@@ -2668,6 +2668,13 @@
       "name": "FUN_a0092b18",
       "status": "matched"
     },
+    "ram:a0092ea8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Enters the selection 0x34..0x3b in word 0xa802afec, stepping until FUN_a00aa520 accepts it",
+      "name": "FUN_a0092ea8",
+      "status": "matched"
+    },
     "ram:a0093464": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
