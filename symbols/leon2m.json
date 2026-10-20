@@ -13230,6 +13230,13 @@
       "name": "FUN_a0148974",
       "status": "matched"
     },
+    "ram:a0148a24": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "1 (and prints WakeUpByPowerKey, calls FUN_a0124b40/FUN_a0124ab0) when FUN_a00de9f8(0) == 1 and FUN_a00de9f8(1) == 0x11, else 0",
+      "name": "FUN_a0148a24",
+      "status": "matched"
+    },
     "ram:a0148aa8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
