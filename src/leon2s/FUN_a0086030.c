@@ -1,14 +1,14 @@
 /* leon2s FUN_a0086030 @ 0xa0086030-0xa0086154 (73 words), flags -mcpu=v8 -Os -g.
- * Code facts: (port, mode, val, n, buf) word params; ch = (u8) port; len = (signed char) n. Through
+ * (port, mode, val, n, buf) word params; ch = (u8) port; len = (signed char) n. Through
  * FUN_a00a78fc(ch, reg, byte): reg 0x31 = 0x71; reg 0x30 = (mode & 0xf0) | (val >> 16 & 0xf), then
  * val >> 8 & 0xff, then val & 0xff. mode &= 0xff. mode 0x80 / 0x40 / 0: reg 0x30 = len, then
  * buf[0..len] (u8 i, signed compare, no bytes when len < 0), then reg 0x31 = 0xb (this call re-converts
  * the port param: 'and %i0,0xff'). Other modes: reg 0x30 = len, reg 0x31 = len == 0 ? 3 : 0xb. Then the
  * sibcall FUN_a00b1794(1). void.
- * Fixes vs the autoc draft (78.08, did not compile): a 'signed char len = n' local (fw 'mov %i3,%i2' copy,
- * sll/sra 24 compares, and the loop counter takes %i3); a plain for loop whose rotated entry guard
- * 'len >= 0' is the fw btst 0x80 (an explicit if (!(len & 0x80)) + do/while is predicted the other way
- * and reorg threads the exit branch); the 3/0xb pick in its own else arm. Aids: none.
+ * Source form: a 'signed char len = n' local (firmware 'mov %i3,%i2' copy, sll/sra 24 compares, and the loop
+ * counter takes %i3); a plain for loop whose rotated entry guard 'len >= 0' is the firmware's btst 0x80 (an
+ * explicit if (!(len & 0x80)) + do/while is predicted the other way and reorg threads the exit branch);
+ * the 3/0xb pick in its own else arm.
  */
 extern void FUN_a00a78fc(unsigned char, unsigned short, unsigned char);
 extern void FUN_a00b1794(unsigned char);

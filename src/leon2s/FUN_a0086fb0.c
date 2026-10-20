@@ -1,11 +1,11 @@
 /* leon2s FUN_a0086fb0 @ 0xa0086fb0-0xa0087074 (196 bytes, 49 words)
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: void (u8 *p, int mode, u8 *out1, u8 *out2). mode &= 0xf (signed compares). out1 = the maximum
- * of p[8..9] and out2 the maximum of p[0xc..0xd] when mode > 1. When mode == 4 they cover p[8..0xb] and
- * p[0xc..0xf]. When mode <= 1 they are p[8] and p[0xc]. Every step is written 'if (v < p[k]) v = p[k];', so each
- * load is its own block-local value. The fw gives them fresh registers (%i2, %i1, %i0) and re-masks both
- * sides with and 0xff. One shared temp variable gives one global register (40.82); 'p[k] > v' gives the
- * same code as 'v < p[k]'. The draft's behaviour was right. No aids.
+ * void (u8 *p, int mode, u8 *out1, u8 *out2). mode &= 0xf (signed compares). out1 = the maximum of p[8..9]
+ * and out2 the maximum of p[0xc..0xd] when mode > 1. When mode == 4 they cover p[8..0xb] and p[0xc..0xf].
+ * When mode <= 1 they are p[8] and p[0xc].
+ * Source form: every step is written 'if (v < p[k]) v = p[k];', so each load is its own block-local value;
+ * the firmware gives them fresh registers (%i2, %i1, %i0) and re-masks both sides with and 0xff. One shared
+ * temp variable gives one global register instead. 'p[k] > v' gives the same code as 'v < p[k]'.
  */
 void FUN_a0086fb0(unsigned char *p, int mode, unsigned char *out1, unsigned char *out2)
 {

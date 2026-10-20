@@ -1,9 +1,8 @@
 /*
  * FUN_a0086360 (leon2s, 0xa0086360-0xa008639c, 60 bytes), flags -mcpu=v8 -Os -g.
- * Code facts: r = (u8)FUN_a00862e4(p1, p2, p3, 0, &param_4): the 5th argument is the ADDRESS of the u8
- * 4th parameter (fw 'stb %i3, [%fp + 0x50]' = its home slot, then 'add %fp, 0x50, %o4'). Returns the
- * u8 0 when r == 1, else 0xff (fw xor/cmp/subx, then 'and 0xff'). The draft returned r != 1 (0/1).
- * Aids: none.
+ * r = (u8)FUN_a00862e4(p1, p2, p3, 0, &param_4): the 5th argument is the address of the u8 4th parameter
+ * (firmware 'stb %i3, [%fp + 0x50]' = its home slot, then 'add %fp, 0x50, %o4'). Returns the u8 0 when
+ * r == 1, else 0xff (firmware xor/cmp/subx, then 'and 0xff').
  */
 extern unsigned char FUN_a00862e4(unsigned char, unsigned char, unsigned int, unsigned int, unsigned char *);
 

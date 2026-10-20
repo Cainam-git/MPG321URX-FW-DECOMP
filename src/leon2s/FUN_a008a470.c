@@ -1,11 +1,10 @@
 /* leon2s FUN_a008a470 @ 0xa008a470-0xa008a590 (72 words), flags -mcpu=v8 -Os -g.
- * Code facts: reg 0xcf0114b0 &= ~4; then four 7-word write blocks to 0xcf011000/04/08/0c/10/58/5c
- * (values 0,0,0,0x12,1 | 0,0xee,0,0x12,0 | 0,0xee,1,2,0xfc | 0,0xee,1,0,0xfc; 0x58 and 0x5c = 0xc6
- * each time, 0x58 first); if (byte 0xa8076688 & 1) 0xcf011008 |= 0x20; 0xcf011014 = 0xff;
- * 0xcf011048 |= 0x60; 0xcf011080 |= 0x30; 0xcf011018 |= 0xc. Leaf.
- * Fixes vs the autoc draft (97.26): BEHAVIOUR, 0x58 is written before 0x5c in every block (draft:
- * 5c first), block 4 also writes 0x5c (draft lost it), and the draft's extra volatile self-copy
- * '0xcf011018 = 0xcf011018' (one more ld/st) is not in the fw. Aids: none.
+ * Register 0xcf0114b0 &= ~4; then four 7-word write blocks to 0xcf011000/04/08/0c/10/58/5c (values
+ * 0,0,0,0x12,1 | 0,0xee,0,0x12,0 | 0,0xee,1,2,0xfc | 0,0xee,1,0,0xfc; 0x58 and 0x5c = 0xc6 each time,
+ * 0x58 first); if (byte 0xa8076688 & 1) 0xcf011008 |= 0x20; 0xcf011014 = 0xff; 0xcf011048 |= 0x60;
+ * 0xcf011080 |= 0x30; 0xcf011018 |= 0xc. Leaf.
+ * 0x58 is written before 0x5c in every block, block 4 also writes 0x5c, and 0xcf011018 gets one
+ * read-modify-write only.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

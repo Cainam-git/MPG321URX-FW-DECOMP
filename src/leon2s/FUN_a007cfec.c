@@ -1,10 +1,9 @@
 /* leon2s FUN_a007cfec @ 0xa007cfec-0xa007d054 (26 words), flags -mcpu=v8 -Os -g.
  * Twin of FUN_a007af04.
- * Code facts: FUN_a0073520(p) != 0 -> returns FUN_a00a7408(0x10, ARR_a807db00[p != 2].w0c + 0x74) != 0
- * (0x34-byte port records); else returns FUN_a00a657c(p, 0x2f6) & 1 (bit 0 of the read).
- * Fixes vs the autoc draft (51.85): real base ARR_a807db00 (not a807db0c), a657c's RESULT is masked
- * (the draft masked the port), the != 0 arm first, the index as a separate local inside the arm
- * (the af04 form: keeps xor/addx/smul 0x34). Aids: none.
+ * FUN_a0073520(p) != 0 -> returns FUN_a00a7408(0x10, ARR_a807db00[p != 2].w0c + 0x74) != 0 (0x34-byte port
+ * records); else returns FUN_a00a657c(p, 0x2f6) & 1 (bit 0 of the read result).
+ * Source form: the != 0 arm first, and the index as a separate local inside that arm (the FUN_a007af04 form:
+ * keeps xor/addx/smul 0x34).
  */
 struct PortRec { unsigned char pad[0xc]; unsigned int w0c; unsigned char pad2[0x34 - 0x10]; };
 extern struct PortRec ARR_a807db00[];
