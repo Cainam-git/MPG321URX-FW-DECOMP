@@ -13856,6 +13856,13 @@
       "name": "FUN_a014f620",
       "status": "matched"
     },
+    "ram:a014f998": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "FUN_a011dd9c(0x10 + n, v) for each set bit n 0..6 of DAT_a802cc87",
+      "name": "FUN_a014f998",
+      "status": "matched"
+    },
     "ram:a014fb84": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
