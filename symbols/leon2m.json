@@ -4800,6 +4800,13 @@
       "name": "FUN_a00a2eec",
       "status": "matched"
     },
+    "ram:a00a3024": {
+      "by": "h24",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns entry n of one of fifteen byte tables chosen by code 0xf0..0xfe",
+      "name": "FUN_a00a3024",
+      "status": "matched"
+    },
     "ram:a00a3838": {
       "by": "near",
       "comment": "near-miss repaired: _DAT_a802b088 is unsigned short",
