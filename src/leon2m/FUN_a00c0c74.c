@@ -1,10 +1,10 @@
 /* leon2m FUN_a00c0c74 @ 0xa00c0c74-0xa00c0cf8 (33 words), flags -mcpu=v8 -O3 -g.
- * Code facts: v = byte 0xa802d049 (port 2) / 0xa802d0a1 (port 3) / 0xa802d0d9 (other); d = v - '0';
- * if (u8)d <= 4: byte 0xa802cffd = d, FUN_a00baa6c(port), FUN_a00ba950(port), FUN_a00bab80(port, 6), return 0;
- * else return 0xff (one exit, result in %g1).
- * Fix vs the autoc draft (76.47): BEHAVIOUR - the range test is d <= 4 (draft: <= 1), the store goes
- * to 0xa802cffd (draft: 0xa802d47e) and there is no FUN_a00b88cc call; d is an int with a u8 test (fw keeps
- * the u8 v re-extended with 'and 0xff' and stores the unmasked d); single return. Aids: none.
+ * Code facts: v = byte 0xa802d049 (port 2) / 0xa802d0a1 (port 3) / 0xa802d0d9 (other); d = v - '0'; if (u8)d <= 4:
+ * byte 0xa802cffd = d, FUN_a00baa6c(port), FUN_a00ba950(port), FUN_a00bab80(port, 6), return 0; else return 0xff
+ * (one exit, result in %g1).
+ * Source form: d is an int with a u8 test (the fw keeps the u8 v re-extended with 'and 0xff' and stores the
+ * unmasked d); a single return.
+ * Compiler aids: none.
  */
 extern unsigned char DAT_a802d049, DAT_a802d0a1, DAT_a802d0d9;
 extern unsigned char DAT_a802cffd;

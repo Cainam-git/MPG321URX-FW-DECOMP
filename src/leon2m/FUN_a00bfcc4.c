@@ -1,31 +1,33 @@
-/* leon2m FUN_a00bfcc4 @ 0xa00bfcc4..0xa00c0adc (902 insns)  Big chip UART/tool command switch (rescue
- * path): MSI tool -> 8051 mailbox portal 0 -> FUN_a00ce348 case 2 -> FUN_a00bfcc4(4, row) -> handler.
- * -mcpu=v8 -O3 -g (also -mcpu=v8 -O3 -g -msoft-float): words; the
- * 131-entry jump table (0xA00BA428, image-relative +0xA0060000) also matches entry by entry.
+/* leon2m FUN_a00bfcc4 @ 0xa00bfcc4..0xa00c0adc (902 insns)  Big chip UART/tool command switch (rescue path): MSI
+ * tool -> 8051 mailbox portal 0 -> FUN_a00ce348 case 2 -> FUN_a00bfcc4(4, row) -> handler.
+ * Flags -mcpu=v8 -O3 -g (also matches with -msoft-float). The 131-entry jump table at 0xA00BA428 (entries
+ * image-relative, +0xA0060000) is built from the same source.
  *
  * What the code does (code facts):
- * - cmd (byte) > 0x82 or a hole in the table (1, 0xb, 0xc, 0xe, 0x10, 0x11, 0x40, 0x44, 0x47, 0x48, 0x4d..0x55, 0x57..0x64,
- *   0x67, 0x69, 0x6d, 0x79..0x7b): return, nothing done.
- * - 28 commands tail-call their handler with the port byte (case 2 = FUN_a00bf110 UartSetI2CEnable, the entry of MSI's
- *   official update; 0 = FUN_a00be9a8, 3/4/5 = FUN_a00bbda0/bbf1c/bc098, 7/8/9 = bc3f8/bc574/bc6f0, ... see the switch).
- * - The other 63 commands are "read a setting" replies: bytes 7, 8, 9 of the reply frame 0xA802D078 = three ASCII digits
- *   (mostly '0', '0', '0' + value: a status byte, or one/two bits of a status word such as 0xA802D338/D33C/D46C/D484),
- *   then FUN_a00bac3c(cmd) (or FUN_a00bacc4(cmd) for 6, 0xa, 0xd, 0xf) fills bytes 0..6 and 10 from command-table row cmd,
- *   FUN_a00ba950(port), and FUN_a00babe4(port, 11) (= FUN_a01487e8(port, 11, frame)) sends 11 bytes back. Commands 6
- *   and 0x4a call FUN_a01487e8(port, 0xb, 0xA802D078) directly. 0x28/0x29/0x2b: two-digit value ('1', v - 10 + '0' when
- *   v > 9). 0x30 replies the constant "V23", 0x4a "021", 0xf "001", 0x2f "00" + 0x9F, 0x38 '2' - byte 0xA802D2C1.
- *   0x41 builds the whole frame itself (bytes 35 62 30 30 5C 30 30 30 31 31 0D = "5b00" backslash "00011" CR) and calls FUN_a00babe4(port, 0x26).
+ * - cmd (byte) > 0x82 or a hole in the table (1, 0xb, 0xc, 0xe, 0x10, 0x11, 0x40, 0x44, 0x47, 0x48, 0x4d..0x55,
+ *   0x57..0x64, 0x67, 0x69, 0x6d, 0x79..0x7b): return, nothing done.
+ * - 28 commands tail-call their handler with the port byte (case 2 = FUN_a00bf110 UartSetI2CEnable, the entry of
+ *   MSI's official update; 0 = FUN_a00be9a8, 3/4/5 = FUN_a00bbda0/bbf1c/bc098, 7/8/9 = bc3f8/bc574/bc6f0, ... see
+ *   the switch).
+ * - The other 63 commands are "read a setting" replies: bytes 7, 8, 9 of the reply frame 0xA802D078 = three ASCII
+ *   digits (mostly '0', '0', '0' + value: a status byte, or one/two bits of a status word such as
+ *   0xA802D338/D33C/D46C/D484), then FUN_a00bac3c(cmd) (or FUN_a00bacc4(cmd) for 6, 0xa, 0xd, 0xf) fills bytes
+ *   0..6 and 10 from command-table row cmd, FUN_a00ba950(port), and FUN_a00babe4(port, 11) (= FUN_a01487e8(port,
+ *   11, frame)) sends 11 bytes back. Commands 6 and 0x4a call FUN_a01487e8(port, 0xb, 0xA802D078) directly.
+ *   0x28/0x29/0x2b: two-digit value ('1', v - 10 + '0' when v > 9). 0x30 replies the constant "V23", 0x4a "021",
+ *   0xf "001", 0x2f "00" + 0x9F, 0x38 '2' - byte 0xA802D2C1.
+ *   0x41 builds the whole frame itself (bytes 35 62 30 30 5C 30 30 30 31 31 0D = "5b00" backslash "00011" CR) and
+ *     calls FUN_a00babe4(port, 0x26).
  *   0x4c: digit = bit 20 of word 0xA802D33C, or '0' when byte 0xA802D2AF != 0 (both read off one 0xA802D290 base).
  * - No loops, no hardware registers, no waits; every path returns. This is the only route from the tool command
  *   task to FUN_a00bf110; it reads no panel/timing state.
  *
- * How it was matched: every inlined case body is the standalone handler of that command (FUN_a00bc3b0 .. FUN_a00be7d4,
- * they exist uncalled in the firmware; most are byte-exact in src/leon2m) - written here directly in the case. The case
- * ORDER in the source is the order of those handlers in the firmware file (handler addresses), not the case value: it
- * sets the -frename-registers LRU ticks (descending order 28.05, ascending 28.27, handler order 63.08).
- * Fixes on top: 0x1c index held in an int (address add operand order), 0x4c test written '== 0' first (fw branch
- * sense), 0x25 halfword read into an unsigned int first (keeps lduh), 0x28/0x29/0x2b store byte 7 BEFORE reading the
- * value (pre-rename allocation of the two sethi registers; 72.39 -> 100).
+ * Source form: every inlined case body is the standalone handler of that command (FUN_a00bc3b0 .. FUN_a00be7d4,
+ *   which exist uncalled in the firmware), written directly in the case. The case order in the source is the order
+ *   of those handlers in the firmware (handler addresses), not the case value: it sets the -frename-registers LRU
+ *   ticks. Also: the 0x1c index is held in an int (address add operand order); the 0x4c test is written '== 0'
+ *   first (fw branch sense); the 0x25 halfword is read into an unsigned int first (keeps lduh); 0x28/0x29/0x2b
+ *   store byte 7 before reading the value (pre-rename allocation of the two sethi registers).
  * Compiler aids: none (no branch hints, no asm labels).
  */
 extern unsigned char DAT_a802cffd;

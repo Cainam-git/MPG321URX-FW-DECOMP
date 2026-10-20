@@ -1,10 +1,9 @@
 /* FUN_a00bdc60 (leon2m, 0xa00bdc60-0xa00bdcb0, 80 bytes, 20 words).
  * Flags: -mcpu=v8 -O3 -g.
- * Code facts: d = (_DAT_a802d2c0 >> 4) & 0xf; bytes 7 = 0x30, 8 = 0x30, 9 = d + 0x30 of DAT_a802d078
- * (ASCII "00<digit>", fw stores 9, 8, 7); FUN_a00bac3c(0x39); FUN_a00ba950(p) with p = (u8)param_1;
- * tail call FUN_a00babe4(p, 0xb). Twin of FUN_a00bdb48.
- * Fix vs draft: FUN_a00bac3c takes ONE argument (fw sets only %o0; the draft passed (0x39, 0)).
- * Aids: none.
+ * Code facts: d = (_DAT_a802d2c0 >> 4) & 0xf; bytes 7 = 0x30, 8 = 0x30, 9 = d + 0x30 of DAT_a802d078 (ASCII
+ * "00<digit>", fw stores 9, 8, 7); FUN_a00bac3c(0x39); FUN_a00ba950(p) with p = (u8)param_1; tail call
+ * FUN_a00babe4(p, 0xb). Twin of FUN_a00bdb48. FUN_a00bac3c takes one argument (the fw sets only %o0).
+ * Compiler aids: none.
  */
 extern unsigned int _DAT_a802d2c0;
 extern unsigned char DAT_a802d078[];

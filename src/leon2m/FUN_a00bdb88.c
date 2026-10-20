@@ -1,8 +1,9 @@
 /* leon2m FUN_a00bdb88 @ 0xa00bdb88-0xa00bdbcc (17 words), flags -mcpu=v8 -O3 -g. Twin of FUN_a00bdb48.
- * Code facts: text bytes DAT_a802d078[7..9] = 'V', '2', '3' (0x56, 0x32, 0x33); FUN_a00bac3c(0x30);
- * p = param_1 & 0xff; FUN_a00ba950(p); tail call FUN_a00babe4(p, 11).
- * Fixes vs the autoc draft (88.24): BEHAVIOUR, FUN_a00ba950 and FUN_a00babe4 take the u8 parameter
- * (the draft passed 0x30 to both; fw: and %i0,0xff,%i0 then mov %i0,%o0); same form as bdb48. Aids: none.
+ * Code facts: text bytes DAT_a802d078[7..9] = 'V', '2', '3' (0x56, 0x32, 0x33); FUN_a00bac3c(0x30); p = param_1 &
+ * 0xff; FUN_a00ba950(p); tail call FUN_a00babe4(p, 11). FUN_a00ba950 and FUN_a00babe4 take the u8 parameter (fw:
+ * and %i0,0xff,%i0 then mov %i0,%o0).
+ * Source form: the same form as FUN_a00bdb48.
+ * Compiler aids: none.
  */
 extern unsigned char DAT_a802d078[];
 extern void FUN_a00bac3c();

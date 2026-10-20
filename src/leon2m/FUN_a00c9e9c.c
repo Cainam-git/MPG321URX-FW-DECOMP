@@ -2,12 +2,13 @@
  * Twin of FUN_a00c135c.
  * Code facts: value = byte 0xa802d049 (param 2), 0xa802d0a1 (param 3) or 0xa802d0d9 (other); d = (u8)(value -
  * 0x30); d > 1 -> return 0xff; else bit 15 of the word at 0xa802d290+0x174 = d & 1 (andn 0x8000 / or (d&1)<<15,
- * the shifted value is computed before the test), FUN_a00db690(), FUN_a00b88cc(), FUN_a00baa6c(p), FUN_a00ba950(p),
- * FUN_a00bab80(p, 6) with p = the u8 parameter; return 0.
- * Fix vs the autoc draft: real base DAT_a802d290 (draft: a mid-record word); 'int diff = value - 0x30;' then a
- * SEPARATE u8 copy 'd = diff' used for the test and the bit (the fw keeps the 'and 0xff' re-extension of the
- * 3-arm u8 value before the add, then 'and 0xff' for d; a u8 diff folds the first one, a u16 diff gives
- * sll/srl, a signed char value gives sll/sra); u8/void prototypes. Aids: none.
+ * the shifted value is computed before the test), FUN_a00db690(), FUN_a00b88cc(), FUN_a00baa6c(p),
+ * FUN_a00ba950(p), FUN_a00bab80(p, 6) with p = the u8 parameter; return 0.
+ * Source form: the record base DAT_a802d290; 'int diff = value - 0x30;' then a separate u8 copy 'd = diff' used
+ * for the test and the bit (the fw keeps the 'and 0xff' re-extension of the 3-arm u8 value before the add, then
+ * 'and 0xff' for d; a u8 diff folds the first one, a u16 diff gives sll/srl, a signed char value gives sll/sra);
+ * u8/void prototypes.
+ * Compiler aids: none.
  */
 struct R290 { unsigned char pad[0x174]; unsigned int w174; };
 extern struct R290 DAT_a802d290;

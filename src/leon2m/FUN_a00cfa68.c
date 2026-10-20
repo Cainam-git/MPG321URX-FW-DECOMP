@@ -1,9 +1,9 @@
 /* leon2m FUN_a00cfa68 @ 0xa00cfa68-0xa00cfacc (25 words), flags -mcpu=v8 -O3 -g.
- * Code facts: crc = 0; for u8 i = 4..7: crc = FUN_a00cea70(param_1[i], crc) (u16 crc step, (u8, u16) -> u16:
- * the callee ends with sll/srl 16 of %i1); then param_2[0..4] = 0x6e, 0x83, 2, crc >> 8, crc (low byte);
- * tail FUN_a0089f60(0x50) (1 u8 arg: it only stores %o0 to byte 0xa802af9e). void.
- * Fix vs the autoc draft (68.00): the loop reads BYTES of param_1 (the draft read words) and passes the
- * running u16 crc; FUN_a0089f60 takes 1 arg; the stores in ascending offset order (1 of 120 orders). Aids: none.
+ * Code facts: crc = 0; for u8 i = 4..7: crc = FUN_a00cea70(param_1[i], crc) (u16 crc step, (u8, u16) -> u16: the
+ * callee ends with sll/srl 16 of %i1); then param_2[0..4] = 0x6e, 0x83, 2, crc >> 8, crc (low byte); tail
+ * FUN_a0089f60(0x50) (1 u8 arg: it only stores %o0 to byte 0xa802af9e). void. The loop reads bytes of param_1.
+ * Source form: the stores in ascending offset order.
+ * Compiler aids: none.
  */
 extern void FUN_a0089f60(unsigned char);
 extern unsigned short FUN_a00cea70(unsigned char, unsigned short);
