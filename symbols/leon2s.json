@@ -1808,6 +1808,12 @@
       "name": "FUN_a006d568",
       "status": "matched"
     },
+    "ram:a006d5a8": {
+      "by": "hand",
+      "comment": "maps codes 0x31..0x81 (step 0x10) to 0..5, other values to 0, returned masked to 3 bits",
+      "name": "FUN_a006d5a8",
+      "status": "matched"
+    },
     "ram:a006d61c": {
       "by": "hand",
       "comment": "port status flags; rec[0xd] bit 2 = the line-rate switch (FreeSync/HDMI VRR detected)",
