@@ -1,10 +1,9 @@
 /* leon2s FUN_a00ab584 @ 0xa00ab584-0xa00ab674 (60 words), flags -mcpu=v8 -Os -g.
- * Code facts: leaf. If byte DAT_a807d289[0] == 0xa0: v = hw word 0xcf013280 & ~0x1f (read once); for the
- * five select bits 1, 2, 4, 8, 0x10: 0xcf013280 = (u8)(v | bit), then 0xcf013284 = (0xcf013284 & 0x1f) |
- * byte DAT_a807d289[3 + n] (n = 0..4). Else: 0xcf013280 |= 0x1f; 0xcf013284 = (0xcf013284 & 0x1f) | 0x80.
- * void. Fixes vs the autoc draft (78.46): one base symbol DAT_a807d289 for the flag and the 5 data bytes
- * (the draft used 6 mid-record names: fw [%o1 + 3..7] off one base); the select write is a u8 cast.
- * volatile only on the two 0xcf0132xx hardware registers. Aids: none.
+ * Leaf. If byte DAT_a807d289[0] == 0xa0: v = hw word 0xcf013280 & ~0x1f (read once); for the five select
+ * bits 1, 2, 4, 8, 0x10: 0xcf013280 = (u8)(v | bit), then 0xcf013284 = (0xcf013284 & 0x1f) | byte
+ * DAT_a807d289[3 + n] (n = 0..4). Else: 0xcf013280 |= 0x1f; 0xcf013284 = (0xcf013284 & 0x1f) | 0x80. void.
+ * One base symbol DAT_a807d289 covers the flag and the 5 data bytes (firmware [%o1 + 3..7] off one base);
+ * the select write is a u8 cast. volatile only on the two 0xcf0132xx hardware registers.
  */
 #define REG_CF013280 (*(volatile unsigned int *)0xcf013280)
 #define REG_CF013284 (*(volatile unsigned int *)0xcf013284)

@@ -1,13 +1,12 @@
 /* FUN_a00a3788 (leon2s, 0xa00a3788-0xa00a3810, 136 bytes, 34 words).
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: port = (u8)param_1; if word DAT_a807db6c[port] != DAT_a807873c[port]: print the
- * dashes line (FUN_a00734c4(DAT_a006ba90), ONE arg: the string has no format), print
- * DAT_a006bac0 ("[HDMI_TX_FRL_Training]: Port%d : DRV_HDMI21_TXDetect_FSM_Init...") with port,
- * and copy db6c[port] into 873c[port]. Then FUN_a0091cf4(port, 0x31, 0); db6c[port] = 1;
- * byte DAT_a8079208[port] = 0; byte DAT_a80791aa = 0; returns 0.
- * Fixes vs draft: table name DAT_a807873c (fw sethi 0xa8078400 | 0x33c; the draft had DAT_a8078400),
- * the dashes string is the symbol DAT_a006ba90 (its address is set in the be delay slot) and
- * FUN_a00734c4 takes 1 arg (the draft passed 0xFFFF). Aids: none.
+ * port = (u8)param_1. If the word DAT_a807db6c[port] != DAT_a807873c[port]: prints the dashes line
+ * (FUN_a00734c4(DAT_a006ba90), one argument: the string has no format), prints DAT_a006bac0
+ * ("[HDMI_TX_FRL_Training]: Port%d : DRV_HDMI21_TXDetect_FSM_Init...") with port, and copies db6c[port]
+ * into 873c[port]. Then FUN_a0091cf4(port, 0x31, 0); db6c[port] = 1; byte DAT_a8079208[port] = 0;
+ * byte DAT_a80791aa = 0; returns 0.
+ * The table symbol is DAT_a807873c (firmware sethi 0xa8078400 | 0x33c). The dashes string is the symbol
+ * DAT_a006ba90 (its address is set in the be delay slot). FUN_a00734c4 takes one argument.
  */
 
 extern unsigned int DAT_a807db6c[];

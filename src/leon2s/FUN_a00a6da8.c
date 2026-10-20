@@ -1,13 +1,12 @@
 /* FUN_a00a6da8 (leon2s, 0xa00a6da8-0xa00a6e10, 104 bytes, 26 words, leaf).
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: block = (u8)param_1; returns 0 when block > 1. Otherwise val = DAT_a00b4d94[block]
- * (u16 table of block bases) + param_2; reads the registers 0xcf000000 | (val << 2) and
- * 0xcf000000 | ((val + 1) << 2) and returns (u16)((hi << 8) | (lo & 0xff)).
- * Fixes vs draft: the high register value is not masked to a byte in the source (same value after the u16
- * truncation; fw: sll 8 of the full word, then
- * the u16 return truncation); the reads go through a static inline register-read helper rd(idx)
- * (fw keeps 'add 1' then 'sll 2' for the second address; an open-coded (val + 1) * 4 folds to
- * val*4 + 4). Same register space as FUN_a00f1690 (leon2m). Aids: none (inline helper only).
+ * block = (u8)param_1; returns 0 when block > 1. Otherwise val = DAT_a00b4d94[block] (u16 table of block
+ * bases) + param_2; reads the registers 0xcf000000 | (val << 2) and 0xcf000000 | ((val + 1) << 2) and
+ * returns (u16)((hi << 8) | (lo & 0xff)). Same register space as FUN_a00f1690 (leon2m).
+ * Source form: the high register value is not masked to a byte (same value after the u16 truncation;
+ * firmware: sll 8 of the full word, then the u16 return truncation); the reads go through a static inline
+ * register-read helper rd(idx) (the firmware keeps 'add 1' then 'sll 2' for the second address; an
+ * open-coded (val + 1) * 4 folds to val*4 + 4).
  */
 extern unsigned short DAT_a00b4d94[];
 
