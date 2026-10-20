@@ -5570,6 +5570,13 @@
       "name": "FUN_a00bdeb8",
       "status": "matched"
     },
+    "ram:a00bdec0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Reply builder: fixed frame 5b00\\\\00011\\r into 0xa802d078, send 0x26 bytes",
+      "name": "FUN_a00bdec0",
+      "status": "matched"
+    },
     "ram:a00bdf28": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
