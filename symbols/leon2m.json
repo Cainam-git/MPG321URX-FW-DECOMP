@@ -4390,6 +4390,13 @@
       "name": "FUN_a00b7a08",
       "status": "matched"
     },
+    "ram:a00b7ae4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Prints four rows from ROM string table 0x18d578 indexed by record byte 8, then calls FUN_a00a813c",
+      "name": "FUN_a00b7ae4",
+      "status": "matched"
+    },
     "ram:a00b7d14": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
