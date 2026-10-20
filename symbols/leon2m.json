@@ -1880,6 +1880,13 @@
       "name": "FUN_a002e69c",
       "status": "matched"
     },
+    "ram:a002e6e4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "For v < 8 replaces bits 0..2 of register 0xa5 of register block blk with v",
+      "name": "FUN_a002e6e4",
+      "status": "matched"
+    },
     "ram:a002ef0c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
