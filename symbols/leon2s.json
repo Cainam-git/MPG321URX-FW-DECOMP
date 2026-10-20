@@ -2351,6 +2351,12 @@
       "name": "FUN_a00857d0",
       "status": "matched"
     },
+    "ram:a00858cc": {
+      "by": "hand",
+      "comment": "stores a byte into DAT_a807cd02 (port 0) or DAT_a807cd2c (other ports)",
+      "name": "FUN_a00858cc",
+      "status": "matched"
+    },
     "ram:a00858f0": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
