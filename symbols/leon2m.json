@@ -2507,6 +2507,13 @@
       "name": "FUN_a008e5b8",
       "status": "matched"
     },
+    "ram:a008e650": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Maps FUN_a012621c's bits through the table at 0x10053f into byte 0xa802cffa, may record them via FUN_a014aed0, and updates bit 14 of 0xa802d290",
+      "name": "FUN_a008e650",
+      "status": "matched"
+    },
     "ram:a008e7a8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
