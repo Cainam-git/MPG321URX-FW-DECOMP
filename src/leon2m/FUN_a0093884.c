@@ -3,9 +3,9 @@
  * Code facts: byte DAT_a802d290 + 0x1a3 = word 0xa802afec - 0x58, word afec = 0xc5 (the fw stores afec first);
  * FUN_a00b6290(1); FUN_a00b6514(0, 1); i = byte +0x1a3: byte +0x8c = t198[i] and +0x8d = t19c[i] (both loads
  * before both stores); FUN_a00a9468(2, 1), (0, 0), (1, 3); FUN_a00b344c(0); tail FUN_a00b34d4(3, 5). void(void).
- * Fix vs the autoc draft: BEHAVIOUR: afec = 0xc5 (the draft stored b6290's return), real base DAT_a802d290 as a
- * struct with the two 4-byte tables as array fields (a flat byte array keeps load/store/load/store, 97.14), the
- * +0x8c copy first in the source; the tail takes 2 args. Aids: none.
+ * afec = 0xc5 is a constant store; the tail takes 2 arguments.
+ * Source form: DAT_a802d290 is a struct with the two 4-byte tables as array fields (a flat byte array keeps
+ * load/store/load/store); the +0x8c copy comes first in the source. Aids: none.
  */
 struct R290 {
   unsigned char pad[0x8c]; unsigned char b8c, b8d; unsigned char pad2[0x198 - 0x8e];

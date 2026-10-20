@@ -3,8 +3,8 @@
  * 0x2a; loop (entered at the test): if FUN_a00aa520((u8)(afec - 0x2a)) == 1 break; t = (lduh 0xa802afee, low
  * half of afec) - 0x29; t = t % 10 (signed, smul 0x66666667, sra 2); afec = t + 0x2a. The test re-loads afec
  * because it has two predecessors. Tail FUN_a00a900c((u8)(afec - 0x2a), 1) (restore %g0,1,%o1). void(void).
- * Fixes vs the autoc draft: loop shape test-first (for(;;) with break), (unsigned short)_DAT_a802afec, 1-arg
- * aa520, real u8/void prototypes. Aids: none.
+ * FUN_a00aa520 takes one argument; u8/void prototypes.
+ * Source form: test-first loop (for(;;) with break), (unsigned short)_DAT_a802afec. Aids: none.
  */
 extern unsigned int _DAT_a802afec;
 extern void FUN_a00a900c(unsigned char, int);

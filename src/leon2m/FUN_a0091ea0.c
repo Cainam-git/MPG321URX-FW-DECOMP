@@ -1,12 +1,12 @@
 /* leon2m FUN_a0091ea0 @ 0xa0091ea0-0xa0091f58 (46 words), flags -mcpu=v8 -O3 -g.
  * Twin of FUN_a0091de8 (only the loop constant differs).
- * same shape as FUN_a0092444 / FUN_a009bf48.
+ * Same shape as FUN_a0092444 / FUN_a009bf48.
  * Code facts: FUN_a00a8ee8(word 0xa802afec - 0x15, as u8); FUN_a00aa258(same, 0); loop: t = (lduh 0xa802afee =
  * low half of word 0xa802afec) - 0x14; t = t % 3 (signed, smul by 0x55555556); word 0xa802afec = t + 0x15;
  * repeat until FUN_a00aa520(t) == 1 (u8, 1 arg). FUN_a00a900c(afec - 0x15, 1); FUN_a00aa258(afec - 0x15, 1);
  * tail FUN_a00af44c(0x15, afec - 0x15). void(void).
- * Fix vs the autoc draft: FUN_a00aa520 takes 1 arg (the draft passed the quotient, which is only the remainder
- * temp); the half-word read is (unsigned short)_DAT_a802afec; u8/void prototypes. Aids: none.
+ * FUN_a00aa520 takes one argument (the quotient in %o1 is only the remainder temp); the half-word read is
+ * (unsigned short)_DAT_a802afec; u8/void prototypes. Aids: none.
  */
 extern unsigned int _DAT_a802afec;
 extern void FUN_a00a8ee8(unsigned char);

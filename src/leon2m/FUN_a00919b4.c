@@ -3,8 +3,8 @@
  * Code facts: FUN_a00a8ee8(word 0xa802afec - 0xe); FUN_a00aa0e8(afec - 0xe, 0); if afec > 0x14 (unsigned):
  * FUN_a00b0034(1), else FUN_a00af44c(0xe, 0) and FUN_a00a900c(0, 0). Then afec = 3, FUN_a00b4144(1, 1),
  * FUN_a00a9468(1, 2), tail FUN_a00b34d4(0, 1) (the common tail is duplicated per arm by jump threading).
- * void(void). Fix vs the autoc draft: BEHAVIOUR: afec = 3 is a constant (the draft stored b4144's return) and
- * both arms end in the same tail; the '> 0x14' arm comes first (the other order is 68.89). Aids: none.
+ * void(void). afec = 3 is a constant store and both arms end in the same tail.
+ * Source form: the '> 0x14' arm comes first. Aids: none.
  */
 extern unsigned int _DAT_a802afec;
 extern void FUN_a00a8ee8(unsigned char);

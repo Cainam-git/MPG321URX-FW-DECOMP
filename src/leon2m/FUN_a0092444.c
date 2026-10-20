@@ -5,9 +5,9 @@
  * until FUN_a00aa520(t) == 1 (u8 return, 1 arg: the quotient in %o1 is only the remainder temp).
  * FUN_a00a900c(afec - 0x1e, 1); FUN_a00aa01c(afec - 0x1e, 1); u = afec - 0x1e; r = FUN_a01445fc(byte 0xa802d2ae);
  * tail FUN_a0146c40(6, 0, 0) if u == r else FUN_a0146c40(6, 1, 0) (crossjumped: two 'mov 6' in the fw).
- * Fix vs the autoc draft: BEHAVIOUR: FUN_a01445fc takes byte 0xa802d2ae (the draft called it with no arg and
- * compared d2ae itself); FUN_a00aa520 takes 1 arg; if/else of two tail calls (a '!=' argument gives one call);
- * 'unsigned int r' local gives the fw 'cmp u, r' operand order. Aids: none.
+ * FUN_a01445fc takes byte 0xa802d2ae; FUN_a00aa520 takes one argument.
+ * Source form: an if/else of two tail calls (a '!=' argument gives one call); an 'unsigned int r' local gives the
+ * fw 'cmp u, r' operand order. Aids: none.
  */
 extern unsigned char DAT_a802d2ae;
 extern unsigned int _DAT_a802afec;

@@ -4,8 +4,8 @@
  * (src FUN_a0091668 form, test first): if FUN_a00aa520((u8)(afec - 0x23)) == 1 break; t = (lduh 0xa802afee) -
  * 0x22; t = t % 3; afec = t + 0x23. FUN_a00a813c(0, d290[0x1f], 0); FUN_a00a900c((u8)(afec - 0x23), 1);
  * FUN_a0146c40(6, 0, 0); if afec == 0x23: FUN_a00a9468(1, 3), tail FUN_a00b34d4(0, 4); else FUN_a00a9468(1,
- * 2), tail FUN_a00b34d4(0, 1). void(void). Fixes vs the autoc draft: real base DAT_a802d290 for all record
- * bytes, test-first loop, 1-arg aa520, real prototypes. Aids: none.
+ * 2), tail FUN_a00b34d4(0, 1). void(void). All record bytes are read through the base DAT_a802d290;
+ * FUN_a00aa520 takes one argument. Source form: test-first loop. Aids: none.
  */
 extern unsigned int _DAT_a802afec;
 extern unsigned char DAT_a802d290[];

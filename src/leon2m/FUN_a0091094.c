@@ -4,9 +4,8 @@
  * FUN_a008ed00(0x49, 1); tail FUN_a008edb8(0x42, 0x43). Else if s - 0x108 < 2: FUN_a008ec48 for
  * 0x45, 0x46, 0x47, 0x48 (each with 1), tail FUN_a008edb8(0xff, 0). Else: FUN_a008ec48 for 0x47,
  * 0x48, 0x45, 0x46, tail FUN_a008edb8(0xff, 0). void, no params.
- * Fixes vs the autoc draft (82.09): the tail callee FUN_a008edb8 takes 2 args (it overwrites %o2;
- * the draft passed a 3rd); positive '||' test with that arm FIRST (draft used the negated '&&'
- * form); void(void). Aids: none.
+ * The tail callee FUN_a008edb8 takes 2 arguments (it overwrites %o2).
+ * Source form: the positive '||' test with that arm FIRST. Aids: none.
  */
 extern unsigned int DAT_a802afec;
 extern void FUN_a008ec48(unsigned char, unsigned char);

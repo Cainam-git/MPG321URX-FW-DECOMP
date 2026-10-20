@@ -3,8 +3,7 @@
  * Code facts: FUN_a00a93bc(byte 0xa8025c56 + 1); FUN_a00a813c(1, c56 + 1, 0); FUN_a00a9650(word 0xa802afec -
  * 0x56, 0); FUN_a00a813c(1, DAT_a802d290[0x1a0] + 1, 0); byte 0xa802afea = d290[0x1a0]; FUN_a00a813c(1,
  * d290[0x1a0] + 1, 1); word afec = 0x12; FUN_a00a900c(4, 1); byte 0xa802b08e |= 2. Every byte is re-read for
- * each use. void(void). Fix vs the autoc draft: real base DAT_a802d290 (draft DAT_a802d430 word), byte afea,
- * void/u8 prototypes. Aids: none.
+ * each use. void(void). The record base is DAT_a802d290; afea is a byte; void/u8 prototypes. Aids: none.
  */
 extern unsigned char DAT_a802d290[];
 extern unsigned char DAT_a8025c56;
