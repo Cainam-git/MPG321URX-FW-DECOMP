@@ -1,6 +1,6 @@
 /* FUN_a0061280 (leon2s 0xa0061280-0xa0061348, 200 bytes), flags -mcpu=v8 -Os -g.
- * Writes the zero-terminated string s to the UART, sending '\r' after every '\n'. Each character is sent like
- * FUN_a006122c: wait for bit 5 of status register 0xc00c0014 (at most 0xffffe polls), then write 0xc00c0000.
+ * Writes the bytes of the zero-terminated string s to hardware register 0xc00c0000, with an extra '\r' after every
+ * '\n'. Each byte is written like FUN_a006122c: wait for bit 5 of status register 0xc00c0014 (at most 0xffffe polls), then write 0xc00c0000.
  * Source forms: the string character is sent by an open-coded wait and store (the firmware reads *s at the
  * store and again for the '\n' test); the '\r' goes through a static inline helper with an int parameter.
  */
