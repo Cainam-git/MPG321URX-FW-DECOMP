@@ -6053,6 +6053,12 @@
       "name": "FUN_a00c9de8",
       "status": "matched"
     },
+    "ram:a00c9e44": {
+      "by": "hand",
+      "comment": "Load a 0x180-byte table into a port block and read back 32 bytes",
+      "name": "FUN_a00c9e44",
+      "status": "matched"
+    },
     "ram:a00ca074": {
       "by": "hand",
       "comment": "leaf, hw registers only (0xcf018e04/0c/10/14, all volatile = real registers). If reg 0xcf018e0c == 0: reg e04 = v; p == 0xaa: e14 |= 1 and wait until bit 0 clears, else e14 |= 4 and wait for bit 2; e10 = 0x1f; e14 |= 0x80 and wait for bit 7; e0c = 0x3f. Else: e04 = v; e0c = e0c - 1. void.",
