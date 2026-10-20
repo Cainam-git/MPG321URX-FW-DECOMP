@@ -662,6 +662,13 @@
       "name": "FUN_CODE_3091",
       "status": "matched"
     },
+    "CODE:3c4d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "selects five pointers into one of six register blocks by channel and passes n bytes to FUN_CODE_611a",
+      "name": "FUN_CODE_3c4d",
+      "status": "matched"
+    },
     "CODE:3fe7": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
