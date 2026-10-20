@@ -125,6 +125,26 @@ def jump_tables(cpu, obj, off, got, want, text_lo):
     return None
 
 
+def code_addresses(cpu, obj, elf, off, got, want, text_lo):
+    """Library members that take the address of one of their own functions (sethi/or of a name defined in their
+    .text, e.g. fflush passing itself to _fwalk): the firmware holds the run-time address, the link gives the listing
+    address. Each such field is taken from the firmware when it equals the linked address minus the run-time shift."""
+    if cpu not in RUNTIME: return got
+    sh = shift(cpu, text_lo)
+    own = {n: int(v, 16) for v, t, n in re.findall(r"^([0-9a-f]+) ([Tt]) (\S+)$", run(tool("nm"), elf).stdout, re.M)}
+    g = bytearray(got)
+    for o, ty, name, add in re.findall(r"^([0-9a-f]+)\s+R_SPARC_(HI22|LO10)\s+([^\s+.][^\s+]*)(?:\+0x([0-9a-f]+))?\s*$",
+                                       run(tool("objdump"), "-r", "-j", ".text", obj).stdout, re.M):
+        if name not in own: continue
+        p = int(o, 16) - off
+        if not 0 <= p < len(g) - 3: continue
+        a = (own[name] + int(add or "0", 16) - sh) & 0xffffffff
+        mask, val = (0x3fffff, a >> 10) if ty == "HI22" else (0x3ff, a & 0x3ff)
+        fw = int.from_bytes(want[p:p + 4], "big"); cw = int.from_bytes(g[p:p + 4], "big")
+        if fw & ~mask == cw & ~mask and fw & mask == val: g[p:p + 4] = want[p:p + 4]
+    return bytes(g)
+
+
 def verify_pool(obj, off, size, got, want, pools, img, base):
     """Literal-pool references (R_SPARC_HI22 / LO10 against .rodata.cstN): accept the firmware's address bits when the
     firmware holds the same constant at that address; returns (got with those fields taken from want, reason or None)."""
@@ -247,6 +267,8 @@ def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False):
                 got, why = verify_pool(obj, off, size, got, want, pools, img, base)
                 if why: last = why; continue
                 LAST = (bytes(got), bytes(want))
+            if got != want and len(got) == len(want) and solve:
+                got = code_addresses(cpu, obj, elf, off, got, want, text_lo)
             if got != want and len(got) == len(want):
                 why = jump_tables(cpu, obj, off, got, want, text_lo)
                 if why is None: got = want
