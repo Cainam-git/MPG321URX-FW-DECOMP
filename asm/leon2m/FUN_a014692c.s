@@ -1,4 +1,4 @@
-# leon2m FUN_a014692c 0xa014692c-0xa014698c (96 bytes)
+# leon2m FUN_a014692c 0xa014692c-0xa01469e0 (180 bytes)
 a014692c:  9d e3 bf 98  save  %sp, -104, %sp
 a0146930:  82 0e 20 ff  and  %i0, 0xff, %g1
 a0146934:  d6 0f a0 5f  ldub  [ %fp + 0x5f ], %o3
@@ -23,3 +23,24 @@ a014697c:  b6 0f 20 ff  and  %i4, 0xff, %i3
 a0146980:  b8 0c 20 ff  and  %l0, 0xff, %i4
 a0146984:  7f ff 50 18  call  0xa011a9e4
 a0146988:  81 e8 00 00  restore
+a014698c:  ba 0a e0 ff  and  %o3, 0xff, %i5
+a0146990:  10 bf ff f6  b  0xa0146968
+a0146994:  90 10 20 00  clr  %o0
+a0146998:  ba 0a e0 ff  and  %o3, 0xff, %i5
+a014699c:  10 bf ff f3  b  0xa0146968
+a01469a0:  90 10 20 01  mov  1, %o0
+a01469a4:  ba 0a e0 ff  and  %o3, 0xff, %i5
+a01469a8:  10 bf ff f0  b  0xa0146968
+a01469ac:  90 10 20 02  mov  2, %o0
+a01469b0:  ba 0a e0 ff  and  %o3, 0xff, %i5
+a01469b4:  10 bf ff ed  b  0xa0146968
+a01469b8:  90 10 20 03  mov  3, %o0
+a01469bc:  ba 0a e0 ff  and  %o3, 0xff, %i5
+a01469c0:  10 bf ff ea  b  0xa0146968
+a01469c4:  90 10 20 04  mov  4, %o0
+a01469c8:  ba 0a e0 ff  and  %o3, 0xff, %i5
+a01469cc:  10 bf ff e7  b  0xa0146968
+a01469d0:  90 10 20 05  mov  5, %o0
+a01469d4:  ba 0a e0 ff  and  %o3, 0xff, %i5
+a01469d8:  10 bf ff e4  b  0xa0146968
+a01469dc:  90 10 20 06  mov  6, %o0

@@ -1,4 +1,4 @@
-# leon2m FUN_a0146870 0xa0146870-0xa01468d8 (104 bytes)
+# leon2m FUN_a0146870 0xa0146870-0xa014692c (188 bytes)
 a0146870:  9d e3 bf 98  save  %sp, -104, %sp
 a0146874:  82 0e 20 ff  and  %i0, 0xff, %g1
 a0146878:  a0 10 00 1c  mov  %i4, %l0
@@ -25,3 +25,24 @@ a01468c8:  b5 36 a0 10  srl  %i2, 0x10, %i2
 a01468cc:  b7 36 e0 10  srl  %i3, 0x10, %i3
 a01468d0:  67 fd 1f a5  call  0x4008e764
 a01468d4:  81 e8 00 00  restore
+a01468d8:  b8 0f 60 ff  and  %i5, 0xff, %i4
+a01468dc:  10 bf ff f3  b  0xa01468a8
+a01468e0:  90 10 20 00  clr  %o0
+a01468e4:  b8 0f 60 ff  and  %i5, 0xff, %i4
+a01468e8:  10 bf ff f0  b  0xa01468a8
+a01468ec:  90 10 20 01  mov  1, %o0
+a01468f0:  b8 0f 60 ff  and  %i5, 0xff, %i4
+a01468f4:  10 bf ff ed  b  0xa01468a8
+a01468f8:  90 10 20 02  mov  2, %o0
+a01468fc:  b8 0f 60 ff  and  %i5, 0xff, %i4
+a0146900:  10 bf ff ea  b  0xa01468a8
+a0146904:  90 10 20 03  mov  3, %o0
+a0146908:  b8 0f 60 ff  and  %i5, 0xff, %i4
+a014690c:  10 bf ff e7  b  0xa01468a8
+a0146910:  90 10 20 04  mov  4, %o0
+a0146914:  b8 0f 60 ff  and  %i5, 0xff, %i4
+a0146918:  10 bf ff e4  b  0xa01468a8
+a014691c:  90 10 20 05  mov  5, %o0
+a0146920:  b8 0f 60 ff  and  %i5, 0xff, %i4
+a0146924:  10 bf ff e1  b  0xa01468a8
+a0146928:  90 10 20 06  mov  6, %o0
