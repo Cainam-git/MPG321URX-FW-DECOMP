@@ -8470,6 +8470,13 @@
       "name": "FUN_a00f7534",
       "status": "matched"
     },
+    "ram:a00f7608": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets 0xCF00EE80/EEC0/EEC4 bits and streams a u16 table (default DAT_0019a334) to 0xCF00EEC8 (0x68/0x40 variant)",
+      "name": "FUN_a00f7608",
+      "status": "matched"
+    },
     "ram:a00f7894": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
