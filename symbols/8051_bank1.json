@@ -996,6 +996,13 @@
       "name": "FUN_CODE_d086",
       "status": "matched"
     },
+    "CODE:d095": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "store the Leon2 base address in XDATA 0xA70D and print it (FE2P_SetLeon2BaseAddress)",
+      "name": "FUN_CODE_d095",
+      "status": "matched"
+    },
     "CODE:d171": {
       "by": "hand",
       "comment": "copy the 0x11A bytes at XDATA 0x3E00 into port byte 0xD5E3 with 0xD5E0 set to 0x22, then restore 0xD5E0",
