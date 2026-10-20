@@ -1,7 +1,7 @@
 /* FUN_a0061348 (leon2s 0xa0061348-0xa00613cc, 132 bytes), flags -mcpu=v8 -Os -g.
- * Writes the word x as 8 hexadecimal digits (most significant first) to the UART: each digit is looked up in the
- * character table s_a00b3a08 ("0123456789ABCDEF") and sent with the body of FUN_a006122c (wait for bit 5 of status register
- * 0xc00c0014, at most 0xffffe polls, then write 0xc00c0000), which is inlined from a static copy.
+ * Writes the 8 nibbles of the word x (most significant first) as characters of the table s_a00b3a08
+ * ("0123456789ABCDEF") to hardware register 0xc00c0000, each with the body of FUN_a006122c (wait at most 0xffffe
+ * polls for bit 5 of register 0xc00c0014, then write 0xc00c0000), inlined from a static copy.
  */
 #define REG_c00c0000 (*(volatile unsigned int *)0xc00c0000)
 #define REG_c00c0014 (*(volatile unsigned int *)0xc00c0014)
