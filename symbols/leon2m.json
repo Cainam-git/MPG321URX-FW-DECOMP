@@ -9494,6 +9494,13 @@
       "name": "FUN_a011c998",
       "status": "matched"
     },
+    "ram:a011ca58": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "serial port data writes via FUN_a011b3e8: low and high byte of v",
+      "name": "FUN_a011ca58",
+      "status": "matched"
+    },
     "ram:a011cc44": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
