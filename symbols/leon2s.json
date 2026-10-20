@@ -5795,6 +5795,12 @@
       "name": "FUN_a00c5d34",
       "status": "matched"
     },
+    "ram:a00c5da8": {
+      "by": "hand",
+      "comment": "Program an 8-bit setting into an input through ROM register routines and reset its state",
+      "name": "FUN_a00c5da8",
+      "status": "matched"
+    },
     "ram:a00c6730": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
