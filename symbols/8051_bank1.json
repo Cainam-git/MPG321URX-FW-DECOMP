@@ -838,6 +838,13 @@
       "name": "FUN_CODE_b456",
       "status": "matched"
     },
+    "CODE:b56a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "initialise the XDATA registers 0xDCB0..0xDCEA and set or clear their enable bits from bit 0x00",
+      "name": "FUN_CODE_b56a",
+      "status": "matched"
+    },
     "CODE:ba6d": {
       "by": "hand",
       "comment": "store the hi/lo pair of channel ch at 0xA73C and its step (hi - lo) / (5 * (0xA73B & 0x1F)) at 0xA737[ch]",
