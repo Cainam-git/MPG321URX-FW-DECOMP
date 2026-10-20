@@ -4277,6 +4277,13 @@
       "name": "FUN_a00aa4e0",
       "status": "matched"
     },
+    "ram:a00aa9d8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Calls FUN_a0146b50/FUN_a0146b6c, then for i = 0..2 FUN_a0146a80 (when FUN_a00aa520(i) == 0) and FUN_a00a31a4 with entry i * 29 + DAT_a802d290 byte +8 of DAT_00188634, then FUN_a00b6d58",
+      "name": "FUN_a00aa9d8",
+      "status": "matched"
+    },
     "ram:a00aaaac": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
