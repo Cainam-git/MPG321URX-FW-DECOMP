@@ -9676,6 +9676,13 @@
       "name": "FUN_a011f1c8",
       "status": "matched"
     },
+    "ram:a011f364": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "record r to regs base+4..8 of block blk (bases DAT_001a2fb0, 2 = both): b0, b1, b4:b5 nibbles, h2 & 0xfff",
+      "name": "FUN_a011f364",
+      "status": "matched"
+    },
     "ram:a011fbd8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
