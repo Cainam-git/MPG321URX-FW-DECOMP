@@ -14499,6 +14499,13 @@
       "name": "FUN_a0141d50",
       "status": "matched"
     },
+    "ram:a0141edc": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "for port <= 3 and record type 5, sets bits 10/9/8 from FUN_a0110f4c/FUN_a0110f54(port)",
+      "name": "FUN_a0141edc",
+      "status": "matched"
+    },
     "ram:a01420e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
