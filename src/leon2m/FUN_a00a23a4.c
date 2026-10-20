@@ -4,7 +4,7 @@
  * (b = byte 0xa8025c56), FUN_a00a900c(word 0xa802afec - 0x34, 1), FUN_a00a9468(1, 2), FUN_a00b34d4(0, 1).
  * Value 2: copies byte 0xa802d290+0x1eb to 0xa8025c55 and calls FUN_a00a1a68. Both then call FUN_a00dabc8 and
  * set bit 1 of byte 0xa802b08e; other values return at once.
- * sel1 and sel3 are the values 1 and 3 of FUN_a00a14bc (selection by word 0xa802afec, 0xc0..0xc2 and 0xf7..0xf9),
+ * sel1 and sel3 are the values 1 and 3 of FUN_a00a14bc (chosen by word 0xa802afec, 0xc0..0xc2 and 0xf7..0xf9),
  * which GCC inlines here as two jump-table switches (tables 0x30b90 and 0x30c78). The inlined copy is written with
  * its cases in ascending record-offset order (0x1e8 ... 0x1ed); that order gives the firmware's block layout.
  * The switch on the byte gives the signed compare chain (ble / bne).

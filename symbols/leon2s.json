@@ -5842,7 +5842,7 @@
     },
     "ram:a00af690": {
       "by": "h17",
-      "comment": "Updates the byte DAT_a8079338[port] from a FUN_a00aceec range test at most once per 0x28 FUN_a00b2064 ticks; returns it",
+      "comment": "Updates the byte DAT_a8079338[port] from a FUN_a00aceec range test at most once per 0x28 counts of FUN_a00b2064; returns it",
       "name": "FUN_a00af690",
       "status": "matched"
     },
@@ -6474,7 +6474,7 @@
     },
     "ram:a00c0dfc": {
       "by": "h17",
-      "comment": "Writes 5 bytes of a to registers 0x1a..0x1e and 0x11a bytes of b through the 0xa1/0xa2/0xa3 address-data registers of port",
+      "comment": "Writes 5 bytes of a to registers 0x1a..0x1e and 0x11a bytes of b through registers 0xa1/0xa2/0xa3 of port",
       "name": "FUN_a00c0dfc",
       "status": "matched"
     },
@@ -6522,7 +6522,7 @@
     },
     "ram:a00c1c18": {
       "by": "h23",
-      "comment": "reads storage blocks into five stack buffers, falls back to fixed tables when a block is all zero, and passes the buffers to the per-input setup routines",
+      "comment": "reads five blocks into stack buffers, uses constant tables instead when a block is all zero, and passes the buffers to the following calls",
       "name": "FUN_a00c1c18",
       "status": "matched"
     },
@@ -6577,7 +6577,7 @@
     },
     "ram:a00c5f18": {
       "by": "h17",
-      "comment": "Updates bit param_1 of DAT_a8078c58, ORs a flag into DAT_a80788d2 and calls FUN_a00c5da8 on a change; then FUN_a00c5d34",
+      "comment": "Updates bit param_1 of DAT_a8078c58, ORs a bit into DAT_a80788d2 and calls FUN_a00c5da8 when the bit changed; then FUN_a00c5d34",
       "name": "FUN_a00c5f18",
       "status": "matched"
     },
@@ -6967,7 +6967,7 @@
     },
     "ram:a00cdde0": {
       "by": "h23",
-      "comment": "sets the record field to 1, polls FUN_a00c2488 up to 30 times, then sends DAT_a807ce50 in 16 groups of 8 bytes to 0x69220..",
+      "comment": "sets the record field to 1, polls FUN_a00c2488 up to 30 times, then writes DAT_a807ce50 in 16 groups of 8 bytes to 0x69220..",
       "name": "FUN_a00cdde0",
       "status": "matched"
     },

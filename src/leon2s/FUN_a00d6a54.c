@@ -5,7 +5,7 @@
  * nothing. The third parameter is not used (callers pass it).
  * Source forms: switch on type; the counter is set to 0 before the n != 0 test of each case and the copy is
  * a do-while; the destination pointer is a local of each case block; the first destination is written as
- * byte offsets in Ghidra's order (entry * 11 first).
+ * byte offsets with entry * 11 first.
  */
 extern unsigned char DAT_a8078832;
 extern unsigned char DAT_a8078808[];
