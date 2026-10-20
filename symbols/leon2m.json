@@ -8497,6 +8497,13 @@
       "name": "FUN_a00fcdd8",
       "status": "matched"
     },
+    "ram:a00fce0c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Copies the five bytes at DAT_a802c968 to a buffer",
+      "name": "FUN_a00fce0c",
+      "status": "matched"
+    },
     "ram:a00fd558": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
