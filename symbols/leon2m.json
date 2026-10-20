@@ -3326,6 +3326,13 @@
       "name": "FUN_a0097cc4",
       "status": "matched"
     },
+    "ram:a0097d3c": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets byte 0xa802d2bf to 0 (afec 0x7f) or 1 (afec 0x80) and on change calls FUN_a00d91fc(0), FUN_a0148268 twice, FUN_a00da254",
+      "name": "FUN_a0097d3c",
+      "status": "matched"
+    },
     "ram:a0098280": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
