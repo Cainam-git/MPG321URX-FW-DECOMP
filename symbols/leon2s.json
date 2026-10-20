@@ -7069,6 +7069,12 @@
       "name": "FUN_a00d8fdc",
       "status": "matched"
     },
+    "ram:a00d904c": {
+      "by": "hand",
+      "comment": "reads a response with FUN_a00d73b4(.., 0x1c), sends header type 0x25 with FUN_a00d791c and sets bit 5 of the selected DAT_a80760a4 register",
+      "name": "FUN_a00d904c",
+      "status": "matched"
+    },
     "ram:a00d9474": {
       "by": "hand",
       "comment": "Sends a 19-byte packet (id, 16 register bytes from +0xd00, a, b) with FUN_a00d791c and sets bit 5 of the block's first register",
