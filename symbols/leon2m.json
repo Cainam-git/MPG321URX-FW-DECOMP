@@ -2652,6 +2652,13 @@
       "name": "FUN_a0091094",
       "status": "matched"
     },
+    "ram:a00911a0": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Unless bit 10 of 0xa802cff4 or FUN_a013ce6c(0) != 0xc: FUN_a00b5378, then by bit 14 of 0xa802d290 sets afec 1 with FUN_a0146 calls or afec 2 with FUN_a00b4144(0, 1); FUN_a00b0034(0), FUN_a00a45a8",
+      "name": "FUN_a00911a0",
+      "status": "matched"
+    },
     "ram:a0091648": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
