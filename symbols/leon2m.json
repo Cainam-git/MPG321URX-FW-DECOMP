@@ -13050,6 +13050,13 @@
       "name": "FUN_a013bdb8",
       "status": "matched"
     },
+    "ram:a013beb0": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Flag from ((h10 - h14) * he) >> 1 > 0x1fff of the record from FUN_a013cd4c(port), FUN_a00f8918(port), then the FUN_a013bd00 body",
+      "name": "FUN_a013beb0",
+      "status": "matched"
+    },
     "ram:a013bfa8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
