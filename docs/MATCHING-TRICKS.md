@@ -28,6 +28,9 @@ symbol names are not allowed.
   `tools/mergetails.py`).
 - **Look for inlined helpers.** A standalone firmware function without callers that matches a block of the function
   you are working on is a static helper that GCC inlined. Write it as a `static` function and call it.
+- **A test repeated before every small block** (for example the same three-way port test four times) means small
+  helper functions defined in the same file that GCC inlined at `-O3`. Define the helpers in your file and call them;
+  each inlined copy repeats the test.
 - **Try every optimisation level.** Each LEON file was compiled with its own flags: mostly `-O2 -g`, often `-O3`, with
   or without `-g` and `-msoft-float`, sometimes `-Os -g` or no optimisation at all. The flags of every matched
   function are recorded in `symbols/<section>.json`.
@@ -70,6 +73,10 @@ symbol names are not allowed.
 | A busy-wait that jumps to its test first, with a single `nop` as body | `while (cond) __asm__ volatile ("nop");`. |
 | The same wait-then-write laid out differently in two places | One static helper, inlined twice. |
 | An else-arm that reloads a register address and jumps back into shared code | The source wrote the same read-modify-writes twice, once per register. GCC merged the tails. A pointer picked with `?:` does not match. |
+| `and x, 0xff` right after an `ldub`, and the byte value then used in wider arithmetic | The byte was read into an `unsigned char` variable and then copied into an `unsigned int` variable. |
+| A pointer table passed to a function, and the whole address of another global kept in a register across the loop | The table is an extern array symbol (`extern unsigned int DAT_00188634[];`), not a cast constant `(unsigned int *)0x188634`. |
+| A structure copied halfword by halfword into a local | A plain structure assignment; the record has only 2-byte alignment (`unsigned short` members). |
+| A word tested with a mask, then one of its bits cleared or set as a field (`andn`/`or` with a shifted value) | A union of a plain word and a bit-field view: test `u.w & mask`, write `u.f.bit`. |
 | An extension into a temporary, then a move into the variable, after a call | The return of an inlined helper with an early return, e.g. `static u16 rd(void) { if (c) return f(a); return f(b); }`. |
 | A retry decrement placed before the call gives `add` + `cmp`; after the call it gives `addcc` | Place the decrement to match. |
 | Retry loops | `for (; a != read() && n < N; n++) a = read();`, with the comparison first and the counter second. |
@@ -88,6 +95,10 @@ symbol names are not allowed.
   registers are off by a swap, try that instead of a fresh variable.
 - **Define a value fully inside each branch** (`if (x) a = w + k; else a = w;`) when a register that should be free
   is still considered live.
+- **Conditional expressions in a `for` header.** `for (i = c ? 0 : x; i <= (c ? 2 : x); i++)` compiles the condition
+  as `addx`/`btst` flag arithmetic; the same bounds in separate variables give `subx`/`orcc`.
+- **A default assignment** before an if/else that sets the same field in every arm (`d.dev = 0xff;`) changes the
+  block layout and registers, although it is dead code.
 - **Small static helpers.** The same instructions with different register names throughout often means the original
   used small helpers (e.g. a 16-bit register write) that GCC inlined.
 - **Types of values that only feed parameters:** declare them with the parameter's type, e.g. `unsigned short`.
@@ -182,6 +193,14 @@ changing the code, and test all pairs.
   `find_free_reg` shows each allocation choice.
 - **Block numbers in dumps** are only comparable while the block numbering stays the same. Any source change that
   renumbers blocks can fake a moved order; always confirm with the real bytes.
+
+- **Permutation search.** `tools/permuter2.py <section> --names <fn> --src <draft> --budget 300` often finds the
+  missing register or order detail of a 60 to 90 % draft within seconds; it writes its best source to
+  `<draft>.p2.c`. Rewrite what it found into natural C and check again: it can produce undefined behaviour (a
+  variable read before it is set), which is never accepted.
+- **Compiler aids.** A statement that emits no instructions but changes register allocation or block order (an empty
+  `if (v) { }`, `x++; x--;`, `__builtin_expect`) is accepted only when the file header names it and says what it
+  changes.
 
 ## Proven dead ends
 
