@@ -8325,6 +8325,13 @@
       "name": "FUN_a00f8cc4",
       "status": "matched"
     },
+    "ram:a00f8ce4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes two 16-bit values as byte pairs into registers +0x60..+0x6C of a block, with optional halving and swap",
+      "name": "FUN_a00f8ce4",
+      "status": "matched"
+    },
     "ram:a00f8dd4": {
       "by": "hand",
       "comment": "Calls FUN_a00f1ce4(param_1 & 0xff, 0x14) and returns the result masked to 12 bits. The unused second parameter param_2 is part of the signature. Frame: save %sp, -104, %sp.",
