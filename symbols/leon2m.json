@@ -5138,6 +5138,13 @@
       "name": "FUN_a00c8410",
       "status": "matched"
     },
+    "ram:a00c8614": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: digit 0-3 -> FUN_a014459c into record byte 0x20, reply 5600+ (same code as FUN_a00c8410)",
+      "name": "FUN_a00c8614",
+      "status": "matched"
+    },
     "ram:a00c93e0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
