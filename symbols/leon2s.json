@@ -3979,6 +3979,12 @@
       "name": "FUN_a0094f64",
       "status": "matched"
     },
+    "ram:a0094fb0": {
+      "by": "hand",
+      "comment": "tail-calls FUN_a00734c4 with one of eight addresses DAT_a00691f0..DAT_a00692d0 selected by v",
+      "name": "FUN_a0094fb0",
+      "status": "matched"
+    },
     "ram:a009584c": {
       "by": "hand",
       "comment": "return 0 if 70404() or 70414(); for ch 0 and 1: if 91bac(ch): 950a0(ch, 9), 91578(ch); return 1",
