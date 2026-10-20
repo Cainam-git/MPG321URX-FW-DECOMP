@@ -3507,6 +3507,13 @@
       "name": "FUN_a00976a8",
       "status": "matched"
     },
+    "ram:a00976f8": {
+      "by": "h25",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "when byte 0x1f of DAT_a802d290 differs from DAT_a8025c56: updates flag bits at 0xa802cff4 and runs a fixed call sequence",
+      "name": "FUN_a00976f8",
+      "status": "matched"
+    },
     "ram:a0097814": {
       "by": "h10",
       "cflags": "-mcpu=v8 -O3 -g",
