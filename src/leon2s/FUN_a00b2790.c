@@ -1,5 +1,5 @@
 /* FUN_a00b2790 (leon2s 0xa00b2790-0xa00b281c, 140 bytes), flags -mcpu=v8 -Os -g.
- * Parses n hexadecimal characters of s ('0'-'9', 'A'-'F', 'a'-'f'; any other character counts as 0) and returns
+ * Converts n hexadecimal characters of s ('0'-'9', 'A'-'F', 'a'-'f'; any other character counts as 0) and returns
  * the value (r = r * 16 + digit). The digit is a signed char that starts at 0 (set before the tests).
  */
 int FUN_a00b2790(const unsigned char *s, int n)
