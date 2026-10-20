@@ -13577,6 +13577,13 @@
       "name": "FUN_a014b968",
       "status": "matched"
     },
+    "ram:a014b980": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "p 0xfe: FUN_a0138c20 for 0x51, 0x61 and 0x71/0x81 by FUN_a012ad6c; else mapped port 0..3 -> FUN_a0138c20(0x51/0x61/0x71/0x81, v)",
+      "name": "FUN_a014b980",
+      "status": "matched"
+    },
     "ram:a014ba68": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
