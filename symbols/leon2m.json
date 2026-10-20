@@ -1688,6 +1688,13 @@
       "name": "FUN_a002a878",
       "status": "matched"
     },
+    "ram:a002a880": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Stores v in the 15x16 word table at 0xa802b170 at row i and the lowest set bit of mask, within per-row limits at 0x199278",
+      "name": "FUN_a002a880",
+      "status": "matched"
+    },
     "ram:a002a910": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
