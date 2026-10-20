@@ -12197,7 +12197,7 @@
     "ram:a0126360": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "Writes the 16-bit OLED luminance gain to panel register 0x5e and retries until the read-back matches",
+      "comment": "Writes a 16-bit value big-endian to register 0x5e with FUN_a0147aa0(0x60, 2, 0x5e, ...) and repeats while the read-back differs (retry byte 0xa802c9fd up to 9)",
       "name": "FUN_a0126360",
       "status": "matched"
     },
@@ -12288,7 +12288,7 @@
     "ram:a0126f4c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "Writes the OLED screen saver range (from bits of 0xa802d46c..0xa802d471) to panel register 0x60 with read-back retries",
+      "comment": "Writes a 2-byte value built from bytes 0xa802d46c..0xa802d471 to register 0x60 with FUN_a0147aa0 and repeats while the read-back differs",
       "name": "FUN_a0126f4c",
       "status": "matched"
     },
@@ -12325,6 +12325,12 @@
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
       "comment": "OLED set Inspection Pattern: I2C 0x60 reg 0x1C8 write + read-back, retries bounded (row 1e)",
       "name": "FUN_a0127724",
+      "status": "matched"
+    },
+    "ram:a0127898": {
+      "by": "h19",
+      "comment": "clears the record at 0xa802d896 and sets its byte +0x0f to 2",
+      "name": "FUN_a0127898",
       "status": "matched"
     },
     "ram:a01278e4": {
