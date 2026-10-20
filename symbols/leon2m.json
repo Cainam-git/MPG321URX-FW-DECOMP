@@ -9274,6 +9274,13 @@
       "name": "FUN_a011a554",
       "status": "matched"
     },
+    "ram:a011a574": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "copies record p[0..4] into regs base+0xaa/0xab/0xad/0xae/0xaf/0xcf of block blk (bits of p[0] set/clear single bits)",
+      "name": "FUN_a011a574",
+      "status": "matched"
+    },
     "ram:a011a848": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
