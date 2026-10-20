@@ -4937,6 +4937,12 @@
       "name": "FUN_a00a6668",
       "status": "matched"
     },
+    "ram:a00a66dc": {
+      "by": "h16",
+      "comment": "writes a 16-bit value as byte registers reg and reg + 1 of block DAT_a00b4d9c[port] for ports 0/1, both blocks for port 2",
+      "name": "FUN_a00a66dc",
+      "status": "matched"
+    },
     "ram:a00a68d0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
