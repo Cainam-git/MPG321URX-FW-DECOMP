@@ -1598,7 +1598,7 @@
     },
     "ram:a00613cc": {
       "by": "hand",
-      "comment": "writes a byte as 2 hex digits to the UART (inlined copy of FUN_a006122c)",
+      "comment": "writes the 2 nibbles of a byte as characters of s_a00b3a08 to register 0xc00c0000 (FUN_a006122c body inlined)",
       "name": "FUN_a00613cc",
       "status": "matched"
     },
