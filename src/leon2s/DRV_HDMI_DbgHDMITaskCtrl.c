@@ -1,7 +1,6 @@
 /* DRV_HDMI_DbgHDMITaskCtrl (leon2s 0xa00a3250-0xa00a32d0, 128 bytes), flags -mcpu=v8 -Os -g.
- * Debug command handler: prints s_a00b4cc0 through FUN_a00734c4, then takes the task selector at byte 3 and the
- * on/off flag at byte 7 of the argument block. Selector 0: FUN_a0073540(0) when on, else FUN_a00735c0(0).
- * Selector 1: DRV_HDMI_Start_Timer(1) when on, else DRV_HDMI_Del_Timer(1). Returns 0. Both bytes are read into
+ * Calls FUN_a00734c4(s_a00b4cc0), then reads byte 3 (sel) and byte 7 (on) of the argument block. sel 0: FUN_a0073540(0) when on, else FUN_a00735c0(0).
+ * sel 1: DRV_HDMI_Start_Timer(1) when on, else DRV_HDMI_Del_Timer(1). Returns 0. Both bytes are read into
  * locals before the tests (the firmware loads byte 7 once).
  */
 extern char s_a00b4cc0[];
