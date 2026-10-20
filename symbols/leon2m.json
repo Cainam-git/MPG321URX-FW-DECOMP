@@ -9482,6 +9482,13 @@
       "name": "FUN_a0104a34",
       "status": "matched"
     },
+    "ram:a0104b2c": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "calls FUN_a00f2298(blk, 0x54, 1), then writes val to the 0xcf013800/0xcf01b000 registers selected by blk",
+      "name": "FUN_a0104b2c",
+      "status": "matched"
+    },
     "ram:a0104c34": {
       "by": "hand",
       "comment": "1 when bits 0..1 of reg 0x54 of block blk are non-zero (block 8: up to 4 tries)",
