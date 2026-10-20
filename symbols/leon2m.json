@@ -9246,6 +9246,13 @@
       "name": "FUN_a011a554",
       "status": "matched"
     },
+    "ram:a011a848": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "n != 0xff: bits 3-5 of reg base+0xa1 = min(n,8)-1 and bit 4 of base+0xaa set; n == 0 clears both",
+      "name": "FUN_a011a848",
+      "status": "matched"
+    },
     "ram:a011b36c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
