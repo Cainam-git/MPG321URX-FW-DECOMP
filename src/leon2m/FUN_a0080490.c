@@ -1,5 +1,5 @@
 /* leon2m FUN_a0080490 @ 0xA0080490..0xA00808AC (263 words) "APPSetPowerOff".
- * -mcpu=v8 -O3 -g (also -msoft-float).
+ * Flags -mcpu=v8 -O3 -g (-msoft-float gives the same code).
  * Where: App_Initialize FUN_a0086ae8 calls it as FUN_a0080490(1) for power-on type 4 only (start-up step 3, after
  * step 2). Strings: "APPSetPowerOff" (ROM 0xFED10), "----> %d(%d)" (0xFED28), "OFFSENSING" (0xFED38),
  * "---> return" (0xFED48), "POWEROFF" (0xFED58).
@@ -24,8 +24,8 @@
  *    FUN_a008767c(1); tail call func_0x4008f8d8.
  * Can it wait or fail? No loop of its own. FUN_a014512c(0, 1) waits for the panel-off state with no limit but relays
  * the liveness ring each round (decomp of FUN_a014512c, see FUN_a008ef48.c); the 10-tick delay needs the timer IRQ.
- * Pins named "0xFF/..." go to FUN_a002c86c with port 0xFF, which does nothing (ports > 17, see the byte-exact FUN_a002c86c).
- * Exact form: the two printed bytes are int locals (the firmware masks them at the call), the 'w0b0 != 0' and
+ * Pins named "0xFF/..." go to FUN_a002c86c with port 0xFF, which does nothing (ports > 17, see FUN_a002c86c).
+ * Source form: the two printed bytes are int locals (the firmware masks them at the call), the 'w0b0 != 0' and
  * 'arg == 0' tests are nested ifs (an '&&' becomes set-flag code), the byte 0xA802D033 store comes before the
  * u16 0xA802D000 store, and the four 0xFF stores are written 3, 2, 1, 0.
  */

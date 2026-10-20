@@ -6,12 +6,11 @@
  * clears the registers 0xcf006b30 and 0xcf006b34, calls the hook pointer _DAT_a802c9e0 if it
  * is non-null, calls FUN_a002e3c4(0, 1) and sets bit 0 of _DAT_a802c9e4.
  * Callers: no direct 'call 0xa002ef0c' in asm/leon2m (reached via a pointer/table).
- * Aids: none. Code fact that makes it exact: the hook takes NO argument
- * ('void (*)(void)'). With the draft's '_DAT_a802c9e0(0)' gcc sets %o0 = 0 for the hook in
- * the 'be' delay slot and reorg does not advance the branch past the clr %o0 at the join
- * (be target +84 vs fw +88, jf 98.00); with no hook argument the delay-slot clr %o0 is
- * FUN_a002e3c4's first argument stolen from the target, exactly as in the fw. Draft's
- * 'return 0' in a void function dropped. FUN_a002e3c4 = (bit, on): (int, unsigned char).
+ * Aids: none. The hook takes NO argument ('void (*)(void)'). With an argument, '_DAT_a802c9e0(0)', gcc sets
+ * %o0 = 0 for the hook in the 'be' delay slot and reorg does not advance the branch past the clr %o0 at the join
+ * (be target +84 vs fw +88); with no hook argument the delay-slot clr %o0 is FUN_a002e3c4's first argument
+ * stolen from the target, exactly as in the fw. The function returns nothing.
+ * FUN_a002e3c4 = (bit, on): (int, unsigned char).
  */
 extern int func_0x00092254(int, int);
 extern int func_0x000ee758(void);

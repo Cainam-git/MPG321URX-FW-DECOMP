@@ -1,6 +1,4 @@
-/* leon2m FUN_a0081ea8 @ 0xa0081ea8..0xa0082acc (777 words), flags -mcpu=v8 -O3 -g
- * (rawcmp a0081ea8..a0082acc 777 words / 0 mismatches).
- * Hand: all 6 cases written from the asm.
+/* leon2m FUN_a0081ea8 @ 0xa0081ea8..0xa0082acc (777 words), flags -mcpu=v8 -O3 -g.
  *
  * What it does: APP power-state entry, switch on the state 0..5 (jump table at run-time 0x201EC, case = +0xA0060000).
  * G = settings block DAT_a802d290 (w000 flags, b01e current item, 0x1fc bytes), C = DAT_a802cff4 state words.
@@ -16,22 +14,21 @@
  *   and FUN_a0090fcc() != 0xFE: (w000 bit 9 clear: FUN_a0124b40, FUN_a0124a68, af60[0..3] = 0xFF),
  *   FUN_a00d9978, FUN_a00d99a8, FUN_a00da754(G b0ac); when C->h006 bit 6: clear it, next item, FUN_a0086ae8(3).
  *
- * Keys: cff4 +0 / +4 as BIT-FIELDS (susp:2 = bits 13..14, b12, b14, b10), w000 bit 14 clear as a bit-field,
+ * Source form: cff4 +0 / +4 as BIT-FIELDS (susp:2 = bits 13..14, b12, b14, b10), w000 bit 14 clear as a bit-field,
  * if/else FUN_a014a820(1)/(0), the store orders of the b1a1/b1a2 tails and the 0xFF byte groups.
- * Keys (case 5):
- * - C->h006 bit-6 clear as a BIT-FIELD (s006.b6 = 0): fixes the and/sth/or schedule at 0xA0082210..18.
- * - DOCUMENTED NO-CODE AID, dead test: 'm' is the unsigned short result of FUN_a0090fcc(); 'm >> 16' is always 0
+ * Source form (case 5):
+ * - C->h006 bit-6 clear as a BIT-FIELD (s006.b6 = 0): gives the and/sth/or schedule at 0xA0082210..18.
+ * - Compiler aid (no code), dead test: 'm' is the unsigned short result of FUN_a0090fcc(); 'm >> 16' is always 0
  *   (a 0..0xFFFF value shifted right by 16), so '!(m >> 16)' is always 1 and the added '&&' operand never jumps:
  *   behaviour is unchanged and combine deletes the test (nonzero bits of the zero-extended u16), so it emits NO
- *   instruction (final code = firmware, ). __builtin_expect(.., 1) only states that it is always true (a
- *   branch-probability note, no code). Why it is needed: without it cse1 follows the 'w000 bit 9 set' jump around
- *   the then-block (cse skip-blocks, the join label had one use) and reuses the &DAT_a802d290 register of the w000
- *   test for the b0ac read (fw: a fresh 'or %l0,0x290,%i0' in the FUN_a00d9978 delay slot). The second jump to
- *   the join label stops that; with plain '!(m >> 16)' the bb-reorder cold-trace order moves (97.43), the
- *   __builtin_expect form keeps the firmware layout.
- * - The asm-label alias alternative (extern struct G290 G_alias __asm__("DAT_a802d290") for the b0ac read) also
- *   breaks the CSE link but tops out at rawcmp 1 (0xA00827C8): combine folds the alias' own single-use HIGH into
- *   'sethi %hi(DAT_a802d290+0xac)' instead of reusing %l0. Not used.
+ *   instruction. __builtin_expect(.., 1) only states that it is always true (a branch-probability note, no code).
+ *   Why it is needed: without it cse1 follows the 'w000 bit 9 set' jump around the then-block (cse skip-blocks, the
+ *   join label had one use) and reuses the &DAT_a802d290 register of the w000 test for the b0ac read (fw: a fresh
+ *   'or %l0,0x290,%i0' in the FUN_a00d9978 delay slot). The second jump to the join label stops that; with plain
+ *   '!(m >> 16)' the bb-reorder cold-trace order moves, the __builtin_expect form keeps the firmware layout.
+ * - An asm-label alias (extern struct G290 G_alias __asm__("DAT_a802d290") for the b0ac read) also breaks the CSE
+ *   link, but combine folds the alias' own single-use HIGH into 'sethi %hi(DAT_a802d290+0xac)' instead of reusing
+ *   %l0 (one word differs at 0xA00827C8). Not used.
  */
 struct G290 {
   union { unsigned int w000; struct { unsigned int hi : 17, b14 : 1, x13 : 1, b12 : 1, x : 2, b9 : 1, lo : 9; } s000; };

@@ -1,5 +1,4 @@
-/* leon2m FUN_a008380c @ 0xa008380c  APPGetFRCMode (hand; -mcpu=v8 -O3, no -g.
- * jf 100 %, rawcmp 165 words 0 mismatches)
+/* leon2m FUN_a008380c @ 0xa008380c (165 words)  APPGetFRCMode (flags -mcpu=v8 -O3, no -g)
  *
  * Chooses the frame-rate-conversion (FRC) mode 0..3 for display channel 0 and prints "APPGetFRCMode %x"
  * (string 0xFEED8). Bit 0 of the result goes to FUN_a0148e34, bit 1 to FUN_a0148eb4 (both via pointer-table
@@ -17,19 +16,18 @@
  *       else the tentative mode.
  * The only refresh-rate condition is the +-2.0 Hz window around the active row; on the <62 Hz row that is
  * 46.0..62.0 Hz.
- * Body written instruction by instruction from the original (control flow: e010 == 1 path with <= / >= limits and
- *   the 800x600 case; other path with < / > limits, b1f / b1a4 / 0x95f / FUN_a011cf88 cases, goto out where the
- *   original returns early). Bit 0 of the result selects FRC Lock (via FUN_a0083aa0 -> FUN_a0148e34); FRC result
- *   bits: bit 0 -> 0xA802E3D0 bit 27, bit 1 -> bit 26 = FRC main bypass.
- * Source keys: input values held as int and cast (unsigned short) at use; natural if/else-if chain (gcc predicts
+ * Control flow: the e010 == 1 path with <= / >= limits and the 800x600 case; the other path with < / > limits,
+ *   b1f / b1a4 / 0x95f / FUN_a011cf88 cases, goto out where the firmware returns early. Bit 0 of the result
+ *   selects FRC Lock (via FUN_a0083aa0 -> FUN_a0148e34); FRC result bits: bit 0 -> 0xA802E3D0 bit 27,
+ *   bit 1 -> bit 26 = FRC main bypass.
+ * Source form: input values held as int and cast (unsigned short) at use; natural if/else-if chain (gcc predicts
  *   '== const' false, which puts the special-flag path out of line); '(x7 == 800) & (x8 == 600)' with bitwise &;
  *   the 4..6 test as an unsigned char flag set in an if; the final mode as 'mode = 0; if (t <= 2) mode = 1;';
  *   the special path as 'if (in range) {...} else mode = 0;'.
- * '-mcpu=v8 -O3' (without -g; with -g only one trailing nop after the last call differs, the known
- *   no--g sign). Further levers: b is an unsigned char local, and the two identical "4..6 or 8" bodies are ONE
- *   body under 'if (in46 || DAT_a802d290.b1a4 == 8)'. Re-reading the field in the second operand keeps the || as
- *   two branches (a plain 'b == 8' lets gcc merge it into an orcc), and the 8 test then zero-extends b again,
- *   which produces the firmware's 'and %o5,0xff'.
+ * Flags '-mcpu=v8 -O3' without -g: with -g one trailing nop after the last call differs. b is an unsigned char
+ *   local, and the two identical "4..6 or 8" bodies are ONE body under 'if (in46 || DAT_a802d290.b1a4 == 8)'.
+ *   Re-reading the field in the second operand keeps the || as two branches (a plain 'b == 8' lets gcc merge it
+ *   into an orcc), and the 8 test then zero-extends b again, which produces the firmware's 'and %o5,0xff'.
  */
 
 struct PanelParam { unsigned char b00[0x4e]; unsigned short vf_min, vf_max; unsigned char b52[6]; };

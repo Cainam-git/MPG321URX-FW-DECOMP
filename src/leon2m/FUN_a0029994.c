@@ -1,13 +1,13 @@
-/* leon2m FUN_a0029994 @ 0xa0029994-0xa0029aac (70 words), flags -mcpu=v8 -O3 -g -msoft-float (plain -O3 -g: loop.c hoists the shift constant
- * 1 into %l1, as in the twins FUN_a0029bc4 / FUN_a0029aac).
- * Code facts: interrupt dispatcher, twin of src/leon2m/FUN_a0029bc4.c with bit 2 / status 0x9f020070 / mask 0x9f020038 /
- * hook table 0xa802b170 + 0x40, 6 sources: FUN_a002c268(0x9f000090, 0, 2); FUN_a002c268(0x9f020028, 2, 2);
- * t1 = FUN_a002c250(0x9f020070); t2 = FUN_a002c250(0x9f020038); pending = t1 & ~t2 & 0xffff; l2 = t2 >> 16; for i = 0..5
- * with bit = 1 << i set in pending and a non-zero hook: bit set in l2 -> hook() then ack FUN_a002c25c(0x9f020070, bit);
- * else ack first, then hook() (re-read after the call). Then FUN_a002c25c(0x9f020034, 2),
- * FUN_a002c25c(0x9f00009c, 2), FUN_a002c268(0x9f020028, 0, 2), tail FUN_a002c268(0x9f000090, 2, 2).
- * Fix vs the autoc draft: written from the accepted twin's form (BEHAVIOUR in the draft family: status
- * addresses, masks and loop bounds). Aids: none.
+/* leon2m FUN_a0029994 @ 0xa0029994-0xa0029aac (70 words), flags -mcpu=v8 -O3 -g -msoft-float (with plain
+ * -O3 -g, loop.c hoists the shift constant 1 into %l1, as in the twins FUN_a0029bc4 / FUN_a0029aac).
+ * Code facts: interrupt dispatcher, twin of src/leon2m/FUN_a0029bc4.c with bit 2 / status 0x9f020070 /
+ * mask 0x9f020038 / hook table 0xa802b170 + 0x40, 6 sources: FUN_a002c268(0x9f000090, 0, 2);
+ * FUN_a002c268(0x9f020028, 2, 2); t1 = FUN_a002c250(0x9f020070); t2 = FUN_a002c250(0x9f020038);
+ * pending = t1 & ~t2 & 0xffff; l2 = t2 >> 16; for i = 0..5 with bit = 1 << i set in pending and a non-zero hook:
+ * bit set in l2 -> hook() then ack FUN_a002c25c(0x9f020070, bit); else ack first, then hook() (re-read after the
+ * call). Then FUN_a002c25c(0x9f020034, 2), FUN_a002c25c(0x9f00009c, 2), FUN_a002c268(0x9f020028, 0, 2),
+ * tail FUN_a002c268(0x9f000090, 2, 2).
+ * Source form: the same form as the twin FUN_a0029bc4. Aids: none.
  */
 extern unsigned int FUN_a002c250(unsigned int addr);
 extern void FUN_a002c25c(unsigned int addr, unsigned int value);

@@ -1,6 +1,5 @@
-/* leon2m FUN_a0080c10 @ 0xa0080c10  APP event generator (hand; flags -mcpu=v8 -O3 -g,
- * -msoft-float gives the same code). and
- * rawcmp a0080c10..a0081e0c 0 mismatching words with both flag sets.
+/* leon2m FUN_a0080c10 @ 0xa0080c10..0xa0081e0c  APP event generator (flags -mcpu=v8 -O3 -g; -msoft-float gives
+ * the same code).
  *
  * Runs once per APP step (first call in FUN_a008a210), unless DAT_a802af41 bit 0 is set.
  * - Head: FUN_a0143fb8() set -> af49 = 0, FUN_a0143fc4(0); else event 0x3D when FUN_a0143fa8() rises from 0.
@@ -21,25 +20,22 @@
  *   0x25.. -> 0x29; 0x2E.. -> 0x32.
  * Inlined helpers (standalone copies exist in the firmware): FUN_a0080320 (port used), FUN_a00808ac(p, 0)
  * (state reset), FUN_a00803a4 (all used ports <= 4); all_le3() is the same loop with limit 3 (port rule inline).
- * Source facts: the post-event chain is ONE block 'if (ev != 0x3f) { FUN_a008a184(ev); ... }' (not
+ * Source form: the post-event chain is ONE block 'if (ev != 0x3f) { FUN_a008a184(ev); ... }' (not
  * 'if (ev == 0x3f) continue;'): that is what lifts the 'ev - 56' test to the frequency the fw layout needs
  * (bgu,a + 'add -51' in the delay slot at 0xA0081720); the 0x20 / 4..7 / 0x38 / 0x33 range tests
- * carry no hints (all 50/50 as in the fw). Case orders (multi-move climb of all switches): timer_id 3, 1, 2; delayed-event
+ * carry no hints (all 50/50 as in the fw). Case orders: timer_id 3, 1, 2; delayed-event
  * add switch 1, 3, 2; state switch 0, 3, 1, 2, 4, 5, 6, 8, 9, 10; port-event add switch 2, 3, 1; af42 clear
- * default, 1, 2, 3.
- * Behaviour identical to the earlier hand file: same calls in the same order, switch blocks all end in break/return so their
- * order does not change behaviour, port_used_m() / port_used() are the same function body.
- * Code-free aids (tools/lessons.txt kinds PRED_CONTINUE 'do continue; while (0);' and PRED_GOTO 'goto L; L: ;';
- * they emit no instructions and only set gcc 3.4 branch predictions for bb-reorder / global-alloc; found by
- * greedy search over every statement position, each one kept only if jf rose):
- * every hint line in the code below ('do continue; while (0);' / 'goto X; X: ;'); none is in the 'ev - K' range
- * tests. port_used_m() and port_used_f() are inline copies of the FUN_a0080320 rule (identical code) used only by
+ * default, 1, 2, 3. The switch blocks all end in break/return, so their order does not change behaviour.
+ * port_used_m() / port_used() are the same function body.
+ * Compiler aid: the code-free kinds PRED_CONTINUE 'do continue; while (0);' and PRED_GOTO 'goto L; L: ;'
+ * (tools/lessons.txt); they emit no instructions and only set gcc 3.4 branch predictions for bb-reorder /
+ * global-alloc. Every hint line in the code below is one of these; none is in the 'ev - K' range tests.
+ * port_used_m() and port_used_f() are inline copies of the FUN_a0080320 rule (identical code) used only by
  * the main loop / by all_le4_f0c, so that their arms can carry hints without touching the other inlined copies:
  * port_used_m i == 3 arm PRED_CONTINUE (main-loop port-3 stub above the 0x20 test trace, fw 0xA0081400);
  * port_used_f i == 1 and i == 3 arms PRED_GOTO + 3x PRED_CONTINUE each (net branch odds x0.88: the f0c port-1 /
  * port-3 stubs land between the head 0x3D call / af42 case-1 stub and after the LED-pair block, fw 0xA0081D3C /
- * 0xA0081DBC). The all_le3 'i != 0' else / 'i == 3'-false else hints of the earlier file are gone (the new frequencies put
- * the all_le3 port-1/2/3 stubs at fw 0xA0081318 / 0xA00813C8 / 0xA00814D0 without them).
+ * 0xA0081DBC). The all_le3 port-1/2/3 stubs land at fw 0xA0081318 / 0xA00813C8 / 0xA00814D0 with no hints.
  */
 struct Scff4 { unsigned short h000, h002; unsigned short b15 : 1, susp : 2, rest : 13;
                unsigned char pad06[0x16]; unsigned char b1c; };

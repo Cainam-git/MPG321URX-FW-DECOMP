@@ -1,4 +1,4 @@
-/* leon2m FUN_a0080978 @ 0xa0080978  leave the fake-sleep power state (hand; -mcpu=v8 -O3 -g)
+/* leon2m FUN_a0080978 @ 0xa0080978  leave the fake-sleep power state (flags -mcpu=v8 -O3 -g)
  *
  * m = FUN_a00fe47c(); only when the 2-bit power-suspend field (bits 13..14 of 0xA802CFF8, a bit-field: the mask
  * form allocates registers differently) is 2 and

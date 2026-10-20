@@ -1,5 +1,5 @@
 /* leon2m FUN_a002f550 @ 0xa002f550 (RAM copy, runs at 0x4008F550)  refresh the four port entries from the Small-chip
- * templates and patch their type/flag bits (hand; -mcpu=v8 -O3 -g).
+ * templates and patch their type/flag bits (flags -mcpu=v8 -O3 -g).
  *
  * Entries E0..E3 = 18-byte records at 0xA802E116 / E128 / E13A / E14C (h0 bits 15..12 = type nibble).
  * For n = 0..3: FUN_a0136d20(n) (call shows as 'call 0xd6d20' = func_0x000d6d20) copies template t = n + 2 into En.
@@ -13,10 +13,10 @@
  *     'Mute when Hdcp22Auth\r\n' and set the type nibble to 2. Finally if type != 5: 0xA802CC0A &= ~b.
  * Line-rate switch: this function never touches entry bit 4 (0x10, the line-rate switch); it only
  *   calls FUN_a0136d20 (which writes it) and changes bits 0x400/0x200/0x100 (E0/E1) and the type nibble 5 -> 2 (E2/E3,
- *   for up to 1000 ticks after first sight while HDCP 2.2 auth is running - interpretation from the string).
+ *   for up to 1000 ticks after first sight, the window in which it prints 'Mute when Hdcp22Auth').
  *   A type rewritten to 2 makes FUN_a0142910's type-5 test fail for that port.
  * Callers: FUN_a0153018 (call 0x4008F550 at 0xA015301C, its first statement; FUN_a0142910 is called right after).
- * keys: one extern per entry (E0/E1 addressed with their own %hi/%lo); E2/E3 through a pointer local
+ * Source form: one extern per entry (E0/E1 addressed with their own %hi/%lo); E2/E3 through a pointer local
  *   (gcc keeps &E in a register: 'or %l0,0x13a,%l1', then [l1], [l1+2]); the outer test as
  *   '(unsigned char)e.type == 5' (keeps the sll/srl 28 extraction) and the inner/other tests as plain 'e.type == 5'
  *   (fold turns those into '(h & 0xf000) == 0x5000'); bitfield struct for the flags.

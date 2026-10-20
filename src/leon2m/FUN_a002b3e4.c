@@ -1,5 +1,4 @@
-/* leon2m FUN_a002b3e4 @ 0xa002b3e4..0xa002b758 (221 words). jf 100.00
- * match=True, with -mcpu=v8 -O3 -g.
+/* leon2m FUN_a002b3e4 @ 0xa002b3e4..0xa002b758 (221 words), flags -mcpu=v8 -O3 -g.
  * What it does: bit-banged I2C page write, used by the settings write FUN_a0140e74 (callers FUN_a0153c74 /
  * FUN_a012cfac, only when they write defaults). FUN_a0140e74 calls it with tries 1, stop 1, at most 16 bytes.
  * Code facts: copies the 10-byte bus descriptor *d to RAM 0xA802D992 (FW.021 bus ROM 0x1A69E0[0]: SCL port 6 mask
@@ -14,9 +13,9 @@
  * return value). With mode != 2 the try count would never rise and the loop would not end while ok == 1; FW.021's
  * bus has mode 2, so this does not happen in FW.021.
  * Pin words (SCL/SDA) name the helper arguments (see FUN_a002ab04.c).
- * Byte-exact lever: one byte variable v carries every byte sent (device, address, data), as a driver's 'send byte'
- * variable. Because v is set several times in the retry loop, gcc's loop pass does not hoist the u8 truncation of the
- * device byte out of the retry loop (the fw truncates it after each START); with 'FUN_a002ab04(dev)' it is hoisted.
+ * Source form: one byte variable v carries every byte sent (device, address, data). Because v is set several times
+ * in the retry loop, gcc's loop pass does not hoist the u8 truncation of the device byte out of the retry loop (the
+ * fw truncates it after each START); with 'FUN_a002ab04(dev)' it is hoisted.
  */
 struct I2cBus { unsigned char scl_port, scl_mask, sda_port, sda_mask; unsigned short delay;
                 unsigned char dev, alen; unsigned short mode : 2, rest : 14; };

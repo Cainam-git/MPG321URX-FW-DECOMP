@@ -1,5 +1,4 @@
-/* leon2m FUN_a002be7c @ 0xa002be7c..0xa002c11c (168 words). jf 100.00
- * match=True, with -mcpu=v8 -O3 -g.
+/* leon2m FUN_a002be7c @ 0xa002be7c..0xa002c11c (168 words), flags -mcpu=v8 -O3 -g.
  * What it does: I2C "is the device there" probe. The settings write FUN_a0140e74 uses it as its write-cycle ACK poll
  * after every 16-byte chunk (start-up callers FUN_a0153c74 / FUN_a012cfac, only when they write defaults).
  * Code facts: only if the bus copy 0xA802D992 has mode 2 (else returns 0 at once): START (FUN_a002a910), STOP (SDA 0,
@@ -11,9 +10,9 @@
  * FUN_a0140e74 loops 'while (!FUN_a002be7c(dev)) ;' with no counter (0xA0140F6C..0xA0140F78): a device that never
  * ACKs its address again keeps the Big chip there for ever.
  * Pin words (SCL/SDA) name the arguments of the pin functions (see FUN_a002ab04.c).
- * Byte-exact levers: the first SCL poll is the '&& --t' form like the other two; the probe result is an if/else
+ * Source form: the first SCL poll is the '&& --t' form like the other two; the probe result is an if/else
  * ('if (ab04(dev) == 0) r = 1; else r = 0;'), which puts r in %i0 first and moves it to %l4 later (the '== 0'
- * expression and the '?:' form keep it in another register and cascade 90 words).
+ * expression and the '?:' form keep it in another register and change 90 words).
  */
 struct I2cBus { unsigned char scl_port, scl_mask, sda_port, sda_mask; unsigned short delay;
                 unsigned char dev, alen; unsigned short mode : 2, rest : 14; };
