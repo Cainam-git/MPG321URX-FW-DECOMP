@@ -5277,6 +5277,13 @@
       "name": "FUN_a00be7d4",
       "status": "matched"
     },
+    "ram:a00be81c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART reply: three ASCII digits of byte 0xa802d33c*20+20 in a frame from table row 0x78, clears receive state, sends",
+      "name": "FUN_a00be81c",
+      "status": "matched"
+    },
     "ram:a00beae0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
