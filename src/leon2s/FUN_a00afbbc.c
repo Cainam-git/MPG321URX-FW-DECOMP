@@ -1,14 +1,13 @@
 /* FUN_a00afbbc (leon2s, 0xa00afbbc-0xa00afd04, 328 bytes, 82 words).
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: port = (u8)param_1; FUN_a00a6c00(port, 0x2f, 0x30); FUN_a00a6c00(port, 0xf7, 0);
- * FUN_a00ab6e0(port, u16 field +0x120 of the 300-byte port record ARR_a807dc18[port], 1);
- * FUN_a00a6c98(port, 0xc2, 4, 1) and (.., 8, 1); when (u8)FUN_a008d800() > 0x81 set bit 4 of the
- * hardware word 0xcf011758; FUN_a00abff0, FUN_a00ac66c, FUN_a00af98c (port); FUN_a00aba5c(port, 1, 1, 0)
- * when byte +0x11f of the record is 1; FUN_a00ab884(port, 0); regs 0xc5 = 4, 0xc4 = 0x55; clears
- * bits port and port+4 of DAT_a8079372; regs 0x51 = 0xa0 and (tail) 0x23 = 0x40.
- * Fix vs draft: the record is ARR_a807dc18 as a 300-byte struct (the draft used
- * the mid-record name ARR_a807dd38 with byte offsets, which splits the address arithmetic).
- * Aids: none (volatile only on the 0xcf011758 hardware register).
+ * port = (u8)param_1; FUN_a00a6c00(port, 0x2f, 0x30); FUN_a00a6c00(port, 0xf7, 0); FUN_a00ab6e0(port, u16
+ * field +0x120 of the 300-byte port record ARR_a807dc18[port], 1); FUN_a00a6c98(port, 0xc2, 4, 1) and
+ * (.., 8, 1); when (u8)FUN_a008d800() > 0x81 sets bit 4 of the hardware word 0xcf011758; FUN_a00abff0,
+ * FUN_a00ac66c, FUN_a00af98c (port); FUN_a00aba5c(port, 1, 1, 0) when byte +0x11f of the record is 1;
+ * FUN_a00ab884(port, 0); regs 0xc5 = 4, 0xc4 = 0x55; clears bits port and port+4 of DAT_a8079372;
+ * regs 0x51 = 0xa0 and (tail) 0x23 = 0x40.
+ * The record is ARR_a807dc18 as a 300-byte struct (a mid-record name with byte offsets splits the address
+ * arithmetic). volatile only on the 0xcf011758 hardware register.
  */
 extern unsigned char DAT_a8079372;
 extern unsigned int DAT_a807dd37;

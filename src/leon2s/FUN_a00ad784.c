@@ -1,9 +1,9 @@
 /* FUN_a00ad784 (leon2s, 0xa00ad784-0xa00ad7c8, 68 bytes, 17 words).
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: port = (u8)param_1; result 0; if bit 6 (0x40) of FUN_a00a6bb8(port, 0x8f) is set,
- * result = (FUN_a00ad668(port) != 0) (u8 test btst 0xff). Returns result as a u8 (fw: the final
+ * port = (u8)param_1; result 0; if bit 6 (0x40) of FUN_a00a6bb8(port, 0x8f) is set, result =
+ * (FUN_a00ad668(port) != 0) (u8 test btst 0xff). Returns result as a u8 (firmware: the final
  * 'and %i0,1,%i0' is the u8 return extension narrowed by nonzero-bits).
- * Fix vs draft: return type and result are unsigned char (unsigned int gives no final and). Aids: none.
+ * Source form: return type and result are unsigned char (unsigned int gives no final and).
  */
 extern unsigned int FUN_a00a6bb8(unsigned int param_1, unsigned short param_2);
 extern unsigned char FUN_a00ad668(unsigned int param_1);

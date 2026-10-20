@@ -1,10 +1,9 @@
 /* leon2s FUN_a00af320 @ 0xa00af320-0xa00af464 (81 words), flags -mcpu=v8 -Os -g.
- * Code facts: port = arg & 0xff; FUN_a00a6bb8(port, 0x8f) bit 0x40 clear -> return 0. Else four
- * indexed reads: FUN_a00a6c00(port, 0x70, 0); FUN_a00a6c00(port, 0x73, idx); FUN_a00a6bb8(port, 0x7a)
- * for idx 0xc, 0xd, 0x10, 0x11. num = (b0c << 8) + b0d, div = (b10 << 8) + b11 (both u16, sll/srl 16);
+ * port = arg & 0xff; FUN_a00a6bb8(port, 0x8f) bit 0x40 clear -> return 0. Else four indexed reads:
+ * FUN_a00a6c00(port, 0x70, 0); FUN_a00a6c00(port, 0x73, idx); FUN_a00a6bb8(port, 0x7a) for idx 0xc, 0xd,
+ * 0x10, 0x11. num = (b0c << 8) + b0d, div = (b10 << 8) + b11 (both u16, sll/srl 16);
  * return (div ? (num / div) : 0) & 0xff != 0 (udiv, cmp/addx).
- * Fix vs the autoc draft (97.53): the bytes are combined with '+' (fw add), the draft used '|' (or).
- * Draft junk ('uVar3 = uVar3', 'result = result') removed. Aids: none.
+ * The bytes are combined with '+' (firmware add).
  */
 extern unsigned int FUN_a00a6bb8(unsigned int, unsigned short);
 extern void FUN_a00a6c00(unsigned int, unsigned short, unsigned int);

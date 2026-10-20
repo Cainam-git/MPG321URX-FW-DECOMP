@@ -1,15 +1,13 @@
 /* leon2s FUN_a00ac66c @ 0xa00ac66c-0xa00acac0 (277 words), flags -mcpu=v8 -Os -g.
- * Code facts: port init: a long fixed sequence of FUN_a00a6c00(port, reg, val) writes and
- * FUN_a00a6c98(port, reg, mask, on) bit updates. Per-port 300-byte records at 0xa807dc18 (smul 0x12c):
- * byte +0x112 == 0 -> reg 0xc0 bit 1 off; after reg 0xa0 bit 4 on, byte +0x110 picks reg 0x47 = 0x40
- * (== 0) or 0x80 (== 1). Port 0 only: reg 0x24 bit 0x80 on and, if record 0 byte +0x112 != 0, a
- * block with 0xcf004680 |= 0x20, FUN_a00b1b18(), 0xcf0046a8 &= ~1, 0xcf0046ac &= ~2, regs 9..0xe
- * and FUN_a00a6fc0(0, 0x3e, 1); other ports: reg 0x24 bit 0x80 off. Six final bit updates, the
- * last one a tail call. void.
- * Fixes vs the autoc draft (96.76): real base ARR_a807dc18 (draft: mid-record DAT_a807dd2a /
- * DAT_a807dd28) as a 300-byte struct; both record reads index ARR_a807dc18[port] the same way so
- * cse shares one address (kept in %l0); the +0x110 byte is read AFTER the reg 0xa0 call (fw ldub
- * after the call); void return (draft 'short', no value). Aids: none.
+ * A long fixed sequence of FUN_a00a6c00(port, reg, val) writes and FUN_a00a6c98(port, reg, mask, on) bit
+ * updates. Per-port 300-byte records at 0xa807dc18 (smul 0x12c): byte +0x112 == 0 -> reg 0xc0 bit 1 off;
+ * after reg 0xa0 bit 4 on, byte +0x110 picks reg 0x47 = 0x40 (== 0) or 0x80 (== 1). Port 0 only: reg 0x24
+ * bit 0x80 on and, if record 0 byte +0x112 != 0, a block with 0xcf004680 |= 0x20, FUN_a00b1b18(),
+ * 0xcf0046a8 &= ~1, 0xcf0046ac &= ~2, regs 9..0xe and FUN_a00a6fc0(0, 0x3e, 1); other ports: reg 0x24 bit
+ * 0x80 off. Six final bit updates, the last one a tail call. void.
+ * The base is ARR_a807dc18 as a 300-byte struct. Both record reads index ARR_a807dc18[port] the same way,
+ * so cse shares one address (kept in %l0). The +0x110 byte is read after the reg 0xa0 call (firmware ldub
+ * after the call).
  */
 
 struct Port { unsigned char pad[0x110]; unsigned char b110; unsigned char pad1; unsigned char b112; unsigned char pad2[300 - 0x113]; };

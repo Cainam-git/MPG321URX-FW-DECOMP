@@ -1,8 +1,7 @@
 /* leon2s FUN_a00ac620 @ 0xa00ac620-0xa00ac66c (19 words), flags -mcpu=v8 -Os -g.
- * Code facts: returns the 24-bit value (r(0x3d2) << 16) + (r(0x3d1) << 8) + r(0x3d0) with r(x) = FUN_a00a6bb8(ch, x)
- * & 0xff (three byte registers, high byte first).
- * Fix vs the autoc draft (75.00): BEHAVIOUR - the first read (0x3d2) is the HIGH byte (<< 16) and 0x3d1 is << 8
- * (the draft had them swapped); the bytes are joined with + (fw add), as in FUN_a00af320. Aids: none.
+ * Returns the 24-bit value (r(0x3d2) << 16) + (r(0x3d1) << 8) + r(0x3d0) with r(x) = FUN_a00a6bb8(ch, x)
+ * & 0xff (three byte registers, high byte first). The bytes are joined with + (firmware add), as in
+ * FUN_a00af320.
  */
 extern unsigned int FUN_a00a6bb8(unsigned char, unsigned short);
 

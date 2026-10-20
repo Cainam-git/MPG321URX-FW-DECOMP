@@ -1,9 +1,7 @@
 /* FUN_a00ad6ec (leon2s, 0xa00ad6ec-0xa00ad734, 72 bytes, 18 words).
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: port = (u8)param_1; FUN_a00a6c00(port, 0x70, 0); FUN_a00a6c00(port, 0x73, 8);
- * returns 1 when bit 4 (0x10) of FUN_a00a6bb8(port, 0x7a) is CLEAR, else 0
- * (fw: and 0x10, cmp %g0,%o0, subx %g0,-1 = (x == 0)).
- * Draft behaviour bug fixed: the draft returned (bit != 0). Aids: none.
+ * port = (u8)param_1; FUN_a00a6c00(port, 0x70, 0); FUN_a00a6c00(port, 0x73, 8); returns 1 when bit 4 (0x10)
+ * of FUN_a00a6bb8(port, 0x7a) is clear, else 0 (firmware: and 0x10, cmp %g0,%o0, subx %g0,-1 = (x == 0)).
  */
 extern unsigned int FUN_a00a6bb8(unsigned int param_1, unsigned short param_2);
 extern void FUN_a00a6c00(unsigned int param_1, unsigned short param_2, unsigned int param_3);

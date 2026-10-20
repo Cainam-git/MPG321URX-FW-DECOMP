@@ -1,9 +1,10 @@
 /* FUN_a00af764 (leon2s, 0xa00af764-0xa00af858, 61 words). Flags -mcpu=v8 -Os -g.
- Code facts: void (u8 port). r = FUN_a00add48(port, func_0x9f1c6624(port)) (u8 returns); mask = -1, r 0..1 -> 1, 2..3 -> 2, 4..5 -> 4, 6..7 -> 8.
- If (u8)FUN_a008d800() <= 0x81 and port == 0 and func_0x9f1c6624(0) == 0: FUN_a008ae18(1). m = (u8)mask; if m != 0xff: pulse bits m of the
- hardware register 0xcf0124b8 (|= m, FUN_a00b1794(1), &= ~m).
- Fixes vs draft: BEHAVIOUR the <= 0x81 test is on d800()'s u8 return (the draft tested r); u8 prototypes. void: the only caller
- (DP_GetClrSpace 0xa006f160) overwrites %o0 right after the call; a u8 'return m' version is byte-identical too. Aids: none.
+ * void (u8 port). r = FUN_a00add48(port, func_0x9f1c6624(port)) (u8 returns); mask = -1, r 0..1 -> 1,
+ * 2..3 -> 2, 4..5 -> 4, 6..7 -> 8. If (u8)FUN_a008d800() <= 0x81 and port == 0 and func_0x9f1c6624(0) == 0:
+ * FUN_a008ae18(1). m = (u8)mask; if m != 0xff: pulses bits m of the hardware register 0xcf0124b8 (|= m,
+ * FUN_a00b1794(1), &= ~m).
+ * The <= 0x81 test is on FUN_a008d800()'s u8 return; u8 prototypes. void: the only caller (DP_GetClrSpace
+ * 0xa006f160) overwrites %o0 right after the call; a u8 'return m' version gives the same bytes.
  */
 // FUN_a00af764 at 0xa00af764
 extern unsigned char FUN_a008d800(void);
