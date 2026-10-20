@@ -4849,6 +4849,12 @@
       "name": "FUN_a00a6da8",
       "status": "matched"
     },
+    "ram:a00a6e10": {
+      "by": "hand",
+      "comment": "reads three consecutive block registers (FUN_a00a6da8 space) and returns them combined low byte first",
+      "name": "FUN_a00a6e10",
+      "status": "matched"
+    },
     "ram:a00a6e8c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
