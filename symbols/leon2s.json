@@ -2502,6 +2502,12 @@
       "name": "FUN_a0087d8c",
       "status": "matched"
     },
+    "ram:a0087db4": {
+      "by": "hand",
+      "comment": "Switch port register bits of regs 0x76/0xa0/0x67 by an enable flag",
+      "name": "FUN_a0087db4",
+      "status": "matched"
+    },
     "ram:a0088a80": {
       "by": "hand",
       "comment": "Port 0..4: returns 1 when bit 2 of the FUN_a0083710 status byte is set",
