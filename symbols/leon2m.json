@@ -9654,6 +9654,13 @@
       "name": "FUN_a01073b8",
       "status": "matched"
     },
+    "ram:a0107554": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "clears bit 4 of 0xcf00eac8, then writes 0x33/0x90/0x4e or 0 to registers at 0xcf00e9e8",
+      "name": "FUN_a0107554",
+      "status": "matched"
+    },
     "ram:a010765c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
