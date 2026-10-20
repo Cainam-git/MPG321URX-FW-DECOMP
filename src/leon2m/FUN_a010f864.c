@@ -1,5 +1,5 @@
 /* leon2m FUN_a010f864 @ 0xa010f864-0xa010f8fc (38 words).
- * ch selects a channel record (ch == 1: 0xA802D804, else 0xA802D704) and clears bit 0 of its byte +0x3E. ch == 0
+ * ch selects a record (ch == 1: 0xA802D804, else 0xA802D704) and clears bit 0 of its byte +0x3E. ch == 0
  * then clears bit 20 of hardware registers 0xD0032000 and 0xD003A000; any other ch clears bit 21 of both.
  * Counterpart of FUN_a010f7a4, which sets the same bits. No direct callers were found.
  */

@@ -1,5 +1,5 @@
 /* leon2m FUN_a010a2cc @ 0xa010a2cc-0xa010a3a8 (55 words).
- * mode 1 or 2: sets bit 4 of hardware register 0xcf01e400, waits 200 (func_0x4008d1a0), sets bit 4 of 0xcf01e600,
+ * mode 1 or 2: sets bit 4 of hardware register 0xcf01e400, calls func_0x4008d1a0(200), sets bit 4 of 0xcf01e600,
  * writes bits 6-7 of 0xcf01ea40 as 10 (mode 1) or 11 (mode 2) together with bit 0, keeping bits 0-5 otherwise, and
  * prints "PIVOT_Enable". Any other mode: clears bits 6-7 of 0xcf01ea40 and bit 4 of 0xcf01e400 and 0xcf01e600, and
  * prints "PIVOT_Disable". The print through FUN_a00df170 is a tail call. No direct callers were found.
