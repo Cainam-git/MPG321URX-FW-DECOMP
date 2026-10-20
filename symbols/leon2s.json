@@ -2640,6 +2640,12 @@
       "name": "FUN_a008a1f8",
       "status": "matched"
     },
+    "ram:a008a238": {
+      "by": "hand",
+      "comment": "Set enable bits of register 0xcf012444 under the hardware semaphore 0xcf03c840",
+      "name": "FUN_a008a238",
+      "status": "matched"
+    },
     "ram:a008a470": {
       "by": "hand",
       "comment": "hardware register init: cf0114b0 &= ~4, then blocks of writes to cf011000..cf011018 / cf011058 / cf01105c (real MMIO, written repeatedly)",
