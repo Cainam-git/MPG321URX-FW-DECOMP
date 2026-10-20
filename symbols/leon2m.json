@@ -7370,6 +7370,13 @@
       "name": "FUN_a00e0774",
       "status": "matched"
     },
+    "ram:a00e0788": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Polls a PHY register up to 10 times until the masked value equals the expected value",
+      "name": "FUN_a00e0788",
+      "status": "matched"
+    },
     "ram:a00e0ba8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
