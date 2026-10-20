@@ -11491,6 +11491,13 @@
       "name": "FUN_a0132c54",
       "status": "matched"
     },
+    "ram:a0132cd4": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "When byte 0xa802cb8f is 1: copies byte 0xa802cb8e bytes of 0xa802de40 to dst, clears 0xa802cb8f, returns 1; else 0",
+      "name": "FUN_a0132cd4",
+      "status": "matched"
+    },
     "ram:a01334ec": {
       "by": "hand",
       "comment": "Calls func_0x4008c4d0(0, 0xc, &local, 1) with local a zero-initialized 4-byte buffer and returns the least-significant byte of what the callee wrote there. Declared with two unused uint parameters and a uint return with an explicit cast; frame 112 bytes.",
