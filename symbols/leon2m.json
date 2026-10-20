@@ -7667,6 +7667,13 @@
       "name": "FUN_a00dfb30",
       "status": "matched"
     },
+    "ram:a00dfc50": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns FUN_a00df8f4(id) && FUN_a00dfa10(ver) && FUN_a00dfb30(gen) (phy ID, phy version and DDR generation checks, inlined)",
+      "name": "FUN_a00dfc50",
+      "status": "matched"
+    },
     "ram:a00dff94": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
