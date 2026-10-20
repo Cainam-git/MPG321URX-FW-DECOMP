@@ -4943,6 +4943,13 @@
       "name": "FUN_a00ae39c",
       "status": "matched"
     },
+    "ram:a00ae638": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "As FUN_a00adec0 for byte 0xa802d412 (modulo 6, FUN_a00b8ca8, FUN_a00dbcf0)",
+      "name": "FUN_a00ae638",
+      "status": "matched"
+    },
     "ram:a00b05d8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
