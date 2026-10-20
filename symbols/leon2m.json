@@ -5159,6 +5159,13 @@
       "name": "FUN_a00c3ec8",
       "status": "matched"
     },
+    "ram:a00c3f54": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: digit 0-2 into record byte 0x2f, FUN_a00da254 refresh, reply 5600+",
+      "name": "FUN_a00c3f54",
+      "status": "matched"
+    },
     "ram:a00c604c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
