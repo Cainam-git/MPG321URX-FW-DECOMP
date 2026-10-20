@@ -14492,6 +14492,13 @@
       "name": "FUN_a0141ce0",
       "status": "matched"
     },
+    "ram:a0141d50": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes v into bits 12-15 of record 0-3 at 0xa802e116 selected by t 0x51/0x61/0x71/0x81",
+      "name": "FUN_a0141d50",
+      "status": "matched"
+    },
     "ram:a01420e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
