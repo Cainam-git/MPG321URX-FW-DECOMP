@@ -9508,6 +9508,13 @@
       "name": "FUN_a011cc44",
       "status": "matched"
     },
+    "ram:a011cca0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "on != 0 sets, else clears bit 0 of reg base+0x80 of block blk (FUN_a01191fc)",
+      "name": "FUN_a011cca0",
+      "status": "matched"
+    },
     "ram:a011cf88": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
