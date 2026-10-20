@@ -3561,6 +3561,13 @@
       "name": "FUN_a0099c0c",
       "status": "matched"
     },
+    "ram:a0099c64": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Clears bit 31 of 0xa802d46c, bit 15 of 0xa802d002, byte 0xa8025c56; inlined FUN_a0090fd8; clears bytes 0xa802d033, 0xa802d474; FUN_a00b1ba4(0xa8025c56, 4); afec = 0x10a",
+      "name": "FUN_a0099c64",
+      "status": "matched"
+    },
     "ram:a0099cfc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
