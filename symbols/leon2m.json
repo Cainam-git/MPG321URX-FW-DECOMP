@@ -13782,6 +13782,12 @@
       "name": "FUN_a014e7d0",
       "status": "matched"
     },
+    "ram:a014e878": {
+      "by": "hand",
+      "comment": "mode 0/1/2: FUN_a00fc15c/FUN_a00fbf5c in the order 0,0 / 1,0 / 1,1",
+      "name": "FUN_a014e878",
+      "status": "matched"
+    },
     "ram:a014e8d8": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O2",
