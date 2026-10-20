@@ -9403,6 +9403,13 @@
       "name": "FUN_a011b3e8",
       "status": "matched"
     },
+    "ram:a011b4f0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "serial port of side sel: command 0xd0, address x->addr, then x->n data bytes; clears bit 7 of block reg base+0 first",
+      "name": "FUN_a011b4f0",
+      "status": "matched"
+    },
     "ram:a011bd60": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
