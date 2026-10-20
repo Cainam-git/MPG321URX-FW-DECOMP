@@ -1,11 +1,10 @@
 /* leon2m FUN_a012cfac @ 0xa012cfac..0xa012d4f8 (339 words) "FGA_Init", start-up step 2 (FUN_a015266c)
  * (after WAIT 3 FUN_a0136fc4, before FUN_a0141964).
- * -mcpu=v8 -O3 -g -msoft-float: tools/exact.py
- * exact() = None. (-mcpu=v8 -O3 -g without -msoft-float: 70.21; see lever 3.)
+ * Flags -mcpu=v8 -O3 -g -msoft-float (without -msoft-float it does not match; see item 3 below).
  * In plain words: at every power-on this checks one marker byte in the settings storage that says "the FGA colour
  * defaults were written". If the marker is 0x77..0x7A it returns at once and writes nothing. Otherwise it writes the
  * default FGA tables into the settings storage and finally the marker 0x77, so the next boot skips the writes.
- * What it does (code facts from this byte-exact C):
+ * What it does (code facts):
  *  - saved = FUN_a00fe47c() (u16: (reg 0xCF009BB4 << 8) | reg 0xCF009BB8, a plain register read); print "FGA_Init".
  *  - Location of the FGA block, from the RAM copy of the settings record S (0xA802E1A0, loaded by FUN_a0153c74):
  *    dev = byte S[0x34], addr = u16 S[0x35..0x36] (bitfield in the word at +0x34), sel = byte S[0x37].
@@ -28,24 +27,25 @@
  *     4. FUN_a00fe44c(saved | 0x10) (registers 0xCF009BB4 / 0xCF009BB8 written back with bit 4 of the low byte set),
  *        FUN_a010af50() (clears bit 3 of 0xCF00EAC8), then marker 0x77 at addr + fga_off(0) (1 byte), then
  *        FUN_a01405d0(dev) (returns at once for a dev whose ROM record b0 bit 7 is clear, i.e. FW.021 dev 0).
- * Can it wait or fail? Its own loops run over constant bit masks and fixed lengths: all bounded (proven by this C).
- * The waits are in the callees: the marker read (FUN_a0140360 -> FUN_a002bb28, bounded except FUN_a002ab04's late-ACK
+ * Can it wait or fail? Its own loops run over constant bit masks and fixed lengths: all bounded.
+ * The waits are in the callees: the marker read (FUN_a0140360 -> FUN_a002bb28, bounded except FUN_a002ab04's
+ * late-ACK
  * loop), and on the default path every FUN_a0140e74 chunk (27 B = 2 chunks, 54 B = 4, 3 x 0x60 = 18, marker 1: 25
  * chunks for sel <= 1) ends in the ready poll 'while (!FUN_a002be7c(dev)) ;' that has NO counter.
  * Write errors are not seen (FUN_a0140e74 ignores them). The marker is written LAST, so an interrupted default load
  * is redone at the next boot.
  * FW.012 has the same function; it differs only in the %lo parts of moved string and RAM addresses.
- * Levers (documented, no-code): (1) the column stride is a local 'int n = 9' and the store is
- * col[pos + k * n + j] gives the fw's 'smul k, 9' (a literal 9 is always synthesized as sll 3 + add), and
- * 'pos + ...'
- * first lets the loop pass hoist fp-8 + pos as in the fw.
+ * Source forms and compiler aids (no code emitted): (1) the column stride is a local 'int n = 9' and the store is
+ * col[pos + k * n + j], which gives the fw's 'smul k, 9' (a literal 9 is always synthesized as sll 3 + add), and
+ * 'pos + ...' first lets the loop pass hoist fp-8 + pos as in the fw.
  * (2) loop-2 switch arms for every bit 0x01..0x80 (5 of them = 0x1A4F70, same as default) give the fw's compare
  * tree (root 8, 'cmp 2; ble', right root 0x20); fewer arms drop the tree nodes, 7 arms below 0x80 give a jump table.
  * (3) -msoft-float: in the -dL loop dump the 0x1A4F58 / 0x1A4F40 sethi are then 'not desirable' and only the
  * 0x1A4F70 sethi (7 uses) is hoisted, as in the fw; with hard float all three are hoisted. loop.c's
  * threshold counts non-fixed registers, and -msoft-float makes the FP registers fixed.
  * (4) loop 3: the 'sel <= 1 && !(bit & 0x200)' arm written FIRST (arm order decides block order /
- * registers), off += 0x60 after each of the two tables (gives the fw's (off + 0x60) + addr and the merged off += 0xC0).
+ * registers), off += 0x60 after each of the two tables (gives the fw's (off + 0x60) + addr and the merged off +=
+ * 0xC0).
  * (5) 'bits = .., bit = 1' in the for-init (bits set first, as in the fw); loop 2 uses u8 bits / bit (fw btst 0xff).
  * (6) frame 208 with rgb[3], col, rows declared first and the scalar mark after them; fga_off() a static
  * helper with if/else so the '& 0x360' survives; addr + fga_off(sub) keeps the fw's (base + sub) + addr order.

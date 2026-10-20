@@ -1,5 +1,5 @@
 /* leon2m FUN_a0127b24 @ 0xa0127b24  recover mode 0/2 decision of the OLED power state machine (RecoverOFF).
- * (hand; -mcpu=v8 -O3 -msoft-float; verified word by word.)
+ * Flags -mcpu=v8 -O3 -msoft-float (also matches with -mcpu=v8 -O3 -g).
  * Stand-alone copy of a small static helper that FUN_a0127c78 (OLED power / panel state machine) also
  * inlines.
  */

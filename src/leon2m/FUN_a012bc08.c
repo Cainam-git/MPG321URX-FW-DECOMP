@@ -1,4 +1,4 @@
-/* leon2m FUN_a012bc08 @ 0xa012bc08  (hand; -mcpu=v8 -O3 -g)
+/* leon2m FUN_a012bc08 @ 0xa012bc08, flags -mcpu=v8 -O3 -g.
  *
  * Updates the output timing record of display channel 'id' (0x24-byte records at 0xA802D8DC) and reports it to
  * the small chip.
@@ -9,23 +9,25 @@
  *   byte +0x15 = bits per colour (set here from row byte +7, 0xA802E37F).
  *   The record is {u8 +0, +1, +2, +3; the same 24-byte timing block at +4; two words at +0x1C/+0x20}.
  *   update != 0: record timing = tm with h0, h2, h4, h5 divided by div (h1, h3, h6, h7, +0x14 copied), +0x15 = bits
- *                per colour, +1 = +2 = FUN_a00fd820(ch); then a copy of the whole record goes to FUN_a013832c(id, &copy).
+ *                per colour, +1 = +2 = FUN_a00fd820(ch); then a copy of the whole record goes to FUN_a013832c(id,
+ *                &copy).
  *   update == 0: record +0x18 (timing +0x14) = tm byte +0x14, +0x19 = bits per colour, and a 28-byte message
  *                {id, tm byte +0x14, bits per colour, 0...} is sent with FUN_a01370dc(0x51, 0x1C, msg, 0).
  * Row bytes 0x40 and 0x42 both give div 1. The bits-per-colour value and the timing of each output channel are
  * forwarded to the small chip (message 0x51).
  * The receiver is the SMALL CHIP (Leon2S): FUN_a01370dc writes the message with MailBox_Write
- *   (func_0x4008c5f8) to portal 1 (0x9F130100), 8 words at offset 0x80, after reading portal 1; FUN_a013832c sends its
+ *   (func_0x4008c5f8) to portal 1 (0x9F130100), 8 words at offset 0x80, after reading portal 1; FUN_a013832c sends
+ *   its
  *   copy as command 0x50 through the same FUN_a01370dc.
  * Callers: no direct 'call 0xa012bc08' in asm/leon2m (reached indirectly).
- * keys:
+ * Source form:
  *   - the record EMBEDS the timing block type (struct Tm t at +4) and struct Tm has NAMED fields h0..h7: gcc's alias
  *     analysis (nonoverlapping_component_refs_p) then knows that a load of tm.hN and a store to rec.t.hM with N != M
  *     do not overlap, which gives the firmware's load/store order. With an array h[8] or two unrelated struct types
- *     the reads were moved next to each store (91-94.5 %).
+ *     the reads move next to each store.
  *   - stores in plain field order (h0..h7, +0x14, +0x15), +1/+2 first; else path: +0x14, +0x15, then the message.
- *   - the record copy for FUN_a013832c is written 'local = *(DAT_a802d8dc + id);' (DAT_a802d8dc[id] moves one load:
- *     99.31 %; memcpy(&local, &DAT_a802d8dc[id], sizeof local) also matches).
+ *   - the record copy for FUN_a013832c is written 'local = *(DAT_a802d8dc + id);' (DAT_a802d8dc[id] moves one load;
+ *     memcpy(&local, &DAT_a802d8dc[id], sizeof local) also matches).
  *   - the 0x20 case of the first chain is a real 'div = 1' (gcc folds it away, but the compare stays).
  */
 

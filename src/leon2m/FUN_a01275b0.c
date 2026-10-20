@@ -1,4 +1,4 @@
-/* leon2m FUN_a01275b0 @ 0xa01275b0  OLED set Inspection Mode (hand; -mcpu=v8 -O3 -g -msoft-float, soft-float unit)
+/* leon2m FUN_a01275b0 @ 0xa01275b0  OLED set Inspection Mode, flags -mcpu=v8 -O3 -g -msoft-float
  *
  * Panel test-pattern ON/OFF over the software I2C bus (device 0x60, 16-bit register address, register 0x1C6):
  * - buffer DAT_a802d890 = { 0, on }; only when GPIO group 9 bit 3 is high (FUN_a01248c8):

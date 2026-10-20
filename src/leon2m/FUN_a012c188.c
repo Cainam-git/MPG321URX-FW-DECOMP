@@ -1,5 +1,4 @@
-/* leon2m FUN_a012c188 @ 0xa012c188..0xa012c320 (102 words).
- * with -mcpu=v8 -O3 -g.
+/* leon2m FUN_a012c188 @ 0xa012c188..0xa012c320 (102 words), flags -mcpu=v8 -O3 -g.
  * Where it runs: start-up step 2 FUN_a015266c, near the end, AFTER FUN_a0141964 (the display start-up that reaches
  * FUN_a0106d64) and after FUN_a01243dc. Job: load the EDIDs into the 8051's DDC slaves.
  * Code:
@@ -10,12 +9,12 @@
  *    x = FUN_a0125380(i); k = settings byte RAM 0xA802E1A0 + 0x1B + i (the EDID choice, from the stored record that
  *    FUN_a0153c74 loaded); data = DAT_a802cc10[k], len = ROM u16 table DAT_001a6ad8[k]; if len > FUN_a01255a0(i):
  *    print "DDC_%d : MaxLen %d / EDID_%d : Len %d" (0x001A4F08) and HANG for ever (nop; nop; b,a loop); else
- *    FUN_a01356fc(1, len) (queue room wait, no timeout), FUN_a0136a10(x, len, data), FUN_a0133fbc(1 << i, len, x >> 7).
+ *    FUN_a01356fc(1, len) (queue room wait, no timeout), FUN_a0136a10(x, len, data), FUN_a0133fbc(1 << i, len, x >>
+ *    7).
  * Two places block: the queue wait in FUN_a01356fc(1, len), which has no timeout, and the endless loop when the EDID
  * selected by the stored settings byte k is longer than the DDC buffer of its port.
- * The hang loop is written as for (;;) with two asm nops (documented no-code aid: the fw loop body
- * is two nop instructions).
- * Byte-exact levers: data read BEFORE len, both indexed by DAT_a802e1a0[0x1b + i] written out; the nibble update as two
+ * Compiler aid: the hang loop is written as for (;;) with two asm nops (the fw loop body is two nop instructions).
+ * Source form: data read BEFORE len, both indexed by DAT_a802e1a0[0x1b + i] written out; the nibble update as two
  * statements 'w &= ~(0xf << s); w |= (x >> 7) << s;' (the one-expression form swaps two temp registers).
  */
 extern unsigned int DAT_a802cb08;

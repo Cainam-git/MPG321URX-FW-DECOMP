@@ -1,4 +1,4 @@
-/* leon2m FUN_a0127724 @ 0xa0127724  OLED set Inspection Pattern (hand; -mcpu=v8 -O3 -g -msoft-float, soft-float unit)
+/* leon2m FUN_a0127724 @ 0xa0127724  OLED set Inspection Pattern, flags -mcpu=v8 -O3 -g -msoft-float
  *
  * Panel test-pattern select over the software I2C bus (device 0x60, 16-bit register address, register 0x1C8):
  * - buffer DAT_a802d890 = { 0, pat }; only when GPIO group 9 bit 3 is high (FUN_a01248c8):

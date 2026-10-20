@@ -1,25 +1,28 @@
-/* leon2m FUN_a0131518 @ 0xa0131518..0xa0132768  GlobalModeHandler (hand)
+/* leon2m FUN_a0131518 @ 0xa0131518..0xa0132768  GlobalModeHandler (1172 words)
  * What it does (code facts from the asm; names are interpretation):
  *  - 4 port records DAT_a802df30[p] (0x78 bytes): w0 bit fields state (31..28), prev (27..24), mode (23..20),
  *    src (15..12), on (bit 0); +0x08/+0x12/+0x14 u16, +0x54 u16, +0x60 u64 clock, +0x70 flag word.
  *  - per port: link check (FUN_a01241fc row type 2), state-entry handlers (A: FUN_a01516b0, B: FUN_a0151674,
- *    C: FUN_a0151818, 5: FUN_a01518c8 ...), state-9 timer via the ms tick (func_0x4008d588/594), FRC checks on port 0
+ *    C: FUN_a0151818, 5: FUN_a01518c8 ...), state-9 timer via the ms tick (func_0x4008d588/594), FRC checks on port
+ *    0
  *    ("FRC Back Check" against the window DAT_a802e378 +0x10/+0x18), then prev = state.
  *  - then the 7 entries of DAT_a802e116 (bit 0x800 = FUN_a0129a10(i)), then the "main source" selection
- *    DAT_a802a44c / DAT_a802a44d with FUN_a00fd594 / FUN_a00fd9a0 (0xb1 = off?).
+ *    DAT_a802a44c / DAT_a802a44d with FUN_a00fd594 / FUN_a00fd9a0.
  * Inputs: none; globals only. Caller: FUN_a0153018.
- * FLAGS -mcpu=v8 -O3 -g -msoft-float (only this gives the firmware's single .LLC constant 0x0fffffff).
+ * FLAGS -mcpu=v8 -O3 -g -msoft-float (only this gives the firmware's single .LLC constant 0x0fffffff). Compiles
+ * -Wall clean.
  * Code facts (asm addresses): each per-port section uses its own fresh pointer &D[p] (port_step s, state-9
  *   section t a01315b4, 0x70/q-loop section u a0131644, FRC tail s a0131684) besides the loop pointer r;
  *   other_above/none_above test 'p == q' (a0131e4c), the q-loop 'q == p' (a01321b8); q-loop 'state > 5U' (bleu
- *   a0132728); src check 'if (a != b || c != d) {state 6, mode 0} else {...}' (one RMW a0131d7c); FUN_a01312d4 called
+ *   a0132728); src check 'if (a != b || c != d) {state 6, mode 0} else {...}' (one RMW a0131d7c); FUN_a01312d4
+ *   called
  *   as 'if (c) f(p, 1); else f(p, 0);'; pick: f5 re-load (a0132598) = 'if (a44d != v && a44c != 0xff) m = 3; else';
  *   'out' block stores w70 first in source (fw: st w, then st w70 in the b delay slot, a0131a44).
  *   Address operand order: fw '[off + base]' everywhere (a0131538, a01315d8, a01315fc, a0131688/90, a0131d30,
  *   other_above loops a0131e78...) = accesses through a pointer '= &D[x]' (ADDR_EXPR expands offset-first; D[x].f is
  *   base-first): first loop r = &D[i], src-check block v0 = &D[p], u before x, s->on in the p != 0 arm,
  *   e = &D[q] in other_above/none_above.
- * Behaviour-neutral constructs / documented no-code compiler aids (bytes must still match exactly):
+ * Behaviour-neutral constructs / compiler aids (no code emitted):
  *  - no 'do continue; while (0);' hint in the p != 0 arm (with the source forms below such a hint moves the
  *    'w70 &= ~0x80000' arm away from fw a0131df8).
  *  - identical-arm diamonds 'if (s->on) { s->mode = 0; s->on = 0; } else s->on = 0;' (and the on = 1 twin):
@@ -27,7 +30,7 @@
  *  - 'unsigned short th = DAT_001a30da;' read once for the print and the compare: DAT_001a30da is ROM (0x001a30da),
  *    fw keeps it in %l3 across the printf (a0132620 / a013268c).
  *  - pick() writes sel through a 'volatile unsigned char *' (reproduces the [fp-9] slot, frame -120).
- * Further code facts (each is a source form, no behaviour change; checked against the asm):
+ * Further source forms (no behaviour change):
  *  - link check arms in this order: 'if ((*FUN_a01241fc() & 0x700000) != 0x200000) {print arm} else {...}'
  *    (rnreg gives the print arm a0131888 the fresher registers = it comes first in source).
  *  - port_step re-checks are separate ifs, not nested: 'if (st == A) f(p); if (st == A && !other_above()) g();'
@@ -43,8 +46,7 @@
  *    'm = DAT_a802a44c != 0;' (fw stb a44d, then clrb [fp-9] a01325c4).
  *  - the q-loop is an inlined helper claim(p, u) whose 'if (q < p) return;' replaces 'goto skip;' (fw bcs,a
  *    a0132704 annulled with the target insn = predicted taken; a goto is predicted not taken).
- *  - mode == 0 block: 'if (DAT_a802a44c != 0xff) if (FUN_a00fd820(...) != 0xb1) {...}' (was an early return).
- * Score: of 1172 words, -Wall clean.
+ *  - mode == 0 block: 'if (DAT_a802a44c != 0xff) if (FUN_a00fd820(...) != 0xb1) {...}'.
  */
 struct PortF { unsigned int state:4, prev:4, mode:4, b16:4, src:4, b1:11, on:1; };
 struct Port {

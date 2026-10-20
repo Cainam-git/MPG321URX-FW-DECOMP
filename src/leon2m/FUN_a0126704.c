@@ -1,5 +1,4 @@
-/* leon2m FUN_a0126704 @ 0xa0126704  OLED set Frame rate control (hand; byte-exact at
- * -mcpu=v8 -O3 -g -msoft-float)
+/* leon2m FUN_a0126704 @ 0xa0126704  OLED set Frame rate control, flags -mcpu=v8 -O3 -g -msoft-float.
  *
  * Tells the panel-side OLED FRC chip (I2C device 0x60, 16-bit register addresses) which frame-rate mode to run:
  * writes the two bytes {0, val} to its register 0x00B2 (FUN_a0147aa0: I2C register write, bit delay 5, bus 0),

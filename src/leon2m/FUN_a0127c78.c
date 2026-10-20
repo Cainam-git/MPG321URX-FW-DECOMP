@@ -1,12 +1,12 @@
 /* leon2m FUN_a0127c78 @ 0xa0127c78-0xa0129598  OLED panel power / sensing state machine.
- * -mcpu=v8 -O3 -msoft-float (no -g): jf 100.00 % match=True, rawcmp 1608 words / 0 mismatches.
- * Lever: the two blink parity tests are written 'if (n % 2 == 1)' instead of 'if (n & 1)' (state 1 sub 6, state 2
- * sub 3; with 'n & 1' the match is 94.41 %). Same meaning (n is an
- * unsigned char, n % 2 == 1 <=> n & 1). Why it matters: gcc 3.4's branch predictor saw two symmetric 'call' and two
- * symmetric 'early return' hints on that test (50/50), so bb-reorder broke the tie by edge order and put the shared
- * zero-colour block in state 2. 'x % 2 == 1' reaches the predictor as a compare with the non-zero constant 1 (the
- * modulo is only simplified to btst later, in combine), so the 'opcode values nonequal' heuristic gives 71 % to the
- * colour arm; the zero block then lands after state 1's test like in the firmware.
+ * Flags -mcpu=v8 -O3 -g -msoft-float (also matches without -g); 1608 words.
+ * Source form: the two blink parity tests are written 'if (n % 2 == 1)' instead of 'if (n & 1)' (state 1 sub 6,
+ * state 2 sub 3; 'n & 1' gives another block order). Same meaning (n is an unsigned char, n % 2 == 1 <=> n & 1). Why
+ * it matters: gcc 3.4's branch predictor saw two symmetric 'call' and two symmetric 'early return' hints on that
+ * test (50/50), so bb-reorder broke the tie by edge order and put the shared zero-colour block in state 2. 'x % 2 ==
+ * 1' reaches the predictor as a compare with the non-zero constant 1 (the modulo is only simplified to btst later,
+ * in combine), so the 'opcode values nonequal' heuristic gives 71 % to the colour arm; the zero block then lands
+ * after state 1's test like in the firmware.
  *
  * What it does: one step per call (called from the main loop and the OSD/power code: FUN_a0080490, FUN_a0081ea8,
  * FUN_a0085984; no arguments, no return value). Dispatches on the state byte S.state at 0xA802D896 (0..4, else

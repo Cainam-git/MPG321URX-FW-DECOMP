@@ -1,14 +1,12 @@
 /* leon2m FUN_a0127154 @ 0xa0127154-0xa01272c8 (93 words), flags -mcpu=v8 -O3 -g -msoft-float
- * (NOTE: best flags differ; with plain '-mcpu=v8 -O3 -g' jf gives 74.19, register choice differs).
- * with -msoft-float.
- * Code facts: twin of FUN_a0126ae4 with register 0x1b4 instead of 0x70: buf 0xa802d890 = {0, val};
- * FUN_a01248c8() & 0xff == 0 -> return; log FUN_a00df170(0x1a47f0, val); write FUN_a0147aa0(0x60, 2,
- * 0x1b4, 5, 0, &d890, 2, 1); func_0x4008d1a0(0x32); read back FUN_a0147ae8(0x60, 2, 0x1b4, 5, 0, &d888, 2);
- * log FUN_a00df170(0x1a4818, d888[0], d888[1]); func_0x4008d1a0(0x32); retry loop while the buffers
- * differ and the retry byte 0xa802c9fd <= 9: log FUN_a00df170(0x1a4840, ...), write,
- * func_0x4008d1a0(5), read back, retry byte++.
- * Fixes vs the autoc draft (95.70 with -msoft-float): BEHAVIOUR, the delay inside the retry loop is
- * func_0x4008d1a0(5) (fw 'mov 5, %o0'), the draft had 0x32; prototypes as in FUN_a0126ae4. Aids: none.
+ * (needs -msoft-float: with plain '-mcpu=v8 -O3 -g' the register choice differs).
+ * Code facts: twin of FUN_a0126ae4 with register 0x1b4 instead of 0x70: buf 0xa802d890 = {0, val}; FUN_a01248c8() &
+ * 0xff == 0 -> return; log FUN_a00df170(0x1a47f0, val); write FUN_a0147aa0(0x60, 2, 0x1b4, 5, 0, &d890, 2, 1);
+ * func_0x4008d1a0(0x32); read back FUN_a0147ae8(0x60, 2, 0x1b4, 5, 0, &d888, 2); log FUN_a00df170(0x1a4818, d888[0],
+ * d888[1]); func_0x4008d1a0(0x32); retry loop while the buffers differ and the retry byte 0xa802c9fd <= 9: log
+ * FUN_a00df170(0x1a4840, ...), write, func_0x4008d1a0(5), read back, retry byte++.
+ * The delay inside the retry loop is func_0x4008d1a0(5) (fw 'mov 5, %o0'); prototypes as in FUN_a0126ae4. Compiler
+ * aids: none.
  */
 extern unsigned char DAT_a802d888[2];
 extern unsigned char DAT_a802d890[2];

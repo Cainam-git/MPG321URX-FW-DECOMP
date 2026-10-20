@@ -1,4 +1,4 @@
-/* leon2m FUN_a01295e4 @ 0xa01295e4  OLED FRC power-up handler (hand; bitfield state word)
+/* leon2m FUN_a01295e4 @ 0xa01295e4  OLED FRC power-up handler, flags -mcpu=v8 -O3 -g (bitfield state word)
  *
  * State machine for the OLED panel's FRC chip, state = top 4 bits of the halfword at 0xA802D892, +2 = timestamp
  * (ms tick, FUN_a002d588/FUN_a002d594), bits 0x400/0x800 = flags, low byte = a channel/mode number.
@@ -20,9 +20,10 @@
  * (0xA802D893), so state 3 -> 2 re-sends the new row to the FRC chip via FUN_a0126704 (register 0xB2).
  * FW.012 kept the row number in bits 8..9 of its state word and sent ((word >> 8) & 3) here.
  * The state word is a bitfield struct: the original reads the row byte as ldub [base+1] and merges
- * "sent = 1; req = 0" into one or/and, which only a struct { state:4, sent:1 (0x800), req:1 (0x400), :2; u8 ch; u16 t }
+ * "sent = 1; req = 0" into one or/and, which only a struct { state:4, sent:1 (0x800), req:1 (0x400), :2; u8 ch; u16
+ * t }
  * reproduces.
- * -O3 (register renaming). Required form: a non-volatile state struct; each state has its own
+ * Source form (with the -O3 register renaming): a non-volatile state struct; each state has its own
  *   'panel off -> state 0' reset (gcc merges them, a shared goto does not reproduce the layout); the default (idle)
  *   state is written first in the switch. The double lduh at the case-3 test is reorg copying the state=0 target's
  *   load into the delay slot, not a second read in the source.
