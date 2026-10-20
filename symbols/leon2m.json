@@ -3770,6 +3770,13 @@
       "name": "FUN_a009b4e8",
       "status": "matched"
     },
+    "ram:a009b8e0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Steps byte 0xa802d420 up through 0..6 and reports it",
+      "name": "FUN_a009b8e0",
+      "status": "matched"
+    },
     "ram:a009b95c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
