@@ -9962,6 +9962,13 @@
       "name": "FUN_a010aae8",
       "status": "matched"
     },
+    "ram:a010ac68": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "two tick-bounded waits on bit 0 of register 0xcf011ff4 (set for up to 0x32 ticks, then clear for up to 0x64)",
+      "name": "FUN_a010ac68",
+      "status": "matched"
+    },
     "ram:a010adc0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
