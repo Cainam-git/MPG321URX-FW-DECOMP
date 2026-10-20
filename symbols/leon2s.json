@@ -5186,6 +5186,12 @@
       "name": "FUN_a00a8054",
       "status": "matched"
     },
+    "ram:a00a80cc": {
+      "by": "h16",
+      "comment": "read-modify-write of a register byte in block DAT_a00b4d44[port * 6 + sub] (port 0..1, sub 0..5): mode 1 sets mask bits, else clears",
+      "name": "FUN_a00a80cc",
+      "status": "matched"
+    },
     "ram:a00a8210": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
