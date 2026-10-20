@@ -8857,6 +8857,13 @@
       "name": "FUN_a00f2708",
       "status": "matched"
     },
+    "ram:a00f29d4": {
+      "by": "h12",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Reads a 24-bit value from three 0xcf000000 registers until two reads agree (at most 5 retries)",
+      "name": "FUN_a00f29d4",
+      "status": "matched"
+    },
     "ram:a00f2b48": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
