@@ -5641,6 +5641,13 @@
       "name": "FUN_a00c5a00",
       "status": "matched"
     },
+    "ram:a00c5c18": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: digit 0-1 into bit 4 of record word 0x11c (clears byte 0x178 when set), FUN_a00d9764/a00d4998, reply 5600+",
+      "name": "FUN_a00c5c18",
+      "status": "matched"
+    },
     "ram:a00c5e40": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
