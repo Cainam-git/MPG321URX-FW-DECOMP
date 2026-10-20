@@ -3575,6 +3575,13 @@
       "name": "FUN_a009bcbc",
       "status": "matched"
     },
+    "ram:a009bdcc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Steps the selection in word 0xa802afec forwards through 0xd8..0xdc into bits 4..7 of word 0xa802d2c0",
+      "name": "FUN_a009bdcc",
+      "status": "matched"
+    },
     "ram:a009bedc": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
