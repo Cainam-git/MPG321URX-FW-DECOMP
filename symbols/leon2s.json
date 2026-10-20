@@ -6577,6 +6577,12 @@
       "name": "FUN_a00d8f58",
       "status": "matched"
     },
+    "ram:a00d9474": {
+      "by": "hand",
+      "comment": "Sends a 19-byte packet (id, 16 register bytes from +0xd00, a, b) with FUN_a00d791c and sets bit 5 of the block's first register",
+      "name": "FUN_a00d9474",
+      "status": "matched"
+    },
     "ram:a00d9698": {
       "by": "hand",
       "comment": "message dispatcher: switch to twelve no-arg handlers, default 9474(v, 4, 0)",
