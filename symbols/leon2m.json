@@ -9007,6 +9007,13 @@
       "name": "FUN_a011932c",
       "status": "matched"
     },
+    "ram:a01195ac": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "block blk: clears bit 7 of reg base+0, calls func_0x4008e2a4, writes 0 to base+0xce, sets bit 0 of base+0xcf, delay 0x28",
+      "name": "FUN_a01195ac",
+      "status": "matched"
+    },
     "ram:a0119640": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
