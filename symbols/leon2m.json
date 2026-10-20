@@ -8127,6 +8127,13 @@
       "name": "FUN_a00f35d0",
       "status": "matched"
     },
+    "ram:a00f36b8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Selects 0xA/0xB/0xC for register 0xCF012844 from a 13-bit count, stores count << 13, writes a 16-bit value and calls a hook",
+      "name": "FUN_a00f36b8",
+      "status": "matched"
+    },
     "ram:a00f37d0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
