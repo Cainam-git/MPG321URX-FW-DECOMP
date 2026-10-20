@@ -6233,7 +6233,7 @@
     },
     "ram:a00b2194": {
       "by": "hand",
-      "comment": "loads the task record whose word +0x10 equals the descriptor d from d and activates it, or prints a not-found message",
+      "comment": "copies the descriptor d into the task record of DAT_a80793b8 whose word +0x10 equals d and sets its byte +4, or calls FUN_a0073044(s_a006c640)",
       "name": "CONV2HDMITX_UpdateInterface_4",
       "status": "matched"
     },
