@@ -1,12 +1,10 @@
-/* leon2m FUN_a0153c74 @ 0xa0153c74..0xa01541ec (350 words): system-settings check at power-on. BYTE-EXACT.
- * -mcpu=v8 -O3 -g: and tools/exact.py exact() = None (linked at the real
- * address, all relocations resolved, bytes == firmware). jf shows 85.14 match=False ONLY because of a diff.py
- * normaliser quirk: the ROM base is 'sethi %hi(DAT_00020000); or %r, %lo(DAT_00020000) = 0, %rd'; the firmware word
- * prints as 'mov %r, %rd' and its later field loads '[%rd + 0x1aa]' are labelled %lo(ADDR), while the relocated 'or'
- * stops that tracking. All 52 differing rows are those 6 base 'or's and 46 ROM field loads (checked row by row).
+/* leon2m FUN_a0153c74 @ 0xa0153c74..0xa01541ec (350 words), flags -mcpu=v8 -O3 -g.
+ * The shape comparison in tools/diff.py reports a difference for this function: the firmware's ROM base
+ * 'sethi %hi(DAT_00020000); or %r, %lo(DAT_00020000)' prints as 'mov', so the later field loads are labelled
+ * differently. The byte-exact link check (tools/exact.py) finds the bytes equal to the firmware.
  *
- * Plain words (code facts; storage = settings chip dev 0, read with FUN_a0140360, written with FUN_a0140e74):
- *  1. FUN_a0140304(0) == 0 ('storage not usable'; FW.021 returns 1): print 'DG_SYSSETTING OPR is invalid 1'
+ * Storage below is device 0 of FUN_a0140360 (read) and FUN_a0140e74 (write):
+ *  1. FUN_a0140304(0) == 0 (FW.021 returns 1): print 'DG_SYSSETTING OPR is invalid 1'
  *     (s_001a7620) and write the ROM defaults: P = 0x30 bytes ROM 0x20140 -> storage 0x440, S = 0x50 bytes ROM
  *     0x20170 -> storage 0x470 (flag 1).
  *  2. Else check(): read S from storage 0x470 into a zeroed buffer twice per round until the version word +0x3A reads
@@ -26,7 +24,7 @@
  * Can it wait or fail? The stable-read loop has no counter but needs two DIFFERENT consecutive version words to spin.
  * Every storage write goes through FUN_a0140e74, whose ACK poll has no limit; writes happen only on the
  * stored bytes listed in step 2. The ROM hangs in step 4 cannot trigger with these ROM bytes.
- * Exact-form levers: (1) the 'not usable' arm FIRST ('if (!FUN_a0140304(0)) ... else if (check() == 1) ... else if
+ * Source form: (1) the 'not usable' arm FIRST ('if (!FUN_a0140304(0)) ... else if (check() == 1) ... else if
  * (check() == 2)'): gives the firmware's register renaming AND its stack-slot sharing (the defaults copy reuses the
  * first check's buffer slot fp-88 / the second's fp-216); (2) Part / Rec 8-byte aligned (no-code type attribute:
  * the firmware copies the ROM records with ldd/std, which gcc only does inline for 8-aligned structs; with 2-byte
