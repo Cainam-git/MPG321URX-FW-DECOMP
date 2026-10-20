@@ -4960,6 +4960,12 @@
       "name": "FUN_a00aa2d0",
       "status": "matched"
     },
+    "ram:a00aa3a4": {
+      "by": "hand",
+      "comment": "writes bank registers through FUN_a00a7b64 for port 0 or the other ports, one-time bank 1 set-up flagged by DAT_a8079304",
+      "name": "FUN_a00aa3a4",
+      "status": "matched"
+    },
     "ram:a00aa45c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
