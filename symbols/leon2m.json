@@ -2471,7 +2471,7 @@
     "ram:a008b5e0": {
       "by": "h14",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Formats two text lines from the bytes 0xa802afb8/afb9 and draws them at ROM position records 16 and 15",
+      "comment": "Formats two texts from bytes 0xa802afb8/afb9 and passes them with ROM records 16 and 15 of 0x100242 to FUN_a00a31a4",
       "name": "FUN_a008b5e0",
       "status": "matched"
     },
