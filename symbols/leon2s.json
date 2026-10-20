@@ -6697,6 +6697,12 @@
       "name": "FUN_a00da6ac",
       "status": "matched"
     },
+    "ram:a00da960": {
+      "by": "hand",
+      "comment": "Clear bit 4 or 5 of block word 0xccc by a table byte when enabled",
+      "name": "FUN_a00da960",
+      "status": "matched"
+    },
     "ram:a00dabf8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
