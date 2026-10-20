@@ -2104,6 +2104,13 @@
       "name": "FUN_a0082c4c",
       "status": "matched"
     },
+    "ram:a0082ec4": {
+      "by": "h14",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Compares channel 1 values 7/8 with u16 0xa8024004/06 and the 12-record table 0xfeb30 and writes four u16 outputs",
+      "name": "FUN_a0082ec4",
+      "status": "matched"
+    },
     "ram:a00837e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
