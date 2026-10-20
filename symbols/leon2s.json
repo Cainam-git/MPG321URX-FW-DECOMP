@@ -5809,6 +5809,12 @@
       "name": "FUN_a00b1538",
       "status": "matched"
     },
+    "ram:a00b1568": {
+      "by": "hand",
+      "comment": "compares two strings as signed chars and returns the first difference (strcmp form)",
+      "name": "FUN_a00b1568",
+      "status": "matched"
+    },
     "ram:a00b15ac": {
       "by": "hand",
       "comment": "memset(dst, v, n) returning dst",
