@@ -4506,6 +4506,13 @@
       "name": "FUN_a00ad460",
       "status": "matched"
     },
+    "ram:a00ad86c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Calls FUN_a0146c40, FUN_a014667c and FUN_a0146870 with id/size/positions chosen by flag and sel, then FUN_a00ad5a4(2, 3, row, flag) when flag != 0",
+      "name": "FUN_a00ad86c",
+      "status": "matched"
+    },
     "ram:a00adc98": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
