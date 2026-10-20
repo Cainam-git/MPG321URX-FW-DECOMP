@@ -3,7 +3,7 @@
  * clears 0xcf016828.
  * This function is the same code as FUN_a010765c (its source comment explains the details), compiled with
  * other constants (template -> this function):
- * 0xa010765c -> 0xa01076bc, 0xcf016828 -> 0xcf0168a8, 0xcf016838 -> 0xcf0168b8, 0xcf016840 -> 0xcf0168c0
+ * 0xcf016828 -> 0xcf0168a8, 0xcf016838 -> 0xcf0168b8, 0xcf016840 -> 0xcf0168c0
  */
 #define REG_cf00ed14 (*(volatile unsigned int *)0xcf00ed14)
 #define REG_cf0168a8 (*(volatile unsigned int *)0xcf0168a8)
