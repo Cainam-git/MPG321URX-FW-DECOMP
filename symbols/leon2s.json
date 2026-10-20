@@ -5108,6 +5108,12 @@
       "name": "FUN_a00a73ac",
       "status": "matched"
     },
+    "ram:a00a73d4": {
+      "by": "hand",
+      "comment": "Clears bit (bit & 31) of word (bit >> 5) of the word array at p (mask held in a volatile local)",
+      "name": "FUN_a00a73d4",
+      "status": "matched"
+    },
     "ram:a00a7408": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
