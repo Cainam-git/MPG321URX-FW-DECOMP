@@ -6239,7 +6239,7 @@
     },
     "ram:a00b222c": {
       "by": "hand",
-      "comment": "clears the word +0x10 of the first task record of DAT_a80793b8 equal to id, or prints a not-found message",
+      "comment": "clears the word +0x10 of the first record of DAT_a80793b8 equal to id, or calls FUN_a0073044(s_a006c640)",
       "name": "FUN_a00b222c",
       "status": "matched"
     },

@@ -1,6 +1,6 @@
 /* FUN_a00b222c (leon2s 0xa00b222c-0xa00b229c, 112 bytes, leaf), flags -mcpu=v8 -Os -g.
  * For a non-zero id: finds the first of the 16 24-byte task records DAT_a80793b8 whose word at +0x10 equals id
- * and clears that word; when none matches, tail-calls the print routine FUN_a0073044 with s_a006c640
+ * and clears that word; when none matches, tail-calls FUN_a0073044 with s_a006c640
  * ("Can not find S/W timer!" per Ghidra). Record layout as in FUN_a00618d8 / FUN_a00b229c. The record pointer t is
  * taken in the loop and used for the clear (the firmware walks a record pointer).
  */
