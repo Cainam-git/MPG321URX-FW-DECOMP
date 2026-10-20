@@ -5725,6 +5725,13 @@
       "name": "FUN_a00c9f44",
       "status": "matched"
     },
+    "ram:a00ca158": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: digit 0-1 selects FUN_a0124a68/ab0, stored in bit 30 of record word 0x1f4, FUN_a00db174, reply 5600+",
+      "name": "FUN_a00ca158",
+      "status": "matched"
+    },
     "ram:a00ca380": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
