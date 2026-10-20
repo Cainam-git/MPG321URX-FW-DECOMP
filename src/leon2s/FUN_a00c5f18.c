@@ -1,9 +1,9 @@
 /* FUN_a00c5f18 (leon2s 0xa00c5f18-0xa00c5fb0, 152 bytes), flags -mcpu=v8 -Os -g.
  * Compares bit param_1 of the byte DAT_a8078c58 with the 8-bit value param_2. When they differ, sets the bit
- * (param_2 != 0) or clears it, ORs a flag into the byte DAT_a80788d2 (1 << param_1 for inputs 0..3, 0x10 for
- * input 4, 0x20 above) and calls FUN_a00c5da8(param_1, param_2). Always ends with a tail call to
+ * (param_2 != 0) or clears it, ORs a bit into the byte DAT_a80788d2 (1 << param_1 for param_1 0..3, 0x10 for
+ * param_1 == 4, 0x20 above) and calls FUN_a00c5da8(param_1, param_2). Always ends with a tail call to
  * FUN_a00c5d34(param_1, param_2).
- * Source forms: the byte is copied into an unsigned int before the masked shift; the flag value is chosen
+ * Source forms: the byte is copied into an unsigned int before the masked shift; the value ORed into DAT_a80788d2 is chosen
  * in an if/else chain (port == 4 tested before the default) and ORed in once.
  */
 extern unsigned char DAT_a8078c58;

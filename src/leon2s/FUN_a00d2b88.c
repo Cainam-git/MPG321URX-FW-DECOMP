@@ -1,7 +1,7 @@
 /* FUN_a00d2b88 (leon2s 0xa00d2b88-0xa00d2c38, 176 bytes), flags -mcpu=v8 -Os -g.
- * Leaf function returning a 0/1 change flag. The flag is set when the byte DAT_a8078c34 is 1 (which is then
- * cleared), when the byte DAT_a8078c38 is 0 or 4, and for each of three copies whose source differs from
- * the stored copy, which is then updated: word +4 of DAT_a807d548 into DAT_a8078c2c, halfword +0x1c of
+ * Leaf function returning 0 or 1. The result is 1 when the byte DAT_a8078c34 is 1 (which is then
+ * cleared), when the byte DAT_a8078c38 is 0 or 4, and when any of three source values differs from
+ * its destination, which is then written: word +4 of DAT_a807d548 into DAT_a8078c2c, halfword +0x1c of
  * DAT_a807d548 into DAT_a8078c28, halfword DAT_a80779dc into DAT_a80766ac.
  * Source forms: DAT_a807d548 is a structure (one base register for +4 and +0x1c); the 0/4 test is an
  * if/else-if pair; the result is an unsigned char returned as r & 1.
