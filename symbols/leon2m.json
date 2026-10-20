@@ -9696,6 +9696,13 @@
       "name": "FUN_a0107554",
       "status": "matched"
     },
+    "ram:a01075f8": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "for on == 1 writes 0x33/0x90/0x4e to registers near 0xcf00e9e8 and sets bit 4 of 0xcf00eac8, else clears two registers",
+      "name": "FUN_a01075f8",
+      "status": "matched"
+    },
     "ram:a010765c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
