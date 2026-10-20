@@ -4556,6 +4556,12 @@
       "name": "FUN_a00a7ce8",
       "status": "matched"
     },
+    "ram:a00a7d70": {
+      "by": "h10",
+      "comment": "func_0x4008e2a4, then FUN_a00b32e4 for rows 6..0x15 except 5 and 7 (row 6: 0x7c2, 10)",
+      "name": "FUN_a00a7d70",
+      "status": "matched"
+    },
     "ram:a00a813c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
