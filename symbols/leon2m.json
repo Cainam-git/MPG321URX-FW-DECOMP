@@ -12894,6 +12894,13 @@
       "name": "FUN_a012be4c",
       "status": "matched"
     },
+    "ram:a012c004": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores bit 0 of v in bit 31 of record id at 0xa802d8dc when it differs and then sends {id, v} with FUN_a01370dc(0x55, 4, msg, 0)",
+      "name": "FUN_a012c004",
+      "status": "matched"
+    },
     "ram:a012c118": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
