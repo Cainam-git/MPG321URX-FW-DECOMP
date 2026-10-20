@@ -5479,6 +5479,12 @@
       "name": "FUN_a00aea3c",
       "status": "matched"
     },
+    "ram:a00aea64": {
+      "by": "hand",
+      "comment": "returns 1 when FUN_a008d800() > 0x83, FUN_a00a6bb8(port, 0x481) >> 4 == 4 and FUN_a00acac0(port) == 0xd70",
+      "name": "FUN_a00aea64",
+      "status": "matched"
+    },
     "ram:a00aeadc": {
       "by": "hand",
       "comment": "returns 1 when bit 15 of word +0x88 of the record that the pointer DAT_a807dc04 points to is set AND bit 0 of FUN_a00a6bb8(ch, 0x463) is set; else 0. Neighbour of src/leon2s/FUN_a00aeb24.c (same record, same register 0x463, bit 7 / bit 2 there).",
