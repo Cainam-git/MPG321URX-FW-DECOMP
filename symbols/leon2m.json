@@ -4208,6 +4208,13 @@
       "name": "FUN_a00a93bc",
       "status": "matched"
     },
+    "ram:a00a9468": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Paints a small status block (columns 0x37..0x3A) in colours chosen by mode, or clears it for mode 6",
+      "name": "FUN_a00a9468",
+      "status": "matched"
+    },
     "ram:a00a9cc8": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
