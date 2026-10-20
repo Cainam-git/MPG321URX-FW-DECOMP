@@ -4,8 +4,8 @@
  * Then bits 16..19 of word 0xa802d290+0x34 = (afec - 100) & 0xf (4-bit BIT-FIELD as in FUN_a00962ac),
  * FUN_a00d58f8(), FUN_a00d58d8(), FUN_a00d4998() (all void(void)), FUN_a00a9650((u8)(afec - 100), 1); v = byte
  * 0xa8025c56; tail FUN_a00a813c(1, v, afec - 100 != v) as two calls. void(void). Twins: FUN_a009c4a4 (-0x60) /
- * FUN_a009c590 (-0x63). Fixes vs the autoc draft: aad30 takes 1 arg, (unsigned short)_DAT_a802afec, real bit-
- * field record. Aids: none.
+ * FUN_a009c590 (-0x63). FUN_a00aad30 takes one argument; the halfword is (unsigned short)_DAT_a802afec; the
+ * record field is a bit-field. Aids: none.
  */
 extern unsigned char DAT_a8025c56;
 extern unsigned int _DAT_a802afec;

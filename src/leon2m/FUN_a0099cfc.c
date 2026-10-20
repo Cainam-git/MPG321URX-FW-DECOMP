@@ -3,9 +3,9 @@
  * before each use). Byte DAT_a8025c56 = b; FUN_a00a900c((u8)(word DAT_a802afec - 0x34), 2);
  * DAT_a802afec = b + 0xbb; FUN_a00a9650(b, 1); tail call FUN_a00a813c(1, b, 0). void, no params.
  * Twin of FUN_a0093464 (bit 12 at +0xa8).
- * Fix vs the autoc draft (82.14): the bit is a 1-bit BIT-FIELD of the record DAT_a802d290
- * (pad[0x1dc], hi:16, b15:1, lo:15; big-endian). The mask/shift form on the absolute word
- * 0xa802d46c folds the offset into %lo(sym) and loses the fw's [base + 0x1dc]. Aids: none.
+ * Source form: the bit is a 1-bit BIT-FIELD of the record DAT_a802d290 (pad[0x1dc], hi:16, b15:1, lo:15;
+ * big-endian). The mask/shift form on the absolute word 0xa802d46c folds the offset into %lo(sym) and loses the
+ * fw's [base + 0x1dc]. Aids: none.
  */
 extern unsigned char DAT_a8025c56;
 extern unsigned int DAT_a802afec;

@@ -3,9 +3,9 @@
  * a 1-bit bit-field written 'f20 = 1 - f20'; FUN_a00a5420(6, new bit). If byte +0x1f != 0: clear it,
  * FUN_a00d91fc(0), FUN_a0148268(0, 1), FUN_a0148268(1, 1), FUN_a00da254(). Then if FUN_a01445fc(byte +0x1e)
  * returns 0 (u8): FUN_a00d91fc(0), FUN_a01439d8(0x10, 1) when byte +0x1e == 5, FUN_a0148268(0, 1) and (1, 1).
- * Always byte 0xa802b08e |= 2. void(void). Fix vs the autoc draft: BEHAVIOUR: d91fc(0) runs before the two
- * 148268 calls in the +0x1f arm; real base DAT_a802d290 (draft d2ae/d2af/d33c mid-record names); uninitialised
- * draft temp replaced by the bit. '~f20' / '!f20' / '^= 1' give and 1 / xor 1 (96.97). Aids: none.
+ * Always byte 0xa802b08e |= 2. void(void). FUN_a00d91fc(0) runs before the two FUN_a0148268 calls in the +0x1f
+ * arm; the record base is DAT_a802d290. Source form: 'f20 = 1 - f20' ('~f20' / '!f20' / '^= 1' give and 1 /
+ * xor 1). Aids: none.
  */
 struct R290 {
   unsigned char pad[0x1e]; unsigned char b1e; unsigned char b1f;

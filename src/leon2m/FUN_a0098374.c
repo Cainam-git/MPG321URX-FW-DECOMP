@@ -1,12 +1,10 @@
 /* leon2m FUN_a0098374 @ 0xa0098374-0xa0098434 (48 words), flags -mcpu=v8 -O3 -g.
- * FUN_a0097ad0 with a leading call and a
- * trailing flag set.
+ * FUN_a0097ad0 with a leading call and a trailing flag set.
  * Code facts: FUN_a00d93c8(); if byte 0xa802d290+0x2f != byte 0xa8025c54 then the record byte gets that value
  * (stb in the call delay slot) and FUN_a00da254() runs; FUN_a00a93bc(word 0xa802afec - 0x7f, as u8);
  * FUN_a00a813c(1, rec+0x2f, 1); FUN_a00a9650(rec+0x2f, 0); FUN_a00a9468(1, 2); word 0xa802afec = 0x25;
  * FUN_a00a900c(2, 1); FUN_a00a9468(1, 2); FUN_a00b34d4(0, 1); byte 0xa802b08f = 5; byte 0xa802b08e |= 2.
- * Fix vs the autoc draft (66.67): BEHAVIOUR: the record byte is written with 0xa8025c54 (the draft stored
- * FUN_a00da254's return); real base DAT_a802d290 (draft: mid-record DAT_a802d2bf); u8 types. Aids: none.
+ * The record byte is written with byte 0xa8025c54; the record base is DAT_a802d290; u8 types. Aids: none.
  */
 struct R290 { unsigned char pad[0x2f]; unsigned char b2f; };
 extern struct R290 DAT_a802d290;

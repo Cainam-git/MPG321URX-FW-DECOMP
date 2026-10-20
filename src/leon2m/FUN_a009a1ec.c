@@ -2,8 +2,8 @@
  * Code facts: FUN_a00a813c(1, byte 0xa8025c55, 0); FUN_a00a93bc((word 0xa802afec + 0xf) & 0xff);
  * FUN_a00a9650(byte 0xa802d290+0x1dd, 2); FUN_a00a813c(1, byte +0x1dd, 1); word 0xa802afec = 0x34;
  * FUN_a00a900c(0, 1); FUN_a00dab08(); byte 0xa802b08e |= 2. void, no params.
- * Fix vs the autoc draft (75.76): BEHAVIOUR - FUN_a00a813c(1, 5c55, 0) runs BEFORE FUN_a00a93bc (draft: after);
- * record field via struct pointer (draft: mid-record DAT_a802d46d as int); void. Aids: none.
+ * FUN_a00a813c(1, 5c55, 0) runs BEFORE FUN_a00a93bc. Source form: the record field via a struct pointer.
+ * Aids: none.
  */
 struct R290 { unsigned char pad[0x1dd]; unsigned char b; };
 extern struct R290 DAT_a802d290;

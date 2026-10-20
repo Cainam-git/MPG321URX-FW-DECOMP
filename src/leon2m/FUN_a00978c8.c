@@ -1,9 +1,11 @@
-/* FUN_a00978c8 (leon2m, 0xa00978c8-0xa0097988, 48 words). Flags -mcpu=v8 -O3 -g.
- Code facts: void(void). a8ee8(DAT_a8025c56); a813c(0, DAT_a8025c56, 0); a813c(0, DAT_a802d290[0x1f], 0); a900c((u8)(_DAT_a802afec - 35), 2);
- FUN_a0097508(); FUN_a00976f8(); _DAT_a802afec = 0x7a; a9650(0, 3); v = DAT_a802d290[0x1f]; if v != DAT_a8025c56 { FUN_a00acef4(); v = re-read };
- DAT_a8025c56 = v; DAT_a8025c55 = DAT_a802d290[0x1a4]; DAT_a802b08f = 0xf; tail call FUN_a00d4998().
- Fixes vs draft: one variable v with TWO sets (before the test and after acef4): the second set is why the fw keeps 'and %o3,0xff' after the
- ldub (regmove cannot fold it); plain (non-volatile) DAT_a802d290 byte array; void. Aids: none.
+/* leon2m FUN_a00978c8 @ 0xa00978c8-0xa0097988 (48 words), flags -mcpu=v8 -O3 -g.
+ * Code facts: void(void). a8ee8(DAT_a8025c56); a813c(0, DAT_a8025c56, 0); a813c(0, DAT_a802d290[0x1f], 0);
+ * a900c((u8)(_DAT_a802afec - 35), 2); FUN_a0097508(); FUN_a00976f8(); _DAT_a802afec = 0x7a; a9650(0, 3);
+ * v = DAT_a802d290[0x1f]; if v != DAT_a8025c56 { FUN_a00acef4(); v = re-read }; DAT_a8025c56 = v;
+ * DAT_a8025c55 = DAT_a802d290[0x1a4]; DAT_a802b08f = 0xf; tail call FUN_a00d4998().
+ * Source form: one variable v with TWO sets (before the test and after acef4): the second set is why the fw keeps
+ * 'and %o3,0xff' after the ldub (regmove cannot fold it); DAT_a802d290 as a plain (non-volatile) byte array.
+ * Aids: none.
  */
 extern unsigned char DAT_a8025c55;
 extern unsigned char DAT_a8025c56;

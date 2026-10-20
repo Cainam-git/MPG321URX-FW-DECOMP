@@ -4,9 +4,9 @@
  * FUN_a00a9650((u8)(DAT_a802afec + 0x30), 1); k = (u8)FUN_a014459c((u8)(DAT_a802afec + 0x30));
  * tail FUN_a00a813c(1, (u8)FUN_a01445fc(byte DAT_a8025c55), k == DAT_a8025c55 ? 0 : 1) (two
  * separate tail arms in the fw). void. Family of FUN_a009e0bc.
- * Fixes vs the autoc draft (80.00 band): '(unsigned short)DAT_a802afec' for the +2 halfword
- * (shares the word's %hi; see FUN_a00920f4); the a014459c result in its own u8 local 'k' before
- * the compare (fw 'cmp k, c55'; the inline form gives 'cmp c55, k': 95.92); void. Aids: none.
+ * Source form: '(unsigned short)DAT_a802afec' for the +2 halfword (shares the word's %hi; see FUN_a00920f4); the
+ * FUN_a014459c result in its own u8 local 'k' before the compare (fw 'cmp k, c55'; the inline form gives
+ * 'cmp c55, k'). Aids: none.
  */
 extern unsigned char DAT_a8025c55;
 extern unsigned int DAT_a802afec;

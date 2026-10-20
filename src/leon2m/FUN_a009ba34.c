@@ -4,8 +4,8 @@
  * 0x55555556), word afec = t + 0xe7, until FUN_a00aad30(t) == 1. Byte 0xa802d2db = afec + 0x19 (stored before the
  * call), FUN_a00a9650(afec + 0x19, 1), FUN_a00d5eac(1) (ONE arg), FUN_a00a813c(1, byte 0xa8025c55, 0 when
  * afec - 0xe7 == that byte else 1; two calls cross-jumped), byte 0xa802b08e |= 2, tail FUN_a014a8d4(1, 0, 0).
- * Fix vs the autoc draft: d5eac takes 1 arg, the a813c 3rd arg is an if/else of two calls, (u16) read of afec,
- * void/u8 prototypes. Aids: none.
+ * Source form: the FUN_a00a813c third argument as an if/else of two calls; a (u16) read of afec; void/u8
+ * prototypes. Aids: none.
  */
 extern unsigned char DAT_a8025c55;
 extern unsigned char DAT_a802b08e;

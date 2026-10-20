@@ -3,8 +3,7 @@
  * arms out of line). FUN_a00a93bc(byte 0xa8025c56 + 0x48, as u8); FUN_a00a813c(1, byte 0xa8025c56, 0);
  * word 0xa802afec = 0x34; FUN_a00a9650(bit 29 of rec+0x1dc, 0); FUN_a00a813c(1, bit 29 re-read, 1);
  * FUN_a00a900c(afec - 0x34, 1); FUN_a00a9468(1, 2); FUN_a00b34d4(0, 1); tail FUN_a00daae8() (no args).
- * Fix vs the autoc draft (67.27): real base DAT_a802d290 (draft: mid-record _DAT_a802d46c); the tail call takes
- * no arguments; u8/void prototypes. Aids: none.
+ * The record base is DAT_a802d290; the tail call takes no arguments; u8/void prototypes. Aids: none.
  */
 struct R290 { unsigned char pad[0x1dc]; unsigned int w1dc; };
 extern struct R290 DAT_a802d290;

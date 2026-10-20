@@ -2,9 +2,8 @@
  * Code facts: byte 0xa8025c55 = byte 0xa802d46f; FUN_a00a93bc((word 0xa802afec + 0x45) & 0xff);
  * FUN_a00a8c88() (no argument set); FUN_a00b7d14(1); word 0xa802afec = 0xf5; FUN_a00a9650(0, 1);
  * tail call FUN_a00aee44(0xbf, 0).
- * Fix vs the autoc draft (95.65): FUN_a00b7d14 takes ONE argument (fw sets only %o0 = 1; its asm
- * never reads %i1); the draft passed 0xa8025c00 as a 2nd arg (extra sethi %o1). Draft junk
- * locals removed, callees given prototypes. Aids: none.
+ * FUN_a00b7d14 takes ONE argument (fw sets only %o0 = 1; its asm never reads %i1); the callees have prototypes.
+ * Aids: none.
  */
 extern unsigned char DAT_a8025c55;
 extern unsigned char DAT_a802d46f;

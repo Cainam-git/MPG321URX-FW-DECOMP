@@ -3,8 +3,8 @@
  * Code facts: FUN_a00a93bc(word 0xa802afec - 0x3f, as u8); loop: t = (lduh 0xa802afee = low half of word
  * 0xa802afec) - 0x3e; t = t % 4 (signed: sra/srl 30/add/and -4/sub); word 0xa802afec = t + 0x3f; repeat until
  * FUN_a00aad30(t) == 1 (u8 in, u8 out). Tail FUN_a00a9650(afec - 0x3f, 1). void(void).
- * Fix vs the autoc draft (67.86): the half-word read is (unsigned short)_DAT_a802afec (no separate afee symbol),
- * real callee prototypes (u8 params/returns, void), plain 't % 4'. Aids: none.
+ * Source form: the half-word read is (unsigned short)_DAT_a802afec (no separate afee symbol); u8 params/returns,
+ * void; plain 't % 4'. Aids: none.
  */
 extern unsigned int _DAT_a802afec;
 extern void FUN_a00a93bc(unsigned char);

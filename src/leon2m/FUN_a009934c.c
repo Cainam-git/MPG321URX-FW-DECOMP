@@ -3,8 +3,7 @@
  * Code facts: bit 7 of word DAT_a802d290 + 0x1ec is toggled (srl 7 / xnor / and 1 / sll 7 / and -129 / or / st),
  * 1-bit bit-field written 'f7 = 1 - f7'; FUN_a00a5420(0, new bit); FUN_a00db12c(0) (it reads its u8 %o0);
  * byte 0xa802b08e |= 2. void(void).
- * Fix vs the autoc draft: real base DAT_a802d290 + 0x1ec (draft _DAT_a802d47c), db12c takes the 0 arg, void.
- * Aids: none.
+ * The record base is DAT_a802d290 + 0x1ec; FUN_a00db12c takes the argument 0. Aids: none.
  */
 struct R290 { unsigned char pad[0x1ec]; unsigned int hi : 24, f7 : 1, lo : 7; };
 extern struct R290 DAT_a802d290;

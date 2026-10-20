@@ -1,9 +1,8 @@
 /* leon2m FUN_a0099168 @ 0xa0099168-0xa00991ec (33 words), flags -mcpu=v8 -O3 -g.
  * Code facts: f = bit 15 of word 0xa802d290+0xa8; FUN_a00a93bc(f); f = byte 0xa8025c56 & 1; FUN_a00a9650(f, 0);
  * FUN_a00a813c(1, f, 1) (f re-read each time); word 0xa802afec = 0x2e; tail FUN_a00a900c(4, 1).
- * Fix vs the autoc draft (75.76): bit 15 as a 1-bit BIT-FIELD (big-endian: hi:16, b15:1, lo:15) of the record word
- * via a struct pointer (fw sethi|or into %l0; the draft used the mid-record name _DAT_a802d338 with masks).
- * Aids: none.
+ * Source form: bit 15 as a 1-bit BIT-FIELD (big-endian: hi:16, b15:1, lo:15) of the record word via a struct
+ * pointer (fw sethi|or into %l0). Aids: none.
  */
 struct R290 { unsigned char pad[0xa8]; struct { unsigned int hi : 16, b15 : 1, lo : 15; } fa8; };
 extern struct R290 DAT_a802d290;

@@ -2,8 +2,7 @@
  * Code facts: toggles bit 15 (0x8000) of the word at 0xa802d290+0x174 (one ld; btst; both the andn and the or
  * value are computed before the branch, one st per arm); FUN_a00aa0e8(word 0xa802afec - 0xe, as u8, 1);
  * FUN_a00aacb4(1, 1); FUN_a00db690(); byte 0xa802b08e |= 2. void(void).
- * Fix vs the autoc draft (68.75): real base DAT_a802d290 (draft used mid-record _DAT_a802d404 as a u16 and an
- * unconditional |= plus a conditional overwrite); if/else of the &= / |= mask forms (a 1-bit bit-field gives
+ * The record base is DAT_a802d290. Source form: an if/else of the &= / |= mask forms (a 1-bit bit-field gives
  * srl + btst 1); no volatile on the RAM byte 0xa802b08e. Aids: none.
  */
 struct R290 { unsigned char pad[0x174]; unsigned int w174; };

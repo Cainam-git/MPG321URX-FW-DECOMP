@@ -3,8 +3,7 @@
  * Code facts: v = byte 0xa802d290+0x17c; byte 0xa8025c56 = v; FUN_a00a813c(1, v, 0);
  * FUN_a00a900c((word 0xa802afec - 11) & 0xff, 2); word 0xa802afec = re-read rec+0x17c + 0x3c;
  * FUN_a00a9650(re-read rec+0x17c, 1); byte 0xa802b08e |= 2. void(void).
- * Fix vs the autoc draft (74.07): real base DAT_a802d290 as a struct (draft: DAT_a802d40c mid-record name),
- * kept in one pointer so the fw shares %l0. Aids: none.
+ * Source form: the base DAT_a802d290 as a struct, kept in one pointer so the fw shares %l0. Aids: none.
  */
 struct R290 { unsigned char pad[0x17c]; unsigned char b; };
 extern struct R290 DAT_a802d290;
