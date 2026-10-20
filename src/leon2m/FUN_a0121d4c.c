@@ -1,6 +1,6 @@
 /* leon2m FUN_a0121d4c @ 0xa0121d4c-0xa0121e3c (60 words), flags -mcpu=v8 -O3 -g.
  * Called by FUN_a00f446c, FUN_a00f59c4, FUN_a013bd00, FUN_a013bdb8, FUN_a013beb0 and FUN_a013c144.
- * t = FUN_a00fd820(port) (the port class code); returns 0 when t is one of 0x31, 0x41, 0x51, 0x61, 0x71, 0x81,
+ * t = FUN_a00fd820(port); returns 0 when t is one of 0x31, 0x41, 0x51, 0x61, 0x71, 0x81,
  * 0xc1, 0x91, 0xa1, 0xe1, 0xe2, 0xb1 or 0xe8, else 1. Source form: one || chain of equality tests in this
  * order (gcc evaluates them in pairs with xor/subx and orcc; the last test, 0xe8, stays a plain compare).
  */

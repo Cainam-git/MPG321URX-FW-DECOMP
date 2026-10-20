@@ -9532,7 +9532,7 @@
     "ram:a00fd820": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Returns the class code of a block (0x11..0xE8) from its mode registers",
+      "comment": "Returns a code (1, 0x11..0xE8) for block blk from FUN_a00f92d4 and bits of its registers 3, 4, 0x40 and 0x54",
       "name": "FUN_a00fd820",
       "status": "matched"
     },
@@ -9553,7 +9553,7 @@
     "ram:a00fe184": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Reads back an internal input-path field from 0xCF0116E0 or 0xCF0116D4 as 1, 2 or 3",
+      "comment": "Returns 3 / 2 / 1 for bits 0x50 of the low byte of 0xCF0116E0 (FUN_a011cf88() > 0x81) or 0xCF0116D4 equal to 0x40 / 0x10 / other",
       "name": "FUN_a00fe184",
       "status": "matched"
     },
@@ -9567,7 +9567,7 @@
     "ram:a00fe3ec": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Reads back an internal input-path field from 0xCF0116E0 or 0xCF0116D4 as 1, 2 or 3",
+      "comment": "Returns 3 / 2 / 1 for bits 0x28 of the low byte of 0xCF0116E0 (FUN_a011cf88() > 0x81) or 0xCF0116D4 equal to 0x20 / 0x08 / other",
       "name": "FUN_a00fe3ec",
       "status": "matched"
     },
@@ -11549,7 +11549,7 @@
     "ram:a0121d4c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Returns 0 when the port class from FUN_a00fd820 is one of 13 listed codes, else 1",
+      "comment": "Returns 0 when FUN_a00fd820(port) is one of 13 listed codes, else 1",
       "name": "FUN_a0121d4c",
       "status": "matched"
     },
@@ -15514,14 +15514,14 @@
     "ram:a014aaa0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "SYSAPI_LoadUSRFlashType1: area check, then FUN_a0140360(0, 0, len, buf) when FUN_a0140304(0) == 1 -> 1, else 0",
+      "comment": "SYSAPI_LoadUSRFlashType1: area check (p 0x30 in group 0x00, never true) -> message and 0; the FUN_a0140360(0, 0, len, buf) path returns 1 when FUN_a0140304(0) == 1",
       "name": "FUN_a014aaa0",
       "status": "matched"
     },
     "ram:a014ab74": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "SYSAPI_SaveUSRFlashType1: area check (p 0x30, size 0x8000) then FUN_a0140e74(0, off, len, buf, 0) -> 1, else message -> 0",
+      "comment": "SYSAPI_SaveUSRFlashType1: area check (p 0x30 in group 0x00, never true) -> message and 0; the FUN_a0140e74(0, off, len, buf, 0) path returns 1",
       "name": "FUN_a014ab74",
       "status": "matched"
     },
@@ -15535,7 +15535,7 @@
     "ram:a014acdc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "SYSAPI_SaveUSRFlashType2: area check (p 0x30, size 0x8000) then FUN_a0140e74(0, off, len, buf, 0) -> 1, else message -> 0",
+      "comment": "SYSAPI_SaveUSRFlashType2: area check (p 0x30 in group 0x10, never true) -> message and 0; the FUN_a0140e74(0, off, len, buf, 0) path returns 1",
       "name": "FUN_a014acdc",
       "status": "matched"
     },

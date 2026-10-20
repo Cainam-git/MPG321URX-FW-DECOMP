@@ -1,5 +1,6 @@
 /* FUN_a014ab74: checks the request (area code p, offset off, length len) against a static area table helper: only
- * p == 0x30 with (p & 0xf0) == 0x00 is known (area 0, size 0x8000). Unknown area or off + len > size: when
+ * p == 0x30 with (p & 0xf0) == 0x00 is known (area 0, size 0x8000);
+ * the two tests cannot both hold, so every p takes the unknown-area path. Unknown area or off + len > size: when
  * FUN_a00dd614(0x40) is non-zero it prints the "SYSAPI_SaveUSRFlashType1 : DG Unknow or exceed size limit!!!!!" message
  * (s_001a70c0) and returns 0. Otherwise calls FUN_a0140e74(area, off, len, buf, 0) and returns 1 (_Bool).
  * The area helper fills a local struct (kept on the stack) with 0xff/0 and then a nested switch on (p & 0xf0)

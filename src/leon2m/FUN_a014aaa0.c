@@ -1,5 +1,6 @@
 /* FUN_a014aaa0: checks the request (area code p, offset off, length len) against the static area helper of
- * FUN_a014ab74 (only p == 0x30 is known: area 0, size 0x8000). Unknown area or off + len > size: when
+ * FUN_a014ab74 (p == 0x30 with (p & 0xf0) == 0x00 gives area 0, size 0x8000;
+ * the two tests cannot both hold, so every p takes the unknown-area path). Unknown area or off + len > size: when
  * FUN_a00dd614(0x40) is non-zero it prints "SYSAPI_LoadUSRFlashType1 : DG Unknow or exceed size limit!!!!!"
  * (s_001a7070) and returns 0. Otherwise, when FUN_a0140304(area) == 1, calls FUN_a0140360(area, 0, len, buf)
  * and returns 1; else 0 (_Bool). The area helper is inlined at -O3. No direct callers were found.

@@ -1,4 +1,4 @@
-/* FUN_a01190b0: when the chip version code (FUN_a011cf88) is above 0x83, sets bit 5 of registers
+/* FUN_a01190b0: when FUN_a011cf88() returns more than 0x83, sets bit 5 of registers
  * 0xcf011800 and 0xcf011a00, bit 0 of 0xcf012e00 and bit 1 of 0xcf012f74; otherwise it writes nothing.
  * No direct callers were found (the address may be reached through a pointer). The bits are the ones that
  * FUN_a011855c clears.
