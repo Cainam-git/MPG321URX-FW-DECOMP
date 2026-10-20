@@ -4166,6 +4166,13 @@
       "name": "FUN_a009e708",
       "status": "matched"
     },
+    "ram:a009e780": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "As FUN_a009e820, then FUN_a014512c(0, 0) when FUN_a0143c14(0) != 10",
+      "name": "FUN_a009e780",
+      "status": "matched"
+    },
     "ram:a009e820": {
       "by": "h10",
       "cflags": "-mcpu=v8 -O3 -g",
