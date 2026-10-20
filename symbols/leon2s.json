@@ -2587,7 +2587,7 @@
     },
     "ram:a0086df4": {
       "by": "hand",
-      "comment": "passes a 2-byte buffer (bit 7 of the high byte from bit 4 of ARR_a807cd2e[port]) to FUN_a00863d4 and returns whether it failed",
+      "comment": "passes a 2-byte buffer (bit 7 of the second byte from bit 4 of ARR_a807cd2e[port]) to FUN_a00863d4 and returns 1 when it returns non-zero",
       "name": "FUN_a0086df4",
       "status": "matched"
     },
