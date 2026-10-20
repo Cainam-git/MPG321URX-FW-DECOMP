@@ -6067,6 +6067,13 @@
       "name": "FUN_a00c7818",
       "status": "matched"
     },
+    "ram:a00c7a5c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command handler: digit 0-2 from the receive record to byte 0xa802d2af, then a sequence of conditional resets, reply 5600+",
+      "name": "FUN_a00c7a5c",
+      "status": "matched"
+    },
     "ram:a00c8410": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
