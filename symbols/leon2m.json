@@ -12742,6 +12742,13 @@
       "name": "FUN_a0129bfc",
       "status": "matched"
     },
+    "ram:a0129c10": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets byte 0xa802ca04 when on is nonzero; while it is set stores FUN_a0101bb0(on) in it and calls FUN_a0101c64(1) when that is 0",
+      "name": "FUN_a0129c10",
+      "status": "matched"
+    },
     "ram:a012a700": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
