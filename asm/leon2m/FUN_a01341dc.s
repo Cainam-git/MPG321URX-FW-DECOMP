@@ -1,4 +1,4 @@
-# leon2m FUN_a01341dc 0xa01341dc-0xa01342d0 (244 bytes)
+# leon2m FUN_a01341dc 0xa01341dc-0xa0134394 (440 bytes)
 a01341dc:  9d e3 bf 98  save  %sp, -104, %sp
 a01341e0:  b0 0e 20 ff  and  %i0, 0xff, %i0
 a01341e4:  b6 10 00 19  mov  %i1, %i3
@@ -60,3 +60,52 @@ a01342c0:  11 00 06 95  sethi  %hi(0x1a5400), %o0
 a01342c4:  7f fe ab ab  call  0xa00df170
 a01342c8:  90 12 20 70  or  %o0, 0x70, %o0	! 0x1a5470
 a01342cc:  30 bf ff d5  b,a   0xa0134220
+a01342d0:  03 33 c0 f3  sethi  %hi(0xcf03cc00), %g1
+a01342d4:  10 bf ff d3  b  0xa0134220
+a01342d8:  b4 10 60 0c  or  %g1, 0xc, %i2	! 0xcf03cc0c
+a01342dc:  03 33 c0 f3  sethi  %hi(0xcf03cc00), %g1
+a01342e0:  10 bf ff d0  b  0xa0134220
+a01342e4:  b4 10 60 08  or  %g1, 8, %i2	! 0xcf03cc08
+a01342e8:  03 33 c0 f3  sethi  %hi(0xcf03cc00), %g1
+a01342ec:  10 bf ff cd  b  0xa0134220
+a01342f0:  b4 10 60 04  or  %g1, 4, %i2	! 0xcf03cc04
+a01342f4:  10 bf ff cb  b  0xa0134220
+a01342f8:  35 33 c0 f3  sethi  %hi(0xcf03cc00), %i2
+a01342fc:  1b 33 c0 f1  sethi  %hi(0xcf03c400), %o5
+a0134300:  10 bf ff c8  b  0xa0134220
+a0134304:  b4 13 60 78  or  %o5, 0x78, %i2	! 0xcf03c478
+a0134308:  03 33 c0 f1  sethi  %hi(0xcf03c400), %g1
+a013430c:  10 bf ff c5  b  0xa0134220
+a0134310:  b4 10 60 70  or  %g1, 0x70, %i2	! 0xcf03c470
+a0134314:  19 33 c0 f1  sethi  %hi(0xcf03c400), %o4
+a0134318:  10 bf ff c2  b  0xa0134220
+a013431c:  b4 13 20 68  or  %o4, 0x68, %i2	! 0xcf03c468
+a0134320:  39 33 c0 f1  sethi  %hi(0xcf03c400), %i4
+a0134324:  10 bf ff bf  b  0xa0134220
+a0134328:  b4 17 20 60  or  %i4, 0x60, %i2	! 0xcf03c460
+a013432c:  33 33 c0 f1  sethi  %hi(0xcf03c400), %i1
+a0134330:  10 bf ff bc  b  0xa0134220
+a0134334:  b4 16 60 58  or  %i1, 0x58, %i2	! 0xcf03c458
+a0134338:  1f 33 c0 f1  sethi  %hi(0xcf03c400), %o7
+a013433c:  10 bf ff b9  b  0xa0134220
+a0134340:  b4 13 e0 50  or  %o7, 0x50, %i2	! 0xcf03c450
+a0134344:  17 33 c0 f0  sethi  %hi(0xcf03c000), %o3
+a0134348:  10 bf ff b6  b  0xa0134220
+a013434c:  b4 12 e0 48  or  %o3, 0x48, %i2	! 0xcf03c048
+a0134350:  15 33 c0 f0  sethi  %hi(0xcf03c000), %o2
+a0134354:  10 bf ff b3  b  0xa0134220
+a0134358:  b4 12 a0 40  or  %o2, 0x40, %i2	! 0xcf03c040
+a013435c:  13 33 c0 f0  sethi  %hi(0xcf03c000), %o1
+a0134360:  10 bf ff b0  b  0xa0134220
+a0134364:  b4 12 60 10  or  %o1, 0x10, %i2	! 0xcf03c010
+a0134368:  03 33 c0 f0  sethi  %hi(0xcf03c000), %g1
+a013436c:  10 bf ff ad  b  0xa0134220
+a0134370:  b4 10 60 0c  or  %g1, 0xc, %i2	! 0xcf03c00c
+a0134374:  03 33 c0 f0  sethi  %hi(0xcf03c000), %g1
+a0134378:  10 bf ff aa  b  0xa0134220
+a013437c:  b4 10 60 08  or  %g1, 8, %i2	! 0xcf03c008
+a0134380:  03 33 c0 f0  sethi  %hi(0xcf03c000), %g1
+a0134384:  10 bf ff a7  b  0xa0134220
+a0134388:  b4 10 60 04  or  %g1, 4, %i2	! 0xcf03c004
+a013438c:  10 bf ff a5  b  0xa0134220
+a0134390:  35 33 c0 f0  sethi  %hi(0xcf03c000), %i2

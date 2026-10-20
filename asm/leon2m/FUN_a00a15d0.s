@@ -1,4 +1,4 @@
-# leon2m FUN_a00a15d0 0xa00a15d0-0xa00a16ec (284 bytes)
+# leon2m FUN_a00a15d0 0xa00a15d0-0xa00a177c (428 bytes)
 a00a15d0:  9d e3 bf 98  save  %sp, -104, %sp
 a00a15d4:  35 2a 00 97  sethi  %hi(0xa8025c00), %i2
 a00a15d8:  40 00 1f 79  call  0xa00a93bc
@@ -70,3 +70,39 @@ a00a16dc:  b0 10 20 01  mov  1, %i0
 a00a16e0:  b4 10 20 00  clr  %i2
 a00a16e4:  40 00 1a 96  call  0xa00a813c
 a00a16e8:  81 e8 00 00  restore
+a00a16ec:  13 2a 00 b5  sethi  %hi(0xa802d400), %o1
+a00a16f0:  f2 0a 60 7c  ldub  [ %o1 + 0x7c ], %i1	! 0xa802d47c
+a00a16f4:  b2 0e 60 ff  and  %i1, 0xff, %i1
+a00a16f8:  b0 10 20 01  mov  1, %i0
+a00a16fc:  10 bf ff e3  b  0xa00a1688
+a00a1700:  b4 10 20 01  mov  1, %i2
+a00a1704:  1b 2a 00 b5  sethi  %hi(0xa802d400), %o5
+a00a1708:  d6 0b 60 7a  ldub  [ %o5 + 0x7a ], %o3	! 0xa802d47a
+a00a170c:  10 bf ff e4  b  0xa00a169c
+a00a1710:  9a 0a e0 ff  and  %o3, 0xff, %o5
+a00a1714:  33 2a 00 b5  sethi  %hi(0xa802d400), %i1
+a00a1718:  d6 0e 60 78  ldub  [ %i1 + 0x78 ], %o3	! 0xa802d478
+a00a171c:  10 bf ff e0  b  0xa00a169c
+a00a1720:  9a 0a e0 ff  and  %o3, 0xff, %o5
+a00a1724:  19 2a 00 b5  sethi  %hi(0xa802d400), %o4
+a00a1728:  f2 0b 20 7a  ldub  [ %o4 + 0x7a ], %i1	! 0xa802d47a
+a00a172c:  10 bf ff f3  b  0xa00a16f8
+a00a1730:  b2 0e 60 ff  and  %i1, 0xff, %i1
+a00a1734:  11 2a 00 b5  sethi  %hi(0xa802d400), %o0
+a00a1738:  f2 0a 20 78  ldub  [ %o0 + 0x78 ], %i1	! 0xa802d478
+a00a173c:  10 bf ff ef  b  0xa00a16f8
+a00a1740:  b2 0e 60 ff  and  %i1, 0xff, %i1
+a00a1744:  1b 2a 00 b5  sethi  %hi(0xa802d400), %o5
+a00a1748:  f2 0b 60 7c  ldub  [ %o5 + 0x7c ], %i1	! 0xa802d47c
+a00a174c:  b2 0e 60 ff  and  %i1, 0xff, %i1
+a00a1750:  b0 10 20 01  mov  1, %i0
+a00a1754:  10 bf ff e4  b  0xa00a16e4
+a00a1758:  b4 10 20 00  clr  %i2
+a00a175c:  31 2a 00 b5  sethi  %hi(0xa802d400), %i0
+a00a1760:  f2 0e 20 7a  ldub  [ %i0 + 0x7a ], %i1	! 0xa802d47a
+a00a1764:  10 bf ff fb  b  0xa00a1750
+a00a1768:  b2 0e 60 ff  and  %i1, 0xff, %i1
+a00a176c:  1f 2a 00 b5  sethi  %hi(0xa802d400), %o7
+a00a1770:  f2 0b e0 78  ldub  [ %o7 + 0x78 ], %i1	! 0xa802d478
+a00a1774:  10 bf ff f7  b  0xa00a1750
+a00a1778:  b2 0e 60 ff  and  %i1, 0xff, %i1

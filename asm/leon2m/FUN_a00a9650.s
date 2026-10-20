@@ -1,4 +1,4 @@
-# leon2m FUN_a00a9650 0xa00a9650-0xa00a9a98 (1076 bytes)
+# leon2m FUN_a00a9650 0xa00a9650-0xa00a9abc (1132 bytes)
 a00a9650:  9d e3 bf 80  save  %sp, -128, %sp
 a00a9654:  b2 0e 60 ff  and  %i1, 0xff, %i1
 a00a9658:  80 a0 00 19  cmp  %g0, %i1
@@ -273,3 +273,12 @@ a00a9a88:  9e 16 a3 64  or  %i2, 0x364, %o7
 a00a9a8c:  d2 03 c0 0a  ld  [ %o7 + %o2 ], %o1
 a00a9a90:  81 c2 40 00  jmp  %o1
 a00a9a94:  01 00 00 00  nop
+a00a9a98:  10 bf ff e3  b  0xa00a9a24
+a00a9a9c:  96 10 20 02  mov  2, %o3	! 0x2
+a00a9aa0:  80 a4 20 02  cmp  %l0, 2
+a00a9aa4:  12 bf ff ed  bne  0xa00a9a58
+a00a9aa8:  80 8a e0 ff  btst  0xff, %o3
+a00a9aac:  10 bf ff ea  b  0xa00a9a54
+a00a9ab0:  96 10 20 01  mov  1, %o3
+a00a9ab4:  10 bf ff e8  b  0xa00a9a54
+a00a9ab8:  96 10 20 02  mov  2, %o3
