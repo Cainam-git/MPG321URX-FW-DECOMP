@@ -12873,6 +12873,13 @@
       "name": "FUN_a012bc08",
       "status": "matched"
     },
+    "ram:a012be4c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores bit 0 of v in a bit of record id at 0xa802d8dc chosen by sel, then sends {id, v} with FUN_a01370dc(sel, 4, msg, 0) when send is set",
+      "name": "FUN_a012be4c",
+      "status": "matched"
+    },
     "ram:a012c118": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
