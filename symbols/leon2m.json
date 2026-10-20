@@ -5906,6 +5906,13 @@
       "name": "FUN_a00c3f54",
       "status": "matched"
     },
+    "ram:a00c5478": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command handler: digit 0-8 from the receive record, FUN_a00d7d48 check for 4-6, byte 0xa802d411 = digit via switch, reply 5600+",
+      "name": "FUN_a00c5478",
+      "status": "matched"
+    },
     "ram:a00c5a00": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
