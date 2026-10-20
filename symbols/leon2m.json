@@ -7708,6 +7708,12 @@
       "name": "FUN_a00f98f4",
       "status": "matched"
     },
+    "ram:a00f9910": {
+      "by": "hand",
+      "comment": "Sets and then clears bit 7 of register 0x2f of block blk through FUN_a00f1b5c",
+      "name": "FUN_a00f9910",
+      "status": "matched"
+    },
     "ram:a00fbfd4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
