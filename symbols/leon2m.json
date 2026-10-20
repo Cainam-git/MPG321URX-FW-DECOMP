@@ -13341,6 +13341,13 @@
       "name": "FUN_a01470fc",
       "status": "matched"
     },
+    "ram:a01471a0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "For display channel ch: FUN_a00f63bc with its bits 4..7, then a 16-way switch on item that tail-calls one of 13 routines with v",
+      "name": "FUN_a01471a0",
+      "status": "matched"
+    },
     "ram:a014737c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
