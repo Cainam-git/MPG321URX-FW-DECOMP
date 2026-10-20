@@ -13395,6 +13395,13 @@
       "name": "FUN_a013cfc4",
       "status": "matched"
     },
+    "ram:a013d018": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "For channel ch 0..3: writes src and FUN_a014226c(port byte) into nibbles 12..15 / 8..11 of word 0 when changed or forced; limits nibble 28..31 to 5 when bit 0 of byte +0x70",
+      "name": "FUN_a013d018",
+      "status": "matched"
+    },
     "ram:a013d178": {
       "by": "hand",
       "comment": "",
