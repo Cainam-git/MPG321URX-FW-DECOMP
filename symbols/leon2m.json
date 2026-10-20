@@ -12244,6 +12244,13 @@
       "name": "FUN_a0133950",
       "status": "matched"
     },
+    "ram:a0133a10": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns the port (p, or the first of 1..4 for p == 0) whose UART ring at 0xa802dd90 has write index != read index, else 0",
+      "name": "FUN_a0133a10",
+      "status": "matched"
+    },
     "ram:a0133ad8": {
       "by": "near",
       "comment": "near-miss repaired: DAT_a802da4a is unsigned char",
