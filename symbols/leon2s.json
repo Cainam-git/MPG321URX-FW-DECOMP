@@ -2615,6 +2615,12 @@
       "name": "FUN_a00870a4",
       "status": "matched"
     },
+    "ram:a0087364": {
+      "by": "h15",
+      "comment": "Returns a 4-bit code 5/6/8/9 from the low nibble of the first argument and bit tests 0x77/0x11/7/1 on bytes 4 and 5 of p",
+      "name": "FUN_a0087364",
+      "status": "matched"
+    },
     "ram:a00876ec": {
       "by": "hand",
       "comment": "Returns the byte at table + x * 40 + 0x15 for a byte index x; the multiply is emitted as ((x << 2) + x) << 3. Same form as FUN_a00858f0 and FUN_a0091c38.",
