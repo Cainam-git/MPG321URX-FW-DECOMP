@@ -6197,6 +6197,12 @@
       "name": "FUN_a00c966c",
       "status": "matched"
     },
+    "ram:a00c972c": {
+      "by": "hand",
+      "comment": "returns bit 1 of hardware register 0xcf018d00 as 0 or 1",
+      "name": "FUN_a00c972c",
+      "status": "matched"
+    },
     "ram:a00c9750": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
