@@ -6275,7 +6275,7 @@
     },
     "ram:a00b2790": {
       "by": "hand",
-      "comment": "parses n hexadecimal characters into an int (invalid characters count as 0)",
+      "comment": "converts n hexadecimal characters into an int (other characters count as 0)",
       "name": "FUN_a00b2790",
       "status": "matched"
     },
