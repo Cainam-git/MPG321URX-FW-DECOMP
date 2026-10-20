@@ -1,10 +1,9 @@
 /* leon2m FUN_a00961d4 @ 0xa00961d4-0xa0096230 (23 words), flags -mcpu=v8 -O3 -g.
  * Code facts: v = low 4 bits of the u16 at 0xa802d290+0x34 (lduh + and 0xf, re-read for every use);
  * byte 0xa8025c56 = v; FUN_a00a813c(1, v, 0); FUN_a00a900c(word 0xa802afec - 0x15, 2); word 0xa802afec = v + 100;
- * tail FUN_a00a9650(v, 1). void(void).
- * Fix vs the autoc draft (69.57): real base DAT_a802d290 (draft used mid-record _DAT_a802d2c4); the field is a
- * 4-bit BIT-FIELD 'lo:4' in a u16 container (a mask on a plain u16 narrows the load to ldub +0x35); tail call
- * takes 2 args; real callee prototypes. Aids: none.
+ * tail FUN_a00a9650(v, 1). void(void). The record base is DAT_a802d290; the tail call takes 2 arguments.
+ * Source form: the field is a 4-bit BIT-FIELD 'lo:4' in a u16 container (a mask on a plain u16 narrows the load
+ * to ldub +0x35). Aids: none.
  */
 struct R290 { unsigned char pad[0x34]; unsigned short hi : 12, lo : 4; };
 extern struct R290 DAT_a802d290;

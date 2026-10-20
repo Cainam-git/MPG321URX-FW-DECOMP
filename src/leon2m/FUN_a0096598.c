@@ -2,8 +2,7 @@
  * Code facts: byte 0xa802d290+0x11 = byte 0xa8025c56; FUN_a00a93bc((word 0xa802afec - 0x6c) & 0xff);
  * FUN_a00a9650(b11, 0); FUN_a00a813c(1, b11, 1) (b11 re-read after each call); FUN_a00d9764();
  * word 0xa802afec = 0x1b; FUN_a00a900c(3, 1); byte 0xa802b08f = 3. void, no params.
- * Fix vs the autoc draft (76.67): record field via struct pointer (fw sethi|or into %l0; the draft named
- * mid-record DAT_a802d2a1 as a 4-byte int), u8 prototypes, void. Aids: none.
+ * Source form: the record field via a struct pointer (fw sethi|or into %l0); u8 prototypes. Aids: none.
  */
 struct R290 { unsigned char pad[0x11]; unsigned char b11; };
 extern struct R290 DAT_a802d290;

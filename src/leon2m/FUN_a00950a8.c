@@ -3,8 +3,8 @@
  * Code facts: old = byte DAT_a802d290 + 0x20; the byte = FUN_a014459c(u8 (word 0xa802afec + 0x30)) (u8 return);
  * FUN_a00d5938(1) when the new byte != old (d5938 reads its u8 arg); byte 0xa802b08f = 0xf; FUN_a00a8c88();
  * FUN_a00a86e8(); word afec = 0x7a; FUN_a00a9650(0, 1); byte 0xa8025c55 = byte +0x1a4; byte 0xa802b08e |= 2.
- * void(void). Fix vs the autoc draft: BEHAVIOUR: afec = 0x7a and b08f = 0xf are constants (the draft stored
- * call returns), d5938 takes 1, c55 gets d290[0x1a4]; real base DAT_a802d290. Aids: none.
+ * void(void). afec = 0x7a and b08f = 0xf are constant stores; FUN_a00d5938 takes the argument 1; c55 gets
+ * d290[0x1a4]; the record base is DAT_a802d290. Aids: none.
  */
 struct R290 { unsigned char pad[0x20]; unsigned char b20; unsigned char pad2[0x1a4 - 0x21]; unsigned char b1a4; };
 extern struct R290 DAT_a802d290;

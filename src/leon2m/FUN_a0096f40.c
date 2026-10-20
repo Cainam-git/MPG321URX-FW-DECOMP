@@ -2,10 +2,9 @@
  * Code facts: if FUN_a01445fc(byte 0xa802d290+0x1e) == 1 (u8): FUN_a00a8ee8((word 0xa802afec - 30) & 0xff),
  * FUN_a00aa01c((word - 30) & 0xff, 0), FUN_a00a900c(FUN_a01445fc(byte +0x1e), 0), word = 6, FUN_a00b4144(4, 1),
  * FUN_a00a9468(1, 2), tail FUN_a00b34d4(0, 1); else byte +0x1e = FUN_a014459c(1), tail FUN_a00b8804(0, 1).
- * Fix vs the autoc draft (78.57): BEHAVIOUR - FUN_a014459c takes 1 argument (= 1; fw 'mov 1, %o0' before the
- * branch, its own asm masks %i0) and FUN_a00b8804 takes 2 (0, 1), not the draft's 6 pass-through params;
- * the function has no parameters; the draft's 'flag' was an uninitialised copy. Record as struct pointer
- * (fw sethi|or into %l0). Aids: none.
+ * FUN_a014459c takes 1 argument (= 1; fw 'mov 1, %o0' before the branch, its own asm masks %i0) and
+ * FUN_a00b8804 takes 2 (0, 1); the function has no parameters.
+ * Source form: the record as a struct pointer (fw sethi|or into %l0). Aids: none.
  */
 struct R290 { unsigned char pad[0x1e]; unsigned char b1e; };
 extern struct R290 DAT_a802d290;

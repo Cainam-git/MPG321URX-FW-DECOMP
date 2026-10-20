@@ -3,10 +3,9 @@
  * & 0xf (ld, andn 0xf0000, or, st); FUN_a00d58f8(); FUN_a00d58d8(); FUN_a00d4998();
  * FUN_a00a93bc((u8)(word DAT_a802afec - 100)); FUN_a00a9650(field, 0); FUN_a00a813c(1, field, 1)
  * (the field is re-read each time with lduh [base + 0x34] & 0xf); DAT_a802afec = 0x17; tail call
- * FUN_a00a900c(2, 1). void, no params.
- * Fix vs the autoc draft (82.86): the nibble is a 4-bit BIT-FIELD of the record DAT_a802d290
- * (pad[0x34], hi:12, f:4, lo:16; big-endian) = the fw's lduh reads and [base + 0x34] addressing;
- * the tail call takes 2 args. Aids: none.
+ * FUN_a00a900c(2, 1). void, no params. The tail call takes 2 arguments.
+ * Source form: the nibble is a 4-bit BIT-FIELD of the record DAT_a802d290 (pad[0x34], hi:12, f:4, lo:16;
+ * big-endian) = the fw's lduh reads and [base + 0x34] addressing. Aids: none.
  */
 extern unsigned char DAT_a8025c56;
 extern unsigned int DAT_a802afec;

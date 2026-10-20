@@ -1,8 +1,8 @@
-/* FUN_a0095778 (leon2m, 0xa0095778-0xa00957e8, 28 words). Flags -mcpu=v8 -O3 -g.
- Code facts: void, 6 params (p3..p6 passed on). DAT_a8025c56 = DAT_a802d290[0x190]; _DAT_a802afec = 0x43; FUN_a00a8c88(); FUN_a00a9dac(b, 1) and
- FUN_a00a9dac(b, 0) with b = DAT_a802d290[0x190] re-read after each call; FUN_a00ab0e0(0); FUN_a00a9468(0, 0); FUN_a00a9468(1, 3); tail call
- FUN_a00b34d4(0, 4, p3, p4, p5, p6).
- Fixes vs draft: the byte at 0xa802d290+0x190 is a plain u8 array element (fw ldub; the draft read a volatile word), p4 is a plain word. Aids: none.
+/* leon2m FUN_a0095778 @ 0xa0095778-0xa00957e8 (28 words), flags -mcpu=v8 -O3 -g.
+ * Code facts: void, 6 params (p3..p6 passed on). DAT_a8025c56 = DAT_a802d290[0x190]; _DAT_a802afec = 0x43;
+ * FUN_a00a8c88(); FUN_a00a9dac(b, 1) and FUN_a00a9dac(b, 0) with b = DAT_a802d290[0x190] re-read after each call;
+ * FUN_a00ab0e0(0); FUN_a00a9468(0, 0); FUN_a00a9468(1, 3); tail call FUN_a00b34d4(0, 4, p3, p4, p5, p6).
+ * The byte at 0xa802d290+0x190 is a plain u8 array element (fw ldub); p4 is a plain word. Aids: none.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;
