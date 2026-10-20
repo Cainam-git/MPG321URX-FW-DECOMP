@@ -8328,6 +8328,13 @@
       "name": "FUN_a00df648",
       "status": "matched"
     },
+    "ram:a00df80c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Prints one of 13 step names (or unknown) with the phy and byte fields of the block at 0xa802b530",
+      "name": "FUN_a00df80c",
+      "status": "matched"
+    },
     "ram:a00df8f4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
