@@ -9417,6 +9417,13 @@
       "name": "FUN_a011bd60",
       "status": "matched"
     },
+    "ram:a011bed8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "serial port of side sel: for n addresses from a + b*ARR_a802c9ca[sel]: command 0x70, address, low/high byte of v",
+      "name": "FUN_a011bed8",
+      "status": "matched"
+    },
     "ram:a011c6c8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
