@@ -959,6 +959,13 @@
       "name": "FUN_CODE_cc7d",
       "status": "matched"
     },
+    "CODE:ccc2": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "set XDATA 0xA64D = 0x1F and, for m == 1, reset the ten-entry table at 0xA62F to 1F FF FF",
+      "name": "FUN_CODE_ccc2",
+      "status": "matched"
+    },
     "CODE:cd8c": {
       "by": "hand",
       "comment": "return ulong a70d[1] - a70d[0] - a717",
