@@ -1,41 +1,44 @@
-/* leon2m FUN_a014aed0 @ 0xa014aed0-0xa014af84 (45 words).
- * Same flash descriptor lookup as FUN_a014ac28 (group 0x30; id 0x30 gives device 0 and size limit 0x8000, any
- * other id device 0xff), but calls FUN_a0140e74(device, addr, len, buf, 1) (writes) when the access fits, and logs "SYSAPI_WriteEEPROM : DG Unknow or exceed size
- * limit!!!!!" (string 0x1a7230) otherwise.
+/* FUN_a014aed0: checks the request (area code p, offset off, length len) against a static area table helper: only
+ * p == 0x30 with (p & 0xf0) == 0x30 is known (area 0, size 0x8000). Unknown area or off + len > size: when
+ * FUN_a00dd614(0x40) is non-zero it prints the "SYSAPI_WriteEEPROM : DG Unknow or exceed size limit!!!!!" message
+ * (s_001a7230) and returns 0. Otherwise calls FUN_a0140e74(area, off, len, buf, 1) and returns 1 (_Bool).
+ * The area helper fills a local struct (kept on the stack) with 0xff/0 and then a nested switch on (p & 0xf0)
+ * and p; GCC inlines it at -O3. No direct callers were found (the address may be reached through a pointer).
  */
-extern int FUN_a00df170(const char *fmt, ...);
-extern unsigned int FUN_a00dd614(unsigned int);
-extern void FUN_a0140e74(unsigned char dev, unsigned short addr, unsigned short len, unsigned char *buf, unsigned char flag);
-extern const char s_001a7230[];
+struct Area { unsigned char idx; unsigned short size; };
+extern unsigned char FUN_a00dd614(unsigned int level);
+extern int FUN_a0140e74();
+extern int FUN_a00df170();
+extern char s_001a7230[];
 
-struct FlashDesc {
-    unsigned char dev;
-    unsigned short limit;
-};
-
-unsigned char FUN_a014aed0(unsigned char id, unsigned char *buf, unsigned short addr, unsigned short len)
+static void area(unsigned char p, struct Area *a)
 {
-    struct FlashDesc d;
-    unsigned char ok = 0;
-
-    d.dev = 0xff;
-
-    if ((id & 0xf0) == 0x30) {
-        if (id == 0x30) {
-            d.dev = 0;
-            d.limit = 0x8000;
-        } else {
-            d.dev = 0xff;
-            d.limit = 0;
+    a->idx = 0xff;
+    a->size = 0;
+    switch (p & 0xf0) {
+    case 0x30:
+        switch (p) {
+        case 0x30:
+            a->idx = 0;
+            a->size = 0x8000;
+            break;
         }
-    } else {
-        d.dev = 0xff;
-        d.limit = 0;
+        break;
     }
-    if (d.dev != 0xff && addr + len <= d.limit) {
-        FUN_a0140e74(d.dev, addr, len, buf, 1);
-        ok = 1;
-    } else if (FUN_a00dd614(0x40) & 0xff)
-        FUN_a00df170(s_001a7230);
-    return ok & 1;
+}
+
+_Bool FUN_a014aed0(unsigned char p, unsigned char *buf, unsigned short off, unsigned short len)
+{
+    struct Area a;
+    _Bool r = 0;
+
+    area(p, &a);
+    if (a.idx == 0xff || off + len > a.size) {
+        if (FUN_a00dd614(0x40))
+            FUN_a00df170(s_001a7230);
+    } else {
+        FUN_a0140e74(a.idx, off, len, buf, 1);
+        r = 1;
+    }
+    return r;
 }
