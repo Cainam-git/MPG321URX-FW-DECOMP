@@ -2633,6 +2633,13 @@
       "name": "FUN_a0092648",
       "status": "matched"
     },
+    "ram:a0092908": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Enters the selection 0x26..0x29 in word 0xa802afec, stepping until FUN_a00aa520 accepts it, and clears byte 0xa802d433",
+      "name": "FUN_a0092908",
+      "status": "matched"
+    },
     "ram:a0092998": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
