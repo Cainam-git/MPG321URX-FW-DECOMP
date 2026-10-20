@@ -81,6 +81,12 @@ symbol names are not allowed.
 | An extension into a temporary, then a move into the variable, after a call | The return of an inlined helper with an early return, e.g. `static u16 rd(void) { if (c) return f(a); return f(b); }`. |
 | A retry decrement placed before the call gives `add` + `cmp`; after the call it gives `addcc` | Place the decrement to match. |
 | Retry loops | `for (; a != read() && n < N; n++) a = read();`, with the comparison first and the counter second. |
+| `and %iN, 0xff, %iN; cmp %iN, 0` and later a load `[base + %iN]` at offset 0 of a structure | The structure is an array element indexed by that parameter, used only when it is 0: `if (k == 0) { ... a[k].f ...; }`. |
+| A register at a fixed address built with `sethi`/`or` into one register and then `ld`/`st [reg]` | A fixed-address volatile macro, `#define REG (*(volatile unsigned int *)0xcf011fc0)`, instead of an extern. |
+| `ldsb` where the firmware has `ldub` on a local character table | Declare the local array `unsigned char`. |
+| `mov -1` followed by `and 0xff` on the returned value | An `int` result variable set to -1, returned from an `unsigned char` function. |
+| `and %i0, 1, %i0` in a shared exit block | `r = 0; ... r = 1; return r & 1;` (one exit for every path). |
+| Several `nop`s in a loop body that are not delay slots | `__asm__("nop");` statements, one per nop. |
 
 ## GCC 3.4.4: same instructions, different registers
 
@@ -127,6 +133,8 @@ symbol names are not allowed.
 - **`-msoft-float` also changes loop hoisting**, even in integer code, because it reserves the floating-point
   registers. Try it when the firmware reloads a value inside a loop that yours hoists.
 - **Access globals directly** through `DAT_x->field`, without caching a local pointer, unless the firmware caches it.
+| `st`, `ld`, `or`, `st` on the same register | Two statements: `REG = a; REG |= b;` (the register is volatile, so both writes stay). |
+| A byte copy pair or a store group in the other order | Try every order of the independent statements (a small brute-force search is quick). |
 
 ## GCC 3.4.4: blocks in a different order
 
@@ -153,6 +161,9 @@ changing the code, and test all pairs.
   block after the jump is case X, put X second to last.
 - The order of the `case` labels also decides the register names inside the cases; try every order.
 - Write identical `case` bodies separately rather than sharing them; GCC merges them itself, in its own way.
+| Switch case blocks in another order, or other registers inside them | Try the permutations of the case labels in the source; the block order and the register choice follow the source order. |
+| An annulled loop increment in the delay slot of a test, where GCC fills the slot from the fall-through | `__builtin_expect(cond, 0)` on that test. |
+| A dispatcher whose case blocks lie past the function's listed end | The function table needs the case blocks merged in (a function-table fix, then the switch matches). |
 
 ## Keil C51 (8051)
 
