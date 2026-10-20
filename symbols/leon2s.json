@@ -2519,6 +2519,12 @@
       "name": "FUN_a0086400",
       "status": "matched"
     },
+    "ram:a008642c": {
+      "by": "h15",
+      "comment": "Sends a 5-byte buffer (mode code from param_2, four copies of (y << 3) | x) through FUN_a00863d4 and returns whether it succeeded",
+      "name": "FUN_a008642c",
+      "status": "matched"
+    },
     "ram:a00864d4": {
       "by": "hand",
       "comment": "Maps param_2 & 0xff to a command byte in a local: 0 -> 0x21, 1 -> 0x22, 2 -> 0x23, 3 -> 0x27, otherwise cleared (clrb); all cases branch to a common store. Calls FUN_a00863d4(param_1 & 0xff, 0x80, 0x102, 0, &cmd) and returns result != 0 (cmp %g0, %o0; addx %g0, 0, %i0).",
