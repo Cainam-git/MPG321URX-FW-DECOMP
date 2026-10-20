@@ -2513,6 +2513,12 @@
       "name": "FUN_a0086bd8",
       "status": "matched"
     },
+    "ram:a0086df4": {
+      "by": "hand",
+      "comment": "passes a 2-byte buffer (bit 7 of the high byte from bit 4 of ARR_a807cd2e[port]) to FUN_a00863d4 and returns whether it failed",
+      "name": "FUN_a0086df4",
+      "status": "matched"
+    },
     "ram:a0086fb0": {
       "by": "hand",
       "comment": "byte maximum of p[8..] or p[0xc..] depending on mode",
