@@ -9697,6 +9697,13 @@
       "name": "FUN_a011e8fc",
       "status": "matched"
     },
+    "ram:a011eadc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "both blocks (DAT_001a2fb0 bases): regs 0x12..0x1d / 0x38..0x3f / 0x48..0x4f from tables 0x1a2fc8/0x1a2fc0/0x1a2fb8, then 16 fixed regs",
+      "name": "FUN_a011eadc",
+      "status": "matched"
+    },
     "ram:a011f1c8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
