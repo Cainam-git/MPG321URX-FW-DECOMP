@@ -8212,6 +8212,13 @@
       "name": "FUN_a00f6cf4",
       "status": "matched"
     },
+    "ram:a00f6d00": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes four 16-bit values as byte pairs to registers 0xCF00EC88..0xCF00ECA4",
+      "name": "FUN_a00f6d00",
+      "status": "matched"
+    },
     "ram:a00f6d80": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
