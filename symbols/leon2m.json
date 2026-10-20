@@ -2353,7 +2353,7 @@
     },
     "ram:a008cc28": {
       "by": "twin",
-      "comment": "Same code as FUN_a008cd58 with other constants: 5 digit chars to values (' ' -> 0, else c - 47)",
+      "comment": "Same code as FUN_a008cd58 with other constants (listed in the source header)",
       "name": "FUN_a008cc28",
       "status": "matched"
     },
@@ -3399,7 +3399,7 @@
     "ram:a00995f0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Same code as FUN_a0093694 with other constants: ",
+      "comment": "Same code as FUN_a0093694 with other constants (listed in the source header)",
       "name": "FUN_a00995f0",
       "status": "matched"
     },
@@ -6366,7 +6366,7 @@
     "ram:a00d44bc": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Same code as FUN_a00d41b4 with other constants: level from (u16)145660(), clamped to 100",
+      "comment": "Same code as FUN_a00d41b4 with other constants (listed in the source header)",
       "name": "FUN_a00d44bc",
       "status": "matched"
     },
@@ -7347,7 +7347,7 @@
     "ram:a00f1ed8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Same code as FUN_a00f1d48 with other constants: Write 16-bit value (low byte to reg, high to reg+1) to 0x19A31C-table block blk",
+      "comment": "Same code as FUN_a00f1d48 with other constants (listed in the source header)",
       "name": "FUN_a00f1ed8",
       "status": "matched"
     },
@@ -12784,7 +12784,7 @@
     "ram:a014d544": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Same code as FUN_a01438dc with other constants: i = remap(ch) (0..3, else print s_001a6dd8 \"SYS remapping channel OOR\" and use 0)",
+      "comment": "Same code as FUN_a01438dc with other constants (listed in the source header)",
       "name": "FUN_a014d544",
       "status": "matched"
     },
