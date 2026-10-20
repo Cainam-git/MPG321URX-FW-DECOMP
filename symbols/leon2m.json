@@ -8788,6 +8788,13 @@
       "name": "FUN_a00fce0c",
       "status": "matched"
     },
+    "ram:a00fd074": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes 0x44 and a byte to 0xCF012084/88 and runs one or two timed register transfer steps",
+      "name": "FUN_a00fd074",
+      "status": "matched"
+    },
     "ram:a00fd558": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
