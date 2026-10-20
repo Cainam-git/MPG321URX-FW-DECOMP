@@ -13145,6 +13145,13 @@
       "name": "FUN_a0146e2c",
       "status": "matched"
     },
+    "ram:a0146ef4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Calls FUN_a00f6898 or FUN_a00f67d0 (by b) with bits 4..7 of display channel ch unless they are 4",
+      "name": "FUN_a0146ef4",
+      "status": "matched"
+    },
     "ram:a0147064": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
