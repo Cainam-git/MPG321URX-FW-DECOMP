@@ -1,12 +1,12 @@
 /* leon2m FUN_a0140360 @ 0xa0140360..0xa0140500 (104 words), -mcpu=v8 -O3 -g (also
- * -msoft-float), exact.py None.
+ * -msoft-float).
  *
  * What it does, in plain words: "read len bytes of settings storage device 'dev' starting at offset addr into buf".
  * It is the settings-read wrapper used by FUN_a0153c74 (start-up settings check) and by
  * FUN_a012cfac (FGA_Init). It looks up the 38-byte ROM record DAT_001a69fe[dev] (byte 0 = b0, the storage kind):
  *  - b0 bit 7 CLEAR: an I2C storage chip. The 10-byte bus descriptor DAT_001a69e0[b0] (5 u16: pins / device / mode)
  *    is copied to the stack and func_0x4008bb28(&desc, addr, len, buf) does the read (= FUN_a002bb28 in the RAM
- *    piece, byte-exact: bit-banged I2C random read, bounded except FUN_a002ab04's late-ACK loop).
+ *    piece: bit-banged I2C random read, bounded except FUN_a002ab04's late-ACK loop).
  *  - b0 bit 7 SET: a memory-mapped area (no bus traffic). base = D[b0].h0 + (b1 << 11) + E[dev].h0 when the area
  *    record A36[b0].b2 != 0, else D[b0].h0 (+ D[b0].b8 * (rec.b4 << 8) unless b8 == 0xFF); then len bytes are copied
  *    from CPU address 0x00000000 + base + addr (DAT_00000000, the flash window) into buf. (D = DAT_a802cbdc 12-byte
@@ -16,7 +16,7 @@
  * ROM data (FW.021): record 0 at ROM 0x1A69FE (file 0x2AE9FE) = 00 00 00 80 00 "DG_EEPROM1" (b0 = 0 -> the I2C
  * path), bus descriptor 0 at ROM 0x1A69E0 = 06 80 06 40 00 04 A0 02 80 00 (as noted in FUN_a002bb28).
  *
- * Exact-form levers (gcc 3.4.4 -O3, all are plain C, no aids):
+ * Source form (gcc 3.4.4 -O3, all plain C, no aids):
  *  1. 'goto out;' at the end of the flash arm. The GOTO branch predictor (c-semantics.c PRED_GOTO) makes the
  *     flash arm less probable (-dl dump: flash-arm block freq / entry block freq 1719/4490 = 38% -> 1719/8185 = 21%;
  *     the copy loop stays the hottest block = 10000, so the entry block's weight rises). Global-alloc priority
@@ -32,8 +32,7 @@
  *     simplify-rtx canonical order (commutative_operand_precedence: a non-object before a REG) puts it FIRST, giving
  *     'ldub [i + p]'; a REG index keeps 'ldub [p + i]' as in the fw, while the store keeps '[i + buf]'. 'p =
  *     DAT_00000000 + off; p += addr;' inside the loop gives the fw hoist order (window + off) + addr.
- * Effect of the levers: 51.43 with the copy loop shape alone, 85.71 with lever 1, 96.15 with lever 2, 100 with
- * lever 3.
+ * All three are needed for the firmware's code.
  */
 struct B38 { unsigned char b0, b1; unsigned short h2; unsigned char b4; char name[33]; };
 struct A36 { unsigned short h0; unsigned char b2, b3; char name[32]; };

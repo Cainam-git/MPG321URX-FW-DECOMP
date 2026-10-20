@@ -1,7 +1,8 @@
 /* leon2m FUN_a013d1b4 @ 0xa013d1b4-0xa013d670 (1212 bytes)  input capture window -> port record
- * Flags: -mcpu=v8 -O3 -g; jf.py 100 %, rawcmp mismatches 0 of 303 words.
+ * Flags: -mcpu=v8 -O3 -g (303 words).
  *
- * void FUN_a013d1b4(unsigned char port, struct Win *w); w = 8 halfwords a..h (g signed). Callers FUN_a013dc6c, FUN_a0149b8c.
+ * void FUN_a013d1b4(unsigned char port, struct Win *w); w = 8 halfwords a..h (g signed).
+ * Callers FUN_a013dc6c, FUN_a0149b8c.
  * 1. port 0 and 0xA802E3D3 != 0: g, a, e, c = x * RAW row +0x0A / RAW row +0x08 (int multiply, signed divide).
  *    else, port != 0 and 0xA802E3D4 & 0xF0000000: a, c rounded up to a multiple of 64, e = (e + 63) & 0xFFC0,
  *    g = (c - a) / 2 (signed shift).
@@ -16,20 +17,23 @@
  *       if c < a and d < b: E = e, F = f; else E = e + g, F = f + h and g = h = 0.
  *    port 3 with 0xA802E3D0 bit 21: g = h = 0, (A,B) = (C,D) = (0x80, 0xA0), X = 0x18, Y = 2, E = F = 0.
  *    G = g + X (clamped at 0, signed), H = h + Y (0 when >= 0x800).
- * 4. P+0x4A = A, +0x52 = B, +0x4E = X, +0x58 = Y, +0x50 = G, +0x56 = H, +0x4C = C, +0x54 = D, +0x5A = E, +0x5C = F.
+ * 4. P+0x4A = A, +0x52 = B, +0x4E = X, +0x58 = Y, +0x50 = G, +0x56 = H, +0x4C = C, +0x54 = D, +0x5A = E,
+ *    +0x5C = F.
  * Panel row fields read: RAW active row 0xA802E378 only: +0x08 and +0x0A (scaling, port 0 with 0xA802E3D3 set)
- *   and +0x26, +0x28, +0x30, +0x32 (port-0 offsets X/Y in the bit-0/bit-30/bit-26 case). No transformed row, no row index.
- * Idioms: union for 0xA802E3D0; 1-bit bitfield for record +0x40 bit 30; nested 'else if (w4 & 0xF0000000)
+ *   and +0x26, +0x28, +0x30, +0x32 (port-0 offsets X/Y in the bit-0/bit-30/bit-26 case). No transformed row, no
+ *   row index.
+ * Source form: union for 0xA802E3D0; 1-bit bitfield for record +0x40 bit 30; nested 'else if (w4 & 0xF0000000)
  *   { if (port != 0)'; flag materialised then the record pointer assigned before its test; branch-free G/H clamps.
- * BEHAVIOUR-NEUTRAL CONSTRUCTS (needed for the firmware's block layout; visible in the -da dumps 12.bp / 31.bbro):
- *   (a) 'else if (w->b >> 16) w0 &= ~bit27; else w0 &= ~bit27;' in the hook-0xA802CC40 else arm: both arms identical and
- *       the test is always false (u16 >> 16); gcc folds it only in 20.combine (nonzero_bits), i.e. after 12.bp, so the
- *       clear block keeps half its frequency (1750 instead of 3500) and bb-reorder starts a new trace after it, exactly
- *       the firmware's layout of the port-0 paths.
+ * Constructs with no effect on behaviour (needed for the firmware's block layout; visible in the -da dumps
+ * 12.bp / 31.bbro):
+ *   (a) 'else if (w->b >> 16) w0 &= ~bit27; else w0 &= ~bit27;' in the hook-0xA802CC40 else arm: both arms
+ *       identical and the test is always false (u16 >> 16); gcc folds it only in 20.combine (nonzero_bits), i.e.
+ *       after 12.bp, so the clear block keeps half its frequency (1750 instead of 3500) and bb-reorder starts a new
+ *       trace after it, exactly the firmware's layout of the port-0 paths.
  *   (b) '__builtin_expect(q->h54 < rom, 0)': makes the "h54 below the ROM threshold" path unlikely. The signed form
  *       '(int)h54 - rom < 0' gives the same layout but emits bneg.
- *   (c) final stores written as DAT_a802df30[port].field (not through a pointer local): gives the address-computation
- *       order of the firmware.
+ *   (c) final stores written as DAT_a802df30[port].field (not through a pointer local): gives the
+ *       address-computation order of the firmware.
  */
 struct Win
 {

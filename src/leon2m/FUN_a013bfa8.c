@@ -1,9 +1,9 @@
 /* leon2m FUN_a013bfa8 @ 0xa013bfa8-0xa013c040 (152 bytes)  input timing record -> output timing record
- * (hand; -mcpu=v8 -O3 -g).
+ * Flags: -mcpu=v8 -O3 -g.
  * o = FUN_a013cd4c(port) (output timing record); p = port record 0xA802E224 + 0x2A*port.
- * lines = p->h18 (input line count), doubled when FUN_a0121258(port) (input register 0 bit 2, the interlace flag);
- * o->h12 = o->h16 = p->h16; o->h14 = o->h18 = lines; o->h1a/h1e = FUN_a00f88ac(port), o->h1c = FUN_a00f88cc(port),
- * o->h2c = o->h20 = FUN_a00f88cc(port), o->h2a = o->h1e.
+ * lines = p->h18 (input line count), doubled when FUN_a0121258(port) (input register 0 bit 2, the interlace
+ * flag); o->h12 = o->h16 = p->h16; o->h14 = o->h18 = lines; o->h1a/h1e = FUN_a00f88ac(port),
+ * o->h1c = FUN_a00f88cc(port), o->h2c = o->h20 = FUN_a00f88cc(port), o->h2a = o->h1e.
  * Source order of the stores reproduces the firmware's scheduling; no unusual constructs.
  */
 struct Out {

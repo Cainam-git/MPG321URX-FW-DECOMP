@@ -1,8 +1,7 @@
 /* leon2m FUN_a013c944 @ 0xa013c944..0xa013cd4c (258 words): input-channel records reset, start-up step 7 of
  * FUN_a015266c, called AFTER FUN_a0141964 (src/leon2m/FUN_a015266c.c: FUN_a012cfac, FUN_a00fd558, FUN_a0141964,
  * FUN_a015209c, FUN_a013c944), so it runs only when the display start-up path has returned.
- * -mcpu=v8 -O3 -g -msoft-float: tools/exact.py
- * exact() = None. (Without -msoft-float: 20.54; the loop pass then hoists other mask constants.)
+ * Flags: -mcpu=v8 -O3 -g -msoft-float (without -msoft-float the loop pass hoists other mask constants).
  * In plain words: it puts the four input-channel records (RAM 0xA802DF30, 4 x 0x78 bytes, the records the channel
  * state machine FUN_a013dc6c steps through) into their start state: channel 0 gets state 5, the other three state 0,
  * each gets its id, port number, a 500 timer value and cleared flags, and the output-timing halves are copied from
@@ -21,12 +20,12 @@
  *    R.h32 + R.h30, +0x5A = +0x5C = 0 (R = the active panel row RAM 0xA802E378).
  *  - Tail: if RAM word 0xA802E3D0 bit 21 is set, FUN_a01302e0(3, 1) as a tail call.
  * It neither waits nor fails: every loop has a fixed bound, the only call is the tail call, no hardware access.
- * Levers (documented, no-code):
+ * Source form (no-code):
  *  (1) one bitfield statement per field (struct W0 / W70 / W68 over the words +0 / +0x70 / +0x68): the fw's chains of
  *      and/or masks are exactly gcc's bitfield stores; combine merges the small masks (f4 + id -> 'and -255') and
  *      widens the field 13..12 clear with the known-zero bits ('andn 0x33000' / 'andn 0x133000').
- *  (2) loop 1: the switch arms in the order default (f4 = 1), case 2, case 3: 91 jf vs 31..84 for other orders (the
- *      case-3 arm then reads ROM[3] with the constant index as in the fw).
+ *  (2) loop 1: the switch arms in the order default (f4 = 1), case 2, case 3; other orders give other code (with
+ *      this order the case-3 arm reads ROM[3] with the constant index as in the fw).
  *  (3) E[0]: 'h74 = 500' as the first statement (fw stores h74 before w70); chained 'a = b = x' stores b first, so
  *      the pairs are written in the fw's store order (h4a = h4c, h52 = h54, h4e = h50, h58 = h56, h5c = h5a).
  *  (4) loop 3: the w68 statements after the halves and 'b22 = 0' last.

@@ -1,11 +1,11 @@
-/* leon2m FUN_a013dbcc @ 0xa013dbcc  (hand; same compile unit as FUN_a013dc6c, which calls it)
+/* leon2m FUN_a013dbcc @ 0xa013dbcc  (same compile unit as FUN_a013dc6c, which calls it)
  * Looks up the port class code of a port (FUN_a00fd820) and, for the four known codes 0x51 / 0x61 / 0x71 / 0x81,
  * fetches the 16-byte record of class 0..3 with FUN_a0139040 into a stack buffer and copies it to *out (8 halfwords).
  * Any other code: nothing is written. param_2 is not used (dc6c passes its buffer pointer there).
- * Form: every case has its OWN call + copy; gcc's cross-jumping merges the four copies
+ * Source form: every case has its OWN call + copy; gcc's cross-jumping merges the four copies
  * into one call block before block reordering, and the merged block's summed frequency gives the fw case-tree layout
  * (> 0x61 subtree inline, 0x51 leaf out of line). The one-call form 'v = k; break; ... call(v)' gives the
- * other layout. Flags -mcpu=v8 -O3 -g (-msoft-float: same object). words.
+ * other layout. Flags -mcpu=v8 -O3 -g (-msoft-float gives the same object).
  */
 struct S16 { unsigned short h[8]; };
 extern unsigned char FUN_a00fd820(unsigned char);

@@ -1,4 +1,4 @@
-/* leon2m FUN_a01412b8 @ 0xa01412b8  panel power request (hand; -mcpu=v8 -O3 -g)
+/* leon2m FUN_a01412b8 @ 0xa01412b8  panel power request. Flags: -mcpu=v8 -O3 -g.
  *
  * on = 1 (power on) / 0 (power off) request to the panel power sequencer FUN_a01413d0 (same unit, state byte
  * DAT_a802e110.state: 1 = off, 2..5 = power-on steps, 6 = on, 7..9 = power-off steps). DAT_a802cc09 = 0 first, then:

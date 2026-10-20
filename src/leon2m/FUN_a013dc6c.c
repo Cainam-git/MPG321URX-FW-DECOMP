@@ -1,5 +1,5 @@
 /* leon2m FUN_a013dc6c @ 0xa013dc6c-0xa013f1e4  input channel bring-up state machine (panel-row reader)
- * Flags -mcpu=v8 -O3 -g -msoft-float. Byte-exact against FW.021: of 1374 words.
+ * Flags -mcpu=v8 -O3 -g -msoft-float. 1374 words.
  *
  * One step per call for the channel DAT_a802cbd2 (0..3, 0xff = none): record c = DAT_a802df30[ch] (0x78 bytes).
  * Word +0: state (bits 28-31), step (20-23), port (12-15), f8 (8-11), f4 (4-7), bit 0. Word +0x70: flags,
@@ -17,7 +17,7 @@
  *   Any 'port not ready' in states 7..12 -> state 5 and stop.
  * Finally DAT_a802cbd2 = (DAT_a802cbd2 + 1) & 3 (next channel on the next call).
  *
- * Source facts (code-level, each checked against the fw asm):
+ * Source form (each item checked against the fw asm):
  *  - state 10 step 0 is 'if (!(c->w70 & 0x30000000)) { ...whole step... } INC_STEP(c); break;' (fw shares one
  *    INC_STEP after the 0x30000000 test, 0xf40-0x1020).
  *  - ch == 0: 'if (DAT_a802e3d0.u0.w & 0x8000000) {set arm} else {clear arm}' (fw falls through into the set arm,
@@ -32,7 +32,7 @@
  *  - port_code's local is 'unsigned char v' (fw keeps 'and %o0,3,%o0' after the port-code join, 3x).
  *  - port_code IS the inlined FUN_a013cda8(ch) (same file, has 10 other callers): the static function takes the
  *    CHANNEL, 'static unsigned int port_code(unsigned char ch)' with the switch on PORT(&DAT_a802df30[ch]); compiled
- *    standalone it is byte-exact FUN_a013cda8 (an int/uint parameter is not). Called as
+ *    standalone it gives the code of FUN_a013cda8 (an int/uint parameter does not). Called as
  *    port_code(0) / port_code(3) / port_code(ch); no '& 3' at the callers (v is 0..3).
  *  - case 1 is written without the fall-through: 'if (F21) {status 4 -> 3} else if (F24 && status 6) -> 3; break;'
  *    (same code; gcc cross-jumps the copy into case 2's test, fw de84 -> def8).
@@ -56,14 +56,14 @@
  *    gcc renames that chain (bb118). The live-out chain is not renamed in the fw.
  *  - case 12 is written abort-first: 'if (status != 4) {abort} else if (BUSY) {abort} else {FUN_a0132964 == 1 ...}'
  *    (same code; fw renames the abort block before the FUN_a0132964 compare).
- *  - real prototypes: 'void FUN_a01045a0(unsigned char, unsigned long long *, unsigned short)' (a K&R declaration
+ *  - prototypes: 'void FUN_a01045a0(unsigned char, unsigned long long *, unsigned short)' (a K&R declaration
  *    swaps the argument set-up order at fw 0x8fc); 'void FUN_a00ef1b0(int, int, struct S16 *)' (the callee ends in a
  *    plain 'restore' and reuses %i0 as a local); 'void FUN_a01016a4(unsigned char, unsigned char, unsigned int,
  *    unsigned char, unsigned char)' (fw 0xa01016a4 is a tail-call wrapper: st %o2, 'and 0xff' on o0/o1/o3/o4; with an
  *    int return the call RTL sets %o0 and the scheduler moves the %o0 argument set-up at fw 0x600 and 0x890);
  *    FUN_a01085f8(int, uchar, uchar); FUN_a0104a34(uchar port, int f8, ushort h, int f4); FUN_a0107e44 / FUN_a0109bbc
  *    with their signatures from src/leon2m.
- * Documented no-code compiler aids:
+ * Compiler aids (no code):
  *  - CASE ORDER (every moved case ends in 'break'): main switch 0/3, 1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 2; the state 10
  *    and state 11 step switches in natural order.
  *  - 'do continue; while (0);' (continue binds to the do-while(0), PRED_CONTINUE hint) after 'if (F(c, 17)) {' in
@@ -72,18 +72,18 @@
  *    step 0.
  *  - Two __builtin_expect branch hints (no instructions; they only set the edge probability, PRED_BUILTIN_EXPECT
  *    99 %, first-match, so it replaces the guessed heuristics on that one branch). Each alone gives a different
- *    layout (rawcmp 275 / 242); together they give the firmware's block order with the same instructions:
+ *    layout; together they give the firmware's block order with the same instructions:
  *    - state 8 step 1: 'if (__builtin_expect(!!((int)c->w40 < 0), 1)) CLR(c, 22);'. The edge into the CLR(c, 22)
  *      arm goes from 21 % to 99 %. Block frequencies: the CLR(22) arm 0 -> 2 and the shared CLR(22)/CLR(28) andn
  *      tail 0 -> 2. bb-reorder then extends the step 1 trace through the arm and places the andn tail as its own
  *      round-4 trace right after it (it was one of the last round-4 traces).
- *    - state 11 step 1: 'if (__builtin_expect(!!(F(c, 26)), 0)) {'. The edge into the 'step 0, state 12' arm goes from
- *      50 % to 1 %, so that arm's frequency goes 3 -> 0 and its round-4 trace moves behind the other low-frequency
- *      traces.
+ *    - state 11 step 1: 'if (__builtin_expect(!!(F(c, 26)), 0)) {'. The edge into the 'step 0, state 12' arm goes
+ *      from 50 % to 1 %, so that arm's frequency goes 3 -> 0 and its round-4 trace moves behind the other
+ *      low-frequency traces.
  *    Net effect in round 4: the frequency-0 single-block traces are taken in the firmware's order: the state 8 step 5
  *    srl stub (0x82 test else arm) with its following blocks, then the step 0 fn0c stub, the state 10 stub, the
- *    FUN_a01062e0 stub and last the state 8 step 2 printf stub (before: step 2 printf stub first, srl stub last),
- *    which is the cold-stub order at fw 0x1274 / 0x13ac.
+ *    FUN_a01062e0 stub and last the state 8 step 2 printf stub (without the hints: step 2 printf stub first, srl
+ *    stub last), which is the cold-stub order at fw 0x1274 / 0x13ac.
  */
 struct InT { unsigned short h00, h02; unsigned char p04[8]; unsigned short h0c, h0e, h10, h12, h14, h16; unsigned char rest[0x24]; };
 struct OutT { unsigned short h00, h02, h04, h06, h08, h0a, h0c, h0e; unsigned char p10[8]; unsigned long long pclk; unsigned int w20; };

@@ -1,5 +1,5 @@
 /* leon2m FUN_a013d918 @ 0xa013d918-0xa013dbcc (692 bytes)  channel window set-up (panel-row reader).
- * -mcpu=v8 -O3 -g (jf 100 match, rawcmp 173/0). No compiler aids.
+ * Flags: -mcpu=v8 -O3 -g (173 words). No compiler aids.
  *
  * void(u8 ch): c = channel record 0xA802DF30[ch] (0x78 bytes). blk = word0 bits 12-15 (the 0xff test is dead
  * code kept by the compiler). Channel 0 with word0 bit 0, +0x40 bit 30 or 0xA802E3D0 bit 26 takes h/m from the
@@ -9,7 +9,7 @@
  * (channel 0 + bit 0: row +0x26/+0x28/+0x30/+0x32 margins; channel 0 + 0xA802E3D3: full row +0x08 x +0x0A).
  * Channel 3: FUN_a0106d3c(blk, 0x3f, 0xff) or (blk, 0x30, 0xc0) by 0xA802E3D0 bit 21.
  * PANEL ROW FIELDS READ: active row copy 0xA802E378 +0x08, +0x0A, +0x26, +0x28, +0x30, +0x32.
- * Code facts: h, dx, dy are unsigned short (16-bit call arguments; with int the firmware's zero-extension and
+ * Source form: h, dx, dy are unsigned short (16-bit call arguments; with int the firmware's zero-extension and
  *   add operand order are lost); word0 read through c; one combined 'ch == 0 && (...)' test; the ch == 3 test
  *   as 'if (ch == 3 && bit) m = 1; else m = 2;' (laid out of line by bb-reorder); dx/dy cleared first.
  */

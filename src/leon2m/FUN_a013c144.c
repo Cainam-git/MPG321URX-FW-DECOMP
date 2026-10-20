@@ -1,6 +1,5 @@
 /* leon2m FUN_a013c144 @ 0xa013c144-0xa013c894 (1872 bytes = 468 insns)  apply the output timing of one port
- * (writer of record byte +0x68). Hand; -mcpu=v8 -O3 -g
- * (jf.py 100 % match=True, rawcmp.py 468 words / 0 mismatches; -msoft-float gives the same bytes).
+ * (writer of record byte +0x68). Flags: -mcpu=v8 -O3 -g (-msoft-float gives the same bytes).
  *
  * int FUN_a013c144(unsigned char a, unsigned char port, unsigned char c), returns 1. rec = FUN_a013cd4c(port).
  * 1. t = FUN_a00fd820(port) (t == 0xB1 -> t = FUN_a012fc20()); flag = a != 0xFF and t in {0x31,0x41,0x51,0x61}.
@@ -22,22 +21,25 @@
  *    FUN_a010a824(port), delay 50, FUN_a0105d20(); else FUN_a010a83c(port).
  * 7. FUN_a00f8e0c(port, FUN_a00f8f34(port) ? +0x1E - +0x1A : +0x1E); FUN_a00f8e44(port, +0x20);
  *    rec+0x70 bit 30: FUN_a0142518(port, w, h).
- * 8. FUN_a013c040(port, w, h) INLINED (0xA013C3D4..0xA013C45C, 0xA013C66C..C6C0: the byte-exact sister, copied here).
+ * 8. FUN_a013c040(port, w, h) INLINED (0xA013C3D4..0xA013C45C, 0xA013C66C..C6C0; its code is copied into this
+ *    file).
  * 9. FUN_a00f8ce4(port, (rec+0x3E != 0 && port > 3) ? +0x16 >> 1 : +0x16, h, 0); FUN_a0121e3c(port).
  *
- * SOURCE FORMS (all needed for the exact bytes, none is a no-code hint):
- *  - FUN_a013c040 is in the same file and declared 'inline' (gcc 3.4 -O3 inlines it; without 'inline' it stays a call).
+ * Source form (each item is needed for the firmware's code; none is a no-code aid):
+ *  - FUN_a013c040 is in the same file and declared 'inline' (gcc 3.4 -O3 inlines it; without 'inline' it stays a
+ *    call).
  *  - w and h are addressable locals (fp-138 / fp-140, reloaded after every call): they are passed by address to a
  *    static function (fix0) that gcc inlines. Declaration order h, w.
  *  - record +0x70 bit 31 is a 1-bit BITFIELD (union with the word; bit 30 is tested as a word mask). With 'w70 < 0'
- *    the FRC block and the interlace block are laid out in the wrong place (84 % instead of 100 %).
- *    FUN_a013c040 stays byte-exact with this record type (jf FUN_a013c040 on this file = 100 %).
+ *    the FRC block and the interlace block are laid out in other places.
+ *    FUN_a013c040 compiled from this file with this record type still gives its firmware code.
  *  - record +0 low nibble read as a 4-bit bitfield (lduh; a plain '& 0xf' becomes ldub +1).
  *  - 'big = 0; if (x > 0x1fff) big = 1;' with x an unsigned int local (reused for the FUN_a00f8ce4 argument).
- *  - 'pad = 0x10 - h16 % 16; pad %= 16;' two statements (one expression folds 16 - y to neg); 'odd = h18 % 2'.
+ *  - 'pad = 0x10 - h16 % 16; pad %= 16;' two statements (one expression folds 16 - y to neg);
+ *    'odd = h18 % 2'.
  *  - FUN_a00f88e8 / FUN_a00f8e0c written as two calls in if/else (gcc merges them).
  *  - the step-3 test is written 'h12 != h16 || h14 != h18' with the big arm FIRST (rnreg LRU tick order; the
- *    opposite arm order is 98.93 % with two register differences).
+ *    opposite arm order gives two register differences).
  */
 struct Timing { unsigned char d[0x3c]; };
 struct Out {

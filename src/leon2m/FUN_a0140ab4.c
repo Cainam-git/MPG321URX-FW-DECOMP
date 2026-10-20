@@ -3,10 +3,9 @@
  * u16 result re-extended sll/srl) is above 1000: one pass (u8 i < 1; fw 'cmp i,0; be') over the ROM 38-byte
  * records DAT_001a69fe[i].b0 -> b; v = u16 DAT_a802cbdc[b].h0 (12-byte RAM records); match when
  * v <= DAT_a802a47a < v + DAT_001a6a24[b].h0 (36-byte ROM records, the same tables FUN_a01405d0 reads).
- * FUN_a01405d0(r) with r = i on a match, else 0xff; then DAT_a802cbd9 = 0. void (fw never sets %i0).
- * Form: r is an int set on two labelled paths (the fw 'and %o0,0xff' in the call slot is the u8 argument
- * conversion of a non-u8 value; with a u8 i it folds to a nop). Draft fixes: void, real record types, the
- * single call. Aids: none.
+ * FUN_a01405d0(r) with r = i on a match, else 0xff; then DAT_a802cbd9 = 0. Returns nothing (fw never sets %i0).
+ * Source form: r is an int set on two labelled paths (the fw 'and %o0,0xff' in the call slot is the u8 argument
+ * conversion of a non-u8 value; with a u8 i it folds to a nop); the record types; a single call. Aids: none.
  */
 struct R38 { unsigned char b0; unsigned char rest[37]; };
 struct R36 { unsigned short h0; unsigned char rest[34]; };

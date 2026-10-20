@@ -7,19 +7,22 @@
  *   FUN_a0121258 = 'bit port of 0xA802CBD4', i.e. the line-rate switch read by the row picker FUN_a00dac38);
  *   P.h0 bit 0x80 -> 0xA802CBD3 bit port the same way.
  * Then FUN_a01215e8(port) and, by FUN_a0142e8c(port):
- *   != 5: best match over the mode table 0x1A5A16 (36-byte rows, ends at row.w2 == 0xFFFF): rows whose +0x22 id is in the
- *     0x1A59E2 list (13 x {id 0x0C, value}) are skipped, row +0x22 bit 0 must equal FUN_a0121258(port); tolerance checks on
- *     t+6 / t+8 against row +2 / +4 (limits row +0x1E / +0x1F), FUN_a0142e8c(port) == 2 also needs t+0xA & row+6;
- *     t+0x10 (doubled when FUN_a0121258(port) == 1) must exceed row +0x10; score = (|d6| + |d8| + 4*|d10|) * 100 + |t+0xC
- *     - row+8|; the minimum wins, else the row nearest in t+0x10. The row is copied into a second FUN_a013cd4c(port)
- *     record (apply_mode, scaled by row+0 when non-zero); then FUN_a01541ec(&t+6) and, if it returns 0, FUN_a01542c4(&t+6).
- *   == 5: timing taken from P+0x16 / P+0x18 (P+0x18 doubled when FUN_a0121258(port), i.e. when the 0xA802CBD4 bit is set),
- *     defaults stored in t, then the first table row within +-5 / +-6 / +-9 / +-9 sets t+0x12, +0x14, +0x3C.
+ *   != 5: best match over the mode table 0x1A5A16 (36-byte rows, ends at row.w2 == 0xFFFF): rows whose +0x22 id is
+ *     in the 0x1A59E2 list (13 x {id 0x0C, value}) are skipped, row +0x22 bit 0 must equal FUN_a0121258(port);
+ *     tolerance checks on t+6 / t+8 against row +2 / +4 (limits row +0x1E / +0x1F), FUN_a0142e8c(port) == 2 also
+ *     needs t+0xA & row+6; t+0x10 (doubled when FUN_a0121258(port) == 1) must exceed row +0x10;
+ *     score = (|d6| + |d8| + 4*|d10|) * 100 + |t+0xC - row+8|; the minimum wins, else the row nearest in t+0x10.
+ *     The row is copied into a second FUN_a013cd4c(port) record (apply_mode, scaled by row+0 when non-zero); then
+ *     FUN_a01541ec(&t+6) and, if it returns 0, FUN_a01542c4(&t+6).
+ *   == 5: timing taken from P+0x16 / P+0x18 (P+0x18 doubled when FUN_a0121258(port), i.e. when the 0xA802CBD4 bit
+ *     is set), defaults stored in t, then the first table row within +-5 / +-6 / +-9 / +-9 sets t+0x12, +0x14,
+ *     +0x3C.
  * Callers: FUN_a013dc6c (call at 0xA013E8A4, the only call site).
- * keys: -msoft-float; 'if (type != 5) {search} else {type-5}' (pre-layout block order drives -frename-registers).
- *   'if (found == 1)' (gcc predicts == const false, so the not-found arm falls through) with the final FUN_a01541ec check
- *   written in BOTH arms; P bits as bitfields (lets gcc reorder the 0xA802CBD4 store after the next load); table rows read
- *   as DAT_001a5a16[i].x in the search loop; abs() builtin; local declaration order matters (register spill of 'best').
+ * Source form: -msoft-float; 'if (type != 5) {search} else {type-5}' (pre-layout block order drives
+ *   -frename-registers). 'if (found == 1)' (gcc predicts == const false, so the not-found arm falls through) with
+ *   the final FUN_a01541ec check written in BOTH arms; P bits as bitfields (lets gcc reorder the 0xA802CBD4 store
+ *   after the next load); table rows read as DAT_001a5a16[i].x in the search loop; abs() builtin; local
+ *   declaration order matters (register spill of 'best').
  */
 struct Tim {
     unsigned char pad0[6];

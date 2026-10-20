@@ -1,9 +1,8 @@
 /* leon2m FUN_a014118c @ 0xa014118c-0xa01411c4 (14 words), flags -mcpu=v8 -O3 -g.
  * Code facts: leaf sibcall FUN_a0118be4(&DAT_001a3668[i], &DAT_001a3648[i]) with i a u8: two ROM
  * tables with 30-byte and 32-byte records (i*15*2 and i<<5 plus each table's own sethi/or).
- * Fixes vs the autoc draft (50.00): the two addresses are SYMBOLS (each has its own sethi of the
- * same HIGH; constants would share one) as struct arrays. The word after the range is the usual
- * padding nop. Aids: none.
+ * Source form: the two addresses are symbols declared as struct arrays (each has its own sethi of the
+ * same HIGH; constants would share one). The word after the range is the usual padding nop. Aids: none.
  */
 struct RecA { unsigned char b[0x1e]; };
 struct RecB { unsigned char b[0x20]; };

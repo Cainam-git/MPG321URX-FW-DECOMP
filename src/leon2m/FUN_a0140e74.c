@@ -1,5 +1,5 @@
 /* leon2m FUN_a0140e74 @ 0xa0140e74..0xa01410a4 (140 words): settings-storage WRITE.
- * Exact: -mcpu=v8 -O3 -g.
+ * Flags: -mcpu=v8 -O3 -g.
  *
  * Plain words: writes len bytes from buf to settings storage 'dev' at storage address addr. The ROM record table
  * DAT_001a69fe[dev] (0x26 bytes per device) says how: its byte b0 with bit 7 SET selects the second path (not
@@ -9,15 +9,15 @@
  *    func_0x4008d588(); if 'flag' is non-zero: FUN_a01405d0(dev) and 0xA802CBD9 = 0 again.
  *  - I2C path: write-protect pin DAT_001a69d6[b] (port, mask, level; FW.021 b 0 = port 6 mask 0x08 level 1) is driven
  *    to ~level, then per 16-byte chunk: copy of the bus descriptor DAT_001a69e0[b] onto the stack, func_0x4008b3e4
- *    (= FUN_a002b3e4, byte-exact, I2C page write, bounded), func_0x4008d1a0(7) (7-tick delay; ends only while the
- *    FUN_a002cfb8 timer IRQ runs), then 'while (!func_0x4008be7c(bus dev byte)) ;' (= FUN_a002be7c, byte-exact, ACK
+ *    (= FUN_a002b3e4, I2C page write, bounded), func_0x4008d1a0(7) (7-tick delay; ends only while the
+ *    FUN_a002cfb8 timer IRQ runs), then 'while (!func_0x4008be7c(bus dev byte)) ;' (= FUN_a002be7c, ACK
  *    probe) at 0xA0140F6C..0xA0140F78 with NO counter. After the last chunk the pin goes back to 'level'.
  * At power-on it runs only when FUN_a0153c74 finds the system record bad or FUN_a012cfac (FGA_Init) finds no
  * 0x77..0x7A marker.
  * Can it wait or fail? WAIT: yes, the ACK poll above waits for ever if the storage chip never ACKs its address after
  * a write, and nothing relays the liveness ring inside that loop. FAIL: a failed write is not detected: the return
  * of FUN_a002b3e4 (ACKed byte count) is ignored, the function returns nothing.
- * Exact-form levers: (1) the bit-7 path is written FIRST ('if (b0 < 0) { bit-7 path } else { I2C }'): with
+ * Source form: (1) the bit-7 path is written FIRST ('if (b0 < 0) { bit-7 path } else { I2C }'): with
  * -frename-registers (on at -O3) the register renaming walks the basic blocks in source order and picks the least
  * recently used register ('tick' order), so the block order decides the I2C path's registers; (2) 'off = 0; if
  * (...) off = ...;' in a static u16 helper; (3) the descriptor copy as a struct copy per chunk arm.
