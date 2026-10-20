@@ -3484,6 +3484,13 @@
       "name": "FUN_a009b37c",
       "status": "matched"
     },
+    "ram:a009b434": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Steps the selection in word 0xa802afec backwards through 0xed..0xef, skipping positions FUN_a00aad30 rejects",
+      "name": "FUN_a009b434",
+      "status": "matched"
+    },
     "ram:a009b95c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
