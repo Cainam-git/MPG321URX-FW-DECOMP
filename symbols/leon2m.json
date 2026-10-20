@@ -6475,6 +6475,13 @@
       "name": "FUN_a00d1ed8",
       "status": "matched"
     },
+    "ram:a00d1f20": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3",
+      "comment": "Frame byte 7 limited to 100 into byte 0xa802d29a, FUN_a00d7de0, returns 0xe0",
+      "name": "FUN_a00d1f20",
+      "status": "matched"
+    },
     "ram:a00d2334": {
       "by": "permuter",
       "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
