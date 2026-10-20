@@ -13525,6 +13525,13 @@
       "name": "FUN_a01382e4",
       "status": "matched"
     },
+    "ram:a013832c": {
+      "by": "h25",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "packs bits, bytes and halfwords of a record into a 24-byte buffer for FUN_a01370dc(0x50, 0x18, buf, 0)",
+      "name": "FUN_a013832c",
+      "status": "matched"
+    },
     "ram:a013844c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
