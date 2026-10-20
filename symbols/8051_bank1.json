@@ -888,7 +888,7 @@
     "CODE:b8fd": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "Collects bytes from XDATA 0xDCC9 into 0xA548 while bit 0 of 0xDCC8 is set, sets 0xDCCB, calls FUN_CODE_34c8 on the 0x9x/0x8x header",
+      "comment": "Copies bytes from XDATA 0xDCC9 to 0xA548.. while bit 0 of 0xDCC8 is set, sets 0xDCCB, calls FUN_CODE_34c8 when the high nibble of 0xA548 is 9 or 8",
       "name": "FUN_CODE_b8fd",
       "status": "matched"
     },

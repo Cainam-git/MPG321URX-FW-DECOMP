@@ -3,7 +3,9 @@
  * XDATA 0xA548 + i for i = 0 .. 0x10 (i counts up), or to XDATA 0xA547 once i reaches 0x11. Then XDATA 0xDCCB =
  * XDATA[0xA54B] + 1 when more than 3 bytes were stored, else 0. When the high nibble of XDATA 0xA548 is 0x9:
  * FUN_CODE_34c8(0, 0xA548, 1); when it is 0x8: FUN_CODE_34c8(1, 0xA548, 1) (generic pointer 01 A5 48; the third
- * argument goes to 34c8's LARGE parameter byte 0xA55D). Caller: FUN_CODE_c1c1 (LCALL at 0xC200). Same code as FUN_CODE_b979 except the third 34c8 argument (1 here, 0 there) and 0xDCD8 / 0xDCD9 / 0xDCDB).
+ * argument goes to 34c8's LARGE parameter byte 0xA55D). Caller: FUN_CODE_c1c1 (LCALL at 0xC200).
+ * Same code as FUN_CODE_b979 except the third 34c8 argument (1 here, 0 there) and the XDATA bytes
+ * (0xDCD8 / 0xDCD9 / 0xDCDB there).
  * Source form: 0xDCC8 and 0xDCC9 are one 2-byte object (Keil reaches the second byte with INC DPTR); with
  * separate externs Keil reads 0xDCC9 once before the i test. No aids.
  */
