@@ -9197,6 +9197,13 @@
       "name": "FUN_a011a1b0",
       "status": "matched"
     },
+    "ram:a011a378": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "switch 0..7: clears bit 1..4 of reg base+0x80 or bit 4..7 of reg base+0xa5 of block blk; other values clear all",
+      "name": "FUN_a011a378",
+      "status": "matched"
+    },
     "ram:a011a554": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
