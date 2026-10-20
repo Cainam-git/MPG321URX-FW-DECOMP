@@ -7165,6 +7165,12 @@
       "name": "FUN_a00d6560",
       "status": "matched"
     },
+    "ram:a00d65a0": {
+      "by": "hand",
+      "comment": "Reads byte 0x9f through func_0xa0fb6bb8 and writes it back with bits 6-7 = v through func_0xa0fb6c00 (port other than 1)",
+      "name": "FUN_a00d65a0",
+      "status": "matched"
+    },
     "ram:a00d6624": {
       "by": "hand",
       "comment": "returns bits 6-7 of ROM read func_0xa0fb6bb8(port, 0x9f), 0 for port 1",
