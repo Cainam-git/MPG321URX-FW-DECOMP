@@ -5109,8 +5109,8 @@
       "status": "matched"
     },
     "ram:a00a7bf8": {
-      "by": "hand",
-      "comment": "sets (mode 1) or clears mask bits of a byte register of banks 0..4 (table DAT_a00b4d70) after the block register 0x60 write of FUN_a00a7acc",
+      "by": "h16",
+      "comment": "read-modify-write of a block register byte for ports 0..4 (mode 1 sets mask bits, else clears); ports 1..4 with reg < 0x60 first rewrite bits 6+ of register base + 0x60 to port - 1",
       "name": "FUN_a00a7bf8",
       "status": "matched"
     },
