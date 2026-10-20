@@ -1140,6 +1140,12 @@
       "name": "FUN_CODE_ce4b",
       "status": "matched"
     },
+    "CODE:ce87": {
+      "by": "hand",
+      "comment": "Returns 0xFF, 1, 2, 3 or 4 from comparisons of IDATA bytes 0x42/0x44, 0x47/0x4C and ints 0x48/0x4E, 0x4A/0x51",
+      "name": "FUN_CODE_ce87",
+      "status": "matched"
+    },
     "CODE:cf73": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
