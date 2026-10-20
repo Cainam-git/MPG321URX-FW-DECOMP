@@ -9641,6 +9641,13 @@
       "name": "FUN_a011e8fc",
       "status": "matched"
     },
+    "ram:a011fbd8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "(v & 0xfff) | 0x4000 to regs base+0x36/0x37 of block blk (0/1, 2 = both; bases DAT_001a2fb0); 0xcf011428 |= 3 first",
+      "name": "FUN_a011fbd8",
+      "status": "matched"
+    },
     "ram:a011fcac": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
