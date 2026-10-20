@@ -3067,6 +3067,12 @@
       "name": "FUN_a008fe6c",
       "status": "matched"
     },
+    "ram:a008ff08": {
+      "by": "hand",
+      "comment": "Classify bits 4..6 of port register 0x146: 1 for 5, 2 for 6, else 0",
+      "name": "FUN_a008ff08",
+      "status": "matched"
+    },
     "ram:a008ff58": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
