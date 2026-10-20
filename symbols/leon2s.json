@@ -2381,6 +2381,12 @@
       "name": "FUN_a00857d0",
       "status": "matched"
     },
+    "ram:a0085830": {
+      "by": "hand",
+      "comment": "maps mode 0/1/3/other to 6/0xa/0x1e/0x14 and stores it into byte 0 of DAT_a807cd68 (port 0) or DAT_a807cd00",
+      "name": "FUN_a0085830",
+      "status": "matched"
+    },
     "ram:a0085888": {
       "by": "hand",
       "comment": "maps mode 0/1/other to 1/2/4 and stores it into byte 1 of DAT_a807cd68 (port 0) or DAT_a807cd00",
