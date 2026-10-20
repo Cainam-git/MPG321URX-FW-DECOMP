@@ -2211,6 +2211,13 @@
       "name": "FUN_a008796c",
       "status": "matched"
     },
+    "ram:a0087d5c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Calls FUN_a01474b0(1, e) and FUN_a01474b0(0, e) with entry n of the 0x44-byte records at 0xff600",
+      "name": "FUN_a0087d5c",
+      "status": "matched"
+    },
     "ram:a0088654": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
