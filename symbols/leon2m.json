@@ -7095,6 +7095,13 @@
       "name": "FUN_a00d972c",
       "status": "matched"
     },
+    "ram:a00d9764": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "limits record bytes 0xa802d290+0x11..0x14, passes them to FUN_a014a11c, and passes a code chosen by byte +0x11 to FUN_a014c778",
+      "name": "FUN_a00d9764",
+      "status": "matched"
+    },
     "ram:a00d9978": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
