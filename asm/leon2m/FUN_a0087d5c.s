@@ -1,4 +1,4 @@
-# leon2m FUN_a0087d5c 0xa0087d5c-0xa0087da8 (76 bytes)
+# leon2m FUN_a0087d5c 0xa0087d5c-0xa0087da4 (72 bytes)
 a0087d5c:  9d e3 bf 98  save  %sp, -104, %sp
 a0087d60:  96 0e 20 ff  and  %i0, 0xff, %o3
 a0087d64:  80 a2 e0 04  cmp  %o3, 4
@@ -17,4 +17,3 @@ a0087d94:  92 10 00 19  mov  %i1, %o1
 a0087d98:  40 02 fd c6  call  0xa01474b0
 a0087d9c:  91 e8 20 00  restore  %g0, 0, %o0
 a0087da0:  01 00 00 00  nop
-a0087da4:  00 02 9d 3c  unimp  0x29d3c
