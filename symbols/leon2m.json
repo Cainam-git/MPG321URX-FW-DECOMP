@@ -13831,6 +13831,12 @@
       "name": "FUN_a014e024",
       "status": "matched"
     },
+    "ram:a014e050": {
+      "by": "hand",
+      "comment": "FUN_a01393f0 or FUN_a0139b90 by mode, then FUN_a013a98c(mode) and FUN_a0138edc(mode)",
+      "name": "FUN_a014e050",
+      "status": "matched"
+    },
     "ram:a014e144": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
