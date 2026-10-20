@@ -4597,6 +4597,13 @@
       "name": "FUN_a00a14bc",
       "status": "matched"
     },
+    "ram:a00a20d0": {
+      "by": "h25",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "applies the c56 value to record byte 0x1e8 using two inlined FUN_a00a14bc lookups and a fixed call sequence",
+      "name": "FUN_a00a20d0",
+      "status": "matched"
+    },
     "ram:a00a2264": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
