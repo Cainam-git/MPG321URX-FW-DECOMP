@@ -4010,6 +4010,12 @@
       "name": "DRV_HDMI_IF_Init",
       "status": "matched"
     },
+    "ram:a00a17c4": {
+      "by": "hand",
+      "comment": "Per-port HDMI input initialisation: register bit setup, record reset, LTS status init",
+      "name": "INIT_handler",
+      "status": "matched"
+    },
     "ram:a00a1a80": {
       "by": "hand",
       "comment": "2 x 400-byte records a807d7e0: byte 3 set -> byte 2 = 1, e9cc/e9fc by byte 1, byte 1 = 0; else byte 2 = 0",
