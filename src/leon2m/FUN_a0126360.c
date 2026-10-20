@@ -1,5 +1,5 @@
 /* leon2m FUN_a0126360 @ 0xa0126360-0xa01264e8 (98 words).
- * Writes a 16-bit luminance gain to the panel controller (debug strings "OLED set Lum Gain %d,(%02x,%02x)", "OLED
+ * Writes a 16-bit value to register 0x5e through FUN_a0147aa0 (debug strings "OLED set Lum Gain %d,(%02x,%02x)", "OLED
  * Get Lum Gain %x %x", "OLED set Lum->retry (%d %d) (%d %d)"). The value goes big-endian into the 2-byte buffer
  * 0xa802d890. When FUN_a01248c8 returns non-zero (low byte), the buffer is written with FUN_a0147aa0(0x60, 2, 0x5e,
  * 5, 0, buffer, 2, 1), and after a 0x32 delay (func_0x4008d1a0) read back into 0xa802d888 with FUN_a0147ae8(0x60, 2,

@@ -1,6 +1,7 @@
 /* leon2m FUN_a0126f4c @ 0xa0126f4c-0xa0127154 (130 words).
- * Writes the screen saver range to the panel controller (debug strings "OLED set Screen Saver Range %x %x" and
- * "OLED Get Screen Saver Range %x %x"; the retry message is the shared string 0x1a46d0). When bit 15 of word
+ * Builds a 2-byte value from bytes of the block at 0xa802d290 and writes it to register 0x60 (debug strings
+ * "OLED set Screen Saver Range %x %x" and "OLED Get Screen Saver Range %x %x"; the retry message is the shared string
+ * 0x1a46d0). When bit 15 of word
  * 0xa802d46c (offset 0x1dc of the block at 0xa802d290) is set, the 2-byte buffer 0xa802d890 becomes
  * {(1 - byte 0xa802d470) | ((1 - byte 0xa802d471) << 4), byte 0xa802d46f + 1} (byte 0xa802d46f is the
  * low byte of that word); otherwise it is {0, 0}. When

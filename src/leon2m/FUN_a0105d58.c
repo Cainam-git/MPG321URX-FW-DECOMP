@@ -2,8 +2,8 @@
  * final call).
  * Searches the 8 records of 9 halfwords at 0x19a640 for the first one where (unsigned short)(+0x06 - w) is below
  * +0x06 / 10, (unsigned short)(+0x0e - h) is below +0x0e / 10, and +0x10 - f lies within -9..9. Prints
- * "%d x %d @ %d : Support(%d_%d)" (red colour codes) with w, h, f, found (1 or 0) and the record index (8 when
- * none matched) through FUN_a00df170, and returns found. Called from FUN_a0131518.
+ * "%d x %d @ %d : Support(%d_%d)" (between the ANSI escape sequences ESC[1;31m and ESC[m) with w, h, f, found (1 or
+ * 0) and the record index (8 when none matched) through FUN_a00df170, and returns found. Called from FUN_a0131518.
  */
 struct Row { unsigned short h0, h2, h4, h6, h8, ha, hc, he, h10; };
 extern const struct Row DAT_0019a640[8];

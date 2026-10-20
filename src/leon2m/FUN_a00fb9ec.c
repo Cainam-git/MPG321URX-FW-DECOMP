@@ -1,8 +1,7 @@
 /* leon2m FUN_a00fb9ec @ 0xa00fb9ec  MATCH (-mcpu=v8 -O3 -g)
  * Calls FUN_a00f9a00() and FUN_a00f9bbc(), then FUN_a00fb434(id, &value, DAT_a802d67a, DAT_a802d678) for the ids
  * 0xC..0x11 with the stack values 0, 1, 0, 0x80, 0x80 and 0x100, and returns 1. No direct callers found.
- * Source form: six separate locals; the order of their assignments decides the store schedule (found by trying
- * all orders).
+ * Source form: six separate locals; the order of their assignments decides the store schedule.
  */
 extern void FUN_a00f9a00(void);
 extern void FUN_a00f9bbc(void);

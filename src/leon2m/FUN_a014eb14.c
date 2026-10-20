@@ -1,6 +1,6 @@
-/* FUN_a014eb14: looks for a free slot among the candidates {1, 3}: the first candidate c whose 4-bit field
- * (DAT_a802cc80 >> (4 * c)) & 0xf is 0 is the result, 4 when none is free. Logs "IsAnyACRAvailable %d"
- * (s_001a7328, with colour codes) and returns the result. No direct callers were found.
+/* FUN_a014eb14: the result is the first c of {1, 3} whose 4-bit field (DAT_a802cc80 >> (4 * c)) & 0xf is 0, or 4
+ * when both fields are non-zero. Prints "IsAnyACRAvailable %d" with the result (s_001a7328, between the ANSI escape
+ * sequences ESC[0;33m and ESC[m) and returns it. No direct callers were found.
  * Built with -mcpu=v8 -O3 (no -g: the firmware has no nop after the final call).
  */
 extern unsigned short DAT_a802cc80;
