@@ -9161,7 +9161,7 @@
     "ram:a00fc200": {
       "by": "h12",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Writes fixed values to 0xcf0120xx registers, calls FUN_a00fe880(3, 1 << p, 1) for p 0..3, sets three state bytes",
+      "comment": "Writes fixed values to 0xcf01201c/0xcf012000/0xcf012044, calls FUN_a00fe880(3, 1 << p, 1) for p 0..3, stores three bytes",
       "name": "FUN_a00fc200",
       "status": "matched"
     },
