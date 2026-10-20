@@ -6025,6 +6025,13 @@
       "name": "FUN_a00c9788",
       "status": "matched"
     },
+    "ram:a00c9980": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command handler: digit 0-3 from the receive record selects one of four action calls, reply 5600+",
+      "name": "FUN_a00c9980",
+      "status": "matched"
+    },
     "ram:a00c9be0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
