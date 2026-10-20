@@ -3578,28 +3578,28 @@
     "ram:a0098434": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Copies the stored position to byte 0xa8025c56 and the selection word 0xa802afec and reports it",
+      "comment": "Byte 0xa8025c56 = v and word 0xa802afec = v + 0x86 for v = byte 0xa802d290[0x18a + byte 0xa802d433], with FUN_a00a813c / FUN_a00a900c / FUN_a00a9650 calls",
       "name": "FUN_a0098434",
       "status": "matched"
     },
     "ram:a0098794": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Same code as FUN_a0098434 with other constants (listed in the source header)",
+      "comment": "Identical copy of FUN_a0098434 (same constants): byte 0xa8025c56 and word 0xa802afec from byte 0xa802d290[0x18a + byte 0xa802d433]",
       "name": "FUN_a0098794",
       "status": "matched"
     },
     "ram:a0098850": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Same code as FUN_a0098434 with other constants (listed in the source header)",
+      "comment": "Identical copy of FUN_a0098434 (same constants): byte 0xa8025c56 and word 0xa802afec from byte 0xa802d290[0x18a + byte 0xa802d433]",
       "name": "FUN_a0098850",
       "status": "matched"
     },
     "ram:a009890c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Same code as FUN_a0098434 with other constants (listed in the source header)",
+      "comment": "Identical copy of FUN_a0098434 (same constants): byte 0xa8025c56 and word 0xa802afec from byte 0xa802d290[0x18a + byte 0xa802d433]",
       "name": "FUN_a009890c",
       "status": "matched"
     },
@@ -4008,14 +4008,14 @@
     "ram:a009ae04": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a009ad40 (constants swapped)",
+      "comment": "Same code as FUN_a009ad40 with base 0xd4: steps word 0xa802afec backwards through 0xd4..0xd7, skipping values FUN_a00aad30 rejects",
       "name": "FUN_a009ae04",
       "status": "matched"
     },
     "ram:a009aec8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a009ad40 (constants swapped)",
+      "comment": "Same code as FUN_a009ad40 with base 0xd4: steps word 0xa802afec forwards through 0xd4..0xd7, skipping values FUN_a00aad30 rejects",
       "name": "FUN_a009aec8",
       "status": "matched"
     },
@@ -4043,7 +4043,7 @@
     "ram:a009b20c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a009b154 (constants swapped)",
+      "comment": "Same code as FUN_a009b154 stepping forwards: word 0xa802afec through 0xdd..0xe1, the result stored at 0xa802d3ce",
       "name": "FUN_a009b20c",
       "status": "matched"
     },
@@ -11306,6 +11306,13 @@
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "u16 v to regs base+0x40/0x41 and v >> 2 to base+0x53/0x54 of block blk (bases DAT_001a2fb0, 2 = both)",
       "name": "FUN_a011ff28",
+      "status": "matched"
+    },
+    "ram:a01207ac": {
+      "by": "h19",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns bit 0 of register base + 0 of block blk (bases DAT_001a2fb0) after setting bits 0-1 of 0xcf011428",
+      "name": "FUN_a01207ac",
       "status": "matched"
     },
     "ram:a01207f4": {
