@@ -11136,6 +11136,13 @@
       "name": "FUN_a011ff28",
       "status": "matched"
     },
+    "ram:a01207f4": {
+      "by": "h19",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "copies a 12-byte structure into entry n of the table at 0xa8027aac",
+      "name": "FUN_a01207f4",
+      "status": "matched"
+    },
     "ram:a012082c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
