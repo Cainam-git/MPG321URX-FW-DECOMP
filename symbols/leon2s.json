@@ -2381,6 +2381,12 @@
       "name": "FUN_a0083ed0",
       "status": "matched"
     },
+    "ram:a0083f04": {
+      "by": "h15",
+      "comment": "Writes registers 0x490/0x434/0x433 of port FUN_a0083ed0(p) through FUN_a00a7718 with values set or inverted by en",
+      "name": "FUN_a0083f04",
+      "status": "matched"
+    },
     "ram:a0083fb8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
