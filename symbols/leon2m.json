@@ -7924,6 +7924,13 @@
       "name": "FUN_a00dec90",
       "status": "matched"
     },
+    "ram:a00decf4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores a and c at 0xa802b0e4/0xa802b0e8 and writes 0xc00a0024 / 0xc00a0020 through func_0x4008c268 / func_0x4008c25c when byte 0xa802b0c4 is set",
+      "name": "FUN_a00decf4",
+      "status": "matched"
+    },
     "ram:a00dedc8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
