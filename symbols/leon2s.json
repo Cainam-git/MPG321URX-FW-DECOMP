@@ -1628,6 +1628,12 @@
       "name": "FUN_a00618cc",
       "status": "matched"
     },
+    "ram:a00618d8": {
+      "by": "hand",
+      "comment": "Advances the down counter 0xa80793a0, three tick dividers and the 16 task timers, then calls two optional callbacks",
+      "name": "FUN_a00618d8",
+      "status": "matched"
+    },
     "ram:a0061eb4": {
       "by": "autoc",
       "comment": "Register access helper for port param_1 keyed by a 16-bit register number param_2. Register 5 goes straight to FUN_a00a6f78(port, 5). Register 0x1b8 is an indirect read: sets the 3-bit field of reg 0x1b7 to 2 (SC_MaskSetByte), raises bit 6 of 0x1b7, writes the low byte of param_2 to 0x1b8, reads the result from 0x1b9, then drops bit 6 again; that byte is returned. Anything else returns 0. param_2 is compared as unsigned short.",
