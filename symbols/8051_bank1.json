@@ -803,6 +803,13 @@
       "name": "FUN_CODE_a8bb",
       "status": "matched"
     },
+    "CODE:a959": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "set register byte 0x0B and the mode bits of byte 5 in the block at the pointer 0xA76D (mode from 0xA780, bit 0x16 selects)",
+      "name": "FUN_CODE_a959",
+      "status": "matched"
+    },
     "CODE:ac5b": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
