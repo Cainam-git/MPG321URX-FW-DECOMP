@@ -5438,6 +5438,13 @@
       "name": "FUN_a00bd6e4",
       "status": "matched"
     },
+    "ram:a00bd760": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART reply with bit 11 of word 0xa802d338 and a digit from byte 0xa802d411 or 0xa802d412 in a frame from table row 0x2c",
+      "name": "FUN_a00bd760",
+      "status": "matched"
+    },
     "ram:a00bd988": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
