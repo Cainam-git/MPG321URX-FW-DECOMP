@@ -676,6 +676,13 @@
       "name": "FUN_CODE_3fe7",
       "status": "matched"
     },
+    "CODE:482e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "selects four register pointers by channel, writes three set-up bytes and passes n bytes to FUN_CODE_62c6 / FUN_CODE_644f",
+      "name": "FUN_CODE_482e",
+      "status": "matched"
+    },
     "CODE:4a85": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",

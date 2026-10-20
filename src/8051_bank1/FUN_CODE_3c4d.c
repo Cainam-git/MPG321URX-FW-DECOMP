@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_3c4d @ 0x3c4d  register-block byte loop with five register pointers (LARGE model).
- * Caller: FUN_CODE_8512 (0x84F8). Returns a bit (carry): the AND of the results of FUN_CODE_611a and FUN_CODE_6db5.
+ * Caller: FUN_CODE_83f3 (0x84F8). Returns a bit (carry): the AND of the results of FUN_CODE_611a and FUN_CODE_6db5.
  * LARGE parameter / local block at XDATA 0xA4B7: ch 0xA4B7, ctl (kept in R5, slot 0xA4B8 unused), n 0xA4B9..BA,
  * buf (generic pointer, passed in its slot 0xA4BB..BD), i 0xA4BE..BF, p0..p4 (generic pointers) 0xA4C0..CE;
  * the bit local ok is BITS 0x20.1.
