@@ -6947,6 +6947,12 @@
       "name": "FUN_a00cdc74",
       "status": "matched"
     },
+    "ram:a00cdcdc": {
+      "by": "h17",
+      "comment": "Sets field st of DAT_a8078bb0[port]; compares two 32-byte arrays and calls FUN_a00c79c8 or three 0x400 routines",
+      "name": "FUN_a00cdcdc",
+      "status": "matched"
+    },
     "ram:a00cdde0": {
       "by": "h23",
       "comment": "sets the record field to 1, polls FUN_a00c2488 up to 30 times, then sends DAT_a807ce50 in 16 groups of 8 bytes to 0x69220..",
