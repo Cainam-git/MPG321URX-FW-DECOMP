@@ -919,6 +919,13 @@
       "name": "FUN_CODE_c7e0",
       "status": "matched"
     },
+    "CODE:c965": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "XDATA 0xA711 (long) = 0xA70D + 0xA717 + w",
+      "name": "FUN_CODE_c965",
+      "status": "matched"
+    },
     "CODE:c9b0": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
