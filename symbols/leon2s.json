@@ -6300,7 +6300,7 @@
     },
     "ram:a00c0a04": {
       "by": "hand",
-      "comment": "for the first of six records of DAT_a807d5c8 with bit n set in byte 4 returns a status bit read through a ROM routine",
+      "comment": "for the first of six records of DAT_a807d5c8 with bit n set in byte 4 returns a bit of a ROM read (func_0xa0fb7e98 or func_0xa0fb6bb8)",
       "name": "FUN_a00c0a04",
       "status": "matched"
     },
