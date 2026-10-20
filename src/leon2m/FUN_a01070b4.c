@@ -1,5 +1,4 @@
-/* -mcpu=v8 -O3 -g (hand, finished with a short computer search; jf 100, ).
- * leon2m FUN_a01070b4 @ 0xa01070b4  drv_PanelLimitation (hand)
+/* leon2m FUN_a01070b4 @ 0xa01070b4  drv_PanelLimitation, flags -mcpu=v8 -O3 -g.
  *
  * ADVISORY check of the current timing against the active panel row (DAT_a802d6a4, the transformed copy):
  * it only prints warnings and returns a bitmask, and its only caller FUN_a014e8d8 discards the result.
@@ -13,14 +12,13 @@
  *   htotal       vs row +0x20/+0x24 -> bits 0x40 / 0x80;  vtotal vs row +0x2A/+0x2E -> warning only
  * On the <62 Hz row an input vfreq of 601 (above 600) sets bit 0x20 and prints
  * "input vfreq(601) > PANEL_MAX_VFREQ(600)" on FW.012 and FW.021 alike; nothing acts on the result.
- * Source facts: the callees return unsigned short. The autoc draft has an extra FUN_a010a9e8 call in the FRC-off
- *   path; the firmware calls it once, at 0xa010723c, FRC-on path only. The firmware zero-extends FUN_a0102fd0's
- *   result (sll/srl 16); 'short clk' sign-extends and is the wrong type.
- * Types read from where the firmware narrows to 16 bits: clk = unsigned int
- *   (FUN_a0102fd0 u16: narrowed right after the call); htot/vtot = unsigned int, FUN_a010a9e8 declared
- *   int-returning (FUN_a010a884 may keep its real u16, same code) (FRC-on: raw 'mov %o0', no narrowing after the call) and FUN_a00f25f8 u16 (FRC-off: narrowed after
- *   the call); htot narrowed again at the division = an inline helper calc_hf(unsigned int clk, unsigned short htot)
- *   (same code as a cast); vtot narrowed at its compares/prints ((unsigned short)vtot).
+ * Source facts: the callees return unsigned short. FUN_a010a9e8 is called once, at 0xa010723c, on the FRC-on path
+ * only. The firmware zero-extends FUN_a0102fd0's result (sll/srl 16), so clk is not a (signed) short.
+ * Types read from where the firmware narrows to 16 bits: clk = unsigned int (FUN_a0102fd0 u16: narrowed right after
+ * the call); htot/vtot = unsigned int, FUN_a010a9e8 declared int-returning (FUN_a010a884 may keep its real u16, same
+ * code) (FRC-on: raw 'mov %o0', no narrowing after the call) and FUN_a00f25f8 u16 (FRC-off: narrowed after the
+ * call); htot narrowed again at the division = an inline helper calc_hf(unsigned int clk, unsigned short htot) (same
+ * code as a cast); vtot narrowed at its compares/prints ((unsigned short)vtot).
  */
 
 struct PanelParam

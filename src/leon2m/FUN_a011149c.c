@@ -1,8 +1,8 @@
 /* leon2m FUN_a011149c @ 0xa011149c  V-by-One (Vx1) transmitter start-up register sequence, link type 0 path
- * (hand; -mcpu=v8 -O3 -g, )
+ * Flags -mcpu=v8 -O3 -g.
  *
  * Called by the panel power sequencer FUN_a01413d0 (state 4, link type 0). A fixed write sequence to the
- * 0xCF01CCxx..0xCF01CFxx block (same block as the byte-exact FUN_a0121f58), with three 1-unit waits
+ * 0xCF01CCxx..0xCF01CFxx block (same block as FUN_a0121f58), with three 1-unit waits
  * (func_0x4008d1a0(1)) in between; 0xCF00EDE4 = 0x20 when byte 0xA802C988 is set. Finally one value from a 13-entry
  * table {1,2,3,4,5,6,7,8,10,11,12,13,14}, indexed by bits 27..31 of the transformed panel row's word 0, goes to
  * 23 registers 0xCF01CD30..CD4C, CDBC..CDC8, CE58..CE64, CED4..CEF0.

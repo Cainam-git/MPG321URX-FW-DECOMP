@@ -1,7 +1,9 @@
-/* leon2m FUN_a010a884 @ 0xa010a884 (-mcpu=v8 -O2 -g, gcc 3.4.4; mechanical draft)
+/* leon2m FUN_a010a884 @ 0xa010a884 (-mcpu=v8 -O3 -g, also -O2 -g; gcc 3.4.4)
  * FRC output line length (horizontal total, pixels), 16 bits. Twin of FUN_a010a9e8 (the frame length).
- *   0xCF011A80 bit 7 set: sum of the four registers 0xCF011AC0, 0xCF011AC8, 0xCF011AD0, 0xCF011AD8 (FUN_a00f3078 reads),
- *     no scaling; bit 7 clear: the register 0xCF011C20 (FUN_a0109bbc's Lock-mode arithmetic uses 0xCF011C20 & 0xFFFF as
+ *   0xCF011A80 bit 7 set: sum of the four registers 0xCF011AC0, 0xCF011AC8, 0xCF011AD0, 0xCF011AD8 (FUN_a00f3078
+ *   reads),
+ *     no scaling; bit 7 clear: the register 0xCF011C20 (FUN_a0109bbc's Lock-mode arithmetic uses 0xCF011C20 & 0xFFFF
+ *     as
  *     the output line length). Result truncated to 16 bits.
  * Callers: FUN_a01070b4 (panel limitation check, "htotal" when FRC is on) and FUN_a012b9a8 (output timing for the
  * Small chip message of FUN_a012bc08).

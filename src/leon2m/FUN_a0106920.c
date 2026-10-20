@@ -12,9 +12,9 @@
  *          bit 5 is clear; else clear it, set 0xcf00ed58 bit 4 and 0xcf00ed84 bit 0.
  *   (c is read again for the 0x80 test: the fw calls FUN_a011cf88 twice.)
  * The path taken depends only on the chip version and 'on', never on the input rate.
- * Fixes vs the autoc draft: the c <= 0x81 part is the then-arm (fw fall-through); the reg 0x86 value
- * is two statements (one combined expression lets fold drop the 3rd and); real callee prototypes.
- * volatile only on the 0xcf00.... hardware registers. Aids: none.
+ * Source form: the c <= 0x81 part is the then-arm (firmware fall-through); the reg 0x86 value is two statements (one
+ * combined expression lets fold drop the third and).
+ * volatile only on the 0xcf00.... hardware registers. Compiler aids: none.
  */
 #define R(a) (*(volatile unsigned int *)(a))
 extern unsigned char FUN_a011cf88(void);

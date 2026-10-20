@@ -1,6 +1,6 @@
 /* leon2m FUN_a01045a0 @ 0xa01045a0-0xa0104a34 (1172 bytes)  measure and correct the output clock (second half of
  * FUN_a0104380, same block registers and saved bytes)
- * Flags: -mcpu=v8 -O3 -g -msoft-float: jf 100, rawcmp 293 words / 0 mismatches.
+ * Flags: -mcpu=v8 -O3 -g -msoft-float.
  *
  * void FUN_a01045a0(ch, clk, rate): ch = register block (0x19A2EC family), clk = 64-bit clock in Hz, rate = refresh
  *   in 0.1 Hz for the frame waits FUN_a0121bcc(1, rate).
@@ -27,7 +27,8 @@
  *   - one 16-bit variable (sum82) holds the loop sum AND the average: sum82 = (sum82 + 2) >> 2 (gives the
  *     firmware's avg register in cc1's global-alloc order);
  *   - avg (16 bit) holds a copy of r2 for d = t - avg: d is short, so only the low 16 bits of r2 matter;
- *   - x = r2; x += q1 * q2 / n: x is short, same low 16 bits as x = r2 + ...; gives the firmware's add operand order;
+ *   - x = r2; x += q1 * q2 / n: x is short, same low 16 bits as x = r2 + ...; gives the firmware's add operand
+ *     order;
  *   - the four counters are cleared in the for header, cnt first (firmware clear order);
  *   - the declaration order is significant: global-alloc ties are broken by pseudo number = declaration order.
  */

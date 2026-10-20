@@ -1,11 +1,13 @@
-/* leon2m FUN_a010a9e8 @ 0xa010a9e8 (-mcpu=v8 -O3 -g, gcc 3.4.4; hand, finished with the permuter)
+/* leon2m FUN_a010a9e8 @ 0xa010a9e8 (-mcpu=v8 -O3 -g, gcc 3.4.4)
  * FRC output frame length (lines), 16 bits.
  *   0xCF011A80 bit 7 set: sum of the four 32-bit registers 0xCF011AE0, 0xCF011AE8, 0xCF011AF0, 0xCF011AF8 (read with
  *     FUN_a00f3078), then scaled by chip variant FUN_a011cf88() and the bits of 0xCF011E40:
- *       variant > 0x82 and bit 3 -> x2;  variant > 0x83 and bit 2 -> x4;  variant > 0x83 and bit 1 -> x8 (cumulative).
+ *       variant > 0x82 and bit 3 -> x2;  variant > 0x83 and bit 2 -> x4;  variant > 0x83 and bit 1 -> x8
+ *       (cumulative).
  *   bit 7 clear: the register 0xCF011C38 (in Free Run mode FUN_a0109bbc writes the fixed output frame length there;
  *     in Lock mode it is 0x3FFF).
- *   The result is truncated to 16 bits (the variable is unsigned short; same value as a 32-bit sum returned as 16 bits).
+ *   The result is truncated to 16 bits (the variable is unsigned short; same value as a 32-bit sum returned as 16
+ *   bits).
  * Callers: FUN_a01070b4 (panel limitation check: "vtotal" when FRC is on) and FUN_a012b9a8.
  * Note: the four summed registers are 0xCF011AE0.., not 0xCF011EE0..: objdump's hint followed a sethi in an annulled
  * delay slot.

@@ -1,7 +1,8 @@
 /* leon2m FUN_a0109bbc @ 0xa0109bbc  FRC lock / free-run set-up
  * Flags: -mcpu=v8 -O3 -g -msoft-float, see the CONSTANTS note at the end of this header.
  *
- * void FUN_a0109bbc(lock, unused, p3, vfreq): vfreq = input refresh in tenths of Hz; the second parameter is never read.
+ * void FUN_a0109bbc(lock, unused, p3, vfreq): vfreq = input refresh in tenths of Hz; the second parameter is never
+ * read.
  * Callers: FUN_a013dc6c "FRC Lock" (1, 0xA802E3D0+0x38 == 3, a 16-bit local, input record 0xA802DF30 +8), "FRC Free
  *   Run" (0, 0, 0, 0xA802E3CA); FUN_a0148500 (0, 0, ?, raw row +0x52); FUN_a01518c8, FUN_a015209c.
  * lock == 0 (free run): prints "FRC freerun mode\r\n"; 0xCF011C04 = 0x60; 16-bit register pairs 0xCF011C38 and
@@ -29,17 +30,16 @@
  *   0xCF011C48 unchanged) and +0x0A (lock with 0xCF011A80 bit 7 set: compared with reg(0,0x64), caps the lock
  *   offset). +0x0A is read at entry on every path (used only there). No raw-row or row-index reads.
  * The input rate enters only the float arithmetic (in_lines / out_lines); no reject path here.
- * keys: the free-run chain has a separate FUN_a00f308c(0xCF011AE8, ...) call in every branch (gcc
+ * Source form: the free-run chain has a separate FUN_a00f308c(0xCF011AE8, ...) call in every branch (gcc
  *   cross-jumps them; the call heuristic puts the three bodies out of line); the four 0xCF011ACx reads go into
  *   unsigned short locals; explicit (float) casts on unsigned short values (clock(), reg64, p3) give gcc's
  *   signed-convert + 65536.0 fix-up, while the divisors are promoted to int (zero-extend, no fix-up);
  *   'reg64 < h0a' (not 'h0a > reg64') gives the bgu.
  * CONSTANTS: 1e6, 0.0, 5.0, 16.0 (0x19ACCC..ACD8, in this order) and 10.0 (0x198760) / 65536.0 (0x19A2D0) are the
- *   literal-pool entries of this file after the linker merged .rodata.cst4 across the program (10.0 and 65536.0
- *   already existed). tools/exact.py places .rodata.cst4 as one block, so it cannot place this file's pool; proof:
- *   FUN_a0109bbc.proof-externconst.c (same code, the five constants named by their firmware addresses) links
- *   byte-exact with .rodata.cst4 (only 65536.0 left) at 0x19A2D0, and this file's .text and relocations equal the
- *   proof's entry for entry. __gtsf2 = FUN_a0155b78 (libmatch, no .lib yet).
+ * literal-pool entries of this file after the linker merged .rodata.cst4 across the program (10.0 and 65536.0
+ * already existed). The build places .rodata.cst4 as one block, so this file's own pool is not placed at those
+ * addresses; the same code with the five constants named by their firmware addresses links with only 65536.0 left in
+ * .rodata.cst4 at 0x19A2D0, and its .text and relocations equal this file's entry for entry. __gtsf2 = FUN_a0155b78.
  */
 struct PanelParam
 {

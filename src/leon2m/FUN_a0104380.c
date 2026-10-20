@@ -1,5 +1,5 @@
 /* leon2m FUN_a0104380 @ 0xa0104380-0xa01045a0 (544 bytes)  correct a clock value from measured register-block counts
- * (hand; -mcpu=v8 -O3 -g, also -O3 -g -msoft-float and -O3; jf.py 100 %, ).
+ * Flags -mcpu=v8 -O3 -g (also matches with -O3 -g -msoft-float and with -O3).
  *
  * void FUN_a0104380(ch, clk): ch = block number of the 0x19A2EC register-block family (FUN_a00f2254 read8,
  *   FUN_a00f2298 write8, FUN_a00f25f8 read16, FUN_a00f2488 write16, FUN_a00f2708 stable read16); clk = pointer to
@@ -15,7 +15,7 @@
  *   6. Always: reg 0x86 = 1, reg 0x88 = 6.
  * Callers: FUN_a013dc6c (one call).
  * PANEL ROW FIELDS READ: transformed row +0x20 and +0x24 (bounds for reg 0x82).
- * keys: n and m are int (callee returns unsigned short, zero-extended right after the call; an
+ * Source form: n and m are int (callee returns unsigned short, zero-extended right after the call; an
  *   unsigned short variable gives other registers); d is short (gives the srl in the else division).
  */
 #define R(a) (*(volatile unsigned int *)(a))

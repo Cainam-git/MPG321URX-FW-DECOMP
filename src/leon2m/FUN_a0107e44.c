@@ -1,5 +1,6 @@
 /* leon2m FUN_a0107e44 @ 0xa0107e44  FRCConfigPostFRC
- * -mcpu=v8 -O3 -g -msoft-float: the image has no FPU instructions, float maths goes through libgcc soft-float)
+ * Flags -mcpu=v8 -O3 -g -msoft-float (the image has no FPU instructions, float maths goes through libgcc
+ * soft-float).
  *
  * Programs the output (post-FRC) timing for refresh value 'rate' (tenths of Hz). Prints "FRCConfigPostFRC %d".
  * Returns at once when rate equals the cached value at 0xA802C986 and force == 0; otherwise caches it.
@@ -19,28 +20,31 @@
  * These 0xCF011Axx registers are the ones FUN_a010a884 / FUN_a010a9e8 read back as FRC-on htotal / vtotal.
  * Callers: FUN_a00dac38 (forced / class fallback rows, rate = halfword 0xA802E3CA), FUN_a013dc6c, FUN_a0148500, ...
  * In this path the output clock follows the input refresh rate (clock ~ htotal * vtotal * rate).
- * Matching notes:
+ * Source form:
  *   hx is not 8-bit and the first clock product has no 8-bit cast (both would change the meaning).
  *   The firmware updates 0xCF011E40 with TWO separate read-modify-writes in each branch (clear bits, then set one:
- *   ld/and/st, ld/or/st), not one combined write. cls is unsigned char (and 0xff in the firmware). Compiles with
- *   -msoft-float (float maths = libgcc calls).
+ *   ld/and/st, ld/or/st), not one combined write. cls is unsigned char (and 0xff in the firmware).
  *   The clock search loop is 'for (ht = DAT_a802d6a4->h20; ht < ->h24; ht += 8)' (the original re-reads h20 for
- *   the loop start after the first clock estimate). A 58 % permuter form merged the two 0xCF011E40
- *   read-modify-writes and is not used (behaviour change). The opening field reads go through a local copy of the
+ *   the loop start after the first clock estimate). The opening field reads go through a local copy of the
  *   table pointer (p = DAT_a802d6a4), the loop start re-reads the global.
- * Without the hints below: 94.54 (rawcmp 20/366, all 20 = h0a/h32 %l6/%l7 swap). Structure: both cls arms load h20, hx, h28, h26 in
- *   that order (p dies at the h26 load, sched1 emits it first -> fw arm order h26, h20, hx|h08, h28); the post-reload crossjump
- *   merges the two identical 'lduh h28 / sth [fp-10]' tails into the join -> join = 'lduh h28, sll %l0 -> %o1, sra' as fw.
- *   Locals declared vt1 h0a h30 h32 h26 hx h28 h2e ht (declaration order = allocno index = tie-break: h28 and hx both int 29,
- *   hx must win). Loads h0a, h30, h32, h2e (h2e last = delay slot). Left: h0a 497/227 -> 43.79 < h32 464/210 -> 44.19.
- * (jf 100, rawcmp 366/0) with three 'branch-weight hints'. UNUSUAL CONSTRUCT, behaviour-neutral:
- *   'do continue; while (0);' x4 + 'goto lN; lN: ;' emits no code (each continue jumps to its own do-while(0) exit, the goto to the
- *   next statement). It only leaves NOTE_INSN_PREDICTION notes (stmt.c PRED_CONTINUE 56 % taken, c-semantics.c PRED_GOTO 70 %
- *   not taken) on the enclosing branch: odds x 1.2727^4 / 2.333 = x1.124 (DS combine in predict.c).
- *   cls == 1 arm 29 % -> 31.5 % (freq 338 -> 367): h0a REG_FREQ 497 -> 500 -> priority int 44 = h32 44, allocno 5 first -> %l6/%l7
- *   as fw. Window: arm freq >= 360 (h0a) and < 388 (else arm must stay >= exec_th 776 of bb-reorder round 2).
- *   The same hint in the sh_v > 0x3fff arm (349 -> 378) and the 0x2000 arm (236 -> 255) keeps the bb-reorder round-3 trace order
- *   (keys = -freq: 0x3fff arm > cls arm > 0x2000 arm > float fixup block 245), and their children stay < exec_th 194.
+ *   Structure: both cls arms load h20, hx, h28, h26 in that order (p dies at the h26 load, sched1 emits it first ->
+ *   fw arm order h26, h20, hx|h08, h28); the post-reload crossjump merges the two identical 'lduh h28 / sth [fp-10]'
+ *   tails into the join -> join = 'lduh h28, sll %l0 -> %o1, sra' as fw.
+ *   Locals declared vt1 h0a h30 h32 h26 hx h28 h2e ht (declaration order = allocno index = tie-break: h28 and hx
+ *   both int 29, hx must win). Loads h0a, h30, h32, h2e (h2e last = delay slot).
+ *   Without the hints below h0a and h32 get each other's registers (%l6/%l7): allocation priority h0a 497/227 ->
+ *   43.79 < h32 464/210 -> 44.19.
+ * Compiler aid: three branch-weight hints, behaviour-neutral:
+ *   'do continue; while (0);' x4 + 'goto lN; lN: ;' emits no code (each continue jumps to its own do-while(0) exit,
+ *   the goto to the next statement). It only leaves NOTE_INSN_PREDICTION notes (stmt.c PRED_CONTINUE 56 % taken,
+ *   c-semantics.c PRED_GOTO 70 % not taken) on the enclosing branch: odds x 1.2727^4 / 2.333 = x1.124 (DS combine in
+ *   predict.c).
+ *   cls == 1 arm 29 % -> 31.5 % (freq 338 -> 367): h0a REG_FREQ 497 -> 500 -> priority int 44 = h32 44, allocno 5
+ *   first -> %l6/%l7 as fw. Window: arm freq >= 360 (h0a) and < 388 (else arm must stay >= exec_th 776 of bb-reorder
+ *   round 2).
+ *   The same hint in the sh_v > 0x3fff arm (349 -> 378) and the 0x2000 arm (236 -> 255) keeps the bb-reorder round-3
+ *   trace order (keys = -freq: 0x3fff arm > cls arm > 0x2000 arm > float fixup block 245), and their children stay <
+ *   exec_th 194.
  */
 
 struct PanelParam

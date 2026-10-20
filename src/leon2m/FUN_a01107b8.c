@@ -1,5 +1,5 @@
-/* leon2m FUN_a01107b8 @ 0xa01107b8-0xa0110d64 (1452 bytes) -mcpu=v8 -O3 -g
- * (of 363 words, no compiler aids). Hand, from earlier drafts.
+/* leon2m FUN_a01107b8 @ 0xa01107b8-0xa0110d64 (1452 bytes, 363 words), flags -mcpu=v8 -O3 -g.
+ * Compiler aids: none.
  *
  * What it does (panel-row reader): void(u8 ch). Picks the window record for ch (1: 0xA802D7C4, 2: 0xA802D784,
  * else 0xA802D744; idx 1/2/0); returns if its width (+0x16) is 0. Splits the window at the column
@@ -9,17 +9,18 @@
  * mirrors positions when +0x3E bit 0 is set, calls FUN_a010baf4 / FUN_a010bee4 per part, and when
  * DAT_a8027a88 == 1 writes the update mask to 0xD003B000 and waits up to 100 ticks (func_0x4008d588) for it
  * to clear.
- * Helpers are the firmware's own functions, inlined by gcc: set_fmt = FUN_a010c194, set_pos = FUN_a010bdcc,
- *   upd = FUN_a011023c. set_pos and upd bodies here also compile byte-exact standalone. set_fmt here has
- *   u8 fmt/val; the standalone FUN_a010c194 (src/leon2m) needs u32 fmt/val + u8 casts (u32 here: 70.80; u8
- *   standalone: 73.23), so the two are separate bodies.
- * Keys (plain C, same calculations):
+ * Helpers are the firmware's own functions, inlined by gcc: set_fmt = FUN_a010c194, set_pos = FUN_a010bdcc, upd =
+ * FUN_a011023c. The set_pos and upd bodies here also match as standalone functions. set_fmt here has u8 fmt/val; the
+ * standalone FUN_a010c194 (src/leon2m) needs u32 fmt/val + u8 casts, and neither form matches in both places, so the
+ * two are separate bodies.
+ * Source form (plain C, same calculations):
  *  - the split block, the 'w > first' test and the mirror block each read the record into their OWN unsigned short
  *    locals (x1/w1, w2, x3/w3), so each keeps its own zero-extension; 'w > first' is an inlined static int helper.
  *  - a2 fully defined in each arm ('a1 = c->w0; if (wider) a2 = c->w0 + k; else a2 = c->w0;'): with 'a2 = a1 = ...;
  *    a2 += k' the a2 hard reg stays in bb->global_live_at_start after post-reload copy-prop and regrename skips it.
  *  - the table bases are 'volatile unsigned int *const TAB[3]' (const pointer tables, as the sister FUN_a0110318).
- *  - record fields +0x18/+0x1a/+0x20/+0x22 are plain unsigned short (with const tables this gives the fw store order).
+ *  - record fields +0x18/+0x1a/+0x20/+0x22 are plain unsigned short (with const tables this gives the fw store
+ *    order).
  *  - mirror arm computes l3 before l5.
  */
 struct Ctx {

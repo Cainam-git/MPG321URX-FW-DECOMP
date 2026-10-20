@@ -1,19 +1,21 @@
-/* leon2m FUN_a0110318 @ 0xa0110318-0xa01107b8 (1184 bytes, 296 insns) -mcpu=v8 -O3 -g
- * (of 296 words).
- * What it does (panel-row reader, sister of FUN_a01107b8): void(u8 ch). Record c = ctx(ch) (0xA802D704, ch 1: 0xA802D804);
- * returns if c->h16 (width) is 0; splits [x, x+w) at half = (*DAT_a802d6a4)->h08 >> 1 into first/second, sets the side
- * enable bits (0xD0032000/0xD003A000 +0x270), scales h0c by each part (udiv), inlined FUN_a010d914(ch, 7, 0xff) (set_fmt),
- * mirror (+0x3E bit 0), FUN_a010dc8c x2, inlined FUN_a010dbc4(ch, 0/1, pos, c->h20) (set_pos), FUN_a010de54 x2, and the
+/* leon2m FUN_a0110318 @ 0xa0110318-0xa01107b8 (1184 bytes, 296 words), flags -mcpu=v8 -O3 -g.
+ * What it does (panel-row reader, sister of FUN_a01107b8): void(u8 ch). Record c = ctx(ch) (0xA802D704, ch 1:
+ * 0xA802D804);
+ * returns if c->h16 (width) is 0; splits [x, x+w) at half = (*DAT_a802d6a4)->h08 >> 1 into first/second, sets the
+ * side
+ * enable bits (0xD0032000/0xD003A000 +0x270), scales h0c by each part (udiv), inlined FUN_a010d914(ch, 7, 0xff)
+ * (set_fmt),
+ * mirror (+0x3E bit 0), FUN_a010dc8c x2, inlined FUN_a010dbc4(ch, 0/1, pos, c->h20) (set_pos), FUN_a010de54 x2, and
+ * the
  * optional 0xD003B000 wait loop.
  * Helpers are the firmware's own functions, inlined by gcc: ctx() (early-return record getter), set_fmt() =
- * FUN_a010d914 (same body compiles byte-exact standalone: src/leon2m/FUN_a010d914.c), set_pos() = FUN_a010dbc4.
+ * FUN_a010d914 (the same body is src/leon2m/FUN_a010d914.c), set_pos() = FUN_a010dbc4.
  * Required source forms (plain C, same calculations, no compiler aids):
- *  - SET's else arm reuses the loop counter: 'unsigned int i; if (ch > 1) for (i...) ...; else { i = ch; tab[i]->f = val; }'
+ *  - SET's else arm reuses the loop counter: 'unsigned int i; if (ch > 1) for (i...) ...; else { i = ch; tab[i]->f =
+ *    val; }'
  *    (flips global-alloc order: table-base pseudos before the record pointer q, as in the fw).
  *  - set_fmt: 't = m << 16; v = m | t | 1;' (fw operand order 'or m, t'; needed for the standalone FUN_a010d914).
  *  - 'a2 = a1 = c->w0;' then 'a2 += ...' / 'a1 += ...' (one c->w0 load, as the sister FUN_a01107b8).
- *  - removed unused locals q, t20, v of the main function.
- * No documented aids used.
  */
 #define R(a) (*(volatile unsigned int *)(a))
 struct OutCh { unsigned int w0; unsigned char p04[8]; unsigned short h0c, h0e; unsigned char p10[4];

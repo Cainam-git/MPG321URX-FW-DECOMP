@@ -1,8 +1,9 @@
 /* leon2m FUN_a010edbc @ 0xa010edbc-0xa010ef64 (424 bytes)  program half the transformed row's +0x08 value into the
- * output channel register blocks (hand; -mcpu=v8 -O3 -g, also -O3 -g -msoft-float and
- * -O3; jf.py 100 %, rawcmp mismatches 0). Twin of the byte-exact FUN_a010f7a4.
+ * output channel register blocks. Flags -mcpu=v8 -O3 -g (also matches with -O3 -g -msoft-float and with -O3). Twin
+ * of FUN_a010f7a4.
  *
- * void FUN_a010edbc(c): ch = (unsigned char)c selects a channel record: ch == 1 -> 0xA802D7C4, ch == 2 -> 0xA802D784,
+ * void FUN_a010edbc(c): ch = (unsigned char)c selects a channel record: ch == 1 -> 0xA802D7C4, ch == 2 ->
+ * 0xA802D784,
  *   else 0xA802D744; sets bit 0 of its byte +0x3E.
  *   v = (transformed row *DAT_a802d6a4 halfword +0x08 >> 1) << 16.
  *   Two pointer tables of 3 register blocks {w0, w4, w8, wc}: T1 = 0x19AED8, T2 = 0x19AECC.
@@ -12,7 +13,7 @@
  *   DAT_0019aed8[3], DAT_0019aecc[3] (pointers to register blocks; writes +0x0C and +0x04, reads +0x04 of T1).
  * Callers: no direct call in asm/leon2m; Ghidra marks the entry unreachable.
  * Panel row fields read: transformed row +0x08 only.
- * key: the index select is 'unsigned int idx = ch > 2 ? 0 : c;' used as (unsigned char)idx (selects on the
+ * Source form: the index select is 'unsigned int idx = ch > 2 ? 0 : c;' used as (unsigned char)idx (selects on the
  *   wide parameter, then truncates: bgu,a / clr %i0 / and 0xff). 'if (ch > 2) c = 0;' is if-converted to subx/and.
  */
 struct ChBlk { unsigned char pad[0x3e]; unsigned char b3e; };

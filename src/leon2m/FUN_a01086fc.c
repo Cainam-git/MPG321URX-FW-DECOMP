@@ -1,11 +1,10 @@
-/* leon2m FUN_a01086fc @ 0xa01086fc-0xa0108e4c (468 words), flags -mcpu=v8 -O3 -g -msoft-float (float code):
- * Path (jf / rawcmp): first C from the asm 25.43 / 436, then 67.95 / 156, 92.09 / 38 (u16 q, rounding as two
- *   arms), 100 / 0 with two changes:
+/* leon2m FUN_a01086fc @ 0xa01086fc-0xa0108e4c (468 words), flags -mcpu=v8 -O3 -g -msoft-float (float code).
+ * Source form, two points:
  *   1. The 0xcf011ddc value is a u8 local set in an if ('d = 0; if (w & 0x1f) d = w / 32 * 32 - w + 0x20;') and
  *      stored after it. With the store written as 'R(0xcf011ddc) = cond ? a : 0' the store ADDRESS is expanded
  *      before the condition, sched2 hoists 'or base,0x1dc' above the branch and every rename choice of the
- *      h3a-bit-15 arms moves (the 38 words). The fw computes 'or %o3,0x1dc,%i2' at the join, after the value.
- *      (The same value through '?:' into a local, or an if/else, gives 87.21: only the 'd = 0' first form fits.)
+ *      h3a-bit-15 arms moves. The fw computes 'or %o3,0x1dc,%i2' at the join, after the value.
+ *      (The same value through '?:' into a local, or an if/else, does not match: only the 'd = 0' first form does.)
  *   2. The float result is converted with '(unsigned int)ceil(...)': the fw calls 0xa0155160 = __fixunsdfsi
  *      (symbols/leon2m.json, libgcc _fixunsdfsi.o); '(int)' calls __fixdfsi (0xa0156944). FUN_a01547dc is libm
  *      ceil (s_ceil.o, symbols/leon2m.json), declared here with its real name.
@@ -21,10 +20,11 @@
  *   8000 (the excess moves into q); reg 0xcf011c00 bit 6 = (clk * h0a / 1000 * h02 / 10000) / v < 40. Then the
  *   16-bit window registers 0xcf011cd0..cf8 / 0xcf011e80..eb8 (FUN_a00f308c = two byte registers), 0xcf011cc0..cc8,
  *   0xcf011ec0 bit 7, the 0xcf0116d0 count (v - 1 or 0), the bit-4 enables of 0xcf011800 / a00 / bf8 / a84 / a88 /
- *   a8c / dc8, 0xcf011ddc = 32 - (w & 31), FUN_a00f232c(ch, 0x90, 0x20, 1) for h3a bit 15 clear, and the 0xcf011d00..
+ *   a8c / dc8, 0xcf011ddc = 32 - (w & 31), FUN_a00f232c(ch, 0x90, 0x20, 1) for h3a bit 15 clear, and the
+ *   0xcf011d00..
  *   d18 words (h0a / 4, 0, 0, 0). Mode 1 writes only x, q, 8, k, q.
  *   clk * h0a / 1000 * h02 / 10000 is the input rate term that sets 0xcf011c00 bit 6.
- * Code facts (each checked in the asm):
+ * Code facts:
  *   - f is a plain u8 local that reload SPILLS to [%fp-9] (stb/clrb/ldub = spill code, frame 112). It is NOT an
  *     address-taken byte: an address (ADDRESSOF) or a frame slot at expand time blocks the fw's sibcalls
  *     ('call FUN_a00f308c; restore' at both ends, sibcall.c no_sibcalls/frame_offset). The spill appears once the
@@ -47,7 +47,7 @@
  *     the h3a re-load (fw order). The test code is the same as '(short)(h3a & 0x8000)'.
  * Register allocation: k and q are u16 (HImode) like the fw ('add %l0,%o4,%l3' = q + raw k); with
  *   q u16 the rounding is written as two arms so combine has no 'q += 2' to fold into the quotient temp.
- * Aids: none. volatile only on the 0xcf... registers.
+ * Compiler aids: none. volatile only on the 0xcf... registers.
  */
 struct Tim {
     unsigned short h00, h02, h04, h06, h08, h0a, h0c, h0e;
