@@ -8037,6 +8037,13 @@
       "name": "FUN_a00f3580",
       "status": "matched"
     },
+    "ram:a00f37d0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes a byte to register 0xCF01281C and passes it to a hook pointer",
+      "name": "FUN_a00f37d0",
+      "status": "matched"
+    },
     "ram:a00f38d4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
