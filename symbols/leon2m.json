@@ -7027,6 +7027,13 @@
       "name": "FUN_a00d934c",
       "status": "matched"
     },
+    "ram:a00d93c8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "toggles bit 14 of word 0xa802d290+0xa8 and refreshes byte +0x3e, then FUN_a01479ec / FUN_a00d5cd8 / FUN_a0143c14 calls and tail FUN_a0147a14(byte +0x10 limited to 100)",
+      "name": "FUN_a00d93c8",
+      "status": "matched"
+    },
     "ram:a00d972c": {
       "by": "hand",
       "comment": "a802d290.b14 clamped to 100 and stored back; 14a11c(2, v); d94fc()",
