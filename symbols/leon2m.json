@@ -6109,6 +6109,13 @@
       "name": "FUN_a00c8a44",
       "status": "matched"
     },
+    "ram:a00c8c38": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command handler: two 4-digit numbers from the receive record to halfwords 0xa802d2e4/2e6, limited by FUN_a014837c by mode, reply 5600+",
+      "name": "FUN_a00c8c38",
+      "status": "matched"
+    },
     "ram:a00c91dc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
