@@ -1009,6 +1009,13 @@
       "name": "FUN_CODE_d1de",
       "status": "matched"
     },
+    "CODE:d214": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "step the register-bank-3 state byte at XDATA 0xA6EE (1: cc7d, 3: d24a and d8a6, then 4)",
+      "name": "FUN_CODE_d214",
+      "status": "matched"
+    },
     "CODE:d27f": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
