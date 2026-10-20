@@ -6149,6 +6149,13 @@
       "name": "FUN_a00cc9c0",
       "status": "matched"
     },
+    "ram:a00ccc20": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command handler: sets byte 0xa802d2a1 to 3, three-digit value 0-100 from the receive record to byte 0xa802d2a4, reply 5600+",
+      "name": "FUN_a00ccc20",
+      "status": "matched"
+    },
     "ram:a00cce80": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
