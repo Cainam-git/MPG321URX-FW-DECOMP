@@ -1,7 +1,7 @@
 /* FUN_a0079ac4 (leon2s 0xa0079ac4-0xa0079b84, 192 bytes), flags -mcpu=v8 -Os -g.
- * For idx 0..3 reads two registers of port through FUN_a00a7314 (register numbers from the halfword tables
- * DAT_a00b3af4 and DAT_a00b3aec at index idx) and keeps bits 8..12 of each (both 0 for other idx). Each value
- * has bit 4 flipped and m is the smaller of the two. Returns 4 (m >= 0x17) or 8 for mode 6, 2 for mode 5,
+ * For idx 0..3 calls FUN_a00a7314(port, DAT_a00b3af4[idx]) and FUN_a00a7314(port, DAT_a00b3aec[idx]) and
+ * keeps bits 8..12 of each result (both 0 for other idx). Each value has bit 4 flipped and m is the smaller
+ * of the two. Returns 4 (m >= 0x17) or 8 for mode 6, 2 for mode 5,
  * otherwise 0, masked with 0xe.
  * Source form: the mode 6 value is written m >= 0x17 ? 4 : 8 (gives the subx/and/add sequence).
  */

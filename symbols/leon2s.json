@@ -2203,7 +2203,7 @@
     },
     "ram:a0079ac4": {
       "by": "h15",
-      "comment": "Reads two table-selected registers of port through FUN_a00a7314 and returns a mode-dependent value 8/4/2/0 from the smaller field",
+      "comment": "Takes bits 8..12 of two FUN_a00a7314 results (table-selected arguments) and returns 8/4/2/0 from the smaller one and param_3",
       "name": "FUN_a0079ac4",
       "status": "matched"
     },
