@@ -11588,6 +11588,13 @@
       "name": "FUN_a0137fa0",
       "status": "matched"
     },
+    "ram:a0137fcc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sends command 0x45 with mode and returns four sums of byte pairs from the words 0xa802cba0/0xa802cba4",
+      "name": "FUN_a0137fcc",
+      "status": "matched"
+    },
     "ram:a013805c": {
       "by": "permuter",
       "comment": "permuter: ",
