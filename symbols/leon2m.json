@@ -8755,6 +8755,12 @@
       "name": "FUN_a01181a4",
       "status": "matched"
     },
+    "ram:a01182cc": {
+      "by": "hand",
+      "comment": "returns byte 1, 2 or 3 of the record at 0xa8027a90 for index 1, 2 or 3, else byte 0",
+      "name": "FUN_a01182cc",
+      "status": "matched"
+    },
     "ram:a0118400": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
