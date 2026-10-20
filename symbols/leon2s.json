@@ -6641,6 +6641,12 @@
       "name": "FUN_a00c80f0",
       "status": "matched"
     },
+    "ram:a00c81f8": {
+      "by": "h17",
+      "comment": "Reads n bytes of port in blocks of 16 through FUN_a00c7fec after polling register 0xf5",
+      "name": "FUN_a00c81f8",
+      "status": "matched"
+    },
     "ram:a00c82dc": {
       "by": "hand",
       "comment": "Masks param_1 to a byte, calls FUN_a00c8048 and masks the result into a local (%g1); if it is non-zero it is returned, otherwise FUN_a00c81f8 is called and its masked result returned.",
