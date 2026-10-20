@@ -996,6 +996,12 @@
       "name": "FUN_CODE_d086",
       "status": "matched"
     },
+    "CODE:d171": {
+      "by": "hand",
+      "comment": "copy the 0x11A bytes at XDATA 0x3E00 into port byte 0xD5E3 with 0xD5E0 set to 0x22, then restore 0xD5E0",
+      "name": "FUN_CODE_d171",
+      "status": "matched"
+    },
     "CODE:d1a8": {
       "by": "hand",
       "comment": "put c into 16-entry ring a1f8[] (head idata 43, tail 45): 0xff if full; EA off; if idle flag idata 46 set: clear it, TI = 1; EA on",
