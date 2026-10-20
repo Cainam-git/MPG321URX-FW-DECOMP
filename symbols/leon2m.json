@@ -5390,6 +5390,13 @@
       "name": "FUN_a00c95a4",
       "status": "matched"
     },
+    "ram:a00c9788": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: digit 0-1 into bit 9 of record word 0, FUN_a0148d98(bit), reply 5600+",
+      "name": "FUN_a00c9788",
+      "status": "matched"
+    },
     "ram:a00c9e9c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
