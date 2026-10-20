@@ -7,13 +7,14 @@
  * word 0xa802afec = b + 0x48, FUN_a00a9650(b, 1); copies b to byte 0xa8025c56 and bit 11 of word
  * 0xa802d290+0xa8 to byte 0xa8025c55; when that bit is set, clears it and, unless (word 0xa802d290+0x180 &
  * 0xffff00) is 0x100, tail-calls FUN_a00dbcf0.
+ * The word at +0x180 and its byte +0x182 are one union.
  * Exact form: bit 15 of the halfword is tested as '(short)(h4 & 0x8000)' (same as FUN_a00a0508).
  */
 struct D290 {
     unsigned char p000[0xa8];
     unsigned int w0a8;
     unsigned char p0ac[0x180 - 0xac];
-    unsigned int w180;
+    union { unsigned int w; unsigned char b[4]; } u180;
     unsigned char p184[0x1a9 - 0x184];
     unsigned char b1a9;
     unsigned char b1aa;
@@ -58,15 +59,15 @@ void FUN_a00a03e8(void)
         _DAT_a802d03c = func_0x4008d588();
         return;
     }
-    FUN_a00a813c(1, ((unsigned char *)&DAT_a802d290)[0x182], 0);
+    FUN_a00a813c(1, DAT_a802d290.u180.b[2], 0);
     FUN_a00a900c(_DAT_a802afec - 14, 2);
-    _DAT_a802afec = ((unsigned char *)&DAT_a802d290)[0x182] + 0x48;
-    FUN_a00a9650(((unsigned char *)&DAT_a802d290)[0x182], 1);
-    DAT_a8025c56 = ((unsigned char *)&DAT_a802d290)[0x182];
+    _DAT_a802afec = DAT_a802d290.u180.b[2] + 0x48;
+    FUN_a00a9650(DAT_a802d290.u180.b[2], 1);
+    DAT_a8025c56 = DAT_a802d290.u180.b[2];
     DAT_a8025c55 = (DAT_a802d290.w0a8 >> 11) & 1;
     if (DAT_a802d290.w0a8 & 0x800) {
         DAT_a802d290.w0a8 &= ~0x800;
-        if ((DAT_a802d290.w180 & 0xffff00) != 0x100)
+        if ((DAT_a802d290.u180.w & 0xffff00) != 0x100)
             FUN_a00dbcf0();
     }
 }
