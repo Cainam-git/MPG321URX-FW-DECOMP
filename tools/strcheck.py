@@ -6,7 +6,7 @@ import sys, re, pathlib, ast
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 def literals(src):
     src = re.sub(r"//[^\n]*|/\*.*?\*/", "", src, flags=re.S)
-    src = re.sub(r"__asm__\s*(?:volatile\s*)?\([^;]*\)", "", src)   # instruction text, not data
+    src = re.sub(r"\b(?:__asm__|asm)\s*(?:volatile\s*)?\([^;]*\)", "", src)   # instruction text or symbol labels, not data
     out = []
     for m in re.finditer(r'((?:"(?:[^"\\\n]|\\.)*"\s*)+)', src):
         if re.search(r"#\s*include", src[max(0, m.start() - 20):m.start()]): continue
@@ -19,6 +19,8 @@ def literals(src):
     return out
 def missing(cpu, path):
     img = (ROOT / "parts" / f"{cpu}.bin").read_bytes()
+    data = ROOT / "parts" / f"{cpu}_data.bin"   # leon2m keeps its strings in the Big chip DATA area
+    if data.exists(): img += b"\0" + data.read_bytes()
     return [s for s in literals(pathlib.Path(path).read_text()) if s + b"\0" not in img]
 if __name__ == "__main__":
     cpu = sys.argv[1]; files = sys.argv[2:] or sorted(str(p) for p in (ROOT / "src" / cpu).glob("*.c"))
