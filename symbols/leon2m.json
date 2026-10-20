@@ -5355,6 +5355,13 @@
       "name": "FUN_a00c5a00",
       "status": "matched"
     },
+    "ram:a00c5e40": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: digit 0-4 into bits 16-19 of record word 0x34, FUN_a00d58f8/58d8/4998 refresh, reply 5600+",
+      "name": "FUN_a00c5e40",
+      "status": "matched"
+    },
     "ram:a00c604c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
