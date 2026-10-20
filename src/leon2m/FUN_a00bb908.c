@@ -2,14 +2,15 @@
  * bytes 2..n of the receive record at 0xa802d040 with the table rows returned by three lookup functions (a table
  * byte 0xff matches any value): rows i = 0..0x8c of FUN_a015468c(i, j) for j = 2..9 (returns i on a full match),
  * rows i = 0..0xc of FUN_a01546ec(i, j) for j = 2..0x18 (returns i + 0x8d), row 0 of FUN_a0154750(0, j) for j = 2..5
- * (returns 0x99). Returns 0xff when no row matches. FUN_a00bb260 is the same for the record 0xa802d0d0.
+ * (returns 0x99). Returns 0xff when no row matches. The port parameter is not used. FUN_a00bb260 is the same for the
+ * record 0xa802d0d0.
  */
 extern unsigned char DAT_a802d040[];
 extern unsigned char FUN_a015468c(unsigned short a, unsigned short b);
 extern unsigned char FUN_a01546ec(unsigned short a, unsigned short b);
 extern unsigned char FUN_a0154750(unsigned short a, unsigned short b);
 
-unsigned char FUN_a00bb908(void)
+unsigned char FUN_a00bb908(unsigned char port)
 {
     unsigned char i, j;
 
