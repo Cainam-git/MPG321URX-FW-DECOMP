@@ -7446,6 +7446,13 @@
       "name": "FUN_a00da870",
       "status": "matched"
     },
+    "ram:a00da9e4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bit 15 of halfword 0xa802cff4+0x14 and sends the command \"5b00;30000\" + digit over FUN_a01487e8",
+      "name": "FUN_a00da9e4",
+      "status": "matched"
+    },
     "ram:a00daa7c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
