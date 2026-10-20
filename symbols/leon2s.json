@@ -1584,6 +1584,12 @@
       "name": "FUN_a006122c",
       "status": "matched"
     },
+    "ram:a0061280": {
+      "by": "hand",
+      "comment": "writes a zero-terminated string to the UART, adding a carriage return after each line feed",
+      "name": "FUN_a0061280",
+      "status": "matched"
+    },
     "ram:a0061348": {
       "by": "hand",
       "comment": "writes a word as 8 hex digits to the UART (inlined copy of FUN_a006122c)",
