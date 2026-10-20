@@ -2604,6 +2604,12 @@
       "name": "FUN_a0089d38",
       "status": "matched"
     },
+    "ram:a0089e24": {
+      "by": "hand",
+      "comment": "Mark an 8-byte record entry (byte 0 = 1, clear bytes 1 and 4)",
+      "name": "FUN_a0089e24",
+      "status": "matched"
+    },
     "ram:a0089e54": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
