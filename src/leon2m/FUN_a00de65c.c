@@ -1,9 +1,9 @@
 /* leon2m FUN_a00de65c @ 0xa00de65c-0xa00de6a8 (19 words), flags -mcpu=v8 -O3 -g.
  * Code facts: ROM register write func_0x4008c25c(0x9f0200e0, 0x60); three 'nop' instructions;
- * func_0x4008c25c(0x9f000014, 0); then a busy-wait of 1024 rounds: i = 0x3ff; loop body 'nop';
- * 'addcc i,-1; bpos' (do { nop } while (--i >= 0)). void, no parameters (%i0 is never read).
- * Fixes vs the autoc draft (84.21): the three nops after the first write were missing; void and no
- * params. The nops are inline asm (they are real instructions in the fw stream). Aids: none.
+ * func_0x4008c25c(0x9f000014, 0); then a busy-wait of 1024 rounds: i = 0x3ff; loop body 'nop'; 'addcc i,-1; bpos'
+ * (do { nop } while (--i >= 0)). void, no parameters (%i0 is never read).
+ * Source form: the nops are inline asm (they are real instructions in the fw stream).
+ * Compiler aids: none.
  */
 extern void func_0x4008c25c(unsigned int addr, unsigned int value);
 

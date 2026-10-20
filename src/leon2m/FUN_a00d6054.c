@@ -1,79 +1,77 @@
-/* leon2m unit: FUN_a00d3d30 @ 0xa00d3d30 + FUN_a00d6054 @ 0xa00d6054 APP_ConfigDispSize (hand), both BYTE-EXACT.
- * Status: FUN_a00d6054 ('-mcpu=v8 -O3 -g' and -msoft-float), FUN_a00d3d30 -Wall -W clean.
- *   jf 99.00 match=False only from the exact() link step: 'memcpy' (gcc block-move libcall; fw memcpy =
- *   FUN_a013c910) has no firmware address, and .rodata.str1.8 / .rodata (strings at file 0x2a0768, tb init) are
- *   not inside parts/leon2m.bin. Judge gap, not code.
- * Unit context (real file context, no dummy objects):
- *   - FUN_a00d3d30 (35 insns) is the real neighbour compiled before FUN_a00d6054 in the same unit: it is the only
- *     text between the unit's first .rodata user (a00d3bb4) and a00d6054 that has .LLC constants (soft-float
- *     libcalls, so the unit is built -msoft-float). Image: its 6 floats 22,30,128,100,70,28 are the first
- *     .rodata.cst4 entries (0x198748.., 0x198744 = alignment padding, unreferenced); the two printf strings of this
- *     file are the first .rodata.str1.8 entries (0x198768, 0x198798); tb is the last object of the unit's plain
- *     .rodata (0x198720). The cc1 output order of this file is the same: cst4 22,30,128,100,70,28 / str1.8
+/* leon2m unit: FUN_a00d3d30 @ 0xa00d3d30 + FUN_a00d6054 @ 0xa00d6054 APP_ConfigDispSize, one source file. Flags
+ * -mcpu=v8 -O3 -g (FUN_a00d6054 also matches with -msoft-float).
+ * The block copy is a gcc 'memcpy' libcall (fw memcpy = FUN_a013c910).
+ * Unit context:
+ *   - FUN_a00d3d30 (35 insns) is the neighbour compiled before FUN_a00d6054 in the same unit: it is the only text
+ *     between the unit's first .rodata user (a00d3bb4) and a00d6054 that has .LLC constants (soft-float libcalls,
+ *     so the unit is built -msoft-float). Image: its 6 floats 22,30,128,100,70,28 are the first .rodata.cst4
+ *     entries (0x198748.., 0x198744 = alignment padding, unreferenced); the two printf strings of this file are
+ *     the first .rodata.str1.8 entries (0x198768, 0x198798); tb is the last object of the unit's plain .rodata
+ *     (0x198720). The cc1 output order of this file is the same: cst4 22,30,128,100,70,28 / str1.8
  *     APP_ConfigDispSize, height / .rodata tb.
- *   - gcc 3.4 const_labelno: a00d3d30's expansion uses .LLC0-.LLC12 (6 pool entries output), so the first string is
- *     .LLC13 and tb = .LLC14 (fw window .LLC10-29) -> gcse PRE makes the fp-48 pseudo before HIGH(tb) -> fw
+ *   - gcc 3.4 const_labelno: a00d3d30's expansion uses .LLC0-.LLC12 (6 pool entries output), so the first string
+ *     is .LLC13 and tb = .LLC14 (fw window .LLC10-29) -> gcse PRE makes the fp-48 pseudo before HIGH(tb) -> fw
  *     'sethi %hi(tb),%l5; add %fp,-48,%l4' in all 7 tb copies.
  *   - The printf strings are literals (as in the fw: they live in the unit's merged .rodata.str1.8).
- * Source forms of FUN_a00d6054 that the firmware bytes require (all value-identical):
+ * Source form of FUN_a00d6054 (all value-identical to the plain form; the exact build depends on each):
  *   - D434 case 4/8 fit arm: 'h = pH;' before 'oh = inH;' (fw 0xe28 'sth h' before 'mov %i3,%l2'), and oh = inH
  *     before ow = inW (fw a00d6e80 'mov %i3,%l2' right after the sth [fp-76], before the two clrh).
- *   - inW declared before inH ('unsigned short inW, inH, pW, pH;'), and 'outR = w * 100 / h;' written before
- *     'inR = inW * 100 / inH;' (independent statements): the inW<<16 PRE pseudo then ties with inH<<16 at priority
- *     75 and the lower allocno inW<<16 gets %l7, inH<<16 %i5, as fw a00d6150/a00d6164.
- *   - The 7 helper tables ta are 'unsigned short ta[3][3]' (no record CLOBBERs; the decl mem attrs give the fw order
- *     'all constants, ldub b1f, 9 ta stores, cmp' at every table block; .h/.v/.f = [0]/[1]/[2]).
+ *   - inW declared before inH ('unsigned short inW, inH, pW, pH;'), and 'outR = w * 100 / h;' written before 'inR
+ *     = inW * 100 / inH;' (independent statements): the inW<<16 PRE pseudo then ties with inH<<16 at priority 75
+ *     and the lower allocno inW<<16 gets %l7, inH<<16 %i5, as fw a00d6150/a00d6164.
+ *   - The 7 helper tables ta are 'unsigned short ta[3][3]' (no record CLOBBERs; the decl mem attrs give the fw
+ *     order 'all constants, ldub b1f, 9 ta stores, cmp' at every table block; .h/.v/.f = [0]/[1]/[2]).
  *   - ar_hmode reads the input size through the inline helper in_size(port, &iw, &ih) (pointer outputs, same calls
  *     and values). Its ADDRESSOF copies survive cse1 and are deleted before global-alloc, so the PRE hash table
  *     gets the fw size (max_cuid 2395, (n/4)|1 = 599) -> fw 'sethi %hi(tb),%l5; add %fp,-48,%l4' order in all 7 tb
  *     copies. (The same helper in FUN_a00d6054 itself changes the case-2 'inH == 0 || inW == 0' code.)
  *   - ar_h: natural case order 0, 1, 2, 3 and 'if (b != 0) { switch } else v = tb[b1a4].h;'. The fw renames the 12
  *     ar_h copy-1 chains from the same LRU pool in the block order case 0, 1, 2, 3, tb last.
- *   - Case-group orders (each moved group ends in break): ar_v1 switch(port) 'case 0: + default:' first, then 1, 2,
- *     3 (the bb164 'b == 1 || b == 4' renames match the fw); disp_base_size port-1 inner switch 'case 3: break;'
- *     after 'case 6:'.
+ *   - Case-group orders (each moved group ends in break): ar_v1 switch(port) 'case 0: + default:' first, then 1,
+ *     2, 3 (the bb164 'b == 1 || b == 4' renames match the fw); disp_base_size port-1 inner switch 'case 3:
+ *     break;' after 'case 6:'.
  *   - Fine-offset block (w00 & 0x20): 'w = pW; h = pH; ow = pW; ow += b3a; oh = pH; oh += b3c; xo = ..; yo = ..;'
- *     (fold puts the decl operand of 'pW + b3a' second; the fw adds 'pW, b3a'). Block 0x410-0x44c byte-equal.
- *   - D434 switch(b1a4) in ascending case order 0, 1, 4/8, 5, 6, 9, default. The cases compute the offsets from the
- *     just-assigned w/h/ow/oh like the sub-window path: case 0 'h = pH;' before the 'ow > pW' cap and
- *     'xo = (w - ow) >> 1;'; cases 1 and 9 'h = pH; w = pW; xo = (w - ow) >> 1;' (the two identical bodies must stay
+ *     (fold puts the decl operand of 'pW + b3a' second; the fw adds 'pW, b3a').
+ *   - D434 switch(b1a4) in ascending case order 0, 1, 4/8, 5, 6, 9, default. The cases compute the offsets from
+ *     the just-assigned w/h/ow/oh like the sub-window path: case 0 'h = pH;' before the 'ow > pW' cap and 'xo = (w
+ *     - ow) >> 1;'; cases 1 and 9 'h = pH; w = pW; xo = (w - ow) >> 1;' (the two identical bodies must stay
  *     identical); case 4/8 'xo = (w - inW) >> 1; yo = (h - inH) >> 1;' with the test 'inW > pW || inH > pH' like
  *     cases 5/6; cases 5/6 'xo = (w - ow) >> 1; yo = (h - oh) >> 1;' (case 5 w before h). Fw: the out[] w copy
  *     'mov %l6,%o2' comes before the shifts and pW's register is reused.
  * Compiler aids (code-free; every aid line is marked '/ * aid * /'):
  *   'do continue; while (0);' = PRED_CONTINUE (taken 56 %), 'goto L; L: ;' = PRED_GOTO (not taken 70 %); stacks of
- *   both set the branch probability of one edge. Identical-body helper copies (ar_mode1, ar_h2, ar_v1) give one
- *   inline copy its own branch weights. Effects on the bb-reorder trace (code facts, gdb fibheap key probe):
+ *     both set the branch probability of one edge. Identical-body helper copies (ar_mode1, ar_h2, ar_v1) give one
+ *     inline copy its own branch weights. Effects on the bb-reorder trace (code facts, bb-reorder fibheap keys):
  *   - ar_v1 case 2 entry: "goto s0" + 3 continues: bb169 113 -> 103 (block 0x14b4, bb282 first).
- *   - ar_v1 "default:": 5 gotos + 17 continues (near-cancelling, 7:2 lattice): bb159 91 -> 90, so bb30 (91) is taken
- *     before it (0x14d4); bb169 stays 103.
- *   - ar_h2 = identical-body copy of ar_h used ONLY by the ar_hmode case-2 arm (copy B; ar_h keeps the default arm,
- *     copy A). Stacks: ar_h2 case-1 entry (4 goto, 14 cont), case-1 before break (4 goto, 14 cont), case-1 then-arm
- *     (6 goto, 21 cont) and the ar_hmode "case 2:" call site (6 goto, 21 cont): bb304 (copy-B case-1 test) 90 -> 86
- *     (below bb168 87, block 0x1530), bb306 (else arm) 45 -> 44 (still before bb26 43) while bb305 (then arm, 43)
- *     stays the fall-through.
+ *   - ar_v1 "default:": 5 gotos + 17 continues (near-cancelling, 7:2 lattice): bb159 91 -> 90, so bb30 (91) is
+ *     taken before it (0x14d4); bb169 stays 103.
+ *   - ar_h2 = identical-body copy of ar_h used ONLY by the ar_hmode case-2 arm (copy B; ar_h keeps the default
+ *     arm, copy A). Stacks: ar_h2 case-1 entry (4 goto, 14 cont), case-1 before break (4 goto, 14 cont), case-1
+ *     then-arm (6 goto, 21 cont) and the ar_hmode "case 2:" call site (6 goto, 21 cont): bb304 (copy-B case-1
+ *     test) 90 -> 86 (below bb168 87, block 0x1530), bb306 (else arm) 45 -> 44 (still before bb26 43) while bb305
+ *     (then arm, 43) stays the fall-through.
  *   - ar_mode1 = identical-body copy of ar_mode used ONLY by the scaling switch (copy 1; ar_mode keeps the printf
- *     use). "goto m3a" at ar_mode1 case 3: the bb135/bb219 tie (435/435) breaks copy 1 first (block 0x1238);
- *     (6 goto, 21 cont) in ar_mode1 case-1 then-arm: bb138 217 -> 220, before bb222 (0x141c); (1 goto, 3 cont)
- *     at ar_v case 3: 0x11ec, 0x14c0, 0x17f8-0x1808.
- *   - (6 goto, 21 cont) at ar_h (copy A) "case 2:" entry: bb190 (ar_v case 2) before bb284 (0x1790) and the
- *     single words 0x11e4/0x14a4.
+ *     use). "goto m3a" at ar_mode1 case 3: the bb135/bb219 tie (435/435) breaks copy 1 first (block 0x1238); (6
+ *     goto, 21 cont) in ar_mode1 case-1 then-arm: bb138 217 -> 220, before bb222 (0x141c); (1 goto, 3 cont) at
+ *     ar_v case 3: 0x11ec, 0x14c0, 0x17f8-0x1808.
+ *   - (6 goto, 21 cont) at ar_h (copy A) "case 2:" entry: bb190 (ar_v case 2) before bb284 (0x1790) and the single
+ *     words 0x11e4/0x14a4.
  *   - The out[] store order and the xo/yo types and declaration order do not produce the 0x1924 tail; it needs the
  *     o pointer below.
  *   - Documented no-code aid (same class as the FUN_a0081ea8 dead test):
  *     'unsigned short *o; o = out + (port >> 8);' as the first statement, all 8 out[] stores written through o.
  *     Proof o == out: port is 'unsigned char' (0..255), so port >> 8 == 0 on every path; o is never changed.
  *     No code: combine folds port >> 8 to 0 (nonzero_bits), o and out share %i1, the copy is deleted after reload.
- *     Mechanism (code facts, gdb on the real cc1, alias.c 3.4.4): cse/gcse see 'o = out + s' (no copy, so cprop
- *     cannot fold o back into out; base of o = base of out, w/h PRE unchanged). combine merges the param copy
- *     'out = %i1' into o's insn, which lies AFTER NOTE_INSN_FUNCTION_BEG -> sched1's init_alias_analysis has
- *     copying_arguments false there -> find_base_value(%i1) = 0 -> reg_base_value[o] = 0 -> every o[] store
- *     may-alias the frame loads of x/y in sched1 ONLY (sched2: %i1 static arg base, known). That is the fw tail
- *     'lduh [fp-90] yo, [fp-78] x, [fp-80] y, [fp-82] xo; sth 7,0..6' (0x1924-0x192c).
+ *     Mechanism (code facts, alias.c of gcc 3.4.4): cse/gcse see 'o = out + s' (no copy, so cprop cannot fold o
+ *       back into out; base of o = base of out, w/h PRE unchanged). combine merges the param copy 'out = %i1' into
+ *       o's insn, which lies AFTER NOTE_INSN_FUNCTION_BEG -> sched1's init_alias_analysis has copying_arguments
+ *       false there -> find_base_value(%i1) = 0 -> reg_base_value[o] = 0 -> every o[] store may-alias the frame
+ *       loads of x/y in sched1 ONLY (sched2: %i1 static arg base, known). That is the fw tail 'lduh [fp-90] yo,
+ *       [fp-78] x, [fp-80] y, [fp-82] xo; sth 7,0..6' (0x1924-0x192c).
  *     A plain 'o = out;' / '&out[0]' / int cast is folded by gcse cprop. record_set (3.4.4) kills a pointer's base
- *     on ANY second non-self set (no same-base check).
- *   - Tail order (independent statements): o[7], o[0], o[1], o[2], o[3], o[4], then y read into t before
- *     o[6] = xo, o[5] = t (with all stores may-alias in sched1 this keeps out[0] off the last slot: no 0x9d0 swap).
+ *       on ANY second non-self set (no same-base check).
+ *   - Tail order (independent statements): o[7], o[0], o[1], o[2], o[3], o[4], then y read into t before o[6] =
+ *     xo, o[5] = t (with all stores may-alias in sched1 this keeps out[0] off the last slot: no 0x9d0 swap).
  */
 extern unsigned char DAT_a802d29a;
 unsigned char FUN_a00d3d30(void)

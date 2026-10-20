@@ -1,10 +1,10 @@
 /* leon2m FUN_a00d934c @ 0xa00d934c-0xa00d93c8 (31 words), flags -mcpu=v8 -O3 -g.
- * Code facts: record DAT_a802d290: word +0xac |= 0x20000; bytes +0x1e and +0x20 are swapped (both read first,
- * then stb +0x1e, stb +0x20). If they were equal: return. Else FUN_a00d9238(); FUN_a01479ec(1) when word +0xa8
- * has bit 14 (0x4000); FUN_a0149978(1, byte +0x20); tail FUN_a00d5cd8(). void(void).
- * Fix vs the autoc draft: real base DAT_a802d290 (draft d2ae/d2b0/d338/d33c names; d2b0 typed as a word), byte
- * types, the tail takes no args. The test is written 'cur == old' (fold keeps the fw cmp %o4,%g1 order).
- * Aids: none.
+ * Code facts: record DAT_a802d290: word +0xac |= 0x20000; bytes +0x1e and +0x20 are swapped (both read first, then
+ * stb +0x1e, stb +0x20). If they were equal: return. Else FUN_a00d9238(); FUN_a01479ec(1) when word +0xa8 has bit
+ * 14 (0x4000); FUN_a0149978(1, byte +0x20); tail FUN_a00d5cd8(). void(void).
+ * Source form: the record base DAT_a802d290 with byte fields; the tail call takes no arguments. The test is
+ * written 'cur == old' (fold keeps the fw cmp %o4,%g1 order).
+ * Compiler aids: none.
  */
 struct R290 {
   unsigned char pad[0x1e]; unsigned char b1e; unsigned char pad1; unsigned char b20;

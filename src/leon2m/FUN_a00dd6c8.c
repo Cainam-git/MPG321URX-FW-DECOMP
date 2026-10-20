@@ -1,12 +1,12 @@
 /* FUN_a00dd6c8 (leon2m, 0xa00dd6c8-0xa00dd7f0, 296 bytes, 74 words).
  * Flags: -mcpu=v8 -O3 -g.
- * Code facts: mode == 2 sets the byte DAT_a802b0ae = 1. Mode 1 or 2: DAT_a802b0ad = 1, then twelve
- * FUN_a0107xxx(0) calls (783c, 7884, 78cc, 7914, 765c, 76bc, 771c, 777c, 77dc, 7554, 75f8, 795c) and a
- * tail call FUN_a00def40(DAT_00198c60, param_2). Other modes: both bytes = 0, the hardware word
- * 0xcf009bb8 = 0, the same twelve calls with 1, tail call FUN_a00def40(DAT_00198c78, param_2).
- * Fix vs draft: the two strings are SYMBOLS DAT_00198c60 / DAT_00198c78 (fw: 'restore %i0, %lo, %o0'
- * builds the address in the delay slot; a constant gives a separate 'or' and a bare restore).
- * Aids: none (volatile only on the 0xcf009bb8 hardware register).
+ * Code facts: mode == 2 sets the byte DAT_a802b0ae = 1. Mode 1 or 2: DAT_a802b0ad = 1, then twelve FUN_a0107xxx(0)
+ * calls (783c, 7884, 78cc, 7914, 765c, 76bc, 771c, 777c, 77dc, 7554, 75f8, 795c) and a tail call
+ * FUN_a00def40(DAT_00198c60, param_2). Other modes: both bytes = 0, the hardware word 0xcf009bb8 = 0, the same
+ * twelve calls with 1, tail call FUN_a00def40(DAT_00198c78, param_2).
+ * Source form: the two strings are the symbols DAT_00198c60 / DAT_00198c78 (fw: 'restore %i0, %lo, %o0' builds the
+ * address in the delay slot; a constant gives a separate 'or' and a bare restore).
+ * Compiler aids: none (volatile only on the 0xcf009bb8 hardware register).
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

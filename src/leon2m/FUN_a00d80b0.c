@@ -1,8 +1,8 @@
 /* leon2m FUN_a00d80b0 @ 0xa00d80b0-0xa00d80d8 (10 words), flags -mcpu=v8 -O3 -g.
- * Code facts: FUN_a014a428(0xc, byte 0xa802d290+0x1d); tail FUN_a014a428(0xd, re-read rec+0x1d)
- * (the fw loads the byte twice, once per call). void(void).
- * Fix vs the autoc draft (70.00): real base DAT_a802d290 as a struct (draft: DAT_a802d2ad mid-record name),
- * the byte is read at each call (the draft cached it in one local). Aids: none.
+ * Code facts: FUN_a014a428(0xc, byte 0xa802d290+0x1d); tail FUN_a014a428(0xd, re-read rec+0x1d) (the fw loads the
+ * byte twice, once per call). void(void).
+ * Source form: the record base DAT_a802d290 as a struct; the byte is read at each call (not kept in a local).
+ * Compiler aids: none.
  */
 struct R290 { unsigned char pad[0x1d]; unsigned char b1d; };
 extern struct R290 DAT_a802d290;

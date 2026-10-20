@@ -1,12 +1,12 @@
 /* FUN_a00dedc8 (leon2m, 0xa00dedc8-0xa00dee6c, 164 bytes, 41 words).
  * Flags: -mcpu=v8 -O3 -g.
- * Code facts: q = param_1 / 0x1c2000 (umul 0x91a2b3c5, rd %y, srl 20); clears the bytes at +0x80 and
- * +0x81 of the record DAT_a802b0ec (fw base sethi/or 0xa802b0ec); then func_0x4008c25c writes to the
- * 0xc00b00xx registers: (0c,0x80) (00,q) (04,0) (0c,0) (0c,3) (08,6) (08,0) (04,1); tail call
- * func_0x4008a880(4, 0x20, FUN_a002e238) (3 args, as at its other call sites).
- * Fixes vs draft: record base DAT_a802b0ec + 0x80/0x81 bytes (the draft had a short at a802b16c);
- * one parameter, void, 3-arg tail call; source store order 0x81 then 0x80 (fw emits 0x80, 0x81).
- * Aids: none.
+ * Code facts: q = param_1 / 0x1c2000 (umul 0x91a2b3c5, rd %y, srl 20); clears the bytes at +0x80 and +0x81 of the
+ * record DAT_a802b0ec (fw base sethi/or 0xa802b0ec); then func_0x4008c25c writes to the 0xc00b00xx registers:
+ * (0c,0x80) (00,q) (04,0) (0c,0) (0c,3) (08,6) (08,0) (04,1); tail call func_0x4008a880(4, 0x20, FUN_a002e238) (3
+ * args, as at its other call sites). One parameter, void.
+ * Source form: the record base DAT_a802b0ec with the +0x80/+0x81 bytes; source store order 0x81 then 0x80 (the fw
+ * emits 0x80, 0x81).
+ * Compiler aids: none.
  */
 extern struct { unsigned char pad[0x80]; unsigned char b80; unsigned char b81; } DAT_a802b0ec;
 extern int FUN_a002e238();
