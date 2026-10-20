@@ -7669,6 +7669,13 @@
       "name": "FUN_a00dcec4",
       "status": "matched"
     },
+    "ram:a00dd3d4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "prints an address and stores and prints a word there when the address is 4-byte aligned (\"Address Fail\" otherwise)",
+      "name": "FUN_a00dd3d4",
+      "status": "matched"
+    },
     "ram:a00dd540": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
