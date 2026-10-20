@@ -4648,6 +4648,12 @@
       "name": "hdmi21_Initialize",
       "status": "matched"
     },
+    "ram:a00a3250": {
+      "by": "hand",
+      "comment": "debug command: by selector byte 3 and flag byte 7 starts/stops a task (FUN_a0073540/FUN_a00735c0) or the HDMI timer; returns 0",
+      "name": "DRV_HDMI_DbgHDMITaskCtrl",
+      "status": "matched"
+    },
     "ram:a00a338c": {
       "by": "hand",
       "comment": "calls FUN_a00a80cc(port, 1, 0x3b, bit, on == 1) for bits 0x20 and 0x10",
