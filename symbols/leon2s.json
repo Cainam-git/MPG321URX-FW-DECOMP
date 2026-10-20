@@ -2838,6 +2838,12 @@
       "name": "FUN_a008a824",
       "status": "matched"
     },
+    "ram:a008a868": {
+      "by": "h15",
+      "comment": "By flag bits of byte 2 of DAT_a8076688, calls FUN_a008a824(on) and sets or clears bit 7 of 0xcf01120c and 0xcf011218",
+      "name": "FUN_a008a868",
+      "status": "matched"
+    },
     "ram:a008a924": {
       "by": "hand",
       "comment": "hw regs cf011060 / cf011068 = low byte, cf011064 / cf01106c = bits 8..15 of v",
