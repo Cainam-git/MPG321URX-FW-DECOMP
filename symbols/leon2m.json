@@ -8898,6 +8898,13 @@
       "name": "FUN_a00fd594",
       "status": "matched"
     },
+    "ram:a00fd820": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns the class code of a block (0x11..0xE8) from its mode registers",
+      "name": "FUN_a00fd820",
+      "status": "matched"
+    },
     "ram:a00fd9a0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
