@@ -4893,6 +4893,13 @@
       "name": "FUN_a00bc954",
       "status": "matched"
     },
+    "ram:a00bc95c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART reply: digit (byte 0xa802d412+5)%6 in a frame from table row 0x13, clears receive state, sends",
+      "name": "FUN_a00bc95c",
+      "status": "matched"
+    },
     "ram:a00bcaa8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
