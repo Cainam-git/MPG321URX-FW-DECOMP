@@ -3890,6 +3890,12 @@
       "name": "FUN_a009c794",
       "status": "matched"
     },
+    "ram:a009d5cc": {
+      "by": "hand",
+      "comment": "End step of the HDMI 2.1 receiver EQ sequence: finish, rerun mode detect or fail",
+      "name": "Jay_EQ_End",
+      "status": "matched"
+    },
     "ram:a009e9a4": {
       "by": "hand",
       "comment": "The difference was the base address: the firmware uses `0xa807d650` (the `sethi`/`or` pair computes this exact address), not `0xa807d65a`. The array declaration now points to the correct base, and the byte offset `+0xa` selects the field within the record.",
