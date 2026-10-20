@@ -6021,6 +6021,12 @@
       "name": "FUN_a00b2064",
       "status": "matched"
     },
+    "ram:a00b2070": {
+      "by": "hand",
+      "comment": "stores a timer callback into the first free slot of group idx of DAT_a80793a4, or prints a no-slot message",
+      "name": "FUN_a00b2070",
+      "status": "matched"
+    },
     "ram:a00b229c": {
       "by": "hand",
       "comment": "task runner: if de92, run every pending one of 16 x 24-byte tasks (clear flag, call fn), then de92 = 0",
