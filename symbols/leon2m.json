@@ -5223,6 +5223,13 @@
       "name": "FUN_a00bc214",
       "status": "matched"
     },
+    "ram:a00bc258": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART reply with the 18-character string SDC QMC315AA01_D01 in a 37-byte frame, then clears the port's receive state",
+      "name": "FUN_a00bc258",
+      "status": "matched"
+    },
     "ram:a00bc3f8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
