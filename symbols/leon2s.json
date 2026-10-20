@@ -1590,6 +1590,12 @@
       "name": "FUN_a0061348",
       "status": "matched"
     },
+    "ram:a00613cc": {
+      "by": "hand",
+      "comment": "writes a byte as 2 hex digits to the UART (inlined copy of FUN_a006122c)",
+      "name": "FUN_a00613cc",
+      "status": "matched"
+    },
     "ram:a0061528": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
