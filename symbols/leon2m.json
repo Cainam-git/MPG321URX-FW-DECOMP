@@ -2316,6 +2316,12 @@
       "name": "FUN_a008c25c",
       "status": "matched"
     },
+    "ram:a008cc28": {
+      "by": "twin",
+      "comment": "Same code as FUN_a008cd58 with other constants: 5 digit chars to values (' ' -> 0, else c - 47)",
+      "name": "FUN_a008cc28",
+      "status": "matched"
+    },
     "ram:a008cd58": {
       "by": "hand",
       "comment": "5 digit chars to values (' ' -> 0, else c - 47); trailing asm nop = the fw's standalone nop before ret",
