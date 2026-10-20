@@ -7842,6 +7842,13 @@
       "name": "FUN_a00de9e0",
       "status": "matched"
     },
+    "ram:a00de9f8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the low byte of hardware register 0xcf03c8c0 + 4 * n for n 0..15 (0 otherwise)",
+      "name": "FUN_a00de9f8",
+      "status": "matched"
+    },
     "ram:a00deb64": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
