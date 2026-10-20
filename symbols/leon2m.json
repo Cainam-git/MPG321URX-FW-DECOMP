@@ -4492,6 +4492,13 @@
       "name": "FUN_a00a01b8",
       "status": "matched"
     },
+    "ram:a00a03e8": {
+      "by": "h24",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "by byte 0xa802d290+0x1a9: reset path (FUN_a00b5080, FUN_a00b0f48, word 0xa802afec = 0x116) or row-value path with FUN_a00a813c/FUN_a00a900c/FUN_a00a9650",
+      "name": "FUN_a00a03e8",
+      "status": "matched"
+    },
     "ram:a00a0508": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
