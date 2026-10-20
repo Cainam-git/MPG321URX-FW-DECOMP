@@ -7971,6 +7971,13 @@
       "name": "FUN_a00f2ca8",
       "status": "matched"
     },
+    "ram:a00f2e30": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Reads an 8-bit block register at 0xCF000000 through a block-base table",
+      "name": "FUN_a00f2e30",
+      "status": "matched"
+    },
     "ram:a00f2e74": {
       "by": "hand",
       "comment": "Delay loop: a byte counter (and 0xff) runs from 0 to 0x1f in a do-while with the comparison against 0x20 after the increment; a nop sits at the loop entry. Returns void.",
