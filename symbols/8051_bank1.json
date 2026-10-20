@@ -810,6 +810,13 @@
       "name": "FUN_CODE_a959",
       "status": "matched"
     },
+    "CODE:a9f6": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "second-channel twin of a959: register byte 0x08 and the mode bits of byte 5 at the pointer 0xA76D (mode 0xA781, bit 0x17)",
+      "name": "FUN_CODE_a9f6",
+      "status": "matched"
+    },
     "CODE:ac5b": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
