@@ -1,6 +1,6 @@
 /* leon2m FUN_a0093f90 @ 0xa0093f90-0xa0094108 (94 words), flags -mcpu=v8 -O3 -g. No direct callers (reached through
- * a table). Uses the halfword time stamps 0xa802d034 and 0xa802d03a (FUN_a0147724 returns the current count,
- * func_0x4008d594(t) the count elapsed since t) and byte 0xa802cffc (0xa802cff4 + 8). When more than 100 have passed
+ * a table). Uses the halfwords 0xa802d034 and 0xa802d03a ('restarted' = set to FUN_a0147724(); 'more than n have
+ * passed since t' = func_0x4008d594(t) > n) and byte 0xa802cffc (0xa802cff4 + 8). When more than 100 have passed
  * since 0xa802d034, the byte is set to 0x38 and 0xa802d03a restarted; 0xa802d034 is restarted; when the high nibble
  * of the byte is not 3, the byte is set to 0x38 and 0xa802d03a restarted. When more than 2000 and when more than
  * 5000 have passed since 0xa802d03a, the byte is set to 0x38 unless more than 99 have passed since 0xa802d034. Then,
