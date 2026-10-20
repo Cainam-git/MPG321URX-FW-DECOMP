@@ -3101,6 +3101,13 @@
       "name": "FUN_a0095134",
       "status": "matched"
     },
+    "ram:a009530c": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "b08f = 0x10, copies byte 0xa8025c55 into 0xa802d2b0 (FUN_a00d5938(1) on change) when byte 0xa802d433 != 0, FUN_a00a8c88, FUN_a00a9abc, afec 0x82/0x83, FUN_a00a9650 x2, FUN_a00a813c",
+      "name": "FUN_a009530c",
+      "status": "matched"
+    },
     "ram:a00953d4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
