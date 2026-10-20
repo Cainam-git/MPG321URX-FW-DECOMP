@@ -4876,6 +4876,12 @@
       "name": "FUN_a00a47e0",
       "status": "matched"
     },
+    "ram:a00a4880": {
+      "by": "h23",
+      "comment": "per-port five-state machine on ARR_a807dc10 driven by FUN_a00a6190/FUN_a00a61d4/FUN_a00a621c results, timers from FUN_a00b2064 and register bits at +0xb4/+0xc0",
+      "name": "FUN_a00a4880",
+      "status": "matched"
+    },
     "ram:a00a4e68": {
       "by": "hand",
       "comment": "one-pass u8 loop (i < 1) storing a, b, c into the 12-byte record table a807dc04 (see header)",
