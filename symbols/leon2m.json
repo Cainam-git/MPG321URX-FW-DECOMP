@@ -12845,6 +12845,13 @@
       "name": "FUN_a014489c",
       "status": "matched"
     },
+    "ram:a014505c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns whether FUN_a014230c accepts the FUN_a0142168 value of display channel ch's port byte 0xa",
+      "name": "FUN_a014505c",
+      "status": "matched"
+    },
     "ram:a014512c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
