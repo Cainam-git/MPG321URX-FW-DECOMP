@@ -4906,6 +4906,13 @@
       "name": "FUN_a00b8668",
       "status": "matched"
     },
+    "ram:a00b867c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Conditionally calls FUN_a0090fd8, stores 0x72C/0 to 0xA802B092/4, calls FUN_a0103808, then FUN_a00b7f9c(0x19) and FUN_a014512c(1, 0) depending on DAT_a802d290 fields and bit 10 of 0xA802CFF8",
+      "name": "FUN_a00b867c",
+      "status": "matched"
+    },
     "ram:a00b8774": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
