@@ -9218,6 +9218,13 @@
       "name": "FUN_a00fe820",
       "status": "matched"
     },
+    "ram:a01003b4": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "when bits 0-1 of block register 4 are set, writes sel into bits 2-3 and sets block register 0x16 bits 0x50 by sel",
+      "name": "FUN_a01003b4",
+      "status": "matched"
+    },
     "ram:a0100434": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
