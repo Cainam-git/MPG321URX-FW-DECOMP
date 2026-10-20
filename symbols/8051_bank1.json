@@ -1653,6 +1653,13 @@
       "name": "FUN_CODE_dee2",
       "status": "matched"
     },
+    "CODE:deff": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "calls FUN_CODE_568f as a tail jump",
+      "name": "thunk_FUN_CODE_568f",
+      "status": "matched"
+    },
     "CODE:df0b": {
       "by": "hand",
       "comment": "returns bit 0x0E in the carry flag",
