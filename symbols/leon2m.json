@@ -11178,6 +11178,12 @@
       "name": "FUN_a0137aec",
       "status": "matched"
     },
+    "ram:a0137b1c": {
+      "by": "hand",
+      "comment": "Passes the buffer {a, b, 0, 0} to FUN_a01370dc(0x15, 4, buf, 1) unless a is 0xff",
+      "name": "FUN_a0137b1c",
+      "status": "matched"
+    },
     "ram:a0137b5c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
