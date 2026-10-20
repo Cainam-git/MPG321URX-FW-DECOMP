@@ -11591,6 +11591,13 @@
       "name": "FUN_a0121bcc",
       "status": "matched"
     },
+    "ram:a0121c6c": {
+      "by": "h19",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "waits for bit 7 of FUN_a00f1f9c(p, 0x20) to set and then to clear, each wait bounded by a 16-bit counter",
+      "name": "FUN_a0121c6c",
+      "status": "matched"
+    },
     "ram:a0121cf4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
