@@ -5337,6 +5337,12 @@
       "name": "FUN_a00b0004",
       "status": "matched"
     },
+    "ram:a00b0078": {
+      "by": "hand",
+      "comment": "Map a port and set or clear bit 3 (clearing bit 7 when enabling) of its page-0 register",
+      "name": "FUN_a00b0078",
+      "status": "matched"
+    },
     "ram:a00b00e0": {
       "by": "hand",
       "comment": "The function masks the first parameter to a byte, calls a hardware function, then a second function with the masked result, and finally calls a third function with either 1 or 0 as the last argument depending on whether the original second parameter was non-zero. The key fix is capturing the result of `FUN_a00add48` (Ghidra dropped it) and using an if/else with separate calls instead of passing a boolean expression directly, matching the `btst`/`bne` branch pattern in the assembly.",
