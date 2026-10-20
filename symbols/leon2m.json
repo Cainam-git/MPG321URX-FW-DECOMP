@@ -12464,6 +12464,13 @@
       "name": "FUN_a013cea0",
       "status": "matched"
     },
+    "ram:a013cecc": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns 1 when v is within the limit selected by byte 0xa802e1a7, or v == 3 and bit 21 of word 0xa802e3d0, else 0",
+      "name": "FUN_a013cecc",
+      "status": "matched"
+    },
     "ram:a013cf84": {
       "by": "h10",
       "comment": "Sets bit 25 of word +0x70 of the four 0x78-byte records at 0xa802df30",
