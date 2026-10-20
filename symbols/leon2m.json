@@ -2934,6 +2934,13 @@
       "name": "FUN_a00943ec",
       "status": "matched"
     },
+    "ram:a00945a8": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "By byte 0xa802d433: counts byte +0x1a5 or +0x1a7 down with FUN_a00a6b98 calls, or steps halfword 0xa802d43c down by a time-dependent step and calls FUN_a014654c",
+      "name": "FUN_a00945a8",
+      "status": "matched"
+    },
     "ram:a0094df0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
