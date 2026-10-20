@@ -2995,6 +2995,12 @@
       "name": "FUN_a008dfe4",
       "status": "matched"
     },
+    "ram:a008e004": {
+      "by": "hand",
+      "comment": "calls FUN_a008dfe4(port, v) with v from DAT_a807d3c1 bytes 3/9 when byte 0 is 0xa0, else 0xc",
+      "name": "FUN_a008e004",
+      "status": "matched"
+    },
     "ram:a008e054": {
       "by": "hand",
       "comment": "Calls FUN_a00a80cc(param_1 & 0xff, 1, 7, 0x80, flag), where flag is 1 if param_2 & 0xff is non-zero and 0 otherwise. Written as an if/else with the call in both branches, which gives btst 0xff, %o1; bne with the masked param_1 kept in %g1 and moved to %o0 in each path. Same structure as the related functions that pass 4 instead of 7.",
