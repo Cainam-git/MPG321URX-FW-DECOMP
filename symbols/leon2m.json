@@ -9946,6 +9946,13 @@
       "name": "FUN_a01393f0",
       "status": "matched"
     },
+    "ram:a01394a8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Posts mailbox word 0x38000000 | bit 0 of the argument to portal 2 after waiting for the slot to clear",
+      "name": "FUN_a01394a8",
+      "status": "matched"
+    },
     "ram:a0139558": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
