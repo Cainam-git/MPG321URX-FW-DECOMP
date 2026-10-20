@@ -9557,6 +9557,13 @@
       "name": "FUN_a011e028",
       "status": "matched"
     },
+    "ram:a011e148": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "masks the register picked by ch (1..6, 16..24/31, 25, 26; others: 0xcf016120..168) with 0x7c",
+      "name": "FUN_a011e148",
+      "status": "matched"
+    },
     "ram:a011e690": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
