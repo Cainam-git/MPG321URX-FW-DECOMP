@@ -2827,6 +2827,12 @@
       "name": "FUN_a008d8e0",
       "status": "matched"
     },
+    "ram:a008d920": {
+      "by": "hand",
+      "comment": "Set bits 2..3 of register 1/6 by mode (10 -> bit 2, 12 -> bit 3)",
+      "name": "FUN_a008d920",
+      "status": "matched"
+    },
     "ram:a008d980": {
       "by": "hand",
       "comment": "Branches on param_2: == 1 with be and == 2 with be,a, while other values fall through to the b at the end. Written as a switch statement, which produces be rather than bne for both cases.",
