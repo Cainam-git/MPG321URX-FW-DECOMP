@@ -3456,6 +3456,13 @@
       "name": "FUN_a009aec8",
       "status": "matched"
     },
+    "ram:a009af8c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Steps the selection in word 0xa802afec backwards through 0xcd..0xcf and records it in reverse numbering",
+      "name": "FUN_a009af8c",
+      "status": "matched"
+    },
     "ram:a009b154": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
