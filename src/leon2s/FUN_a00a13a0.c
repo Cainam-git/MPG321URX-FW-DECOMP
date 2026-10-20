@@ -3,7 +3,7 @@
  * 400-byte record ARR_a807d7e0[port]. Reads r[0x18] (value unused). When the low 24 bits of r[0x19] are 0x1a,
  * w = r[0x1a]: rec[0x160] = bits 16-23, rec[0x161] = bits 24-31, rec[0x15d..0x15f] = bits 8, 9, 10, rec[0x15c] = 1.
  * Otherwise rec[0x10c] = rec[0x10d] = 1, FUN_a009fcb8(port, rec + 0xec) when rec[0x10e] is 0, rec[0x15c] = 0.
- * Then tail-calls FUN_a00a0b98(port, 0x11, 0). Store order as written (found by an order search).
+ * Then tail-calls FUN_a00a0b98(port, 0x11, 0). Store order as written.
  */
 struct PortRec
 {
