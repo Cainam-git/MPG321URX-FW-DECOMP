@@ -5219,6 +5219,12 @@
       "name": "FUN_a00abb28",
       "status": "matched"
     },
+    "ram:a00abb30": {
+      "by": "hand",
+      "comment": "clears bits in registers 0xcf01143c, 0xcf011674, 0xcf01147c around FUN_a00a6c98(port, 0xc0, 0x10, 0)",
+      "name": "FUN_a00abb30",
+      "status": "matched"
+    },
     "ram:a00abba8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
