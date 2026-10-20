@@ -4698,6 +4698,13 @@
       "name": "FUN_a00bd2e0",
       "status": "matched"
     },
+    "ram:a00bd328": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Builds the 11-byte reply with the three decimal digits of byte 0xa802d29c, clears the port's receive state and sends it",
+      "name": "FUN_a00bd328",
+      "status": "matched"
+    },
     "ram:a00bd4a4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
