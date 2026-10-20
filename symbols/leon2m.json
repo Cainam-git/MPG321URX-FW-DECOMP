@@ -10909,6 +10909,13 @@
       "name": "FUN_a0115644",
       "status": "matched"
     },
+    "ram:a0115684": {
+      "by": "h22",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Reads register 0xc6 (sel 0/1) or 0xc7 (sel 2/3) of page 0 of port 0/1/2's register block and returns its low nibble (sel 0/2), high nibble (sel 1/3) or the whole byte",
+      "name": "FUN_a0115684",
+      "status": "matched"
+    },
     "ram:a01181a4": {
       "by": "hand",
       "comment": "writes 6 to byte 3 of the record at 0xa8027a90 and clears its bytes 0-2 and the bytes 0xa802c98c/0xa802c98d",
