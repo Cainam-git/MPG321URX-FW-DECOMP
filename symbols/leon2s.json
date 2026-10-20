@@ -1970,6 +1970,12 @@
       "name": "FUN_a0072958",
       "status": "matched"
     },
+    "ram:a0072970": {
+      "by": "h15",
+      "comment": "Fills n words of buf with FUN_a00618c0(0x9f0a0100 / 0x9f130100 + off + i * 4) for sel 0 / 1, else with 0",
+      "name": "FUN_a0072970",
+      "status": "matched"
+    },
     "ram:a0072a4c": {
       "by": "hand",
       "comment": "Small-chip MailBox_Write (portal 0/1); carries the port descriptors to the Big chip",
