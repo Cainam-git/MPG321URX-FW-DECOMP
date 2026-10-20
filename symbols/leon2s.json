@@ -6383,6 +6383,12 @@
       "name": "FUN_a00c7654",
       "status": "matched"
     },
+    "ram:a00c76c0": {
+      "by": "h17",
+      "comment": "Sets or clears mask bits in the 8-bit register at ((DAT_9f1c1ec8[idx] + reg) << 2) | 0xcf000000",
+      "name": "FUN_a00c76c0",
+      "status": "matched"
+    },
     "ram:a00c7770": {
       "by": "hand",
       "comment": "idx > 2: print error, return 0; else return hw reg word 0xcf000000 | ((table 9f1c1ec8[idx] + reg) << 2)",
