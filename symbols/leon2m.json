@@ -10856,6 +10856,13 @@
       "name": "FUN_a0113064",
       "status": "matched"
     },
+    "ram:a0113138": {
+      "by": "h19",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "for each set bit i 0..4 of mask calls func_0x4008e3c4(i, 0) and sets bit i of 0xcf011800 and 0xcf011a00; bit 5 calls FUN_a01185d4",
+      "name": "FUN_a0113138",
+      "status": "matched"
+    },
     "ram:a011433c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
