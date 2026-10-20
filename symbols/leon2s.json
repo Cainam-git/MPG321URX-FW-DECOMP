@@ -4438,6 +4438,12 @@
       "name": "FUN_a00a3a10",
       "status": "matched"
     },
+    "ram:a00a4238": {
+      "by": "hand",
+      "comment": "HDMI TX FRL training step: lower the FRL rate or give up, write SCDC 0x31",
+      "name": "FUN_a00a4238",
+      "status": "matched"
+    },
     "ram:a00a4370": {
       "by": "permuter",
       "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
