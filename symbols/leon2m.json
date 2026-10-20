@@ -15898,6 +15898,14 @@
       "status": "matched",
       "symbol": "_dtoa_r"
     },
+    "ram:a015b300": {
+      "by": "lib",
+      "comment": "toolchain library function fflush from libc.a:fflush.o; byte-exact, no C needed",
+      "lib": "libc.a:fflush.o",
+      "name": "FUN_a015b300",
+      "status": "matched",
+      "symbol": "fflush"
+    },
     "ram:a015b468": {
       "by": "lib",
       "comment": "toolchain library function std from libc.a:findfp.o; byte-exact, no C needed",
