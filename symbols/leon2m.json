@@ -7990,7 +7990,7 @@
     "ram:a00dfb30": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "returns 1 for DDR generation 3 or 4, otherwise prints the training step and \"Invalid DDR generation\" and returns 0",
+      "comment": "returns 1 for DDR generation 3 or 4, otherwise prints the step name of word 0xa802b530 and \"Invalid DDR generation\" and returns 0",
       "name": "FUN_a00dfb30",
       "status": "matched"
     },
