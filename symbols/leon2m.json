@@ -6626,6 +6626,13 @@
       "name": "FUN_a00d29c0",
       "status": "matched"
     },
+    "ram:a00d2a28": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Frame byte 7 != 0 into bit 7 of word 0xa802d47c (old bit to 0xa8025c56); on change FUN_a00db12c(0) and bit 1 of 0xa802b08e; returns 0xe0",
+      "name": "FUN_a00d2a28",
+      "status": "matched"
+    },
     "ram:a00d3d30": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
