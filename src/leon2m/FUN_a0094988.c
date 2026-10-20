@@ -1,16 +1,15 @@
-/* leon2m FUN_a0094988 @ 0xa0094988-0xa0094b6c (121 words), flags -mcpu=v8 -O3 -g. No direct callers (reached
- * through a table).
- * Selected by byte 0xa802d433 (0xa802d290 + 0x1a3). 0: when byte +0x1a6 is not 0x1c, FUN_a00a6b98(0, 0, 1), the
- * byte is raised by 1 and FUN_a00a6b98(0, 0, 0) is tail-called. 1: the same with byte +0x1a8 and first argument 1.
- * 2: uses the halfword time stamps 0xa802d034 and 0xa802d03a (FUN_a0147724 returns the current count,
- * func_0x4008d594(t) the count elapsed since t) and byte 0xa802cffc (0xa802cff4 + 8): when more than 100 have
+/* leon2m FUN_a0094988 @ 0xa0094988-0xa0094b6c (121 words), flags -mcpu=v8 -O3 -g. No direct callers (reached through
+ * a table). Selected by byte 0xa802d433 (0xa802d290 + 0x1a3). 0: when byte +0x1a6 is not 0x1c, FUN_a00a6b98(0, 0,
+ * 1), the byte is raised by 1 and FUN_a00a6b98(0, 0, 0) is tail-called. 1: the same with byte +0x1a8 and first
+ * argument 1. 2: uses the halfwords 0xa802d034 and 0xa802d03a ('restarted' = set to FUN_a0147724(); 'more than n
+ * have passed since t' = func_0x4008d594(t) > n) and byte 0xa802cffc (0xa802cff4 + 8): when more than 100 have
  * passed since 0xa802d034, the byte is set to 0x11 and 0xa802d03a restarted; 0xa802d034 is restarted; when the high
  * nibble of the byte is not 1, the byte is set to 0x11 and 0xa802d03a restarted; when more than 2000 (5000) have
  * passed since 0xa802d03a and at most 99 since 0xa802d034, the byte is set to 0x15 (0x1a). The halfword +0x1ae is
  * raised by the low nibble of the byte while the sum stays at most 0x7f2, else by 1 while it is at most 0x803, and
  * FUN_a014654c(halfword +0x1ac, halfword +0x1ae, 1) is tail-called. Same form as FUN_a00945a8.
- * Exact form: the step is (byte & 0xf) in an unsigned short local and the limit test is written h + step; the
- * three selector values are an if/else chain. (FUN_a00945a8 reads the step through a 4-bit bit-field.)
+ * Exact form: the step is (byte & 0xf) in an unsigned short local and the limit test is written h + step; the three
+ * selector values are an if/else chain. (FUN_a00945a8 reads the step through a 4-bit bit-field.)
  */
 union U8 { unsigned char b; struct { unsigned char hi : 4, lo : 4; } f; };
 struct Rcff4 { unsigned char pad[8]; union U8 u; };
