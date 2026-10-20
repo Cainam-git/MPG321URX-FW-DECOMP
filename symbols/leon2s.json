@@ -5483,6 +5483,12 @@
       "name": "FUN_a00abba8",
       "status": "matched"
     },
+    "ram:a00ac41c": {
+      "by": "h16",
+      "comment": "compares DAT_a807931c / en with bit 0 of FUN_a00a6bb8(port, 0x460); prints the FEC ready message on change; rewrites registers 0x30 and 0x460 through FUN_a00a6c98",
+      "name": "FUN_a00ac41c",
+      "status": "matched"
+    },
     "ram:a00ac4ec": {
       "by": "hand",
       "comment": "reg >= 0x200 only: a6c98(port, 0x30, 0x80, 1); a6c00(port, reg, val); a6c98(port, 0x30, 0x80, 0)",
