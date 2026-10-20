@@ -5095,6 +5095,13 @@
       "name": "FUN_a00b6d58",
       "status": "matched"
     },
+    "ram:a00b6d94": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Toggles bit 4 of word 0xa802d3ac (clears byte 0xa802d408 when set), FUN_a00a9f30(1, bit or 0 by FUN_a00d7d48), FUN_a00d4998, b08e |= 2",
+      "name": "FUN_a00b6d94",
+      "status": "matched"
+    },
     "ram:a00b6e1c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
