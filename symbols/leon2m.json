@@ -13777,6 +13777,13 @@
       "name": "FUN_a0142e8c",
       "status": "matched"
     },
+    "ram:a0142ea8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Stores the tick count in halfword 0x12 of entry blk of the table at 0xa802e224",
+      "name": "FUN_a0142ea8",
+      "status": "matched"
+    },
     "ram:a0142fcc": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
