@@ -650,6 +650,12 @@
       "status": "matched",
       "symbol": "@0+1073"
     },
+    "CODE:2c38": {
+      "by": "hand",
+      "comment": "external interrupt 0 handler serving four register blocks and two receive paths into XDATA arrays",
+      "name": "FUN_CODE_2c38",
+      "status": "matched"
+    },
     "CODE:3fe7": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
