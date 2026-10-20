@@ -13445,6 +13445,13 @@
       "name": "FUN_a014ac28",
       "status": "matched"
     },
+    "ram:a014acdc": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same lookup as FUN_a014ac28; writes with FUN_a0140e74(..., 0) when it fits (SYSAPI_SaveUSRFlashType2)",
+      "name": "FUN_a014acdc",
+      "status": "matched"
+    },
     "ram:a014ae1c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
