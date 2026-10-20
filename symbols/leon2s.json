@@ -6901,6 +6901,12 @@
       "name": "FUN_a00d27fc",
       "status": "matched"
     },
+    "ram:a00d2b88": {
+      "by": "h17",
+      "comment": "Copies three changed values into their stored copies and returns 1 when any changed or a state byte is set",
+      "name": "FUN_a00d2b88",
+      "status": "matched"
+    },
     "ram:a00d2c38": {
       "by": "hand",
       "comment": "twin of d2ca8: if a8078c25 == 1: the same calls with 0, a8078c25 = 0, ROM f834c4(9f1c63d8)",
