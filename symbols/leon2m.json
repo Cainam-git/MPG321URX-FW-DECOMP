@@ -4555,6 +4555,13 @@
       "name": "FUN_a00a13d8",
       "status": "matched"
     },
+    "ram:a00a14bc": {
+      "by": "h25",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "fills five values from the word _DAT_a802afec (switch) and returns the one chosen by sel",
+      "name": "FUN_a00a14bc",
+      "status": "matched"
+    },
     "ram:a00a2264": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
