@@ -2850,6 +2850,12 @@
       "name": "FUN_a008a9ec",
       "status": "matched"
     },
+    "ram:a008aa18": {
+      "by": "h15",
+      "comment": "Selects the FUN_a008a924/FUN_a008a9ec/FUN_a008a95c writes of the halfword v by the byte from FUN_a0089f84(0)",
+      "name": "FUN_a008aa18",
+      "status": "matched"
+    },
     "ram:a008aab0": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
