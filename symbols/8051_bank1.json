@@ -1653,6 +1653,12 @@
       "name": "FUN_CODE_dee2",
       "status": "matched"
     },
+    "CODE:df0b": {
+      "by": "hand",
+      "comment": "returns bit 0x0E in the carry flag",
+      "name": "FUN_CODE_df0b",
+      "status": "matched"
+    },
     "CODE:df0f": {
       "by": "template",
       "c51opts": "OPTIMIZE(7,SPEED)",

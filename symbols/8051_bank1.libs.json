@@ -171,5 +171,6 @@
   "data:FUN_CODE_db4b:DAT_INTMEM_50": 80,
   "data:FUN_CODE_db64:DAT_INTMEM_53": 83,
   "data:FUN_CODE_deb0:BITS_22_1": 17,
-  "data:FUN_CODE_deb0:b": 0
+  "data:FUN_CODE_deb0:b": 0,
+  "data:FUN_CODE_df0b:BITS_21_6": 14
 }
