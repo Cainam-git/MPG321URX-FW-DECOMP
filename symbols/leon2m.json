@@ -13651,6 +13651,13 @@
       "name": "FUN_a01492b8",
       "status": "matched"
     },
+    "ram:a0149978": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Calls FUN_a012f43c and, by flags of 0xa802e3d0, FUN_a01328d4 for display channel ch, then tail-calls FUN_a0142ea8 with its source field",
+      "name": "FUN_a0149978",
+      "status": "matched"
+    },
     "ram:a0149b8c": {
       "by": "hand",
       "comment": "copies the 8 x u16 record p to a local and calls FUN_a013d1b4(ch, &copy)",
