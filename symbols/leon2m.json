@@ -12315,6 +12315,13 @@
       "name": "FUN_a013b544",
       "status": "matched"
     },
+    "ram:a013b5a0": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Inlined FUN_a013b4e8 body with record 0xa802a468 bytes 0, 2 kept and byte 1 = v",
+      "name": "FUN_a013b5a0",
+      "status": "matched"
+    },
     "ram:a013b684": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
