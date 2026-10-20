@@ -875,6 +875,13 @@
       "name": "FUN_CODE_a4e9",
       "status": "matched"
     },
+    "CODE:a6cf": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "bit: k = FUN_CODE_aeb2(XDATA 0xA755/0xA756 by ch); first two calls store k at 0xA751+ch, then keep the minimum; sets BITS_20_1 when k exceeds it by more than 0x50",
+      "name": "FUN_CODE_a6cf",
+      "status": "matched"
+    },
     "CODE:a8bb": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
