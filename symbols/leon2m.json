@@ -9309,6 +9309,13 @@
       "name": "FUN_a00f9bbc",
       "status": "matched"
     },
+    "ram:a00f9f10": {
+      "by": "h22",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Fills the 16x17 halfword table at 0xa8026ed6 (mode 3) or 0xa8026cb6 (mode 4 in bits 12..15 of 0xd0040098) from 20 values at 0xa802c874 by fixed-weight interpolation; returns 1",
+      "name": "FUN_a00f9f10",
+      "status": "matched"
+    },
     "ram:a00fb9ec": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
