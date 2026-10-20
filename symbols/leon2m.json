@@ -13461,6 +13461,12 @@
       "name": "FUN_a0149018",
       "status": "matched"
     },
+    "ram:a0149130": {
+      "by": "hand",
+      "comment": "Stores v into byte 0xa802e3ed",
+      "name": "FUN_a0149130",
+      "status": "matched"
+    },
     "ram:a014913c": {
       "by": "hand",
       "comment": "byte 0xa802e3d0+0x1c = u8 param; if param != 5: FUN_a011855c() then tail FUN_a014110c(re-read rec+0x1c) (1 arg, restore in the delay slot); else tail FUN_a011855c(). void.",
