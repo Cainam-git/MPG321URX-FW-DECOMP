@@ -5066,6 +5066,12 @@
       "name": "FUN_a00a7a5c",
       "status": "matched"
     },
+    "ram:a00a7acc": {
+      "by": "h16",
+      "comment": "reads the low byte of a block register for ports 0..4; ports 1..4 with reg < 0x60 first rewrite bits 6+ of register base + 0x60 to port - 1",
+      "name": "FUN_a00a7acc",
+      "status": "matched"
+    },
     "ram:a00a7cc0": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
