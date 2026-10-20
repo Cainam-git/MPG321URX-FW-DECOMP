@@ -8016,6 +8016,13 @@
       "name": "FUN_a00f30f0",
       "status": "matched"
     },
+    "ram:a00f328c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes fixed values and bit clears to five 0xCF02xxxx hardware registers",
+      "name": "FUN_a00f328c",
+      "status": "matched"
+    },
     "ram:a00f38d4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
