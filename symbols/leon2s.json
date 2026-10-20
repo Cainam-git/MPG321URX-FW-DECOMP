@@ -4274,6 +4274,12 @@
       "name": "Jay_EQ_End",
       "status": "matched"
     },
+    "ram:a009e368": {
+      "by": "h23",
+      "comment": "port mode-detect completion: H_Total check, six info block reads or clears, status prints, state 8 or 5",
+      "name": "DRV_HDMI_ModeDetect_FSM_Complete",
+      "status": "matched"
+    },
     "ram:a009e9a4": {
       "by": "hand",
       "comment": "The difference was the base address: the firmware uses `0xa807d650` (the `sethi`/`or` pair computes this exact address), not `0xa807d65a`. The array declaration now points to the correct base, and the byte offset `+0xa` selects the field within the record.",
