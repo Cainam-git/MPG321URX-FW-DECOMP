@@ -788,6 +788,13 @@
       "name": "FUN_CODE_9243",
       "status": "matched"
     },
+    "CODE:9339": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Copies bytes from XDATA 0xDCD9 to a local buffer while bit 0 of 0xDCD8 is set, waits on 0xDCDC bit 0, calls FUN_CODE_147a by the high nibble of the first byte, updates 0xDCDA/0xDCDB",
+      "name": "FUN_CODE_9339",
+      "status": "matched"
+    },
     "CODE:96eb": {
       "by": "hand",
       "comment": "helper-chip start-up before the Big chip runs: loads the bank-2 image block, USB key",
