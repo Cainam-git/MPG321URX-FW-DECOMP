@@ -15017,6 +15017,12 @@
       "name": "FUN_a0146354",
       "status": "matched"
     },
+    "ram:a0146370": {
+      "by": "h13",
+      "comment": "tail-calls FUN_a011932c with code 0xa0/0xb0/0xc0/0xc1 for sel 0-3",
+      "name": "FUN_a0146370",
+      "status": "matched"
+    },
     "ram:a0146518": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
