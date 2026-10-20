@@ -1,17 +1,15 @@
 /* leon2m FUN_a00e321c @ 0xa00e321c-0xa00e3524 (194 words), flags -mcpu=v8 -O3 -g.
- * Code facts: c = (param_2 == 0 && param_3 == 3) (cmp/subx pair, andcc into %l7); if c: three
- * FUN_a00e0774 field writes (0x1c1 mask 6 / 0xf0, 0x1dc mask 0xc0, value 1). Then a fixed sequence of
- * FUN_a00e05d8 (reg rmw: dev, reg, mask, val), FUN_a00e0740 (= FUN_a00e05d8(dev, reg, m, m)) and
- * FUN_a00dff94(1). Five FUN_a00e2d8c(dev, a, a, 0) runs (a = 0, 8, 1, 7, 6), each preceded by
- * writing four hook words 0xa802d660/668/664/65c = 0x82588/0x82714/0x82aec/0x82c3c; flag word
- * 0xa802b728 = 1 (only if c) before runs 0 and 1, = 0 after them. FUN_a00e02ec(dev, 0x1d0/0x1d1/0x1d0)
- * results go to regs 0x1cc/0x1c8/0x1c7 after 0x1c0 field 0xf0 = 0x90/0x50/0x40. Tail call
- * FUN_a00e0774(dev, 0x1c0, 0xf0, 4, 0).
- * Fixes vs the autoc draft (97.42): the four hook values are link-time SYMBOL addresses (fw has a
- * separate 'sethi %hi(0x82400)' for 0x82588 and 0x82714; plain constants share one HIGH); only three
- * real parameters (dev passed unextended); the tail call has 5 args (draft passed a 6th); dropped the
- * draft's 'bVar3 = param_1' artefact; real callee prototypes (void wrappers, 5-arg FUN_a00e0774).
- * HOOKS() is a do/while(0) macro for the four repeated stores. Aids: none.
+ * Code facts: c = (param_2 == 0 && param_3 == 3) (cmp/subx pair, andcc into %l7); if c: three FUN_a00e0774 field
+ * writes (0x1c1 mask 6 / 0xf0, 0x1dc mask 0xc0, value 1). Then a fixed sequence of FUN_a00e05d8 (reg rmw: dev, reg,
+ * mask, val), FUN_a00e0740 (= FUN_a00e05d8(dev, reg, m, m)) and FUN_a00dff94(1). Five FUN_a00e2d8c(dev, a, a, 0)
+ * runs (a = 0, 8, 1, 7, 6), each preceded by writing four hook words 0xa802d660/668/664/65c =
+ * 0x82588/0x82714/0x82aec/0x82c3c; flag word 0xa802b728 = 1 (only if c) before runs 0 and 1, = 0 after them.
+ * FUN_a00e02ec(dev, 0x1d0/0x1d1/0x1d0) results go to regs 0x1cc/0x1c8/0x1c7 after 0x1c0 field 0xf0 = 0x90/0x50/0x40.
+ * Tail call FUN_a00e0774(dev, 0x1c0, 0xf0, 4, 0).
+ * The four hook values are link-time symbol addresses (the firmware has a separate 'sethi %hi(0x82400)' for 0x82588
+ * and 0x82714; plain constants share one %hi). Three parameters (dev passed unextended); the tail call has 5
+ * arguments; the callees return nothing and FUN_a00e0774 takes 5 arguments.
+ * HOOKS() is a do/while(0) macro for the four repeated stores. Compiler aids: none.
  */
 extern unsigned int _DAT_a802b728;
 extern unsigned int _DAT_a802d65c;

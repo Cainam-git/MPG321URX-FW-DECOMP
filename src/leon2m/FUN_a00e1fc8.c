@@ -1,11 +1,11 @@
 /* leon2m FUN_a00e1fc8 @ 0xa00e1fc8-0xa00e2040 (30 words), flags -mcpu=v8 -O3 -g.
  * Code facts: DDR table select: if FUN_a0125e38() (u8) == 0: print s_00199698 "Old DDR", word 0xa802d654 =
- * 0xa8028ff0, word 0xa802d658 = FUN_a0124208(); else print s_001996a8 "New DDR", d654 = 0xa8027bc0,
- * d658 = FUN_a0124214(). Then tail FUN_a00e0e44(0). void, no parameters.
- * Fix vs the autoc draft (78.12): BEHAVIOUR - the test is on FUN_a0125e38()'s return (the draft tested an
- * unset param_1); FUN_a00e0e44 takes one argument (0) and its value is not masked; the stored values are
- * addresses (each its own sethi|or: symbols DAT_a8028ff0 / DAT_a8027bc0); the == 0 arm is first in the source
- * (fw fall-through = Old DDR). Note: rawcmp.py ignores reloc words, so only jf sees the string order. Aids: none.
+ * 0xa8028ff0, word 0xa802d658 = FUN_a0124208(); else print s_001996a8 "New DDR", d654 = 0xa8027bc0, d658 =
+ * FUN_a0124214(). Then tail FUN_a00e0e44(0). void, no parameters.
+ * The test is on the return value of FUN_a0125e38(). FUN_a00e0e44 takes one argument (0) and its value is not
+ * masked. The stored values are addresses (each its own sethi|or: symbols DAT_a8028ff0 / DAT_a8027bc0).
+ * Source form: the == 0 arm is first in the source (the firmware falls through into the "Old DDR" arm).
+ * Compiler aids: none.
  */
 extern void *_DAT_a802d654;
 extern unsigned int _DAT_a802d658;

@@ -1,16 +1,15 @@
 /* leon2m FUN_a00e3880 @ 0xa00e3880-0xa00e3bdc (215 words), flags -mcpu=v8 -O3 -g.
- * Twin of FUN_a00e321c. Code facts: c = (param_2 == 0 && param_3 == 3) (cmp/subx pair).
- * if c: three FUN_a00e0774 field writes (0x216 mask 6 / 0xf0, 0x237 mask 0xc0, value 1). Then a
- * fixed FUN_a00e05d8 / FUN_a00e0740 sequence and FUN_a00dff94(1). Six FUN_a00e2d8c(dev, a, a, 0)
- * runs (a = 4, 5, 7, 6, then 1, 0), each preceded by four hook words 0xa802d664/65c/660/668 =
- * 0x82bcc/0x82d1c/0x82690/0x829a4. FUN_a00e02ec(dev, 0x231/0x232/0x228/0x229) results go to regs
- * 0x21a/0x21b/0x223/0x224 after reg 0x215 field 0xf0 = 0x20/0x30/0x80/0x90. Tail call
- * FUN_a00e0774(dev, 0x215, 0xf0, 4, 0).
- * Fixes vs the autoc draft (89.91): hook values are link-time SYMBOL addresses (fw has a separate
- * sethi %hi(0x82800) for 0x82bcc and 0x829a4); _DAT_a802d668 is a word (st, not sth);
- * FUN_a00dff94 takes 1 arg (1); FUN_a00e0774 takes 5 args (the draft passed a 6th); void callees;
- * HOOKS() source order 660/668/664/65c gives the fw store order 664/65c/660/668 (same as e321c).
- * HOOKS() is a do/while(0) macro for the four repeated stores. Aids: none.
+ * Twin of FUN_a00e321c. Code facts: c = (param_2 == 0 && param_3 == 3) (cmp/subx pair). if c: three FUN_a00e0774
+ * field writes (0x216 mask 6 / 0xf0, 0x237 mask 0xc0, value 1). Then a fixed FUN_a00e05d8 / FUN_a00e0740 sequence
+ * and FUN_a00dff94(1). Six FUN_a00e2d8c(dev, a, a, 0) runs (a = 4, 5, 7, 6, then 1, 0), each preceded by four hook
+ * words 0xa802d664/65c/660/668 = 0x82bcc/0x82d1c/0x82690/0x829a4. FUN_a00e02ec(dev, 0x231/0x232/0x228/0x229) results
+ * go to regs 0x21a/0x21b/0x223/0x224 after reg 0x215 field 0xf0 = 0x20/0x30/0x80/0x90. Tail call FUN_a00e0774(dev,
+ * 0x215, 0xf0, 4, 0).
+ * The hook values are link-time symbol addresses (the firmware has a separate sethi %hi(0x82800) for 0x82bcc and
+ * 0x829a4); _DAT_a802d668 is a word (st, not sth); FUN_a00dff94 takes one argument (1); FUN_a00e0774 takes 5
+ * arguments; the callees return nothing.
+ * Source form: HOOKS() source order 660/668/664/65c gives the firmware store order 664/65c/660/668 (same as
+ * FUN_a00e321c). HOOKS() is a do/while(0) macro for the four repeated stores. Compiler aids: none.
  */
 extern unsigned int _DAT_a802d65c;
 extern unsigned int _DAT_a802d660;

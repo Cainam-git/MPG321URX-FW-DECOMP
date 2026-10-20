@@ -1,6 +1,7 @@
 /* leon2m FUN_a00f30f0 @ 0xa00f30f0  write a 24-bit value to three consecutive byte registers, then a short settle
- * delay of 10 nop loop turns (hand; byte-exact). Counterpart of FUN_a00f30a8; used by the GPLL
- * programmer FUN_a01026e8 (new PLL value) and FUN_a0102680. */
+ * delay of 10 nop loop turns. Flags -mcpu=v8 -O3 -g. Counterpart of FUN_a00f30a8; used by the GPLL programmer
+ * FUN_a01026e8 (new PLL value) and FUN_a0102680.
+ */
 void FUN_a00f30f0(volatile unsigned int *r, unsigned int v)
 {
     unsigned char i;

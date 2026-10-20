@@ -1,11 +1,11 @@
 /* leon2m FUN_a00e1f50 @ 0xa00e1f50-0xa00e1fc8 (30 words), flags -mcpu=v8 -O3 -g.
- * Code facts: c = FUN_a0125e38() (returns 0/1: subx). c == 0: log FUN_a00df170(0x199698),
- * word DAT_a802d654 = address 0xa8028ff0, word DAT_a802d658 = FUN_a0124208() (returns 0x1429);
- * else: log 0x1996a8, d654 = address 0xa8027bc0, d658 = FUN_a0124214(). Then tail call
- * FUN_a00e0e44(0) (ONE arg: restore %g0,0,%o0; e0e44 compares %i0 with d658). void, no params.
- * Fixes vs the autoc draft (84.38): the tail callee takes 1 arg (draft passed 2), the 0xa8028ff0 /
- * 0xa8027bc0 values are symbol addresses (own sethi each), and the '== 0' arm is first in the
- * source (fw falls through into the 0x199698 arm). Aids: none.
+ * Code facts: c = FUN_a0125e38() (returns 0/1: subx). c == 0: log FUN_a00df170(0x199698), word DAT_a802d654 =
+ * address 0xa8028ff0, word DAT_a802d658 = FUN_a0124208() (returns 0x1429); else: log 0x1996a8, d654 = address
+ * 0xa8027bc0, d658 = FUN_a0124214(). Then tail call FUN_a00e0e44(0) (one argument: restore %g0,0,%o0; e0e44 compares
+ * %i0 with d658). void, no params.
+ * The tail callee takes one argument. The values 0xa8028ff0 / 0xa8027bc0 are symbol addresses (each its own sethi).
+ * Source form: the '== 0' arm is first in the source (the firmware falls through into the 0x199698 arm).
+ * Compiler aids: none.
  */
 extern unsigned int DAT_a802d654;
 extern unsigned int DAT_a802d658;

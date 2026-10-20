@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f446c @ 0xa00f446c-0xa00f4e60 (637 words), flags -mcpu=v8 -O3 -g: BYTE-EXACT.
+/* leon2m FUN_a00f446c @ 0xa00f446c-0xa00f4e60 (637 words), flags -mcpu=v8 -O3 -g.
  *
  * What it does: pointer-called link-training / equaliser calibration of input block blk; p = training record,
  *   u16 p->h0c = lower bound of the sweep value. Returns 1 = trained, 0 = failed.
@@ -26,12 +26,12 @@
  *   2160p with 2250 total lines is about 135.0 kHz at 60.000 Hz (rate 1350), so the stage-0 sweep value must stay
  *   <= 2050000 / 1350 = 1518; at rate 1352 (135.2 kHz) the bound is 2050000 / 1352 = 1516.
  *
- * Source facts (all plain C, no aids; each one checked word by word):
+ * Source facts (plain C, no compiler aids):
  *   - window code t is an UNSIGNED CHAR and the DAT_a802b7ae store is written inside each arm. With the store
  *     in the arms each arm has 5 insns, so ifcvt (find_if_case_1, BRANCH_COST 3 on v8) does not hoist an arm
  *     before reload; after reload crossjump merges the identical arm tails 'and x,0x3f,t; sethi; stb' into the
  *     join and ce3 hoists the 2-insn af arm above the branch. The u8 t keeps the call's own 'and 0x3f'. This
- *     is the fw 'double and' shape and it also fixed the rename choices of the later blocks (jf 86 -> 97.5).
+ *     gives the firmware's 'double and' shape and the register renaming of the later blocks.
  *   - stage-2 wait: the input-lost test is the first statement of a for (;;) loop with its arm in place
  *     '{ DAT_a802b7ac = 1; return 0; }' (fw: the input-lost exit enters the abort block at its stb with
  *     %g1 = 1 from the compare; cse uses the compare register for the constant, crossjump merges it with the
@@ -45,8 +45,7 @@
  *     returns unsigned short, u16 stage-1 positions, 'h2 = h + h' before the 'cur <= h' test, the line-rate
  *     limit as a local 'lim = 2050000; pr = rate * cur; if (lim < pr)', history 'p3 = p2; p2 = p1; p1 = val',
  *     e read before FUN_a00f3580, af / b0 unsigned int, 'goto abort2' for the ok == 0 abort.
- * volatile only on the hardware register 0xcf020114. Tool note: rawcmp masks the %lo field of relocated
- *   loads, so a swapped symbol (af / b0) is only visible with relocation names (objdump -dr).
+ * volatile only on the hardware register 0xcf020114.
  */
 #define R(a) (*(volatile unsigned int *)(a))
 struct Lt { unsigned char p00[0xc]; unsigned short h0c; };
