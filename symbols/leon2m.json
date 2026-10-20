@@ -8802,6 +8802,13 @@
       "name": "FUN_a00f6fac",
       "status": "matched"
     },
+    "ram:a00f7434": {
+      "by": "h12",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes a 16-bit table byte by byte to 0xcf00eec8 with delays between 0xcf00eec4 control writes",
+      "name": "FUN_a00f7434",
+      "status": "matched"
+    },
     "ram:a00f7534": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
