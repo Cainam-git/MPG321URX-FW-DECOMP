@@ -1,4 +1,4 @@
-/* leon2m FUN_a0143fc4 @ 0xa0143fc4  (hand; -mcpu=v8 -O3 -g)
+/* leon2m FUN_a0143fc4 @ 0xa0143fc4  Flags: -mcpu=v8 -O3 -g.
  * Stores its argument in DAT_a802a47d and clears the 1-bit flag f7 = bit 7 of byte 0xA802D991 (a bit-field: a
  * plain &= 0x7f schedules differently). Called by the APP event generator
  * FUN_a0080c10 (row 1e) when FUN_a0143fb8() reports set (argument 0 there).

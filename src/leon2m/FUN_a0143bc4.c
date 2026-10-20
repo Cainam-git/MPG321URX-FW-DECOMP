@@ -3,9 +3,8 @@
  * Code facts: n = (u8)FUN_a0142218((u8)FUN_a0125198((u8)param_1)); returns 2 when the top nibble of
  * the u16 at DAT_a802e116 + n*0x12 is 5, else 0 (fw: clr/mov 2 then 'and %i0,2,%i0' = the u8
  * return extension narrowed by nonzero-bits).
- * Fixes vs draft: BEHAVIOUR: FUN_a0125198 runs FIRST and its result feeds FUN_a0142218 (the draft
- * called FUN_a0142218() with no argument first and indexed by FUN_a0125198's result); FUN_a0125198
- * takes one argument; no second parameter. Aids: none.
+ * FUN_a0125198 runs first and its result is the argument of FUN_a0142218; FUN_a0125198 takes one
+ * argument; the function has one parameter. Aids: none.
  */
 extern unsigned char DAT_a802e116;
 extern int FUN_a0125198();

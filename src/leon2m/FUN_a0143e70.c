@@ -1,6 +1,7 @@
-/* leon2m FUN_a0143e70 @ 0xa0143e70  (hand; -mcpu=v8 -O3 -g)
+/* leon2m FUN_a0143e70 @ 0xa0143e70  Flags: -mcpu=v8 -O3 -g.
  * Channel 0..3 checked (otherwise prints "SYS remapping channel OOR" and uses 0); returns bit 29 of the channel
- * record word at +0x70 (DAT_a802df30[ch].w70, 0xA802DFA0 + 0x78 * ch). Called by the APP event generator FUN_a0080c10 (row 1e).
+ * record word at +0x70 (DAT_a802df30[ch].w70, 0xA802DFA0 + 0x78 * ch). Called by the APP event generator
+ * FUN_a0080c10 (row 1e).
  */
 struct Chan { unsigned int w0; unsigned char pad[0x6c]; unsigned int w70; unsigned int w74; };   /* display channel record, 0x78 bytes */
 extern struct Chan DAT_a802df30[4];

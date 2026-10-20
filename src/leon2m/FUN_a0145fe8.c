@@ -1,4 +1,4 @@
-/* leon2m FUN_a0145fe8 @ 0xa0145fe8  per-port full-screen fill colour (hand; -mcpu=v8 -O3 -g, also -msoft-float)
+/* leon2m FUN_a0145fe8 @ 0xa0145fe8  per-port full-screen fill colour. Flags: -mcpu=v8 -O3 -g (also -msoft-float).
  *
  * FUN_a0145fe8(ch, r, g, b, on): channel 0..3 (anything else: return, nothing done); FUN_a010385c(0);
  * when 'on': FUN_a0106bfc(port, r, g, b) first; then FUN_a0103808, FUN_a0118a80 and (tail call) FUN_a010aae8, all

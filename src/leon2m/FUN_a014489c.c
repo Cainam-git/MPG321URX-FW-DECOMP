@@ -2,9 +2,9 @@
  * Flags: -mcpu=v8 -O3 -g.
  * Code facts: port = (u8)param_1; field = (word at DAT_a802df30 + port*0x78 >> 12) & 0xf;
  * if (u8)FUN_a00fd820(field) == 0xb1: r = FUN_a013923c((u8)FUN_a0142168((u8)FUN_a012fc20()));
- * otherwise r = 8; returns (u8)r. Fix vs draft: ONE return of a variable set in both arms (fw: the
- * 'mov 8,%o0' sits in the bne delay slot and both paths meet at one 'and %o0,0xff,%i0'); the draft's
- * two returns gave 'mov 8,%i0'. Aids: none.
+ * otherwise r = 8; returns (u8)r. Source form: one return of a variable set in both arms (fw: the
+ * 'mov 8,%o0' sits in the bne delay slot and both paths meet at one 'and %o0,0xff,%i0'); two returns
+ * give 'mov 8,%i0'. Aids: none.
  */
 extern unsigned char DAT_a802df30;
 extern int FUN_a00fd820(unsigned char);

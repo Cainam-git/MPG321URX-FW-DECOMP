@@ -1,12 +1,13 @@
-/* FUN_a01413d0 (panel power sequencer) - BYTE-EXACT. Flags: -mcpu=v8 -O3 -g.
-   Behaviour-neutral, documented NO-CODE aids (no inline asm):
-   - 'for (;;) break;' at the start of off_req's last else arm and of case 9's else arm. Emits no code. Its
-     NOTE_INSN_LOOP_BEG/END notes end cse1's extended basic block (cse_end_of_basic_block stops at LOOP_END), so the
-     following DAT_a802e110 store gets its own HIGH pseudo, which gcse PRE + local cprop map to the function-level
-     %l1. Effect 1: the chain's state load stays the only use of case 5's HIGH, so local-alloc update_equiv_regs moves
-     that sethi next to the load (firmware a01416a0 'sethi' in the cc09-test delay slot). Effect 2: in case 9 both arm
-     stores use %l1 and crossjump merges the tails ('mov 1' fall-through, 'b join; mov 2' arm, 'be,a ; clrb').
-   - case 9 stores DAT_a802e110.state directly in each arm. */
+/* FUN_a01413d0 (panel power sequencer). Flags: -mcpu=v8 -O3 -g.
+ * Compiler aids (no code, no inline asm, no effect on behaviour):
+ * - 'for (;;) break;' at the start of off_req's last else arm and of case 9's else arm. Emits no code. Its
+ *   NOTE_INSN_LOOP_BEG/END notes end cse1's extended basic block (cse_end_of_basic_block stops at LOOP_END), so the
+ *   following DAT_a802e110 store gets its own HIGH pseudo, which gcse PRE + local cprop map to the function-level
+ *   %l1. Effect 1: the chain's state load stays the only use of case 5's HIGH, so local-alloc update_equiv_regs moves
+ *   that sethi next to the load (firmware a01416a0 'sethi' in the cc09-test delay slot). Effect 2: in case 9 both arm
+ *   stores use %l1 and crossjump merges the tails ('mov 1' fall-through, 'b join; mov 2' arm, 'be,a ; clrb').
+ * Source form: case 9 stores DAT_a802e110.state directly in each arm.
+ */
 
 struct PwrSeq
 {

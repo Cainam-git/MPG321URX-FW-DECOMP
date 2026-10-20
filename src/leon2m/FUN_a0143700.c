@@ -1,5 +1,5 @@
-/* leon2m FUN_a0143700 @ 0xa0143700  register a callback in slot n (byte-exact with -mcpu=v8 -O3 -g,
- * gcc 3.4.4; real size 0xDC: the function list's size field said 44, its end address was right).
+/* leon2m FUN_a0143700 @ 0xa0143700  register a callback in slot n. Flags: -mcpu=v8 -O3 -g (gcc 3.4.4).
+ * Real size 0xDC (the function list's size field says 44; its end address is right).
  * Stores handler into the callback table at RAM 0xA802CC1C: n = 0..8 -> slot n, n = 10..15 -> slot n - 1; n = 9 and
  * n > 15 are ignored. Called by FUN_a008796c (main() init) for n = 2, 3, 6, 7, 8, 10, 11, 12, 14, 15.
  */

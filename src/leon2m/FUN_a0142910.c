@@ -1,26 +1,29 @@
-/* leon2m FUN_a0142910 @ 0xa0142910  per-port sync state machine; copies the port-entry flags (incl. the line-rate switch)
- * into the port status words (hand; -mcpu=v8 -O3 -g -msoft-float).
+/* leon2m FUN_a0142910 @ 0xa0142910  per-port sync state machine; copies the port-entry flags (incl. the line-rate
+ * switch) into the port status words. Flags: -mcpu=v8 -O3 -g -msoft-float.
  *
  * For each port i = 0..3, p = 0xA802E224 + 42*i (h0 = halfword +0, state +2, type +3):
  *   state 1: p+9 = 1, FUN_a0121cf4(i), next port.
  *   k = FUN_a0142168(p+0xa); k == 0xFF: state = 1, next port.
  *   k == 6: type = 5, +0x1a/+0x1c/+0x16/+0x18 = FUN_a00f92f4/9314/9334/9354(p+0xb), h0 bits 0x8000/0x4000 cleared.
- *   else (E = 18-byte entry 0xA802E116 + 18*k): type = E type nibble; ONLY if it is 5: +0x1a/+0x1c/+0x16/+0x18 = E+6/+8/+0xa/
- *     +0xc, +0x28 = E+4, and h0 bits: 0x8000/0x4000/0x2000 = E bits 10/9/8, 0x800 = E bit 5, 0x400 = E bit 4 (THE LINE-RATE
- *     SWITCH), 0x200 = E bit 3, 0x100 = E bit 2, 0x40 = E bit 1, 0x80 = E bit 0, 0x20 = E+2 bit 15.
+ *   else (E = 18-byte entry 0xA802E116 + 18*k): type = E type nibble; ONLY if it is 5: +0x1a/+0x1c/+0x16/+0x18 =
+ *     E+6/+8/+0xa/+0xc, +0x28 = E+4, and h0 bits: 0x8000/0x4000/0x2000 = E bits 10/9/8, 0x800 = E bit 5,
+ *     0x400 = E bit 4 (THE LINE-RATE SWITCH), 0x200 = E bit 3, 0x100 = E bit 2, 0x40 = E bit 1, 0x80 = E bit 0,
+ *     0x20 = E+2 bit 15.
  *     A type != 5 leaves h0 untouched (bit 0x400 keeps its old value).
  *   p+9 = FUN_a01213a4(i, (u8)p+0x1e, p+9) (the 'i == 6 || i == 7' arm is dead for i = 0..3).
- *   switch (state): 2: FUN_a00f8f58(i, 0); FUN_a012082c(i, E+2 bit 5 ? 0xB0 : 4); if p+9 != 1 and type 5: start ticks
- *     (+6, +0x12), state 3, 'Go To SYNC_WAIT_STABLE(%d, %d)'. 3: type 5 and stable > 100 ticks -> FUN_a014285c(p, i),
- *     state 4 'Go To SYNC_IS_STABLE2'; changes / loss -> state 2. 4: loss -> state 2 (+0x1000 'Exit SYNC_IS_STABLE').
+ *   switch (state): 2: FUN_a00f8f58(i, 0); FUN_a012082c(i, E+2 bit 5 ? 0xB0 : 4); if p+9 != 1 and type 5: start
+ *     ticks (+6, +0x12), state 3, 'Go To SYNC_WAIT_STABLE(%d, %d)'. 3: type 5 and stable > 100 ticks ->
+ *     FUN_a014285c(p, i), state 4 'Go To SYNC_IS_STABLE2'; changes / loss -> state 2. 4: loss -> state 2
+ *     (+0x1000 'Exit SYNC_IS_STABLE').
  *     Non-type-5 ports in states 3/4 are cleared (+4, +0x16..+0x20, +0x22..+0x24, +0x26) and put back to state 2.
- * Line-rate switch chain, CONFIRMED byte-exact: port h0 bit 0x400 = entry h0 bit 4 = template +0xc bit 2, copied only
+ * Line-rate switch chain: port h0 bit 0x400 = entry h0 bit 4 = template +0xc bit 2, copied only
  *   when the entry type is 5 (and k != 6, 0xFF).
  * Callers: FUN_a0153018 (call at 0xA0153024, right after FUN_a002f550).
- * keys: -msoft-float; every port field through the pointer p (also the bitfields); the 'last statement of a
- *   block is scheduled first' rule of gcc 3.4 sched1 -> write CLEAR before 'state = 2' / before 'p12 = 1' (the original
- *   order then comes out); case 4 written 'if (type != 5) {reset} else {...}' (only changes the pre-layout block order,
- *   which drives -frename-registers' register choice); b9 select and FUN_a012082c as if/else (not ?:).
+ * Source form: -msoft-float; every port field through the pointer p (also the bitfields); the 'last statement of a
+ *   block is scheduled first' rule of gcc 3.4 sched1 -> write CLEAR before 'state = 2' / before 'p12 = 1' (the
+ *   firmware's order then comes out); case 4 written 'if (type != 5) {reset} else {...}' (only changes the
+ *   pre-layout block order, which drives -frename-registers' register choice); b9 select and FUN_a012082c as
+ *   if/else (not ?:).
  */
 struct Ent {
     unsigned short type:4;     /* bits 15..12 */

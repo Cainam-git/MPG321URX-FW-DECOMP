@@ -1,4 +1,4 @@
-/* leon2m FUN_a0141964 @ 0xa0141964  display output start-up (byte-exact with -mcpu=v8 -O3 -g, gcc 3.4.4).
+/* leon2m FUN_a0141964 @ 0xa0141964  display output start-up Flags: -mcpu=v8 -O3 -g (gcc 3.4.4).
  * Called once by the system start-up FUN_a015266c. Sets the flag block at RAM 0xA802E110 (byte 0 = 1, half 2 = 0),
  * copies the 88-byte RAW panel row (FUN_a01241fc, RAM 0xA802E378) to the stack and remaps its 3-bit link field
  * (word 0 bits 20..22, the row's link type): 1 -> 2, 2 -> 1, 0 stays 0, others unchanged. Writes the display mode
