@@ -8148,6 +8148,13 @@
       "name": "FUN_a00df384",
       "status": "matched"
     },
+    "ram:a00df3d0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes a character to 0xc00b0000 after bit 5 of 0xc00b0014 is set, a newline preceded by a recursive carriage return",
+      "name": "FUN_a00df3d0",
+      "status": "matched"
+    },
     "ram:a00df420": {
       "by": "hand",
       "comment": "Tests bit 0 of a value with btst 1. GCC emits the AND mask itself as the btst operand, so the source form is (x & 1) == 0.",
