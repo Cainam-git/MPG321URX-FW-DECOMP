@@ -905,6 +905,13 @@
       "name": "FUN_CODE_c5f0",
       "status": "matched"
     },
+    "CODE:c73e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "set or clear mask bits in XDATA 0x4D00[idx] (bank 0) or 0x4E00[idx] (bank 1)",
+      "name": "FUN_CODE_c73e",
+      "status": "matched"
+    },
     "CODE:c790": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
