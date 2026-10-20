@@ -9578,6 +9578,13 @@
       "name": "FUN_a011e438",
       "status": "matched"
     },
+    "ram:a011e4c8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes byte v to the register picked by ch 16..24 (0xcf016450..46c, 47c); other ch: all nine",
+      "name": "FUN_a011e4c8",
+      "status": "matched"
+    },
     "ram:a011e690": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
