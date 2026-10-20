@@ -4542,6 +4542,13 @@
       "name": "FUN_a00a89e4",
       "status": "matched"
     },
+    "ram:a00a8a78": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Maps the halfword from FUN_a0090fcc to 0, 1 or 2 by value groups (0xc0..0xc2: 1 when p == 2)",
+      "name": "FUN_a00a8a78",
+      "status": "matched"
+    },
     "ram:a00a8bc0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
