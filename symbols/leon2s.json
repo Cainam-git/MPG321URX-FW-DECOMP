@@ -4040,6 +4040,12 @@
       "name": "FUN_a0098b60",
       "status": "matched"
     },
+    "ram:a0099610": {
+      "by": "hand",
+      "comment": "resets bytes 0xaa..0xaf of record port of DAT_a807d680 (0xac = 100 / DAT_a8078630) and clears 20 bytes at 0x96",
+      "name": "FUN_a0099610",
+      "status": "matched"
+    },
     "ram:a009a580": {
       "by": "hand",
       "comment": "per-lane PHY freq read (delay then a7314) into ARR_a807905a[port*4+i], print re-reads",
