@@ -6885,6 +6885,13 @@
       "name": "FUN_a00d80b0",
       "status": "matched"
     },
+    "ram:a00d80d8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "copies halfwords 0 and 4 of record idx of the 16-byte table at 0x1984c8 through two pointers",
+      "name": "FUN_a00d80d8",
+      "status": "matched"
+    },
     "ram:a00d8b30": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
