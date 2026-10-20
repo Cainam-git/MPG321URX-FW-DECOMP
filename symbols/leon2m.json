@@ -12360,6 +12360,13 @@
       "name": "FUN_a0125e38",
       "status": "matched"
     },
+    "ram:a012621c": {
+      "by": "h19",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "repeats FUN_a0125e60 until its byte stays equal to 0xa802c9fc for 0x32 ticks and returns that byte",
+      "name": "FUN_a012621c",
+      "status": "matched"
+    },
     "ram:a012629c": {
       "by": "h19",
       "cflags": "-mcpu=v8 -O3 -g",
