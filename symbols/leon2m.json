@@ -3809,6 +3809,13 @@
       "name": "FUN_a009a078",
       "status": "matched"
     },
+    "ram:a009a0d4": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Byte 0xa802d47e = (afec != 0xc3), then FUN_a00a93bc, FUN_a00a813c x2, afec = 0x36, FUN_a00a9650, FUN_a00a900c, FUN_a00a9468, FUN_a00b34d4, b08e |= 2",
+      "name": "FUN_a009a0d4",
+      "status": "matched"
+    },
     "ram:a009a198": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
