@@ -2917,6 +2917,13 @@
       "name": "FUN_a0093144",
       "status": "matched"
     },
+    "ram:a0093334": {
+      "by": "h24",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "copies bytes 0xa8025c56/0xa8025c55 into word 0xa802d290+0x180/+0xa8, row calls, then FUN_a00dbcf0 or FUN_a00db738 when changed",
+      "name": "FUN_a0093334",
+      "status": "matched"
+    },
     "ram:a0093464": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
