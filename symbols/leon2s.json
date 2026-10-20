@@ -3007,6 +3007,12 @@
       "name": "FUN_a008ced8",
       "status": "matched"
     },
+    "ram:a008d1d8": {
+      "by": "h15",
+      "comment": "Searches row (v > 0x7ff) of the halfword table DAT_a807d252 for v with DAT_a8078c01 as index; returns 1 when found",
+      "name": "FUN_a008d1d8",
+      "status": "matched"
+    },
     "ram:a008d280": {
       "by": "hand",
       "comment": "Write a computed 12-bit value to registers 0xcf012240/44 and return register 0xcf012200",
