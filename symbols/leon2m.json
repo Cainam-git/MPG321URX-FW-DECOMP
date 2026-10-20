@@ -13115,6 +13115,13 @@
       "name": "FUN_a0147c94",
       "status": "matched"
     },
+    "ram:a0148120": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "scans s for the 0 or index 0x2c, then while reg 2*ch+0xf190 == 0x96 retries FUN_a0123c80(s, last); handshake 0x48 on reg 2*ch+0xf191 -> 2, else 4",
+      "name": "FUN_a0148120",
+      "status": "matched"
+    },
     "ram:a0148230": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
