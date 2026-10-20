@@ -705,6 +705,23 @@
       "name": "FUN_CODE_5dcb",
       "status": "matched"
     },
+    "CODE:62b5": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_62c6, in FUN_CODE_62c6's code segment; emitted by compiling src/8051_bank1/FUN_CODE_482e.c, bytes judged with FUN_CODE_62c6 over 0x62b5..0x644f",
+      "kind": "common_entry",
+      "module": "FUN_CODE_482e",
+      "name": "FUN_CODE_62b5",
+      "of": "FUN_CODE_62c6",
+      "status": "matched"
+    },
+    "CODE:62c6": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "waits up to 1000 passes for register bit 6 of the channel block, then writes v and 0x40",
+      "module": "FUN_CODE_482e",
+      "name": "FUN_CODE_62c6",
+      "status": "matched"
+    },
     "CODE:6c34": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
