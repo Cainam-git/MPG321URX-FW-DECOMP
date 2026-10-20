@@ -4215,6 +4215,13 @@
       "name": "FUN_a00a7ce8",
       "status": "matched"
     },
+    "ram:a00a813c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Calls FUN_a0146b20 for columns col and col + 1 at a row derived from sel, with values ch/ch + 1 or 0, col and ch chosen by mode",
+      "name": "FUN_a00a813c",
+      "status": "matched"
+    },
     "ram:a00a8230": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
