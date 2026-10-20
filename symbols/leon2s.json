@@ -4388,6 +4388,12 @@
       "name": "FUN_a00a1098",
       "status": "matched"
     },
+    "ram:a00a13a0": {
+      "by": "hand",
+      "comment": "copies fields of port register word 0x1a into ARR_a807d7e0[port] when r[0x19] low 24 bits are 0x1a, else sets bytes 0x10c/0x10d and calls FUN_a009fcb8; then FUN_a00a0b98(port, 0x11, 0)",
+      "name": "FUN_a00a13a0",
+      "status": "matched"
+    },
     "ram:a00a146c": {
       "by": "hand",
       "comment": "bytes +0xe6 / +0xe7 of the 400-byte record a807d7e0[n] (ascending stores)",
