@@ -7041,6 +7041,13 @@
       "name": "FUN_a00d93c8",
       "status": "matched"
     },
+    "ram:a00d94fc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "selects three bytes by byte 0xa802d290+0x11 (FUN_a0145920 lookups or scaled record bytes) and passes them to FUN_a0145fc0, the third scaled by 0.81",
+      "name": "FUN_a00d94fc",
+      "status": "matched"
+    },
     "ram:a00d972c": {
       "by": "hand",
       "comment": "a802d290.b14 clamped to 100 and stored back; 14a11c(2, v); d94fc()",
