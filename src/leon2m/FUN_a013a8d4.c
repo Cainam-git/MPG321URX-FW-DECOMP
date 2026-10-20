@@ -4,7 +4,7 @@
  * Reads portal 2 offset 0x20 (MailBox_Read func_0x4008c4d0); while it is non-zero, waits 1 ms (func_0x4008d1a0) and
  * re-reads, at most 100 times; when it reads 0 writes 0x84000000 | b << 16 | (u16)a to offset 0x20
  * (MailBox_Write func_0x4008c5f8); gives up silently after 100 tries.
- * key: the u16 value is the FIRST parameter, the byte the second (swapped: 89.1 %).
+ * Source form: the u16 value is the first parameter, the byte the second (the swapped order gives other code).
  */
 extern void func_0x4008c4d0();
 extern void func_0x4008c5f8();

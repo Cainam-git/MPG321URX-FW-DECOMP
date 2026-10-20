@@ -4,10 +4,10 @@
  * v != 0 (at most 100 rounds): ROM delay func_0x4008d1a0(1), read again. If v ended 0:
  * v = 0x35000000 | arg, ROM func_0x4008c5f8(2, 0x20, &v, 1) writes it. In every non-early
  * path DAT_a802a458 = arg (sth in the delay slots).
- * Fix vs the autoc draft (84.91): the 0x35000000 operand is a SEPARATE u16 copy 's = arg'
- * taken AFTER the early-return test (fw 'mov %i0,%l1' keeps the store value; the or re-extends
- * %i0 and reuses %i0 for the sethi). With the copy before the test, the param pseudo dies at
- * the compare's sll and sched1 puts the sll before the sethi (reg weight 0 < 1). Aids: none.
+ * Source form: the 0x35000000 operand is a separate u16 copy 's = arg' taken after the early-return
+ * test (fw 'mov %i0,%l1' keeps the store value; the or re-extends %i0 and reuses %i0 for the sethi).
+ * With the copy before the test, the param pseudo dies at the compare's sll and sched1 puts the sll
+ * before the sethi (reg weight 0 < 1). Aids: none.
  */
 extern unsigned short DAT_a802a458;
 extern int func_0x4008c4d0(unsigned char portal, unsigned char offset, unsigned int *buf, unsigned char count);

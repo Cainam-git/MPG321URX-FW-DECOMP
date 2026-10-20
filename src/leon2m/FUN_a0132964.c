@@ -9,8 +9,8 @@
  * The channel moves past state 9 only if fd820 reports class 0x51 or
  * 0x61 (or 0xb1 mapped to them) AND bit 6 of that e116 record is set; else it returns 0.
  * The 2nd param is passed by dc6c but never read by the fw (no %i1 use).
- * Fix vs the autoc draft: the idx choice is a switch with 2 cases (an if/else-if chain
- * lets sched1 move the 0x51/0x61 xor pair speculatively into the 0x31/0x41 test block).
+ * Source form: the idx choice is a switch with 2 cases (an if/else-if chain lets sched1 move the 0x51/0x61
+ * xor pair speculatively into the 0x31/0x41 test block).
  * Aids: none.
  */
 extern unsigned char FUN_a00fd820(unsigned char);

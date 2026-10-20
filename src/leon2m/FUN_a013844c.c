@@ -1,9 +1,8 @@
 /* leon2m FUN_a013844c @ 0xa013844c-0xa01384ac (24 words), flags -mcpu=v8 -O3 -g.
  * Code facts: builds a 12-byte message at %fp-24: buf[0] = p1, buf[4..11] = src[0..7] (4 byte pairs, loop
  * i = 0..3 u8), then FUN_a01370dc(0x59, 0xc, buf, 0). buf[1..3] are not written.
- * Fix vs the autoc draft (75.00): BEHAVIOUR - the draft stored an uninitialised b1 one round late; the copy is
- * plain buf[4 + 2i] = src[2i]; buf[5 + 2i] = src[2i + 1] (sched2 puts the +1 store first). One 12-byte buffer
- * (the draft had two locals). Aids: none.
+ * Source form: the copy is plain buf[4 + 2i] = src[2i]; buf[5 + 2i] = src[2i + 1] (sched2 puts the +1 store
+ * first); one 12-byte buffer. Aids: none.
  */
 extern void FUN_a01370dc(int, int, unsigned char *, int);
 

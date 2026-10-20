@@ -8,13 +8,13 @@
  *   template flags byte +0xc spread into the entry bits:
  *     flags bit 0 -> h0 bit 6 (0x40)   bit 1 -> h0 bit 5 (0x20)   bit 2 -> h0 bit 4 (0x10)   bit 3 -> h0 bit 3 (0x08)
  *     bit 4 -> h0 bit 2 (0x04)          bit 5 -> h2 bit 15 (+2, 0x8000)   bit 6 -> h0 bit 1   bit 7 -> h0 bit 0.
- * Line-rate switch chain, CONFIRMED for this link: entry h0 bit 4 (0x10) = template +0xc bit 2, entry type
- *   nibble = template +0; index n (not t) selects the entry.
+ * Line-rate switch chain: entry h0 bit 4 (0x10) = template +0xc bit 2, entry type nibble = template +0;
+ *   index n (not t) selects the entry.
  * Callers: only FUN_a002f550 (RAM copy at 0x4008F550, four calls; its listing shows 'call 0xd6d20').
  * Returns nothing (the Ghidra 'uint' result is the leftover %i0).
- * keys: h0 as a bitfield struct; the type and the flag bits written through DAT_a802e116[n] (the field
+ * Source form: h0 as a bitfield struct; the type and the flag bits written through DAT_a802e116[n] (the field
  *   copies through a pointer local e); flag bit 5 written with an explicit '& 1' ('(f >> 5) & 1'), without it gcc
- *   drops the 'and' and the registers rotate (90.5 %).
+ *   drops the 'and' and the registers rotate.
  */
 struct Tmpl {
     unsigned char type;     /* +0 */

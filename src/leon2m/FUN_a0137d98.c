@@ -1,10 +1,10 @@
 /* leon2m FUN_a0137d98 @ 0xa0137d98-0xa0137de0 (18 words), flags -mcpu=v8 -O3 -g.
- * FUN_a01370dc family (src FUN_a0137c4c etc.).
+ * Same callee as FUN_a0137c4c.
  * Code facts: builds a 5-byte stack packet buf = {id, p[0], p[1], p[2], p[3]} (u8 param id stored with stb,
- * no extension; p is a byte pointer) and sends it with FUN_a01370dc(0x40, 5, buf, 0). void (the fw never sets
- * %i0). The 'nop' after the call is gcc's own.
- * Form: the stores in ascending buffer order (sched emits the p[3] load/store first); of the 120 possible source
- * orders of the five stores only this one is byte-exact. Aids: none.
+ * no extension; p is a byte pointer) and sends it with FUN_a01370dc(0x40, 5, buf, 0). Returns nothing (the fw
+ * never sets %i0). The 'nop' after the call is gcc's own.
+ * Source form: the stores in ascending buffer order (sched emits the p[3] load/store first); no other source
+ * order of the five stores gives the firmware's code. Aids: none.
  */
 extern void FUN_a01370dc(int, int, unsigned char *, int);
 

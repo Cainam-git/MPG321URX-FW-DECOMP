@@ -1,9 +1,9 @@
 /* leon2m FUN_a013b4e8 @ 0xa013b4e8-0xa013b544 (23 words), flags -mcpu=v8 -O3 -g.
  * Code facts: three u8 params (all three are re-extended with 'and 0xff'); record 0xa802a468 bytes
  * +0/+1/+2 = p1/p2/p3; a 12-entry u16 stack buffer (frame -128) gets [3]=p1, [7]=p2, [11]=p3; then
- * FUN_a00f6fe4(byte 0xa802cbbc & 1, (byte >> 1) & 1, buf, 0x70). void.
- * Fix vs the autoc draft (73.91): record 0xa802a468 as one 3-byte struct (draft: three symbols), param_3 is u8,
- * the record stores in ascending offset order a,b,c (a,c,b gives 91.30). Aids: none.
+ * FUN_a00f6fe4(byte 0xa802cbbc & 1, (byte >> 1) & 1, buf, 0x70). Returns nothing.
+ * Source form: record 0xa802a468 is one 3-byte struct, param_3 is u8, the record stores are in ascending
+ * offset order a, b, c (the order a, c, b gives other code). Aids: none.
  */
 struct R468 { unsigned char a, b, c; };
 extern struct R468 DAT_a802a468;

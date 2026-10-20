@@ -1,5 +1,4 @@
-/* leon2m FUN_a0134de0 @ 0xa0134de0-0xa0135004 (548 bytes) -mcpu=v8 -O3 -g
- * (jf.py 100 % match=True, rawcmp.py 137 words, mismatches 0).
+/* leon2m FUN_a0134de0 @ 0xa0134de0-0xa0135004 (548 bytes, 137 words) -mcpu=v8 -O3 -g.
  *
  * What it does: the Big chip's receive poll for messages from mailbox portal 0 (the 8051).
  * The portal has 4 message slots of 20 bytes (5 words) at offsets
@@ -15,8 +14,8 @@
  * Calls: func_0x4008c4d0 = MailBox_Read(portal, offset, buf, words), func_0x4008c5f8 = MailBox_Write (same args),
  *   FUN_a00dd614 (debug level test), FUN_a00df170 (debug printf), FUN_a013497c (message decoder).
  * Caller: FUN_a01387a4.
- * Match key: the index advance is written 'if (++idx > 3) idx = 0;' at all three places; the if/else form
- *   (idx + 1 > 3 ? 0 : idx + 1) gives separate %hi registers for the stores (67 %).
+ * Source form: the index advance is written 'if (++idx > 3) idx = 0;' at all three places; the if/else form
+ *   (idx + 1 > 3 ? 0 : idx + 1) gives separate %hi registers for the stores.
  * The two strings at 0x1A54F8 / 0x1A5510 are referenced by symbol.
  */
 extern void func_0x4008c4d0(unsigned char portal, unsigned char offset, unsigned int *buf, unsigned char count);

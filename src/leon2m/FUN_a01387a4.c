@@ -1,6 +1,6 @@
 /*
  * FUN_a01387a4 - mailbox reader (Big chip, leon2m). '-mcpu=v8 -O3 -g -msoft-float'
- * (jf 100.00 % match=True; rawcmp a01387a4..a0138ae8: 209 words, 0 mismatches).
+ * (a01387a4..a0138ae8, 209 words).
  *
  * What it does: calls FUN_a01350dc and FUN_a0134de0, reads 4 header words from mailbox portal 1 offset 0
  * (func_0x4008c4d0) and sets the type nibble of the 7 template slots DAT_a802dec0[0..6]; reads the word at
@@ -13,12 +13,12 @@
  * Inputs: none. Output: none. Globals: DAT_a802dec0[] (templates, written), DAT_a802a450[] (read),
  * DAT_a802cb98 (print-once flag, written).
  *
- * Matching notes:
+ * Source form:
  * - The debug-level test is a small static function dbg_on() ("if (FUN_a00dd614(l)) return 1; return 0;"),
  *   inlined. Its inlined return paths leave labels that stop gcc's cse1 from skipping around the debug-print
  *   block (-fcse-skip-blocks), so the stored byte y keeps its own register (firmware 'mov %i4,%l1' + 'stb %l1').
- *   With a plain 'if (FUN_a00dd614(0x20))' cse1 replaces y by the and result (97.61 %). dbg_on() is used for
- *   all three prints (also matches with it used only for the last one).
+ *   With a plain 'if (FUN_a00dd614(0x20))' cse1 replaces y by the and result. dbg_on() is used for
+ *   all three prints (using it only for the last one gives the same code).
  * - End value: uint x = (unsigned char)(n & mb2) for the test and the print, u8 y = n & mb2 for m[0]
  *   (n = mask first gives the firmware's and operand order).
  */

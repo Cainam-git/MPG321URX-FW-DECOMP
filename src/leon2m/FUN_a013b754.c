@@ -1,10 +1,8 @@
 /* leon2m FUN_a013b754 @ 0xa013b754-0xa013b7e0 (35 words), flags -mcpu=v8 -O3 -g.
  * Code facts: now = func_0x4008d588() (u16); diff = now - u16 0xa802cbd0; 0xa802cbd0 = now;
  * for idx = 0..8 (u8) over the u16 timer table at 0xa802cbbe: t < diff -> t = 0, else t -= diff;
- * then table[param_1] = (u16)param_2. %i0 is never written: 'void' and the draft's
- * 'return param_1' give the same code (kept void).
- * Fix vs the autoc draft (97.14): BEHAVIOUR, the table is indexed by idx (u16 stride, fw
- * 'add %g1,%g1'); the draft used idx*2 (4-byte stride, sll 2). Aids: none.
+ * then table[param_1] = (u16)param_2. The table is indexed by idx with a u16 stride (fw 'add %g1,%g1').
+ * %i0 is never written: 'void' and 'return param_1' give the same code (kept void). Aids: none.
  */
 extern unsigned short _DAT_a802cbd0;
 extern int func_0x4008d588();
