@@ -9499,6 +9499,13 @@
       "name": "FUN_a0101b60",
       "status": "matched"
     },
+    "ram:a0101bb0": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "optional register reset, then increments byte 0xa802c981 into 0xcf016110/0xcf016114; returns 0 and clears all at 0xff",
+      "name": "FUN_a0101bb0",
+      "status": "matched"
+    },
     "ram:a0101c64": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
