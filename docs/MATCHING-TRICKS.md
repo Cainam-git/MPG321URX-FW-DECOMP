@@ -65,6 +65,7 @@ symbol names are not allowed.
 | A call result truncated right after the call | The callee returns `unsigned short` and the variable is `int` or `unsigned int`. |
 | `sll`/`srl 16` of a value, versus `sll`/`sra 16` | `unsigned short` versus `signed short`. |
 | An extra `nop` after the final call that the firmware lacks | That file was compiled without `-g`. |
+| Unoptimised code that multiplies by a constant with shifts and adds instead of `smul` | That file was compiled without `-mcpu=v8` (flags `-g` only). |
 | A floating-point operation as a call (`__mulsf3`, …) | Normal `float` C, compiled with `-msoft-float`; the firmware has no FPU instructions. |
 | A busy-wait that jumps to its test first, with a single `nop` as body | `while (cond) __asm__ volatile ("nop");`. |
 | The same wait-then-write laid out differently in two places | One static helper, inlined twice. |

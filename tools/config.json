@@ -12,7 +12,7 @@
     "toolchain": "toolchains/sparc-elf-3.4.4/bin",
     "prefix": "sparc-elf-",
     "cflags": "-mcpu=v8 -O2 -g",
-    "note": "mostly -O2 (-O2 beats -Os on most functions); some files -Os: per-function 'cflags' in symbols/leon2m.json; some files without -g (FUN_a00e3bdc); some files -O3 -g (FUN_a00f913c); the image has no FPU instructions and calls the soft-float libgcc routines, so float code needs -msoft-float (FUN_a0107e44 FRCConfigPostFRC); '-O3' WITHOUT -g (FUN_a0151c84: the trailing nop after a final call disappears without -g); some files UNOPTIMISED ('-mcpu=v8 -g', params spilled to the stack: FUN_a015463c)",
+    "note": "mostly -O2 (-O2 beats -Os on most functions); some files -Os: per-function 'cflags' in symbols/leon2m.json; some files without -g (FUN_a00e3bdc); some files -O3 -g (FUN_a00f913c); the image has no FPU instructions and calls the soft-float libgcc routines, so float code needs -msoft-float (FUN_a0107e44 FRCConfigPostFRC); '-O3' WITHOUT -g (FUN_a0151c84: the trailing nop after a final call disappears without -g); some files UNOPTIMISED ('-mcpu=v8 -g', params spilled to the stack: FUN_a015463c); a few files without -mcpu=v8 ('-g' alone: unoptimised SPARC v7 code, multiplications by a constant expanded into shifts and adds, FUN_a01546ec)",
     "alt_cflags": [
       "-mcpu=v8 -O3 -g",
       "-mcpu=v8 -Os -g",
@@ -20,7 +20,8 @@
       "-mcpu=v8 -O3 -g -msoft-float",
       "-mcpu=v8 -O3",
       "-mcpu=v8 -O3 -msoft-float",
-      "-mcpu=v8 -g"
+      "-mcpu=v8 -g",
+      "-g"
     ]
   },
   "8051": {
