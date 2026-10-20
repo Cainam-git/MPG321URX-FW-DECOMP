@@ -28,7 +28,7 @@ Each matched function records how its source was obtained in the `by` field of `
 |---|---|---|
 | Mechanical clean-up | `autoc` | Ghidra's C with types, string literals and variable widths corrected automatically (`tools/autoc.py`, `tools/auto8051.py`). |
 | Shape twins | `twin` | The source of a matched function, reused for another function with an identical instruction shape (`tools/twin.py`, `tools/twin8051.py`). |
-| Libraries | `lib`, `keil-lib` | Toolchain library routines recognised byte for byte (`tools/libmatch.py`, `tools/keillib.py`). |
+| Libraries | `lib`, `keil-lib` | Toolchain library routines recognised byte for byte and imported unchanged (`tools/libmatch.py`, `tools/libimport.py`, `tools/keillib.py`). |
 | Assembly | `asm` | Routines that were written in assembly in the original: trap tables, start-up code, privileged instructions. |
 | Search | `permuter`, `near` | Near-misses closed by automatic source permutation (`tools/permuter*.py`) or mechanical repair (`tools/nearfix.py`). |
 | Individual work | `hand` | Written and tuned function by function. |
@@ -44,7 +44,7 @@ these forms.
 |---|---|
 | `firmware/` | The target image and earlier versions. |
 | `asm/<section>/` | Target assembly, one file per function. |
-| `src/<section>/` | Matched source, one file per function. |
+| `src/<section>/` | Matched source, one file per function; a few 8051 files hold a Keil module of several functions, accepted per function. |
 | `symbols/` | Names, status, flags and descriptions (`<section>.json`), function tables (`<section>.functions.json`), names taken from debug strings (`<section>.auto.json`), library matches and Keil register files. |
 | `decomp/` | Ghidra output, as a reading aid. |
 | `tools/` | Scripts. |

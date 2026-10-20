@@ -31,7 +31,8 @@ loader is complete. Detailed numbers are in the [status report](docs/STATUS.md).
 
 ## How it works
 
-1. A function is rewritten in C, or in assembly where the original was written in assembly.
+1. A function is rewritten in C, or in assembly where the original was written in assembly. Routines from the
+   toolchains' own libraries are taken unchanged from those libraries.
 2. It is compiled with the original toolchains: GCC 3.4.4 for the two LEON processors and Keil C51 for the 8051.
 3. The result is compared with the original bytes at the exact address the function occupies.
 4. Only an identical result is accepted.
@@ -54,7 +55,7 @@ Most source files begin with a short description of what the function does. The 
 
 | Folder | Contents |
 |---|---|
-| `src/` | The reconstructed source code, one file per function. |
+| `src/` | The reconstructed source code, one file per function (a few 8051 files hold a Keil module of several functions). |
 | `firmware/` | The original FW.021 file, older versions for comparison, and two custom versions. |
 | `asm/` | The original machine code of each function, as a reference. |
 | `symbols/` | Names and status of every function. |

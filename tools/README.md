@@ -35,7 +35,7 @@ toolchains themselves are described in the [build guide](../docs/BUILD.md).
 |---|---|
 | `autoc.py`, `auto8051.py` | Clean up Ghidra's C for every function, then compile and check it. |
 | `twin.py`, `twin8051.py`, `sibling.py` | Reuse the source of a matched function for functions with the same shape. |
-| `libmatch.py`, `libimport.py`, `keillib.py`, `keil_helpers.py` | Find toolchain library functions in the firmware. |
+| `libmatch.py`, `libimport.py`, `keillib.py`, `keil_helpers.py` | Find toolchain library functions in the firmware and import them unchanged. |
 | `asmgen.py`, `asm8051.py`, `startup8051.py` | Assembly routines and the 8051 start-up code. |
 | `permute.py`, `permuter.py`, `permuter2.py`, `permute8051.py`, `basefix.py`, `nearfix.py` | Automatic searches that close near-misses. |
 | `near.py`, `piles.py`, `splits.py`, `mergetails.py`, `inlined.py`, `sigs.py` | Sorting near-misses and repairing the function table. |

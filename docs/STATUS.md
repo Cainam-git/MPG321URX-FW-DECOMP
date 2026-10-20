@@ -23,10 +23,14 @@ come from the function sizes in `symbols/<section>.functions.json`.
     object at its real address and requires identical bytes.
   - For the 8051, `tools/diff8051.py` compares the Keil object byte for byte, except for the bytes the linker fills in.
 - **Library functions:** Routines recognised byte for byte in the toolchains' own libraries (`tools/libmatch.py`,
-  `tools/keillib.py`) count as matched. They are recorded as `.lib` entries.
+  `tools/libimport.py`, `tools/keillib.py`) count as matched. They are recorded as `.lib` entries.
 - **Function counts:** These come from Ghidra's function table (`symbols/<section>.functions.json`), corrected with
-  `tools/splits.py` and `tools/mergetails.py`. In 8051 bank 3, most of the 1,205 entries are table bytes that the
-  import marked as code; that bank is mostly data.
+  `tools/splits.py` and `tools/mergetails.py`, and by hand where a function's jump-table case blocks, return tail or
+  a second routine lay outside or inside its listed range. In 8051 bank 3, most of the 1,205 entries are table bytes
+  that the import marked as code; that bank is mostly data.
+- **Known limitation of the byte counts:** for some functions with switch tables, the size recorded in the function
+  table is smaller than the function's range. The counts therefore understate both the matched and the total bytes.
+  A recount based on the ranges is planned.
 
 ## Verification
 
