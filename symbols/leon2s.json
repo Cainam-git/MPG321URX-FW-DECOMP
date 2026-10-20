@@ -3974,6 +3974,12 @@
       "name": "FUN_a0097ff4",
       "status": "matched"
     },
+    "ram:a0098048": {
+      "by": "hand",
+      "comment": "sets or clears bit 0x19 of the port bitmap depending on two fields of register block word 0x20",
+      "name": "FUN_a0098048",
+      "status": "matched"
+    },
     "ram:a0098240": {
       "by": "hand",
       "comment": "twin of DRV_HDMI21_RXDetect_FSM_LTS_2: state change print and next state from 961e8(port) (see header)",
