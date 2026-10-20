@@ -1,11 +1,11 @@
 /* FUN_a00cf9e8 (leon2s, 0xa00cf9e8-0xa00cfab8, 208 bytes, 52 words).
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: port = (u8)param_1; reads reg 0x201 (func_0xa0f9639c(port, 0x90, 0x201, &b)); when bit 2
- * of b is set: func_0xa0f96360(port, 0x80, 0x201, 4), then reads 0x68029 (result bit 2 or 3 set ->
- * flag = 1) and 0x69493 (bit 3 or 4 set -> flag = 1), each only when the read call returns 0.
- * Returns the flag as a u8 (fw: 'and %l0,1,%i0' = u8 return extension narrowed by nonzero-bits).
- * Fix vs draft: u8 return type and u8 flag returned as is (the draft's int flag with 'return l0 & 1'
- * gives a different exit block). Aids: none.
+ * port = (u8)param_1; reads reg 0x201 (func_0xa0f9639c(port, 0x90, 0x201, &b)); when bit 2 of b is set:
+ * func_0xa0f96360(port, 0x80, 0x201, 4), then reads 0x68029 (result bit 2 or 3 set -> flag = 1) and 0x69493
+ * (bit 3 or 4 set -> flag = 1), each only when the read call returns 0. Returns the flag as a u8
+ * (firmware: 'and %l0,1,%i0' = u8 return extension narrowed by nonzero-bits).
+ * Source form: u8 return type and u8 flag returned as is (an int flag with 'return l0 & 1' gives a
+ * different exit block).
  */
 extern int func_0xa0f96360(int, int, int, int);
 extern int func_0xa0f9639c(int, int, int, void *);

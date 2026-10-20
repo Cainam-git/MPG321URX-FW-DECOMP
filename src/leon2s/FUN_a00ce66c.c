@@ -1,10 +1,12 @@
 /* FUN_a00ce66c (leon2s, 0xa00ce66c-0xa00ce864, 126 words). Flags -mcpu=v8 -Os -g.
- Code facts: void (u8 port). Record word (24-byte record port of DAT_a8078bb0): bits 16..17 = 01. func_0xa0f96400(0, 0x90, 0x69493, 0, buf); if bit 2 of buf[0]
- is clear, bits 16..17 |= 3 and done. Else read 0x692e0 (15 bytes) into buf, FUN_a00c87e8(port, 1/3/5, 0x8000) around 2 x 8 reads of FUN_a00c7770(port, 1)
- into local[16], FUN_a00c7654(port, 1, x) for the 16 buf and 16 local bytes, and copies 5 bytes DAT_a807ce38[port*5 + i] to the record at
- 0xa807cda8 + 0xa.
- Fixes vs draft: FUN_a00c87e8 takes 3 args (the draft passed 6; fw sets only %o0..%o2, see FUN_a00cf6bc); source table base is 0xa807ce38 (draft typo cc38, fw or 0x238); destination base is the struct at
- 0xa807cda8 with the 5-byte array at +0xa (fw add base then 'stb [.. + 0xa]'; the draft used the mid-record name DAT_a807cdb2). Aids: none.
+ * void (u8 port). Record word (24-byte record port of DAT_a8078bb0): bits 16..17 = 01. func_0xa0f96400(0,
+ * 0x90, 0x69493, 0, buf); if bit 2 of buf[0] is clear, bits 16..17 |= 3 and done. Else reads 0x692e0 (15
+ * bytes) into buf, FUN_a00c87e8(port, 1/3/5, 0x8000) around 2 x 8 reads of FUN_a00c7770(port, 1) into
+ * local[16], FUN_a00c7654(port, 1, x) for the 16 buf and 16 local bytes, and copies 5 bytes
+ * DAT_a807ce38[port*5 + i] to the record at 0xa807cda8 + 0xa.
+ * FUN_a00c87e8 takes 3 args (the firmware sets only %o0..%o2, see FUN_a00cf6bc). The source table base is
+ * 0xa807ce38 (firmware or 0x238); the destination base is the struct at 0xa807cda8 with the 5-byte array at
+ * +0xa (firmware add base then 'stb [.. + 0xa]').
  */
 extern unsigned int DAT_a8078bb0[];
 extern unsigned char DAT_a807ce38[];

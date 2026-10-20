@@ -1,12 +1,11 @@
 /* FUN_a00cea60 (leon2s, 0xa00cea60-0xa00cec18, 440 bytes, 110 words).
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: port = (u8)param_1; bits 16..17 of the word at DAT_a8078bb0 + port*24 := 01;
- * FUN_a00c87e8(port, 9, 0x8000); 32 bytes DAT_a807d088[i] = (u8)FUN_a00c7770(port, 1); two
- * func_0xa0f96400(0, 0x90, 0x692f8 / 0x69308, 0xf, buf) reads, each copied (16 bytes) into
- * DAT_a807cd88[0..15] and DAT_a807cd88[16..31]; then if any of the 32 bytes of d088 differs from
- * cd88, bits 16..17 of that word := 10 (and the compare loop stops). u16 loop counters.
- * Fix vs draft: the second copy goes to DAT_a807cd88[i + 0x10] (the same 32-byte table: fw reloads
- * the cd88 base and stores at +0x10); the draft used a separate symbol DAT_a807cd98. Aids: none.
+ * port = (u8)param_1; bits 16..17 of the word at DAT_a8078bb0 + port*24 := 01; FUN_a00c87e8(port, 9, 0x8000);
+ * 32 bytes DAT_a807d088[i] = (u8)FUN_a00c7770(port, 1); two func_0xa0f96400(0, 0x90, 0x692f8 / 0x69308, 0xf,
+ * buf) reads, each copied (16 bytes) into DAT_a807cd88[0..15] and DAT_a807cd88[16..31]; then if any of the
+ * 32 bytes of d088 differs from cd88, bits 16..17 of that word := 10 (and the compare loop stops). u16 loop
+ * counters. The second copy goes to DAT_a807cd88[i + 0x10] (the same 32-byte table: the firmware reloads the
+ * cd88 base and stores at +0x10).
  */
 extern unsigned char DAT_a8078bb0[];
 extern unsigned char DAT_a807d088[];

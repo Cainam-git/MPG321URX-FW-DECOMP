@@ -1,10 +1,8 @@
 /* leon2s FUN_a00cfab8 @ 0xa00cfab8-0xa00cfb20 (26 words), flags -mcpu=v8 -Os -g.
- * Code facts: timer tick: now = func_0xa0fc2064() (ROM tick); d = now - _DAT_a8078bf8; _DAT_a8078bf8 = now;
- * then for 15 u32 countdown slots ARR_a8078b60[0..14] (u8 index): slot = 0 if d > slot, else slot -= d.
- * void (the fw never sets %i0; the draft returned 0).
- * Fixes vs the autoc draft (75.86): plain RAM array (the draft's volatile reloaded each slot 3 times),
- * void, and the '> -> 0' arm first (the fw falls through to the clear and branches bleu to the subtract).
- * Aids: none.
+ * now = func_0xa0fc2064() (ROM call); d = now - _DAT_a8078bf8; _DAT_a8078bf8 = now; then for 15 u32 slots
+ * ARR_a8078b60[0..14] (u8 index): slot = 0 if d > slot, else slot -= d. void (the firmware never sets %i0).
+ * Source form: a plain RAM array (a volatile one reloads each slot 3 times), and the '> -> 0' arm first
+ * (the firmware falls through to the clear and branches bleu to the subtract).
  */
 extern unsigned int _DAT_a8078bf8;
 extern unsigned int ARR_a8078b60[];
