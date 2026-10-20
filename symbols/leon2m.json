@@ -13377,6 +13377,13 @@
       "name": "FUN_a014a0d8",
       "status": "matched"
     },
+    "ram:a014a11c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sel 0/1/2: byte e3dc/e3dd/e3de = v and FUN_a013b42c/b44c/b46c((v*200+50)/100 + 0x38)",
+      "name": "FUN_a014a11c",
+      "status": "matched"
+    },
     "ram:a014a388": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
