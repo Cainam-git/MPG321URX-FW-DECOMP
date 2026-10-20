@@ -4255,6 +4255,13 @@
       "name": "FUN_a00acef4",
       "status": "matched"
     },
+    "ram:a00ad02c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Redraws a menu page: clears rows 5..0x14 and for page 0 draws seven items from table 0x188DA0",
+      "name": "FUN_a00ad02c",
+      "status": "matched"
+    },
     "ram:a00adc98": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
