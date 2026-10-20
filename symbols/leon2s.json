@@ -4610,6 +4610,12 @@
       "name": "FUN_a00a78fc",
       "status": "matched"
     },
+    "ram:a00a7940": {
+      "by": "hand",
+      "comment": "Read-modify-write of an 8-bit register of a hardware block (table 0xa00b4d7a, ports 0..4)",
+      "name": "FUN_a00a7940",
+      "status": "matched"
+    },
     "ram:a00a7a5c": {
       "by": "hand",
       "comment": "twin of a00a6f08; returns the last read value",
