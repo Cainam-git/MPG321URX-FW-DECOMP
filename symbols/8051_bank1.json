@@ -1096,6 +1096,13 @@
       "name": "FUN_CODE_ccc2",
       "status": "matched"
     },
+    "CODE:cd07": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Computes the Timer 0 reload from FUN_CODE_dbf6, stores it at XDATA 0xA772/0xA773 and calls FUN_CODE_9975(1, 4800)",
+      "name": "FUN_CODE_cd07",
+      "status": "matched"
+    },
     "CODE:cd4b": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
