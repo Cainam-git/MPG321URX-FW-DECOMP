@@ -5305,6 +5305,13 @@
       "name": "FUN_a00be81c",
       "status": "matched"
     },
+    "ram:a00be9a8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART reply: '1'/'0' from FUN_a0143c14(0) in a frame from table row 0, clears receive state, sends",
+      "name": "FUN_a00be9a8",
+      "status": "matched"
+    },
     "ram:a00beae0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
