@@ -3685,6 +3685,12 @@
       "name": "FUN_a0095ca4",
       "status": "matched"
     },
+    "ram:a0095d34": {
+      "by": "hand",
+      "comment": "Port 0/1: returns 1 when FUN_a0083648(5 or 6) returns 0",
+      "name": "FUN_a0095d34",
+      "status": "matched"
+    },
     "ram:a0095e9c": {
       "by": "asm",
       "comment": "twin of FUN_a0060bb0: identical hand-written assembly, constants swapped",
