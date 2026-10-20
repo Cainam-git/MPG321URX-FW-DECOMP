@@ -5104,7 +5104,7 @@
     },
     "ram:a00a7b64": {
       "by": "hand",
-      "comment": "writes a byte register of banks 0..4 (table DAT_a00b4d70), selecting the page at offset 0x60 first for banks 1..4 and reg <= 0x5f",
+      "comment": "writes a byte register of banks 0..4 (table DAT_a00b4d70), first writing (bank - 1) into bits 6-7 of block register 0x60 for banks 1..4 and reg <= 0x5f",
       "name": "FUN_a00a7b64",
       "status": "matched"
     },
