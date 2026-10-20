@@ -7031,6 +7031,13 @@
       "name": "FUN_a00e0bf0",
       "status": "matched"
     },
+    "ram:a00e0c68": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Stores v into word 0xa8025d08 when word 0xa802b54c is 0",
+      "name": "FUN_a00e0c68",
+      "status": "matched"
+    },
     "ram:a00e1f50": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
