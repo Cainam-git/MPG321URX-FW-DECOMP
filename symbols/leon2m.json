@@ -9380,6 +9380,13 @@
       "name": "FUN_a0101cb4",
       "status": "matched"
     },
+    "ram:a0101d9c": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes 0 to 0xcf00ec04 and the low byte and bits 8-12 of four values to 0xcf00ec08-0xcf00ec24",
+      "name": "FUN_a0101d9c",
+      "status": "matched"
+    },
     "ram:a0101e24": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
