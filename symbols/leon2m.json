@@ -5648,6 +5648,13 @@
       "name": "FUN_a00c762c",
       "status": "matched"
     },
+    "ram:a00c7818": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: digit 0-1 into bit 20 of record word 0xac, conditional FUN_a00d91fc/a01439d8/a0148268 calls, reply 5600+",
+      "name": "FUN_a00c7818",
+      "status": "matched"
+    },
     "ram:a00c8410": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
