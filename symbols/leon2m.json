@@ -9340,6 +9340,13 @@
       "name": "FUN_a011c8e4",
       "status": "matched"
     },
+    "ram:a011cc44": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "16-bit write of v to registers base+0xcc/0xcd of block blk (blk > 1 -> 0)",
+      "name": "FUN_a011cc44",
+      "status": "matched"
+    },
     "ram:a011cf88": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
