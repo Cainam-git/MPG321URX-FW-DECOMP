@@ -7174,6 +7174,13 @@
       "name": "FUN_a00e2690",
       "status": "matched"
     },
+    "ram:a00e2714": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Range-checks a and b (0..9) and writes three register fields taken from 10-entry tables at index a",
+      "name": "FUN_a00e2714",
+      "status": "matched"
+    },
     "ram:a00e2aec": {
       "by": "hand",
       "comment": "Calls a setup routine, then polls FUN_a00e0514 until it returns zero six consecutive times (a nonzero return resets the counter), and returns (FUN_a00e02ec(0x1cf) << 8) | FUN_a00e02ec(0x1ce). The return is a single expression so the sll follows the first read, before the second call.",
