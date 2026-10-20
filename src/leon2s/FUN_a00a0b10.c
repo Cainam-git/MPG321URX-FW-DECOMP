@@ -1,9 +1,9 @@
 /* FUN_a00a0b10 (leon2s, 0xa00a0b10-0xa00a0b98, 136 bytes, 34 words; includes the merged
  * unreachable ret/restore tail FUN_a00a0b90). Flags: -mcpu=v8 -Os -g.
- * Code facts: port = (u8)param_1, v = (u8)param_2; FUN_a00a0930(port, reg, v) for reg 0x16, 0xe,
- * 0x1c, 0xb, 8; then if (u8)FUN_a008d800() > 0x82, tail call FUN_a00a0930(port, 0xc, v).
- * Fix vs draft: FUN_a008d800 takes NO argument (fw sets no %o0 before it; the 'mov 0xc,%i1' in its
- * delay slot belongs to the tail call). Aids: none.
+ * port = (u8)param_1, v = (u8)param_2; FUN_a00a0930(port, reg, v) for reg 0x16, 0xe, 0x1c, 0xb, 8; then if
+ * (u8)FUN_a008d800() > 0x82, tail call FUN_a00a0930(port, 0xc, v).
+ * FUN_a008d800 takes no argument (the firmware sets no %o0 before it; the 'mov 0xc,%i1' in its delay slot
+ * belongs to the tail call).
  */
 extern int FUN_a008d800();
 extern void FUN_a00a0930();

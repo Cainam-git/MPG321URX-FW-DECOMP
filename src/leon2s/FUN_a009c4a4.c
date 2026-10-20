@@ -1,13 +1,14 @@
 /* leon2s FUN_a009c4a4 @ 0xa009c4a4-0xa009c558 (180 bytes, 45 words)
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: u8 (u8 port). FUN_a009c434 takes ONE arg (the draft passed 2). Its u8 result picks bits 16..19
- * (non-zero) or 24..27 (zero) of the MMIO word at ARR_a807db00[port].regs, the +4 register pointer of the
- * 0x34-byte port record. AID (MMIO class): that pointer target is volatile, because the fw does a
- * full-word ld and then extracts the field. The nibble is mapped by a switch (jump table, 15 entries):
- * 0, 8, 12, 10, 14 and 3 map to themselves, anything else to 2. The cases set a u8 result that is returned
- * at the end (fw 'mov 2' in the bgu delay slot plus the final 'and 0xf' = u8 nonzero-bits narrowing).
- * Note: the fw jump table is the 60 bytes 0xa009c468-0xa009c4a4, between the end of
- * FUN_a009c434 (0xa009c468) and this function. Ours references a .rodata table by relocation.
+ * u8 (u8 port). FUN_a009c434 takes one argument. Its u8 result picks bits 16..19 (non-zero) or 24..27 (zero)
+ * of the MMIO word at ARR_a807db00[port].regs, the +4 register pointer of the 0x34-byte port record. The
+ * nibble is mapped by a switch (jump table, 15 entries): 0, 8, 12, 10, 14 and 3 map to themselves, anything
+ * else to 2. The cases set a u8 result that is returned at the end (firmware 'mov 2' in the bgu delay slot
+ * plus the final 'and 0xf' = u8 nonzero-bits narrowing).
+ * Compiler aid (MMIO class): that pointer target is volatile, because the firmware does a full-word ld and
+ * then extracts the field.
+ * Note: the firmware jump table is the 60 bytes 0xa009c468-0xa009c4a4, between the end of FUN_a009c434
+ * (0xa009c468) and this function. Ours references a .rodata table by relocation.
  */
 struct Port34 { unsigned int w0; volatile unsigned int *regs; unsigned char rest[0x34 - 8]; };
 extern struct Port34 ARR_a807db00[];

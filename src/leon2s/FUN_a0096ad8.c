@@ -1,12 +1,11 @@
 /* FUN_a0096ad8 (leon2s, 0xa0096ad8-0xa0096b08, 48 bytes, 12 words, leaf).
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: rec = ARR_a807d7e0 + (u8)param_1 * 400 (smul 0x190); clears the bytes +0xa2, +0xe7,
- * +0x10d, +0xb9, +0x182, +0x187.
- * Fixes vs draft: base name ARR_a807d7e0 (fw sethi 0xa807d400 | 0x3e0; the draft had ARR_a807d400)
- * and the source store order (rule below, predicted from the twins FUN_a008fa78/faa0, first try).
- * Store order: in this -Os block of independent byte clears the fw emits the LAST source store first,
+ * rec = ARR_a807d7e0 + (u8)param_1 * 400 (smul 0x190); clears the bytes +0xa2, +0xe7, +0x10d, +0xb9,
+ * +0x182, +0x187.
+ * The base is ARR_a807d7e0 (firmware sethi 0xa807d400 | 0x3e0). The source store order follows the rule
+ * below, as in the twins FUN_a008fa78 / FUN_a008faa0.
+ * Store order: in this -Os block of independent byte clears the firmware emits the last source store first,
  * then the others in source order (the last of those in the retl delay slot).
- * Aids: none.
  */
 extern unsigned char ARR_a807d7e0[];
 

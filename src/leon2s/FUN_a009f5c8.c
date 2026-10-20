@@ -1,12 +1,11 @@
 /* leon2s FUN_a009f5c8 @ 0xa009f5c8-0xa009f654 (35 words), flags -mcpu=v8 -Os -g.
- * Code facts: leaf, u8 port. If the FRL rate field (bits 24..27 of word +0x90 of the register block that
- * the 0x34-byte port record DAT_a807db00[port] points to at +0x18) differs from byte +2 of the 0xb0-byte
- * state record DAT_a807d680[port], and ARR_a80790d8[port] != 0, and the state word ARR_a807d648[port] is
- * > 4 and != 7: ARR_a80790d0[port] = 1. void.
- * Fixes vs the autoc draft: real record bases DAT_a807db00 (draft: a negative constant) and
- * DAT_a807d680 + 2 (draft: mid-record ARR_a807d682). volatile only on the register block reached through
- * the +0x18 pointer (MMIO, the port-record convention): a plain pointer narrows the full-word 'ld' +
- * srl/and to a byte load (77.14). Aids: none.
+ * Leaf, u8 port. If the FRL rate field (bits 24..27 of word +0x90 of the register block that the 0x34-byte
+ * port record DAT_a807db00[port] points to at +0x18) differs from byte +2 of the 0xb0-byte state record
+ * DAT_a807d680[port], and ARR_a80790d8[port] != 0, and the state word ARR_a807d648[port] is > 4 and != 7:
+ * ARR_a80790d0[port] = 1. void.
+ * The record bases are DAT_a807db00 and DAT_a807d680 (+2). volatile only on the register block reached
+ * through the +0x18 pointer (MMIO, the port-record convention): a plain pointer narrows the full-word 'ld'
+ * + srl/and to a byte load.
  */
 struct port_regs {
     unsigned char _00[0x18];

@@ -1,13 +1,13 @@
 /* leon2s FUN_a0092944 @ 0xa0092944-0xa0092cec (936 bytes, 234 words)
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: (u8 port, u8 *p), void. Writes a 0xa1-byte block p[0..0xa0] into registers 3..0xa3 of
- * page 2 through FUN_a00a8054(u8 port, u8 page, u16 reg, u8 val): reg = offset + 3. It does so in runs:
- * eleven u8-counter loops (lengths 3, 7, 0x15, 3, 0x1c, 3, 0x1c, 3, 0x1c, 3, 0x17), five single writes
- * 0x99..0x9d, one loop of 3 (0x9e..0xa0), and three single writes 0xa1..0xa3. The last one is a sibcall.
- * One counter variable i serves all loops (the fw re-uses %i3). The run at reg 0x63 (p + 0x60) is the only one
- * whose fw address add is 'add i, p' (the others are 'add p, i'): it is written in the integer address form
- * (u32)i + (u32)p + 0x60 that Ghidra also showed. &p[i + 0x60] gives 'add p, i' there (99.57).
- * The draft's arguments were right; its extra param_3..6 and int counters were Ghidra noise. No aids, no volatile.
+ * (u8 port, u8 *p), void. Writes a 0xa1-byte block p[0..0xa0] into registers 3..0xa3 of page 2 through
+ * FUN_a00a8054(u8 port, u8 page, u16 reg, u8 val): reg = offset + 3. It does so in runs: eleven u8-counter
+ * loops (lengths 3, 7, 0x15, 3, 0x1c, 3, 0x1c, 3, 0x1c, 3, 0x17), five single writes 0x99..0x9d, one loop
+ * of 3 (0x9e..0xa0), and three single writes 0xa1..0xa3. The last one is a sibcall.
+ * One counter variable i serves all loops (the firmware re-uses %i3). No volatile.
+ * Source form: the run at reg 0x63 (p + 0x60) is the only one whose firmware address add is 'add i, p' (the
+ * others are 'add p, i'): it is written in the integer address form (u32)i + (u32)p + 0x60 that Ghidra also
+ * showed. &p[i + 0x60] gives 'add p, i' there.
  */
 extern void FUN_a00a8054(unsigned char, unsigned char, unsigned short, unsigned char);
 

@@ -1,10 +1,9 @@
 /* leon2s FUN_a0092cec @ 0xa0092cec-0xa0092db8 (204 bytes, 51 words)
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: void (u8 port, u8 *p). It is the page-3 twin of FUN_a0092944: it writes p[0..0xd] into
- * registers 3..0x10 of page 3 through FUN_a00a8054(u8 port, u8 page, u16 reg, u8 val), reg = offset + 3.
+ * void (u8 port, u8 *p). It is the page-3 twin of FUN_a0092944: it writes p[0..0xd] into registers
+ * 3..0x10 of page 3 through FUN_a00a8054(u8 port, u8 page, u16 reg, u8 val), reg = offset + 3.
  * There are three u8-counter loops of lengths 3, 7 and 4, and one counter variable (%l0) serves all three.
- * The draft returned a value and took an unsigned short port; the fw sets no %i0 and masks the port
- * with and 0xff, so that was Ghidra noise. No aids.
+ * The firmware sets no %i0 (void) and masks the port with 'and 0xff' (u8).
  */
 extern void FUN_a00a8054(unsigned char, unsigned char, unsigned short, unsigned char);
 
