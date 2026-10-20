@@ -1,0 +1,3 @@
+libc.a wcsrtombs.o _wcsrtombs_r
+# leon2m FUN_a0159734: toolchain library function _wcsrtombs_r (libc.a:wcsrtombs.o, 268 bytes),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

@@ -1,0 +1,80 @@
+/* leon2s FUN_a007a79c @ 0xa007a79c  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, permuter)
+ * reached byte-exact by tools/permuter.py: decomp-permuter (AST mutations), judged by exact bytes
+ */
+
+extern void FUN_a007a708(unsigned char param_1);
+extern void FUN_a00a7424(unsigned int param_1, unsigned int param_2, unsigned int param_3, unsigned short param_4);
+extern void FUN_a00a7488(unsigned int param_1, unsigned short param_2, unsigned int param_3, unsigned int param_4);
+extern unsigned short DAT_a00b3b10[4];
+extern unsigned short DAT_a00b3b18[4];
+extern unsigned short DAT_a00b3b28[4];
+extern unsigned short DAT_a00b3b30[4];
+extern unsigned short DAT_a00b3b38[4];
+extern unsigned short DAT_a00b3b40[4];
+extern unsigned short DAT_a00b3b48[4];
+extern unsigned short DAT_a00b3b50[4];
+void FUN_a007a79c(unsigned int param_1, int param_2)
+{
+  int i;
+  unsigned int j;
+  unsigned short v30;
+  unsigned short v28;
+  unsigned short v40;
+  unsigned short v50;
+  unsigned short v38;
+  unsigned short v48;
+  param_1 &= 0xff;
+  i = 0;
+  FUN_a007a708(param_1);
+  do
+  {
+    FUN_a00a7424(0, 7, param_1, DAT_a00b3b18[i]);
+ do { if (i > 3) { break; } FUN_a00a7488(param_1, DAT_a00b3b10[i], 0xffffff, 0x18000000); } while (0);
+    i++;
+  }
+  while (i < 4);
+  i = 0;
+  do
+  {
+    unsigned int bit = (param_2 & 0xff) >> i;
+    if ((bit & 1) == 0)
+    {
+      if (param_1 || i)
+      {
+        goto skip;
+      }
+      else
+      {
+        goto skip;
+      }
+    }
+    if (i > 3)
+    {
+      goto skip;
+    }
+    FUN_a00a7424(0, 7, param_1, DAT_a00b3b18[i]);
+    FUN_a00a7488(param_1, DAT_a00b3b10[i], 0xffffff, 0x18000000);
+    v40 = DAT_a00b3b40[i];
+    FUN_a00a7488(param_1, v40, 0xffffff, 0x88000000);
+    v50 = DAT_a00b3b50[i];
+    FUN_a00a7488(param_1, v50, 0xffffff00, 0x88);
+    v38 = DAT_a00b3b38[i];
+    FUN_a00a7488(param_1, v38, 0xffffff, 0x88000000);
+    v48 = DAT_a00b3b48[i];
+    FUN_a00a7488(param_1, v48, 0xffffff00, 0x88);
+    v30 = DAT_a00b3b30[i];
+    FUN_a00a7488(param_1, v30, 0xffff00ff, 0);
+    v28 = DAT_a00b3b28[i];
+    FUN_a00a7488(param_1, v28, 0xffff00ff, 0);
+    FUN_a00a7488(param_1, v30, 0xff00ffff, DAT_a00b3b30[i] * 0);
+    FUN_a00a7488(param_1, v28, 0xff00ffff, 0);
+    FUN_a00a7488(param_1, v40, 0xffffff, 0x8000000);
+    FUN_a00a7488(param_1, v50, 0xffffff00, 8);
+    FUN_a00a7488(param_1, v38, 0xffffff, 0x8000000);
+    FUN_a00a7488(param_1, v48, 0xffffff00, 8);
+    skip:
+    i++;
+
+  }
+  while (i < 4);
+}

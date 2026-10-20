@@ -1,0 +1,9 @@
+/* 8051_bank1 FUN_CODE_dde5 @ 0xdde5  MATCH (OPTIMIZE(7,SPEED), twin of 8051_bank2/FUN_CODE_e4e9)
+ * twin of 8051_bank2/FUN_CODE_e4e9: byte-exact.
+ */
+extern unsigned long xdata DAT_EXTMEM_a729;
+
+unsigned long FUN_CODE_dde5(void)
+{
+    return DAT_EXTMEM_a729;
+}

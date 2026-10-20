@@ -1,0 +1,3 @@
+libgcc.a _gt_sf.o __gtsf2
+# leon2m FUN_a0155b78: toolchain library function __gtsf2 (libgcc.a:_gt_sf.o, 100 bytes; same code as __gesf2),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

@@ -1,0 +1,3 @@
+libc.a vfiprintf.o __sprint
+# leon2m FUN_a0157a20: toolchain library function __sprint (libc.a:vfiprintf.o, 64 bytes),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

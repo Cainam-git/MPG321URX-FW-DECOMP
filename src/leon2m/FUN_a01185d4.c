@@ -1,0 +1,19 @@
+/* leon2m FUN_a01185d4 @ 0xa01185d4-0xa0118628 (21 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
+ * jf 100.00 match=True, rawcmp.py 0 mismatches / 21 words.
+ * Code facts: hardware registers by constant address (sethi/or into a register, plain [reg] ld/st): 0xcf011800
+ * |= 0x20, 0xcf011a00 |= 0x20, 0xcf012e00 |= 1, ROM delay func_0x4008d1a0(0x32), then 0xcf012e80 = 1. void(void).
+ * Fix vs the autoc draft: BEHAVIOUR: 0xcf012e80 gets the constant 1 after the delay (the draft stored the delay
+ * call's return); the registers are constant hardware addresses. volatile only on the 0xcf... registers.
+ * Aids: none.
+ */
+#define REG(a) (*(volatile unsigned int *)(a))
+extern void func_0x4008d1a0(int);
+
+void FUN_a01185d4(void)
+{
+  REG(0xcf011800) |= 0x20;
+  REG(0xcf011a00) |= 0x20;
+  REG(0xcf012e00) |= 1;
+  func_0x4008d1a0(0x32);
+  REG(0xcf012e80) = 1;
+}

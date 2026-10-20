@@ -1,0 +1,5 @@
+# leon2s FUN_a00608b0 0xa00608b0-0xa00608c0 (16 bytes)
+a00608b0:  40 00 3c 5e  call  0xa006fa28
+a00608b4:  01 00 00 00  nop
+a00608b8:  40 01 48 06  call  0xa00b28d0
+a00608bc:  01 00 00 00  nop

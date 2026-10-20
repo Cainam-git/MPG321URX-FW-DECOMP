@@ -1,0 +1,337 @@
+{
+  "functions": {
+    "CODE:0000": {
+      "by": "hand",
+      "comment": "reset vector ?C_STARTUP: LJMP 13F7h (part of STARTUP.A51, tools/startup8051.py)",
+      "name": "thunk_FUN_CODE_13f7",
+      "status": "matched"
+    },
+    "CODE:0003": {
+      "by": "hand",
+      "comment": "boot loader: partition table loader (slot by CODE 0x7FFF == 0xAA, DUALFW patch, bank byte, descriptors -> share block); no validation",
+      "name": "FUN_CODE_0003",
+      "status": "matched"
+    },
+    "CODE:0927": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?_PRINTF517?BYTE (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0927",
+      "status": "matched",
+      "symbol": "?_PRINTF517?BYTE"
+    },
+    "CODE:0930": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+9) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0930",
+      "status": "matched",
+      "symbol": "@0+9"
+    },
+    "CODE:094b": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+36) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_094b",
+      "status": "matched",
+      "symbol": "@0+36"
+    },
+    "CODE:0962": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+59) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0962",
+      "status": "matched",
+      "symbol": "@0+59"
+    },
+    "CODE:0973": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+76) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0973",
+      "status": "matched",
+      "symbol": "@0+76"
+    },
+    "CODE:0989": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine _PRINTF (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0989",
+      "status": "matched",
+      "symbol": "_PRINTF"
+    },
+    "CODE:0bba": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+659) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0bba",
+      "status": "matched",
+      "symbol": "@0+659"
+    },
+    "CODE:0c83": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "boot loader: flash bus mode (QE set-up per maker, quad 0x6B / dual 0x3B verified against CODE 0..9, else single 0x0B)",
+      "name": "FUN_CODE_0c83",
+      "status": "matched"
+    },
+    "CODE:0f3f": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CLDPTR (C51C.LIB:?C?CLDPTR)",
+      "lib": "C51C.LIB:?C?CLDPTR",
+      "name": "FUN_CODE_0f3f",
+      "status": "matched",
+      "symbol": "?C?CLDPTR"
+    },
+    "CODE:0f58": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CLDOPTR (C51C.LIB:?C?CLDOPTR)",
+      "lib": "C51C.LIB:?C?CLDOPTR",
+      "name": "FUN_CODE_0f58",
+      "status": "matched",
+      "symbol": "?C?CLDOPTR"
+    },
+    "CODE:0f85": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CSTPTR (C51C.LIB:?C?CSTPTR)",
+      "lib": "C51C.LIB:?C?CSTPTR",
+      "name": "FUN_CODE_0f85",
+      "status": "matched",
+      "symbol": "?C?CSTPTR"
+    },
+    "CODE:0f97": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CSTOPTR (C51C.LIB:?C?CSTOPTR)",
+      "lib": "C51C.LIB:?C?CSTOPTR",
+      "name": "FUN_CODE_0f97",
+      "status": "matched",
+      "symbol": "?C?CSTOPTR"
+    },
+    "CODE:0fb9": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LMUL (C51BC.LIB:?C?LMUL)",
+      "lib": "C51BC.LIB:?C?LMUL",
+      "name": "FUN_CODE_0fb9",
+      "status": "matched",
+      "symbol": "?C?LMUL"
+    },
+    "CODE:1044": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?ULDIV (C51BC.LIB:?C?ULDIV)",
+      "lib": "C51BC.LIB:?C?ULDIV",
+      "name": "FUN_CODE_1044",
+      "status": "matched",
+      "symbol": "?C?ULDIV"
+    },
+    "CODE:10d6": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?ULSHR (C51BC.LIB:?C?ULSHR)",
+      "lib": "C51BC.LIB:?C?ULSHR",
+      "name": "FUN_CODE_10d6",
+      "status": "matched",
+      "symbol": "?C?ULSHR"
+    },
+    "CODE:10e9": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?PLDIIDATA (C51BC.LIB:?C?PLDIIDATA)",
+      "lib": "C51BC.LIB:?C?PLDIIDATA",
+      "name": "FUN_CODE_10e9",
+      "status": "matched",
+      "symbol": "?C?PLDIIDATA"
+    },
+    "CODE:10f9": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CCASE (C51BC.LIB:?C?CCASE)",
+      "lib": "C51BC.LIB:?C?CCASE",
+      "name": "FUN_CODE_10f9",
+      "status": "matched",
+      "symbol": "?C?CCASE"
+    },
+    "CODE:111f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "boot loader: identify flash from the JEDEC table at CODE 0x4000; 32 MiB with EAR != 0 -> EAR = 0 and halt; then bus mode",
+      "name": "FUN_CODE_111f",
+      "status": "matched"
+    },
+    "CODE:123a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "Keil common entry code of FUN_CODE_124f (FUN_CODE_124f(2, buf, 0, &s) for FUN_CODE_0c83), emitted by compiling src/8051_bank0/FUN_CODE_0c83.c; bytes checked by diff8051 common_entry()",
+      "name": "FUN_CODE_123a",
+      "status": "matched"
+    },
+    "CODE:1249": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "Keil common entry code of FUN_CODE_124f (tail of the set-up for FUN_CODE_124f(3, buf, 0, &s) for FUN_CODE_0c83), emitted by compiling src/8051_bank0/FUN_CODE_0c83.c; bytes checked by diff8051 common_entry()",
+      "name": "FUN_CODE_1249",
+      "status": "matched"
+    },
+    "CODE:124f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "boot loader: generic SPI transfer (n_out bytes out incl. opcode, n_in bytes in via FIFO)",
+      "name": "FUN_CODE_124f",
+      "status": "matched"
+    },
+    "CODE:1346": {
+      "by": "hand",
+      "comment": "boot loader: copy len bytes into the share structure XDATA 0x3000 + off[kind]",
+      "name": "FUN_CODE_1346",
+      "status": "matched"
+    },
+    "CODE:13f7": {
+      "by": "hand",
+      "comment": "Keil STARTUP.A51 (IDATALEN 80h, XDATA 3000h..3FFFh, SP 5Ah) + INIT.A51 ?C_INIT; byte-exact via tools/startup8051.py (src/8051_bank0/startup)",
+      "name": "FUN_CODE_13f7",
+      "status": "matched"
+    },
+    "CODE:1491": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "boot loader: streaming flash read via FIFO (always 512 bytes; address bits 15..8 dropped, latent bug)",
+      "name": "FUN_CODE_1491",
+      "status": "matched"
+    },
+    "CODE:151c": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "boot loader main: UART, flash ID + bus mode, partition table, 0xF1D0 = 0x87 (start next image), spin",
+      "name": "FUN_CODE_151c",
+      "status": "matched"
+    },
+    "CODE:1616": {
+      "by": "hand",
+      "comment": "boot loader: UART 4800 8N1 (timer 1, clock 48/96 MHz by chip variant)",
+      "name": "FUN_CODE_1616",
+      "status": "matched"
+    },
+    "CODE:16db": {
+      "by": "hand",
+      "comment": "boot loader: SPI flash command + one data byte through the FIFO (0xF1C3), e.g. 0xC5 WREAR",
+      "name": "FUN_CODE_16db",
+      "status": "matched"
+    },
+    "CODE:172d": {
+      "by": "hand",
+      "comment": "boot loader: SPI flash command returning one byte (0xF0EF), e.g. 0x05 RDSR",
+      "name": "FUN_CODE_172d",
+      "status": "matched"
+    },
+    "CODE:1777": {
+      "by": "hand",
+      "comment": "boot loader: JEDEC ID (0x9F) -> XDATA 0xF064..0xF066",
+      "name": "FUN_CODE_1777",
+      "status": "matched"
+    },
+    "CODE:17af": {
+      "by": "hand",
+      "comment": "boot loader: SPI flash command without data (0xF0EE opcode, start 0xF0E5 bit 0, poll)",
+      "name": "FUN_CODE_17af",
+      "status": "matched"
+    },
+    "CODE:17e2": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "boot loader: index of marker 0x30 / 0x60 in IDATA 0x0E / 0x08 by chip variant; main stores +1 at XDATA 0xD929",
+      "name": "FUN_CODE_17e2",
+      "status": "matched"
+    },
+    "CODE:180d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "boot loader: SetExtendedAddr(ear): WREN, WREAR 0xC5 = ear (32 MiB flash bank), print",
+      "name": "FUN_CODE_180d",
+      "status": "matched"
+    },
+    "CODE:1838": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine _PUTCHAR (C51BC.LIB:PUTCHAR)",
+      "lib": "C51BC.LIB:PUTCHAR",
+      "name": "FUN_CODE_1838",
+      "status": "matched",
+      "symbol": "_PUTCHAR"
+    },
+    "CODE:1843": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PUTCHAR (internal entry point, segment 0+11) (C51BC.LIB:PUTCHAR)",
+      "lib": "C51BC.LIB:PUTCHAR",
+      "name": "FUN_CODE_1843",
+      "status": "matched",
+      "symbol": "@0+11"
+    },
+    "CODE:1873": {
+      "by": "hand",
+      "comment": "boot loader: busy-wait delay, n x 8 NOPs",
+      "name": "FUN_CODE_1873",
+      "status": "matched"
+    },
+    "CODE:1899": {
+      "by": "hand",
+      "comment": "boot loader helper",
+      "name": "FUN_CODE_1899",
+      "status": "matched"
+    },
+    "CODE:18bb": {
+      "by": "hand",
+      "comment": "boot loader: chip variant test, XDATA 0xD511 == 0x20 (CY)",
+      "name": "FUN_CODE_18bb",
+      "status": "matched"
+    },
+    "CODE:18c9": {
+      "by": "hand",
+      "comment": "boot loader: 0 for chip variant 0x20 else 1; main writes it *4 to SPI bus mode 0xF0E6",
+      "name": "FUN_CODE_18c9",
+      "status": "matched"
+    },
+    "CODE:18e2": {
+      "by": "hand",
+      "comment": "boot loader: read Extended Address Register (0xC8)",
+      "name": "FUN_CODE_18e2",
+      "status": "matched"
+    },
+    "CODE:18e8": {
+      "by": "hand",
+      "comment": "boot loader: returns 57, the number of JEDEC flash-chip records at CODE 0x4000",
+      "name": "FUN_CODE_18e8",
+      "status": "matched"
+    },
+    "CODE:7400": {
+      "by": "data",
+      "comment": "NOT CODE: 17 zero bytes of padding inside the slot-1 partition area (0x7000..0x7FFF); no caller (a byte search for LCALL/LJMP to it finds only operand bytes of other instructions); Ghidra false positive",
+      "name": "FUN_CODE_7400",
+      "status": "matched"
+    },
+    "CODE:7527": {
+      "by": "data",
+      "comment": "NOT CODE: 17 zero bytes of padding inside the slot-1 partition area (0x7000..0x7FFF); no caller (a byte search for LCALL/LJMP to it finds only operand bytes of other instructions); Ghidra false positive",
+      "name": "FUN_CODE_7527",
+      "status": "matched"
+    },
+    "CODE:7f9d": {
+      "by": "data",
+      "comment": "NOT CODE: 17 zero bytes of padding inside the slot-1 partition area (0x7000..0x7FFF); no caller (a byte search for LCALL/LJMP to it finds only operand bytes of other instructions); Ghidra false positive",
+      "name": "FUN_CODE_7f9d",
+      "status": "matched"
+    },
+    "ram:1899": {
+      "by": "hand",
+      "comment": "The call to FUN_CODE_0003 passes a generic pointer (R3:R2:R1) set to NULL: the firmware loads R3=0, R2=0, R1=0, not three byte arguments in R7/R5/R3. FUN_CODE_0f3f is ?C?CLDPTR (load a char through a generic pointer in R3:R2:R1). With the parameter declared as a generic pointer and a constant NULL argument, Keil emits MOV R3,#0 / MOV R2,#0 / MOV R1,#0 directly instead of CLR A followed by register moves.",
+      "name": "FUN_CODE_1899",
+      "status": "matched"
+    },
+    "ram:18d6": {
+      "by": "hand",
+      "comment": "Read-modify-write sequence on an xdata register: an OR-store followed by a fresh MOVX A,@DPTR read and an AND-store. The variable must be declared volatile so that Keil re-reads it after the OR-store instead of keeping the value in A.",
+      "name": "FUN_CODE_18d6",
+      "status": "matched"
+    },
+    "ram:18e2": {
+      "by": "autoc",
+      "comment": "mechanical match (tools/auto8051.py); not yet named or documented",
+      "name": "FUN_CODE_18e2",
+      "status": "matched"
+    }
+  }
+}

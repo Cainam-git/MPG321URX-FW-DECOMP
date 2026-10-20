@@ -1,0 +1,78 @@
+{
+  "3179": {
+    "meaning": "load a char through a generic pointer in R3:R2:R1 (`*p` where p has no memory-space keyword)",
+    "name": "?C?CLDPTR"
+  },
+  "3192": {
+    "meaning": "load a char through a generic pointer plus offset in A (`p[i]`)",
+    "name": "?C?CLDOPTR"
+  },
+  "31e1": {
+    "meaning": "store a char through a generic pointer (`*p = c`)",
+    "name": "?C?CSTPTR"
+  },
+  "31f3": {
+    "meaning": "store a char through a generic pointer plus offset (`p[i] = c`)",
+    "name": "?C?CSTOPTR"
+  },
+  "3292": {
+    "meaning": "load an int through a generic pointer",
+    "name": "?C?ILDPTR"
+  },
+  "32f5": {
+    "meaning": "multiply the longs R4..R7 * R0..R3 (`a * b` on longs); bytes e8 8f f0 a4 cc ...",
+    "name": "?C?LMUL"
+  },
+  "3380": {
+    "meaning": "divide the unsigned long R4..R7 by R0..R3 (`a / b` on unsigned longs; quotient in R4..R7); bytes b8 00 c1 b9 00 59 ba 00 2d ec 8b f0 84 ...",
+    "name": "?C?ULDIV"
+  },
+  "343e": {
+    "meaning": "shift the unsigned long in R4..R7 right by R0 bits (`v >> n`); bytes e8 60 0f ec c3 13 ...",
+    "name": "?C?ULSHR"
+  },
+  "34e1": {
+    "meaning": "store the unsigned long in R4..R7 to xdata at DPTR (`*(unsigned long xdata *)DPTR = v`)",
+    "name": "?C?LSTXDATA"
+  },
+  "3591": {
+    "meaning": "load an unsigned long from xdata at DPTR into R4..R7 (`v = *(unsigned long xdata *)DPTR`)",
+    "name": "?C?LLDXDATA"
+  },
+  "9d8b": {
+    "meaning": "load an unsigned long from xdata at DPTR into R4..R7 (`v = *(unsigned long xdata *)DPTR`)",
+    "name": "?C?LLDXDATA"
+  },
+  "bfc3": {
+    "meaning": "load an unsigned long from xdata at DPTR into R4..R7 (`v = *(unsigned long xdata *)DPTR`)",
+    "name": "?C?LLDXDATA"
+  },
+  "c892": {
+    "meaning": "load an unsigned long from xdata at DPTR into R4..R7 (`v = *(unsigned long xdata *)DPTR`)",
+    "name": "?C?LLDXDATA"
+  },
+  "c967": {
+    "meaning": "load an unsigned long from xdata at DPTR into R4..R7 (`v = *(unsigned long xdata *)DPTR`)",
+    "name": "?C?LLDXDATA"
+  },
+  "d840": {
+    "meaning": "load an unsigned long from xdata at DPTR into R4..R7 (`v = *(unsigned long xdata *)DPTR`)",
+    "name": "?C?LLDXDATA"
+  },
+  "e4ec": {
+    "meaning": "load an unsigned long from xdata at DPTR into R4..R7 (`v = *(unsigned long xdata *)DPTR`)",
+    "name": "?C?LLDXDATA"
+  },
+  "e4fb": {
+    "meaning": "load an unsigned long from xdata at DPTR into R4..R7 (`v = *(unsigned long xdata *)DPTR`)",
+    "name": "?C?LLDXDATA"
+  },
+  "e50a": {
+    "meaning": "load an unsigned long from xdata at DPTR into R4..R7 (`v = *(unsigned long xdata *)DPTR`)",
+    "name": "?C?LLDXDATA"
+  },
+  "e519": {
+    "meaning": "load an unsigned long from xdata at DPTR into R4..R7 (`v = *(unsigned long xdata *)DPTR`)",
+    "name": "?C?LLDXDATA"
+  }
+}

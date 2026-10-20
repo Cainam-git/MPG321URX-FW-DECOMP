@@ -1,0 +1,3 @@
+libc.a freer.o _free_r
+# leon2m FUN_a015b8c0: toolchain library function _free_r (libc.a:freer.o, 644 bytes),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

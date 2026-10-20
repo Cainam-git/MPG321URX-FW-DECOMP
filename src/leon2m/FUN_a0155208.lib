@@ -1,0 +1,5 @@
+libgcc.a _udivdi3.o __udivdi3
+# leon2m FUN_a0155208: toolchain library function __udivdi3 (default-multilib libgcc.a:_udivdi3.o of gcc 3.4.4,
+# unwind section removed), byte-exact at its address; the archive member is the source, nothing to decompile.
+# Unsigned 64-bit division: returns a / b (rounded down) for unsigned long long a, b.
+# Used by the clock meter FUN_a0102fd0 and the panel limit check FUN_a01070b4 (Hz -> MHz).

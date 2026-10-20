@@ -1,0 +1,10296 @@
+{
+ "signatures": {
+  "ram:a00608f0": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00608f8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0060a50": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0060ab0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0060ab4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0060bb8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0060cbc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0060e70": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0060ed0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0060ed4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006102c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0061280": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0061348": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00614b8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint *"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0061534": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "volatile unsigned int *"
+    },
+    {
+     "name": "param_2",
+     "type": "unsigned int"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00615dc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned char",
+   "varargs": false
+  },
+  "ram:a0061608": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int *"
+    },
+    {
+     "name": "param_2",
+     "type": "ushort *"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00618d8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0061a6c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint *"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0061adc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0061d60": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0061eb4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00624b4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006250c": {
+   "params": [],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0062718": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    },
+    {
+     "name": "param_5",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00627a8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "int"
+    },
+    {
+     "name": "param_5",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00629fc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0062b64": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0062bac": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined2 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0062f3c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0062fc8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006370c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00638a0": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00638cc": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00638f8": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0063924": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0063950": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a006c788": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006c9c0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006cfe8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006d050": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006d30c": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a006d3c8": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a006d46c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006d53c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1 *"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a006d548": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a006d7bc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006e0e4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char *"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006e444": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006e820": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006ed54": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006faa8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a006fad4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a006fb3c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned int *"
+    },
+    {
+     "name": "param_2",
+     "type": "unsigned int"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a006fca8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006fd78": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006fedc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a006ffb4": {
+   "params": [],
+   "return": "byte",
+   "varargs": false
+  },
+  "ram:a006ffc4": {
+   "params": [],
+   "return": "byte",
+   "varargs": false
+  },
+  "ram:a006ffd4": {
+   "params": [],
+   "return": "byte",
+   "varargs": false
+  },
+  "ram:a006ffe4": {
+   "params": [],
+   "return": "byte",
+   "varargs": false
+  },
+  "ram:a006fff4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0070000": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00700cc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0070404": {
+   "params": [],
+   "return": "byte",
+   "varargs": false
+  },
+  "ram:a0070414": {
+   "params": [],
+   "return": "byte",
+   "varargs": false
+  },
+  "ram:a0070424": {
+   "params": [],
+   "return": "byte",
+   "varargs": false
+  },
+  "ram:a0070434": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0070b7c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    },
+    {
+     "name": "param_5",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0072900": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a0072958": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0072970": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0072a4c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0072b04": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0072b7c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0072fd8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char *"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00734c4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "unsigned int",
+   "varargs": false
+  },
+  "ram:a0073500": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00735c0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00735e8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0073638": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0073680": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0073704": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0073738": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a007381c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "unsigned char"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0073be8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    },
+    {
+     "name": "param_5",
+     "type": "uint"
+    },
+    {
+     "name": "param_6",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0073c24": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0073c44": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "char *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0074bf8": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0074cf8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    },
+    {
+     "name": "param_2",
+     "type": "unsigned char"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0074fc4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007517c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "undefined1",
+   "varargs": false
+  },
+  "ram:a0075190": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0075858": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0075ffc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0076180": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0077e68": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0077e7c": {
+   "params": [
+    {
+     "name": "phyidx",
+     "type": "int"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0077f04": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00787f4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007890c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0078dc8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0078fe8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0079460": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00798fc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00799b8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0079a20": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0079aac": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0079ac4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0079e00": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007a050": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a007a0a0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007a630": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a007a648": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007a6f0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a007a708": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a007ab94": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a007abbc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a007ac7c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a007aca0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a007ae30": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "char"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007ae94": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007af04": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007af6c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007afdc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007b2a0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007cfec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007d054": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007d140": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007d21c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007d688": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007e7c0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007ed88": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007f634": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007f798": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a007f8a4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a007f900": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a007f9d0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a007f9e8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a007fa0c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0080244": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00802cc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    },
+    {
+     "name": "param_4",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0080494": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0083618": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0083870": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0083e28": {
+   "params": [],
+   "return": "undefined1",
+   "varargs": false
+  },
+  "ram:a0083e34": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0083ec4": {
+   "params": [],
+   "return": "undefined1",
+   "varargs": false
+  },
+  "ram:a0083ed0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0083fb8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008442c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00848cc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0085684": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned char",
+   "varargs": false
+  },
+  "ram:a00856d0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00856fc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    },
+    {
+     "name": "param_4",
+     "type": "int"
+    },
+    {
+     "name": "param_5",
+     "type": "int"
+    },
+    {
+     "name": "param_6",
+     "type": "int"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00857d0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0085b14": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0085ea8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00862e4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "char"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00863d4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "char"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned char",
+   "varargs": false
+  },
+  "ram:a0086400": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "char"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned char",
+   "varargs": false
+  },
+  "ram:a0086540": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "byte"
+    },
+    {
+     "name": "param_4",
+     "type": "byte"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00865b8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008661c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00866a4": {
+   "params": [],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00866b8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00866e0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008686c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0086c48": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0086fb0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "byte *"
+    },
+    {
+     "name": "param_4",
+     "type": "byte *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0087110": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    },
+    {
+     "name": "param_4",
+     "type": "byte *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008743c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    },
+    {
+     "name": "param_4",
+     "type": "byte *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0087824": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0087d8c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00883d0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008899c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0088a80": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0088af0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0088c5c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    },
+    {
+     "name": "param_3",
+     "type": "byte *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0088ea0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0088f28": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0088f84": {
+   "params": [],
+   "return": "undefined1",
+   "varargs": false
+  },
+  "ram:a0088fd4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0089420": {
+   "params": [],
+   "return": "undefined4",
+   "varargs": false
+  },
+  "ram:a0089428": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0089750": {
+   "params": [],
+   "return": "undefined4",
+   "varargs": false
+  },
+  "ram:a0089a38": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0089d38": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a0089e54": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0089f84": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "undefined1",
+   "varargs": false
+  },
+  "ram:a008a470": {
+   "params": [],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008a590": {
+   "params": [],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008a7bc": {
+   "params": [],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008a868": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008a9ec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "unsigned short"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008aadc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined2"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008b53c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008b5d0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008b6f4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008b75c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "uint"
+    },
+    {
+     "name": "param_6",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008b838": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008b850": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008b8ac": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008b934": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008b9b0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    },
+    {
+     "name": "param_5",
+     "type": "uint"
+    },
+    {
+     "name": "param_6",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008b9ec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008bc44": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008c538": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008c5d8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008c6f8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008cba8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008ced8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008d0b8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "ushort"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008d1d8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "ushort"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008d2e0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008d490": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008d8d8": {
+   "params": [],
+   "return": "undefined4",
+   "varargs": false
+  },
+  "ram:a008dfe4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008e098": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008e200": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008e3c0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008e484": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "unsigned char"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008e6b8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008ecb8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "char"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008ed50": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008f4ec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008f54c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008f79c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008f990": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008f9c0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008fa00": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008fa30": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008fb5c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008fb7c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008fe10": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008fea8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008ff08": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a008ff58": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008ffa4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a008fff0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    }
+   ],
+   "return": "undefined1",
+   "varargs": false
+  },
+  "ram:a0090010": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0090078": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned short",
+   "varargs": false
+  },
+  "ram:a0090098": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0090100": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned short",
+   "varargs": false
+  },
+  "ram:a0090120": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned short",
+   "varargs": false
+  },
+  "ram:a0090140": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned short",
+   "varargs": false
+  },
+  "ram:a0090160": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned short",
+   "varargs": false
+  },
+  "ram:a0090180": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned short",
+   "varargs": false
+  },
+  "ram:a00901a0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0090374": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0090380": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0090498": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0090568": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0090638": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0090718": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00907f0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0090d7c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0090dec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0090e4c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0090e6c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte"
+    },
+    {
+     "name": "param_2",
+     "type": "byte"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00910d0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned char",
+   "varargs": false
+  },
+  "ram:a0091420": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00914c4": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00914e0": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0091520": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00916a8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0091960": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0091be8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0091c10": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0091c5c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0091d64": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "unsigned char",
+   "varargs": false
+  },
+  "ram:a0091db4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0091e70": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a0091ef0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00924dc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00925e4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0092608": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00926e0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0092cec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0092db8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0093060": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0093138": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0093164": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00934c0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009434c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0094370": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00944e0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0094798": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009498c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0094a10": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0094ac4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0094ae8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0094b0c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0094b30": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0094c54": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00950a0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    },
+    {
+     "name": "param_5",
+     "type": "uint"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009584c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0095c30": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0095c9c": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0095d34": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0095ea4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0096204": {
+   "params": [],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00962ec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0096300": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0096428": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0096538": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00967ec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009740c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00977e8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0097ed0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0097f04": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0098b60": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned int"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a0098bb0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009967c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a0099c18": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009a698": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009c188": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009c284": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009c3bc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009c434": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009c4a4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009c5b4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009c6e4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009cb34": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009d5cc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009d87c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009dd40": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009e00c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    },
+    {
+     "name": "param_3",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009e368": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009e9fc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a009ec20": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a009f654": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a009f66c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009f738": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "char *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009faf0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009fcb8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a009fe2c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a009fe98": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a009fed0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a0268": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a0478": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a0514": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a0558": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a0560": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a0588": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a0930": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a0b10": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a0bfc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a1150": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a14c4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a151c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a15c8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a1638": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a16cc": {
+   "params": [
+    {
+     "name": "a",
+     "type": "unsigned int"
+    },
+    {
+     "name": "b",
+     "type": "unsigned int"
+    }
+   ],
+   "return": "unsigned int",
+   "varargs": false
+  },
+  "ram:a00a1710": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "unsigned int",
+   "varargs": false
+  },
+  "ram:a00a1734": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "unsigned int",
+   "varargs": false
+  },
+  "ram:a00a1758": {
+   "params": [],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a00a17c4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a1a80": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a1b08": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a1c74": {
+   "params": [
+    {
+     "name": "param1",
+     "type": "unsigned int"
+    },
+    {
+     "name": "param2",
+     "type": "unsigned int"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a1cdc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a1df0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a211c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a2230": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a22d4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a28a4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a29b0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a29d8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "undefined1",
+   "varargs": false
+  },
+  "ram:a00a29ec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a2a80": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a2bec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "unsigned int",
+   "varargs": false
+  },
+  "ram:a00a2c94": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "byte"
+    }
+   ],
+   "return": "unsigned int",
+   "varargs": false
+  },
+  "ram:a00a2cf4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint *"
+    },
+    {
+     "name": "param_3",
+     "type": "uint *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a2e48": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "undefined4",
+   "varargs": false
+  },
+  "ram:a00a2fd4": {
+   "params": [],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a00a317c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint *"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a32d0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a33f4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a4658": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a47b0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a00a47e0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a4880": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a4e68": {
+   "params": [],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a5148": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a5cb4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a5ce8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a61d4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a6260": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a63a8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined2 *"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a6428": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint *"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a66dc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a67b8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a6aa0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a6c98": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a7058": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a71fc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a73ac": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a7408": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a74b8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a78fc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "unsigned short"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a7a5c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a7bf8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a7cc0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "unsigned short"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a8210": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "unsigned short"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a832c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "unsigned short"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a8400": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a89c0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    },
+    {
+     "name": "param_5",
+     "type": "byte"
+    },
+    {
+     "name": "param_6",
+     "type": "byte"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a9020": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined1 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a94f4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a9870": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    },
+    {
+     "name": "param_5",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00a9c4c": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00a9e74": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00aa00c": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00aa7bc": {
+   "params": [],
+   "return": "undefined4",
+   "varargs": false
+  },
+  "ram:a00aa7c4": {
+   "params": [],
+   "return": "undefined4",
+   "varargs": false
+  },
+  "ram:a00aa7cc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ab4a8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ab4f8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ab690": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ab6e0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "char"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00aba5c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00abb20": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00abb28": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00abb30": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00abbc4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ac4ec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "ushort"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ac550": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "ushort"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00ac584": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined2"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00ac5a4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned int"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00ac620": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00acac0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00acb00": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00acb40": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned short",
+   "varargs": false
+  },
+  "ram:a00acb60": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned short",
+   "varargs": false
+  },
+  "ram:a00acb94": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00aceec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00acff4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ad054": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00ad09c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00ad27c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ad320": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ad3e0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ad478": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ad5cc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ad644": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ad668": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned char",
+   "varargs": false
+  },
+  "ram:a00ad6cc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00ad6ec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ad764": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00ad784": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ad7c8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ada24": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ae238": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned char",
+   "varargs": false
+  },
+  "ram:a00ae344": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00ae378": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00ae5e4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00aea0c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00aea3c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00aea64": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00aeadc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00aeb24": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00aec10": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00aec50": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00af1e8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00af320": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00af464": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "char"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00af524": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00af690": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char *"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00af8bc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00afd74": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00afdb0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    },
+    {
+     "name": "param_2",
+     "type": "unsigned int"
+    },
+    {
+     "name": "param_3",
+     "type": "unsigned int"
+    },
+    {
+     "name": "param_4",
+     "type": "unsigned int"
+    },
+    {
+     "name": "param_5",
+     "type": "unsigned int"
+    },
+    {
+     "name": "param_6",
+     "type": "unsigned int"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00afeb8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b0138": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b02f0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a00b035c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a00b0518": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00b0540": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00b0724": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00b0738": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b0e54": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b115c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte"
+    },
+    {
+     "name": "param_2",
+     "type": "byte"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b1224": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte"
+    },
+    {
+     "name": "param_2",
+     "type": "byte"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b12c4": {
+   "params": [],
+   "return": "undefined4",
+   "varargs": false
+  },
+  "ram:a00b1450": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00b14dc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00b1538": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char *"
+    }
+   ],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a00b18d0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b192c": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00b1948": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00b1964": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00b1e30": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00b1e70": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b1fe0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b2064": {
+   "params": [],
+   "return": "undefined4",
+   "varargs": false
+  },
+  "ram:a00b20dc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4 *"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b2194": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4 *"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b229c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b22fc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4 *"
+    }
+   ],
+   "return": "undefined4",
+   "varargs": false
+  },
+  "ram:a00b2304": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4 *"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00b2324": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b258c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned int"
+    },
+    {
+     "name": "param_2",
+     "type": "unsigned int"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00b25f8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char *"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b2790": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b281c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1 *"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b288c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a00b28d0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00b3530": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c0a04": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c0a88": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c0b48": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "int"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00c0ecc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c18fc": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00c1ac0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c1c18": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c2488": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c2758": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c2de4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c2f58": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c30e4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c32f4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c3ae8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c44e4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c4e4c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c59e0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00c5ae4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c5c30": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c5d34": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00c5da8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c601c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c6730": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00c68f8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c6968": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c7654": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c76c0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c7770": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c7b60": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00c7bf8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c7d5c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00c80f0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_5",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c82dc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c8328": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned char",
+   "varargs": false
+  },
+  "ram:a00c8360": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c850c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c85b8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00c85e4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    },
+    {
+     "name": "param_3",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c8688": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00c8760": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c87c0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "unsigned int",
+   "varargs": false
+  },
+  "ram:a00c87e8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_3",
+     "type": "unsigned short"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00c8824": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "uint"
+    },
+    {
+     "name": "param_6",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c8a80": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c9368": {
+   "params": [],
+   "return": "undefined4",
+   "varargs": false
+  },
+  "ram:a00c9370": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c9398": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c966c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c9750": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a00c9798": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c9810": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    },
+    {
+     "name": "param_3",
+     "type": "ushort"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00c9c98": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined2"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00c9cc8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00c9de8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "unsigned short"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00ca6d4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "uint"
+    },
+    {
+     "name": "param_6",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ca8c4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00cad8c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00cbb50": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00cc5f8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00cc974": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00cc9ac": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00cc9f8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ccad4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00ccb04": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined1 *"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    },
+    {
+     "name": "param_5",
+     "type": "uint"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ccf0c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00cd31c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00cd5e4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00ce864": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00cef6c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00cf7b4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00cf9e8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00cfab8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00cfb20": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a00cfd38": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d0530": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a00d0550": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d0d78": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d12e4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d17a8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d2378": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined2"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d24ac": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d25f4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a00d2678": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d27fc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d2920": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d2c38": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d2ca8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d2d1c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d2d8c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d2e00": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d2f20": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d3114": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d31f8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d3364": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d3670": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d36e4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    },
+    {
+     "name": "param_3",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d38a8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d3c40": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1 *"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d64ec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d6560": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00d6624": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d6694": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "unsigned char",
+   "varargs": false
+  },
+  "ram:a00d6c98": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "unsigned char *"
+    },
+    {
+     "name": "param_2",
+     "type": "unsigned char *"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00d6e94": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint *"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d6f70": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d714c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d73b4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    },
+    {
+     "name": "param_4",
+     "type": "byte"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d74ec": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d7638": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00d7734": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00d77a8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00d7828": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    },
+    {
+     "name": "param_2",
+     "type": "byte *"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00d791c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "char"
+    },
+    {
+     "name": "param_4",
+     "type": "byte"
+    },
+    {
+     "name": "param_5",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d7ca4": {
+   "params": [],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00d7cd0": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "int"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d7e6c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d82c8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a00d8300": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d84f4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d8714": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d87fc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d8b90": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d8d20": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d8f58": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d8fdc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d904c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d9474": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined1"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d9524": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d97bc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte *"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d985c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d9a78": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d9be4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d9d50": {
+   "params": [],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00d9e44": {
+   "params": [],
+   "return": "undefined1",
+   "varargs": false
+  },
+  "ram:a00d9edc": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "uint"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00da388": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00da49c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00da6ac": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00daa98": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00dabf8": {
+   "params": [],
+   "return": "undefined4",
+   "varargs": false
+  },
+  "ram:a00dac00": {
+   "params": [],
+   "return": "undefined4",
+   "varargs": false
+  },
+  "ram:a00dac08": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00dae90": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "uint"
+    },
+    {
+     "name": "param_3",
+     "type": "char"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00db53c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00db784": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00db9d4": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00dba70": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "char"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00dbc8c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00dbe74": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00dc0a8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00dc214": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "int",
+   "varargs": false
+  },
+  "ram:a00dccd8": {
+   "params": [],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00dcdb8": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "byte"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00dd154": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "uint"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  },
+  "ram:a00dd37c": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "undefined1"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_3",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_4",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_5",
+     "type": "undefined4"
+    },
+    {
+     "name": "param_6",
+     "type": "undefined4"
+    }
+   ],
+   "return": "void",
+   "varargs": false
+  },
+  "ram:a00de8ac": {
+   "params": [
+    {
+     "name": "param_1",
+     "type": "int"
+    },
+    {
+     "name": "param_2",
+     "type": "undefined4"
+    }
+   ],
+   "return": "uint",
+   "varargs": false
+  }
+ }
+}

@@ -1,0 +1,3 @@
+libc.a fvwrite.o __sfvwrite
+# leon2m FUN_a015bb44: toolchain library function __sfvwrite (libc.a:fvwrite.o, 1080 bytes),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

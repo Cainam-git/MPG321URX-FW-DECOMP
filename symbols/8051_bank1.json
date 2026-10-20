@@ -1,0 +1,1654 @@
+{
+  "functions": {
+    "CODE:0016": {
+      "by": "twin",
+      "c51opts": "OPTIMIZE(7,SPEED)",
+      "comment": "twin of 8051_bank0/FUN_CODE_18d6",
+      "name": "FUN_CODE_0016",
+      "status": "matched"
+    },
+    "CODE:0022": {
+      "by": "template",
+      "c51opts": "OPTIMIZE(7,SPEED)",
+      "comment": "template",
+      "name": "FUN_CODE_0022",
+      "status": "matched"
+    },
+    "CODE:002d": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPADD (C51BFPC.LIB:?C?FPADD)",
+      "lib": "C51BFPC.LIB:?C?FPADD",
+      "name": "FUN_CODE_002d",
+      "status": "matched",
+      "symbol": "?C?FPADD"
+    },
+    "CODE:007b": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FPADD (internal entry point, segment 0+85) (C51BFPC.LIB:?C?FPADD)",
+      "lib": "C51BFPC.LIB:?C?FPADD",
+      "name": "thunk_FUN_CODE_03f1",
+      "status": "matched",
+      "symbol": "@0+85"
+    },
+    "CODE:011e": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPMUL (C51BFPC.LIB:?C?FPMUL)",
+      "lib": "C51BFPC.LIB:?C?FPMUL",
+      "name": "FUN_CODE_011e",
+      "status": "matched",
+      "symbol": "?C?FPMUL"
+    },
+    "CODE:0200": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FPMUL (internal entry point, segment 0+226) (C51BFPC.LIB:?C?FPMUL)",
+      "lib": "C51BFPC.LIB:?C?FPMUL",
+      "name": "FUN_CODE_0200",
+      "status": "matched",
+      "symbol": "@0+226"
+    },
+    "CODE:0204": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FPMUL (internal entry point, segment 0+230) (C51BFPC.LIB:?C?FPMUL)",
+      "lib": "C51BFPC.LIB:?C?FPMUL",
+      "name": "FUN_CODE_0204",
+      "status": "matched",
+      "symbol": "@0+230"
+    },
+    "CODE:0227": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPDIV (C51BFPC.LIB:?C?FPDIV)",
+      "lib": "C51BFPC.LIB:?C?FPDIV",
+      "name": "FUN_CODE_0227",
+      "status": "matched",
+      "symbol": "?C?FPDIV"
+    },
+    "CODE:0260": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FPDIV (internal entry point, segment 0+60) (C51BFPC.LIB:?C?FPDIV)",
+      "lib": "C51BFPC.LIB:?C?FPDIV",
+      "name": "FUN_CODE_0260",
+      "status": "matched",
+      "symbol": "@0+60"
+    },
+    "CODE:02c4": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPCMP3 (C51BFPC.LIB:?C?FPCMP)",
+      "lib": "C51BFPC.LIB:?C?FPCMP",
+      "name": "FUN_CODE_02c4",
+      "status": "matched",
+      "symbol": "?C?FPCMP3"
+    },
+    "CODE:033d": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FCASTL (C51BFPC.LIB:?C?FCAST)",
+      "lib": "C51BFPC.LIB:?C?FCAST",
+      "name": "FUN_CODE_033d",
+      "status": "matched",
+      "symbol": "?C?FCASTL"
+    },
+    "CODE:0342": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FCASTI (C51BFPC.LIB:?C?FCAST)",
+      "lib": "C51BFPC.LIB:?C?FCAST",
+      "name": "FUN_CODE_0342",
+      "status": "matched",
+      "symbol": "?C?FCASTI"
+    },
+    "CODE:037b": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CASTF (C51BFPC.LIB:?C?CASTF)",
+      "lib": "C51BFPC.LIB:?C?CASTF",
+      "name": "FUN_CODE_037b",
+      "status": "matched",
+      "symbol": "?C?CASTF"
+    },
+    "CODE:03b2": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPGETOPN2 (C51BFPC.LIB:?C?FPGETOPN)",
+      "lib": "C51BFPC.LIB:?C?FPGETOPN",
+      "name": "FUN_CODE_03b2",
+      "status": "matched",
+      "symbol": "?C?FPGETOPN2"
+    },
+    "CODE:03c9": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPRESULT (C51BFPC.LIB:?C?FPGETOPN)",
+      "lib": "C51BFPC.LIB:?C?FPGETOPN",
+      "name": "FUN_CODE_03c9",
+      "status": "matched",
+      "symbol": "?C?FPRESULT"
+    },
+    "CODE:03e7": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPNANRESULT (C51BFPC.LIB:?C?FPGETOPN)",
+      "lib": "C51BFPC.LIB:?C?FPGETOPN",
+      "name": "FUN_CODE_03e7",
+      "status": "matched",
+      "symbol": "?C?FPNANRESULT"
+    },
+    "CODE:03ee": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPUNDERFLOW (C51BFPC.LIB:?C?FPGETOPN)",
+      "lib": "C51BFPC.LIB:?C?FPGETOPN",
+      "name": "FUN_CODE_03ee",
+      "status": "matched",
+      "symbol": "?C?FPUNDERFLOW"
+    },
+    "CODE:03f1": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPOVERFLOW (C51BFPC.LIB:?C?FPGETOPN)",
+      "lib": "C51BFPC.LIB:?C?FPGETOPN",
+      "name": "FUN_CODE_03f1",
+      "status": "matched",
+      "symbol": "?C?FPOVERFLOW"
+    },
+    "CODE:03fc": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPROUND (C51BFPL.LIB:?C?FPROUND)",
+      "lib": "C51BFPL.LIB:?C?FPROUND",
+      "name": "FUN_CODE_03fc",
+      "status": "matched",
+      "symbol": "?C?FPROUND"
+    },
+    "CODE:0439": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPCONVERT (C51BFPL.LIB:?C?FPCONVERT)",
+      "lib": "C51BFPL.LIB:?C?FPCONVERT",
+      "name": "FUN_CODE_0439",
+      "status": "matched",
+      "symbol": "?C?FPCONVERT"
+    },
+    "CODE:056e": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FTNPWR (C51BFPC.LIB:?C?FTNPWR)",
+      "lib": "C51BFPC.LIB:?C?FTNPWR",
+      "name": "FUN_CODE_056e",
+      "status": "matched",
+      "symbol": "?C?FTNPWR"
+    },
+    "CODE:0588": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FTNPWR (internal entry point, segment 0+74) (C51BFPC.LIB:?C?FTNPWR)",
+      "lib": "C51BFPC.LIB:?C?FTNPWR",
+      "name": "FUN_CODE_0588",
+      "status": "matched",
+      "symbol": "@0+74"
+    },
+    "CODE:0597": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FTNPWR (internal entry point, segment 0+89) (C51BFPC.LIB:?C?FTNPWR)",
+      "lib": "C51BFPC.LIB:?C?FTNPWR",
+      "name": "FUN_CODE_0597",
+      "status": "matched",
+      "symbol": "@0+89"
+    },
+    "CODE:059c": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FTNPWR (internal entry point, segment 0+94) (C51BFPC.LIB:?C?FTNPWR)",
+      "lib": "C51BFPC.LIB:?C?FTNPWR",
+      "name": "FUN_CODE_059c",
+      "status": "matched",
+      "symbol": "@0+94"
+    },
+    "CODE:05da": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?COPY (internal entry point, segment 0+44) (C51C.LIB:?C?COPY)",
+      "lib": "C51C.LIB:?C?COPY",
+      "name": "FUN_CODE_05da",
+      "status": "matched",
+      "symbol": "@0+44"
+    },
+    "CODE:0603": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?COPY (internal entry point, segment 0+85) (C51C.LIB:?C?COPY)",
+      "lib": "C51C.LIB:?C?COPY",
+      "name": "FUN_CODE_0603",
+      "status": "matched",
+      "symbol": "@0+85"
+    },
+    "CODE:064a": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?COPY (internal entry point, segment 0+156) (C51C.LIB:?C?COPY)",
+      "lib": "C51C.LIB:?C?COPY",
+      "name": "FUN_CODE_064a",
+      "status": "matched",
+      "symbol": "@0+156"
+    },
+    "CODE:067e": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?COPY (C51C.LIB:?C?COPY)",
+      "lib": "C51C.LIB:?C?COPY",
+      "name": "FUN_CODE_067e",
+      "status": "matched",
+      "symbol": "?C?COPY"
+    },
+    "CODE:06a4": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CLDPTR (C51C.LIB:?C?CLDPTR)",
+      "lib": "C51C.LIB:?C?CLDPTR",
+      "name": "FUN_CODE_06a4",
+      "status": "matched",
+      "symbol": "?C?CLDPTR"
+    },
+    "CODE:06bd": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CLDOPTR (C51C.LIB:?C?CLDOPTR)",
+      "lib": "C51C.LIB:?C?CLDOPTR",
+      "name": "FUN_CODE_06bd",
+      "status": "matched",
+      "symbol": "?C?CLDOPTR"
+    },
+    "CODE:06ea": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CSTPTR (C51C.LIB:?C?CSTPTR)",
+      "lib": "C51C.LIB:?C?CSTPTR",
+      "name": "FUN_CODE_06ea",
+      "status": "matched",
+      "symbol": "?C?CSTPTR"
+    },
+    "CODE:06fc": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CSTOPTR (C51C.LIB:?C?CSTOPTR)",
+      "lib": "C51C.LIB:?C?CSTOPTR",
+      "name": "FUN_CODE_06fc",
+      "status": "matched",
+      "symbol": "?C?CSTOPTR"
+    },
+    "CODE:071e": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?IMUL (C51BC.LIB:?C?IMUL)",
+      "lib": "C51BC.LIB:?C?IMUL",
+      "name": "FUN_CODE_071e",
+      "status": "matched",
+      "symbol": "?C?IMUL"
+    },
+    "CODE:0730": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?UIDIV (C51BC.LIB:?C?UIDIV)",
+      "lib": "C51BC.LIB:?C?UIDIV",
+      "name": "FUN_CODE_0730",
+      "status": "matched",
+      "symbol": "?C?UIDIV"
+    },
+    "CODE:0785": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?IILDX (C51BC.LIB:?C?IILDX)",
+      "lib": "C51BC.LIB:?C?IILDX",
+      "name": "FUN_CODE_0785",
+      "status": "matched",
+      "symbol": "?C?IILDX"
+    },
+    "CODE:079b": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?ILDIX (C51BC.LIB:?C?ILDIX)",
+      "lib": "C51BC.LIB:?C?ILDIX",
+      "name": "FUN_CODE_079b",
+      "status": "matched",
+      "symbol": "?C?ILDIX"
+    },
+    "CODE:07b1": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LMUL (C51BC.LIB:?C?LMUL)",
+      "lib": "C51BC.LIB:?C?LMUL",
+      "name": "FUN_CODE_07b1",
+      "status": "matched",
+      "symbol": "?C?LMUL"
+    },
+    "CODE:083c": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?ULDIV (C51BC.LIB:?C?ULDIV)",
+      "lib": "C51BC.LIB:?C?ULDIV",
+      "name": "FUN_CODE_083c",
+      "status": "matched",
+      "symbol": "?C?ULDIV"
+    },
+    "CODE:08ce": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LNEG (C51BC.LIB:?C?LNEG)",
+      "lib": "C51BC.LIB:?C?LNEG",
+      "name": "FUN_CODE_08ce",
+      "status": "matched",
+      "symbol": "?C?LNEG"
+    },
+    "CODE:08dc": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?ULCMP (C51BC.LIB:?C?ULCMP)",
+      "lib": "C51BC.LIB:?C?ULCMP",
+      "name": "FUN_CODE_08dc",
+      "status": "matched",
+      "symbol": "?C?ULCMP"
+    },
+    "CODE:08ed": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?ULSHR (C51BC.LIB:?C?ULSHR)",
+      "lib": "C51BC.LIB:?C?ULSHR",
+      "name": "FUN_CODE_08ed",
+      "status": "matched",
+      "symbol": "?C?ULSHR"
+    },
+    "CODE:0900": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSHL (C51BC.LIB:?C?LSHL)",
+      "lib": "C51BC.LIB:?C?LSHL",
+      "name": "FUN_CODE_0900",
+      "status": "matched",
+      "symbol": "?C?LSHL"
+    },
+    "CODE:0913": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LLDPTR (C51C.LIB:?C?LLDPTR)",
+      "lib": "C51C.LIB:?C?LLDPTR",
+      "name": "FUN_CODE_0913",
+      "status": "matched",
+      "symbol": "?C?LLDPTR"
+    },
+    "CODE:0933": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LLDOPTR (C51C.LIB:?C?LLDOPTR)",
+      "lib": "C51C.LIB:?C?LLDOPTR",
+      "name": "FUN_CODE_0933",
+      "status": "matched",
+      "symbol": "?C?LLDOPTR"
+    },
+    "CODE:0963": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSTPTR (C51C.LIB:?C?LSTPTR)",
+      "lib": "C51C.LIB:?C?LSTPTR",
+      "name": "FUN_CODE_0963",
+      "status": "matched",
+      "symbol": "?C?LSTPTR"
+    },
+    "CODE:097d": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSTOPTR (C51C.LIB:?C?LSTOPTR)",
+      "lib": "C51C.LIB:?C?LSTOPTR",
+      "name": "FUN_CODE_097d",
+      "status": "matched",
+      "symbol": "?C?LSTOPTR"
+    },
+    "CODE:09a1": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LLDCODE (C51BC.LIB:?C?LLDCODE)",
+      "lib": "C51BC.LIB:?C?LLDCODE",
+      "name": "FUN_CODE_09a1",
+      "status": "matched",
+      "symbol": "?C?LLDCODE"
+    },
+    "CODE:09b1": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSTXDATA (C51BC.LIB:?C?LSTXDATA)",
+      "lib": "C51BC.LIB:?C?LSTXDATA",
+      "name": "FUN_CODE_09b1",
+      "status": "matched",
+      "symbol": "?C?LSTXDATA"
+    },
+    "CODE:09bd": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSTKXDATA (C51BC.LIB:?C?LSTKXDATA)",
+      "lib": "C51BC.LIB:?C?LSTKXDATA",
+      "name": "FUN_CODE_09bd",
+      "status": "matched",
+      "symbol": "?C?LSTKXDATA"
+    },
+    "CODE:09d4": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?LSTKXDATA (internal entry point, segment 0+23) (C51BC.LIB:?C?LSTKXDATA)",
+      "lib": "C51BC.LIB:?C?LSTKXDATA",
+      "name": "FUN_CODE_09d4",
+      "status": "matched",
+      "symbol": "@0+23"
+    },
+    "CODE:09ee": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSTPTR (C51C.LIB:?C?LSTPTR)",
+      "lib": "C51C.LIB:?C?LSTPTR",
+      "name": "FUN_CODE_09ee",
+      "status": "matched",
+      "symbol": "?C?LSTPTR"
+    },
+    "CODE:0a08": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSTOPTR (C51C.LIB:?C?LSTOPTR)",
+      "lib": "C51C.LIB:?C?LSTOPTR",
+      "name": "FUN_CODE_0a08",
+      "status": "matched",
+      "symbol": "?C?LSTOPTR"
+    },
+    "CODE:0a2c": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?PLDIXDATA (C51BC.LIB:?C?PLDIXDATA)",
+      "lib": "C51BC.LIB:?C?PLDIXDATA",
+      "name": "FUN_CODE_0a2c",
+      "status": "matched",
+      "symbol": "?C?PLDIXDATA"
+    },
+    "CODE:0a43": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?PSTXDATA (C51BC.LIB:?C?PSTXDATA)",
+      "lib": "C51BC.LIB:?C?PSTXDATA",
+      "name": "FUN_CODE_0a43",
+      "status": "matched",
+      "symbol": "?C?PSTXDATA"
+    },
+    "CODE:0a4c": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CCASE (C51BC.LIB:?C?CCASE)",
+      "lib": "C51BC.LIB:?C?CCASE",
+      "name": "FUN_CODE_0a4c",
+      "status": "matched",
+      "symbol": "?C?CCASE"
+    },
+    "CODE:0a72": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LIMUL (C51BC.LIB:?C?LIMUL)",
+      "lib": "C51BC.LIB:?C?LIMUL",
+      "name": "FUN_CODE_0a72",
+      "status": "matched",
+      "symbol": "?C?LIMUL"
+    },
+    "CODE:0a9f": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LLDIDATA (C51BC.LIB:?C?LLDIDATA)",
+      "lib": "C51BC.LIB:?C?LLDIDATA",
+      "name": "FUN_CODE_0a9f",
+      "status": "matched",
+      "symbol": "?C?LLDIDATA"
+    },
+    "CODE:0aab": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LLDXDATA (C51BC.LIB:?C?LLDXDATA)",
+      "lib": "C51BC.LIB:?C?LLDXDATA",
+      "name": "FUN_CODE_0aab",
+      "status": "matched",
+      "symbol": "?C?LLDXDATA"
+    },
+    "CODE:0ab7": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LLDPDATA (C51BC.LIB:?C?LLDPDATA)",
+      "lib": "C51BC.LIB:?C?LLDPDATA",
+      "name": "FUN_CODE_0ab7",
+      "status": "matched",
+      "symbol": "?C?LLDPDATA"
+    },
+    "CODE:0ac3": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSTIDATA (C51BC.LIB:?C?LSTIDATA)",
+      "lib": "C51BC.LIB:?C?LSTIDATA",
+      "name": "FUN_CODE_0ac3",
+      "status": "matched",
+      "symbol": "?C?LSTIDATA"
+    },
+    "CODE:0acf": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSTPDATA (C51BC.LIB:?C?LSTPDATA)",
+      "lib": "C51BC.LIB:?C?LSTPDATA",
+      "name": "FUN_CODE_0acf",
+      "status": "matched",
+      "symbol": "?C?LSTPDATA"
+    },
+    "CODE:0adb": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSTKIDATA (C51BC.LIB:?C?LSTKIDATA)",
+      "lib": "C51BC.LIB:?C?LSTKIDATA",
+      "name": "FUN_CODE_0adb",
+      "status": "matched",
+      "symbol": "?C?LSTKIDATA"
+    },
+    "CODE:0af4": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSTKPDATA (C51BC.LIB:?C?LSTKPDATA)",
+      "lib": "C51BC.LIB:?C?LSTKPDATA",
+      "name": "FUN_CODE_0af4",
+      "status": "matched",
+      "symbol": "?C?LSTKPDATA"
+    },
+    "CODE:0b0d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "helper-chip start-up: hardware set-up, Share Structure check, record copy, core image copies (with FUN_CODE_1397, one C function 0x0B0D..0x147A)",
+      "name": "FUN_CODE_0b0d",
+      "status": "matched"
+    },
+    "CODE:1397": {
+      "by": "hand",
+      "comment": "part of the C function FUN_CODE_0b0d (one function 0x0b0d..0x147a, diff8051.SPAN_END); emitted by compiling src/8051_bank1/FUN_CODE_0b0d.c, bytes judged with FUN_CODE_0b0d over 0x0b0d..0x147a",
+      "kind": "part",
+      "module": "FUN_CODE_0b0d",
+      "name": "FUN_CODE_1397",
+      "of": "FUN_CODE_0b0d",
+      "status": "matched"
+    },
+    "CODE:224f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "STBC 49-way command switch on the Big chip's command word (power, I2C slave, flash update ...)",
+      "name": "FUN_CODE_224f",
+      "status": "matched"
+    },
+    "CODE:22db": {
+      "by": "hand",
+      "comment": "part of the C function FUN_CODE_224f (one function 0x224f..0x27b5, diff8051.SPAN_END); emitted by compiling src/8051_bank1/FUN_CODE_224f.c, bytes judged with FUN_CODE_224f over 0x224f..0x27b5",
+      "kind": "part",
+      "module": "FUN_CODE_224f",
+      "name": "thunk_FUN_CODE_236e",
+      "of": "FUN_CODE_224f",
+      "status": "matched"
+    },
+    "CODE:2350": {
+      "by": "hand",
+      "comment": "part of the C function FUN_CODE_224f (one function 0x224f..0x27b5, diff8051.SPAN_END); emitted by compiling src/8051_bank1/FUN_CODE_224f.c, bytes judged with FUN_CODE_224f over 0x224f..0x27b5",
+      "kind": "part",
+      "module": "FUN_CODE_224f",
+      "name": "thunk_FUN_CODE_275e",
+      "of": "FUN_CODE_224f",
+      "status": "matched"
+    },
+    "CODE:236e": {
+      "by": "hand",
+      "comment": "part of the C function FUN_CODE_224f (one function 0x224f..0x27b5, diff8051.SPAN_END); emitted by compiling src/8051_bank1/FUN_CODE_224f.c, bytes judged with FUN_CODE_224f over 0x224f..0x27b5",
+      "kind": "part",
+      "module": "FUN_CODE_224f",
+      "name": "FUN_CODE_236e",
+      "of": "FUN_CODE_224f",
+      "status": "matched"
+    },
+    "CODE:275e": {
+      "by": "hand",
+      "comment": "part of the C function FUN_CODE_224f (one function 0x224f..0x27b5, diff8051.SPAN_END); emitted by compiling src/8051_bank1/FUN_CODE_224f.c, bytes judged with FUN_CODE_224f over 0x224f..0x27b5",
+      "kind": "part",
+      "module": "FUN_CODE_224f",
+      "name": "FUN_CODE_275e",
+      "of": "FUN_CODE_224f",
+      "status": "matched"
+    },
+    "CODE:279f": {
+      "by": "hand",
+      "comment": "part of the C function FUN_CODE_224f (one function 0x224f..0x27b5, diff8051.SPAN_END); emitted by compiling src/8051_bank1/FUN_CODE_224f.c, bytes judged with FUN_CODE_224f over 0x224f..0x27b5",
+      "kind": "part",
+      "module": "FUN_CODE_224f",
+      "name": "FUN_CODE_279f",
+      "of": "FUN_CODE_224f",
+      "status": "matched"
+    },
+    "CODE:27b5": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?_PRINTF517?BYTE (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_27b5",
+      "status": "matched",
+      "symbol": "?_PRINTF517?BYTE"
+    },
+    "CODE:27c4": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+15) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_27c4",
+      "status": "matched",
+      "symbol": "@0+15"
+    },
+    "CODE:27d7": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+34) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_27d7",
+      "status": "matched",
+      "symbol": "@0+34"
+    },
+    "CODE:27e0": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+43) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_27e0",
+      "status": "matched",
+      "symbol": "@0+43"
+    },
+    "CODE:27f8": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+67) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_27f8",
+      "status": "matched",
+      "symbol": "@0+67"
+    },
+    "CODE:2809": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+84) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_2809",
+      "status": "matched",
+      "symbol": "@0+84"
+    },
+    "CODE:2820": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine _PRINTF517 (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_2820",
+      "status": "matched",
+      "symbol": "_PRINTF517"
+    },
+    "CODE:2b3e": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+905) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_2b3e",
+      "status": "matched",
+      "symbol": "@0+905"
+    },
+    "CODE:2b5c": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+935) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_2b5c",
+      "status": "matched",
+      "symbol": "@0+935"
+    },
+    "CODE:2be6": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+1073) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_2be6",
+      "status": "matched",
+      "symbol": "@0+1073"
+    },
+    "CODE:3fe7": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "STBC application main: start-up then endless loop (releases Big chip WAIT 1, runs the liveness check every pass)",
+      "name": "FUN_CODE_3fe7",
+      "status": "matched"
+    },
+    "CODE:4a85": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Leon2 Main core set-up: boot base 0xA0028000 and 7 fixed core registers from CODE 0x8252, then +0x18/+0x1C of the share record",
+      "name": "FUN_CODE_4a85",
+      "status": "matched"
+    },
+    "CODE:5dcb": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Leon2 Sub core set-up: boot base 0xA0060000 and fixed core registers from CODE 0x8292, then +0x1C/+0x20 of the share record",
+      "name": "FUN_CODE_5dcb",
+      "status": "matched"
+    },
+    "CODE:6c34": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "STBC firmware-update command loop: mailbox 0xF250 (cmd) .. 0xF255, ack 0xF260",
+      "name": "FUN_CODE_6c34",
+      "status": "matched"
+    },
+    "CODE:7352": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_738c, in FUN_CODE_738c's code segment; emitted by compiling src/8051_bank1/FUN_CODE_0b0d.c, bytes judged with FUN_CODE_738c over 0x7352..0x74af",
+      "kind": "common_entry",
+      "module": "FUN_CODE_0b0d",
+      "name": "FUN_CODE_7352",
+      "of": "FUN_CODE_738c",
+      "status": "matched"
+    },
+    "CODE:7369": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_738c, in FUN_CODE_738c's code segment; emitted by compiling src/8051_bank1/FUN_CODE_0b0d.c, bytes judged with FUN_CODE_738c over 0x7352..0x74af",
+      "kind": "common_entry",
+      "module": "FUN_CODE_0b0d",
+      "name": "FUN_CODE_7369",
+      "of": "FUN_CODE_738c",
+      "status": "matched"
+    },
+    "CODE:7381": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_738c, in FUN_CODE_738c's code segment; emitted by compiling src/8051_bank1/FUN_CODE_0b0d.c, bytes judged with FUN_CODE_738c over 0x7352..0x74af",
+      "kind": "common_entry",
+      "module": "FUN_CODE_0b0d",
+      "name": "FUN_CODE_7381",
+      "of": "FUN_CODE_738c",
+      "status": "matched"
+    },
+    "CODE:738c": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "flash-to-AHB image copy (src, dst, len, 4-byte-address bit) + its Keil common-entry block 7352/7369/7381",
+      "module": "FUN_CODE_0b0d",
+      "name": "FUN_CODE_738c",
+      "status": "matched"
+    },
+    "CODE:7765": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "updater: save flash status regs and clear protect bits (WRSR)",
+      "name": "FUN_CODE_7765",
+      "status": "matched"
+    },
+    "CODE:7a0b": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "power-off hardware sequence (used by the power-off command and the crash path)",
+      "name": "FUN_CODE_7a0b",
+      "status": "matched"
+    },
+    "CODE:7b5a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "STBC three-core liveness check: a stalled Big/Small chip -> SYSTEM CRASH, RESET, stop both cores, then the 8051 loops forever",
+      "name": "FUN_CODE_7b5a",
+      "status": "matched"
+    },
+    "CODE:7ca8": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "updater: flash read in 0x200 chunks into XDATA",
+      "name": "FUN_CODE_7ca8",
+      "status": "matched"
+    },
+    "CODE:8b58": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "updater: DoBlockErase (flash erase by opcode)",
+      "name": "FUN_CODE_8b58",
+      "status": "matched"
+    },
+    "CODE:8e61": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Leon2 Main RUN: core-control 0x9F020008 |= 0x1000, then &= ~0x1003, via the AHB bridge",
+      "name": "FUN_CODE_8e61",
+      "status": "matched"
+    },
+    "CODE:8f5a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Leon2 Sub RUN: core-control 0x9F120008 |= 0x1000, then &= ~0x1003, via the AHB bridge (twin of 8e61)",
+      "name": "FUN_CODE_8f5a",
+      "status": "matched"
+    },
+    "CODE:9243": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "mailbox service per loop pass (command word -> command switch, then bounded message loops both ways)",
+      "name": "FUN_CODE_9243",
+      "status": "matched"
+    },
+    "CODE:96eb": {
+      "by": "hand",
+      "comment": "helper-chip start-up before the Big chip runs: loads the bank-2 image block, USB key",
+      "name": "FUN_CODE_96eb",
+      "status": "matched"
+    },
+    "CODE:9b11": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "updater (bank1) command check; documented dead re-read of cmd = fw instruction at 0x9B3D",
+      "name": "FUN_CODE_9b11",
+      "status": "matched"
+    },
+    "CODE:9bde": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "switch n 0..12: d9d1(4, mode) / d9d1(3, x) / d9d1(0x54, y) / d645(3, 1, on) register writes, dcf0 bit 0",
+      "name": "FUN_CODE_9bde",
+      "status": "matched"
+    },
+    "CODE:a4e9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "MailBox_Read: n words from the Big chip mailbox",
+      "name": "FUN_CODE_a4e9",
+      "status": "matched"
+    },
+    "CODE:a8bb": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "image-copy DMA without source (fills a window rest; used by 0b0d)",
+      "name": "FUN_CODE_a8bb",
+      "status": "matched"
+    },
+    "CODE:ac5b": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "updater (bank1) - see header",
+      "name": "FUN_CODE_ac5b",
+      "status": "matched"
+    },
+    "CODE:af47": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "bit: (register n & mask) != 0 for n 1..13 = f000..f004, f010, f012, f114..f11e, 14 = P3; else 0",
+      "name": "FUN_CODE_af47",
+      "status": "matched"
+    },
+    "CODE:afdc": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "register set-up by chip id d511 (0x20 / 0x1a): f160..f165, f3e9, f024 / f02c / f02d / f030, f0a6 (volatile: d511 re-read 4x, f02d |= 0xff kept)",
+      "name": "FUN_CODE_afdc",
+      "status": "matched"
+    },
+    "CODE:b228": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "post n words to the Big chip mailbox portal 0x9F0A0100 + off (AHB bridge)",
+      "name": "FUN_CODE_b228",
+      "status": "matched"
+    },
+    "CODE:b456": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "SPI flash: write the saved status register(s) back (Write Status Register)",
+      "name": "FUN_CODE_b456",
+      "status": "matched"
+    },
+    "CODE:bcad": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "AHB bridge 32-bit read (PBus-to-AHB, regs 0xCD80..0xCD8C)",
+      "name": "FUN_CODE_bcad",
+      "status": "matched"
+    },
+    "CODE:bd81": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "SPI flash: program one 256-byte page from XDATA 0x3200 at a 24-bit address",
+      "name": "FUN_CODE_bd81",
+      "status": "matched"
+    },
+    "CODE:beb5": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "AHB bridge 32-bit write (PBus-to-AHB, regs 0xCD80..0xCD8C)",
+      "name": "FUN_CODE_beb5",
+      "status": "matched"
+    },
+    "CODE:bf7b": {
+      "by": "hand",
+      "comment": "register transfer: D80D = 0x2E, D820 = a, D810 = d, wait up to 1000 d94a ticks for D80D & 0x2E (0x55 to F00A/F0E0 each pass), status -> 3/0/3",
+      "name": "FUN_CODE_bf7b",
+      "status": "matched"
+    },
+    "CODE:bfdd": {
+      "by": "hand",
+      "comment": "UART ISR (interrupt 4 using 1): RX byte into ring a1e8[idata 42], TX next byte of ring a1f8 or set idle flag 46",
+      "name": "FUN_CODE_bfdd",
+      "status": "matched"
+    },
+    "CODE:c2d3": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "matches with the LARGE memory model",
+      "name": "FUN_CODE_c2d3",
+      "status": "matched"
+    },
+    "CODE:c32e": {
+      "by": "hand",
+      "comment": "a709 = p; pointer copies a721->a701, a71e->a706, a724->a6fe; bytes a728->a704, a727->a705",
+      "name": "FUN_CODE_c32e",
+      "status": "matched"
+    },
+    "CODE:c43e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "chip-variant flash copy for chip IDs 0x16/0x1E/0x1F/0x17 (not on this monitor's Big-chip window)",
+      "name": "FUN_CODE_c43e",
+      "status": "matched"
+    },
+    "CODE:c544": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "writes the start-up release byte the Big chip's wait 1 polls (mailbox word +0xB8)",
+      "name": "FUN_CODE_c544",
+      "status": "matched"
+    },
+    "CODE:c5f0": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "SPI flash: issue Page Program (02h) for the prepared 256-byte page",
+      "name": "FUN_CODE_c5f0",
+      "status": "matched"
+    },
+    "CODE:c790": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "matches with the LARGE memory model",
+      "name": "FUN_CODE_c790",
+      "status": "matched"
+    },
+    "CODE:c7e0": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "matches with the LARGE memory model",
+      "name": "FUN_CODE_c7e0",
+      "status": "matched"
+    },
+    "CODE:c9b0": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "matches with the LARGE memory model",
+      "name": "FUN_CODE_c9b0",
+      "status": "matched"
+    },
+    "CODE:c9fb": {
+      "by": "hand",
+      "comment": "clear bit 3 of cc8b, regs d904..d90c (as cc7d), 0x3840 NOP delay, d929 = (d6bf() + 1) | 0x40",
+      "name": "FUN_CODE_c9fb",
+      "status": "matched"
+    },
+    "CODE:cad5": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "SPI flash: send a command (0xF0EE) followed by one data byte (0xF1C3)",
+      "name": "FUN_CODE_cad5",
+      "status": "matched"
+    },
+    "CODE:cbac": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Leon2 STOP: core-control = 0x1003 via the AHB bridge",
+      "name": "FUN_CODE_cbac",
+      "status": "matched"
+    },
+    "CODE:cbf2": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Leon2 STOP: core-control = 0x1003 via the AHB bridge",
+      "name": "FUN_CODE_cbf2",
+      "status": "matched"
+    },
+    "CODE:cc7d": {
+      "by": "hand",
+      "comment": "using 3: clear bit 3 of cc8b, set regs d904..d90c (fe 03 04 . . 55 55 84 30), then 0xF0 NOP delay",
+      "name": "FUN_CODE_cc7d",
+      "status": "matched"
+    },
+    "CODE:cd8c": {
+      "by": "hand",
+      "comment": "return ulong a70d[1] - a70d[0] - a717",
+      "name": "FUN_CODE_cd8c",
+      "status": "matched"
+    },
+    "CODE:cdcd": {
+      "by": "hand",
+      "comment": "a76d record bytes 0x48..0x4D = 00 08 7F 04 00 00, F030 |= 4",
+      "name": "FUN_CODE_cdcd",
+      "status": "matched"
+    },
+    "CODE:cf73": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "SPI flash: send a command (0xF0EA), read one byte back from 0xF0EF",
+      "name": "FUN_CODE_cf73",
+      "status": "matched"
+    },
+    "CODE:cfad": {
+      "by": "hand",
+      "comment": "twin of d021: idata 0x4d bytes of a2b0[] to f0fb, status f0fa",
+      "name": "FUN_CODE_cfad",
+      "status": "matched"
+    },
+    "CODE:d021": {
+      "by": "hand",
+      "comment": "send idata 0x53 bytes of a320[] to data reg f073, waiting while status f072 bit 3 is set; then count = 0, f00a = 0x55",
+      "name": "FUN_CODE_d021",
+      "status": "matched"
+    },
+    "CODE:d086": {
+      "by": "hand",
+      "comment": "delay: empty loop i = 0..99 (unsigned int)",
+      "name": "FUN_CODE_d086",
+      "status": "matched"
+    },
+    "CODE:d1a8": {
+      "by": "hand",
+      "comment": "put c into 16-entry ring a1f8[] (head idata 43, tail 45): 0xff if full; EA off; if idle flag idata 46 set: clear it, TI = 1; EA on",
+      "name": "FUN_CODE_d1a8",
+      "status": "matched"
+    },
+    "CODE:d1de": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "reg writes: f04f = 0x10, 0x11; d570 = 0x80, 0x60, 0x40; d571..d577 = 0 0 20 0 0 0 0; cc8b &= 0xf7; printf code 0xcec2 (volatile = registers written twice)",
+      "name": "FUN_CODE_d1de",
+      "status": "matched"
+    },
+    "CODE:d2b4": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "b *= 8; reg 0x29 = (reg 0x29 & 0x13) | (b & 0xe0) | 4 via dd74/dcd3; reg 0x1b = (a << 5) | (b & 0x1e)",
+      "name": "FUN_CODE_d2b4",
+      "status": "matched"
+    },
+    "CODE:d2e9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "res = 5a39() | 82d2(); if res == 0: a629 = 1; else if a629 == 0: res = 0; return res",
+      "name": "FUN_CODE_d2e9",
+      "status": "matched"
+    },
+    "CODE:d31d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Update FE2P Addr: store the new LEON flash window base at XDATA 0xA4B3, print it, set flag 0xA4BF, pass it to FUN_CODE_b228(0xB4, &addr)",
+      "name": "FUN_CODE_d31d",
+      "status": "matched"
+    },
+    "CODE:d3b9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "7ca8(buffer a800, ulong a711, uint a715)",
+      "name": "FUN_CODE_d3b9",
+      "status": "matched"
+    },
+    "CODE:d3eb": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "6f26(buffer a800, ulong a711, uint a715)",
+      "name": "FUN_CODE_d3eb",
+      "status": "matched"
+    },
+    "CODE:d44e": {
+      "by": "hand",
+      "comment": "delay: n++; t0 = d94a(); while (d94a() - t0 < n) f00a = 0x55",
+      "name": "FUN_CODE_d44e",
+      "status": "matched"
+    },
+    "CODE:d4e1": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "set (on) or clear bit 0 of byte 0x10 of the record at pointer a76d",
+      "name": "FUN_CODE_d4e1",
+      "status": "matched"
+    },
+    "CODE:d511": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "retry d1a8(c) (ring put) with a 1000-loop delay, set TI after 0xf0 tries; f00a = 0x55; return c",
+      "name": "FUN_CODE_d511",
+      "status": "matched"
+    },
+    "CODE:d59b": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_d5a1, in FUN_CODE_d5a1's code segment; emitted by compiling src/8051_bank1/FUN_CODE_224f.c, bytes judged with FUN_CODE_d5a1 over 0xd59b..0xd5c8",
+      "kind": "common_entry",
+      "module": "FUN_CODE_224f",
+      "name": "FUN_CODE_d59b",
+      "of": "FUN_CODE_d5a1",
+      "status": "matched"
+    },
+    "CODE:d5a1": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "mailbox portal word clear (same module as 224f)",
+      "module": "FUN_CODE_224f",
+      "name": "FUN_CODE_d5a1",
+      "status": "matched"
+    },
+    "CODE:d5f3": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "SPI flash: send a one-byte command (0xF0EE) and wait for the controller",
+      "name": "FUN_CODE_d5f3",
+      "status": "matched"
+    },
+    "CODE:d61c": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "xdata byte 0x9ab0 + reg: |= mask (on == 1) or &= ~mask",
+      "name": "FUN_CODE_d61c",
+      "status": "matched"
+    },
+    "CODE:d645": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "twin of d61c on array 9a00",
+      "name": "FUN_CODE_d645",
+      "status": "matched"
+    },
+    "CODE:d697": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "ring read: if dce3() == 0: r = a566[a565], a565 wraps at 0x80; else 0xff",
+      "name": "FUN_CODE_d697",
+      "status": "matched"
+    },
+    "CODE:d6bf": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "matches with the LARGE memory model",
+      "name": "FUN_CODE_d6bf",
+      "status": "matched"
+    },
+    "CODE:d6e7": {
+      "by": "hand",
+      "comment": "return 1 if bit 6 of xdata 5407 and 5409 != 0 and 5408 != 0, else 0",
+      "name": "FUN_CODE_d6e7",
+      "status": "matched"
+    },
+    "CODE:d70f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "a73a[min(i, 1)] = ((b & 7) << 5) | (c & 0x1f); a739 = 2",
+      "name": "FUN_CODE_d70f",
+      "status": "matched"
+    },
+    "CODE:d737": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "using 3: return 4d00[idx] (sel 0) or 4e00[idx] (sel 1); other sel leaves r unset as in the fw",
+      "name": "FUN_CODE_d737",
+      "status": "matched"
+    },
+    "CODE:d7ac": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "f0a8 = 0x7f, 0x0f; d44e(20); f0a8 = 0; return 0 < f0ad < 10",
+      "name": "FUN_CODE_d7ac",
+      "status": "matched"
+    },
+    "CODE:d81c": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "SPI flash: write enable, wait WEL, write extended address register (C5h), wait WIP",
+      "name": "FUN_CODE_d81c",
+      "status": "matched"
+    },
+    "CODE:d884": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "using 3: 4d00[idx] (sel 0) or 4e00[idx] (sel 1) = v; 72 callers",
+      "name": "FUN_CODE_d884",
+      "status": "matched"
+    },
+    "CODE:d8a6": {
+      "by": "hand",
+      "comment": "using 3: r = de20(d929 & 0x0f); dcb1[0] = r * 9; dcb1[1] = r * 15",
+      "name": "FUN_CODE_d8a6",
+      "status": "matched"
+    },
+    "CODE:d92a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "bit: d511 == 0x20 and bit 6 of d53f(page, 0x41a) (d511 volatile, as in afdc)",
+      "name": "FUN_CODE_d92a",
+      "status": "matched"
+    },
+    "CODE:d94a": {
+      "by": "hand",
+      "comment": "return a stable copy of the u16 counter idata 0x57 (copy to 0x59 until it equals the re-read counter; 0x57 volatile = real re-read)",
+      "name": "FUN_CODE_d94a",
+      "status": "matched"
+    },
+    "CODE:d9a5": {
+      "by": "hand",
+      "comment": "return u16 from xdata 0x9ab0 + reg (low) and + reg + 1 (high)",
+      "name": "FUN_CODE_d9a5",
+      "status": "matched"
+    },
+    "CODE:d9d1": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "9a00[reg] = val; note: d9c3 falls into it (likely a common-entry block of this module, callers cf38 / c0a1)",
+      "name": "FUN_CODE_d9d1",
+      "status": "matched"
+    },
+    "CODE:da3a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "b = (a6fd & 1) == 1; if b printf 'mrx wake up' (code 0x6aa6); return b",
+      "name": "FUN_CODE_da3a",
+      "status": "matched"
+    },
+    "CODE:da57": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "b = (a6fd & 0x10) == 0x10; if b printf 'mrx1 wake up' (code 0x6ab4); return b",
+      "name": "FUN_CODE_da57",
+      "status": "matched"
+    },
+    "CODE:da74": {
+      "by": "hand",
+      "comment": "bit 0x18 = 0; return (byte 0x10 of record at pointer a76d & 0xc) == 0xc",
+      "name": "FUN_CODE_da74",
+      "status": "matched"
+    },
+    "CODE:da91": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "8b58(a711 / 0x1000, 0x20)",
+      "name": "FUN_CODE_da91",
+      "status": "matched"
+    },
+    "CODE:db05": {
+      "by": "hand",
+      "comment": "if i < 0x10: f230[i] = v",
+      "name": "FUN_CODE_db05",
+      "status": "matched"
+    },
+    "CODE:db18": {
+      "by": "hand",
+      "comment": "if d511 == 0x1a and d510 >= 1: f06b = 3, then 1",
+      "name": "FUN_CODE_db18",
+      "status": "matched"
+    },
+    "CODE:db32": {
+      "by": "hand",
+      "comment": "a2b0[idata 4d++] = v; flush via cfad() when count >= 0x37",
+      "name": "FUN_CODE_db32",
+      "status": "matched"
+    },
+    "CODE:db4b": {
+      "by": "hand",
+      "comment": "a2e8[idata 50++] = v; flush via cfe7() when count >= 0x37",
+      "name": "FUN_CODE_db4b",
+      "status": "matched"
+    },
+    "CODE:db64": {
+      "by": "hand",
+      "comment": "a320[idata 53++] = v; flush via d021() when count >= 0x37",
+      "name": "FUN_CODE_db64",
+      "status": "matched"
+    },
+    "CODE:dbdf": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "b228(0xb0, &v, 1) with the ulong argument v; callers 0x21b3 (LJMP), 0x244b",
+      "name": "FUN_CODE_dbdf",
+      "status": "matched"
+    },
+    "CODE:dcbb": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "clear xdata a6af[0..0x11]",
+      "name": "FUN_CODE_dcbb",
+      "status": "matched"
+    },
+    "CODE:dcd3": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "write val to the xdata byte at 0x9ab0 + reg (generic pointer; twin of dd74)",
+      "name": "FUN_CODE_dcd3",
+      "status": "matched"
+    },
+    "CODE:dce3": {
+      "by": "hand",
+      "comment": "return a564 == a565",
+      "name": "FUN_CODE_dce3",
+      "status": "matched"
+    },
+    "CODE:dd09": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "printf 'Enable_DPMRX' (code 0x6ad8), then 8a51(0), 8a51(1); twin of de2e 'Disable_DPMRX'",
+      "name": "FUN_CODE_dd09",
+      "status": "matched"
+    },
+    "CODE:dd74": {
+      "by": "hand",
+      "comment": "return the xdata byte at 0x9ab0 + reg (generic pointer)",
+      "name": "FUN_CODE_dd74",
+      "status": "matched"
+    },
+    "CODE:dd96": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "fill xdata a800[0..0x7ff] with 0xff",
+      "name": "FUN_CODE_dd96",
+      "status": "matched"
+    },
+    "CODE:ddb6": {
+      "by": "hand",
+      "comment": "bit: (a3e3 >> n) & 1",
+      "name": "FUN_CODE_ddb6",
+      "status": "matched"
+    },
+    "CODE:dde5": {
+      "by": "twin",
+      "c51opts": "OPTIMIZE(7,SPEED)",
+      "comment": "twin of 8051_bank2/FUN_CODE_e4e9",
+      "name": "FUN_CODE_dde5",
+      "status": "matched"
+    },
+    "CODE:ddf4": {
+      "by": "hand",
+      "comment": "a3e2++, wraps to 0 at 4",
+      "name": "FUN_CODE_ddf4",
+      "status": "matched"
+    },
+    "CODE:de03": {
+      "by": "hand",
+      "comment": "a73a = v (u16); a739 = 1",
+      "name": "FUN_CODE_de03",
+      "status": "matched"
+    },
+    "CODE:de12": {
+      "by": "hand",
+      "comment": "bit: u16 a3ea == 0",
+      "name": "FUN_CODE_de12",
+      "status": "matched"
+    },
+    "CODE:de50": {
+      "by": "hand",
+      "comment": "bit: ce87() == 0xff",
+      "name": "FUN_CODE_de50",
+      "status": "matched"
+    },
+    "CODE:de92": {
+      "by": "hand",
+      "comment": "bit: dee2() == 0",
+      "name": "FUN_CODE_de92",
+      "status": "matched"
+    },
+    "CODE:dea6": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "bit: dce3() == 1",
+      "name": "FUN_CODE_dea6",
+      "status": "matched"
+    },
+    "CODE:deb0": {
+      "by": "hand",
+      "comment": "test-and-clear bit 22.1, return the old value",
+      "name": "FUN_CODE_deb0",
+      "status": "matched"
+    },
+    "CODE:dedc": {
+      "by": "twin",
+      "c51opts": "OPTIMIZE(7,SPEED)",
+      "comment": "twin of 8051_bank2/FUN_CODE_00f6",
+      "name": "FUN_CODE_dedc",
+      "status": "matched"
+    },
+    "CODE:dee2": {
+      "by": "twin",
+      "c51opts": "OPTIMIZE(7,SPEED)",
+      "comment": "twin of 8051_bank1/FUN_CODE_dedc",
+      "name": "FUN_CODE_dee2",
+      "status": "matched"
+    },
+    "CODE:df0f": {
+      "by": "template",
+      "c51opts": "OPTIMIZE(7,SPEED)",
+      "comment": "template",
+      "name": "FUN_CODE_df0f",
+      "status": "matched"
+    },
+    "CODE:df14": {
+      "by": "template",
+      "c51opts": "OPTIMIZE(7,SPEED)",
+      "comment": "template",
+      "name": "FUN_CODE_df14",
+      "status": "matched"
+    },
+    "CODE:df16": {
+      "by": "template",
+      "c51opts": "OPTIMIZE(7,SPEED)",
+      "comment": "template",
+      "name": "FUN_CODE_df16",
+      "status": "matched"
+    },
+    "CODE:df17": {
+      "by": "template",
+      "c51opts": "OPTIMIZE(7,SPEED)",
+      "comment": "template",
+      "name": "FUN_CODE_df17",
+      "status": "matched"
+    },
+    "ram:236e": {
+      "by": "hand",
+      "comment": "Accesses consecutive xdata bytes through one incremented pointer so that Keil keeps DPTR and emits INC DPTR between byte accesses instead of a separate MOV DPTR per byte. The second access to 0xa4ae goes through a fresh pointer cast, which reproduces the DPTR reload at that point.",
+      "name": "FUN_CODE_236e",
+      "status": "matched"
+    },
+    "ram:9f04": {
+      "by": "hand",
+      "comment": "Calls FUN_CODE_2820 (printf, declared `extern void FUN_CODE_2820(void *fmt, ...) large;`) with the generic code pointer 0xffdd52, passed as a `(void code *)` constant so that it is loaded into R3:R2:R1 (MOV R3,#0xff; MOV R2,#0xdd; MOV R1,#0x52) before the LCALL.",
+      "name": "FUN_CODE_9f04",
+      "status": "matched"
+    },
+    "ram:b06f": {
+      "by": "hand",
+      "comment": "Writes 0xFF to xdata register 0xd910 and related xdata registers via MOV DPTR,#addr; MOV A,#imm; MOVX @DPTR,A, clears a bdata bit (sbit), and ends with a tail call to FUN_CODE_cd07 emitted as LJMP. The registers must be declared xdata so Keil uses MOVX @DPTR addressing instead of direct addressing.",
+      "name": "FUN_CODE_b06f",
+      "status": "matched"
+    },
+    "ram:b192": {
+      "by": "hand",
+      "comment": "Busy-waits on bit 1 of an xdata status register, compiled as ANL A,#2 / JNZ (an integer comparison in source, not a bit test that would emit JB ACC.1), then performs a dummy read of xdata 0xf1c0 whose value is stored to R4 before A is cleared, so the read value must be used in source.",
+      "name": "FUN_CODE_b192",
+      "status": "matched"
+    },
+    "ram:bbca": {
+      "by": "hand",
+      "comment": "The function takes two byte parameters: a mask and a value. For each of the 7 low bits set in the mask, it sets bit 7 of the corresponding high register (0xF181, 0xF183, ..., 0xF18D) and writes the value byte to the adjacent low register (0xF180, 0xF182, ..., 0xF18C). The structure is a sequence of independent if-blocks in ascending bit order, each performing a read-modify-write on the high register followed by a write to the low register. The mask is kept in R6 (matching the target's `MOV R6,R7` at entry) and the value in R5, matching the register usage in the firmware's byte pattern.",
+      "name": "FUN_CODE_bbca",
+      "status": "matched"
+    },
+    "ram:bde9": {
+      "by": "hand",
+      "comment": "Takes a bitmask sel (R7) and a value val (R5). Clears the LSB of val (keeps bits 1-7), then for each set bit in sel writes (current_value & 1) | val to the matching XDATA register: bit 0 -> 0xF040, bit 1 -> 0xF048, bit 2 -> 0xF090, bit 3 -> 0xF098, bit 4 -> 0xF0A2, bit 5 -> 0xF0BF, bit 6 -> 0xF147, bit 7 -> 0xF01B. The MOV R4,AR7 copy in the target is how Keil copies the first parameter.",
+      "name": "FUN_CODE_bde9",
+      "status": "matched"
+    },
+    "ram:c085": {
+      "by": "hand",
+      "comment": "The function reads two xdata registers at 0xf021 and 0xf022, masks each with 0xF0, and ORs in a shared value from 0xa1e7, then writes back to the respective registers. The main uncertainty is whether the value at 0xa1e7 is read once or twice \u2014 the assembly reads it once into R6 and reuses it for both OR operations, which matches the C above.",
+      "name": "FUN_CODE_c085",
+      "status": "matched"
+    },
+    "ram:c278": {
+      "by": "hand",
+      "comment": "Clears bit 0 of eight xdata registers, one per set bit of the byte parameter (copied to R5): bit 0 -> 0xf040, bit 1 -> 0xf048, bit 2 -> 0xf090, bit 3 -> 0xf098, bit 4 -> 0xf0a2, bit 5 -> 0xf0bf, bit 6 -> 0xf147, bit 7 -> 0xf01b. Each bit test is followed by a read-modify-write of its register; `param_1 & (1 << n)` and `(param_1 >> n) & 1` compile identically.",
+      "name": "FUN_CODE_c278",
+      "status": "matched"
+    },
+    "ram:cfe7": {
+      "by": "hand",
+      "comment": "Accesses IDATA byte DAT_INTMEM_50 at 0x50 through MOV R0,#0x50 indirect addressing. The variable is defined (not declared extern) as unsigned char idata DAT_INTMEM_50 _at_ 0x50, since Keil rejects extern with _at_.",
+      "name": "FUN_CODE_cfe7",
+      "status": "matched"
+    },
+    "ram:d13a": {
+      "by": "hand",
+      "comment": "Makes five calls that pass a byte in R7, a byte in R5 and a 16-bit word in R2:R3 (R2 high, R3 low): (0x00, 0x80, 0x01c2), (0x10, 0x00, 0x0640), (0x20, 0x80, 0x0002), (0x30, 0x80, 0x001c), (0x50, 0x80, 0x0136). The callee prototype is (unsigned char, unsigned char, unsigned int).",
+      "name": "FUN_CODE_d13a",
+      "status": "matched"
+    },
+    "ram:d24a": {
+      "by": "hand",
+      "comment": "Interrupt-style function using register bank 3 (`using 3`, MOV PSW,#0x18). It tests bit 7 of DAT_EXTMEM_d90b with the sequence ANL A,#0x80; XRL A,#0x80; JNZ, which requires the source form `if ((DAT_EXTMEM_d90b & 0x80) ^ 0x80)` rather than a plain bit test (which compiles to XRL/JB ACC.7).",
+      "name": "FUN_CODE_d24a",
+      "status": "matched"
+    },
+    "ram:d5c8": {
+      "by": "hand",
+      "comment": "This function writes a constant to one xdata register, clears bit 7 of another, then branches on whether a third register equals 0x20 (space): if equal, it keeps only bit 0 of a fourth register; otherwise keeps the low nibble. It then sets bit 0 of a fifth register and tail-calls `FUN_CODE_daad`. The main uncertainty is whether the final call is truly a tail call (LJMP) rather than a call followed by return; the assembly uses LJMP, so this should match.",
+      "name": "FUN_CODE_d5c8",
+      "status": "matched"
+    },
+    "ram:d66e": {
+      "by": "autoc",
+      "comment": "mechanical match (tools/auto8051.py); not yet named or documented",
+      "name": "FUN_CODE_d66e",
+      "status": "matched"
+    },
+    "ram:d75e": {
+      "by": "autoc",
+      "comment": "mechanical match (tools/auto8051.py); not yet named or documented",
+      "name": "FUN_CODE_d75e",
+      "status": "matched"
+    },
+    "ram:d7d2": {
+      "by": "hand",
+      "comment": "Calls FUN_CODE_df0b and tests carry: if set, returns the 32-bit constant 0x00B71B00; otherwise reads xdata 0xd511 and returns 0x02DC6C00 if it equals 0x20, else 0x05B8D800. The 32-bit result is returned in R4:R7 (R4 MSB, R7 LSB); R7 is loaded with 0x00 once before the CJNE and shared by both branches.",
+      "name": "FUN_CODE_d7d2",
+      "status": "matched"
+    },
+    "ram:d862": {
+      "by": "hand",
+      "comment": "The key change is swapping the branch order: the firmware tests `JNZ` (jump if non-zero) to the else path, so the `if (a565 == 0)` case must come first in source. The `else` handles the non-zero case with the subtraction comparison. This matches the target's control flow exactly \u2014 the zero test comes first, and the non-zero path (subtraction) is at the end.",
+      "name": "FUN_CODE_d862",
+      "status": "matched"
+    },
+    "ram:d8c8": {
+      "by": "hand",
+      "comment": "Reads the status byte at xdata 0xA6A6. If it equals 1, writes 0x20 to 0xA66E; otherwise writes 0x10 to 0xA66E, sets SFR bit 0xD2.7, writes 2 to 0xA781 and calls FUN_CODE_a9f6. In both cases it then calls FUN_CODE_d4e1(0).",
+      "name": "FUN_CODE_d8c8",
+      "status": "matched"
+    },
+    "ram:d969": {
+      "by": "hand",
+      "comment": "Tests whether the absolute difference of two unsigned bytes is below a limit: if param_1 <= param_2 (MOV A,R7; SETB CY; SUBB A,R5; JC to 0xd97a) it checks param_2 - param_1 < param_3, otherwise param_1 - param_2 < param_3. The SETB CY form of the first comparison comes from an unsigned `>` comparison in the source; a `>=` comparison emits CLR C instead.",
+      "name": "FUN_CODE_d969",
+      "status": "matched"
+    },
+    "ram:d987": {
+      "by": "hand",
+      "comment": "Initializes UART and timer configuration: two calls followed by SFR and bit writes, in order, that enable both timers, external interrupts, the timer 0 interrupt and the serial interrupt, and set the serial interrupt priority. The sfr/sbit addresses are the standard 8052 ones.",
+      "name": "FUN_CODE_d987",
+      "status": "matched"
+    },
+    "ram:db7d": {
+      "by": "hand",
+      "comment": "Tests a bit of an xdata byte with ANL A,#mask followed by JZ rather than JNB ACC.x; the source must express the test as a mask operation (via a temporary or volatile access) so Keil emits the ANL.",
+      "name": "FUN_CODE_db7d",
+      "status": "matched"
+    },
+    "ram:dbf6": {
+      "by": "hand",
+      "comment": "",
+      "name": "FUN_CODE_dbf6",
+      "status": "matched"
+    },
+    "ram:dc3b": {
+      "by": "hand",
+      "comment": "Calls thunk_FUN_CODE_deff (LCALL 0xDEFF).",
+      "name": "FUN_CODE_dc3b",
+      "status": "matched"
+    },
+    "ram:dc51": {
+      "by": "autoc",
+      "comment": "mechanical match (tools/auto8051.py); not yet named or documented",
+      "name": "FUN_CODE_dc51",
+      "status": "matched"
+    },
+    "ram:dc67": {
+      "by": "autoc",
+      "comment": "mechanical match (tools/auto8051.py); not yet named or documented",
+      "name": "FUN_CODE_dc67",
+      "status": "matched"
+    },
+    "ram:dc92": {
+      "by": "hand",
+      "comment": "Loads the generic code pointer 0xffb545 (R3=0xff, R2=0xb5, R1=0x45) as the call argument. In Keil's generic pointer format R3 holds the memory-type byte, R2 the high byte and R1 the low byte, so the constant is written as 0xffb545.",
+      "name": "FUN_CODE_dc92",
+      "status": "matched"
+    },
+    "ram:dcf6": {
+      "by": "hand",
+      "comment": "The issue is the argument order in the call. Keil C51 passes the first byte parameter in R7 and the second in R5. The target has `MOV R5,#0` then `MOV R7,#1`, meaning the first argument is 1 and the second is 0. Ghidra's decompilation showed `FUN_CODE_c389(0,1)` but the actual assembly shows R7=1, R5=0, so the arguments are reversed.",
+      "name": "FUN_CODE_dcf6",
+      "status": "matched"
+    },
+    "ram:dd41": {
+      "by": "hand",
+      "comment": "Clears the flag at xdata 0xa629, calls FUN_CODE_d94a, which returns an unsigned int in R6:R7, and stores that value big-endian to xdata 0xa5eb-0xa5ec. The function takes no parameters; R6:R7 after the call is the return value of FUN_CODE_d94a.",
+      "name": "FUN_CODE_dd41",
+      "status": "matched"
+    },
+    "ram:dd63": {
+      "by": "hand",
+      "comment": "Writes 1 to xdata 0xa70c if its parameter (R7) equals 1, otherwise writes 0, using an if/else with a separate store in each branch.",
+      "name": "FUN_CODE_dd63",
+      "status": "matched"
+    },
+    "ram:de20": {
+      "by": "hand",
+      "comment": "`using 3` corresponds to register bank 3 (PSW bits RS0=1, RS1=1), which gives PSW value 0x18. This should match the target exactly.",
+      "name": "FUN_CODE_de20",
+      "status": "matched"
+    },
+    "ram:de2e": {
+      "by": "hand",
+      "comment": "Calls FUN_CODE_2820 with the generic pointer to code address 0x6ae7 (R3=0xff code-space type byte, R2=0x6a, R1=0xe7), then tail-jumps (LJMP) to FUN_CODE_d75e. The pointer is held in a local generic `void *` variable to force the three-byte generic representation; the call followed by return compiles to the tail jump under OPTIMIZE(7,SPEED).",
+      "name": "FUN_CODE_de2e",
+      "status": "matched"
+    },
+    "ram:de3a": {
+      "by": "hand",
+      "comment": "Stores its first byte parameter (R7) to xdata 0xD820 and its second byte parameter (R5) to xdata 0xD810, each as MOV DPTR,#addr; MOV A,Rn; MOVX @DPTR,A, in that order, using absolute xdata variable declarations.",
+      "name": "FUN_CODE_de3a",
+      "status": "matched"
+    },
+    "ram:de45": {
+      "by": "hand",
+      "comment": "",
+      "name": "FUN_CODE_de45",
+      "status": "matched"
+    },
+    "ram:de5b": {
+      "by": "hand",
+      "comment": "Reads xdata 0xa35f and returns a bit in carry: carry cleared if the byte equals 1, carry set otherwise. The source return type is bit.",
+      "name": "FUN_CODE_de5b",
+      "status": "matched"
+    },
+    "ram:de66": {
+      "by": "hand",
+      "comment": "Writes the constant 0x37 to xdata 0xd507 and 0xd508 as two direct MOVX stores; returns void.",
+      "name": "FUN_CODE_de66",
+      "status": "matched"
+    },
+    "ram:de71": {
+      "by": "hand",
+      "comment": "Writes the constant 0x88 to xdata 0xd507 and 0xd508 as two direct MOVX stores; returns void.",
+      "name": "FUN_CODE_de71",
+      "status": "matched"
+    },
+    "ram:de7c": {
+      "by": "hand",
+      "comment": "",
+      "name": "FUN_CODE_de7c",
+      "status": "matched"
+    },
+    "ram:de9c": {
+      "by": "hand",
+      "comment": "Reads xdata 0xa46c and returns a bit in carry: set if the byte is non-zero, cleared if zero. Both paths end in RET; the source return type is bit.",
+      "name": "FUN_CODE_de9c",
+      "status": "matched"
+    },
+    "ram:deb9": {
+      "by": "hand",
+      "comment": "Copies one byte from xdata 0xa565 (DAT_EXTMEM_a565) to xdata 0xa564 (DAT_EXTMEM_a564). No calls, branches or loops.",
+      "name": "FUN_CODE_deb9",
+      "status": "matched"
+    },
+    "ram:dec2": {
+      "by": "hand",
+      "comment": "Writes its first byte parameter to xdata 0xa73c and its second to 0xa73d with one DPTR load and an increment (MOV DPTR,#0xa73c; MOVX @DPTR; INC DPTR; MOVX @DPTR). Writing the two targets as elements of an array (or through one pointer) produces this sequence.",
+      "name": "FUN_CODE_dec2",
+      "status": "matched"
+    },
+    "ram:decb": {
+      "by": "hand",
+      "comment": "Writes its first parameter (R7) to xdata 0xa73e and its second parameter (R5) to 0xa73f through a volatile xdata pointer initialized to 0xa73e and incremented between stores: MOV DPTR,#0xa73e; MOV A,R7; MOVX @DPTR,A; INC DPTR; MOV A,R5; MOVX @DPTR,A; RET.",
+      "name": "FUN_CODE_decb",
+      "status": "matched"
+    },
+    "ram:dee8": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Stores the 32-bit value v (passed in R4..R7) to xdata 0xA717: MOV DPTR,#0xA717 followed by a tail jump to the library routine ?C?LSTXDATA (FUN_CODE_09b1).",
+      "name": "FUN_CODE_dee8",
+      "status": "matched"
+    },
+    "ram:deee": {
+      "by": "hand",
+      "comment": "Writes its byte parameter (R7) to xdata 0xA62E: MOV DPTR,#0xA62E; MOV A,R7; MOVX @DPTR,A.",
+      "name": "FUN_CODE_deee",
+      "status": "matched"
+    },
+    "ram:def4": {
+      "by": "hand",
+      "comment": "This function simply calls two other functions in sequence: first `FUN_CODE_dcf6` then `FUN_CODE_d987`. It matches the target's two-instruction structure exactly. There are no parameters, return values, or branches to worry about. The only uncertainty is whether the compiler might reorder or inline these calls, but with the given optimization settings and separate external functions, it should produce the direct LCALL/LJMP sequence as expected.",
+      "name": "FUN_CODE_def4",
+      "status": "matched"
+    }
+  }
+}
