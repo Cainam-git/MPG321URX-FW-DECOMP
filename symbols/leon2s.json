@@ -4178,6 +4178,12 @@
       "name": "FUN_a0098b60",
       "status": "matched"
     },
+    "ram:a0099560": {
+      "by": "h16",
+      "comment": "clears bytes 0x8e/0x8f/0x91/0x92..0x95 of record DAT_a807d680[port], sets 0x90 = 100 / DAT_a8078630 (0 if zero), clears 0x50 bytes at +0x3e",
+      "name": "FUN_a0099560",
+      "status": "matched"
+    },
     "ram:a0099610": {
       "by": "hand",
       "comment": "resets bytes 0xaa..0xaf of record port of DAT_a807d680 (0xac = 100 / DAT_a8078630) and clears 20 bytes at 0x96",
