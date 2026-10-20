@@ -5230,6 +5230,13 @@
       "name": "FUN_a00bc258",
       "status": "matched"
     },
+    "ram:a00bc3b0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Reply builder: '0','0','0'+byte 0xa802d2a1 into reply bytes 7-9, header 6, send 11 bytes",
+      "name": "FUN_a00bc3b0",
+      "status": "matched"
+    },
     "ram:a00bc3f8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
