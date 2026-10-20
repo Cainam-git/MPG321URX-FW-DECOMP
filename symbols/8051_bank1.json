@@ -871,6 +871,12 @@
       "name": "FUN_CODE_bfdd",
       "status": "matched"
     },
+    "CODE:c1c1": {
+      "by": "hand",
+      "comment": "bank-3 event check: DCDF/DCDE and DCCF/DCCE pending bits -> 9339/b979 or 914b/b8fd, then d214 unless chip 0x20",
+      "name": "FUN_CODE_c1c1",
+      "status": "matched"
+    },
     "CODE:c2d3": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
