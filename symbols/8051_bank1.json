@@ -1009,6 +1009,13 @@
       "name": "FUN_CODE_d1de",
       "status": "matched"
     },
+    "CODE:d27f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "look up a key in the ten-entry table at XDATA 0xA62F and return byte 2 of the entry, 0xFF if absent",
+      "name": "FUN_CODE_d27f",
+      "status": "matched"
+    },
     "CODE:d2b4": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
