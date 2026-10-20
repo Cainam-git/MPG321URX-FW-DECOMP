@@ -8553,6 +8553,13 @@
       "name": "FUN_a00fe4a4",
       "status": "matched"
     },
+    "ram:a00fe6c8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns 0x51/0x61 or 0x71/0x81 from three hardware register bits",
+      "name": "FUN_a00fe6c8",
+      "status": "matched"
+    },
     "ram:a00fe820": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
