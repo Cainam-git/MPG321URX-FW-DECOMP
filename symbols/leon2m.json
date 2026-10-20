@@ -5278,6 +5278,13 @@
       "name": "FUN_a00c16b0",
       "status": "matched"
     },
+    "ram:a00c18cc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: digit 0-3 -> FUN_a014459c into record byte 0x1e unless unchanged, FUN_a00d9238, cff4 bit 10, reply 5600+",
+      "name": "FUN_a00c18cc",
+      "status": "matched"
+    },
     "ram:a00c1d54": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
