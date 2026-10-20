@@ -7904,6 +7904,13 @@
       "name": "FUN_a00dcec4",
       "status": "matched"
     },
+    "ram:a00dd250": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "prints n words around addr as lines of address, hex bytes and characters through FUN_a00def40 / FUN_a00deffc / FUN_a00df0f4 / FUN_a00deef0",
+      "name": "FUN_a00dd250",
+      "status": "matched"
+    },
     "ram:a00dd3d4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
