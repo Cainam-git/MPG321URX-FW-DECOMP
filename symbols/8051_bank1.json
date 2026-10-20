@@ -871,6 +871,13 @@
       "name": "FUN_CODE_bfdd",
       "status": "matched"
     },
+    "CODE:c163": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "poll mailbox word 0xB8 until its low byte is 1 (max 20000 reads); 1 = ready, 0 = time-out",
+      "name": "FUN_CODE_c163",
+      "status": "matched"
+    },
     "CODE:c1c1": {
       "by": "hand",
       "comment": "bank-3 event check: DCDF/DCDE and DCCF/DCCE pending bits -> 9339/b979 or 914b/b8fd, then d214 unless chip 0x20",
