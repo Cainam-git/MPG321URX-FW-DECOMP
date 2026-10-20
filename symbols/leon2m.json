@@ -2633,6 +2633,13 @@
       "name": "FUN_a0092648",
       "status": "matched"
     },
+    "ram:a00926c8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Steps the selection word 0xa802afec backwards through 0x23..0x25 and updates the dependent settings",
+      "name": "FUN_a00926c8",
+      "status": "matched"
+    },
     "ram:a0092908": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
