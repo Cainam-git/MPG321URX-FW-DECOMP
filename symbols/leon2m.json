@@ -2330,6 +2330,13 @@
       "name": "FUN_a008ac00",
       "status": "matched"
     },
+    "ram:a008ac90": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "FUN_a0146b50, then FUN_a00a31a4 with the data at 0x1002a8 or 0x1002a0 depending on FUN_a0145af8",
+      "name": "FUN_a008ac90",
+      "status": "matched"
+    },
     "ram:a008b2bc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
