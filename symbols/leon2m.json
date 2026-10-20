@@ -5110,6 +5110,13 @@
       "name": "FUN_a00c16b0",
       "status": "matched"
     },
+    "ram:a00c29d8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: digit 0-4 into byte 0xa802d3cf, conditional FUN_a0090fd8/fac refresh, reply 5600+",
+      "name": "FUN_a00c29d8",
+      "status": "matched"
+    },
     "ram:a00c3380": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
