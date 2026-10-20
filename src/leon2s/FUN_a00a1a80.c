@@ -1,9 +1,8 @@
 /* leon2s FUN_a00a1a80 @ 0xa00a1a80-0xa00a1b08 (34 words), flags -mcpu=v8 -Os -g.
- * Code facts: for u8 i = 0..1 over the 400-byte records DAT_a807d7e0[i]: when byte +3 != 0: byte +2 = 1,
- * FUN_a009e9cc(i) if byte +1 == 1 else FUN_a009e9fc(i), then byte +1 = 0 (address recomputed after the call);
- * when byte +3 == 0: byte +2 = 0. void(void).
- * Fix vs the autoc draft: BEHAVIOUR: the draft used base a807d7e1 and so tested +1/+2/+3 one byte off and
- * cleared the wrong bytes; the != 0 arm comes first. Aids: none.
+ * For u8 i = 0..1 over the 400-byte records DAT_a807d7e0[i]: when byte +3 != 0: byte +2 = 1,
+ * FUN_a009e9cc(i) if byte +1 == 1 else FUN_a009e9fc(i), then byte +1 = 0 (address recomputed after the
+ * call); when byte +3 == 0: byte +2 = 0. void(void).
+ * The base is DAT_a807d7e0 (not 0xa807d7e1). Source form: the != 0 arm comes first.
  */
 extern unsigned char DAT_a807d7e0[];
 extern void FUN_a009e9cc(unsigned char);

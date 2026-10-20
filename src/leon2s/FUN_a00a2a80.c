@@ -1,9 +1,8 @@
 /* leon2s FUN_a00a2a80 @ 0xa00a2a80-0xa00a2b08 (34 words), flags -mcpu=v8 -Os -g.
- * Code facts: for both ports i = 0, 1 (u8): p = word 0 (a register-block pointer) of the
- * 0x34-byte record ARR_a807db00[i]; mode 1: p[1] |= 0xff00; mode 0: p[1] = (p[1] & 0xffff00ff) |
- * 0x1000; other modes: nothing. Returns 0.
- * Fix vs the autoc draft (82.35): written as the record array with a pointer field (the draft's
- * goto-merged arms and 64-bit return); plain for loop; int 0 return. Aids: none.
+ * For both ports i = 0, 1 (u8): p = word 0 (a register-block pointer) of the 0x34-byte record
+ * ARR_a807db00[i]; mode 1: p[1] |= 0xff00; mode 0: p[1] = (p[1] & 0xffff00ff) | 0x1000; other modes:
+ * nothing. Returns 0.
+ * Source form: the record array with a pointer field; a plain for loop; an int 0 return.
  */
 struct Port34 { unsigned int *regs; unsigned char rest[0x30]; };
 extern struct Port34 ARR_a807db00[];

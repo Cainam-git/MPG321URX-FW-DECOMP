@@ -1,8 +1,8 @@
 /*
  * FUN_a00a2f70 (leon2s, 0xa00a2f70-0xa00a2fd0, 96 bytes, leaf with sibcalls), flags -mcpu=v8 -Os -g.
- * Code facts: blk = the pointer at +0x30 of the 0x34-byte port record ARR_a807db00[port]. on != 0:
- * blk[2] low 6 bits = v (u8), then FUN_a00a73ac(7, &blk[2]); on == 0: FUN_a00a73d4(7, &blk[2]). Both
- * are leaf tail calls. The draft used the mid-record name DAT_a807db30. Aids: none.
+ * blk = the pointer at +0x30 of the 0x34-byte port record ARR_a807db00[port]. on != 0: blk[2] low 6 bits
+ * = v (u8), then FUN_a00a73ac(7, &blk[2]); on == 0: FUN_a00a73d4(7, &blk[2]). Both are leaf tail calls.
+ * The base is ARR_a807db00 (not the mid-record address 0xa807db30).
  */
 struct Port34 { unsigned char pad[0x30]; unsigned int *blk; };
 extern struct Port34 ARR_a807db00[];

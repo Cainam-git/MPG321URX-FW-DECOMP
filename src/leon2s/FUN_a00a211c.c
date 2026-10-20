@@ -1,14 +1,14 @@
 /* FUN_a00a211c (leon2s, 0xa00a211c-0xa00a2230, 276 bytes, 69 words).
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: port = (u8)param_1; regs = word +4 of the 52-byte port record DAT_a807db00[port];
- * n = (regs[2] & 0xff) << 16 | regs[1] >> 16 (24 bits), m = regs[3] & 0xffffff. When both are
- * non-zero: rate = FUN_a00a20c4(port) / 10 for mode 0 (mode = (u8)FUN_a00a20a8(port)), 0xa6/0x14d/
- * 0x1bc/0x22b for modes 1..4, 0x29a for 5 and 6, 0 otherwise (jump table); returns
- * (u16)((rate * n / m * 10000) >> 7). Else returns 0.
- * Fix vs draft: the register block behind record word +4 is volatile: the fw reads the FULL words
- * at +4/+8/+0xc (ld) and extracts the fields; a plain pointer lets gcc narrow them to ldub/lduh.
- * Same MMIO-pointer convention as FUN_a0098300 (record word +0x18) and the src users of record
- * word +0 (FUN_a00a7408 reads, RMW at +0x84 in FUN_a009c6e4). Aids: none.
+ * port = (u8)param_1; regs = word +4 of the 52-byte port record DAT_a807db00[port];
+ * n = (regs[2] & 0xff) << 16 | regs[1] >> 16 (24 bits), m = regs[3] & 0xffffff. When both are non-zero:
+ * rate = FUN_a00a20c4(port) / 10 for mode 0 (mode = (u8)FUN_a00a20a8(port)), 0xa6/0x14d/0x1bc/0x22b for
+ * modes 1..4, 0x29a for 5 and 6, 0 otherwise (jump table); returns (u16)((rate * n / m * 10000) >> 7).
+ * Else returns 0.
+ * The register block behind record word +4 is volatile: the firmware reads the full words at +4/+8/+0xc (ld)
+ * and extracts the fields; a plain pointer lets gcc narrow them to ldub/lduh. Same MMIO-pointer convention as
+ * FUN_a0098300 (record word +0x18) and the src users of record word +0 (FUN_a00a7408 reads, read-modify-write
+ * at +0x84 in FUN_a009c6e4).
  */
 /* FUN_a00a211c at 0xa00a211c */
 struct port_regs {

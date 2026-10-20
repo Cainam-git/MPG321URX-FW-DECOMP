@@ -1,11 +1,14 @@
 /* FUN_a00a3578 (leon2s, 0xa00a3578-0xa00a3788, 132 words). Flags -mcpu=v8 -Os -g.
- Code facts: TxFFE mode set-up for port (u8 p1), mode = (u8)p2. mode 2: print 'TxFFE De-Emphasis', a80cc(port,1,0x7d,0x10,1),
- e0f0(port,3,T[idx].a), e200(port,T[idx].b) with T = 2-byte records at 0xa807872a, idx = DAT_a80791f0[port], tail e3c0(port,0,p3..p6).
- mode 1: 'TxFFE_Preshoot', e0f0(port,3,0xe), e200(port,0), tail e3c0(port,3,p3..p6). mode 3: 'TxFFE_NO', read-modify-writes of regs
- 1/8 (|0xf0), 1/0xe (&0xf8 then &0x8f), 1/0x7c (&0xcf). Else: print 'TxFFE_Normal(Exit Mode)[%d]' WITH mode (fw keeps mode in %o1),
- a80cc(...,0), regs 4/0xe2 and 4/0xe3 = low/high byte of u16 ARR_a8078732[idx].
- Fixes vs draft: the exit-mode print takes the mode argument (this was the whole %o1 vs %i1 difference), the 0x72a/0x72b tables
- are one array of {u8 a, b} records (fw base+1 load). Aids: none.
+ * TxFFE mode set-up for port (u8 p1), mode = (u8)p2. Callees by their last hex digits: a80cc = FUN_a00a80cc,
+ * e0f0 = FUN_a008e0f0, e200 = FUN_a008e200, e3c0 = FUN_a008e3c0.
+ * mode 2: print 'TxFFE De-Emphasis', a80cc(port, 1, 0x7d, 0x10, 1), e0f0(port, 3, T[idx].a),
+ * e200(port, T[idx].b) with T = 2-byte records at 0xa807872a, idx = DAT_a80791f0[port], tail
+ * e3c0(port, 0, p3..p6).
+ * mode 1: 'TxFFE_Preshoot', e0f0(port, 3, 0xe), e200(port, 0), tail e3c0(port, 3, p3..p6).
+ * mode 3: 'TxFFE_NO', read-modify-writes of regs 1/8 (|0xf0), 1/0xe (&0xf8 then &0x8f), 1/0x7c (&0xcf).
+ * Else: print 'TxFFE_Normal(Exit Mode)[%d]' with mode as its argument (in %o1), a80cc(..., 0), regs 4/0xe2
+ * and 4/0xe3 = low/high byte of u16 ARR_a8078732[idx].
+ * The tables at 0xa807872a/0xa807872b are one array of {u8 a, b} records (firmware base+1 load).
  */
 extern unsigned int DAT_a006ba08;
 extern unsigned int DAT_a006ba28;
