@@ -5229,6 +5229,13 @@
       "name": "FUN_a00cb618",
       "status": "matched"
     },
+    "ram:a00cb7f4": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: stores the ASCII digit 0..2 plus 1 from the receive record in byte 0xa802d47d and replies 5600+",
+      "name": "FUN_a00cb7f4",
+      "status": "matched"
+    },
     "ram:a00cb9d4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
