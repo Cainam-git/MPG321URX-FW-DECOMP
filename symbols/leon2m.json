@@ -8802,6 +8802,13 @@
       "name": "FUN_a00fce0c",
       "status": "matched"
     },
+    "ram:a00fce40": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes 0x8C to 0xCF012084, clears DAT_a802c978 and runs one or two timed register transfer steps",
+      "name": "FUN_a00fce40",
+      "status": "matched"
+    },
     "ram:a00fd074": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
