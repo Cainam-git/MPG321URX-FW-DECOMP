@@ -11396,6 +11396,12 @@
       "name": "FUN_a0132770",
       "status": "matched"
     },
+    "ram:a01327e0": {
+      "by": "h10",
+      "comment": "Tail-calls FUN_a00fe1dc(1, 2 or 3) for v 0, 1 or 2/4",
+      "name": "FUN_a01327e0",
+      "status": "matched"
+    },
     "ram:a01328d4": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
