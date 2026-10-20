@@ -781,6 +781,13 @@
       "name": "FUN_CODE_8f5a",
       "status": "matched"
     },
+    "CODE:914b": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Copies bytes from XDATA 0xDCC9 to a local buffer while bit 0 of 0xDCC8 is set, waits on 0xDCCC bit 0, calls FUN_CODE_147a by the high nibble of the first byte, updates 0xDCCA/0xDCCB",
+      "name": "FUN_CODE_914b",
+      "status": "matched"
+    },
     "CODE:9243": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
