@@ -736,6 +736,13 @@
       "name": "FUN_CODE_6c34",
       "status": "matched"
     },
+    "CODE:6db5": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "sets register bit 5 of the channel block, then waits up to 12000 passes for bit 0 of the next register",
+      "name": "FUN_CODE_6db5",
+      "status": "matched"
+    },
     "CODE:7352": {
       "by": "hand",
       "comment": "Keil common-entry (L?) code in front of FUN_CODE_738c, in FUN_CODE_738c's code segment; emitted by compiling src/8051_bank1/FUN_CODE_0b0d.c, bytes judged with FUN_CODE_738c over 0x7352..0x74af",
