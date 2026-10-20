@@ -7920,6 +7920,13 @@
       "name": "FUN_a00f1298",
       "status": "matched"
     },
+    "ram:a00f154c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Stable 16-bit register read of a DAT_a8026a7e block (re-reads until two reads agree, at most 5 retries)",
+      "name": "FUN_a00f154c",
+      "status": "matched"
+    },
     "ram:a00f1690": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
