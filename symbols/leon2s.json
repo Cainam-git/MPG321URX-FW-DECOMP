@@ -1694,6 +1694,12 @@
       "name": "FUN_a0062b94",
       "status": "matched"
     },
+    "ram:a0062f3c": {
+      "by": "hand",
+      "comment": "starts (FUN_a00b192c or register 0xcf03c800 = 0x55) and polls 0xcf03c804 for 0xdd; on timeout writes 0x88 and returns 0",
+      "name": "FUN_a0062f3c",
+      "status": "matched"
+    },
     "ram:a00638a0": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
