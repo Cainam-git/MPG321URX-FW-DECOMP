@@ -5276,6 +5276,12 @@
       "name": "FUN_a00aec10",
       "status": "matched"
     },
+    "ram:a00aec2c": {
+      "by": "hand",
+      "comment": "Test bit 2 of register word 0xb4 of the block at DAT_a807dc04",
+      "name": "FUN_a00aec2c",
+      "status": "matched"
+    },
     "ram:a00aee08": {
       "by": "hand",
       "comment": "Load a 16-bit value and an n-bit lane mask into port registers 0x8b/0x8c/0x9a",
