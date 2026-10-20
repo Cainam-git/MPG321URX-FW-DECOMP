@@ -5899,6 +5899,12 @@
       "name": "FUN_a00b12c4",
       "status": "matched"
     },
+    "ram:a00b12cc": {
+      "by": "hand",
+      "comment": "writes bank registers through FUN_a00a6c00 and FUN_a00a6c98 depending on FUN_a00b12c4(port) and on",
+      "name": "FUN_a00b12cc",
+      "status": "matched"
+    },
     "ram:a00b1350": {
       "by": "hand",
       "comment": "calls FUN_a00a6c98(port, 0x487, 4, v) with v = 0, 1, 0",
