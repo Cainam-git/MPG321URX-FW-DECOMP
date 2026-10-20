@@ -3305,6 +3305,13 @@
       "name": "FUN_a0098434",
       "status": "matched"
     },
+    "ram:a0098794": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same code as FUN_a0098434 with other constants (listed in the source header)",
+      "name": "FUN_a0098794",
+      "status": "matched"
+    },
     "ram:a0098d4c": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
