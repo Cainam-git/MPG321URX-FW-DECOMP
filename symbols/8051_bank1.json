@@ -884,6 +884,13 @@
       "name": "FUN_CODE_c32e",
       "status": "matched"
     },
+    "CODE:c3e4": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(7,SPEED) LARGE",
+      "comment": "return round(b * 256 / a) in float for a = reg 0x12 & 0x1FFF and b = reg 0x14 read with d9a5",
+      "name": "FUN_CODE_c3e4",
+      "status": "matched"
+    },
     "CODE:c43e": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
