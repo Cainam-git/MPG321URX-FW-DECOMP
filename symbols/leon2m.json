@@ -1880,6 +1880,13 @@
       "name": "FUN_a002e3c4",
       "status": "matched"
     },
+    "ram:a002e46c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns an address for index k: word 0xa802c990 plus a per-index offset, words 0xa802c994/8, or func_0x00093164 of a register address",
+      "name": "FUN_a002e46c",
+      "status": "matched"
+    },
     "ram:a002e69c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
