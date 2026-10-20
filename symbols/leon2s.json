@@ -6183,6 +6183,12 @@
       "name": "FUN_a00b2304",
       "status": "matched"
     },
+    "ram:a00b24b0": {
+      "by": "hand",
+      "comment": "UART memory dump of n words at addr, four words per row",
+      "name": "CED_ALL_3",
+      "status": "matched"
+    },
     "ram:a00b258c": {
       "by": "hand",
       "comment": "prints an address in hex on the UART and, when word aligned, writes val there through FUN_a00b2304 and prints it",
