@@ -1,4 +1,4 @@
-# leon2s FUN_a008da88 0xa008da88-0xa008dbd4 (204 bytes)
+# leon2s FUN_a008da88 0xa008da88-0xa008db4c (196 bytes)
 a008da88:  9d e3 bf 98  save  %sp, -104, %sp
 a008da8c:  80 8e 60 ff  btst  0xff, %i1
 a008da90:  b0 0e 20 ff  and  %i0, 0xff, %i0
@@ -48,37 +48,3 @@ a008db3c:  b8 10 20 00  clr  %i4
 a008db40:  40 00 69 63  call  0xa00a80cc
 a008db44:  81 e8 00 00  restore
 a008db48:  01 00 00 00  nop
-a008db4c:  80 8a 60 ff  btst  0xff, %o1
-a008db50:  82 0a 20 ff  and  %o0, 0xff, %g1
-a008db54:  94 10 20 08  mov  8, %o2
-a008db58:  96 10 20 08  mov  8, %o3
-a008db5c:  98 10 20 01  mov  1, %o4
-a008db60:  92 10 20 01  mov  1, %o1
-a008db64:  12 80 00 07  bne  0xa008db80
-a008db68:  90 10 00 01  mov  %g1, %o0
-a008db6c:  90 10 00 01  mov  %g1, %o0
-a008db70:  92 10 20 01  mov  1, %o1
-a008db74:  94 10 20 08  mov  8, %o2
-a008db78:  96 10 20 08  mov  8, %o3
-a008db7c:  98 10 20 00  clr  %o4
-a008db80:  82 13 c0 00  mov  %o7, %g1
-a008db84:  40 00 69 52  call  0xa00a80cc
-a008db88:  9e 10 40 00  mov  %g1, %o7
-a008db8c:  01 00 00 00  nop
-a008db90:  80 8a 60 ff  btst  0xff, %o1
-a008db94:  82 0a 20 ff  and  %o0, 0xff, %g1
-a008db98:  94 10 20 7f  mov  0x7f, %o2
-a008db9c:  96 10 20 01  mov  1, %o3
-a008dba0:  98 10 20 01  mov  1, %o4
-a008dba4:  92 10 20 01  mov  1, %o1
-a008dba8:  12 80 00 07  bne  0xa008dbc4
-a008dbac:  90 10 00 01  mov  %g1, %o0
-a008dbb0:  90 10 00 01  mov  %g1, %o0
-a008dbb4:  92 10 20 01  mov  1, %o1
-a008dbb8:  94 10 20 7f  mov  0x7f, %o2
-a008dbbc:  96 10 20 01  mov  1, %o3
-a008dbc0:  98 10 20 00  clr  %o4
-a008dbc4:  82 13 c0 00  mov  %o7, %g1
-a008dbc8:  40 00 69 41  call  0xa00a80cc
-a008dbcc:  9e 10 40 00  mov  %g1, %o7
-a008dbd0:  01 00 00 00  nop

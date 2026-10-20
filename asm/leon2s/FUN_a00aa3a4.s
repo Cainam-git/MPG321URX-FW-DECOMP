@@ -1,4 +1,4 @@
-# leon2s FUN_a00aa3a4 0xa00aa3a4-0xa00aa49c (188 bytes)
+# leon2s FUN_a00aa3a4 0xa00aa3a4-0xa00aa45c (184 bytes)
 a00aa3a4:  9d e3 bf 98  save  %sp, -104, %sp
 a00aa3a8:  b0 0e 20 ff  and  %i0, 0xff, %i0
 a00aa3ac:  92 10 20 09  mov  9, %o1
@@ -45,19 +45,3 @@ a00aa44c:  94 10 20 10  mov  0x10, %o2
 a00aa450:  7f ff f5 c5  call  0xa00a7b64
 a00aa454:  81 e8 00 00  restore
 a00aa458:  01 00 00 00  nop
-a00aa45c:  82 0a 60 ff  and  %o1, 0xff, %g1
-a00aa460:  80 a0 60 01  cmp  %g1, 1
-a00aa464:  82 0a 20 ff  and  %o0, 0xff, %g1
-a00aa468:  92 10 20 09  mov  9, %o1
-a00aa46c:  94 10 20 08  mov  8, %o2
-a00aa470:  96 10 20 01  mov  1, %o3
-a00aa474:  02 80 00 06  be  0xa00aa48c
-a00aa478:  90 10 00 01  mov  %g1, %o0
-a00aa47c:  90 10 00 01  mov  %g1, %o0
-a00aa480:  92 10 20 09  mov  9, %o1
-a00aa484:  94 10 20 08  mov  8, %o2
-a00aa488:  96 10 20 00  clr  %o3
-a00aa48c:  82 13 c0 00  mov  %o7, %g1
-a00aa490:  7f ff f5 da  call  0xa00a7bf8
-a00aa494:  9e 10 40 00  mov  %g1, %o7
-a00aa498:  01 00 00 00  nop
