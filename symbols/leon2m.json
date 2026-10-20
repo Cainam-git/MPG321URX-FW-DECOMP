@@ -11933,6 +11933,13 @@
       "name": "FUN_a015463c",
       "status": "matched"
     },
+    "ram:a015468c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -g",
+      "comment": "Returns byte b of row a of the 11-byte UART frame table at 0x1a7a6e",
+      "name": "FUN_a015468c",
+      "status": "matched"
+    },
     "ram:a01547dc": {
       "by": "lib",
       "comment": "toolchain library function ceil from libm.a:s_ceil.o; byte-exact, no C needed",
