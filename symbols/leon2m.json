@@ -13433,6 +13433,13 @@
       "name": "FUN_a0149f44",
       "status": "matched"
     },
+    "ram:a0149fb8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Remaps channel ch, then FUN_a012f1ec(i, 2) and FUN_a0109474(FUN_a013cda8(i), 0)",
+      "name": "FUN_a0149fb8",
+      "status": "matched"
+    },
     "ram:a014a060": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
