@@ -4477,6 +4477,13 @@
       "name": "FUN_a00ba950",
       "status": "matched"
     },
+    "ram:a00baa6c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes the reply 5600+ CR into a UART port's transmit buffer",
+      "name": "FUN_a00baa6c",
+      "status": "matched"
+    },
     "ram:a00bab80": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
