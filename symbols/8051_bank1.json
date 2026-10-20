@@ -985,6 +985,12 @@
       "name": "FUN_CODE_cdcd",
       "status": "matched"
     },
+    "CODE:ce4b": {
+      "by": "hand",
+      "comment": "cd07, Timer 0 reload from 0xA773/0xA772, 9975(0x1D, 4800), DD09 bit 3 and a pulse on F3D1 bit 2",
+      "name": "FUN_CODE_ce4b",
+      "status": "matched"
+    },
     "CODE:cf73": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
