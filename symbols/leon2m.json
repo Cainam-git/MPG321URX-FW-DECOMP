@@ -10221,6 +10221,13 @@
       "name": "FUN_a010f7a4",
       "status": "matched"
     },
+    "ram:a010f864": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "clears bit 0 of channel record byte +0x3e and bit 20 or 21 of 0xd0032000/0xd003a000",
+      "name": "FUN_a010f864",
+      "status": "matched"
+    },
     "ram:a011023c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
