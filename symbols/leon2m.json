@@ -12257,6 +12257,13 @@
       "name": "FUN_a0138f04",
       "status": "matched"
     },
+    "ram:a0138f2c": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sends {bits, 0, 0, 0} with FUN_a01370dc(0xa3, 4, buf, 0); bits 0..3 = a, b, c, d == 1",
+      "name": "FUN_a0138f2c",
+      "status": "matched"
+    },
     "ram:a0138fb8": {
       "by": "h10",
       "comment": "Sends words a, b, c as 12 bytes, lowest byte first, with FUN_a01370dc(0xa6, 12, buf, 0)",
