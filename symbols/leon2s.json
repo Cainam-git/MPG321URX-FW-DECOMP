@@ -4522,6 +4522,12 @@
       "name": "FUN_a00a2b08",
       "status": "matched"
     },
+    "ram:a00a2b98": {
+      "by": "hand",
+      "comment": "for both port records clears the upper half of block word 0x2d and the low byte of word 0x2e; returns 0",
+      "name": "FUN_a00a2b98",
+      "status": "matched"
+    },
     "ram:a00a2bec": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
