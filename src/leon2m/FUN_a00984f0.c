@@ -1,0 +1,29 @@
+/* leon2m FUN_a00984f0 @ 0xa00984f0-0xa0098618 (74 words).
+ * With b = byte 0xa8025c56: FUN_a00a93bc(b % 7), FUN_a00a813c(1, b % 7, 0), FUN_a00a9650((word 0xa802afec -
+ * 0x86) % 7, 0). With k = byte 0xa802d290+0x1a3: FUN_a00a813c(1, (byte 0xa802d290+0x18a+k) % 7, 1), stores
+ * k + 0x26 to word 0xa802afec, calls FUN_a00a900c(k, 1) and sets bit 1 of byte 0xa802b08e.
+ */
+struct D290 {
+    unsigned char p000[0x18a];
+    unsigned char st[0x1a3 - 0x18a];
+    unsigned char b1a3;
+};
+extern struct D290 DAT_a802d290;
+extern unsigned int _DAT_a802afec;
+extern unsigned char DAT_a802b08e;
+extern unsigned char DAT_a8025c56;
+extern void FUN_a00a93bc(unsigned char);
+extern void FUN_a00a813c(int, unsigned char, int);
+extern void FUN_a00a9650(unsigned char, int);
+extern void FUN_a00a900c(unsigned char, int);
+
+void FUN_a00984f0(void)
+{
+    FUN_a00a93bc(DAT_a8025c56 % 7);
+    FUN_a00a813c(1, DAT_a8025c56 % 7, 0);
+    FUN_a00a9650((_DAT_a802afec - 0x86) % 7, 0);
+    FUN_a00a813c(1, DAT_a802d290.st[DAT_a802d290.b1a3] % 7, 1);
+    _DAT_a802afec = DAT_a802d290.b1a3 + 0x26;
+    FUN_a00a900c(DAT_a802d290.b1a3, 1);
+    DAT_a802b08e |= 2;
+}
