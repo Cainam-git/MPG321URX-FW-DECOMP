@@ -12752,6 +12752,13 @@
       "name": "FUN_a013bb50",
       "status": "matched"
     },
+    "ram:a013bbb8": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets halfwords +0x2e..+0x38 of the record from FUN_a013cd4c(port) from +0x28, +0x2a (+-min 0x32), +0x10 and +0x18",
+      "name": "FUN_a013bbb8",
+      "status": "matched"
+    },
     "ram:a013bc5c": {
       "by": "h10",
       "cflags": "-mcpu=v8 -O3 -g",
