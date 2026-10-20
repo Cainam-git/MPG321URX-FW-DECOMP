@@ -919,6 +919,13 @@
       "name": "FUN_CODE_c7e0",
       "status": "matched"
     },
+    "CODE:c830": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "wake-up timer set-up: XDATA 0xA62A = t * 1000 (long), 0xA5E9 = current d94a() count, print it",
+      "name": "FUN_CODE_c830",
+      "status": "matched"
+    },
     "CODE:c87f": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
