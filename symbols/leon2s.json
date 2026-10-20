@@ -6941,6 +6941,12 @@
       "name": "FUN_a00cdc74",
       "status": "matched"
     },
+    "ram:a00cdde0": {
+      "by": "h23",
+      "comment": "sets the record field to 1, polls FUN_a00c2488 up to 30 times, then sends DAT_a807ce50 in 16 groups of 8 bytes to 0x69220..",
+      "name": "FUN_a00cdde0",
+      "status": "matched"
+    },
     "ram:a00ce420": {
       "by": "hand",
       "comment": "record a8078bb0[p] (24 B): bits 16..17 = 01; c87e8(p, 5, 0x8000); 32 bytes c7770(p, 1) into a807ce50; two f963d4 writes of 16 B each",
