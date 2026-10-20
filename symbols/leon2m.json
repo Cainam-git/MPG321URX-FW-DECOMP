@@ -13452,6 +13452,13 @@
       "name": "FUN_a014aa48",
       "status": "matched"
     },
+    "ram:a014ab74": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "SYSAPI_SaveUSRFlashType1: area check (p 0x30, size 0x8000) then FUN_a0140e74(0, off, len, buf, 0) -> 1, else message -> 0",
+      "name": "FUN_a014ab74",
+      "status": "matched"
+    },
     "ram:a014ac28": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
