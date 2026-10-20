@@ -1,4 +1,4 @@
-/* FUN_a008996c (leon2s 0xa008996c-0xa0089a38, 196 bytes), flags -mcpu=v8 -Os -g.
+/* FUN_a008996c (leon2s 0xa008996c-0xa0089a38, 204 bytes), flags -mcpu=v8 -Os -g.
  * Returns unless bit 0 of FUN_a00a78b4(port, 0x7b) is set. Works on the 8-byte record port of DAT_a807cd04
  * (bytes a at +1 and b at +4, halfwords ta at +2 and tb at +6) with the value t of FUN_a00b2064(). When b is
  * set and t - tb > 100: FUN_a00a78b4(port, 0x73) and tb = FUN_a00b2064(). When b is clear, a is set and
