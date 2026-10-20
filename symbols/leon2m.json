@@ -8770,6 +8770,13 @@
       "name": "FUN_a00f6898",
       "status": "matched"
     },
+    "ram:a00f6940": {
+      "by": "h12",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Selects by p one set of 0xcf00ee2x/0xcf00ee6x register writes, then writes three bytes to 0xcf00ee44-0xcf00ee4c",
+      "name": "FUN_a00f6940",
+      "status": "matched"
+    },
     "ram:a00f6ca4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
