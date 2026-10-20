@@ -5060,6 +5060,13 @@
       "name": "FUN_a00b27fc",
       "status": "matched"
     },
+    "ram:a00b2a1c": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Steps byte 0xa8025c55 backwards by mode bits (calls FUN_a00b0710(1..3, v)) unless one of the early-return tests holds; writes it into bit 15 of halfword 0xa802d002 unless 2 or 3",
+      "name": "FUN_a00b2a1c",
+      "status": "matched"
+    },
     "ram:a00b3070": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
