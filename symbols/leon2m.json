@@ -12382,6 +12382,13 @@
       "name": "FUN_a013cf84",
       "status": "matched"
     },
+    "ram:a013cfc4": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Clears bit 25 of word +0x70 of the four 0x78-byte records at 0xa802df30",
+      "name": "FUN_a013cfc4",
+      "status": "matched"
+    },
     "ram:a013d178": {
       "by": "hand",
       "comment": "",
