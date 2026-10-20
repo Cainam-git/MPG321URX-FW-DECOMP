@@ -13370,6 +13370,13 @@
       "name": "FUN_a014a060",
       "status": "matched"
     },
+    "ram:a014a0d8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "bit 24 of DAT_a802e3d0 = on; FUN_a0151aa4(0x10, 1); FUN_a012b328(0, bit 24)",
+      "name": "FUN_a014a0d8",
+      "status": "matched"
+    },
     "ram:a014a388": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
