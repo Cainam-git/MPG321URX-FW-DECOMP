@@ -12964,6 +12964,13 @@
       "name": "FUN_a014a7f4",
       "status": "matched"
     },
+    "ram:a014ac28": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Looks up a flash descriptor for id and reads len bytes at addr with FUN_a0140360 when it fits, else logs an error",
+      "name": "FUN_a014ac28",
+      "status": "matched"
+    },
     "ram:a014b01c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
