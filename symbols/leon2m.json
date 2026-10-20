@@ -4207,6 +4207,13 @@
       "name": "FUN_a00a0ff0",
       "status": "matched"
     },
+    "ram:a00a105c": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "OSDPBPAdjustR: halfword 0xa802d02a +8 up to 0xb40, FUN_a0146870 with it and 0xa802d02c, prints both",
+      "name": "FUN_a00a105c",
+      "status": "matched"
+    },
     "ram:a00a13d8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
