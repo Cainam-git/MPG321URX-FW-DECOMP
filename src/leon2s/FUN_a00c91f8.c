@@ -1,14 +1,13 @@
 /* leon2s FUN_a00c91f8 @ 0xa00c91f8-0xa00c9334 (316 bytes, 79 words)
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: void (u8 port). It works on the 24-byte DAT_a8078bb0[port] record. Word 0 holds bit-fields
- * (big-endian): f28 = bit 28 (srl 28; btst 1), f23 = bit 23, st = bits 16..17. Byte +3 is a plain u8 member
- * (as a bit-field it is read with ld + and and compared signed). It sets st = 1. When f28 is 0: f23 = 0, bytes
- * +3..+6 are cleared (source order 3, 4, 5, 6 gives the fw stores 6, 3, 4, 5), FUN_a00c87e8(port, 0xb,
- * 0x4005) (3 args; the draft passed 6), five ROM reads func_0xa0fb7fd8(port, 0, i + 0x10) are written with
- * FUN_a00c7654(port, 1, v), then FUN_a00c87e8(port, 0, 0). Then: b3 >= 0x7f sets b5 = 1, else b3++; b4 >= 7
- * sets b6 = 1, else b4++. The 'set flag' arm comes first in the source (the fw falls into it).
- * BEHAVIOUR fixes against the draft: f23 is cleared in the same RMW, there is no self-copy of the word, and
- * the function is void. No aids, no volatile.
+ * void (u8 port). It works on the 24-byte DAT_a8078bb0[port] record. Word 0 holds bit-fields (big-endian):
+ * f28 = bit 28 (srl 28; btst 1), f23 = bit 23, st = bits 16..17. Byte +3 is a plain u8 member (as a
+ * bit-field it is read with ld + and and compared signed). It sets st = 1. When f28 is 0: f23 = 0 (in the
+ * same read-modify-write), bytes +3..+6 are cleared (source order 3, 4, 5, 6 gives the firmware stores 6, 3,
+ * 4, 5), FUN_a00c87e8(port, 0xb, 0x4005) (3 args), five ROM reads func_0xa0fb7fd8(port, 0, i + 0x10) are
+ * written with FUN_a00c7654(port, 1, v), then FUN_a00c87e8(port, 0, 0). Then: b3 >= 0x7f sets b5 = 1, else
+ * b3++; b4 >= 7 sets b6 = 1, else b4++. The 'set flag' arm comes first in the source (the firmware falls
+ * into it). No volatile.
  */
 struct Rec24 {
     unsigned int a:3;

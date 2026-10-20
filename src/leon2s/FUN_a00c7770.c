@@ -1,8 +1,9 @@
 /* FUN_a00c7770 (leon2s, 0xa00c7770-0xa00c77dc, 27 words). Flags -mcpu=v8 -Os -g.
- Code facts: u8 idx, u16 reg. idx > 2: print func_0xa0f83044(s_9f1c1f78, s_9f1c1f00, idx, reg), return 0. Else returns the low byte of the
- hardware register at 0xcf000000 | ((DAT_9f1c1ec8[idx] + reg) << 2) (volatile: real 0xcf... register).
- Fixes vs draft: 0x9f1c1f78/0x9f1c1f00/0x9f1c1ec8 are SYMBOL addresses (own sethi each; the table is an extern u32 array, which gives the fw
- [base + idx*4] order); the print is variadic. Aids: none.
+ * u8 idx, u16 reg. idx > 2: prints func_0xa0f83044(s_9f1c1f78, s_9f1c1f00, idx, reg), returns 0. Else returns
+ * the low byte of the hardware register at 0xcf000000 | ((DAT_9f1c1ec8[idx] + reg) << 2) (volatile: a 0xcf...
+ * register).
+ * 0x9f1c1f78/0x9f1c1f00/0x9f1c1ec8 are symbol addresses (own sethi each; the table is an extern u32 array,
+ * which gives the firmware [base + idx*4] order); the print is variadic.
  */
 extern unsigned int DAT_9f1c1ec8[];
 extern char s_9f1c1f78[], s_9f1c1f00[];

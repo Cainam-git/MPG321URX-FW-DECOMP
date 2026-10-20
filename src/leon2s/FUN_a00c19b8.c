@@ -1,11 +1,11 @@
 /*
  * FUN_a00c19b8 (leon2s, 0xa00c19b8-0xa00c1ac0, 264 bytes), flags -mcpu=v8 -Os -g.
- * Code facts: k = (u8)(p2 - 2). p2 <= 1: sibcall func_0xa0fb65c4(p2, 0x301, mode == 1 ? 4 : 0) - 3 args
- * like its other callers (the draft passed a 4th '1': BEHAVIOUR). Else regs 0xa6/0xa5/0xa4 of k = 0 and
- * 0xa7 = 4 (mode 1) or 0 through func_0xa0fb69fc, then sibcall func_0xa0fb6aa0(k, 0xa4, 0x20, 1).
- * Form: the full call sequence in EACH arm of the p2 test, long arm first ('p2 > 1'), (u8)(p2 - 2)
- * written at each use (the FUN_a00af464 lever): -Os pre-sets the 6aa0 args i1/i2/i3 above the test.
- * A k local gives 80.30. Aids: none.
+ * k = (u8)(p2 - 2). p2 <= 1: sibcall func_0xa0fb65c4(p2, 0x301, mode == 1 ? 4 : 0) (3 args, like its other
+ * callers). Else regs 0xa6/0xa5/0xa4 of k = 0 and 0xa7 = 4 (mode 1) or 0 through func_0xa0fb69fc, then sibcall
+ * func_0xa0fb6aa0(k, 0xa4, 0x20, 1).
+ * Source form: the full call sequence in each arm of the p2 test, long arm first ('p2 > 1'), (u8)(p2 - 2)
+ * written at each use (as in FUN_a00af464): -Os pre-sets the func_0xa0fb6aa0 args i1/i2/i3 above the test.
+ * A k local gives different code.
  */
 extern int func_0xa0fb65c4(unsigned int, unsigned int, unsigned int);
 extern void func_0xa0fb69fc(unsigned int, unsigned int, unsigned int);

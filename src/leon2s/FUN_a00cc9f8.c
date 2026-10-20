@@ -1,10 +1,9 @@
 /* FUN_a00cc9f8 (leon2s, 0xa00cc9f8-0xa00cca38, 64 bytes, 16 words).
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: port = (u8)param_1; FUN_a00c9798(port, buf) fills a 2-byte stack buffer; if bit 3
- * (0x08) of buf[1] is set: FUN_a00c7a4c(port, 0) and r = 1, else r = 0; returns r as a u8
- * (fw: final 'and %i0,1,%i0' = u8 return extension narrowed by nonzero-bits).
- * Fix vs draft: u8 return type and one return of r (the draft's two int returns had no final and).
- * Aids: none.
+ * port = (u8)param_1; FUN_a00c9798(port, buf) fills a 2-byte stack buffer; if bit 3 (0x08) of buf[1] is set:
+ * FUN_a00c7a4c(port, 0) and r = 1, else r = 0; returns r as a u8 (firmware: final 'and %i0,1,%i0' = u8
+ * return extension narrowed by nonzero-bits).
+ * Source form: u8 return type and one return of r (two int returns give no final and).
  */
 extern int FUN_a00c9798(unsigned int, unsigned char *);
 extern int FUN_a00c7a4c(unsigned int, int);

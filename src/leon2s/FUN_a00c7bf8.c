@@ -1,10 +1,9 @@
 /* leon2s FUN_a00c7bf8 @ 0xa00c7bf8-0xa00c7ccc (53 words), flags -mcpu=v8 -Os -g.
- * Code facts: port = arg & 0xff. Loop 1: FUN_a00c7b60(port); v = FUN_a0fb7fd8(port, 0, 0xf2); repeat
- * while (v & 0x10) and the u8 count <= 4. Loop 2: FUN_a00c7b90(port); v = FUN_a0fb7fd8(port, 0, 0xf5);
- * repeat while (v & 0x1f) and count <= 4. Then FUN_a00c7bc4(port); FUN_a0fc1794(1); status 0xf2 bit
- * 0x10 set -> 0xe, else status 0xf5 & 0x1f -> 0xf, else 0; returns that & 0xf.
- * Fix vs the autoc draft (96.23): BEHAVIOUR, both retry tests were inverted (the loops repeat while
- * the status bits are SET; fw 'btst; be exit'). Aids: none.
+ * port = arg & 0xff. Loop 1: FUN_a00c7b60(port); v = FUN_a0fb7fd8(port, 0, 0xf2); repeats while (v & 0x10)
+ * and the u8 count <= 4. Loop 2: FUN_a00c7b90(port); v = FUN_a0fb7fd8(port, 0, 0xf5); repeats while
+ * (v & 0x1f) and count <= 4. Then FUN_a00c7bc4(port); FUN_a0fc1794(1); status 0xf2 bit 0x10 set -> 0xe, else
+ * status 0xf5 & 0x1f -> 0xf, else 0; returns that & 0xf. Both loops repeat while the status bits are set
+ * (firmware 'btst; be exit').
  */
 typedef unsigned int uint;
 

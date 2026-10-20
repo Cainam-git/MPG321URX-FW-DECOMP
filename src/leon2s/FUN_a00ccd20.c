@@ -1,9 +1,9 @@
 /* leon2s FUN_a00ccd20 @ 0xa00ccd20-0xa00ccdb4 (148 bytes, 37 words)
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: void (u8 port). FUN_a00ccad4(port). The DAT_a8078bb0[port] st:2 bit-field (bits 16..17 of word 0)
- * is set to 1. r = (u8)FUN_a00c966c(port). When r == 0: st = 3 (a plain or 0x30000). Otherwise FUN_a00c8a1c(port, 0)
- * runs, and st = 2 when r == 0x22 (FUN_a00c966c returns 0, 0x14 or 0x22, src/leon2s/FUN_a00c966c.c).
- * BEHAVIOUR fixes against the draft: FUN_a00c966c takes the port, and the function is void. No aids.
+ * void (u8 port). FUN_a00ccad4(port). The DAT_a8078bb0[port] st:2 bit-field (bits 16..17 of word 0) is set
+ * to 1. r = (u8)FUN_a00c966c(port). When r == 0: st = 3 (a plain or 0x30000). Otherwise FUN_a00c8a1c(port,
+ * 0) runs, and st = 2 when r == 0x22 (FUN_a00c966c returns 0, 0x14 or 0x22, src/leon2s/FUN_a00c966c.c).
+ * FUN_a00c966c takes the port.
  */
 struct Rec24 {
     unsigned int top:4;

@@ -1,14 +1,13 @@
 /* leon2s FUN_a00b1e70 @ 0xa00b1e70-0xa00b1fe0 (92 words), flags -mcpu=v8 -Os -g.
- * Code facts: one-time init, guarded by the byte DAT_a80793a4 (set to 1 at the end). Clears word
- * DAT_a807de98, the 1 x 2 word array at DAT_a80793a4 + 0xc (nested loops; gcc counts the inner one down:
- * addcc/bpos), picks v = 12000 / 10000 / 3000 for clock word DAT_a80787dc == 96000000 / 80000000 / other,
- * clears bytes +4, +5 and word +0x14 of 16 0x18-byte records at DAT_a80793b8 (a separate symbol: own
- * sethi), pulses bit 1 of hw word 0xc0000000 around FUN_a00b1794(1), writes v / 0x83 / 0 through
- * FUN_a0061534 to 0xc00a0010 / 14 / 18, then read-modify-writes the 0x9f12xxxx / 0x9f100090 registers
- * (|0x10, |0x10, &~0x10, &~2, =2, &~0xf, =0x10). void (the fw never sets %i0).
- * Fixes vs the autoc draft (80.85): void instead of the CONCAT44 garbage return, int loop counters
- * written as plain for loops (the draft's hand-reversed char counter gave btst 0x80 tests), struct
- * records instead of pointer walks. volatile only on the 0x9f1x / 0xc0xx hardware registers. Aids: none.
+ * Runs once, guarded by the byte DAT_a80793a4 (set to 1 at the end). Clears word DAT_a807de98, the 1 x 2
+ * word array at DAT_a80793a4 + 0xc (nested loops; gcc counts the inner one down: addcc/bpos), picks
+ * v = 12000 / 10000 / 3000 for the word DAT_a80787dc == 96000000 / 80000000 / other, clears bytes +4, +5
+ * and word +0x14 of 16 0x18-byte records at DAT_a80793b8 (a separate symbol: own sethi), pulses bit 1 of
+ * hw word 0xc0000000 around FUN_a00b1794(1), writes v / 0x83 / 0 through FUN_a0061534 to 0xc00a0010 / 14 /
+ * 18, then read-modify-writes the 0x9f12xxxx / 0x9f100090 registers (|0x10, |0x10, &~0x10, &~2, =2, &~0xf,
+ * =0x10). void (the firmware never sets %i0).
+ * Source form: int loop counters in plain for loops, struct records instead of pointer walks. volatile only
+ * on the 0x9f1x / 0xc0xx hardware registers.
  */
 #define REG_9F100090 (*(volatile unsigned int *)0x9f100090)
 #define REG_9F120028 (*(volatile unsigned int *)0x9f120028)

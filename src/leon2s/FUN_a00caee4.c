@@ -1,10 +1,9 @@
 /* leon2s FUN_a00caee4 @ 0xa00caee4-0xa00caf78 (37 words), flags -mcpu=v8 -Os -g.
- * Code facts: u8 ch. Sets the 2-bit field (bits 16..17) of word 0 of the 24-byte record DAT_a8078bb0[ch]
- * to 1; buffer DAT_a807ce50[0] = 5; FUN_a00c87e8(ch, 5, 0x8000); 32 reads buf[1 + i] = FUN_a00c7770(ch, 1)
- * (u8 results); then the sibcall FUN_a00c80f0(ch, DAT_a807ce50, 0x74, 0x60, 0x21). void.
- * Fixes vs the autoc draft (76.32): BEHAVIOUR: the buffer bytes are c7770's RETURN values (the draft
- * stored ch); the record field is the Rec18 f16:2 bit-field (same record as FUN_a00cd4fc); real buffer
- * base DAT_a807ce50 for both the stores and the c80f0 argument. Aids: none.
+ * u8 ch. Sets the 2-bit field (bits 16..17) of word 0 of the 24-byte record DAT_a8078bb0[ch] to 1; buffer
+ * DAT_a807ce50[0] = 5; FUN_a00c87e8(ch, 5, 0x8000); 32 reads buf[1 + i] = FUN_a00c7770(ch, 1) (u8 results);
+ * then the sibcall FUN_a00c80f0(ch, DAT_a807ce50, 0x74, 0x60, 0x21). void.
+ * The buffer bytes are FUN_a00c7770's return values; the record field is the Rec18 f16:2 bit-field (same
+ * record as FUN_a00cd4fc); the buffer base DAT_a807ce50 serves both the stores and the FUN_a00c80f0 argument.
  */
 struct Rec18 { unsigned int hi : 14; unsigned int f16 : 2; unsigned int lo : 16; unsigned char pad[0x14]; };
 extern struct Rec18 DAT_a8078bb0[];
