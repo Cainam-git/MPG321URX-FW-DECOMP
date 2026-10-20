@@ -1,13 +1,12 @@
 /* leon2s FUN_a00d8714 @ 0xa00d8714-0xa00d87fc (58 words), flags -mcpu=v8 -Os -g.
- * Code facts: 1-byte command h on the stack (fp-9): bits 0..6 = 0x14 (bit 7 kept: ldub/and -128/or/stb);
- * clears u16 _DAT_a80787fa then _DAT_a80787f8; 4 passes i = 0..3 over the register block
- * DAT_a807609c[byte DAT_a8078832] (table and index re-read for every access): saved = (u8) reg +0x2ac;
- * +0x2ac = (saved & 0x3f) | ((i + 1) << 6); +0x284 = 0; +0x2b0 |= 0x10; +0x2b0 &= ~0x10 (pulse);
- * +0x2ac = saved. Then FUN_a00d791c(&h, 2, 1, 6, 1). void.
- * Fixes vs the autoc draft (75.86): 7-bit BIT-FIELD for the command byte, the register block reached
- * through 'volatile unsigned int *DAT_a807609c[]' (same pointers as FUN_a00da6ac; the
- * fw reads and writes +0x2ac / +0x2b0 twice per pass), every access after the first re-indexes the table
- * (fw reloads), void. volatile only on the register blocks behind DAT_a807609c[]. Aids: none.
+ * Stack byte h (fp-9): bits 0..6 = 0x14 (bit 7 kept: ldub/and -128/or/stb); clears u16 _DAT_a80787fa then
+ * _DAT_a80787f8; 4 passes i = 0..3 over the register block DAT_a807609c[byte DAT_a8078832] (table and index
+ * re-read for every access): saved = (u8) reg +0x2ac; +0x2ac = (saved & 0x3f) | ((i + 1) << 6); +0x284 = 0;
+ * +0x2b0 |= 0x10; +0x2b0 &= ~0x10 (pulse); +0x2ac = saved. Then FUN_a00d791c(&h, 2, 1, 6, 1). void.
+ * Source form: a 7-bit bit-field for the stack byte; the register block is reached through
+ * 'volatile unsigned int *DAT_a807609c[]' (same pointers as FUN_a00da6ac; the firmware reads and writes
+ * +0x2ac / +0x2b0 twice per pass); every access after the first re-indexes the table (firmware reloads).
+ * volatile only on the register blocks behind DAT_a807609c[].
  */
 struct cmd1 {
     unsigned char b7 : 1;

@@ -1,12 +1,10 @@
 /* leon2s FUN_a00d6df8 @ 0xa00d6df8..0xa00d6e94 (156 bytes, 39 words)
  * Flags: -mcpu=v8 -Os -g.
- * What it does (code facts): n = (src[0] >> 4) - 1; k = n / 2 rounded up (n odd -> +1), as a
- * byte. From src[k + 3 .. k + 7] it fills dst: word 0 bits 24..30 = src[k+3] & 0x7f, word 0
- * bits 20..23 = src[k+4] >> 4 (bit 31 and bits 0..19 kept), word 1 = (src[k+4] & 0xf) << 16 |
- * src[k+5] << 8 | src[k+6], byte 8 = src[k+7].
+ * n = (src[0] >> 4) - 1; k = n / 2 rounded up (n odd -> +1), as a byte. From src[k + 3 .. k + 7] it fills
+ * dst: word 0 bits 24..30 = src[k+3] & 0x7f, word 0 bits 20..23 = src[k+4] >> 4 (bit 31 and bits 0..19
+ * kept), word 1 = (src[k+4] & 0xf) << 16 | src[k+5] << 8 | src[k+6], byte 8 = src[k+7].
  * Callers: FUN_a00d73b4.
- * Aids: none. Draft fix: the second mask is 0xff0fffff (fw andn sethi 0xf00000 = clear only
- * bits 20..23); the draft's 0x800fffff also cleared the bits 24..30 just written. Rest = draft.
+ * The second mask is 0xff0fffff (firmware andn sethi 0xf00000 = clears only bits 20..23).
  */
 void FUN_a00d6df8(unsigned int *param_1, unsigned char *param_2)
 {

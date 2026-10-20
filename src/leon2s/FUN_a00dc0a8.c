@@ -1,19 +1,19 @@
 /* FUN_a00dc0a8 (leon2s, 0xa00dc0a8-0xa00dc214, 364 bytes, 91 words).
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: prints DAT_9f1ccc30 with DAT_a8078832 (the current index). If the byte DAT_a8078840 == 1:
- * x = DAT_a8078832 (u16): clears the bytes DAT_a8078830/828/808/800[x] and the u16 ARR_a807880a/
- * 880e[x]; clears DAT_a80787fc..ff; for i = 0..3 clears ARR_a8079c3d[2i] and [2i+1]; x reloaded:
- * clears DAT_a8078850/848[x] and bits 4..5 of the word at ARR_a80760a4[x] + 0xccc; x reloaded:
- * DAT_a80760b0[x] = 1, clears the u16 _DAT_a80787fa/_DAT_a80787f8 and the byte at 0xa8078838 + x,
- * clears DAT_a8078847; FUN_a00d9a78() when (u8)func_0xa0f966a4() != 0; FUN_a00d6560(DAT_a8078832).
- * Always clears DAT_a8078840 at the end (fw: in the bne,a delay slot and before ret).
- * Fixes vs draft: the draft's first store used an uninitialised index (removed); x is u16 (fw doubles
- * it with add for the u16 arrays); string symbol DAT_9f1ccc30; void. Source order of the first six
- * clears is 830, 828, 80e, 80a, 808, 800 (2 of 720 orders give the fw order; perm.py).
- * AID: the 0xa8078838 byte is written through a local constant pointer
- * 'p = (u8 *)0xa8078838; p[x] = 0' (same instruction bytes as the symbol DAT_a8078838: sethi/or).
- * With the symbol, alias analysis lets sched move that store before the 7fa/7f8 clears (96.70 for
- * all 24 orders of that block); the constant base keeps the fw order and the [%g1+%o4] operands.
+ * Prints DAT_9f1ccc30 with DAT_a8078832. If the byte DAT_a8078840 == 1: x = DAT_a8078832 (u16): clears the
+ * bytes DAT_a8078830/828/808/800[x] and the u16 ARR_a807880a/880e[x]; clears DAT_a80787fc..ff; for i = 0..3
+ * clears ARR_a8079c3d[2i] and [2i+1]; x reloaded: clears DAT_a8078850/848[x] and bits 4..5 of the word at
+ * ARR_a80760a4[x] + 0xccc; x reloaded: DAT_a80760b0[x] = 1, clears the u16 _DAT_a80787fa/_DAT_a80787f8 and
+ * the byte at 0xa8078838 + x, clears DAT_a8078847; FUN_a00d9a78() when (u8)func_0xa0f966a4() != 0;
+ * FUN_a00d6560(DAT_a8078832). Always clears DAT_a8078840 at the end (firmware: in the bne,a delay slot and
+ * before ret).
+ * x is u16 (the firmware doubles it with add for the u16 arrays); string symbol DAT_9f1ccc30; void.
+ * Source form: the first six clears are in the order 830, 828, 80e, 80a, 808, 800 (2 of the 720 orders
+ * give the firmware order).
+ * Compiler aid: the 0xa8078838 byte is written through a local constant pointer 'p = (u8 *)0xa8078838;
+ * p[x] = 0' (same instruction bytes as the symbol DAT_a8078838: sethi/or). With the symbol, alias analysis
+ * lets sched move that store before the 7fa/7f8 clears (for all 24 orders of that block); the constant base
+ * keeps the firmware order and the [%g1+%o4] operands.
  */
 extern unsigned char DAT_a80787fc;
 extern unsigned char DAT_a80787fd;

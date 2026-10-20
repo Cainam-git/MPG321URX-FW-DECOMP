@@ -1,11 +1,11 @@
 /* leon2s FUN_a00d8f58 @ 0xa00d8f58-0xa00d8fdc (33 words), flags -mcpu=v8 -Os -g.
- * Code facts: 260-byte response buffer r (fp-272) cleared by the ROM memset func_0xa0fc15ac(&r, 0, 0x104),
- * filled by FUN_a00d73b4(&r, 0, 1, 0x1a); then an 8-byte command header h (fp-280): bits 24..30 = 0x23
- * and bits 16..19 = bits 20..23 of r's first word (other header bits are left as they were on the stack),
- * sent with FUN_a00d791c(&h, 2, 1, 10, 2). void.
- * Fixes vs the autoc draft (75.76): BIT-FIELDS (big-endian, first field = MSB) for both header fields and
- * the response nibble (fw andn/or sequence); declaration order r before h (frame slots); the ROM memset
- * returns void * (a void prototype moves the 'mov %l0,%o0' out of the call delay slot). Aids: none.
+ * 260-byte stack buffer r (fp-272) cleared by func_0xa0fc15ac(&r, 0, 0x104), filled by
+ * FUN_a00d73b4(&r, 0, 1, 0x1a); then an 8-byte stack block h (fp-280): bits 24..30 = 0x23 and bits 16..19 =
+ * bits 20..23 of r's first word (other bits of h are left as they were on the stack), passed to
+ * FUN_a00d791c(&h, 2, 1, 10, 2). void.
+ * Source form: bit-fields (big-endian, first field = MSB) for both fields of h and the nibble of r
+ * (firmware andn/or sequence); declaration order r before h (frame slots); func_0xa0fc15ac returns void *
+ * (a void prototype moves the 'mov %l0,%o0' out of the call delay slot).
  */
 struct cmd_hdr {
     unsigned int b31 : 1;

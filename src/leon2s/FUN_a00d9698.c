@@ -1,10 +1,10 @@
 /* leon2s FUN_a00d9698 @ 0xa00d9698-0xa00d97bc (292 bytes, 73 words)
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: void(void) message dispatcher. v = (u8)FUN_a00d95e4(). A switch (signed compare tree, root 0x20)
- * on 1, 2, 0x10, 0x11, 0x14, 0x20, 0x21, 0x22, 0x23, 0x24, 0x25 and 0x38 sibcalls one handler each. The
- * handlers take NO argument: their entries never read %i0, and the fw 'call; restore' leaves v in %o0 only as a
- * left-over. The draft passed (v, param_2...), and constant args give 'restore %g0, K, %o0'. The default
- * sibcalls FUN_a00d9474(v, 4, 0). The case source order is ascending (the stub order in the fw). No aids.
+ * void(void). v = (u8)FUN_a00d95e4(). A switch (signed compare tree, root 0x20) on 1, 2, 0x10, 0x11, 0x14,
+ * 0x20, 0x21, 0x22, 0x23, 0x24, 0x25 and 0x38 sibcalls one function each. These take no argument: their
+ * entries never read %i0, and the firmware 'call; restore' leaves v in %o0 only as a left-over (constant
+ * arguments would give 'restore %g0, K, %o0'). The default sibcalls FUN_a00d9474(v, 4, 0).
+ * Source form: the cases in ascending order (the stub order in the firmware).
  */
 extern void FUN_a00d7e6c(void);
 extern void FUN_a00d82c8(void);

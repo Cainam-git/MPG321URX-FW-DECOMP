@@ -1,7 +1,7 @@
 /* FUN_a00d7844 (leon2s, 7 words, leaf; twin pair FUN_a00d7844/FUN_a00d7860). Flags -mcpu=v8 -Os -g.
- Code facts: void (u8 *src, u8 *dst): dst[0] = src[0] & 0x7f; dst[1] = src[1] & 0xf0.
- Fix vs draft: the second value goes through an unsigned short temp (fw 'and %g1,0xf0' in SImode; the direct byte form gives the QImode
- mask 'and -16'), same lever as FUN_a00d76ac. Aids: none.
+ * void (u8 *src, u8 *dst): dst[0] = src[0] & 0x7f; dst[1] = src[1] & 0xf0.
+ * Source form: the second value goes through an unsigned short temp (firmware 'and %g1,0xf0' in SImode;
+ * the direct byte form gives the QImode mask 'and -16'), as in FUN_a00d76ac.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,9 +1,8 @@
 /* leon2s FUN_a00d3704 @ 0xa00d3704-0xa00d378c (34 words), flags -mcpu=v8 -Os -g.
- * Code facts: mode param_2 == 1: acc = word 0xa80785e0; acc != level -> acc = FUN_a00d36e4(level << 8,
- * acc, 0x28) (two compares, bgu / bcc); level = (acc + 0x80) >> 8. Else acc = level << 8.
- * Clamp: level > 0x514 -> 0x514, else max(level, u16 0xa80783dc). Tail call FUN_a00d2378((u16)level).
- * Fix vs the autoc draft (97.14): the tail callee takes ONE argument (fw sets only %i0 before
- * call+restore; the draft passed a 2nd constant 0xa8078400 -> an extra sethi %i1). Aids: none.
+ * mode param_2 == 1: acc = word 0xa80785e0; acc != level -> acc = FUN_a00d36e4(level << 8, acc, 0x28) (two
+ * compares, bgu / bcc); level = (acc + 0x80) >> 8. Else acc = level << 8. Clamp: level > 0x514 -> 0x514,
+ * else max(level, u16 0xa80783dc). Tail call FUN_a00d2378((u16)level).
+ * The tail callee takes one argument (the firmware sets only %i0 before call+restore).
  */
 typedef unsigned int uint;
 

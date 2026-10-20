@@ -1,18 +1,17 @@
 /* leon2s FUN_a00d9be4 @ 0xa00d9be4-0xa00d9d50 (364 bytes, 91 words)
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: void(void). idx = DAT_a8078832. It returns when the byte tables DAT_a8078830[idx] and DAT_a8078828[idx]
- * are equal. v = FUN_a00d7cd0() & 0xff (the callee returns a u8; the fw re-masks it into a u32), m = v & 0xe0.
- * m == 0x80: nothing happens. m == 0x40: DAT_a8078828[idx] = (v + 1) & 0xf. Any other m: a 20-byte local
- * message is filled by FUN_a00d6890(&s, 0, 1). Bit 13 of its word +16 is cleared at entry (word ld/andn/st) and
- * read back after the call as a 16-bit field at bits 8..23 (srl 8; btst 0x20), so word +16 is a union of a
- * plain word and that bit-field. Return when that bit is clear. lo = (w0 >> 24) & 0xf, hi = w0 >> 28 (plain
- * u32 shifts; with bit-fields the compare becomes signed 'bl', the fw has 'bcs'). lo == 0: memcpy (ROM
- * func_0xa0fc15d8, returns void *) of 0x13 bytes into a block-local buffer, FUN_a00d9524(buf),
- * FUN_a00d9698(). lo >= hi: the same into a 2nd buffer, then the store if idx != 0. Otherwise a 3rd buffer:
- * FUN_a00d97bc(buf), FUN_a00d985c(). Then DAT_a8078828[idx] = (v + 1) & 0xf. m != 0x80 && m != 0x40 is the
- * first arm (the fw ANDs the two '!=' values with btst).
- * BEHAVIOUR fixes against the draft: void(void) (the draft returned param_1/param_2), the flag is cleared in
- * the word, and the three copies use separate buffers. No aids, no volatile.
+ * void(void). idx = DAT_a8078832. It returns when the byte tables DAT_a8078830[idx] and DAT_a8078828[idx]
+ * are equal. v = FUN_a00d7cd0() & 0xff (the callee returns a u8; the firmware re-masks it into a u32),
+ * m = v & 0xe0. m == 0x80: nothing happens. m == 0x40: DAT_a8078828[idx] = (v + 1) & 0xf. Any other m: a
+ * 20-byte local block is filled by FUN_a00d6890(&s, 0, 1). Bit 13 of its word +16 is cleared at entry (word
+ * ld/andn/st) and read back after the call as a 16-bit field at bits 8..23 (srl 8; btst 0x20), so word +16
+ * is a union of a plain word and that bit-field. Return when that bit is clear. lo = (w0 >> 24) & 0xf,
+ * hi = w0 >> 28 (plain u32 shifts; with bit-fields the compare becomes signed 'bl', the firmware has 'bcs').
+ * lo == 0: a copy of 0x13 bytes with func_0xa0fc15d8 (returns void *) into a block-local buffer,
+ * FUN_a00d9524(buf), FUN_a00d9698(). lo >= hi: the same into a 2nd buffer, then the store if idx != 0.
+ * Otherwise a 3rd buffer: FUN_a00d97bc(buf), FUN_a00d985c(). Then DAT_a8078828[idx] = (v + 1) & 0xf.
+ * m != 0x80 && m != 0x40 is the first arm (the firmware ANDs the two '!=' values with btst).
+ * The flag is cleared in the word, and the three copies use separate buffers. No volatile.
  */
 struct Msg {
     unsigned int w0;

@@ -1,9 +1,8 @@
 /* leon2s FUN_a00dcc80 @ 0xa00dcc80-0xa00dccd8 (22 words), flags -mcpu=v8 -Os -g.
- * Code facts: v = byte 0xa807953d; FUN_a00dcc50(v); tail ROM call func_0xa0f834c4(string) with s_9f1cec38 /
- * s_9f1cec50 / s_9f1cec68 for v 0 / 2 / 3, else s_9f1cec80 (each string has its own sethi/or into %i0, then one
- * shared 'call; restore'). void(void).
- * Fix vs the autoc draft: the strings are SYMBOLS passed to separate tail calls (the draft stored them in a u16).
- * Aids: none.
+ * v = byte 0xa807953d; FUN_a00dcc50(v); tail ROM call func_0xa0f834c4(string) with s_9f1cec38 / s_9f1cec50 /
+ * s_9f1cec68 for v 0 / 2 / 3, else s_9f1cec80 (each string has its own sethi/or into %i0, then one shared
+ * 'call; restore'). void(void).
+ * The strings are symbols passed to separate tail calls.
  */
 extern unsigned char DAT_a807953d;
 extern char s_9f1cec38[], s_9f1cec50[], s_9f1cec68[], s_9f1cec80[];

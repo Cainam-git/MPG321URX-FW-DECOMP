@@ -1,29 +1,23 @@
 /* leon2s FUN_a00d3c40 @ 0xa00d3c40..0xa00d3eb0 (624 bytes, 156 words; FUN_a00d3ea8 = unreachable
  * ret/restore tail inside the range)
  * Flags: -mcpu=v8 -Os -g.
- * (linked at the real addresses); rawcmp_l2s.py
- * 0 mismatches / 156 words (a00d3c40 a00d3eb0).
- * What it does (code facts): runs only when the register 0xcf03c80c reads 0x99. FUN_a00d36a4();
- * if bit DAT_a8078c37 of DAT_a8078c36 is set: FUN_a00d2d1c(), state DAT_a8078c38 = 0, report
- * (c37 << 16 | 0xff) to 0xd0013ffc via func_0xa0f71534, return. Else: func_0xa0f724b4() == 1
- * -> FUN_a00d2d8c(), state 4. Otherwise DAT_a8078c24 = (FUN_a00d2e00() == 1) (on 1 also
- * FUN_a00d38a8(), _DAT_a8078c20 = func_0xa0fc2064(), FUN_a00d2e9c()); with c24 == 1 and
- * FUN_a00d2b88() == 1: _DAT_a807d54c > 1 -> FUN_a00d3364() != 0 ? (report 0x55, state 2, the
- * calls with 0x9f1c6458 / 0x9f1cca78) : (func_0xa0f83044(0x9f1c6438, state), DAT_a8078c34 = 1);
- * else FUN_a00d2d1c(), FUN_a00d2c38(), state 1, report 0xdd. With c24 != 1: DAT_a8078c30 bit 0
- * set -> FUN_a00d31f8() if bit 1 too; else FUN_a00d3670() != 0 -> FUN_a00d2d1c(), FUN_a00d2c38(),
- * state 0, report 0xff. Common tail: DAT_a8078c33 == 1 -> FUN_a00d378c(); FUN_a00d2920();
- * func_0xa0f71adc() (tail call).
+ * Runs only when the register 0xcf03c80c reads 0x99. FUN_a00d36a4(); if bit DAT_a8078c37 of DAT_a8078c36 is
+ * set: FUN_a00d2d1c(), state DAT_a8078c38 = 0, writes (c37 << 16 | 0xff) to 0xd0013ffc via func_0xa0f71534,
+ * return. Else: func_0xa0f724b4() == 1 -> FUN_a00d2d8c(), state 4. Otherwise DAT_a8078c24 =
+ * (FUN_a00d2e00() == 1) (on 1 also FUN_a00d38a8(), then _DAT_a8078c20 = func_0xa0fc2064(), FUN_a00d2e9c());
+ * with c24 == 1 and FUN_a00d2b88() == 1: _DAT_a807d54c > 1 -> FUN_a00d3364() != 0 ? (writes 0x55, state 2,
+ * the calls with 0x9f1c6458 / 0x9f1cca78) : (func_0xa0f83044(0x9f1c6438, state), DAT_a8078c34 = 1); else
+ * FUN_a00d2d1c(), FUN_a00d2c38(), state 1, writes 0xdd. With c24 != 1: DAT_a8078c30 bit 0 set ->
+ * FUN_a00d31f8() if bit 1 too; else FUN_a00d3670() != 0 -> FUN_a00d2d1c(), FUN_a00d2c38(), state 0, writes
+ * 0xff. Common tail: DAT_a8078c33 == 1 -> FUN_a00d378c(); FUN_a00d2920(); func_0xa0f71adc() (tail call).
  * Callers: no direct 'call 0xa00d3c40' in asm/leon2s (reached via a pointer/table).
- * Aids: none. Fixes vs the draft (99.36): (1) the '== 1' test after func_0xa0f724b4
- * is on ITS return value (fw and %o0, 0xff after the call), the draft tested param_1;
- * (2) order FUN_a00d38a8() then _DAT_a8078c20 = func_0xa0fc2064() (fw stores the fc2064
- * result), the draft had them swapped; (3) void function without parameters (fw never reads
- * %i0..%i5, both returns are tail calls / plain restore). The calls outside the image
- * (0xa0f7xxxx/0xa0f8xxxx/0xa0fcxxxx) cannot be read here: their prototypes are the ones that
- * give the fw bytes; func_0xa0f83044 must return int (void moves its argument set-up, 97.44).
- * Two result variables (u for FUN_a00d2e00, r for FUN_a00d2b88) as in the fw registers
- * (one shared variable 95.51).
+ * The '== 1' test after func_0xa0f724b4 is on its return value (firmware and %o0, 0xff after the call).
+ * void function without parameters (the firmware never reads %i0..%i5; both returns are tail calls /
+ * plain restore).
+ * Source form: the prototypes of the calls outside the image (0xa0f7xxxx/0xa0f8xxxx/0xa0fcxxxx) are the
+ * ones that give the firmware bytes; func_0xa0f83044 returns int (void moves its argument set-up). Two
+ * result variables (u for FUN_a00d2e00, r for FUN_a00d2b88) as in the firmware registers (one shared
+ * variable gives different code).
  */
 extern unsigned char DAT_a8078c37;
 extern unsigned char DAT_a8078c38;
