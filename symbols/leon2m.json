@@ -3221,6 +3221,13 @@
       "name": "FUN_a0099598",
       "status": "matched"
     },
+    "ram:a00995f0": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same code as FUN_a0093694 with other constants: ",
+      "name": "FUN_a00995f0",
+      "status": "matched"
+    },
     "ram:a0099970": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
