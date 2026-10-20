@@ -8810,6 +8810,13 @@
       "name": "FUN_a0107914",
       "status": "matched"
     },
+    "ram:a010795c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets register bits and writes 0x33/0x90 to 0xcf016aa8/0xcf016ab8 when on is 1, else clears 0xcf016aa8",
+      "name": "FUN_a010795c",
+      "status": "matched"
+    },
     "ram:a0107a14": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
