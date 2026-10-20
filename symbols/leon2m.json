@@ -8387,6 +8387,13 @@
       "name": "FUN_a00e4538",
       "status": "matched"
     },
+    "ram:a00e52e8": {
+      "by": "h12",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Adds d to the value read through FUN_a00e0754 with a 0..15 range check and writes it back through FUN_a00e0774",
+      "name": "FUN_a00e52e8",
+      "status": "matched"
+    },
     "ram:a00e7dc8": {
       "by": "h12",
       "cflags": "-mcpu=v8 -O3 -g",
