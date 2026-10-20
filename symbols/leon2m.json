@@ -7312,6 +7312,13 @@
       "name": "FUN_a00e0090",
       "status": "matched"
     },
+    "ram:a00e0134": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Adds or subtracts a masked delta to an 8-bit PHY register field with a limit check",
+      "name": "FUN_a00e0134",
+      "status": "matched"
+    },
     "ram:a00e021c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
