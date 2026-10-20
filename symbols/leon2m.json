@@ -9571,6 +9571,13 @@
       "name": "FUN_a011e388",
       "status": "matched"
     },
+    "ram:a011e438": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "bit 3 = b & 1 in register 0xcf016120/138/150/168/180/198 picked by ch 1..6",
+      "name": "FUN_a011e438",
+      "status": "matched"
+    },
     "ram:a011e690": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
