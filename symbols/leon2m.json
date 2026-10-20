@@ -8121,6 +8121,13 @@
       "name": "FUN_a00f39c0",
       "status": "matched"
     },
+    "ram:a00f4434": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Tests whether FUN_a0120a18(port) times n exceeds 2050000",
+      "name": "FUN_a00f4434",
+      "status": "matched"
+    },
     "ram:a00f446c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
