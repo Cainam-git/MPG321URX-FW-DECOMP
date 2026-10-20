@@ -8490,6 +8490,13 @@
       "name": "FUN_a00fcbec",
       "status": "matched"
     },
+    "ram:a00fcdd8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns the four bytes at DAT_a802c978 as a little-endian word",
+      "name": "FUN_a00fcdd8",
+      "status": "matched"
+    },
     "ram:a00fd558": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
