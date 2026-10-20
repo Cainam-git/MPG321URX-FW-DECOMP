@@ -6153,6 +6153,12 @@
       "name": "FUN_a00b2304",
       "status": "matched"
     },
+    "ram:a00b2790": {
+      "by": "hand",
+      "comment": "parses n hexadecimal characters into an int (invalid characters count as 0)",
+      "name": "FUN_a00b2790",
+      "status": "matched"
+    },
     "ram:a00b281c": {
       "by": "permuter",
       "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
