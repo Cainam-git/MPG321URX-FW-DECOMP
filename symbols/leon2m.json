@@ -12280,6 +12280,13 @@
       "name": "FUN_a013855c",
       "status": "matched"
     },
+    "ram:a0138564": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sends {bit-reversed p[0], p[2], p[1] >> 6, (p[1] >> 4) & 3} with FUN_a01370dc(0x90, 4, buf, 0)",
+      "name": "FUN_a0138564",
+      "status": "matched"
+    },
     "ram:a0138610": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
