@@ -1,11 +1,12 @@
-/* leon2m FUN_a00e7dc8 @ 0xa00e7dc8-0xa00e7eb0, flags -mcpu=v8 -O3 -g.
- * Called nine times from FUN_a00e7eb0. Parameters: device, byte index 0..3, dq index 0..7, set flag.
- * An out-of-range index calls FUN_a00df80c and FUN_a00e0bc0, prints "Error: byte_idx=%d, sould never here."
- * or "Error: dq_idx=%d, sould never here." (both print the byte index) and returns -1.
- * Otherwise it selects one bit of the register map: byte 3 uses register 0x1bf bit dq+1 (dq 7: register
- * 0x1bd bit 6); bytes 0..2 use register byte*3 + 0x1b6 bit dq+4 for dq 0..3 and register byte*3 + 0x1b7
- * bit dq-4 for dq 4..7. It calls FUN_a00e05d8(device, register, bit mask, set == 1 ? bit mask : 0) and
- * returns 0. The indices are signed ints: each range test (x < 0 || x > n) folds into one unsigned compare.
+/* leon2m FUN_a00e7dc8 @ 0xa00e7dc8-0xa00e7eb0, flags -mcpu=v8 -O3 -g. Called nine times from FUN_a00e7eb0.
+ * Parameters p0..p3; p1 and p2 are named byte_idx and dq_idx by the firmware's error strings.
+ * byte_idx outside 0..3 or dq_idx outside 0..7: calls FUN_a00df80c and FUN_a00e0bc0, passes
+ * "Error: byte_idx=%d, sould never here.\n" or "Error: dq_idx=%d, sould never here.\n" with byte_idx (both
+ * strings get byte_idx) to FUN_a00df170 and returns -1.
+ * Otherwise it computes a = 0x1bf, m = 1 << (dq_idx + 1) for byte_idx 3 (dq_idx 7: a = 0x1bd, m = 0x40);
+ * a = byte_idx * 3 + 0x1b6, m = 1 << (dq_idx + 4) for dq_idx 0..3; a = byte_idx * 3 + 0x1b7,
+ * m = 1 << (dq_idx - 4) for dq_idx 4..7. It calls FUN_a00e05d8(p0, a, m, p3 == 1 ? m : 0) and returns 0.
+ * The indices are signed ints: each range test (x < 0 || x > n) folds into one unsigned compare.
  */
 extern void FUN_a00df80c(void);
 extern void FUN_a00e0bc0(void);
