@@ -6577,6 +6577,12 @@
       "name": "FUN_a00d7638",
       "status": "matched"
     },
+    "ram:a00d7648": {
+      "by": "hand",
+      "comment": "Copy a 19-byte descriptor, masking the header fields",
+      "name": "FUN_a00d7648",
+      "status": "matched"
+    },
     "ram:a00d76ac": {
       "by": "hand",
       "comment": "pack 3 u16 of src into 6 bytes of dst: bits 8..14, low & 0xf1, w1 high/low, w2 high/low",
