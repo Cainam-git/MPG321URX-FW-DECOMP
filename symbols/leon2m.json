@@ -2383,6 +2383,13 @@
       "name": "FUN_a008e520",
       "status": "matched"
     },
+    "ram:a008e5b8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Formats byte 0xa802d285 as 2 characters, converts them to glyph numbers and passes them to FUN_a0146af4",
+      "name": "FUN_a008e5b8",
+      "status": "matched"
+    },
     "ram:a008e7a8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
