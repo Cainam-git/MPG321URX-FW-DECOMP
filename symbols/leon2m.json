@@ -6261,6 +6261,13 @@
       "name": "FUN_a00cbe9c",
       "status": "matched"
     },
+    "ram:a00cc140": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command handler: copies receive record bytes 6-18 to 0xa802d277, checks their 8-bit sum against byte 19, FUN_a014aed0 save or 0xee reply",
+      "name": "FUN_a00cc140",
+      "status": "matched"
+    },
     "ram:a00cc760": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
