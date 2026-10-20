@@ -2796,6 +2796,12 @@
       "name": "FUN_a008aadc",
       "status": "matched"
     },
+    "ram:a008aaf8": {
+      "by": "hand",
+      "comment": "passes v to FUN_a008aab0, FUN_a008aadc, FUN_a008a9ec for 0 and 1, then FUN_a008a95c(v >> 8)",
+      "name": "FUN_a008aaf8",
+      "status": "matched"
+    },
     "ram:a008ae18": {
       "by": "hand",
       "comment": "Sets bit param_1 of the byte register at 0xa8078b31: load byte, or with 1 << param_1 (mov 1,%o5; sll %o5,%o0,%o5), store byte.",
