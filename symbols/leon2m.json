@@ -4470,6 +4470,13 @@
       "name": "FUN_a00ba8bc",
       "status": "matched"
     },
+    "ram:a00ba950": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Clears the receive state and receive record of a UART port",
+      "name": "FUN_a00ba950",
+      "status": "matched"
+    },
     "ram:a00babe4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
