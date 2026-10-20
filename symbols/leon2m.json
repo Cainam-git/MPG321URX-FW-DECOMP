@@ -8099,6 +8099,13 @@
       "name": "FUN_a00f3580",
       "status": "matched"
     },
+    "ram:a00f35d0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes sel << 5 to three 0xCF0200xx registers; sel 8 is replaced by a level 0..7 from a measured count",
+      "name": "FUN_a00f35d0",
+      "status": "matched"
+    },
     "ram:a00f37d0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
