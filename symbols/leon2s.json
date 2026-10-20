@@ -2267,6 +2267,12 @@
       "name": "FUN_a0083618",
       "status": "matched"
     },
+    "ram:a0083648": {
+      "by": "hand",
+      "comment": "Tests one bit of the status byte 0xa80789e0 selected by index (indexes 1..4 remapped through 2-bit fields of 0xa80761a8)",
+      "name": "FUN_a0083648",
+      "status": "matched"
+    },
     "ram:a0083e28": {
       "by": "near",
       "comment": "near-miss repaired: DAT_a80789e0 is unsigned char",
