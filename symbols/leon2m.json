@@ -6468,6 +6468,13 @@
       "name": "FUN_a00d1ce4",
       "status": "matched"
     },
+    "ram:a00d1e3c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Frame byte 7 (1-4) mapped to 2,0,1,3 into byte 0xa802d2a1 with FUN_a00d9764 and a save of 0xa802d290; returns 0xe0, 0xe3 for other values",
+      "name": "FUN_a00d1e3c",
+      "status": "matched"
+    },
     "ram:a00d1ed8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
