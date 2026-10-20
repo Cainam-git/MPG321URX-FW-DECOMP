@@ -2490,6 +2490,12 @@
       "name": "FUN_a0087d8c",
       "status": "matched"
     },
+    "ram:a0088a80": {
+      "by": "hand",
+      "comment": "Port 0..4: returns 1 when bit 2 of the FUN_a0083710 status byte is set",
+      "name": "FUN_a0088a80",
+      "status": "matched"
+    },
     "ram:a0088af0": {
       "by": "hand",
       "comment": "Calls FUN_a0083648(param_1) for param_1 & 0xff in {0, 2, 3, 4, 1}, tested in that if/else order; any other value makes no call. Returns 1 if the call returned 0, otherwise 0: l0 starts at 0, is set to 1 on a zero result, and the function returns l0 & 1.",
