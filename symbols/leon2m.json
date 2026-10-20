@@ -13036,6 +13036,13 @@
       "name": "FUN_a013bc5c",
       "status": "matched"
     },
+    "ram:a013bd00": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Calls FUN_a00f8918 / FUN_a00f88e8 / FUN_a00f8ef4 for port by halfword compares of the record from FUN_a013cd4c(port) and flag",
+      "name": "FUN_a013bd00",
+      "status": "matched"
+    },
     "ram:a013bfa8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
