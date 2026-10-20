@@ -5329,6 +5329,12 @@
       "name": "FUN_a00add0c",
       "status": "matched"
     },
+    "ram:a00add48": {
+      "by": "hand",
+      "comment": "returns 9 for a == 2, else a byte of row a of DAT_a8078768 (column b when a*4+b <= 4, else column 0)",
+      "name": "FUN_a00add48",
+      "status": "matched"
+    },
     "ram:a00adf64": {
       "by": "autoc",
       "comment": "Returns bit (param_1 * 4 + param_2) of the status byte at 0xa807de70: four status bits per port. Ghidra had added a shift mask.",
