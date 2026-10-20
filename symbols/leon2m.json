@@ -12114,6 +12114,13 @@
       "name": "FUN_a014d504",
       "status": "matched"
     },
+    "ram:a014d544": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same code as FUN_a01438dc with other constants: i = remap(ch) (0..3, else print s_001a6dd8 \"SYS remapping channel OOR\" and use 0)",
+      "name": "FUN_a014d544",
+      "status": "matched"
+    },
     "ram:a014deec": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
