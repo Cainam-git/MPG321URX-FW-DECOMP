@@ -6166,6 +6166,12 @@
       "name": "FUN_a00b34a8",
       "status": "matched"
     },
+    "ram:a00c0a04": {
+      "by": "hand",
+      "comment": "for the first of six records of DAT_a807d5c8 with bit n set in byte 4 returns a status bit read through a ROM routine",
+      "name": "FUN_a00c0a04",
+      "status": "matched"
+    },
     "ram:a00c0b48": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
