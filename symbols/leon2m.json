@@ -7474,6 +7474,13 @@
       "name": "FUN_a00dbcf0",
       "status": "matched"
     },
+    "ram:a00dc2dc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reloads the record 0xa802d290 from the table at 0x198524 keeping a few bytes, re-limits bytes +0x12..+0x14 and runs FUN_a00db738 or FUN_a00dbcf0",
+      "name": "FUN_a00dc2dc",
+      "status": "matched"
+    },
     "ram:a00dcec4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
