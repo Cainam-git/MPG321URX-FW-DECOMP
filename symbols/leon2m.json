@@ -12789,6 +12789,13 @@
       "name": "FUN_a012ad6c",
       "status": "matched"
     },
+    "ram:a012b22c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns bit (nibble ch of byte 0xa802e1cc) of nibble ch of byte 0xa802e1d2",
+      "name": "FUN_a012b22c",
+      "status": "matched"
+    },
     "ram:a012b328": {
       "by": "near",
       "comment": "near-miss repaired: name arr->DAT_a802d8ae",
