@@ -1584,6 +1584,12 @@
       "name": "FUN_a006122c",
       "status": "matched"
     },
+    "ram:a0061348": {
+      "by": "hand",
+      "comment": "writes a word as 8 hex digits to the UART (inlined copy of FUN_a006122c)",
+      "name": "FUN_a0061348",
+      "status": "matched"
+    },
     "ram:a0061528": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
