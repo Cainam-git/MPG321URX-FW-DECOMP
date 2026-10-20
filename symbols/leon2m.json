@@ -3638,6 +3638,13 @@
       "name": "FUN_a0098e28",
       "status": "matched"
     },
+    "ram:a0098f28": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "FUN_a00a93bc, FUN_a00a813c; for afec 0xb1 clears bit 6 of word 0xa802d338, else sets it and copies afec bit 0 into bit 5; FUN_a00a9650 / FUN_a00a813c with the bit; afec = 0x2d",
+      "name": "FUN_a0098f28",
+      "status": "matched"
+    },
     "ram:a009901c": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
