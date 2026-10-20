@@ -4426,6 +4426,12 @@
       "name": "hdmi_Init_Interrupt",
       "status": "matched"
     },
+    "ram:a00a303c": {
+      "by": "hand",
+      "comment": "HDMI 2.1 receiver start-up: block init, per-port INIT_handler, callback registration",
+      "name": "hdmi21_Initialize",
+      "status": "matched"
+    },
     "ram:a00a3578": {
       "by": "hand",
       "comment": "TxFFE mode switch per port: mode 1 'TxFFE_Preshoot', mode 3 'TxFFE_NO' (reg RMWs), else 'TxFFE_Normal(Exit Mode)[%d]'; values from 2-byte records a807872a[a80791f0[port]] and u16 a8078732[idx]; e0f0 / e200 / e3c0 calls",
