@@ -13772,6 +13772,13 @@
       "name": "FUN_a014e19c",
       "status": "matched"
     },
+    "ram:a014e1d0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "FUN_a010afc8, FUN_a010b198, delay 10, then the routine pair of sel 0..4 called with 0",
+      "name": "FUN_a014e1d0",
+      "status": "matched"
+    },
     "ram:a014e2f0": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
