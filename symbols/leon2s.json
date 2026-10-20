@@ -3625,6 +3625,12 @@
       "name": "FUN_a0093138",
       "status": "matched"
     },
+    "ram:a0093164": {
+      "by": "hand",
+      "comment": "Copy two byte tables into page-0 registers 0x11e.. and 0x180.. of a port",
+      "name": "FUN_a0093164",
+      "status": "matched"
+    },
     "ram:a00931fc": {
       "by": "hand",
       "comment": "Void. Three loops with unsigned char counters (masked with 0xff after the increment, bleu compare): i = 0..2 calls (*_DAT_a807d5b8)(param1, i + 0x12a) and FUN_a00a8054(param2, 0, i + 0x11e, result & 0xff); i = 0..1 uses i + 0x130 and i + 0x121; then FUN_a00a80cc(param2, 0, 0x13e, 0x30, 0); then i = 0..8 (bleu,a) uses i + 0x180 for both calls. Ends with the tail call FUN_a00a80cc(param2, 0, 0x13e, 0x30, 1) (restore %g0, 1, %o4). Register numbers are passed as unsigned short ((i + n) via sll/srl 16).",
