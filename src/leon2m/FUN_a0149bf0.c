@@ -4,12 +4,11 @@
  * RANGE: the asm header (and symbols/leon2m.splits.json "a0149bf0": "a0149db8") cut this function at its tail call;
  *   the 8-entry jump table (0xe34b4 + 0xA0060000 run-time offset) targets 0xa0149e5c (modes 0,2), 0xa0149e14 (1,5),
  *   0xa0149cf4 (3,6), 0xa0149db8 (4,7). "FUN_a0149db8" is one case body of this function, 0xa0149e14-0xa0149e8c
- *   two more. Judged with jf.py with the target range overridden (exact bytes incl. the jump-table
- *   proof of tools/exact.py).
+ *   two more. A comparison against the firmware must use the real range, the jump table included.
  *
  * Code facts:
- *   PIP state block 0xA802E1A0 (byte +7 = 0xA802E1A7 = the current PIP/PBP mode; the panel row picker FUN_a00dac38 reads
- *   it as its input class). Window table 0xA802DF30, 4 entries of 0x78 bytes (+0x00 cfg word, bits 12-15 passed to
+ *   PIP state block 0xA802E1A0 (byte +7 = 0xA802E1A7 = the current PIP/PBP mode; the panel row picker FUN_a00dac38
+ *   reads it as its input class). Window table 0xA802DF30, 4 entries of 0x78 bytes (+0x00 cfg word, bits 12-15 passed to
  *   FUN_a0101e24; +0x40 ctl word).
  *   1. Leaving mode 0 for any non-zero mode, or leaving mode 2 for any mode other than 0/2:
  *      FUN_a0107e44(0xA802E3D3 != 0, 0xA802E3CA, 1) (FRCConfigPostFRC).
@@ -21,7 +20,7 @@
  *   6. FUN_a010385c(1); FUN_a012f1ec(0..3, 2); FUN_a013129c(); FUN_a0118628(mode == 0 ? 2 : 3);
  *      tail call FUN_a0153970(&0xA802E1A0, 0).
  * Callers: FUN_a0096858 (several sites), FUN_a00c4ec4 (several sites), FUN_a00da254.
- * keys: (state == 0) & (mode != 0) with bitwise & (setcc + btst); the final call written as if/else with
+ * Source form: (state == 0) & (mode != 0) with bitwise & (setcc + btst); the final call written as if/else with
  *   two calls (a ?: or a variable gives the addx / clr shapes); switch cases in natural order 0,2 / 1,5 / 3,6 / 4,7
  *   with four explicit calls each (gcc cross-jumps the shared tails); mode is an unsigned int parameter.
  */

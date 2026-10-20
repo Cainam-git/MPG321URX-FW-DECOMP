@@ -2,10 +2,10 @@
  * Code facts: v = (u8)FUN_a01421c4((u8)FUN_a0142218((u8)FUN_a0125198(p))) (each result is
  * re-masked by the caller: the callees return int). v == 0x71: k = 0, FUN_a0151aa4(0x10, 1);
  * v == 0x81: k = 1, FUN_a0151aa4(0x20, 1) (one shared call in the fw); else k = 0xff. If
- * k != 0xff: FUN_a012b164(k, q); tail call FUN_a0153970(&DAT_a802e1a0, 0). void.
- * Fix vs the autoc draft (82.86): the arm selection is a SWITCH on v (an if/else-if chain makes
- * gcc crossjump 'mov 1,%o1; call' together; the switch keeps only the call shared, so the 0x81
- * arm sets o0 and o1 itself as in the fw). Aids: none.
+ * k != 0xff: FUN_a012b164(k, q); tail call FUN_a0153970(&DAT_a802e1a0, 0). Returns nothing.
+ * Source form: the arm selection is a switch on v (an if/else-if chain makes gcc crossjump
+ * 'mov 1,%o1; call' together; the switch keeps only the call shared, so the 0x81 arm sets o0 and o1
+ * itself as in the fw). Aids: none.
  */
 extern unsigned char DAT_a802e1a0[];
 extern int FUN_a0125198(unsigned char);

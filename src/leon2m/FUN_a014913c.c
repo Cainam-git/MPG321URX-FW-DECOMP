@@ -1,8 +1,8 @@
 /* leon2m FUN_a014913c @ 0xa014913c-0xa0149178 (15 words), flags -mcpu=v8 -O3 -g.
  * Code facts: byte 0xa802e3d0+0x1c = u8 param; if param != 5: FUN_a011855c() then tail FUN_a014110c(re-read
- * rec+0x1c) (1 arg, restore in the delay slot); else tail FUN_a011855c(). void.
- * Fix vs the autoc draft (73.33): real base DAT_a802e3d0 as a struct (draft: DAT_a802e3ec word), u8 param
- * (no extra params), FUN_a011855c(void), FUN_a014110c takes 1 u8 arg. Aids: none.
+ * rec+0x1c) (1 arg, restore in the delay slot); else tail FUN_a011855c(). Returns nothing.
+ * Source form: the base DAT_a802e3d0 as a struct, one u8 param, FUN_a011855c(void); FUN_a014110c takes one
+ * u8 argument. Aids: none.
  */
 struct E3D0 { unsigned char pad[0x1c]; unsigned char b1c; };
 extern struct E3D0 DAT_a802e3d0;

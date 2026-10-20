@@ -2,10 +2,9 @@
  * Code facts: p (u8) maps 0->0, 1->1, 2->2, 3->3, anything else -> 0xff (switch, emitted as a
  * compare chain). If v <= 3: tail call FUN_a012f1ec(v, 3). Else: log FUN_a00df170(string
  * 0x1a6dd8), then tail call FUN_a012f1ec(0, 3). Both tail calls are separate in the fw.
- * FUN_a012f1ec re-extends its 2nd arg (and %i1,0xff), so (u8, u8). void.
- * Fix vs the autoc draft (83.33): the 'v <= 3' arm is FIRST in the source (fw falls through into
- * the v tail call; the draft's '> 3' first arm made gcc share one tail call). String named by
- * address s_001a6dd8. Aids: none.
+ * FUN_a012f1ec re-extends its 2nd arg (and %i1,0xff), so (u8, u8). Returns nothing.
+ * Source form: the 'v <= 3' arm is first (fw falls through into the v tail call; a '> 3' first arm
+ * makes gcc share one tail call). String named by address s_001a6dd8. Aids: none.
  */
 extern void FUN_a00df170(const char *);
 extern void FUN_a012f1ec(unsigned char, unsigned char);

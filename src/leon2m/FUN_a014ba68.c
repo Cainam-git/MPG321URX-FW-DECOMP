@@ -1,8 +1,7 @@
-/* leon2m FUN_a014ba68 @ 0xa014ba68-0xa014bac4 (23 words), flags -mcpu=v8 -O3 -g (the autoc entry said -Os:
- * -Os gives 56.52).
+/* leon2m FUN_a014ba68 @ 0xa014ba68-0xa014bac4 (23 words), flags -mcpu=v8 -O3 -g (-Os gives other code).
  * Code facts: maps the u8 FUN_a0138e5c() result 0..3 to itself and every other value to 4 (signed case tree
  * rooted at 1); returns u8 (the extension 'and 0xff' is reduced to 'and 7' by combine, nonzero bits of 0..4).
- * Fix vs the autoc draft (65.22): a plain switch with a u8 result and the prompt's -O3 flags. Aids: none.
+ * Source form: a plain switch with a u8 result. Aids: none.
  */
 extern unsigned char FUN_a0138e5c(void);
 

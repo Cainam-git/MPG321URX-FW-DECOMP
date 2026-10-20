@@ -1,4 +1,4 @@
-/* leon2m FUN_a01483f4 @ 0xa01483f4  (hand; last byte-level step by the permuter; byte-exact)
+/* leon2m FUN_a01483f4 @ 0xa01483f4  Flags: -mcpu=v8 -O3 -g.
  *
  * Makes src the active panel parameter row: copies the 0x58-byte row (one of the three rows of the table at
  * 0x198380, chosen by FUN_a00dac38) byte by byte to 0xA802E378, prints its clock limits, H-total and V-total

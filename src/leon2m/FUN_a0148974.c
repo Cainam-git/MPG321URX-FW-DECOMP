@@ -3,9 +3,9 @@
  * 9 -> FUN_a0125140(byte 0xa802e138); 10 -> FUN_a0125140(FUN_a012ad6c() ? byte 0xa802e15c : byte 0xa802e14a);
  * 11 -> FUN_a0125140(FUN_a012ad6c() ? 0xa802e14a : 0xa802e15c); other values keep 0xff. Returns r as u8.
  * The four bytes are separate symbols (one sethi per load, none shared).
- * Fix vs the autoc draft (68.18): plain switch with r preset to 0xff; both 10/11 arms test 'if (FUN_a012ad6c())'
- * with the true arm first (an '== 0' form in case 11 swaps the %o2/%o3 HIGH registers, 90.91); real
- * prototypes (u8 returns, void params). Aids: none.
+ * Source form: plain switch with r preset to 0xff; both 10/11 arms test 'if (FUN_a012ad6c())' with the true
+ * arm first (an '== 0' form in case 11 swaps the %o2/%o3 HIGH registers); prototypes with u8 returns and
+ * void params. Aids: none.
  */
 extern unsigned char DAT_a802e126;
 extern unsigned char DAT_a802e138;

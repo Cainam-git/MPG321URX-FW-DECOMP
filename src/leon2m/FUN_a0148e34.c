@@ -5,8 +5,8 @@
  * (*DAT_a802d6a4, the 2nd size value that FUN_a00fc044 passes to FUN_a00fb434 with h08) < 0x1000
  * -> bit set; otherwise (off, or that size >= 4096) -> bit cleared.
  * For a 4K row (3840/2160 < 4096) the lock bit follows 'on' only. The function reads no input timing at all.
- * Fixes vs the autoc draft (Ghidra returned a fake CONCAT44): void return, u8 param, the
- * string as its symbol s_001a6f48, the struct PanelParam row (the src/leon2m/FUN_a00fc044.c layout).
+ * Returns nothing (Ghidra's CONCAT44 return is not real). Source form: u8 param, the string as its symbol
+ * s_001a6f48, the struct PanelParam row (the src/leon2m/FUN_a00fc044.c layout).
  * Aids: none. volatile: none (DAT_a802e3d0 is RAM).
  */
 struct PanelParam { unsigned int w0; unsigned short h4; unsigned char b6, b7; unsigned short h08, h0a; };

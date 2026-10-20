@@ -2,10 +2,9 @@
  * Same family as FUN_a014b360.
  * Code facts: m = (u8)FUN_a01421c4(FUN_a0142218(FUN_a0125198(p1))) (each result passed on as u8). i = 0, 1, 2, 3
  * for m = 0x51 / 0x61 / 0x71 / 0x81, else 0 (u16 i: the fw 'and 3'). r = FUN_a0125124(byte +0x10 of the
- * 0x12-byte record DAT_a802e116[i]); FUN_a01255dc(r, p2); tail FUN_a0133e7c((u8)(1 << r), p2). void.
- * Fix vs the autoc draft: one nested call chain, the real record base DAT_a802e116 + 0x10 (draft e126), u8
- * prototypes. The explicit 'case 0x51: i = 0' (same value as the default; the case-tree root lever) gives the
- * fw tree with 0x61 at the root (without it 78.57). Aids: none.
+ * 0x12-byte record DAT_a802e116[i]); FUN_a01255dc(r, p2); tail FUN_a0133e7c((u8)(1 << r), p2). Returns nothing.
+ * Source form: one nested call chain, the record base DAT_a802e116 + 0x10, u8 prototypes. The explicit
+ * 'case 0x51: i = 0' (same value as the default) gives the fw case tree with 0x61 at the root. Aids: none.
  */
 struct Ent { unsigned char b00[0x10]; unsigned char b10; unsigned char b11; };
 extern struct Ent DAT_a802e116[];

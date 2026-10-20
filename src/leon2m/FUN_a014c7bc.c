@@ -1,6 +1,5 @@
 /* leon2m FUN_a014c7bc @ 0xa014c7bc-0xa014ce84 (1736 bytes)  SYSAPI command dispatcher (varargs) for the 0xA802E3D0
- * system state. -mcpu=v8 -O3 -g (jf 100 match.
- * rawcmp 434/0, all 167 register-rename decisions = firmware).
+ * system state. Flags: -mcpu=v8 -O3 -g (434 words).
  *
  * void FUN_a014c7bc(cmd, ...): the five variadic words are spilled at %fp+0x48 (va_list); cmd > 32 does nothing.
  *   Jump table at 0xE35A4 (33 entries; the table holds 0x000ECxxx addresses = code address - 0xA0060000). Cases
@@ -25,7 +24,7 @@
  *   31: 0xA802E3FE = a.   32: 0xA802E408 = word; 0/1: FUN_a0150120(word, 0); 2/3: FUN_a0150120(1, 1).
  * Callers: no direct call in asm/leon2m.
  * PANEL ROW FIELDS READ: transformed row +0x0A (case 4 only).
- * Code facts used: case order (search) 17,0,4,5,6,7,12,13,9,14,15,16,18,19,20,21,22,23,24,31,32,8 gives the
+ * Source form: case order 17,0,4,5,6,7,12,13,9,14,15,16,18,19,20,21,22,23,24,31,32,8 gives the
  *   firmware's block layout; inner a-switches in 21/22 (signed compare tree on the promoted u8); case 32 as an
  *   if-chain (a switch merges 0/1 into a range test); unsigned '/ 100U'.
  * Case 14 facts:
@@ -35,12 +34,12 @@
  *   - 'unsigned int m; m = b;' before the identity switch (no default copy) gives the firmware's 'ldub [ap+7]'.
  *   - case 0 falls through into default (shared call keeps 'a' in %o0); case 1 has its own call, where gcse puts
  *     the constant 1 ('mov 1, %o0'), as in the firmware.
- *   - Top-level case order (whole case blocks, each ends in break) from a hill-climb; the rename pass (LRU ticks)
- *     follows source block order.
- * DOCUMENTED NO-CODE COMPILER AID: two 'do continue; while (0);' at the start of case 14's
+ *   - Top-level case order: whole case blocks, each ends in break; the rename pass (LRU ticks) follows source
+ *     block order.
+ * Compiler aid (no code): two 'do continue; while (0);' at the start of case 14's
  *   'case 1:' arm. They emit no instructions and change no behaviour; each adds the PRED_CONTINUE branch hint, which
  *   raises that arm's predicted frequency above the inner switch stubs, so bb-reorder places the arm before the
- *   stubs as in the firmware (one hint: 97.70, two: 100).
+ *   stubs as in the firmware (one hint is not enough; two give the firmware's layout).
  */
 #include <stdarg.h>
 struct E3D0bits {
