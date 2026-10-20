@@ -676,6 +676,13 @@
       "name": "FUN_CODE_3fe7",
       "status": "matched"
     },
+    "CODE:45aa": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "fixed sequence of FUN_CODE_d884(ch, reg, value) writes with three local flags selecting call groups, plus FUN_CODE_c73e(ch, 0x87, 0x40, 1)",
+      "name": "FUN_CODE_45aa",
+      "status": "matched"
+    },
     "CODE:482e": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
