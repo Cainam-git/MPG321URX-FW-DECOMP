@@ -2447,6 +2447,13 @@
       "name": "FUN_a008b330",
       "status": "matched"
     },
+    "ram:a008b380": {
+      "by": "h14",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Formats a table frequency selected by 0xa802afb8 as KHz/MHz text and draws it at ROM position record 15",
+      "name": "FUN_a008b380",
+      "status": "matched"
+    },
     "ram:a008b83c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
