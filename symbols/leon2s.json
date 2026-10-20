@@ -2899,6 +2899,12 @@
       "name": "FUN_a008e200",
       "status": "matched"
     },
+    "ram:a008e2c0": {
+      "by": "hand",
+      "comment": "Program page-1 registers 0x0a/0x99 fields from a mode-selected value",
+      "name": "FUN_a008e2c0",
+      "status": "matched"
+    },
     "ram:a008e3c0": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
