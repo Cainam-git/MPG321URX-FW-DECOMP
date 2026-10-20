@@ -7669,6 +7669,13 @@
       "name": "FUN_a00dcec4",
       "status": "matched"
     },
+    "ram:a00dd540": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "prints the main stack Max/Min/Curr values and Pass or Fail when the argument is 0",
+      "name": "FUN_a00dd540",
+      "status": "matched"
+    },
     "ram:a00dd614": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
