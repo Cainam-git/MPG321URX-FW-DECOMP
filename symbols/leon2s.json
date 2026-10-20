@@ -6304,6 +6304,12 @@
       "name": "FUN_a00c0a04",
       "status": "matched"
     },
+    "ram:a00c0a88": {
+      "by": "h17",
+      "comment": "Writes 5 bytes of a and 0x11a bytes of b to hardware register blocks with register 0xcf011674 bits 3-4 set",
+      "name": "FUN_a00c0a88",
+      "status": "matched"
+    },
     "ram:a00c0b48": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
