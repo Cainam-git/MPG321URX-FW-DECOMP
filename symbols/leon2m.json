@@ -8889,7 +8889,7 @@
     "ram:a00f7434": {
       "by": "h12",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Writes a 16-bit table byte by byte to 0xcf00eec8 with delays between 0xcf00eec4 control writes",
+      "comment": "Writes the u16 entries of p (or DAT_0019a378) byte by byte to 0xcf00eec8 between 0xcf00eec4 writes",
       "name": "FUN_a00f7434",
       "status": "matched"
     },

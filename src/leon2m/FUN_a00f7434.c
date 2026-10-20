@@ -1,9 +1,9 @@
 /* leon2m FUN_a00f7434 @ 0xa00f7434-0xa00f7534, flags -mcpu=v8 -O3 -g. Callers: FUN_a012a2f0, FUN_a01474b0.
  * Writes (0xcf00ee80 & 0xf9) | (DAT_a802b7b4 << 1) to 0xcf00ee80, clears bit 5 of 0xcf00eec0 and writes
- * v = (0xcf00eec4 & 0x0f) | 0x50 (an unsigned char) to 0xcf00eec4. The table t is p, or DAT_0019a378 when p
+ * v = (0xcf00eec4 & 0x0f) | 0x50 (an unsigned char) to 0xcf00eec4. The data block t is p, or DAT_0019a378 when p
  * is null (layout { u8 n; u16 v[]; } with v at offset 2). For i = 0..n (inclusive, do-while) it writes the low
- * byte, then the high byte of v[i] to 0xcf00eec8, each followed by the delay FUN_a00f2e74. Then it writes
- * v | 0x90 to 0xcf00eec4, calls the ROM routine func_0x4008e2a4, sets bit (DAT_a802b7b4 + 4) of 0xcf00ee80
+ * byte, then the high byte of v[i] to 0xcf00eec8, each write followed by a call of the 32-nop loop FUN_a00f2e74.
+ * Then it writes v | 0x90 to 0xcf00eec4, calls func_0x4008e2a4, sets bit (DAT_a802b7b4 + 4) of 0xcf00ee80
  * (result masked to 8 bits) and clears bit 7 of 0xcf00eec4. Same frame as src/leon2m/FUN_a00f7534.c.
  */
 #define R(a) (*(volatile unsigned int *)(a))
