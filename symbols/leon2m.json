@@ -13431,6 +13431,13 @@
       "name": "FUN_a014a820",
       "status": "matched"
     },
+    "ram:a014aa48": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns 0xa802cd90 (sel 1), 0xa802cc90 (sel 2) or 0xa802ce90",
+      "name": "FUN_a014aa48",
+      "status": "matched"
+    },
     "ram:a014ac28": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
