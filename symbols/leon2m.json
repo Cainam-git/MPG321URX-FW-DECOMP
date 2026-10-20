@@ -1756,6 +1756,12 @@
       "name": "FUN_a002c25c",
       "status": "matched"
     },
+    "ram:a002c268": {
+      "by": "hand",
+      "comment": "Read-modify-write of the word at p: bits in mask taken from v",
+      "name": "FUN_a002c268",
+      "status": "matched"
+    },
     "ram:a002c4d0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
