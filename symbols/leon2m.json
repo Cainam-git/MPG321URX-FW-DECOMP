@@ -4525,6 +4525,13 @@
       "name": "FUN_a00bbf1c",
       "status": "matched"
     },
+    "ram:a00bc098": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Builds the 11-byte reply with the three decimal digits of byte 0xa802d2d9, clears the port's receive state and sends it",
+      "name": "FUN_a00bc098",
+      "status": "matched"
+    },
     "ram:a00bc214": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
