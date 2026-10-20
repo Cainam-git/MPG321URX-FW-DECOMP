@@ -2928,6 +2928,12 @@
       "name": "FUN_a008b53c",
       "status": "matched"
     },
+    "ram:a008b5d0": {
+      "by": "h15",
+      "comment": "For port <= 3: FUN_a00a71fc(port, 7, 0x10, 0) when en is clear, otherwise FUN_a00a71b4 tests of arguments 7, 1, 0xf with FUN_a00a71fc writes",
+      "name": "FUN_a008b5d0",
+      "status": "matched"
+    },
     "ram:a008b694": {
       "by": "permuter",
       "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
