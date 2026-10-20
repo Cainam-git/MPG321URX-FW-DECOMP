@@ -7181,6 +7181,13 @@
       "name": "FUN_a00e2714",
       "status": "matched"
     },
+    "ram:a00e285c": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same code as FUN_a00e2714 with other tables (listed in the source header)",
+      "name": "FUN_a00e285c",
+      "status": "matched"
+    },
     "ram:a00e2aec": {
       "by": "hand",
       "comment": "Calls a setup routine, then polls FUN_a00e0514 until it returns zero six consecutive times (a nonzero return resets the counter), and returns (FUN_a00e02ec(0x1cf) << 8) | FUN_a00e02ec(0x1ce). The return is a single expression so the sll follows the first read, before the second call.",
