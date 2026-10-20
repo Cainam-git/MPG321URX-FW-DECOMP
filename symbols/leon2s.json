@@ -3938,6 +3938,12 @@
       "name": "FUN_a009c794",
       "status": "matched"
     },
+    "ram:a009c87c": {
+      "by": "hand",
+      "comment": "Clear audio-related bytes of a port record and reset the audio status",
+      "name": "FUN_a009c87c",
+      "status": "matched"
+    },
     "ram:a009d5cc": {
       "by": "hand",
       "comment": "End step of the HDMI 2.1 receiver EQ sequence: finish, rerun mode detect or fail",
