@@ -7887,7 +7887,7 @@
     "ram:a00fca4c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Starts a transfer on registers 0xcf0120xx (or through the hook 0xa802c970) and waits up to 1000 ticks for status bits 0x2e",
+      "comment": "Writes registers 0xcf012084/0xcf012034, calls the hook 0xa802c970 or writes 0xcf012080/0xcf012040, then polls 0xcf012034 bits 0x2e for up to 1000 ticks",
       "name": "FUN_a00fca4c",
       "status": "matched"
     },
