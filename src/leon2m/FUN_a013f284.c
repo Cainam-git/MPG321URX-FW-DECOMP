@@ -1,10 +1,8 @@
-/* leon2m FUN_a013f284 @ 0xa013f284-0xa013f370 (59 words), flags -mcpu=v8 -O3 -g. No direct callers (reached
- * through a table).
- * Copies timing row idx of the 36-byte ROM records at 0x1a5a16 into the record o = FUN_a013cd4c(port) (halfword
- * fields): o->h12..h18 = t->he..h14, o->he = t->ha, o->h1e = t->h1a, o->h20 = t->h1c, o->h1a = t->h16,
- * o->h1c = t->h18, o->h28 = t->ha, o->h2a = t->h16, byte o->b26 = 0x20, o->h2c = t->h18, byte o->b3a = 0,
- * o->h3c = t->h22. When the row's first byte k is not 0, o->h16, o->he, o->h1e, o->h28 and o->h2a are multiplied
- * by k.
+/* leon2m FUN_a013f284 @ 0xa013f284-0xa013f370 (59 words), flags -mcpu=v8 -O3 -g. No direct callers (reached through
+ * a table). Copies row idx of the 36-byte ROM records at 0x1a5a16 into the record o = FUN_a013cd4c(port) (halfword
+ * fields): o->h12..h18 = t->he..h14, o->he = t->ha, o->h1e = t->h1a, o->h20 = t->h1c, o->h1a = t->h16, o->h1c =
+ * t->h18, o->h28 = t->ha, o->h2a = t->h16, byte o->b26 = 0x20, o->h2c = t->h18, byte o->b3a = 0, o->h3c = t->h22.
+ * When the row's first byte k is not 0, o->h16, o->he, o->h1e, o->h28 and o->h2a are multiplied by k.
  * Exact form: the table is read through a local pointer tab; the row is t = tab + idx, but k is read as tab[idx].k
  * (ldub [tab + offset] operand order) and o->h2c is written before o->b26.
  */
