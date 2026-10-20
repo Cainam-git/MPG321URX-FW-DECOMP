@@ -14254,6 +14254,13 @@
       "name": "FUN_a0146b50",
       "status": "matched"
     },
+    "ram:a0146b6c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Tail-calls FUN_a011b36c with 1, 2 or 0 selected by c",
+      "name": "FUN_a0146b6c",
+      "status": "matched"
+    },
     "ram:a0146bb4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
