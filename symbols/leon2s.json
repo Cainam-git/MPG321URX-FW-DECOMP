@@ -3836,6 +3836,12 @@
       "name": "FUN_a0097ed0",
       "status": "matched"
     },
+    "ram:a0097f04": {
+      "by": "hand",
+      "comment": "Count down an EQ hold byte, re-trigger port events and set the EQ state to 7",
+      "name": "FUN_a0097f04",
+      "status": "matched"
+    },
     "ram:a0098240": {
       "by": "hand",
       "comment": "twin of DRV_HDMI21_RXDetect_FSM_LTS_2: state change print and next state from 961e8(port) (see header)",
