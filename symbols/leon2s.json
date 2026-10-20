@@ -7177,6 +7177,12 @@
       "name": "FUN_a00dac00",
       "status": "matched"
     },
+    "ram:a00db9d4": {
+      "by": "h17",
+      "comment": "Builds a cleared stack message with fixed header bit-fields and passes it to FUN_a00d6a54(&m, 1, 1)",
+      "name": "FUN_a00db9d4",
+      "status": "matched"
+    },
     "ram:a00dbe74": {
       "by": "hand",
       "comment": "if byte 0xa8078841 & 0x30: FUN_a00db784(); i = byte 0xa8078832; if byte 0xa8078828[i] == byte 0xa8078830[i]: tail FUN_a00dbc8c(). void.",
