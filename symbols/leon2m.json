@@ -4638,6 +4638,12 @@
       "name": "FUN_a00b0ef8",
       "status": "matched"
     },
+    "ram:a00b0f48": {
+      "by": "hand",
+      "comment": "Fixed sequence of eleven calls ending in FUN_a0146dc0(1, 0)",
+      "name": "FUN_a00b0f48",
+      "status": "matched"
+    },
     "ram:a00b3070": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
