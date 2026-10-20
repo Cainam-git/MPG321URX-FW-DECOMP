@@ -7760,6 +7760,13 @@
       "name": "FUN_a00de088",
       "status": "matched"
     },
+    "ram:a00de444": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the halfword constant 0xf000..0xf303 for n 1..17 (0 otherwise)",
+      "name": "FUN_a00de444",
+      "status": "matched"
+    },
     "ram:a00de53c": {
       "by": "hand",
       "comment": "delay loop: n x 64 passes of 2 nops; aid asm nop x2 = real fw nops (a00de65c class)",
