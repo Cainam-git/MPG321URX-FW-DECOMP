@@ -13557,6 +13557,13 @@
       "name": "FUN_a014b360",
       "status": "matched"
     },
+    "ram:a014b844": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "ch 0/1: byte e3d0+0x2a/0x2c = v, FUN_a01302a4(2/3, v == 1), FUN_a012f1ec(2/3, 0), FUN_a0132770/FUN_a01327e0(byte); then FUN_a013129c",
+      "name": "FUN_a014b844",
+      "status": "matched"
+    },
     "ram:a014b900": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
