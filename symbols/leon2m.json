@@ -13667,6 +13667,12 @@
       "name": "FUN_a014dbf4",
       "status": "matched"
     },
+    "ram:a014dc28": {
+      "by": "hand",
+      "comment": "FUN_a0111028(2); FUN_a0111088(1) if mask bit 0; FUN_a0111088(2) if mask bit 1",
+      "name": "FUN_a014dc28",
+      "status": "matched"
+    },
     "ram:a014deec": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
