@@ -6033,6 +6033,12 @@
       "name": "FUN_a00b2070",
       "status": "matched"
     },
+    "ram:a00b222c": {
+      "by": "hand",
+      "comment": "clears the word +0x10 of the first task record of DAT_a80793b8 equal to id, or prints a not-found message",
+      "name": "FUN_a00b222c",
+      "status": "matched"
+    },
     "ram:a00b229c": {
       "by": "hand",
       "comment": "task runner: if de92, run every pending one of 16 x 24-byte tasks (clear flag, call fn), then de92 = 0",
