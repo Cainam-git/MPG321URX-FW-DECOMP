@@ -5502,6 +5502,12 @@
       "name": "FUN_a00ad0c4",
       "status": "matched"
     },
+    "ram:a00ad27c": {
+      "by": "h16",
+      "comment": "returns 1 when FUN_a00856d0(port) is not 1 and any of the bit pairs 0x11/0x22/0x44/0x88 of FUN_a0085684(port) is fully set",
+      "name": "FUN_a00ad27c",
+      "status": "matched"
+    },
     "ram:a00ad320": {
       "by": "hand",
       "comment": "returns 1 if byte 0x115 of the 300-byte record ARR_a807dc18[n] is set, ad27c(n) == 1 and bit 7 of a6bb8(n, 0x223); else 0",
