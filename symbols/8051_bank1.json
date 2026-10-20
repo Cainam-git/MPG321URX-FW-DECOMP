@@ -845,6 +845,13 @@
       "name": "FUN_CODE_bcad",
       "status": "matched"
     },
+    "CODE:bd1b": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "OR the source byte and the mask into the target byte through the pointers at 0xA709 / 0xA701, then wait for the mask bits (IDATA 0x60 counter)",
+      "name": "FUN_CODE_bd1b",
+      "status": "matched"
+    },
     "CODE:bd81": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
