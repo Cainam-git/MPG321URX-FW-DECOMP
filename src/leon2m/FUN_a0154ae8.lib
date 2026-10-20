@@ -1,0 +1,3 @@
+libm.a e_log.o __ieee754_log
+# leon2m FUN_a0154ae8: toolchain library function __ieee754_log (libm.a:e_log.o, 1420 bytes),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

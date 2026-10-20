@@ -14645,6 +14645,22 @@
       "status": "matched",
       "symbol": "ceil"
     },
+    "ram:a0154980": {
+      "by": "lib",
+      "comment": "toolchain library function log from libm.a:w_log.o; byte-exact, no C needed",
+      "lib": "libm.a:w_log.o",
+      "name": "FUN_a0154980",
+      "status": "matched",
+      "symbol": "log"
+    },
+    "ram:a0154ae8": {
+      "by": "lib",
+      "comment": "toolchain library function __ieee754_log from libm.a:e_log.o; byte-exact, no C needed",
+      "lib": "libm.a:e_log.o",
+      "name": "FUN_a0154ae8",
+      "status": "matched",
+      "symbol": "__ieee754_log"
+    },
     "ram:a0155074": {
       "by": "lib",
       "comment": "toolchain library function isnan from libc.a:s_isnan.o; byte-exact, no C needed",
@@ -14968,6 +14984,14 @@
       "status": "matched",
       "symbol": "__sprint"
     },
+    "ram:a0157a60": {
+      "by": "lib",
+      "comment": "toolchain library function _vfprintf_r from libc.a:vfprintf.o; byte-exact, no C needed",
+      "lib": "libc.a:vfprintf.o",
+      "name": "FUN_a0157a60",
+      "status": "matched",
+      "symbol": "_vfprintf_r"
+    },
     "ram:a01596b8": {
       "by": "lib",
       "comment": "toolchain library function _wcrtomb_r from libc.a:wcrtomb.o; byte-exact, no C needed",
@@ -15013,6 +15037,14 @@
       "name": "FUN_a0159e40",
       "status": "matched",
       "symbol": "quorem"
+    },
+    "ram:a015a038": {
+      "by": "lib",
+      "comment": "toolchain library function _dtoa_r from libc.a:dtoa.o; byte-exact, no C needed",
+      "lib": "libc.a:dtoa.o",
+      "name": "FUN_a015a038",
+      "status": "matched",
+      "symbol": "_dtoa_r"
     },
     "ram:a015b468": {
       "by": "lib",
@@ -15145,6 +15177,14 @@
       "name": "FUN_a015c1fc",
       "status": "matched",
       "symbol": "__smakebuf"
+    },
+    "ram:a015c35c": {
+      "by": "lib",
+      "comment": "toolchain library function _malloc_r from libc.a:mallocr.o; byte-exact, no C needed",
+      "lib": "libc.a:mallocr.o",
+      "name": "FUN_a015c35c",
+      "status": "matched",
+      "symbol": "_malloc_r"
     },
     "ram:a015ca50": {
       "by": "lib",
@@ -15289,6 +15329,14 @@
       "name": "FUN_a015d918",
       "status": "matched",
       "symbol": "_ratio"
+    },
+    "ram:a015d994": {
+      "by": "lib",
+      "comment": "toolchain library function _mprec_log10 from libc.a:mprec.o; byte-exact, no C needed",
+      "lib": "libc.a:mprec.o",
+      "name": "FUN_a015d994",
+      "status": "matched",
+      "symbol": "_mprec_log10"
     },
     "ram:a015d9e4": {
       "by": "lib",
