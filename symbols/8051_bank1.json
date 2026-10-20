@@ -1382,6 +1382,13 @@
       "name": "FUN_CODE_d511",
       "status": "matched"
     },
+    "CODE:d53f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "stores v >> 8 to 0xF401 + page and reads from 0x6100 + page * 256 + (v & 0xFF) through generic pointers",
+      "name": "FUN_CODE_d53f",
+      "status": "matched"
+    },
     "CODE:d59b": {
       "by": "hand",
       "comment": "Keil common-entry (L?) code in front of FUN_CODE_d5a1, in FUN_CODE_d5a1's code segment; emitted by compiling src/8051_bank1/FUN_CODE_224f.c, bytes judged with FUN_CODE_d5a1 over 0xd59b..0xd5c8",
