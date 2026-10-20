@@ -9571,6 +9571,13 @@
       "name": "FUN_a01004cc",
       "status": "matched"
     },
+    "ram:a0100a40": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes block registers 0x19/0x1a of blk selected by word 0xa8027a78 and a 43-case switch on byte 0xa8027a75",
+      "name": "FUN_a0100a40",
+      "status": "matched"
+    },
     "ram:a01016cc": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
