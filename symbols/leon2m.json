@@ -13218,7 +13218,7 @@
     "ram:a0139040": {
       "by": "h10",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Sends the mode command byte with FUN_a01370dc(0x71, 4, buf, 0), FUN_a0137344(1), copies the four words at 0xa802cb9c + 4 as halfwords to out",
+      "comment": "Sends the mode byte with FUN_a01370dc(0x71, 4, buf, 0), FUN_a0137344(1), copies the four words at 0xa802cb9c + 4 as halfwords to out",
       "name": "FUN_a0139040",
       "status": "matched"
     },
