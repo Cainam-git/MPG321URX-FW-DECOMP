@@ -5641,6 +5641,12 @@
       "name": "FUN_a00b12c4",
       "status": "matched"
     },
+    "ram:a00b1350": {
+      "by": "hand",
+      "comment": "calls FUN_a00a6c98(port, 0x487, 4, v) with v = 0, 1, 0",
+      "name": "FUN_a00b1350",
+      "status": "matched"
+    },
     "ram:a00b1418": {
       "by": "hand",
       "comment": "The function masks the first argument to a byte, calls the register-read helper with that byte and constant 0x3a, then returns only bit 0x40 of the result. The original Ghidra decompilation incorrectly introduced a fake 64-bit return and an extra unused parameter; the actual function takes one argument and returns the masked helper result directly.",
