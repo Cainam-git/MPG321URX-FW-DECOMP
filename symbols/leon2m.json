@@ -5124,6 +5124,13 @@
       "name": "FUN_a00c2180",
       "status": "matched"
     },
+    "ram:a00c25ac": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: reads two 4-digit decimal numbers into 16-bit settings with limits 3745 and 2052, replies 5600+",
+      "name": "FUN_a00c25ac",
+      "status": "matched"
+    },
     "ram:a00c29d8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
