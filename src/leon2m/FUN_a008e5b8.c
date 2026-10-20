@@ -2,7 +2,8 @@
  * Formats the byte 0xa802d285 as 2 characters with FUN_a01577f4 (format table at 0x100508), maps each character to a
  * number (space -> 0, otherwise character - 47) and passes them to FUN_a0146af4(0, a, b, 2, buf, 0). Same code as
  * FUN_a008cd58, which formats its third argument.
- */extern unsigned char DAT_a802d285;
+ */
+extern unsigned char DAT_a802d285;
 
 extern void FUN_a0146af4(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char *, unsigned char);
 extern void FUN_a01577f4(unsigned char *, unsigned int, unsigned short);

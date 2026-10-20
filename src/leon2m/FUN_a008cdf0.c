@@ -2,7 +2,8 @@
  * Formats bits 8..23 of the word 0xa802e1a8 as 5 characters with FUN_a01577f4 (format table at 0x100510), maps each character to a
  * number (space -> 0, otherwise character - 47) and passes them to FUN_a0146af4(0, a, b, 5, buf, 0). Same code as
  * FUN_a008cd58, which formats its third argument.
- */extern unsigned int DAT_a802e1a8;
+ */
+extern unsigned int DAT_a802e1a8;
 
 extern void FUN_a0146af4(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char *, unsigned char);
 extern void FUN_a01577f4(unsigned char *, unsigned int, unsigned short);

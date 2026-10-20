@@ -2,7 +2,8 @@
  * Formats the halfword 0xa802d286 as 5 characters with FUN_a01577f4 (format table at 0x100510), maps each character to a
  * number (space -> 0, otherwise character - 47) and passes them to FUN_a0146af4(0, a, b, 5, buf, 0). Same code as
  * FUN_a008cd58, which formats its third argument.
- */extern unsigned short DAT_a802d286;
+ */
+extern unsigned short DAT_a802d286;
 
 extern void FUN_a0146af4(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char *, unsigned char);
 extern void FUN_a01577f4(unsigned char *, unsigned int, unsigned short);
