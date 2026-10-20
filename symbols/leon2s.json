@@ -4792,6 +4792,12 @@
       "name": "DRV_HDMI_DbgHDMITaskCtrl",
       "status": "matched"
     },
+    "ram:a00a32d0": {
+      "by": "hand",
+      "comment": "calls FUN_a00734c4(DAT_a006b9a0), then by cmd 6/7/10/100 calls EN_HDMI_MSG_INIT_INFO, DRV_HDMI_DbgHDMITaskCtrl (stack blocks of a, b), sets DAT_a8079052 or calls FUN_a00a1df0(a != 0)",
+      "name": "DRV_HDMI_DbgMenu",
+      "status": "matched"
+    },
     "ram:a00a338c": {
       "by": "hand",
       "comment": "calls FUN_a00a80cc(port, 1, 0x3b, bit, on == 1) for bits 0x20 and 0x10",
