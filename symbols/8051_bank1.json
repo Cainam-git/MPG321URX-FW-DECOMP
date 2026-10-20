@@ -656,6 +656,12 @@
       "name": "FUN_CODE_2c38",
       "status": "matched"
     },
+    "CODE:3091": {
+      "by": "hand",
+      "comment": "external interrupt 1 handler serving four register blocks and one receive path into XDATA arrays",
+      "name": "FUN_CODE_3091",
+      "status": "matched"
+    },
     "CODE:3fe7": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
