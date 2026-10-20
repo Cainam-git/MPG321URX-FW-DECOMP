@@ -12904,6 +12904,13 @@
       "name": "FUN_a0145ee0",
       "status": "matched"
     },
+    "ram:a0145ee8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "FUN_a013b6e4(0) when off is set; otherwise FUN_a013b6e4(1) and FUN_a00f63bc(bits 4..7 of channel ch) unless 4",
+      "name": "FUN_a0145ee8",
+      "status": "matched"
+    },
     "ram:a0145fac": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
