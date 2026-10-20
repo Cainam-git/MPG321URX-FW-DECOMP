@@ -8775,6 +8775,13 @@
       "name": "FUN_a0118400",
       "status": "matched"
     },
+    "ram:a011855c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes 0 to 0xcf012e80; when FUN_a011cf88() <= 0x83 or bit 1 of 0xcf012f74 is clear also clears bit 0 of 0xcf012e00 and bit 5 of 0xcf011a00/0xcf011800",
+      "name": "FUN_a011855c",
+      "status": "matched"
+    },
     "ram:a01185d4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
