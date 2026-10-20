@@ -7711,6 +7711,13 @@
       "name": "FUN_a00dd904",
       "status": "matched"
     },
+    "ram:a00ddae4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the low byte of one of ten hardware registers 0xcf03cf14..0xcf03cf58 selected by n (0xff otherwise)",
+      "name": "FUN_a00ddae4",
+      "status": "matched"
+    },
     "ram:a00dddb8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
