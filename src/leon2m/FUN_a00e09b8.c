@@ -1,4 +1,4 @@
-/* leon2m FUN_a00e09b8 @ 0xa00e09b8  MATCH (-mcpu=v8 -O3 -g -msoft-float)
+/* leon2m FUN_a00e09b8 @ 0xa00e09b8  MATCH (-mcpu=v8 -O3 -g; also matches with -msoft-float)
  * mwb_from_phy (name from its error message): reads a byte with FUN_a00e0514(phy, reg, mask_phy) and writes it
  * into the bits mask_addr of the word at addr with FUN_a00df51c(addr, mask_addr, value).
  * When the masks differ, the byte is shifted by the distance (1..7) at which mask_phy shifted left (mask_addr larger)
