@@ -7991,6 +7991,12 @@
       "name": "FUN_a00dd540",
       "status": "matched"
     },
+    "ram:a00dd5b8": {
+      "by": "hand",
+      "comment": "Prints its three arguments and passes them on to FUN_a0138fb8",
+      "name": "FUN_a00dd5b8",
+      "status": "matched"
+    },
     "ram:a00dd614": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
