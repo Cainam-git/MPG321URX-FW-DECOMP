@@ -4937,6 +4937,12 @@
       "name": "FUN_a00a5cb4",
       "status": "matched"
     },
+    "ram:a00a5ce8": {
+      "by": "hand",
+      "comment": "Clears bit 0 of two registers and sets bit 13 of a third for register-pointer entry 0, around FUN_a00a5cb4(0)",
+      "name": "FUN_a00a5ce8",
+      "status": "matched"
+    },
     "ram:a00a60ac": {
       "by": "hand",
       "comment": "port 0: dc04[port]->wb0 bit 0, else 2",
