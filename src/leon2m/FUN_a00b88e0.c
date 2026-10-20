@@ -1,5 +1,5 @@
 /* leon2m FUN_a00b88e0 @ 0xa00b88e0-0xa00b89c4 (57 words), flags -mcpu=v8 -O3 -g. Called by FUN_a00a5e68.
- * Draws a value at screen position (x, y): FUN_a0146b50(200, 0), FUN_a0146b6c(2, 0), FUN_a0146a80(x + 3, y + 11,
+ * With position arguments (x, y): FUN_a0146b50(200, 0), FUN_a0146b6c(2, 0), FUN_a0146a80(x + 3, y + 11,
  * 0x10, 0x792, 0); formats FUN_a00d8b38() with the format string "n%d HZ" (0x1981d8, image-relative) into a
  * 16-byte local buffer with FUN_a01577f4; stores the index of the first zero byte minus 1 into buffer byte 0;
  * then FUN_a00a31a4(0, x + 8, y + 11, 6, buffer, 0).

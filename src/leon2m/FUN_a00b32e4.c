@@ -3,7 +3,6 @@
  * x + k and q = y, any other dir passes p = x and q = y + k. inc != 0 passes ch + k as the value, inc == 0 passes ch
  * each time. Parameters: (u8 dir, u8 inc, u16 c, u16 x, u8 y, u8 n, u8 ch); ch is the 7th argument, passed on the
  * stack. Callers include FUN_a00a5714, FUN_a00ad460 and FUN_a00a8bc0.
- * Called from many menu drawing routines (for example FUN_a00a5714, FUN_a00ad460, FUN_a00a8bc0).
  * Source form: the inc test sits inside each loop; the compiler unswitches it into four loops.
  */
 extern void FUN_a0146ab0(unsigned short, unsigned char);

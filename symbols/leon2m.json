@@ -2409,7 +2409,7 @@
     "ram:a008a568": {
       "by": "h14",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Draws a u16 value as 1 or 3 digits at the ROM position record selected by id",
+      "comment": "Formats a u16 value as 1 or 3 decimal digits and passes it to FUN_a0146af4 with the ROM record selected by id",
       "name": "FUN_a008a568",
       "status": "matched"
     },
@@ -5634,7 +5634,7 @@
     "ram:a00b88e0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Formats FUN_a00d8b38() with \"n%d HZ\" into a buffer and draws it at (x+8, y+11) via FUN_a00a31a4",
+      "comment": "Formats FUN_a00d8b38() with \"n%d HZ\" into a buffer and passes it with (x+8, y+11) to FUN_a00a31a4",
       "name": "FUN_a00b88e0",
       "status": "matched"
     },

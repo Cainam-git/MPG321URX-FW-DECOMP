@@ -1,6 +1,6 @@
 /* leon2m FUN_a008a568 @ 0xa008a568-0xa008a778 (132 words), flags -mcpu=v8 -O3 -g.
- * void(u8 id, u16 v); called from FUN_a008b83c, FUN_a008c25c, FUN_a008d2f8 and FUN_a008abe0. Draws v as digits at
- * the 3-byte record {col, row, len} id of the ROM table 0x100242:
+ * void(u8 id, u16 v); called from FUN_a008b83c, FUN_a008c25c, FUN_a008d2f8 and FUN_a008abe0. Formats v as decimal
+ * digits and passes them with the 3-byte record {col, row, len} id of the ROM table 0x100242 to FUN_a0146af4:
  *   id 1..12: "%3d" (0x100480), FUN_a0146af4(0, col + 1, row, 3, buf, 0);
  *   id 15, 16: "%1d" (0x100478), FUN_a0146af4(0, col + len, row, 1, buf, 0);
  *   other ids: "%3d", FUN_a0146af4(0, col + len, row, 3, buf, 0).
