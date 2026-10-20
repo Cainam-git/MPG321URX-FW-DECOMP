@@ -9295,6 +9295,13 @@
       "name": "FUN_a011a9e4",
       "status": "matched"
     },
+    "ram:a011abcc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "n == 0: clears bits 0-1 of reg base+0x90 and writes 0 to base+0x95; else sets them and writes n*0x55",
+      "name": "FUN_a011abcc",
+      "status": "matched"
+    },
     "ram:a011b36c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
