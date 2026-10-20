@@ -5137,6 +5137,12 @@
       "name": "FUN_a00ae3a0",
       "status": "matched"
     },
+    "ram:a00ae5e4": {
+      "by": "hand",
+      "comment": "Read a port's status byte block from reg 0xf9 and run the matching reg 0x24 bit sequence",
+      "name": "FUN_a00ae5e4",
+      "status": "matched"
+    },
     "ram:a00aea0c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
