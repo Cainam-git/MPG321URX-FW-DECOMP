@@ -2922,12 +2922,6 @@
       "name": "FUN_a008ae18",
       "status": "matched"
     },
-    "ram:a008b2b4": {
-      "by": "asm",
-      "comment": "twin of FUN_a0060bb0: identical hand-written assembly, constants swapped",
-      "name": "FUN_a008b2b4",
-      "status": "matched"
-    },
     "ram:a008b2bc": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
@@ -3018,22 +3012,10 @@
       "name": "FUN_a008bd1c",
       "status": "matched"
     },
-    "ram:a008c530": {
-      "by": "asm",
-      "comment": "twin of FUN_a0060bb0: identical hand-written assembly, constants swapped",
-      "name": "FUN_a008c530",
-      "status": "matched"
-    },
     "ram:a008c8b0": {
       "by": "autoc",
       "comment": "For each of four units (4, 6, 0xc, 0xe): if FUN_a0089f98(unit) reports something (non-zero 16-bit value), it runs FUN_a008b9ec(n) and then FUN_a008a1b4(unit, FUN_a008a040(unit) & 0xff, 1). Ghidra lost the unit argument of the check.",
       "name": "FUN_a008c8b0",
-      "status": "matched"
-    },
-    "ram:a008cba0": {
-      "by": "asm",
-      "comment": "twin of FUN_a0060bb0: identical hand-written assembly, constants swapped",
-      "name": "FUN_a008cba0",
       "status": "matched"
     },
     "ram:a008ced8": {
@@ -4043,12 +4025,6 @@
       "by": "hand",
       "comment": "on a change of FUN_a0095d34(port) stores it in DAT_a8078c50[port] and runs FUN_a0095ca4/FUN_a00a33f4 or func_0x9f1b8a1c, updating DAT_a8078c48[port]",
       "name": "FUN_a0095d78",
-      "status": "matched"
-    },
-    "ram:a0095e9c": {
-      "by": "asm",
-      "comment": "twin of FUN_a0060bb0: identical hand-written assembly, constants swapped",
-      "name": "FUN_a0095e9c",
       "status": "matched"
     },
     "ram:a0095ef8": {
@@ -5360,12 +5336,6 @@
       "by": "hand",
       "comment": "writes the register set 0xcf012ad0-adc (port 0) or 0xcf012a90-a9c (other ports) when on, else clears bit 0 of 0xcf012ad0 / 0xcf012a90",
       "name": "FUN_a00aa538",
-      "status": "matched"
-    },
-    "ram:a00aa7b4": {
-      "by": "asm",
-      "comment": "twin of FUN_a0060bb0: identical hand-written assembly, constants swapped",
-      "name": "FUN_a00aa7b4",
       "status": "matched"
     },
     "ram:a00aa7bc": {
@@ -7189,12 +7159,6 @@
       "name": "FUN_a00d6560",
       "status": "matched"
     },
-    "ram:a00d661c": {
-      "by": "asm",
-      "comment": "twin of FUN_a0060bb0: identical hand-written assembly, constants swapped",
-      "name": "FUN_a00d661c",
-      "status": "matched"
-    },
     "ram:a00d6624": {
       "by": "hand",
       "comment": "returns bits 6-7 of ROM read func_0xa0fb6bb8(port, 0x9f), 0 for port 1",
@@ -7217,6 +7181,12 @@
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
       "name": "FUN_a00d6890",
+      "status": "matched"
+    },
+    "ram:a00d6a54": {
+      "by": "h17",
+      "comment": "Copies the n bytes produced by FUN_a00d68cc into one of two table entries selected by type 1 or 3",
+      "name": "FUN_a00d6a54",
       "status": "matched"
     },
     "ram:a00d6b4c": {
