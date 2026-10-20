@@ -2080,6 +2080,12 @@
       "name": "FUN_a0074f60",
       "status": "matched"
     },
+    "ram:a0074fc4": {
+      "by": "hand",
+      "comment": "returns 1 when record halfword 0xa of DAT_a807cc64 and FUN_a0074f60(port) differ by more than 2",
+      "name": "FUN_a0074fc4",
+      "status": "matched"
+    },
     "ram:a007517c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
