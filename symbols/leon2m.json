@@ -6966,6 +6966,13 @@
       "name": "FUN_a00d8bd8",
       "status": "matched"
     },
+    "ram:a00d8ffc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "passes bit 31 of word 0xa802d290+0x11c (or 0, chosen by FUN_a014bd70/FUN_a01438dc/FUN_a014ba68) to FUN_a01492b8, then FUN_a00d8cd4 when the bit is clear",
+      "name": "FUN_a00d8ffc",
+      "status": "matched"
+    },
     "ram:a00d9120": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
