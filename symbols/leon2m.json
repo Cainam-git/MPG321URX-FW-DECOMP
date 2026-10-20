@@ -2563,6 +2563,13 @@
       "name": "FUN_a0091ea0",
       "status": "matched"
     },
+    "ram:a0091f58": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Enters the selection 0x18..0x1d in word 0xa802afec from a state-dependent start, stepping until FUN_a00aa520 accepts it",
+      "name": "FUN_a0091f58",
+      "status": "matched"
+    },
     "ram:a0092044": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
