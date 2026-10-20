@@ -1,5 +1,5 @@
 /* FUN_a00b1568 (leon2s 0xa00b1568-0xa00b15ac, 68 bytes, leaf), flags -mcpu=v8 -Os -g.
- * String compare: steps through both strings until the signed characters differ or the first string ends, and
+ * Steps through two zero-terminated byte strings until the signed characters differ or the first string ends, and
  * returns the difference of the last pair (0 when equal). Both characters are read into char locals first
  * (ldub + sign extension in the firmware).
  */
