@@ -1262,6 +1262,13 @@
       "name": "FUN_CODE_ce87",
       "status": "matched"
     },
+    "CODE:cefd": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "stores v >> 8 to 0xF401 + page and reads from 0x6100 + page * 256 + (v & 0xFF) through generic pointers",
+      "name": "FUN_CODE_cefd",
+      "status": "matched"
+    },
     "CODE:cf73": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
