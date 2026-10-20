@@ -7024,6 +7024,13 @@
       "name": "FUN_a00e0bd8",
       "status": "matched"
     },
+    "ram:a00e0bf0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Reads a DDR PHY register with FUN_a00e02ec and prints it with the PHY name",
+      "name": "FUN_a00e0bf0",
+      "status": "matched"
+    },
     "ram:a00e1f50": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
