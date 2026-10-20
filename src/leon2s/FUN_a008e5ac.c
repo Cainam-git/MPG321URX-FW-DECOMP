@@ -1,8 +1,9 @@
 /* FUN_a008e5ac (leon2s, 0xa008e5ac-0xa008e654, 42 words). Flags -mcpu=v8 -Os -g.
- Code facts: void (u8 p1, p2, p3, p4). p2 == 0: dbd4(p1,0,p4), db4c(p1,1), db90(p1,0). p3 == 1: db4c(p1,0), dbd4(p1,1,p4), db90(p1,1).
- Else: dbd4(p1,0,p4), db4c(p1,1), db90(p1,1). Then tail call FUN_a00b1794(10).
- Fixes vs draft: BEHAVIOUR the 3rd arg of FUN_a008dbd4 is p4 in all arms (fw loads 'and %i3,0xff,%o2' once at entry and keeps it to
- both 0-arm calls; the draft passed 0); void with a sibcall (FUN_a00b1794 declared void). Aids: none.
+ * void (u8 p1, p2, p3, p4). p2 == 0: dbd4(p1, 0, p4), db4c(p1, 1), db90(p1, 0). p3 == 1: db4c(p1, 0),
+ * dbd4(p1, 1, p4), db90(p1, 1). Else: dbd4(p1, 0, p4), db4c(p1, 1), db90(p1, 1). Then tail call
+ * FUN_a00b1794(10). (dbd4 = FUN_a008dbd4, db4c = FUN_a008db4c, db90 = FUN_a008db90.)
+ * The 3rd argument of FUN_a008dbd4 is p4 in all arms (the firmware computes 'and %i3,0xff,%o2' once at
+ * entry and keeps it for both 0-arm calls). void with a sibcall (FUN_a00b1794 declared void).
  */
 extern void FUN_a008db4c(unsigned char, unsigned char); /* 0xa008db4c */
 extern void FUN_a008db90(unsigned char, unsigned char); /* 0xa008db90 */

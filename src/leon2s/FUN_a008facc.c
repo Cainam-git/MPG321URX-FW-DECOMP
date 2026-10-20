@@ -1,11 +1,11 @@
 /* FUN_a008facc (leon2s, 0xa008facc-0xa008fb5c, 144 bytes, 36 words).
  * Flags: -mcpu=v8 -Os -g.
- * Code facts: port = (u8)param_1; if bit 1 of FUN_a00a657c(port, 0x134) is set: m = low nibble of
+ * port = (u8)param_1; if bit 1 of FUN_a00a657c(port, 0x134) is set: m = low nibble of
  * FUN_a00a657c(port, 0x148) (u8), v = low nibble of FUN_a00a657c(port, 8); v |= 0x50 when m == 1,
  * v |= 0xf0 when m == 3; tail call FUN_a00a65c4(port, 8, (u8)v). Otherwise tail call
  * FUN_a00a67b8(port, 8, 0xf0, 0) (its four args are set before the branch).
- * Fixes vs draft: FUN_a00a65c4 takes THREE args (the draft passed a 4th 0); m is unsigned char
- * (the draft's plain char lost the fw 'and %l0,0xff,%l0' re-extension). Aids: none.
+ * FUN_a00a65c4 takes three arguments; m is unsigned char (the firmware re-extends it with
+ * 'and %l0,0xff,%l0').
  */
 extern unsigned int FUN_a00a657c(unsigned int, unsigned short);
 extern void FUN_a00a65c4(unsigned int, int, unsigned int);

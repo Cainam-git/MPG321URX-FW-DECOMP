@@ -1,10 +1,10 @@
 /* leon2s FUN_a008e654 @ 0xa008e654-0xa008e6b8 (25 words), flags -mcpu=v8 -Os -g.
- * Code facts: (u8 port, u8 mode, 4 words passed through). FUN_a008e054(port, mode == 1 ? 0 : 1), then
+ * (u8 port, u8 mode, 4 words passed through). FUN_a008e054(port, mode == 1 ? 0 : 1), then
  * FUN_a008da88(port, 1), FUN_a008df40(port, 1), FUN_a00b1794(1), FUN_a008df7c(port, 1), and the sibcall
  * FUN_a008e004(port, mode, p3, p4, p5, p6) (%i2..%i5 untouched). void.
- * Fix vs the autoc draft (76.00): the first step is an if/else with TWO e054 calls (gcc crossjumps them into
- * one call with %o1 = 0/1; this keeps the fw's separate 'and %i0,0xff,%g1' copy and the second
- * 'and %i0,0xff,%i0'). A computed 0/1 argument gives an extra 'and %o1,1'. Aids: none.
+ * Source form: the first step is an if/else with two FUN_a008e054 calls (gcc crossjumps them into one call
+ * with %o1 = 0/1; this keeps the firmware's separate 'and %i0,0xff,%g1' copy and the second
+ * 'and %i0,0xff,%i0'). A computed 0/1 argument gives an extra 'and %o1,1'.
  */
 extern void FUN_a008da88(unsigned char, unsigned char);
 extern void FUN_a008df40(unsigned char, unsigned char);
