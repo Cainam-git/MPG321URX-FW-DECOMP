@@ -5739,6 +5739,13 @@
       "name": "FUN_a00c9be0",
       "status": "matched"
     },
+    "ram:a00c9df4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: digit 0-1 into bit 7 of record word 0x1ec, FUN_a00db12c(0), reply 5600+ via called helpers",
+      "name": "FUN_a00c9df4",
+      "status": "matched"
+    },
     "ram:a00c9e9c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
