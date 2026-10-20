@@ -6221,7 +6221,7 @@
     },
     "ram:a00b2070": {
       "by": "hand",
-      "comment": "stores a timer callback into the first free slot of group idx of DAT_a80793a4, or prints a no-slot message",
+      "comment": "stores fn into the first zero word of the two at offset 0xc + idx * 8 of DAT_a80793a4, or calls FUN_a0073044(s_a006c608)",
       "name": "FUN_a00b2070",
       "status": "matched"
     },

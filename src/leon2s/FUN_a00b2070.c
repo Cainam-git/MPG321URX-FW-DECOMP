@@ -1,6 +1,6 @@
 /* FUN_a00b2070 (leon2s 0xa00b2070-0xa00b20dc, 108 bytes, leaf), flags -mcpu=v8 -Os -g.
  * Stores the callback fn into the first empty one of the two callback words of group idx of DAT_a80793a4
- * (offset 0xc, the callbacks that FUN_a00618d8 calls); when both are taken, tail-calls the print routine
+ * (offset 0xc, the callbacks that FUN_a00618d8 calls); when both are taken, tail-calls
  * FUN_a0073044 with s_a006c608 ("No H/W timer ISR available" per Ghidra) instead.
  */
 struct Timers {
