@@ -2882,7 +2882,7 @@
     },
     "ram:a008aa18": {
       "by": "h15",
-      "comment": "Selects the FUN_a008a924/FUN_a008a9ec/FUN_a008a95c writes of the halfword v by the byte from FUN_a0089f84(0)",
+      "comment": "Calls FUN_a008a924/FUN_a008a9ec/FUN_a008a95c with the halfword v, chosen by the byte FUN_a0089f84(0) (4..7, 1, other)",
       "name": "FUN_a008aa18",
       "status": "matched"
     },
