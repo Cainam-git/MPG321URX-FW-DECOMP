@@ -7906,6 +7906,13 @@
       "name": "FUN_a00f0b58",
       "status": "matched"
     },
+    "ram:a00f1298": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes a 16-bit value to a register pair of one block or blocks 0..2 (DAT_a8026a7e bases)",
+      "name": "FUN_a00f1298",
+      "status": "matched"
+    },
     "ram:a00f1690": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
