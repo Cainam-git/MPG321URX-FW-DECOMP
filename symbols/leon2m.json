@@ -5459,6 +5459,13 @@
       "name": "FUN_a00bd988",
       "status": "matched"
     },
+    "ram:a00bd9d8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART reply with the bytes of the record at 0xa802d274 in a 21-byte frame from table row 0x2e",
+      "name": "FUN_a00bd9d8",
+      "status": "matched"
+    },
     "ram:a00bdb48": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
