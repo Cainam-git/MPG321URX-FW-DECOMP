@@ -13411,6 +13411,13 @@
       "name": "FUN_a014a654",
       "status": "matched"
     },
+    "ram:a014a6e0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3",
+      "comment": "SYSAPI_GetSystemDPDSCSupport: FUN_a012b22c(0/1) for mapped port 0x71/0x81, else 0; logs p and the result",
+      "name": "FUN_a014a6e0",
+      "status": "matched"
+    },
     "ram:a014a768": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
