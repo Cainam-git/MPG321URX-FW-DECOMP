@@ -12674,6 +12674,13 @@
       "name": "FUN_a01546ec",
       "status": "matched"
     },
+    "ram:a0154750": {
+      "by": "hand",
+      "cflags": "-g",
+      "comment": "Returns byte b of row a of the 42-byte table at 0x1a81cf",
+      "name": "FUN_a0154750",
+      "status": "matched"
+    },
     "ram:a01547dc": {
       "by": "lib",
       "comment": "toolchain library function ceil from libm.a:s_ceil.o; byte-exact, no C needed",
