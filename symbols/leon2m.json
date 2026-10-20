@@ -9249,6 +9249,13 @@
       "name": "FUN_a011c6c8",
       "status": "matched"
     },
+    "ram:a011c77c": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same code as FUN_a011c6c8 with other constants (listed in the source header)",
+      "name": "FUN_a011c77c",
+      "status": "matched"
+    },
     "ram:a011cf88": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
