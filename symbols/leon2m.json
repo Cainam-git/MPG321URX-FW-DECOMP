@@ -11477,6 +11477,13 @@
       "name": "FUN_a0132a40",
       "status": "matched"
     },
+    "ram:a0132b8c": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "When byte 0xa802cb93 is 1: copies byte 0xa802cb92 bytes of 0xa802de40 to dst, clears 0xa802cb93, returns 1; else 0",
+      "name": "FUN_a0132b8c",
+      "status": "matched"
+    },
     "ram:a0132c54": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
