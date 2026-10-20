@@ -5168,6 +5168,13 @@
       "name": "FUN_a00b88cc",
       "status": "matched"
     },
+    "ram:a00ba068": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Divides halfwords 0xa802d43c+30 and 0xa802d43e+36 by FUN_a014837c(0/1)>>4 with rounding into two byte pairs (0, 16 edge cases)",
+      "name": "FUN_a00ba068",
+      "status": "matched"
+    },
     "ram:a00ba8bc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
