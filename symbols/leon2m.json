@@ -6560,6 +6560,13 @@
       "name": "FUN_a00d5a9c",
       "status": "matched"
     },
+    "ram:a00d5c2c": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same code as FUN_a00d5a28 with other constants (listed in the source header)",
+      "name": "FUN_a00d5c2c",
+      "status": "matched"
+    },
     "ram:a00d5e84": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
