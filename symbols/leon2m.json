@@ -5854,6 +5854,13 @@
       "name": "FUN_a00d43b4",
       "status": "matched"
     },
+    "ram:a00d44bc": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same code as FUN_a00d41b4 with other constants: level from (u16)145660(), clamped to 100",
+      "name": "FUN_a00d44bc",
+      "status": "matched"
+    },
     "ram:a00d4558": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
