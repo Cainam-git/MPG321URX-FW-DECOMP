@@ -9620,6 +9620,13 @@
       "name": "FUN_a011e6dc",
       "status": "matched"
     },
+    "ram:a011e794": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "ch 0x10..0x17: 2-bit field (bits 6-7 even / 2-3 odd) of reg 0xcf016480+4*((ch-0x10)/2): sel 1 clears both, else low=1 high=0",
+      "name": "FUN_a011e794",
+      "status": "matched"
+    },
     "ram:a012082c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
