@@ -4200,6 +4200,13 @@
       "name": "FUN_a00a0c70",
       "status": "matched"
     },
+    "ram:a00a0ff0": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "OSDPBPAdjustL: halfword 0xa802d02a -8 down to 0x3c0, FUN_a0146870 with it and 0xa802d02c, prints both",
+      "name": "FUN_a00a0ff0",
+      "status": "matched"
+    },
     "ram:a00a13d8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
