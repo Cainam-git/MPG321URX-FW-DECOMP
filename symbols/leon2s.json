@@ -5067,8 +5067,8 @@
       "status": "matched"
     },
     "ram:a00a7acc": {
-      "by": "h16",
-      "comment": "reads the low byte of a block register for ports 0..4; ports 1..4 with reg < 0x60 first rewrite bits 6+ of register base + 0x60 to port - 1",
+      "by": "hand",
+      "comment": "reads a byte register of banks 0..4 (table DAT_a00b4d70), selecting the page at offset 0x60 first for banks 1..4 and reg <= 0x5f",
       "name": "FUN_a00a7acc",
       "status": "matched"
     },

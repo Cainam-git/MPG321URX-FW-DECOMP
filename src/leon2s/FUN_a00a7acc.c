@@ -1,34 +1,27 @@
-/* FUN_a00a7acc (leon2s 0xa00a7acc-0xa00a7b64, 152 bytes), flags -mcpu=v8 -Os -g.
- * Reads the low byte of register reg of a hardware block for port (arg & 0xff), ports 0..4 only (other
- * ports return 0). Register address = ((u16 base table 0xa00b4d70[port] + reg) * 4) | 0xcf000000.
- * Before the read, for ports 1..4 and (u16)reg < 0x60, the register at base + 0x60 is rewritten:
- * bits 0..5 kept, bits 6 and up = port - 1.
- * Source forms: the address is built by the inlined helper reg_addr(), so (base + 0x60) * 4 keeps its
- * add before the shift; the read uses a copy r = reg taken right before it, truncated as
- * ((r << 16) >> 16), while the test uses (unsigned short)reg: this keeps the two separate truncations.
+/* FUN_a00a7acc (leon2s 0xa00a7acc-0xa00a7b64, 152 bytes, leaf), flags -mcpu=v8 -Os -g.
+ * Reads one 8-bit register of a hardware block: banks 0..4 only (else returns 0). Register address =
+ * ((u16 base table DAT_a00b4d70[bank] + (u16)reg) * 4) | 0xcf000000. For banks 1..4 and reg <= 0x5f it first
+ * writes the page (bank - 1) into bits 6-7 of the block register at offset 0x60 (read-modify-write, low 6 bits
+ * kept). Source forms as in FUN_a00a7940: the address uses ((u32)reg << 16) >> 16, taken after the page write,
+ * and the compare (unsigned short)reg, which keeps two separate truncations; separate nested tests; the result is
+ * an unsigned int masked to a byte at the read.
  */
-extern unsigned char DAT_a00b4d70;
+extern unsigned short DAT_a00b4d70[];
 
-static __inline__ volatile unsigned int *reg_addr(unsigned int a)
+unsigned char FUN_a00a7acc(unsigned char bank, short reg)
 {
-    return (volatile unsigned int *)((a * 4) | 0xcf000000);
-}
-
-unsigned int FUN_a00a7acc(unsigned int port, short reg)
-{
+    unsigned int addr;
     unsigned int v = 0;
-    unsigned int r;
-    volatile unsigned int *p;
 
-    port &= 0xff;
-    if (port < 5) {
-        if (port != 0)
-            if ((unsigned short)reg < 0x60) {
-                p = reg_addr(*(unsigned short *)(&DAT_a00b4d70 + port * 2) + 0x60);
-                *p = (*p & 0x3f) | ((port - 1) << 6);
-            }
-        r = reg;
-        v = *reg_addr(*(unsigned short *)(&DAT_a00b4d70 + port * 2) + ((r << 16) >> 16)) & 0xff;
+    if (bank <= 4) {
+        if (bank != 0) {
+            if ((unsigned short)reg <= 0x5f)
+                *(volatile unsigned int *)(((DAT_a00b4d70[bank] + 0x60) << 2) | 0xcf000000) =
+                    (*(volatile unsigned int *)(((DAT_a00b4d70[bank] + 0x60) << 2) | 0xcf000000) & 0x3f) | ((bank - 1) << 6);
+        }
+        addr = reg;
+        addr = (addr << 16) >> 16;
+        v = *(volatile unsigned int *)(((DAT_a00b4d70[bank] + addr) << 2) | 0xcf000000) & 0xff;
     }
     return v;
 }
