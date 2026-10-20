@@ -3062,7 +3062,7 @@
     "ram:a0094988": {
       "by": "h10",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "By byte 0xa802d433: counts byte +0x1a6 or +0x1a8 up to 0x1c with FUN_a00a6b98 calls, or steps halfword 0xa802d43e up by a time-dependent step and calls FUN_a014654c",
+      "comment": "By byte 0xa802d433: raises byte +0x1a6 or +0x1a8 up to 0x1c with FUN_a00a6b98 calls, or raises halfword 0xa802d43e by the low nibble of byte 0xa802cffc and calls FUN_a014654c",
       "name": "FUN_a0094988",
       "status": "matched"
     },
