@@ -9655,6 +9655,13 @@
       "name": "FUN_a011fcac",
       "status": "matched"
     },
+    "ram:a011fd84": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "block blk (bases DAT_001a2fb0, 2 = both): reg base+0x24 = (a&~1)|(b<<1)|4, base+0x25/0x26 = c & 0xfff",
+      "name": "FUN_a011fd84",
+      "status": "matched"
+    },
     "ram:a012082c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
