@@ -6807,6 +6807,13 @@
       "name": "FUN_a00f1e50",
       "status": "matched"
     },
+    "ram:a00f1ed8": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same code as FUN_a00f1d48 with other constants: Write 16-bit value (low byte to reg, high to reg+1) to 0x19A31C-table block blk",
+      "name": "FUN_a00f1ed8",
+      "status": "matched"
+    },
     "ram:a00f1fe0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
