@@ -8438,6 +8438,12 @@
       "name": "FUN_a00f9500",
       "status": "matched"
     },
+    "ram:a00f9880": {
+      "by": "hand",
+      "comment": "Clears and sets bit 3 of block-0 register 3 around FUN_4008d1a0(0x28) and prints toggle for preFRC",
+      "name": "FUN_a00f9880",
+      "status": "matched"
+    },
     "ram:a00f98f4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
