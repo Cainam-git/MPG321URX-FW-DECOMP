@@ -8683,6 +8683,13 @@
       "name": "FUN_a00fe1dc",
       "status": "matched"
     },
+    "ram:a00fe3ec": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Reads back an internal input-path field from 0xCF0116E0 or 0xCF0116D4 as 1, 2 or 3",
+      "name": "FUN_a00fe3ec",
+      "status": "matched"
+    },
     "ram:a00fe44c": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
