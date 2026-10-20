@@ -13199,6 +13199,13 @@
       "name": "FUN_a01470fc",
       "status": "matched"
     },
+    "ram:a014737c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Calls FUN_a00f7894 with {a, b, mode value} under the bank of display channel ch, then restores the bank",
+      "name": "FUN_a014737c",
+      "status": "matched"
+    },
     "ram:a01474b0": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
