@@ -6075,7 +6075,7 @@
     },
     "ram:a00b1568": {
       "by": "hand",
-      "comment": "compares two strings as signed chars and returns the first difference (strcmp form)",
+      "comment": "compares two zero-terminated strings as signed chars and returns the first difference",
       "name": "FUN_a00b1568",
       "status": "matched"
     },
