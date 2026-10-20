@@ -1,6 +1,6 @@
 /* leon2m FUN_a008ccc0 @ 0xa008ccc0-0xa008cd58 (38 words).
- * Formats the byte 0xa802e1a8 as 2 characters with FUN_a01577f4 (format table at 0x100508), turns each character into a glyph
- * number (space -> 0, otherwise character - 47) and draws them with FUN_a0146af4(0, a, b, 2, buf, 0). Same code as
+ * Formats the byte 0xa802e1a8 as 2 characters with FUN_a01577f4 (format table at 0x100508), maps each character to a
+ * number (space -> 0, otherwise character - 47) and passes them to FUN_a0146af4(0, a, b, 2, buf, 0). Same code as
  * FUN_a008cd58, which formats its third argument.
  */extern unsigned char DAT_a802e1a8;
 

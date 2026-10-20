@@ -2353,7 +2353,7 @@
     "ram:a008ccc0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Formats byte 0xa802e1a8 as 2 characters, converts them to glyph numbers and passes them to FUN_a0146af4",
+      "comment": "Formats byte 0xa802e1a8 as 2 characters, maps them (space -> 0, others c - 47) and passes them to FUN_a0146af4",
       "name": "FUN_a008ccc0",
       "status": "matched"
     },
@@ -2366,7 +2366,7 @@
     "ram:a008cdf0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Formats bits 8..23 of word 0xa802e1a8 as 5 characters, converts them to glyph numbers and passes them to FUN_a0146af4",
+      "comment": "Formats bits 8..23 of word 0xa802e1a8 as 5 characters, maps them (space -> 0, others c - 47) and passes them to FUN_a0146af4",
       "name": "FUN_a008cdf0",
       "status": "matched"
     },
@@ -2379,14 +2379,14 @@
     "ram:a008e520": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Formats halfword 0xa802d286 as 5 characters, converts them to glyph numbers and passes them to FUN_a0146af4",
+      "comment": "Formats halfword 0xa802d286 as 5 characters, maps them (space -> 0, others c - 47) and passes them to FUN_a0146af4",
       "name": "FUN_a008e520",
       "status": "matched"
     },
     "ram:a008e5b8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Formats byte 0xa802d285 as 2 characters, converts them to glyph numbers and passes them to FUN_a0146af4",
+      "comment": "Formats byte 0xa802d285 as 2 characters, maps them (space -> 0, others c - 47) and passes them to FUN_a0146af4",
       "name": "FUN_a008e5b8",
       "status": "matched"
     },

@@ -1,6 +1,6 @@
 /* leon2m FUN_a008e520 @ 0xa008e520-0xa008e5b8 (38 words).
- * Formats the halfword 0xa802d286 as 5 characters with FUN_a01577f4 (format table at 0x100510), turns each character into a glyph
- * number (space -> 0, otherwise character - 47) and draws them with FUN_a0146af4(0, a, b, 5, buf, 0). Same code as
+ * Formats the halfword 0xa802d286 as 5 characters with FUN_a01577f4 (format table at 0x100510), maps each character to a
+ * number (space -> 0, otherwise character - 47) and passes them to FUN_a0146af4(0, a, b, 5, buf, 0). Same code as
  * FUN_a008cd58, which formats its third argument.
  */extern unsigned short DAT_a802d286;
 
