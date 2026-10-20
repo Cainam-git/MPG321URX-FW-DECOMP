@@ -2622,6 +2622,12 @@
       "name": "FUN_a0089f98",
       "status": "matched"
     },
+    "ram:a008a040": {
+      "by": "hand",
+      "comment": "Return a selected 2-bit status field of registers 0xcf0111c0..d4 (0xff for unknown selectors)",
+      "name": "FUN_a008a040",
+      "status": "matched"
+    },
     "ram:a008a1b4": {
       "by": "hand",
       "comment": "leaf sibling call. Only for mode 4 or 6: FUN_a00a71fc(port & 0xff, 3, 0x20, (u8)(val << 5)) (the 4th arg is masked 0xe0 by the u8 conversion). void.",
