@@ -1,7 +1,6 @@
 /* FUN_a00a8f28 (leon2s 0xa00a8f28-0xa00a8f8c, 100 bytes, leaf), flags -mcpu=v8 -Os -g.
- * Builds an InfoFrame packet from a source descriptor: type (src+1), version (src+4) and length (src+5)
- * go to dst bytes 0..2, the first 10 payload bytes src+6.. to dst+4.., and dst byte 3 is the checksum: minus
- * the byte sum of header and payload.
+ * Copies the bytes src+1, src+4 and src+5 to dst bytes 0..2 and the 10 bytes src+6.. to dst+4..; dst byte 3
+ * becomes minus the 8-bit sum of dst bytes 0..2 and the 10 copied bytes.
  * Source form: both sides are structs, so the payload stores and the checksum accesses are separate fields
  * that GCC may reorder (the firmware loads the checksum before the payload store).
  */

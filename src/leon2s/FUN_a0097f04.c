@@ -1,5 +1,5 @@
 /* FUN_a0097f04 (leon2s 0xa0097f04-0xa0097ff4, 240 bytes), flags -mcpu=v8 -Os -g. Returns 1.
- * Counts the hold byte (+6) of the 0x18-byte record DAT_a807d650[port] down while the low byte of word 0x10
+ * Counts byte +6 of the 0x18-byte record DAT_a807d650[port] down while the low byte of word 0x10
  * of the port register block r4 (0x34-byte record DAT_a807db00[port]) is not 0x82, else clears it. Then
  * FUN_a00a07b8(port, 0x16); when FUN_a008d800() returns more than 0x82 also FUN_a00a07b8 with 8, 0xb and
  * 0xc. Finally sets the record state word to 7; the source tests FUN_a0097ed0(port) and stores 7 in both

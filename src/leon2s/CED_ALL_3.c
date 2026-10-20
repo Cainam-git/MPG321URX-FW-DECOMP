@@ -3,8 +3,8 @@
  * (addr & ~3) + 4 * n rounded up to 32 bytes. Per row: FUN_a0061348(row), FUN_a0061280(DAT_a006c660), then for four
  * words p: FUN_a0061280(DAT_a006c688) when p is outside [addr & ~3, addr & ~3 + 4 * n), otherwise
  * FUN_a0061348(FUN_a00b22fc(p)) and FUN_a0061280(DAT_a006c690); then FUN_a0061280 with the string at 0xa0069ee8
- * (the last bytes of s_a0069eb8), which is also passed once before and once after the rows. Source forms: addr is masked in place before the n test; the row
- * limit is computed before the loop; each word case makes its own calls.
+ * (the last bytes of s_a0069eb8), which is also passed once before and once after the rows. Source forms: addr is
+ * masked in place before the n test; the row limit is computed before the loop; each word case makes its own calls.
  */
 extern char DAT_a006c660[], DAT_a006c688[], DAT_a006c690[], DAT_a0069ee8[];
 extern void FUN_a0061280(const char *);

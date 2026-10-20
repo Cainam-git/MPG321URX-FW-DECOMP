@@ -2822,7 +2822,7 @@
     },
     "ram:a008a238": {
       "by": "hand",
-      "comment": "Set enable bits of register 0xcf012444 under the hardware semaphore 0xcf03c840",
+      "comment": "For sel 0..4 sets bit 4, 5, 6, 7 or bits 4..7 of 0xcf012444 after polling 0xcf03c840 (write 2 when it is not 1, until it reads 2; then 2) and before writing 0 to it",
       "name": "FUN_a008a238",
       "status": "matched"
     },
@@ -4144,7 +4144,7 @@
     },
     "ram:a0097f04": {
       "by": "hand",
-      "comment": "Count down an EQ hold byte, re-trigger port events and set the EQ state to 7",
+      "comment": "Counts byte +6 of DAT_a807d650[port] down (or clears it), FUN_a00a07b8 calls, then sets the record state word to 7; returns 1",
       "name": "FUN_a0097f04",
       "status": "matched"
     },
@@ -4270,7 +4270,7 @@
     },
     "ram:a009c87c": {
       "by": "hand",
-      "comment": "Clear audio-related bytes of a port record and reset the audio status",
+      "comment": "Clears bytes +4, +1 and +0x2d of ARR_a807d7e0[port] and calls DRV_HDMI_Set_AudStatus(port, 0)",
       "name": "FUN_a009c87c",
       "status": "matched"
     },
@@ -4468,7 +4468,7 @@
     },
     "ram:a00a1b08": {
       "by": "hand",
-      "comment": "Disconnect an HDMI input port: clear its record flag and reset; port 2 rejected with 0x16",
+      "comment": "Port 2: prints the [VERBOSE] trace and returns 0x16; other ports: clears byte +3 of ARR_a807d7e0[port], calls FUN_a00a1a80 and returns 0",
       "name": "DRV_HDMI_IF_Disconnect",
       "status": "matched"
     },
@@ -4908,7 +4908,7 @@
     },
     "ram:a00a507c": {
       "by": "hand",
-      "comment": "Fill a 0x48-byte configuration record with default values",
+      "comment": "Fills a 0x48-byte record with fixed values (offsets 0x26..0x35 and 0x41..0x43 not written)",
       "name": "FUN_a00a507c",
       "status": "matched"
     },
@@ -5286,13 +5286,13 @@
     },
     "ram:a00a8ec4": {
       "by": "hand",
-      "comment": "Build an InfoFrame packet (header, 27 payload bytes, checksum)",
+      "comment": "Copies src bytes 1, 4, 5 and 27 bytes from src+6 to dst bytes 0..2 and dst+4, dst byte 3 = minus their 8-bit sum",
       "name": "FUN_a00a8ec4",
       "status": "matched"
     },
     "ram:a00a8f28": {
       "by": "hand",
-      "comment": "Build an InfoFrame packet (header, 10 payload bytes, checksum)",
+      "comment": "Copies src bytes 1, 4, 5 and 10 bytes from src+6 to dst bytes 0..2 and dst+4, dst byte 3 = minus their 8-bit sum",
       "name": "FUN_a00a8f28",
       "status": "matched"
     },

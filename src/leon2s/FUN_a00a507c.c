@@ -1,5 +1,5 @@
 /* FUN_a00a507c (leon2s 0xa00a507c-0xa00a5148, 204 bytes, leaf), flags -mcpu=v8 -Os -g.
- * Fills a 0x48-byte configuration record with fixed default values; called by FUN_a00a5cb4. The first
+ * Fills a 0x48-byte record with fixed values; called by FUN_a00a5cb4. The first
  * argument is unused. Field names are their byte offsets; the gaps (0x26..0x35, 0x41..0x43) are not written.
  * The stores are written in ascending offset order; the scheduler groups the stores of each repeated
  * constant (1, 2, 0x8ca, 0x12) into the order seen in the firmware.

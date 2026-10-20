@@ -5,8 +5,7 @@
  * Then three dumps of 8 words per line: the 40 saved registers at 0xa807ff60, 16 words of the stack at the
  * pointer saved at 0xa807ff94, and 32 words of code starting 16 bytes before the saved PC. Ends with
  * "System Halt." and an endless loop.
- * Strings: " " (s_a006c690) and "
-" (s_a0069ee8, the tail of another message) are shared firmware strings.
+ * Strings: " " (s_a006c690) and "\n" (s_a0069ee8, the tail of another message) are shared firmware strings.
  * Source forms: the trap type is computed once before the table loop; each dump reads through a
  * volatile unsigned int pointer (the dumped words are loaded before each print call, never in its delay
  * slot, which GCC only does for volatile loads).

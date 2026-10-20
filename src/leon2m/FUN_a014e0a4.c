@@ -1,6 +1,6 @@
 /* leon2m FUN_a014e0a4 @ 0xa014e0a4-0xa014e0d4 (12 words).
  * Tail-calls FUN_a0105d04(2) for v == 2, FUN_a0105d04(1) for v == 1 and FUN_a0105d04(0) for any other v. Routine
- * directly after FUN_a014e050 (separated from it in the function table).
+ * directly after FUN_a014e050.
  */
 extern void FUN_a0105d04(unsigned char);
 
