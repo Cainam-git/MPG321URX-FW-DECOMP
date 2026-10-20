@@ -6047,6 +6047,12 @@
       "name": "FUN_a00cd4fc",
       "status": "matched"
     },
+    "ram:a00cdb0c": {
+      "by": "hand",
+      "comment": "Port record step: init block and register copy when f28 is clear, then saturating counters",
+      "name": "FUN_a00cdb0c",
+      "status": "matched"
+    },
     "ram:a00cdc74": {
       "by": "hand",
       "comment": "record a8078bb0[ch] word 0 bits 16..17 = 01; a = c9368(ch); if a != c972c(): cca38(a) (same body as a00cf980)",
