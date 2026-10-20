@@ -6263,7 +6263,7 @@
     },
     "ram:a00b24b0": {
       "by": "hand",
-      "comment": "UART memory dump of n words at addr, four words per row",
+      "comment": "passes rows of four words around addr (n words, default 32) to FUN_a0061348 and strings to FUN_a0061280",
       "name": "CED_ALL_3",
       "status": "matched"
     },
