@@ -4915,6 +4915,13 @@
       "name": "FUN_a00adec0",
       "status": "matched"
     },
+    "ram:a00ae020": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "As FUN_a00adec0 but steps byte 0xa802d3eb back modulo 5 (FUN_a00ad970 at 3 and 4)",
+      "name": "FUN_a00ae020",
+      "status": "matched"
+    },
     "ram:a00ae174": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
