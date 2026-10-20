@@ -5072,6 +5072,12 @@
       "name": "FUN_a00a7acc",
       "status": "matched"
     },
+    "ram:a00a7b64": {
+      "by": "hand",
+      "comment": "writes a byte register of banks 0..4 (table DAT_a00b4d70), selecting the page at offset 0x60 first for banks 1..4 and reg <= 0x5f",
+      "name": "FUN_a00a7b64",
+      "status": "matched"
+    },
     "ram:a00a7cc0": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
