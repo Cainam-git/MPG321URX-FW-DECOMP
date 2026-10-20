@@ -8142,6 +8142,12 @@
       "name": "FUN_a00df368",
       "status": "matched"
     },
+    "ram:a00df384": {
+      "by": "hand",
+      "comment": "polls bit 0 of 0xc00b0014 up to 1000 times and returns the byte read from 0xc00b0000 (0 on timeout)",
+      "name": "FUN_a00df384",
+      "status": "matched"
+    },
     "ram:a00df420": {
       "by": "hand",
       "comment": "Tests bit 0 of a value with btst 1. GCC emits the AND mask itself as the btst operand, so the source form is (x & 1) == 0.",
