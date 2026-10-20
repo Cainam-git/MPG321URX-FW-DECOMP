@@ -5069,6 +5069,12 @@
       "name": "FUN_a00ab8b8",
       "status": "matched"
     },
+    "ram:a00aba14": {
+      "by": "hand",
+      "comment": "clears eight bytes of record port of ARR_a807dc18",
+      "name": "FUN_a00aba14",
+      "status": "matched"
+    },
     "ram:a00aba4c": {
       "by": "near",
       "comment": "near-miss repaired: _DAT_cf034400 via cast address",
