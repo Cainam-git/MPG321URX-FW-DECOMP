@@ -1,4 +1,4 @@
-# leon2s FUN_a008ae80 0xa008ae80-0xa008b2b4 (1076 bytes)
+# leon2s FUN_a008ae80 0xa008ae80-0xa008b2bc (1084 bytes)
 a008ae80:  9d e3 bf 98  save  %sp, -104, %sp
 a008ae84:  b0 0e 20 ff  and  %i0, 0xff, %i0
 a008ae88:  82 06 3f ff  add  %i0, -1, %g1
@@ -268,3 +268,5 @@ a008b2a4:  b6 10 20 00  clr  %i3
 a008b2a8:  40 00 6e 7c  call  0xa00a6c98
 a008b2ac:  81 e8 00 00  restore
 a008b2b0:  01 00 00 00  nop
+a008b2b4:  81 c7 e0 08  ret
+a008b2b8:  81 e8 00 00  restore
