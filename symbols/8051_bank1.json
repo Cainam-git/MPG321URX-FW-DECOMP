@@ -945,6 +945,13 @@
       "name": "FUN_CODE_b228",
       "status": "matched"
     },
+    "CODE:b2b0": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "returns a bit from FUN_CODE_d92a or from FUN_CODE_dd74 / FUN_CODE_cefd tests around FUN_CODE_ce18 stores",
+      "name": "FUN_CODE_b2b0",
+      "status": "matched"
+    },
     "CODE:b456": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
