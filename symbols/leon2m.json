@@ -4117,6 +4117,13 @@
       "name": "FUN_a00a8230",
       "status": "matched"
     },
+    "ram:a00a835c": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same code as FUN_a00a8570 with table 0x1890d4, 5 rows and selection byte 0xa802d3eb",
+      "name": "FUN_a00a835c",
+      "status": "matched"
+    },
     "ram:a00a8570": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
