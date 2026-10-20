@@ -2748,6 +2748,12 @@
       "name": "FUN_a008a7a0",
       "status": "matched"
     },
+    "ram:a008a7bc": {
+      "by": "hand",
+      "comment": "writes 0 then 0x88 to the registers 0xcf01125c-0xcf011274",
+      "name": "FUN_a008a7bc",
+      "status": "matched"
+    },
     "ram:a008a824": {
       "by": "hand",
       "comment": "If param_1 & 0xff is non-zero (btst 0xff, %o0; be to the else path): ORs 0xc into register 0xcf011018. Otherwise: if (reg 0xcf011200 & 0xf) != 0, ANDs 0xcf011018 with -13 (0xfffffff3). Written as if / else if, with a separate store in each path.",
