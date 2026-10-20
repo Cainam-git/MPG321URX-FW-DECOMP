@@ -3403,6 +3403,13 @@
       "name": "FUN_a0099168",
       "status": "matched"
     },
+    "ram:a00991ec": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Toggles bit 22 of word 0xa802d33c, calls FUN_a00a5420(5, bit), sets bit 1 of byte 0xa802b08e",
+      "name": "FUN_a00991ec",
+      "status": "matched"
+    },
     "ram:a0099244": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
