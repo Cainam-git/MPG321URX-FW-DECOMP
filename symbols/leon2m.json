@@ -11813,6 +11813,12 @@
       "name": "FUN_a0134184",
       "status": "matched"
     },
+    "ram:a0134394": {
+      "by": "h10",
+      "comment": "Prints MailBox_LoadFE2P with a and b when FUN_a00dd614(0x20), then func_0x4008f3f4(0x14, b, a >> 8, a & 0xff, 1) and func_0x4008f3f4(0x12, 0, 0, 0, 2)",
+      "name": "FUN_a0134394",
+      "status": "matched"
+    },
     "ram:a0134428": {
       "by": "hand",
       "comment": "Two calls to the routine at 0x4008f3f4 (likely a trace/log or register-write routine). The first passes 0x14 as command/ID, the low byte of param_2, bits 8-15 of param_1, the low byte of param_1, and 1; the second passes 0x11 with all-zero data fields and 2. The parameters are unsigned int, as the assembly works on full 32-bit registers with explicit masks. Bits 8-15 must be written as the two-step shift (x<<16)>>24 to produce the target's sll + srl pair rather than a single srl.",
