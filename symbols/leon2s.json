@@ -2815,6 +2815,12 @@
       "name": "FUN_a008ced8",
       "status": "matched"
     },
+    "ram:a008d280": {
+      "by": "hand",
+      "comment": "Write a computed 12-bit value to registers 0xcf012240/44 and return register 0xcf012200",
+      "name": "FUN_a008d280",
+      "status": "matched"
+    },
     "ram:a008d690": {
       "by": "hand",
       "comment": "ROM table ARR_a00b4036 of 4-byte {u16 a; u16 b} records. sum = u16 sum of rec[0xc..0x10].b; FUN_a008d2e0(rec[0xc].a (= u16 at 0xa00b4066), sum, 0x9f1b0600); FUN_a008d490(0x9f1b0600, 0xc, 0x11); byte DAT_a8078c00 = 1; tail call FUN_a006fedc() (no args: it sets %o0.. itself). void, no params.",
