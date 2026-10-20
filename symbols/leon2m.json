@@ -3244,6 +3244,13 @@
       "name": "FUN_a0097988",
       "status": "matched"
     },
+    "ram:a00979ec": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same sequence as FUN_a00978c8 with the selection taken from byte 0xa802d2bf",
+      "name": "FUN_a00979ec",
+      "status": "matched"
+    },
     "ram:a0097ad0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
