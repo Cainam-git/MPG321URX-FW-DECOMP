@@ -882,6 +882,13 @@
       "name": "FUN_CODE_a6cf",
       "status": "matched"
     },
+    "CODE:a775": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Sets XDATA 0xF0xx register groups for bits 2/3/4 of m, calls FUN_CODE_c389(m, x), then FUN_CODE_9975(m, d * 1200)",
+      "name": "FUN_CODE_a775",
+      "status": "matched"
+    },
     "CODE:a8bb": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
