@@ -12376,6 +12376,12 @@
       "name": "FUN_a013cea0",
       "status": "matched"
     },
+    "ram:a013cf84": {
+      "by": "h10",
+      "comment": "Sets bit 25 of word +0x70 of the four 0x78-byte records at 0xa802df30",
+      "name": "FUN_a013cf84",
+      "status": "matched"
+    },
     "ram:a013d178": {
       "by": "hand",
       "comment": "",
