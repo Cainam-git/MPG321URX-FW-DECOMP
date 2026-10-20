@@ -7255,6 +7255,12 @@
       "name": "FUN_a00d9474",
       "status": "matched"
     },
+    "ram:a00d9524": {
+      "by": "h17",
+      "comment": "Copies a 0x13-byte message from src, rewrites its 4-bit header fields and bits of word 4, passes it to FUN_a00d6a54(&m, 1, 1)",
+      "name": "FUN_a00d9524",
+      "status": "matched"
+    },
     "ram:a00d9698": {
       "by": "hand",
       "comment": "message dispatcher: switch to twelve no-arg handlers, default 9474(v, 4, 0)",
