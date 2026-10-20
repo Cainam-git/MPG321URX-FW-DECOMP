@@ -1696,7 +1696,7 @@
     },
     "ram:a0062f3c": {
       "by": "hand",
-      "comment": "starts (FUN_a00b192c or register 0xcf03c800 = 0x55) and polls 0xcf03c804 for 0xdd; on timeout writes 0x88 and returns 0",
+      "comment": "calls FUN_a00b192c (mode 1) or writes 0x55 to 0xcf03c800, then polls 0xcf03c804 for 0xdd; on timeout writes 0x88 and returns 0",
       "name": "FUN_a0062f3c",
       "status": "matched"
     },
