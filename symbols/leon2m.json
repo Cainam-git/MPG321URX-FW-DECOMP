@@ -14269,6 +14269,13 @@
       "name": "FUN_a0140e74",
       "status": "matched"
     },
+    "ram:a01410a4": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "passes a stack structure (bits 29-31 cleared, 2, 0x1a3668, 0x1a3648) by value to FUN_a0118e04",
+      "name": "FUN_a01410a4",
+      "status": "matched"
+    },
     "ram:a014118c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
