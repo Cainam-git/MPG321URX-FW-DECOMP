@@ -8025,6 +8025,13 @@
       "name": "FUN_a0121d44",
       "status": "matched"
     },
+    "ram:a0121d4c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns 0 when the port class from FUN_a00fd820 is one of 13 listed codes, else 1",
+      "name": "FUN_a0121d4c",
+      "status": "matched"
+    },
     "ram:a0121e3c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
