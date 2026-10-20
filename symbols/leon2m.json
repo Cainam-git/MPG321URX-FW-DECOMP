@@ -1655,6 +1655,13 @@
       "name": "FUN_a002a5e4",
       "status": "matched"
     },
+    "ram:a002a734": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Interrupt dispatcher for bit 0x4000: runs and acknowledges the pending hooks of 7 sources",
+      "name": "FUN_a002a734",
+      "status": "matched"
+    },
     "ram:a002a84c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
