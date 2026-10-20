@@ -8383,6 +8383,13 @@
       "name": "FUN_a01076bc",
       "status": "matched"
     },
+    "ram:a010771c": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same code as FUN_a010765c with other constants: Sets three registers at 0xcf016828.. (and clears bit 7 of 0xcf00ed14) when on is 1, else clears 0xcf01",
+      "name": "FUN_a010771c",
+      "status": "matched"
+    },
     "ram:a0107a14": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
