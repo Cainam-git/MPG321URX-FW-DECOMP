@@ -1,6 +1,9 @@
-/* leon2m FUN_a009ae04 @ 0xa009ae04  MATCH (-mcpu=v8 -O3 -g, twin)
- * Twin of FUN_a009ad40: same code, constants swapped; byte-exact.
- * See FUN_a009ad40 for the explanation; this copy's constants differ, so its comments were removed.
+/* leon2m FUN_a009ae04 @ 0xa009ae04-0xa009aec8 (49 words)  MATCH (-mcpu=v8 -O3 -g, twin)
+ * Same code as FUN_a009ad40 (whose header describes it) with other constants: base 0xd4 instead of 0xd0 and step
+ * offset 0xd1 instead of 0xcf. The word 0xa802afec steps backwards through 0xd4..0xd7: FUN_a00a93bc(afec - 0xd4),
+ * then t = ((low halfword of afec) - 0xd1) % 4 and afec = t + 0xd4 until FUN_a00aad30(t) returns 1;
+ * FUN_a00a9650(afec - 0xd4, 1); FUN_a00a813c(1, FUN_a01445fc(byte 0xa8025c55), flag) with flag 0 when
+ * FUN_a014459c(afec - 0xd4) equals byte 0xa8025c55, else 1.
  */
 extern unsigned char DAT_a8025c55;
 extern unsigned int _DAT_a802afec;

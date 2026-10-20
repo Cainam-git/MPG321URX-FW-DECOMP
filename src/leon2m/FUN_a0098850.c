@@ -1,8 +1,8 @@
 /* leon2m FUN_a0098850 @ 0xa0098850-0xa009890c (47 words).
- * Template FUN_a0098434: Copies the stored position to byte 0xa8025c56 and the selection word 0xa802afec and
- * reports it.
- * This function is the same code as FUN_a0098434 (its source comment explains the details), compiled with
- * other constants (template -> this function):
+ * Same instructions and constants as FUN_a0098434 (whose header describes them); only the call displacements
+ * differ because the code lies at another address. v = byte 0xa802d290[0x18a + k] with k = byte 0xa802d433
+ * (offset 0x1a3); byte 0xa8025c56 = v, FUN_a00a813c(1, v % 7, 0), FUN_a00a900c(word 0xa802afec - 38, 2), word
+ * 0xa802afec = v + 0x86 and the tail call FUN_a00a9650(v % 7, 1); v is read again for each use.
  */
 extern unsigned char DAT_a802d290[];
 extern unsigned char DAT_a8025c56;
