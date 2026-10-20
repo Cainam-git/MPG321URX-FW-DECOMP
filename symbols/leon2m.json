@@ -3271,6 +3271,13 @@
       "name": "FUN_a00976a8",
       "status": "matched"
     },
+    "ram:a0097814": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Call sequence on bytes 0xa8025c56 / 0xa802d2af and afec (set to 7); FUN_a00acef4 when the two bytes differ",
+      "name": "FUN_a0097814",
+      "status": "matched"
+    },
     "ram:a00978c8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
