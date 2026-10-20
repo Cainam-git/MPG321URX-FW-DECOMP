@@ -2917,6 +2917,12 @@
       "name": "FUN_a008da34",
       "status": "matched"
     },
+    "ram:a008da88": {
+      "by": "hand",
+      "comment": "calls FUN_a00a80cc(port, 1, 10, bit, on) for bits 4, 8, 0x10, 0x20",
+      "name": "FUN_a008da88",
+      "status": "matched"
+    },
     "ram:a008db4c": {
       "by": "hand",
       "comment": "Calls FUN_a00a80cc(param_1, 1, 8, 8, param_2 != 0), written as two call forms in an if/else on the byte param_2 (btst 0xff,%o1; param_1 masked with and %o0,0xff,%g1). Returns void.",
