@@ -12412,6 +12412,13 @@
       "name": "FUN_a013129c",
       "status": "matched"
     },
+    "ram:a013143c": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Maps FUN_a00fd820(port byte +0xb) through the ROM table 0x1a5238 into port bytes +0xc / +0xd (0xff for a == 0)",
+      "name": "FUN_a013143c",
+      "status": "matched"
+    },
     "ram:a0131518": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
