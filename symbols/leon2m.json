@@ -10973,6 +10973,13 @@
       "name": "FUN_a01256d0",
       "status": "matched"
     },
+    "ram:a01257f0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "For index 0: updates bytes 6/7 and halfword 4 of the 10-byte structure at 0xa802a430 and passes a copy to func_0x4008b758",
+      "name": "FUN_a01257f0",
+      "status": "matched"
+    },
     "ram:a012587c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
