@@ -3020,7 +3020,7 @@
     "ram:a0094108": {
       "by": "h10",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Time-dependent step in byte 0xa802cffc (0x48), raises halfword 0xa802d2e6 within FUN_a014837c(1) - 972/756/540 by byte 0xa802d2c1, FUN_a00d7a70(0), b08e |= 2",
+      "comment": "Steps byte 0xa802cffc (0x48) by func_0x4008d594 checks of 0xa802d034/0xa802d03a, raises halfword 0xa802d2e6 within FUN_a014837c(1) - 972/756/540, FUN_a00d7a70(0), b08e |= 2",
       "name": "FUN_a0094108",
       "status": "matched"
     },
