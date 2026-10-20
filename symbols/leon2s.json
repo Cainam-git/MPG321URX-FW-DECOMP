@@ -3961,6 +3961,12 @@
       "name": "FUN_a0095d34",
       "status": "matched"
     },
+    "ram:a0095d78": {
+      "by": "hand",
+      "comment": "on a change of FUN_a0095d34(port) stores it in DAT_a8078c50[port] and runs FUN_a0095ca4/FUN_a00a33f4 or func_0x9f1b8a1c, updating DAT_a8078c48[port]",
+      "name": "FUN_a0095d78",
+      "status": "matched"
+    },
     "ram:a0095e9c": {
       "by": "asm",
       "comment": "twin of FUN_a0060bb0: identical hand-written assembly, constants swapped",
