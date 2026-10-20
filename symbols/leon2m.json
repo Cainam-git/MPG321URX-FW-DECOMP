@@ -8835,6 +8835,13 @@
       "name": "FUN_a0118b0c",
       "status": "matched"
     },
+    "ram:a0118b9c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "u8 e: e != 0 writes 1/1/4 to 0xcf012fd0/0xcf012f74/0xcf012f6c, e == 0 writes 0 to all three",
+      "name": "FUN_a0118b9c",
+      "status": "matched"
+    },
     "ram:a011909c": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
