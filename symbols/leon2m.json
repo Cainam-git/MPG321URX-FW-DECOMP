@@ -13870,6 +13870,13 @@
       "name": "FUN_a014f998",
       "status": "matched"
     },
+    "ram:a014faa8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "FUN_a011e4c8(0x10+i, b) for each byte b != 0xff of DAT_a802a4a8[0..7], then FUN_a011e4c8(0x18, DAT_a802cc85)",
+      "name": "FUN_a014faa8",
+      "status": "matched"
+    },
     "ram:a014fb84": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
