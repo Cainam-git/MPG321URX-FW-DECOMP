@@ -1,9 +1,10 @@
 /* FUN_a00907f0 (leon2s, 0xa00907f0-0xa00908d0, 56 words). Flags -mcpu=v8 -Os -g.
- Code facts: (u8 port, u8 *buf). w = FUN_a00a6544(0, port, 0x140); buf[0] = byte 0, buf[2] = byte 2. If byte 0 == 0x82 and byte 2 != 0: buf[1], buf[3] =
- bytes 1 and 3; for loop = 0, 4, 8: the 4 bytes of a6544(0, port, 0x144 + loop) go to buf[4 + loop ..]; the low 3 bytes of a6544(0, port, 0x150) go to
- buf[0x10..0x12]; return 1. Otherwise FUN_a00b15ac(buf, 0, 0x16) (memset) and return 0.
- Fixes vs draft: FUN_a00a6544's 3rd parameter is unsigned short (fw sll/srl 16 on loop + 0x144; the draft masked & 0xffff by hand);
- the last three stores in ascending source order 0x10, 0x11, 0x12. Aids: none.
+ * (u8 port, u8 *buf). w = FUN_a00a6544(0, port, 0x140); buf[0] = byte 0, buf[2] = byte 2. If byte 0 == 0x82
+ * and byte 2 != 0: buf[1], buf[3] = bytes 1 and 3; for loop = 0, 4, 8: the 4 bytes of
+ * FUN_a00a6544(0, port, 0x144 + loop) go to buf[4 + loop ..]; the low 3 bytes of FUN_a00a6544(0, port, 0x150)
+ * go to buf[0x10..0x12]; return 1. Otherwise FUN_a00b15ac(buf, 0, 0x16) (memset) and return 0.
+ * The 3rd parameter of FUN_a00a6544 is unsigned short (firmware sll/srl 16 on loop + 0x144).
+ * Source form: the last three stores in ascending source order 0x10, 0x11, 0x12.
  */
 extern unsigned int FUN_a00a6544(unsigned int, unsigned int, unsigned short);
 extern int FUN_a00b15ac(unsigned char *, unsigned int, unsigned int);

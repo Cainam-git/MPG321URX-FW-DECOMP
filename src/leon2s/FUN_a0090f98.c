@@ -1,7 +1,7 @@
 /* FUN_a0090f98 (leon2s, 7 words, leaf). Flags -mcpu=v8 -Os -g.
- Code facts: returns the u16 at byte offset 0x92 of the 0xb0-byte record (u8 param) of the table at 0xa807d3e4 (sethi/or base, smul 0xb0, add, lduh +0x92).
- Fixes vs draft: real base ARR_a807d3e4 (FUN_a0091078 form, u16 index param*0x58 + 0x49); the draft used a mid-record symbol and a stride
- of 0xb0 u16 elements (smul 0x160). Aids: none.
+ * Returns the u16 at byte offset 0x92 of the 0xb0-byte record (u8 param) of the table at 0xa807d3e4
+ * (sethi/or base, smul 0xb0, add, lduh +0x92).
+ * The base is ARR_a807d3e4 (the FUN_a0091078 form, u16 index param*0x58 + 0x49).
  */
 extern unsigned short ARR_a807d3e4[];
 
