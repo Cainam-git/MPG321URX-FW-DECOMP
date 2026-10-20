@@ -948,7 +948,7 @@
     "CODE:b781": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "Returns v, shifted left by (sum of each 0x200-byte block of XDATA 0xA800.. + 8) for four blocks, from 0",
+      "comment": "sums 4 blocks of 512 bytes at 0xA800 into a shifted 32-bit result",
       "name": "FUN_CODE_b781",
       "status": "matched"
     },
