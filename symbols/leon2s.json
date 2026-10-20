@@ -3769,6 +3769,12 @@
       "name": "FUN_a0091d64",
       "status": "matched"
     },
+    "ram:a0091db4": {
+      "by": "hand",
+      "comment": "copies len bytes in 16-byte steps read through the ROM routines func_0x9f1b8048/func_0x9f1b81f8 (offset base + i * 16) into dst",
+      "name": "FUN_a0091db4",
+      "status": "matched"
+    },
     "ram:a0091e70": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
