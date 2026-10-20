@@ -1,4 +1,4 @@
-# leon2m FUN_a00bd760 0xa00bd760-0xa00bd908 (424 bytes)
+# leon2m FUN_a00bd760 0xa00bd760-0xa00bd988 (552 bytes)
 a00bd760:  9d e3 bf 98  save  %sp, -104, %sp
 a00bd764:  15 2a 00 b4  sethi  %hi(0xa802d000), %o2
 a00bd768:  96 12 a2 90  or  %o2, 0x290, %o3	! 0xa802d290
@@ -105,3 +105,35 @@ a00bd8f8:  c0 2b 60 0a  clrb  [ %o5 + 0xa ]
 a00bd8fc:  b4 16 a0 78  or  %i2, 0x78, %i2
 a00bd900:  40 02 2b ba  call  0xa01487e8
 a00bd904:  93 e8 20 0b  restore  %g0, 0xb, %o1
+a00bd908:  9a 16 a0 78  or  %i2, 0x78, %o5
+a00bd90c:  82 10 20 37  mov  0x37, %g1
+a00bd910:  10 bf ff ae  b  0xa00bd7c8
+a00bd914:  c2 2b 60 09  stb  %g1, [ %o5 + 9 ]
+a00bd918:  9a 16 a0 78  or  %i2, 0x78, %o5
+a00bd91c:  82 10 20 30  mov  0x30, %g1
+a00bd920:  10 bf ff aa  b  0xa00bd7c8
+a00bd924:  c2 2b 60 09  stb  %g1, [ %o5 + 9 ]
+a00bd928:  9a 16 a0 78  or  %i2, 0x78, %o5
+a00bd92c:  82 10 20 31  mov  0x31, %g1
+a00bd930:  10 bf ff a6  b  0xa00bd7c8
+a00bd934:  c2 2b 60 09  stb  %g1, [ %o5 + 9 ]
+a00bd938:  9a 16 a0 78  or  %i2, 0x78, %o5
+a00bd93c:  82 10 20 32  mov  0x32, %g1
+a00bd940:  10 bf ff a2  b  0xa00bd7c8
+a00bd944:  c2 2b 60 09  stb  %g1, [ %o5 + 9 ]
+a00bd948:  9a 16 a0 78  or  %i2, 0x78, %o5
+a00bd94c:  82 10 20 33  mov  0x33, %g1
+a00bd950:  10 bf ff 9e  b  0xa00bd7c8
+a00bd954:  c2 2b 60 09  stb  %g1, [ %o5 + 9 ]
+a00bd958:  9a 16 a0 78  or  %i2, 0x78, %o5
+a00bd95c:  82 10 20 34  mov  0x34, %g1
+a00bd960:  10 bf ff 9a  b  0xa00bd7c8
+a00bd964:  c2 2b 60 09  stb  %g1, [ %o5 + 9 ]
+a00bd968:  9a 16 a0 78  or  %i2, 0x78, %o5
+a00bd96c:  82 10 20 35  mov  0x35, %g1
+a00bd970:  10 bf ff 96  b  0xa00bd7c8
+a00bd974:  c2 2b 60 09  stb  %g1, [ %o5 + 9 ]
+a00bd978:  9a 16 a0 78  or  %i2, 0x78, %o5
+a00bd97c:  82 10 20 36  mov  0x36, %g1
+a00bd980:  10 bf ff 92  b  0xa00bd7c8
+a00bd984:  c2 2b 60 09  stb  %g1, [ %o5 + 9 ]
