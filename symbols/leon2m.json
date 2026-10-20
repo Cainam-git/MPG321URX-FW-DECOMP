@@ -15229,6 +15229,13 @@
       "name": "FUN_a01479ec",
       "status": "matched"
     },
+    "ram:a0147a14": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "scales x by 1023/100 (rounded) and 20914/1023, plus 1, into FUN_a01386ac(0, v)",
+      "name": "FUN_a0147a14",
+      "status": "matched"
+    },
     "ram:a0147aa0": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
