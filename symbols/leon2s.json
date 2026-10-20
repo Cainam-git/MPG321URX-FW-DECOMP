@@ -3330,6 +3330,12 @@
       "name": "FUN_a0091388",
       "status": "matched"
     },
+    "ram:a0091420": {
+      "by": "hand",
+      "comment": "Rate-limited range check of a port value; returns the cached flag byte",
+      "name": "FUN_a0091420",
+      "status": "matched"
+    },
     "ram:a00914c4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
