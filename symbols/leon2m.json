@@ -8418,6 +8418,13 @@
       "name": "FUN_a0107884",
       "status": "matched"
     },
+    "ram:a01078cc": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same code as FUN_a010783c with other constants (listed in the source header)",
+      "name": "FUN_a01078cc",
+      "status": "matched"
+    },
     "ram:a0107a14": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
