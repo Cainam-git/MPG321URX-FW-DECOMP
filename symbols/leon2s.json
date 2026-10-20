@@ -4166,6 +4166,12 @@
       "name": "DRV_HDMI21_PHY_Freq_Detection",
       "status": "matched"
     },
+    "ram:a009c310": {
+      "by": "hand",
+      "comment": "by type (1, 0x14, 0x15) sets word 1 of DAT_a80790f4 / DAT_a8079100 from DAT_a8078631 / DAT_a8078630 and passes them to CONV2HDMITX_UpdateInterface_4",
+      "name": "DRV_HDMI_Start_Timer",
+      "status": "matched"
+    },
     "ram:a009c3bc": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
