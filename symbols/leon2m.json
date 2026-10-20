@@ -14338,6 +14338,13 @@
       "name": "FUN_a0142168",
       "status": "matched"
     },
+    "ram:a0142218": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "index of the first of 7 records at 0xa802e116 with byte +0x10 equal to v, else 0xff",
+      "name": "FUN_a0142218",
+      "status": "matched"
+    },
     "ram:a014226c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
