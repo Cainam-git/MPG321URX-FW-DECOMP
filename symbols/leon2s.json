@@ -5860,6 +5860,12 @@
       "name": "FUN_a00c1ac0",
       "status": "matched"
     },
+    "ram:a00c22a0": {
+      "by": "hand",
+      "comment": "Load three 128-byte tables (ROM or storage) into a port block",
+      "name": "FUN_a00c22a0",
+      "status": "matched"
+    },
     "ram:a00c30e4": {
       "by": "hand",
       "comment": "Returns 1 or 0 (result in l0, returned as l0 & 1). For param <= 1: calls a function and returns 1 if bit 4 of the result is set, else 0. For param 2-3 (bleu,a with mov 1, %l0 in the delay slot) returns 1; for param > 5 returns 0; for 4-5 returns 1. Branch layout: bgu to 0xa00c311c for param > 1, be to the return-0 exit 0xa00c313c after the bit test, cmp 3 / bleu,a and cmp 5 / bgu, with the shared result exit at 0xa00c3138 (and %l0, 1, %i0).",
