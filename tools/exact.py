@@ -154,7 +154,8 @@ def verify_pool(obj, off, size, got, want, pools, img, base):
             g[pos:pos + 4] = want[pos:pos + 4]
         if hi is None or lo is None: return got, f"literal {sec}+{add} is not loaded with a sethi/%lo pair"
         a = hi | lo
-        val = data[add:add + n] if n else data[add:].rstrip(b"\0")   # n == 0: plain .rodata placed by its references
+        val = (data[add:add + n] if n > 0 else data[add:data.index(b"\0", add) + 1] if n < 0
+               else data[add:].rstrip(b"\0"))   # n == 0: plain .rodata placed by its references; n < 0: one string
         fw_img = (pathlib.Path(__file__).resolve().parent.parent / "firmware" / "MSI_MPG321URX_V021_7F69.bin").read_bytes()
         # file offsets: Leon2M code addresses its constants at run-time addresses (file = address + 0x108000, the
         # documented string rule); Leon2S at flash addresses (file = address - 0xA0010000)
@@ -164,7 +165,7 @@ def verify_pool(obj, off, size, got, want, pools, img, base):
     return bytes(g), None
 
 
-def exact(cpu, fn, obj, sym=None, solve=False):
+def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False):
     """None when the object gives the firmware's exact bytes for fn at its real address, else a reason.
     sym: the function's name inside the object when it differs (library members); solve: derive the addresses
     of undefined names from the firmware instead of requiring Ghidra names (library members only)."""
@@ -176,6 +177,16 @@ def exact(cpu, fn, obj, sym=None, solve=False):
     off = int(m[1], 16); text_lo = lo - off   # the function need not be first in its object's .text
     size = int(m[2], 16) if m[2] else hi - lo   # no size recorded (hand-written members): Ghidra's length
     solved = solve_undefined(cpu, obj, text_lo) if solve else {}
+    if solve:   # library member: a section is also placed by the names it defines that the relocations reach
+        secs = dict(re.findall(r"^\s*\[\s*(\d+)\]\s+(\S+)", run(tool("readelf"), "-SW", obj).stdout, re.M))
+        at = {}
+        for val, ndx, name in re.findall(r"^\s*\d+:\s+([0-9a-f]+)\s+\d+\s+\w+\s+\w+\s+\w+\s+(\d+)\s+(\S+)\s*$",
+                                         run(tool("readelf"), "-sW", obj).stdout, re.M):
+            sec = secs.get(ndx)
+            if sec and sec != ".text" and name in solved: at.setdefault(sec, set()).add(solved[name] - int(val, 16))
+        for sec, a in at.items():
+            if len(a) > 1: return f"the names defined in {sec} give different firmware addresses for it"
+            solved.setdefault(sec, a.pop())
     defs = []
     for name in run(tool("nm"), "-u", obj).stdout.split():
         if name == "U": continue
@@ -190,7 +201,9 @@ def exact(cpu, fn, obj, sym=None, solve=False):
         place = []; pools = []
         for sec, ssz in re.findall(r"\]\s+(\.\S+)\s+\w+\s+\w+\s+\w+\s+(\w+)\s+\w+\s+\S*A", run(tool("readelf"), "-SW", obj).stdout):
             if sec == ".text" or int(ssz, 16) == 0: continue
-            if sec in solved:   # library member: its relocations say where the firmware keeps this section
+            merge = re.match(r"\.rodata\.(cst|str)", sec)
+            if sec in solved and not (split_pools and merge):   # library member: its relocations say where the
+                # firmware keeps this section (second try: mergeable constants and strings checked per reference)
                 place.append((sec, [solved[sec] - base])); continue
             if not sec.startswith(".rodata"):
                 return f"defines its own variables ({sec}); use the firmware's globals (extern DAT_xxxxxxxx) instead"
@@ -200,7 +213,7 @@ def exact(cpu, fn, obj, sym=None, solve=False):
             # whose trailing zero bytes are data (stripping them cut the double 0.5 = 3fe00000 00000000 to 3fe0 00,
             # which then matched at a wrong place, e.g. in FUN_a0120c90)
             data = b.read_bytes() if mc else b.read_bytes().rstrip(b"\0") + b"\0"
-            hits = [m.start() for m in re.finditer(re.escape(data), img)][:4]
+            hits = [] if split_pools and merge else [m.start() for m in re.finditer(re.escape(data), img)][:4]
             if not hits and mc:   # a mergeable literal pool; the original link merged each entry with other
                 # objects' constants, so its entries need not be adjacent: place it outside the image and check every
                 # literal reference against the firmware's own address bits (verify_pool below)
@@ -208,7 +221,9 @@ def exact(cpu, fn, obj, sym=None, solve=False):
             if not hits and cpu == "leon2m":   # a unit's .rodata/.rodata.str* in the Big chip DATA area (file =
                 # address + 0x108000, outside parts/leon2m.bin): place it outside the image and check every literal reference
                 # against the firmware bytes at its own address bits (verify_pool, n = 0 = rest of the section)
-                pools.append((sec, 0, b.read_bytes())); place.append((sec, [len(img) + 0x10000 + 0x1000 * len(pools)])); continue
+                # (n = -1: a mergeable string section, each string checked on its own)
+                pools.append((sec, -1 if split_pools and merge else 0, b.read_bytes()))
+                place.append((sec, [len(img) + 0x10000 + 0x1000 * len(pools)])); continue
             if not hits: return f"its constant data/strings ({len(data)} bytes) are not in the firmware in this order"
             place.append((sec, hits))
 
@@ -231,6 +246,7 @@ def exact(cpu, fn, obj, sym=None, solve=False):
             if got != want and len(got) == len(want) and pools:
                 got, why = verify_pool(obj, off, size, got, want, pools, img, base)
                 if why: last = why; continue
+                LAST = (bytes(got), bytes(want))
             if got != want and len(got) == len(want):
                 why = jump_tables(cpu, obj, off, got, want, text_lo)
                 if why is None: got = want
@@ -240,4 +256,7 @@ def exact(cpu, fn, obj, sym=None, solve=False):
             k = next(i for i in range(min(len(got), len(want))) if got[i] != want[i]) & ~3
             last = (f"bytes differ at 0x{lo + k:x}: compiled {got[k:k+4].hex()} vs firmware {want[k:k+4].hex()} "
                     f"(same instruction shape: check the exact address/offset/constant there)")
+        if solve and not split_pools and any(re.match(r"\.rodata\.(cst|str)", s_) for s_ in solved):
+            # the original link may have spread a member's literal pool among other objects' constants
+            return exact(cpu, fn, obj, sym, solve, True) and last
         return last
