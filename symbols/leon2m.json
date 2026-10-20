@@ -8369,6 +8369,13 @@
       "name": "FUN_a01070b4",
       "status": "matched"
     },
+    "ram:a010765c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets three registers at 0xcf016828.. (and clears bit 7 of 0xcf00ed14) when on is 1, else clears 0xcf016828",
+      "name": "FUN_a010765c",
+      "status": "matched"
+    },
     "ram:a0107a14": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
