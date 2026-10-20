@@ -13459,6 +13459,13 @@
       "name": "FUN_a014ae1c",
       "status": "matched"
     },
+    "ram:a014aed0": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same lookup as FUN_a014ac28 for group 0x30; writes with FUN_a0140e74(..., 1) when it fits (SYSAPI_WriteEEPROM)",
+      "name": "FUN_a014aed0",
+      "status": "matched"
+    },
     "ram:a014b01c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
