@@ -7255,6 +7255,12 @@
       "name": "FUN_a00da960",
       "status": "matched"
     },
+    "ram:a00da9e8": {
+      "by": "h17",
+      "comment": "Compares a table byte selected by the nibbles of record byte 0 with a record byte; returns 1 when they differ and lo < hi",
+      "name": "FUN_a00da9e8",
+      "status": "matched"
+    },
     "ram:a00dabf8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
