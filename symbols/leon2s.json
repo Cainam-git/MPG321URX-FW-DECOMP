@@ -4388,6 +4388,12 @@
       "name": "FUN_a00a1df0",
       "status": "matched"
     },
+    "ram:a00a1f84": {
+      "by": "hand",
+      "comment": "writes a 2-bit value from code 4..7 into bits 0-1 or 4-5 of register 0xcf0147f0",
+      "name": "FUN_a00a1f84",
+      "status": "matched"
+    },
     "ram:a00a2010": {
       "by": "hand",
       "comment": "Read-modify-write of the volatile register 0xcf0147f0: param_1 (byte) selects bit 2 (0x4, when param_1 == 0) or bit 6 (0x40, otherwise); the bit is set if param_2 (btst 0xff,%o1) is non-zero and cleared (and 0xfffffffb / 0xffffffbf) otherwise. The param_2 == 0 case is the be target; within each half, param_1 != 0 is the bne target, with mov %o4,%o5 in the delay slots.",
