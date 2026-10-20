@@ -9282,6 +9282,13 @@
       "name": "FUN_a010192c",
       "status": "matched"
     },
+    "ram:a0101950": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets bits 4..7 and bit 3 of the register at 0xcf0160c0",
+      "name": "FUN_a0101950",
+      "status": "matched"
+    },
     "ram:a0101984": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
