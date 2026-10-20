@@ -1,9 +1,5 @@
 /* leon2m FUN_a0120c90 @ 0xa0120c90-0xa0120de4 (85 words), flags -mcpu=v8 -O3 -g -msoft-float (float source;
  * the FUN_a0155xxx/a01560ac callees are the libgcc soft-float routines, see src/leon2m/*.lib).
- * jf 99.00 'bytes differ at 0xa0120d90' = a JUDGE artefact, not a code difference:
- * exact.py strips trailing zero bytes of the .rodata.cst8 pool (data.rstrip(b"\0")), so the double 0.5
- * (3fe00000 00000000) shrinks to 3fe000, is "found" somewhere in parts/leon2m.bin and placed there,
- * instead of being checked at the fw address 0x19a638 (which does hold 0.5) by verify_pool.
  * What it does: the input timing value t.x that the output clock sum FUN_a010325c (and FUN_a014285c,
  * r->h26) uses for port 'port'. Registers via FUN_a00f21f0 (16-bit pair read of the 0x19A2FC block):
  *   h   = reg 0x12 & 0x1fff; outside 147..8000 -> returns 0;
@@ -15,9 +11,8 @@
  *   else returns (u16)(FUN_a00f21f0(port, 0x26) + 1).
  * The value is either the scaled ratio cnt * 256 (or 2048) / h, or reg pair
  * 0x26 + 1; nothing here clamps to 60 Hz.
- * Required forms (Ghidra loses all float math): -msoft-float float source; h is an int and
- * cnt a short (an unsigned short cnt re-extends, an int cnt gives 'and o0,l0' instead of the fw
- * 'and l0,o0'); u8 port, u16 return. Aids: none.
+ * Source form: float source built with -msoft-float; h is an int and cnt a short (an unsigned short cnt re-extends,
+ * an int cnt gives 'and o0,l0' instead of the fw 'and l0,o0'); u8 port, u16 return. Compiler aids: none.
  */
 struct VMode { unsigned int a; unsigned int div32; unsigned int c; };
 extern struct VMode DAT_a8027aac[];

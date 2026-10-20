@@ -1,17 +1,21 @@
 /*
  * FUN_a01227f0 - V-by-One (Vx1) transmitter lane set-up (Big chip, leon2m). '-mcpu=v8 -O3 -g'
- * (jf 100.00 % match=True; rawcmp a01227f0..a0122cd8: 314 words, 0 mismatches).
+ * (0xa01227f0..0xa0122cd8, 314 words).
  *
  * What it does: from the active transformed panel row DAT_a802d6a4 (byte +6 display mode, +7 bits per colour)
- * prints "Vx1 Lane BW = %ld" (= k * FUN_a0105a94(1, 0) * 5 / 4), writes the Vx1 TX set-up registers 0xCF00EB40..EB60,
+ * prints "Vx1 Lane BW = %ld" (= k * FUN_a0105a94(1, 0) * 5 / 4), writes the Vx1 TX set-up registers
+ * 0xCF00EB40..EB60,
  * the reset/strobe sequence on 0xCF01CBB8.., the block enables 0xCF01CD10/CD9C/CE28/CEB4 by mode, the 32 lane
  * registers from DAT_a8027b0c, and per block (stride 0x8C) a flag 0xFF/0 plus four values (DAT_a802c9ec*17-17)&0xFF
- * when DAT_a802c9ec != 0. Inputs: none; output: none. Callers: FUN_a01413d0 (panel power sequencer, state 4, link 1).
+ * when DAT_a802c9ec != 0. Inputs: none; output: none. Callers: FUN_a01413d0 (panel power sequencer, state 4, link
+ * 1).
  *
- * Matching notes:
- * - Tail: DAT_a802c9ec is read ONCE into v; x = v * 17 - 17 is computed once before the four tests (unsigned short x,
+ * Source form:
+ * - Tail: DAT_a802c9ec is read ONCE into v; x = v * 17 - 17 is computed once before the four tests (unsigned short
+ *   x,
  *   stored as (unsigned char) x in each block).
- * - Tests 2..4 are written 'z = v == 0; if (z)': with plain 'if (v == 0)' gcse's jump bypass (10.bypass, implicit set
+ * - Tests 2..4 are written 'z = v == 0; if (z)': with plain 'if (v == 0)' gcse's jump bypass (10.bypass, implicit
+ *   set
  *   v == 0) threads the A arms into each other and cse2 deletes the tests; the setcc makes the join block 2 insns so
  *   bypass_block skips it, and combine folds it back into 'cmp v,0' (the firmware keeps all four tests).
  * - Head (switches with repeated case bodies, explicit locals): behaviour-neutral.

@@ -1,21 +1,28 @@
-/* leon2m FUN_a01186e0 @ 0xa01186e0-0xa011898c (684 bytes) (rawcmp 171 words, 0 mismatches) at -mcpu=v8 -O3 -g.
+/* leon2m FUN_a01186e0 @ 0xa01186e0-0xa011898c (684 bytes, 171 words), flags -mcpu=v8 -O3 -g.
  *
  * void FUN_a01186e0(arg): output-block (0xCF012Exx/Fxx) set-up from the transformed panel row.
- *   0xCF009BB8 bit 1 cleared; delay 50 (func_0x4008d1a0 = FUN_a002d1a0); 0xCF012E80 = 4; FUN_a00f2e98(0xF4, 0, 0x400, arg);
+ *   0xCF009BB8 bit 1 cleared; delay 50 (func_0x4008d1a0 = FUN_a002d1a0); 0xCF012E80 = 4; FUN_a00f2e98(0xF4, 0,
+ *   0x400, arg);
  *   0xCF012E40 = 0x71; 0xCF012E44 = 0x10; mode = word +4 of record 0xA8027A98:
- *     mode == 1: 0xCF012E44 bit 0 set, else cleared; 0xCF012E40 bits 0-1 = 1 (mode 1/2), 2 (mode 3), 3 (mode 4), 0 (other).
- *   delay 1; h = row(*DAT_a802d6a4) +0x08; n = h/16 (h/8 when 0xCF012E44 bit 5 set) + (h & 15 ? 1 : 0); w = row +0x0A / 2;
+ *     mode == 1: 0xCF012E44 bit 0 set, else cleared; 0xCF012E40 bits 0-1 = 1 (mode 1/2), 2 (mode 3), 3 (mode 4), 0
+ *     (other).
+ *   delay 1; h = row(*DAT_a802d6a4) +0x08; n = h/16 (h/8 when 0xCF012E44 bit 5 set) + (h & 15 ? 1 : 0); w = row
+ *   +0x0A / 2;
  *   0xCF012E0C/E10 = n low/high byte, 0xCF012E1C/E20 = w low/high byte.
- *   delay 1; record word 0 bit 29 set: 0xCF012F18 = 0xE, F1C = F20 = 1. 0xCF012E60 = 3, E64 = 0xB, bit 5 set in 0xCF011800
+ *   delay 1; record word 0 bit 29 set: 0xCF012F18 = 0xE, F1C = F20 = 1. 0xCF012E60 = 3, E64 = 0xB, bit 5 set in
+ *   0xCF011800
  *   and 0xCF011A00; 0xCF012E6C = bit 29 ? 0x12 : 0; F00 = 0x40, F04 = F08 = 0, F0C = F10 = 0xFF, F14 = 0x1F.
  * Callers: no direct call in asm/leon2m.
  * PANEL ROW FIELDS READ: transformed row +0x08 and +0x0A.
- * Code facts that decide the match (all behaviour-neutral):
- *   - registers as 'volatile unsigned long' (alias set differs from the unsigned int record word, so the mode load is
+ * Source form (all behaviour-neutral):
+ *   - registers as 'volatile unsigned long' (alias set differs from the unsigned int record word, so the mode load
+ *     is
  *     scheduled between the 0x71 / 0x10 stores like the firmware); mode read after both stores.
- *   - word 0 of 0xA8027A98 read twice: as mask (u0.w & 0x20000000) and as 1-bit field (u0.b.b29 == 1; '== 1' gives the
+ *   - word 0 of 0xA8027A98 read twice: as mask (u0.w & 0x20000000) and as 1-bit field (u0.b.b29 == 1; '== 1' gives
+ *     the
  *     firmware's branch layout, '!= 0' does not).
- *   - w read BEFORE the four n/w register stores; '(unsigned char) n' for the low byte (keeps n out of %o3 conflicts).
+ *   - w read BEFORE the four n/w register stores; '(unsigned char) n' for the low byte (keeps n out of %o3
+ *     conflicts).
  *   - case order 4,1,2,3,default (separate case 1 and case 2 bodies).
  */
 #define R(a) (*(volatile unsigned long *)(a))

@@ -2,8 +2,8 @@
  * Code facts: FUN_a0133e7c(0x20, 0xa8); ROM func_0x4008c86c(7, 0x20, 0); four ROM func_0x4008cb30(a, b, 1) writes
  * with the byte pairs at ROM 0x1a4298..0x1a429f; FUN_a0133e7c(0x80, 0xa8); func_0x4008c86c(7, 0x10, 0); four more
  * with the pairs at 0x1a42a0..0x1a42a7 (the last a tail call). void.
- * Fix vs the autoc draft (77.78): the table base DAT_001a4288 is taken AFTER the first two calls (fw sethi|or into
- * %l1 at 0xa0124ff0; set at the top it is built before the first call, 96.30); symbol name, void. Aids: none.
+ * Source form: the table base DAT_001a4288 is taken AFTER the first two calls (fw sethi|or into %l1 at 0xa0124ff0;
+ * set at the top it is built before the first call). Compiler aids: none.
  */
 extern const unsigned char DAT_001a4288[];
 extern void FUN_a0133e7c(unsigned char, unsigned char);

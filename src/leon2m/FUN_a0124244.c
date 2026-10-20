@@ -1,5 +1,4 @@
 /* leon2m FUN_a0124244 @ 0xa0124244-0xa01243b0 (91 words), -mcpu=v8 -O3 -g.
- * (from an 80.22 % draft):
  * Called by APPTimerRoutine FUN_a0085984 (colour-cycling chain).
  * What it does: one step of a state-change watcher. lim = 2, f = 0; (u8)FUN_a012ad6c() != 1 -> f = 1, lim = 3.
  *   mode == 1: the two remembered bytes DAT_a802a420 / DAT_a802a421 = 0xff (forget), return.
@@ -9,13 +8,13 @@
  *   : (src == 2 ? 0x9c : 0xc9); a/b = src == 2 ? 0xf / 1 : 0 / 0; FUN_a012b418(f & 1, level, a & 0xf, b & 1, 1);
  *   FUN_a0137864(lim, 2); remember src and v.
  * No timing value is read here; the inputs are the three callee results and mode.
- * Levers: u8 f/a/b with explicit '& 1 / & 0xf / & 1' at the call (fw keeps the masks); one FUN_a0125b44 call.
+ * Source form: u8 f/a/b with explicit '& 1 / & 0xf / & 1' at the call (fw keeps the masks); one FUN_a0125b44 call.
  *   src goes through an INT temp 'x = 0; if (...) x = 2; src = x;' set BEFORE the FUN_a0125b44 call (fw
  *   'clr/mov 2 %g1' in the branch delay, 'mov %g1, %l3' in the call delay, 'and %l3, 0xff, %l0' after: the copy
  *   from a register hides src's 0/2 range from combine). Level and a/b selects written with 'src != 2' FIRST in
  *   each if/else (gives the fw block layout: the 0x9c block gets its own copy of the a = 0xf / b = 1 tail).
  *   mode == 1 stores written 0x420 then 0x421 (sched emits 0x421 first, like the fw).
- * Aids: none. No volatile.
+ * Compiler aids: none. No volatile.
  */
 extern unsigned char DAT_a802a420;
 extern unsigned char DAT_a802a421;

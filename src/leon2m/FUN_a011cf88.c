@@ -9,9 +9,9 @@
  * lim = min(lim, DAT_a802d6a4->h50)'), FUN_a0107e44 and FUN_a0109bbc. So the 60 Hz cap (the h50
  * limit of the panel mode table) applies only to chip codes 0x80, 0x81 and 0x82; whether the cap applies
  * is decided by this chip version alone, not by the input timing.
- * Fix vs the autoc draft (61 %): the 8-byte copy is an inlined static helper rd8(dst, src, n) with a
- * u8 counter (the same loop is in FUN_a011d0a8): it keeps the fw [idx + base] addressing and the
- * 'cmp 8; bcs,a' loop test; an open-coded loop gives a strength-reduced giv. Aids: none.
+ * Source form: the 8-byte copy is an inlined static helper rd8(dst, src, n) with a u8 counter (the same loop is in
+ * FUN_a011d0a8): it keeps the fw [idx + base] addressing and the 'cmp 8; bcs,a' loop test; an open-coded loop gives
+ * a strength-reduced giv. Compiler aids: none.
  */
 #define ID_REG  (*(volatile unsigned int *)0xcf011444)
 #define ID_OK   (*(volatile unsigned int *)0xcf011440)
