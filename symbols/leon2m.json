@@ -9627,6 +9627,13 @@
       "name": "FUN_a011e794",
       "status": "matched"
     },
+    "ram:a011e8fc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets (sel 1) or clears bit ch-0x10 of 0xcf016470 for ch 0x10..0x17",
+      "name": "FUN_a011e8fc",
+      "status": "matched"
+    },
     "ram:a012082c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
