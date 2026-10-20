@@ -9354,6 +9354,13 @@
       "name": "FUN_a011b3b8",
       "status": "matched"
     },
+    "ram:a011b3e8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes byte v to 0xcf01178c (sel == 0) or 0xcf0117a0, then a 160-nop delay loop",
+      "name": "FUN_a011b3e8",
+      "status": "matched"
+    },
     "ram:a011c6c8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
