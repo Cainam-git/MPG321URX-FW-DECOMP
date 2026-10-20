@@ -4356,6 +4356,13 @@
       "name": "FUN_a00b7530",
       "status": "matched"
     },
+    "ram:a00b7674": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets up an OSD value row from record byte 0xc (x = n*4-20) and prints it with n%3d",
+      "name": "FUN_a00b7674",
+      "status": "matched"
+    },
     "ram:a00b7944": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
