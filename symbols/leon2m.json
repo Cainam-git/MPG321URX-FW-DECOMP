@@ -8023,6 +8023,13 @@
       "name": "FUN_a00f328c",
       "status": "matched"
     },
+    "ram:a00f3528": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns a 16-bit value from a hook pointer or the register pair at 0xCF012820",
+      "name": "FUN_a00f3528",
+      "status": "matched"
+    },
     "ram:a00f38d4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
