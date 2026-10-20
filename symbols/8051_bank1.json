@@ -891,6 +891,13 @@
       "name": "FUN_CODE_c43e",
       "status": "matched"
     },
+    "CODE:c4ee": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "return the lowest pending request bit of XDATA 0xA758 as 1..5 (and clear it) when 78ba() returns 1",
+      "name": "FUN_CODE_c4ee",
+      "status": "matched"
+    },
     "CODE:c544": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
