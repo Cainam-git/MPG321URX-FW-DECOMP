@@ -1,9 +1,9 @@
 /* leon2m FUN_a00bb908 @ 0xa00bb908-0xa00bbabc (109 words), flags -mcpu=v8 -O3 -g. Caller: FUN_a00bbabc. Compares
- * bytes 2..n of the receive record at 0xa802d040 with the table rows returned by three lookup functions (a table
- * byte 0xff matches any value): rows i = 0..0x8c of FUN_a015468c(i, j) for j = 2..9 (returns i on a full match),
- * rows i = 0..0xc of FUN_a01546ec(i, j) for j = 2..0x18 (returns i + 0x8d), row 0 of FUN_a0154750(0, j) for j = 2..5
- * (returns 0x99). Returns 0xff when no row matches. The port parameter is not used. FUN_a00bb260 is the same for the
- * record 0xa802d0d0.
+ * bytes 2..n of the record at 0xa802d040 with the rows returned by three functions (a table byte 0xff matches any
+ * value): rows i = 0..0x8c of FUN_a015468c(i, j) for j = 2..9 (returns i on a full match), rows i = 0..0xc of
+ * FUN_a01546ec(i, j) for j = 2..0x18 (returns i + 0x8d), row 0 of FUN_a0154750(0, j) for j = 2..5 (returns 0x99).
+ * Returns 0xff when no row matches. The port parameter is not used. FUN_a00bb260 is the same for the record
+ * 0xa802d0d0.
  */
 extern unsigned char DAT_a802d040[];
 extern unsigned char FUN_a015468c(unsigned short a, unsigned short b);
