@@ -1,14 +1,16 @@
-/* leon2m FUN_a0101e9c @ 0xa0101e9c  output register set-up per display mode (hand; -mcpu=v8 -O3 -g.
+/* leon2m FUN_a0101e9c @ 0xa0101e9c  output register set-up per display mode (-mcpu=v8 -O3 -g;
  * jump table at runtime 0xa1cc8, cases in number order)
  *
- * Called by FUN_a01023f4 (output path set-up B) with the display mode DAT_a802d680.w8 (0..17, from DispModeTransform).
+ * Called by FUN_a01023f4 (output path set-up B) with the display mode DAT_a802d680.w8 (0..17, from
+ * DispModeTransform).
  * Writes three output-format fields; each is a read-modify-write on a 32-bit hardware register:
  *   0xCF00ED58 bits 0..3 (value 0, 1, 4 or 5), 0xCF00EDE0 bits 0..2 and 4..7 (mask 0xF7),
  *   and for display modes 5, 9, 13, 14, 15, 17 only when the active panel row's link type
  *   (DAT_a802d6a4->w0 bits 20..22) is 1: 0xCF0116D4 bits 4, 6, 7 (mask 0xD0; value 0x00, 0x40 or 0x80).
  *   Mode 16 instead sets bit 3 of 0xCF00ED54. Modes above 17: nothing.
  * Mode -> ED58 / EDE0 / 116D4:  0,1: 0/0  2: 0/01  3: 0/10  4: 4/20  5: 1/30/00  6: 5/40  7: 5/54  8: 1/62
- *   9: 5/72/40  10: 5/86  11: 1/92  12: 5/A2  13: 5/B6/80  14: 1/D2/00  15: 5/C2/40  16: 0/00 + ED54 bit 3  17: 5/E2/40
+ *   9: 5/72/40  10: 5/86  11: 1/92  12: 5/A2  13: 5/B6/80  14: 1/D2/00  15: 5/C2/40  16: 0/00 + ED54 bit 3  17:
+ *   5/E2/40
  */
 #define R(a) (*(volatile unsigned long *)(a))
 struct PanelParam { volatile unsigned int w0; };   /* volatile: the firmware re-reads w0 after each register write */

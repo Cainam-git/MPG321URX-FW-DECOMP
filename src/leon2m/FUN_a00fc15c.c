@@ -1,9 +1,9 @@
 /* leon2m FUN_a00fc15c @ 0xa00fc15c-0xa00fc1a0 (17 words), flags -mcpu=v8 -O3 -g.
- * Code facts: leaf. Hardware register 0xd0040200 (sethi/or into a register, plain [reg] loads and stores,
- * no relocation): when the u8 arg == 1, clear bit 31 (andn 0x80000000), else set bit 31 (or). Each arm does its
- * own ld/st. void.
- * Fix vs the autoc draft: the register is a constant hardware address (volatile pointer cast); an extern
- * symbol gives the sethi/%lo simm13 form (23.53). volatile is on a real 0xd0... hardware register. Aids: none.
+ * Code facts: leaf. Hardware register 0xd0040200 (sethi/or into a register, plain [reg] loads and stores, no
+ * relocation): when the u8 arg == 1, clear bit 31 (andn 0x80000000), else set bit 31 (or). Each arm does its own
+ * ld/st. void.
+ * Source form: the register is a constant hardware address (volatile pointer cast); an extern symbol gives the
+ * sethi/%lo simm13 form. volatile is on a real 0xd0... hardware register. Compiler aids: none.
  */
 #define REG_D0040200 (*(volatile unsigned int *)0xd0040200)
 

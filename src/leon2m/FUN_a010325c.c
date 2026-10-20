@@ -1,15 +1,17 @@
 /* FUN_a010325c (0xa010325c-0xa0103808): output pixel clock calculation.
- * Toolchain sparc-elf-3.4.4, flags: -mcpu=v8 -O3 -g -msoft-float. (jf 100, rawcmp 363/0).
+ * Toolchain sparc-elf-3.4.4, flags: -mcpu=v8 -O3 -g -msoft-float.
  * Facts behind the non-obvious parts (all behaviour-neutral, no inline asm, no no-code hints):
  * - -msoft-float: fixes the 32 FP regs, so loop.c's threshold (1 + n_non_fixed_regs) drops to ~25 and the loads of
  *   t.act / t.vt / 0xcf011a00 stay in the htot loop ('not desirable'), as in the fw. The fw has no FPU insns at all.
- * - struct Tm: leading u32 field puts ht/act/x/vt at fp-36/-30/-18/-14 with frame -136 (no spill once loop.c stops hoisting).
- * - struct Row: DAT_a802d6a4 is used directly (no cached 'row' local); w0 is a signed 3-bit bitfield 'mode' at bits 22..20
- *   (big-endian MSB-first layout): 'mode == 2' gives the and 0x700000 / cmp 0x200000 form and its struct alias set
- *   makes the w0 load reload every iteration (r->clk store conflicts), as in the fw.
+ * - struct Tm: leading u32 field puts ht/act/x/vt at fp-36/-30/-18/-14 with frame -136 (no spill once loop.c stops
+ *   hoisting).
+ * - struct Row: DAT_a802d6a4 is used directly (no cached 'row' local); w0 is a signed 3-bit bitfield 'mode' at bits
+ *   22..20 (big-endian MSB-first layout): 'mode == 2' gives the and 0x700000 / cmp 0x200000 form and its struct
+ *   alias set makes the w0 load reload every iteration (r->clk store conflicts), as in the fw.
  * - struct In: h3a bit 14 as a 1-bit unsigned short bitfield f14 (gives the fw's andcc operand order).
  * - FUN_a00df170 is declared 'int (...)' (printf-like); 'void' changes the arg-setup order around both calls.
- * - Format strings are DAT_0019a7d8 / DAT_0019a7f0 / DAT_0019a828 (the draft's 0x19a3d8 was a typo for 0x19a7d8). */
+ * - Format strings are DAT_0019a7d8 / DAT_0019a7f0 / DAT_0019a828.
+ */
 struct In { unsigned short h0, h2, h4, h6, h8, ha, hc, he, h10, h12; unsigned char pad14[0x26]; unsigned short h3a_hi : 1, f14 : 1, h3a_lo : 14; };
 struct Rec { unsigned short h0, h2, h4, h6, h8, ha, hc, he; unsigned char pad10[8]; unsigned long long clk; unsigned char b20; };
 struct Tm { unsigned int w0; unsigned short ht, h2, h4, act; unsigned int w8; unsigned short hc, he, h10, x, h14, vt; };

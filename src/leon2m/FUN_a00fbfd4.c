@@ -1,11 +1,12 @@
 /* FUN_a00fbfd4 (leon2m, 0xa00fbfd4-0xa00fc044, 112 bytes, 28 words).
  * Flags: -mcpu=v8 -O3 -g.
- * Code facts: FUN_a00fbdcc(0, 1, 0); halfword _DAT_a802b7ea = 1; FUN_a00fbdcc(0, 4, 0);
- * the word at 0xd0040000 |= 0x80000000 (fw: ld [%o4] reg+%g0 form = a plain constant address,
- * a symbol gives ld [%o4+%lo]); func_0x4008a880(0xc, 0x100, 0x9a814); func_0x40089820(0xc, 0x100);
- * %i0 is never written, so the function returns its first parameter unchanged.
- * Fixes vs draft: FUN_a00fbdcc takes THREE args (fw sets %o0..%o2; callee reads %i1), constant address.
- * Aids: none.
+ * Code facts: FUN_a00fbdcc(0, 1, 0); halfword _DAT_a802b7ea = 1; FUN_a00fbdcc(0, 4, 0); the word at 0xd0040000 |=
+ * 0x80000000 (fw: ld [%o4] reg+%g0 form = a plain constant address, a symbol gives ld [%o4+%lo]);
+ * func_0x4008a880(0xc, 0x100, 0x9a814); func_0x40089820(0xc, 0x100); %i0 is never written, so the function returns
+ * its first parameter unchanged.
+ * FUN_a00fbdcc takes three arguments (the firmware sets %o0..%o2; the callee reads %i1); the register is a constant
+ * address.
+ * Compiler aids: none.
  */
 extern unsigned short _DAT_a802b7ea;
 extern int FUN_a00fbdcc();

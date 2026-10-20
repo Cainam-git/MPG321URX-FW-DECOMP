@@ -1,8 +1,8 @@
-/* leon2m FUN_a01023f4 @ 0xa01023f4  output timing apply (hand; byte-exact: the last
- * scheduling difference went away when the register macro is written "volatile unsigned long" instead of
- * "unsigned int" (same 32-bit width on SPARC v8, different alias type, so gcc places the cfg +8 reload later);
- * the working value is an unsigned char that starts at 0x61 and is overwritten with 0xE1, and the display-mode
- * test is written "!= 0" first, which is what gives the original its branches)
+/* leon2m FUN_a01023f4 @ 0xa01023f4  output timing apply, flags -mcpu=v8 -O3 -g.
+ * Source form: the register macro is written "volatile unsigned long" instead of "unsigned int" (same 32-bit width
+ * on SPARC v8, different alias type, so gcc places the cfg +8 reload later); the working value is an unsigned char
+ * that starts at 0x61 and is overwritten with 0xE1, and the display-mode test is written "!= 0" first, which gives
+ * the firmware's branches.
  *
  * Programs output timing block 'blk' (0x19A2EC register family, FUN_a00f2488 16-bit writes) from the active
  * transformed panel row (DAT_a802d6a4) and the output configuration at 0xA802D680:

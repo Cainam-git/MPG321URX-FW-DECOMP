@@ -1,5 +1,5 @@
-/* leon2m FUN_a01026e8 @ 0xa01026e8  GPLL display / FRC clock programmer (hand; byte-exact at
- * -mcpu=v8 -O3 -g). Real size 0x884 bytes (Ghidra's list says 164: it stops at the jump table).
+/* leon2m FUN_a01026e8 @ 0xa01026e8  GPLL display / FRC clock programmer, flags -mcpu=v8 -O3 -g.
+ * Real size 0x884 bytes (Ghidra's list says 164: it stops at the jump table).
  *
  * FUN_a01026e8(ch, freq): programs output clock 'ch' of the GPLL to 'freq' Hz.
  *   Post-divider k: freq < 470 MHz -> k = 0; < 940 MHz -> k = 1 (f = freq / 2); < 1870 MHz -> k = 2 (freq / 4);

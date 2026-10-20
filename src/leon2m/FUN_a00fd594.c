@@ -1,5 +1,5 @@
 /* leon2m FUN_a00fd594 @ 0xa00fd594-0xa00fd820 (163 words). -mcpu=v8 -O3 -g.
- * (written from the asm; no draft).
+ * Written from the assembly.
  * What it does: GlobalModeHandler main source selection, register set-up of block blk for the source class
  * cls (the port class codes of FUN_a00fd820; caller FUN_a0131518 passes DAT_a802a44c/a44d-related values).
  * Helpers (all per-block 8-bit registers): RMW(blk, reg, mask, set) = FUN_a00f1b5c, WR = FUN_a00f1ad4,
@@ -15,7 +15,7 @@
  *   0xe2: RMW(5c, 1, 1), RMW(5c, 8, 0), WR(4, 0x83), RMW(3, 1, 0)       any other cls: nothing more.
  * Nothing here reads the input rate; reg 4 gets the class's fixed code.
  * The switch in natural value order gives the fw compare tree as is (root 0x71: 15 nodes with the 0x11..0x13
- * range made by gcc's group_case_nodes). volatile only on the real hardware registers. Aids: none.
+ * range made by gcc's group_case_nodes). volatile only on the real hardware registers. Compiler aids: none.
  */
 extern void FUN_a00f1b5c(unsigned char blk, unsigned char reg, unsigned char mask, unsigned char set);
 extern void FUN_a00f1ad4(unsigned char blk, unsigned char reg, unsigned char val);
