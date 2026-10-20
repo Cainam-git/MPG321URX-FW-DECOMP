@@ -6183,6 +6183,12 @@
       "name": "FUN_a00b2304",
       "status": "matched"
     },
+    "ram:a00b258c": {
+      "by": "hand",
+      "comment": "prints an address in hex on the UART and, when word aligned, writes val there through FUN_a00b2304 and prints it",
+      "name": "CED_ALL_4",
+      "status": "matched"
+    },
     "ram:a00b2790": {
       "by": "hand",
       "comment": "parses n hexadecimal characters into an int (invalid characters count as 0)",
