@@ -13467,9 +13467,9 @@
       "status": "matched"
     },
     "ram:a014acdc": {
-      "by": "twin",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Same lookup as FUN_a014ac28; writes with FUN_a0140e74(..., 0) when it fits (SYSAPI_SaveUSRFlashType2)",
+      "comment": "SYSAPI_SaveUSRFlashType2: area check (p 0x30, size 0x8000) then FUN_a0140e74(0, off, len, buf, 0) -> 1, else message -> 0",
       "name": "FUN_a014acdc",
       "status": "matched"
     },
