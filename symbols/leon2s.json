@@ -1664,6 +1664,12 @@
       "name": "FUN_a00629fc",
       "status": "matched"
     },
+    "ram:a0062b64": {
+      "by": "hand",
+      "comment": "returns (h << 18) + (0x1000 - h) * (FUN_a0062a34(x) >> 2) with h = DAT_a8078aa4",
+      "name": "FUN_a0062b64",
+      "status": "matched"
+    },
     "ram:a0062b94": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
