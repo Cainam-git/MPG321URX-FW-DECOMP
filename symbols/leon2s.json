@@ -2610,6 +2610,12 @@
       "name": "FUN_a0087734",
       "status": "matched"
     },
+    "ram:a0087794": {
+      "by": "hand",
+      "comment": "writes v plus bit 6 of register 3 (bit 7 by ARR_a807cd2e[port] bit 4) through FUN_a00a78fc and sets FUN_a00a7940(port, 0x78, 0x10, ...)",
+      "name": "FUN_a0087794",
+      "status": "matched"
+    },
     "ram:a0087d50": {
       "by": "hand",
       "comment": "Writes register field 0x70 with value 0x20 through the same callee in both branches, passing 1 if param_2 != 0 and 0 otherwise (if/else with a call in each branch). Both parameters are unsigned char, giving and %o0,0xff,%g1 for param_1 and btst 0xff,%o1 for param_2. Returns void.",
