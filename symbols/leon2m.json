@@ -11732,6 +11732,13 @@
       "name": "FUN_a0125530",
       "status": "matched"
     },
+    "ram:a0125568": {
+      "by": "h19",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns byte +0xa of the 0x16-byte record at 0x1a42a8 picked by ARR_a802d880[n], or all ones for index 0xff",
+      "name": "FUN_a0125568",
+      "status": "matched"
+    },
     "ram:a01255dc": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
