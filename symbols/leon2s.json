@@ -5050,6 +5050,12 @@
       "name": "FUN_a00ab4f8",
       "status": "matched"
     },
+    "ram:a00ab548": {
+      "by": "hand",
+      "comment": "stores two bytes into the 16-byte record (sel & 0xf) of DAT_a80792b4 at index sel >> 4",
+      "name": "FUN_a00ab548",
+      "status": "matched"
+    },
     "ram:a00ab584": {
       "by": "hand",
       "comment": "select writes to hw regs cf0132xx from the bytes a807d289[0] / [3..7] (see header)",
