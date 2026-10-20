@@ -9281,6 +9281,13 @@
       "name": "FUN_a011a848",
       "status": "matched"
     },
+    "ram:a011a9e4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "block blk: reg base+0x30 = 0 then |= 0x2f | (b&1)<<4; sel 0/1/2 writes (e&0x1f)|(c&1)<<7 and d to base+0x31..0x33 / 0x34..0x36",
+      "name": "FUN_a011a9e4",
+      "status": "matched"
+    },
     "ram:a011b36c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
