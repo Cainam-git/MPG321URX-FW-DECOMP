@@ -5063,6 +5063,13 @@
       "name": "FUN_a00bacc4",
       "status": "matched"
     },
+    "ram:a00bae38": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Converts three ASCII digits at bytes 7-9 of the port's UART receive record to a number 0-199, 0xff if not digits",
+      "name": "FUN_a00bae38",
+      "status": "matched"
+    },
     "ram:a00baef8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
