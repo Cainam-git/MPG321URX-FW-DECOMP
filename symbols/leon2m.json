@@ -4225,6 +4225,13 @@
       "name": "FUN_a00b344c",
       "status": "matched"
     },
+    "ram:a00b34d4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Redraws two menu value fields (rows 0xE and 0x13) when they differ from the nibbles at DAT_a802d290 +0x189, then stores both",
+      "name": "FUN_a00b34d4",
+      "status": "matched"
+    },
     "ram:a00b3708": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
