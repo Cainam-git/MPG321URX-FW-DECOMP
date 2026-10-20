@@ -6811,6 +6811,13 @@
       "name": "FUN_a00d5e84",
       "status": "matched"
     },
+    "ram:a00d5eac": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Unless byte 0xa802d2af is set: FUN_a014d474/FUN_a014dd98 by byte 0xa802d2da, then optionally FUN_a014d474 and FUN_a0149fb8",
+      "name": "FUN_a00d5eac",
+      "status": "matched"
+    },
     "ram:a00d5f3c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
