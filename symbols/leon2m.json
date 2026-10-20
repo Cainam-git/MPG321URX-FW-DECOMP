@@ -5544,6 +5544,13 @@
       "name": "FUN_a00c9788",
       "status": "matched"
     },
+    "ram:a00c9be0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: digit 0-2 into bits 18-19 of record word 0xac, FUN_a00db054, sets 0xa802b08e bit 2, reply 5600+",
+      "name": "FUN_a00c9be0",
+      "status": "matched"
+    },
     "ram:a00c9e9c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
