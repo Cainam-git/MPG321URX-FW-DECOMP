@@ -9316,6 +9316,13 @@
       "name": "FUN_a011adc8",
       "status": "matched"
     },
+    "ram:a011aee4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "c == d == 0: regs base+0x8e/0x8f = 0; else base+0xcf |= (e&3)<<6, base+0x8e = c:d nibbles, base+0x8f = 0x80|(a&7)<<4|(b&0xf)",
+      "name": "FUN_a011aee4",
+      "status": "matched"
+    },
     "ram:a011b36c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
