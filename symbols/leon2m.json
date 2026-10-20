@@ -11509,6 +11509,13 @@
       "name": "FUN_a0144280",
       "status": "matched"
     },
+    "ram:a0144298": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns whether byte 9 of the port record selected by display channel ch equals 5",
+      "name": "FUN_a0144298",
+      "status": "matched"
+    },
     "ram:a0144350": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
