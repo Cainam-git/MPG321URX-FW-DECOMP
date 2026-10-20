@@ -10738,6 +10738,13 @@
       "name": "FUN_a0126c58",
       "status": "matched"
     },
+    "ram:a0126f4c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Writes the OLED screen saver range (from bits of 0xa802d46c..0xa802d471) to panel register 0x60 with read-back retries",
+      "name": "FUN_a0126f4c",
+      "status": "matched"
+    },
     "ram:a0127154": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
