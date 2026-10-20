@@ -9190,6 +9190,13 @@
       "name": "FUN_a011996c",
       "status": "matched"
     },
+    "ram:a011a1b0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "switch 0..7: sets bit 1..4 of reg base+0x80 or bit 4..7 of reg base+0xa5 of block blk (FUN_a01191fc)",
+      "name": "FUN_a011a1b0",
+      "status": "matched"
+    },
     "ram:a011a554": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
