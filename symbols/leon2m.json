@@ -13342,6 +13342,13 @@
       "name": "FUN_a0148aa8",
       "status": "matched"
     },
+    "ram:a0148bc4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Calls FUN_a00f9528(port of display channel ch, v)",
+      "name": "FUN_a0148bc4",
+      "status": "matched"
+    },
     "ram:a0148c94": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
