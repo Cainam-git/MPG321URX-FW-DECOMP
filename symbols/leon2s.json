@@ -5897,6 +5897,12 @@
       "name": "FUN_a00c77dc",
       "status": "matched"
     },
+    "ram:a00c79c8": {
+      "by": "hand",
+      "comment": "Clear the 3x5 byte table DAT_a807cda8 (all rows for port 3, else row 0)",
+      "name": "FUN_a00c79c8",
+      "status": "matched"
+    },
     "ram:a00c7b60": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
