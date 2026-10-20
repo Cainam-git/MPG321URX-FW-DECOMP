@@ -6108,6 +6108,13 @@
       "name": "FUN_a00bce7c",
       "status": "matched"
     },
+    "ram:a00bcecc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "maps byte 0xa802d434 (0,1,2,4,3,5,6 -> 0,1,2,3,5,7,8) to a digit, fills the 11-byte reply at 0xa802d078 with FUN_a015463c(0x22, n) bytes, sends it to the port",
+      "name": "FUN_a00bcecc",
+      "status": "matched"
+    },
     "ram:a00bd070": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
