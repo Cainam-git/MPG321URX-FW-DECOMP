@@ -9834,6 +9834,13 @@
       "name": "FUN_a0109ad0",
       "status": "matched"
     },
+    "ram:a0109b14": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets or clears bit n of the register at 0xcf011dc4",
+      "name": "FUN_a0109b14",
+      "status": "matched"
+    },
     "ram:a0109b70": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
