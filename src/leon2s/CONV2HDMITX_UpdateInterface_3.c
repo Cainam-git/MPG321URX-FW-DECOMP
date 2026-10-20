@@ -3,7 +3,8 @@
  * first of the 16 24-byte task records DAT_a80793b8 whose word at +0x10 is 0 and fills it from d (period,
  * periodic, fn, count = period, word +0x10 = d, active = 1, in this store order; three separate early-return
  * tests); when none is free, tail-calls FUN_a0073044 with
- * s_a006c628 ("No S/W timer available" per Ghidra). Record layout as in FUN_a00618d8; counterpart of CONV2HDMITX_UpdateInterface_4.
+ * s_a006c628 ("\nNo S/W timer available"). Record layout as in FUN_a00618d8; counterpart of
+ * CONV2HDMITX_UpdateInterface_4.
  */
 struct Task {
     unsigned int periodic;

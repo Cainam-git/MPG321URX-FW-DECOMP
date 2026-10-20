@@ -1,6 +1,6 @@
 /* leon2m FUN_a00d5c2c @ 0xa00d5c2c-0xa00d5ca0 (29 words).
- * Template FUN_a00d5a28: Copies record byte 0xa802d2b7 of the 16-byte table at 0x198488 and passes it to
- * FUN_a014b968(5, ...).
+ * Template FUN_a00d5a28: copies the 16-byte record selected by byte 0xa802d2b7 from the table at 0x198488 and
+ * passes it to FUN_a014b968(5, ...).
  * This function is the same code as FUN_a00d5a28 (its source comment explains the details), compiled with
  * other constants (template -> this function):
  * 0x5 -> 0x1, 0x198488 -> 0x1984c8, 0xa014b968 -> 0xa014b900, 0xa802d2b7 -> 0xa802d2d8

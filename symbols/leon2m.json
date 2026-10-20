@@ -7272,7 +7272,7 @@
     },
     "ram:a00d2884": {
       "by": "hand",
-      "comment": "Tool command: stores command byte 7 (0 or 1) at DAT_a802d274+0x14, saves the record, returns 0xE0",
+      "comment": "Command handler: stores command byte 7 (0 or 1) at DAT_a802d274+0x14, writes the record with FUN_a014aed0, returns 0xE0",
       "name": "FUN_a00d2884",
       "status": "matched"
     },
@@ -7484,28 +7484,28 @@
     "ram:a00d5a28": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Copies record byte 0xa802d2b7 of the 16-byte table at 0x198488 and passes it to FUN_a014b968(5, ...)",
+      "comment": "Copies the 16-byte record selected by byte 0xa802d2b7 from the table at 0x198488 and passes it to FUN_a014b968(5, ...)",
       "name": "FUN_a00d5a28",
       "status": "matched"
     },
     "ram:a00d5a9c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Same code as FUN_a00d5a28 with other constants (listed in the source header)",
+      "comment": "Same code as FUN_a00d5a28 with index byte 0xa802d2b8 and first argument 6",
       "name": "FUN_a00d5a9c",
       "status": "matched"
     },
     "ram:a00d5bb8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Copies record byte 0xa802d2d6 of the 16-byte table at 0x1984c8 and passes it to FUN_a014b900(0, ...)",
+      "comment": "Copies the 16-byte record selected by byte 0xa802d2d6 from the table at 0x1984c8 and passes it to FUN_a014b900(0, ...)",
       "name": "FUN_a00d5bb8",
       "status": "matched"
     },
     "ram:a00d5c2c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Same code as FUN_a00d5a28 with other constants (listed in the source header)",
+      "comment": "Same code as FUN_a00d5a28 with index byte 0xa802d2d8, table 0x1984c8 and FUN_a014b900(1, ...)",
       "name": "FUN_a00d5c2c",
       "status": "matched"
     },
