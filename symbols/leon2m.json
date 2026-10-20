@@ -4789,6 +4789,13 @@
       "name": "FUN_a00b7674",
       "status": "matched"
     },
+    "ram:a00b77b4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Calls FUN_a00a31a4 with entries of DAT_00193248 and DAT_00193330, then FUN_a00a9650(v, 0) and FUN_a00a813c(1, v, 1) with v from bits 6 and 5 of DAT_a802d290 word +0xA8",
+      "name": "FUN_a00b77b4",
+      "status": "matched"
+    },
     "ram:a00b7944": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
