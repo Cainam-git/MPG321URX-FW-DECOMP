@@ -11301,6 +11301,13 @@
       "name": "FUN_a012fcf4",
       "status": "matched"
     },
+    "ram:a01302a4": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes bit 0 of v into bit 17 of word +0x70 of record ch of the 0x78-byte records at 0xa802df30",
+      "name": "FUN_a01302a4",
+      "status": "matched"
+    },
     "ram:a013129c": {
       "by": "hand",
       "comment": "Calls FUN_a0130438 once, then for i = 0..3 calls FUN_a013d684 and FUN_a013d918 with i & 0xff. Returns void; the and %l1,0xff,%l0 before ret is the delay slot of the loop's ble.",
