@@ -13837,6 +13837,12 @@
       "name": "FUN_a014e050",
       "status": "matched"
     },
+    "ram:a014e0a4": {
+      "by": "hand",
+      "comment": "Calls FUN_a0105d04 with 2, 1 or 0 for v 2, 1 or other",
+      "name": "FUN_a014e0a4",
+      "status": "matched"
+    },
     "ram:a014e144": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
