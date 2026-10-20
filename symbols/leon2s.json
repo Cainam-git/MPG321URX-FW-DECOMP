@@ -2363,6 +2363,12 @@
       "name": "FUN_a0083e28",
       "status": "matched"
     },
+    "ram:a0083e34": {
+      "by": "hand",
+      "comment": "sets or clears bit 0 of 0xcf0133c0 and 0xcf034400, the flag DAT_a80789ec and register 0xcf014778",
+      "name": "FUN_a0083e34",
+      "status": "matched"
+    },
     "ram:a0083ec4": {
       "by": "near",
       "comment": "near-miss repaired: DAT_a80789ec is unsigned char",
