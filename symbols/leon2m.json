@@ -4650,6 +4650,12 @@
       "name": "FUN_a00a288c",
       "status": "matched"
     },
+    "ram:a00a28a4": {
+      "by": "hand",
+      "comment": "Returns entry n of a table (16-bit index)",
+      "name": "FUN_a00a28a4",
+      "status": "matched"
+    },
     "ram:a00a29a8": {
       "by": "h10",
       "cflags": "-mcpu=v8 -O3 -g",
