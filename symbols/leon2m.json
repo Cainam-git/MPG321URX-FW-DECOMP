@@ -2542,6 +2542,13 @@
       "name": "FUN_a0091a68",
       "status": "matched"
     },
+    "ram:a0091b94": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Steps the selection word 0xa802afec forwards through 0xe..0x14 with a page update every 7 positions",
+      "name": "FUN_a0091b94",
+      "status": "matched"
+    },
     "ram:a0091cc0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
