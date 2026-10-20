@@ -4556,6 +4556,13 @@
       "name": "FUN_a00b5064",
       "status": "matched"
     },
+    "ram:a00b50d8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets DAT_a802b08e bit 7 and configures one of five layouts (modes 0, 2, 3, 4, 5) through FUN_a0146194/FUN_a0146370",
+      "name": "FUN_a00b50d8",
+      "status": "matched"
+    },
     "ram:a00b52f8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
