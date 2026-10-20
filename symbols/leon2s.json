@@ -2736,6 +2736,12 @@
       "name": "FUN_a008a974",
       "status": "matched"
     },
+    "ram:a008a9b0": {
+      "by": "hand",
+      "comment": "when 0xcf011014 is non-zero clears it and 0xcf011048 and writes 0xc6 to 0xcf011058 and 0xcf01105c",
+      "name": "FUN_a008a9b0",
+      "status": "matched"
+    },
     "ram:a008a9ec": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
