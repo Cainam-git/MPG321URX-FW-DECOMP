@@ -9362,6 +9362,13 @@
       "name": "FUN_a0101704",
       "status": "matched"
     },
+    "ram:a010178c": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "clamps x to 0x3c-0x2af8 and writes 12000000/x - 0.5 bits 10-17 and control values to registers at 0xcf0160c0-0xcf0160f4",
+      "name": "FUN_a010178c",
+      "status": "matched"
+    },
     "ram:a0101858": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
