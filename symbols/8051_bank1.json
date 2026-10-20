@@ -845,6 +845,12 @@
       "name": "FUN_CODE_bae2",
       "status": "matched"
     },
+    "CODE:bc3d": {
+      "by": "hand",
+      "comment": "interrupt helper: latch the F028/F027 count, compute (0xFFFF - count) / 75 into IDATA 0x5B and append it to the ring buffer at 0xA566",
+      "name": "FUN_CODE_bc3d",
+      "status": "matched"
+    },
     "CODE:bcad": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
