@@ -974,6 +974,13 @@
       "name": "FUN_CODE_c9fb",
       "status": "matched"
     },
+    "CODE:ca44": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "write bytes 0x38..0x3A of the structure at the pointer in XDATA 0xA76D from a, b and the 16-bit c",
+      "name": "FUN_CODE_ca44",
+      "status": "matched"
+    },
     "CODE:cad5": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
