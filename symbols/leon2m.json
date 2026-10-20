@@ -12382,6 +12382,13 @@
       "name": "FUN_a0134834",
       "status": "matched"
     },
+    "ram:a01348a0": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Takes min(n, count 0xa802cb94) bytes from the buffer 0xa802dd50 into dst, shifts the rest down, lowers the count, returns the number taken",
+      "name": "FUN_a01348a0",
+      "status": "matched"
+    },
     "ram:a013497c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
