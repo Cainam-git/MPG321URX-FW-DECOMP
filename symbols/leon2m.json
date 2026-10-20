@@ -4476,6 +4476,13 @@
       "name": "FUN_a00b3238",
       "status": "matched"
     },
+    "ram:a00b32e4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Draws a horizontal or vertical run of n character cells in one colour, with a fixed or incrementing character",
+      "name": "FUN_a00b32e4",
+      "status": "matched"
+    },
     "ram:a00b344c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
