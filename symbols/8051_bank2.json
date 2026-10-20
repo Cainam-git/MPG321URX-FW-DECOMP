@@ -490,7 +490,7 @@
     "CODE:573b": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "FOTG210 EP0 SETUP handler (SET_ADDRESS / GET_DESCRIPTOR / GET_STATUS / SET_CONFIGURATION); module with FUN_CODE_7a60 (its common-entry block 0x7a46); gap in functions.json, stand-in entry diff8051.EXTRA_FUNCS",
+      "comment": "Reads two words from register 0x1D0 into a request buffer and answers b2 values 0, 5, 6 and 9; fotg210 cx_finish/cx_stall/cx_idle prints",
       "name": "FUN_CODE_573b",
       "status": "matched"
     },
@@ -614,6 +614,23 @@
       "comment": "af07 updater member; functions.json names it 72a5 (its common-entry block), stand-in entry diff8051.EXTRA_FUNCS",
       "module": "FUN_CODE_a17e",
       "name": "FUN_CODE_72b0",
+      "status": "matched"
+    },
+    "CODE:7a46": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_7a60, in FUN_CODE_7a60's code segment; emitted by compiling src/8051_bank2/FUN_CODE_573b.c, bytes judged with FUN_CODE_7a60 over 0x7a46..0x7ddb",
+      "kind": "common_entry",
+      "module": "FUN_CODE_573b",
+      "name": "FUN_CODE_7a46",
+      "of": "FUN_CODE_7a60",
+      "status": "matched"
+    },
+    "CODE:7a60": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Piecewise transfer loop on registers 0x1C0/0x1C8/0x1CC/0x14C with the fotg210 dma prints",
+      "module": "FUN_CODE_573b",
+      "name": "FUN_CODE_7a60",
       "status": "matched"
     },
     "CODE:813c": {

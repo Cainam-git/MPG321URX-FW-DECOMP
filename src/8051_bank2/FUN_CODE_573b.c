@@ -1,60 +1,44 @@
-/* 8051_bank2 MODULE FUN_CODE_573b: FUN_CODE_573b @ 0x573b..0x5c20 (1253 B) and FUN_CODE_7a60 @ 0x7a60..0x7ddb with
- * its Keil common-entry block 0x7a46..0x7a5f (917 B together). One Keil C51 module, OPTIMIZE(8,SPEED) LARGE.
- * Both BYTE-EXACT (diff8051.judge, exact None): 573b 1253/1253; 7a60 917/917 judged over block + function.
- * functions.json has FUN_CODE_7a46 = 0x7a46..0x7ddb; the C function starts at 0x7a60 and the block in front of it
- * is the argument set-up of 573b's calls. The two functions are one module because Keil builds the block from
- * 573b's call sites.
- * FUN_CODE_573b: BYTE-EXACT under OPTIMIZE(8,SPEED) LARGE (first C,
- * MATCH exact None 1253/1253).
- * NOT IN symbols/8051_bank2.functions.json: 0x573b..0x5c20 is a gap between FUN_CODE_520d (merged to end 0x573b)
- * and FUN_CODE_5c20; Ghidra only has SUB_CODE_573b. The entry {FUN_CODE_573b, 0x573b, 0x5c20} must be
- * added before diff8051 / accept8051 can see it. Judged with plain diff8051.judge with ROOT pointed
- * at a scratch root (symlinks to the real parts / decomp / symbols, functions.json = a copy plus this one
- * entry). ?FUN_CODE_573b?XD = 0x08F6 (recorded in that root's libs.json copy only).
- * Only caller: FUN_CODE_5c20 at 0x5d77 (FOTG210 device group 0 / sub bit 0 = control-endpoint SETUP).
- * FOTG210 control (EP0) SETUP handler: write [0x1C0] = 0x10, read the 8-byte SETUP packet as two 32-bit reads of
- * [0x1D0] into req[2] (XDATA 0x08FC), write [0x1C0] = 0; p = generic pointer to req. Field offsets inside req as
- * the 32-bit reads leave them (code facts): +0 wValue (uint), +2 bRequest, +3 bmRequestType, +4 wLength (uint).
- * Only standard requests ((bmRequestType & 0x60) == 0):
- *   5 SET_ADDRESS: [0x104] = ([0x104] & ~0x7f) | (wValue & 0x7f);
- *   6 GET_DESCRIPTOR: printf "DescType = %02BX" (type = wValue >> 8), idx = low byte; per type a reply from a CODE
- *     table with FUN_CODE_e306(table, n) then FUN_CODE_7a60(len, p->bmRequestType): 1 -> 0x7F86 / 18,
- *     2 -> 0x80E6 / 32, 0x0F -> 0x7F98 / 80,
- *     3 -> printf "DescIdx = %02BX", idx 0 / 1 / 2 / 3 / 4 / 7 / 8 -> 0x7FE8 / 4, 0x7FEC / 16, 0x7FFC / 60,
- *     0x8038 / 48, 0x8068 / 40, 0x8090 / 24, 0x80A8 / 62, other idx = idx 8; 6 -> 0x8106 / 10; 7 -> 0x8110 / 32;
- *   0 GET_STATUS: 0x8130 / 2;   9 SET_CONFIGURATION: nothing.  These four set st = 1.
- *   len = min(wLength, n) (local 0x08FA) is the first argument of FUN_CODE_7a60; e306 gets the constant n.
- *   All seven 7a60 calls have the same arguments (len, p->bmRequestType): Keil emits that set-up once, as the
- *   common-entry block 0x7a46..0x7a5f in front of 7a60 (len into R6:R7, ?C?CLDOPTR of p + 3 into R5), and every
- *   call site is a plain LCALL of the block.
- * Then st 1: [0x120] |= 1 (FUN_CODE_dfbe write) + "fotg210: cx_finish!", st 2: [0x120] |= 4 + "fotg210: cx_stall!"
- * (st is never 2 here), st 0: "fotg210: cx_idle?".
- * Shapes found by the bytes: type / idx are two char locals (0x08F8 / 0x08F9) from one int load of wValue (an
- * 'unsigned int desc' local: 38.7 %, other length); the type tests are int compares
- * ('(unsigned int)type == 1' -> XRL A,#k / JNZ, reloading 0x08F8 each test; plain 'type == 1' and 'type == 1U' give
- * CJNE, 43 %; '(type ^ k) == 0' also matches); the idx tests are plain char compares (CJNE). Switch case order as
- * written (dispatch 0, 6, 9, 5 and 0, 2, 1 comes from Keil). Tail 'LCALL 65ab; RET' = the three st arms'
- * cross-jumped printf, default jumps to the RET: no aid needed.
+/* 8051_bank2 module FUN_CODE_573b: FUN_CODE_573b @ 0x573b..0x5c20 and FUN_CODE_7a60 @ 0x7a60..0x7ddb, with the Keil
+ * common-entry block FUN_CODE_7a46 @ 0x7a46..0x7a60 in front of FUN_CODE_7a60. One Keil C51 module, OPTIMIZE(8,SPEED)
+ * LARGE. The block is the shared argument set-up of the seven FUN_CODE_7a60 calls in FUN_CODE_573b (len into R6:R7,
+ * byte p + 3 into R5 through ?C?CLDOPTR); Keil emits it once because all seven calls pass the same arguments.
  *
- * FUN_CODE_7a60(size, dir): piecewise DMA loop on the FOTG210 registers (its strings: "fotg210: dma ..."; register
- * numbers as passed to FUN_CODE_9b91 read / FUN_CODE_b317 write). LARGE parameters size (0x090B) and dir (0x090D); locals fail (0x090E),
- * v (0x090F), t (0x0913), rem (0x0917), off (0x0919), declared in that XDATA order. rem = size, off = 0; per piece
- * (size cut to XDATA 0x09BD, an int; rem -= size):
- *   [0x1C8] bit 0 set: printf "fotg210: dma busy\r\n" (0x7F41), then wait until it clears;
+ * FUN_CODE_573b (only caller: FUN_CODE_5c20 at 0x5d77): writes register [0x1C0] = 0x10, reads two 32-bit values from
+ * [0x1D0] into req[2] at XDATA 0x08FC, writes [0x1C0] = 0; p is a generic pointer to req. Byte/word offsets in req
+ * used below: +0 word w0, +2 byte b2, +3 byte b3, +4 word w4. Only when (b3 & 0x60) == 0, switch on b2:
+ *   5: [0x104] = ([0x104] & ~0x7f) | (w0 & 0x7f);
+ *   6: prints "DescType = %02BX" with type = w0 >> 8 (idx = low byte of w0); per type a CODE table and length n go
+ *      to FUN_CODE_e306(table, n), then FUN_CODE_7a60(len, b3): type 1 -> 0x7F86 / 18, 2 -> 0x80E6 / 32,
+ *      0x0F -> 0x7F98 / 80, 3 -> prints "DescIdx = %02BX" and idx 0 / 1 / 2 / 3 / 4 / 7 / 8 select 0x7FE8 / 4,
+ *      0x7FEC / 16, 0x7FFC / 60, 0x8038 / 48, 0x8068 / 40, 0x8090 / 24, 0x80A8 / 62 (other idx as idx 8),
+ *      6 -> 0x8106 / 10, 7 -> 0x8110 / 32;
+ *   0: 0x8130 / 2;  9: nothing.  These four values of b2 set st = 1.
+ *   len = min(w4, n) (XDATA 0x08FA) is the first argument of FUN_CODE_7a60.
+ * Then st 1: [0x120] |= 1 (FUN_CODE_dfbe) and "fotg210: cx_finish!", st 2: [0x120] |= 4 and "fotg210: cx_stall!"
+ * (st is never 2 here), st 0: "fotg210: cx_idle?".
+ * Source forms the bytes depend on: type and idx are two char locals (0x08F8 / 0x08F9) filled from one int load of
+ * w0; the type tests are int compares ('(unsigned int)type == 1' gives XRL A,#k / JNZ and reloads 0x08F8 each
+ * test); the idx tests are char compares (CJNE); the case order is as written.
+ *
+ * FUN_CODE_7a60(size, dir): loop over pieces with the registers that the "fotg210: dma ..." strings name (register
+ * numbers as passed to FUN_CODE_9b91 read / FUN_CODE_b317 write). LARGE parameters size (0x090B) and dir (0x090D);
+ * locals fail (0x090E), v (0x090F), t (0x0913), rem (0x0917), off (0x0919), declared in that XDATA order.
+ * rem = size, off = 0; per piece (size cut to XDATA 0x09BD, an int; rem -= size):
+ *   [0x1C8] bit 0 set: prints "fotg210: dma busy\r\n" (0x7F41), then waits until it clears;
  *   [0x1CC] = XDATA 0x08C9 (unsigned long) * 0x20 + off;
- *   dir bit 7 set: wait until ([0x120] & 0x20) == 0x20, e44b(1), [0x1C0] = 0x10, v = (size << 8) | 2;
+ *   dir bit 7 set: waits until ([0x120] & 0x20) == 0x20, e44b(1), [0x1C0] = 0x10, v = (size << 8) | 2;
  *   dir bit 7 clear: [0x1C0] = 0x10, then up to 1000 rounds of e44b(1), v = ([0x120] & 0x7F000000) >> 24 while
  *     v < size; when v > size, size = v; v = (size << 8) & ~2;
  *   [0x1C8] = v, then [0x1C8] |= 1 (read-modify-write);
- *   fail = 0xFF; up to 1000 reads of v = [0x14C]: bit 7 -> fail = 0, [0x14C] = 0x80; bit 8 -> [0x14C] = 0x100, printf
- *     "fotg210: dma error\r\n" (0x7EA9); bits 0..2 -> [0x14C] = 7, printf "fotg210: dma reset by host\r\n" (0x7F55);
+ *   fail = 0xFF; up to 1000 reads of v = [0x14C]: bit 7 -> fail = 0, [0x14C] = 0x80; bit 8 -> [0x14C] = 0x100 and
+ *     "fotg210: dma error\r\n" (0x7EA9); bits 0..2 -> [0x14C] = 7 and "fotg210: dma reset by host\r\n" (0x7F55);
  *     each of the three ends the reads;
- *   fail != 0: [0x1C8] = 0x18, printf "fotg210: dma fail\r\n" (0x7F72); [0x1C0] = 0; size = rem; off += XDATA 0x09BD;
+ *   fail != 0: [0x1C8] = 0x18 and "fotg210: dma fail\r\n" (0x7F72); [0x1C0] = 0; size = rem; off += XDATA 0x09BD;
  *   repeat while rem != 0.
- * Source forms the bytes depend on: 'v = x & 0x7f000000; v >>= 24;' as two statements (the firmware stores v between
- * the mask and the ?C?ULSHR); 'if (v > size)' (SETB C / JC; 'v < size' gives CLR C / JNC); the shared tail from the
- * v store at 0x7C3D is Keil's cross-jump of the two dir arms. The parameter is named size, not len: the judge
- * resolves the block's 'len' (a 573b local) by name. No aids.
+ * Source forms the bytes depend on: 'v = x & 0x7f000000; v >>= 24;' as two statements (the firmware stores v
+ * between the mask and ?C?ULSHR); 'if (v > size)' (SETB C / JC); the shared tail from the v store at 0x7C3D is
+ * Keil's cross-jump of the two dir arms. The parameter is named size because the common-entry block's operand
+ * 'len' belongs to FUN_CODE_573b.
  */
 struct setup { unsigned int wValue; unsigned char bRequest; unsigned char bmRequestType; unsigned int wLength; unsigned int wIndex; };
 unsigned long FUN_CODE_9b91(unsigned int reg);
