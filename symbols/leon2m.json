@@ -13334,6 +13334,13 @@
       "name": "FUN_a013b86c",
       "status": "matched"
     },
+    "ram:a013b92c": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns 1 when halfword +0x3c of the record from FUN_a013cd4c(port) is one of 14 listed values, else 0",
+      "name": "FUN_a013b92c",
+      "status": "matched"
+    },
     "ram:a013ba14": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
