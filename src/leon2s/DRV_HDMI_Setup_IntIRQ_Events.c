@@ -1,9 +1,11 @@
 /* DRV_HDMI_Setup_IntIRQ_Events (leon2s, 0xa0096344-0xa0096428, 57 words). Flags -mcpu=v8 -Os -g.
- Code facts: void (port, enable). If bit 2 of _DAT_a8078634: print '[MODEDET]: Port%c ... Enable = %d' with (char)(port+'A') and enable&0xff.
- If (u8)enable == 1: FUN_a00a0b98(port, n, 1) for n = 0x10, 0x15, 0x12, 0xd, 0x11; q = word +4 of the 0x34-byte record port of ARR_a807db00;
- the 400-byte record port of ARR_a807d7e0 gets +0xc = q[+0x40], +0x10 = q[+0x44], byte +0x16 = 0, +0x14 = 4, +8 = 0.
- Fixes vs draft: BEHAVIOUR (the draft read an uninitialised pointer for +0xc; both words come from q), void (draft returned 0),
- a local record pointer r for the [r+4] load, store source order 0x16/0x14/8 (0x14/0x16/8 is also exact). Aids: none.
+ * void (port, enable). If bit 2 of _DAT_a8078634 is set: prints '[MODEDET]: Port%c ... Enable = %d' with
+ * (char)(port + 'A') and enable & 0xff.
+ * If (u8)enable == 1: FUN_a00a0b98(port, n, 1) for n = 0x10, 0x15, 0x12, 0xd, 0x11; q = word +4 of the
+ * 0x34-byte record port of ARR_a807db00; in the 400-byte record port of ARR_a807d7e0: +0xc = q[+0x40],
+ * +0x10 = q[+0x44], byte +0x16 = 0, +0x14 = 4, +8 = 0. Both words come from q.
+ * Source form: a local record pointer r for the [r+4] load; the stores in source order 0x16, 0x14, 8
+ * (0x14, 0x16, 8 builds the same code).
  */
 extern unsigned int _DAT_a8078634;
 extern unsigned char ARR_a807db00[];

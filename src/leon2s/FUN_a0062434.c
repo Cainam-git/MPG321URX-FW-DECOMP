@@ -1,10 +1,9 @@
 /* leon2s FUN_a0062434 @ 0xa0062434-0xa00624b4 (32 words), flags -mcpu=v8 -Os -g.
- * Code facts: hw regs: 0x9f120048 &= ~0x10; 0x9f120028 &= ~0x20; 0x9f100090 |= 0x20. Word +0x20
- * of the record DAT_a8078a70 (0xa8078a90) = (u16)func_0x9f1c3ef0() * 10; FUN_a0061534(hw address
- * 0xd0013ffc, 0xff); tail call FUN_a0062308() (no args: it never reads %i0..). void.
- * Fixes vs the autoc draft (81.25): the word is +0x20 of a record at 0xa8078a70 (fw stores to
- * [rec + 0x20]; the draft's absolute _DAT_a8078a90 folds to its own %lo); the tail call takes no
- * args (draft forwarded 6). volatile only on the 0x9f.../0xd0... hw registers. Aids: none.
+ * Hardware registers: 0x9f120048 &= ~0x10; 0x9f120028 &= ~0x20; 0x9f100090 |= 0x20. Word +0x20 of the
+ * record DAT_a8078a70 (0xa8078a90) = (u16)func_0x9f1c3ef0() * 10; FUN_a0061534(hardware address 0xd0013ffc,
+ * 0xff); tail call FUN_a0062308() with no arguments (it never reads %i0..). void.
+ * The word is +0x20 of a record at 0xa8078a70 (the firmware stores to [rec + 0x20]; an absolute symbol at
+ * 0xa8078a90 folds to its own %lo). volatile only on the 0x9f.../0xd0... hardware registers.
  */
 struct R70 { unsigned char pad[0x20]; unsigned int w20; };
 extern struct R70 DAT_a8078a70;

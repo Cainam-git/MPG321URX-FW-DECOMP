@@ -1,8 +1,8 @@
 /* FUN_a006cb98 (leon2s, 0xa006cb98-0xa006cc24, 35 words, leaf with a tail call). Flags -mcpu=v8 -Os -g.
- Code facts: 7 params (p3/p5/p6 u16, p4 u8, p7 on the stack at [%sp+0x5c]). v = 0x1e0 if p4 == 0 or p6 < p3, else p5 (u16).
- If v <= 0x1e0: tail call FUN_a006c9c0(p1, (p7 >> 5) + (p2 >> 3) + p6 * 60, v >> 3).
- Fixes vs draft: BEHAVIOUR the condition was inverted (the draft took p5 when p4 == 0 and p6 < p3) and p6 * 60 uses the full u16
- (the draft truncated p6 to u8); written as the || if/else (fw subx/addx + orcc, 0x1e0 in the delay slot). Aids: none.
+ * 7 params (p3/p5/p6 u16, p4 u8, p7 on the stack at [%sp+0x5c]). v = 0x1e0 if p4 == 0 or p6 < p3, else
+ * p5 (u16). If v <= 0x1e0: tail call FUN_a006c9c0(p1, (p7 >> 5) + (p2 >> 3) + p6 * 60, v >> 3);
+ * p6 * 60 uses the full u16 p6.
+ * Source form: the || written as an if/else (firmware subx/addx + orcc, 0x1e0 in the delay slot).
  */
 extern void FUN_a006c9c0(unsigned int, unsigned int, unsigned int);
 

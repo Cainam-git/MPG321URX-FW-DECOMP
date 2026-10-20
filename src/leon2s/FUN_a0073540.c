@@ -1,11 +1,10 @@
 /* leon2s FUN_a0073540 @ 0xa0073540-0xa0073578 (14 words), flags -mcpu=v8 -Os -g.
  * Twin of FUN_a00a45d8.
- * Code facts: leaf. When mode == 0: word +4 of the record DAT_a80789d4 = word 0xa8076190, then sibcall
- * FUN_a00b2194(&DAT_a80789d4) ('mov %o7,%g1; call; mov %g1,%o7'). Other modes return through a real 'nop' (the bne
- * target) before retl. void.
- * Fix vs the autoc draft: the record is one {w0, w4} struct (the draft used a separate +4 symbol), the callee
- * is named by its address FUN_a00b2194 (no symbol entry yet). Aids: one asm nop on the mode != 0 path (fw real
- * nop, not a delay slot).
+ * Leaf. When mode == 0: word +4 of the record DAT_a80789d4 = word 0xa8076190, then sibcall
+ * FUN_a00b2194(&DAT_a80789d4) ('mov %o7,%g1; call; mov %g1,%o7'). Other modes return through a real 'nop'
+ * (the bne target) before retl. void.
+ * The record is one {w0, w4} struct; the callee is named by its address FUN_a00b2194 (no symbol entry).
+ * Compiler aid: one asm nop on the mode != 0 path (a real nop in the firmware, not a delay slot).
  */
 struct R { unsigned int w0; unsigned int w4; };
 extern struct R DAT_a80789d4;

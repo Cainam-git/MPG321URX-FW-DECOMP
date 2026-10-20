@@ -1,9 +1,8 @@
 /* leon2s FUN_a006cfac @ 0xa006cfac-0xa006cfe8 (15 words), flags -mcpu=v8 -Os -g.
- * Code facts: stores a request: the 4-word record DAT_a80787e4 = {a, b, c, d} (params 1..4), the byte
- * DAT_a80787e0 = mode (5th param, u8), the byte flag DAT_a80787f4 = 1; then sibcall FUN_a006fedc()
- * (no args). Three separate symbols (each byte store has its own sethi; the words go through one base).
- * Fixes vs the autoc draft (52.94): the record as a struct, a void callee, and the source store order
- * a, mode, b, c, d, flag (found by a permutation search of the 6 stores). Aids: none.
+ * Stores the 4-word record DAT_a80787e4 = {a, b, c, d} (params 1..4), the byte DAT_a80787e0 = mode
+ * (5th param, u8) and the byte flag DAT_a80787f4 = 1; then sibcall FUN_a006fedc() (no arguments, returns
+ * nothing). Three separate symbols (each byte store has its own sethi; the words go through one base).
+ * Source form: the record as a struct, and the store order a, mode, b, c, d, flag.
  */
 struct Req { unsigned int a, b, c, d; };
 extern struct Req DAT_a80787e4;

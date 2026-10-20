@@ -1,6 +1,5 @@
-/* leon2s FUN_a00700cc @ 0xa00700cc  publish the input port records and status words to the Big chip
- * (hand; -mcpu=v8 -Os -g:
- * over 0xa00700cc-0xa00703b8, 187 words).
+/* leon2s FUN_a00700cc @ 0xa00700cc-0xa00703b8 (187 words), flags -mcpu=v8 -Os -g.
+ * Publishes the input port records and status words to the Big chip.
  *
  * 1. ids[7] = port ids from mailbox word 0 (FUN_a006fca8). For each slot i (0..6): id = ids[i], n = id - 1,
  *    rec = port record 0xA807A824 + 20 * n. When id is 1..9 and the record's 'changed' bytes +0xf or +0x10 are 1:
@@ -15,33 +14,31 @@
  * 3. word 0 (DAT_a80788e0): bits 1..2 = 0x9f1c3efc() & 3, write; bits 4..31 = the 7 port type nibbles
  *    (rec[i].b0 & 0xf, 4 bits each), write. This nibble is the type the Big chip tests for 5 (line-rate path).
  *
- * Flags: -mcpu=v8 -Os -g (as every src/leon2s file; -O2/-O3 score 27-42 %).
- * Keys (last swap):
+ * Source form:
  *  - the record address is integer arithmetic 'n * sizeof(struct PortRec) + b' (Ghidra shows the same shape:
  *    iVar4 = n * 0x14; *(char *)(iVar4 + 0xa807a833)), with b = the record base as unsigned int.
- *  - DOCUMENTED NO-CODE AID: 'b = (unsigned int)DAT_a807a824 + (x >> 8)'. x = id is an unsigned char zero-extended,
- *    so x <= 0xff and x >> 8 == 0 always: the term is provably zero and emits no code ().
+ *  - Compiler aid (no code): 'b = (unsigned int)DAT_a807a824 + (x >> 8)'. x = id is an unsigned char
+ *    zero-extended, so x <= 0xff and x >> 8 == 0 always: the term is provably zero and emits no code.
  *    Mechanism (gcc 3.4.4, checked in the -da dumps): combine (pass 20) folds (lshiftrt x 8) to 0 by nonzero_bits and
  *    merges 'tmp = x >> 8', 'base = lo_sum(high, DAT_a807a824)' (REG_EQUAL DAT_a807a824) and 'b = tmp + base' into
  *    'b = lo_sum(high, DAT_a807a824)' at b's insn, keeping that insn's notes: NO REG_EQUAL. So local-alloc.c
  *    update_equiv_regs gives b no REG_EQUIV and does NOT move the %lo 'or' next to the add (it does for every
  *    single-set constant base, which made the sched2 tie between the 'or' and the last 'sll' fall to the sll by
- *    INSN_LUID). The 'or' keeps its source position before the multiply's last shift -> fw order
+ *    INSN_LUID). The 'or' keeps its source position before the multiply's last shift -> firmware order
  *    'sethi; or %g1,0x24,%g1; sll %o5,2,%o5; add %o5,%g1,%l1'. b stays a local pseudo tied with the high
- *    (high dies in the or) -> one qty, %g1 (fw). Without the '>> 8' term the same file is 99.47 (the old swap).
+ *    (high dies in the or) -> one qty, %g1 (as in the firmware).
  *  - memcpy (gcc's block-copy libcall for the map[] initializer) declared with the asm label of the firmware
- *    memcpy FUN_a00b15d8 (call 0xa00b15d8), as for leon2m FUN_a00d6054 (no code change; the jf
- *    link step needs a firmware name).
- * Earlier keys:
- *  - the HPD print has a REAL second argument (string 0xa00664b0 has %02X): FUN_a0073044(s, DAT_a80788d2) - it
- *    keeps the reloaded byte in %o1 and fixes the arg order / or-stb order of the word-3 block.
- *  - documented no-code aid 'for (;;) break;' after the record address: its loop notes stop sched1 from hoisting
- *    the 1..9 range test above the record address (fw order: address, then 'and %o4,0xff' + test).
- *  - the 1..9 test is on a SEPARATE 'unsigned int x = id;' taken BEFORE n = id - 1 (fw keeps
+ *    memcpy FUN_a00b15d8 (call 0xa00b15d8), as for leon2m FUN_a00d6054 (no code change; the link step needs a
+ *    firmware name).
+ *  - the HPD print has a real second argument (string 0xa00664b0 has %02X): FUN_a0073044(s, DAT_a80788d2); it
+ *    keeps the reloaded byte in %o1 and gives the argument order / or-stb order of the word-3 block.
+ *  - Compiler aid (no code): 'for (;;) break;' after the record address: its loop notes stop sched1 from hoisting
+ *    the 1..9 range test above the record address (firmware order: address, then 'and %o4,0xff' + test).
+ *  - the 1..9 test is on a separate 'unsigned int x = id;' taken before n = id - 1 (the firmware keeps
  *    'and %o4,0xff,%l3' and passes %l3 to FUN_a006fbac): id is then still live after the extend, so regmove.c
  *    optimize_reg_copy_3 cannot fold the extend into the ldub, and global.c does not copy x's %o0 preference to id
  *    (id stays in %o4). No volatile needed.
- *  - separate loop counter k with i = k (fw %l4 counter, %l2 byte copy); the word-3 block written with
+ *  - separate loop counter k with i = k (firmware %l4 counter, %l2 byte copy); the word-3 block written with
  *    the c/w/d/lo temporaries in this order; the type loop bound held in a variable (cnt = 7).
  */
 struct PortRec { unsigned char b0, b1; unsigned short h2, h4, h6, h8, ha; unsigned char bc, bd, be, bf, b10, b11, b12, b13; };

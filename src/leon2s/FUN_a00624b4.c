@@ -1,11 +1,9 @@
 /* leon2s FUN_a00624b4 @ 0xa00624b4-0xa006250c (22 words), flags -mcpu=v8 -Os -g.
- * Code facts: timeout check. base = word DAT_a8078a3c (read before the flag test); if byte
- * DAT_a8078a3a == 0 return 0. now = FUN_a00b2064() (tick); d = now - base, or 0xffffffff - base
- * + now when the tick wrapped (now < base); if d > 200: DAT_a8078a3a = 0. Returns DAT_a8078a3a
- * (reloaded). u8 result.
- * Fix vs the autoc draft (84.38 band): the wrap arm is the explicit '0xffffffff - base + now'
- * with the '>=' arm first (a 'd--' or 'd - 1' form is merged into one subx: 63.64); no volatile
- * on the RAM word a3c (the draft had it). Aids: none.
+ * base = word DAT_a8078a3c (read before the flag test); if byte DAT_a8078a3a == 0 returns 0.
+ * now = FUN_a00b2064(); d = now - base, or 0xffffffff - base + now when now < base; if d > 200:
+ * DAT_a8078a3a = 0. Returns DAT_a8078a3a (reloaded). u8 result. The RAM word a3c is not volatile.
+ * Source form: the wrap arm is the explicit '0xffffffff - base + now' with the '>=' arm first (a 'd--' or
+ * 'd - 1' form is merged into one subx).
  */
 extern unsigned char DAT_a8078a3a;
 extern unsigned int DAT_a8078a3c;

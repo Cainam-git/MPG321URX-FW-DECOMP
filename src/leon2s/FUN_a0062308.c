@@ -1,8 +1,9 @@
 /* FUN_a0062308 (leon2s, 0xa0062308-0xa0062434, 75 words, leaf). Flags -mcpu=v8 -Os -g.
- Code facts: void(void) table init of the RAM block DAT_a8078aa0: 34 u16 constants at +0x82..+0x86, +0x30..+0x40, +0x08..+0x16, +0x02/+0x04,
- +0x5a..+0x66, +0x18/+0x1a, +0x06, +0x68/+0x6a, plus the byte +0x58 = 9.
- Fix vs draft: the byte +0x58 and the u16 +0x06 take ONE register holding 9 (fw 'mov 9,%o3' then stb and sth): written as the chained
- assignment b58 = regs[3] = 9 (separate statements or a u8 temp give two 'mov 9' and a longer schedule). Aids: none.
+ * void(void) table init of the RAM block DAT_a8078aa0: 34 u16 constants at +0x82..+0x86, +0x30..+0x40,
+ * +0x08..+0x16, +0x02/+0x04, +0x5a..+0x66, +0x18/+0x1a, +0x06, +0x68/+0x6a, plus the byte +0x58 = 9.
+ * The byte +0x58 and the u16 +0x06 take one register holding 9 (firmware 'mov 9,%o3', then stb and sth).
+ * Source form: the chained assignment b58 = regs[3] = 9 (separate statements or a u8 temp give two
+ * 'mov 9' and a longer schedule).
  */
 extern unsigned char DAT_a8078aa0[];
 

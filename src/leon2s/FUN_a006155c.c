@@ -1,7 +1,9 @@
 /* FUN_a006155c (leon2s, 0xa006155c-0xa0061578, 7 words, leaf). Flags -mcpu=v8 -Os -g.
- Code facts: byte read through an aligned word access: w = word at (addr & ~3); returns (w >> ((addr & 3) << 3)) & 0xff (fw: and 3, and -4,
- ld, sll 3, srl, and 0xff). Fix vs draft: the word load is a separate statement before the shift (the one-expression form schedules
- the sll before the and -4/ld). Not volatile: nothing shows the address is a hardware register. Aids: none.
+ * Byte read through an aligned word access: w = word at (addr & ~3); returns (w >> ((addr & 3) << 3)) & 0xff
+ * (firmware: and 3, and -4, ld, sll 3, srl, and 0xff). Not volatile: nothing shows the address is a hardware
+ * register.
+ * Source form: the word load is a separate statement before the shift (the one-expression form schedules
+ * the sll before the and -4 / ld).
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;
