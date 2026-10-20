@@ -2009,6 +2009,13 @@
       "name": "FUN_a0080978",
       "status": "matched"
     },
+    "ram:a0080bc0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns 1 when bit 3 of byte 0xa802af41 is set",
+      "name": "FUN_a0080bc0",
+      "status": "matched"
+    },
     "ram:a0080c10": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
