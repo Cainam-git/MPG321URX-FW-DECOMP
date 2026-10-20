@@ -3006,6 +3006,12 @@
       "name": "FUN_a008b9ec",
       "status": "matched"
     },
+    "ram:a008bc44": {
+      "by": "h15",
+      "comment": "For i = 0, 1 sets byte i of DAT_a80766a0 from FUN_a00a6bb8(i, 0x50) bit 6, a FUN_a00b2064 interval and FUN_a008b8d4(i); returns the two bytes as bits 0 and 1",
+      "name": "FUN_a008bc44",
+      "status": "matched"
+    },
     "ram:a008bd1c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
