@@ -13843,6 +13843,12 @@
       "name": "FUN_a014e0a4",
       "status": "matched"
     },
+    "ram:a014e0d4": {
+      "by": "hand",
+      "comment": "Calls FUN_a010adc0 with the two bits of v for v 0..3",
+      "name": "FUN_a014e0d4",
+      "status": "matched"
+    },
     "ram:a014e144": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
