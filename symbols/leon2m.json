@@ -11815,6 +11815,12 @@
       "name": "FUN_a013808c",
       "status": "matched"
     },
+    "ram:a01380c4": {
+      "by": "h10",
+      "comment": "Returns 0xff for a != 0, else FUN_a01370dc(0x5d, 4, {a, b, 0, 0}, 0), FUN_a0137344(1), returns byte 0xa802cba3",
+      "name": "FUN_a01380c4",
+      "status": "matched"
+    },
     "ram:a0138110": {
       "by": "hand",
       "comment": "a 4-byte stack buffer is cleared with one word store ('clr [fp-16]', in the bne delay slot, so on both paths); only when the u8 param_1 is 0 (btst 0xff) are bytes [0] = param_1 and [1] = param_2 stored and FUN_a01370dc(0x5f, 4, buf, 0) called (the same message-send callee as FUN_a0137d40). void.",
