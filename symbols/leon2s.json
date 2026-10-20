@@ -1850,6 +1850,12 @@
       "name": "FUN_a006fc58",
       "status": "matched"
     },
+    "ram:a006fca8": {
+      "by": "hand",
+      "comment": "reads 4 words through FUN_a006faa8 and stores seven nibbles of word 1 into a byte array",
+      "name": "FUN_a006fca8",
+      "status": "matched"
+    },
     "ram:a006fd04": {
       "by": "hand",
       "comment": "Returns 0 unless byte 3 of the input buffer is 0x55. Otherwise XOR-folds a sequence of 32-bit words selected by a byte-masked index, accumulating each word with itself shifted right by 8, 16 and 24, and returns 1 if the low byte of the accumulated XOR is zero. A single raw index variable masked at each use produces the and %o3, 0xff, %g1 at the loop head.",
