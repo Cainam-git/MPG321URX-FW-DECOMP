@@ -1,4 +1,4 @@
-/* leon2m FUN_a01061c0 @ 0xa01061c0-0xa0106228 (11 words).
+/* leon2m FUN_a01061c0 @ 0xa01061c0-0xa0106228 (26 words).
  * Writes one value to hardware register 0xcf00ed80, selected by sel: 0 writes 0, 1 writes 1, 2 writes 2, 3 writes 4
  * and 4 writes 0x10 (a jump table over the five cases). Any other sel leaves the register unchanged.
  * Called from FUN_a01518c8.
