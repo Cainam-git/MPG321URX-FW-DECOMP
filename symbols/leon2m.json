@@ -8393,6 +8393,13 @@
       "name": "FUN_a00f6fac",
       "status": "matched"
     },
+    "ram:a00f7894": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes ACE configuration bits from a 3-byte record to 0xCF00EE80/0xCF00EEC0 and prints Config ACE",
+      "name": "FUN_a00f7894",
+      "status": "matched"
+    },
     "ram:a00f87b0": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
