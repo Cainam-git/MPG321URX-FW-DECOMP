@@ -884,6 +884,13 @@
       "name": "FUN_CODE_c32e",
       "status": "matched"
     },
+    "CODE:c389": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "for v < 9, store v in shadow bytes 0xA763..0xA766 and the low nibble of registers F054 / F0F6 / F032 / F06E selected by m",
+      "name": "FUN_CODE_c389",
+      "status": "matched"
+    },
     "CODE:c3e4": {
       "by": "hand",
       "c51opts": "OPTIMIZE(7,SPEED) LARGE",
