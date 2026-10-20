@@ -966,6 +966,13 @@
       "name": "FUN_CODE_ccc2",
       "status": "matched"
     },
+    "CODE:cd4b": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "print the CEC request returned by c4ee (PowerUp, PowerDown, ActivateSC, DeviceControl_Power) and set bit 0x11 for the power-up requests",
+      "name": "FUN_CODE_cd4b",
+      "status": "matched"
+    },
     "CODE:cd8c": {
       "by": "hand",
       "comment": "return ulong a70d[1] - a70d[0] - a717",
