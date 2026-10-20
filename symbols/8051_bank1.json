@@ -705,6 +705,13 @@
       "name": "FUN_CODE_5dcb",
       "status": "matched"
     },
+    "CODE:611a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "waits up to 1000 passes for register bit 5 of the channel block, then copies the data register to *buf and writes 0x20",
+      "name": "FUN_CODE_611a",
+      "status": "matched"
+    },
     "CODE:62b5": {
       "by": "hand",
       "comment": "Keil common-entry (L?) code in front of FUN_CODE_62c6, in FUN_CODE_62c6's code segment; emitted by compiling src/8051_bank1/FUN_CODE_482e.c, bytes judged with FUN_CODE_62c6 over 0x62b5..0x644f",
