@@ -3428,6 +3428,20 @@
       "name": "FUN_a009ad40",
       "status": "matched"
     },
+    "ram:a009ae04": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "twin of FUN_a009ad40 (constants swapped)",
+      "name": "FUN_a009ae04",
+      "status": "matched"
+    },
+    "ram:a009aec8": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "twin of FUN_a009ad40 (constants swapped)",
+      "name": "FUN_a009aec8",
+      "status": "matched"
+    },
     "ram:a009b95c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
