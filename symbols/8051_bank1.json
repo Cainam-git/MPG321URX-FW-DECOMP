@@ -919,6 +919,13 @@
       "name": "FUN_CODE_c7e0",
       "status": "matched"
     },
+    "CODE:c87f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "set or clear bit 6 (and clear bits 0, 1) of one of seven XDATA registers chosen by a one-hot selector",
+      "name": "FUN_CODE_c87f",
+      "status": "matched"
+    },
     "CODE:c965": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
