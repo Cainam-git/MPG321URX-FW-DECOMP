@@ -6341,6 +6341,12 @@
       "name": "FUN_a00c5da8",
       "status": "matched"
     },
+    "ram:a00c5f18": {
+      "by": "h17",
+      "comment": "Updates bit param_1 of DAT_a8078c58, flags the change in DAT_a80788d2 and reprograms the input",
+      "name": "FUN_a00c5f18",
+      "status": "matched"
+    },
     "ram:a00c5fb0": {
       "by": "hand",
       "comment": "maps codes 0x31..0x81 (step 0x10) to 0..5, other values to 0xff",
