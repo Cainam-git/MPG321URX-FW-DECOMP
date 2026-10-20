@@ -13515,6 +13515,13 @@
       "name": "FUN_a014acdc",
       "status": "matched"
     },
+    "ram:a014ad90": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "SYSAPI_EraseUSRFlashType2: area check, FUN_a0140500(area) -> 1, else message -> 0",
+      "name": "FUN_a014ad90",
+      "status": "matched"
+    },
     "ram:a014ae1c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
