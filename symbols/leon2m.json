@@ -8789,6 +8789,13 @@
       "name": "FUN_a01185d4",
       "status": "matched"
     },
+    "ram:a0118628": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "bit 0 of 0xcf012e44 = (m == 1); low 2 bits of 0xcf012e40 = 1/1/2/3 for m 1..4, else 0 (masked 0xfc)",
+      "name": "FUN_a0118628",
+      "status": "matched"
+    },
     "ram:a01186e0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
