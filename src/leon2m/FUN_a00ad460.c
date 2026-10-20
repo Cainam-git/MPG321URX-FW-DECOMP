@@ -1,10 +1,9 @@
 /* leon2m FUN_a00ad460 @ 0xa00ad460  (-mcpu=v8 -O3 -g)
- * Builds a menu screen. After func_0x4008e2a4() it draws rows 6..0x15 with FUN_a00b32e4(1, 0, colour, 7, row,
- * len, 0), skipping rows 5 and 7: row 6 uses colour 0x7C2 and length 10, the others colour 0x792 and length 0xB.
- * Then FUN_a00b3d14(1), FUN_a00b4144(7, 2), func_0x4008e2a4() again, rows 5..0x14 are cleared
- * (FUN_a0146b20(0, 0x13, row, 0x13, 0, 0) and FUN_a0146a80(0x13, row, 0x13, 0x792, 0)), followed by
- * FUN_a0146b20(0, 0x1C, 0x15, 2, 0, 0), FUN_a0146c40(5, 0, 0), FUN_a00ad1c0(0), FUN_a00a900c(0, 2) and
- * FUN_a00b3860(). Finally DAT_a802d419 = 0xFF and FUN_a00b34d4(0, 4) is tail-called (it redraws both nibbles).
+ * Calls func_0x4008e2a4(), then FUN_a00b32e4(1, 0, c, 7, q, n, 0) for q = 6..0x15 except 5 and 7: q = 6 with c =
+ * 0x7C2 and n = 10, the others with c = 0x792 and n = 0xB. Then FUN_a00b3d14(1), FUN_a00b4144(7, 2),
+ * func_0x4008e2a4() again, for q = 5..0x14 FUN_a0146b20(0, 0x13, q, 0x13, 0, 0) and FUN_a0146a80(0x13, q, 0x13,
+ * 0x792, 0), followed by FUN_a0146b20(0, 0x1C, 0x15, 2, 0, 0), FUN_a0146c40(5, 0, 0), FUN_a00ad1c0(0),
+ * FUN_a00a900c(0, 2) and FUN_a00b3860(). Finally DAT_a802d419 = 0xFF and FUN_a00b34d4(0, 4) is tail-called.
  * Callers: FUN_a0098c08, FUN_a009d234, FUN_a009d4e8.
  * Source form: the row-5 and row-7 tests are two nested ifs (with '&&' the two tests are combined into one
  * flag test).

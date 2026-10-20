@@ -1,11 +1,10 @@
 /* leon2m FUN_a00ad02c @ 0xa00ad02c  (-mcpu=v8 -O3 -g -msoft-float)
- * Redraws a menu page. When force is non-zero and DAT_a802b08d already equals page, nothing is done. Otherwise
- * DAT_a802b08d = page, func_0x4008e2a4() is called, rows 5..0x14 are cleared (FUN_a0146b20(0, 0x13, row, 0x13,
- * 0, 0) and FUN_a0146a80(0x13, row, 0x13, 0x792, 0)), then FUN_a0146b20(0, 0x1C, 0x15, 2, 0, 0),
- * FUN_a0146c40(5, 0, 0), FUN_a0146b50(0x92, 0) and FUN_a0146b6c(0, 0). For page 0 it draws seven items i = 0..6
- * at row i * 2 + 6: when FUN_a00aa520(i) returns 0 the field is first painted with FUN_a0146a80(0x14, row, 0xD,
- * 0x292, 0); the text is entry i * 29 + DAT_a802d290 byte +8 of the table at 0x188DA0 (FUN_a00a3844,
- * FUN_a00a31a4). Then FUN_a00b6994, FUN_a00b69d0 and FUN_a00b6b68 are called.
+ * When force is non-zero and DAT_a802b08d already equals page, nothing is done. Otherwise DAT_a802b08d = page,
+ * func_0x4008e2a4() is called, then for q = 5..0x14 FUN_a0146b20(0, 0x13, q, 0x13, 0, 0) and FUN_a0146a80(0x13, q,
+ * 0x13, 0x792, 0), then FUN_a0146b20(0, 0x1C, 0x15, 2, 0, 0), FUN_a0146c40(5, 0, 0), FUN_a0146b50(0x92, 0) and
+ * FUN_a0146b6c(0, 0). For page 0, for i = 0..6 with q = i * 2 + 6: when FUN_a00aa520(i) returns 0, FUN_a0146a80(0x14,
+ * q, 0xD, 0x292, 0) first; then FUN_a00a31a4 with entry i * 29 + DAT_a802d290 byte +8 of the table at 0x188DA0
+ * (looked up with FUN_a00a3844). Then FUN_a00b6994, FUN_a00b69d0 and FUN_a00b6b68 are called.
  * Callers: FUN_a0091a68, FUN_a0091b94, FUN_a0094438, FUN_a00b0034, FUN_a00b1004 and others.
  * Source form: a pointer to DAT_a802d290 declared inside the page-0 block; with direct accesses or a pointer at
  * function scope the compiler also keeps the table address in a register across the loop.

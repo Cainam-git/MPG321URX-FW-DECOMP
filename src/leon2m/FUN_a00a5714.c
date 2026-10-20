@@ -1,9 +1,8 @@
 /* leon2m FUN_a00a5714 @ 0xa00a5714  (-mcpu=v8 -O3 -g)
- * Draws a fixed frame of eleven blocks relative to the position (x, y) with FUN_a00b32e4(a, b, colour, column,
- * row, width, char): colour 0x12AA blocks at x+1 (rows y, y+1, y+3) and x+0xB (row y+4), colour 0x89AE blocks at
- * x+3, x+0xC and x (rows y, y+1, y+4), colour 0x8A2 blocks at x, x+0xD and x+4 (rows y, y+1, y+2, y+4).
- * FUN_a00b32e4 takes (u8, u8, u16 colour, u16 column, u8 row, u8 width, u8 char); the 7th argument is passed on
- * the stack.
+ * Eleven calls of FUN_a00b32e4(a, b, c, p, q, n, value) with p and q relative to the parameters (x, y): c = 0x12AA at
+ * p = x+1 (q = y, y+1, y+3) and p = x+0xB (q = y+4), c = 0x89AE at p = x+3, x+0xC and x (q = y, y+1, y+4), c = 0x8A2
+ * at p = x, x+0xD and x+4 (q = y, y+1, y+2, y+4). FUN_a00b32e4 takes (u8, u8, u16, u16, u8, u8, u8); the 7th argument
+ * is passed on the stack.
  * Callers: FUN_a00b7f9c+0xE0.
  */
 extern void FUN_a00b32e4(unsigned char, unsigned char, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char);

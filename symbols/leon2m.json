@@ -4276,14 +4276,14 @@
     "ram:a00a5714": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Draws a fixed frame of eleven coloured blocks relative to (x, y) with FUN_a00b32e4",
+      "comment": "Eleven FUN_a00b32e4 calls at fixed offsets from (x, y) with values 0x12AA, 0x89AE and 0x8A2",
       "name": "FUN_a00a5714",
       "status": "matched"
     },
     "ram:a00a788c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Draws mode-dependent OSD frame cells with FUN_a0146a80/FUN_a0146b20/FUN_a00b32e4",
+      "comment": "Mode-dependent FUN_a0146a80, FUN_a0146b20 and FUN_a00b32e4 call sequence",
       "name": "FUN_a00a788c",
       "status": "matched"
     },
@@ -4323,7 +4323,7 @@
     "ram:a00a8440": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Draws a three-line menu block at column 0x2A and marks the line selected by bit 12 of DAT_a802d290 word +0xA8",
+      "comment": "FUN_a00a31a4 calls with three table entries, then FUN_a0146b20 marks for the value of bit 12 of word 0xa802d338",
       "name": "FUN_a00a8440",
       "status": "matched"
     },
@@ -4379,7 +4379,7 @@
     "ram:a00a9468": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Paints a small status block (columns 0x37..0x3A) in colours chosen by mode, or clears it for mode 6",
+      "comment": "Calls FUN_a0146a80 (and FUN_a0146b20 for mode 6) for three or four values of the second argument, values chosen by mode",
       "name": "FUN_a00a9468",
       "status": "matched"
     },
@@ -4565,21 +4565,21 @@
     "ram:a00acef4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Draws two menu text lines at column 0x2A from tables 0x188DA0 and 0x193248, indexed by DAT_a802d290 byte +8 and bit 7 of word +0xA8",
+      "comment": "FUN_a0146a80 and FUN_a00a31a4 call pairs with entries of the tables 0x188DA0 and 0x193248",
       "name": "FUN_a00acef4",
       "status": "matched"
     },
     "ram:a00ad02c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "Redraws a menu page: clears rows 5..0x14 and for page 0 draws seven items from table 0x188DA0",
+      "comment": "For a new page value: FUN_a0146b20/FUN_a0146a80 over 5..0x14 and, for page 0, seven FUN_a00a31a4 calls",
       "name": "FUN_a00ad02c",
       "status": "matched"
     },
     "ram:a00ad460": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Builds a menu screen: draws rows 6..0x15, clears rows 5..0x14, calls the page helpers and redraws the DAT_a802d419 fields",
+      "comment": "FUN_a00b32e4 calls for 6..0x15, then a fixed sequence of FUN_a0146xxx calls and FUN_a00b34d4(0, 4)",
       "name": "FUN_a00ad460",
       "status": "matched"
     },
@@ -4668,7 +4668,7 @@
     "ram:a00b32e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Draws a horizontal or vertical run of n character cells in one colour, with a fixed or incrementing character",
+      "comment": "Calls FUN_a0146ab0 once and FUN_a0146b20 n times, stepping the second or third argument",
       "name": "FUN_a00b32e4",
       "status": "matched"
     },
@@ -4682,7 +4682,7 @@
     "ram:a00b34d4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Redraws two menu value fields (rows 0xE and 0x13) when they differ from the nibbles at DAT_a802d290 +0x189, then stores both",
+      "comment": "Compares two nibbles with byte 0xa802d419 and calls FUN_a0146a80 and FUN_a00a31a4 for each that changed",
       "name": "FUN_a00b34d4",
       "status": "matched"
     },
@@ -4717,7 +4717,7 @@
     "ram:a00b3ba0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "Draws five rows from table 0x196B24 (last row offset by DAT_a802d290 byte +8), then calls FUN_a00a9f30(4, bit 9)",
+      "comment": "Five FUN_a00a31a4 calls with entries of the table 0x196B24, then FUN_a00a9f30",
       "name": "FUN_a00b3ba0",
       "status": "matched"
     },
@@ -4897,7 +4897,7 @@
     "ram:a00b7674": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Sets up an OSD value row from record byte 0xc (x = n*4-20) and prints it with n%3d",
+      "comment": "Formats record byte 0xc with n%3d and passes it to FUN_a00a31a4, after FUN_a00ab5f0 and FUN_a0146a80 calls",
       "name": "FUN_a00b7674",
       "status": "matched"
     },
