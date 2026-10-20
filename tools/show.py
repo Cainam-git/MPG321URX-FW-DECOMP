@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """Compact diff of one work/autoc function: only differing hunks, best flag set.
 usage: show.py <cpu> <fn> [file.c] [context]"""
-import sys, subprocess, pathlib
+import sys, subprocess, pathlib, tempfile
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools")); import diff, autoc
 cpu, fn = sys.argv[1], sys.argv[2]
 src = sys.argv[3] if len(sys.argv) > 3 and sys.argv[3] != "-" else str(ROOT / "work/autoc" / cpu / f"{fn}.c")
 ctx = int(sys.argv[4]) if len(sys.argv) > 4 else 2
 best = None
+td = tempfile.TemporaryDirectory()   # private object file: several runs may judge at the same time
 for fl in autoc.flag_sets(cpu):
-    o = ROOT / "work/autoc/tmp/show.o"
+    o = pathlib.Path(td.name) / "show.o"
     r = subprocess.run([str(ROOT / "toolchains/sparc-elf-3.4.4/bin/sparc-elf-gcc"), *fl.split(), "-w", "-c", src, "-o", str(o)], capture_output=True, text=True)
     if r.returncode: print(r.stderr[-800:]); continue
     res = diff.compare(cpu, fn, str(o))
