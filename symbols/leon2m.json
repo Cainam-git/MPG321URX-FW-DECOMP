@@ -2710,7 +2710,7 @@
     "ram:a00918f4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Enters the selection 0xe..0x14 in word 0xa802afec, stepping until FUN_a00aa520 accepts it",
+      "comment": "Sets word 0xa802afec within 0xe..0x14, stepping until FUN_a00aa520 accepts the value",
       "name": "FUN_a00918f4",
       "status": "matched"
     },
@@ -2724,21 +2724,21 @@
     "ram:a0091a68": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection word 0xa802afec backwards through 0xe..0x14 with a page update every 7 positions",
+      "comment": "Steps word 0xa802afec backwards through 0xe..0x14, skipping values FUN_a00aa520 rejects; FUN_a00ad02c when (value - 0xe) / 7 changes",
       "name": "FUN_a0091a68",
       "status": "matched"
     },
     "ram:a0091b94": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection word 0xa802afec forwards through 0xe..0x14 with a page update every 7 positions",
+      "comment": "Steps word 0xa802afec forwards through 0xe..0x14, skipping values FUN_a00aa520 rejects; FUN_a00ad02c when (value - 0xe) / 7 changes",
       "name": "FUN_a0091b94",
       "status": "matched"
     },
     "ram:a0091cc0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Enters the selection 0x15..0x17 in word 0xa802afec, stepping until FUN_a00aa520 accepts it",
+      "comment": "Sets word 0xa802afec within 0x15..0x17, stepping until FUN_a00aa520 accepts the value",
       "name": "FUN_a0091cc0",
       "status": "matched"
     },
@@ -2794,7 +2794,7 @@
     "ram:a009221c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Sets the selection word 0xa802afec from byte 0xa802d2ae and steps it until FUN_a00aa520 accepts it",
+      "comment": "Sets word 0xa802afec from byte 0xa802d2ae and steps it until FUN_a00aa520 accepts it",
       "name": "FUN_a009221c",
       "status": "matched"
     },
@@ -2836,21 +2836,21 @@
     "ram:a00926c8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection word 0xa802afec backwards through 0x23..0x25 and updates the dependent settings",
+      "comment": "Steps word 0xa802afec backwards through 0x23..0x25 (FUN_a00aa520 check), then FUN_a00a900c, FUN_a0146c40, FUN_a00af44c, FUN_a00a9468, FUN_a00b34d4 and FUN_a00a813c calls",
       "name": "FUN_a00926c8",
       "status": "matched"
     },
     "ram:a00927e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection word 0xa802afec forwards through 0x23..0x25 and updates the dependent settings",
+      "comment": "Steps word 0xa802afec forwards through 0x23..0x25 (FUN_a00aa520 check), then FUN_a00a900c, FUN_a0146c40, FUN_a00af44c, FUN_a00a9468, FUN_a00b34d4 and FUN_a00a813c calls",
       "name": "FUN_a00927e8",
       "status": "matched"
     },
     "ram:a0092908": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Enters the selection 0x26..0x29 in word 0xa802afec, stepping until FUN_a00aa520 accepts it, and clears byte 0xa802d433",
+      "comment": "Sets word 0xa802afec within 0x26..0x29, stepping until FUN_a00aa520 accepts the value, and clears byte 0xa802d433",
       "name": "FUN_a0092908",
       "status": "matched"
     },
@@ -2864,14 +2864,14 @@
     "ram:a00929e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection word 0xa802afec backwards through 0x26..0x29 and byte 0xa802d433 by 3 (mod 4)",
+      "comment": "Steps word 0xa802afec backwards through 0x26..0x29 and byte 0xa802d433 by 3 (mod 4)",
       "name": "FUN_a00929e8",
       "status": "matched"
     },
     "ram:a0092a80": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection word 0xa802afec forwards through 0x26..0x29 and byte 0xa802d433 by 1 (mod 4)",
+      "comment": "Steps word 0xa802afec forwards through 0x26..0x29 and byte 0xa802d433 by 1 (mod 4)",
       "name": "FUN_a0092a80",
       "status": "matched"
     },
@@ -2885,35 +2885,35 @@
     "ram:a0092c58": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection word 0xa802afec backwards through 0x2a..0x33 with a page update every 7 positions",
+      "comment": "Steps word 0xa802afec backwards through 0x2a..0x33, skipping values FUN_a00aa520 rejects; FUN_a00ad1c0 when (value - 0x2a) / 7 changes",
       "name": "FUN_a0092c58",
       "status": "matched"
     },
     "ram:a0092d80": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection word 0xa802afec forwards through 0x2a..0x33 with a page update every 7 positions",
+      "comment": "Steps word 0xa802afec forwards through 0x2a..0x33, skipping values FUN_a00aa520 rejects; FUN_a00ad1c0 when (value - 0x2a) / 7 changes",
       "name": "FUN_a0092d80",
       "status": "matched"
     },
     "ram:a0092ea8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Enters the selection 0x34..0x3b in word 0xa802afec, stepping until FUN_a00aa520 accepts it",
+      "comment": "Sets word 0xa802afec within 0x34..0x3b, stepping until FUN_a00aa520 accepts the value",
       "name": "FUN_a0092ea8",
       "status": "matched"
     },
     "ram:a0092fd4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection word 0xa802afec backwards through 0x34..0x3b with a page update and position-dependent calls",
+      "comment": "Steps word 0xa802afec backwards through 0x34..0x3b (FUN_a00aa83c when (value - 0x34) / 7 changes), then calls chosen by the value",
       "name": "FUN_a0092fd4",
       "status": "matched"
     },
     "ram:a0093144": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection word 0xa802afec forwards through 0x34..0x3b with a page update and position-dependent calls",
+      "comment": "Steps word 0xa802afec forwards through 0x34..0x3b (FUN_a00aa83c when (value - 0x34) / 7 changes), then calls chosen by the value",
       "name": "FUN_a0093144",
       "status": "matched"
     },
@@ -3538,7 +3538,7 @@
     "ram:a00979ec": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Same sequence as FUN_a00978c8 with the selection taken from byte 0xa802d2bf",
+      "comment": "Same sequence as FUN_a00978c8 with word 0xa802afec taken from byte 0xa802d2bf",
       "name": "FUN_a00979ec",
       "status": "matched"
     },
@@ -3641,7 +3641,7 @@
     "ram:a00989c8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Copies byte 0xa802d298 to byte 0xa8025c56 and the selection word 0xa802afec and reports it",
+      "comment": "Byte 0xa8025c56 = v and word 0xa802afec = v + 0x92 for v = byte 0xa802d298, with FUN_a00a813c / FUN_a00a900c / FUN_a00a9650 calls",
       "name": "FUN_a00989c8",
       "status": "matched"
     },
@@ -3994,42 +3994,42 @@
     "ram:a009a5fc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec backwards through 0x48..0x4d, skipping positions FUN_a00aad30 rejects",
+      "comment": "Steps word 0xa802afec backwards through 0x48..0x4d, skipping values FUN_a00aad30 rejects",
       "name": "FUN_a009a5fc",
       "status": "matched"
     },
     "ram:a009a6c0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec forwards through 0x48..0x4d, skipping positions FUN_a00aad30 rejects",
+      "comment": "Steps word 0xa802afec forwards through 0x48..0x4d, skipping values FUN_a00aad30 rejects",
       "name": "FUN_a009a6c0",
       "status": "matched"
     },
     "ram:a009a784": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec backwards through 0x53..0x55 and sets bit 12 of word 0xa802d338",
+      "comment": "Steps word 0xa802afec backwards through 0x53..0x55 and sets bit 12 of word 0xa802d338",
       "name": "FUN_a009a784",
       "status": "matched"
     },
     "ram:a009a8dc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec forwards through 0x53..0x55 and sets bit 12 of word 0xa802d338",
+      "comment": "Steps word 0xa802afec forwards through 0x53..0x55 and sets bit 12 of word 0xa802d338",
       "name": "FUN_a009a8dc",
       "status": "matched"
     },
     "ram:a009aa34": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec backwards through 0x56..0x5b and records it at 0xa802d430",
+      "comment": "Steps word 0xa802afec backwards through 0x56..0x5b; byte 0xa802d430 = value - 0x57 (byte 0xa8025c56 for 0x56)",
       "name": "FUN_a009aa34",
       "status": "matched"
     },
     "ram:a009ab58": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec forwards through 0x56..0x5b and records it at 0xa802d430",
+      "comment": "Steps word 0xa802afec forwards through 0x56..0x5b; byte 0xa802d430 = value - 0x57 (byte 0xa8025c56 for 0x56)",
       "name": "FUN_a009ab58",
       "status": "matched"
     },
@@ -4043,7 +4043,7 @@
     "ram:a009ad40": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec through 0xd0..0xd3, skipping positions FUN_a00aad30 rejects",
+      "comment": "Steps word 0xa802afec through 0xd0..0xd3, skipping values FUN_a00aad30 rejects",
       "name": "FUN_a009ad40",
       "status": "matched"
     },
@@ -4064,21 +4064,21 @@
     "ram:a009af8c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec backwards through 0xcd..0xcf and records it in reverse numbering",
+      "comment": "Steps word 0xa802afec backwards through 0xcd..0xcf and stores 2 - (value - 0xcd) at byte 0xa802d2c1",
       "name": "FUN_a009af8c",
       "status": "matched"
     },
     "ram:a009b070": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec forwards through 0xcd..0xcf and records it in reverse numbering",
+      "comment": "Steps word 0xa802afec forwards through 0xcd..0xcf and stores 2 - (value - 0xcd) at byte 0xa802d2c1",
       "name": "FUN_a009b070",
       "status": "matched"
     },
     "ram:a009b154": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec backwards through 0xdd..0xe1 and records it at 0xa802d3ce",
+      "comment": "Steps word 0xa802afec backwards through 0xdd..0xe1 and stores value - 0xdd at byte 0xa802d3ce",
       "name": "FUN_a009b154",
       "status": "matched"
     },
@@ -4092,35 +4092,35 @@
     "ram:a009b2c4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec backwards through 0xe2..0xe6 and records it at 0xa802d3cf",
+      "comment": "Steps word 0xa802afec backwards through 0xe2..0xe6 and stores value - 0xe2 at byte 0xa802d3cf",
       "name": "FUN_a009b2c4",
       "status": "matched"
     },
     "ram:a009b37c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec forwards through 0xe2..0xe6 and records it at 0xa802d3cf",
+      "comment": "Steps word 0xa802afec forwards through 0xe2..0xe6 and stores value - 0xe2 at byte 0xa802d3cf",
       "name": "FUN_a009b37c",
       "status": "matched"
     },
     "ram:a009b434": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec backwards through 0xed..0xef, skipping positions FUN_a00aad30 rejects",
+      "comment": "Steps word 0xa802afec backwards through 0xed..0xef, skipping values FUN_a00aad30 rejects",
       "name": "FUN_a009b434",
       "status": "matched"
     },
     "ram:a009b4e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec forwards through 0xed..0xef, skipping positions FUN_a00aad30 rejects",
+      "comment": "Steps word 0xa802afec forwards through 0xed..0xef, skipping values FUN_a00aad30 rejects",
       "name": "FUN_a009b4e8",
       "status": "matched"
     },
     "ram:a009b8e0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps byte 0xa802d420 up through 0..6 and reports it",
+      "comment": "Steps byte 0xa802d420 up through 0..6 (6 becomes 0) and passes it to FUN_a00a9dac and FUN_a00a813c, then FUN_a00b88b8",
       "name": "FUN_a009b8e0",
       "status": "matched"
     },
@@ -4141,28 +4141,28 @@
     "ram:a009bb0c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec backwards through 0xea..0xec, records it and refreshes",
+      "comment": "Steps word 0xa802afec backwards through 0xea..0xec, stores value - 0xea at byte 0xa802d2dc, then FUN_a00d5eac(1) and FUN_a014a8d4(1, 0, 0)",
       "name": "FUN_a009bb0c",
       "status": "matched"
     },
     "ram:a009bbe4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec forwards through 0xea..0xec, records it and refreshes",
+      "comment": "Steps word 0xa802afec forwards through 0xea..0xec, stores value - 0xea at byte 0xa802d2dc, then FUN_a00d5eac(1) and FUN_a014a8d4(1, 0, 0)",
       "name": "FUN_a009bbe4",
       "status": "matched"
     },
     "ram:a009bcbc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec backwards through 0xd8..0xdc into bits 4..7 of word 0xa802d2c0",
+      "comment": "Steps word 0xa802afec backwards through 0xd8..0xdc into bits 4..7 of word 0xa802d2c0",
       "name": "FUN_a009bcbc",
       "status": "matched"
     },
     "ram:a009bdcc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec forwards through 0xd8..0xdc into bits 4..7 of word 0xa802d2c0",
+      "comment": "Steps word 0xa802afec forwards through 0xd8..0xdc into bits 4..7 of word 0xa802d2c0",
       "name": "FUN_a009bdcc",
       "status": "matched"
     },
@@ -4183,14 +4183,14 @@
     "ram:a009bfb4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection word 0xa802afec backwards through 0x5c..0x63 (pages of 7) and updates the dependent settings",
+      "comment": "Steps word 0xa802afec backwards through 0x5c..0x63, stores FUN_a00b6b88(value - 0x5c, 1) at 0xa802d411, then FUN_a00db738 / FUN_a00aacb4 / FUN_a00a9650 / FUN_a00a813c calls",
       "name": "FUN_a009bfb4",
       "status": "matched"
     },
     "ram:a009c22c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection word 0xa802afec forwards through 0x5c..0x63 (pages of 7) and updates the dependent settings",
+      "comment": "Steps word 0xa802afec forwards through 0x5c..0x63, stores FUN_a00b6b88(value - 0x5c, 1) at 0xa802d411, then FUN_a00db738 / FUN_a00aacb4 / FUN_a00a9650 / FUN_a00a813c calls",
       "name": "FUN_a009c22c",
       "status": "matched"
     },
@@ -4211,14 +4211,14 @@
     "ram:a009c67c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec backwards through 0x77..0x79 into bits 18..19 of word 0xa802d33c",
+      "comment": "Steps word 0xa802afec backwards through 0x77..0x79 into bits 18..19 of word 0xa802d33c",
       "name": "FUN_a009c67c",
       "status": "matched"
     },
     "ram:a009c75c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec forwards through 0x77..0x79 into bits 18..19 of word 0xa802d33c",
+      "comment": "Steps word 0xa802afec forwards through 0x77..0x79 into bits 18..19 of word 0xa802d33c",
       "name": "FUN_a009c75c",
       "status": "matched"
     },
@@ -4239,14 +4239,14 @@
     "ram:a009c99c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec backwards through 0x70..0x76, skipping positions FUN_a00aad30 rejects",
+      "comment": "Steps word 0xa802afec backwards through 0x70..0x76, skipping values FUN_a00aad30 rejects",
       "name": "FUN_a009c99c",
       "status": "matched"
     },
     "ram:a009ca54": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec forwards through 0x70..0x76, skipping positions FUN_a00aad30 rejects",
+      "comment": "Steps word 0xa802afec forwards through 0x70..0x76, skipping values FUN_a00aad30 rejects",
       "name": "FUN_a009ca54",
       "status": "matched"
     },
@@ -4267,14 +4267,14 @@
     "ram:a009cc0c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec backwards through 0x7f..0x85, skipping positions FUN_a00aad30 rejects",
+      "comment": "Steps word 0xa802afec backwards through 0x7f..0x85, skipping values FUN_a00aad30 rejects",
       "name": "FUN_a009cc0c",
       "status": "matched"
     },
     "ram:a009ccc0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec forwards through 0x7f..0x85, skipping positions FUN_a00aad30 rejects",
+      "comment": "Steps word 0xa802afec forwards through 0x7f..0x85, skipping values FUN_a00aad30 rejects",
       "name": "FUN_a009ccc0",
       "status": "matched"
     },
@@ -4316,7 +4316,7 @@
     "ram:a009db20": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec forwards through 0x3c..0x3e, skipping positions FUN_a00aad30 rejects",
+      "comment": "Steps word 0xa802afec forwards through 0x3c..0x3e, skipping values FUN_a00aad30 rejects",
       "name": "FUN_a009db20",
       "status": "matched"
     },
@@ -4365,14 +4365,14 @@
     "ram:a009df5c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec backwards through 0xbb..0xbf, skipping positions FUN_a00aad30 rejects",
+      "comment": "Steps word 0xa802afec backwards through 0xbb..0xbf, skipping values FUN_a00aad30 rejects",
       "name": "FUN_a009df5c",
       "status": "matched"
     },
     "ram:a009e00c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps the selection in word 0xa802afec forwards through 0xbb..0xbf, skipping positions FUN_a00aad30 rejects",
+      "comment": "Steps word 0xa802afec forwards through 0xbb..0xbf, skipping values FUN_a00aad30 rejects",
       "name": "FUN_a009e00c",
       "status": "matched"
     },
@@ -4405,14 +4405,14 @@
     "ram:a009e2cc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps byte 0xa802d33c up through 0..4 and reports it",
+      "comment": "Steps byte 0xa802d33c up through 0..4 and passes it to FUN_a00da754, FUN_a00a9650 and FUN_a00a813c",
       "name": "FUN_a009e2cc",
       "status": "matched"
     },
     "ram:a009e348": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps byte 0xa802d33c down through 0..4 and reports it",
+      "comment": "Steps byte 0xa802d33c down through 0..4 and passes it to FUN_a00da754, FUN_a00a9650 and FUN_a00a813c",
       "name": "FUN_a009e348",
       "status": "matched"
     },
@@ -4433,28 +4433,28 @@
     "ram:a009e538": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps byte 0xa802d470 up through 0..1 and reports it with FUN_a00a9650 and FUN_a00a813c",
+      "comment": "Steps byte 0xa802d470 up through 0..1 and passes it to FUN_a00a9650 and FUN_a00a813c",
       "name": "FUN_a009e538",
       "status": "matched"
     },
     "ram:a009e5ac": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps byte 0xa802d470 down (0 becomes 1) and reports it with FUN_a00a9650 and FUN_a00a813c",
+      "comment": "Steps byte 0xa802d470 down (0 becomes 1) and passes it to FUN_a00a9650 and FUN_a00a813c",
       "name": "FUN_a009e5ac",
       "status": "matched"
     },
     "ram:a009e694": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps byte 0xa802d471 up through 0..1 and reports it with FUN_a00a9650 and FUN_a00a813c",
+      "comment": "Steps byte 0xa802d471 up through 0..1 and passes it to FUN_a00a9650 and FUN_a00a813c",
       "name": "FUN_a009e694",
       "status": "matched"
     },
     "ram:a009e708": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Steps byte 0xa802d471 down (0 becomes 1) and reports it with FUN_a00a9650 and FUN_a00a813c",
+      "comment": "Steps byte 0xa802d471 down (0 becomes 1) and passes it to FUN_a00a9650 and FUN_a00a813c",
       "name": "FUN_a009e708",
       "status": "matched"
     },
@@ -4579,7 +4579,7 @@
     "ram:a00a13d8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Maps selection 0x38..0x3a to 0xc0..0xc2 with its stored byte and reports it",
+      "comment": "FUN_a00a900c, then word 0xa802afec 0x38..0x3a becomes 0xc0..0xc2 with byte 0xa8025c56 from 0xa802d478/47a/47c; FUN_a00a9650 and FUN_a00a813c",
       "name": "FUN_a00a13d8",
       "status": "matched"
     },
@@ -6747,7 +6747,7 @@
     "ram:a00c1adc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: digit 0-1 from the receive record to bit 31 of word 0xa802d3ac, then dependent calls, reply 5600+",
+      "comment": "UART command handler: digit 0-1 from the receive record to bit 31 of word 0xa802d3ac, then conditional calls, reply 5600+",
       "name": "FUN_a00c1adc",
       "status": "matched"
     },
@@ -6775,35 +6775,35 @@
     "ram:a00c29d8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-4 into byte 0xa802d3cf, conditional FUN_a0090fd8/fac refresh, reply 5600+",
+      "comment": "UART command: digit 0-4 into byte 0xa802d3cf, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
       "name": "FUN_a00c29d8",
       "status": "matched"
     },
     "ram:a00c2f08": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-4 selects record bytes 0x1a0-0x1a2 from tables, sets cff4 bit 14, conditional refresh, reply 5600+",
+      "comment": "UART command: digit 0-4 selects record bytes 0x1a0-0x1a2 from tables, sets cff4 bit 14, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
       "name": "FUN_a00c2f08",
       "status": "matched"
     },
     "ram:a00c3180": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-4 into byte 0xa802d3ce, conditional FUN_a0090fd8/fac refresh, reply 5600+",
+      "comment": "UART command: digit 0-4 into byte 0xa802d3ce, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
       "name": "FUN_a00c3180",
       "status": "matched"
     },
     "ram:a00c3380": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-12 into record byte 0x17b, conditional FUN_a0090fd8/fac refresh, reply 5600+",
+      "comment": "UART command: digit 0-12 into record byte 0x17b, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
       "name": "FUN_a00c3380",
       "status": "matched"
     },
     "ram:a00c35d0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-12 into record byte 0x190, conditional FUN_a0090fd8/fac refresh, reply 5600+",
+      "comment": "UART command: digit 0-12 into record byte 0x190, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
       "name": "FUN_a00c35d0",
       "status": "matched"
     },
@@ -6817,7 +6817,7 @@
     "ram:a00c3a30": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-10 into byte 0xa802d3d0, FUN_a00d8b30/FUN_a00d4998 refresh, reply 5600+",
+      "comment": "UART command: digit 0-10 into byte 0xa802d3d0, calls FUN_a00d8b30/FUN_a00d4998, reply 5600+",
       "name": "FUN_a00c3a30",
       "status": "matched"
     },
@@ -6838,21 +6838,21 @@
     "ram:a00c3f54": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-2 into record byte 0x2f, FUN_a00da254 refresh, reply 5600+",
+      "comment": "UART command: digit 0-2 into record byte 0x2f, calls FUN_a00da254, reply 5600+",
       "name": "FUN_a00c3f54",
       "status": "matched"
     },
     "ram:a00c4144": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: digit 0-2 from the receive record to word 0xa802d340 with dependent resets, reply 5600+",
+      "comment": "UART command handler: digit 0-2 from the receive record to word 0xa802d340 with conditional clears and calls, reply 5600+",
       "name": "FUN_a00c4144",
       "status": "matched"
     },
     "ram:a00c46d4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: digit 0-1 from the receive record to byte 0xa802d2da; for 1 a sequence of conditional resets, reply 5600+",
+      "comment": "UART command handler: digit 0-1 from the receive record to byte 0xa802d2da; for 1 a sequence of conditional clears and calls, reply 5600+",
       "name": "FUN_a00c46d4",
       "status": "matched"
     },
@@ -6866,7 +6866,7 @@
     "ram:a00c5a00": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-3 into byte 0xa802d2a1 via switch, FUN_a00d9764 refresh, reply 5600+",
+      "comment": "UART command: digit 0-3 into byte 0xa802d2a1 via switch, calls FUN_a00d9764, reply 5600+",
       "name": "FUN_a00c5a00",
       "status": "matched"
     },
@@ -6880,7 +6880,7 @@
     "ram:a00c5e40": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-4 into bits 16-19 of record word 0x34, FUN_a00d58f8/58d8/4998 refresh, reply 5600+",
+      "comment": "UART command: digit 0-4 into bits 16-19 of record word 0x34, calls FUN_a00d58f8/FUN_a00d58d8/FUN_a00d4998, reply 5600+",
       "name": "FUN_a00c5e40",
       "status": "matched"
     },
@@ -6894,7 +6894,7 @@
     "ram:a00c6228": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-1 into bit 17 of record word 0xac, FUN_a00d5cd8 refresh, reply 5600+",
+      "comment": "UART command: digit 0-1 into bit 17 of record word 0xac, calls FUN_a00d5cd8, reply 5600+",
       "name": "FUN_a00c6228",
       "status": "matched"
     },
@@ -6908,7 +6908,7 @@
     "ram:a00c762c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-5 into byte 0xa802d2d9, FUN_a00d4084/FUN_a00d4998 refresh, reply 5600+",
+      "comment": "UART command: digit 0-5 into byte 0xa802d2d9, calls FUN_a00d4084/FUN_a00d4998, reply 5600+",
       "name": "FUN_a00c762c",
       "status": "matched"
     },
@@ -6922,7 +6922,7 @@
     "ram:a00c7a5c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: digit 0-2 from the receive record to byte 0xa802d2af, then a sequence of conditional resets, reply 5600+",
+      "comment": "UART command handler: digit 0-2 from the receive record to byte 0xa802d2af, then a sequence of conditional clears and calls, reply 5600+",
       "name": "FUN_a00c7a5c",
       "status": "matched"
     },
@@ -6943,14 +6943,14 @@
     "ram:a00c8818": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-3 -> FUN_a014459c into record byte 0x20, FUN_a00d5938/a0124f44/(d5cd8)/a0124f24 refresh, reply 5600+",
+      "comment": "UART command: digit 0-3 -> FUN_a014459c into record byte 0x20, calls FUN_a00d5938/FUN_a0124f44/(FUN_a00d5cd8)/FUN_a0124f24, reply 5600+",
       "name": "FUN_a00c8818",
       "status": "matched"
     },
     "ram:a00c8a44": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-2, stores 2-d at record byte 0x31, FUN_a00d7b20 refresh, reply 5600+",
+      "comment": "UART command: digit 0-2, stores 2-d at record byte 0x31, calls FUN_a00d7b20, reply 5600+",
       "name": "FUN_a00c8a44",
       "status": "matched"
     },
@@ -6964,7 +6964,7 @@
     "ram:a00c91dc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-4 into bits 4-7 of record word 0x30, FUN_a00d7a70(1) refresh, reply 5600+",
+      "comment": "UART command: digit 0-4 into bits 4-7 of record word 0x30, calls FUN_a00d7a70(1), reply 5600+",
       "name": "FUN_a00c91dc",
       "status": "matched"
     },
@@ -6992,7 +6992,7 @@
     "ram:a00c95a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-4 into byte 0xa802d3eb, FUN_a00d4998/FUN_a00d9120 refresh, reply 5600+",
+      "comment": "UART command: digit 0-4 into byte 0xa802d3eb, calls FUN_a00d4998/FUN_a00d9120, reply 5600+",
       "name": "FUN_a00c95a4",
       "status": "matched"
     },
@@ -7034,7 +7034,7 @@
     "ram:a00c9f44": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-1 into bit 31 of record word 0x1f4, FUN_a00d9fdc(2) refresh, reply 5600+",
+      "comment": "UART command: digit 0-1 into bit 31 of record word 0x1f4, calls FUN_a00d9fdc(2), reply 5600+",
       "name": "FUN_a00c9f44",
       "status": "matched"
     },
@@ -7193,7 +7193,7 @@
     "ram:a00cce80": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Stores the per-port digit byte minus '0' at 0xa802d298 and runs the port refresh calls",
+      "comment": "Stores the per-port digit byte minus '0' at 0xa802d298 and runs FUN_a00d4888, FUN_a00b88cc and the reply calls",
       "name": "FUN_a00cce80",
       "status": "matched"
     },
