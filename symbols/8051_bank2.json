@@ -490,7 +490,7 @@
     "CODE:573b": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "FOTG210 EP0 SETUP handler (SET_ADDRESS / GET_DESCRIPTOR / GET_STATUS / SET_CONFIGURATION); gap in functions.json, stand-in entry diff8051.EXTRA_FUNCS",
+      "comment": "FOTG210 EP0 SETUP handler (SET_ADDRESS / GET_DESCRIPTOR / GET_STATUS / SET_CONFIGURATION); module with FUN_CODE_7a60 (its common-entry block 0x7a46); gap in functions.json, stand-in entry diff8051.EXTRA_FUNCS",
       "name": "FUN_CODE_573b",
       "status": "matched"
     },
