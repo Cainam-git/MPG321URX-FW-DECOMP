@@ -4290,6 +4290,13 @@
       "name": "FUN_a00ad02c",
       "status": "matched"
     },
+    "ram:a00ad460": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Builds a menu screen: draws rows 6..0x15, clears rows 5..0x14, calls the page helpers and redraws the DAT_a802d419 fields",
+      "name": "FUN_a00ad460",
+      "status": "matched"
+    },
     "ram:a00adc98": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
