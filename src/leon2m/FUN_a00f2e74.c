@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f2e74 @ 0xa00f2e74  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00f2e74 @ 0xa00f2e74 (-mcpu=v8 -O2 -g)
  * Delay loop: a byte counter runs 0..0x1F with one nop per iteration. The byte counter produces the `and %o5,
  * 0xff` mask; the nop is an explicit __asm__ statement.
  */

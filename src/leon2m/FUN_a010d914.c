@@ -1,5 +1,5 @@
-/* leon2m FUN_a010d914 @ 0xa010d914-0xa010daf8 (344 bytes, 121 insns)  BYTE-EXACT at -mcpu=v8 -O3 -g
- * (jf 100 match=True, rawcmp 0 of 121 words).
+/* leon2m FUN_a010d914 @ 0xa010d914-0xa010daf8 (344 bytes, 121 insns) -mcpu=v8 -O3 -g
+ * (of 121 words).
  * void FUN_a010d914(u8 ch, u8 fmt, u8 val): record q = ctx(ch); q->b26 = val; q->b25 = fmt; table words +0x14 of
  * DAT_0019aec4[] and DAT_0019aebc[] = val (both entries when ch > 1); switch(fmt) -> q->b24 (0x10/0x20) and m;
  * 0xD0032004/0xD003A004 (ch 0) or ...008 = m << 16 | m | 1. Inlined in FUN_a0110318 as set_fmt(ch, 7, 0xff).

@@ -1,4 +1,4 @@
-/* leon2m FUN_a014bc58 @ 0xa014bc58  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a014bc58 @ 0xa014bc58 (-mcpu=v8 -O2 -g)
  * 
  */
 /* FUN_a014bc58 at 0xa014bc58 */

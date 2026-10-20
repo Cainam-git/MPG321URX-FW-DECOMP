@@ -1,4 +1,4 @@
-/* leon2m FUN_a0098d98 @ 0xa0098d98  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0098d98 @ 0xa0098d98 (-mcpu=v8 -O2 -g)
  * Calls FUN_a00a93bc(0), stores 0x2B to the word at 0xa802afec, calls FUN_a00a900c(1, 1) and FUN_a00b7530(0), then
  * sets bit 1 of DAT_a802b08e.
  */

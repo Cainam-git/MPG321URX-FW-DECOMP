@@ -1,4 +1,4 @@
-/* leon2s FUN_a009e9a4 @ 0xa009e9a4  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a009e9a4 @ 0xa009e9a4 (-mcpu=v8 -Os -g)
  * The difference was the base address: the firmware uses `0xa807d650` (the `sethi`/`or` pair computes this exact address), not `0xa807d65a`. The array declaration now points to the correct base, and the byte offset `+0xa` selects the field within the record.
  */
 typedef unsigned char undefined1;

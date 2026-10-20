@@ -1,4 +1,4 @@
-/* leon2m FUN_a0105150 @ 0xa0105150  output path setup, variant A (hand; BYTE-EXACT at
+/* leon2m FUN_a0105150 @ 0xa0105150  output path setup, variant A
  * -mcpu=v8 -O3 -g)
  *
  * Called by Disp_Init FUN_a0151db4 and FUN_a015209c with a 36-byte output configuration, stored at 0xA802D680
@@ -28,7 +28,7 @@
  *   and 0xCF00EFC0, not 0xCF00E804..E824 and 0xCF00EBC0.
  * Note: the 0xCF012890 bit merge writes the computed value to BOTH 0xCF012890 and 0xCF012990.
  * Display modes 5 and 11 behave the same here (neither is 8..10).
- * BYTE-EXACT keys:
+ * keys:
  *   - the f/a clamp exactly as in FUN_a0106d64: t = h10 (unsigned int) and a0 = h12 read before 'if (t != 0)',
  *     f re-read from the record, 'a = a0' before the f range check (f < 25 || f > 500).
  *   - the clock-path tests written as nested if (x != 0) { work } else { clear } (b0, b1, t, he); gcc cross-jumps

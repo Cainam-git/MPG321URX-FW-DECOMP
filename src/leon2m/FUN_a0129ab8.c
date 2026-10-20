@@ -1,5 +1,5 @@
 /* leon2m FUN_a0129ab8 @ 0xa0129ab8-0xa0129af0 (14 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/14 mismatches. Twin of FUN_a0129a24.
+ * Twin of FUN_a0129a24.
  * Code facts: leaf; one lduh of the halfword DAT_a802ca00; returns 1 if bit 0, 1 or 3 is set (btst/bne
  * chain), else (h & 4) != 0 (and 4; cmp %g0; addx). int result.
  * Fixes vs the autoc draft (50.00): the flag word is an unsigned short (lduh), and the last bit is

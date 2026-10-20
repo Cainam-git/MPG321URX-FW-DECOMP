@@ -1,6 +1,6 @@
 /* leon2m FUN_a0127154 @ 0xa0127154-0xa01272c8 (93 words), flags -mcpu=v8 -O3 -g -msoft-float
  * (NOTE: best flags differ; with plain '-mcpu=v8 -O3 -g' jf gives 74.19, register choice differs).
- * jf 100.00 match=True, rawcmp 0 mismatches with -msoft-float.
+ * with -msoft-float.
  * Code facts: twin of FUN_a0126ae4 with register 0x1b4 instead of 0x70: buf 0xa802d890 = {0, val};
  * FUN_a01248c8() & 0xff == 0 -> return; log FUN_a00df170(0x1a47f0, val); write FUN_a0147aa0(0x60, 2,
  * 0x1b4, 5, 0, &d890, 2, 1); func_0x4008d1a0(0x32); read back FUN_a0147ae8(0x60, 2, 0x1b4, 5, 0, &d888, 2);

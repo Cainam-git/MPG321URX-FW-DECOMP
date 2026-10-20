@@ -1,4 +1,4 @@
-/* leon2s FUN_a00d7210 @ 0xa00d7210  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00d7210 @ 0xa00d7210 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Table pick into a 2-byte setting: n =
  * (param_2[0] >> 4) - 1, index = n/2 rounded up; copies the low 7 bits of param_2[index + 3]
  * into param_1[0] (keeping its bit 7) and the high nibble of param_2[index + 4] into

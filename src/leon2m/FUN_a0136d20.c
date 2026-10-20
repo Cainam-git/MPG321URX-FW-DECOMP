@@ -1,5 +1,5 @@
-/* leon2m FUN_a0136d20 @ 0xa0136d20  copy Small-chip port template t into port entry n (hand;
- * BYTE-EXACT at -mcpu=v8 -O3 -g).
+/* leon2m FUN_a0136d20 @ 0xa0136d20  copy Small-chip port template t into port entry n
+ * Flags: -mcpu=v8 -O3 -g.
  *
  * t = 2, 3, 4, 5 for n = 0, 1, 2, 3, else t = 0. Template = 16 bytes at 0xA802DEC0 + 16*t (filled by FUN_a01387a4
  * from mailbox portal 1); entry = 18 bytes at 0xA802E116 + 18*n.
@@ -12,7 +12,7 @@
  *   nibble = template +0; index n (not t) selects the entry.
  * Callers: only FUN_a002f550 (RAM copy at 0x4008F550, four calls; its listing shows 'call 0xd6d20').
  * Returns nothing (the Ghidra 'uint' result is the leftover %i0).
- * BYTE-EXACT keys: h0 as a bitfield struct; the type and the flag bits written through DAT_a802e116[n] (the field
+ * keys: h0 as a bitfield struct; the type and the flag bits written through DAT_a802e116[n] (the field
  *   copies through a pointer local e); flag bit 5 written with an explicit '& 1' ('(f >> 5) & 1'), without it gcc
  *   drops the 'and' and the registers rotate (90.5 %).
  */

@@ -1,4 +1,4 @@
-/* leon2m FUN_a01382e4 @ 0xa01382e4  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a01382e4 @ 0xa01382e4 (-mcpu=v8 -O2 -g)
  * Copies the bytes at offsets 0x30, 0x31 and 0x32 of the structure at 0xA802E3D0 into a zero-initialized 4-byte
  * local buffer and calls FUN_a01370dc(0x7E, 4, buf, 0). The three-element initializer of the 4-byte array produces
  * the firmware's clr [%fp-16] before the byte stores. Takes no arguments and returns nothing.

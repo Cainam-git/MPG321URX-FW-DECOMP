@@ -1,4 +1,4 @@
-/* leon2s FUN_a00b1c64 @ 0xa00b1c64  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00b1c64 @ 0xa00b1c64 (-mcpu=v8 -Os -g)
  * Four separate read-modify-writes of volatile registers: 0x9F120048 |= bit 9, 0x9F120048 &= ~bit 25, 0x9F120080
  * |= bit 9, 0x9F120034 |= bit 5.
  */

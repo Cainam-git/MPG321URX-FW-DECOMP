@@ -1,5 +1,4 @@
 /* leon2m FUN_a0124180 @ 0xa0124180-0xa01241fc (31 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/31 mismatches.
  * What it does: the start-up default of the active panel row. It copies the 0x58-byte ROM default
  * row DAT_001a30d0 into the RAM row DAT_a802e378 (the row FUN_a01241fc returns and that the
  * rate code reads: h08/h0a sizes, the u16 fields at 0x4e/0x50/0x52). One struct assignment;

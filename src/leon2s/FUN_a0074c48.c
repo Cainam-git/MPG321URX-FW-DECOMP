@@ -1,4 +1,4 @@
-/* leon2s FUN_a0074c48 @ 0xa0074c48  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0074c48 @ 0xa0074c48 (-mcpu=v8 -Os -g)
  * Returns 1 when byte 1 of the 24-byte record (param_1 & 0xFF) of the table at 0xa807cc64 equals 1, else 0. The +1
  * in the index gives the target's ldub [%g1+1].
  */

@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f2298 @ 0xa00f2298  (hand; byte-exact at -mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f2298 @ 0xa00f2298  (-mcpu=v8 -O3 -g)
  *
  * Writes the 8-bit value val to register reg of a 0x19A2EC-table block; block 8 writes all eight blocks, block
  * numbers above 8 do nothing. Register = 32-bit word at 0xCF000000 + 4 * (block base + reg). Table 0x19A2EC:

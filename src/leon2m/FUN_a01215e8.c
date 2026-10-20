@@ -1,5 +1,4 @@
-/* leon2m FUN_a01215e8 @ 0xa01215e8-0xa01216f8 (68 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/68.
+/* leon2m FUN_a01215e8 @ 0xa01215e8-0xa01216f8 (68 words). -mcpu=v8 -O3 -g.
  * What it does (mode-table match FUN_a013f370 callee), for port (u8):
  *   RMW(port, 0x56, 1, 0) (FUN_a00f1b5c: clear bit 0 of reg 0x56);
  *   if (reg 4 & 3) != 3 and bit 6 of reg 0 is set: clear bit 6 of reg 0, then the delay func_0x4008d1a0(0x78);

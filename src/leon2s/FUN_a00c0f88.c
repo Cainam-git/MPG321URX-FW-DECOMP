@@ -1,5 +1,4 @@
-/* leon2s FUN_a00c0f88 @ 0xa00c0f88  MATCH (-mcpu=v8 -Os, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): name global_0xa8078620->DAT_a8078620
+/* leon2s FUN_a00c0f88 @ 0xa00c0f88 (-mcpu=v8 -Os)
  */
 extern int func_0xa0fb657c(int, int); // 0xa0fb657c
 extern int func_0xa0fb65c4(int, int, int); // 0xa0fb65c4

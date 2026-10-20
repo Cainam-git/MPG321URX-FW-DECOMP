@@ -1,4 +1,4 @@
-/* leon2s FUN_a008f9c0 @ 0xa008f9c0  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a008f9c0 @ 0xa008f9c0 (-mcpu=v8 -Os -g)
  * 
  * This should produce:
  */

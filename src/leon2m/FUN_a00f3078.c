@@ -1,5 +1,4 @@
 /* leon2m FUN_a00f3078 @ 0xa00f3078-0xa00f308c (5 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/5 mismatches.
  * Code facts: leaf; reads the 32-bit hardware register word at p (ld [%o0] -> %g1) and then the
  * word at p + 4, returns (p[1] << 8) | p[0] as a full int (no extension at the retl). Callers pass
  * 0xcf01xxxx register addresses (FUN_a010a9e8: 0xcf011ae0/ae8/af0), so p points at MMIO and the

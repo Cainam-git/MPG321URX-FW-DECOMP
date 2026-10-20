@@ -1,4 +1,4 @@
-/* leon2m FUN_a010a4d0 (34 insns) BYTE-EXACT at -mcpu=v8 -O3 -g, no aids (hand). Inlined into FUN_a010a558.
+/* leon2m FUN_a010a4d0 (34 insns) -mcpu=v8 -O3 -g, no aids (hand). Inlined into FUN_a010a558.
  * Reads a 16-bit counter: FUN_a0106274(0) if 0xCF011A80 bit 0, else FUN_a00f3078(0xCF011AD8 if bit 7, else 0xCF011C18);
  * writes value >> 2 as low byte to 0xCF01EAC4 and high byte | 0x80 to 0xCF01EAC0. */
 #define R(a) (*(volatile unsigned int *)(a))

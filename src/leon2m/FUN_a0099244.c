@@ -1,5 +1,4 @@
-/* leon2m FUN_a0099244 @ 0xa0099244-0xa009934c (66 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 66 words.
+/* leon2m FUN_a0099244 @ 0xa0099244-0xa009934c (66 words), flags -mcpu=v8 -O3 -g.
  * Code facts: record DAT_a802d290: bit 20 of word +0xac is toggled (srl 20 / xnor / and 1 / andn / or / st) as
  * a 1-bit bit-field written 'f20 = 1 - f20'; FUN_a00a5420(6, new bit). If byte +0x1f != 0: clear it,
  * FUN_a00d91fc(0), FUN_a0148268(0, 1), FUN_a0148268(1, 1), FUN_a00da254(). Then if FUN_a01445fc(byte +0x1e)

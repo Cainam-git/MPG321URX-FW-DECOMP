@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f8dd4 @ 0xa00f8dd4  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00f8dd4 @ 0xa00f8dd4 (-mcpu=v8 -O2 -g)
  * Returns FUN_a00f1ce4(param_1 & 0xff, 0x14) & 0xfff (the low 12 bits of the callee's result). The second
  * parameter is unused.
  */

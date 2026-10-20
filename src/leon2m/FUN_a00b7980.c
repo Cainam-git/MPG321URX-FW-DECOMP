@@ -1,5 +1,4 @@
 /* leon2m FUN_a00b7980 @ 0xa00b7980-0xa00b79cc (19 words; the fw nop at 0xa00b79cc is padding), flags -mcpu=v8 -O3 -g.
- * BYTE-EXACT: jf 100.00 match=True, rawcmp.py 0 mismatches / 19 words.
  * Code facts: leaf; if bit 20 of word 0xa802d290+0xac is set and byte +0x1f == 0: tail FUN_a00a9f30(6, 1);
  * else tail FUN_a00a9f30(6, 0) (both leaf sibcalls 'mov %o7, %g1; call; mov %g1, %o7').
  * Fix vs the autoc draft (75.00): one record DAT_a802d290 via a struct pointer (fw sethi|or into %o4, both reads

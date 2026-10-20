@@ -1,5 +1,5 @@
 /* FUN_a00d787c (leon2s, 0xa00d787c-0xa00d78d8, 92 bytes, 23 words, leaf).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/23 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: copies a 24-byte block param_1 -> param_2: byte 0 & 0x7f, byte 1 & 0xf8, byte 2 & 0xf9,
  * byte 3 as is, then bytes 4..23 in a u8 loop (i = 0..0x13).
  * Fix vs draft: bytes 1 and 2 are masked in an unsigned int temporary in separate statements

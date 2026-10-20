@@ -1,5 +1,5 @@
-/* leon2m FUN_a0091668 @ 0xa0091668-0xa0091710 (42 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 42 words. afec loop family, test-first variant.
+/* leon2m FUN_a0091668 @ 0xa0091668-0xa0091710 (42 words), flags -mcpu=v8 -O3 -g.
+ * afec loop family, test-first variant.
  * Code facts: FUN_a00b4144(word 0xa802afec - 2, 2); word afec = 0xb; loop: break when FUN_a00aa520(afec - 0xb)
  * == 1 (u8, 1 arg), else t = (lduh 0xa802afee) - 10, t %= 3 (smul 0x55555556), afec = t + 0xb. Then
  * FUN_a00a900c(afec - 0xb, 1) and tail FUN_a00aa4c0(afec - 0xb, 1). void(void).

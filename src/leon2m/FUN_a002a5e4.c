@@ -1,4 +1,4 @@
-/* leon2m FUN_a002a5e4 @ 0xa002a5e4  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a002a5e4 @ 0xa002a5e4 (-mcpu=v8 -O2 -g)
  * Reads the register at 0x9F020064 through FUN_a002c250, ORs in ((b & 0xFF) << a) << 16 and passes the result with
  * the remaining four parameters to FUN_a002c25c. FUN_a002c250 is declared to return int, which avoids an
  * 'and %o0,0xff,%o0' on its result.

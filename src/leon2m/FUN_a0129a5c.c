@@ -1,4 +1,4 @@
-/* leon2m FUN_a0129a5c @ 0xa0129a5c  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0129a5c @ 0xa0129a5c (-mcpu=v8 -O2 -g)
  * Returns the number of bits set among bits 0..3 of the halfword at 0xa802c9fe. The tests run in the target's
  * order (1, 2, 8, 4); the first test assigns 1 instead of incrementing, which gives the target's be with clr %o0
  * in the delay slot followed by mov 1, %o0.

@@ -1,4 +1,4 @@
-/* leon2m FUN_a00e0134 @ 0xa00e0134  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00e0134 @ 0xa00e0134 (-mcpu=v8 -O3 -g)
  * Adds (add != 0) or subtracts (add == 0) delta within the bits of mask of an 8-bit PHY register value.
  * Callers: FUN_a00e0e44 (two calls). Parameters: phy, addr, delta, mask, limit, keep, sat, add.
  * First counts the 0/1 transitions over the 32 bits of mask; unless there are one or two (one contiguous run of

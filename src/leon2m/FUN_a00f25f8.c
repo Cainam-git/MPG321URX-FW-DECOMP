@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f25f8 @ 0xa00f25f8  (hand; byte-exact at -mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f25f8 @ 0xa00f25f8  (-mcpu=v8 -O3 -g)
  *
  * Reads a 16-bit value (low byte at reg, high byte at reg + 1, low read first) from a 0x19A2EC-table block.
  * Block numbers 8 and up read block 0. For blocks 6 and 7, reg 0xA0 and reg 0xBE are remapped to the single

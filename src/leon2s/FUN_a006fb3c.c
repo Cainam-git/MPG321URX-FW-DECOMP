@@ -1,4 +1,4 @@
-/* leon2s FUN_a006fb3c @ 0xa006fb3c  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a006fb3c @ 0xa006fb3c (-mcpu=v8 -Os -g)
  * Byte-XOR checksum: clears the top byte of param_1[0], XORs all four bytes of each of the first (param_2 & 0xFF)
  * words and stores the result in the top byte of param_1[0]. The operand order `uVar4 ^ uVar3` gives the target's
  * xor %o5, %o4, %o4.

@@ -1,5 +1,5 @@
 /* leon2m FUN_a008c25c @ 0xa008c25c (hand), flags -mcpu=v8 -O3 -g (-msoft-float: same code)
- * BYTE-EXACT: jf 100 match=True, rawcmp 0/627 (rawcmp.py FUN_a008c25c FILE FLAGS a008c25c a008cc28), both flag sets.
+ * (rawcmp.py FUN_a008c25c FILE FLAGS a008c25c a008cc28), both flag sets.
  * Factory menu "+" key: steps the item selected by DAT_a802afbd (0..26) up and redraws it.
  *  1..6, 10..12: u8 values at 0xA802E1F6..E1FB / E202..E204, +1 saturating at 0xFF, redraw a group of 3 items;
  *  7..9: 0xA802D2A2..D2A4 +1 up to 100, item shows v*255/100 rounded; 13/14: 0xA802D299/D29A +1 up to 100 (+apply);

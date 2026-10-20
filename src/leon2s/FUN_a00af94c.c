@@ -1,4 +1,4 @@
-/* leon2s FUN_a00af94c @ 0xa00af94c  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00af94c @ 0xa00af94c (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Per-port step (param_1 = port): reads a byte
  * for the port via 0x9f1c6624, passes it to FUN_a00add48(port, value), and with the port
  * number that call returns runs FUN_a00a8370(p, 0, 0) and then FUN_a00a8370(p, 1, 0x6a).

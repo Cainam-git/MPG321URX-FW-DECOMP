@@ -1,4 +1,4 @@
-/* FUN_a008e7c0 (leon2s, 0xa008e7c0-0xa008e940, 96 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a008e7c0 (leon2s, 0xa008e7c0-0xa008e940, 96 words). Flags -mcpu=v8 -Os -g.
  Code facts: void (u8 p1, u8 p2, u8 p3). Read-modify-write of the hardware register 0xcf0116b4 (volatile, real HW).
  If p3 == 1 and p2 is one of 0x31/0x41/0x51/0x61: p1 0 -> |1, p1 1 -> |2, else &0xfc; then p2 0x51: p1 0 -> &0xfb, 1 -> &0xf7;
  p2 0x61: p1 0 -> |4, 1 -> |8. Otherwise (p3 != 1 or other p2): p1 0 -> &0xfe, 1 -> &0xfd. Every other path ends in &0xfc.

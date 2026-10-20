@@ -1,5 +1,4 @@
-/* leon2m FUN_a009da6c @ 0xa009da6c-0xa009db20 (45 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 45 words.
+/* leon2m FUN_a009da6c @ 0xa009da6c-0xa009db20 (45 words), flags -mcpu=v8 -O3 -g.
  * Code facts: w = word 0xa802afec; FUN_a00a93bc((w - 60) & 0xff); loop: v = ((low halfword of w) - 58) % 3,
  * w = v + 60, until FUN_a00aad30(v & 0xff) returns 1; byte 0xa802d40c = w - 60; FUN_a00a9650((w - 60) & 0xff, 1);
  * tail FUN_a00a813c(1, byte 0xa8025c56, 0) if w - 60 == that byte, else (.., 1) (two calls, cross-jumped).

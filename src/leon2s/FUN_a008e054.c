@@ -1,4 +1,4 @@
-/* leon2s FUN_a008e054 @ 0xa008e054  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a008e054 @ 0xa008e054 (-mcpu=v8 -Os -g)
  * Calls FUN_a00a80cc(param_1, 1, 7, 0x80, flag) with flag = 1 when param_2 is non-zero, else 0. The call is written
  * in both arms of the if/else; the firmware loads mov 1, %o1 on both paths.
  */

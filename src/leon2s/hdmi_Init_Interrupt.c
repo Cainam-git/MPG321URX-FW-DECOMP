@@ -1,5 +1,4 @@
-/* leon2s hdmi_Init_Interrupt @ 0xa00a2fd4  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): name hdmi_status->DAT_a8078634; format string with \n; function name as a static const char[] (separate .rodata object)
+/* leon2s hdmi_Init_Interrupt @ 0xa00a2fd4 (-mcpu=v8 -Os -g)
  */
 /* hdmi_Init_Interrupt at 0xa00a2fd4 */
 

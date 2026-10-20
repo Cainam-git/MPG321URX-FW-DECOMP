@@ -1,4 +1,4 @@
-/* leon2s FUN_a00ce4cc @ 0xa00ce4cc  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00ce4cc @ 0xa00ce4cc (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Per-port refresh of a 32-byte data block
  * (param_1 = port; 24-byte port records at 0xa8078bb0, the same table as FUN_a00cc900). Marks
  * the record busy (bits 16-17 = 01), reads 16 bytes via 0xa0f96400; if bit 1 of the first byte

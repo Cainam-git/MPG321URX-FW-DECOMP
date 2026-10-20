@@ -1,4 +1,4 @@
-/* leon2m FUN_a011023c @ 0xa011023c  layer update strobe. BYTE-EXACT at -mcpu=v8 -O3 -g.
+/* leon2m FUN_a011023c @ 0xa011023c  layer update strobe. -mcpu=v8 -O3 -g.
  *
  * FUN_a011023c(idx): when DAT_a8027a88 == 1, writes the update bit for layer idx to register 0xD003B000
  * (idx 0..6 -> bit idx, idx 7 -> 0x100, idx 8 -> 0x1FF = all layers) and waits until the register reads 0 or

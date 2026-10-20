@@ -1,7 +1,7 @@
 /* leon2s FUN_a00d3c40 @ 0xa00d3c40..0xa00d3eb0 (624 bytes, 156 words; FUN_a00d3ea8 = unreachable
- * ret/restore tail inside the range)  BYTE-EXACT
+ * ret/restore tail inside the range)
  * Flags: -mcpu=v8 -Os -g.
- * Judge: jf 100.00 match=True (linked at the real addresses); rawcmp_l2s.py
+ * (linked at the real addresses); rawcmp_l2s.py
  * 0 mismatches / 156 words (a00d3c40 a00d3eb0).
  * What it does (code facts): runs only when the register 0xcf03c80c reads 0x99. FUN_a00d36a4();
  * if bit DAT_a8078c37 of DAT_a8078c36 is set: FUN_a00d2d1c(), state DAT_a8078c38 = 0, report

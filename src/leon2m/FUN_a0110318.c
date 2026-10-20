@@ -1,5 +1,5 @@
-/* leon2m FUN_a0110318 @ 0xa0110318-0xa01107b8 (1184 bytes, 296 insns)  BYTE-EXACT at -mcpu=v8 -O3 -g
- * (jf 100 match=True, rawcmp 0 of 296 words).
+/* leon2m FUN_a0110318 @ 0xa0110318-0xa01107b8 (1184 bytes, 296 insns) -mcpu=v8 -O3 -g
+ * (of 296 words).
  * What it does (panel-row reader, sister of FUN_a01107b8): void(u8 ch). Record c = ctx(ch) (0xA802D704, ch 1: 0xA802D804);
  * returns if c->h16 (width) is 0; splits [x, x+w) at half = (*DAT_a802d6a4)->h08 >> 1 into first/second, sets the side
  * enable bits (0xD0032000/0xD003A000 +0x270), scales h0c by each part (udiv), inlined FUN_a010d914(ch, 7, 0xff) (set_fmt),

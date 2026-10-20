@@ -1,5 +1,4 @@
-/* leon2m FUN_a01085f8 @ 0xa01085f8-0xa01086fc (65 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/65.
+/* leon2m FUN_a01085f8 @ 0xa01085f8-0xa01086fc (65 words). -mcpu=v8 -O3 -g.
  * What it does: converter lock mode of channel ch (bit = 1 << ch) in three hardware registers
  * A = 0xcf011a84, B = 0xcf011a88, C = 0xcf011a8c (volatile, each a separate read-modify-write):
  *   mode 1:     A |= bit, B &= ~bit, C = ok ? C | bit : C & ~bit;

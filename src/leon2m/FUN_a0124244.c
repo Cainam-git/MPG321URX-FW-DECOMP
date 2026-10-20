@@ -1,5 +1,5 @@
 /* leon2m FUN_a0124244 @ 0xa0124244-0xa01243b0 (91 words), -mcpu=v8 -O3 -g.
- * BYTE-EXACT (from an 80.22 % draft): jf 100.00 match=True, rawcmp 0/91.
+ * (from an 80.22 % draft):
  * Called by APPTimerRoutine FUN_a0085984 (colour-cycling chain).
  * What it does: one step of a state-change watcher. lim = 2, f = 0; (u8)FUN_a012ad6c() != 1 -> f = 1, lim = 3.
  *   mode == 1: the two remembered bytes DAT_a802a420 / DAT_a802a421 = 0xff (forget), return.

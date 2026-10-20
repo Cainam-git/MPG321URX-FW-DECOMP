@@ -1,6 +1,5 @@
-/* leon2s FUN_a00ad320 @ 0xa00ad320..0xa00ad38c (108 bytes, 27 words)  BYTE-EXACT
+/* leon2s FUN_a00ad320 @ 0xa00ad320..0xa00ad38c (108 bytes, 27 words)
  * Flags: -mcpu=v8 -Os -g.
- * Judge: jf 100.00 match=True; rawcmp_l2s.py 0 mismatches / 27 words (a00ad320 a00ad38c).
  * What it does (code facts): returns 0 when byte 0x115 of the 300-byte (0x12c) record
  * param_1 of ARR_a807dc18 is 0; otherwise returns 1 only when FUN_a00ad27c(param_1) == 1 AND
  * bit 7 of FUN_a00a6bb8(param_1, 0x223) is set, else 0.

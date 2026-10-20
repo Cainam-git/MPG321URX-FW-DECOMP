@@ -1,4 +1,4 @@
-/* leon2s FUN_a006fb00 @ 0xa006fb00  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a006fb00 @ 0xa006fb00 (-mcpu=v8 -Os -g)
  * 
  */
 extern unsigned int DAT_a80788e0;

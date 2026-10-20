@@ -1,5 +1,4 @@
-/* leon2s TMDS_PowerOn @ 0xa0074c78  MATCH (-mcpu=v8 -Os, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): string 'TMDS_PowerOn  %d'->'TMDS_PowerOn  %d  \\r'
+/* leon2s TMDS_PowerOn @ 0xa0074c78 (-mcpu=v8 -Os)
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

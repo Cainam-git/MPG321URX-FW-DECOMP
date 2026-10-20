@@ -1,4 +1,4 @@
-/* leon2s FUN_a00911bc @ 0xa00911bc  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00911bc @ 0xa00911bc (-mcpu=v8 -Os -g)
  * The function takes an input, masks it to 0/1, calls FUN_a0074f60, then checks a byte at `0xa807cc64 + param_1*24 + 4`; if non-zero, it shifts the call result left by 2 and returns it as a 16-bit value. The key fix is declaring the array at the exact base address `0xa807cc64` and using the `+4` offset to match the target's `ldub [%g1 + 4]`.
  */
 extern int FUN_a0074f60();

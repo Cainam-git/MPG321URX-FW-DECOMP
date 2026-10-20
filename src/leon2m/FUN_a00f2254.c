@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f2254 @ 0xa00f2254  (hand; byte-exact at -mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f2254 @ 0xa00f2254  (-mcpu=v8 -O3 -g)
  *
  * Reads one 8-bit register of a 0x19A2EC-table block. Block numbers 8 and up read block 0.
  * Register addressing (shared by the FUN_a00f1xxx/FUN_a00f2xxx accessor family): a register is a 32-bit word at

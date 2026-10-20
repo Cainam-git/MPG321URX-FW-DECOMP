@@ -1,5 +1,5 @@
-/* leon2m FUN_a00f1a18 @ 0xa00f1a18  register bit set/clear, 0x19A2D8 block table (hand;
- * BYTE-EXACT at -mcpu=v8 -O3 -g).
+/* leon2m FUN_a00f1a18 @ 0xa00f1a18  register bit set/clear, 0x19A2D8 block table
+ * Flags: -mcpu=v8 -O3 -g.
  *
  * Read-modify-write of register reg of block blk: v = register; set == 1 -> v |= mask, else v &= ~mask; the low
  * 8 bits of v are written back. Block bases are the 32-bit words of the table at 0x0019A2D8; the register is the

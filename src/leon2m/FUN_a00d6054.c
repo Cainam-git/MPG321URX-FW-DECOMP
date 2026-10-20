@@ -1,5 +1,5 @@
 /* leon2m unit: FUN_a00d3d30 @ 0xa00d3d30 + FUN_a00d6054 @ 0xa00d6054 APP_ConfigDispSize (hand), both BYTE-EXACT.
- * Status: FUN_a00d6054 rawcmp 0/1623 ('-mcpu=v8 -O3 -g' and -msoft-float), FUN_a00d3d30 rawcmp 0/35, -Wall -W clean.
+ * Status: FUN_a00d6054 ('-mcpu=v8 -O3 -g' and -msoft-float), FUN_a00d3d30 -Wall -W clean.
  *   jf 99.00 match=False only from the exact() link step: 'memcpy' (gcc block-move libcall; fw memcpy =
  *   FUN_a013c910) has no firmware address, and .rodata.str1.8 / .rodata (strings at file 0x2a0768, tb init) are
  *   not inside parts/leon2m.bin. Judge gap, not code.

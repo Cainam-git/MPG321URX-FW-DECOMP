@@ -1,4 +1,4 @@
-/* leon2s FUN_a00d6c98 @ 0xa00d6c98  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00d6c98 @ 0xa00d6c98 (-mcpu=v8 -Os -g)
  * Computes k = u / 2 + (u & 1) with u = (param_2[0] >> 4) - 1, then merges
  * param_1[0] = (param_1[0] & 0x80) | (param_2[k + 3] & 0x7F) and
  * param_1[1] = (param_1[1] & 0x0F) | (param_2[k + 4] & 0xF0).

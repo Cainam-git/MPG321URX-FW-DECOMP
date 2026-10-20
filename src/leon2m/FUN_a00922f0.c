@@ -1,4 +1,4 @@
-/* leon2m FUN_a00922f0 @ 0xa00922f0  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00922f0 @ 0xa00922f0 (-mcpu=v8 -O2 -g)
  * Calls FUN_a00a8ee8 and FUN_a00aa01c with (_DAT_a802afec - 30) & 0xFF, FUN_a00a900c with the low byte of
  * FUN_a01445fc(DAT_a802d2ae), sets _DAT_a802afec = 6, calls FUN_a00b4144(4, 1) and FUN_a00a9468(1, 2), and returns
  * the result of the tail call FUN_a00b34d4(0, 1).

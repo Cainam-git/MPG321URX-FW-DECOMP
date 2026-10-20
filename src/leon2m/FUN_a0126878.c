@@ -1,4 +1,4 @@
-/* leon2m FUN_a0126878 @ 0xa0126878  (hand; byte-exact at -mcpu=v8 -O3 -g)
+/* leon2m FUN_a0126878 @ 0xa0126878  (-mcpu=v8 -O3 -g)
  *
  * Reads a 16-bit value over the software I2C bus, but only while a GPIO input is high.
  *

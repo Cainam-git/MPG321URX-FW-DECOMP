@@ -1,5 +1,4 @@
 /* leon2s FUN_a008e654 @ 0xa008e654-0xa008e6b8 (25 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/25 mismatches.
  * Code facts: (u8 port, u8 mode, 4 words passed through). FUN_a008e054(port, mode == 1 ? 0 : 1), then
  * FUN_a008da88(port, 1), FUN_a008df40(port, 1), FUN_a00b1794(1), FUN_a008df7c(port, 1), and the sibcall
  * FUN_a008e004(port, mode, p3, p4, p5, p6) (%i2..%i5 untouched). void.

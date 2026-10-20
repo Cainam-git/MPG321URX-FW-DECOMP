@@ -1,4 +1,4 @@
-/* FUN_a00af1e8 (leon2s, 0xa00af1e8-0xa00af320, 78 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a00af1e8 (leon2s, 0xa00af1e8-0xa00af320, 78 words). Flags -mcpu=v8 -Os -g.
  Code facts: twin of FUN_a00af320. If (u8)FUN_a00ad784(port) == 0 return 0. Reads regs 0xc, 0xd, 0x10, 0x11 through the index/data pair
  (a6c00(port,0x70,0), a6c00(port,0x73,idx), a6bb8(port,0x7a)); num = (r0 << 8) + r1, div = (r2 << 8) + r3 (u16, joined with add);
  returns the u8 quotient num / div, or 0 when div == 0.

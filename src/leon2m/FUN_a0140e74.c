@@ -1,5 +1,5 @@
 /* leon2m FUN_a0140e74 @ 0xa0140e74..0xa01410a4 (140 words): settings-storage WRITE.
- * Exact: -mcpu=v8 -O3 -g, jf 100.00 match=True, rawcmp 0/140.
+ * Exact: -mcpu=v8 -O3 -g.
  *
  * Plain words: writes len bytes from buf to settings storage 'dev' at storage address addr. The ROM record table
  * DAT_001a69fe[dev] (0x26 bytes per device) says how: its byte b0 with bit 7 SET selects the second path (not

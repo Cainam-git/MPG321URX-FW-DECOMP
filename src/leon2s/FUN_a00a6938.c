@@ -1,5 +1,5 @@
 /* leon2s FUN_a00a6938 @ 0xa00a6938-0xa00a69b4 (31 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/31 mismatches. Read twin of FUN_a00a6f08.
+ * Read twin of FUN_a00a6f08.
  * Code facts: stable-read loop: v = FUN_a00a68d0(port, reg); up to 6 times, re-read and stop when
  * the 16-bit values match; else v = a fresh read and n++ (n <= 4). Returns (u16)v.
  * Required forms: the a6f08 loop form; the callee is declared with an unsigned int

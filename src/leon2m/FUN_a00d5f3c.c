@@ -1,5 +1,4 @@
-/* leon2m FUN_a00d5f3c @ 0xa00d5f3c-0xa00d5f9c (24 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 24 words.
+/* leon2m FUN_a00d5f3c @ 0xa00d5f3c-0xa00d5f9c (24 words), flags -mcpu=v8 -O3 -g.
  * Code facts: record DAT_a802d290: when byte +0x4a != 0 and word +0xb0 != 0: byte +0x4a = 0 (the clrb sits in
  * the delay slot of the +0x1f test, so it runs on both paths), then if byte +0x1f == 0: FUN_a014d474(1, 0) and
  * FUN_a014dd98(1, 0). The function ends with a real 'nop' at the join label before ret/restore. void(void).

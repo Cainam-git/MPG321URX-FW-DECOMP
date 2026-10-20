@@ -1,4 +1,4 @@
-/* leon2m FUN_a0129b44 @ 0xa0129b44  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0129b44 @ 0xa0129b44 (-mcpu=v8 -O2 -g)
  * Fixed set-up sequence of calls into the FUN_a01016cc..FUN_a0101b20 group: FUN_a0101704(0x1A3128),
  * FUN_a010178c(0x3C0, 3), FUN_a0101868(8, 0), FUN_a0101884(4, 1), FUN_a01018b0(0), FUN_a010192c(0xF); copies
  * DAT_a802a449 to DAT_a802a448 and calls FUN_a0101a28(DAT_a802ca03, DAT_a802a449); then FUN_a0101a4c(5, 5),

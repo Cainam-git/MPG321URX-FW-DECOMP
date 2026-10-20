@@ -1,4 +1,4 @@
-/* leon2m FUN_a0133514 @ 0xa0133514  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0133514 @ 0xa0133514 (-mcpu=v8 -O2 -g)
  * Calls func_0x4008c4d0(0, 0x0C, &local, 1) with a zero-initialised 32-bit local and returns bits 8..15 of the
  * value written to it (ldub, zero-extended into %i0).
  */

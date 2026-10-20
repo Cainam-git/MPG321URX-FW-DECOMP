@@ -1,4 +1,4 @@
-/* leon2m FUN_a00fe3ec @ 0xa00fe3ec  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00fe3ec @ 0xa00fe3ec (-mcpu=v8 -O3 -g)
  * Reads back the field that FUN_a00fe1dc writes: the register is 0xCF0116E0 when FUN_a011cf88() returns above
  * 0x81, else 0xCF0116D4; of its low byte, bits 3 and 5 (0x28) are kept.
  * Returns 3 when the field is 0x20, 2 when it is 0x08, otherwise 1. No direct callers found.

@@ -1,6 +1,5 @@
 /*
  * FUN_a00a2a28 (leon2s, 0xa00a2a28-0xa00a2a80, 88 bytes), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/22.
  * Code facts: for both 0x34-byte port records ARR_a807db00[0..1] (u8 counter): FUN_a00a73ac(0x14, ctl + 0x34
  * bytes) and FUN_a00a73ac(0x15, ctl + 0x34 bytes), where ctl is the register pointer at record +4 (reloaded
  * after the first call). Returns 0 (fw 'restore %g0, 0, %o0'; the draft returned param_2 << 32).

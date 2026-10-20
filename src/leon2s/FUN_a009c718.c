@@ -1,4 +1,4 @@
-/* leon2s FUN_a009c718 @ 0xa009c718  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a009c718 @ 0xa009c718 (-mcpu=v8 -Os -g)
  * Fills the record at param_2 for port param_1 & 0xFF: words 0..3 from FUN_a009c3f0 (low byte), FUN_a009c4a4 (low
  * byte), FUN_a009c558 and FUN_a009c58c; byte +0x10 from FUN_a0097ed0; byte +0x11 from FUN_a009c6e4 when a second
  * FUN_a0097ed0 call returns a non-zero low byte, else 0. FUN_a0097ed0 and FUN_a009c6e4 take one argument (only %o0

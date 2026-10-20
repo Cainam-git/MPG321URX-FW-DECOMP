@@ -1,5 +1,5 @@
-/* leon2m FUN_a002be7c @ 0xa002be7c..0xa002c11c (168 words). BYTE-EXACT: jf 100.00
- * match=True, rawcmp 0/168 with -mcpu=v8 -O3 -g.
+/* leon2m FUN_a002be7c @ 0xa002be7c..0xa002c11c (168 words). jf 100.00
+ * match=True, with -mcpu=v8 -O3 -g.
  * What it does: I2C "is the device there" probe. The settings write FUN_a0140e74 uses it as its write-cycle ACK poll
  * after every 16-byte chunk (start-up callers FUN_a0153c74 / FUN_a012cfac, only when they write defaults).
  * Code facts: only if the bus copy 0xA802D992 has mode 2 (else returns 0 at once): START (FUN_a002a910), STOP (SDA 0,

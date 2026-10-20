@@ -1,5 +1,4 @@
-/* leon2m FUN_a013b86c @ 0xa013b86c-0xa013b92c (48 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/48.
+/* leon2m FUN_a013b86c @ 0xa013b86c-0xa013b92c (48 words). -mcpu=v8 -O3 -g.
  * What it does (dc6c callee): maps a port number (0..3) to a slot index:
  *   ch = the first channel 0..3 whose record DAT_a802df30[ch] has this 4-bit port field;
  *   result = the first i 0..3 with FUN_a01436b4(i) == ch (FUN_a01436b4 maps 0..3 to a channel number),

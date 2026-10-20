@@ -1,4 +1,4 @@
-/* leon2m FUN_a013a728 @ 0xa013a728  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a013a728 @ 0xa013a728 (-mcpu=v8 -O2 -g)
  * Copies param_1 into a local word and writes it with func_0x4008c5f8(2, 0x38, &local, 1) (MailBox_Write, portal 2,
  * offset 0x38, one word).
  */

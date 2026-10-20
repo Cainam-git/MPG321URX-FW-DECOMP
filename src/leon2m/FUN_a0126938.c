@@ -1,5 +1,5 @@
 /* leon2m FUN_a0126938 @ 0xa0126938  OLED set EL sensing: writes register 0xC2 of the panel-side OLED controller and prints 'OLED set EL sensing %d'.
- * (hand; BYTE-EXACT at -mcpu=v8 -O3 -msoft-float; verified word by word.)
+ * (hand; -mcpu=v8 -O3 -msoft-float; verified word by word.)
  * Stand-alone copy of a small static helper that FUN_a0127c78 (OLED power / panel state machine) also
  * inlines.
  */

@@ -1,5 +1,4 @@
 /* leon2s FUN_a009c558 @ 0xa009c558-0xa009c58c (13 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/13 mismatches.
  * Code facts: leaf; r = register-block pointer at +4 of the 0x34-byte port record ARR_a807db00[port];
  * returns (r[2] & 0xff) << 16 | r[1] >> 16 (two full-word ld, +8 first). The record pointer is an
  * MMIO block (full-word loads with field extraction), so it is volatile.

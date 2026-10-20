@@ -1,5 +1,4 @@
 /* leon2m FUN_a01542c4 @ 0xa01542c4-0xa015440c (82 words), -mcpu=v8 -O3 -g.
- * BYTE-EXACT: jf 100.00 match=True, rawcmp 0/82.
  * What it does: the mode-table STORE (sibling of the lookup FUN_a01541ec). FUN_a013f370 calls it with the channel
  *   record + 6 after a new input timing is applied and FUN_a01541ec found no table row for it (FUN_a0145360 also
  *   calls it per channel). The table is 20 rows of 16 bytes at settings-EEPROM offset 0x300 (I2C device 0,

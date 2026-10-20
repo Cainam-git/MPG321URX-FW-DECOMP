@@ -1,4 +1,4 @@
-/* leon2m FUN_a0096494 @ 0xa0096494  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0096494 @ 0xa0096494 (-mcpu=v8 -O2 -g)
  * Reads byte 0x11 of the mode record at 0xA802D290 into DAT_a8025c56 and calls FUN_a00a813c(1, byte, 0), then
  * FUN_a00a900c((_DAT_a802afec - 24) & 0xff, 2). It reads byte 0x11 again, stores byte + 0x6c to _DAT_a802afec,
  * calls FUN_a00a9650(byte, 1) and writes 0x0D to DAT_a802b08f.

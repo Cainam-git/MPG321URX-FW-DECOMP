@@ -1,6 +1,5 @@
-/* leon2m FUN_a00abd00 @ 0xa00abd00..0xa00abdc8 (200 bytes, 50 words)  BYTE-EXACT
+/* leon2m FUN_a00abd00 @ 0xa00abd00..0xa00abdc8 (200 bytes, 50 words)
  * Flags: -mcpu=v8 -O3 -g.
- * Judge: jf 100.00 match=True; rawcmp.py 0 mismatches / 50 words (a00abd00 a00abdc8).
  * What it does (code facts): step DOWN twin of FUN_a00abff8 on byte 0x13: v = DAT_a802d290[0x13] - 1;
  * v > 100 (wrapped below 0) stores 0, else stores v and redraws with row 8 and FUN_a0146b50(0xe8, 0),
  * then FUN_a00d462c(). Always sets bit 1 of DAT_a802b08e.

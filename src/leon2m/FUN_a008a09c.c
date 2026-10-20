@@ -1,5 +1,5 @@
-/* leon2m FUN_a008a09c @ 0xa008a09c-0xa008a174 (54 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/54 (written from the asm).
+/* leon2m FUN_a008a09c @ 0xa008a09c-0xa008a174 (54 words). -mcpu=v8 -O3 -g.
+ * (written from the asm).
  * What it does (APP event pump FUN_a008a210 callee): picks one pending event code and hands it on:
  *   v = 0xc7 (none); the first of FUN_a0088654, FUN_a008866c, FUN_a0088688, FUN_a00886a4, FUN_a00886c0,
  *   FUN_a00886dc, FUN_a00886f8 that returns nonzero gives v = 0xc0, 0xc2, 0xc1, 0xc3, 0xc4, 0xc5, 0xc6

@@ -1,5 +1,4 @@
 /* leon2s FUN_a0091a10 @ 0xa0091a10-0xa0091a4c (15 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/15 mismatches.
  * Code facts: leaf. For ch <= 1 returns (word 0 of the 0x1c-byte record ARR_a807d580[ch] >> 31)
  * != 0 (srl 31; cmp %g0; addx), else 0. u8 result from an int local.
  * Fix vs the autoc draft (80.00): the '!= 0' test of the top bit in an INT local (a u8/_Bool local

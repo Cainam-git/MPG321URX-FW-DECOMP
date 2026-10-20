@@ -1,5 +1,5 @@
-/* leon2m FUN_a015ea98 @ 0xa015ea98  MATCH (-mcpu=v8 -O2 -g, twin)
- * Twin of FUN_a015e9d8: same code, constants swapped; byte-exact.
+/* leon2m FUN_a015ea98 @ 0xa015ea98 (-mcpu=v8 -O2 -g)
+ * Twin of FUN_a015e9d8: same code, other constants.
  */
 /* Global function pointer at 0xa802cfdc (DRAM) */
 typedef int (*code)(int);

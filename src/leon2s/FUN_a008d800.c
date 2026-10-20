@@ -1,5 +1,4 @@
 /* leon2s FUN_a008d800 @ 0xa008d800-0xa008d8d8 (54 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/54 mismatches.
  * Code facts: returns a u8 mode code from two hardware words: word 0xcf011444 (re-read for each test) and
  * word 0xcf011440 == 1 (full 'ld', so u32): 0x16 -> (byte 0x9f1b0606 == 1 ? 0x81 : 0x80), 0x1e -> 0x82,
  * 0x1f -> 0x83, 0x17 -> 0x84; anything else 0x84 (preset). Callers test the result (FUN_a00a0b10, FUN_a00af764).

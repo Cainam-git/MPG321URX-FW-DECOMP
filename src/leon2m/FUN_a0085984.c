@@ -1,5 +1,5 @@
 /* FUN_a0085984 (APPTimerRoutine), byte-exact at -mcpu=v8 -O3 -g (hand).
- * Verified: jf.py 100 % and rawcmp.py 0 mismatches over 1,035 words (0xA0085984..0xA00869B0).
+ * Verified: jf.py 100 % and over 1,035 words (0xA0085984..0xA00869B0).
  * What it does (code facts): Big chip main-loop task (called from FUN_a0087430): OLED error detection, Vx1 check,
  * fake-sleep counter / escape, timers 0x13 / 1 / 0x14 / 0x15 / 0x16, PIP source / CEC dispatch (jump table at
  * 0xA0085CAC, all targets in range), the two power-saving chains (DAT_a802af42 bit 0x10 / bit 0x4000) and the

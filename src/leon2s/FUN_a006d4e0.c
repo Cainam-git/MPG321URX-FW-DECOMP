@@ -1,5 +1,4 @@
-/* leon2s FUN_a006d4e0 @ 0xa006d4e0-0xa006d53c (23 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches / 23 words.
+/* leon2s FUN_a006d4e0 @ 0xa006d4e0-0xa006d53c (23 words), flags -mcpu=v8 -Os -g.
  * Code facts: leaf: data = byte 0xa80788d3; for i = 0..8 (u8): bit 7 of the u16 at +0x12 of the 20-byte record
  * ARR_a807a824[i] = bit i of data (signed shift of the int-promoted byte).
  * Fix vs the autoc draft: the record address as integer arithmetic r = (struct Rec *)(i * sizeof + b) with

@@ -1,5 +1,4 @@
-/* leon2m FUN_a014c794 @ 0xa014c794-0xa014c7bc (10 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 10 words.
+/* leon2m FUN_a014c794 @ 0xa014c794-0xa014c7bc (10 words), flags -mcpu=v8 -O3 -g.
  * Code facts: byte 0xa802e3d0+0x18 = u8 param; FUN_a012eeb0(param & 0xff); tail FUN_a014c118(byte rec+0xb)
  * (1 arg, restore in the delay slot). void.
  * Fix vs the autoc draft (70.00): real base DAT_a802e3d0 as a struct (draft: DAT_a802e3e8 / DAT_a802e3db

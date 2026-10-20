@@ -1,5 +1,4 @@
-/* leon2m FUN_a0099970 @ 0xa0099970  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: swap lines 9
+/* leon2m FUN_a0099970 @ 0xa0099970 (-mcpu=v8 -O3 -g)
  */
 extern unsigned int _DAT_a802afec;
 extern unsigned char DAT_a802d2da;

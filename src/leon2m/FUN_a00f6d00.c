@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f6d00 @ 0xa00f6d00  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f6d00 @ 0xa00f6d00 (-mcpu=v8 -O3 -g)
  * Writes four 16-bit values as byte pairs (low byte first) to the hardware registers 0xCF00EC88..0xCF00ECA4:
  * a -> 0xCF00EC88/8C, c -> 0xCF00EC90/94, b -> 0xCF00EC98/9C, d -> 0xCF00ECA0/A4.
  * Callers: FUN_a012d554 (several), FUN_a013d918.

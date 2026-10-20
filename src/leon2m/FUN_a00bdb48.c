@@ -1,5 +1,5 @@
 /* FUN_a00bdb48 (leon2m, 0xa00bdb48-0xa00bdb88, 64 bytes, 16 words).
- * Flags: -mcpu=v8 -O3 -g. Judge: jf 100.00 match=True, rawcmp 0/16 mismatches.
+ * Flags: -mcpu=v8 -O3 -g.
  * Code facts: writes bytes 7 = 0x30, 8 = 0x30, 9 = 0x9f of DAT_a802d078 (fw base sethi/or 0xa802d078),
  * calls FUN_a00bac3c(0x2f), masks the parameter to its low byte, calls FUN_a00ba950(p) and
  * tail-calls FUN_a00babe4(p, 0xb) (restore %g0,0xb,%o1 in the delay slot).

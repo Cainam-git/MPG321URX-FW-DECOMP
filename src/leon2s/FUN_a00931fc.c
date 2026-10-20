@@ -1,4 +1,4 @@
-/* leon2s FUN_a00931fc @ 0xa00931fc  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00931fc @ 0xa00931fc (-mcpu=v8 -Os -g)
  * Copies values through the read function pointer at 0xa807d5b8, called as fn(param_1 & 0xFF, index), into
  * FUN_a00a8054(param_2, 0, dst, value): indexes 0x12A..0x12C to 0x11E..0x120 and 0x130..0x131 to 0x121..0x122,
  * then FUN_a00a80cc(param_2, 0, 0x13E, 0x30, 0), indexes 0x180..0x188 to the same index, and finally

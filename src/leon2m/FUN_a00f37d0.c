@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f37d0 @ 0xa00f37d0  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f37d0 @ 0xa00f37d0 (-mcpu=v8 -O3 -g)
  * Writes the byte v to the hardware register 0xCF01281C, then passes v to the function pointer at
  * DAT_a802b770 + 0xC when the flag byte DAT_a802b770 is set and the pointer is non-null.
  * DAT_a802b770 is the 0x24-byte record described in FUN_a00f3528.

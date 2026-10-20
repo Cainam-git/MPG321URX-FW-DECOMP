@@ -1,5 +1,4 @@
 /* leon2m FUN_a00be250 @ 0xa00be250-0xa00be2a0 (20 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/20 mismatches.
  * Code facts: DAT_a802d078[7] = DAT_a802d078[8] = '0', DAT_a802d078[9] = bits 18..19 of the word
  * DAT_a802d290 + 0xac (srl 18, and 3) + '0'; FUN_a00bac3c(0x6a); FUN_a00ba950(port); sibcall
  * FUN_a00babe4(port, 0xb). port is a u8 param. Same shape as FUN_a00bc86c.

@@ -1,4 +1,4 @@
-/* leon2s FUN_a0061864 @ 0xa0061864  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0061864 @ 0xa0061864 (-mcpu=v8 -Os -g)
  * Byte-swaps (param_2 >> 2) 32-bit words in place starting at param_1 and returns the pointer past the last word.
  * The temporaries t1..t5 give the firmware's order of the mask and shift operations.
  */

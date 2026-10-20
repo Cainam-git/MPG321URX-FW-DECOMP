@@ -1,4 +1,4 @@
-/* leon2s FUN_a0061534 @ 0xa0061534  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0061534 @ 0xa0061534 (-mcpu=v8 -Os -g)
  * Stores param_2 to *param_1. The volatile pointer keeps the st ahead of retl / nop; without it GCC 3.4 -Os places
  * the st in the retl delay slot.
  */

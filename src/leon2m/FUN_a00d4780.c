@@ -1,5 +1,5 @@
-/* leon2m FUN_a00d4780 @ 0xa00d4780-0xa00d47ac (11 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 11 words. Leaf frame, sibcall (mov %o7 form).
+/* leon2m FUN_a00d4780 @ 0xa00d4780-0xa00d47ac (11 words), flags -mcpu=v8 -O3 -g.
+ * Leaf frame, sibcall (mov %o7 form).
  * Code facts: v = byte 0xa802d290+0xf; if v > 5 then v = 5 (bgu,a); byte rec+0xf = v; tail call
  * FUN_a014a388(v & 0xff) (the fw re-extends after the store).
  * Fix vs the autoc draft (73.53): real base DAT_a802d290 as a struct (draft: DAT_a802d29f mid-record name);

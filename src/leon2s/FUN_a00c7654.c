@@ -1,5 +1,5 @@
-/* leon2s FUN_a00c7654 @ 0xa00c7654-0xa00c76c0 (27 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s.py 0 mismatches / 27 words. Write twin of FUN_a00c7770.
+/* leon2s FUN_a00c7654 @ 0xa00c7654-0xa00c76c0 (27 words), flags -mcpu=v8 -Os -g.
+ * Write twin of FUN_a00c7770.
  * Code facts: idx > 2 (u8): tail ROM print func_0xa0f83044(s_9f1c1f18, s_9f1c1ed8, idx, reg, val) (the
  * 'sll idx,2,%i5' in the bleu delay slot is the table offset of the other path, not an argument). Else the
  * hardware word ((DAT_9f1c1ec8[idx] + reg) << 2) | 0xcf000000 = val (u8). void.

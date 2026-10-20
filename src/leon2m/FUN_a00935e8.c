@@ -1,5 +1,4 @@
-/* leon2m FUN_a00935e8 @ 0xa00935e8  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: drop pass-through args from 3; nonvolatile DAT_a8025c56
+/* leon2m FUN_a00935e8 @ 0xa00935e8 (-mcpu=v8 -O3 -g)
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

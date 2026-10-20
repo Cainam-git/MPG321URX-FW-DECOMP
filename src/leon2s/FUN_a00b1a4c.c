@@ -1,4 +1,4 @@
-/* leon2s FUN_a00b1a4c @ 0xa00b1a4c  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00b1a4c @ 0xa00b1a4c (-mcpu=v8 -Os -g)
  * Read-modify-write sequence on volatile 32-bit registers: sets bit 5 (0x20) of 0x9F120030 and 0x9F100090; clears
  * bit 5 of 0x9F120028; clears bit 7 (0x80) of 0x9F120048; sets bit 7 of 0x9F120080; sets bit 23 (0x800000) of
  * 0x9F120048; sets bit 5 of 0x9F120034. The two operations on 0x9F120048 are separate load-modify-store sequences.

@@ -1,6 +1,6 @@
 /* leon2m FUN_a01243dc @ 0xa01243dc..0xa0124448 (27 words): start-up step 7 of FUN_a015266c, after the display
  * start-up FUN_a0141964. Sets up the 8051's I2C service ports from a fixed mask
- * (byte-exact: -mcpu=v8 -O3 -g, jf 100.00 match=True, rawcmp 0/27).
+ * (byte-exact: -mcpu=v8 -O3 -g, ).
  * Plain words: for port i = 0..7: if bit i of 0x55 is set (i = 0, 2, 4, 6) it sends 8051 command 7 with the port
  * mask (1 << i) and the slave byte DAT_a802a428[i] (FUN_a0133e7c; the same command UartSetI2CEnable FUN_a00bf110
  * sends with slave 0x6E), otherwise (i = 1, 3, 5, 7) 8051 command 8 with the mask (FUN_a0133e58).

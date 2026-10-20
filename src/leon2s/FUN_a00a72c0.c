@@ -1,5 +1,4 @@
-/* leon2s FUN_a00a72c0 @ 0xa00a72c0-0xa00a7314 (21 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s.py 0 mismatches / 21 words. The autoc draft was empty (asm only).
+/* leon2s FUN_a00a72c0 @ 0xa00a72c0-0xa00a7314 (21 words), flags -mcpu=v8 -Os -g.
  * Code facts: leaf paged register write. page = hw register ((ch + 0xf401) << 2) | 0xcf000000; old = *page;
  * *page = (u16)reg >> 8 (sll 16 / srl 24); hw word 0xce008100 + (ch << 8) + (reg & 0xff) = val (st [reg+reg]);
  * *page = old & 0xff. u8 ch, u32 reg and val. volatile only on the 0xcf... / 0xce... hardware registers.

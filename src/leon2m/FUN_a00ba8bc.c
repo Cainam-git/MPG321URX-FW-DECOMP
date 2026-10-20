@@ -1,5 +1,5 @@
 /* leon2m FUN_a00ba8bc @ 0xa00ba8bc-0xa00ba950 (37 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0 mismatches, prompt flags (no extra flag).
+ * prompt flags (no extra flag).
  * Code facts: clears bytes DAT_a802d0d0[0..0x31] (u8 loop counter, clrb [base + i]),
  * DAT_a802b09c = 0, clears DAT_a802d078[0..0x18], then FUN_a0148794(1, 0x10, 4, 0x1c200) and
  * FUN_a0148794(1, 4, 2, 0x1c200). void. The last call is NOT a sibcall (call; mov 2,%o2; nop; ret;

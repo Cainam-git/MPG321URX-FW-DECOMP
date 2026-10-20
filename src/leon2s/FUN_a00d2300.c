@@ -1,4 +1,4 @@
-/* leon2s FUN_a00d2300 @ 0xa00d2300  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00d2300 @ 0xa00d2300 (-mcpu=v8 -Os -g)
  * Reads func_0xa0f71528(0xD0013F50) into a one-word buffer, calls func_0xa0f714b8(buf, n, n, param_2 & 0xFF) with
  * n = 0x1F when the low byte of param_1 is 0, else n = 0x1E, and writes the buffer back with
  * func_0xa0f71534(0xD0013F50, buf[0]). Both branches use 0xD0013F50 ('or %l0, 0x350, %o0'). Always returns 1.

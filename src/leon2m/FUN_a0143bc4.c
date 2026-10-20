@@ -1,5 +1,5 @@
 /* FUN_a0143bc4 (leon2m, 0xa0143bc4-0xa0143c14, 80 bytes, 20 words).
- * Flags: -mcpu=v8 -O3 -g. Judge: jf 100.00 match=True, rawcmp 0/20 mismatches.
+ * Flags: -mcpu=v8 -O3 -g.
  * Code facts: n = (u8)FUN_a0142218((u8)FUN_a0125198((u8)param_1)); returns 2 when the top nibble of
  * the u16 at DAT_a802e116 + n*0x12 is 5, else 0 (fw: clr/mov 2 then 'and %i0,2,%i0' = the u8
  * return extension narrowed by nonzero-bits).

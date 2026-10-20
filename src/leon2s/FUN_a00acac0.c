@@ -1,4 +1,4 @@
-/* leon2s FUN_a00acac0 @ 0xa00acac0  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00acac0 @ 0xa00acac0 (-mcpu=v8 -Os -g)
  * This way, the first call's result is masked and shifted immediately after the call (stored in `%i0`), then the second call happens, and its result is masked and added. The final `(ushort)` cast would generate the shift-left-16/shift-right-16 masking.
  */
 typedef unsigned int uint;

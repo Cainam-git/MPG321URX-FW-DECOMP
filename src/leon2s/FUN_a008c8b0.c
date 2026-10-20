@@ -1,4 +1,4 @@
-/* leon2s FUN_a008c8b0 @ 0xa008c8b0  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a008c8b0 @ 0xa008c8b0 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. For each of four units (4, 6, 0xc, 0xe): if
  * FUN_a0089f98(unit) reports something (non-zero 16-bit value), it runs FUN_a008b9ec(n) and
  * then FUN_a008a1b4(unit, FUN_a008a040(unit) & 0xff, 1). The

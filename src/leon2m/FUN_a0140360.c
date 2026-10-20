@@ -1,5 +1,5 @@
-/* leon2m FUN_a0140360 @ 0xa0140360..0xa0140500 (104 words), BYTE-EXACT: -mcpu=v8 -O3 -g (also
- * -msoft-float), jf 100.00 match=True, rawcmp 0/104, exact.py None.
+/* leon2m FUN_a0140360 @ 0xa0140360..0xa0140500 (104 words), -mcpu=v8 -O3 -g (also
+ * -msoft-float), exact.py None.
  *
  * What it does, in plain words: "read len bytes of settings storage device 'dev' starting at offset addr into buf".
  * It is the settings-read wrapper used by FUN_a0153c74 (start-up settings check) and by

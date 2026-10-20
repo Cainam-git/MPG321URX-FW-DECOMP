@@ -1,4 +1,4 @@
-/* leon2s FUN_a008983c @ 0xa008983c  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a008983c @ 0xa008983c (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Writes the 16-bit value param_2 to register
  * 0x57 of port param_1 as two byte writes, low byte first, through FUN_a00a78fc. It then
  * pulses bit 4 of register 0x70 (set, wait 5 via FUN_a00b1794, clear) to latch the value.

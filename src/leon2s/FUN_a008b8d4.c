@@ -1,4 +1,4 @@
-/* leon2s FUN_a008b8d4 @ 0xa008b8d4  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a008b8d4 @ 0xa008b8d4 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Returns bit 6 of register 4 of port param_1
  * (read through FUN_a00a6f78), as 0 or 1. Needed the reader's proven unsigned prototype
  * (logical shift).

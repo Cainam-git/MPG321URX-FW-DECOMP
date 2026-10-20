@@ -1,5 +1,4 @@
-/* leon2s FUN_a008ced8 @ 0xa008ced8  MATCH (-mcpu=v8 -Os, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): already exact
+/* leon2s FUN_a008ced8 @ 0xa008ced8 (-mcpu=v8 -Os)
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

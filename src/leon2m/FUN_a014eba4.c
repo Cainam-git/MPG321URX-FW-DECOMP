@@ -1,6 +1,5 @@
-/* leon2m FUN_a014eba4 @ 0xa014eba4..0xa014ebf8 (84 bytes, 21 words)  BYTE-EXACT
+/* leon2m FUN_a014eba4 @ 0xa014eba4..0xa014ebf8 (84 bytes, 21 words)
  * Flags: -mcpu=v8 -O3 -g (also exact with -msoft-float).
- * Judge: jf 100.00 match=True; rawcmp.py 0 mismatches / 21 words (a014eba4 a014ebf8).
  * What it does (code facts): walks the 9-byte table DAT_a802a480[0..8]; for every slot i whose
  * byte equals a (a & 0xff), it calls FUN_a013863c(a, i, b & 0xff, 1), i.e. a 4-byte message
  * {a, i, b, 1} sent by FUN_a013863c through FUN_a01370dc(0x92, 4, buf, 0). No return value.

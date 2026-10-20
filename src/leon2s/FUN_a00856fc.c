@@ -1,4 +1,4 @@
-/* leon2s FUN_a00856fc @ 0xa00856fc  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00856fc @ 0xa00856fc (-mcpu=v8 -Os -g)
  * c = FUN_a0083ed0(param_1 & 0xFF) & 0xFF; every register access below passes c first. When bit 1 of register
  * 0x4B1 (read with FUN_a00a74b8) is set: writes 2 and then 0 to 0x4B1 (FUN_a00a7614) and, when bit 5 of 0x409 is
  * set, 0xB4 to 0xAF. When bit 1 of 0x4B2 is set: writes 2 and then 0 to 0x4B2 and, when bit 5 of 0x409 is clear,

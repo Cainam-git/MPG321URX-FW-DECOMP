@@ -1,4 +1,4 @@
-/* leon2m FUN_a014e19c @ 0xa014e19c  MATCH (-mcpu=v8 -Os -g)
+/* leon2m FUN_a014e19c @ 0xa014e19c (-mcpu=v8 -Os -g)
  * Tests the low byte of param_1. If it is non-zero, calls FUN_a010afac and tail-calls FUN_a010b17c with the
  * incoming arguments; if it is zero, calls FUN_a010afc8 and tail-calls FUN_a010b198 with them. The non-zero path
  * is the fall-through and the zero path the branch target, as in the firmware.

@@ -1,4 +1,4 @@
-/* BYTE-EXACT at -mcpu=v8 -O3 -g (hand, finished with a short computer search; jf 100, rawcmp 0).
+/* -mcpu=v8 -O3 -g (hand, finished with a short computer search; jf 100, ).
  * leon2m FUN_a01070b4 @ 0xa01070b4  drv_PanelLimitation (hand)
  *
  * ADVISORY check of the current timing against the active panel row (DAT_a802d6a4, the transformed copy):

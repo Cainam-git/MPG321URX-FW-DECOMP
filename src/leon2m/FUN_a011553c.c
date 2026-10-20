@@ -1,5 +1,4 @@
 /* leon2m FUN_a011553c @ 0xa011553c-0xa0115584 (18 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/18 mismatches.
  * Code facts: hw reg 0xcf022bf8 = 0; log FUN_a00df170(string 0x1a2f20, hw reg 0xcf022800 & 0xff);
  * 0xcf022bf8 = 0 again; 0xcf022800 = 0xaa; 0xcf022bf8 = 0; log FUN_a00df170(the SAME string
  * 0x1a2f20, 0xcf022800 & 0xff) as a tail call ('restore %i0, 0x320, %o0' completes the shared

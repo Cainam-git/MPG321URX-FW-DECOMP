@@ -1,5 +1,5 @@
-/* leon2m FUN_a01518c8 @ 0xa01518c8-0xa01519b4 (59 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/59 (hand, written from the asm).
+/* leon2m FUN_a01518c8 @ 0xa01518c8-0xa01519b4 (59 words). -mcpu=v8 -O3 -g.
+ * (hand, written from the asm).
  * What it does: GlobalModeHandler state 5 entry for channel ch:
  *   FUN_a01241fc() (getter of the active panel row 0xa802e378; its result is not used here);
  *   pc = the 4-bit port field of DAT_a802df30[ch] (ch 1..3; anything else uses record 0);

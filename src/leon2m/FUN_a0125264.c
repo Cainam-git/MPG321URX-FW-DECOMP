@@ -1,5 +1,5 @@
-/* leon2m FUN_a0125264 @ 0xa0125264-0xa0125294 (12 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 12 words. Leaf.
+/* leon2m FUN_a0125264 @ 0xa0125264-0xa0125294 (12 words), flags -mcpu=v8 -O3 -g.
+ * Leaf.
  * Code facts: r = ROM record DAT_001a42a8[n] (0x16-byte rows, smul 0x16; same table as FUN_a0124da4 /
  * FUN_a0125380); returns r->b12 when r->b01 == 1, else 0xf.
  * Fix vs the autoc draft (66.67): real base DAT_001a42a8 as a struct array (draft used 0x1a42a9 / 0x1a42ba

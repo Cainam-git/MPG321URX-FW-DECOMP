@@ -1,5 +1,5 @@
 /* leon2m FUN_a0127ab8 @ 0xa0127ab8  QSM record valid check of the OLED power state machine.
- * (BYTE-EXACT at -mcpu=v8 -O3 -msoft-float; verified word by word.)
+ * ( -mcpu=v8 -O3 -msoft-float; verified word by word.)
  * Stand-alone copy of a small static function that FUN_a0127c78 (OLED power / panel state machine) also inlines.
  */
 struct OledState {

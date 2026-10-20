@@ -1,5 +1,5 @@
-/* leon2m FUN_a00fd594 @ 0xa00fd594-0xa00fd820 (163 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/163 (written from the asm; no draft).
+/* leon2m FUN_a00fd594 @ 0xa00fd594-0xa00fd820 (163 words). -mcpu=v8 -O3 -g.
+ * (written from the asm; no draft).
  * What it does: GlobalModeHandler main source selection, register set-up of block blk for the source class
  * cls (the port class codes of FUN_a00fd820; caller FUN_a0131518 passes DAT_a802a44c/a44d-related values).
  * Helpers (all per-block 8-bit registers): RMW(blk, reg, mask, set) = FUN_a00f1b5c, WR = FUN_a00f1ad4,

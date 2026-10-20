@@ -1,4 +1,4 @@
-/* leon2m FUN_a0145660 @ 0xa0145660  input timing getter (hand; byte-exact at -mcpu=v8 -O3 -g)
+/* leon2m FUN_a0145660 @ 0xa0145660  input timing getter (-mcpu=v8 -O3 -g)
  *
  * Returns field 'id' of display channel ch's input timing record (0x78-byte records at 0xA802DF30; channel number
  * through the same 0..3 remap helper as FUN_a0148540; out of range ids return 0xFFFF):

@@ -1,6 +1,5 @@
 /*
  * FUN_a00da6ac (leon2s, 0xa00da6ac-0xa00da838, 396 bytes), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/99.
  * Code facts: k = byte 0xa80787fc selects a 0x30-byte record rec = 0xa8079c98 + k*0x30 and a flag
  * c = byte 0xa8079c50[k]. FUN_a00d6724(buf, rec) fills a stack buffer (frame -128: buf at %fp-32,
  * 17..24 bytes give the same frame). Unless the high nibble of buf[0] is 1, buf[1..] is shifted down

@@ -1,5 +1,4 @@
-/* leon2m FUN_a00943a4 @ 0xa00943a4  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: decomp-permuter (AST mutations), judged by exact bytes
+/* leon2m FUN_a00943a4 @ 0xa00943a4 (-mcpu=v8 -O3 -g)
  */
 
 extern unsigned char DAT_a8025c55;

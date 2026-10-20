@@ -1,4 +1,4 @@
-/* leon2m FUN_a01252e0 @ 0xa01252e0  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a01252e0 @ 0xa01252e0 (-mcpu=v8 -O2 -g)
  * Returns byte 0xB of row (param_1 & 0xFF) of the ROM table at 0x1A42A8 (22-byte rows, stride 0x16). Same shape as
  * FUN_a0125124 (byte 2) and FUN_a01250a8 (byte 1). The constant row offset is folded into the load:
  * add followed by ldub [%o0 + 0xb].

@@ -1,4 +1,4 @@
-/* leon2m FUN_a0121bcc @ 0xa0121bcc  (hand; byte-exact at -mcpu=v8 -O3 -g)
+/* leon2m FUN_a0121bcc @ 0xa0121bcc  (-mcpu=v8 -O3 -g)
  *
  * Busy-waits for 'frames' frame periods (at most 10) of a picture whose refresh rate is 'rate' in tenths of Hz.
  *   rate 20.0..365.0 Hz (200..3650): frames * 10000 / rate + 1 ticks (10000 / rate = one frame period in ms)

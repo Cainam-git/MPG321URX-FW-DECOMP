@@ -1,4 +1,4 @@
-/* leon2s FUN_a00d2378 @ 0xa00d2378  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00d2378 @ 0xa00d2378 (-mcpu=v8 -Os -g)
  * Read-modify-write of register 0xD0013F50: func_0xa0f71528 reads it into a one-word buffer, func_0xa0f714b8(buf,
  * 0xb, 0, param_1) writes param_1 into bits 11..0 of the buffered value, and func_0xa0f71534 writes it back.
  * Returns 1. Same field-write pattern as FUN_a00d2300 and FUN_a00d2678.

@@ -1,4 +1,4 @@
-/* leon2s FUN_a00d6b4c @ 0xa00d6b4c  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00d6b4c @ 0xa00d6b4c (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. One-byte member of the FUN_a00d7210 /
  * FUN_a00d7274 family: n = (param_2[0] >> 4) - 1, index = n/2 rounded up; copies the low 7
  * bits of param_2[index + 3] into param_1[0], keeping its bit 7.

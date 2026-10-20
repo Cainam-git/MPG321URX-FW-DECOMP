@@ -1,6 +1,6 @@
 /* leon2m FUN_a0105af8 @ 0xa0105af8-0xa0105c0c (69 words), flags -mcpu=v8 -O3 -g -msoft-float
  * (BEST FLAGS DIFFER: plain -O3 -g gives 19.10; the float math is libgcc soft-float calls).
- * jf 100.00 match=True, rawcmp 0/69 mismatches with those flags.
+ * with those flags.
  * Code facts: q = (u16)FUN_a0120a18(p) * (u16)FUN_a00f25f8(p, 0x4c) / 1000 (unsigned, umul by
  * 0x10624dd3). f = (float)v[0] (short, __floatsisf = FUN_a0155c40), + 65536.0f if v[0] < 0
  * (__addsf3 = FUN_a015578c, constant at 0x19a2d0); f *= (float)(u16)v[1]; f *= (float)

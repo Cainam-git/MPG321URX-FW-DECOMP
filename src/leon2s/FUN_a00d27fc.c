@@ -1,5 +1,4 @@
 /* leon2s FUN_a00d27fc @ 0xa00d27fc-0xa00d2920 (73 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches.
  * Code facts: word local at %fp-12 = 0; FUN_a00d264c(); reg 0xcf011f00 |= 1; FUN_a00d25f4(byte
  * 0xa8078c37); arg byte == 0 -> func_0xa0fc15d8(0xa80779e0, 0x9f1b07d0, 0x24) (3 args: o0/o1/o2);
  * FUN_a00d24ac(); FUN_a00d2678(1); func_0xa0f72434(); FUN_a00d2210/2288/23bc/2300/2434(0, 0) in this

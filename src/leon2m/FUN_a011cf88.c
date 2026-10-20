@@ -1,5 +1,4 @@
 /* leon2m FUN_a011cf88 @ 0xa011cf88-0xa011d0a8 (72 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/72 mismatches.
  * What it does: returns a chip version code 0x80..0x84 built from the hardware ID register
  * 0xcf011444 and its valid flag 0xcf011440 (both read fresh at every test, so volatile):
  *   ID 0x16 and valid == 1 -> copies 8 bytes from 0x9f1b0600 into a zeroed local buffer and

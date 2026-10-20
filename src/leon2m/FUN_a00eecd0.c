@@ -1,5 +1,4 @@
 /* leon2m FUN_a00eecd0 @ 0xa00eecd0-0xa00eef3c (155 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/155 mismatches.
  * Code facts: unit p, flag full. FUN_a00dffb4(2, p, -1); FUN_a00dfc50(p, 2, 4). If full != 0:
  * v = FUN_a0115584(0 / 1 / 2) for p == 0 / 1 / 2 (literal args, one shared call), a -1 result
  * becomes 0x10; any other p: FUN_a00df80c(); FUN_a00e0bc0(); log FUN_a00df170(string 0x199fc8,

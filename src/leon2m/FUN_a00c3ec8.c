@@ -1,4 +1,4 @@
-/* leon2m FUN_a00c3ec8 @ 0xa00c3ec8  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00c3ec8 @ 0xa00c3ec8 (-mcpu=v8 -O2 -g)
  * This function reads a mode-dependent digit (from one of three globals based on the parameter), validates it's at most 2 after subtracting '0', stores it, and performs initialization calls — including `FUN_a00d5eac(1)`. The `mov 1, %o0` before the comparison is the compiler hoisting the argument setup for that call.
  */
 extern unsigned char DAT_a802d049;

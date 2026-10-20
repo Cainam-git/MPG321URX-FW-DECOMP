@@ -1,4 +1,4 @@
-/* leon2s FUN_a0088fb0 @ 0xa0088fb0  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0088fb0 @ 0xa0088fb0 (-mcpu=v8 -Os -g)
  * Returns the halfword ARR_a8078a00[param_1 & 0xFF] and clears it. The source forms the byte offset (param_1 &
  * 0xff) * 2 and indexes with offset / 2; the target uses that doubled offset in lduh / clrh.
  */

@@ -1,5 +1,5 @@
 /* leon2m FUN_a013c144 @ 0xa013c144-0xa013c894 (1872 bytes = 468 insns)  apply the output timing of one port
- * (writer of record byte +0x68). Hand; BYTE-EXACT at -mcpu=v8 -O3 -g
+ * (writer of record byte +0x68). Hand; -mcpu=v8 -O3 -g
  * (jf.py 100 % match=True, rawcmp.py 468 words / 0 mismatches; -msoft-float gives the same bytes).
  *
  * int FUN_a013c144(unsigned char a, unsigned char port, unsigned char c), returns 1. rec = FUN_a013cd4c(port).

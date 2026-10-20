@@ -1,5 +1,4 @@
 /* leon2m FUN_a012ccf0 @ 0xa012ccf0-0xa012cd68 (30 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/30 mismatches.
  * Code facts: p = 128-byte block. Copies 10 bytes DAT_a802e1a0[0x22..0x2b] to p[8..17]; then
  * sum = u8 sum of p[0..0x7e]; p[0x7f] = sum ? -sum : 0 (checksum byte so the whole block sums
  * to 0, EDID-style). void (%i0 is not changed but no caller value is produced).

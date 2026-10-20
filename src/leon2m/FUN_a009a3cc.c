@@ -1,5 +1,4 @@
 /* leon2m FUN_a009a3cc @ 0xa009a3cc-0xa009a424 (22 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0 mismatches.
  * Code facts: byte 0xa8025c55 = byte 0xa802d46f; FUN_a00a93bc((word 0xa802afec + 0x45) & 0xff);
  * FUN_a00a8c88() (no argument set); FUN_a00b7d14(1); word 0xa802afec = 0xf5; FUN_a00a9650(0, 1);
  * tail call FUN_a00aee44(0xbf, 0).

@@ -1,5 +1,5 @@
 /* leon2m FUN_a0081e0c @ 0xa0081e0c-0xa0081ea8 (39 words, includes the merged ret/restore tail FUN_a0081ea0),
- * flags -mcpu=v8 -O3 -g. BYTE-EXACT: jf 100.00 match=True, rawcmp.py 0 mismatches / 39 words.
+ * flags -mcpu=v8 -O3 -g.
  * Code facts: if (word 0xa802d290 & 0x5000) == 0x1000 and the u16 at 0xa802d290+0x1f6 != 0x55aa:
  * FUN_a00df170(s_000fedc8, 1); FUN_a008ef48(); FUN_a008ee6c(0xff, 1); FUN_a008ee6c(0x40, 0);
  * byte 0xa802af41 |= 1; FUN_a0143d98(); tail FUN_a00869b0(3, 3000). Otherwise plain return. void(void).

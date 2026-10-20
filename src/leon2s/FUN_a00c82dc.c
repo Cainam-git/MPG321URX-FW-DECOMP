@@ -1,4 +1,4 @@
-/* leon2s FUN_a00c82dc @ 0xa00c82dc  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00c82dc @ 0xa00c82dc (-mcpu=v8 -Os -g)
  * This should produce:
  * - `and %i0, 0xff, %i0` for param_1 mask
  * - Set up args and call FUN_a00c8048

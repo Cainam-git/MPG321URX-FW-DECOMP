@@ -1,5 +1,4 @@
 /* leon2s DRV_HDMI21_PHY_Freq_Detection @ 0xa009a580-0xa009a698 (70 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/70 mismatches.
  * Code facts: u8 port; PHY page ch = 2 for port 0, 3 for port 1, else return. If bit 0x800 of
  * _DAT_a8078634: print s_a006a298 with s_a00b4390 (function-name string). FUN_a00a7488(ch, 0x2f54,
  * 0xffffff00, 0x5f); for lane i = 0..3: a7488(ch, 0x2f50, 0xff00ffff, i << 16); FUN_a00a7424(1, 0x18,

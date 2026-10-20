@@ -1,4 +1,4 @@
-/* leon2m FUN_a012bc08 @ 0xa012bc08  (hand; BYTE-EXACT at -mcpu=v8 -O3 -g)
+/* leon2m FUN_a012bc08 @ 0xa012bc08  (hand; -mcpu=v8 -O3 -g)
  *
  * Updates the output timing record of display channel 'id' (0x24-byte records at 0xA802D8DC) and reports it to
  * the small chip.
@@ -18,7 +18,7 @@
  *   (func_0x4008c5f8) to portal 1 (0x9F130100), 8 words at offset 0x80, after reading portal 1; FUN_a013832c sends its
  *   copy as command 0x50 through the same FUN_a01370dc.
  * Callers: no direct 'call 0xa012bc08' in asm/leon2m (reached indirectly).
- * BYTE-EXACT keys:
+ * keys:
  *   - the record EMBEDS the timing block type (struct Tm t at +4) and struct Tm has NAMED fields h0..h7: gcc's alias
  *     analysis (nonoverlapping_component_refs_p) then knows that a load of tm.hN and a store to rec.t.hM with N != M
  *     do not overlap, which gives the firmware's load/store order. With an array h[8] or two unrelated struct types

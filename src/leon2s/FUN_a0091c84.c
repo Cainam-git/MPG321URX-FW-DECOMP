@@ -1,5 +1,5 @@
 /* FUN_a0091c84 (leon2s 0xa0091c84-0xa0091cf4, 112 bytes incl. the trailing pad nop), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches of 28 words.
+ * of 28 words.
  * Code facts: void, 2 params (u8 port, u16 v). r = FUN_a00a7fd8(port, 0, 0xf7) & ~0xc (and %o0,-13 right
  * after the call; the callee returns a word masked with 0xff, so an int prototype is honest). v is clamped
  * to 0x3ff. Then FUN_a00a8054(port, 0, 0xf6, v & 0xff) and a tail call FUN_a00a8054(port, 0, 0xf7,

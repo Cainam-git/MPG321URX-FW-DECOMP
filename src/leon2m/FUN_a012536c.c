@@ -1,4 +1,4 @@
-/* leon2m FUN_a012536c @ 0xa012536c  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a012536c @ 0xa012536c (-mcpu=v8 -O2 -g)
  * Returns bit n of the byte at 0xA802C9FA (0 or 1), n being the parameter. The shift count is used unmasked (no `&
  * 0x1f`), since the target has no and before the shift.
  */

@@ -1,4 +1,4 @@
-/* leon2m FUN_a002d1a0 @ 0xa002d1a0  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, autoc)
+/* leon2m FUN_a002d1a0 @ 0xa002d1a0 (-mcpu=v8 -O3 -g)
  * Finished by hand from mechanical Ghidra C. Waits for a 16-bit handshake: stores (param_1 + 1) & 0xFFFF in the
  * volatile word at 0xa802b0c0 and loads a countdown of (word at 0xa8025c74) / 100 into 0xa802d638, then spins while
  * the 0xa802b0c0 word is non-zero, decrementing the countdown. When the countdown reaches 0 with the word still

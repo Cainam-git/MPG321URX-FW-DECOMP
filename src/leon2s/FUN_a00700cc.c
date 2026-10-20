@@ -1,6 +1,6 @@
 /* leon2s FUN_a00700cc @ 0xa00700cc  publish the input port records and status words to the Big chip
- * (hand; BYTE-EXACT at -mcpu=v8 -Os -g:
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches over 0xa00700cc-0xa00703b8, 187 words).
+ * (hand; -mcpu=v8 -Os -g:
+ * over 0xa00700cc-0xa00703b8, 187 words).
  *
  * 1. ids[7] = port ids from mailbox word 0 (FUN_a006fca8). For each slot i (0..6): id = ids[i], n = id - 1,
  *    rec = port record 0xA807A824 + 20 * n. When id is 1..9 and the record's 'changed' bytes +0xf or +0x10 are 1:
@@ -20,7 +20,7 @@
  *  - the record address is integer arithmetic 'n * sizeof(struct PortRec) + b' (Ghidra shows the same shape:
  *    iVar4 = n * 0x14; *(char *)(iVar4 + 0xa807a833)), with b = the record base as unsigned int.
  *  - DOCUMENTED NO-CODE AID: 'b = (unsigned int)DAT_a807a824 + (x >> 8)'. x = id is an unsigned char zero-extended,
- *    so x <= 0xff and x >> 8 == 0 always: the term is provably zero and emits no code (rawcmp 0).
+ *    so x <= 0xff and x >> 8 == 0 always: the term is provably zero and emits no code ().
  *    Mechanism (gcc 3.4.4, checked in the -da dumps): combine (pass 20) folds (lshiftrt x 8) to 0 by nonzero_bits and
  *    merges 'tmp = x >> 8', 'base = lo_sum(high, DAT_a807a824)' (REG_EQUAL DAT_a807a824) and 'b = tmp + base' into
  *    'b = lo_sum(high, DAT_a807a824)' at b's insn, keeping that insn's notes: NO REG_EQUAL. So local-alloc.c

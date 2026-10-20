@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f9880 @ 0xa00f9880  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f9880 @ 0xa00f9880 (-mcpu=v8 -O3 -g)
  * When FUN_a010a874() returns non-zero and bit 3 of block-0 register 3 (FUN_a00f1a90(0, 3)) is set, clears that
  * bit with FUN_a00f1b5c(0, 3, 8, 0), calls FUN_4008d1a0(0x28), sets the bit again with FUN_a00f1b5c(0, 3, 8, 1)
  * and prints "toggle for preFRC" (between the ANSI escape sequences ESC[1;31m and ESC[m) through FUN_a00df170. Callers: FUN_a013c040, FUN_a013c144.

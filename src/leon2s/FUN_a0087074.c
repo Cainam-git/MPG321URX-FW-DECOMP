@@ -1,4 +1,4 @@
-/* leon2s FUN_a0087074 @ 0xa0087074  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0087074 @ 0xa0087074 (-mcpu=v8 -Os -g)
  * The key change is the `+1` offset in the array index - that matches the `ldub [%g1 + 1]` instruction. The multiplication by 6 comes from the three adds (×2, ×3, ×6), and the comparison uses the XOR-with-zero trick.
  */
 extern unsigned char ARR_a807cd2e[];

@@ -1,5 +1,4 @@
 /* leon2m FUN_a0097bec @ 0xa0097bec-0xa0097c54 (26 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/26 mismatches.
  * Code facts: DAT_a802b08f = 5; FUN_a00ab2a8(); with b = byte DAT_a802d290[0x31]: _DAT_a802afec =
  * 0xcf - b, DAT_a8025c55 = b, FUN_a00a9650((u8)(2 - b), 0), then b is re-read after the call and
  * sibcall FUN_a00a9650((u8)(2 - b), 1). void(void).

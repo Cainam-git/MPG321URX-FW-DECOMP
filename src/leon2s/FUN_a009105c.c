@@ -1,4 +1,4 @@
-/* leon2s FUN_a009105c @ 0xa009105c  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a009105c @ 0xa009105c (-mcpu=v8 -Os -g)
  * 
  */
 extern unsigned short ARR_a807d3e4[];

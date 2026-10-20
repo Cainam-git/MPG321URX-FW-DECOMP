@@ -1,5 +1,5 @@
-/* leon2m FUN_a0133950 @ 0xa0133950  UART ring-buffer read (hand; BYTE-EXACT at -mcpu=v8 -O3 -g,
- * jf 100 % + rawcmp 0/48 words).
+/* leon2m FUN_a0133950 @ 0xa0133950  UART ring-buffer read (hand; -mcpu=v8 -O3 -g.
+ * jf 100 % + words).
  *
  * Copies up to len bytes from the receive ring of UART port (0..4) into buf and counts them in *pn. Each ring is 35
  * bytes at 0xA802DD90 + 35 * port: write index, read index, 32 data bytes, overflow byte; the read index wraps at 32.

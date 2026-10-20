@@ -1,7 +1,7 @@
 /* leon2m FUN_a0153018 @ 0xA0153018..0xA015373C (457 words), a main-loop task (usage-time counters, per-port
  * service, liveness relay at the end), called from main FUN_a00295a4's main loop (RAM 0x400895C8, no argument,
  * result not used) after FUN_a01387a4.
- * BYTE-EXACT: -mcpu=v8 -O3 -g -msoft-float, jf 100.00 match=True, rawcmp 0/457.
+ * -mcpu=v8 -O3 -g -msoft-float.
  * What it does, in order (code facts from the asm):
  * 1. Calls func_0x4008f550, FUN_a0142910, FUN_a01298d8, FUN_a013dc6c, FUN_a0131518, FUN_a01413d0.
  * 2. Every 200 ms (func_0x4008d594(u16 0xA802CF94) > 200, then 0xA802CF94 = tick now): v = -1 if

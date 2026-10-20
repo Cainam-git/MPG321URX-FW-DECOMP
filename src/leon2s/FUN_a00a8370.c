@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a8370 @ 0xa00a8370  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00a8370 @ 0xa00a8370 (-mcpu=v8 -Os -g)
  * 
  */
 extern unsigned short DAT_a00b4d20[];

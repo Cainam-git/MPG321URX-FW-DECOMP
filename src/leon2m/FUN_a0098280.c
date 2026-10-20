@@ -1,4 +1,4 @@
-/* leon2m FUN_a0098280 @ 0xa0098280  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0098280 @ 0xa0098280 (-mcpu=v8 -O2 -g)
  * Sets DAT_a802b08f = 5 and DAT_a802d290[0x1A3] = 0 and calls FUN_a00b621c. Copies the byte DAT_a802d290[0x1E]
  * to DAT_a8025c55, then converts it three times with FUN_a01445fc, re-reading DAT_a802d290[0x1E] for the second
  * and third call: _DAT_a802afec = (first result & 0xFF) + 0xD4; FUN_a00a9650(second result & 0xFF, 0);

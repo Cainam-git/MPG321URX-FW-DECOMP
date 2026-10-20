@@ -1,5 +1,5 @@
 /* leon2s FUN_a0092944 @ 0xa0092944-0xa0092cec (936 bytes, 234 words)
- * BYTE-EXACT with -mcpu=v8 -Os -g (gcc 3.4.4): jf 100.00 match=True, rawcmp_l2s 0/234.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: (u8 port, u8 *p), void. Writes a 0xa1-byte block p[0..0xa0] into registers 3..0xa3 of
  * page 2 through FUN_a00a8054(u8 port, u8 page, u16 reg, u8 val): reg = offset + 3. It does so in runs:
  * eleven u8-counter loops (lengths 3, 7, 0x15, 3, 0x1c, 3, 0x1c, 3, 0x1c, 3, 0x17), five single writes

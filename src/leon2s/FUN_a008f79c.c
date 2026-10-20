@@ -1,5 +1,5 @@
-/* leon2s FUN_a008f79c @ 0xa008f79c  VRR signalling detector of an HDMI receiver port (hand;
- * BYTE-EXACT at -Os).
+/* leon2s FUN_a008f79c @ 0xa008f79c  VRR signalling detector of an HDMI receiver port
+ * -Os).
  *
  * Reads receiver register bytes with FUN_a00a657c(port, reg) (= byte at 0xCF000000 | (base[port] + reg) * 4, base
  * table 0xA00B4D9C; ports 0 and 1 only, other ports read 0) and returns flags:
@@ -13,7 +13,7 @@
  * Caller: FUN_a006d61c(rec, port) sets rec[0xd] bit 2 when the result has bit 0 or bit 2; that byte reaches the
  *   main chip through mailbox portal 1 and becomes the switch that sends the panel row picker FUN_a00dac38 (Leon2M)
  *   to its line-rate path.
- * BYTE-EXACT key: the 0x16C test written as if (bit set) { r |= 2; if (0x169 bit 5) r &= ~0x10; else r |= 0x10; }
+ * key: the 0x16C test written as if (bit set) { r |= 2; if (0x169 bit 5) r &= ~0x10; else r |= 0x10; }
  *   else r |= 0x10; (other orders lose the be,a / bne delay-slot shape).
  */
 extern unsigned int FUN_a00a657c(unsigned int param_1, unsigned short param_2);

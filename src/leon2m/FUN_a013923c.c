@@ -1,5 +1,5 @@
-/* leon2m FUN_a013923c @ 0xa013923c-0xa01392d0 (37 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 37 words. Same shape as FUN_a0137c4c.
+/* leon2m FUN_a013923c @ 0xa013923c-0xa01392d0 (37 words), flags -mcpu=v8 -O3 -g.
+ * Same shape as FUN_a0137c4c.
  * Code facts: stack u8 buf[4] = {0} (word clear at %fp-16); buf[0] = 3 / 4 / 5 / 2 for mode 1 / 2 / 3 / 0
  * (case tree rooted at 1), other modes leave 0; FUN_a01370dc(0xa1, 4, buf, 0); FUN_a0137344(1); returns byte
  * 0xa802cba3 (u8). Fix vs the autoc draft: a switch instead of the if-chain, prototypes. Aids: none.

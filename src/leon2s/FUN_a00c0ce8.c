@@ -1,5 +1,4 @@
-/* leon2s FUN_a00c0ce8 @ 0xa00c0ce8  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: [walk]; cast (uint) signed char; flip uVar4 < 5; split uVar5#0; param param_1 signed char; temp arg func_0xa0fb65c4#2; temp arg func_0xa0fb65c4#1; drop cast (signed char); split t11_#1; local t11_ unsigned short; param param_2 unsigned int
+/* leon2s FUN_a00c0ce8 @ 0xa00c0ce8 (-mcpu=v8 -Os -g)
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

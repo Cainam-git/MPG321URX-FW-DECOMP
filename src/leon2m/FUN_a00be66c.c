@@ -1,4 +1,4 @@
-/* leon2m FUN_a00be66c @ 0xa00be66c  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00be66c @ 0xa00be66c (-mcpu=v8 -O2 -g)
  * Writes '0' (0x30) to DAT_a802d078[7] and [8] and DAT_a802d479 + 0x2F ('0' - 1) to DAT_a802d078[9], then calls
  * FUN_a00bac3c(0x7D), FUN_a00ba950(param_1) and FUN_a00babe4(param_1, 0xB). Same shape as FUN_a00be5e8. Returns
  * nothing.

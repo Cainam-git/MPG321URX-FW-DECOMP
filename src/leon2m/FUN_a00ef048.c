@@ -1,5 +1,5 @@
 /* leon2m FUN_a00ef048 @ 0xa00ef048-0xa00ef1b0 (90 words; Ghidra's header says -0xa00ef140, see below).
- * BYTE-EXACT over the real range: -mcpu=v8 -O3 -g, rawcmp 0/90 (0xa00ef048-0xa00ef1b0) and tools/exact.py exact()
+ * over the real range: -mcpu=v8 -O3 -g, (0xa00ef048-0xa00ef1b0) and tools/exact.py exact()
  * = None (jump table proven) when given that range (hand, written from the asm; the autoc draft was behaviour-wrong).
  * jf with the asm header range gives 68.89 only because the function continues past 0xa00ef140.
  * The function really ends at 0xa00ef1b0. Ghidra cut it: FUN_a00ef140 (0xa00ef140-0xa00ef164, no

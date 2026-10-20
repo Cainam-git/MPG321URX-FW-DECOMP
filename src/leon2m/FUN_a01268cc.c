@@ -1,5 +1,5 @@
 /* leon2m FUN_a01268cc @ 0xa01268cc  OLED set OFF Sensing: writes register 0xC0 of the panel-side OLED controller and prints 'OLED set OFF Sensing %d'.
- * (BYTE-EXACT at -mcpu=v8 -O3 -msoft-float; verified word by word.)
+ * ( -mcpu=v8 -O3 -msoft-float; verified word by word.)
  * Stand-alone copy of a small static function that FUN_a0127c78 (OLED power / panel state machine) also inlines.
  */
 extern unsigned char DAT_a802d890[2];

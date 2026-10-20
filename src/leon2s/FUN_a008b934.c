@@ -1,4 +1,4 @@
-/* leon2s FUN_a008b934 @ 0xa008b934  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a008b934 @ 0xa008b934 (-mcpu=v8 -Os -g)
  * This function masks its byte argument, programs two scaler registers through the helper functions, then updates a bitfield byte at `0xa8078b54`: it sets bit `param_1` and clears bit `param_1 + 4` (i.e. `0x10 << param_1`). The decompiler’s bogus second parameter and `CONCAT44` return are dropped, and the explicit `& 0x1f` shift masks are left out so the compiler uses the already-masked `%i0` directly, matching the target’s `sll` instructions.
  */
 extern unsigned char DAT_a8078b54; /* 0xa8078b54 */

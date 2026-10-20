@@ -1,4 +1,4 @@
-/* leon2m FUN_a0125b44 @ 0xa0125b44  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0125b44 @ 0xa0125b44 (-mcpu=v8 -O2 -g)
  * Returns 1 when the low byte of func_0x4008cd38(2, 8) is 1, else 0. The parameters a and b are unused.
  */
 extern int func_0x4008cd38(int a, int b); /* at 0x4008cd38 */

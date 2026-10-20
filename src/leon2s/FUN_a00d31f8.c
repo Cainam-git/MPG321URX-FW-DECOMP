@@ -1,4 +1,4 @@
-/* FUN_a00d31f8 (leon2s, 0xa00d31f8-0xa00d3364, 91 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a00d31f8 (leon2s, 0xa00d31f8-0xa00d3364, 91 words). Flags -mcpu=v8 -Os -g.
  Code facts: void(void). Runs only if bit 3 of DAT_a8078c30. Copies 0x101 u16 into ARR_a8077a08 from ARR_a80783de (bit 2 clear) or from
  DAT_9f1b0800 (bit 2 set). FUN_a00d2378(0x100), FUN_a00d3114(0,0,0,0,0). v = func_0xa0f71528(0xd0013f6c); func_0xa0f714b8(&v,0x1f,0x1e,0)
  and (..,3), each followed by func_0xa0f71534(0xd0013f6c, v). v = 71528(0xd0013fdc); 714b8 field writes (0x19,0x18,1), (0x1f,0x1e,0),

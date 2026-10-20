@@ -1,5 +1,4 @@
 /* leon2m FUN_a01086fc @ 0xa01086fc-0xa0108e4c (468 words), flags -mcpu=v8 -O3 -g -msoft-float (float code):
- * BYTE-EXACT: jf 100.00 match=True, rawcmp 0/468.
  * Path (jf / rawcmp): first C from the asm 25.43 / 436, then 67.95 / 156, 92.09 / 38 (u16 q, rounding as two
  *   arms), 100 / 0 with two changes:
  *   1. The 0xcf011ddc value is a u8 local set in an if ('d = 0; if (w & 0x1f) d = w / 32 * 32 - w + 0x20;') and

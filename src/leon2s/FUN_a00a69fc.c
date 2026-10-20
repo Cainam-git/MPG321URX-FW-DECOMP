@@ -1,5 +1,5 @@
-/* leon2s FUN_a00a69fc @ 0xa00a69fc  MATCH (-mcpu=v8 -Os -g, twin)
- * Twin of FUN_a00a65c4: same code, constants swapped; byte-exact.
+/* leon2s FUN_a00a69fc @ 0xa00a69fc (-mcpu=v8 -Os -g)
+ * Twin of FUN_a00a65c4: same code, other constants.
  */
 extern unsigned short DAT_a00b4d98[];
 

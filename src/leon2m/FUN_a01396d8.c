@@ -1,5 +1,4 @@
-/* leon2m FUN_a01396d8 @ 0xa01396d8-0xa01397ec (69 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 69 words. The autoc draft was empty (asm only).
+/* leon2m FUN_a01396d8 @ 0xa01396d8-0xa01397ec (69 words), flags -mcpu=v8 -O3 -g.
  * Code facts: stack word buf = 0; ROM read func_0x4008c4d0(2, 0x34, &buf, 1). If buf == 0x55aa0002: buf = 0,
  * ROM write func_0x4008c5f8(2, 0x30, &buf, 1), buf = 1, then poll the read up to 0xffff times (u16 counter,
  * sll 16 test) until buf == 0. Then always: buf = 0x55aa0002, write reg 0x30, buf = 1, poll until buf ==

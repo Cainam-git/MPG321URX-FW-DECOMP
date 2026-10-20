@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f2708 @ 0xa00f2708  stable 16-bit register read (hand; byte-exact at -O3 -g)
+/* leon2m FUN_a00f2708 @ 0xa00f2708  stable 16-bit register read (-O3 -g)
  *
  * Reads a 16-bit value from a register block of the 0x19A2EC table (block base + reg; block 6/7 remap of 0xA0 -> +0x60
  * and 0xBE -> +0x5D), exactly as FUN_a00f25f8, which the original has in the same file and inlines here three times.

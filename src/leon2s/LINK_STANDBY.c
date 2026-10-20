@@ -1,5 +1,4 @@
 /* leon2s LINK_STANDBY @ 0xa006d7bc-0xa006e0e4 (2344 bytes, 586 words), flags -mcpu=v8 -Os -g.
- * BYTE-EXACT: jf 100.00 match=True, rawcmp_l2s.py 0/586 mismatches.
  *
  * What it does: one pass of the HDMI receiver link state machine for one port. Only caller FUN_a006fa28 runs it for
  * port 0 with the 20-byte port record 0xa807a824 and for port 1 with 0xa807a838 (the records FUN_a006fbac sends to

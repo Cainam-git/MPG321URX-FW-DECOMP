@@ -1,5 +1,5 @@
-/* leon2m FUN_a01298d8 @ 0xa01298d8  bitmask of the port entries whose source is present (hand;
- * BYTE-EXACT at -mcpu=v8 -O3 -g -msoft-float).
+/* leon2m FUN_a01298d8 @ 0xa01298d8  bitmask of the port entries whose source is present
+ * Flags: -mcpu=v8 -O3 -g -msoft-float.
  *
  * For each of the 7 port entries (18-byte records at 0xA802E116, the table of the line-rate switch chain): bit i of
  * the halfword 0xA802C9FE = FUN_a0124bf4(entry[i] byte +0x10) != 0 AND FUN_a0125140(entry[i] byte +0x10) != 0xFF,

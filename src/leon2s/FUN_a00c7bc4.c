@@ -1,4 +1,4 @@
-/* leon2s FUN_a00c7bc4 @ 0xa00c7bc4  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00c7bc4 @ 0xa00c7bc4 (-mcpu=v8 -Os -g)
  * This should force the exact sequence: and, or, and on the result of the first call.
  */
 typedef unsigned int uint;

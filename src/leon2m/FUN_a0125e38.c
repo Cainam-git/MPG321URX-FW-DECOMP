@@ -1,4 +1,4 @@
-/* leon2m FUN_a0125e38 @ 0xa0125e38  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0125e38 @ 0xa0125e38 (-mcpu=v8 -O2 -g)
  * Returns 1 if the low byte of func_0x4008cd38(13, 16) equals 1, else 0. No parameters (%i0/%i1 are not read after
  * the save).
  *

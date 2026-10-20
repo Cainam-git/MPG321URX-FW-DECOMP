@@ -1,4 +1,4 @@
-/* leon2m FUN_a00bac3c @ 0xa00bac3c  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00bac3c @ 0xa00bac3c (-mcpu=v8 -O2 -g)
  * Fills the byte array at 0xA802D078: [0] = FUN_a015463c(p, 0), [1] = 0x62, [2..6] = FUN_a015463c(p, 2..6), [10] =
  * 0x0D, where p is the first parameter masked to a byte. Bytes 7..9 are not written. The second parameter is
  * unused; no return value.

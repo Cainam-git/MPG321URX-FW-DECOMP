@@ -1,5 +1,4 @@
-/* leon2m FUN_a0096c80 @ 0xa0096c80  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: base 0xa802d290 kept in a register: pointer local (basefix)
+/* leon2m FUN_a0096c80 @ 0xa0096c80 (-mcpu=v8 -O3 -g)
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

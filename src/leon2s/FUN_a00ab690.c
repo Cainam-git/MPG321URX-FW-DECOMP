@@ -1,4 +1,4 @@
-/* leon2s FUN_a00ab690 @ 0xa00ab690  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00ab690 @ 0xa00ab690 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Reads register 0x21c of port param_1
  * (FUN_a00a6bb8) and maps its low byte to a small index: 6 -> 0, 10 -> 1, 0x14 -> 2, 0x1e ->
  * 3, anything else -> 4. The values 6/10/20/30 look like a rate or clock code (for example,

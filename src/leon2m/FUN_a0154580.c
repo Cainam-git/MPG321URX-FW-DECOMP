@@ -1,5 +1,5 @@
 /* leon2m FUN_a0154580 @ 0xa0154580..0xa015463c (47 words)  main-loop helper that ends with the liveness-ring relay
- * (BYTE-EXACT at -mcpu=v8 -O0 -g: jf 100 match=True, rawcmp 0/47; -O1 gives 38 %: this unit was
+ * ( -mcpu=v8 -O0 -g: -O1 gives 38 %: this unit was
  * built without optimisation, ldub + and 0xff and or-formed addresses). Called twice from the main-loop task
  * FUN_a0153018 (0xA015326C, 0xA015359C).
  * What the code does (code facts): if byte 0xA802A4C0 == 1: byte 0xA802CF9C = FUN_a011cf88(), byte 0xA802CF9D =

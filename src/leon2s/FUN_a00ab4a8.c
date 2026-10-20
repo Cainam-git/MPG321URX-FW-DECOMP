@@ -1,4 +1,4 @@
-/* leon2s FUN_a00ab4a8 @ 0xa00ab4a8  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00ab4a8 @ 0xa00ab4a8 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Twin of FUN_a00ab4f8 (opposite direction). Sets
  * bit param_1 in peripheral register 0xcf013280, clears bits 0 and 3 of 0xcf013290, calls
  * FUN_a00b1794(1) (busy-wait delay: 50 000 nop iterations per unit), then sets bit 0 of 0xcf013284.

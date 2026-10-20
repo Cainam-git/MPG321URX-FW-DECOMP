@@ -1,6 +1,5 @@
 /* FUN_a0089758 (leon2s, 0xa0089758-0xa008983c, 228 bytes, 57 words; includes the merged unreachable
  * ret/restore tail FUN_a0089834). Flags: -mcpu=v8 -Os -g.
- * Judge: jf 100.00 match=True, rawcmp_l2s 0/57 mismatches.
  * Code facts: port = (u8)param_1, on = (u8)param_2. Port 0: on == 1: FUN_a00a7940(0, 0x70, 0x10, 1),
  * then bit 0 of the register 0xcf018e80 is set when (u8)FUN_a0089750() == 1; on != 1:
  * FUN_a00a7940(0, 0x70, 0x10, 0), and when (u8)FUN_a0086bd8() == 0 and (u8)FUN_a0089750() == 1:

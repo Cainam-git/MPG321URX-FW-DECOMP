@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f3528 @ 0xa00f3528  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f3528 @ 0xa00f3528 (-mcpu=v8 -O3 -g)
  * Returns a 16-bit value: from the function pointer at DAT_a802b770 + 8 when the flag byte DAT_a802b770 is set and
  * the pointer is non-null, otherwise the register pair at 0xCF012820 read with FUN_a00f3078.
  * DAT_a802b770 is a 0x24-byte record (flag byte, then function pointers at +4..+0x20) that FUN_a00f32d8 copies in.

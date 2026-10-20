@@ -1,4 +1,4 @@
-/* leon2s FUN_a008a1f8 @ 0xa008a1f8  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a008a1f8 @ 0xa008a1f8 (-mcpu=v8 -Os -g)
  * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
  */
 #define _DAT_cf011024 (*(volatile unsigned int *)0xcf011024)

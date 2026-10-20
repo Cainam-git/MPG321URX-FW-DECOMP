@@ -1,5 +1,5 @@
 /* leon2m FUN_a00dcec4 @ 0xA00DCEC4..0xA00DD250 (227 words): the Big chip's debug UART command shell "MDBG >>".
- * BYTE-EXACT: -mcpu=v8 -O3 -g -msoft-float, jf 100.00 match=True, rawcmp 0/227.
+ * -mcpu=v8 -O3 -g -msoft-float.
  * Hand-written.
  *
  * Code:

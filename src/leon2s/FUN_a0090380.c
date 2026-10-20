@@ -1,5 +1,5 @@
 /* leon2s FUN_a0090380 @ 0xa0090380-0xa0090498 (280 bytes, 70 words)
- * BYTE-EXACT with -mcpu=v8 -Os -g (gcc 3.4.4): jf 100.00 match=True, rawcmp_l2s 0/70.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: void (u8 port, u8 sel, u8 *buf). A switch on sel (signed tree, root 0x83). It reads 0x1c bytes
  * with FUN_a00a657c(port, i + base) into buf[i], u8 counter i (it reuses sel's register %i1). The bases are
  * 0x82 -> 0x144, 0x83 -> 0x164, 0x84 -> 0x184, 0x87 -> 0x1b0. Any other sel does nothing.

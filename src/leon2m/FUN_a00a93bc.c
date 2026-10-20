@@ -1,5 +1,5 @@
 /* FUN_a00a93bc (leon2m, 0xa00a93bc-0xa00a9468, 172 bytes, 43 words).
- * Flags: -mcpu=v8 -O3 -g. Judge: jf 100.00 match=True, rawcmp 0/43 mismatches.
+ * Flags: -mcpu=v8 -O3 -g.
  * Code facts: base = (u8)(p*2 + 5); func_0x4008e2a4() twice; FUN_a0146c40(3, 0, 0);
  * FUN_a00b3ed0(0, 0, 0, 0) (FOUR arguments: the fw sets only %o0..%o3 before that call);
  * func_0x4008e2a4(); then for b = 0..2: v = (u16)(base + b), FUN_a0146b20(0, 0x27, v, 1, 0, 0) and

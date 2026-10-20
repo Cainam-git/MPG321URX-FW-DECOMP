@@ -19,7 +19,7 @@
  * that range.
  * Form: the 0xFA00 x 2-nop wait is a static delay helper delay_loops(n) called with 1 and inlined (gcc keeps the
  *   'cmp j, 1; bcs' outer test only when the bound arrives through inlining; a literal 'j < 1' folds to j == 0).
- *   Verified: jf 100.00 match=True, rawcmp 0/107 at -mcpu=v8 -O3 -g.
+ *   Verified: at -mcpu=v8 -O3 -g.
  * Nops are real firmware instructions (inline asm nop, as in FUN_a00de65c / FUN_a00de604).
  */
 extern void func_0x4008c25c(unsigned int addr, unsigned int value);

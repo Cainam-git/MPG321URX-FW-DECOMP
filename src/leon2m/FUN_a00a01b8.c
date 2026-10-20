@@ -1,5 +1,4 @@
-/* leon2m FUN_a00a01b8 @ 0xa00a01b8-0xa00a01fc (17 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 17 words.
+/* leon2m FUN_a00a01b8 @ 0xa00a01b8-0xa00a01fc (17 words), flags -mcpu=v8 -O3 -g.
  * Code facts: FUN_a00b0f48(); word 0xa802afec = 0x116; byte 0xa802b08e |= 2; byte 0xa802d43a = 0 (clrb in the
  * call delay slot); u16 0xa802d03c = func_0x4008d588() (ROM ms tick, u16, no argument). void(void).
  * Fix vs the autoc draft (68.42): BEHAVIOUR: the ROM tick function takes NO argument (the 'sethi %hi(0xa802d400),

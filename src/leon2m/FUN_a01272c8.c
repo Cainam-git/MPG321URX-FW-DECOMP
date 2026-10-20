@@ -1,5 +1,4 @@
-/* leon2m FUN_a01272c8 @ 0xa01272c8-0xa012743c (93 words), flags -mcpu=v8 -O3 -g -msoft-float. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 93 words.
+/* leon2m FUN_a01272c8 @ 0xa01272c8-0xa012743c (93 words), flags -mcpu=v8 -O3 -g -msoft-float.
  * NOTE: best flags differ: needs -mcpu=v8 -O3 -g -msoft-float (plain -O3 gives about 73-74, register choice),
  * like its twins FUN_a0126ae4 / FUN_a0127154. Code facts: buf 0xa802d890 = {0, val}; FUN_a01248c8() & 0xff
  * == 0 -> return. Log FUN_a00df170(0x1a4878, val); write FUN_a0147aa0(0x60, 2, 0x1b6, 5, 0, &d890, 2, 1)

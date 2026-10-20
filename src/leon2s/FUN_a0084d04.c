@@ -1,4 +1,4 @@
-/* leon2s FUN_a0084d04 @ 0xa0084d04  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a0084d04 @ 0xa0084d04 (-mcpu=v8 -Os -g)
  * Mechanical Ghidra C, finished by hand: 300-byte record array, register read results restored, byte casts and Ghidra
  * type names kept.
  */

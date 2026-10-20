@@ -1,4 +1,4 @@
-/* leon2s FUN_a00af858 @ 0xa00af858  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00af858 @ 0xa00af858 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Sets or clears one bit of control register
  * 0xcf012448 for port param_1: the bit number comes from FUN_a00add48(port, value), where the
  * value is read through 0x9f1c6624 (same lookup as FUN_a00af94c). param_2 == 1 sets the bit,

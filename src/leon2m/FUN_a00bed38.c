@@ -1,5 +1,4 @@
 /* leon2m FUN_a00bed38 @ 0xa00bed38-0xa00bee64 (75 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0 mismatches.
  * Code facts: fills the 11-byte buffer at 0xa802d078: [7] = [8] = '0', [9] = FUN_a01445fc(byte
  * 0xa802d2ae) + '0', [0] = FUN_a015463c(0x35, 0), [1] = 'b', [2..6] = FUN_a015463c(0x35, 2..6),
  * [10] = '\r'. Then port == 2: clear byte 0xa802b09a and record 0xa802d040 bytes 0, 1, 7, 10, 0x19;

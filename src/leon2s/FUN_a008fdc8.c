@@ -1,4 +1,4 @@
-/* leon2s FUN_a008fdc8 @ 0xa008fdc8  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a008fdc8 @ 0xa008fdc8 (-mcpu=v8 -Os -g)
  * Calls FUN_a008fb5c(param_1 & 0xFF), then FUN_a00a67b8(param_1 & 0xFF, 0x48, 2, flag) with flag = 1 when the low
  * byte of the first result equals 1, else 0. The if/else with the call in both arms gives the firmware's two
  * separate call sequences after the comparison. param_2 is not used.

@@ -1,4 +1,4 @@
-/* leon2s FUN_a00ad684 @ 0xa00ad684  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00ad684 @ 0xa00ad684 (-mcpu=v8 -Os -g)
  * The key insight: the target sets up `%i0`, `%i1`, `%i2` *before* the branch (at 0xa00ad698-0xa00ad6a0), then does the `btst`/`bne` test, and only sets `%i3` differently in each branch. The two calls have identical first three arguments; only the fourth differs. This is an if/else with the same call in both branches, where the fourth argument is `(result & 0x10) ? 0 : 1`.
  */
 typedef unsigned int uint;

@@ -1,5 +1,4 @@
 /* leon2s FUN_a007af04 @ 0xa007af04-0xa007af6c (26 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/26 mismatches.
  * Code facts: p (u8). If FUN_a0073520(p) (1 arg: returns 1 for p == 2 or 3) != 0: i = (p != 2);
  * return FUN_a00a7408(8, word +0xc of the 0x34-byte record ARR_a807db00[i] + 0x60) != 0. Else
  * return FUN_a00a657c(p, 0x2e1) & 1.

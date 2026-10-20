@@ -1,5 +1,5 @@
-/* leon2m FUN_a00f2ca8 @ 0xa00f2ca8  read-modify-write of one register in one or both of two register blocks (hand;
- * BYTE-EXACT at -mcpu=v8 -O3 -g, rawcmp 0 mismatches). blk > 1 = both blocks 0..1 (block bases DAT_0019a2e0);
+/* leon2m FUN_a00f2ca8 @ 0xa00f2ca8  read-modify-write of one register in one or both of two register blocks
+ * -mcpu=v8 -O3 -g, ). blk > 1 = both blocks 0..1 (block bases DAT_0019a2e0).
  * register address 0xCF000000 + 4 * (base + reg); set == 1 ORs mask in, else clears it; the low byte is written back.
  * Family with FUN_a00f2068, FUN_a00f2ca8, FUN_a00f2ca8, FUN_a010d914: all parameters and the value are unsigned char. */
 #define R(a) (*(volatile unsigned int *)(0xcf000000 | ((a) << 2)))

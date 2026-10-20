@@ -1,4 +1,4 @@
-/* FUN_a00ce66c (leon2s, 0xa00ce66c-0xa00ce864, 126 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a00ce66c (leon2s, 0xa00ce66c-0xa00ce864, 126 words). Flags -mcpu=v8 -Os -g.
  Code facts: void (u8 port). Record word (24-byte record port of DAT_a8078bb0): bits 16..17 = 01. func_0xa0f96400(0, 0x90, 0x69493, 0, buf); if bit 2 of buf[0]
  is clear, bits 16..17 |= 3 and done. Else read 0x692e0 (15 bytes) into buf, FUN_a00c87e8(port, 1/3/5, 0x8000) around 2 x 8 reads of FUN_a00c7770(port, 1)
  into local[16], FUN_a00c7654(port, 1, x) for the 16 buf and 16 local bytes, and copies 5 bytes DAT_a807ce38[port*5 + i] to the record at

@@ -1,4 +1,4 @@
-/* leon2m FUN_a00e2aec @ 0xa00e2aec  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00e2aec @ 0xa00e2aec (-mcpu=v8 -O2 -g)
  * FUN_a00e05d8(param_1, 0x1C1, 1, 0), then polls FUN_a00e0514(param_1, 0x1E0, 1) until it has returned zero six
  * times in a row (a nonzero return restarts the count). Returns (FUN_a00e02ec(param_1, 0x1CF) << 8) |
  * FUN_a00e02ec(param_1, 0x1CE). The result is a single expression, which places the sll directly after the first

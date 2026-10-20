@@ -1,5 +1,4 @@
 /* leon2m FUN_a0132964 @ 0xa0132964-0xa0132a14 (44 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/44 mismatches.
  * What it does: the "keep going" test of the channel state machine FUN_a013dc6c (state 9 -> 10
  * and state 12 -> 5 only when this returns 1; otherwise the channel waits / restarts).
  * Code facts: m = FUN_a00fd820(port), the port's signal-class code (0xe8, 0xc1, 0x31/0x41/0x51/0x61,

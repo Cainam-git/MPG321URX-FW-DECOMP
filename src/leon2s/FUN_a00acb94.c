@@ -1,4 +1,4 @@
-/* leon2s FUN_a00acb94 @ 0xa00acb94  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00acb94 @ 0xa00acb94 (-mcpu=v8 -Os -g)
  * Reads a 3-bit code: when bit 2 of FUN_a00a6f78(port, 5) and bit 6 of FUN_a00a6bb8(port, 0x8E) are both set, it
  * calls FUN_a00a6c98(port, 0xBE, 0x80, 1) and takes FUN_a00a6bb8(port, 0xBD) & 7; otherwise bits 5..7 of
  * FUN_a00a6bb8(port, 0x8D). Codes 0, 1, 2, 3, 4 map to 6, 8, 10, 12, 16 (others 8), returned & 0x1E. The dense

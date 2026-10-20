@@ -1,4 +1,4 @@
-/* leon2m FUN_a0127a08 @ 0xa0127a08  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0127a08 @ 0xa0127a08 (-mcpu=v8 -O2 -g)
  * 
  */
 extern unsigned char DAT_a802a440[];

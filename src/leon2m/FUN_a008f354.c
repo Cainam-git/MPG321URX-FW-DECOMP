@@ -1,5 +1,5 @@
 /* FUN_a008f354 (leon2m, 0xa008f354-0xa008f3e8, 148 bytes, 37 words).
- * Flags: -mcpu=v8 -O3 -g. Judge: jf 100.00 match=True, rawcmp 0/37 mismatches.
+ * Flags: -mcpu=v8 -O3 -g.
  * Code facts: calls FUN_a0090fd8(), FUN_a014512c(0, 1), FUN_a0145fe8(0, 0, 0, 0, 0), FUN_a00d8cd4(),
  * FUN_a00d7de0(), FUN_a00d9764(), FUN_a00d7bc0(); if bit 12 (0x1000) of the u16 at
  * DAT_a802cff4 + 4 is clear: FUN_a00da254(); then FUN_a00b50d8(1) and that bit is cleared

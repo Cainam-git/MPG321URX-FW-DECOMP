@@ -1,6 +1,5 @@
 /* leon2s FUN_a00d2d1c @ 0xa00d2d1c-0xa00d2d8c (28 words incl. the unreachable ret/restore pair
  * FUN_a00d2d84), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/28 mismatches.
  * Code facts: only when byte DAT_a8078c26 == 1: FUN_a00d2210(0, 0); FUN_a00d2288(0, 0);
  * FUN_a00d23bc(0, 0); FUN_a00d2300(0, 0); FUN_a00d2434(0, 0); DAT_a8078c26 = 0; tail call
  * func_0xa0f834c4(string 0x9f1c6408). void, no params.

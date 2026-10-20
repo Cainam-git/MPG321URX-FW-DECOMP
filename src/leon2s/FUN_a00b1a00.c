@@ -1,5 +1,5 @@
-/* leon2s FUN_a00b1a00 @ 0xa00b1a00  MATCH (-mcpu=v8 -Os -g, twin)
- * Twin of FUN_a00b1b98: same code, constants swapped; byte-exact.
+/* leon2s FUN_a00b1a00 @ 0xa00b1a00 (-mcpu=v8 -Os -g)
+ * Twin of FUN_a00b1b98: same code, other constants.
  */
 #define REG_9f120048 (*(volatile unsigned int *)0x9f120048)
 #define REG_9f120080 (*(volatile unsigned int *)0x9f120080)

@@ -1,4 +1,4 @@
-/* leon2m FUN_a00b3ed0 @ 0xa00b3ed0  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, autoc)
+/* leon2m FUN_a00b3ed0 @ 0xa00b3ed0 (-mcpu=v8 -O3 -g)
  * Finished by hand from mechanical Ghidra C. Sets up an output window for port mode param_2.
  * Mode 1, and modes 0x13/0x27, use small margins (2,3,4 and a width of param_4 - 3 or - 2);
  * every other mode uses (7,0x1c,0xb,0x1f) and the full param_4. With param_1 == 0 only two

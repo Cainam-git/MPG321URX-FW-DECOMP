@@ -1,5 +1,5 @@
 /* leon2s FUN_a00908d0 @ 0xa00908d0-0xa0090d7c (299 words; FUN_a0090d74 = unreachable ret/restore tail inside the
- * range), flags -mcpu=v8 -Os -g. BYTE-EXACT: jf 100.00 match=True, rawcmp_l2s.py 0/299 mismatches.
+ * range), flags -mcpu=v8 -Os -g.
  *
  * What it does: the per-pass interrupt/status poll of one HDMI receiver port while the link FSM (LINK_STANDBY) is in
  * state 5 (link up, timing stable; its only caller). rec = ARR_a807d3e4[port] (0xb0-byte RX state per port).

@@ -1,5 +1,4 @@
 /* leon2s FUN_a00aa88c @ 0xa00aa88c-0xa00aa904 (30 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches.
  * Code facts: leaf wrapper; sel = arg & 0xff, sel > 4 -> return; mode = arg2 & 0xff (in the jmp delay
  * slot, i.e. after the range test, before the jump table 0xa00aa878); switch picks (ch, reg, mask):
  * 0 -> (1, 0x67, 0xf), 1 -> (1, 0x67, 0xf0), 2 -> (1, 0x8a, 0xf), 3 -> (1, 0x8a, 0xf0),

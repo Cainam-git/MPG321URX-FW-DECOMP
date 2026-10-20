@@ -1,5 +1,5 @@
-/* BYTE-EXACT: leon2s FUN_a00c77dc @ 0xa00c77dc-0xa00c79c8 (123 words),
- * flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0/123.
+/* leon2s FUN_a00c77dc @ 0xa00c77dc-0xa00c79c8 (123 words).
+ * flags -mcpu=v8 -Os -g.
  * Code facts: (u8 p), void. Byte DAT_a807cdb8[0] = 0; base = &DAT_a807cdb8 (kept in %l1). Through
  * func_0xa0fb7ee0(p, reg, val) (write) / func_0xa0fb7fa0(p, reg) (read): reg 0xc = 0x18, 0x10; 32 writes of
  * ROM table DAT_9f1c1ea8[i] to reg 0xd; reg 0xa = 0x42; wait while bit 1 of reg 0xa is SET, at most 255

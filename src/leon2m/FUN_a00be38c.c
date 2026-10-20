@@ -1,5 +1,4 @@
-/* leon2m FUN_a00be38c @ 0xa00be38c  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: [walk]; swap lines 11; swap lines 12; drop cast (unsigned char); return unsigned int; callee FUN_a00ba950 unsigned char; swap lines 11
+/* leon2m FUN_a00be38c @ 0xa00be38c (-mcpu=v8 -O3 -g)
  */
 extern unsigned int _DAT_a802d484;
 extern unsigned char DAT_a802d078[];

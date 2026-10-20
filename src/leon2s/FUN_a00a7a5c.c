@@ -1,5 +1,5 @@
-/* leon2s FUN_a00a7a5c @ 0xa00a7a5c-0xa00a7acc (28 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s.py 0 mismatches / 28 words. Twin of FUN_a00a6f08 (int result here).
+/* leon2s FUN_a00a7a5c @ 0xa00a7a5c-0xa00a7acc (28 words), flags -mcpu=v8 -Os -g.
+ * Twin of FUN_a00a6f08 (int result here).
  * Code facts: v = FUN_a00a79c4(port, reg) (int, (hi << 8) | lo); while a fresh read differs from v and the u8
  * retry counter n <= 4: v = another read, n++. Returns v in %i0 (int, no extension).
  * Fix vs the autoc draft: BEHAVIOUR: the result is the last read value (the draft returned the port byte and

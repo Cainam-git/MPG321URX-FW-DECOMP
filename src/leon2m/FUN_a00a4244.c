@@ -1,4 +1,4 @@
-/* leon2m FUN_a00a4244 @ 0xa00a4244  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00a4244 @ 0xa00a4244 (-mcpu=v8 -O2 -g)
  * Increments the byte DAT_a802d290[9]. A result <= 100 is stored and followed by FUN_a00b7054(1) and
  * FUN_a00d8cd4(); a larger result stores 100. Then sets bit 1 of DAT_a802b08e.
  */

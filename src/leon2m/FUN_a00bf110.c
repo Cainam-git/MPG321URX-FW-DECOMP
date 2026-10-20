@@ -1,5 +1,5 @@
 /* leon2m FUN_a00bf110 @ 0xa00bf110..0xa00bf2c8 (440 bytes)  UartSetI2CEnable: the Big chip's entry into the official
- * USB/UART firmware update (rescue) path. BYTE-EXACT at -mcpu=v8 -O3 -g -msoft-float (also -mcpu=v8 -O3 -g).
+ * USB/UART firmware update (rescue) path. -mcpu=v8 -O3 -g -msoft-float (also -mcpu=v8 -O3 -g).
  *
  * What the code does (code facts):
  * 1. Builds an 11-byte reply frame at 0xA802D078: bytes 7, 8, 9 = the hundreds, tens and ones digit ('0' + n) of the
@@ -23,7 +23,7 @@
  *   command switch FUN_a00bfcc4; this function then needs only the UART send path, the GPIO set-up and the
  *   func_0x4008f3f4 (RAM-copy, = FUN_a002f3f4) I2C slave set-up. It reads no panel/timing state.
  *
- * BYTE-EXACT key: the three digits computed into their own unsigned char locals first (h = v / 100; t = r / 10;
+ * key: the three digits computed into their own unsigned char locals first (h = v / 100; t = r / 10.
  *   o = r - t * 10) and stored afterwards; writing the digit expressions straight into the stores gives the same
  *   instructions with other registers (78.2 %).
  */

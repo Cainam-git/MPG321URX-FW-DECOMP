@@ -1,4 +1,4 @@
-/* leon2m FUN_a0124fb4 @ 0xa0124fb4  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0124fb4 @ 0xa0124fb4 (-mcpu=v8 -O2 -g)
  * Returns byte 3 of the 4-byte entry (param_1 & 0xFF) of the table at 0x1A4288. The table is a plain
  * (non-volatile) unsigned char array, like DAT_001a42a8 in FUN_a01252fc.
  */

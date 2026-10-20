@@ -1,5 +1,4 @@
-/* leon2s FUN_a00a7368 @ 0xa00a7368  MATCH (-mcpu=v8 -Os, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): literal 0xf4000001->0xf401
+/* leon2s FUN_a00a7368 @ 0xa00a7368 (-mcpu=v8 -Os)
  */
 int FUN_a00a7368(unsigned int param_1, unsigned short param_2)
 {

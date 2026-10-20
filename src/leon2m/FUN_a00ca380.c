@@ -1,4 +1,4 @@
-/* leon2m FUN_a00ca380 @ 0xa00ca380  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00ca380 @ 0xa00ca380 (-mcpu=v8 -O2 -g)
  * Selects DAT_a802d049 (param_1 == 2), DAT_a802d0a1 (param_1 == 3) or DAT_a802d0d9 (other values, param_1 masked
  * to 8 bits) and subtracts '0' (0x30). A result above 2 returns 0xFF. Otherwise the result is stored to
  * DAT_a802d46d, FUN_a00dab08, FUN_a00b88cc, FUN_a00baa6c(param_1), FUN_a00ba950(param_1) and FUN_a00bab80(param_1,

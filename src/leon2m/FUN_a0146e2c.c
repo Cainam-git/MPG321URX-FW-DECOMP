@@ -1,5 +1,5 @@
-/* leon2m FUN_a0146e2c @ 0xa0146e2c-0xa0146ef4 (50 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 50 words. Twin of FUN_a0147560 (same
+/* leon2m FUN_a0146e2c @ 0xa0146e2c-0xa0146ef4 (50 words), flags -mcpu=v8 -O3 -g.
+ * Twin of FUN_a0147560 (same
  * remap function and channel check), tail callee FUN_a00f6d00.
  * Code facts: mapped = u8 remap(ch) (1 / 0 / 2 / 3 -> itself, else -1; case tree rooted at 1); mapped > 3 ->
  * FUN_a00df170(s_001a6dd8 "SYS remapping channel OOR\r\n") and mapped = 0. v = bits 4..7 of word

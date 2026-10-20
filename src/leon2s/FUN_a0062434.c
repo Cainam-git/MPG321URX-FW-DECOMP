@@ -1,5 +1,4 @@
 /* leon2s FUN_a0062434 @ 0xa0062434-0xa00624b4 (32 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/32 mismatches.
  * Code facts: hw regs: 0x9f120048 &= ~0x10; 0x9f120028 &= ~0x20; 0x9f100090 |= 0x20. Word +0x20
  * of the record DAT_a8078a70 (0xa8078a90) = (u16)func_0x9f1c3ef0() * 10; FUN_a0061534(hw address
  * 0xd0013ffc, 0xff); tail call FUN_a0062308() (no args: it never reads %i0..). void.

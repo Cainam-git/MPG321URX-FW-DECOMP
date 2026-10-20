@@ -1,5 +1,4 @@
-/* leon2m FUN_a0104c34 @ 0xa0104c34-0xa0104cb0 (31 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/31.
+/* leon2m FUN_a0104c34 @ 0xa0104c34-0xa0104cb0 (31 words). -mcpu=v8 -O3 -g.
  * What it does: returns 1 when bits 0..1 of register 0x54 of block blk (FUN_a00f2254, the 0x19a2ec-table
  * register read) are not both 0, else 0. For blk 8 (= the 'all blocks' code; FUN_a00f2254 reads block 0
  * for 8 and up) it tries up to 4 times and returns 1 at the first nonzero read.

@@ -1,5 +1,4 @@
-/* leon2m FUN_a0152fac @ 0xa0152fac-0xa0153018 (27 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 27 words.
+/* leon2m FUN_a0152fac @ 0xa0152fac-0xa0153018 (27 words), flags -mcpu=v8 -O3 -g.
  * Code facts: r = -1 when FUN_a011996c(0) or FUN_a011996c(1) returns non-zero (u8 return, btst 0xff), else 0.
  * When r differs from the word at 0xa802a4bc, FUN_a013a728(r) is called; then the word is set to r. void(void).
  * Fix vs the autoc draft: the callee args are the constants 0 and 1 (clr %o0 / mov 1,%o0), the draft passed

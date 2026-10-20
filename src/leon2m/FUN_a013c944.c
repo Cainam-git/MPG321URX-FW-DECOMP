@@ -1,7 +1,7 @@
 /* leon2m FUN_a013c944 @ 0xa013c944..0xa013cd4c (258 words): input-channel records reset, start-up step 7 of
  * FUN_a015266c, called AFTER FUN_a0141964 (src/leon2m/FUN_a015266c.c: FUN_a012cfac, FUN_a00fd558, FUN_a0141964,
  * FUN_a015209c, FUN_a013c944), so it runs only when the display start-up path has returned.
- * BYTE-EXACT: -mcpu=v8 -O3 -g -msoft-float: jf 100.00 match=True, rawcmp 0/258, tools/exact.py
+ * -mcpu=v8 -O3 -g -msoft-float: tools/exact.py
  * exact() = None. (Without -msoft-float: 20.54; the loop pass then hoists other mask constants.)
  * In plain words: it puts the four input-channel records (RAM 0xA802DF30, 4 x 0x78 bytes, the records the channel
  * state machine FUN_a013dc6c steps through) into their start state: channel 0 gets state 5, the other three state 0,

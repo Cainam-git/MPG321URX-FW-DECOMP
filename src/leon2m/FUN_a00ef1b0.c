@@ -1,5 +1,5 @@
-/* leon2m FUN_a00ef1b0 @ 0xa00ef1b0-0xa00f0380 (1140 words), flags -mcpu=v8 -O3 -g -msoft-float. BYTE-EXACT
- *: jf 100.00 match=True, rawcmp.py 0 mismatches / 1140 words. Float source: the
+/* leon2m FUN_a00ef1b0 @ 0xa00ef1b0-0xa00f0380 (1140 words), flags -mcpu=v8 -O3 -g -msoft-float.
+ *: Float source: the
  * FUN_a0155xxx callees are libgcc soft-float (c40 __floatsisf, 78c __addsf3, 830 __mulsf3, a18 __divsf3,
  * 1bc __fixunssfsi, d90 __extendsfdf2).
  * What it does: output / pixel-clock set-up of the selected port block (dc6c state 8 step 5 calls

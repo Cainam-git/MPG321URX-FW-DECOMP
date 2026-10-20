@@ -1,5 +1,4 @@
 /* leon2s FUN_a00d3704 @ 0xa00d3704-0xa00d378c (34 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches.
  * Code facts: mode param_2 == 1: acc = word 0xa80785e0; acc != level -> acc = FUN_a00d36e4(level << 8,
  * acc, 0x28) (two compares, bgu / bcc); level = (acc + 0x80) >> 8. Else acc = level << 8.
  * Clamp: level > 0x514 -> 0x514, else max(level, u16 0xa80783dc). Tail call FUN_a00d2378((u16)level).

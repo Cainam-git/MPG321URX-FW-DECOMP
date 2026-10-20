@@ -1,4 +1,4 @@
-/* leon2s FUN_a0098b60 @ 0xa0098b60  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0098b60 @ 0xa0098b60 (-mcpu=v8 -Os -g)
  * For the port byte p: clears the halfword DAT_a8079054[p], then sets bit 2 of DAT_a80788d2 if p == 0, or bit 3 if
  * p == 1. The compiler places the halfword store in the branch delay slot and hoists the second base address.
  */

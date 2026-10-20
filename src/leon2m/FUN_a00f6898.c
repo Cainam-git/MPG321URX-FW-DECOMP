@@ -1,5 +1,4 @@
-/* leon2m FUN_a00f6898 @ 0xa00f6898-0xa00f6940 (42 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/42.
+/* leon2m FUN_a00f6898 @ 0xa00f6898-0xa00f6940 (42 words). -mcpu=v8 -O3 -g.
  * What it does (leaf): sets enable bits in two hardware registers chosen by p; the set-twin of
  * src/leon2m/FUN_a00f67d0.c (which clears bit 0/1 of 0xcf00ec80 / 0xcf00eca8):
  *   p 0: 0xcf00ec80 |= 1, 0xcf00ee40 |= 3      p 1: 0xcf00ec80 |= 2, 0xcf00ee40 |= 0xc

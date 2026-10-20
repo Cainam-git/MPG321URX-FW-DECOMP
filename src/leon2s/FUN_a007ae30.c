@@ -1,4 +1,4 @@
-/* leon2s FUN_a007ae30 @ 0xa007ae30  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a007ae30 @ 0xa007ae30 (-mcpu=v8 -Os -g)
  * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
  */
 void FUN_a007ae30(unsigned int param_1, unsigned char param_2)

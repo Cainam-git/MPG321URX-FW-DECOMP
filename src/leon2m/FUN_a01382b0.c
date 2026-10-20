@@ -1,4 +1,4 @@
-/* leon2m FUN_a01382b0 @ 0xa01382b0  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a01382b0 @ 0xa01382b0 (-mcpu=v8 -O2 -g)
  * Calls FUN_a01370dc(0x7F, 4, buffer, 0) with the 4-byte buffer {0x3C, 0, 0, 0}. The source zero-initialises the
  * buffer and then ORs 0x3C into byte 0.
  */

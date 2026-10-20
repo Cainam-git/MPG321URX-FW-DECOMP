@@ -1,5 +1,4 @@
-/* leon2m FUN_a0097138 @ 0xa0097138-0xa0097190 (22 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 22 words.
+/* leon2m FUN_a0097138 @ 0xa0097138-0xa0097190 (22 words), flags -mcpu=v8 -O3 -g.
  * Code facts: toggles bit 9 (0x200) of the word at 0xa802d290 (one ld, btst, or/andn values both computed,
  * one st per arm); FUN_a0148d98((word >> 9) & 1) after a re-load; FUN_a00b3b5c(1); byte 0xa802b08e |= 2.
  * void(void). Fix vs the autoc draft (68.18): if/else of the mask forms with the CLEAR test first

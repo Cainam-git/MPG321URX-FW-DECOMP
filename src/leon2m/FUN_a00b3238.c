@@ -1,4 +1,4 @@
-/* leon2m FUN_a00b3238 @ 0xa00b3238  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00b3238 @ 0xa00b3238 (-mcpu=v8 -O2 -g)
  * Calls FUN_a00a8c88, FUN_a0146b50(0x111, 0) and FUN_a0146b6c(0, 0), then for index 0..2 passes
  * FUN_a00a3844(0x18F52C, index) to FUN_a00a31a4(0, 0x2A, index * 2 + 6, 1, value, 0). The loop counter is an
  * unsigned char that is incremented and masked with 0xFF before the comparison; the address is written as

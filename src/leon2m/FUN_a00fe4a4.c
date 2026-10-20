@@ -1,5 +1,5 @@
-/* leon2m FUN_a00fe4a4 @ 0xa00fe4a4-0xa00fe6c8 (137 words). BYTE-EXACT: -mcpu=v8 -O3 -g,
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 137 words. void(u8 blk, u8 cls).
+/* leon2m FUN_a00fe4a4 @ 0xa00fe4a4-0xa00fe6c8 (137 words). -mcpu=v8 -O3 -g.
+ * void(u8 blk, u8 cls).
  * What it does: register set-up of block blk by the source class code cls (GlobalModeHandler FUN_a0131518 calls
  * it with sel and cls = byte +0x0a of the port record DAT_a802e224[src], in modes 1 and 2, before
  * FUN_a00fd594 / FUN_a00fd9a0 with 0xb1):

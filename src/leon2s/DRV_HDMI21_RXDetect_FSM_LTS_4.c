@@ -1,4 +1,4 @@
-/* leon2s DRV_HDMI21_RXDetect_FSM_LTS_4 @ 0xa00983ec  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s DRV_HDMI21_RXDetect_FSM_LTS_4 @ 0xa00983ec (-mcpu=v8 -Os -g)
  * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
  */
 extern unsigned int DAT_a8078634;              /* 0xa8078634 */

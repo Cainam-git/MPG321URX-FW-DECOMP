@@ -1,5 +1,5 @@
 /* leon2m FUN_a0096610 @ 0xa0096610-0xa009665c (19 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/19 mismatches. Sibling of src FUN_a009665c.
+ * Sibling of src FUN_a009665c.
  * void(void). On the mode record DAT_a802d290: [0x11] = 3, then the copies [0x8c] = [0x12], [0x8d] = [0x13],
  * [0x8e] = [0x14]; then DAT_a802afec = 0xca; calls FUN_a00b7474() (no arguments; it sets its own %o0 at entry) and
  * tail-calls FUN_a00a9650(0, 1).

@@ -1,5 +1,4 @@
 /* leon2m FUN_a0125140 @ 0xa0125140-0xa0125198 (22 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/22 mismatches.
  * Code facts: leaf getter, n = (u8)param. n <= 7 -> byte +0 of the 0x16-byte ROM record
  * DAT_001a42a8[n] (smul 0x16, ldub); n == 0xfc -> 0x12, 0xfd -> 0x13, 0xfe -> 0x14; anything else
  * 0xff. Returns u8 (retl; and 0xff).

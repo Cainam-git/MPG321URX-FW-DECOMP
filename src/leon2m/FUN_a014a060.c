@@ -1,5 +1,4 @@
 /* leon2m FUN_a014a060 @ 0xa014a060-0xa014a0d8 (30 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/30 mismatches.
  * Code facts: p (u8) maps 0->0, 1->1, 2->2, 3->3, anything else -> 0xff (switch, emitted as a
  * compare chain). If v <= 3: tail call FUN_a012f1ec(v, 3). Else: log FUN_a00df170(string
  * 0x1a6dd8), then tail call FUN_a012f1ec(0, 3). Both tail calls are separate in the fw.

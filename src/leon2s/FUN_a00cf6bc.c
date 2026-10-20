@@ -1,4 +1,4 @@
-/* FUN_a00cf6bc (leon2s, 0xa00cf6bc-0xa00cf7b4, 62 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a00cf6bc (leon2s, 0xa00cf6bc-0xa00cf7b4, 62 words). Flags -mcpu=v8 -Os -g.
  Code facts: void (u8 port). Word 0 of the 24-byte record port of DAT_a8078bb0: 2-bit field bits 16..17 = 1; func_0xa0f96400(0, 0x90, 0x69493, 0, buf);
  FUN_a00c87e8(port, 0xc, 0x8000); 16 bytes buf[i] = FUN_a00c7770(port, 1) (u16 i); func_0xa0f963d4(0, 0x80, 0x693e0, 0xf, buf); if bit 21 of the
  record word is set, the bits 16..17 field = 2.

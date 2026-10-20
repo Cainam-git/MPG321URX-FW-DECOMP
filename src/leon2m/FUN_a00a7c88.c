@@ -1,4 +1,4 @@
-/* leon2m FUN_a00a7c88 @ 0xa00a7c88  MATCH (-mcpu=v8 -O2 -g, gcc 3.4.4, autoc)
+/* leon2m FUN_a00a7c88 @ 0xa00a7c88 (-mcpu=v8 -O2 -g)
  * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
  */
 extern int func_0x4008e2a4(void); /* 0x4008e2a4 */

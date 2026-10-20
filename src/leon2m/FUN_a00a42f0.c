@@ -1,4 +1,4 @@
-/* leon2m FUN_a00a42f0 @ 0xa00a42f0  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00a42f0 @ 0xa00a42f0 (-mcpu=v8 -O2 -g)
  * The function returns 1 in both cases, as shown by `mov 1, %o0` before the branch.
  */
 extern unsigned char DAT_a802d290[];

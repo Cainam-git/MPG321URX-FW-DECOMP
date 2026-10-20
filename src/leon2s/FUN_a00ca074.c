@@ -1,5 +1,4 @@
 /* leon2s FUN_a00ca074 @ 0xa00ca074-0xa00ca130 (47 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/47 mismatches.
  * Code facts: leaf, hw registers only (0xcf018e04/0c/10/14, all volatile = real registers).
  * If reg 0xcf018e0c == 0: reg e04 = v; p == 0xaa: e14 |= 1 and wait until bit 0 clears, else
  * e14 |= 4 and wait for bit 2; e10 = 0x1f; e14 |= 0x80 and wait for bit 7; e0c = 0x3f.

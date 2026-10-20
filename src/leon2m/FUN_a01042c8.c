@@ -1,5 +1,4 @@
-/* leon2m FUN_a01042c8 @ 0xa01042c8-0xa0104380 (46 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 46 words.
+/* leon2m FUN_a01042c8 @ 0xa01042c8-0xa0104380 (46 words), flags -mcpu=v8 -O3 -g.
  * Code facts: stable read of register 0x89 of block blk: a = FUN_a00f29d4(blk, 0x89); FUN_a0121bcc(1, rate) (wait);
  * b = FUN_a00f29d4(blk, 0x89); up to 3 more rounds while -15 <= (int)(a - b) <= 15 (n = 0..2, u8); returns
  * (a + b) >> 1 (unsigned). Callee prototypes as in src/leon2m (blk/reg u8, frames u8, rate u16).

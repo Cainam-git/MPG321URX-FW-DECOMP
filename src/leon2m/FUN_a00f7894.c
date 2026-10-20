@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f7894 @ 0xa00f7894  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f7894 @ 0xa00f7894 (-mcpu=v8 -O3 -g)
  * Takes a 3-byte record p. m = 1 when p[2] is 8, 2 when p[2] is 16, otherwise 0. Writes
  * 0xCF00EE80 = (0xCF00EE80 & 0xF9) | (DAT_a802b7b4 << 1) and
  * 0xCF00EEC0 = (0xCF00EEC0 & 0x3A) | (p[0] << 7) | (p[1] << 6) | (m << 2), then prints

@@ -1,5 +1,5 @@
 /* FUN_a0091f14 (leon2s, 0xa0091f14-0xa0092064, 336 bytes, 84 words).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/84 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: colour depth set-up. port = (u8)param_1; FUN_a0091ef0(port, 0); r12f = reg 0x12f & ~0x78,
  * r4a = reg 0x4a & 0x1f (FUN_a00a7fd8(port, 0, reg)). By (u8)param_2: 8 -> print "- 8bit_Depth",
  * 0x12f = (r12f | 0x20) & 0xa7, 0x4a = r4a, FUN_a0091ef0(port, 0); 10 -> "- 10bit_Depth", 0x28 / 0xaf,

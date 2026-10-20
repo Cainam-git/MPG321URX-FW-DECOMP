@@ -1,5 +1,5 @@
 /* leon2m FUN_a0087020 @ 0xa0087020..0xa0087430 (1,040 bytes)  App_CoolInitialize: Big chip start-up, step 3 of main()
- * (hand; BYTE-EXACT at -mcpu=v8 -O3 -g -msoft-float, also at -mcpu=v8 -O3 -g).
+ * (hand; -mcpu=v8 -O3 -g -msoft-float, also at -mcpu=v8 -O3 -g).
  *
  * Caller: main() FUN_a00295a4 (func_0x00027020), once, after FUN_a015266c and before the endless main loop.
  * What the code does (code facts, in order):

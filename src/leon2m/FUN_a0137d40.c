@@ -1,5 +1,4 @@
-/* leon2m FUN_a0137d40 @ 0xa0137d40-0xa0137d6c (11 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 11 words.
+/* leon2m FUN_a0137d40 @ 0xa0137d40-0xa0137d6c (11 words), flags -mcpu=v8 -O3 -g.
  * Code facts: a 4-byte stack buffer is cleared with one word store, byte [0] = the u8 param, then
  * FUN_a01370dc(0x2f, 4, buf, 1). void.
  * Fix vs the autoc draft (72.73): a 4-byte buffer with an initializer (the draft's single u8 local had no word

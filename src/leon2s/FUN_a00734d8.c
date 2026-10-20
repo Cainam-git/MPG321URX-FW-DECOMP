@@ -1,4 +1,4 @@
-/* leon2s FUN_a00734d8 @ 0xa00734d8  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00734d8 @ 0xa00734d8 (-mcpu=v8 -Os -g)
  * Sets byte 2 of the 0x18-byte entry (param_1 & 0xFF) of the table at 0xA807CC64 to 1.
  */
 typedef unsigned int uint;

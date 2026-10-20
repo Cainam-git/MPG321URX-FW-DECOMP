@@ -1,5 +1,5 @@
-/* leon2m FUN_a0148500 @ 0xa0148500  re-apply the active row's nominal rate to the FRC set-up (hand; 
- * BYTE-EXACT at -mcpu=v8 -O3 -g and -O3 -msoft-float).
+/* leon2m FUN_a0148500 @ 0xa0148500  re-apply the active row's nominal rate to the FRC set-up
+ * Flags: -mcpu=v8 -O3 -g and -O3 -msoft-float.
  *
  * rate = halfword +0x52 of the raw active panel row 0xA802E378 (= 0xA802E3CA: 2400 / 1200 / 600 tenths of Hz for rows
  * 0 / 1 / 2). Calls FRCConfigPostFRC FUN_a0107e44(0xA802E3D3 != 0, rate, 1), then tail-calls FUN_a0109bbc(0, 0, 0,

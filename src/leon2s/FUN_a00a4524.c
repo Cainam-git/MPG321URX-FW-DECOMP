@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a4524 @ 0xa00a4524  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00a4524 @ 0xa00a4524 (-mcpu=v8 -Os -g)
  * Finished from mechanical Ghidra C. HDMI TX FRL training, link-training-state
  * step for port param_1: when the port entry of 0xa807db6c differs from its copy in 0xa807873c
  * it logs the state change, copies it, writes 0 to register 0x31 and, if bit 5 of register

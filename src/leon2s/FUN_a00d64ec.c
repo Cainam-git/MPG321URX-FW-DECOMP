@@ -1,4 +1,4 @@
-/* FUN_a00d64ec (leon2s, 0xa00d64ec-0xa00d6560, 29 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a00d64ec (leon2s, 0xa00d64ec-0xa00d6560, 29 words). Flags -mcpu=v8 -Os -g.
  Code facts: void(void). Up to 10 passes (u8 counter 9 down to 0): set bit 0 of the hardware register 0xcf013204, func_0xa0fc1794(5), st = 0,
  r = func_0xa0f9639c(0, 0x90, 0x2c0, &st) (u8 return); a failed read (r != 0) clears st; stop when bit 1 of st is set.
  Fixes vs draft: 9639c returns u8 and result is unsigned char (fw btst 0xff; a signed char result gives sll 24); the decrement sits in the

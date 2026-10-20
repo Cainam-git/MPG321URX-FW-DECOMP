@@ -1,5 +1,4 @@
 /* leon2m FUN_a002fae0 @ 0xa002fae0-0xa002fb44 (25 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/25 mismatches.
  * Code facts: for the 4 port records DAT_a802df30[i] (0x78 bytes; i*15*8): m = FUN_a002c204() (u8
  * read of hw 0xcf03c890, no args); if m & byte +0x76 of the record, FUN_a002e3c4((word +0 >> 12) &
  * 0xf, 1). The record offset is computed before the call. void(void).

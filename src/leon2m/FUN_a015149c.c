@@ -1,5 +1,4 @@
 /* leon2m FUN_a015149c @ 0xa015149c-0xa0151674 (118 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0 mismatches.
  * Code facts: FUN_a01241fc(); FUN_a0142418(0, f24) with f24 = bits 24..27 of the word at 0xa802e3d4
  * (fw ldub [rec+4] & 0xf); FUN_a0142418(1, f20) (ld, srl 20, and 0xf); m = top nibble (srl 28,
  * signed char compare: ble). m == 2 / 1 / 3 / other select the (a, b) pattern of four

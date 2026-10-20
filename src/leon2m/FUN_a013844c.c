@@ -1,5 +1,4 @@
-/* leon2m FUN_a013844c @ 0xa013844c-0xa01384ac (24 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 24 words.
+/* leon2m FUN_a013844c @ 0xa013844c-0xa01384ac (24 words), flags -mcpu=v8 -O3 -g.
  * Code facts: builds a 12-byte message at %fp-24: buf[0] = p1, buf[4..11] = src[0..7] (4 byte pairs, loop
  * i = 0..3 u8), then FUN_a01370dc(0x59, 0xc, buf, 0). buf[1..3] are not written.
  * Fix vs the autoc draft (75.00): BEHAVIOUR - the draft stored an uninitialised b1 one round late; the copy is

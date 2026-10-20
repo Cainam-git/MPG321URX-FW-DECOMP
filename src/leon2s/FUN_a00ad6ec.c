@@ -1,5 +1,5 @@
 /* FUN_a00ad6ec (leon2s, 0xa00ad6ec-0xa00ad734, 72 bytes, 18 words).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/18 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: port = (u8)param_1; FUN_a00a6c00(port, 0x70, 0); FUN_a00a6c00(port, 0x73, 8);
  * returns 1 when bit 4 (0x10) of FUN_a00a6bb8(port, 0x7a) is CLEAR, else 0
  * (fw: and 0x10, cmp %g0,%o0, subx %g0,-1 = (x == 0)).

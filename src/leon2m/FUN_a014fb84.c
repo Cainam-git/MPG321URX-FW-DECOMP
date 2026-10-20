@@ -1,5 +1,4 @@
-/* leon2m FUN_a014fb84 @ 0xa014fb84-0xa014fbf0 (27 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 27 words.
+/* leon2m FUN_a014fb84 @ 0xa014fb84-0xa014fbf0 (27 words), flags -mcpu=v8 -O3 -g.
  * Code facts: b = byte 0xa802a49a; mode == 1: FUN_a011e028(b, 1), FUN_a011e220(b, 1), FUN_a011dd9c(b, u16
  * 0xa802a49e), tail FUN_a011d748(b, 0xff, u16 0xa802a4a0, 0); else tail FUN_a011e148(b). (The GEN2/GEN1 arms of
  * FUN_a0150120 without the prints.)

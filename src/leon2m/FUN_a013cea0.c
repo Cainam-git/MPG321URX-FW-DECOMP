@@ -1,5 +1,4 @@
 /* leon2m FUN_a013cea0 @ 0xa013cea0-0xa013cecc (11 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/11 mismatches.
  * Code facts: leaf; ch is a u8 param (and 0xff at entry); returns bits 14..15 of word +0x70 of the
  * port record DAT_a802df30[ch] (0x78-byte records, index ch*15*8: sll 4 / sub / sll 3), i.e.
  * (w70 >> 14) & 3 (srl 0xe; and 3). Caller: FUN_a0143d14 (channel-checked wrapper, row-1e events).

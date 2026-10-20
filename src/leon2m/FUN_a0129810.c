@@ -1,5 +1,4 @@
-/* leon2m FUN_a0129810 @ 0xa0129810-0xa01298d8 (50 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/50.
+/* leon2m FUN_a0129810 @ 0xa0129810-0xa01298d8 (50 words). -mcpu=v8 -O3 -g.
  * What it does: switches the panel to ROM row 1 (the second 0x58-byte PanelRow of the 3-row table
  * DAT_00198380), once:
  *   was = DAT_a802d892.ch (read BEFORE the call: fw 'ldub [%i1+1]' in the call delay slot);

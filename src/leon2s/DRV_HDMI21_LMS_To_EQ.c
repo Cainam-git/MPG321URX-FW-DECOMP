@@ -1,4 +1,4 @@
-/* leon2s DRV_HDMI21_LMS_To_EQ @ 0xa0079f80  MATCH (-mcpu=v8 -Os -g)
+/* leon2s DRV_HDMI21_LMS_To_EQ @ 0xa0079f80 (-mcpu=v8 -Os -g)
  * The function programs HDMI LMS equalizer tables: it writes halfword values from two tables through register-write helper FUN_a00a7488, with a conditional debug call at the start gated by a hardware flag. The statement order puts `i = 0` before the conditional, and a `goto` gives the exact branch structure. Whether `param_1` needs a separate local to produce the `mov %i0, %l1` in the delay slot is not determined.
  */
 extern unsigned int _DAT_a8078634;

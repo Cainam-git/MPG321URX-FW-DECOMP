@@ -1,5 +1,4 @@
-/* leon2s FUN_a0072fd8 @ 0xa0072fd8  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: decomp-permuter (AST mutations), judged by exact bytes
+/* leon2s FUN_a0072fd8 @ 0xa0072fd8 (-mcpu=v8 -Os -g)
  */
 
 extern int FUN_a006122c();

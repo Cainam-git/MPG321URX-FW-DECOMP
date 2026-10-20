@@ -1,5 +1,4 @@
-/* leon2m FUN_a008a034 @ 0xa008a034-0xa008a09c (26 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/26.
+/* leon2m FUN_a008a034 @ 0xa008a034-0xa008a09c (26 words). -mcpu=v8 -O3 -g.
  * What it does (leaf, APP event pump FUN_a008a210 callee): v = 4; when bits 6..7 of the event code p are
  * 0b10 (p & 0xc0 == 0x80): i = byte table DAT_00100068[p & 0x3f]; if i != 4, v = byte table DAT_00100060[i].
  * Then, when v <= 3, FUN_a0088714() (a leaf that only sets the byte DAT_a8024028 = 2; it takes no argument:

@@ -1,5 +1,4 @@
-/* leon2m FUN_a0097ad0 @ 0xa0097ad0-0xa0097b7c (43 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 43 words.
+/* leon2m FUN_a0097ad0 @ 0xa0097ad0-0xa0097b7c (43 words), flags -mcpu=v8 -O3 -g.
  * Code facts: if byte 0xa802d290+0x2f != byte 0xa8025c54 then the record byte gets that value (stb in the
  * call delay slot) and FUN_a00da254() runs (return unused); FUN_a00a93bc(word 0xa802afec - 0x7f, as u8);
  * FUN_a00a813c(1, rec+0x2f, 1); FUN_a00a9650(rec+0x2f, 0); FUN_a00a9468(1, 2); word 0xa802afec = 0x25;

@@ -1,4 +1,4 @@
-/* leon2m FUN_a0124914 @ 0xa0124914  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0124914 @ 0xa0124914 (-mcpu=v8 -O2 -g)
  * Returns 1 when the low byte of func_0x4008cd38(9, 4) equals 1, else 0. Masking into the separate variable t
  * produces the firmware's two-register sequence (and ..., %g1 / xor %g1, 1, ...).
  */

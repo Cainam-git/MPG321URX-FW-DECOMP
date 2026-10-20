@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a151c @ 0xa00a151c  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00a151c @ 0xa00a151c (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. For the 52-byte record of unit param_1 at
  * 0xa807db00, takes the pointer in its first word + 4, calls FUN_a00a73ac(9, p),
  * FUN_a00b160c(1), FUN_a00a73d4(9, p), FUN_a00b1794(1), then sets the flag byte at 0xa807918e

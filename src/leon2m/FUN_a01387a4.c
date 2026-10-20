@@ -1,5 +1,5 @@
 /*
- * FUN_a01387a4 - mailbox reader (Big chip, leon2m). BYTE-EXACT at '-mcpu=v8 -O3 -g -msoft-float'
+ * FUN_a01387a4 - mailbox reader (Big chip, leon2m). '-mcpu=v8 -O3 -g -msoft-float'
  * (jf 100.00 % match=True; rawcmp a01387a4..a0138ae8: 209 words, 0 mismatches).
  *
  * What it does: calls FUN_a01350dc and FUN_a0134de0, reads 4 header words from mailbox portal 1 offset 0

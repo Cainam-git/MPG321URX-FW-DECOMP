@@ -1,5 +1,5 @@
 /* leon2m FUN_a008a878 @ 0xa008a878-0xa008a95c (57 words incl. the merged unreachable ret/restore FUN_a008a954), flags -mcpu=v8 -O3 -g.
- * BYTE-EXACT: jf 100.00 match=True, rawcmp.py 0 mismatches / 57 words. Twin of FUN_a008a794.
+ * Twin of FUN_a008a794.
  * Code facts: ROM table DAT_00100242 of 3-byte records {x, y, w} indexed by byte 0xa802afbd (add/add = *3,
  * [base + off] and +1/+2). FUN_a0146a80(x, y, w, 0x790, 0) for the old index; index = afbd + 1, when > 0x1a it wraps to 0xd;
  * FUN_a0146a80(x, y, w, 0x90, 0) for the new index. Then the index maps to byte 0xa802d2a1 (1 -> 2, 7 -> 3, 0xa / 0x14 -> 1, 4 -> 0) followed by the

@@ -1,4 +1,4 @@
-/* FUN_a00afeb8 (leon2s, 0xa00afeb8-0xa00b0004, 83 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a00afeb8 (leon2s, 0xa00afeb8-0xa00b0004, 83 words). Flags -mcpu=v8 -Os -g.
  Code facts: (port, restart). restart: counter DAT_a807933a = 0, aec50(port, 1). Three a6c98 writes (0x483/0x24/1, 0x483/3/0, 0x486/1/1); r = (u16)FUN_a00acc54(port);
  a4ec4(0, r); if (u16)(r - 101) <= 0x30: 6c98(port, 0x483, 1, (u8)6bb8(port, 0x21c) == 6 ? 0 : 1). 6c00(port, 0x485, DAT_a00b4df8[counter]); aec10();
  (u8)aec50(port, 0) == 1 -> counter++; counter > 10 -> counter = 0, afdf4(port, 0), return 1; else return 0.

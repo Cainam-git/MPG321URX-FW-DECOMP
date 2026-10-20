@@ -1,4 +1,4 @@
-/* leon2m FUN_a0124df8 @ 0xa0124df8  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0124df8 @ 0xa0124df8 (-mcpu=v8 -O2 -g)
  * This computes the table pointer (sethi/or, smul, add) before the comparison, matching the target's ordering. The function reads three bytes from the table entry and calls func with them if the first isn't 0xff.
  */
 extern int func_0x4008c86c();

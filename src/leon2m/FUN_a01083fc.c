@@ -1,7 +1,6 @@
 /* leon2m FUN_a01083fc @ 0xa01083fc-0xa01084a8 (43 words), flags -mcpu=v8 -O3 -g -msoft-float.
  * BEST FLAGS DIFFER: needs -msoft-float (plain -O3 -g gives 27.78; the FUN_a0155xxx callees are libgcc
- * soft-float routines, as in FUN_a0105af8). BYTE-EXACT with those flags:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 43 words.
+ * soft-float routines, as in FUN_a0105af8). those flags:
  * Code facts: FUN_a00df170(s_0019abc8 "FRC_AutoFrameDown dclk =%ld\r\n", *dclk); x = *dclk (re-read). x <
  * 2408000000 (0x8f872a00) returns 100. Else v = 100, and when x > 2408000000: v = (unsigned)((float)x /
  * 2407000000.0f * 100.0f) + 1 (unsigned-to-float = __floatsisf FUN_a0155c40 with the >>1|&1 + __addsf3

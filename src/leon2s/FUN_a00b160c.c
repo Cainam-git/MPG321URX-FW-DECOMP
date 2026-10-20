@@ -1,4 +1,4 @@
-/* leon2s FUN_a00b160c @ 0xa00b160c  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00b160c @ 0xa00b160c (-mcpu=v8 -Os -g)
  * Delay loop: param_1 outer iterations (16-bit counter), each an inner nop loop whose count depends on param_1:
  * 0x21 for 0..4, 0x2E for 5..0x13, 0x2F for 0x14..0x5F, 0x30 for 0x60..0x1EA, 0x31 above 0x1EA. The inner test
  * `uVar2 < count` compiles to cmp %g1, count - 1 / bleu after the inc (cmp %g1, 0x30 for 0x31).

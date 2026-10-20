@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a6fc0 @ 0xa00a6fc0  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00a6fc0 @ 0xa00a6fc0 (-mcpu=v8 -Os -g)
  * Writes param_3 & 0xFF to the volatile register 0xCF000000 | ((DAT_a00b4d90[k] + param_2) * 4). For
  * param_1 = 0 or 1, k = param_1; for param_1 = 2 a do-while loop writes k = 0 and k = 1; for param_1 > 2 nothing
  * is written. DAT_a00b4d90 is a table of unsigned short entries.

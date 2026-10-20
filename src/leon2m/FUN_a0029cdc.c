@@ -1,4 +1,4 @@
-/* leon2m FUN_a0029cdc @ 0xa0029cdc  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0029cdc @ 0xa0029cdc (-mcpu=v8 -O2 -g)
  * This function initializes two hardware register blocks, reads two interrupt status registers, then scans a 6-bit mask (bits 0–5) against two 16-bit masks derived from those registers. For each set bit, it checks a callback table at 0xa802b170+0x100 and conditionally invokes the callback and/or writes an acknowledge register depending on the second mask. After the loop, it clears the status registers and performs a final tail-call write sequence. The main uncertainty is the exact loop bound (7 iterations vs 6) and whether the final call's return value is actually used (the tail-call pattern sug
  */
 extern unsigned int FUN_a002c250(unsigned int addr);

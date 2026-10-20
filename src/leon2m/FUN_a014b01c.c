@@ -1,5 +1,5 @@
-/* leon2m FUN_a014b01c @ 0xa014b01c-0xa014b0c4 (42 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 42 words. Same family as FUN_a014b360.
+/* leon2m FUN_a014b01c @ 0xa014b01c-0xa014b0c4 (42 words), flags -mcpu=v8 -O3 -g.
+ * Same family as FUN_a014b360.
  * Code facts: m = (u8)FUN_a01421c4(FUN_a0142218(FUN_a0125198(p1))) (each result passed on as u8). i = 0, 1, 2, 3
  * for m = 0x51 / 0x61 / 0x71 / 0x81, else 0 (u16 i: the fw 'and 3'). r = FUN_a0125124(byte +0x10 of the
  * 0x12-byte record DAT_a802e116[i]); FUN_a01255dc(r, p2); tail FUN_a0133e7c((u8)(1 << r), p2). void.

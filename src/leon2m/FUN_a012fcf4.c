@@ -1,6 +1,5 @@
 /* leon2m FUN_a012fcf4 @ 0xa012fcf4-0xa01302a4 (364 words; the asm header's "648 bytes" label is wrong, its range
  * is right) = GMDHEnableFRC (called by GlobalModeHandler state A entry FUN_a01516b0). Flags -mcpu=v8 -O3 -g.
- * Judge: jf 100.00 match=True, rawcmp 0/364.
  * What it does: m = byte DAT_a802e1a7 (DAT_a802e1a0 +7, the FRC mode 0..7); prints the s_001a5240 line with m and
  *   port 0 word0 bit 0. Switch 1 (jump table fw 0xcf1ac): per channel 1..3 FUN_a0109474(FUN_a013cda8(ch), a) and
  *   FUN_a01093a8(FUN_a013cda8(ch), b): mode 1 -> a = 1 on ch 1; 3 -> a on ch 1, 2; 4 -> a on ch 1..3; 5 -> b on

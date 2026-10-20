@@ -1,4 +1,4 @@
-/* leon2m FUN_a0145af8 @ 0xa0145af8  (hand; byte-exact at -mcpu=v8 -O3 -g, jump table included)
+/* leon2m FUN_a0145af8 @ 0xa0145af8  (-mcpu=v8 -O3 -g, jump table included)
  *
  * Getter for the monitor's saved-settings record at 0xA802E1A0, the 0x50-byte block that FUN_a0153970 writes
  * back to the settings EEPROM (I2C device 0 of the FUN_a0140e74 table, offset 0x470, 16-byte page writes with the

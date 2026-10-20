@@ -1,5 +1,5 @@
 /* leon2s FUN_a0092cec @ 0xa0092cec-0xa0092db8 (204 bytes, 51 words)
- * BYTE-EXACT with -mcpu=v8 -Os -g (gcc 3.4.4): jf 100.00 match=True, rawcmp_l2s 0/51.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: void (u8 port, u8 *p). It is the page-3 twin of FUN_a0092944: it writes p[0..0xd] into
  * registers 3..0x10 of page 3 through FUN_a00a8054(u8 port, u8 page, u16 reg, u8 val), reg = offset + 3.
  * There are three u8-counter loops of lengths 3, 7 and 4, and one counter variable (%l0) serves all three.

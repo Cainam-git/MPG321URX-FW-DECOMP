@@ -1,5 +1,4 @@
 /* leon2m FUN_a0106920 @ 0xa0106920-0xa0106b08 (122 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/122 mismatches.
  * What it does: switches an output-path mode of block 0 on or off (FUN_a0106b08 calls it with
  * (blk, 1) at the start of the rate set-up). blk != 0 -> nothing. Then by the chip version code
  * c = FUN_a011cf88() (see FUN_a011cf88.c):

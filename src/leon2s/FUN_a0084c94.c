@@ -1,4 +1,4 @@
-/* leon2s FUN_a0084c94 @ 0xa0084c94  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a0084c94 @ 0xa0084c94 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Port p comes back from FUN_a0083ed0(param_1 &
  * 0xff) (low byte). Then writes the low four bits of param_2 one by one through
  * FUN_a00a7718(p, reg, 1, bit) to registers 0x140, 0x1c0, 0x240 and 0x2c0 (bit 0 to the first,

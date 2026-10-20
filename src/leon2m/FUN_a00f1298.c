@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f1298 @ 0xa00f1298  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f1298 @ 0xa00f1298 (-mcpu=v8 -O3 -g)
  * Writes the 16-bit val (low byte, then high byte) to register reg and reg + 1 of a block, register n of block b
  * being the word at 0xCF000000 + 4 * (DAT_a8026a7e[b] + n) (u16 base table in RAM, four entries).
  * blk 4 writes blocks 0, 1 and 2 (the loop runs to 3 but skips entry 3); blk 0..3 writes that block; larger blk

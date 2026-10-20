@@ -1,4 +1,4 @@
-/* leon2s FUN_a008fb5c @ 0xa008fb5c  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a008fb5c @ 0xa008fb5c (-mcpu=v8 -Os -g)
  * 
  */
 extern unsigned int FUN_a00a657c(unsigned int param_1, unsigned short param_2);

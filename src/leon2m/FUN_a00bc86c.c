@@ -1,5 +1,4 @@
 /* leon2m FUN_a00bc86c @ 0xa00bc86c-0xa00bc8c4 (22 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/22 mismatches.
  * Code facts: writes three ASCII digits: DAT_a802d078[7..9] = DAT_a802d290[0x12..0x14] + '0'
  * (one record base each, ldub/add 0x30/stb); FUN_a00bacc4(10); FUN_a00ba950(port); sibcall
  * FUN_a00babe4(port, 0xb). port is a u8 param (fw 'and %i0,0xff' after the first call).

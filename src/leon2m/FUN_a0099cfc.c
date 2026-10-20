@@ -1,5 +1,4 @@
 /* leon2m FUN_a0099cfc @ 0xa0099cfc-0xa0099d6c (28 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/28 mismatches.
  * Code facts: b = bit 15 of the word at DAT_a802d290 + 0x1dc (0xa802d46c; srl 15, and 1; re-read
  * before each use). Byte DAT_a8025c56 = b; FUN_a00a900c((u8)(word DAT_a802afec - 0x34), 2);
  * DAT_a802afec = b + 0xbb; FUN_a00a9650(b, 1); tail call FUN_a00a813c(1, b, 0). void, no params.

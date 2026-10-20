@@ -1,5 +1,5 @@
 /* leon2s FUN_a00d9be4 @ 0xa00d9be4-0xa00d9d50 (364 bytes, 91 words)
- * BYTE-EXACT with -mcpu=v8 -Os -g (gcc 3.4.4): jf 100.00 match=True, rawcmp_l2s 0/91.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: void(void). idx = DAT_a8078832. It returns when the byte tables DAT_a8078830[idx] and DAT_a8078828[idx]
  * are equal. v = FUN_a00d7cd0() & 0xff (the callee returns a u8; the fw re-masks it into a u32), m = v & 0xe0.
  * m == 0x80: nothing happens. m == 0x40: DAT_a8078828[idx] = (v + 1) & 0xf. Any other m: a 20-byte local

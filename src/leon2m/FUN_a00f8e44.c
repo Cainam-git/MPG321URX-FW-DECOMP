@@ -1,5 +1,4 @@
-/* leon2m FUN_a00f8e44 @ 0xa00f8e44  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: [walk]; temp arg FUN_a00f1d48#2; selfassign t02_#2; return char; swap param_2 + 1; return unsigned short; local t02_ short; local t02_ unsigned short
+/* leon2m FUN_a00f8e44 @ 0xa00f8e44 (-mcpu=v8 -O3 -g)
  */
 extern int FUN_a00f1a90();
 extern int FUN_a00f1d48();

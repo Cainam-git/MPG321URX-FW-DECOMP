@@ -1,4 +1,4 @@
-/* leon2s FUN_a0091388 @ 0xa0091388  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0091388 @ 0xa0091388 (-mcpu=v8 -Os -g)
  * Reads two 20-bit values through FUN_a00a6668(param_1 & 0xFF, 0x106) and FUN_a00a6668(param_1 & 0xFF, 0x10C).
  * When both are non-zero it returns (u16)((u16)FUN_a00911bc(param_1) * v106 / v10C * 10000 >> 7); otherwise 0.
  */

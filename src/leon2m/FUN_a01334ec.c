@@ -1,4 +1,4 @@
-/* leon2m FUN_a01334ec @ 0xa01334ec  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a01334ec @ 0xa01334ec (-mcpu=v8 -O2 -g)
  * Calls func_0x4008c4d0(0, 0xC, &local_c, 1) with local_c = 0 and returns the low byte of local_c. The two
  * parameters are not used.
  */

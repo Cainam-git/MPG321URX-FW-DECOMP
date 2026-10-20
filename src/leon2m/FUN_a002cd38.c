@@ -4,7 +4,7 @@
  * Code: switch on port 1..17 (jump table 0xA002C824, 18 entries) -> one 32-bit load of
  * 0xCF03C000/04/08/0C/10, 0xCF03C040/48, 0xCF03C450..78 (step 8), 0xCF03CC00..0C; port 0 and port > 17 -> 0.
  * Leaf function: one load, no loop, no wait.
- * Exact: rawcmp 0/92 and the compiled jump table equals the firmware table (entries relative to the function). The
+ * Exact: and the compiled jump table equals the firmware table (entries relative to the function). The
  * jf score reads 99.00 'jump table at 0xa002c824 is outside the image' only because tools/exact.py maps jump
  * tables with the main-body runtime shift (+0xA0060000), which does not apply to this boot piece (it runs at its
  * listing address). volatile = real hardware registers.

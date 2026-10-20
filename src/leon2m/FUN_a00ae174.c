@@ -1,5 +1,5 @@
-/* leon2m FUN_a00ae174 @ 0xa00ae174  MATCH (-mcpu=v8 -O3 -g, twin)
- * Twin of FUN_a00adc98: same code, constants swapped; byte-exact.
+/* leon2m FUN_a00ae174 @ 0xa00ae174 (-mcpu=v8 -O3 -g)
+ * Twin of FUN_a00adc98: same code, other constants.
  * See FUN_a00adc98 for the explanation; this copy's constants differ, so its comments were removed.
  */
 struct St {

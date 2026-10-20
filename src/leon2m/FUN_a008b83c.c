@@ -1,5 +1,5 @@
-/* leon2m FUN_a008b83c @ 0xa008b83c, flags -mcpu=v8 -O3 -g (-mcpu=v8 -O3 -g -msoft-float: same code). BYTE-EXACT
- * (jf 100 match=True, rawcmp.py FUN_a008b83c FILE FLAGS a008b83c a008c25c: 0/648). Hand, from
+/* leon2m FUN_a008b83c @ 0xa008b83c, flags -mcpu=v8 -O3 -g (-mcpu=v8 -O3 -g -msoft-float: same code).
+ * (rawcmp.py FUN_a008b83c FILE FLAGS a008b83c a008c25c: 0/648). Hand, from
  * earlier drafts.
  * Factory menu "-" key: steps the item selected by DAT_a802afbd (0..26) down and redraws it
  * (near-twin of the "+" key FUN_a008c25c).

@@ -1,4 +1,4 @@
-/* leon2s FUN_a00c80f0 @ 0xa00c80f0  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00c80f0 @ 0xa00c80f0 (-mcpu=v8 -Os -g)
  * 
  */
 extern int func_0xa0fb7fd8();

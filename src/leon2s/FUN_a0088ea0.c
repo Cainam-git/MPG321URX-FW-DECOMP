@@ -1,4 +1,4 @@
-/* leon2s FUN_a0088ea0 @ 0xa0088ea0  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a0088ea0 @ 0xa0088ea0 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. For port param_1: if FUN_a0088af0(port) reports
  * something (non-zero low byte), returns 1 when FUN_a00aa7cc(port) gives 4, else 0; returns 0
  * when nothing is reported. Ghidra had passed an extra argument to both calls.

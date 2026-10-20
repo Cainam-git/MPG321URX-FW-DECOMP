@@ -1,5 +1,4 @@
 /* leon2m FUN_a0100434 @ 0xa0100434-0xa0100468 (13 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/13 mismatches.
  * Code facts: v = FUN_a00f1a90(blk, 4) (u8 register read); if (v & 3) == 3 returns (v >> 2) & 3,
  * else 0xff. blk is a u8 param.
  * Fixes vs the autoc draft (54.29): the tests are on the READ value v, not on the param (the draft

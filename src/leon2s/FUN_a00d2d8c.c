@@ -1,6 +1,5 @@
 /* FUN_a00d2d8c (leon2s, 0xa00d2d8c-0xa00d2e00, 116 bytes, 29 words; includes the merged unreachable
  * ret/restore tail FUN_a00d2df8). Flags: -mcpu=v8 -Os -g.
- * Judge: jf 100.00 match=True, rawcmp_l2s 0/29 mismatches.
  * Code facts: if the byte DAT_a8078c26 == 0: FUN_a00d2210(0, 1), FUN_a00d2288(0, 1),
  * FUN_a00d23bc(0, 1), FUN_a00d2300(0, 1), FUN_a00d2434(0, 1); DAT_a8078c26 = 1; tail call
  * FUN_a0f834c4(DAT_9f1c6420) (fw: 'restore %i0, %lo, %o0'). Sibling of FUN_a00d2ca8/FUN_a00d2c38

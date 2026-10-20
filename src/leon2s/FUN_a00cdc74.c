@@ -1,6 +1,5 @@
 /* leon2s FUN_a00cdc74 @ 0xa00cdc74-0xa00cdcdc (26 words incl. the unreachable ret/restore pair
  * FUN_a00cdcd4), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/26 mismatches.
  * Code facts: ch (u8). Word 0 of the 24-byte record DAT_a8078bb0[ch]: bits 16..17 = 1 (andn
  * 0x30000, or 0x10000). a = FUN_a00c9368(ch) (a stub 'retl; mov 1,%o0' that ignores its arg;
  * all other callers pass one, e.g. FUN_a00c9398 / FUN_a00cc900); if a != FUN_a00c972c() (both

@@ -1,5 +1,5 @@
-/* leon2m FUN_a015373c @ 0xa015373c  output path set-up after a panel row change (hand;
- * BYTE-EXACT at -mcpu=v8 -O3 and at -mcpu=v8 -O3 -g; NEW in FW.021). Real size 564 bytes.
+/* leon2m FUN_a015373c @ 0xa015373c  output path set-up after a panel row change
+ * -mcpu=v8 -O3 and at -mcpu=v8 -O3 -g; NEW in FW.021). Real size 564 bytes.
  *
  * Called at the end of FUN_a0141840 (panel row transform) and by FUN_a0141964, so in FW.021 every panel row change
  * (row picker FUN_a00dac38 -> FUN_a01483f4 -> FUN_a0141840) re-runs the output path set-up.
@@ -16,7 +16,7 @@
  * The FW.021 panel rows carry byte 0x54 = 0x20 -> +0x0C = 0x80, +0x0D = 0, the same
  *   values Disp_Init FUN_a0151db4 stores as constants; FUN_a0106d64 writes +0x0C to 0xCF00ED58.
  * Callers: FUN_a0141840, FUN_a0141964.
- * BYTE-EXACT keys: DispModeTransform CALLED (FUN_a0151c84 defined in this file and inlined by gcc -O3; its own keys
+ * keys: DispModeTransform CALLED (FUN_a0151c84 defined in this file and inlined by gcc -O3; its own keys
  *   apply: case order and the if-chain for 0x22/0x42); the record fields read as packed u16 members (gives the
  *   firmware's ldub +3 / ld +4 >> 24 / >> 8); the +0x0C/+0x0D bytes as single-bit extracts shifted into place
  *   (pre-shifted masks make gcc narrow 0x80/0xC0 to -128/-64).

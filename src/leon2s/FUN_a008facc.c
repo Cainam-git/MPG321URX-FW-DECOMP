@@ -1,5 +1,5 @@
 /* FUN_a008facc (leon2s, 0xa008facc-0xa008fb5c, 144 bytes, 36 words).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/36 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: port = (u8)param_1; if bit 1 of FUN_a00a657c(port, 0x134) is set: m = low nibble of
  * FUN_a00a657c(port, 0x148) (u8), v = low nibble of FUN_a00a657c(port, 8); v |= 0x50 when m == 1,
  * v |= 0xf0 when m == 3; tail call FUN_a00a65c4(port, 8, (u8)v). Otherwise tail call

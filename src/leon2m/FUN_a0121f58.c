@@ -1,4 +1,4 @@
-/* leon2m FUN_a0121f58 @ 0xa0121f58  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4; autoc, finished by hand)
+/* leon2m FUN_a0121f58 @ 0xa0121f58 (-mcpu=v8 -O3 -g, gcc 3.4.4; autoc, finished by hand)
  * Vx1 transmitter block set-up (part of the panel-link set-up FUN_a01227f0, its only caller).
  * First a fixed register sequence (0xCF01CFA8 = 0, 0xCF01CF9C = 0x70, 0xCF01CF94 = 0x82, 0xCF01CFA0 = 0x62,
  * 0xCF01CF9C = 0x30, 0xCF01CF98 = 2, 0xCF01CC58 = 1), then per display mode = byte +6 of the active, transformed panel

@@ -1,5 +1,4 @@
 /* leon2s DRV_HDMI21_RXDetect_FSM_LTS_1 @ 0xa0098240-0xa0098300 (48 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/48 mismatches.
  * Code facts: u8 port. r = FUN_a00961e8(port) (u8). rec = 0xb0-byte record port of DAT_a807d680; if the
  * state word DAT_a807d648[port] != rec word +0x30: if bit 0x800 of _DAT_a8078634, print s_a0067868 with
  * s_a00b4298 (2 args; the function-name string); then rec +0x30 = state. If byte +6 of the 24-byte entry

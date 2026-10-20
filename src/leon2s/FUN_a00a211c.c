@@ -1,5 +1,5 @@
 /* FUN_a00a211c (leon2s, 0xa00a211c-0xa00a2230, 276 bytes, 69 words).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/69 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: port = (u8)param_1; regs = word +4 of the 52-byte port record DAT_a807db00[port];
  * n = (regs[2] & 0xff) << 16 | regs[1] >> 16 (24 bits), m = regs[3] & 0xffffff. When both are
  * non-zero: rate = FUN_a00a20c4(port) / 10 for mode 0 (mode = (u8)FUN_a00a20a8(port)), 0xa6/0x14d/

@@ -1,4 +1,4 @@
-/* leon2m FUN_a0121374 @ 0xa0121374  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0121374 @ 0xa0121374 (-mcpu=v8 -O2 -g)
  * Returns bit param_1 of the word at 0xa802c9e4: (word >> param_1) & 1. The shift count has no `& 0x1f` mask;
  * SPARC srl uses only the low 5 bits of the count, and GCC emits sethi, ld, srl, retl, and.
  */

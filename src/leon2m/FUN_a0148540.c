@@ -1,4 +1,4 @@
-/* leon2m FUN_a0148540 @ 0xa0148540  (hand; byte-exact at -mcpu=v8 -O3 -g)
+/* leon2m FUN_a0148540 @ 0xa0148540  (-mcpu=v8 -O3 -g)
  *
  * Asks whether the input port behind display channel ch is flagged in the port bitmask at 0xA802CBD4.
  *   1. remap(ch): channels 0..3 map to themselves; anything else prints "SYS remapping channel OOR" (string

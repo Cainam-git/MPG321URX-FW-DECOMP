@@ -1,5 +1,5 @@
 /* leon2m FUN_a011149c @ 0xa011149c  V-by-One (Vx1) transmitter start-up register sequence, link type 0 path
- * (hand; BYTE-EXACT at -mcpu=v8 -O3 -g, rawcmp 0 mismatches)
+ * (hand; -mcpu=v8 -O3 -g, )
  *
  * Called by the panel power sequencer FUN_a01413d0 (state 4, link type 0). A fixed write sequence to the
  * 0xCF01CCxx..0xCF01CFxx block (same block as the byte-exact FUN_a0121f58), with three 1-unit waits

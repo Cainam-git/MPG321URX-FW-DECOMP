@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f88cc @ 0xa00f88cc  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00f88cc @ 0xa00f88cc (-mcpu=v8 -O2 -g)
  * Returns FUN_a00f1ce4(param_1 & 0xFF, 0xC) & 0x7FF (11 bits). The function takes one argument; as a non-leaf
  * function it has the save %sp,-104,%sp frame.
  */

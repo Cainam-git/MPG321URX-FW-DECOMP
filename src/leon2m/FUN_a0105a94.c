@@ -1,5 +1,4 @@
 /* leon2m FUN_a0105a94 @ 0xa0105a94-0xa0105af0 (23 words), flags -mcpu=v8 -O3 -g:
- * BYTE-EXACT: jf 100.00 match=True, rawcmp 0/23.
  * What it does: returns the clock counter FUN_a0102fd0(id) (u16) for clock id = a ? (bit 0 of hw reg 0xcf011a00 ?
  *   4 : 0) : (b ? 2 : 3). Only caller: the Vx1 panel-link set-up FUN_a01227f0, as FUN_a0105a94(1, 0): clock 4 or 0
  *   by the register bit, used for "Vx1 Lane BW = %ld": it returns the measured clock

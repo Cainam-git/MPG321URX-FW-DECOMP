@@ -1,5 +1,4 @@
-/* leon2m FUN_a00db690 @ 0xa00db690-0xa00db738 (42 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 42 words.
+/* leon2m FUN_a00db690 @ 0xa00db690-0xa00db738 (42 words), flags -mcpu=v8 -O3 -g.
  * Code facts: v = 0 when FUN_a014bd70(0) == 1; else when FUN_a01438dc(0) == 1 and FUN_a014ba68() is 1..4 (case
  * tree rooted at 2) v = 0; otherwise v = 1 if bit 15 of word 0xa802d404 is set (sethi 0x8000 / btst), else 0.
  * Then FUN_a014e878(v) and tail FUN_a00d9120(). void(void).

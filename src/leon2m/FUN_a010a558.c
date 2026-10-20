@@ -1,4 +1,4 @@
-/* leon2m FUN_a010a558 @ 0xa010a558 (179 insns)  BYTE-EXACT at -mcpu=v8 -O3 -g (jf 100 match=True, rawcmp 0 of 179 words,
+/* leon2m FUN_a010a558 @ 0xa010a558 (179 insns) -mcpu=v8 -O3 -g (of 179 words.
  * no compiler aids).
  * What it does (panel-row reader): if en != 0, logs s_0019acb0, reads the transformed panel row *DAT_a802d6a4 (h0a width,
  * h2c total, h22, h30, h32), programs the 0xCF01E4xx / 0xCF01E6xx / 0xCF01EAxx timing registers (16-bit values split

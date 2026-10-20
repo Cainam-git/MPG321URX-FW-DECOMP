@@ -1,5 +1,4 @@
-/* leon2m FUN_a012b328 @ 0xa012b328  MATCH (-mcpu=v8 -O2, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): name arr->DAT_a802d8ae
+/* leon2m FUN_a012b328 @ 0xa012b328 (-mcpu=v8 -O2)
  */
 typedef struct {
     unsigned char _pad[3];

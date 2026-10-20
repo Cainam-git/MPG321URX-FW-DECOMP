@@ -1,5 +1,5 @@
-/* leon2m FUN_a0144144 @ 0xa0144144  MATCH (-mcpu=v8 -O3 -g, twin)
- * Twin of FUN_a0143ff0: same code, constants swapped; byte-exact.
+/* leon2m FUN_a0144144 @ 0xa0144144 (-mcpu=v8 -O3 -g)
+ * Twin of FUN_a0143ff0: same code, other constants.
  * See FUN_a0143ff0 for the explanation; this copy's constants differ, so its comments were removed.
  */
 struct Chan { unsigned int w0; unsigned char rest[0x74]; };

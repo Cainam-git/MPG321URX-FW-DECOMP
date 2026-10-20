@@ -1,5 +1,5 @@
 /* leon2m FUN_a011919c @ 0xa011919c  16-bit write into register block 0 or 1 of a second register family
- * (hand; byte-exact at -mcpu=v8 -O3 -g).
+ * (-mcpu=v8 -O3 -g).
  * blk > 1 is treated as 0. Block base = halfword table in RAM at 0xA8027AA8 (two entries, register numbers);
  * the value goes to register (base + reg) as its low byte and to (base + reg + 1) as its high byte; registers are
  * word-spaced at 0xCF000000 + 4 * n (same addressing as the 0x19A2EC family, FUN_a00f2488).

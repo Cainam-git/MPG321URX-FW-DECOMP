@@ -1,5 +1,4 @@
 /* leon2s FUN_a008e0f0 @ 0xa008e0f0-0xa008e200 (68 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/68 mismatches.
  * Code facts: (port, mode, p3, +3 unused words). mode &= 0xff; v = 0 / 4 / p3 / 0xf for mode 0 / 1 / 3 /
  * other (a switch: the fw case tree compares signed, so mode is an int); port &= 0xff after the switch.
  * Through FUN_a00a7fd8 (read) / FUN_a00a8054 (write) of page 1: reg 8 = (rd & 0xf) | (v & 0xff) << 4;

@@ -1,5 +1,5 @@
-/* leon2m FUN_a010f7a4 @ 0xa010f7a4  program half the active row's +0x08 value into an output block (hand;
- * BYTE-EXACT at -mcpu=v8 -O3 -g -msoft-float).
+/* leon2m FUN_a010f7a4 @ 0xa010f7a4  program half the active row's +0x08 value into an output block
+ * Flags: -mcpu=v8 -O3 -g -msoft-float.
  *
  * ch selects a channel record (ch == 1: 0xA802D804, else 0xA802D704); sets bit 0 of its byte +0x3E. v = transformed
  * row (DAT_a802d6a4) halfword +0x08 >> 1. ch == 0: 0xD0032018 = 0xD003A018 = v, then bit 20 set in 0xD0032000 and

@@ -1,5 +1,5 @@
 /* FUN_a00dd6c8 (leon2m, 0xa00dd6c8-0xa00dd7f0, 296 bytes, 74 words).
- * Flags: -mcpu=v8 -O3 -g. Judge: jf 100.00 match=True, rawcmp 0/74 mismatches.
+ * Flags: -mcpu=v8 -O3 -g.
  * Code facts: mode == 2 sets the byte DAT_a802b0ae = 1. Mode 1 or 2: DAT_a802b0ad = 1, then twelve
  * FUN_a0107xxx(0) calls (783c, 7884, 78cc, 7914, 765c, 76bc, 771c, 777c, 77dc, 7554, 75f8, 795c) and a
  * tail call FUN_a00def40(DAT_00198c60, param_2). Other modes: both bytes = 0, the hardware word

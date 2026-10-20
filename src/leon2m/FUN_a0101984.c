@@ -1,4 +1,4 @@
-/* leon2m FUN_a0101984 @ 0xa0101984  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0101984 @ 0xa0101984 (-mcpu=v8 -O2 -g)
  * 
  */
 // FUN_a0101984 at 0xa0101984

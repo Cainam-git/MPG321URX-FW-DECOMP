@@ -1,4 +1,4 @@
-/* leon2m FUN_a0099b60 @ 0xa0099b60  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0099b60 @ 0xa0099b60 (-mcpu=v8 -O2 -g)
  * The function reads a byte from a configuration register, calls a function with it, sets a word register to 0xb3, calls another function, ORs a flag byte with 2, clears another byte, and returns its first parameter unchanged. The second parameter `param_2` is unused in the assembly — no instruction moves `%i1` to an output register.
  */
 extern unsigned char DAT_a8025c55;

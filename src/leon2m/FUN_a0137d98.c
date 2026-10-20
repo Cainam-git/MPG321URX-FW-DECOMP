@@ -1,5 +1,5 @@
-/* leon2m FUN_a0137d98 @ 0xa0137d98-0xa0137de0 (18 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 18 words. FUN_a01370dc family (src FUN_a0137c4c etc.).
+/* leon2m FUN_a0137d98 @ 0xa0137d98-0xa0137de0 (18 words), flags -mcpu=v8 -O3 -g.
+ * FUN_a01370dc family (src FUN_a0137c4c etc.).
  * Code facts: builds a 5-byte stack packet buf = {id, p[0], p[1], p[2], p[3]} (u8 param id stored with stb,
  * no extension; p is a byte pointer) and sends it with FUN_a01370dc(0x40, 5, buf, 0). void (the fw never sets
  * %i0). The 'nop' after the call is gcc's own.

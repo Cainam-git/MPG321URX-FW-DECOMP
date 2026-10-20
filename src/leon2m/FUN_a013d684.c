@@ -1,5 +1,5 @@
-/* leon2m FUN_a013d684 @ 0xa013d684-0xa013d918 (165 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/165 (hand, written from the asm).
+/* leon2m FUN_a013d684 @ 0xa013d684-0xa013d918 (165 words). -mcpu=v8 -O3 -g.
+ * (hand, written from the asm).
  * What it does, for channel ch (record c = DAT_a802df30[ch], 0x78 bytes; the u16 fields at +0x48.. are the
  * channel's output-timing block, here named by offset):
  *   if ch == 0 and DAT_a802e3d3 != 0 and DAT_a802e1a7 == 0:  c->h48 = DAT_a802e39a (a fixed value);

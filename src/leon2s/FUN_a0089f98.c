@@ -1,4 +1,4 @@
-/* leon2s FUN_a0089f98 @ 0xa0089f98  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0089f98 @ 0xa0089f98 (-mcpu=v8 -Os -g)
  * The key fix from Ghidra's version: the call takes `idx` (the loop counter), not `param_1`. The loop also runs until counter reaches 8 inclusive (9 iterations total).
  */
 extern int FUN_a0089f84(unsigned char param_1);

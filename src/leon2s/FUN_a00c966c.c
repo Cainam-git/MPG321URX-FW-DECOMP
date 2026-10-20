@@ -1,5 +1,4 @@
 /* leon2s FUN_a00c966c @ 0xa00c966c-0xa00c972c (48 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches.
  * Code facts: byte local at [%fp-9] = 4. Loop 1: up to 10 times call FUN_a00c7bf8(port & 0xff) then
  * FUN_a0fc1794(10) while the result byte != 0. Loop 2: same with FUN_a00c8328(port & 0xff, &local)
  * and FUN_a0fc1794(10). Last result != 0 -> return 0; else return local != 4 ? 0x14 : 0x22

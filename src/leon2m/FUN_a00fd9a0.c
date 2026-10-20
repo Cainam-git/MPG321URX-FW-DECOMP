@@ -1,4 +1,4 @@
-/* leon2m FUN_a00fd9a0 @ 0xa00fd9a0-0xa00fde94 (317 words), -mcpu=v8 -O3 -g: jf 100.00 match=True, rawcmp 0/317.
+/* leon2m FUN_a00fd9a0 @ 0xa00fd9a0-0xa00fde94 (317 words), -mcpu=v8 -O3 -g:
  * GlobalModeHandler main source
  * selection, part 2 (FUN_a0131518 calls it after FUN_a00fd594 with the same blk / class code).
  * What it does: copies the ROM table DAT_0019a4fb (12 rows x 16 bytes) to the stack (FUN_a013c910 = fw memcpy);

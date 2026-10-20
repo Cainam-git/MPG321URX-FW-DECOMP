@@ -1,4 +1,4 @@
-/* leon2m FUN_a013480c @ 0xa013480c  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a013480c @ 0xa013480c (-mcpu=v8 -O2 -g)
  * 
  */
 extern int func_0x4008c5f8();

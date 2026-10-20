@@ -1,5 +1,4 @@
-/* leon2s FUN_a00ac620 @ 0xa00ac620-0xa00ac66c (19 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches / 19 words.
+/* leon2s FUN_a00ac620 @ 0xa00ac620-0xa00ac66c (19 words), flags -mcpu=v8 -Os -g.
  * Code facts: returns the 24-bit value (r(0x3d2) << 16) + (r(0x3d1) << 8) + r(0x3d0) with r(x) = FUN_a00a6bb8(ch, x)
  * & 0xff (three byte registers, high byte first).
  * Fix vs the autoc draft (75.00): BEHAVIOUR - the first read (0x3d2) is the HIGH byte (<< 16) and 0x3d1 is << 8

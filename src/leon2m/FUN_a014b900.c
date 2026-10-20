@@ -1,4 +1,4 @@
-/* leon2m FUN_a014b900 @ 0xa014b900  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a014b900 @ 0xa014b900 (-mcpu=v8 -O2 -g)
  * The function checks a mode parameter (0 or 1), reads a corresponding status byte from a global, and if that status is 1, calls a function with a mode-specific code (2 or 3) and a zero argument. The structure uses nested ifs rather than early returns to match the branch layout.
  */
 extern unsigned char DAT_a802e3fa;

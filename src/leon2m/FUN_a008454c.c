@@ -1,4 +1,4 @@
-/* leon2m FUN_a008454c: BYTE-EXACT (jf 100 match=True, rawcmp a008454c..a0085984 1294 words / 0 mismatches,
+/* leon2m FUN_a008454c: (rawcmp a008454c..a0085984 1294 words / 0 mismatches.
    -mcpu=v8 -O3 -g). Source-form levers (all behaviour-neutral):
    - case 2 in the plain form; cases 60 and 62 placed just before case 2 (source order only, each ends in break):
      all 281 rnreg decisions match the firmware (rnmap 0).

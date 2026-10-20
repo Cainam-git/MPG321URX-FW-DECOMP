@@ -1,4 +1,4 @@
-/* leon2m FUN_a0137d08 @ 0xa0137d08  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0137d08 @ 0xa0137d08 (-mcpu=v8 -O2 -g)
  * Packs the five byte parameters into a local array and calls FUN_a01370dc(0x2E, 5, local, 1).
  */
 extern int FUN_a01370dc();

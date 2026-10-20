@@ -1,5 +1,4 @@
 /* leon2s FUN_a00d8714 @ 0xa00d8714-0xa00d87fc (58 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/58 mismatches.
  * Code facts: 1-byte command h on the stack (fp-9): bits 0..6 = 0x14 (bit 7 kept: ldub/and -128/or/stb);
  * clears u16 _DAT_a80787fa then _DAT_a80787f8; 4 passes i = 0..3 over the register block
  * DAT_a807609c[byte DAT_a8078832] (table and index re-read for every access): saved = (u8) reg +0x2ac;

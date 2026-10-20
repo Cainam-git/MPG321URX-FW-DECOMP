@@ -1,5 +1,4 @@
 /* leon2m FUN_a00de65c @ 0xa00de65c-0xa00de6a8 (19 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/19 mismatches.
  * Code facts: ROM register write func_0x4008c25c(0x9f0200e0, 0x60); three 'nop' instructions;
  * func_0x4008c25c(0x9f000014, 0); then a busy-wait of 1024 rounds: i = 0x3ff; loop body 'nop';
  * 'addcc i,-1; bpos' (do { nop } while (--i >= 0)). void, no parameters (%i0 is never read).

@@ -1,4 +1,4 @@
-/* leon2m FUN_a00eec44 @ 0xa00eec44  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00eec44 @ 0xa00eec44 (-mcpu=v8 -O2 -g)
  * Calls FUN_a00ee1e8(param_1, param_2, param_3, param_4, param_9, 4, param_5, param_6); param_5 and param_6 are
  * the 7th and 8th arguments and go on the stack ('st %i5, [%sp+0x60]'). Returns 0 when that result is >= 0 and
  * either param_4 != 3 or FUN_a00ee964(param_1, param_2, param_3, param_9, param_5, param_7, param_8) returns 0;

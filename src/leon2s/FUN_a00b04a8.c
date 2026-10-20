@@ -1,4 +1,4 @@
-/* leon2s FUN_a00b04a8 @ 0xa00b04a8  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00b04a8 @ 0xa00b04a8 (-mcpu=v8 -Os -g)
  * For port p = param_1 & 0xFF, fills four halfwords of p's 300-byte record in the table at 0xA807DC18 from
  * FUN_a00a6da8(p, reg): reg 0x94 -> +0x100, reg 0x96 -> +0x108, reg 0x98 -> +0x106 and reg 0x9A -> +0x10E, the last
  * two masked to 15 bits (0x7FFF). Returns nothing (ret; restore).

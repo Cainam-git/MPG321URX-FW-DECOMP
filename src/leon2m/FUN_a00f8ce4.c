@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f8ce4 @ 0xa00f8ce4  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f8ce4 @ 0xa00f8ce4 (-mcpu=v8 -O3 -g)
  * Writes two 16-bit values a and b as byte pairs into registers +0x60..+0x6C of the register block of blk:
  * +0x60/+0x64 = b (low, high byte), +0x68/+0x6C = a. Block bases: 0 -> 0xCF009800, 1 -> 0xCF009C00,
  * 2 -> 0xCF00A000, 3 -> 0xCF00A400, 6 -> 0xCF009000, 7 -> 0xCF009400 (the 0x19A2EC table of FUN_a00f2254);

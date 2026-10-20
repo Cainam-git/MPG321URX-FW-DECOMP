@@ -1,5 +1,4 @@
-/* leon2m FUN_a0092648 @ 0xa0092648-0xa00926c8 (32 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 32 words.
+/* leon2m FUN_a0092648 @ 0xa0092648-0xa00926c8 (32 words), flags -mcpu=v8 -O3 -g.
  * Code facts: FUN_a00a8ee8(word 0xa802afec - 0x23, as u8); FUN_a00a813c(0, byte 0xa802d290+0x1f, 1);
  * FUN_a00a900c(rec+0x1f, 0); word 0xa802afec = 7; FUN_a00b4144(5, 1); FUN_a00acef4(); FUN_a00a9468(1, 2);
  * FUN_a00b34d4(0, 1); tail FUN_a00af44c(0x23, rec+0x1f) (the 0x23 is set in the acef4 delay slot). void(void).

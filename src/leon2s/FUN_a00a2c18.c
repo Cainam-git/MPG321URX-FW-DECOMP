@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a2c18 @ 0xa00a2c18  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00a2c18 @ 0xa00a2c18 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. For both entries (0, 1) of the 52-byte records
  * at 0xa807db00, takes the pointer in the record's first word, adds 8, and passes it to
  * FUN_a00a73ac(0, p) when param_1 is 1 or to FUN_a00a73d4(0, p) when param_1 is 0; any other

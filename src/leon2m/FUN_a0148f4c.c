@@ -1,5 +1,4 @@
-/* leon2m FUN_a0148f4c @ 0xa0148f4c-0xa0148fc0 (29 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 29 words.
+/* leon2m FUN_a0148f4c @ 0xa0148f4c-0xa0148fc0 (29 words), flags -mcpu=v8 -O3 -g.
  * Code facts: cur = byte DAT_a802e3d0 + 3. When cur != the u8 mode: if both are non-zero (two cmp %g0 / addx
  * flags and btst) FUN_a012f1ec(0, 4), else FUN_a0107e44(0, 0x960, 1) and FUN_a012f1ec(0, 2); then the byte =
  * mode. void.

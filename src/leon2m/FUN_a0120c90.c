@@ -1,6 +1,6 @@
 /* leon2m FUN_a0120c90 @ 0xa0120c90-0xa0120de4 (85 words), flags -mcpu=v8 -O3 -g -msoft-float (float source;
  * the FUN_a0155xxx/a01560ac callees are the libgcc soft-float routines, see src/leon2m/*.lib).
- * rawcmp 0/85 mismatches; jf 99.00 'bytes differ at 0xa0120d90' = a JUDGE artefact, not a code difference:
+ * jf 99.00 'bytes differ at 0xa0120d90' = a JUDGE artefact, not a code difference:
  * exact.py strips trailing zero bytes of the .rodata.cst8 pool (data.rstrip(b"\0")), so the double 0.5
  * (3fe00000 00000000) shrinks to 3fe000, is "found" somewhere in parts/leon2m.bin and placed there,
  * instead of being checked at the fw address 0x19a638 (which does hold 0.5) by verify_pool.

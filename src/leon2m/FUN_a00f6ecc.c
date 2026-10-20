@@ -1,6 +1,5 @@
 /* leon2m FUN_a00f6ecc @ 0xa00f6ecc-0xa00f6f10 (17 words), flags -mcpu=v8 -O3 -g. One of three twins FUN_a00f6e88 / FUN_a00f6ecc /
  * FUN_a00f6f10 (selector 3 / 4 / 5, register 0xcf00ef10 / ef14 / ef18).
- * jf 100.00 match=True, rawcmp 0 mismatches.
  * Code facts: v = param_1 & 0xff; if the hook word _DAT_a802b7b8 is non-zero it is called as
  * hook(4, v) (call %g1 with %o0 = 4 and %o1 = v); otherwise the word register 0xcf00ef14 = v. void.
  * Fixes vs the autoc draft (88.24): BEHAVIOUR, the hook takes TWO arguments (selector and v; the

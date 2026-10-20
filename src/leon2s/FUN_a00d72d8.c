@@ -1,6 +1,5 @@
 /*
  * FUN_a00d72d8 (leon2s, 0xa00d72d8-0xa00d73b4, 220 bytes, leaf), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/55.
  * Code facts: v = (src[0] >> 4) - 1 (int), n = (u8)(v / 2 rounded up for odd v). Copies a 10-byte block
  * from src + n + 3 into dst: dst[0] low 7 bits, dst[1], dst[2..8] (u8 loop), and the dst[9] fields
  * 0xc0, 0x20, 0x18, 0x04 one RMW each (src[n + 0xc] re-read for each, dst[9] kept in a register).

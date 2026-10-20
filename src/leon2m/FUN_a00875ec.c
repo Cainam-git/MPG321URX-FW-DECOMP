@@ -1,5 +1,4 @@
-/* leon2m FUN_a00875ec @ 0xa00875ec-0xa008767c (36 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 36 words.
+/* leon2m FUN_a00875ec @ 0xa00875ec-0xa008767c (36 words), flags -mcpu=v8 -O3 -g.
  * Code facts: save = low byte of word DAT_a802d290 + 0xb0 (ldub +0xb3); FUN_a00df170(s_000ff5e8
  * "APPBlurFree_AfterMute\r\n") (1 arg); FUN_a01438c8(0); FUN_a0150768(1, 0xff); FUN_a014bac4(2, 0x3ff);
  * FUN_a014bc58(0); FUN_a014dbf4(0); word +0xb0 = 0. If bit 14 of the u16 at DAT_a802cff4 + 0x3e is set it is

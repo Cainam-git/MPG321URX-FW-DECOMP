@@ -1,4 +1,4 @@
-/* leon2s FUN_a00c9d28 @ 0xa00c9d28  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00c9d28 @ 0xa00c9d28 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Block READ through a port's indirect register
  * window (func_0xa0fb7ee0 = write, func_0xa0fb7fa0 = read): selects bank param_3 by writing
  * param_3*0x11 to register 4, strobes register 5 (0x80 then 0), does a dummy read of register

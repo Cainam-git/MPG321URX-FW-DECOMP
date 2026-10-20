@@ -1,4 +1,4 @@
-/* leon2s FUN_a00d77c4 @ 0xa00d77c4  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00d77c4 @ 0xa00d77c4 (-mcpu=v8 -Os -g)
  * Copies a length-prefixed record from param_1 to param_2: byte 0 & 0x7F, byte 1 & 0x0F, the count byte 2, then
  * count payload bytes from offset 3. The loop counter is a byte that is masked with 0xFF after each increment.
  */

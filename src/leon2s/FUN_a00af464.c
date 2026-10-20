@@ -1,5 +1,4 @@
 /* leon2s FUN_a00af464 @ 0xa00af464-0xa00af524 (48 words incl. the merged ret/restore tail), -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/48 mismatches.
  * Code facts: (u8 port, u8 on). r = FUN_a00a6bb8(port, 0x461) & 1. on == 1 and r == 0, or on != 1 and
  * r == 1: FUN_a00a6c98(port, 0x30, 0x80, 1); FUN_a00a6c98(port, 0x461, 1, on == 1); then the sibcall
  * FUN_a00a6c98(port, 0x30, 0x80, 0). Otherwise nothing. void (the draft returned 0).

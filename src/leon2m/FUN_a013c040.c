@@ -1,5 +1,5 @@
 /* leon2m FUN_a013c040 @ 0xa013c040-0xa013c144 (260 bytes)  re-apply the output timing on port 0 (writes record +0x68)
- * (hand; BYTE-EXACT at -mcpu=v8 -O3 -g).
+ * (hand; -mcpu=v8 -O3 -g).
  * Only port 0. Copies the 0x3C-byte timing block at record +6 (FUN_a013c910 = memcpy) and calls FUN_a01086fc(0, &copy, w, h, il, 0, 0).
  * Interlace case (DAT_a802e3d0 bit 25, record +0x70 bit 31 and FUN_a0121258(0) == 1): h = record +0x18, il = 1, and record byte +0x68
  * (top byte of word +0x68) = 0. Always: word +0x68 bits 22 and 21 cleared, then FUN_a00f9880().

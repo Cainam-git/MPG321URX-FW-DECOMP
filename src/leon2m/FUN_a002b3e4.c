@@ -1,5 +1,5 @@
-/* leon2m FUN_a002b3e4 @ 0xa002b3e4..0xa002b758 (221 words). BYTE-EXACT: jf 100.00
- * match=True, rawcmp 0/221 with -mcpu=v8 -O3 -g.
+/* leon2m FUN_a002b3e4 @ 0xa002b3e4..0xa002b758 (221 words). jf 100.00
+ * match=True, with -mcpu=v8 -O3 -g.
  * What it does: bit-banged I2C page write, used by the settings write FUN_a0140e74 (callers FUN_a0153c74 /
  * FUN_a012cfac, only when they write defaults). FUN_a0140e74 calls it with tries 1, stop 1, at most 16 bytes.
  * Code facts: copies the 10-byte bus descriptor *d to RAM 0xA802D992 (FW.021 bus ROM 0x1A69E0[0]: SCL port 6 mask

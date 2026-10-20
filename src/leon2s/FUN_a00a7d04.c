@@ -1,5 +1,4 @@
 /* leon2s FUN_a00a7d04 @ 0xa00a7d04-0xa00a7d88 (33 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches.
  * Code facts: ch = arg & 0xff; ch < 2 only: addr = ((u16 table 0xa00b4d6c[ch] + (u16)off) << 2) |
  * 0xcf000000; v = word at addr; mode (arg4 & 0xff) == 1 -> v |= mask, else v &= ~mask (andn);
  * the store re-reads the table entry and recomputes the address, then writes (v & 0xff).

@@ -1,5 +1,5 @@
 /* leon2s FUN_a0079a20 @ 0xa0079a20-0xa0079aac (140 bytes, 35 words)
- * BYTE-EXACT with -mcpu=v8 -Os -g (gcc 3.4.4): jf 100.00 match=True, rawcmp_l2s 0/35.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: void (u32 port, u8 mask). For u16 i = 0..3 with bit i of mask set (signed sra of the
  * zero-extended mask), and a redundant i < 4 bound test in its own if (the fw keeps 'cmp 3; bgu'), it runs
  * FUN_a00a7424(0, 7, port, DAT_a00b3b18[i]) and FUN_a00a7488(port & 0xff, DAT_a00b3b10[i], 0xffffff,

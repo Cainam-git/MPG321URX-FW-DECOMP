@@ -1,4 +1,4 @@
-/* leon2s FUN_a00dbed4 @ 0xa00dbed4  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00dbed4 @ 0xa00dbed4 (-mcpu=v8 -Os -g)
  * Returns at once when DAT_a80787ff == DAT_a80787fe. Otherwise calls FUN_a00db53c when DAT_a807883f != 0, else
  * copies DAT_a80787fe into DAT_a80787ff. The goto form gives the firmware's branch layout: be to the end on
  * equality, bne to the call, and the store in the delay slot of the branch to the end.

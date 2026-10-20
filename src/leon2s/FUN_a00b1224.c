@@ -1,6 +1,5 @@
 /*
  * FUN_a00b1224 (leon2s, 0xa00b1224-0xa00b12c4, 160 bytes), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/40.
  * Code facts: switch on the u8 mode param_2 (signed case tree, root 1). Each case makes two
  * FUN_a00a6c98(port, 0x55, mask, on) bit writes on port register 0x55: mode 0 clears bits 0x40
  * and 0x10, mode 1 sets both, mode 2 sets 0x40 and clears 0x10. Any other mode does nothing.

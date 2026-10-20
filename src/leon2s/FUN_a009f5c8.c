@@ -1,5 +1,4 @@
 /* leon2s FUN_a009f5c8 @ 0xa009f5c8-0xa009f654 (35 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/35 mismatches.
  * Code facts: leaf, u8 port. If the FRL rate field (bits 24..27 of word +0x90 of the register block that
  * the 0x34-byte port record DAT_a807db00[port] points to at +0x18) differs from byte +2 of the 0xb0-byte
  * state record DAT_a807d680[port], and ARR_a80790d8[port] != 0, and the state word ARR_a807d648[port] is

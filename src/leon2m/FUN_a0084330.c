@@ -1,5 +1,5 @@
-/* leon2m FUN_a0084330 @ 0xa0084330-0xa00844f8 (114 words). BYTE-EXACT: -mcpu=v8 -O3 -g,
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 114 words. void(u8 reset).
+/* leon2m FUN_a0084330 @ 0xa0084330-0xa00844f8 (114 words). -mcpu=v8 -O3 -g.
+ * void(u8 reset).
  * What it does: a change detector for a measured signal of channel 1.
  *   reset != 0: byte 0xa8024020 = 0xff (no state), u16 0xa802af56 = 0, return.
  *   Else FUN_a0145660(1, 7) (input record field id 7 of channel 1; the result is not used), then

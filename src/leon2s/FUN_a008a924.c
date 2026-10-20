@@ -1,4 +1,4 @@
-/* FUN_a008a924 (leon2s, 0xa008a924-0xa008a95c, 14 words, leaf). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a008a924 (leon2s, 0xa008a924-0xa008a95c, 14 words, leaf). Flags -mcpu=v8 -Os -g.
  Code facts: void (u32 v): writes lo = v & 0xff and hi = (u16)v >> 8 to the hardware registers 0xcf011060/64 and again to 0xcf011068/6c.
  Fix vs draft: BEHAVIOUR the draft's u8 param made hi always 0; the fw takes bits 8..15 (sll 16, srl 24 = (unsigned short)v >> 8) of a full
  word argument. Aids: none.

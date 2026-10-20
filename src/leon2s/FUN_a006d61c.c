@@ -1,5 +1,5 @@
-/* leon2s FUN_a006d61c @ 0xa006d61c  refresh the status flags of one input port record (hand; 
- * BYTE-EXACT at -Os).
+/* leon2s FUN_a006d61c @ 0xa006d61c  refresh the status flags of one input port record
+ * -Os).
  *
  * rec = 20-byte port record (0xA807A824 + 20 * (id - 1)), port = receiver index. r = FUN_a008f79c(port) (the VRR
  * signalling detector, byte-exact):
@@ -12,7 +12,7 @@
  * read by the Big chip's FUN_a01387a4 into template +0xc, copied by FUN_a0136d20 into port entry bit 4, and from
  * there reaches the line-rate path of the panel row picker FUN_a00dac38. r bit 0 = AMD FreeSync SPD InfoFrame seen,
  * bit 2 = HDMI 2.1 VTEM with VRR_EN (see FUN_a008f79c).
- * BYTE-EXACT key: the type test written as 'if (rec->b0 != 5) {...} else ...' (other port first).
+ * key: the type test written as 'if (rec->b0 != 5) {...} else ...' (other port first).
  */
 struct PortRec { unsigned char b0, b1; unsigned short h2, h4, h6, h8, ha; unsigned char bc, bd; unsigned short he, h10, h12; };
 extern unsigned char DAT_a8078c35, DAT_a8078c5b;

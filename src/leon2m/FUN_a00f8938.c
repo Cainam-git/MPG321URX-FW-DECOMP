@@ -1,5 +1,4 @@
-/* leon2m FUN_a00f8938 @ 0xa00f8938-0xa00f896c (13 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 13 words.
+/* leon2m FUN_a00f8938 @ 0xa00f8938-0xa00f896c (13 words), flags -mcpu=v8 -O3 -g.
  * Code facts: FUN_a00f1d48(a & 0xff, 0x14, (u16)(x & ~1)); tail FUN_a00f1d48(a, 0x10, (u16)y). 3 params.
  * Fix vs the autoc draft (76.92): the & ~1 is a separate statement 'x &= ~1;' on the unsigned int param: in one
  * expression fold-const turns (u16)(x & ~1) into x & 0xfffe (sethi|or + and); as a statement the RTL keeps

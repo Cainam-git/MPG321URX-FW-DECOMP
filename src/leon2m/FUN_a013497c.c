@@ -1,5 +1,5 @@
-/* leon2m FUN_a013497c @ 0xa013497c-0xa0134de0 (1124 bytes, 281 insns)  BYTE-EXACT
- * Flags: -mcpu=v8 -O3 -g (also -mcpu=v8 -O3 -g -msoft-float): jf 100 match=True, rawcmp 0/281 mismatches (both).
+/* leon2m FUN_a013497c @ 0xa013497c-0xa0134de0 (1124 bytes, 281 insns)
+ * Flags: -mcpu=v8 -O3 -g (also -mcpu=v8 -O3 -g -msoft-float): (both).
  *
  * What it does: decodes one 5-word message from mailbox portal 0 (the 8051; called by the slot poll
  * FUN_a0134de0). Word 0: bits 0-3 type, bits 4-7 flags (bit 0 = last part), bits 8-15 port,

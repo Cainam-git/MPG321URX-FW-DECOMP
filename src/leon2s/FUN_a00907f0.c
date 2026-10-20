@@ -1,4 +1,4 @@
-/* FUN_a00907f0 (leon2s, 0xa00907f0-0xa00908d0, 56 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a00907f0 (leon2s, 0xa00907f0-0xa00908d0, 56 words). Flags -mcpu=v8 -Os -g.
  Code facts: (u8 port, u8 *buf). w = FUN_a00a6544(0, port, 0x140); buf[0] = byte 0, buf[2] = byte 2. If byte 0 == 0x82 and byte 2 != 0: buf[1], buf[3] =
  bytes 1 and 3; for loop = 0, 4, 8: the 4 bytes of a6544(0, port, 0x144 + loop) go to buf[4 + loop ..]; the low 3 bytes of a6544(0, port, 0x150) go to
  buf[0x10..0x12]; return 1. Otherwise FUN_a00b15ac(buf, 0, 0x16) (memset) and return 0.

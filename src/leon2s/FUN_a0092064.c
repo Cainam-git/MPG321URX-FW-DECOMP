@@ -1,5 +1,4 @@
 /* leon2s FUN_a0092064 @ 0xa0092064-0xa00920ec (34 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/34 mismatches.
  * Code facts: (u8 port, mode). v = FUN_a00a7fd8(port, 0, 0x82) (u8 register read); by mode & 0xf:
  * 1 -> write (v | 0x40) & 0xdf, then sibcall FUN_a008d980(port, 1); 3 -> write v | 0x60, d980(port, 2);
  * else -> write (v | 0x20) & 0xbf, d980(port, 0). The write is FUN_a00a8054(port, 0, 0x82, value).

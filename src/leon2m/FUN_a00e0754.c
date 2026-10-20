@@ -1,4 +1,4 @@
-/* leon2m FUN_a00e0754 @ 0xa00e0754  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00e0754 @ 0xa00e0754 (-mcpu=v8 -O2 -g)
  * Returns FUN_a00e0514(param_1, param_2, param_3) shifted right logically by param_4. The unsigned int types of the
  * parameters, the local and the return value make GCC emit srl rather than sra.
  */

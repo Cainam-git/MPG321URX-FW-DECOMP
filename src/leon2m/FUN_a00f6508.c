@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f6508 @ 0xa00f6508  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f6508 @ 0xa00f6508 (-mcpu=v8 -O3 -g)
  * Loads a 24-entry table through an index/data register pair: clears bit 1 of 0xCF00EF30 and writes 2 to
  * 0xCF00EF34; then for i = 0..23 writes i to 0xCF00EF38 and a byte to 0xCF00EF3C: p->v[i] for each bit i set in
  * the word p->mask (entries with a clear bit are skipped), or 0x80 for every i when p is null. Finally sets bit 1 of

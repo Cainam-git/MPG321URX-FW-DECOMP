@@ -1,5 +1,5 @@
 /* leon2s FUN_a009c4a4 @ 0xa009c4a4-0xa009c558 (180 bytes, 45 words)
- * BYTE-EXACT with -mcpu=v8 -Os -g (gcc 3.4.4): jf 100.00 match=True, rawcmp_l2s 0/45.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: u8 (u8 port). FUN_a009c434 takes ONE arg (the draft passed 2). Its u8 result picks bits 16..19
  * (non-zero) or 24..27 (zero) of the MMIO word at ARR_a807db00[port].regs, the +4 register pointer of the
  * 0x34-byte port record. AID (MMIO class): that pointer target is volatile, because the fw does a

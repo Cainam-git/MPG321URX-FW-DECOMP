@@ -1,5 +1,5 @@
-/* leon2m FUN_a013f370 @ 0xa013f370  per-port mode match; publishes the line-rate switch into 0xA802CBD4 (hand;
- * BYTE-EXACT at -mcpu=v8 -O3 -g -msoft-float).
+/* leon2m FUN_a013f370 @ 0xa013f370  per-port mode match; publishes the line-rate switch into 0xA802CBD4
+ * Flags: -mcpu=v8 -O3 -g -msoft-float.
  *
  * t = FUN_a013cd4c(port) (pointer to the port's timing record).
  * Port status P = 0xA802E224 + 42*port:
@@ -16,7 +16,7 @@
  *   == 5: timing taken from P+0x16 / P+0x18 (P+0x18 doubled when FUN_a0121258(port), i.e. when the 0xA802CBD4 bit is set),
  *     defaults stored in t, then the first table row within +-5 / +-6 / +-9 / +-9 sets t+0x12, +0x14, +0x3C.
  * Callers: FUN_a013dc6c (call at 0xA013E8A4, the only call site).
- * BYTE-EXACT keys: -msoft-float; 'if (type != 5) {search} else {type-5}' (pre-layout block order drives -frename-registers);
+ * keys: -msoft-float; 'if (type != 5) {search} else {type-5}' (pre-layout block order drives -frename-registers).
  *   'if (found == 1)' (gcc predicts == const false, so the not-found arm falls through) with the final FUN_a01541ec check
  *   written in BOTH arms; P bits as bitfields (lets gcc reorder the 0xA802CBD4 store after the next load); table rows read
  *   as DAT_001a5a16[i].x in the search loop; abs() builtin; local declaration order matters (register spill of 'best').

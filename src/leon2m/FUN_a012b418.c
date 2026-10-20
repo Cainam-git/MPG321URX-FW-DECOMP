@@ -1,5 +1,4 @@
-/* leon2m FUN_a012b418 @ 0xa012b418  MATCH (-mcpu=v8 -O2 -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: [walk]; swap lines 8; param param_2 char; selfassign idx#1; swap lines 10
+/* leon2m FUN_a012b418 @ 0xa012b418 (-mcpu=v8 -O2 -g)
  */
 extern void FUN_a0137d08(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int); /* 0xa0137d08 */
 

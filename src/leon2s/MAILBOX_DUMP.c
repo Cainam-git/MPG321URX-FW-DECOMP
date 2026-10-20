@@ -1,5 +1,4 @@
 /* leon2s MAILBOX_DUMP @ 0xa0072b04-0xa0072b7c (30 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/30 mismatches.
  * Code facts: buf = 48 words at %fp-200; FUN_a00b15ac(buf, 0, 0xc0) (memset: returns its
  * destination, mov %o0,%g1); FUN_a0072970(1, 0, buf, 0x30) (mailbox read); for i = 0..0x2f (u8)
  * log FUN_a0073044(string 0xa0066550 "0x%8lX", buf[i]); then FUN_a0073044(string 0xa0066560

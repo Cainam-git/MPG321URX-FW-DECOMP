@@ -1,4 +1,4 @@
-/* leon2s FUN_a0094a50 @ 0xa0094a50  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0094a50 @ 0xa0094a50 (-mcpu=v8 -Os -g)
  * void(u8 param_1, u8 param_2). Calls FUN_a00a80cc(param_1, 0, 0xFD, 0x60, param_2) (param_2 is set in the call's
  * delay slot), FUN_a00a8260(param_1, 0x81, 0x30, param_2), then FUN_a00a8184(param_1, 1, 0x80, 0x0C, 8) for
  * param_2 == 1, else FUN_a00a8184(param_1, 1, 0x80, 0x0C, 4) (cmp / be).

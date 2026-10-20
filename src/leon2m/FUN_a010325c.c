@@ -1,5 +1,5 @@
 /* FUN_a010325c (0xa010325c-0xa0103808): output pixel clock calculation.
- * Toolchain sparc-elf-3.4.4, flags: -mcpu=v8 -O3 -g -msoft-float. BYTE-EXACT (jf 100, rawcmp 363/0).
+ * Toolchain sparc-elf-3.4.4, flags: -mcpu=v8 -O3 -g -msoft-float. (jf 100, rawcmp 363/0).
  * Facts behind the non-obvious parts (all behaviour-neutral, no inline asm, no no-code hints):
  * - -msoft-float: fixes the 32 FP regs, so loop.c's threshold (1 + n_non_fixed_regs) drops to ~25 and the loads of
  *   t.act / t.vt / 0xcf011a00 stay in the htot loop ('not desirable'), as in the fw. The fw has no FPU insns at all.

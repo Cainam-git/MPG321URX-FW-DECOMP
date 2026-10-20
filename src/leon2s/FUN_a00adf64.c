@@ -1,4 +1,4 @@
-/* leon2s FUN_a00adf64 @ 0xa00adf64  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00adf64 @ 0xa00adf64 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Returns bit (param_1 * 4 + param_2) of the
  * status byte at 0xa807de70: four status bits per port. Ghidra had added a shift mask.
  * Still needs a real name and proper types.

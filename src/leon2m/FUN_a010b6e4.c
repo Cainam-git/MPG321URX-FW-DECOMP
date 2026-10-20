@@ -1,5 +1,4 @@
 /* leon2m FUN_a010b6e4 @ 0xa010b6e4-0xa010b77c (38 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/38 mismatches.
  * What it does: a set-then-clear pulse of bits 10 (0x400) and 14 (0x4000) in the twin hardware
  * registers 0xd00300f0 and 0xd00380f0 (two blocks 0x8000 apart; volatile = real registers).
  * Order (fw): set bit 10 in 300f0, then 380f0; set bit 14 in 300f0, then 380f0; call the ROM routine

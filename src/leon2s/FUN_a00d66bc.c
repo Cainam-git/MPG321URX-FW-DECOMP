@@ -1,4 +1,4 @@
-/* leon2s FUN_a00d66bc @ 0xa00d66bc  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00d66bc @ 0xa00d66bc (-mcpu=v8 -Os -g)
  * The `bne,a` (branch always with annul) for the second check means the delay slot instruction `clr %o0` executes only if the branch is taken, setting up the return value. The final `b` to the common return point is also needed.
  */
 extern unsigned char DAT_a8078832;

@@ -1,6 +1,6 @@
 /* leon2m FUN_a012cfac @ 0xa012cfac..0xa012d4f8 (339 words) "FGA_Init", start-up step 2 (FUN_a015266c)
  * (after WAIT 3 FUN_a0136fc4, before FUN_a0141964).
- * BYTE-EXACT: -mcpu=v8 -O3 -g -msoft-float: jf 100.00 match=True, rawcmp 0/339, tools/exact.py
+ * -mcpu=v8 -O3 -g -msoft-float: tools/exact.py
  * exact() = None. (-mcpu=v8 -O3 -g without -msoft-float: 70.21; see lever 3.)
  * In plain words: at every power-on this checks one marker byte in the settings storage that says "the FGA colour
  * defaults were written". If the marker is 0x77..0x7A it returns at once and writes nothing. Otherwise it writes the

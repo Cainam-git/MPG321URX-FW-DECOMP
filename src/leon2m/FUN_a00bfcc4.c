@@ -1,6 +1,6 @@
 /* leon2m FUN_a00bfcc4 @ 0xa00bfcc4..0xa00c0adc (902 insns)  Big chip UART/tool command switch (rescue
  * path): MSI tool -> 8051 mailbox portal 0 -> FUN_a00ce348 case 2 -> FUN_a00bfcc4(4, row) -> handler.
- * BYTE-EXACT at -mcpu=v8 -O3 -g (also -mcpu=v8 -O3 -g -msoft-float): jf 100 match=True, rawcmp 0/902 words; the
+ * -mcpu=v8 -O3 -g (also -mcpu=v8 -O3 -g -msoft-float): words; the
  * 131-entry jump table (0xA00BA428, image-relative +0xA0060000) also matches entry by entry.
  *
  * What the code does (code facts):

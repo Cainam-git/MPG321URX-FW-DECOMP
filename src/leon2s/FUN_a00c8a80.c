@@ -1,5 +1,4 @@
 /* leon2s FUN_a00c8a80 @ 0xa00c8a80-0xa00c8aec (27 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/27 mismatches.
  * Code facts: ch (u8). Word 0 of the 24-byte record DAT_a8078bb0[ch]: bits 16..17 = 1; then
  * r = func_0xa0fb7fd8(ch, 0, 9); if bit 1 of r is clear: bits 16..17 = 0, else bits 16..17 = 1
  * (mask 0xfffcffff kept in a register). void. Family of FUN_a00cdc74.

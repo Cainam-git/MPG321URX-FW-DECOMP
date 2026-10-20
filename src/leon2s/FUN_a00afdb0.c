@@ -1,4 +1,4 @@
-/* leon2s FUN_a00afdb0 @ 0xa00afdb0  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00afdb0 @ 0xa00afdb0 (-mcpu=v8 -Os -g)
  * The function masks its first argument to a byte, calls a helper to compute a value, masks that result, passes it to another helper, then calls a fixed-argument function, and finally tail-calls a fourth function with the computed value and three of the original parameters. The main fix was adding the `& 0xff` on the result of `FUN_a00add48` and using that masked value as the first argument to the final tail call instead of the original parameter. Open question: whether the final call is truly a tail call or the compiler emits the trailing `nop` as a return-address placeholder; the C relies on the compiler's sibling-call optimization to produce the observed `restore` in the delay slot and the `nop`.
  */
 extern int func_0x9f1c6624();  /* 0x9f1c6624 */

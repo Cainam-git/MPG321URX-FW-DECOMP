@@ -1,5 +1,4 @@
-/* leon2m FUN_a014fd34 @ 0xa014fd34  MATCH (-mcpu=v8 -O2, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): already exact
+/* leon2m FUN_a014fd34 @ 0xa014fd34 (-mcpu=v8 -O2)
  */
 extern unsigned char DAT_a802cc86;
 extern void FUN_a011e8fc(int, int); /* 0xa011e8fc */

@@ -1,4 +1,4 @@
-/* leon2m FUN_a00e0788 @ 0xa00e0788  MATCH (-mcpu=v8 -O3 -g -msoft-float)
+/* leon2m FUN_a00e0788 @ 0xa00e0788 (-mcpu=v8 -O3 -g -msoft-float)
  * Polls a PHY register until (value & mask) == expect: up to 10 rounds of FUN_a00dffa4(2) followed by
  * FUN_a00e02ec(phy, addr). Returns 1 when the value matched, 0 after 10 failed rounds.
  * When the word DAT_a802b550 is non-zero it prints the "checkphy ..." trace lines (start, every value read, pass or

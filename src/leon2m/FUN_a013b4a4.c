@@ -1,5 +1,4 @@
-/* leon2m FUN_a013b4a4 @ 0xa013b4a4-0xa013b4cc (10 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 10 words.
+/* leon2m FUN_a013b4a4 @ 0xa013b4a4-0xa013b4cc (10 words), flags -mcpu=v8 -O3 -g.
  * Code facts: leaf sibcall wrapper. Stores the three u16 args into the record at 0xa802a46c (+0, +2, +4; the fw
  * emits +0 through %lo(sym), then +4, then +2), then tail-calls FUN_a013ae00(byte 0xa802a460) through the
  * 'mov %o7,%g1; call; mov %g1,%o7' form. void.

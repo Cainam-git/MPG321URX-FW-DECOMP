@@ -1,5 +1,4 @@
-/* leon2m FUN_a014226c @ 0xa014226c-0xa01422f4 (34 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/34.
+/* leon2m FUN_a014226c @ 0xa014226c-0xa01422f4 (34 words). -mcpu=v8 -O3 -g.
  * What it does (leaf): maps a port code to an index: 0x31 -> 0, 0x41 -> 1, 0x51 -> 2, 0x61 -> 3, 0x71 -> 0,
  * 0x81 -> 1, every other value -> 0xff. Callers: the channel bring-up dc6c, FUN_a0136054, FUN_a013d018.
  * Not rate-dependent; it turns the input's port code into the 0..3 index.

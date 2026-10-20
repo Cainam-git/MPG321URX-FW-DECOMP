@@ -1,5 +1,5 @@
-/* leon2s FUN_a006d414 @ 0xa006d414  set the type byte (+0) of one input port record (hand;
- * BYTE-EXACT at -mcpu=v8 -Os -g, jf 100 match=True, rawcmp 0 mismatches over 0xa006d414-0xa006d46c).
+/* leon2s FUN_a006d414 @ 0xa006d414  set the type byte (+0) of one input port record
+ * Flags: -mcpu=v8 -Os -g, over 0xa006d414-0xa006d46c.
  *
  * rec = port record 0xA807A824 + 20 * n (9 records, the same table FUN_a006fbac / FUN_a00700cc read).
  * n 0..8: rec[n].b0 = type. n == 0xFF: records 0..5 only (not 6..8) get the type. Any other n: no change.

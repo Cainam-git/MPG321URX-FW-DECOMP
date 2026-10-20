@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a284c @ 0xa00a284c  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00a284c @ 0xa00a284c (-mcpu=v8 -Os -g)
  * Returns the u16 at byte offset 0x2A (element 0x15) of the 400-byte entry (param_1 & 0xFF) of the table at
  * 0xA807D7E0 (200 u16 elements per entry).
  */

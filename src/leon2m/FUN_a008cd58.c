@@ -1,5 +1,4 @@
-/* leon2m FUN_a008cd58 @ 0xa008cd58-0xa008cdf0 (38 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 38 words.
+/* leon2m FUN_a008cd58 @ 0xa008cd58-0xa008cdf0 (38 words), flags -mcpu=v8 -O3 -g.
  * Code facts: stack buf[8] at %fp-16; FUN_a01577f4(buf, 0x100510, (u16)v) (a format-to-buffer call; 0x100510
  * is a ROM address); for u8 i = 0..4: buf[i] = 0 when it is ' ', else buf[i] -= 47 ('0' - 1); then
  * FUN_a0146af4(0, a, b, 5, buf, 0) with u8 a/b. The fw ends with a real 'nop' after that call's delay slot,

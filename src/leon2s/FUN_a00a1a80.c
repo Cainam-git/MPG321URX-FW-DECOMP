@@ -1,5 +1,4 @@
-/* leon2s FUN_a00a1a80 @ 0xa00a1a80-0xa00a1b08 (34 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s.py 0 mismatches / 34 words.
+/* leon2s FUN_a00a1a80 @ 0xa00a1a80-0xa00a1b08 (34 words), flags -mcpu=v8 -Os -g.
  * Code facts: for u8 i = 0..1 over the 400-byte records DAT_a807d7e0[i]: when byte +3 != 0: byte +2 = 1,
  * FUN_a009e9cc(i) if byte +1 == 1 else FUN_a009e9fc(i), then byte +1 = 0 (address recomputed after the call);
  * when byte +3 == 0: byte +2 = 0. void(void).

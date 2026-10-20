@@ -1,4 +1,4 @@
-/* leon2s DRV_HDMI_PHY_Clr_EQ_Err @ 0xa0074e38  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s DRV_HDMI_PHY_Clr_EQ_Err @ 0xa0074e38 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Clears the HDMI equaliser error state of one
  * port (0-3). Logs '[EQ]: Port<letter> DRV_HDMI_PHY_Clr_EQ_Err' when bit 1 of the debug mask
  * at 0xa8078634 is set. Sets single bits via FUN_a00a7424(value 1, bit, port, register): bit

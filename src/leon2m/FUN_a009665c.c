@@ -1,5 +1,4 @@
 /* leon2m FUN_a009665c @ 0xa009665c-0xa0096704 (42 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/42 mismatches.
  * Code facts: byte DAT_a802d290[0x8e] = DAT_a802d290[0x14]; byte DAT_a8025c56 = DAT_a802d290[0x11];
  * FUN_a00a8c88(); FUN_a00a8570(); FUN_a00a813c(1, DAT_a802d290[0x11] (reloaded), 0); word
  * DAT_a802afec = 0x6f; FUN_a00a9650(3, 0); FUN_a00a9650((u8)(DAT_a802afec - 0x6c) (reloaded), 1);

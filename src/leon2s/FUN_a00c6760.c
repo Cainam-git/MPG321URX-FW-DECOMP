@@ -1,6 +1,6 @@
-/* leon2s FUN_a00c6760 @ 0xa00c6760..0xa00c68f8 (408 bytes, 102 words)  BYTE-EXACT
+/* leon2s FUN_a00c6760 @ 0xa00c6760..0xa00c68f8 (408 bytes, 102 words)
  * Flags: -mcpu=v8 -Os -g.
- * Judge: jf 100.00 match=True (linked at the real addresses); rawcmp_l2s.py
+ * (linked at the real addresses); rawcmp_l2s.py
  * 0 mismatches / 102 words (a00c6760 a00c68f8).
  * What it does (code facts): register-write sequence for unit addr = param_1 & 0xff through
  * the external routines at 0xa0fb6c98 (addr, reg, mask, val) and 0xa0fb6c00 (addr, reg, val)

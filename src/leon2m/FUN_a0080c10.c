@@ -1,5 +1,5 @@
 /* leon2m FUN_a0080c10 @ 0xa0080c10  APP event generator (hand; flags -mcpu=v8 -O3 -g,
- * -msoft-float gives the same code). BYTE-EXACT: jf 100.00 match=True and
+ * -msoft-float gives the same code). and
  * rawcmp a0080c10..a0081e0c 0 mismatching words with both flag sets.
  *
  * Runs once per APP step (first call in FUN_a008a210), unless DAT_a802af41 bit 0 is set.

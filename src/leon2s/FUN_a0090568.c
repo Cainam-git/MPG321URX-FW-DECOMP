@@ -1,5 +1,4 @@
-/* leon2s FUN_a0090568 @ 0xa0090568-0xa0090638 (52 words), flags -mcpu=v8 -Os -g. BYTE-EXACT: jf 100.00 match=True,
- * rawcmp_l2s.py 0/52 mismatches.
+/* leon2s FUN_a0090568 @ 0xa0090568-0xa0090638 (52 words), flags -mcpu=v8 -Os -g.
  * Code facts: (u8 port, u8 *buf) -> int. Packet capture of one HDMI receiver port: w = FUN_a00a6544(0, port, 0x160)
  * (32-bit word of the packet RAM, 0xce000000 | (u16 base[port] + offset)); the same copy as FUN_a0090498 (twin): byte 0 != 0 -> bytes 1..3,
  * words 0x164..0x178 -> buf[4..0x1b], low 3 bytes of word 0x17c -> buf[0x1c..0x1e], return 1; else memset 0x22, 0.

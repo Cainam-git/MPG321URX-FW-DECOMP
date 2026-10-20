@@ -1,4 +1,4 @@
-/* leon2s FUN_a008f54c @ 0xa008f54c  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a008f54c @ 0xa008f54c (-mcpu=v8 -Os -g)
  * Mechanical Ghidra C, finished by hand: two 176-byte records at 0xa807d3e4 (was a raw address); flags 0x6a, 0x21,
  * 0x8c set; Ghidra type names kept.
  */

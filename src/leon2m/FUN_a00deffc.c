@@ -1,5 +1,5 @@
-/* leon2m FUN_a00deffc @ 0xa00deffc-0xa00df074 (30 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 30 words. Prints a 32-bit value as 8 hex digits on the UART.
+/* leon2m FUN_a00deffc @ 0xa00deffc-0xa00df074 (30 words), flags -mcpu=v8 -O3 -g.
+ * Prints a 32-bit value as 8 hex digits on the UART.
  * Code facts: for i = 0..7 (do/while, cmp 7; ble): c = ROM hex table DAT_00198fa0[(val >> (28 - 4 i)) & 0xf]
  * (ldub [table + idx]); poll ROM func_0x4008c250(0xc00b0014) until bit 5 (0x20) is set or 0xfffff tries (u32
  * counter, incremented before the test, cmp 0xffffe; bleu); then ROM func_0x4008c25c(0xc00b0000, (signed char)c).

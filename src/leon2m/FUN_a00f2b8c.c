@@ -1,5 +1,4 @@
 /* leon2m FUN_a00f2b8c @ 0xa00f2b8c-0xa00f2c20 (37 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/37 mismatches.
  * Code facts: leaf. blk, reg, val (u8 each, and 0xff). blk == 8: for i = 0..3 write val to the
  * hw register 0xcf000000 | ((DAT_0019a2e4[i] + reg) << 2) (u16 table of 4 block bases);
  * else if blk <= 3: write val to 0xcf000000 | ((DAT_0019a2e4[blk] + reg) << 2); else nothing.

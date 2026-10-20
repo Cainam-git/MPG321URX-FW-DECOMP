@@ -1,5 +1,4 @@
-/* leon2m FUN_a00e2588 @ 0xa00e2588-0xa00e260c (33 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 33 words.
+/* leon2m FUN_a00e2588 @ 0xa00e2588-0xa00e260c (33 words), flags -mcpu=v8 -O3 -g.
  * Code facts: DDR setter (a, x = N_adj, y = N_det): x > 9 -> FUN_a00df80c(), FUN_a00e0bc0() (prints
  * "ddr_err: "), tail print s_00199788 "error: N_adj=%d, should be 0~9." with x; else y > 9 -> the same with
  * s_00199768 "error: N_det=%d, should be 0~9." and y; else FUN_a00e0774(a, 0x1c0, 0xf0, 4, x); tail FUN_a00e0774(a, 0x1f0, 0x0f, 0, y)

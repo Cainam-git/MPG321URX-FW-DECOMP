@@ -1,5 +1,5 @@
-/* leon2m FUN_a0144200 @ 0xa0144200  MATCH (-mcpu=v8 -O2 -g, twin)
- * Twin of FUN_a01440ac: same code, constants swapped; byte-exact.
+/* leon2m FUN_a0144200 @ 0xa0144200 (-mcpu=v8 -O2 -g)
+ * Twin of FUN_a01440ac: same code, other constants.
  * See FUN_a01440ac for the explanation; this copy's constants differ, so its comments were removed.
  */
 typedef unsigned char undefined;

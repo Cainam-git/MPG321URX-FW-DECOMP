@@ -1,5 +1,5 @@
-/* leon2m FUN_a0149bf0 @ 0xa0149bf0  SYSAPI_ConfigSystemPIPMode(mode) (hand; BYTE-EXACT at
- * -mcpu=v8 -O3 -g over the REAL range 0xa0149bf0-0xa0149e8c, 668 bytes).
+/* leon2m FUN_a0149bf0 @ 0xa0149bf0  SYSAPI_ConfigSystemPIPMode(mode)
+ * Flags: -mcpu=v8 -O3 -g over the REAL range 0xa0149bf0-0xa0149e8c, 668 bytes.
  *
  * RANGE: the asm header (and symbols/leon2m.splits.json "a0149bf0": "a0149db8") cut this function at its tail call;
  *   the 8-entry jump table (0xe34b4 + 0xA0060000 run-time offset) targets 0xa0149e5c (modes 0,2), 0xa0149e14 (1,5),
@@ -21,7 +21,7 @@
  *   6. FUN_a010385c(1); FUN_a012f1ec(0..3, 2); FUN_a013129c(); FUN_a0118628(mode == 0 ? 2 : 3);
  *      tail call FUN_a0153970(&0xA802E1A0, 0).
  * Callers: FUN_a0096858 (several sites), FUN_a00c4ec4 (several sites), FUN_a00da254.
- * BYTE-EXACT keys: (state == 0) & (mode != 0) with bitwise & (setcc + btst); the final call written as if/else with
+ * keys: (state == 0) & (mode != 0) with bitwise & (setcc + btst); the final call written as if/else with
  *   two calls (a ?: or a variable gives the addx / clr shapes); switch cases in natural order 0,2 / 1,5 / 3,6 / 4,7
  *   with four explicit calls each (gcc cross-jumps the shared tails); mode is an unsigned int parameter.
  */

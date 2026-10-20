@@ -1,5 +1,5 @@
-/* leon2m FUN_a00a012c @ 0xa00a012c-0xa00a01b8 (35 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/35 (written from the asm; same shape as FUN_a008a09c).
+/* leon2m FUN_a00a012c @ 0xa00a012c-0xa00a01b8 (35 words). -mcpu=v8 -O3 -g.
+ * (written from the asm; same shape as FUN_a008a09c).
  * What it does (APP event pump FUN_a008a210 callee): runs the event handler FUN_a009f42c() (no arguments: it
  * never reads %i0 before setting it), then picks one pending event code:
  *   v = 0x84 (none); the first of FUN_a00b5014, FUN_a00b5030, FUN_a00b5048, FUN_a00b5064 that returns

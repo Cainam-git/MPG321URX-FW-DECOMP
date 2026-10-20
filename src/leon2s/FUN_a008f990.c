@@ -1,5 +1,4 @@
-/* leon2s FUN_a008f990 @ 0xa008f990-0xa008f9c0 (12 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches / 12 words.
+/* leon2s FUN_a008f990 @ 0xa008f990-0xa008f9c0 (12 words), flags -mcpu=v8 -Os -g.
  * Code facts: now = FUN_a00b2064(); d = now - t0, minus 1 more when now < t0 (unsigned wrap); returns
  * d >= 0x33 (unsigned; fw 'cmp d, 0x33; subx %g0, -1' = 1 - carry).
  * Fix vs the autoc draft (78.57): BEHAVIOUR - the result is d >= 0x33 on the full word (the draft returned

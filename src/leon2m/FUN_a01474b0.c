@@ -1,4 +1,4 @@
-/* leon2m FUN_a01474b0 @ 0xa01474b0  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, autoc)
+/* leon2m FUN_a01474b0 @ 0xa01474b0 (-mcpu=v8 -O3 -g)
  * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
  */
 struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* display channel record, 0x78 bytes */

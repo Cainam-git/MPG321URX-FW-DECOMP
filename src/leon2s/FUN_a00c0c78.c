@@ -1,4 +1,4 @@
-/* leon2s FUN_a00c0c78 @ 0xa00c0c78  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00c0c78 @ 0xa00c0c78 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Copies two fixed tables out of the 0x9f1b....
  * data area into caller buffers: 5 bytes from 0x9f1b7018 to param_1 and 282 bytes from
  * 0x9f1b6ef8 to param_2. Twin of FUN_a00c0c08 (other table pair); located next to the HDCP key

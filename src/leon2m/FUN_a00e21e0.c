@@ -1,4 +1,4 @@
-/* leon2m FUN_a00e21e0 @ 0xa00e21e0  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00e21e0 @ 0xa00e21e0 (-mcpu=v8 -O2 -g)
  * Returns (FUN_a00e021c(param_1) & param_2) >> param_3. param_3 is unsigned int and used unmasked
  * ('srl %o0, %i2, %i0').
  */

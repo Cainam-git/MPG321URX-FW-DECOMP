@@ -1,5 +1,4 @@
-/* leon2m FUN_a00d41b4 @ 0xa00d41b4-0xa00d4250 (39 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 39 words.
+/* leon2m FUN_a00d41b4 @ 0xa00d41b4-0xa00d4250 (39 words), flags -mcpu=v8 -O3 -g.
  * Code facts: level = u8 arg clamped to 100 (cmp 0x64; bleu). id = (u8)FUN_a0144414(). hi = (u16)FUN_a0145660
  * (id, 5) and lo = (u16)FUN_a0145660(id, 6), each extended right after its call (sll/srl 16); q = level * (hi
  * - lo) / 100 (signed, smul by 0x51eb851f, sra 5); tail FUN_a0145808(id, 4, (u16)(q + FUN_a0145660(id, 6)), 1).

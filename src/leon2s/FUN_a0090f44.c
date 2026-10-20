@@ -1,5 +1,5 @@
-/* leon2s FUN_a0090f44 @ 0xa0090f44  MATCH (-mcpu=v8 -Os -g, twin)
- * Twin of FUN_a008f9e4: same code, constants swapped; byte-exact.
+/* leon2s FUN_a0090f44 @ 0xa0090f44 (-mcpu=v8 -Os -g)
+ * Twin of FUN_a008f9e4: same code, other constants.
  */
 extern unsigned char ARR_a807d3e4[];
 

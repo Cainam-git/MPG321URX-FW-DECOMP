@@ -1,5 +1,5 @@
-/* leon2m FUN_a0109bbc @ 0xa0109bbc  FRC lock / free-run set-up (hand; BYTE-EXACT at
- * -mcpu=v8 -O3 -g -msoft-float, see the CONSTANTS note at the end of this header).
+/* leon2m FUN_a0109bbc @ 0xa0109bbc  FRC lock / free-run set-up
+ * Flags: -mcpu=v8 -O3 -g -msoft-float, see the CONSTANTS note at the end of this header.
  *
  * void FUN_a0109bbc(lock, unused, p3, vfreq): vfreq = input refresh in tenths of Hz; the second parameter is never read.
  * Callers: FUN_a013dc6c "FRC Lock" (1, 0xA802E3D0+0x38 == 3, a 16-bit local, input record 0xA802DF30 +8), "FRC Free
@@ -29,7 +29,7 @@
  *   0xCF011C48 unchanged) and +0x0A (lock with 0xCF011A80 bit 7 set: compared with reg(0,0x64), caps the lock
  *   offset). +0x0A is read at entry on every path (used only there). No raw-row or row-index reads.
  * The input rate enters only the float arithmetic (in_lines / out_lines); no reject path here.
- * BYTE-EXACT keys: the free-run chain has a separate FUN_a00f308c(0xCF011AE8, ...) call in every branch (gcc
+ * keys: the free-run chain has a separate FUN_a00f308c(0xCF011AE8, ...) call in every branch (gcc
  *   cross-jumps them; the call heuristic puts the three bodies out of line); the four 0xCF011ACx reads go into
  *   unsigned short locals; explicit (float) casts on unsigned short values (clock(), reg64, p3) give gcc's
  *   signed-convert + 65536.0 fix-up, while the divisors are promoted to int (zero-extend, no fix-up);

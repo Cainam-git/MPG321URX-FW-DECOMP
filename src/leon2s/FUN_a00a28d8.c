@@ -1,4 +1,4 @@
-/* FUN_a00a28d8 (leon2s, 0xa00a28d8-0xa00a2928, 20 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a00a28d8 (leon2s, 0xa00a28d8-0xa00a2928, 20 words). Flags -mcpu=v8 -Os -g.
  Code facts: void, 6 params (only p3..p6 used). FUN_a00638cc(); FUN_a00a69fc(0, 0x9c8, 1); if DAT_a807d7e1 != 0: tail call
  FUN_a00a0c84(0, 0, p3, p4, p5, p6); else FUN_a00a0bfc(0) and tail call FUN_a00a0b10(0, 0).
  Fixes vs draft: BEHAVIOUR the else path also tail-calls FUN_a00a0b10(0, 0) (the draft returned bfc's value); void; the != 0 arm is first in

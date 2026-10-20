@@ -1,5 +1,4 @@
-/* leon2m FUN_a0137920 @ 0xa0137920-0xa013797c (23 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/23.
+/* leon2m FUN_a0137920 @ 0xa0137920-0xa013797c (23 words). -mcpu=v8 -O3 -g.
  * What it does: mailbox command 0x12 sender. A 4-byte message buffer m is cleared (one word store
  * 'clr [%fp-16]'), then m[0] = 2 for ch 0, 3 for ch 1, 0xff for any other ch; when m[0] is not 0xff the
  * 1-byte message { m[0] } goes through the inter-processor mailbox FUN_a01370dc(cmd 0x12, length 1, m, 0)

@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a6c00 @ 0xa00a6c00  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00a6c00 @ 0xa00a6c00 (-mcpu=v8 -Os -g)
  * Finished from mechanical Ghidra C. Register write helper (twin of the read
  * helper FUN_a00a6bb8): writes the low byte of param_3 to register param_2 of port param_1 at
  * 0xcf000000 | ((base[port] + reg) * 4), base table at 0xa00b4d94. Port 2 means both ports (0

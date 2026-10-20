@@ -1,5 +1,5 @@
 /* FUN_a00a7314 (leon2s, 0xa00a7314-0xa00a7368, 84 bytes, 21 words, leaf).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/21 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: port = (u8)param_1; page register R = 0xcf000000 | ((port + 0xf401) << 2); saves R,
  * writes the high byte of param_2 (u16) to R, reads the word at 0xce008100 + (port << 8) +
  * (param_2 & 0xff), writes the saved low byte back to R, returns the word read.

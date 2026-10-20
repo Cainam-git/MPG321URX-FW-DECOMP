@@ -1,5 +1,4 @@
-/* leon2m FUN_a00f446c @ 0xa00f446c-0xa00f4e60 (637 words), flags -mcpu=v8 -O3 -g: BYTE-EXACT, jf 100.00 match=True,
- * rawcmp 0/637.
+/* leon2m FUN_a00f446c @ 0xa00f446c-0xa00f4e60 (637 words), flags -mcpu=v8 -O3 -g: BYTE-EXACT.
  *
  * What it does: pointer-called link-training / equaliser calibration of input block blk; p = training record,
  *   u16 p->h0c = lower bound of the sweep value. Returns 1 = trained, 0 = failed.

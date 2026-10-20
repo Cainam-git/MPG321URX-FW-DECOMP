@@ -1,5 +1,4 @@
 /* leon2s FUN_a00ce420 @ 0xa00ce420-0xa00ce4cc (43 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches.
  * Code facts: port = arg & 0xff; word at 0xa8078bb0 + port*0x18: clear bits 16..17 (andn 0x30000),
  * set 0x10000; FUN_a00c87e8(port, 5, 0x8000); for i = 0..31 (u8, bleu 0x1f) byte table
  * 0xa807ce50[i] = FUN_a00c7770(port, 1); then func_0xa0f963d4(0, 0x80, 0x692a0, 0xf, table) and

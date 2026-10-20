@@ -1,6 +1,5 @@
 /*
  * FUN_a00735e8 (leon2s, 0xa00735e8-0xa0073638, 80 bytes), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/20.
  * Code facts: if u8 FUN_a0073520(port) != 0: returns bits 24..27 of register word 0x24 (+0x90) of the
  * register block whose pointer is at +0x18 of the 0x34-byte port record ARR_a807db00[port != 2]; else 0.
  * Aids: volatile on the register-block pointer target (fw full-word 'ld [%g1+0x90]' then srl/and; a plain

@@ -1,5 +1,4 @@
-/* leon2s FUN_a0096aa4 @ 0xa0096aa4-0xa0096ad8 (13 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches / 13 words.
+/* leon2s FUN_a0096aa4 @ 0xa0096aa4-0xa0096ad8 (13 words), flags -mcpu=v8 -Os -g.
  * Code facts: leaf: r = ARR_a807d7e0 + port * 400; clears the bytes r[0x186], r[0xa1], r[0xe6], r[0x157], r[0x10c],
  * r[0xb8], r[0x181] in this order. void.
  * Fix vs the autoc draft (76.92): real base ARR_a807d7e0 (fw sethi 0xa807d400 | 0x3e0; the draft added 0xa807d400

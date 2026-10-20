@@ -1,4 +1,4 @@
-/* leon2m FUN_a0131518 @ 0xa0131518..0xa0132768  GlobalModeHandler  BYTE-EXACT (hand)
+/* leon2m FUN_a0131518 @ 0xa0131518..0xa0132768  GlobalModeHandler (hand)
  * What it does (code facts from the asm; names are interpretation):
  *  - 4 port records DAT_a802df30[p] (0x78 bytes): w0 bit fields state (31..28), prev (27..24), mode (23..20),
  *    src (15..12), on (bit 0); +0x08/+0x12/+0x14 u16, +0x54 u16, +0x60 u64 clock, +0x70 flag word.
@@ -44,7 +44,7 @@
  *  - the q-loop is an inlined helper claim(p, u) whose 'if (q < p) return;' replaces 'goto skip;' (fw bcs,a
  *    a0132704 annulled with the target insn = predicted taken; a goto is predicted not taken).
  *  - mode == 0 block: 'if (DAT_a802a44c != 0xff) if (FUN_a00fd820(...) != 0xb1) {...}' (was an early return).
- * Score: jf 100.00 match=True, rawcmp 0 of 1172 words, -Wall clean.
+ * Score: of 1172 words, -Wall clean.
  */
 struct PortF { unsigned int state:4, prev:4, mode:4, b16:4, src:4, b1:11, on:1; };
 struct Port {

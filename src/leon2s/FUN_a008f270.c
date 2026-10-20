@@ -1,4 +1,4 @@
-/* leon2s FUN_a008f270 @ 0xa008f270  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a008f270 @ 0xa008f270 (-mcpu=v8 -Os -g)
  * Mechanical Ghidra C, finished by hand: switch cases in natural order 0, 1, 2; Ghidra type names kept.
  */
 extern unsigned int DAT_a0068de8; /* 0xa0068de8 */

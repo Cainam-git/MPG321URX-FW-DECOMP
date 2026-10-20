@@ -1,4 +1,4 @@
-/* leon2m FUN_a0148aa8 @ 0xa0148aa8  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0148aa8 @ 0xa0148aa8 (-mcpu=v8 -O2 -g)
  * This function masks the input parameter to a byte, logs it via a trace function, sets bit 31 of a global based on the LSB of the parameter, then calls another function with the global's address and constant 1. The main uncertainty is whether the final call's second parameter should be `1` (from `restore %g0, 1, %o1`) or something else - the assembly clearly shows the constant 1 being loaded into the delay slot.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;

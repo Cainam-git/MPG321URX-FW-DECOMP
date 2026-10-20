@@ -1,5 +1,4 @@
-/* leon2m FUN_a00a9cc8 @ 0xa00a9cc8  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: decomp-permuter (AST mutations), judged by exact bytes
+/* leon2m FUN_a00a9cc8 @ 0xa00a9cc8 (-mcpu=v8 -O3 -g)
  */
 
 typedef unsigned char undefined;

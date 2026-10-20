@@ -1,4 +1,4 @@
-/* leon2s FUN_a00ae1c0 @ 0xa00ae1c0  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00ae1c0 @ 0xa00ae1c0 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Pulse on port param_1: saves register 0, clears
  * its bit 5, sets bit 6 of register 0x30, busy-waits 35000 nop iterations, then writes the
  * saved value back to register 0 (FUN_a00a6c00). Probably a reset or calibration kick. The

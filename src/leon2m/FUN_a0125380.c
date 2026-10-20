@@ -1,6 +1,5 @@
-/* leon2m FUN_a0125380 @ 0xa0125380..0xa01253bc (60 bytes, 15 words)  BYTE-EXACT
+/* leon2m FUN_a0125380 @ 0xa0125380..0xa01253bc (60 bytes, 15 words)
  * Flags: -mcpu=v8 -O3 -g (also exact with -msoft-float; -O2 gives 60.00).
- * Judge: jf 100.00 match=True; rawcmp.py 0 mismatches / 15 words (a0125380 a01253bc).
  * What it does (code facts): maps id -> row through the byte table DAT_a802d880[id]; row 0xff
  * means "none" and returns 0xffff, otherwise returns the halfword at offset +6 of the 22-byte
  * (0x16 stride) ROM record DAT_001a42a8[row] (same table that FUN_a01250a8 / FUN_a01252c4 /

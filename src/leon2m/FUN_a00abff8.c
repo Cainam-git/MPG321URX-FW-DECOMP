@@ -1,6 +1,5 @@
-/* leon2m FUN_a00abff8 @ 0xa00abff8..0xa00ac0c4 (204 bytes, 51 words)  BYTE-EXACT
+/* leon2m FUN_a00abff8 @ 0xa00abff8..0xa00ac0c4 (204 bytes, 51 words)
  * Flags: -mcpu=v8 -O3 -g.
- * Judge: jf 100.00 match=True; rawcmp.py 0 mismatches / 51 words (a00abff8 a00ac0c4).
  * What it does (code facts): step UP: v = DAT_a802d290[0x12] + 1;
  * v > 100 stores 100 (clamp), else stores v and redraws through FUN_a00ab5f0(0x2c, 6, v, 7, 1),
  * three FUN_a0146a80(.., 6, .., 0x742, 0) calls, FUN_a0146b50(0xe6, 0),

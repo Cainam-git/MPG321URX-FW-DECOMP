@@ -1,5 +1,5 @@
-/* leon2m FUN_a00d9238 @ 0xa00d9238-0xa00d934c (69 words). BYTE-EXACT: -mcpu=v8 -O3 -g,
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 69 words. void(void).
+/* leon2m FUN_a00d9238 @ 0xa00d9238-0xa00d934c (69 words). -mcpu=v8 -O3 -g.
+ * void(void).
  * What it does: f = byte d290+0x1f (DAT_a802d290 record), v = byte d290+0x1e.
  *   1. f == 0 and the mapped port state of channel 0 (FUN_a0143c14(0)) is 10: FUN_a0124a08(), FUN_a01248ac(),
  *      FUN_a014512c(0, 0), 50 ms delay (func_0x4008d1a0(0x32)).

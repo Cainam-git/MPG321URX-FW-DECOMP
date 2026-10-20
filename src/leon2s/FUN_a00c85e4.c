@@ -1,5 +1,5 @@
 /* FUN_a00c85e4 (leon2s, 0xa00c85e4-0xa00c8688, 164 bytes, 41 words).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/41 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: port = (u8)param_1. When param_3 == 0, twice: v = func_0xa0fb7fd8(port, 0, 0xf) and
  * func_0xa0fb8054(port, 0, 0xf, (u8)(v | 8)) (read-modify-write, bit 3 set). Then for i = 0..7:
  * param_2[i] = func_0xa0fb7fd8(port, 0, (u16)(i + 0x15)). No return value (%i0 not set).

@@ -1,4 +1,4 @@
-/* leon2m FUN_a0098ddc @ 0xa0098ddc  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, autoc)
+/* leon2m FUN_a0098ddc @ 0xa0098ddc (-mcpu=v8 -O3 -g)
  * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;

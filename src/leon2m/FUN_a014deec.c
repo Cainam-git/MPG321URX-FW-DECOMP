@@ -1,5 +1,4 @@
-/* leon2m FUN_a014deec @ 0xa014deec-0xa014df68 (31 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 31 words.
+/* leon2m FUN_a014deec @ 0xa014deec-0xa014df68 (31 words), flags -mcpu=v8 -O3 -g.
  * Code facts: r = FUN_a01421c4(FUN_a0142218(FUN_a0125198(p))) (u8 chain); r == 0x71 -> v = 0,
  * FUN_a0151aa4(0x10, 1); r == 0x81 -> v = 1, FUN_a0151aa4(0x20, 1); else v = 0xff. If v != 0xff:
  * tail FUN_a012b884(v). The two FUN_a0151aa4 calls are cross-jumped into one call site in the fw.

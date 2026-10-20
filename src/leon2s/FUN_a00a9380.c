@@ -1,5 +1,4 @@
-/* leon2s FUN_a00a9380 @ 0xa00a9380  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: [walk]; swap lines 15; swap lines 17; swap lines 15; void -> int, return 0; swap lines 18; swap lines 17; swap lines 19; swap lines 20; return void; [walk]; swap lines 18; swap lines 19; swap lines 18; swap lines 20; swap lines 18
+/* leon2s FUN_a00a9380 @ 0xa00a9380 (-mcpu=v8 -Os -g)
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

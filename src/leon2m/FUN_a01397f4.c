@@ -1,5 +1,5 @@
-/* leon2m FUN_a01397f4 @ 0xa01397f4  MATCH (-mcpu=v8 -O3 -g, twin)
- * Twin of FUN_a0139968: same code, constants swapped; byte-exact.
+/* leon2m FUN_a01397f4 @ 0xa01397f4 (-mcpu=v8 -O3 -g)
+ * Twin of FUN_a0139968: same code, other constants.
  * See FUN_a0139968 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern void func_0x4008c4d0(unsigned char portal, unsigned char offset, unsigned int *buf, unsigned char count);

@@ -1,5 +1,4 @@
-/* leon2m FUN_a01378f0 @ 0xa01378f0  MATCH (-mcpu=v8 -O2 -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: 
+/* leon2m FUN_a01378f0 @ 0xa01378f0 (-mcpu=v8 -O2 -g)
  */
 extern int FUN_a01370dc();
 

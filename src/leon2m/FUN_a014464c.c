@@ -1,4 +1,4 @@
-/* leon2m FUN_a014464c @ 0xa014464c  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a014464c @ 0xa014464c (-mcpu=v8 -O2 -g)
  * Loads the byte at index 2 * (param_1 & 0xFF) of the table at 0x1A6DB2 and passes it through FUN_a0125198,
  * FUN_a0142218 and FUN_a01421c4, masking each result to a byte; returns the last result. The call chain is the
  * same as in FUN_a0144574, with the table lookup in front.

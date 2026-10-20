@@ -1,4 +1,4 @@
-/* leon2m FUN_a00a429c @ 0xa00a429c  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00a429c @ 0xa00a429c (-mcpu=v8 -O2 -g)
  * Counts down the byte DAT_a802d290[9]: when it holds 1..0x65 ((unsigned char)(v - 1) <= 0x64), stores v - 1 and
  * calls FUN_a00b7054(1) and FUN_a00d8cd4(); otherwise sets it to 0. In both cases sets bit 1 of DAT_a802b08e.
  * Returns param_1 unchanged (ret / restore).

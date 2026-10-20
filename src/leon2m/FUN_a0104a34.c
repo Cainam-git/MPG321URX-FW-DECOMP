@@ -1,5 +1,4 @@
-/* leon2m FUN_a0104a34 @ 0xa0104a34-0xa0104b2c (62 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/62.
+/* leon2m FUN_a0104a34 @ 0xa0104a34-0xa0104b2c (62 words). -mcpu=v8 -O3 -g.
  * What it does: dc6c state 8 step (FRC set-up of the channel's input port), called as
  * FUN_a0104a34(port, f8, h06, f4); only port (u8) and h06 (u16) are used:
  *   1. if (block-register read FUN_a00f1a90(port, 4) & 0xf) <= 1 and bit 5 of reg 3 is clear and

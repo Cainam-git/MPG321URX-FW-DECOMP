@@ -1,4 +1,4 @@
-/* leon2m FUN_a0138148 @ 0xa0138148  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0138148 @ 0xa0138148 (-mcpu=v8 -O2 -g)
  * Builds a 4-byte buffer {param_1, 0, 0, 0} (stb of the byte parameter), prints the string at 0x1A55C0 (debug
  * printf FUN_a00df170) and calls FUN_a01370dc(0x60, 4, buffer, 0).
  */

@@ -1,5 +1,5 @@
-/* leon2m FUN_a00d462c @ 0xa00d462c  MATCH (-mcpu=v8 -Os -g, twin)
- * Twin of FUN_a00d46c4: same code, constants swapped; byte-exact.
+/* leon2m FUN_a00d462c @ 0xa00d462c (-mcpu=v8 -Os -g)
+ * Twin of FUN_a00d46c4: same code, other constants.
  */
 extern unsigned char DAT_a802d290[23]; /* 0xa802d290 */
 extern int FUN_a014a11c(int, int);     /* 0xa014a11c */

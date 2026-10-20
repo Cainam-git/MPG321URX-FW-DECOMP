@@ -1,6 +1,5 @@
 /*
  * FUN_a00a2ecc (leon2s, 0xa00a2ecc-0xa00a2f70, 164 bytes), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/41.
  * Code facts: for both 0x34-byte port records ARR_a807db00[0..1] (u8 counter): word 12 of the block at
  * record +0x30 = 0x80008000, FUN_a00a73ac(0x1c, that block + 0x34 bytes); the register word at record +4:
  * bits 20..23 = 5, FUN_a00a73d4(1, reg), and when FUN_a00a7408(1, reg) != 0 bits 16..19 = 2. Returns 0.

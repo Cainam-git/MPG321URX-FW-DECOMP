@@ -1,4 +1,4 @@
-/* leon2s FUN_a006fd04 @ 0xa006fd04  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a006fd04 @ 0xa006fd04 (-mcpu=v8 -Os -g)
  * Returns 0 unless byte 3 of param_1 is 0x55. Otherwise XORs the first param_2 32-bit
  * words of the buffer, each folded with itself shifted right by 8, 16 and 24, and returns 1 when the low byte of
  * the result is 0, else 0. A single raw index masked at each use ('idx & 0xff') produces the

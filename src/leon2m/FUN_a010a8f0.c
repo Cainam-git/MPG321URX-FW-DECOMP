@@ -1,5 +1,4 @@
-/* leon2m FUN_a010a8f0 @ 0xa010a8f0-0xa010a9e8 (62 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/62.
+/* leon2m FUN_a010a8f0 @ 0xa010a8f0-0xa010a9e8 (62 words). -mcpu=v8 -O3 -g.
  * What it does (output path set-up FUN_a01062e0 callee): returns a 16-bit value read with FUN_a00f3078
  * (the hardware register pair p[0] | p[1] << 8):
  *   bit 7 of hw 0xcf011a80 clear: the pair at 0xcf011c30;

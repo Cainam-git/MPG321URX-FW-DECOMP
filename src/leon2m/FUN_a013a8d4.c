@@ -1,10 +1,10 @@
-/* leon2m FUN_a013a8d4 @ 0xa013a8d4  send command 0x84 to the Tensilica core through mailbox portal 2 (hand;
- * BYTE-EXACT at -mcpu=v8 -O3 -g -msoft-float).
+/* leon2m FUN_a013a8d4 @ 0xa013a8d4  send command 0x84 to the Tensilica core through mailbox portal 2
+ * Flags: -mcpu=v8 -O3 -g -msoft-float.
  *
  * Reads portal 2 offset 0x20 (MailBox_Read func_0x4008c4d0); while it is non-zero, waits 1 ms (func_0x4008d1a0) and
  * re-reads, at most 100 times; when it reads 0 writes 0x84000000 | b << 16 | (u16)a to offset 0x20
  * (MailBox_Write func_0x4008c5f8); gives up silently after 100 tries.
- * BYTE-EXACT key: the u16 value is the FIRST parameter, the byte the second (swapped: 89.1 %).
+ * key: the u16 value is the FIRST parameter, the byte the second (swapped: 89.1 %).
  */
 extern void func_0x4008c4d0();
 extern void func_0x4008c5f8();

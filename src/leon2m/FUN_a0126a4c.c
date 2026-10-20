@@ -1,5 +1,5 @@
 /* leon2m FUN_a0126a4c @ 0xa0126a4c  getTempSensing: reads register 8 of the OLED controller and scales it by 0.0625 (soft-float); matches without -g.
- * (hand; BYTE-EXACT at -mcpu=v8 -O3 -msoft-float; verified word by word.)
+ * (hand; -mcpu=v8 -O3 -msoft-float; verified word by word.)
  * Stand-alone copy of a small static helper that FUN_a0127c78 (OLED power / panel state machine) also inlines.
  */
 extern unsigned char DAT_a802d888[2];

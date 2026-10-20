@@ -5,7 +5,7 @@
  * A result of length 1 whose first byte is 0 prints nothing. Each character: wait until UART status 0xC00B0014 bit 5
  * (transmitter ready) is set, giving up after 0xFFFFF polls, then write it to 0xC00B0000; after a '\n' the same wait
  * and a '\r'. Register access goes through the RAM-copy helpers func_0x4008c250 (read) / func_0x4008c25c (write).
- * Returns 0. BYTE-EXACT: the wait-and-send is a static helper used twice (the character, then '\r' after a
+ * Returns 0. the wait-and-send is a static helper used twice (the character, then '\r' after a
  * '\n'); its wait is 'for (t = 0; !(status & 0x20); ) if (++t > 0xffffe) break;'; the buffer is indexed through a
  * pointer local (p[i]), not walked.
  */

@@ -1,4 +1,4 @@
-/* leon2s FUN_a0075360 @ 0xa0075360  MATCH (-mcpu=v8 -Os, gcc 3.4.4)
+/* leon2s FUN_a0075360 @ 0xa0075360 (-mcpu=v8 -Os)
  * Sets up register block 0x3630 for one HDMI port (param_1 = port): clears/sets its bit fields
  * through FUN_a00a7488(port, reg, mask, value), with the three upper fields depending on byte 2
  * of the port table entry DAT_a807d680[port != 2] (> 5 -> 0x4000/0x10000/0x40000), then runs

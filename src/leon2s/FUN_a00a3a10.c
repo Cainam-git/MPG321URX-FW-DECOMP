@@ -1,4 +1,4 @@
-/* FUN_a00a3a10 (leon2s, 0xa00a3a10-0xa00a3b68, 86 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a00a3a10 (leon2s, 0xa00a3a10-0xa00a3b68, 86 words). Flags -mcpu=v8 -Os -g.
  Code facts: u8 port. If ARR_a807db6c[port] != ARR_a807873c[port]: print DAT_a006bb50 (port), copy it. DAT_a80791aa = 1. If bit 6 of
  FUN_a0091d64(port, 0x40): 1cf4(port, 0x31, (f4[port] << 4 | fc[port]) & 0xff), 4ac4(port, 1), ARR_a80791f0[port] = 0, then a8054(port,4,0xe2,
  low byte) and a8054(port,4,0xe3, high byte) of u16 ARR_a8078732[ARR_a80791f0[port]] (the first index is store-forwarded to 0 = 'ldub 0xa8078733',

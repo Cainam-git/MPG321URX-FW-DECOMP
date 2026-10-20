@@ -1,5 +1,5 @@
-/* leon2m FUN_a009deb0 @ 0xa009deb0-0xa009df5c (43 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 43 words. Family of FUN_a009d79c / d848 / de04 / deb0
+/* leon2m FUN_a009deb0 @ 0xa009deb0-0xa009df5c (43 words), flags -mcpu=v8 -O3 -g.
+ * Family of FUN_a009d79c / d848 / de04 / deb0
  * (the afec % N loop family, FUN_a0091de8 / FUN_a009dc84 form).
  * Code facts: FUN_a00a93bc((u8)(word 0xa802afec + 0x48)); loop: t = (lduh 0xa802afee = low half of word
  * 0xa802afec) - 0xb7; t = t % 3 (signed, smul 0x55555556); word 0xa802afec = t + 0xb8; repeat until

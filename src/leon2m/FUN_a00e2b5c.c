@@ -1,4 +1,4 @@
-/* leon2m FUN_a00e2b5c @ 0xa00e2b5c  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00e2b5c @ 0xa00e2b5c (-mcpu=v8 -O2 -g)
  * FUN_a00e05d8(param_1, 0x1E2, 1, 0), then polls FUN_a00e0514(param_1, 0x213, 1) until it has returned zero six
  * times in a row (a nonzero return restarts the count). Returns (FUN_a00e02ec(param_1, 0x202) << 8) |
  * FUN_a00e02ec(param_1, 0x201).

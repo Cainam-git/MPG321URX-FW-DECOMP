@@ -1,5 +1,5 @@
 /* FUN_a00aa4e0 (leon2m 0xa00aa4e0-0xa00aa520, 64 bytes), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp (rawcmp.py) 0 mismatches of 16 words.
+ * rawcmp (rawcmp.py) 0 mismatches of 16 words.
  * Code facts: one u8 param id (and %i0,0xff). id != 5 -> returns 1. id == 5 -> calls FUN_a00d7d48()
  * (no argument: %o0 is not set before the call) and returns 1 only when that call returned 0 AND the
  * word DAT_a802d484 is >= 0 (ld + cmp + bge,a), else 0.

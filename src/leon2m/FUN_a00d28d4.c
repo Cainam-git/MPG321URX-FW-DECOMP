@@ -1,4 +1,4 @@
-/* leon2m FUN_a00d28d4 @ 0xa00d28d4  tool command: factory mode + Burn In on (hand;
+/* leon2m FUN_a00d28d4 @ 0xa00d28d4  tool command: factory mode + Burn In on
  * -mcpu=v8 -O3 -g)
  *
  * When command byte 7 is 1: settings word 0 |= 0x4000 (factory mode bit), Burn In byte +0x1D5 (0xA802D465) = 1,

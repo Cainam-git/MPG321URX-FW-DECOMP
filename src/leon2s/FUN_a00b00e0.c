@@ -1,4 +1,4 @@
-/* leon2s FUN_a00b00e0 @ 0xa00b00e0  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00b00e0 @ 0xa00b00e0 (-mcpu=v8 -Os -g)
  * The function masks the first parameter to a byte, calls a hardware function, then a second function with the masked result, and finally calls a third function with either 1 or 0 as the last argument depending on whether the original second parameter was non-zero. The key fix is capturing the result of `FUN_a00add48` (Ghidra dropped it) and using an if/else with separate calls instead of passing a boolean expression directly, matching the `btst`/`bne` branch pattern in the assembly.
  */
 extern int func_0x9f1c6624(unsigned int param_1);

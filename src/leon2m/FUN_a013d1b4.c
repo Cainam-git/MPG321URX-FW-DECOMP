@@ -1,5 +1,5 @@
-/* leon2m FUN_a013d1b4 @ 0xa013d1b4-0xa013d670 (1212 bytes)  input capture window -> port record (hand;
- * BYTE-EXACT at -mcpu=v8 -O3 -g; jf.py 100 %, rawcmp mismatches 0 of 303 words).
+/* leon2m FUN_a013d1b4 @ 0xa013d1b4-0xa013d670 (1212 bytes)  input capture window -> port record
+ * Flags: -mcpu=v8 -O3 -g; jf.py 100 %, rawcmp mismatches 0 of 303 words.
  *
  * void FUN_a013d1b4(unsigned char port, struct Win *w); w = 8 halfwords a..h (g signed). Callers FUN_a013dc6c, FUN_a0149b8c.
  * 1. port 0 and 0xA802E3D3 != 0: g, a, e, c = x * RAW row +0x0A / RAW row +0x08 (int multiply, signed divide).

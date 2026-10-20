@@ -1,4 +1,4 @@
-/* leon2s FUN_a008a6f4 @ 0xa008a6f4  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a008a6f4 @ 0xa008a6f4 (-mcpu=v8 -Os -g)
  * Writes fixed values to the registers 0xCF0110C0, C4, D4, D8, DC, E0, E4, C8 and CC (in that order), then sets
  * 0xCF011024 = (0xCF011024 & 0x3F) | 0x40, 0xCF011100 = (0xCF011100 & 0x1F) | 0xE0 and clears bit 7 of 0xCF0114B4.
  * Each register is accessed through a volatile 32-bit macro.

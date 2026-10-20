@@ -1,5 +1,5 @@
-/* leon2m FUN_a00a8230 @ 0xa00a8230-0xa00a82c4 (37 words), flags -mcpu=v8 -O3 -g -msoft-float. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 37 words (with -msoft-float; plain -O3 -g: 72.97, loop.c
+/* leon2m FUN_a00a8230 @ 0xa00a8230-0xa00a82c4 (37 words), flags -mcpu=v8 -O3 -g -msoft-float.
+ * (with -msoft-float; plain -O3 -g: 72.97, loop.c
  * hoists the full &DAT_a802d290). Same code at plain -O3 -g with the FUN_a00b3c80 'top: ... if (i < n) goto top;' form.
  * Code facts: twin of FUN_a00b3c80: FUN_a0146b50(0x92, 0); FUN_a0146b6c(0, 0); for i = 0..3:
  * FUN_a00a31a4(0, 0x14, i*2 + 6, 1, FUN_a00a3844(ROM word table 0x19158c, (u16)(i*29 + byte 0xa802d290+8)), 0).

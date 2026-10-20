@@ -1,4 +1,4 @@
-/* FUN_a00a3578 (leon2s, 0xa00a3578-0xa00a3788, 132 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a00a3578 (leon2s, 0xa00a3578-0xa00a3788, 132 words). Flags -mcpu=v8 -Os -g.
  Code facts: TxFFE mode set-up for port (u8 p1), mode = (u8)p2. mode 2: print 'TxFFE De-Emphasis', a80cc(port,1,0x7d,0x10,1),
  e0f0(port,3,T[idx].a), e200(port,T[idx].b) with T = 2-byte records at 0xa807872a, idx = DAT_a80791f0[port], tail e3c0(port,0,p3..p6).
  mode 1: 'TxFFE_Preshoot', e0f0(port,3,0xe), e200(port,0), tail e3c0(port,3,p3..p6). mode 3: 'TxFFE_NO', read-modify-writes of regs

@@ -1,5 +1,4 @@
-/* leon2m FUN_a0127968 @ 0xa0127968  MATCH (-mcpu=v8 -O2, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): DAT_a802d8a2 is unsigned char
+/* leon2m FUN_a0127968 @ 0xa0127968 (-mcpu=v8 -O2)
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

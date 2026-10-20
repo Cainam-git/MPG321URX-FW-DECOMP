@@ -1,5 +1,4 @@
 /* leon2s FUN_a008a470 @ 0xa008a470-0xa008a590 (72 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches.
  * Code facts: reg 0xcf0114b0 &= ~4; then four 7-word write blocks to 0xcf011000/04/08/0c/10/58/5c
  * (values 0,0,0,0x12,1 | 0,0xee,0,0x12,0 | 0,0xee,1,2,0xfc | 0,0xee,1,0,0xfc; 0x58 and 0x5c = 0xc6
  * each time, 0x58 first); if (byte 0xa8076688 & 1) 0xcf011008 |= 0x20; 0xcf011014 = 0xff;

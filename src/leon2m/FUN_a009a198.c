@@ -1,5 +1,4 @@
-/* leon2m FUN_a009a198 @ 0xa009a198-0xa009a1ec (21 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 21 words.
+/* leon2m FUN_a009a198 @ 0xa009a198-0xa009a1ec (21 words), flags -mcpu=v8 -O3 -g.
  * Code facts: b = byte 0xa802d290+0x1dd; byte 0xa8025c55 = b; FUN_a00a93bc((word 0xa802afec + 0x48) & 0xff);
  * FUN_a00a8c88(); FUN_a00ac718(0xba); word 0xa802afec = b + 0xf1 (b re-read); tail FUN_a00a9650(b, 1).
  * Fix vs the autoc draft (76.19): FUN_a00ac718 takes ONE argument (the draft's 2nd arg 0xa8025c00 was a stale

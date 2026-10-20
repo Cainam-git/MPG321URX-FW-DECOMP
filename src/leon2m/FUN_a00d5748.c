@@ -1,4 +1,4 @@
-/* leon2m FUN_a00d5748 @ 0xa00d5748  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00d5748 @ 0xa00d5748 (-mcpu=v8 -O2 -g)
  * Calls FUN_a0145508(1), then for n = 4, 0xB, 0xF and 0x14 in turn passes the result of FUN_a0145660(0, n),
  * truncated to 16 bits, to FUN_a0145808(0, n, value, 1). The last call is a
  * tail call (restore in the delay slot).

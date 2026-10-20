@@ -1,4 +1,4 @@
-/* leon2m FUN_a00a27a4 @ 0xa00a27a4  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00a27a4 @ 0xa00a27a4 (-mcpu=v8 -O2 -g)
  * Copies DAT_a8025c55 to byte 0x1ED of the mode record DAT_a802d290 and sets DAT_a8025c56 = 2, then runs a fixed
  * call sequence: FUN_a00a93bc(0), FUN_a00a8c88(), _DAT_a802afec = 0xc2, FUN_a00ac718(0x3a),
  * FUN_a00a9650(DAT_a8025c56, 1), record byte 0x189 = 0xff, FUN_a00ab4bc(), FUN_a00a9468(1, 2), FUN_a00a9468(2, 5),

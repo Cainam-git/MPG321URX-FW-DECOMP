@@ -1,5 +1,4 @@
-/* leon2m FUN_a0095020 @ 0xa0095020-0xa00950a8 (34 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 34 words.
+/* leon2m FUN_a0095020 @ 0xa0095020-0xa00950a8 (34 words), flags -mcpu=v8 -O3 -g.
  * Code facts: byte 0xa802b08f = 0xf. When byte 0xa8025c55 differs from bits 4..7 of word DAT_a802d290 + 0x30
  * (4-bit bit-field f4), those bits get the byte (and -241 / sll 4 / or, store in the call delay slot) and
  * FUN_a00d7a70(1) runs. Then FUN_a00a8c88(), FUN_a00a86e8() (void(void)), word 0xa802afec = 0x7c,

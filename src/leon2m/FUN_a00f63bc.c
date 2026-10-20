@@ -1,5 +1,5 @@
 /* leon2m FUN_a00f63bc @ 0xa00f63bc-0xa00f6408 (19 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/19 mismatches. Leaf.
+ * Leaf.
  * Code facts: when the cached byte DAT_a802b7b4 differs from p (cmp without any extension of %o0,
  * so p is a full unsigned int), the two hardware registers 0xcf00ec84 and 0xcf00e980 each get
  * (reg & 0xfc) | p (ld / and / or / st, in that order), then the cache byte is set to p (stb).

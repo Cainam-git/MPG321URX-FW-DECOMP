@@ -1,4 +1,4 @@
-/* leon2m FUN_a009a37c @ 0xa009a37c  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a009a37c @ 0xa009a37c (-mcpu=v8 -O2 -g)
  * Passes the byte at 0xA802D290 + 0x1E0 to FUN_a00a93bc, replaces it with DAT_a8025c55, calls FUN_a00af44c(0x34, 3),
  * sets _DAT_a802afec = 0xBD, calls FUN_a00a9650(2, 1) and clears DAT_a8025c55. The table is addressed through a
  * local base pointer (%l0 = 0xA802D290, load from [%l0 + 0x1e0]).

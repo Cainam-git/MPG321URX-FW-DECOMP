@@ -1,5 +1,5 @@
-/* leon2m FUN_a014782c @ 0xa014782c-0xa01478a8 (31 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/31, jump table proven by tools/exact.py.
+/* leon2m FUN_a014782c @ 0xa014782c-0xa01478a8 (31 words). -mcpu=v8 -O3 -g.
+ * jump table proven by tools/exact.py.
  * What it does: action switch on act (u8, 8-entry jump table at fw 0xe33f8; values > 7 do nothing):
  *   1: if FUN_a013ce6c(0) (the state nibble, bits 28..31, of channel 0's record) is not 0: FUN_a00fca4c();
  *   2: FUN_a00fcb1c();  3: FUN_a00fcbec();  5: FUN_a00fce40();  6: FUN_a00fd074(0x6d);  7: FUN_a00fd298();

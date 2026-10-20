@@ -1,4 +1,4 @@
-/* leon2m FUN_a008a4a8 @ 0xa008a4a8  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a008a4a8 @ 0xa008a4a8 (-mcpu=v8 -O2 -g)
  * Fixed sequence of calls (FUN_a0146dc0, FUN_a0146298, FUN_a0146354, FUN_a0146194 ->
  * FUN_a0146370, FUN_a00a28bc, FUN_a0146c40, FUN_a014613c, FUN_a0146518, FUN_a0146ab0, three func_0x4008e2a4),
  * then a tail call FUN_a0146108(0, param_2, ..., param_6) that passes the incoming arguments on with param_1

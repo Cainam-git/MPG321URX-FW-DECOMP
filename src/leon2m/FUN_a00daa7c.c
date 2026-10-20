@@ -1,5 +1,4 @@
 /* leon2m FUN_a00daa7c @ 0xa00daa7c-0xa00daad0 (21 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/21 mismatches.
  * Code facts: fills the 8-byte buffer DAT_a802d268 with {0x35, 0x38, 0x30, 0x30, 0x3b, 0x34,
  * 0x30, 0x0d} and leaf-sibcalls FUN_a01487e8(2, 8, DAT_a802d268). The buffer address is the THIRD
  * argument (fw 'or %o4,0x268,%o2' stays live into the call; a01487e8 forwards %o2 to a01337e8).

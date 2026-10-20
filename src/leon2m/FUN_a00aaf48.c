@@ -1,5 +1,4 @@
 /* leon2m FUN_a00aaf48 @ 0xa00aaf48-0xa00ab080 (78 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/78 mismatches.
  * Code facts: FUN_a0146b50(0x111, 0); FUN_a0146b6c(0, 0); save byte DAT_a802b08f, set it to 0xe.
  * Loop i = 0..6 (u8): if FUN_a00aad30(i) returns 0 (low byte): FUN_a0146a80(0x2a, i*2+6, 10,
  * 0x296, 0); then FUN_a00a31a4(0, 0x2a, (u16)(i*2+6), 1, FUN_a00a3844(0x1910b0, (u16)(i*29 +

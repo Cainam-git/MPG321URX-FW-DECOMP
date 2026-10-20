@@ -1,5 +1,4 @@
-/* leon2m FUN_a0083b60 @ 0xa0083b60-0xa0083be0 (32 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 32 words.
+/* leon2m FUN_a0083b60 @ 0xa0083b60-0xa0083be0 (32 words), flags -mcpu=v8 -O3 -g.
  * Code facts: k = (u8)FUN_a0148868(); FUN_a00df170(s_000feef8, k); ok = (k == 3) ? !(FUN_a0148a24() == 1)
  * : (k != 4) (fw: mov 1 / be,a clr for k == 3, xor 4 / addx store-flag otherwise); if ok: FUN_a0124b40() and
  * tail FUN_a0124a68(). void(void).

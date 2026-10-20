@@ -1,4 +1,4 @@
-/* FUN_a0088b60 (leon2s, 0xa0088b60-0xa0088c5c, 63 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a0088b60 (leon2s, 0xa0088b60-0xa0088c5c, 63 words). Flags -mcpu=v8 -Os -g.
  Code facts: void (u8 port). Returns early if FUN_a0088af0(port) == 0, or (FUN_a00866a4() != 0, port 0) when FUN_a008639c(0, 0x90, 0x111, &st)
  fails or bit 0 of st is set. Loop i = 0..15: off = i << 4; DAT_a80789f0 = off; FUN_a00863d4(port, 0x40, 0x50, 0, &DAT_a80789f0);
  FUN_a0086400(port, 0x10, 0x50, 0xf, DAT_9f1b0000 + off); stop if FUN_a0088af0(port) == 0 or bit 7 of the hardware register 0xcf018884.

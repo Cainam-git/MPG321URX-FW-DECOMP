@@ -1,5 +1,5 @@
 /* leon2m FUN_a00baef8 @ 0xa00baef8..0xa00bb1c4 (716 bytes)  UART frame reader / classifier for one port (UART command path).
- * BYTE-EXACT: jf 100 match=True and rawcmp 0 / 179 words at -mcpu=v8 -O3 -g (also at -mcpu=v8 -O3 -g -msoft-float).
+ * and words at -mcpu=v8 -O3 -g (also at -mcpu=v8 -O3 -g -msoft-float).
  * No compiler aids. Hand, from a 95.53 % draft.
  *
  * What the code does (code facts; only caller FUN_a00ce348 passes port 4):

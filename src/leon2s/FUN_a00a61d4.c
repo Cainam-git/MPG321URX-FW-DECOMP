@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a61d4 @ 0xa00a61d4  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00a61d4 @ 0xa00a61d4 (-mcpu=v8 -Os -g)
  * Returns 1 when param_1 is 0x71 and the low byte of FUN_a00ad784(0) is 1, or when param_1 is 0x81 and the low
  * byte of FUN_a00ad784(1) is 1; otherwise returns 0. The firmware loads the argument 0 with clr %o0 before the
  * first comparison and the argument 1 with mov 1, %o0 in the branch delay slot; the bne of the second comparison

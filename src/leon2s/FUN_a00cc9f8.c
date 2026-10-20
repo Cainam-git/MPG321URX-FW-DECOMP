@@ -1,5 +1,5 @@
 /* FUN_a00cc9f8 (leon2s, 0xa00cc9f8-0xa00cca38, 64 bytes, 16 words).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/16 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: port = (u8)param_1; FUN_a00c9798(port, buf) fills a 2-byte stack buffer; if bit 3
  * (0x08) of buf[1] is set: FUN_a00c7a4c(port, 0) and r = 1, else r = 0; returns r as a u8
  * (fw: final 'and %i0,1,%i0' = u8 return extension narrowed by nonzero-bits).

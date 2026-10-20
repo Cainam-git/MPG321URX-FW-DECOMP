@@ -1,5 +1,5 @@
 /* FUN_a008faa0 (leon2s, 0xa008faa0-0xa008facc, 44 bytes, 11 words, leaf).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/11 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: rec = ARR_a807d3e4 + (u8)param_1 * 0xb0; clears the bytes +0x57, +0x68, +0x1f, +0x41, +0x8a.
  * Fix vs draft: source store order 0x57, 0x68, 0x1f, 0x41, 0x8a (1 of 120 orders gives the fw
  * 8a, 57, 68, 1f, 41). Twin of FUN_a008fa78 (same record, neighbouring bytes).

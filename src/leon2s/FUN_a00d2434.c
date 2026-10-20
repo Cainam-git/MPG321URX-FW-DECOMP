@@ -1,4 +1,4 @@
-/* leon2s FUN_a00d2434 @ 0xa00d2434  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00d2434 @ 0xa00d2434 (-mcpu=v8 -Os -g)
  * This function reads a value from a register at 0xd0013f10, passes it through a transformation function with different parameters depending on the input flag, then writes back the result. The structure matches the similar functions exactly, with the only differences being the constant address (0xd0013f10 instead of 0xd0013f60/0xd0013f50) and the parameter values passed to func_0xa0f714b8 (0,0 in one branch and 1,1 in the other, matching the mov 1, %o1 and mov 1, %o2 in the target).
  */
 extern int func_0xa0f71528(unsigned int);

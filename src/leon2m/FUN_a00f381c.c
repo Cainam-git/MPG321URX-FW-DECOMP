@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f381c @ 0xa00f381c  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f381c @ 0xa00f381c (-mcpu=v8 -O3 -g)
  * Waits on a 24-bit hardware value: takes the start tick t0 = func_0x4008d588(), then repeatedly reads
  * v = FUN_a00f30a8(0xCF012848) (three byte registers), scales it by 4 when the register 0xCF012844 reads 0xA or by
  * 2 when it reads 0xB, and computes d = v - DAT_a802b794. It returns when d lies within -8191..8191 and more than

@@ -1,5 +1,4 @@
-/* leon2s FUN_a00dcc80 @ 0xa00dcc80-0xa00dccd8 (22 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s.py 0 mismatches / 22 words.
+/* leon2s FUN_a00dcc80 @ 0xa00dcc80-0xa00dccd8 (22 words), flags -mcpu=v8 -Os -g.
  * Code facts: v = byte 0xa807953d; FUN_a00dcc50(v); tail ROM call func_0xa0f834c4(string) with s_9f1cec38 /
  * s_9f1cec50 / s_9f1cec68 for v 0 / 2 / 3, else s_9f1cec80 (each string has its own sethi/or into %i0, then one
  * shared 'call; restore'). void(void).

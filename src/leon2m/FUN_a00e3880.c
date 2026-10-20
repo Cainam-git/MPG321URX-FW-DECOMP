@@ -1,5 +1,5 @@
 /* leon2m FUN_a00e3880 @ 0xa00e3880-0xa00e3bdc (215 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0 mismatches. Twin of FUN_a00e321c. Code facts: c = (param_2 == 0 && param_3 == 3) (cmp/subx pair);
+ * Twin of FUN_a00e321c. Code facts: c = (param_2 == 0 && param_3 == 3) (cmp/subx pair).
  * if c: three FUN_a00e0774 field writes (0x216 mask 6 / 0xf0, 0x237 mask 0xc0, value 1). Then a
  * fixed FUN_a00e05d8 / FUN_a00e0740 sequence and FUN_a00dff94(1). Six FUN_a00e2d8c(dev, a, a, 0)
  * runs (a = 4, 5, 7, 6, then 1, 0), each preceded by four hook words 0xa802d664/65c/660/668 =

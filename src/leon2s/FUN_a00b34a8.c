@@ -1,5 +1,4 @@
-/* leon2s FUN_a00b34a8 @ 0xa00b34a8  MATCH (-mcpu=v8 -Os, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): byte-exact as submitted; restore %lo() idiom not recognised by the shape judge
+/* leon2s FUN_a00b34a8 @ 0xa00b34a8 (-mcpu=v8 -Os)
  */
 extern unsigned char DAT_a807dec4;
 extern unsigned int _DAT_a807deac;

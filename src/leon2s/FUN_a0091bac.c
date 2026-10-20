@@ -1,5 +1,4 @@
 /* leon2s FUN_a0091bac @ 0xa0091bac-0xa0091be8 (15 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/15 mismatches.
  * Code facts: leaf; r = &ARR_a807d580[port] (0x1c-byte records, port*7*4, computed before the range
  * test); returns bit 1 of word +0x10 when port (u8) < 2, else 0.
  * Fixes vs the autoc draft (53.33): real base ARR_a807d580 (the draft used the mid-record a807d590 and

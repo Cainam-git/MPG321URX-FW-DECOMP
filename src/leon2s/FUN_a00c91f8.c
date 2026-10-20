@@ -1,5 +1,5 @@
 /* leon2s FUN_a00c91f8 @ 0xa00c91f8-0xa00c9334 (316 bytes, 79 words)
- * BYTE-EXACT with -mcpu=v8 -Os -g (gcc 3.4.4): jf 100.00 match=True, rawcmp_l2s 0/79.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: void (u8 port). It works on the 24-byte DAT_a8078bb0[port] record. Word 0 holds bit-fields
  * (big-endian): f28 = bit 28 (srl 28; btst 1), f23 = bit 23, st = bits 16..17. Byte +3 is a plain u8 member
  * (as a bit-field it is read with ld + and and compared signed). It sets st = 1. When f28 is 0: f23 = 0, bytes

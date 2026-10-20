@@ -1,4 +1,4 @@
-/* leon2m FUN_a00964fc @ 0xa00964fc  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00964fc @ 0xa00964fc (-mcpu=v8 -O2 -g)
  * You need to include a typedef for `uint`. The Ghidra output uses `uint` but it's not defined. Add `typedef unsigned int uint;` at the top.
  */
 typedef unsigned int uint;

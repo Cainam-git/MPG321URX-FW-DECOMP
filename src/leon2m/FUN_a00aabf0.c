@@ -1,5 +1,5 @@
-/* leon2m FUN_a00aabf0 @ 0xa00aabf0-0xa00aacb4 (49 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 49 words. (Also exact as a for loop with -O3 -g -msoft-float;
+/* leon2m FUN_a00aabf0 @ 0xa00aabf0-0xa00aacb4 (49 words), flags -mcpu=v8 -O3 -g.
+ * (Also exact as a for loop with -O3 -g -msoft-float.
  * a for loop at plain -O3 -g gives 75.51: loop.c hoists the full &DAT_a802d290, the fw hoists only the sethi.)
  * Code facts: FUN_a0146b50(0x92, 0); FUN_a0146b6c(0, 0); for i = 0..5 (u8): if FUN_a00aa520(i) == 0:
  * FUN_a0146a80(0x14, i*2 + 6, 0xd, 0x292, 0); then FUN_a00a31a4(0, 0x14, (u16)(i*2 + 6), 1,

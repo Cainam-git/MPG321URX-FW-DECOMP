@@ -1,5 +1,4 @@
 /* leon2s FUN_a00a6190 @ 0xa00a6190-0xa00a61d4 (17 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/17 mismatches.
  * Code facts: leaf. port 'Q' (0x51): returns 1 if byte DAT_a807d80d == 1; port 'a' (0x61):
  * returns 1 if byte DAT_a807d99d == 1; any other port returns 0 (u8, '& 1'). The two flags are
  * +0xd of two 0x190-byte records from 0xa807d800 (both loads crossjump into one compare).

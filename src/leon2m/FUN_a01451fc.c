@@ -1,5 +1,4 @@
 /* leon2m FUN_a01451fc @ 0xa01451fc-0xa01452d0 (53 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/53 mismatches.
  * Code facts: init sequence. Log FUN_a00df170(string 0x1a6e20); FUN_a0107a20(2, 0); ROM
  * func_0x4008992c(1); FUN_a0124f44(); FUN_a014512c(0, 1); FUN_a0124f08(); FUN_a0125c8c();
  * bit 18 of word 0 of the record DAT_a802e3d0 = FUN_a0137bb0() (it returns 0/1: and %i0,1);

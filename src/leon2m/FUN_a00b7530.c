@@ -1,5 +1,5 @@
 /* leon2m FUN_a00b7530 @ 0xa00b7530-0xa00b7674 (81 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0 mismatches. Twin of FUN_a00b7e68. Code facts: n = byte rec[0xf] (rec = DAT_a802d290);
+ * Twin of FUN_a00b7e68. Code facts: n = byte rec[0xf] (rec = DAT_a802d290).
  * FUN_a00ab5f0(0x2c, 6, (n * 20) & 0xfc, 6, param_1); v = 0x742, or 0x792 when param_1 == 0, with
  * FUN_a00a9468(1, 3) / (1, 2); v &= 0x7d2; FUN_a0146a80(0x28/0x2b/0x32, 6, 3/1/1, v, 0) with
  * FUN_a0146b20(0, 0x2b/0x32, 6, 1, 0x3f/0x40, 0) after the 2nd and 3rd; FUN_a0146b50(0xe6, 0);

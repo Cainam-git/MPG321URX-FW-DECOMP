@@ -1,4 +1,4 @@
-/* leon2m FUN_a002a144 @ 0xa002a144  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a002a144 @ 0xa002a144 (-mcpu=v8 -O2 -g)
  * Calls FUN_a002c268(0x9F000090, 0, 0x100) and FUN_a002c268(0x9F020028, 0x100, 0x100), then reads the words at
  * 0x9F02008C (t1) and 0x9F020054 (t2) through FUN_a002c250. For bits n = 0 and 1 of (t1 & ~t2) & 0xFFFF: when the
  * handler word table[0x80 + n] at 0xA802B170 is non-zero, the handler is called and bit n is written to 0x9F02008C

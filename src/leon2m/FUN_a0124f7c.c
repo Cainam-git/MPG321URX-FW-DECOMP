@@ -1,4 +1,4 @@
-/* leon2m FUN_a0124f7c @ 0xa0124f7c  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0124f7c @ 0xa0124f7c (-mcpu=v8 -O2 -g)
  * Returns byte 1 of entry (param_1 & 0xFF) of the table at 0x1A4288 (4-byte entries). The array-index form gives
  * the firmware's add followed by ldub [%o0+1]; a pointer-cast form gives ldub [%o0+%g1] instead.
  */

@@ -1,4 +1,4 @@
-/* leon2s FUN_a0087734 @ 0xa0087734  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0087734 @ 0xa0087734 (-mcpu=v8 -Os -g)
  * All three parameters are masked to bytes. For param_1 == 0 calls FUN_a00aa5e8(param_1, param_2, DAT_a807cd02, 1),
  * else for param_1 == param_3 FUN_a00aa5e8(param_1, param_2, DAT_a807cd2c, 1); then always
  * FUN_a00a78fc(param_1, 2, param_2).

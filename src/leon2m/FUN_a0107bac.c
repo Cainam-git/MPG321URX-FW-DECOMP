@@ -1,4 +1,4 @@
-/* leon2m FUN_a0107bac @ 0xa0107bac  GPIO pin set-up (hand; BYTE-EXACT at -mcpu=v8 -O3 -g)
+/* leon2m FUN_a0107bac @ 0xa0107bac  GPIO pin set-up (hand; -mcpu=v8 -O3 -g)
  *
  * FUN_a0107bac(grp, pin, oe, lvl): pin 15 = none (returns at once). Pin-mux word 0xCF03C348 (grp 0) or 0xCF03C2B8
  * (grp != 0): bits 2..4 = pin, bit 1 = oe, bit 0 = lvl (three read-modify-writes). 0xCF03C294 bit 'pin' cleared for
@@ -11,7 +11,7 @@
  *   firmware (an if-assignment needed a register window: 5 %). Left: block layout of the pin cases.
  * 84.9 %: 0xCF03C294 is read once, modified under the grp test and always written back (v = R;
  *   if (grp == 0) v &= ...; R = v), and with oe == 0 the hardware register is cleared before the shadow is set.
- * BYTE-EXACT: the three mux read-modify-writes are written out twice, once per group register inside
+ * the three mux read-modify-writes are written out twice, once per group register inside
  *   if (grp == 0) {...} else {...}; gcc merges the identical tails (cross-jumping) and the else branch re-loads its
  *   address before jumping back, exactly as the firmware does. A pointer chosen by ?: or if shares the %hi part.
  */

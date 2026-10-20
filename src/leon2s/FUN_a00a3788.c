@@ -1,5 +1,5 @@
 /* FUN_a00a3788 (leon2s, 0xa00a3788-0xa00a3810, 136 bytes, 34 words).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/34 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: port = (u8)param_1; if word DAT_a807db6c[port] != DAT_a807873c[port]: print the
  * dashes line (FUN_a00734c4(DAT_a006ba90), ONE arg: the string has no format), print
  * DAT_a006bac0 ("[HDMI_TX_FRL_Training]: Port%d : DRV_HDMI21_TXDetect_FSM_Init...") with port,

@@ -1,5 +1,4 @@
 /* leon2m FUN_a0122e80 @ 0xa0122e80-0xa0123184 (193 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/193 mismatches.
  * Code facts: params p (u8 unit), lo, hi, mode (u8). Log FUN_a00df170(string 0x1a3078);
  * FUN_a00f2ca8(p, 0xe, 0xea, 0); FUN_a00fe880(0xb, 0x10/0x20/0x40/0x80, 0xc); hw reg
  * 0xcf03c548 &= 0xf3; 0xcf011814 = 0. mode != 0: FUN_a00f2c20(p, reg, val) for (0xcc,0),

@@ -1,5 +1,5 @@
-/* leon2m FUN_a0151818 @ 0xa0151818-0xa01518c8 (44 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/44 (hand, from the asm).
+/* leon2m FUN_a0151818 @ 0xa0151818-0xa01518c8 (44 words). -mcpu=v8 -O3 -g.
+ * (hand, from the asm).
  * What it does: GlobalModeHandler state C entry for channel ch:
  *   pc = the 4-bit port field (bits 12..15 of word 0) of DAT_a802df30[ch] (ch 1..3; anything else uses record 0);
  *   only when pc == 0 AND bit 21 (0x200000) of the FRC config word DAT_a802e3d0 is set:

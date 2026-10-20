@@ -1,5 +1,5 @@
 /*
- * FUN_a01227f0 - V-by-One (Vx1) transmitter lane set-up (Big chip, leon2m). BYTE-EXACT at '-mcpu=v8 -O3 -g'
+ * FUN_a01227f0 - V-by-One (Vx1) transmitter lane set-up (Big chip, leon2m). '-mcpu=v8 -O3 -g'
  * (jf 100.00 % match=True; rawcmp a01227f0..a0122cd8: 314 words, 0 mismatches).
  *
  * What it does: from the active transformed panel row DAT_a802d6a4 (byte +6 display mode, +7 bits per colour)

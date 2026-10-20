@@ -1,5 +1,4 @@
-/* leon2m FUN_a0099168 @ 0xa0099168-0xa00991ec (33 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 33 words.
+/* leon2m FUN_a0099168 @ 0xa0099168-0xa00991ec (33 words), flags -mcpu=v8 -O3 -g.
  * Code facts: f = bit 15 of word 0xa802d290+0xa8; FUN_a00a93bc(f); f = byte 0xa8025c56 & 1; FUN_a00a9650(f, 0);
  * FUN_a00a813c(1, f, 1) (f re-read each time); word 0xa802afec = 0x2e; tail FUN_a00a900c(4, 1).
  * Fix vs the autoc draft (75.76): bit 15 as a 1-bit BIT-FIELD (big-endian: hi:16, b15:1, lo:15) of the record word

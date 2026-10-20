@@ -1,5 +1,4 @@
-/* leon2s FUN_a009c794 @ 0xa009c794-0xa009c7e4 (20 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s.py 0 mismatches / 20 words.
+/* leon2s FUN_a009c794 @ 0xa009c794-0xa009c7e4 (20 words), flags -mcpu=v8 -Os -g.
  * Code facts: leaf. p = word +4 (a register-block pointer) of the 0x34-byte record ARR_a807db00[port] (smul
  * 0x34); when the u8 'on' == 1: sibcall FUN_a00a73ac(0x19, p + 0x34), else sibcall FUN_a00a73d4(0x19, p + 0x34).
  * void. Fix vs the autoc draft: real base ARR_a807db00 (draft ARR_a807db04 + mid-record), the field is a byte

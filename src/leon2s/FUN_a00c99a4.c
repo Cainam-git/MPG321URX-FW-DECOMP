@@ -1,4 +1,4 @@
-/* leon2s FUN_a00c99a4 @ 0xa00c99a4  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00c99a4 @ 0xa00c99a4 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Block WRITE through a port's indirect register
  * window (func_0xa0fb7ee0 = register write): selects bank param_3 by writing param_3*0x11 to
  * register 4, strobes register 5 (0x80 then 0); unless param_4 is set, writes param_5/16

@@ -1,5 +1,5 @@
 /* FUN_a0096ad8 (leon2s, 0xa0096ad8-0xa0096b08, 48 bytes, 12 words, leaf).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/12 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: rec = ARR_a807d7e0 + (u8)param_1 * 400 (smul 0x190); clears the bytes +0xa2, +0xe7,
  * +0x10d, +0xb9, +0x182, +0x187.
  * Fixes vs draft: base name ARR_a807d7e0 (fw sethi 0xa807d400 | 0x3e0; the draft had ARR_a807d400)

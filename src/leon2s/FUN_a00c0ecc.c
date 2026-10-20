@@ -1,5 +1,4 @@
 /* leon2s FUN_a00c0ecc @ 0xa00c0ecc-0xa00c0f88 (47 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/47 mismatches.
  * Code facts: copies ROM tables into three caller buffers with u16 counters: dst1[i] = DAT_9f1b7148[0x13 - i]
  * for i = 0..15 (reversed), dst2[i] = DAT_9f1b7148[0x28 + i] for i = 0..0x209, dst3[i] = DAT_9f1b74b8[i]
  * for i = 0..0x7f. dst3 is the FOURTH parameter (%i3); the third parameter is never read (the fw reuses

@@ -1,5 +1,4 @@
-/* leon2m FUN_a00a493c @ 0xa00a493c-0xa00a49b8 (31 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 31 words.
+/* leon2m FUN_a00a493c @ 0xa00a493c-0xa00a49b8 (31 words), flags -mcpu=v8 -O3 -g.
  * Code facts: v = (u8)(byte DAT_a802d290 + 9 + 1). If v > 100: the byte = 100. Else the byte = byte + 1 (stored in
  * the call delay slot), FUN_a00a45c0(5, 8, v, 0xc), FUN_a00b3708(10, 6, re-read byte), FUN_a00d8cd4(). Then
  * FUN_a00d4998() and byte 0xa802b08e |= 2. void(void).

@@ -1,5 +1,5 @@
-/* leon2m FUN_a0086ae8 @ 0xA0086AE8..0xA0087020 (334 words) "App_Initialize". BYTE-EXACT:
- * -mcpu=v8 -O3 -g (also -msoft-float) jf 100.00 match=True, rawcmp 0/334, exact.py None.
+/* leon2m FUN_a0086ae8 @ 0xA0086AE8..0xA0087020 (334 words) "App_Initialize".
+ * -mcpu=v8 -O3 -g (also -msoft-float) exact.py None.
  * Plain words: the application start-up step (start-up step 3). It calls FUN_a014a768 for ids 0xC / 0xD with one
  * settings bit, then switches the GPIO power pins on in an order that depends on the power-on type argument (type 1:
  * with extra init calls and two 50-tick delays; type 4: a short pin set and FUN_a0080490(1); other types: the type-1

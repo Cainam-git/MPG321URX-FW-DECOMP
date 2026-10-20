@@ -1,5 +1,4 @@
 /* leon2s FUN_a00624b4 @ 0xa00624b4-0xa006250c (22 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/22 mismatches.
  * Code facts: timeout check. base = word DAT_a8078a3c (read before the flag test); if byte
  * DAT_a8078a3a == 0 return 0. now = FUN_a00b2064() (tick); d = now - base, or 0xffffffff - base
  * + now when the tick wrapped (now < base); if d > 200: DAT_a8078a3a = 0. Returns DAT_a8078a3a

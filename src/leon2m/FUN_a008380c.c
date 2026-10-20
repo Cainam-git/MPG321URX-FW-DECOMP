@@ -1,4 +1,4 @@
-/* leon2m FUN_a008380c @ 0xa008380c  APPGetFRCMode (hand; BYTE-EXACT at -mcpu=v8 -O3, no -g;
+/* leon2m FUN_a008380c @ 0xa008380c  APPGetFRCMode (hand; -mcpu=v8 -O3, no -g.
  * jf 100 %, rawcmp 165 words 0 mismatches)
  *
  * Chooses the frame-rate-conversion (FRC) mode 0..3 for display channel 0 and prints "APPGetFRCMode %x"
@@ -25,7 +25,7 @@
  *   '== const' false, which puts the special-flag path out of line); '(x7 == 800) & (x8 == 600)' with bitwise &;
  *   the 4..6 test as an unsigned char flag set in an if; the final mode as 'mode = 0; if (t <= 2) mode = 1;';
  *   the special path as 'if (in range) {...} else mode = 0;'.
- * BYTE-EXACT at '-mcpu=v8 -O3' (without -g; with -g only one trailing nop after the last call differs, the known
+ * '-mcpu=v8 -O3' (without -g; with -g only one trailing nop after the last call differs, the known
  *   no--g sign). Further levers: b is an unsigned char local, and the two identical "4..6 or 8" bodies are ONE
  *   body under 'if (in46 || DAT_a802d290.b1a4 == 8)'. Re-reading the field in the second operand keeps the || as
  *   two branches (a plain 'b == 8' lets gcc merge it into an orcc), and the 8 test then zero-extends b again,

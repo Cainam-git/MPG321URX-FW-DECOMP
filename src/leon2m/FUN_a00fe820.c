@@ -1,6 +1,5 @@
 /* leon2m FUN_a00fe820 @ 0xa00fe820-0xa00fe880 (24 words incl. the unreachable ret/restore pair
  * FUN_a00fe878), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/24 mismatches.
  * Code facts: only for p == 6 or 7 ((u8)(p - 6) <= 1): r = FUN_a00f1a90(p, 5) (register read);
  * v = on ? (r & ~1) | 8 : (r & ~8) | 1; tail call FUN_a00f1ad4(p, 5, (u8)v) (register write).
  * void. FUN_a00f1a90 takes 2 args (the draft passed a 3rd) and its value is used unmasked

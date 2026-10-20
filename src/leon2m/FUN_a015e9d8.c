@@ -1,4 +1,4 @@
-/* leon2m FUN_a015e9d8 @ 0xa015e9d8  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a015e9d8 @ 0xa015e9d8 (-mcpu=v8 -O2 -g)
  * Calls the function pointer stored at 0xA802CFEC with param_1 and returns its result; returns 0 when the pointer
  * is NULL.
  */

@@ -1,5 +1,5 @@
 /* FUN_a00a4a30 (leon2m, 0xa00a4a30-0xa00a4b4c, 284 bytes, 71 words).
- * Flags: -mcpu=v8 -O3 -g. Judge: jf 100.00 match=True, rawcmp 0/71 mismatches.
+ * Flags: -mcpu=v8 -O3 -g.
  * Code facts: FUN_a0146a80(5, 8, 4, 0x792, 0); for i = 0..3 (u8): FUN_a0146b20(0, (u16)(i + 9), 8, 1,
  * (u8)(i + 0x22) when param_1 == 0 else (u8)(i + 0x1e), 0); then param_1 == 0:
  * FUN_a0146a80(3, 8, 5, 0x792, 0) + tail FUN_a0146a80(0xe, 8, 5, 0x992, 0); param_1 != 0: the same

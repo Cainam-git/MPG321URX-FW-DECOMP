@@ -1,4 +1,4 @@
-/* leon2s FUN_a00aa2d0 @ 0xa00aa2d0  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00aa2d0 @ 0xa00aa2d0 (-mcpu=v8 -Os -g)
  * 
  */
 typedef unsigned int uint;

@@ -1,4 +1,4 @@
-/* leon2m FUN_a0142518 @ 0xa0142518-0xa01427d4 (175 words), -mcpu=v8 -O3 -g: jf 100.00 match=True, rawcmp 0/175
+/* leon2m FUN_a0142518 @ 0xa0142518-0xa01427d4 (175 words), -mcpu=v8 -O3 -g:
  * (behaviour checked against the asm on every path).
  * What it does: called by FUN_a013c144 (480p chain) when port record word +0x70 bit 30 is set, with the active
  *   size w (width) and h (lines). rec = FUN_a013cd4c(port); return when (word0 & 0xe) == 4. m = word0 bits 1..3:

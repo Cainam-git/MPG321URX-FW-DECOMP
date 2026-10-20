@@ -1,5 +1,4 @@
-/* leon2m FUN_a0092b18 @ 0xa0092b18-0xa0092bb4 (39 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 39 words.
+/* leon2m FUN_a0092b18 @ 0xa0092b18-0xa0092bb4 (39 words), flags -mcpu=v8 -O3 -g.
  * Code facts (afec % N loop family, src FUN_a0091668 form): FUN_a00b4144((u8)(word 0xa802afec - 2), 2); afec =
  * 0x2a; loop (entered at the test): if FUN_a00aa520((u8)(afec - 0x2a)) == 1 break; t = (lduh 0xa802afee, low
  * half of afec) - 0x29; t = t % 10 (signed, smul 0x66666667, sra 2); afec = t + 0x2a. The test re-loads afec

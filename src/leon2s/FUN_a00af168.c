@@ -1,6 +1,5 @@
 /*
  * FUN_a00af168 (leon2s, 0xa00af168-0xa00af1e8, 128 bytes), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/32.
  * Code facts: DP DSC enable. on != 0: FUN_a00a6c98(p, 0x480, 1, 1), FUN_a00a6c00(p, 0x482, 0xc0),
  * FUN_a00aef04(p), FUN_a00a6c00(p, 0x484, 2), FUN_a00a6c98(p, 0x486, 2, 1). on == 0:
  * FUN_a00a6c98(p, 0x480, 1, 0). Then the sibcall print FUN_a0073044(s_a006c510 "DP DSC en= %d", on):

@@ -1,5 +1,5 @@
 /* FUN_a0090010 (leon2s, 0xa0090010-0xa0090078, 104 bytes, 26 words).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/26 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: port = (u8)param_1; v = FUN_a00a6938(port, 0x4e) as u16. When bits 5..7 of
  * FUN_a00a657c(port, 0x144) equal 0x60, or (u8)FUN_a008fff0(port) != 0, the function returns
  * (u16)(v << 1); otherwise (u16)v. Both doubled arms share one call site in the fw (cross-jump).

@@ -1,6 +1,6 @@
 /* leon2m FUN_a008ef48 @ 0xA008EF48..0xA008F354 (259 words) "ShowLogo": draws the power-on MSI logo and switches the
- * panel on. BYTE-EXACT (from a 96.14 % draft): -mcpu=v8 -O3 -g (also -msoft-float), jf
- * 100.00 match=True, rawcmp 0/259.
+ * panel on. (from a 96.14 % draft): -mcpu=v8 -O3 -g (also -msoft-float), jf
+ * 100.00 match=True.
  * Where: start-up step 3 (App_CoolInitialize FUN_a0087020 -> FUN_a0081e0c -> here), i.e. after start-up step 2 with
  * FUN_a0106d64. A Big chip that stops in step 2 never gets here: no logo.
  * What it does at power-on (code facts, in order):

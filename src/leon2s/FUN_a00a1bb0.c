@@ -1,6 +1,5 @@
-/* leon2s FUN_a00a1bb0 @ 0xa00a1bb0..0xa00a1c74 (196 bytes, 49 words)  BYTE-EXACT
+/* leon2s FUN_a00a1bb0 @ 0xa00a1bb0..0xa00a1c74 (196 bytes, 49 words)
  * Flags: -mcpu=v8 -Os -g.
- * Judge: jf 100.00 match=True; rawcmp_l2s.py 0 mismatches / 49 words (a00a1bb0 a00a1c74).
  * What it does (code facts): rec = 0x34-byte record (param_1 & 0xff) of ARR_a807db00; with
  * w = rec word 1 (offset +4, re-read before every call) it sets (param_2 != 0) or clears
  * bits 0x1c in the bitmap at w + 0x24 and bits 8, 9, 10 in the bitmap at w + 0x28 through

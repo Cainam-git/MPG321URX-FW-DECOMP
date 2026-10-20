@@ -1,6 +1,5 @@
-/* leon2m FUN_a008ec48 @ 0xa008ec48..0xa008ed00 (184 bytes, 46 words)  BYTE-EXACT
+/* leon2m FUN_a008ec48 @ 0xa008ec48..0xa008ed00 (184 bytes, 46 words)
  * Flags: -mcpu=v8 -O3 -g.
- * Judge: jf 100.00 match=True; rawcmp.py 0 mismatches / 46 words (a008ec48 a008ed00).
  * What it does (code facts): keeps a 16-bit mask in DAT_a802afdc. param_1 == 0xff = "all":
  * the mask is first set to 0xffff (param_2 == 1) or 0. Then it searches the 16 two-byte ROM
  * entries at 0x10051f for the one whose second byte (offset +1) equals param_1; the found

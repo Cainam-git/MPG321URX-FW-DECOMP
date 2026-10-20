@@ -1,5 +1,4 @@
 /* leon2m FUN_a00b7d14 @ 0xa00b7d14-0xa00b7e68 (85 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/85 mismatches.
  * Code facts: twin of FUN_a00b7e68. n = byte DAT_a802d290[0x1df] * 17 (sll 4 + add),
  * n = 100 if that byte > 5; FUN_a00ab5f0(0x2c, 6, (u8)n, 6, p & 0xff); p & 0xff != 0: v = 0x742,
  * FUN_a00a9468(1, 3); else v = 0x792, FUN_a00a9468(1, 2) (u16 v; the fw keeps 'and v, 0x7d2' =

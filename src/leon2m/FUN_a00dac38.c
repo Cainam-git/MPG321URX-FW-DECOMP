@@ -1,5 +1,5 @@
 /* leon2m FUN_a00dac38 @ 0xa00dac38  SYSAPI_GetPanelParamStruct = the panel row picker
- * (hand; BYTE-EXACT at -O3).
+ * (hand; -O3).
  *
  * off = 20 (5 when FUN_a0145af8(2) == 1). Reads vfreq (tenths of Hz, id 1), hfreq (id 0) and active lines (id 10) via
  * FUN_a0145660(0, n) (ids 8 and 7 are read and ignored).
@@ -18,7 +18,7 @@
  * Row 2 (the 60 Hz row) is chosen below 62.0 Hz (refresh path) or for h/2348 <= 699 (line-rate path); FW.012
  *   had only the refresh path and no row 2. The two limits are the immediates 0x2bb (699) and 0x258 (600).
  * Callers (all four call sites, void to each): FUN_a008454c (1,1,0), FUN_a0127c78 (0,1,0) twice, FUN_a01295e4 (1,1,1).
- * BYTE-EXACT keys: -O3; the line-rate value written in ONE expression ((u16)hfreq * 2160 / a * 1000, with
+ * keys: -O3; the line-rate value written in ONE expression ((u16)hfreq * 2160 / a * 1000, with
  *   a = (u16)active held in an unsigned int), so gcc reuses the zero-extended active from its print; the callees'
  *   real signatures (FUN_a01295c4 unsigned char, FUN_a0126878 unsigned short, FUN_a0145af8 unsigned short), but
  *   FUN_a0145660 declared int-returning (the original extends its results at the uses).

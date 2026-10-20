@@ -1,4 +1,4 @@
-/* leon2m FUN_a0134428 @ 0xa0134428  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0134428 @ 0xa0134428 (-mcpu=v8 -O2 -g)
  * Two calls to func_0x4008f3f4: the first passes 0x14, the low byte of param_2, bits 8-15 of param_1 (left-then-right
  * shift), the low byte of param_1 and 1; the second passes 0x11 with all-zero data fields and 2. The parameters are
  * unsigned int (the assembly works on full 32-bit registers with explicit masks); the two-step shift `(x<<16)>>24`

@@ -1,5 +1,5 @@
-/* leon2m FUN_a00d4888 @ 0xa00d4888-0xa00d48cc (17 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 17 words. Leaf frame, sibcall (mov %o7 form).
+/* leon2m FUN_a00d4888 @ 0xa00d4888-0xa00d48cc (17 words), flags -mcpu=v8 -O3 -g.
+ * Leaf frame, sibcall (mov %o7 form).
  * Code facts: if bit 20 of word 0xa802d290+0xac is set and byte rec+0x1f == 0: tail FUN_a014782c(4). void(void).
  * Fix vs the autoc draft (70.59): real base DAT_a802d290 as a struct (draft: _DAT_a802d33c / DAT_a802d2af
  * mid-record names, the +0x1f byte declared as a word), one record pointer for both reads. Aids: none.

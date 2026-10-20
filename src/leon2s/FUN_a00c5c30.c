@@ -1,4 +1,4 @@
-/* leon2s FUN_a00c5c30 @ 0xa00c5c30  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00c5c30 @ 0xa00c5c30 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. per-port register fix-up. Reads register 0x2e
  * of the port (func_0xa0fb7e98 = register read); only acts when bit 5 is set. Ports 0-1: if
  * register 0x21f bit 1 is set, or register 6 bit 1 is clear, pulse bit 1 of register 0x30

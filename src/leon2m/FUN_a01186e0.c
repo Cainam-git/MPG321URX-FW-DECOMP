@@ -1,4 +1,4 @@
-/* leon2m FUN_a01186e0 @ 0xa01186e0-0xa011898c (684 bytes)  BYTE-EXACT (rawcmp 171 words, 0 mismatches) at -mcpu=v8 -O3 -g.
+/* leon2m FUN_a01186e0 @ 0xa01186e0-0xa011898c (684 bytes) (rawcmp 171 words, 0 mismatches) at -mcpu=v8 -O3 -g.
  *
  * void FUN_a01186e0(arg): output-block (0xCF012Exx/Fxx) set-up from the transformed panel row.
  *   0xCF009BB8 bit 1 cleared; delay 50 (func_0x4008d1a0 = FUN_a002d1a0); 0xCF012E80 = 4; FUN_a00f2e98(0xF4, 0, 0x400, arg);

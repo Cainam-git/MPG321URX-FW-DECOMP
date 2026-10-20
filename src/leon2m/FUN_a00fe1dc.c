@@ -1,5 +1,5 @@
 /* leon2m FUN_a00fe1dc @ 0xa00fe1dc-0xa00fe3ec (528 bytes)  Set_INTERNAL_2_INPUT_Path: select the source of internal
- * path 2 (hand; BYTE-EXACT at -mcpu=v8 -O3 -g, also -O3 -g -msoft-float and -O3; jf.py 100 %,
+ * path 2 (hand; -mcpu=v8 -O3 -g, also -O3 -g -msoft-float and -O3; jf.py 100 %.
  * rawcmp mismatches 0). Twin of FUN_a00fdf74 (path 1); the reader of this field is FUN_a00fe3ec.
  *
  * void FUN_a00fe1dc(mode): prints "Set_INTERNAL_2_INPUT_Path = %02x\r\n" (0x19A4D8) with mode.
@@ -15,7 +15,7 @@
  *   1 is written anyway; released by writing 0.
  * Callers: FUN_a01327e0 (tail calls: its arg 0 -> mode 1, 1 -> mode 2, 2 or 4 -> mode 3).
  * PANEL ROW FIELDS READ: transformed row +0x00 bits 20-22 (only on the variant <= 0x81 path).
- * BYTE-EXACT keys: the register READ is written as if/else of two loads (one sethi per address; a selected pointer
+ * keys: the register READ is written as if/else of two loads (one sethi per address; a selected pointer
  *   shares the sethi); case order 1, 2, 3; case 1 repeats 'v &= ~0x28' (no-op on the value, the bits are already
  *   clear; it gives the firmware's extra 'mov %o5,%l0' in case 1); the semaphore as static inline lock()/unlock().
  */

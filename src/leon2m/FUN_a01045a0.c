@@ -1,6 +1,6 @@
 /* leon2m FUN_a01045a0 @ 0xa01045a0-0xa0104a34 (1172 bytes)  measure and correct the output clock (second half of
- * FUN_a0104380, same block registers and saved bytes) (hand; BYTE-EXACT at
- * -mcpu=v8 -O3 -g -msoft-float: jf 100, rawcmp 293 words / 0 mismatches).
+ * FUN_a0104380, same block registers and saved bytes)
+ * Flags: -mcpu=v8 -O3 -g -msoft-float: jf 100, rawcmp 293 words / 0 mismatches.
  *
  * void FUN_a01045a0(ch, clk, rate): ch = register block (0x19A2EC family), clk = 64-bit clock in Hz, rate = refresh
  *   in 0.1 Hz for the frame waits FUN_a0121bcc(1, rate).

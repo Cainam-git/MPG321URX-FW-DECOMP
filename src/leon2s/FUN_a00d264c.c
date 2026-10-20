@@ -1,4 +1,4 @@
-/* leon2s FUN_a00d264c @ 0xa00d264c  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00d264c @ 0xa00d264c (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Fills the 257-entry 16-bit table at 0xa8077a08
  * with 0x400. Written as a plain array loop; Ghidra's byte-offset form changes the address operand order.
  */

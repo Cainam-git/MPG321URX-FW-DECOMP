@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f21f0 @ 0xa00f21f0  MATCH (-mcpu=v8 -O3 -g, twin of FUN_a00f1ce4)
+/* leon2m FUN_a00f21f0 @ 0xa00f21f0 (-mcpu=v8 -O3 -g, twin of FUN_a00f1ce4)
  * Reads a 16-bit value from two consecutive registers (low byte at reg, high byte at reg + 1, low read first) of a
  * 0x19A2FC-table block; block numbers 8 and up read block 0. Register = 32-bit word at 0xCF000000 + 4 * (base + reg),
  * low 8 bits used. Table 0x19A2FC: blocks 0..7 = 0x1AB0..0x21B0 -> 0xCF006AC0 + 0x400 * block.

@@ -1,5 +1,4 @@
 /* leon2s FUN_a00b1e70 @ 0xa00b1e70-0xa00b1fe0 (92 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/92 mismatches.
  * Code facts: one-time init, guarded by the byte DAT_a80793a4 (set to 1 at the end). Clears word
  * DAT_a807de98, the 1 x 2 word array at DAT_a80793a4 + 0xc (nested loops; gcc counts the inner one down:
  * addcc/bpos), picks v = 12000 / 10000 / 3000 for clock word DAT_a80787dc == 96000000 / 80000000 / other,

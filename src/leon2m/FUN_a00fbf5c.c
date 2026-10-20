@@ -1,4 +1,4 @@
-/* leon2m FUN_a00fbf5c @ 0xa00fbf5c  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00fbf5c @ 0xa00fbf5c (-mcpu=v8 -O3 -g)
  * on == 1: sets bit 31 of the word at 0xD0040000, then calls func_0x4008a880(0xC, 0x100, 0x9A814) and
  * func_0x40089820(0xC, 0x100) (ROM routines; same calls as FUN_a00fbfd4). Otherwise clears bit 31 and calls
  * func_0x40089968(0xC, 0x100). Callers: FUN_a014e878 (twice).

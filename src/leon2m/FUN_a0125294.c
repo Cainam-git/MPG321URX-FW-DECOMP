@@ -1,4 +1,4 @@
-/* leon2m FUN_a0125294 @ 0xa0125294  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0125294 @ 0xa0125294 (-mcpu=v8 -O2 -g)
  * Reads the 22-byte (0x16) per-port record at 0x001A42A8 indexed by the low byte of the parameter: returns record
  * byte +0x12 if record byte +1 equals 2, otherwise 0x0F.
  *

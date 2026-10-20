@@ -1,5 +1,4 @@
 /* leon2m FUN_a00de53c @ 0xa00de53c-0xa00de578 (15 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/15 mismatches.
  * Code facts: leaf busy-wait: for i = 0 .. n-1 (unsigned, cmp/bcs), an inner loop of 64 passes
  * (j = 0x3f; addcc -1; bpos) whose body is two real 'nop' instructions. void, n unsigned int.
  * Required forms: the two nops in the inner body. Aid: the nops are inline asm

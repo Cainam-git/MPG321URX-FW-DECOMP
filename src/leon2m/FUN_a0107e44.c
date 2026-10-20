@@ -1,4 +1,4 @@
-/* leon2m FUN_a0107e44 @ 0xa0107e44  FRCConfigPostFRC (hand; BYTE-EXACT at
+/* leon2m FUN_a0107e44 @ 0xa0107e44  FRCConfigPostFRC
  * -mcpu=v8 -O3 -g -msoft-float: the image has no FPU instructions, float maths goes through libgcc soft-float)
  *
  * Programs the output (post-FRC) timing for refresh value 'rate' (tenths of Hz). Prints "FRCConfigPostFRC %d".
@@ -33,7 +33,7 @@
  *   merges the two identical 'lduh h28 / sth [fp-10]' tails into the join -> join = 'lduh h28, sll %l0 -> %o1, sra' as fw.
  *   Locals declared vt1 h0a h30 h32 h26 hx h28 h2e ht (declaration order = allocno index = tie-break: h28 and hx both int 29,
  *   hx must win). Loads h0a, h30, h32, h2e (h2e last = delay slot). Left: h0a 497/227 -> 43.79 < h32 464/210 -> 44.19.
- * BYTE-EXACT (jf 100, rawcmp 366/0) with three 'branch-weight hints'. UNUSUAL CONSTRUCT, behaviour-neutral:
+ * (jf 100, rawcmp 366/0) with three 'branch-weight hints'. UNUSUAL CONSTRUCT, behaviour-neutral:
  *   'do continue; while (0);' x4 + 'goto lN; lN: ;' emits no code (each continue jumps to its own do-while(0) exit, the goto to the
  *   next statement). It only leaves NOTE_INSN_PREDICTION notes (stmt.c PRED_CONTINUE 56 % taken, c-semantics.c PRED_GOTO 70 %
  *   not taken) on the enclosing branch: odds x 1.2727^4 / 2.333 = x1.124 (DS combine in predict.c).

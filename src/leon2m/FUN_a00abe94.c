@@ -1,4 +1,4 @@
-/* leon2m FUN_a00abe94 @ 0xa00abe94  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00abe94 @ 0xa00abe94 (-mcpu=v8 -O2 -g)
  * Computes off = 0x742 when the low byte b of param_1 is non-zero and 0x792 when it is zero, and reads the byte s
  * at 0xA802D2A2 (pointer 0xA802D290 + 0x12). Calls FUN_a00ab5f0(0x2C, 6, s, 7, b), FUN_a0146a80(0x28, 6, 3, off, 0),
  * FUN_a0146a80(0x2B, 6, 1, off, 0), FUN_a0146a80(0x32, 6, 1, off, 0) and FUN_a0146b50(0xE6, 0), and returns

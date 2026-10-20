@@ -1,4 +1,4 @@
-/* leon2s FUN_a00afd04 @ 0xa00afd04  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00afd04 @ 0xa00afd04 (-mcpu=v8 -Os -g)
  * For the port byte p = param_1 & 0xff: stores param_2 to byte 0x115 of the 300-byte per-port record p in
  * ARR_a807dc18, then calls FUN_a00abff0(p), FUN_a00ac66c(p) and tail-calls FUN_a00af98c(p). Each callee takes one
  * argument (only %o0 is set before each call).

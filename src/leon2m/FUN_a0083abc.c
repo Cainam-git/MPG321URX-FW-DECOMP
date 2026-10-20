@@ -1,4 +1,4 @@
-/* leon2m FUN_a0083abc @ 0xa0083abc  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0083abc @ 0xa0083abc (-mcpu=v8 -O2 -g)
  * Calls FUN_a008380c and tail-calls FUN_a0148eb4 with bit 1 of its result and param_2; param_1 is unused. The void
  * prototype of FUN_a008380c leaves a nop in the call delay slot, and the unsigned type gives a logical srl.
  */

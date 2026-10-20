@@ -1,4 +1,4 @@
-/* leon2m FUN_a0143ff0 @ 0xa0143ff0  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0143ff0 @ 0xa0143ff0 (-mcpu=v8 -O2 -g)
  * Maps the channel number ch (0..3) through remap(); an out-of-range channel prints "SYS remapping channel OOR"
  * (s_001a6dd8) and uses channel 0. Takes bits 12..15 of word 0 of the 0x78-byte channel record DAT_a802df30[ch] as
  * an index into the 42-byte records at DAT_a802e224, reads byte 0x0A of that record, passes it to FUN_a0142168 and

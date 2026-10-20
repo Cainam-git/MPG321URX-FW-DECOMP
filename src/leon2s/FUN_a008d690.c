@@ -1,5 +1,4 @@
 /* leon2s FUN_a008d690 @ 0xa008d690-0xa008d70c (31 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/31 mismatches.
  * Code facts: ROM table ARR_a00b4036 of 4-byte {u16 a; u16 b} records. sum = u16 sum of
  * rec[0xc..0x10].b; FUN_a008d2e0(rec[0xc].a (= u16 at 0xa00b4066), sum, 0x9f1b0600);
  * FUN_a008d490(0x9f1b0600, 0xc, 0x11); byte DAT_a8078c00 = 1; tail call FUN_a006fedc() (no args:

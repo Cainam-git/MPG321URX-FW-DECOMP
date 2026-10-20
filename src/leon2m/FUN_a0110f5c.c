@@ -1,4 +1,4 @@
-/* leon2m FUN_a0110f5c @ 0xa0110f5c  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0110f5c @ 0xa0110f5c (-mcpu=v8 -O2 -g)
  * So the C should have `func_0x4008c25c(0xb7080168,
  */
 extern int func_0x4008c25c();

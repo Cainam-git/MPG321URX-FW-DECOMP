@@ -1,4 +1,4 @@
-/* leon2s FUN_a0088af0 @ 0xa0088af0  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0088af0 @ 0xa0088af0 (-mcpu=v8 -Os -g)
  * For a port byte of 0, 2, 3, 4 or 1 calls FUN_a0083648 with that value and returns 1 if the call returned 0, else
  * 0; any other value returns 0 without a call. The if/else chain tests the values in the target order 0, 2, 3, 4,
  * 1; the result local starts at 0 and is set to 1 only on success.

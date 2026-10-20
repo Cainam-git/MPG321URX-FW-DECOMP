@@ -1,5 +1,4 @@
 /* leon2m FUN_a00a49b8 @ 0xa00a49b8-0xa00a4a30 (30 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/30 mismatches.
  * Code facts: b = (u8)(byte DAT_a802d290[9] - 1); if b > 100 (also the wrap from 0): byte
  * DAT_a802d290[9] = 0; else store b, FUN_a00a45c0(5, 8, b, 0xc), FUN_a00b3708(10, 6,
  * DAT_a802d290[9]) (reloaded after the call), FUN_a00d8cd4(). Then FUN_a00d4998(); bit 1 of

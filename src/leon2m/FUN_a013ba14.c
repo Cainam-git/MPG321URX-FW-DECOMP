@@ -1,5 +1,5 @@
-/* leon2m FUN_a013ba14 @ 0xa013ba14-0xa013bb50 (79 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp 0/79 mismatches (behaviour read from the asm).
+/* leon2m FUN_a013ba14 @ 0xa013ba14-0xa013bb50 (79 words), flags -mcpu=v8 -O3 -g.
+ * (behaviour read from the asm).
  * What it does: dc6c callee, a 'timing usable' test for one port. t = FUN_a013cd4c(port) (the channel record whose
  * port field is port); h = FUN_a013cd4c(port)->h3c (called a second time). h one of 0x5b01, 0x5c01, 0x5d01, 0x800,
  * 0x5f01, 0x6001, 0x6101, 0x5800, 0x5900, 0x2200, 0x5700, 0x5a00, 0x6301, 0x6201 -> return 0. Otherwise return 1

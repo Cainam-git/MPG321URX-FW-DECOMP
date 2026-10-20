@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f2488 @ 0xa00f2488  (hand; byte-exact at -mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f2488 @ 0xa00f2488  (-mcpu=v8 -O3 -g)
  *
  * Writes a 16-bit value (low byte to reg, high byte to reg + 1) to a 0x19A2EC-table block. Block 8 writes all
  * eight blocks. For blocks 6 and up, reg 0xA0 and reg 0xBE write only the low byte to the single registers 0x60

@@ -1,4 +1,4 @@
-/* leon2s FUN_a0092500 @ 0xa0092500  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0092500 @ 0xa0092500 (-mcpu=v8 -Os -g)
  * The target does `sll %o2, 0x10, %o2; srl %o2, 0x10, %o2` which is a 16-bit mask on the offset - this matches `(unsigned short)(i + 0x144)`. The loop index `i` is used both for the offset and as pointer index, which matches the `add %i1, %l0, %l0` (pointer + index) and `ldub [%l0 + 4]` pattern.
  */
 extern void FUN_a00a8054(unsigned int, unsigned int, unsigned int, unsigned int);

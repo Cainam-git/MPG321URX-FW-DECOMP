@@ -1,5 +1,5 @@
-/* leon2m FUN_a0092044 @ 0xa0092044-0xa00920f4 (44 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 44 words. afec loop family (no loop here).
+/* leon2m FUN_a0092044 @ 0xa0092044-0xa00920f4 (44 words), flags -mcpu=v8 -O3 -g.
+ * afec loop family (no loop here).
  * Code facts: FUN_a00a8ee8(word 0xa802afec - 0x18, u8). v = 0 when FUN_a00aa520(0) != 0 (u8 return, 1 arg),
  * else v = 1 if FUN_a00aa520(1) == 1, else 2 (xor 1 / cmp %g0 / addx / add 1). Then FUN_a00af44c(0x18, v),
  * FUN_a00a900c(v, 0), word afec = 5, tail FUN_a00b4144(3, 1) (the whole tail is duplicated per path by jump

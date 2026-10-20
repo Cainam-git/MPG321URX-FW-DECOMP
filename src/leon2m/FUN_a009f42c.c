@@ -1,5 +1,5 @@
-/* leon2m FUN_a009f42c @ 0xa009f42c-0xa00a012c (832 words). BYTE-EXACT: -mcpu=v8 -O3 -g (also
- * -msoft-float) jf 100.00 match=True, rawcmp 0/832, exact.py None.
+/* leon2m FUN_a009f42c @ 0xa009f42c-0xa00a012c (832 words). -mcpu=v8 -O3 -g (also
+ * -msoft-float) exact.py None.
  * Plain words: the APP event / timer handler (no
  * arguments, called by FUN_a0087430 and FUN_a00a012c); it steps the APP state machine (state = _DAT_a802afec) on ms
  * timers and port states, counts down the T+0x1a0..0x1a2 timer (b1a2 59..0, then b1a1 - 1) and the 1000 ms aff2

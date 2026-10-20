@@ -1,5 +1,5 @@
 /* leon2m FUN_a0081ea8 @ 0xa0081ea8..0xa0082acc (777 words), flags -mcpu=v8 -O3 -g
- * BYTE-EXACT (jf 100 match=True, rawcmp a0081ea8..a0082acc 777 words / 0 mismatches).
+ * (rawcmp a0081ea8..a0082acc 777 words / 0 mismatches).
  * Hand: all 6 cases written from the asm.
  *
  * What it does: APP power-state entry, switch on the state 0..5 (jump table at run-time 0x201EC, case = +0xA0060000).
@@ -23,7 +23,7 @@
  * - DOCUMENTED NO-CODE AID, dead test: 'm' is the unsigned short result of FUN_a0090fcc(); 'm >> 16' is always 0
  *   (a 0..0xFFFF value shifted right by 16), so '!(m >> 16)' is always 1 and the added '&&' operand never jumps:
  *   behaviour is unchanged and combine deletes the test (nonzero bits of the zero-extended u16), so it emits NO
- *   instruction (final code = firmware, rawcmp 0). __builtin_expect(.., 1) only states that it is always true (a
+ *   instruction (final code = firmware, ). __builtin_expect(.., 1) only states that it is always true (a
  *   branch-probability note, no code). Why it is needed: without it cse1 follows the 'w000 bit 9 set' jump around
  *   the then-block (cse skip-blocks, the join label had one use) and reuses the &DAT_a802d290 register of the w000
  *   test for the b0ac read (fw: a fresh 'or %l0,0x290,%i0' in the FUN_a00d9978 delay slot). The second jump to

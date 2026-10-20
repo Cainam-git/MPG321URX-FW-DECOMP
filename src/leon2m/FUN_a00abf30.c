@@ -1,5 +1,4 @@
 /* leon2m FUN_a00abf30 @ 0xa00abf30-0xa00abff8 (50 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/50 mismatches.
  * Code facts: step DOWN twin of FUN_a00abff8: b = (u8)(byte DAT_a802d290[0x12] - 1); b > 100
  * (also the wrap from 0) stores 0; else stores b and redraws: FUN_a00ab5f0(0x2c, 6, b, 7, 1),
  * FUN_a0146a80(0x28/0x2b/0x32, 6, 3/1/1, 0x742, 0), FUN_a0146b50(0xe6, 0),

@@ -1,4 +1,4 @@
-/* leon2s FUN_a0074f60 @ 0xa0074f60  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0074f60 @ 0xa0074f60 (-mcpu=v8 -Os -g)
  * For the port byte p: FUN_a00a7488(p, 0x1f00, 0xfff0ffff, 0x40000) and FUN_a00a7488(p, 0x1f00, 0x00ffffff,
  * 0x1000000) (results discarded), the delay FUN_a00b160c(5), then returns (FUN_a00a7314(p, 0x1f04) >> 8) & 0x1fff.
  * p = param_1 & 0xff is computed once and kept in %l0 across the calls.

@@ -1,5 +1,4 @@
 /* leon2m FUN_a00b617c @ 0xa00b617c-0xa00b621c (40 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0 mismatches.
  * Code facts: FUN_a0146b50(0x111, 0); FUN_a0146b6c(0, 0); for i = 0..5 (u8, bleu 5):
  * FUN_a00a31a4(0, 0x2a, i*2 + 6, 1, FUN_a00a3844(table 0x195f24, (u16)(i*29 + rec.b08)), 0) with
  * rec = 0xa802d290; then tail FUN_a00a813c(1, rec byte +0x182, 1) (ldub [%l0+0x182] into %i1).

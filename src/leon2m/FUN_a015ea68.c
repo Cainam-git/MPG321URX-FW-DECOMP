@@ -1,4 +1,4 @@
-/* leon2m FUN_a015ea68 @ 0xa015ea68  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a015ea68 @ 0xa015ea68 (-mcpu=v8 -O2 -g)
  * 
  */
 extern int (*_DAT_a802cfe0)(int);

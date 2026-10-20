@@ -1,4 +1,4 @@
-/* leon2s FUN_a00cc900 @ 0xa00cc900  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00cc900 @ 0xa00cc900 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Per-port refresh (param_1 = port): runs
  * FUN_a00c9968(port, 1), then compares two per-port values, FUN_a00c9368(port) and
  * FUN_a00c9750(port) (low bytes); when they differ, applies the first via FUN_a00cc834(port,

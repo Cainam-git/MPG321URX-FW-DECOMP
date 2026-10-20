@@ -1,5 +1,5 @@
 /* leon2m FUN_a0153c74 @ 0xa0153c74..0xa01541ec (350 words): system-settings check at power-on. BYTE-EXACT.
- * -mcpu=v8 -O3 -g: rawcmp 0/350 and tools/exact.py exact() = None (linked at the real
+ * -mcpu=v8 -O3 -g: and tools/exact.py exact() = None (linked at the real
  * address, all relocations resolved, bytes == firmware). jf shows 85.14 match=False ONLY because of a diff.py
  * normaliser quirk: the ROM base is 'sethi %hi(DAT_00020000); or %r, %lo(DAT_00020000) = 0, %rd'; the firmware word
  * prints as 'mov %r, %rd' and its later field loads '[%rd + 0x1aa]' are labelled %lo(ADDR), while the relocated 'or'

@@ -1,5 +1,5 @@
-/* leon2m FUN_a010ae38 @ 0xa010ae38  MATCH (-mcpu=v8 -O3 -g, twin)
- * Twin of FUN_a0108e54: same code, constants swapped; byte-exact.
+/* leon2m FUN_a010ae38 @ 0xa010ae38 (-mcpu=v8 -O3 -g)
+ * Twin of FUN_a0108e54: same code, other constants.
  */
 #define _DAT_cf00eac8 (*(volatile unsigned int *)0xcf00eac8)
 

@@ -1,5 +1,4 @@
 /* leon2s FUN_a0086bd8 @ 0xa0086bd8-0xa0086c48 (28 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/28 mismatches.
  * Code facts: leaf, returns a u8 status: 0 when bit 0 of hw word 0xcf0189e0 is clear; otherwise 1 / 2 / 3
  * for bit 7 / bit 1 / bit 4 of hw word 0xcf013000 (re-read for each test), else 4. The fw 'and 7' in the
  * retl slot is the u8 return extension narrowed by combine (all values fit in 3 bits).

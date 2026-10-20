@@ -1,4 +1,4 @@
-/* leon2m FUN_a00b37a4 @ 0xa00b37a4  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00b37a4 @ 0xa00b37a4 (-mcpu=v8 -O2 -g)
  * The `i - 1` is computed in the delay slot of the `be,a`, so it's `i` (the old value) minus 1. Since `i` hasn't been incremented yet when the break happens, `i-1` is correct. When the loop exits normally, `i` has been incremented, so `i-1` gives the last valid index.
  */
 extern int FUN_a00d8b38(void); /* 0xa00d8b38 */

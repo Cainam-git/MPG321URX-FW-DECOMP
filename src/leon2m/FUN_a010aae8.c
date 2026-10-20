@@ -1,5 +1,4 @@
-/* leon2m FUN_a010aae8 @ 0xa010aae8-0xa010abd4 (59 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/59.
+/* leon2m FUN_a010aae8 @ 0xa010aae8-0xa010abd4 (59 words). -mcpu=v8 -O3 -g.
  * What it does (leaf): per-port fill colour: writes the three bytes c0, c1, c2 to the hardware registers
  *   port 0: 0xcf011fc4 / fc8 / fcc     port 1: 0xcf011fd0 / fd4 / fd8
  *   port 2: 0xcf011fdc / fe0 / fe4     port 3: 0xcf011fe8 / fec / ff0     other port: nothing.

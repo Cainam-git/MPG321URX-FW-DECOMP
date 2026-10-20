@@ -1,5 +1,4 @@
-/* leon2m FUN_a00b6b88 @ 0xa00b6b88-0xa00b6bec (25 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 25 words.
+/* leon2m FUN_a00b6b88 @ 0xa00b6b88-0xa00b6bec (25 words), flags -mcpu=v8 -O3 -g.
  * Code facts: leaf u8 step of a 0..7 value: dir == 1 (down): v == 0 -> 7 (wrap), else v - 1 if (u8)(v - 1) <= 6,
  * else v; other dir (up): v == 7 -> 0 (wrap), v > 6 -> v unchanged, else v + 1.
  * Fix vs the autoc draft (76.00): early returns (the fw writes each result straight into %o0 before retl; a result

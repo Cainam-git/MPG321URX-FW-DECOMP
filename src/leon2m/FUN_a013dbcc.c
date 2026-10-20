@@ -5,7 +5,7 @@
  * Form: every case has its OWN call + copy; gcc's cross-jumping merges the four copies
  * into one call block before block reordering, and the merged block's summed frequency gives the fw case-tree layout
  * (> 0x61 subtree inline, 0x51 leaf out of line). The one-call form 'v = k; break; ... call(v)' gives the
- * other layout. Flags -mcpu=v8 -O3 -g (-msoft-float: same object). jf 100 match=True, rawcmp 0 / 40 words.
+ * other layout. Flags -mcpu=v8 -O3 -g (-msoft-float: same object). words.
  */
 struct S16 { unsigned short h[8]; };
 extern unsigned char FUN_a00fd820(unsigned char);

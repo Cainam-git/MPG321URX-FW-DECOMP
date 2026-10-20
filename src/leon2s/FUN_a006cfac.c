@@ -1,5 +1,4 @@
 /* leon2s FUN_a006cfac @ 0xa006cfac-0xa006cfe8 (15 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/15 mismatches.
  * Code facts: stores a request: the 4-word record DAT_a80787e4 = {a, b, c, d} (params 1..4), the byte
  * DAT_a80787e0 = mode (5th param, u8), the byte flag DAT_a80787f4 = 1; then sibcall FUN_a006fedc()
  * (no args). Three separate symbols (each byte store has its own sethi; the words go through one base).

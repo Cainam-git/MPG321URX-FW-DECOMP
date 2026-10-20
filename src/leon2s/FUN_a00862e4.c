@@ -1,4 +1,4 @@
-/* leon2s FUN_a00862e4 @ 0xa00862e4  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00862e4 @ 0xa00862e4 (-mcpu=v8 -Os -g)
  * Up to 10 attempts: FUN_a0086030(p1 & 0xff, p2 & 0xff, p3, p4, p5), then FUN_a0086154(p1 & 0xff, p2 & 0xff, p4,
  * p5); stops as soon as FUN_a0086154 returns 0. Returns 1 when an attempt succeeded, 0 when all 10 failed (count
  * != 10, emitted as addx %g0, 0, %i0). param_4 is passed sign-extended.

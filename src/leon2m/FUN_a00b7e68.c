@@ -1,5 +1,4 @@
 /* leon2m FUN_a00b7e68 @ 0xa00b7e68-0xa00b7f9c (77 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0 mismatches.
  * Code facts: FUN_a0146b50(0x111, 0); FUN_a00ab5f0(0x2c, 6, p2 & 0xff, 6, p1 & 0xff);
  * p1 != 0 -> v = 0x742, FUN_a00a9468(1, 3); else v = 0x792, FUN_a00a9468(1, 2) (u16 v; the
  * zero-extension shows as 'and %l0, 0x7d2' = nonzero bits of both constants). Then

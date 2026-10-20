@@ -1,4 +1,4 @@
-/* leon2m FUN_a0156714 @ 0xa0156714  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0156714 @ 0xa0156714 (-mcpu=v8 -O2 -g)
  * This should match: the two calls, the two comparisons, the early return of 1, and the final call with its result returned.
  */
 extern void FUN_a015734c(double *, unsigned int *);

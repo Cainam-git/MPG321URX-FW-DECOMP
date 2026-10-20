@@ -1,5 +1,5 @@
-/* leon2m FUN_a00a0508 @ 0xa00a0508-0xa00a0780 (158 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT: jf 100.00 match=True,
- * rawcmp 0/158 mismatches, with one no-code aid (2 stacked 'do continue; while (0);' hints, see Aids).
+/* leon2m FUN_a00a0508 @ 0xa00a0508-0xa00a0780 (158 words), flags -mcpu=v8 -O3 -g.
+ * with one no-code aid (2 stacked 'do continue; while (0);' hints, see Aids).
  * One of 4 twins (a00a0508 / a00a0780 / a00a09f8 / a00a0c70 = port state byte DAT_a802d290 +0x18d / +0x18c /
  * +0x18b / +0x18a; FUN_a014459c arg 0 / 2 / 3 / 1; FUN_a00b8e7c arg 3 / 2 / 1 / 0). This one: st[3] (+0x18d),
  * FUN_a014459c(0), FUN_a00b8e7c(3). void, no parameters (the fw never reads %i0/%i1). Pointer-called per-port

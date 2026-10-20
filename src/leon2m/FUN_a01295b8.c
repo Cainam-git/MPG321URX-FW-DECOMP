@@ -1,4 +1,4 @@
-/* leon2m FUN_a01295b8 @ 0xa01295b8  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4; autoc)
+/* leon2m FUN_a01295b8 @ 0xa01295b8 (-mcpu=v8 -Os -g, gcc 3.4.4; autoc)
  * OLED FRC row index setter: stores the byte argument in 0xA802D893 (low byte of the OLED FRC handler state 0xA802D892),
  * the panel row index later sent to panel controller register 0xB2 by FUN_a01295e4 -> FUN_a0126704. Getter: FUN_a01295c4.
  * Callers: only the row picker FUN_a00dac38 (3 sites: once the chosen row, twice the constant 1, one of them on the forced path).

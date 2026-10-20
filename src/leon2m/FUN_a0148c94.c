@@ -1,5 +1,5 @@
-/* leon2m FUN_a0148c94 @ 0xa0148c94  MATCH (-mcpu=v8 -O3 -g, twin)
- * Twin of FUN_a0148540: same code, constants swapped; byte-exact.
+/* leon2m FUN_a0148c94 @ 0xa0148c94 (-mcpu=v8 -O3 -g)
+ * Twin of FUN_a0148540: same code, other constants.
  */
 struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* display channel record, 0x78 bytes */
 extern struct Chan DAT_a802df30[4];

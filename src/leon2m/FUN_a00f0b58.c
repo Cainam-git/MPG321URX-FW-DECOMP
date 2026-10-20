@@ -1,5 +1,5 @@
 /* leon2m FUN_a00f0b58 @ 0xa00f0b58-0xa00f1100 (362 words), -mcpu=v8 -O3 -g.
- * BYTE-EXACT (first C from the asm): jf 100.00 match=True, rawcmp 0/362.
+ * (first C from the asm):
  * What it does (dc6c channel bring-up, the "PLL auto on" / FreeRun step of one port; p = port code):
  *   p 2 or 6 -> block 2 with the state DAT_a802b746 (done flag), b744 (u16 retry count), b74a (u16 start tick);
  *   p 3 or 7 -> block 3 with b742 / b740 / b748; other p: return. v = reg 0x8e of the port (FUN_a00f2254 =

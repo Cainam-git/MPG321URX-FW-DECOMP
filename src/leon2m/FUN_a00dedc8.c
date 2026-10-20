@@ -1,5 +1,5 @@
 /* FUN_a00dedc8 (leon2m, 0xa00dedc8-0xa00dee6c, 164 bytes, 41 words).
- * Flags: -mcpu=v8 -O3 -g. Judge: jf 100.00 match=True, rawcmp 0/41 mismatches.
+ * Flags: -mcpu=v8 -O3 -g.
  * Code facts: q = param_1 / 0x1c2000 (umul 0x91a2b3c5, rd %y, srl 20); clears the bytes at +0x80 and
  * +0x81 of the record DAT_a802b0ec (fw base sethi/or 0xa802b0ec); then func_0x4008c25c writes to the
  * 0xc00b00xx registers: (0c,0x80) (00,q) (04,0) (0c,0) (0c,3) (08,6) (08,0) (04,1); tail call

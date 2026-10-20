@@ -1,5 +1,4 @@
 /* leon2s FUN_a00ccf0c @ 0xa00ccf0c-0xa00ccfa8 (39 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches.
  * Code facts: FUN_a00cca38(0); rec = 24-byte record (arg & 0xff) of the table at 0xa8078bb0
  * (port*3 << 3); rec.w0 = (rec.w0 & 0xfffcffff) | 0x10000; r = func_0xa0f96400(0, 0x90, 0x6921d, 0,
  * &byte 0xa807ce50); (r & 0xff) == 0 -> clear bits 16..17 of rec.w0; else if that byte == 2 ->

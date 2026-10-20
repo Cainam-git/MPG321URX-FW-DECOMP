@@ -1,5 +1,4 @@
 /* leon2m FUN_a0089f6c @ 0xa0089f6c-0xa008a034 (50 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/50 mismatches.
  * Code facts: builds a 10-byte message on the stack {0x6e, 0x88, 2, 0, 0xe6, 0, 0, 1, 0, f} where
  * f = bit 7 of the word DAT_a802d290 + 0xa8 (ld, btst 0x80); the byte DAT_a802af9e = 0x50, then
  * af9e ^= buf[i] for i = 0..9 (loop.c load_mems keeps af9e in a register and writes it back after

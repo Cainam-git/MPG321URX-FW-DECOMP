@@ -1,4 +1,4 @@
-/* FUN_a00af764 (leon2s, 0xa00af764-0xa00af858, 61 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a00af764 (leon2s, 0xa00af764-0xa00af858, 61 words). Flags -mcpu=v8 -Os -g.
  Code facts: void (u8 port). r = FUN_a00add48(port, func_0x9f1c6624(port)) (u8 returns); mask = -1, r 0..1 -> 1, 2..3 -> 2, 4..5 -> 4, 6..7 -> 8.
  If (u8)FUN_a008d800() <= 0x81 and port == 0 and func_0x9f1c6624(0) == 0: FUN_a008ae18(1). m = (u8)mask; if m != 0xff: pulse bits m of the
  hardware register 0xcf0124b8 (|= m, FUN_a00b1794(1), &= ~m).

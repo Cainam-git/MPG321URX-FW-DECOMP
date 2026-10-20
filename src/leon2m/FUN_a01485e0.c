@@ -1,4 +1,4 @@
-/* leon2m FUN_a01485e0 @ 0xa01485e0  MATCH (-mcpu=v8 -O3 -g, twin of FUN_a0148540)
+/* leon2m FUN_a01485e0 @ 0xa01485e0 (-mcpu=v8 -O3 -g, twin of FUN_a0148540)
  * Asks whether the input port behind display channel ch is flagged in the port bitmask at 0xA802CBD3: channel
  * remap 0..3 (else "SYS remapping channel OOR" and channel 0), port P = bits 12-15 of the channel record's first
  * word (0xA802DF30 + 0x78 * ch), FUN_a01400bc(P) = bit P of 0xA802CBD3. FUN_a013f370(port) sets that bit when bit

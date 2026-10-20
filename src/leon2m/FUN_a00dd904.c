@@ -1,4 +1,4 @@
-/* leon2m FUN_a00dd904 @ 0xa00dd904  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00dd904 @ 0xa00dd904 (-mcpu=v8 -O2 -g)
  * 
  */
 #define DAT_cf03cf00 (*(volatile unsigned int *)0xcf03cf00)

@@ -1,6 +1,5 @@
 /*
  * FUN_a008d70c (leon2s, 0xa008d70c-0xa008d800, 244 bytes), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/61.
  * Code facts: ROM table ARR_a00b4036 of {u16 a, u16 b} pairs (the a008d690 form). Group 0: u16 sum of
  * .b over entries 0..1, FUN_a008d2e0(entry0.a, sum, 0xa807d27a). Group 1: sum over 3..11,
  * FUN_a008d2e0(entry3.a, sum, 0xa807d289). Group 2: FUN_a008d2e0(entry14.a, entry14.b, 0xa807d3d1).

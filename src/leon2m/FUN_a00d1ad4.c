@@ -1,5 +1,4 @@
 /* leon2m FUN_a00d1ad4 @ 0xa00d1ad4-0xa00d1b48 (29 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0 mismatches.
  * Code facts: b = byte at param_1 + 7. b == 1: FUN_a00cea18() (result unused), u16 at
  * DAT_a802d290 + 0x1f6 (= 0xa802d486) = 0x55aa, FUN_a014aed0(0x30, &DAT_a802d290, 0, 0x1fc).
  * b == 0: FUN_a00cea44(), same u16 = 0xbb99. Then FUN_a0145360(1); returns 0xe0.

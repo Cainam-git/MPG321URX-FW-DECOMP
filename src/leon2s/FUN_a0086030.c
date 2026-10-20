@@ -1,5 +1,4 @@
 /* leon2s FUN_a0086030 @ 0xa0086030-0xa0086154 (73 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/73 mismatches.
  * Code facts: (port, mode, val, n, buf) word params; ch = (u8) port; len = (signed char) n. Through
  * FUN_a00a78fc(ch, reg, byte): reg 0x31 = 0x71; reg 0x30 = (mode & 0xf0) | (val >> 16 & 0xf), then
  * val >> 8 & 0xff, then val & 0xff. mode &= 0xff. mode 0x80 / 0x40 / 0: reg 0x30 = len, then

@@ -1,6 +1,5 @@
-/* leon2m FUN_a002ef0c @ 0xa002ef0c..0xa002efd4 (200 bytes, 50 words)  BYTE-EXACT
+/* leon2m FUN_a002ef0c @ 0xa002ef0c..0xa002efd4 (200 bytes, 50 words)
  * Flags: -mcpu=v8 -O3 -g.
- * Judge: jf 100.00 match=True; rawcmp.py 0 mismatches / 50 words (a002ef0c a002efd4).
  * What it does (code facts): st = func_0x00092254(0, 0x54) (call to the absolute ROM address
  * 0x92254); only when (st & 3) == 0 AND 0xcf011aa0 & 0xf == 0 AND bit 7 of 0xcf011aa4,
  * 0xcf011aa8 and 0xcf011aac are all clear, it calls func_0x000ee758() (ROM 0xee758). Then it

@@ -1,5 +1,5 @@
 /* FUN_a00d76f4 (leon2s, 0xa00d76f4-0xa00d7734, 64 bytes, 16 words, leaf).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/16 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: packs three u16 words of param_1 into five bytes of param_2:
  * [0] = (w0 >> 8) & 0x7f, [1] = w0 & 0xf0 (bits 4..7 kept in place), [2] = w1 >> 9,
  * [3] = w2 >> 8, [4] = low byte of w2; each word is re-read with lduh.

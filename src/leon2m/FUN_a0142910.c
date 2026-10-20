@@ -1,5 +1,5 @@
 /* leon2m FUN_a0142910 @ 0xa0142910  per-port sync state machine; copies the port-entry flags (incl. the line-rate switch)
- * into the port status words (hand; BYTE-EXACT at -mcpu=v8 -O3 -g -msoft-float).
+ * into the port status words (hand; -mcpu=v8 -O3 -g -msoft-float).
  *
  * For each port i = 0..3, p = 0xA802E224 + 42*i (h0 = halfword +0, state +2, type +3):
  *   state 1: p+9 = 1, FUN_a0121cf4(i), next port.
@@ -17,7 +17,7 @@
  * Line-rate switch chain, CONFIRMED byte-exact: port h0 bit 0x400 = entry h0 bit 4 = template +0xc bit 2, copied only
  *   when the entry type is 5 (and k != 6, 0xFF).
  * Callers: FUN_a0153018 (call at 0xA0153024, right after FUN_a002f550).
- * BYTE-EXACT keys: -msoft-float; every port field through the pointer p (also the bitfields); the 'last statement of a
+ * keys: -msoft-float; every port field through the pointer p (also the bitfields); the 'last statement of a
  *   block is scheduled first' rule of gcc 3.4 sched1 -> write CLEAR before 'state = 2' / before 'p12 = 1' (the original
  *   order then comes out); case 4 written 'if (type != 5) {reset} else {...}' (only changes the pre-layout block order,
  *   which drives -frename-registers' register choice); b9 select and FUN_a012082c as if/else (not ?:).

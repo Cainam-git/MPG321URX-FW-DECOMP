@@ -1,4 +1,4 @@
-/* leon2m FUN_a01386ac @ 0xa01386ac  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a01386ac @ 0xa01386ac (-mcpu=v8 -O2 -g)
  * Calls FUN_a01370dc(0x94, 4, buf, 0) with buf = {param_1, low byte of param_2, high byte of param_2, 0}.
  */
 extern int FUN_a01370dc();

@@ -1,5 +1,4 @@
 /* leon2s FUN_a00ad7c8 @ 0xa00ad7c8-0xa00ad828 (24 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/24 mismatches.
  * Code facts: ch (u8). r = 0; if FUN_a00ad784(ch) != 0: FUN_a00a6c00(ch, 0x70, 0);
  * FUN_a00a6c00(ch, 0x73, 8); r = (FUN_a00a6bb8(ch, 0x7a) & 8) != 0 (and 8; cmp %g0; addx).
  * Returns r.

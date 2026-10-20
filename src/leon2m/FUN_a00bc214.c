@@ -1,5 +1,5 @@
-/* leon2m FUN_a00bc214 @ 0xa00bc214-0xa00bc258 (17 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 17 words. The autoc entry said -Os; -O3 is right.
+/* leon2m FUN_a00bc214 @ 0xa00bc214-0xa00bc258 (17 words), flags -mcpu=v8 -O3 -g.
+ * The autoc entry said -Os; -O3 is right.
  * Code facts: record DAT_a802d078 bytes 7, 8, 9 = 0x30, 0x32, 0x31 (stored in that order), FUN_a00bac3c(0x4a)
  * (return unused), param & 0xff after that call, FUN_a00ba950(p), tail FUN_a01487e8(p, 0xb, &DAT_a802d078):
  * the record address stays in %i2 and the restore passes it as %o2. FUN_a01487e8 is a wrapper that forwards

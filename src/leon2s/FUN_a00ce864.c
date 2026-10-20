@@ -1,5 +1,5 @@
 /* leon2s FUN_a00ce864 @ 0xa00ce864-0xa00cea60 (508 bytes, 127 words)
- * BYTE-EXACT with -mcpu=v8 -Os -g (gcc 3.4.4): jf 100.00 match=True, rawcmp_l2s 0/127.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: u8 port; DAT_a8078bb0 is an array of 24-byte records whose first word holds BIT-FIELDS
  * (big-endian: cnt = bits 24..27, st = bits 16..17; the fw reads st back with lduh +0 & 3). It sets st = 1;
  * if DAT_a807d636 == port it sets record byte +9 and DAT_a807d636 to 0xff (source order b9 first gives the fw

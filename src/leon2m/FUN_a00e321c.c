@@ -1,5 +1,4 @@
 /* leon2m FUN_a00e321c @ 0xa00e321c-0xa00e3524 (194 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0 mismatches.
  * Code facts: c = (param_2 == 0 && param_3 == 3) (cmp/subx pair, andcc into %l7); if c: three
  * FUN_a00e0774 field writes (0x1c1 mask 6 / 0xf0, 0x1dc mask 0xc0, value 1). Then a fixed sequence of
  * FUN_a00e05d8 (reg rmw: dev, reg, mask, val), FUN_a00e0740 (= FUN_a00e05d8(dev, reg, m, m)) and

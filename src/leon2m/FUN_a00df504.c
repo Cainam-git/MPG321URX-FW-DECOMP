@@ -1,4 +1,4 @@
-/* leon2m FUN_a00df504 @ 0xa00df504  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00df504 @ 0xa00df504 (-mcpu=v8 -O2 -g)
  * Returns FUN_a00e021c(param_1) & param_2. The mask applies to the call result, not to param_1, and the function
  * returns the value (Ghidra's pseudocode masks param_1 & param_2 and is void).
  */

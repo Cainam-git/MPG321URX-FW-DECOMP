@@ -1,5 +1,5 @@
 /* FUN_a00a6da8 (leon2s, 0xa00a6da8-0xa00a6e10, 104 bytes, 26 words, leaf).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/26 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: block = (u8)param_1; returns 0 when block > 1. Otherwise val = DAT_a00b4d94[block]
  * (u16 table of block bases) + param_2; reads the registers 0xcf000000 | (val << 2) and
  * 0xcf000000 | ((val + 1) << 2) and returns (u16)((hi << 8) | (lo & 0xff)).

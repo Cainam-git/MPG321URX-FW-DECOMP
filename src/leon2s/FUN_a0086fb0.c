@@ -1,5 +1,5 @@
 /* leon2s FUN_a0086fb0 @ 0xa0086fb0-0xa0087074 (196 bytes, 49 words)
- * BYTE-EXACT with -mcpu=v8 -Os -g (gcc 3.4.4): jf 100.00 match=True, rawcmp_l2s 0/49.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: void (u8 *p, int mode, u8 *out1, u8 *out2). mode &= 0xf (signed compares). out1 = the maximum
  * of p[8..9] and out2 the maximum of p[0xc..0xd] when mode > 1. When mode == 4 they cover p[8..0xb] and
  * p[0xc..0xf]. When mode <= 1 they are p[8] and p[0xc]. Every step is written 'if (v < p[k]) v = p[k];', so each

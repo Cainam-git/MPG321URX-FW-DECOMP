@@ -1,4 +1,4 @@
-/* leon2m FUN_a01235b4 @ 0xa01235b4  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a01235b4 @ 0xa01235b4 (-mcpu=v8 -O2 -g)
  * The function takes a byte parameter, calls a helper twice with different constants, and checks if the results match one of three (x, y) pairs, returning 1 for a match or 0 otherwise. Whether the original used `||` or separate `if` statements for the branch pattern is not determined; the logic is the same.
  */
 extern int FUN_a00f2e30(int, int); /* at 0xa00f2e30 */

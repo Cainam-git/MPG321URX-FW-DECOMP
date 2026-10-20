@@ -1,4 +1,4 @@
-/* leon2m FUN_a0108544 @ 0xa0108544  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0108544 @ 0xa0108544 (-mcpu=v8 -O2 -g)
  * Calls FUN_a00df170(0x19ABE8, 4, 0) and discards its result, clears bit 4 of the registers 0xCF011BF8, 0xCF011A00
  * and 0xCF011800 (in that order), and writes 1 to 0xCF011CC0. Returns nothing.
  */

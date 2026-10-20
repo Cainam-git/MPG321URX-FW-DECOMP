@@ -1,4 +1,4 @@
-/* FUN_a0095778 (leon2m, 0xa0095778-0xa00957e8, 28 words). Flags -mcpu=v8 -O3 -g. jf 100.00 match=True, rawcmp 0 mismatches.
+/* FUN_a0095778 (leon2m, 0xa0095778-0xa00957e8, 28 words). Flags -mcpu=v8 -O3 -g.
  Code facts: void, 6 params (p3..p6 passed on). DAT_a8025c56 = DAT_a802d290[0x190]; _DAT_a802afec = 0x43; FUN_a00a8c88(); FUN_a00a9dac(b, 1) and
  FUN_a00a9dac(b, 0) with b = DAT_a802d290[0x190] re-read after each call; FUN_a00ab0e0(0); FUN_a00a9468(0, 0); FUN_a00a9468(1, 3); tail call
  FUN_a00b34d4(0, 4, p3, p4, p5, p6).

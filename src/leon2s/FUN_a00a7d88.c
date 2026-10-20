@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a7d88 @ 0xa00a7d88  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00a7d88 @ 0xa00a7d88 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Register read helper for one hardware block:
  * returns the low byte of register param_2 of port param_1 (0 or 1; other ports read 0).
  * Address = 0xcf000000 | ((base[port] + reg) * 4), with the per-port 16-bit base table at

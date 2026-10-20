@@ -1,5 +1,4 @@
-/* leon2m FUN_a0140ab4 @ 0xa0140ab4-0xa0140b78 (49 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 49 words.
+/* leon2m FUN_a0140ab4 @ 0xa0140ab4-0xa0140b78 (49 words), flags -mcpu=v8 -O3 -g.
  * Code facts: if the pending byte DAT_a802cbd9 is set and func_0x4008d594(DAT_a802cc04) (ROM ms-elapsed,
  * u16 result re-extended sll/srl) is above 1000: one pass (u8 i < 1; fw 'cmp i,0; be') over the ROM 38-byte
  * records DAT_001a69fe[i].b0 -> b; v = u16 DAT_a802cbdc[b].h0 (12-byte RAM records); match when

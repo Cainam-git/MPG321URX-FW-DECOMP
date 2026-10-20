@@ -1,4 +1,4 @@
-/* FUN_a009262c (leon2s, 0xa009262c-0xa00926e0, 45 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches. Twin of FUN_a0093084 (regs 0x180..).
+/* FUN_a009262c (leon2s, 0xa009262c-0xa00926e0, 45 words). Flags -mcpu=v8 -Os -g. Twin of FUN_a0093084 (regs 0x180..).
  Code facts: void (u8 port, u8 *buf). FUN_a00a8054(port, 0, reg, val) writes buf[0], buf[1], buf[2] to 0x160, 0x161, 0x162; then for i < buf[2]
  (re-read every pass): FUN_a00a8054(port, 0, 0x164 + i (u16), buf[2]) and sum += buf[4 + i]; finally a tail call writing the u8 checksum -sum to 0x163.
  Fixes vs draft: BEHAVIOUR the loop call's 4th argument is buf[2] (fw %o3 = the loop-test load), the 0x162 value is buf[2]; real a8054 prototype. Aids: none.

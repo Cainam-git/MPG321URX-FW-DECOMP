@@ -1,5 +1,4 @@
 /* leon2m FUN_a0149f44 @ 0xa0149f44-0xa0149fb8 (29 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/29 mismatches.
  * Code facts: ch = port for port 0..3, else 0xff (case tree root 1, the FUN_a014ba68 switch form);
  * ch <= 3 -> sibcall FUN_a013d684(ch); else log FUN_a00df170(s_001a6dd8) and sibcall FUN_a013d684(0).
  * port is a u8 param. Fixes vs the autoc draft (51.72): FUN_a013d684 takes 1 arg (the draft passed

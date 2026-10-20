@@ -1,5 +1,4 @@
 /* leon2s FUN_a00a47e0 @ 0xa00a47e0-0xa00a486c (35 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/35 mismatches.
  * Code facts: r = 1; unless byte +5 of the 8-byte record ARR_a807dc10[ch] is 1: if
  * FUN_a00a6190(port) or FUN_a00a61d4(port) is nonzero (port = byte DAT_a8079228, re-read for each
  * call): r = 0, and if FUN_a00a621c(port) == 1: r = 1, log FUN_a0073044(string 0xa006c030

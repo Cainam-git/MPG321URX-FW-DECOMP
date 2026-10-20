@@ -1,5 +1,4 @@
 /* leon2m FUN_a00b3ac8 @ 0xa00b3ac8-0xa00b3b5c (37 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/37 mismatches.
  * Code facts: FUN_a0146b50(0x111, 0); FUN_a0146b6c(0, 0); for i = 0, 1, 2 (u8):
  * FUN_a00a31a4(0, 0x2a, i*2 + 6, 1, FUN_a00a3844(table 0x18e54c, (u16)(i*29 + byte
  * DAT_a802d290[8])), 0). void. Same family and loop form as FUN_a00b31a0 / FUN_a00a89e4.

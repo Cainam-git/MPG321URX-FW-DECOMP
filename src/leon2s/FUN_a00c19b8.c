@@ -1,6 +1,5 @@
 /*
  * FUN_a00c19b8 (leon2s, 0xa00c19b8-0xa00c1ac0, 264 bytes), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/66.
  * Code facts: k = (u8)(p2 - 2). p2 <= 1: sibcall func_0xa0fb65c4(p2, 0x301, mode == 1 ? 4 : 0) - 3 args
  * like its other callers (the draft passed a 4th '1': BEHAVIOUR). Else regs 0xa6/0xa5/0xa4 of k = 0 and
  * 0xa7 = 4 (mode 1) or 0 through func_0xa0fb69fc, then sibcall func_0xa0fb6aa0(k, 0xa4, 0x20, 1).

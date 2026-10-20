@@ -1,5 +1,5 @@
 /* leon2m FUN_a0145c5c @ 0xa0145c5c-0xa0145eb8 (151 words; the asm header's '40 bytes' label is wrong, its range
- * is right). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True, rawcmp 0/151, jump table proven by tools/exact.py
+ * is right). -mcpu=v8 -O3 -g, jump table proven by tools/exact.py
  * (written from the asm).
  * What it does (leaf): setting setter: writes v into field number id (0..17, jump table at fw 0xe3280) of the
  * record DAT_a802e1a0 (the saved-settings record; dc6c reads its byte +7 as DAT_a802e1a7):

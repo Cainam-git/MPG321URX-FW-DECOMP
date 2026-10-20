@@ -1,4 +1,4 @@
-/* leon2m FUN_a0129aa4 @ 0xa0129aa4  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0129aa4 @ 0xa0129aa4 (-mcpu=v8 -O2 -g)
  * Returns bit param_1 of the 16-bit value at 0xA802CA00 (the value is shifted right by param_1, then masked with 1).
  * The shift count is used unmasked, as in the firmware: the source has no & 0x1F on param_1.
  */

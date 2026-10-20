@@ -1,5 +1,4 @@
-/* leon2m FUN_a013a5b8 @ 0xa013a5b8  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: param param_2 unsigned int
+/* leon2m FUN_a013a5b8 @ 0xa013a5b8 (-mcpu=v8 -O3 -g)
  */
 
 extern void func_0x4008c4d0();

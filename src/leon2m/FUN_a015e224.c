@@ -1,4 +1,4 @@
-/* leon2m FUN_a015e224 @ 0xa015e224  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a015e224 @ 0xa015e224 (-mcpu=v8 -O2 -g)
  * Clears the word _DAT_a802e40c, calls FUN_a015e7d8(param_2), and if that returns -1 (0xFFFFFFFF) while
  * _DAT_a802e40c has become non-zero, stores _DAT_a802e40c to *param_1. Returns the result of FUN_a015e7d8.
  */

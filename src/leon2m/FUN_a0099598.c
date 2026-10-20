@@ -1,4 +1,4 @@
-/* leon2m FUN_a0099598 @ 0xa0099598  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0099598 @ 0xa0099598 (-mcpu=v8 -O2 -g)
  * Passes the table byte DAT_a802d290[0x17C] to FUN_a00a93bc, replaces it with DAT_a8025c56, calls
  * FUN_a00a9650(DAT_a8025c56, 0) and FUN_a00a813c(1, <new table byte>, 1), sets _DAT_a802afec = 0x0B and tail-calls
  * FUN_a00a900c(0, 1).

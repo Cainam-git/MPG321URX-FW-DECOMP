@@ -1,5 +1,5 @@
-/* leon2m FUN_a010385c @ 0xa010385c-0xa01038c0 (25 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/25 (hand).
+/* leon2m FUN_a010385c @ 0xa010385c-0xa01038c0 (25 words). -mcpu=v8 -O3 -g.
+ * (hand).
  * What it does (leaf): keeps the low byte of the hardware register 0xcf00eac8, clears bit 4 of 0xcf00eac8,
  * sets (on != 0) or clears bit 7 of the hardware register 0xcf00e9c4, then writes the kept low byte back
  * to 0xcf00eac8 (so bit 4 comes back as it was and bits 8..31 end as 0). Callers: the per-port fill colour

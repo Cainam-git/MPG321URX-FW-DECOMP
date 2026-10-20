@@ -1,5 +1,5 @@
-/* leon2m FUN_a015266c @ 0xa015266c..0xa0152a20 (948 bytes)  Big chip start-up, step 2 of main() (hand;
- * BYTE-EXACT at -mcpu=v8 -O3 -g -msoft-float, also at -mcpu=v8 -O3 -g).
+/* leon2m FUN_a015266c @ 0xa015266c..0xa0152a20 (948 bytes)  Big chip start-up, step 2 of main()
+ * Flags: -mcpu=v8 -O3 -g -msoft-float, also at -mcpu=v8 -O3 -g.
  *
  * Caller: main() FUN_a00295a4 (func_0x000f266c in the RAM copy), once, between FUN_a008796c and FUN_a0087020, before
  * the endless main loop. No other caller found.

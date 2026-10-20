@@ -1,5 +1,4 @@
 /* leon2m FUN_a01541ec @ 0xa01541ec-0xa01542c4 (54 words), -mcpu=v8 -O3 -g.
- * BYTE-EXACT: jf 100.00 match=True, rawcmp 0/54.
  * What it does: the mode-table LOOKUP (sibling of the store FUN_a01542c4). FUN_a013f370 calls it with the channel
  *   record + 6 when a new input timing is applied; if it returns 0, FUN_a01542c4 stores the timing. It reads up to
  *   20 rows of 16 bytes from the settings EEPROM with FUN_a0140360(0, 0x300 + i * 16, 0x10, &row) (row zeroed

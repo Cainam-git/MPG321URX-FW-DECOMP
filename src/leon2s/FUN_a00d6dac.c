@@ -1,4 +1,4 @@
-/* leon2s FUN_a00d6dac @ 0xa00d6dac  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00d6dac @ 0xa00d6dac (-mcpu=v8 -Os -g)
  * 
  */
 void FUN_a00d6dac(unsigned char *param_1, unsigned char *param_2)

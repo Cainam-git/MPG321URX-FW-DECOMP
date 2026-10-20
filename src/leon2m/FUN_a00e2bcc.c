@@ -1,4 +1,4 @@
-/* leon2m FUN_a00e2bcc @ 0xa00e2bcc  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00e2bcc @ 0xa00e2bcc (-mcpu=v8 -O2 -g)
  * The only change from the previous attempt is making the loop counter `i` a signed `int` instead of `unsigned int`. This forces the compiler to emit the signed `ble` instruction (branch if less than or equal) for the `i > 5` check, matching the target exactly. The rest of the code is unchanged and already aligned.
  */
 extern int FUN_a00e02ec(unsigned int, unsigned int);

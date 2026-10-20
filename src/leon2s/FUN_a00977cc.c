@@ -1,5 +1,5 @@
-/* leon2s FUN_a00977cc @ 0xa00977cc-0xa00977e8 (7 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s.py 0 mismatches / 7 words. Leaf (retl).
+/* leon2s FUN_a00977cc @ 0xa00977cc-0xa00977e8 (7 words), flags -mcpu=v8 -Os -g.
+ * Leaf (retl).
  * Code facts: halfword store: ARR_a807d7e0[u8 port] (400-byte records, smul 0x190) +0x32 = u16 value.
  * Fix vs the autoc draft (71.43): real base ARR_a807d7e0 as a 400-byte struct array (draft: ARR_a807d812 mid-
  * record name), u8/u16 params. Aids: none.

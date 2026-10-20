@@ -1,5 +1,5 @@
-/* leon2m FUN_a0121714 @ 0xa0121714  switch one input port's receiver block on or off (hand; 
- * BYTE-EXACT at -mcpu=v8 -O3 -g -msoft-float).
+/* leon2m FUN_a0121714 @ 0xa0121714  switch one input port's receiver block on or off
+ * Flags: -mcpu=v8 -O3 -g -msoft-float.
  *
  * on != 0: func_0x40089968(5, 0xF); clear bit ch of 0xA802C9E4; FUN_a00f1d48(ch, 0x57, 0xB0), (ch, 0x59, 0x464);
  *   FUN_a00f36b8(ch, transformed row halfword +0x22); FUN_a00f1ad4(ch, 0x55, 0xB2), (ch, 0x54, 1);
@@ -8,7 +8,7 @@
  *   0x12/0x13/0x21 -> 0x21, 0x31/0x41/0x51/0x61 -> 0x20 when word 0 of entry ch (12-byte entries at 0xA8027AAC)
  *   is 1, else 0x90; any other type -> 0x90; then FUN_a00f1b5c(ch, 0x94, 0x20, 0) and set bit ch of 0xA802C9E4.
  * Change-rule reader of the panel row (scorecard row 1c): only the 'on' path reads row +0x22.
- * BYTE-EXACT key: one FUN_a00f1ad4 call per case group (gcc cross-jumps them), not a value variable.
+ * key: one FUN_a00f1ad4 call per case group (gcc cross-jumps them), not a value variable.
  */
 struct PanelParam { unsigned int w0; unsigned short h4; unsigned char b6, b7; unsigned short h08, h0a; unsigned char b0c[0x14];
                     unsigned short h20, h22; };

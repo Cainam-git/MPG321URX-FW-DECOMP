@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f7534 @ 0xa00f7534  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f7534 @ 0xa00f7534 (-mcpu=v8 -O3 -g)
  * Writes (0xCF00EE80 & 0xF9) | (DAT_a802b7b4 << 1) to 0xCF00EE80, (0xCF00EEC0 & 0xF3) | 0xA8 to 0xCF00EEC0 and sets
  * bits 0x50 of 0xCF00EEC4. Then writes the n 16-bit entries of the table t (p, or DAT_0019a334 when p is null;
  * layout { u8 n; u16 v[n]; } with v at offset 2) one after another to 0xCF00EEC8, sets bit 7 of 0xCF00EEC4, calls

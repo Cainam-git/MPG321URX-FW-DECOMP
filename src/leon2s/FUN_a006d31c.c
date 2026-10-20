@@ -1,5 +1,5 @@
 /* FUN_a006d31c (leon2s, 0xa006d31c-0xa006d39c, 128 bytes, 32 words).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/32 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: init sequence: FUN_a008d690, FUN_a008d70c, FUN_a006d30c, FUN_9f1b1c18,
  * DRV_HDMIRx_Phy_Init (0xa0074bf8), FUN_a008f54c, DRV_HDMI21_RX_Init (0xa00a1cdc), FUN_a00ab8b8(0),
  * FUN_a00ab8b8(1), FUN_a00b1028(0, 1), FUN_a00b1028(1, 1), FUN_a00a47b0(), FUN_a0085ea8(), then a

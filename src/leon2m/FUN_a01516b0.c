@@ -1,5 +1,5 @@
-/* leon2m FUN_a01516b0 @ 0xa01516b0-0xa01517f4 (81 words). BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100 match=True,
- * rawcmp 0/81 (written from the asm).
+/* leon2m FUN_a01516b0 @ 0xa01516b0-0xa01517f4 (81 words). -mcpu=v8 -O3 -g.
+ * (written from the asm).
  * What it does: GlobalModeHandler state A entry for channel ch ("SysTasksBeforeDisplay_byChannel %d"):
  *   1. log s_001a74c8 = "SysTasksBeforeDisplay_byChannel %d\r\n" with ch;
  *   2. pc = the 4-bit port field (bits 12..15 of word 0) of the channel record DAT_a802df30[ch] (ch 1..3,

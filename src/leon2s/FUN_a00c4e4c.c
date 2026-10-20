@@ -1,5 +1,5 @@
-/* leon2s FUN_a00c4e4c @ 0xa00c4e4c  MATCH (-mcpu=v8 -Os -g, twin)
- * Twin of FUN_a0088f28: same code, constants swapped; byte-exact.
+/* leon2s FUN_a00c4e4c @ 0xa00c4e4c (-mcpu=v8 -Os -g)
+ * Twin of FUN_a0088f28: same code, other constants.
  * See FUN_a0088f28 for the explanation; this copy's constants differ, so its comments were removed.
  */
 // FUN_a0fb7e98 at 0xa0fb7e98

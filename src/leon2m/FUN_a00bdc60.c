@@ -1,5 +1,5 @@
 /* FUN_a00bdc60 (leon2m, 0xa00bdc60-0xa00bdcb0, 80 bytes, 20 words).
- * Flags: -mcpu=v8 -O3 -g. Judge: jf 100.00 match=True, rawcmp 0/20 mismatches.
+ * Flags: -mcpu=v8 -O3 -g.
  * Code facts: d = (_DAT_a802d2c0 >> 4) & 0xf; bytes 7 = 0x30, 8 = 0x30, 9 = d + 0x30 of DAT_a802d078
  * (ASCII "00<digit>", fw stores 9, 8, 7); FUN_a00bac3c(0x39); FUN_a00ba950(p) with p = (u8)param_1;
  * tail call FUN_a00babe4(p, 0xb). Twin of FUN_a00bdb48.

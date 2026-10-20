@@ -1,6 +1,6 @@
 /* leon2m FUN_a015209c @ 0xa015209c-0xa015266c (372 words; the asm header's "1284 bytes" label is wrong, its range is
- * right). System_Initialize. BYTE-EXACT: -mcpu=v8 -O3 -g, jf 100.00 match=True,
- * rawcmp.py 0 mismatches / 372 words. Written from the asm.
+ * right). System_Initialize. -mcpu=v8 -O3 -g.
+ * Written from the asm.
  * What it does (start-up, once): prints "System_Initialize"; clock/PLL set-up FUN_a011d748 / FUN_a011e220 on block 7
  * and 0xff; FUN_a010031c(0, 7), (1, 7), (2, FUN_a0125124(byte 0xa802e126)), (3, FUN_a0125124(byte 0xa802e138));
  * FUN_a014f6f4, a0124eec, a0150da4, a012f12c, a00f87dc; the per-port record {2, 1, 1, 1} (12 bytes, PASSED BY VALUE)

@@ -1,5 +1,5 @@
 /* leon2s FUN_a00cb1d4 @ 0xa00cb1d4-0xa00cb3e8 (532 bytes, 133 words)
- * BYTE-EXACT with -mcpu=v8 -Os -g (gcc 3.4.4): jf 100.00 match=True, rawcmp_l2s 0/133.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: void (u8 port). It uses the 24-byte DAT_a8078bb0 records. The 2-bit state field st (bits 16..17
  * of word 0, the same layout as FUN_a00ce864 / FUN_a00cf6bc) is set to 1. Every failure sets st = 0 and
  * returns: (u8)FUN_a00c9798(port, &DAT_a807d250) != 0, then byte +1 of the 2-byte DAT_a807d250 & 0xc, then

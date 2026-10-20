@@ -1,4 +1,4 @@
-/* FUN_a00d7844 (leon2s, 7 words, leaf; twin pair FUN_a00d7844/FUN_a00d7860). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a00d7844 (leon2s, 7 words, leaf; twin pair FUN_a00d7844/FUN_a00d7860). Flags -mcpu=v8 -Os -g.
  Code facts: void (u8 *src, u8 *dst): dst[0] = src[0] & 0x7f; dst[1] = src[1] & 0xf0.
  Fix vs draft: the second value goes through an unsigned short temp (fw 'and %g1,0xf0' in SImode; the direct byte form gives the QImode
  mask 'and -16'), same lever as FUN_a00d76ac. Aids: none.

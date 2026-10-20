@@ -1,4 +1,4 @@
-/* leon2s DRV_HDMI_IF_Init @ 0xa00a1758  MATCH (-mcpu=v8 -Os, gcc 3.4.4)
+/* leon2s DRV_HDMI_IF_Init @ 0xa00a1758 (-mcpu=v8 -Os)
  * One-time init of the HDMI interface layer: if already initialised, prints a verbose
  * "Init Again!!" trace; otherwise clears the 800-byte interface state buffer, runs three
  * sub-inits, configures item 0x15 and sets the initialised flag. Always returns 0.

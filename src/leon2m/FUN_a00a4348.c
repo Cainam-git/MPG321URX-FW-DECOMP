@@ -1,4 +1,4 @@
-/* leon2m FUN_a00a4348 @ 0xa00a4348  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00a4348 @ 0xa00a4348 (-mcpu=v8 -O2 -g)
  * Decrements the byte counter at offset 0x0A of the mode record DAT_a802d290. If the decremented value (as
  * unsigned byte) is <= 100 it is stored and FUN_a00b6f20(1) and FUN_a00d7de0() are called; otherwise (the counter
  * was 0) the counter is set to 0. Then sets bit 1 of DAT_a802b08e and returns the first parameter unchanged in

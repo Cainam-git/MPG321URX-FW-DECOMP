@@ -1,4 +1,4 @@
-/* leon2m FUN_a0083aa0 @ 0xa0083aa0  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0083aa0 @ 0xa0083aa0 (-mcpu=v8 -O2 -g)
  * Calls FUN_a008380c() without arguments and passes its bit 0 together with param_2 to FUN_a0148e34. param_1 is
  * not used. Returns nothing.
  */

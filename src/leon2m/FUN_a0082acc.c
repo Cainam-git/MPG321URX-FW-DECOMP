@@ -1,4 +1,4 @@
-/* leon2m FUN_a0082acc @ 0xa0082acc  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, autoc)
+/* leon2m FUN_a0082acc @ 0xa0082acc (-mcpu=v8 -O3 -g)
  * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
  */
 extern unsigned char DAT_a802af41; /* 0xa802af41 */

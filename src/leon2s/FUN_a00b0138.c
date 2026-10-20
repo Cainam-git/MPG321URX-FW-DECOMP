@@ -1,5 +1,4 @@
 /* leon2s FUN_a00b0138 @ 0xa00b0138-0xa00b0248 (68 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/68 mismatches.
  * Code facts: copies the 2 x {u16 a, u16 b} ROM table DAT_a00b4e04 to the stack (memcpy FUN_a00b15d8, 8
  * bytes); p = (u8) port; a = FUN_a00acac0(p), b = FUN_a00acb00(p) (u16). found = 1 if (a, b) equals one
  * table entry. found == 1: if bit 2 of FUN_a00a6bb8(p, 0x46) is set, FUN_a00a6c98(p, 0x46, 4, 0) and

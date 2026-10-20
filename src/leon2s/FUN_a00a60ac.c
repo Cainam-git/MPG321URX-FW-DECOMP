@@ -1,5 +1,4 @@
 /* leon2s FUN_a00a60ac @ 0xa00a60ac-0xa00a60d8 (11 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/11 mismatches.
  * Code facts: leaf; returns 2 unless port (u8) == 0, then bit 0 of word +0xb0 of the config record
  * that the pointer table DAT_a807dc04[port] points to (ld [base + port], ld [+0xb0], and 1).
  * Fixes vs the autoc draft (54.55): the pointer is indexed by port (fw keeps the [base + %o0] form;

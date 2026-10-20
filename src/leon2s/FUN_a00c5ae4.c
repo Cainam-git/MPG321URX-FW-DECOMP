@@ -1,4 +1,4 @@
-/* leon2s FUN_a00c5ae4 @ 0xa00c5ae4  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00c5ae4 @ 0xa00c5ae4 (-mcpu=v8 -Os -g)
  * Mechanical Ghidra C, finished by hand: int parameter cut to a byte where used; array of 16-byte records at 0xa807d5c8; returns nothing; Ghidra type names kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;

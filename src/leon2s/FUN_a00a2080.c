@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a2080 @ 0xa00a2080  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00a2080 @ 0xa00a2080 (-mcpu=v8 -Os -g)
  * Returns 1 when the word at offset 0x50 of the 400-byte record (param_1 & 0xFF) of the table at 0xa807d7e0 equals
  * 3, else 0.
  */

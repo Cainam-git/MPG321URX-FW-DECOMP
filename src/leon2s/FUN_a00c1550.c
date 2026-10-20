@@ -1,4 +1,4 @@
-/* leon2s FUN_a00c1550 @ 0xa00c1550  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a00c1550 @ 0xa00c1550 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Twin of FUN_a00c0f88 on the other register bank
  * (0x400-0x406 via 0xa0fb6c00 / 0xa0fb6c98). Saves the low byte of control register 0xcf00f21c
  * and clears its bits 3-4, then streams four blocks into the port's protection engine: 320

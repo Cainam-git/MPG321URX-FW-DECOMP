@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f36b8 @ 0xa00f36b8  MATCH (-mcpu=v8 -O3 -g -msoft-float)
+/* leon2m FUN_a00f36b8 @ 0xa00f36b8 (-mcpu=v8 -O3 -g -msoft-float)
  * Reads the 13-bit count c = FUN_a00f21f0(blk, 0x12) & 0x1FFF and, comparing (float)c with 3840.0 and 1920.0
  * (soft-float calls), writes 0xA (above 3840), 0xB (above 1920) or 0xC to the hardware register 0xCF012844.
  * Clears bit 5 of 0xCF012804, stores c << 13 in DAT_a802b794 (-1 when c is 0 or 0x1FFF), writes val to the

@@ -1,5 +1,4 @@
-/* leon2s DRV_HDMI21_PHY_PICDR_Reset @ 0xa0080244  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): port table symbol at its base; function name as static const char[]; dead ret/restore tail FUN_a00802c4 merged
+/* leon2s DRV_HDMI21_PHY_PICDR_Reset @ 0xa0080244 (-mcpu=v8 -Os -g)
  */
 extern unsigned int _DAT_a8078634;
 extern void DRV_HDMI21_PHY_INV_PICDR_Reset(unsigned char param_1);

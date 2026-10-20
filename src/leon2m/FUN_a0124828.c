@@ -1,4 +1,4 @@
-/* leon2m FUN_a0124828 @ 0xa0124828  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0124828 @ 0xa0124828 (-mcpu=v8 -O2 -g)
  * Returns 1 when the low byte of func_0x4008cd38(13, 32) is 1, else 0. '(r & 0xff) == 1' produces the
  * and / xor 1 / cmp / 'subx %g0, -1' sequence. The function takes no parameters and returns int; this avoids the
  * extra clr / or instructions of a 64-bit return.

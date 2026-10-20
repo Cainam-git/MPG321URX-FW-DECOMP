@@ -1,5 +1,4 @@
 /* leon2m FUN_a013b754 @ 0xa013b754-0xa013b7e0 (35 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0 mismatches.
  * Code facts: now = func_0x4008d588() (u16); diff = now - u16 0xa802cbd0; 0xa802cbd0 = now;
  * for idx = 0..8 (u8) over the u16 timer table at 0xa802cbbe: t < diff -> t = 0, else t -= diff;
  * then table[param_1] = (u16)param_2. %i0 is never written: 'void' and the draft's

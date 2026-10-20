@@ -1,5 +1,5 @@
 /* FUN_a008fa78 (leon2s, 0xa008fa78-0xa008faa0, 40 bytes, 10 words, leaf).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/10 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: rec = ARR_a807d3e4 + (u8)param_1 * 0xb0; clears the bytes +0x58, +0x69, +0x42, +0x8b.
  * Fixes vs draft: the record base is the SYMBOL ARR_a807d3e4 (draft: a constant pointer) and the
  * source store order is 0x58, 0x69, 0x42, 0x8b (1 of 24 orders gives the fw 8b, 58, 69, 42).

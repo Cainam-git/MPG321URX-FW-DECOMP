@@ -1,6 +1,5 @@
 /*
  * FUN_a00a60d8 (leon2s, 0xa00a60d8-0xa00a610c, 52 bytes, leaf with sibcall), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/13.
  * Code facts: FUN_a00b1508(rec[p].a, rec[p].b, 0x18) on a table of 12-byte records whose base symbol is
  * 0xa807dc04 (fw 'or %g1, 4' base, then [base + p*12] and [+4]). A 0xa807dc00-based array with the
  * fields at +4/+8 gives a different add order (5 words off), so the array starts at 0xa807dc04. Other

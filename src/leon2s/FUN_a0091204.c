@@ -1,4 +1,4 @@
-/* leon2s FUN_a0091204 @ 0xa0091204  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0091204 @ 0xa0091204 (-mcpu=v8 -Os -g)
  * Fills the 0xB0-byte entry (param_1 & 0xFF) of the table at 0xA807D3E4: the u16 fields +0x96..+0xA4 from eight
  * getters FUN_a0090010..FUN_a0090180, byte +0x8F = bit 0 and +0x90 = bit 1 of FUN_a00a657c(port, 0x55), +0x8D = bit 4
  * of FUN_a00a657c(port, 0x30), u16 +0x94 = FUN_a00911bc, u16 +0x92 = FUN_a00910ec, byte +0x8E = FUN_a0090dec. The

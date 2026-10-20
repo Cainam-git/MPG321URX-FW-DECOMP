@@ -1,4 +1,4 @@
-/* leon2m FUN_a01248f0 @ 0xa01248f0  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a01248f0 @ 0xa01248f0 (-mcpu=v8 -O2 -g)
  * Returns 1 when the low byte of func_0x4008cd38(0xD, 0x80) is zero, else 0. GCC 3.4 emits `return (x & 0xff) ==
  * 0;` as and / cmp %g0, %o0 / subx %g0, -1, %i0.
  */

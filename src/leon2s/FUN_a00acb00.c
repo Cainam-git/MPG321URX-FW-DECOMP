@@ -1,5 +1,5 @@
-/* leon2s FUN_a00acb00 @ 0xa00acb00  MATCH (-mcpu=v8 -Os -g, twin)
- * Twin of FUN_a00acac0: same code, constants swapped; byte-exact.
+/* leon2s FUN_a00acb00 @ 0xa00acb00 (-mcpu=v8 -Os -g)
+ * Twin of FUN_a00acac0: same code, other constants.
  */
 typedef unsigned int uint;
 typedef unsigned short ushort;

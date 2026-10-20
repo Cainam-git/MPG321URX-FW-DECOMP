@@ -1,4 +1,4 @@
-/* leon2s FUN_a006d204 @ 0xa006d204  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a006d204 @ 0xa006d204 (-mcpu=v8 -Os -g)
  * HDMI power-off sequence: TMDS_PowerOff(port, 1) for ports 0..3, FUN_a00ab4f8(0..4), clears the registers
  * 0xCF012448 and 0xCF014760, then a fixed call order: FUN_a00afdb0(2), FUN_a00afdf4(0/1, 1), FUN_a00b0568(0/1),
  * FUN_a0095c9c(0/1), FUN_a00a9e74(), FUN_a00aa200(), FUN_a0083f04(0/1, 1, 1), FUN_a00ad478(1), FUN_a006d3d8(),

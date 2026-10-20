@@ -1,5 +1,4 @@
 /* leon2s DRV_HDMI21_RX_Init @ 0xa00a1cdc-0xa00a1df0 (69 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/69 mismatches.
  * Code facts: one-time init guarded by byte DAT_a8079192 (set to 1 at the end). If bit 0 of _DAT_a8078634:
  * print s_a006b860 with 999. DRV_HDMI_IF_Init(); for i = 0, 1: DRV_HDMI_IF_Disconnect(i), FUN_a00a1b58(i);
  * for j = 0, 1: FUN_a00a1c74(j, 1); for i = 0, 1: FUN_a00a7488(FUN_a008f4d0(i), 0x2e70, 0xffffffff, 0xf00)

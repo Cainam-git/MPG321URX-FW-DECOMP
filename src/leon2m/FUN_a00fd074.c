@@ -1,4 +1,4 @@
-/* leon2m FUN_a00fd074 @ 0xa00fd074  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00fd074 @ 0xa00fd074 (-mcpu=v8 -O3 -g)
  * Writes 0x44 to 0xCF012084 and v to 0xCF012088, then runs one transfer step xfer(m) with m = DAT_a802c97d, or the
  * two steps xfer(8) and xfer(4) when m is 0xF. Caller: FUN_a014782c.
  * xfer(mode) (static, inlined): writes 0x2E to the status register 0xCF012034; passes (mode, 2) to the function

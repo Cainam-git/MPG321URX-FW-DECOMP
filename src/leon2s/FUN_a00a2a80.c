@@ -1,5 +1,4 @@
 /* leon2s FUN_a00a2a80 @ 0xa00a2a80-0xa00a2b08 (34 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/34 mismatches.
  * Code facts: for both ports i = 0, 1 (u8): p = word 0 (a register-block pointer) of the
  * 0x34-byte record ARR_a807db00[i]; mode 1: p[1] |= 0xff00; mode 0: p[1] = (p[1] & 0xffff00ff) |
  * 0x1000; other modes: nothing. Returns 0.

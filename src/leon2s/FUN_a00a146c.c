@@ -1,5 +1,4 @@
-/* leon2s FUN_a00a146c @ 0xa00a146c-0xa00a14c4 (22 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s.py 0 mismatches / 22 words.
+/* leon2s FUN_a00a146c @ 0xa00a146c-0xa00a14c4 (22 words), flags -mcpu=v8 -Os -g.
  * Code facts: 400-byte records DAT_a807d7e0[port] (smul 0x190): bytes +0xe6 and +0xe7 = 1; when byte +0xe8 == 0:
  * FUN_a009faf0(port, &record[0xbc]); tail FUN_a00a0b98(port, 0x12, 0). void.
  * Fix vs the autoc draft: the stores are in ascending source order e6, e7 (the fw emits e7 first and e6 in the

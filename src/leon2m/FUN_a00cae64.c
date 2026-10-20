@@ -1,5 +1,5 @@
-/* leon2m FUN_a00cae64 @ 0xa00cae64  MATCH (-mcpu=v8 -O3 -g, twin)
- * Twin of FUN_a00c9e9c: same code, constants swapped; byte-exact.
+/* leon2m FUN_a00cae64 @ 0xa00cae64 (-mcpu=v8 -O3 -g)
+ * Twin of FUN_a00c9e9c: same code, other constants.
  * See FUN_a00c9e9c for the explanation; this copy's constants differ, so its comments were removed.
  */
 struct R290 { unsigned char pad[0x1dc]; unsigned int w174; };

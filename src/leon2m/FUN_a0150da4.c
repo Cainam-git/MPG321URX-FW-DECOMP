@@ -1,5 +1,4 @@
 /* leon2m FUN_a0150da4 @ 0xa0150da4-0xa0150df8 (21 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0 mismatches.
  * Code facts: FUN_a00f793c(); FUN_a00f87b0(0xd3da0); FUN_a00f63bc(0); FUN_a013b6e4(0);
  * FUN_a013b710(0); then the high nibble of byte 0xa802a4b8 |= 3 (fw: ldub; and 0xf0; or 0x30;
  * and 0xf; or; stb = gcc's bit-field insert of the high 4-bit field).

@@ -1,5 +1,4 @@
-/* leon2m FUN_a00a8ee8 @ 0xa00a8ee8  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: [walk]; return unsigned int; param param_1 unsigned int; sink uVar2 into arms; return void; param param_1 unsigned char
+/* leon2m FUN_a00a8ee8 @ 0xa00a8ee8 (-mcpu=v8 -O3 -g)
  */
 extern void func_0x4008e2a4(void);                          // 0x4008e2a4
 extern void FUN_a0146a80(unsigned short, unsigned short, unsigned char, unsigned short, unsigned char); // 0xa0146a80

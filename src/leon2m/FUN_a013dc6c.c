@@ -1,5 +1,5 @@
 /* leon2m FUN_a013dc6c @ 0xa013dc6c-0xa013f1e4  input channel bring-up state machine (panel-row reader)
- * Flags -mcpu=v8 -O3 -g -msoft-float. Byte-exact against FW.021: jf 100.00 match=True, rawcmp 0 of 1374 words.
+ * Flags -mcpu=v8 -O3 -g -msoft-float. Byte-exact against FW.021: of 1374 words.
  *
  * One step per call for the channel DAT_a802cbd2 (0..3, 0xff = none): record c = DAT_a802df30[ch] (0x78 bytes).
  * Word +0: state (bits 28-31), step (20-23), port (12-15), f8 (8-11), f4 (4-7), bit 0. Word +0x70: flags,
@@ -32,7 +32,7 @@
  *  - port_code's local is 'unsigned char v' (fw keeps 'and %o0,3,%o0' after the port-code join, 3x).
  *  - port_code IS the inlined FUN_a013cda8(ch) (same file, has 10 other callers): the static function takes the
  *    CHANNEL, 'static unsigned int port_code(unsigned char ch)' with the switch on PORT(&DAT_a802df30[ch]); compiled
- *    standalone it is byte-exact FUN_a013cda8 (jf 100 match=True; an int/uint parameter is not). Called as
+ *    standalone it is byte-exact FUN_a013cda8 (an int/uint parameter is not). Called as
  *    port_code(0) / port_code(3) / port_code(ch); no '& 3' at the callers (v is 0..3).
  *  - case 1 is written without the fall-through: 'if (F21) {status 4 -> 3} else if (F24 && status 6) -> 3; break;'
  *    (same code; gcc cross-jumps the copy into case 2's test, fw de84 -> def8).

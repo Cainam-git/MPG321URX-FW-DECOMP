@@ -1,4 +1,4 @@
-/* leon2m FUN_a00bd6e4 @ 0xa00bd6e4  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00bd6e4 @ 0xa00bd6e4 (-mcpu=v8 -O2 -g)
  * This function formats a two-digit value into a display buffer at `DAT_a802d078`. It reads a byte from `DAT_a802d41d`, and based on whether it's > 9, writes either "1X" (where X is the value + 0x26, i.e., 0x30-0x39 for values 10-19) or "0X" (where X is the value + 0x30, i.e., 0x30-0x39 for values 0-9) into offsets 8-9 of the buffer. It always writes '0' to offset 7. Then it calls the trace/display functions with the parameter and 0xb. The main uncertainty is whether the comparison should be signed or unsigned (the target uses `bleu`, suggesting unsigned), and the exact parameter types for the c
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;

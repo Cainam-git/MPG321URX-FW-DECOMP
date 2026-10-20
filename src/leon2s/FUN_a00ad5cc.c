@@ -1,5 +1,4 @@
-/* leon2s FUN_a00ad5cc @ 0xa00ad5cc  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: 
+/* leon2s FUN_a00ad5cc @ 0xa00ad5cc (-mcpu=v8 -Os -g)
  */
 extern unsigned char DAT_a8079312;
 extern unsigned char DAT_a8079313;

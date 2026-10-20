@@ -1,6 +1,5 @@
 /*
  * FUN_a00d3114 (leon2s, 0xa00d3114-0xa00d31f8, 228 bytes), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/57.
  * Code facts: a word v (stack, cleared first: fw 'clr [%fp-12]') = ROM read func_0xa0f71528(0xd0013f60);
  * field writes func_0xa0f714b8(&v, hi, lo, val): (0,0) = 1, (0x10,8) = 0, write back with
  * func_0xa0f71534(0xd0013f60, v). Then for i = 0..0x100: field (0x10,8) = i, write 0xd0013f60; for

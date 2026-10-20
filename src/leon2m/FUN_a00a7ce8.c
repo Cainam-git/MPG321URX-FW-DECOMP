@@ -1,4 +1,4 @@
-/* leon2m FUN_a00a7ce8 @ 0xa00a7ce8  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00a7ce8 @ 0xa00a7ce8 (-mcpu=v8 -O2 -g)
  * The function performs a series of register writes through two helper functions in a loop (5 to 20 inclusive), then does one final write and a cleanup call. Ghidra types the helper parameters `undefined1`/`undefined2`; int types with the default promotions give the matching code.
  */
 extern int func_0x4008e2a4(void); /* 0x4008e2a4 */

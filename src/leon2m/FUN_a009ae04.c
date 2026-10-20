@@ -1,4 +1,4 @@
-/* leon2m FUN_a009ae04 @ 0xa009ae04-0xa009aec8 (49 words)  MATCH (-mcpu=v8 -O3 -g, twin)
+/* leon2m FUN_a009ae04 @ 0xa009ae04-0xa009aec8 (49 words) (-mcpu=v8 -O3 -g)
  * Same code as FUN_a009ad40 (whose header describes it) with other constants: base 0xd4 instead of 0xd0 and step
  * offset 0xd1 instead of 0xcf. The word 0xa802afec steps backwards through 0xd4..0xd7: FUN_a00a93bc(afec - 0xd4),
  * then t = ((low halfword of afec) - 0xd1) % 4 and afec = t + 0xd4 until FUN_a00aad30(t) returns 1;

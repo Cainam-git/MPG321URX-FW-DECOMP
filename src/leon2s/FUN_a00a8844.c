@@ -1,5 +1,4 @@
 /* leon2s FUN_a00a8844 @ 0xa00a8844-0xa00a88b8 (29 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches.
  * Code facts: three stack buffers: a[4] at %fp-16 = {0, 0x10, 0, 0} (word clear + stb 0x10 at -15),
  * b[4] at %fp-24 = {0x40, 0, 0, 0}, c[8] at %fp-32 filled by FUN_a00b15d8(c, &DAT_a00b4dc8, 4)
  * (4-byte copy). Then FUN_a00a8708(port, 0, a), (port, 1, c), (port, 2, b) with port = param_1 & 0xff.

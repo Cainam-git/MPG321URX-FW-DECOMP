@@ -1,5 +1,5 @@
-/* BYTE-EXACT: leon2s FUN_a00a6260 @ 0xa00a6260-0xa00a63a8 (82 words),
- * flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0/82.
+/* leon2s FUN_a00a6260 @ 0xa00a6260-0xa00a63a8 (82 words).
+ * flags -mcpu=v8 -Os -g.
  * Code facts: (u8 p, u16 *rec), void. i = 0 for p == 0x51, 1 for p == 0x61, else return. The callees get i
  * (0/1), not p. Byte offsets: rec[0x48] = a2750(i), [0x14] = a2788(i), [0x10] = a27f8(i), [0x16] = a27f8(i),
  * [0x18] = a27c0(i) <= 7 ? 2 : a27c0(i) (called again), [0x20] = a27a4(i), [0x24] = a2814(i),

@@ -1,5 +1,5 @@
 /* FUN_a00dc0a8 (leon2s, 0xa00dc0a8-0xa00dc214, 364 bytes, 91 words).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/91 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: prints DAT_9f1ccc30 with DAT_a8078832 (the current index). If the byte DAT_a8078840 == 1:
  * x = DAT_a8078832 (u16): clears the bytes DAT_a8078830/828/808/800[x] and the u16 ARR_a807880a/
  * 880e[x]; clears DAT_a80787fc..ff; for i = 0..3 clears ARR_a8079c3d[2i] and [2i+1]; x reloaded:

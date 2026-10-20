@@ -1,5 +1,5 @@
-/* leon2m FUN_a01107b8 @ 0xa01107b8-0xa0110d64 (1452 bytes)  BYTE-EXACT at -mcpu=v8 -O3 -g
- * (jf 100 match=True, rawcmp 0 of 363 words, no compiler aids). Hand, from earlier drafts.
+/* leon2m FUN_a01107b8 @ 0xa01107b8-0xa0110d64 (1452 bytes) -mcpu=v8 -O3 -g
+ * (of 363 words, no compiler aids). Hand, from earlier drafts.
  *
  * What it does (panel-row reader): void(u8 ch). Picks the window record for ch (1: 0xA802D7C4, 2: 0xA802D784,
  * else 0xA802D744; idx 1/2/0); returns if its width (+0x16) is 0. Splits the window at the column

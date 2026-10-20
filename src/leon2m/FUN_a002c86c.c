@@ -7,7 +7,7 @@
  * 0xCF03C044); jump tables 0xA002C74C (level 0) and 0xA002C704 (level 1); port 0 and port > 17: nothing. Every
  * write ORs in the second register.
  * Leaf function: one read-modify-write, no loop, no failure path.
- * Exact: jf 100.00 match=True, rawcmp 0/177, both compiled jump tables equal the firmware tables with the same
+ * Exact: both compiled jump tables equal the firmware tables with the same
  * dispatch. Exact form: 'switch (level & 1) { case 1: set-switch; default: clear-switch; }' (an if/else
  * keeps the wrong arm as the fall-through). volatile = real hardware registers.
  */

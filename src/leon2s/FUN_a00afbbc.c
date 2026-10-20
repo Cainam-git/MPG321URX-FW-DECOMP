@@ -1,5 +1,5 @@
 /* FUN_a00afbbc (leon2s, 0xa00afbbc-0xa00afd04, 328 bytes, 82 words).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/82 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: port = (u8)param_1; FUN_a00a6c00(port, 0x2f, 0x30); FUN_a00a6c00(port, 0xf7, 0);
  * FUN_a00ab6e0(port, u16 field +0x120 of the 300-byte port record ARR_a807dc18[port], 1);
  * FUN_a00a6c98(port, 0xc2, 4, 1) and (.., 8, 1); when (u8)FUN_a008d800() > 0x81 set bit 4 of the

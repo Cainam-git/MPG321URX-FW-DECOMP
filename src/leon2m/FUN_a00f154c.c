@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f154c @ 0xa00f154c  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f154c @ 0xa00f154c (-mcpu=v8 -O3 -g)
  * Stable 16-bit register read, same form as FUN_a00f2708: reads a with rd16(blk, reg), then while a second read
  * differs from a and fewer than 5 retries were made, reads a again; returns the last a.
  * rd16 (a static helper, inlined three times) reads register reg and reg + 1 (low byte, high byte) of block blk,

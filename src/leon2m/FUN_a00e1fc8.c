@@ -1,5 +1,4 @@
-/* leon2m FUN_a00e1fc8 @ 0xa00e1fc8-0xa00e2040 (30 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 30 words.
+/* leon2m FUN_a00e1fc8 @ 0xa00e1fc8-0xa00e2040 (30 words), flags -mcpu=v8 -O3 -g.
  * Code facts: DDR table select: if FUN_a0125e38() (u8) == 0: print s_00199698 "Old DDR", word 0xa802d654 =
  * 0xa8028ff0, word 0xa802d658 = FUN_a0124208(); else print s_001996a8 "New DDR", d654 = 0xa8027bc0,
  * d658 = FUN_a0124214(). Then tail FUN_a00e0e44(0). void, no parameters.

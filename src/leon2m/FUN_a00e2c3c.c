@@ -1,4 +1,4 @@
-/* leon2m FUN_a00e2c3c @ 0xa00e2c3c  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00e2c3c @ 0xa00e2c3c (-mcpu=v8 -O2 -g)
  * Calls FUN_a00e05d8(param_1, 0x1c1, 1, 1), then polls FUN_a00e0514(param_1, 0x1e0, 1) until it returns 0 six
  * times in a row (a non-zero result restarts the count). Returns (FUN_a00e02ec(param_1, 0x1cf) << 8) |
  * FUN_a00e02ec(param_1, 0x1ce). Twin of FUN_a00e2d1c with other register numbers.

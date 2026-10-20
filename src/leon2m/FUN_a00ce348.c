@@ -1,5 +1,5 @@
 /* leon2m FUN_a00ce348 @ 0xa00ce348..0xa00ce5dc (660 bytes)  port-4 UART command task.
- * BYTE-EXACT: jf 100 match=True and rawcmp 0 / 165 words at -mcpu=v8 -O3 -g (also at -mcpu=v8 -O3 -g -msoft-float).
+ * and words at -mcpu=v8 -O3 -g (also at -mcpu=v8 -O3 -g -msoft-float).
  * Hand, from an 82.53 % draft.
  *
  * What the code does (code facts):

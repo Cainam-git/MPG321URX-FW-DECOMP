@@ -1,5 +1,4 @@
 /* leon2s FUN_a00a63a8 @ 0xa00a63a8-0xa00a6428 (32 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches.
  * Code facts: record init through p (u16 *): bytes 4, 0xc, 0xd, 0xe = 1; u16 0 and 2 = 0; byte 5 = 2;
  * bytes 6..0xb and 0xf = 0; FUN_a00a6260(port & 0xff, p); byte 0x3f = 2; bytes 0x3a..0x3e and 0x40
  * = 0; word +0x44 = (u16 +0x20) >> 3. Returns void (%i0 is left unchanged).

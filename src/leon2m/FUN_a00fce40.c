@@ -1,4 +1,4 @@
-/* leon2m FUN_a00fce40 @ 0xa00fce40  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00fce40 @ 0xa00fce40 (-mcpu=v8 -O3 -g)
  * Writes 0x8C to 0xCF012084, clears the four bytes DAT_a802c978[3..0] (the bytes FUN_a00fcdd8 returns as a word),
  * then runs xfer(m, 1) with m = DAT_a802c97d, or xfer(8, 1) and xfer(4, 1) when m is 0xF. Caller: FUN_a014782c.
  * xfer(mode, op) is the inlined step of FUN_a00fd074 (there with op 2): status 0xCF012034 = 0x2E; the function

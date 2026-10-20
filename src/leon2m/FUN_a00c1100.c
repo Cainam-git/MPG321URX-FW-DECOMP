@@ -1,4 +1,4 @@
-/* leon2m FUN_a00c1100 @ 0xa00c1100  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00c1100 @ 0xa00c1100 (-mcpu=v8 -O2 -g)
  * The `diff` variable holds the `value - 0x30` (which becomes `%o4`), and `(unsigned char)diff` forces the mask to `0xff` (which becomes `%o5`). The store `DAT_a802d40c = (unsigned char)diff` uses the same `%o4` value.
  */
 extern unsigned char DAT_a802d049;

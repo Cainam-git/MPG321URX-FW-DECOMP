@@ -1,5 +1,4 @@
 /* leon2m FUN_a014a654 @ 0xa014a654-0xa014a6e0 (35 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/35 mismatches.
  * Code facts: v = (u8)FUN_a01421c4((u8)FUN_a0142218((u8)FUN_a0125198(p))) (each result is
  * re-masked by the caller: the callees return int). v == 0x71: k = 0, FUN_a0151aa4(0x10, 1);
  * v == 0x81: k = 1, FUN_a0151aa4(0x20, 1) (one shared call in the fw); else k = 0xff. If

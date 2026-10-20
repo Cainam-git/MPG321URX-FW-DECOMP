@@ -1,5 +1,4 @@
 /* leon2s FUN_a00cd4fc @ 0xa00cd4fc-0xa00cd5e4 (58 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/58 mismatches.
  * Code facts: ch (u8); f = bits 16..17 of word 0 of the 24-byte record DAT_a8078bb0[ch] (lduh,
  * and 3). If f != 2: r = func_0xa0f9639c(0, 0x90, 0x68029, buf) (buf = 24 bytes at %fp-32);
  * r != 0: f = 3, buf[0] = 0, return; else if bit 0 of buf[0] is clear: f = 3, return. Then

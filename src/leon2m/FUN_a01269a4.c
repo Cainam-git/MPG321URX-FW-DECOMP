@@ -1,5 +1,5 @@
-/* leon2m FUN_a01269a4 @ 0xa01269a4  MATCH (-mcpu=v8 -O3 -g, twin)
- * Twin of FUN_a0126878: same code, constants swapped; byte-exact.
+/* leon2m FUN_a01269a4 @ 0xa01269a4 (-mcpu=v8 -O3 -g)
+ * Twin of FUN_a0126878: same code, other constants.
  */
 extern unsigned char FUN_a01248c8(void);   /* GPIO group 9 bit 3 is high */
 extern unsigned short FUN_a0147ae8();      /* I2C register read */

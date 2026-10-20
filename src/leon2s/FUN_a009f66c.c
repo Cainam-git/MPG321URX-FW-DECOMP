@@ -1,4 +1,4 @@
-/* leon2s FUN_a009f66c @ 0xa009f66c  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a009f66c @ 0xa009f66c (-mcpu=v8 -Os -g)
  * For the 0x34-byte record of port at 0xa807db00: calls FUN_a00a73d4(0xB, base + 0x1F), FUN_a00a73d4(0, base +
  * 0x18) and FUN_a00a73d4(1, base + 0x18), clears the top byte of base[0x17], calls FUN_a00a73d4 with 8 and 9 on
  * base + 0x18, 0x11 on cfg + 0x24 and 6 on cfg + 0x20 (word indexes), and when the low byte of FUN_a008d800() is

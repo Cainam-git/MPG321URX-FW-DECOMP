@@ -1,4 +1,4 @@
-/* leon2s FUN_a0087d50 @ 0xa0087d50  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0087d50 @ 0xa0087d50 (-mcpu=v8 -Os -g)
  * Calls FUN_a00a7940(port, 0x70, 0x20, 1) when param_2 is non-zero, else FUN_a00a7940(port, 0x70, 0x20, 0): sets
  * or clears field 0x20 of register 0x70 of the port. Both parameters are unsigned char (the port is masked with
  * and 0xff).

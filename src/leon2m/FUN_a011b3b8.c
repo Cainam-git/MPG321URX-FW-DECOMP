@@ -1,4 +1,4 @@
-/* leon2m FUN_a011b3b8 @ 0xa011b3b8  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a011b3b8 @ 0xa011b3b8 (-mcpu=v8 -O2 -g)
  * Stores the byte param_1 into the 256-byte table DAT_a802c9a0 at index param_2 & 0xff.
  *
  * Required form: the global is declared as an array and indexed with a plain subscript, which makes the global

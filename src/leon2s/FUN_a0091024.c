@@ -1,5 +1,4 @@
-/* leon2s FUN_a0091024 @ 0xa0091024  MATCH (-mcpu=v8 -Os, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): ARR_a807d482->ARR_a807d082; ARR_a807d082->ARR_a807d3e4
+/* leon2s FUN_a0091024 @ 0xa0091024 (-mcpu=v8 -Os)
  */
 extern unsigned short ARR_a807d3e4[];
 

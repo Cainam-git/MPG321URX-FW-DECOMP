@@ -1,4 +1,4 @@
-/* leon2m FUN_a0102fd0 @ 0xa0102fd0  (hand; byte-exact at -mcpu=v8 -O3 -g, jump table included)
+/* leon2m FUN_a0102fd0 @ 0xa0102fd0  (-mcpu=v8 -O3 -g, jump table included)
  *
  * Clock meter: frequency of measured clock 'id' in MHz (prints "clock %d = %ld", string 0x19A7C0).
  * The hardware counts the measured clock for 2^17 cycles of the 12 MHz crystal into a 24-bit counter (three byte

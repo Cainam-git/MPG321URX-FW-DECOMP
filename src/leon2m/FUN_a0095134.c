@@ -1,5 +1,4 @@
-/* leon2m FUN_a0095134 @ 0xa0095134-0xa00951a8 (29 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 29 words.
+/* leon2m FUN_a0095134 @ 0xa0095134-0xa00951a8 (29 words), flags -mcpu=v8 -O3 -g.
  * Code facts: old = byte 0xa802d290+0x20, t = byte 0xa8025c55; byte 0xa802b08f = 0xf; byte +0x20 = t; if old != t:
  * FUN_a00d5938(1); FUN_a00a8c88(); FUN_a00a86e8(); word 0xa802afec = 0x7a; FUN_a00a9650(0, 1); then byte
  * 0xa8025c55 = byte +0x1a4. Near-twin of FUN_a0095430.

@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a27c0 @ 0xa00a27c0  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00a27c0 @ 0xa00a27c0 (-mcpu=v8 -Os -g)
  * Returns the halfword at byte offset 0x24 of the 400-byte record (param_1 & 0xFF) of the table at 0xa807d7e0,
  * written as halfword indexing (stride 0xC8, offset 0x12).
  */

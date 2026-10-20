@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a2010 @ 0xa00a2010  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00a2010 @ 0xa00a2010 (-mcpu=v8 -Os -g)
  * Sets (param_2 != 0) or clears (param_2 == 0) one bit of the register 0xCF0147F0: bit 2 for param_1 == 0, bit 6
  * otherwise. Both parameters are bytes ('and %o0, 0xff', 'btst 0xff, %o1'); the 'mov %o4, %o5' in the delay slots
  * carries the shared register address.

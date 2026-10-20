@@ -1,6 +1,5 @@
 /* leon2s FUN_a00b05e8 @ 0xa00b05e8-0xa00b06e0 (62 words incl. the unreachable ret/restore pair
  * FUN_a00b06d8), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp 0/62 mismatches.
  * Code facts: port, force (u8). Unless byte ARR_a8079318[port] == 1 and force == 0:
  * FUN_a00b0540(port); FUN_a00ae3a0(port); FUN_a0083f04(port, 1, 1); if force: FUN_a0084d04(port);
  * FUN_a0083fb8(port); if FUN_a008d800() > 0x80: FUN_a00a6c00(port, 0x21d, 0x84),

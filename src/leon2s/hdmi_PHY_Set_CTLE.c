@@ -1,5 +1,4 @@
-/* leon2s hdmi_PHY_Set_CTLE @ 0xa0075278  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): firmware format string; function name as static const char[]
+/* leon2s hdmi_PHY_Set_CTLE @ 0xa0075278 (-mcpu=v8 -Os -g)
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

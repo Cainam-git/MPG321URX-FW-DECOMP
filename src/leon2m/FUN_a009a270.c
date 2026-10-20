@@ -1,5 +1,4 @@
-/* leon2m FUN_a009a270 @ 0xa009a270-0xa009a2d0 (24 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 24 words.
+/* leon2m FUN_a009a270 @ 0xa009a270-0xa009a2d0 (24 words), flags -mcpu=v8 -O3 -g.
  * Code facts: FUN_a00a93bc((word 0xa802afec + 0xf) & 0xff); v = byte 0xa8025c55; byte 0xa802d290+0x1dd = v;
  * FUN_a00a9650(v, 2); FUN_a00a813c(1, byte +0x1dd (re-read), 1); word 0xa802afec = 0x34; tail FUN_a00a900c(0, 1).
  * Fix vs the autoc draft (75.00): v is a u8 local (the fw re-extends the loaded byte with 'and 0xff' for the

@@ -1,4 +1,4 @@
-/* leon2m FUN_a0121258 @ 0xa0121258  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0121258 @ 0xa0121258 (-mcpu=v8 -O2 -g)
  * 
  */
 extern int FUN_a00f1a90(unsigned char, int);

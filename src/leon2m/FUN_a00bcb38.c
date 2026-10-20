@@ -1,5 +1,4 @@
-/* leon2m FUN_a00bcb38 @ 0xa00bcb38  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: global DAT_a802d340 unsigned int
+/* leon2m FUN_a00bcb38 @ 0xa00bcb38 (-mcpu=v8 -O3 -g)
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

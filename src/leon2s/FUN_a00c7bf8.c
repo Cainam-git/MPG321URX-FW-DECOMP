@@ -1,5 +1,4 @@
 /* leon2s FUN_a00c7bf8 @ 0xa00c7bf8-0xa00c7ccc (53 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches.
  * Code facts: port = arg & 0xff. Loop 1: FUN_a00c7b60(port); v = FUN_a0fb7fd8(port, 0, 0xf2); repeat
  * while (v & 0x10) and the u8 count <= 4. Loop 2: FUN_a00c7b90(port); v = FUN_a0fb7fd8(port, 0, 0xf5);
  * repeat while (v & 0x1f) and count <= 4. Then FUN_a00c7bc4(port); FUN_a0fc1794(1); status 0xf2 bit

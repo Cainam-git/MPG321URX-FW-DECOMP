@@ -1,4 +1,4 @@
-/* leon2m FUN_a0094df0 @ 0xa0094df0  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0094df0 @ 0xa0094df0 (-mcpu=v8 -O2 -g)
  * Calls FUN_a00a93bc((_DAT_a802afec + 0x23) & 0xff), FUN_a00a8c88(), FUN_a00a8440(), FUN_a00a813c(1, DAT_a8025c56
  * + 1, 1) and FUN_a00a9650(DAT_a8025c56 + 1, 0); stores 0x53 to _DAT_a802afec, calls FUN_a00a9650(0, 1) and sets
  * bit 1 of DAT_a802b08e. No return value.

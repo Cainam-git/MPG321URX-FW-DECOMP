@@ -1,4 +1,4 @@
-/* leon2m FUN_a00adc98 @ 0xa00adc98  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00adc98 @ 0xa00adc98 (-mcpu=v8 -O2 -g)
  * This function is structurally identical to the already-matched `FUN_a00ae288`, except the final field update uses `(value + 1) % 3` instead of `(value + 2) % 3`. The target assembly confirms this: `add %o4, 1, %o0` before the modulo-by-3 multiply sequence. Everything else — the initial `m = (field * 2 + 4) & 0xff`, the `if (m == 10)` branch with its two calls versus the else branch with one call, the common third call, then the modulo and the `FUN_a00ad86c` call with the result and `1`, and the final `DAT_a802b08e |= 2` — matches the known-good pattern exactly.
  */
 struct St {

@@ -1,5 +1,4 @@
 /* leon2m FUN_a0118994 @ 0xa0118994-0xa0118a28 (37 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/37 mismatches.
  * Code facts: only if bit 0 of hw reg 0xcf012e00 is set, bit 0 of hw reg 0xcf0115c0 is clear and
  * bit 0 of FUN_a00f2254(p & 0xff, 0x50) is set: n = byte DAT_a802c99c + 1 (u8); if n > 0x32:
  * DAT_a802c99c = 0, then hw reg 0xcf012f00 = 0x40 when hw reg 0xcf012f24 != 0, else 0;

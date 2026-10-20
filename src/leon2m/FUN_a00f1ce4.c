@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f1ce4 @ 0xa00f1ce4  (hand; byte-exact at -mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f1ce4 @ 0xa00f1ce4  (-mcpu=v8 -O3 -g)
  *
  * Reads a 16-bit value from two consecutive registers (low byte at reg, high byte at reg + 1) of a
  * 0x19A31C-table block. Block numbers 8 and up read block 0. The low register is read first.

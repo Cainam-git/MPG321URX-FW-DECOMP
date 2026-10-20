@@ -1,5 +1,4 @@
-/* leon2s FUN_a00b0004 @ 0xa00b0004-0xa00b0078 (29 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s.py 0 mismatches / 29 words.
+/* leon2s FUN_a00b0004 @ 0xa00b0004-0xa00b0078 (29 words), flags -mcpu=v8 -Os -g.
  * Code facts: q = (u8)FUN_a00add48(port, (u8)func_0x9f1c6624(port)) (ROM call); when the u8 'on' is set:
  * FUN_a00a8400(q, 0, 0x10, 1) then tail FUN_a00a8400(q, 0, 0x80, 0); else FUN_a00a8400(q, 0, 0x10, 0) then
  * tail FUN_a00a8400(q, 0, 0x80, 1) (the two tails share one 'call; restore' after per-arm %i1..%i3 set-up).

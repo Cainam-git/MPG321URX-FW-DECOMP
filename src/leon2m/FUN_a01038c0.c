@@ -1,5 +1,5 @@
-/* leon2m FUN_a01038c0 @ 0xa01038c0..0xa01042c8  display output timing set-up for one channel (hand;
- * BYTE-EXACT at -mcpu=v8 -O3 -g -msoft-float, also at -mcpu=v8 -O3 -g).
+/* leon2m FUN_a01038c0 @ 0xa01038c0..0xa01042c8  display output timing set-up for one channel
+ * Flags: -mcpu=v8 -O3 -g -msoft-float, also at -mcpu=v8 -O3 -g.
  *
  * Called by the port state machine FUN_a013dc6c in MODE_DISPLAY sub-step 2 (ch = output block, in = input timing
  * record (0x3C bytes, copied to a local), out = output timing record, flag, p7 = 7th argument (stack byte)).
@@ -23,7 +23,7 @@
  * 6. Sets bit 0x20 of reg 0x90 unless in->h10 == out->h04 and in->h12 == out->h0c.
  * Field names hNN = byte offset.
  *
- * BYTE-EXACT keys: (a) the first test is the BOOL idiom 'tc = FUN_a0121258(ch) ? 1 : 0; if (tc == 1)':
+ * keys: (a) the first test is the BOOL idiom 'tc = FUN_a0121258(ch) ? 1 : 0; if (tc == 1)':
  *   the code is the same btst/bne as 'if (tc)', but at branch-prediction time it is an '== 1' test (opcode heuristic,
  *   not taken), which lowers that block's estimated frequency and moves it behind the frame-lock block in the layout
  *   (95.95 -> 100 %); (b) the htotal candidate held in an unsigned short (rs); (c) the false-path reg 0x7c value held

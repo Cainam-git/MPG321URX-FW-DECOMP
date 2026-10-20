@@ -1,4 +1,4 @@
-/* leon2m FUN_a00e4538 @ 0xa00e4538  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00e4538 @ 0xa00e4538 (-mcpu=v8 -O2 -g)
  * The key structure points: the global toggle is a word at 0xa802b72c (0xa802b400+0x32c), the switch on param_2 has cases 0/1/2 with case 1 falling into case 2's body, and the loop condition uses the counter check after incrementing. The function returns the result of `FUN_a00e40f4`.
  */
 extern int FUN_a00dfc50();

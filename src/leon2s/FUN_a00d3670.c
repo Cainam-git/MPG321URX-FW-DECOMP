@@ -1,5 +1,4 @@
-/* leon2s FUN_a00d3670 @ 0xa00d3670-0xa00d36a4 (13 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s.py 0/13 mismatches.
+/* leon2s FUN_a00d3670 @ 0xa00d3670-0xa00d36a4 (13 words), flags -mcpu=v8 -Os -g.
  * Code facts: timeout test of the 0xcf03c80c == 0x99 state machine FUN_a00d3c40 (its only caller, the c24 != 1 arm):
  * t0 = _DAT_a8078c20 (stamped by FUN_a00d3c40 with func_0xa0fc2064() when FUN_a00d2e00() == 1), now =
  * func_0xa0fc2064() (ROM tick counter outside the image); d = now - t0, minus 1 more when now < t0 (wrap);

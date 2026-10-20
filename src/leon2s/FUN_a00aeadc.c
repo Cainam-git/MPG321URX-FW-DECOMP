@@ -1,5 +1,4 @@
-/* leon2s FUN_a00aeadc @ 0xa00aeadc-0xa00aeb24 (18 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches / 18 words.
+/* leon2s FUN_a00aeadc @ 0xa00aeadc-0xa00aeb24 (18 words), flags -mcpu=v8 -Os -g.
  * Code facts: returns 1 when bit 15 of word +0x88 of the record that the pointer DAT_a807dc04 points to is set AND
  * bit 0 of FUN_a00a6bb8(ch, 0x463) is set; else 0. Neighbour of src/leon2s/FUN_a00aeb24.c (same record, same
  * register 0x463, bit 7 / bit 2 there).

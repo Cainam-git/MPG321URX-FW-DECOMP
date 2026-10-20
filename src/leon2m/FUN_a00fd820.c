@@ -1,4 +1,4 @@
-/* leon2m FUN_a00fd820 @ 0xa00fd820  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00fd820 @ 0xa00fd820 (-mcpu=v8 -O3 -g)
  * Returns the class code of block blk that FUN_a00fd594 / FUN_a00fd9a0 take as input:
  *   FUN_a00f92d4(blk) non-zero -> 0xE8;
  *   reg 3 bit 5 set -> by reg 0x40 bits 0-1 (FUN_a00f1e0c): 0 -> 0x91, 2 -> 0xA1, else 0xB1;

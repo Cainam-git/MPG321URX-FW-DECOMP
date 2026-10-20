@@ -1,5 +1,5 @@
-/* leon2m FUN_a012c188 @ 0xa012c188..0xa012c320 (102 words). BYTE-EXACT:
- * jf 100.00 match=True, rawcmp 0/102 with -mcpu=v8 -O3 -g.
+/* leon2m FUN_a012c188 @ 0xa012c188..0xa012c320 (102 words).
+ * with -mcpu=v8 -O3 -g.
  * Where it runs: start-up step 2 FUN_a015266c, near the end, AFTER FUN_a0141964 (the display start-up that reaches
  * FUN_a0106d64) and after FUN_a01243dc. Job: load the EDIDs into the 8051's DDC slaves.
  * Code:

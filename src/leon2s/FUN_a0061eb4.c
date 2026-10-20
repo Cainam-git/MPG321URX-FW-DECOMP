@@ -1,4 +1,4 @@
-/* leon2s FUN_a0061eb4 @ 0xa0061eb4  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a0061eb4 @ 0xa0061eb4 (-mcpu=v8 -Os -g)
  * Finished by hand from mechanical Ghidra C. Register access helper for port param_1 keyed
  * by a 16-bit register number param_2. Register 5 goes straight to FUN_a00a6f78(port, 5).
  * Register 0x1b8 is an indirect read: sets the 3-bit field of reg 0x1b7 to 2 (SC_MaskSetByte),

@@ -1,5 +1,4 @@
-/* leon2s FUN_a00a535c @ 0xa00a535c  MATCH (-mcpu=v8 -Os, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): string 'Pexil clock = %ld KH'->'\\n Pexil clock = %ld'
+/* leon2s FUN_a00a535c @ 0xa00a535c (-mcpu=v8 -Os)
  */
 extern int FUN_a0073044(const char *, ...);
 extern int FUN_a00a5148(int, int);

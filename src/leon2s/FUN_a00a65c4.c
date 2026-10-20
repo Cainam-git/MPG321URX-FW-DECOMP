@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a65c4 @ 0xa00a65c4  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00a65c4 @ 0xa00a65c4 (-mcpu=v8 -Os -g)
  * The function writes a value to memory-mapped registers at addresses computed from a lookup table `DAT_a00b4d9c` plus a parameter, scaled and OR'd with the register base. For `param_1 == 2` it writes two entries; for `param_1 < 2` (i.e., 0 or 1) it writes one entry. The declaration must be an array because the assembly uses indexed `lduh` accesses.
  */
 extern unsigned short DAT_a00b4d9c[];

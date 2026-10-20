@@ -1,5 +1,5 @@
 /* FUN_a00cf9e8 (leon2s, 0xa00cf9e8-0xa00cfab8, 208 bytes, 52 words).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/52 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: port = (u8)param_1; reads reg 0x201 (func_0xa0f9639c(port, 0x90, 0x201, &b)); when bit 2
  * of b is set: func_0xa0f96360(port, 0x80, 0x201, 4), then reads 0x68029 (result bit 2 or 3 set ->
  * flag = 1) and 0x69493 (bit 3 or 4 set -> flag = 1), each only when the read call returns 0.

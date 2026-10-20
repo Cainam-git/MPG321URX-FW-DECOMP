@@ -1,5 +1,5 @@
 /* FUN_a00958c4 (leon2m, 0xa00958c4-0xa0095930, 108 bytes, 27 words).
- * Flags: -mcpu=v8 -O3 -g. Judge: jf 100.00 match=True, rawcmp 0/27 mismatches.
+ * Flags: -mcpu=v8 -O3 -g.
  * Code facts: FUN_a00a93bc((u8)(_DAT_a802afec - 0x3f)); if the word _DAT_a802afec (re-read) is 0x42:
  * FUN_a00a9468(1, 2) and FUN_a00b34d4(0, 1); then on both paths _DAT_a802afec = 0xc and a tail call
  * FUN_a00a900c(1, 1) (fw: restore in the delay slot, %i0/%i1 = 1).

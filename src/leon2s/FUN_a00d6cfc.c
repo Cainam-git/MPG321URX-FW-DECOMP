@@ -1,5 +1,5 @@
 /* FUN_a00d6cfc (leon2s, 0xa00d6cfc-0xa00d6dac, 176 bytes, 44 words, leaf).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/44 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: n = (param_2[0] >> 4) - 1; half = n / 2 (signed) rounded up when n is odd;
  * p = param_2 + (u8)half. Into the u16 words of param_1: w0 bits 8..14 = p[3] & 0x7f,
  * w0 bits 4..7 = p[4] & 0xf0, w0 bits 0..3 = p[4] & 0x0f (w0 is kept in a register, three sth),

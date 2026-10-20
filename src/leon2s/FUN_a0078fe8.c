@@ -1,4 +1,4 @@
-/* leon2s FUN_a0078fe8 @ 0xa0078fe8  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a0078fe8 @ 0xa0078fe8 (-mcpu=v8 -Os -g)
  * 
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;

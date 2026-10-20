@@ -1,4 +1,4 @@
-/* leon2m FUN_a0094ed8 @ 0xa0094ed8  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0094ed8 @ 0xa0094ed8 (-mcpu=v8 -O2 -g)
  * The key changes:
  * - Made the function `void` (no return value in the assembly)
  * - Corrected the types of the extern functions to match the actual call patterns

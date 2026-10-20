@@ -1,5 +1,5 @@
 /* leon2m FUN_a0080490 @ 0xA0080490..0xA00808AC (263 words) "APPSetPowerOff".
- * BYTE-EXACT: -mcpu=v8 -O3 -g (also -msoft-float), jf 100.00 match=True, rawcmp 0/263.
+ * -mcpu=v8 -O3 -g (also -msoft-float).
  * Where: App_Initialize FUN_a0086ae8 calls it as FUN_a0080490(1) for power-on type 4 only (start-up step 3, after
  * step 2). Strings: "APPSetPowerOff" (ROM 0xFED10), "----> %d(%d)" (0xFED28), "OFFSENSING" (0xFED38),
  * "---> return" (0xFED48), "POWEROFF" (0xFED58).

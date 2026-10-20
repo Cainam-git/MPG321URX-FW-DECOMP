@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a2928 @ 0xa00a2928  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00a2928 @ 0xa00a2928 (-mcpu=v8 -Os -g)
  * Calls FUN_a00638a0() and FUN_a00a69fc(1, 0x9c8, 1). If the byte DAT_a807d971 is non-zero it tail-calls
  * FUN_a00a0c84(1, 0, param_3..param_6); otherwise it calls FUN_a00a0bfc(1) and tail-calls FUN_a00a0b10(1, 0).
  *

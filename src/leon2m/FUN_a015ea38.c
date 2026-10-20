@@ -1,4 +1,4 @@
-/* leon2m FUN_a015ea38 @ 0xa015ea38  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a015ea38 @ 0xa015ea38 (-mcpu=v8 -O2 -g)
  * If the function pointer _DAT_a802cfe8 is non-NULL, calls it with param_1 and returns its result; otherwise
  * returns 0. The second parameter is unused. The branch for the NULL case targets the ret at 0xa015ea60.
  */

@@ -1,4 +1,4 @@
-/* leon2m FUN_a010c194 @ 0xa010c194  channel format set. BYTE-EXACT at -mcpu=v8 -O3 -g.
+/* leon2m FUN_a010c194 @ 0xa010c194  channel format set. -mcpu=v8 -O3 -g.
  *
  * FUN_a010c194(ch, fmt, val): stores val and fmt in bytes +0x26 / +0x25 of the channel record (ch 1: 0xA802D7C4,
  * ch 2: 0xA802D784, otherwise 0xA802D744) and sets its bits-per-pixel byte (+0x24): fmt 0 -> 8, fmt 1..6 -> 16,

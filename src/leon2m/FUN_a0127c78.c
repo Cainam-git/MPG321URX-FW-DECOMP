@@ -1,5 +1,5 @@
 /* leon2m FUN_a0127c78 @ 0xa0127c78-0xa0129598  OLED panel power / sensing state machine.
- * BYTE-EXACT at -mcpu=v8 -O3 -msoft-float (no -g): jf 100.00 % match=True, rawcmp 1608 words / 0 mismatches.
+ * -mcpu=v8 -O3 -msoft-float (no -g): jf 100.00 % match=True, rawcmp 1608 words / 0 mismatches.
  * Lever: the two blink parity tests are written 'if (n % 2 == 1)' instead of 'if (n & 1)' (state 1 sub 6, state 2
  * sub 3; with 'n & 1' the match is 94.41 %). Same meaning (n is an
  * unsigned char, n % 2 == 1 <=> n & 1). Why it matters: gcc 3.4's branch predictor saw two symmetric 'call' and two
@@ -25,7 +25,7 @@
  * Globals touched: DAT_a802d896 (S), DAT_a802d290 (G, +0x1d5, +0x1e2..+0x1e7, +0x1f4 word/+0x1f6 half),
  *   DAT_a802cff4 (dpms bits), DAT_a802d888/DAT_a802d890 (I2C buffers of the inlined helpers).
  *
- * Six small helpers of this file are BYTE-EXACT on their own (-mcpu=v8 -O3 -msoft-float):
+ * Six small helpers of this file are on their own (-mcpu=v8 -O3 -msoft-float):
  *   FUN_a01268cc OLED set OFF Sensing, FUN_a0126938 EL sensing, FUN_a0126a4c OLEDIIC_getTempSensing (needs NO -g),
  *   FUN_a0127a34 OFF-sensing-time-due, FUN_a0127ab8 QSM-record-valid, FUN_a0127b24 recover-mode.
  * The S and G field names are descriptive labels, not firmware names.

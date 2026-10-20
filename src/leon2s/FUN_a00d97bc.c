@@ -1,5 +1,4 @@
-/* leon2s FUN_a00d97bc @ 0xa00d97bc-0xa00d985c (40 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s.py 0 mismatches / 40 words.
+/* leon2s FUN_a00d97bc @ 0xa00d97bc-0xa00d985c (40 words), flags -mcpu=v8 -Os -g.
  * Code facts: stack message m at %fp-32 (address kept in %l0): ROM copy func_0xa0fc15d8(&m, src, 0x13);
  * t = src[0] & 0xf; bits 24..27 of m's first word (4-bit bit-field) = t - 1; n = (signed char)(t - 1); for u8
  * i while i < n (signed): m.b[i + 1] = src[i + 2]; then m.b[i + 1] = 0; FUN_a00d6a54(&m, 3, 1). The fw ends

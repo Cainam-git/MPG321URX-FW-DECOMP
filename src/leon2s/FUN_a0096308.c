@@ -1,5 +1,4 @@
-/* leon2s FUN_a0096308 @ 0xa0096308  MATCH (-mcpu=v8 -Os, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): DAT_a807d7e1->DAT_a807d7e0
+/* leon2s FUN_a0096308 @ 0xa0096308 (-mcpu=v8 -Os)
  */
 extern unsigned char DAT_a807d7e0;
 extern unsigned char DAT_a807d7e2;

@@ -1,6 +1,5 @@
 /*
  * FUN_a00a2f70 (leon2s, 0xa00a2f70-0xa00a2fd0, 96 bytes, leaf with sibcalls), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/24.
  * Code facts: blk = the pointer at +0x30 of the 0x34-byte port record ARR_a807db00[port]. on != 0:
  * blk[2] low 6 bits = v (u8), then FUN_a00a73ac(7, &blk[2]); on == 0: FUN_a00a73d4(7, &blk[2]). Both
  * are leaf tail calls. The draft used the mid-record name DAT_a807db30. Aids: none.

@@ -1,5 +1,5 @@
-/* leon2m FUN_a0083ff0 @ 0xA0083FF0..0xA0084330 (208 words) "UsbModeSelectRoutine". BYTE-EXACT (from
- * a 59.13 % draft): -mcpu=v8 -O3 -g (also -msoft-float) jf 100.00 match=True, rawcmp 0/208.
+/* leon2m FUN_a0083ff0 @ 0xA0083FF0..0xA0084330 (208 words) "UsbModeSelectRoutine". (from
+ * a 59.13 % draft): -mcpu=v8 -O3 -g (also -msoft-float)
  * Lever: the cable-sense test as 'int in = FUN_a0125a60() || FUN_a0125a88(); if (!in) {none} else {chosen}'. With
  * a plain 'if (a || b)' the 'chosen' block's label has one use, CSE follows the jump and keeps the struct pointer
  * of 0xA802D290 live into that block (other register allocation); with '!a && !b' the label has two uses (pointer

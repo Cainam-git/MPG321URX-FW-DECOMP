@@ -1,4 +1,4 @@
-/* leon2m FUN_a0101e9c @ 0xa0101e9c  output register set-up per display mode (hand; BYTE-EXACT at -mcpu=v8 -O3 -g, rawcmp 0 mismatches;
+/* leon2m FUN_a0101e9c @ 0xa0101e9c  output register set-up per display mode (hand; -mcpu=v8 -O3 -g.
  * jump table at runtime 0xa1cc8, cases in number order)
  *
  * Called by FUN_a01023f4 (output path set-up B) with the display mode DAT_a802d680.w8 (0..17, from DispModeTransform).

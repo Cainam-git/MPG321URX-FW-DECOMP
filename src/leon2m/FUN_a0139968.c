@@ -1,5 +1,5 @@
-/* BYTE-EXACT: leon2m FUN_a0139968 @ 0xa0139968-0xa0139a30 (50 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/50 (autoc draft 90.00).
+/* leon2m FUN_a0139968 @ 0xa0139968-0xa0139a30 (50 words), flags -mcpu=v8 -O3 -g.
+ * (autoc draft 90.00).
  * Code facts: (int-width p: the fw stores %i0 unextended with stb and masks it per use). If the byte DAT_a802cb99
  * differs from (u8)p: v = 0xffffffff; ROM read func_0x4008c4d0(2, 0x20, &v, 1); then up to 100 rounds while v != 0
  * of { delay func_0x4008d1a0(1); n--; read again; stop when n == 0 }; if v == 0 afterwards: v = (u8)p | 0x20000000

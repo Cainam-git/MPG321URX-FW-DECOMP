@@ -1,5 +1,4 @@
 /* leon2m FUN_a0139604 @ 0xa0139604-0xa01396d8 (53 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/53 mismatches.
  * Code facts: if the u16 DAT_a802a458 already equals the u16 argument, return. Else
  * v = 0xffffffff at %fp-12; ROM func_0x4008c4d0(2, 0x20, &v, 1) reads one word; while
  * v != 0 (at most 100 rounds): ROM delay func_0x4008d1a0(1), read again. If v ended 0:

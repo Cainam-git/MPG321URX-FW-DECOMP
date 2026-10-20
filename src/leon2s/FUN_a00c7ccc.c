@@ -1,6 +1,5 @@
 /*
  * FUN_a00c7ccc (leon2s, 0xa00c7ccc-0xa00c7d5c, 144 bytes), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/36.
  * Code facts: bit 2 of port register (0, 0xf) through the ROM read/write pair func_0xa0fb7fd8
  * (port, 0, 0xf) / func_0xa0fb8054(port, 0, 0xf, v). Mode 1: clear bit 2, func_0xa0fc1794(1)
  * (delay), re-read and write (u8)(v | 4). Any other mode: write v & 0xfb. Both arms end in their

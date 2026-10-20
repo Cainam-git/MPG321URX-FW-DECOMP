@@ -1,5 +1,4 @@
-/* leon2s Deskew_HotPlug @ 0xa0077e7c  MATCH (-mcpu=v8 -Os, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): name hotplug_reg->DAT_a80788d2; name printf->FUN_a0073044
+/* leon2s Deskew_HotPlug @ 0xa0077e7c (-mcpu=v8 -Os)
  */
 extern int FUN_a0073044(const char *fmt, ...); /* 0xa0073044 */
 extern unsigned char DAT_a80788d2;        /* 0xa80788d2 */

@@ -1,4 +1,4 @@
-/* FUN_a009e894 (leon2m, 0xa009e894-0xa009e91c, 34 words). Flags -mcpu=v8 -O3 -g. jf 100.00 match=True, rawcmp 0 mismatches.
+/* FUN_a009e894 (leon2m, 0xa009e894-0xa009e91c, 34 words). Flags -mcpu=v8 -O3 -g.
  Code facts: void(void). If _DAT_a802afec != 0x1c or FUN_a00d7d48() != 0: _DAT_a802afec = 0x10f. If it is (still) 0x1c: FUN_a0146dc0(1, 0).
  FUN_a00b848c(); _DAT_a802d03c = (u16)func_0x4008d588(); _DAT_a802cff4 |= 0x100.
  Fixes vs draft: FUN_a00d7d48 takes NO argument (its entry never reads %i0; the fw 'mov 0x10f,%o0' in the be delay slot is the store value

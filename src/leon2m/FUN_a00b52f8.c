@@ -1,4 +1,4 @@
-/* leon2m FUN_a00b52f8 @ 0xa00b52f8  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00b52f8 @ 0xa00b52f8 (-mcpu=v8 -O2 -g)
  * The function performs a fixed sequence of calls, truncates `param_1` and `param_3` to 16 bits via zero-extension (which the compiler implements with `sll`/`srl`), masks `param_2` to 8 bits, reads two bytes from a fixed address, and ends with a tail call returning the result of `FUN_a0146108(0)`. The only structural change from the previous attempt is using `(unsigned short)` casts to force the exact shift idioms seen in the target, and correcting the final call to return its value.
  */
 extern void FUN_a0146dc0(int, int);

@@ -1,5 +1,5 @@
-/* leon2m FUN_a009934c @ 0xa009934c-0xa00993a8 (23 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 23 words. Same toggle form as FUN_a0099244.
+/* leon2m FUN_a009934c @ 0xa009934c-0xa00993a8 (23 words), flags -mcpu=v8 -O3 -g.
+ * Same toggle form as FUN_a0099244.
  * Code facts: bit 7 of word DAT_a802d290 + 0x1ec is toggled (srl 7 / xnor / and 1 / sll 7 / and -129 / or / st),
  * 1-bit bit-field written 'f7 = 1 - f7'; FUN_a00a5420(0, new bit); FUN_a00db12c(0) (it reads its u8 %o0);
  * byte 0xa802b08e |= 2. void(void).

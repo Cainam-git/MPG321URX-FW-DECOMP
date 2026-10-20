@@ -1,5 +1,4 @@
-/* leon2m FUN_a01438dc @ 0xa01438dc-0xa014398c (44 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 44 words.
+/* leon2m FUN_a01438dc @ 0xa01438dc-0xa014398c (44 words), flags -mcpu=v8 -O3 -g.
  * Code facts: i = remap(ch) (0..3, else print s_001a6dd8 "SYS remapping channel OOR" and use 0); returns bit 6 of
  * the u16 at +0 of port record 0xa802e224[(DAT_a802df30[i].w0 >> 12) & 0xf] (0x2a-byte records).
  * Same remap helper as src/leon2m/FUN_a0143f0c.c.

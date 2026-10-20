@@ -1,5 +1,5 @@
 /* FUN_a00cea60 (leon2s, 0xa00cea60-0xa00cec18, 440 bytes, 110 words).
- * Flags: -mcpu=v8 -Os -g. Judge: jf 100.00 match=True, rawcmp_l2s 0/110 mismatches.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: port = (u8)param_1; bits 16..17 of the word at DAT_a8078bb0 + port*24 := 01;
  * FUN_a00c87e8(port, 9, 0x8000); 32 bytes DAT_a807d088[i] = (u8)FUN_a00c7770(port, 1); two
  * func_0xa0f96400(0, 0x90, 0x692f8 / 0x69308, 0xf, buf) reads, each copied (16 bytes) into

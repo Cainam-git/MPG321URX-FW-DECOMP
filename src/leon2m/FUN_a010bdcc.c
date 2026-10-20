@@ -1,4 +1,4 @@
-/* leon2m FUN_a010bdcc  BYTE-EXACT (hand, -mcpu=v8 -O3 -g). Channel window position set; gcc inlines it into
+/* leon2m FUN_a010bdcc (hand, -mcpu=v8 -O3 -g). Channel window position set; gcc inlines it into
  * FUN_a01107b8 (set_pos there).
  * void(u8 ch, u8 which, u16 pos, u16 w20). Picks the window record for ch (1: 0xA802D7C4, 2: 0xA802D784, else
  * 0xA802D744). which == 0: record +0x18 = pos, v = pos. Otherwise: record +0x1A = pos, v = pos - DAT_a802d700 when

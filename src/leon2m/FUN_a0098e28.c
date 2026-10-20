@@ -1,4 +1,4 @@
-/* leon2m FUN_a0098e28 @ 0xa0098e28  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, autoc)
+/* leon2m FUN_a0098e28 @ 0xa0098e28 (-mcpu=v8 -O3 -g)
  * Finished by hand from mechanical Ghidra C. Fixed init sequence: FUN_a00a93bc(0), word
  * 0xa802afec = 0x2c, FUN_a00a900c(2, 1), FUN_a00b7674(0), then sets bit 1 of the byte at
  * 0xa802b08e. FUN_a00a900c is void; the draft had it returning int.

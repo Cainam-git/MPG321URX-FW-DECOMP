@@ -1,4 +1,4 @@
-/* leon2s FUN_a00ac5a4 @ 0xa00ac5a4  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00ac5a4 @ 0xa00ac5a4 (-mcpu=v8 -Os -g)
  * Polls FUN_a00a6bb8(param_1 & 0xFF, 0xC1) until bit 6 of the result is set, then calls FUN_a00a6c98(port, 0xC1,
  * 0x80, 1), writes 0 to 0x3D2, 0x3D1 and 0x3D0 through FUN_a00a6c00, and ends with FUN_a00a6c98(port, 0xC1, 0x80,
  * 0). The loop tests the return value of FUN_a00a6bb8 (btst %o0), not the parameter as in Ghidra's output.

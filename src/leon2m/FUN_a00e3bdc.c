@@ -1,4 +1,4 @@
-/* leon2m FUN_a00e3bdc @ 0xa00e3bdc  MATCH (-mcpu=v8 -O2, gcc 3.4.4, autoc)
+/* leon2m FUN_a00e3bdc @ 0xa00e3bdc (-mcpu=v8 -O2)
  * Mechanical Ghidra C, finished by hand: error path is an early return -1; FUN_a00df80c takes no args; built -O2 without -g; Ghidra's type names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;

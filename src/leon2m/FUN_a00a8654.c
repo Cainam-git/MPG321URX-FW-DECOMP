@@ -1,5 +1,5 @@
 /* FUN_a00a8654 (leon2m, 0xa00a8654-0xa00a86e8, 148 bytes, 37 words).
- * Flags: -mcpu=v8 -O3 -g. Judge: jf 100.00 match=True, rawcmp 0/37 mismatches.
+ * Flags: -mcpu=v8 -O3 -g.
  * Code facts: FUN_a0146b50(0x111, 0); FUN_a0146b6c(0, 0); for i = 0..2 (u8):
  * FUN_a00a31a4(0, 0x2a, i*2 + 6, 1, FUN_a00a3844(DAT_00190cec, (u16)(i*29 + byte +8 of the record
  * DAT_a802d290)), 0). Twin of FUN_a00b3c80, same source shape.

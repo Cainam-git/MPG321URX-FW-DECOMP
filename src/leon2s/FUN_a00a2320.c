@@ -1,5 +1,5 @@
-/* leon2s FUN_a00a2320 @ 0xa00a2320  MATCH (-mcpu=v8 -Os -g, twin)
- * Twin of FUN_a009c794: same code, constants swapped; byte-exact.
+/* leon2s FUN_a00a2320 @ 0xa00a2320 (-mcpu=v8 -Os -g)
+ * Twin of FUN_a009c794: same code, other constants.
  * See FUN_a009c794 for the explanation; this copy's constants differ, so its comments were removed.
  */
 struct Port34 { unsigned int pad0; unsigned char *ctl; unsigned char pad8[0x2c]; };

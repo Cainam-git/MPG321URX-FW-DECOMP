@@ -1,4 +1,4 @@
-/* leon2m FUN_a00b7474 @ 0xa00b7474  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00b7474 @ 0xa00b7474 (-mcpu=v8 -O2 -g)
  * The function performs a fixed sequence of initialization calls, then reads a byte from a global address, passes it through `FUN_a00a3844`, and uses the result as an argument to `FUN_a00a31a4`. Finally it tail-calls `FUN_a00b34d4` with the first two arguments replaced by constants 3 and 5, and the remaining original parameters unchanged. The main uncertainty is whether the compiler will schedule the assignments of those constants into the delay slots of earlier calls exactly as in the target; the provided C relies on the optimizer to do so, as the original Ghidra output did.
  */
 extern unsigned char DAT_a802d298;

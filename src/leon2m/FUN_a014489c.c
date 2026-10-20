@@ -1,5 +1,5 @@
 /* FUN_a014489c (leon2m, 0xa014489c-0xa01448fc, 96 bytes, 24 words).
- * Flags: -mcpu=v8 -O3 -g. Judge: jf 100.00 match=True, rawcmp 0/24 mismatches.
+ * Flags: -mcpu=v8 -O3 -g.
  * Code facts: port = (u8)param_1; field = (word at DAT_a802df30 + port*0x78 >> 12) & 0xf;
  * if (u8)FUN_a00fd820(field) == 0xb1: r = FUN_a013923c((u8)FUN_a0142168((u8)FUN_a012fc20()));
  * otherwise r = 8; returns (u8)r. Fix vs draft: ONE return of a variable set in both arms (fw: the

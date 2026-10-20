@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a621c @ 0xa00a621c  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00a621c @ 0xa00a621c (-mcpu=v8 -Os -g)
  * Returns 1 when the selected byte is zero, else 0: DAT_a807d7e1 for param_1 == 'Q' (0x51), DAT_a807d971 for
  * param_1 == 'a' (0x61), the constant 1 (result 0) for other values.
  */

@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f35d0 @ 0xa00f35d0  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f35d0 @ 0xa00f35d0 (-mcpu=v8 -O3 -g)
  * Writes the low byte of sel << 5 to the three hardware registers 0xCF020024, 0xCF02002C and 0xCF020034.
  * When sel is 8 it is first replaced by a level 0..7: the code clears 0xCF01245C, writes 5 to 0xCF012458, calls
  * FUN_4008d1a0(5), reads the 16-bit count n at 0xCF012460 (FUN_a00f3078) and computes q = 0x180000 / n (16 bits);

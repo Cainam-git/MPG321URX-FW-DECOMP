@@ -1,5 +1,4 @@
 /* leon2m FUN_a00f2b48 @ 0xa00f2b48-0xa00f2b8c (17 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/17 mismatches.
  * What it does: reads one 8-bit register of a per-port register block. port >= 4 is clamped to 0
  * (fw: 'cmp 4; addx; neg; and' = port & -(port < 4)). The ROM table DAT_0019a2e4[4] = {0x4e00,
  * 0x4e40, 0x4e80, 0x4ec0} holds each port's word index, so the address is

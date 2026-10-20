@@ -1,4 +1,4 @@
-/* FUN_a008b9ec (leon2s, 0xa008b9ec-0xa008bc44, 150 words). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a008b9ec (leon2s, 0xa008b9ec-0xa008bc44, 150 words). Flags -mcpu=v8 -Os -g.
  Code facts: u8 port; id = 4 (needs DAT_a807a824[0x50] == 5) or, for port 1, 6 (needs [0x64] == 5), else return. now = FUN_a008b838(port).
  If the port bit of DAT_a8078b54 is set or |now - ARR_a8078b3c[port]| > 0x14: if b8d4(port) == 1 and b8f4(port) == 1: if (u16)89f98(id) != 0
  and bit 0x40 of the u16 at +0x62 of the 0x14-byte record port of DAT_a807a824: ++DAT_a8078b38[port] > 3 -> clear it, b75c(a040(id), 1),

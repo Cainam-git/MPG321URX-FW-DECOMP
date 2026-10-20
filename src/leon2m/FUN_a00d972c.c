@@ -1,5 +1,4 @@
-/* leon2m FUN_a00d972c @ 0xa00d972c-0xa00d9764 (14 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 14 words.
+/* leon2m FUN_a00d972c @ 0xa00d972c-0xa00d9764 (14 words), flags -mcpu=v8 -O3 -g.
  * Code facts: v = byte 0xa802d290+0x14; if v > 100: v = 100; store v back; FUN_a014a11c(2, v & 0xff);
  * tail call FUN_a00d94fc().
  * Fix vs the autoc draft (78.57): the record as struct pointer (fw sethi|or of 0xa802d290 + field 0x14; the draft

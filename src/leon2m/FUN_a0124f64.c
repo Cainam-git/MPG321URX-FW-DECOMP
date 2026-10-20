@@ -1,5 +1,4 @@
-/* leon2m FUN_a0124f64 @ 0xa0124f64  MATCH (-mcpu=v8 -O2, gcc 3.4.4, near)
- * near-miss repaired mechanically (tools/nearfix.py): name FUN_table_1a4288->DAT_001a4288
+/* leon2m FUN_a0124f64 @ 0xa0124f64 (-mcpu=v8 -O2)
  */
 extern unsigned char DAT_001a4288[]; /* at 0x1a4288 */
 

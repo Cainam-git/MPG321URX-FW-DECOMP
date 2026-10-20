@@ -1,5 +1,4 @@
-/* leon2s FUN_a008661c @ 0xa008661c-0xa0086678 (23 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s.py 0 mismatches / 23 words.
+/* leon2s FUN_a008661c @ 0xa008661c-0xa0086678 (23 words), flags -mcpu=v8 -Os -g.
  * Code facts: v = 0x80 when bit 3 of byte ARR_a807cd2e[p * 6] is set, else 0 (if-converted: srl 3 / and 1 /
  * cmp %g0 / addx -1 / and -128 / add -128, then the u8 extension narrowed to 'and 0x80'); returns 1 when
  * FUN_a0086360(p, 0x80, 0x107, v) returns 0 (u8), else 0.

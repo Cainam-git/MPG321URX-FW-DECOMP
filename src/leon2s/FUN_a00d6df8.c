@@ -1,6 +1,5 @@
-/* leon2s FUN_a00d6df8 @ 0xa00d6df8..0xa00d6e94 (156 bytes, 39 words)  BYTE-EXACT
+/* leon2s FUN_a00d6df8 @ 0xa00d6df8..0xa00d6e94 (156 bytes, 39 words)
  * Flags: -mcpu=v8 -Os -g.
- * Judge: jf 100.00 match=True; rawcmp_l2s.py 0 mismatches / 39 words (a00d6df8 a00d6e94).
  * What it does (code facts): n = (src[0] >> 4) - 1; k = n / 2 rounded up (n odd -> +1), as a
  * byte. From src[k + 3 .. k + 7] it fills dst: word 0 bits 24..30 = src[k+3] & 0x7f, word 0
  * bits 20..23 = src[k+4] >> 4 (bit 31 and bits 0..19 kept), word 1 = (src[k+4] & 0xf) << 16 |

@@ -1,5 +1,4 @@
 /* leon2s FUN_a00b229c @ 0xa00b229c-0xa00b22fc (24 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/24 mismatches.
  * Code facts: deferred-call runner: if the byte DAT_a807de92 is set, for each of the 16 24-byte task
  * records DAT_a80793b8[i] whose byte +5 is set, clear it and call the function pointer at +0x14 (no
  * args); then clear de92. The fw counts a down counter 15..0 (addcc; bpos) next to the 0x18 stride.

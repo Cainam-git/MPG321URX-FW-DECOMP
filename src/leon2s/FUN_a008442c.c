@@ -1,4 +1,4 @@
-/* leon2s FUN_a008442c @ 0xa008442c  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, autoc)
+/* leon2s FUN_a008442c @ 0xa008442c (-mcpu=v8 -Os -g)
  * Mechanical Ghidra C plus one fix: Ghidra lost that the first call's result replaces the
  * parameter (x = FUN_a0083ed0(x)). Still needs a real name, proper types and a description.
  */

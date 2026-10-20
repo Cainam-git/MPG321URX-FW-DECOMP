@@ -1,4 +1,4 @@
-/* leon2m FUN_a00e4278 @ 0xa00e4278  MATCH (-mcpu=v8 -O2 -g, gcc 3.4.4, autoc)
+/* leon2m FUN_a00e4278 @ 0xa00e4278 (-mcpu=v8 -O2 -g)
  * Sets up one device (param_1 = its handle) and starts it, repeating the setup while the
  * device answers "busy". From the call pattern, FUN_a00e03b0(dev, reg, val) writes a
  * register and FUN_a00e05d8(dev, reg, mask, val) changes only the masked bits.

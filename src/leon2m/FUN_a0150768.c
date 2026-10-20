@@ -1,6 +1,5 @@
 /* leon2m FUN_a0150768 @ 0xa0150768-0xa0150a98 (204 words incl. the unreachable ret/restore pair
  * FUN_a0150a90), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/204 mismatches.
  * Code facts: p (u8), q (u8). For each bit b = 0x01, 0x02, ... 0x80 in turn: if bit b is set in
  * byte DAT_a802cc86 or in byte DAT_a802cc87, call FUN_a00fe880(q, b, t) with t = 10 when p == 1
  * and t = 0 otherwise (two unrolled copies of the 8 tests; the p != 1 copy is the fall-through).

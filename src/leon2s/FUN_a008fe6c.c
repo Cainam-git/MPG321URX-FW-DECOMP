@@ -1,4 +1,4 @@
-/* leon2s FUN_a008fe6c @ 0xa008fe6c  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a008fe6c @ 0xa008fe6c (-mcpu=v8 -Os -g)
  * Calls FUN_a00a67b8(param_1, 0xB5, 4, 1) when param_2 != 0 ('btst 0xff'), else FUN_a00a67b8(param_1, 0xB5, 4, 0).
  */
 extern int FUN_a00a67b8();

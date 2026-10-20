@@ -1,4 +1,4 @@
-/* leon2m FUN_a0138284 @ 0xa0138284  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0138284 @ 0xa0138284 (-mcpu=v8 -O2 -g)
  * This should produce:
  * - `save %sp, -112, %sp`
  * - `call FUN_a01241fc` with `clr [%fp-16]` in delay slot (initializing buf)

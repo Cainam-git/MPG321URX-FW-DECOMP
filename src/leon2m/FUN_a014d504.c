@@ -1,5 +1,4 @@
 /* leon2m FUN_a014d504 @ 0xa014d504-0xa014d544 (16 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/16 mismatches.
  * Code facts: returns 1 when FUN_a0108e54() (u8, no args) == 1 and bits 26..27 (mask 0xc000000) of
  * the word _DAT_a802e3d0 are both clear, else 0; u8 flag set per path, 'and 1' at each exit.
  * Fixes vs the autoc draft (54.00): no param (the draft tested an unused param_1; the test is on the

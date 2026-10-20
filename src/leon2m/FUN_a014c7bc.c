@@ -1,5 +1,5 @@
 /* leon2m FUN_a014c7bc @ 0xa014c7bc-0xa014ce84 (1736 bytes)  SYSAPI command dispatcher (varargs) for the 0xA802E3D0
- * system state. BYTE-EXACT at -mcpu=v8 -O3 -g (jf 100 match,
+ * system state. -mcpu=v8 -O3 -g (jf 100 match.
  * rawcmp 434/0, all 167 register-rename decisions = firmware).
  *
  * void FUN_a014c7bc(cmd, ...): the five variadic words are spilled at %fp+0x48 (va_list); cmd > 32 does nothing.

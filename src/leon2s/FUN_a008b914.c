@@ -1,6 +1,5 @@
 /*
  * FUN_a008b914 (leon2s, 0xa008b914-0xa008b930, 28 bytes, leaf sibcall), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/7.
  * Code facts: FUN_a00b1e30(4) when param_1 == 0, else FUN_a00b1e30(6), as one crossjumped leaf tail call
  * (mov %o7,%g1 / call / mov %g1,%o7). Written as two calls with the == 0 arm first; a value variable or a
  * ternary becomes branch-free arithmetic (23-33), the != 0 arm first gives 75.00.

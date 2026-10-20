@@ -1,4 +1,4 @@
-/* leon2m FUN_a0148fc0 @ 0xa0148fc0  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0148fc0 @ 0xa0148fc0 (-mcpu=v8 -O2 -g)
  * Sets bits 28..31 of the word at 0xa802e3d4 to param_1, then calls FUN_a012f1ec(n, 2) for n = 0..3. The word is
  * accessed as member +4 of a struct at 0xa802e3d0, which gives the target's base + 4 addressing.
  */

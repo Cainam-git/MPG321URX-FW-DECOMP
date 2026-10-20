@@ -1,5 +1,4 @@
-/* leon2s FUN_a007f634 @ 0xa007f634  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: 
+/* leon2s FUN_a007f634 @ 0xa007f634 (-mcpu=v8 -Os -g)
  */
 extern int DRV_HDMI_Config_BCH();
 extern int FUN_a0073520();

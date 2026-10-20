@@ -1,5 +1,4 @@
-/* leon2s FUN_a0086540 @ 0xa0086540  MATCH (-mcpu=v8 -Os -g, gcc 3.4.4, permuter)
- * reached byte-exact by tools/permuter.py: [walk]; mask->cast param_3#3; cast->mask local_10#1; cast (char) short; local local_10 unsigned char; param param_3 char; mask->cast param_3#0
+/* leon2s FUN_a0086540 @ 0xa0086540 (-mcpu=v8 -Os -g)
  */
 extern unsigned char FUN_a00863d4(unsigned int param_1, unsigned int param_2, unsigned int param_3, char param_4, unsigned int param_5);
 

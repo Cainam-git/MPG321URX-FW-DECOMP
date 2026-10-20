@@ -1,4 +1,4 @@
-/* leon2m FUN_a01252c4 @ 0xa01252c4  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a01252c4 @ 0xa01252c4 (-mcpu=v8 -O2 -g)
  * Returns byte 0x11 of row (param_1 & 0xFF) of the 22-byte-stride table at 0x1A42A8. The sibling functions read
  * offsets 1 and 2 of the same table.
  */

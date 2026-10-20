@@ -1,4 +1,4 @@
-/* leon2m FUN_a0106b08 @ 0xa0106b08  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0106b08 @ 0xa0106b08 (-mcpu=v8 -O2 -g)
  * This should produce the three bare calls and the register write sequence without the unnecessary do-while loop.
  */
 extern void FUN_a00f2298(unsigned char blk, unsigned char reg, unsigned char val);

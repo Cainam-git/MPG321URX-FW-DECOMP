@@ -1,4 +1,4 @@
-/* leon2m FUN_a00c165c @ 0xa00c165c  MATCH (-mcpu=v8 -O3 -g, gcc 3.4.4, autoc)
+/* leon2m FUN_a00c165c @ 0xa00c165c (-mcpu=v8 -O3 -g)
  * Finished by hand from mechanical Ghidra C. Reads a value for the given port via
  * FUN_a00bae38(port); if its low byte is below 12, stores it in the byte at 0xa802d41c, then
  * runs FUN_a00b88cc() and three per-port steps (FUN_a00baa6c, FUN_a00ba950, FUN_a00bab80(port,

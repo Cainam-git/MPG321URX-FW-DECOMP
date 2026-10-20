@@ -1,5 +1,4 @@
-/* leon2s FUN_a008f744 @ 0xa008f744-0xa008f79c (22 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s.py 0/22 mismatches.
+/* leon2s FUN_a008f744 @ 0xa008f744-0xa008f79c (22 words), flags -mcpu=v8 -Os -g.
  * Code facts: m = RX reg 0x281 & 0xf (FUN_a00a657c(port, reg) = low byte of 0xcf000000 | (base[port] + reg) * 4);
  * if (reg 0x282 & m) != 0: FUN_a00a67b8(port, 0x137, 2, 1) (set bit 1 of reg 0x137), else FUN_a00a67b8(port, 0x137,
  * 2, 0) (clear it); both arms are one tail call (call + restore). One parameter: the fw never reads %i1.

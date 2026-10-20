@@ -1,6 +1,5 @@
 /* leon2m FUN_a0145360 @ 0xa0145360-0xa01454c4 (89 words), flags -mcpu=v8 -O3 -g -msoft-float (plain -O3 -g: 81.11,
  * the loop hoists the s_001a6dd8 sethi into %l2; the fw re-materialises it in the bgu delay slot).
- * BYTE-EXACT: jf 100.00 match=True, rawcmp.py 0 mismatches / 89 words (with -msoft-float).
  * Code facts: switch on mode (u8): 0 -> tail FUN_a0153994(0xa802e1f0, 0); 1 -> tail FUN_a0153970(0xa802e1a0, 0);
  * 2 -> for ch = 0..3: if FUN_a013ce6c(ch) == 0xc: j = remap(ch) (0..3, else print s_001a6dd8 "SYS remapping
  * channel OOR" and use 0); if byte +9 of port record 0xa802e224[(DAT_a802df30[j].w0 >> 12) & 0xf] (0x2a bytes)

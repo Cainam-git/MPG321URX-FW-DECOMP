@@ -1,4 +1,4 @@
-/* FUN_a0091540 (leon2s, 0xa0091540-0xa0091578, 14 words, leaf). Flags -mcpu=v8 -Os -g. jf 100.00 match=True, rawcmp_l2s 0 mismatches.
+/* FUN_a0091540 (leon2s, 0xa0091540-0xa0091578, 14 words, leaf). Flags -mcpu=v8 -Os -g.
  Code facts: void (u8 port). For port 0 or 1: clears bit 31 of word 0 of the 7-word record port of ARR_a807d580 (offset port * 0x1c).
  Required form: ARR_a807d580 as a u32 array indexed [port * 7] gives the fw [base + off] operand order; byte arithmetic swaps it. Aids: none.
  */

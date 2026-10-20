@@ -1,5 +1,4 @@
 /* leon2m FUN_a00bdb88 @ 0xa00bdb88-0xa00bdbcc (17 words), flags -mcpu=v8 -O3 -g. Twin of FUN_a00bdb48.
- * jf 100.00 match=True, rawcmp 0 mismatches.
  * Code facts: text bytes DAT_a802d078[7..9] = 'V', '2', '3' (0x56, 0x32, 0x33); FUN_a00bac3c(0x30);
  * p = param_1 & 0xff; FUN_a00ba950(p); tail call FUN_a00babe4(p, 11).
  * Fixes vs the autoc draft (88.24): BEHAVIOUR, FUN_a00ba950 and FUN_a00babe4 take the u8 parameter

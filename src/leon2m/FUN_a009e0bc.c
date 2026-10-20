@@ -1,5 +1,4 @@
 /* leon2m FUN_a009e0bc @ 0xa009e0bc-0xa009e154 (38 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/38 mismatches.
  * Code facts: FUN_a00a93bc((u8)(word DAT_a802afec + 0x3d)); loop: r = ((low halfword of
  * DAT_a802afec, lduh +2) - 0xc2) % 2 (signed); DAT_a802afec = r + 0xc3; until
  * FUN_a00aad30((u8)r) returns 1. FUN_a00a9650((u8)(DAT_a802afec + 0x3d), 1); tail call

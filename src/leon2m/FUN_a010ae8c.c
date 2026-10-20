@@ -1,5 +1,5 @@
 /* leon2m FUN_a010ae8c @ 0xa010ae8c-0xa010af18 (35 words), flags -mcpu=v8 -O3 -g (autoc tagged -Os;
- * -O3 is right). jf 100.00 match=True, rawcmp 0/35 mismatches.
+ * -O3 is right).
  * Code facts: dev = (u8)(ch << 4 | 4); FUN_a00f2e98(dev, off, len, data) (a block write); then if bit 7
  * of the hardware register 0xcf00eac0 is set (ld, btst 0x80) and off + (len >> 1) == 0x100, the last
  * two data bytes are copied into a 2-byte stack buffer {data[len-2], data[len-1]} and written again

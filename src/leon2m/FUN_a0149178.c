@@ -1,5 +1,4 @@
-/* leon2m FUN_a0149178 @ 0xa0149178-0xa0149210 (38 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 38 words.
+/* leon2m FUN_a0149178 @ 0xa0149178-0xa0149210 (38 words), flags -mcpu=v8 -O3 -g.
  * Code facts: a stack record {u8 ch @-16; u16 v @-14} defaults to {0xff, 0}; when the high nibble of the u8
  * param is 1 or 3 (both compares as subx flags joined by orcc) and the param is 0x30, it becomes {0, 0x8000}.
  * ch == 0xff (stb then ldub reload) -> if FUN_a00dd614(0x40) is non-zero, print FUN_a00df170(s_001a6fa8);

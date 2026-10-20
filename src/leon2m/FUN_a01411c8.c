@@ -1,5 +1,4 @@
-/* leon2m FUN_a01411c8 @ 0xa01411c8-0xa01411f8 (12 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 12 words.
+/* leon2m FUN_a01411c8 @ 0xa01411c8-0xa01411f8 (12 words), flags -mcpu=v8 -O3 -g.
  * Code facts: r = FUN_a011909c() (u8); returns byte [((p << 4) + r) * 2] of the ROM table at 0x1a3648
  * (16 two-byte entries per p; first byte of each entry).
  * Fix vs the autoc draft (76.92): the mask is a separate first statement 'p &= 0xff;' on the unsigned int param

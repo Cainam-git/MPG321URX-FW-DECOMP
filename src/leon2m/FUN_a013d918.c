@@ -1,5 +1,5 @@
 /* leon2m FUN_a013d918 @ 0xa013d918-0xa013dbcc (692 bytes)  channel window set-up (panel-row reader).
- * BYTE-EXACT at -mcpu=v8 -O3 -g (jf 100 match, rawcmp 173/0). No compiler aids.
+ * -mcpu=v8 -O3 -g (jf 100 match, rawcmp 173/0). No compiler aids.
  *
  * void(u8 ch): c = channel record 0xA802DF30[ch] (0x78 bytes). blk = word0 bits 12-15 (the 0xff test is dead
  * code kept by the compiler). Channel 0 with word0 bit 0, +0x40 bit 30 or 0xA802E3D0 bit 26 takes h/m from the

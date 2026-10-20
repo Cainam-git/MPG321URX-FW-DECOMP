@@ -1,5 +1,5 @@
-/* leon2m FUN_a0133564 @ 0xa0133564  MATCH (-mcpu=v8 -O2 -g, twin)
- * Twin of FUN_a0133514: same code, constants swapped; byte-exact.
+/* leon2m FUN_a0133564 @ 0xa0133564 (-mcpu=v8 -O2 -g)
+ * Twin of FUN_a0133514: same code, other constants.
  */
 extern int func_0x4008c4d0();
 

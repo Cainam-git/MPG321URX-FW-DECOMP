@@ -1,5 +1,4 @@
 /* leon2m FUN_a0121b98 @ 0xa0121b98-0xa0121bcc (13 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/13 mismatches.
  * Code facts: read-modify-write of bit-block register 0x40: v = FUN_a00f1f9c(blk, 0x40) (u8 read);
  * sibcall FUN_a00f1fe0(blk, 0x40, (v & 1) | (on << 1)) (u8 write). Both params are u8.
  * Fixes vs the autoc draft (53.85): the 'and 1' is on the READ value (%o0 after the first call), not

@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a1c74 @ 0xa00a1c74  MATCH (-mcpu=v8 -Os -g)
+/* leon2s FUN_a00a1c74 @ 0xa00a1c74 (-mcpu=v8 -Os -g)
  * Masks both arguments to 8 bits. If the second is non-zero, calls FUN_a00a2bec, DRV_HDMI_IF_Enable_RxPort(param1,
  * param2 & 0xFF) and FUN_a00a15c8, and tail-calls FUN_a00a0560 with the masked first argument. Otherwise calls
  * FUN_a00a2bec with 0, FUN_a00a0558 and FUN_a00a1638, and tail-calls DRV_HDMI_IF_Enable_RxPort(param1, 0).

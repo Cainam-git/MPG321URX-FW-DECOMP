@@ -1,5 +1,5 @@
-/* leon2m FUN_a0092364 @ 0xa0092364-0xa0092444 (56 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 56 words. Twin of FUN_a0092444 (only the loop constant differs).
+/* leon2m FUN_a0092364 @ 0xa0092364-0xa0092444 (56 words), flags -mcpu=v8 -O3 -g.
+ * Twin of FUN_a0092444 (only the loop constant differs).
  * Code facts: FUN_a00a8ee8(word 0xa802afec - 0x1e); FUN_a00aa01c(same, 0); loop: t = (lduh 0xa802afee, i.e. the
  * low half of word 0xa802afec) - 0x1a; t = t % 5 (signed, smul by 0x66666667); word 0xa802afec = t + 0x1e; repeat
  * until FUN_a00aa520(t) == 1 (u8 return, 1 arg: the quotient in %o1 is only the remainder temp).

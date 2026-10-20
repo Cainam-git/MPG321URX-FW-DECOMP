@@ -1,5 +1,4 @@
-/* leon2m FUN_a013b4e8 @ 0xa013b4e8-0xa013b544 (23 words), flags -mcpu=v8 -O3 -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp.py 0 mismatches / 23 words.
+/* leon2m FUN_a013b4e8 @ 0xa013b4e8-0xa013b544 (23 words), flags -mcpu=v8 -O3 -g.
  * Code facts: three u8 params (all three are re-extended with 'and 0xff'); record 0xa802a468 bytes
  * +0/+1/+2 = p1/p2/p3; a 12-entry u16 stack buffer (frame -128) gets [3]=p1, [7]=p2, [11]=p3; then
  * FUN_a00f6fe4(byte 0xa802cbbc & 1, (byte >> 1) & 1, buf, 0x70). void.

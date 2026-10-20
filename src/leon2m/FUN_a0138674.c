@@ -1,4 +1,4 @@
-/* leon2m FUN_a0138674 @ 0xa0138674  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0138674 @ 0xa0138674 (-mcpu=v8 -O2 -g)
  * Sends command 0x93 with the 4-byte buffer {param_1, low byte of param_2, high byte of param_2, 0}:
  * FUN_a01370dc(0x93, 4, buf, 0).
  */

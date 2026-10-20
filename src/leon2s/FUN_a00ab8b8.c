@@ -1,5 +1,4 @@
 /* leon2s FUN_a00ab8b8 @ 0xa00ab8b8-0xa00ab93c (33 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/33 mismatches.
  * Code facts: leaf; resets the 300-byte port record ARR_a807dc18[port] (u8 port): bytes +0x110 = 3,
  * +0x111 = 2, +0x115 = 1, +0x116 = 1, +0x117 = 2, +0x118 = 0x1b, u16 +0x120 = 600, and clears +0x112..0x114,
  * +0x119..0x11f, +0x123..0x125, +0x128, +0x129. void.

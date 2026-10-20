@@ -1,5 +1,4 @@
 /* leon2s FUN_a00ac66c @ 0xa00ac66c-0xa00acac0 (277 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches.
  * Code facts: port init: a long fixed sequence of FUN_a00a6c00(port, reg, val) writes and
  * FUN_a00a6c98(port, reg, mask, on) bit updates. Per-port 300-byte records at 0xa807dc18 (smul 0x12c):
  * byte +0x112 == 0 -> reg 0xc0 bit 1 off; after reg 0xa0 bit 4 on, byte +0x110 picks reg 0x47 = 0x40

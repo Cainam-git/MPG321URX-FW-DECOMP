@@ -1,5 +1,4 @@
 /* leon2m FUN_a0148e34 @ 0xa0148e34-0xa0148eb4 (32 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/32 mismatches.
  * What it does: SYSAPI_ConfigSystemPostFRCLockMode(on). It logs "SYSAPI_ConfigSystemPostFRCLockMode
  * = %d" (s_001a6f48, FUN_a00df170) and then sets or clears the FRC Lock bit 27 (0x8000000) of the
  * RAM config word DAT_a802e3d0: on != 0 AND the u16 at +0x0a of the current panel mode row

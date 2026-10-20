@@ -1,5 +1,4 @@
 /* leon2s FUN_a00d8f58 @ 0xa00d8f58-0xa00d8fdc (33 words), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/33 mismatches.
  * Code facts: 260-byte response buffer r (fp-272) cleared by the ROM memset func_0xa0fc15ac(&r, 0, 0x104),
  * filled by FUN_a00d73b4(&r, 0, 1, 0x1a); then an 8-byte command header h (fp-280): bits 24..30 = 0x23
  * and bits 16..19 = bits 20..23 of r's first word (other header bits are left as they were on the stack),

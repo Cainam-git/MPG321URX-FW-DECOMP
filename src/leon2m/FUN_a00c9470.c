@@ -1,4 +1,4 @@
-/* leon2m FUN_a00c9470 @ 0xa00c9470  MATCH (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00c9470 @ 0xa00c9470 (-mcpu=v8 -O2 -g)
  * Selects a byte by the low byte of the parameter (2: DAT_a802d049, 3: DAT_a802d0a1, otherwise DAT_a802d0d9). If
  * it equals 0x31 and DAT_a802d2af is non-zero, calls FUN_a00d93c8(), FUN_a00baa6c(p), FUN_a00ba950(p),
  * FUN_a00bab80(p, 6) and returns 0; otherwise returns 0xff. The call results are not used.

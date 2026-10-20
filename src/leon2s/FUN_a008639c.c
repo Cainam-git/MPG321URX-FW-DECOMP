@@ -1,5 +1,4 @@
-/* leon2s FUN_a008639c @ 0xa008639c-0xa00863d4 (14 words), flags -mcpu=v8 -Os -g. BYTE-EXACT:
- * jf 100.00 match=True, rawcmp_l2s 0 mismatches / 14 words.
+/* leon2s FUN_a008639c @ 0xa008639c-0xa00863d4 (14 words), flags -mcpu=v8 -Os -g.
  * Code facts: r = FUN_a00862e4((u8)a, (u8)b, c, 0, d) (5 args, %o3 = 0); returns 0 if (u8)r == 1, else 0xff
  * (fw xor 1 / cmp / subx / and 0xff).
  * Fix vs the autoc draft (78.57): BEHAVIOUR - the result is 0 / 0xff on r == 1 (the draft returned r == 0 as 0/1).

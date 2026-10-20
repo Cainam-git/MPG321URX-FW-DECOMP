@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f1e0c @ 0xa00f1e0c  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00f1e0c @ 0xa00f1e0c (-mcpu=v8 -O3 -g)
  * Reads one 8-bit register: the low byte of the 32-bit word at 0xCF000000 + 4 * (DAT_0019a30c[blk] + reg).
  * Block numbers 8 and up read block 0. Same form as FUN_a00f2254 (register addressing described there); the
  * table DAT_0019a30c holds 8 unsigned short block bases.

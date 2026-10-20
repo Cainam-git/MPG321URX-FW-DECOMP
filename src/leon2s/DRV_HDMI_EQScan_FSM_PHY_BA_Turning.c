@@ -1,5 +1,5 @@
 /* leon2s DRV_HDMI_EQScan_FSM_PHY_BA_Turning @ 0xa0075508-0xa0075858 (848 bytes, 212 words)
- * BYTE-EXACT with -mcpu=v8 -Os -g (gcc 3.4.4): jf 100.00 match=True, rawcmp_l2s 0/212.
+ * Flags: -mcpu=v8 -Os -g.
  * Code facts: port is a u8 parameter (the fw keeps the raw %i0 copy in %l4 and re-extends it at each
  * use). Three separate debug ifs on bit 1 of _DAT_a8078634, each prints "[EQ]: Port%c, ChN, %s [0x%02lx]"
  * (DAT_a0066b30/b58/b80) with (char)(port + 'A'), the function name and bits 16..19 of PHY register

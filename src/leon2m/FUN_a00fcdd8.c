@@ -1,4 +1,4 @@
-/* leon2m FUN_a00fcdd8 @ 0xa00fcdd8  MATCH (-mcpu=v8 -O3 -g)
+/* leon2m FUN_a00fcdd8 @ 0xa00fcdd8 (-mcpu=v8 -O3 -g)
  * Returns the four bytes at DAT_a802c978 as a little-endian 32-bit value: b[0] + (b[1] << 8) + (b[2] << 16) +
  * (b[3] << 24). Referenced from FUN_a0147760.
  */

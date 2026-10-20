@@ -1,6 +1,5 @@
 /*
  * FUN_a00aef04 (leon2s, 0xa00aef04-0xa00af168, 612 bytes), flags -mcpu=v8 -Os -g.
- * jf 100.00 match=True, rawcmp_l2s 0/153.
  * Code facts: for port = (u8)param_1 it reads 8 indirect registers 0x0a..0x11 of the port
  * (FUN_a00a6c00(port,0x70,0); FUN_a00a6c00(port,0x73,idx); FUN_a00a6bb8(port,0x7a)), the first two
  * results discarded. denom = r10:r11, num = r0c:r0d, hres = r0e:r0f (u16 big-endian byte pairs;

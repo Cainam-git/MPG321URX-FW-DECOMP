@@ -1,5 +1,5 @@
 /* leon2m FUN_a009dd34 @ 0xa009dd34-0xa009dd9c (26 words), flags -mcpu=v8 -O3 -g.
- * jf 100.00 match=True, rawcmp 0/26 mismatches. Byte-identical twin of FUN_a009dd9c.
+ * Byte-identical twin of FUN_a009dd9c.
  * Code facts: the afec % N loop family (FUN_a0091de8 form): FUN_a00a93bc((u8)(afec + 0x4a));
  * then repeat { t = (low halfword of _DAT_a802afec, lduh +2) - 0xb5; t = t % 2 (signed); afec =
  * t + 0xb6 } until FUN_a00aad30((u8)t) returns 1; sibcall FUN_a00a9650((u8)(afec + 0x4a), 1).

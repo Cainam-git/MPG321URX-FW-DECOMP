@@ -1,4 +1,4 @@
-/* leon2m FUN_a0134de0 @ 0xa0134de0-0xa0135004 (548 bytes)  BYTE-EXACT at -mcpu=v8 -O3 -g
+/* leon2m FUN_a0134de0 @ 0xa0134de0-0xa0135004 (548 bytes) -mcpu=v8 -O3 -g
  * (jf.py 100 % match=True, rawcmp.py 137 words, mismatches 0).
  *
  * What it does: the Big chip's receive poll for messages from mailbox portal 0 (the 8051).
