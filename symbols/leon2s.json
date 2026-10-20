@@ -3139,6 +3139,12 @@
       "name": "FUN_a008f270",
       "status": "matched"
     },
+    "ram:a008f450": {
+      "by": "hand",
+      "comment": "calls FUN_a00a8184(port, 1, 5, 0xc0, 0xc0 or 0) depending on val against a mode-dependent limit",
+      "name": "FUN_a008f450",
+      "status": "matched"
+    },
     "ram:a008f4d0": {
       "by": "hand",
       "comment": "0/1 flag: port == 1",
