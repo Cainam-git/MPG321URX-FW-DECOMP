@@ -892,6 +892,13 @@
       "name": "FUN_CODE_b8fd",
       "status": "matched"
     },
+    "CODE:b979": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Collects bytes from XDATA 0xDCD9 into 0xA548 while bit 0 of 0xDCD8 is set, sets 0xDCDB, calls FUN_CODE_34c8 on the 0x9x/0x8x header",
+      "name": "FUN_CODE_b979",
+      "status": "matched"
+    },
     "CODE:ba6d": {
       "by": "hand",
       "comment": "store the hi/lo pair of channel ch at 0xA73C and its step (hi - lo) / (5 * (0xA73B & 0x1F)) at 0xA737[ch]",
