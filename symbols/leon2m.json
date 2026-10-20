@@ -2927,6 +2927,13 @@
       "name": "FUN_a0093bac",
       "status": "matched"
     },
+    "ram:a0093f90": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Time-dependent step in byte 0xa802cffc (0x38), lowers halfword 0xa802d2e6 by it (or clears it) for byte 0xa802d2c1 0..2, FUN_a00d7a70(0), b08e |= 2",
+      "name": "FUN_a0093f90",
+      "status": "matched"
+    },
     "ram:a0094368": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
