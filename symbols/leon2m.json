@@ -6966,6 +6966,13 @@
       "name": "FUN_a00d8bd8",
       "status": "matched"
     },
+    "ram:a00d9120": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "calls FUN_a014bd0c, func_0x4008e2a4 and FUN_a0087d5c with values chosen by FUN_a014bd70, FUN_a01438dc, FUN_a014ba68 and record bytes",
+      "name": "FUN_a00d9120",
+      "status": "matched"
+    },
     "ram:a00d91fc": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
