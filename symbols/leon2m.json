@@ -4249,6 +4249,12 @@
       "name": "FUN_a00a2bbc",
       "status": "matched"
     },
+    "ram:a00a2bdc": {
+      "by": "h10",
+      "comment": "Calls FUN_a01461a8 with the record at 0xa80241a8 and id 0, then with 0xa80241a0 and id 1",
+      "name": "FUN_a00a2bdc",
+      "status": "matched"
+    },
     "ram:a00a2c04": {
       "by": "near",
       "comment": "near-miss repaired: name arr_125928->DAT_00125928",
