@@ -10305,6 +10305,13 @@
       "name": "FUN_a010b39c",
       "status": "matched"
     },
+    "ram:a010b610": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bits of 0xcf00b844/0xcf00b870 when FUN_a011cf88() > 0x81, then a timed bit sequence on 0xd00300f0 and 0xd00380f0",
+      "name": "FUN_a010b610",
+      "status": "matched"
+    },
     "ram:a010b6e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
