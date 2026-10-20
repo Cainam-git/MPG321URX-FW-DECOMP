@@ -4166,6 +4166,13 @@
       "name": "FUN_a009e894",
       "status": "matched"
     },
+    "ram:a009e91c": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "When (FUN_a0143c14(0) == 10 or bit 9 of 0xa802d290 or afec != 0xfe) and word 0xa802e1a0 < 0: afec = 0x10d, clears byte 0xa802cff5, FUN_a00b867c",
+      "name": "FUN_a009e91c",
+      "status": "matched"
+    },
     "ram:a009eaf8": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
