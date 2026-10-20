@@ -9232,6 +9232,13 @@
       "name": "FUN_a00fe820",
       "status": "matched"
     },
+    "ram:a010031c": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes a 3-bit value into bits 0-2 or 3-5 of 0xcf03c158 or 0xcf03c144 selected by sel",
+      "name": "FUN_a010031c",
+      "status": "matched"
+    },
     "ram:a01003b4": {
       "by": "h13",
       "cflags": "-mcpu=v8 -O3 -g",
