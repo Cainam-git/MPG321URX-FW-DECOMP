@@ -5382,6 +5382,13 @@
       "name": "FUN_a00bce7c",
       "status": "matched"
     },
+    "ram:a00bd070": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART reply with the digit of byte 0xa802d411 (0..7) in a frame from table row 0x23, then clears the port's receive state",
+      "name": "FUN_a00bd070",
+      "status": "matched"
+    },
     "ram:a00bd244": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
