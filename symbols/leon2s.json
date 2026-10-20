@@ -3372,6 +3372,12 @@
       "name": "FUN_a0091a10",
       "status": "matched"
     },
+    "ram:a0091a4c": {
+      "by": "hand",
+      "comment": "Set bit 14 of word 5 of the 28-byte record ARR_a807d580[idx] for idx 0..1",
+      "name": "FUN_a0091a4c",
+      "status": "matched"
+    },
     "ram:a0091a88": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
