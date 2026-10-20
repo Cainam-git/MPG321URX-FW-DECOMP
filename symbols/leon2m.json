@@ -10577,6 +10577,13 @@
       "name": "FUN_a011553c",
       "status": "matched"
     },
+    "ram:a0115644": {
+      "by": "h19",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bit 7 of register 0xcf011f80, then sets or clears its bit 0 by on",
+      "name": "FUN_a0115644",
+      "status": "matched"
+    },
     "ram:a01181a4": {
       "by": "hand",
       "comment": "writes 6 to byte 3 of the record at 0xa8027a90 and clears its bytes 0-2 and the bytes 0xa802c98c/0xa802c98d",
