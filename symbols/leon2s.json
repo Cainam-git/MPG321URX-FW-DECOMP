@@ -6491,6 +6491,12 @@
       "name": "FUN_a00c8688",
       "status": "matched"
     },
+    "ram:a00c86bc": {
+      "by": "h17",
+      "comment": "Reads bytes 0x1d..0x21 of port into a buffer and passes them to FUN_a00c80f0(port, buf, 0x74, 0x10, 5)",
+      "name": "FUN_a00c86bc",
+      "status": "matched"
+    },
     "ram:a00c87c0": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
