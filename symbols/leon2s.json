@@ -2935,6 +2935,12 @@
       "name": "FUN_a008df40",
       "status": "matched"
     },
+    "ram:a008df7c": {
+      "by": "hand",
+      "comment": "tail-calls FUN_a00a8054(port, 1, 5, 0xd) or FUN_a00a80cc(port, 1, 5, 1, on) depending on on and bit 4 of ARR_a807d580 record word 0",
+      "name": "FUN_a008df7c",
+      "status": "matched"
+    },
     "ram:a008dfe4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
