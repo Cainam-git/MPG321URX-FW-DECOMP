@@ -8092,6 +8092,13 @@
       "name": "FUN_a00f37d0",
       "status": "matched"
     },
+    "ram:a00f381c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Waits until a scaled 24-bit register value is within 8191 of DAT_a802b794 for 30 ticks, or 299 ticks pass",
+      "name": "FUN_a00f381c",
+      "status": "matched"
+    },
     "ram:a00f38d4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
