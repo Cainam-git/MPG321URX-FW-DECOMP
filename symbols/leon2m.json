@@ -7453,6 +7453,13 @@
       "name": "FUN_a00db738",
       "status": "matched"
     },
+    "ram:a00dbcf0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UserSetGameMode: re-applies the record settings (FUN_a00d8100 steps, mode print, inlined FUN_a00d8c1c / FUN_a00d8ffc steps, bit-11 copy)",
+      "name": "FUN_a00dbcf0",
+      "status": "matched"
+    },
     "ram:a00dcec4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
