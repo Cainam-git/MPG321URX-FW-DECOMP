@@ -6769,6 +6769,12 @@
       "name": "FUN_a00d661c",
       "status": "matched"
     },
+    "ram:a00d6624": {
+      "by": "hand",
+      "comment": "returns bits 6-7 of ROM read func_0xa0fb6bb8(port, 0x9f), 0 for port 1",
+      "name": "FUN_a00d6624",
+      "status": "matched"
+    },
     "ram:a00d6694": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
