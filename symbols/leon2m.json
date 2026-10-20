@@ -9683,6 +9683,13 @@
       "name": "FUN_a011f364",
       "status": "matched"
     },
+    "ram:a011f6a4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "records a/b to regs base+0x10/0x30..0x32 and 0x11/0x33..0x35 of block blk (bases DAT_001a2fb0, 2 = both)",
+      "name": "FUN_a011f6a4",
+      "status": "matched"
+    },
     "ram:a011fbd8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
