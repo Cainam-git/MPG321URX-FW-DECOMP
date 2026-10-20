@@ -2189,6 +2189,12 @@
       "name": "FUN_a007ae30",
       "status": "matched"
     },
+    "ram:a007ae94": {
+      "by": "hand",
+      "comment": "Test a port status bit: record bit 0x12 or register 0x2f6 bit 2, by FUN_a0073520",
+      "name": "FUN_a007ae94",
+      "status": "matched"
+    },
     "ram:a007af04": {
       "by": "hand",
       "comment": "if 73520(p): a7408(8, register base of record a807db00[p != 2] + 0x60) != 0; else bit 0 of a657c(p, 0x2e1)",
