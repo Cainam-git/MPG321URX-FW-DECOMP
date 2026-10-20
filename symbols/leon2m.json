@@ -1988,6 +1988,13 @@
       "name": "FUN_a002f96c",
       "status": "matched"
     },
+    "ram:a002f984": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Calls the function pointer at 0xa802cc1c + 4k for k 0, 1 or 5 when set; prints App Callback for k other than 1",
+      "name": "FUN_a002f984",
+      "status": "matched"
+    },
     "ram:a002fa34": {
       "by": "hand",
       "comment": "Writes 0xdd to unit 2 via FUN_a002c11c and polls FUN_a002c194(3) for 0xaa, then writes three result values",
