@@ -9515,6 +9515,13 @@
       "name": "FUN_a011cca0",
       "status": "matched"
     },
+    "ram:a011cd10": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "on != 0 sets, else clears bit 3 of reg base+0xa5 of block blk (FUN_a01191fc)",
+      "name": "FUN_a011cd10",
+      "status": "matched"
+    },
     "ram:a011cf88": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
