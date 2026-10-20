@@ -2480,6 +2480,13 @@
       "name": "FUN_a0090fcc",
       "status": "matched"
     },
+    "ram:a0090fd8": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "If bit 15 of halfword 0xa802cff8 is set: sets its bit 10 and calls FUN_a00808ac(4, 0); clears word 0xa802afec, tail-calls FUN_a00b5080",
+      "name": "FUN_a0090fd8",
+      "status": "matched"
+    },
     "ram:a0091034": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
