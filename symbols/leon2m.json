@@ -7091,6 +7091,12 @@
       "name": "FUN_a00e2258",
       "status": "matched"
     },
+    "ram:a00e2288": {
+      "by": "hand",
+      "comment": "Adds delta to register 0xd5 with a mode-dependent mask and updates register 0xd6 depending on register 0x10",
+      "name": "FUN_a00e2288",
+      "status": "matched"
+    },
     "ram:a00e2588": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
