@@ -6938,6 +6938,13 @@
       "name": "FUN_a00d8b30",
       "status": "matched"
     },
+    "ram:a00d8b38": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "rounds FUN_a0145660(0, 2) to tenths and snaps values near 120, 144, 180 and 240 to those values",
+      "name": "FUN_a00d8b38",
+      "status": "matched"
+    },
     "ram:a00d8bd8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
