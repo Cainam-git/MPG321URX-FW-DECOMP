@@ -14842,6 +14842,13 @@
       "name": "FUN_a014468c",
       "status": "matched"
     },
+    "ram:a01446e0": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "looks up x in five 3-byte records at 0x1a6da3, swapping results 4 and 6 when FUN_a012ad6c() is 1",
+      "name": "FUN_a01446e0",
+      "status": "matched"
+    },
     "ram:a014489c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
