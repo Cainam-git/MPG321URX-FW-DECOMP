@@ -6468,6 +6468,13 @@
       "name": "FUN_a00d1ce4",
       "status": "matched"
     },
+    "ram:a00d1d34": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3",
+      "comment": "Frame byte 7 (8/9/0xd/0xf) selects n 0-3 for byte 0xa802d2ae via FUN_a01445fc/FUN_a014459c, FUN_a00b8804; returns 0xe0",
+      "name": "FUN_a00d1d34",
+      "status": "matched"
+    },
     "ram:a00d1e3c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
