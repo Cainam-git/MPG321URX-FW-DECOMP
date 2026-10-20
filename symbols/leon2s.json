@@ -6099,6 +6099,12 @@
       "name": "FUN_a00b1e70",
       "status": "matched"
     },
+    "ram:a00b1fe0": {
+      "by": "hand",
+      "comment": "writes one of two value sets to the registers 0x9f100090, 0x9f120028, 0x9f120044, 0x9f120038",
+      "name": "FUN_a00b1fe0",
+      "status": "matched"
+    },
     "ram:a00b2064": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
