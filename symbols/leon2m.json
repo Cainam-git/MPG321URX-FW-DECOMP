@@ -4399,6 +4399,13 @@
       "name": "FUN_a00a4f68",
       "status": "matched"
     },
+    "ram:a00a50c4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "When byte 0xa802d2da is 1: clears it, calls FUN_a00d5eac(0) and makes six FUN_a0146xxx calls; always sets bit 1 of 0xa802b08e",
+      "name": "FUN_a00a50c4",
+      "status": "matched"
+    },
     "ram:a00a5420": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
