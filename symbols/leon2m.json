@@ -13487,6 +13487,13 @@
       "name": "FUN_a014aa48",
       "status": "matched"
     },
+    "ram:a014aaa0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "SYSAPI_LoadUSRFlashType1: area check, then FUN_a0140360(0, 0, len, buf) when FUN_a0140304(0) == 1 -> 1, else 0",
+      "name": "FUN_a014aaa0",
+      "status": "matched"
+    },
     "ram:a014ab74": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
