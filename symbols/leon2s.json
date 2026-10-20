@@ -2533,7 +2533,7 @@
     },
     "ram:a008642c": {
       "by": "h15",
-      "comment": "Sends a 5-byte buffer (mode code from param_2, four copies of (y << 3) | x) through FUN_a00863d4 and returns whether it succeeded",
+      "comment": "Passes a 5-byte buffer (code from param_2, four copies of (y << 3) | x) to FUN_a00863d4 and returns 1 when its result is non-zero",
       "name": "FUN_a008642c",
       "status": "matched"
     },
