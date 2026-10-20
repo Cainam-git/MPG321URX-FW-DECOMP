@@ -13557,6 +13557,13 @@
       "name": "FUN_a014b01c",
       "status": "matched"
     },
+    "ram:a014b0c4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "mapped port 0x61/0x71/0x81 -> entry 1/2/3 (else 0) of DAT_a802e116; FUN_a012c320(FUN_a0125124(entry.b10), 0, p2, p3, 0)",
+      "name": "FUN_a014b0c4",
+      "status": "matched"
+    },
     "ram:a014b360": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
