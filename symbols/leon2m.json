@@ -13782,6 +13782,13 @@
       "name": "FUN_a0142fe4",
       "status": "matched"
     },
+    "ram:a01436b4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns c for c 0..3, else 0xff",
+      "name": "FUN_a01436b4",
+      "status": "matched"
+    },
     "ram:a0143700": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
