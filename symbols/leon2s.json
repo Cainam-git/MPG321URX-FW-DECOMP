@@ -6173,6 +6173,12 @@
       "name": "FUN_a00c5da8",
       "status": "matched"
     },
+    "ram:a00c5fb0": {
+      "by": "hand",
+      "comment": "maps codes 0x31..0x81 (step 0x10) to 0..5, other values to 0xff",
+      "name": "FUN_a00c5fb0",
+      "status": "matched"
+    },
     "ram:a00c6730": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
