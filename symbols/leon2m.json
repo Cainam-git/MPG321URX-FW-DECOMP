@@ -2029,6 +2029,13 @@
       "name": "FUN_a0080490",
       "status": "matched"
     },
+    "ram:a00808ac": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets byte 0xa802af60 + n (or all four for n 4) to 0xff and, when f is 1, the matching bits of 0xa802af45",
+      "name": "FUN_a00808ac",
+      "status": "matched"
+    },
     "ram:a0080978": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
