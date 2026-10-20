@@ -5598,6 +5598,13 @@
       "name": "FUN_a00be0f0",
       "status": "matched"
     },
+    "ram:a00be140": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Reply builder: '0','0', and bit 20 of word 0xa802d33c as a digit when byte 0xa802d2af is 0, header 0x4c, send 11 bytes",
+      "name": "FUN_a00be140",
+      "status": "matched"
+    },
     "ram:a00be1c0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
