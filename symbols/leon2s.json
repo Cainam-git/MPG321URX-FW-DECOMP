@@ -5715,6 +5715,12 @@
       "name": "FUN_a00b1c64",
       "status": "matched"
     },
+    "ram:a00b1d00": {
+      "by": "hand",
+      "comment": "Program a unit's 8-bit register block (mode byte, two 24-bit values, start sequence)",
+      "name": "FUN_a00b1d00",
+      "status": "matched"
+    },
     "ram:a00b1e30": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
