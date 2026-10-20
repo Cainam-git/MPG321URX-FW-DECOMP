@@ -4206,6 +4206,13 @@
       "name": "FUN_a00ac0c4",
       "status": "matched"
     },
+    "ram:a00acef4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Draws two menu text lines at column 0x2A from tables 0x188DA0 and 0x193248, indexed by DAT_a802d290 byte +8 and bit 7 of word +0xA8",
+      "name": "FUN_a00acef4",
+      "status": "matched"
+    },
     "ram:a00adc98": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
