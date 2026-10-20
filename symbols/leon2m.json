@@ -7377,6 +7377,13 @@
       "name": "FUN_a00e0788",
       "status": "matched"
     },
+    "ram:a00e09b8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "mwb_from_phy: writes a PHY register byte into the masked bits of a word, aligning the two masks by a shift",
+      "name": "FUN_a00e09b8",
+      "status": "matched"
+    },
     "ram:a00e0ba8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
