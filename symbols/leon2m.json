@@ -9351,6 +9351,13 @@
       "name": "FUN_a011aee4",
       "status": "matched"
     },
+    "ram:a011b034": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "a/b to regs base+0xc8/0xd8/0xc9/0xd9 and c/d to base+0xca/0xda/0xcb/0xdb of block blk (all 0 when a or c is 0)",
+      "name": "FUN_a011b034",
+      "status": "matched"
+    },
     "ram:a011b36c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
