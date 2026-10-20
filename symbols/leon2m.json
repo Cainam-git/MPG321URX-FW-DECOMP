@@ -9613,6 +9613,13 @@
       "name": "FUN_a011e690",
       "status": "matched"
     },
+    "ram:a011e6dc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "fixed register writes to 0xcf016480..0xcf0164f4, 0xcf016408 read back, 0xcf01640c = 0x20",
+      "name": "FUN_a011e6dc",
+      "status": "matched"
+    },
     "ram:a012082c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
