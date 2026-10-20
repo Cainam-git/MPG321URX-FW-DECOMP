@@ -3205,6 +3205,12 @@
       "name": "FUN_a008fe6c",
       "status": "matched"
     },
+    "ram:a008fea8": {
+      "by": "hand",
+      "comment": "returns 1 when FUN_a00a657c(port, 0x134) bit 1 is set, FUN_a00a657c(port, 0x140) is 0x82 and FUN_a008fb5c(port) is non-zero",
+      "name": "FUN_a008fea8",
+      "status": "matched"
+    },
     "ram:a008ff08": {
       "by": "hand",
       "comment": "Classify bits 4..6 of port register 0x146: 1 for 5, 2 for 6, else 0",
