@@ -1,8 +1,8 @@
 /* leon2m FUN_a00b8848 @ 0xa00b8848-0xa00b88b8 (28 words), flags -mcpu=v8 -O3 -g.
- * Code facts: FUN_a0146b6c(0, 0); FUN_a0090fd8(); FUN_a00dc3dc(); flag byte 0xa802b08e |= 6;
- * FUN_a0142e8c(0) & 0xff != 5 -> if (u16)FUN_a0145660(0, 0x16) != 0 then flag byte |= 1. void.
- * Fix vs the autoc draft (96.43): BEHAVIOUR, FUN_a0090fd8 is called BEFORE FUN_a00dc3dc and takes
- * no argument (fw sets no %o0 for it; its own asm never reads %i0). Aids: none.
+ * Code facts: FUN_a0146b6c(0, 0); FUN_a0090fd8(); FUN_a00dc3dc(); flag byte 0xa802b08e |= 6; FUN_a0142e8c(0) &
+ * 0xff != 5 -> if (u16)FUN_a0145660(0, 0x16) != 0 then flag byte |= 1. void. FUN_a0090fd8 takes no argument (the
+ * fw sets no %o0 for it; its own asm never reads %i0).
+ * Compiler aids: none.
  */
 extern unsigned char DAT_a802b08e;
 

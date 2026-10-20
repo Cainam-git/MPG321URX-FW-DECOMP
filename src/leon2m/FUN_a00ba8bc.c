@@ -1,17 +1,15 @@
 /* leon2m FUN_a00ba8bc @ 0xa00ba8bc-0xa00ba950 (37 words), flags -mcpu=v8 -O3 -g.
- * prompt flags (no extra flag).
- * Code facts: clears bytes DAT_a802d0d0[0..0x31] (u8 loop counter, clrb [base + i]),
- * DAT_a802b09c = 0, clears DAT_a802d078[0..0x18], then FUN_a0148794(1, 0x10, 4, 0x1c200) and
- * FUN_a0148794(1, 4, 2, 0x1c200). void. The last call is NOT a sibcall (call; mov 2,%o2; nop; ret;
- * restore) and the frame is the minimum (save -104): no stack slot.
- * Fixes vs the autoc draft: void (the draft returned 0, restore %g0,0,%o0); the first table
- * is the symbol DAT_a802d0d0 (the draft's constant pointer swapped the clrb address operands).
- * Cause of the missing sibcall: sibcall.c:644/674 refuses sibcalls in a function that used
- * ADDRESSOF. The two calls go through an inlined static helper call_148794() that takes the port as a
- * pointer to a local (port = 1); the address is purged back to a constant, so no code and no slot
- * remain (the plain form gives a sibcall, 75.68; passing the baud through the helper or a local
- * makes gcc keep the full 0x1c200 in %l0 instead of the fw's shared HIGH + 'or' per call, 89.47).
- * Aid: the inlined helper with a pointer argument (code-free; it only removes the sibcall).
+ * Code facts: clears bytes DAT_a802d0d0[0..0x31] (u8 loop counter, clrb [base + i]), DAT_a802b09c = 0, clears
+ * DAT_a802d078[0..0x18], then FUN_a0148794(1, 0x10, 4, 0x1c200) and FUN_a0148794(1, 4, 2, 0x1c200). void (plain
+ * restore, no return value). The last call is NOT a sibcall (call; mov 2,%o2; nop; ret; restore) and the frame is
+ * the minimum (save -104): no stack slot.
+ * Source form: the first table is the symbol DAT_a802d0d0 (a constant pointer swaps the clrb address operands).
+ * sibcall.c:644/674 refuses sibcalls in a function that used ADDRESSOF. The two calls go through an inlined static
+ * helper call_148794() that takes the first argument as a pointer to a local (value 1); the address is purged back
+ * to a constant, so no code and no slot remain (the plain form gives a sibcall; passing the 0x1c200 argument
+ * through the helper or a local makes gcc keep the full 0x1c200 in %l0 instead of the fw's shared HIGH + 'or' per
+ * call).
+ * Compiler aid: the inlined helper with a pointer argument (code-free; it only removes the sibcall).
  */
 extern unsigned char DAT_a802d0d0[];
 extern unsigned char DAT_a802d078[];

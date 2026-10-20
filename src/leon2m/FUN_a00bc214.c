@@ -1,11 +1,10 @@
 /* leon2m FUN_a00bc214 @ 0xa00bc214-0xa00bc258 (17 words), flags -mcpu=v8 -O3 -g.
- * The autoc entry said -Os; -O3 is right.
  * Code facts: record DAT_a802d078 bytes 7, 8, 9 = 0x30, 0x32, 0x31 (stored in that order), FUN_a00bac3c(0x4a)
- * (return unused), param & 0xff after that call, FUN_a00ba950(p), tail FUN_a01487e8(p, 0xb, &DAT_a802d078):
- * the record address stays in %i2 and the restore passes it as %o2. FUN_a01487e8 is a wrapper that forwards
- * o0/o1/o2 to FUN_a01337e8, which reads %i2 (mov %i2,%l2) as a buffer pointer: an 11-byte send of d078.
- * Fix vs the autoc draft: BEHAVIOUR: the 3rd byte is 0x31 (the draft stored bac3c's return there), the tail
- * call has the 3rd buffer argument; real base DAT_a802d078 (FUN_a00bdb48 form). Aids: none.
+ * (return unused), param & 0xff after that call, FUN_a00ba950(p), tail FUN_a01487e8(p, 0xb, &DAT_a802d078): the
+ * record address stays in %i2 and the restore passes it as %o2. FUN_a01487e8 is a wrapper that forwards o0/o1/o2
+ * to FUN_a01337e8, which reads %i2 (mov %i2,%l2) as a buffer pointer: an 11-byte send of d078.
+ * Source form: the record base DAT_a802d078 (FUN_a00bdb48 form).
+ * Compiler aids: none.
  */
 extern unsigned char DAT_a802d078[];
 extern void FUN_a00bac3c();

@@ -34,7 +34,7 @@
  *      T.t197/t19b row of T.b1a0 into b1a1/b1a2 (new b1a0), S.h4 bit 15 -> bit 10, FUN_a00db1ac, DAT_a802b08e |=
  *      2, FUN_a00d4998, state 0, FUN_a00b5080, FUN_a0083c20() -> state 0x10c, FUN_a00b87d4.
  *   Refresh rate: nothing here reads the rate. It only reads the per-port state (state 10 / 4 from FUN_a0143c14),
- *   the state in _DAT_a802afec and ms timers; an input mode reaches it only through the port state values.
+ *     the state in _DAT_a802afec and ms timers; an input mode reaches it only through the port state values.
  * Source form (the exact build depends on each of these):
  *   - int return for FUN_a0127a08; the T+0x1dc word as bit-fields b31/b30; the timer arm tests 'b1a2 != 0' first;
  *     'if (t != afea) if (t != 0)' nested; the 5-state set test is an inlined early-return function in_set().
