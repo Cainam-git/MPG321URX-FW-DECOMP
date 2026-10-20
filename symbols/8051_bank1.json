@@ -1250,6 +1250,32 @@
       "name": "FUN_CODE_cdcd",
       "status": "matched"
     },
+    "CODE:ce0d": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_ce18, in FUN_CODE_ce18's code segment; emitted by compiling src/8051_bank1/FUN_CODE_b2b0.c, bytes judged with FUN_CODE_ce18 over 0xce0d..0xce4b",
+      "kind": "common_entry",
+      "module": "FUN_CODE_b2b0",
+      "name": "FUN_CODE_ce0d",
+      "of": "FUN_CODE_ce18",
+      "status": "matched"
+    },
+    "CODE:ce0f": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_ce18, in FUN_CODE_ce18's code segment; emitted by compiling src/8051_bank1/FUN_CODE_b2b0.c, bytes judged with FUN_CODE_ce18 over 0xce0d..0xce4b",
+      "kind": "common_entry",
+      "module": "FUN_CODE_b2b0",
+      "name": "FUN_CODE_ce0f",
+      "of": "FUN_CODE_ce18",
+      "status": "matched"
+    },
+    "CODE:ce18": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "Member of the FUN_CODE_b2b0 module; its common-entry block at 0xCE0D comes from the shared call form",
+      "module": "FUN_CODE_b2b0",
+      "name": "FUN_CODE_ce18",
+      "status": "matched"
+    },
     "CODE:ce4b": {
       "by": "hand",
       "comment": "cd07, Timer 0 reload from 0xA773/0xA772, 9975(0x1D, 4800), DD09 bit 3 and a pulse on F3D1 bit 2",
