@@ -7340,6 +7340,13 @@
       "name": "FUN_a00d25f4",
       "status": "matched"
     },
+    "ram:a00d27ac": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "frame byte 7 = 0/1/2: sets bytes 9/0x59 of 0xa802d290 to 0x19/0x46, 0xa802e1ab = value, clears bit 11 of word +0xa8, calls FUN_a00d8cd4/FUN_a00dbcf0/FUN_a014aed0/FUN_a0145360, returns 0xe0; else 0xe4",
+      "name": "FUN_a00d27ac",
+      "status": "matched"
+    },
     "ram:a00d2884": {
       "by": "hand",
       "comment": "Command handler: stores command byte 7 (0 or 1) at DAT_a802d274+0x14, writes the record with FUN_a014aed0, returns 0xE0",
