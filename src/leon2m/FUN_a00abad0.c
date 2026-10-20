@@ -1,8 +1,10 @@
 /* FUN_a00abad0 (leon2m, 0xa00abad0-0xa00abb98, 50 words). Flags -mcpu=v8 -O3 -g.
- Code facts: third twin of FUN_a00abff8/FUN_a00abd00 (here DAT_a802d290[0x14], channel 0xa, b50(0xea), tail FUN_a00d972c). v = rec[0x14] - 1 (u8);
- v > 100 -> rec[0x14] = 0; else rec[0x14] = v, ab5f0(0x2c,0xa,v,7,1), three 6a80 calls, 6b50(0xea,0), b6ec8(0x29,0xa,rec[0x14]), d972c(); then
- DAT_a802b08e |= 2.
- Fixes vs draft: BEHAVIOUR the draft subtracted 1 twice (range test on v - 1); FUN_a00abff8 form: clamp arm first, void u8 prototypes. Aids: none.
+ * Code facts: third twin of FUN_a00abff8/FUN_a00abd00 (here DAT_a802d290[0x14], channel 0xa, b50(0xea), tail
+ * FUN_a00d972c). v = rec[0x14] - 1 (u8, subtracted once; the range test is on v); v > 100 -> rec[0x14] = 0; else
+ * rec[0x14] = v, ab5f0(0x2c,0xa,v,7,1), three 6a80 calls, 6b50(0xea,0), b6ec8(0x29,0xa,rec[0x14]), d972c(); then
+ * DAT_a802b08e |= 2.
+ * Source form: the FUN_a00abff8 form: the clamp arm first; void and u8 prototypes.
+ * Compiler aids: none.
  */
 extern unsigned char DAT_a802d290[];
 extern unsigned char DAT_a802b08e;
