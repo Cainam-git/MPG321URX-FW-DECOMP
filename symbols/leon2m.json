@@ -3743,6 +3743,13 @@
       "name": "FUN_a00995f0",
       "status": "matched"
     },
+    "ram:a0099864": {
+      "by": "h24",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "calls FUN_a0099658, FUN_a0146a80 by FUN_a00d7d48, FUN_a00a813c/FUN_a00a9650 rows, stores 0xd to word 0xa802afec",
+      "name": "FUN_a0099864",
+      "status": "matched"
+    },
     "ram:a0099970": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
