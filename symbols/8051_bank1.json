@@ -838,6 +838,13 @@
       "name": "FUN_CODE_b456",
       "status": "matched"
     },
+    "CODE:bae2": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "poll bit 6 of the status register chosen by ch (F03C/F044/F08C/F094/F09E/F0BB) up to 12000 times",
+      "name": "FUN_CODE_bae2",
+      "status": "matched"
+    },
     "CODE:bcad": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
