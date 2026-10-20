@@ -8340,6 +8340,13 @@
       "name": "FUN_a00f643c",
       "status": "matched"
     },
+    "ram:a00f6508": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes a 24-entry masked byte table (or 0x80 fill) through the 0xCF00EF38/0xCF00EF3C index/data pair",
+      "name": "FUN_a00f6508",
+      "status": "matched"
+    },
     "ram:a00f67d0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
