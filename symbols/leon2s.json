@@ -1592,7 +1592,7 @@
     },
     "ram:a0061348": {
       "by": "hand",
-      "comment": "writes a word as 8 hex digits to the UART (inlined copy of FUN_a006122c)",
+      "comment": "writes the 8 nibbles of a word as characters of s_a00b3a08 to register 0xc00c0000 (FUN_a006122c body inlined)",
       "name": "FUN_a0061348",
       "status": "matched"
     },
