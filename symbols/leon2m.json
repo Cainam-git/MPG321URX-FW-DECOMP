@@ -6254,6 +6254,13 @@
       "name": "FUN_a00cbe64",
       "status": "matched"
     },
+    "ram:a00cbe9c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command handler: 8-bit sum of receive record bytes 6-17 checked against byte 18, reply 5600+ and FUN_a0082c0c or 5600 0xee",
+      "name": "FUN_a00cbe9c",
+      "status": "matched"
+    },
     "ram:a00cc760": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
