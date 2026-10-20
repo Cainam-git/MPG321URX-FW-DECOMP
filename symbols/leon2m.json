@@ -9536,6 +9536,13 @@
       "name": "FUN_a011cf88",
       "status": "matched"
     },
+    "ram:a011d0a8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "maps bytes 4-5 of the 8 bytes at 0x9f1b0600 (0x500..0x504, 0x550..0x552) to code 1..7, else 0",
+      "name": "FUN_a011d0a8",
+      "status": "matched"
+    },
     "ram:a011d194": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
