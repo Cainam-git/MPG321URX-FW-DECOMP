@@ -6352,6 +6352,12 @@
       "name": "FUN_a00c0ce8",
       "status": "matched"
     },
+    "ram:a00c0dfc": {
+      "by": "h17",
+      "comment": "Writes 5 bytes of a to registers 0x1a..0x1e and 0x11a bytes of b through the 0xa1/0xa2/0xa3 address-data registers of port",
+      "name": "FUN_a00c0dfc",
+      "status": "matched"
+    },
     "ram:a00c0ecc": {
       "by": "hand",
       "comment": "three table copies from ROM 9f1b7148 (+0x28 for the 2nd); the 3rd goes to p4, p3 unused (see header)",
