@@ -1,8 +1,8 @@
 /* leon2m FUN_a014737c @ 0xa014737c-0xa01474b0 (77 words).
  * For display channel ch (0..3; other values report "SYS remapping channel OOR" and use record 0) whose bits 4..7 in
- * word 0 of its 0x78-byte record at 0xa802df30 are not 4: keeps byte 0xa802b7b4 (FUN_a00f6cf4), selects bank value
- * bits 4..7 with FUN_a00f63bc, calls FUN_a00f7894 with the 3-byte structure {a, b, m} passed by value, where m is 4,
- * 8 or 0x20 for mode 0, 1 or 3 and 0x10 otherwise, then selects the kept value again with FUN_a00f63bc.
+ * word 0 of its 0x78-byte record at 0xa802df30 are not 4: keeps byte 0xa802b7b4 (FUN_a00f6cf4), passes bits 4..7 to
+ * FUN_a00f63bc, calls FUN_a00f7894 with the 3-byte structure {a, b, m} passed by value, where m is 4,
+ * 8 or 0x20 for mode 0, 1 or 3 and 0x10 otherwise, then passes the kept value to FUN_a00f63bc again.
  */
 struct Chan { unsigned int hi24 : 24; unsigned int f4 : 4; unsigned int lo4 : 4; unsigned char rest[0x74]; };
 struct Arg { unsigned char a, b, m; };

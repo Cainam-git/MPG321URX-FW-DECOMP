@@ -13209,7 +13209,7 @@
     "ram:a014737c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Calls FUN_a00f7894 with {a, b, mode value} under the bank of display channel ch, then restores the bank",
+      "comment": "Calls FUN_a00f7894 with {a, b, mode value} between two FUN_a00f63bc calls (bits 4..7 of display channel ch, then the previous byte 0xa802b7b4)",
       "name": "FUN_a014737c",
       "status": "matched"
     },
