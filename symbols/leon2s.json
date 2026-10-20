@@ -3763,6 +3763,12 @@
       "name": "FUN_a0094b0c",
       "status": "matched"
     },
+    "ram:a0094f64": {
+      "by": "hand",
+      "comment": "calls FUN_a00a80cc twice (0x10, 0x20) and FUN_a00a8054(port, 0, 0x130, 10)",
+      "name": "FUN_a0094f64",
+      "status": "matched"
+    },
     "ram:a009584c": {
       "by": "hand",
       "comment": "return 0 if 70404() or 70414(); for ch 0 and 1: if 91bac(ch): 950a0(ch, 9), 91578(ch); return 1",
