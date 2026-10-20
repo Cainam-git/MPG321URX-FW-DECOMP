@@ -5313,6 +5313,13 @@
       "name": "FUN_a00c3f54",
       "status": "matched"
     },
+    "ram:a00c5a00": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: digit 0-3 into byte 0xa802d2a1 via switch, FUN_a00d9764 refresh, reply 5600+",
+      "name": "FUN_a00c5a00",
+      "status": "matched"
+    },
     "ram:a00c604c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
