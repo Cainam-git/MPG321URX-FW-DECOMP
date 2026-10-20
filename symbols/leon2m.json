@@ -5738,7 +5738,7 @@
     "ram:a00bbabc": {
       "by": "h10",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Port-2 command task: by FUN_a00bb560(2) clears the receive state, sends 5600 replies, looks up commands; prints ucCmdIndex/ucCmdStatus for 4",
+      "comment": "by FUN_a00bb560(2) clears the receive state, sends 5600 replies, looks up commands; prints ucCmdIndex/ucCmdStatus for 4",
       "name": "FUN_a00bbabc",
       "status": "matched"
     },

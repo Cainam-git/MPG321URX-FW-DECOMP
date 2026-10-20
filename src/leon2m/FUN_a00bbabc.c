@@ -1,10 +1,10 @@
-/* leon2m FUN_a00bbabc @ 0xa00bbabc-0xa00bbda0 (185 words), flags -mcpu=v8 -O3 -g. Caller: FUN_a0085984 (twice).
- * Port-2 command task, the same layout as FUN_a00ce348 (port 4). r = FUN_a00bb560(2); clear = byte 0xa802b09a = 0
- * and the 0x32 bytes at 0xa802d040 cleared; reply(c) = the 6 bytes "5600" c "\r" at 0xa802d128 sent with
- * FUN_a01487e8(2, 6, 0xa802d128). r 0x10, 0x20, 0x40: clear, then reply('-'); 0x80: clear; 2: c = first row
- * 0..0x82 of FUN_a015463c whose bytes 2..6 match bytes 2..6 at 0xa802d040 (0xff = any; 0xff when none), reply('6')
- * when c is above 0x82, then clear; 4: c = FUN_a00bb908(2), prints "##ucCmdIndex=%d\r\n" with c, clear, prints
- * "##ucCmdStatus=%d\r\n" with 0 and clears byte 0xa802b099. Other values: nothing.
+/* leon2m FUN_a00bbabc @ 0xa00bbabc-0xa00bbda0 (185 words), flags -mcpu=v8 -O3 -g. Caller: FUN_a0085984 (twice). Same
+ * layout as FUN_a00ce348 (which uses port 4). r = FUN_a00bb560(2); clear = byte 0xa802b09a = 0 and the 0x32 bytes at
+ * 0xa802d040 cleared; reply(c) = the 6 bytes "5600" c "\r" at 0xa802d128 sent with FUN_a01487e8(2, 6, 0xa802d128). r
+ * 0x10, 0x20, 0x40: clear, then reply('-'); 0x80: clear; 2: c = first row 0..0x82 of FUN_a015463c whose bytes 2..6
+ * match bytes 2..6 at 0xa802d040 (0xff = any; 0xff when none), reply('6') when c is above 0x82, then clear; 4: c =
+ * FUN_a00bb908(2), prints "##ucCmdIndex=%d\r\n" with c, clear, prints "##ucCmdStatus=%d\r\n" with 0 and clears byte
+ * 0xa802b099. Other values: nothing.
  * Exact form: case order 0x80, 0x40, 0x20, 0x10, 2, 4 (the case order decides the block layout).
  */
 extern unsigned char FUN_a00bb560(unsigned char);
