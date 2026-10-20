@@ -2243,6 +2243,12 @@
       "name": "FUN_a007a79c",
       "status": "matched"
     },
+    "ram:a007aac4": {
+      "by": "h15",
+      "comment": "Calls FUN_a00a7488(port, n, 0xffff00ff, x << 8) for all four bytes a..d (idx > 3) or for byte idx with n from DAT_a00b3afc",
+      "name": "FUN_a007aac4",
+      "status": "matched"
+    },
     "ram:a007ab94": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
