@@ -27,6 +27,7 @@ toolchains themselves are described in the [build guide](../docs/BUILD.md).
 | `check/shapej.py`, `check/casecmp.py`, `check/jtscan.py`, `check/p2o3*.py` | Register-independent shape comparison, switch-case comparison, jump-table scan, and permutation search with fixed flags. |
 | `verify.py`, `relink.py` | Re-check or rebuild every matched function. |
 | `progress.py` | Counts matched functions and bytes per section. |
+| `stats.py` | Updates the progress bars in `README.md` and the table in `docs/STATUS.md`. |
 
 ## Mechanical matching
 
