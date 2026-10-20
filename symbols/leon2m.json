@@ -3435,6 +3435,13 @@
       "name": "FUN_a009a784",
       "status": "matched"
     },
+    "ram:a009a8dc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Steps the selection in word 0xa802afec forwards through 0x53..0x55 and sets bit 12 of word 0xa802d338",
+      "name": "FUN_a009a8dc",
+      "status": "matched"
+    },
     "ram:a009ac7c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
