@@ -5990,6 +5990,13 @@
       "name": "FUN_a00c3f54",
       "status": "matched"
     },
+    "ram:a00c4144": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command handler: digit 0-2 from the receive record to word 0xa802d340 with dependent resets, reply 5600+",
+      "name": "FUN_a00c4144",
+      "status": "matched"
+    },
     "ram:a00c46d4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
