@@ -6533,6 +6533,12 @@
       "name": "FUN_a00c8360",
       "status": "matched"
     },
+    "ram:a00c850c": {
+      "by": "h17",
+      "comment": "Writes 5 bytes read by FUN_a00c81f8 to registers 0x10..0x14 of port and returns 0x78 when FUN_a00c83e4 reports 0",
+      "name": "FUN_a00c850c",
+      "status": "matched"
+    },
     "ram:a00c85b8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
