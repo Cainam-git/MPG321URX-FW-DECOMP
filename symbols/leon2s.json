@@ -5090,6 +5090,12 @@
       "name": "FUN_a00a7b64",
       "status": "matched"
     },
+    "ram:a00a7bf8": {
+      "by": "hand",
+      "comment": "sets (mode 1) or clears mask bits of a byte register of banks 0..4 (table DAT_a00b4d70) after the page select",
+      "name": "FUN_a00a7bf8",
+      "status": "matched"
+    },
     "ram:a00a7cc0": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
