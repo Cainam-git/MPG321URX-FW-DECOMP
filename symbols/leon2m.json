@@ -9155,6 +9155,13 @@
       "name": "FUN_a01198c8",
       "status": "matched"
     },
+    "ram:a011996c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "bit 0 of register base+0x80 of block blk (0xa8027aa8 base table, blk > 1 -> 0)",
+      "name": "FUN_a011996c",
+      "status": "matched"
+    },
     "ram:a011a554": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
