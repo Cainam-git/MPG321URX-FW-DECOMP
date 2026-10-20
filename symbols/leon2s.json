@@ -2267,6 +2267,12 @@
       "name": "FUN_a007ebd0",
       "status": "matched"
     },
+    "ram:a007ed0c": {
+      "by": "hand",
+      "comment": "sets or clears bit 0x11 of record (port != 2) of ARR_a807db00 when FUN_a0073520(port), else FUN_a00a67b8(port, 0x2f6, 2, on)",
+      "name": "FUN_a007ed0c",
+      "status": "matched"
+    },
     "ram:a007f634": {
       "by": "permuter",
       "comment": "permuter: ",
