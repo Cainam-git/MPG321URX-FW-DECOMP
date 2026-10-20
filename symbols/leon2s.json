@@ -2580,6 +2580,12 @@
       "name": "FUN_a0088ea0",
       "status": "matched"
     },
+    "ram:a0088ee0": {
+      "by": "hand",
+      "comment": "calls FUN_a00a78fc(port, 0x11, 0x1b) and (port, 0x66, 0x28) when on, else (port, 0x11, 0)",
+      "name": "FUN_a0088ee0",
+      "status": "matched"
+    },
     "ram:a0088f28": {
       "by": "hand",
       "comment": "",
