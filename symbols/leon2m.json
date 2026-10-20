@@ -2852,6 +2852,13 @@
       "name": "FUN_a00943a4",
       "status": "matched"
     },
+    "ram:a00943ec": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Copies byte 0xa802d3cf to 0xa8025c55, sets afec 0x108 and byte 0xa802d433 to 1, calls FUN_a00b5080, func_0x4008e2a4 twice, FUN_a00a6b98(1, 1, 0)",
+      "name": "FUN_a00943ec",
+      "status": "matched"
+    },
     "ram:a0094df0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
