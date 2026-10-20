@@ -2,8 +2,8 @@
  * Runs in register bank 3 ('using 3': PUSH PSW, PSW = 0x18). Two identical event checks: when bit 0 of XDATA 0xDCDF
  * and bit 3 of 0xDCDE are set, it calls FUN_CODE_9339 (bit 0x15 = BITS_22_5 set) or FUN_CODE_b979 (clear) and then
  * sets bit 3 of 0xDCDE again; the same with 0xDCCF / 0xDCCE and FUN_CODE_914b / FUN_CODE_b8fd. Finally it calls
- * FUN_CODE_d214 when the chip ID XDATA 0xD511 is not 0x20. Only caller FUN_CODE_3091 (0x3107).
- * The bit tests are int-typed ('ANL A,#n / JZ'). The chip-ID test goes through a bit value (CJNE, SETB C / CLR C,
+ * FUN_CODE_d214 when the byte XDATA 0xD511 is not 0x20. Only caller FUN_CODE_3091 (0x3107).
+ * The bit tests are int-typed ('ANL A,#n / JZ'). The 0xD511 test goes through a bit value (CJNE, SETB C / CLR C,
  * JC): written as a '(bit)' conversion of the comparison.
  */
 extern unsigned char xdata DAT_EXTMEM_dcdf, DAT_EXTMEM_dcde, DAT_EXTMEM_dccf, DAT_EXTMEM_dcce, DAT_EXTMEM_d511;

@@ -945,6 +945,13 @@
       "name": "FUN_CODE_b56a",
       "status": "matched"
     },
+    "CODE:b781": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Returns v, shifted left by (sum of each 0x200-byte block of XDATA 0xA800.. + 8) for four blocks, from 0",
+      "name": "FUN_CODE_b781",
+      "status": "matched"
+    },
     "CODE:b8fd": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
