@@ -5258,6 +5258,12 @@
       "name": "FUN_a00aec10",
       "status": "matched"
     },
+    "ram:a00aee08": {
+      "by": "hand",
+      "comment": "Load a 16-bit value and an n-bit lane mask into port registers 0x8b/0x8c/0x9a",
+      "name": "FUN_a00aee08",
+      "status": "matched"
+    },
     "ram:a00aef04": {
       "by": "hand",
       "comment": "reads 8 indirect port registers 0x0a..0x11 (index 0x73 / data 0x7a), forms denom / num / hres (hres = r0e:r0f) and tail-calls aee08 (3 args) by mode 1 / 2 / 4",
