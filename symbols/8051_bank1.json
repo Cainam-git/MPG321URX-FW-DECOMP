@@ -817,6 +817,13 @@
       "name": "FUN_CODE_a9f6",
       "status": "matched"
     },
+    "CODE:abc4": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "write the seven register pairs selected by m: first = (first & 0xC0) | (c bit 0 ? 0x33 : 0x13), second = 0xA0 | (b & 0x0E)",
+      "name": "FUN_CODE_abc4",
+      "status": "matched"
+    },
     "CODE:ac5b": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
