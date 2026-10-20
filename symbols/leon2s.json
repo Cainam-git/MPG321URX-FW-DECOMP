@@ -5290,6 +5290,12 @@
       "name": "FUN_a00aa49c",
       "status": "matched"
     },
+    "ram:a00aa538": {
+      "by": "hand",
+      "comment": "writes the register set 0xcf012ad0-adc (port 0) or 0xcf012a90-a9c (other ports) when on, else clears bit 0 of 0xcf012ad0 / 0xcf012a90",
+      "name": "FUN_a00aa538",
+      "status": "matched"
+    },
     "ram:a00aa7b4": {
       "by": "asm",
       "comment": "twin of FUN_a0060bb0: identical hand-written assembly, constants swapped",
