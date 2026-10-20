@@ -13076,6 +13076,13 @@
       "name": "FUN_a0147064",
       "status": "matched"
     },
+    "ram:a01470fc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes v into bits 4..7 of the first word of display channel record ch",
+      "name": "FUN_a01470fc",
+      "status": "matched"
+    },
     "ram:a01474b0": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
