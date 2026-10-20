@@ -5851,6 +5851,12 @@
       "name": "FUN_a00b160c",
       "status": "matched"
     },
+    "ram:a00b1794": {
+      "by": "hand",
+      "comment": "delay loop of n times 50000 nops",
+      "name": "FUN_a00b1794",
+      "status": "matched"
+    },
     "ram:a00b17e8": {
       "by": "hand",
       "comment": "register init: 9f100090=0, 9f120028/9f10009c/9f120034=0xffff, 9f120038 bit pairs (clear 0/2/3/4, set 16/18/19/20), 9f120028 &= ~2, 9f100090 |= 2",
