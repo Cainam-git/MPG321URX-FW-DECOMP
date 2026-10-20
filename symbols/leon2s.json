@@ -4064,6 +4064,12 @@
       "name": "FUN_a00a1a80",
       "status": "matched"
     },
+    "ram:a00a1b08": {
+      "by": "hand",
+      "comment": "Disconnect an HDMI input port: clear its record flag and reset; port 2 rejected with 0x16",
+      "name": "DRV_HDMI_IF_Disconnect",
+      "status": "matched"
+    },
     "ram:a00a1b58": {
       "by": "hand",
       "comment": "Writes 1 to the byte at index param_1 * 400 + 3 of the array at 0xa807d7e0 (smul %i0, 0x190; byte store at offset +3, in the call's delay slot), calls FUN_a00a1a80() with no arguments and returns 0 (restore %g0, 0, %o0).",
