@@ -13826,6 +13826,13 @@
       "name": "FUN_a014e308",
       "status": "matched"
     },
+    "ram:a014e320": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "port DAT_a802e3d0[0x18]: FUN_a012e550(1 << port, 2/0x10/0x80, b) results copied to DAT_a802e1f0[6..8]/[9..0xb]/[0x12..0x14] when FUN_a012f134(port)",
+      "name": "FUN_a014e320",
+      "status": "matched"
+    },
     "ram:a014e478": {
       "by": "hand",
       "comment": "Masks param_1 to l1 (and %i0,0xff,%l1) and calls FUN_a0125230(i) for i = 0..7 until (result & 0xff) == l1, returning the matching index or 8 if none match. Two unsigned char counters l0 and i0 are both cleared; each iteration calls with i0, increments l0 (inc in the be delay slot), and on no match sets i0 = l0 & 0xff and loops while i0 <= 7 (bleu). Takes one parameter; returns int.",
