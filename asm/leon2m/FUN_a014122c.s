@@ -1,4 +1,4 @@
-# leon2m FUN_a014122c 0xa014122c-0xa0141294 (104 bytes)
+# leon2m FUN_a014122c 0xa014122c-0xa0141290 (100 bytes)
 a014122c:  9d e3 bf 98  save  %sp, -104, %sp
 a0141230:  7f ff 5f 9b  call  0xa011909c
 a0141234:  a2 0e 20 ff  and  %i0, 0xff, %l1
@@ -24,4 +24,3 @@ a0141280:  b0 04 00 18  add  %l0, %i0, %i0
 a0141284:  7f ff 5e 58  call  0xa0118be4
 a0141288:  93 ec 40 12  restore  %l1, %l2, %o1
 a014128c:  01 00 00 00  nop
-a0141290:  00 0e 18 38  unimp  0xe1838

@@ -1,4 +1,4 @@
-# leon2m FUN_a00e9b34 0xa00e9b34-0xa00e9c68 (308 bytes)
+# leon2m FUN_a00e9b34 0xa00e9b34-0xa00e9c80 (332 bytes)
 a00e9b34:  9d e3 bf 90  save  %sp, -112, %sp
 a00e9b38:  13 2a 00 9a  sethi  %hi(0xa8026800), %o1
 a00e9b3c:  15 2a 00 9a  sethi  %hi(0xa8026800), %o2
@@ -76,3 +76,9 @@ a00e9c58:  d8 07 a0 5c  ld  [ %fp + 0x5c ], %o4
 a00e9c5c:  7f ff fc 84  call  0xa00e8e6c
 a00e9c60:  01 00 00 00  nop
 a00e9c64:  00 00 00 08  unimp  0x8
+a00e9c68:  f0 07 bf f4  ld  [ %fp + -12 ], %i0
+a00e9c6c:  f2 07 bf f0  ld  [ %fp + -16 ], %i1
+a00e9c70:  f0 24 60 04  st  %i0, [ %l1 + 4 ]
+a00e9c74:  f2 24 40 00  st  %i1, [ %l1 ]
+a00e9c78:  81 c7 e0 0c  jmp  %i7 + 0xc
+a00e9c7c:  91 e8 00 11  restore  %g0, %l1, %o0
