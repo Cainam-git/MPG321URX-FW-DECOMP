@@ -2427,6 +2427,13 @@
       "name": "FUN_a008a878",
       "status": "matched"
     },
+    "ram:a008a95c": {
+      "by": "h14",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets bit 6 of 0xa802d290+0x1d4 for index 0x14, then two FUN_a0146a80 calls with the ROM record selected by byte 0xa802afbd",
+      "name": "FUN_a008a95c",
+      "status": "matched"
+    },
     "ram:a008abe0": {
       "by": "hand",
       "comment": "v = FUN_a01266b0() (u16, no argument); tail FUN_a008a568(0x15, v) (u8, u16: sll/srl 16 of the return value). void(void). Fix vs the autoc draft (66.67): FUN_a01266b0 takes no arguments (the draft passed param_1/param_2, which only sat in %o0/%o1); real prototypes from src/. Aids: none.",
