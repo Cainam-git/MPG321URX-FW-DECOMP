@@ -4308,6 +4308,13 @@
       "name": "FUN_a00a4b4c",
       "status": "matched"
     },
+    "ram:a00a4e08": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same code as FUN_a00a4b4c for bit 22 of word 0xa802d33c",
+      "name": "FUN_a00a4e08",
+      "status": "matched"
+    },
     "ram:a00a5420": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
