@@ -5266,6 +5266,12 @@
       "name": "FUN_a00aa45c",
       "status": "matched"
     },
+    "ram:a00aa49c": {
+      "by": "h16",
+      "comment": "calls FUN_a00a7bf8(port, 8, 0x80/0x40, flag) with the flag pair chosen by mode 3/2/1/other",
+      "name": "FUN_a00aa49c",
+      "status": "matched"
+    },
     "ram:a00aa7b4": {
       "by": "asm",
       "comment": "twin of FUN_a0060bb0: identical hand-written assembly, constants swapped",
