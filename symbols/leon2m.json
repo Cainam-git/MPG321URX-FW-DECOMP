@@ -4305,6 +4305,13 @@
       "name": "FUN_a00a29a8",
       "status": "matched"
     },
+    "ram:a00a2a38": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Eight FUN_a01461dc(1, record, k) calls on records 0xa8024188..0xa80240b0",
+      "name": "FUN_a00a2a38",
+      "status": "matched"
+    },
     "ram:a00a2adc": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
