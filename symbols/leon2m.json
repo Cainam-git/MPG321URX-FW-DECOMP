@@ -11843,6 +11843,12 @@
       "name": "FUN_a0133f84",
       "status": "matched"
     },
+    "ram:a0133fbc": {
+      "by": "h10",
+      "comment": "Prints Enable Internal EDID, func_0x4008f3f4(1, a, 0xa0, len > 0x80, 1), and func_0x4008f3f4(0xe, a, c, 0, 1) when len > 0x100",
+      "name": "FUN_a0133fbc",
+      "status": "matched"
+    },
     "ram:a01340b0": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
