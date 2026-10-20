@@ -12891,6 +12891,12 @@
       "name": "FUN_a01392d0",
       "status": "matched"
     },
+    "ram:a01392f8": {
+      "by": "h10",
+      "comment": "Sends 8 halfwords of the record (low byte first), id and record byte +5 with FUN_a01370dc(0xfe, 0x12, buf, 1)",
+      "name": "FUN_a01392f8",
+      "status": "matched"
+    },
     "ram:a01393bc": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
