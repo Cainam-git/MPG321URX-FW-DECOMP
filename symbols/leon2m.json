@@ -7930,6 +7930,13 @@
       "name": "FUN_a00dee6c",
       "status": "matched"
     },
+    "ram:a00deea4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "takes one byte from the 128-byte ring buffer at 0xa802b0ec into *out (returns 0 when empty, else 1)",
+      "name": "FUN_a00deea4",
+      "status": "matched"
+    },
     "ram:a00deef0": {
       "by": "hand",
       "comment": "Polls the status register at 0xc00b0014 via func_0x4008c250 up to 0xfffff times waiting for bit 0x20, then calls func_0x4008c25c with the sign-extended byte parameter as second argument. The loop is a while loop with the comparison at the top (initial jump over the first check) and the counter increment after the bit test. param_2..param_6 are unused.",
