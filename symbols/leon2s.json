@@ -4214,6 +4214,12 @@
       "name": "FUN_a00a1b58",
       "status": "matched"
     },
+    "ram:a00a1b80": {
+      "by": "hand",
+      "comment": "stores (v << 16) | v into word 12 of the register block pointed to by record word 12 of ARR_a807db00",
+      "name": "FUN_a00a1b80",
+      "status": "matched"
+    },
     "ram:a00a1bb0": {
       "by": "hand",
       "comment": "record ARR_a807db00[p1] (52 B): p2 != 0 -> a73ac on bits 0x1c/8/9/10 + a73d4(0x19); else the inverse (word 1 base + 0x24/0x28/0x34)",
