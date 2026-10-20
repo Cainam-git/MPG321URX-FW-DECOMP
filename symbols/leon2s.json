@@ -5738,6 +5738,12 @@
       "name": "FUN_a00af464",
       "status": "matched"
     },
+    "ram:a00af690": {
+      "by": "h17",
+      "comment": "Updates the byte DAT_a8079338[port] from a FUN_a00aceec range test at most once per 0x28 FUN_a00b2064 ticks; returns it",
+      "name": "FUN_a00af690",
+      "status": "matched"
+    },
     "ram:a00af764": {
       "by": "hand",
       "comment": "r = add48(port, 9f1c6624(port)), mask 1/2/4/8 by r pair; if 8d800() <= 0x81, port 0 and 9f1c6624(0) == 0: 8ae18(1); pulse mask bits of hw reg cf0124b8 (|=, b1794(1), &= ~)",
