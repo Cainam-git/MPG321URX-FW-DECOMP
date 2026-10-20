@@ -1744,7 +1744,7 @@
     },
     "ram:a006cfe8": {
       "by": "hand",
-      "comment": "runs the pending unzip-osd request (flag DAT_a80787f4): prints, calls FUN_a006cc24 with the stored words, clears the flag, calls FUN_a006fedc, prints",
+      "comment": "when DAT_a80787f4 is 1: FUN_a0073044 with s_a0065bc8, FUN_a006cc24 with the words of DAT_a80787e4, clears the byte, FUN_a006fedc, FUN_a0073044 with s_a0065be0",
       "name": "FUN_a006cfe8",
       "status": "matched"
     },
