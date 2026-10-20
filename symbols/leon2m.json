@@ -1873,6 +1873,13 @@
       "name": "FUN_a002d5ac",
       "status": "matched"
     },
+    "ram:a002e238": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Moves one byte from register 0xc00b0000 into the 128-byte ring at 0xa802b0ec when bit 0 of 0xc00b0014 is set and the ring is not full",
+      "name": "FUN_a002e238",
+      "status": "matched"
+    },
     "ram:a002e3c4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
