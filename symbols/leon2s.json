@@ -4227,6 +4227,12 @@
       "name": "FUN_a00a2320",
       "status": "matched"
     },
+    "ram:a00a2374": {
+      "by": "hand",
+      "comment": "Set or clear bits 0x10/0x12 of a port register array by mode",
+      "name": "FUN_a00a2374",
+      "status": "matched"
+    },
     "ram:a00a26a8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
