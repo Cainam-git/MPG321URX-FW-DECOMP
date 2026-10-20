@@ -7686,6 +7686,12 @@
       "name": "FUN_a00dffa4",
       "status": "matched"
     },
+    "ram:a00dffb4": {
+      "by": "hand",
+      "comment": "stores step, phy and byte in the words at 0xa802b530..0xa802b538",
+      "name": "FUN_a00dffb4",
+      "status": "matched"
+    },
     "ram:a00e0090": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
