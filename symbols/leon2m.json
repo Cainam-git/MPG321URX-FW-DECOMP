@@ -9946,6 +9946,13 @@
       "name": "FUN_a0109110",
       "status": "matched"
     },
+    "ram:a01093a8": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets or clears one bit of 0xcf011aa0, then bit 6 = 1 exactly when bits 0-3 are all clear",
+      "name": "FUN_a01093a8",
+      "status": "matched"
+    },
     "ram:a0109474": {
       "by": "h13",
       "cflags": "-mcpu=v8 -O3 -g",
