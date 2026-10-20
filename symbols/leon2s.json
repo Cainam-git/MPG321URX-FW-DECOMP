@@ -1586,7 +1586,7 @@
     },
     "ram:a0061280": {
       "by": "hand",
-      "comment": "writes a zero-terminated string to the UART, adding a carriage return after each line feed",
+      "comment": "writes the bytes of a zero-terminated string to register 0xc00c0000, adding 0x0d after each 0x0a",
       "name": "FUN_a0061280",
       "status": "matched"
     },
