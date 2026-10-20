@@ -4308,6 +4308,13 @@
       "name": "FUN_a00a4b4c",
       "status": "matched"
     },
+    "ram:a00a4cac": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "When bit 12 of word 0xa802d338 is clear: sets it and makes six FUN_a0146xxx calls; always sets bit 1 of byte 0xa802b08e",
+      "name": "FUN_a00a4cac",
+      "status": "matched"
+    },
     "ram:a00a4e08": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
