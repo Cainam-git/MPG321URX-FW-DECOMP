@@ -4677,6 +4677,12 @@
       "name": "FUN_a00a2cc4",
       "status": "matched"
     },
+    "ram:a00a2cdc": {
+      "by": "hand",
+      "comment": "Returns entry n of a word table (16-bit index)",
+      "name": "FUN_a00a2cdc",
+      "status": "matched"
+    },
     "ram:a00a3838": {
       "by": "near",
       "comment": "near-miss repaired: _DAT_a802b088 is unsigned short",
