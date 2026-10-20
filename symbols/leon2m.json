@@ -2456,6 +2456,12 @@
       "name": "FUN_a008f354",
       "status": "matched"
     },
+    "ram:a0090f30": {
+      "by": "h10",
+      "comment": "Returns 0 when a port 0..3 has FUN_a0080320(p) != 0 and FUN_a0143c14(p) != 4, else 1",
+      "name": "FUN_a0090f30",
+      "status": "matched"
+    },
     "ram:a0090f94": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
