@@ -3243,6 +3243,13 @@
       "name": "FUN_a0097138",
       "status": "matched"
     },
+    "ram:a0097498": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Copies two bytes picked by byte 0xa802d430 when it is not 0, stores it to 0xa802afea, sets bit 14 of 0xa802cff4, clears afec, FUN_a00b5080, b08e |= 2",
+      "name": "FUN_a0097498",
+      "status": "matched"
+    },
     "ram:a00976a8": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
