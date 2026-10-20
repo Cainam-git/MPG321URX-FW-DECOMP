@@ -11780,6 +11780,13 @@
       "name": "FUN_a0146e2c",
       "status": "matched"
     },
+    "ram:a0147064": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns bits 4..7 of the first word of display channel record ch",
+      "name": "FUN_a0147064",
+      "status": "matched"
+    },
     "ram:a01474b0": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
