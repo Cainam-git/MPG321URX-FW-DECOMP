@@ -2839,6 +2839,12 @@
       "name": "FUN_a008d980",
       "status": "matched"
     },
+    "ram:a008d9d4": {
+      "by": "hand",
+      "comment": "Set bits 4..5 of register 1/0x7f by mode (10 -> bit 4, 12 -> bit 5)",
+      "name": "FUN_a008d9d4",
+      "status": "matched"
+    },
     "ram:a008da34": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
