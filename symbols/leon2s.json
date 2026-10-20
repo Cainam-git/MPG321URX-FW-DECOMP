@@ -4786,6 +4786,12 @@
       "name": "hdmi21_Initialize",
       "status": "matched"
     },
+    "ram:a00a317c": {
+      "by": "hand",
+      "comment": "sets, clears or (n = 15) zeroes bits of DAT_a8078634 from the argument block, then calls FUN_a0073044 for the 15 entries of PTR_a00b4c80 with DAT_a006b990/DAT_a006b998 by bit",
+      "name": "EN_HDMI_MSG_INIT_INFO",
+      "status": "matched"
+    },
     "ram:a00a3250": {
       "by": "hand",
       "comment": "calls FUN_a00734c4(s_a00b4cc0), then by byte 3 (0/1) and byte 7 of the argument calls FUN_a0073540/FUN_a00735c0 or DRV_HDMI_Start_Timer/DRV_HDMI_Del_Timer; returns 0",
