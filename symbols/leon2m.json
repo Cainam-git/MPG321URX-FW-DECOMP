@@ -1655,6 +1655,13 @@
       "name": "FUN_a002a5e4",
       "status": "matched"
     },
+    "ram:a002a614": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Interrupt dispatcher for bit 0x2000: runs and acknowledges the pending hooks of 3 sources",
+      "name": "FUN_a002a614",
+      "status": "matched"
+    },
     "ram:a002a734": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
