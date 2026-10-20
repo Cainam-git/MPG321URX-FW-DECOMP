@@ -3992,6 +3992,12 @@
       "name": "FUN_a009c3bc",
       "status": "matched"
     },
+    "ram:a009c3f0": {
+      "by": "hand",
+      "comment": "reads bit 17 of port register word 10 fifty times and returns 1 when the last read was clear",
+      "name": "FUN_a009c3f0",
+      "status": "matched"
+    },
     "ram:a009c434": {
       "by": "hand",
       "comment": "returns FUN_a00a7408(1, word +4 of the 52-byte port record DAT_a807db00[port]) != 0.",
