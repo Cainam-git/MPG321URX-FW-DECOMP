@@ -7377,6 +7377,13 @@
       "name": "FUN_a00da184",
       "status": "matched"
     },
+    "ram:a00da65c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "converts the FUN_a0125c54 reading to a temperature with the 3400.65 / log(r / 0.000112) - 273.15 formula (soft-float)",
+      "name": "FUN_a00da65c",
+      "status": "matched"
+    },
     "ram:a00da714": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
