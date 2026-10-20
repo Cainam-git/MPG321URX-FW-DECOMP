@@ -898,6 +898,13 @@
       "name": "FUN_CODE_c544",
       "status": "matched"
     },
+    "CODE:c59a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "set bit 7 of one of seven XDATA registers per set bit of m",
+      "name": "FUN_CODE_c59a",
+      "status": "matched"
+    },
     "CODE:c5f0": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
