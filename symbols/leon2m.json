@@ -2142,6 +2142,13 @@
       "name": "FUN_a0083c20",
       "status": "matched"
     },
+    "ram:a0083c88": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns the index of the code Play, Nint or XBOX that equals bytes 1..4 at 0xa8024018, or 0xff",
+      "name": "FUN_a0083c88",
+      "status": "matched"
+    },
     "ram:a0083ff0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
