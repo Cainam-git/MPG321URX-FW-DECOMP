@@ -6623,6 +6623,12 @@
       "name": "FUN_a00cb1d4",
       "status": "matched"
     },
+    "ram:a00cc834": {
+      "by": "h17",
+      "comment": "Sets or clears bit 1 of an indexed register for port 2, else calls FUN_a00c76c0(port, 4, 0x10, on)",
+      "name": "FUN_a00cc834",
+      "status": "matched"
+    },
     "ram:a00cc900": {
       "by": "autoc",
       "comment": "Per-port refresh (param_1 = port): runs FUN_a00c9968(port, 1), then compares two per-port values, FUN_a00c9368(port) and FUN_a00c9750(port) (low bytes); when they differ, applies the first via FUN_a00cc834(port, value). Finally sets bits 16-17 (0x30000) in the first word of the port's 24-byte record at 0xa8078bb0. Ghidra had lost the port argument on both value reads.",
