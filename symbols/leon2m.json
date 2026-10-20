@@ -8761,6 +8761,13 @@
       "name": "FUN_a01182cc",
       "status": "matched"
     },
+    "ram:a0118324": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores byte v into byte i (0..3) of the record at 0xa8027a90",
+      "name": "FUN_a0118324",
+      "status": "matched"
+    },
     "ram:a0118400": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
