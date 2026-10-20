@@ -7760,6 +7760,13 @@
       "name": "FUN_a00de088",
       "status": "matched"
     },
+    "ram:a00de1fc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes two bytes to one of 17 hardware register pairs selected by n",
+      "name": "FUN_a00de1fc",
+      "status": "matched"
+    },
     "ram:a00de444": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
