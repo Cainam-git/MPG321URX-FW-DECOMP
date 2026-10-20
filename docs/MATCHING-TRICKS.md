@@ -73,6 +73,7 @@ symbol names are not allowed.
 | A busy-wait that jumps to its test first, with a single `nop` as body | `while (cond) __asm__ volatile ("nop");`. |
 | The same wait-then-write laid out differently in two places | One static helper, inlined twice. |
 | An else-arm that reloads a register address and jumps back into shared code | The source wrote the same read-modify-writes twice, once per register. GCC merged the tails. A pointer picked with `?:` does not match. |
+| A global read twice in a row (once for a test, again for the update), or loads kept out of call delay slots | The variable or pointer is `volatile` in the original. Use it only when the code shows it this way, and say so in the header; `volatile` is never added just to steer code generation. |
 | `and x, 0xff` right after an `ldub`, and the byte value then used in wider arithmetic | The byte was read into an `unsigned char` variable and then copied into an `unsigned int` variable. |
 | A pointer table passed to a function, and the whole address of another global kept in a register across the loop | The table is an extern array symbol (`extern unsigned int DAT_00188634[];`), not a cast constant `(unsigned int *)0x188634`. |
 | A structure copied halfword by halfword into a local | A plain structure assignment; the record has only 2-byte alignment (`unsigned short` members). |
