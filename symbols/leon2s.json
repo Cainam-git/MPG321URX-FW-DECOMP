@@ -4556,6 +4556,12 @@
       "name": "FUN_a00a6fc0",
       "status": "matched"
     },
+    "ram:a00a7168": {
+      "by": "hand",
+      "comment": "Write the low byte of a value to a hardware register via the port base table 0xa00b4d88",
+      "name": "FUN_a00a7168",
+      "status": "matched"
+    },
     "ram:a00a71b4": {
       "by": "hand",
       "comment": "Clamps t = param_1 & 0xff to t < 4 ? t : 0 without a branch (cmp %g1,4; subx %g0,0,%g1; and %o0,%g1,%o0; and 0xff), with the mask written as (t >= 4) - 1. The index selects an unsigned short from the table at 0xa00b4d88; (unsigned short)param_2 (sll/srl 0x10) is added, and the sum is used as an offset into the register region at 0xcf000000, whose low byte is returned.",
