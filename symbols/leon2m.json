@@ -7983,7 +7983,7 @@
     "ram:a00dfa10": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "returns 1 for phy version 2, otherwise prints the training step and \"Invalid phy version\" and returns 0",
+      "comment": "returns 1 for phy version 2, otherwise prints the step name of word 0xa802b530 and \"Invalid phy version\" and returns 0",
       "name": "FUN_a00dfa10",
       "status": "matched"
     },
