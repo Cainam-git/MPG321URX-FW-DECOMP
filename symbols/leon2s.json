@@ -5248,6 +5248,12 @@
       "name": "FUN_a00aa2d0",
       "status": "matched"
     },
+    "ram:a00aa308": {
+      "by": "h16",
+      "comment": "writes port 1 registers 0x3d/0x60/0x83/0xa6 via FUN_a00a7cc0 with DAT_a807d3d1 bytes 3..6 when byte 0 is 0xa0, else 0x10",
+      "name": "FUN_a00aa308",
+      "status": "matched"
+    },
     "ram:a00aa3a4": {
       "by": "hand",
       "comment": "writes bank registers through FUN_a00a7b64 for port 0 or the other ports, one-time bank 1 set-up flagged by DAT_a8079304",
