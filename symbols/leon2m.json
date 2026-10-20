@@ -9256,6 +9256,13 @@
       "name": "FUN_a0101868",
       "status": "matched"
     },
+    "ram:a0101884": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes two 4-bit fields to the register at 0xcf0160c4 in two steps",
+      "name": "FUN_a0101884",
+      "status": "matched"
+    },
     "ram:a01018b0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
