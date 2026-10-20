@@ -2717,6 +2717,13 @@
       "name": "FUN_a0092ea8",
       "status": "matched"
     },
+    "ram:a0092fd4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Steps the selection word 0xa802afec backwards through 0x34..0x3b with a page update and position-dependent calls",
+      "name": "FUN_a0092fd4",
+      "status": "matched"
+    },
     "ram:a0093464": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
