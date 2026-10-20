@@ -4276,7 +4276,7 @@
     },
     "ram:a009d5cc": {
       "by": "hand",
-      "comment": "End step of the HDMI 2.1 receiver EQ sequence: finish, rerun mode detect or fail",
+      "comment": "Port 0/1: register bit updates and FUN_a009fe60; returns 1 on the \"Run HDMI21 ModeDet\" or eq_done path, 0 on the eq_fail path",
       "name": "Jay_EQ_End",
       "status": "matched"
     },
@@ -4456,7 +4456,7 @@
     },
     "ram:a00a17c4": {
       "by": "hand",
-      "comment": "Per-port HDMI input initialisation: register bit setup, record reset, LTS status init",
+      "comment": "Per-port register bit setup and record byte writes for port 0 or 1, then DRV_HDMI21_LTS_STS_InitialSettings and three more calls",
       "name": "INIT_handler",
       "status": "matched"
     },
@@ -4800,7 +4800,7 @@
     },
     "ram:a00a303c": {
       "by": "hand",
-      "comment": "HDMI 2.1 receiver start-up: block init, per-port INIT_handler, callback registration",
+      "comment": "Start-up sequence: register setup calls, INIT_handler for ports 0 and 1, FUN_a00b2070(0, FUN_a009f654) when FUN_a008d800() <= 0x82",
       "name": "hdmi21_Initialize",
       "status": "matched"
     },
@@ -5788,7 +5788,7 @@
     },
     "ram:a00aee08": {
       "by": "hand",
-      "comment": "Load a 16-bit value and an n-bit lane mask into port registers 0x8b/0x8c/0x9a",
+      "comment": "Writes a 16-bit value to regs 0x8b/0x8c and the n-bit mask (1 << n) - 1 to reg 0x9a of a port, between bit updates of regs 0x482/0x9f/0x32",
       "name": "FUN_a00aee08",
       "status": "matched"
     },
@@ -5854,7 +5854,7 @@
     },
     "ram:a00af98c": {
       "by": "hand",
-      "comment": "Port register setup sequence with port-0 ROM calibration loop",
+      "comment": "Port register write sequence; for port 0 a loop over func_0x9f1c65a0(0, 3..0) with FUN_a00af8bc / FUN_a00af94c, then func_0x9f1b6760",
       "name": "FUN_a00af98c",
       "status": "matched"
     },
@@ -6311,7 +6311,7 @@
     },
     "ram:a00b1d00": {
       "by": "hand",
-      "comment": "Program a unit's 8-bit register block (mode byte, two 24-bit values, start sequence)",
+      "comment": "Writes registers 0, 1, 4..6, 8..10 and 3 of unit sel through FUN_a00a832c (0 or 0xd0, 0xea, bytes of a and b, then 3 / 7 / 3)",
       "name": "FUN_a00b1d00",
       "status": "matched"
     },
@@ -6498,7 +6498,7 @@
     },
     "ram:a00c1ac0": {
       "by": "hand",
-      "comment": "Finish pending state-5/6 inputs of two blocks when their ready bits are set",
+      "comment": "For i = 0, 1: records DAT_a807d5c8[i] / DAT_a807d5e8[i] in state 5 or 6 with bit 5 of reg 0x318 / bit 6 of reg 0xa8 set get ROM register writes and state 7",
       "name": "FUN_a00c1ac0",
       "status": "matched"
     },
@@ -6510,7 +6510,7 @@
     },
     "ram:a00c22a0": {
       "by": "hand",
-      "comment": "Load three 128-byte tables (ROM or storage) into a port block",
+      "comment": "Sends three 128-byte tables (ROM, or read with func_0xa0f9d2e0) with FUN_a00c99a4 modes 5/3/4, then DAT_a8078d38 in mode 0",
       "name": "FUN_a00c22a0",
       "status": "matched"
     },
@@ -6553,13 +6553,13 @@
     },
     "ram:a00c5da8": {
       "by": "hand",
-      "comment": "Program an 8-bit setting into an input through ROM register routines and reset its state",
+      "comment": "Writes the byte param_2 through ROM register routines chosen by param_1 (0..1, 2..3, 4+), then clears DAT_a8078c60[port] and record bytes +0xd/+0xc",
       "name": "FUN_a00c5da8",
       "status": "matched"
     },
     "ram:a00c5f18": {
       "by": "h17",
-      "comment": "Updates bit param_1 of DAT_a8078c58, flags the change in DAT_a80788d2 and reprograms the input",
+      "comment": "Updates bit param_1 of DAT_a8078c58, ORs a flag into DAT_a80788d2 and calls FUN_a00c5da8 on a change; then FUN_a00c5d34",
       "name": "FUN_a00c5f18",
       "status": "matched"
     },

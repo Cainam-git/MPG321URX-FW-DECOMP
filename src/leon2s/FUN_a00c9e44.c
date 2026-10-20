@@ -1,9 +1,9 @@
 /* FUN_a00c9e44 (leon2s 0xa00c9e44-0xa00ca074, 560 bytes), flags -mcpu=v8 -Os -g.
  * Loads a 0x180-byte table into a port block and reads back 32 bytes. Pulses bit 1 of reg 0 (ROM register
  * routine func_0xa0fb7f1c), sets the mode byte DAT_a807d087 to 3 when DAT_a807d62c is set, else reads it from
- * storage address 0x734 (func_0xa0f9d2e0); clears the buffer DAT_a807cf08 (0x17f bytes) and sends it
- * (FUN_a00c99a4 mode 5); fills the buffer from the ROM table 0x9f1c1ca8 (DAT_a807d62c set) or from storage
- * 0x5b4, sends it (mode 3), runs FUN_a00c9b58 / FUN_a00c9de8, sets bits 6..7 of reg 0xf, writes regs 0/3,
+ * address 0x734 with func_0xa0f9d2e0; clears the buffer DAT_a807cf08 (0x17f bytes) and sends it
+ * (FUN_a00c99a4 mode 5); fills the buffer from the ROM table 0x9f1c1ca8 (DAT_a807d62c set) or with func_0xa0f9d2e0
+ * from address 0x5b4, sends it (mode 3), runs FUN_a00c9b58 / FUN_a00c9de8, sets bits 6..7 of reg 0xf, writes regs 0/3,
  * waits for bit 5 of reg 2, writes reg 2 = 0x40, clears bit 0 of reg 3, reads back with FUN_a00c9d28,
  * counts an empty 0x180-step delay loop, copies 32 bytes from buffer offset 0x160 to DAT_a807cd88 and clears
  * bits 6..7 of reg 0xf. Loop counters are unsigned short.

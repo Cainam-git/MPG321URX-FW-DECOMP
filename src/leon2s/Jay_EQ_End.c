@@ -1,5 +1,5 @@
 /* Jay_EQ_End (leon2s 0xa009d5cc-0xa009d87c, 688 bytes), flags -mcpu=v8 -Os -g.
- * End step of the HDMI 2.1 receiver EQ sequence for port 0 or 1 (other ports return 0 at once); sel = 2 for
+ * Works on port 0 or 1 (other ports return 0 at once); sel = 2 for
  * port 0, 3 for port 1. Sets/clears register bits through FUN_a00a73ac / FUN_a00a73d4 (bit n of a word array
  * reached through the 0x34-byte port record DAT_a807db00[port]), calls FUN_a009fe60(port) and, when byte +4 of
  * the 400-byte record ARR_a807d7e0[port] is 1, FUN_a009c87c(port). With c = byte +1 of the 0x18-byte record

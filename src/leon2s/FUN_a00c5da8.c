@@ -1,7 +1,7 @@
 /* FUN_a00c5da8 (leon2s 0xa00c5da8-0xa00c5f18, 368 bytes), flags -mcpu=v8 -Os -g.
- * Programs one 8-bit setting v (param_2) into the input selected by param_1 through ROM register routines:
- * inputs 0..1 via func_0xa0fb7dd0 (regs 0x310 = 0xad, 0x311 = 8, 0x312 = v, 0x310 = 0), inputs 2..3 via
- * func_0xa0fb7dd0 (0xa6 = 10, 0xa5 = 0x12, 0xa4 = 2, 0xa7 = v), inputs from 4 via func_0xa0fb6c00 with index
+ * Writes the 8-bit value v (param_2) through ROM register routines chosen by param_1:
+ * param_1 0..1 via func_0xa0fb7dd0 (regs 0x310 = 0xad, 0x311 = 8, 0x312 = v, 0x310 = 0), 2..3 via
+ * func_0xa0fb7dd0 (0xa6 = 10, 0xa5 = 0x12, 0xa4 = 2, 0xa7 = v), 4 and above via func_0xa0fb6c00 with index
  * param_1 - 4 (0x408 = 1, 0x404 = 7, wait func_0xa0fc160c(1), 0x404 = 1, 0x400 = 3, 0x403 = 10, 0x402 = 0x40,
  * 0x401 = v + 2, 0x402 = 0x80). Then clears the word DAT_a8078c60[port] and bytes +0xd and +0xc of the
  * 16-byte record DAT_a807d5c8[port].

@@ -1,5 +1,5 @@
 /* FUN_a00aee08 (leon2s 0xa00aee08-0xa00aef04, 252 bytes), flags -mcpu=v8 -Os -g.
- * Loads a 16-bit value and an n-bit lane mask into port registers: sets bit 3 of reg 0x482, saves the
+ * Loads a 16-bit value and an n-bit mask into port registers: sets bit 3 of reg 0x482, saves the
  * bytes of regs 0x89/0x8a, sets bit 6 of reg 0x9f and bit 2 of reg 0x32, writes the saved bytes back,
  * writes the high and low byte of val to regs 0x8b/0x8c and ((1 << n) - 1) to reg 0x9a (built bit by bit),
  * then clears bit 6 of reg 0x9f. Access through FUN_a00a6bb8 / FUN_a00a6c00 / FUN_a00a6c98.

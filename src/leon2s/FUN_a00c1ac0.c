@@ -1,5 +1,5 @@
 /* FUN_a00c1ac0 (leon2s 0xa00c1ac0-0xa00c1c18, 344 bytes), flags -mcpu=v8 -Os -g.
- * For both inputs i = 0, 1 of two blocks, through ROM register routines: block A (16-byte records
+ * For i = 0, 1 of two blocks, through ROM register routines: block A (16-byte records
  * DAT_a807d5c8[i]) in state 5 or 6 with bit 5 of reg 0x318 set: write 0x60 to reg 0x318, set bit 4 of reg
  * 0x308, state = 7. Block B (records DAT_a807d5e8[i]) in state 5 or 6 with bit 6 of reg 0xa8 set: writes
  * 0xa8 = 0x60, 0xa6 = 9, 0xa4 = 0, 0xa5 = 0, 0xa7 = 0x10, 0xa4 = 0x20, state = 7.

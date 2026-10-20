@@ -1,5 +1,5 @@
 /* hdmi21_Initialize (leon2s 0xa00a303c-0xa00a317c, 320 bytes), flags -mcpu=v8 -Os -g. Returns 0.
- * HDMI 2.1 receiver start-up: optional "[INIT]: %s" trace with the function-name string; when bit 8 of
+ * Start-up sequence: optional "[INIT]: %s" trace with the function-name string; when bit 8 of
  * register 0x1f0c reads 0 (FUN_a00a7468) calls FUN_a00a2a80(1), then FUN_a00a2b98, FUN_a00a2b08(1),
  * FUN_a00a2ecc, the same bit test with FUN_a00a2a80(0), FUN_a00a2c18(1), FUN_a00a2a28 and
  * hdmi_Init_Interrupt. For ports 0 and 1: clears bit 1 of r0[2], sets the low byte of rc[0x14] to 1, sets

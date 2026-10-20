@@ -1,5 +1,5 @@
 /* INIT_handler (leon2s 0xa00a17c4-0xa00a1a80, 700 bytes), flags -mcpu=v8 -Os -g.
- * Called by hdmi21_Initialize once per input port. Port 0 or 1 only (any other port returns at once);
+ * Called by hdmi21_Initialize once per port. Port 0 or 1 only (any other port returns at once);
  * sel = 2 for port 0, 3 for port 1. Sets and clears bits in the register blocks of the port through
  * FUN_a00a73ac (set bit n of the word array) and FUN_a00a73d4 (clear bit n), rewrites register fields
  * at r0[0x30]/r0[0x31], r4[0xd], r20[0x20] and r8[0x27], clears/sets bytes of the 400-byte record

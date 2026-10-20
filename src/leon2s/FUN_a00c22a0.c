@@ -1,7 +1,7 @@
 /* FUN_a00c22a0 (leon2s 0xa00c22a0-0xa00c2488, 488 bytes), flags -mcpu=v8 -Os -g.
  * Loads three 128-byte tables into a port block. Pulses bit 1 of reg 0 (ROM routine func_0xa0fb7f1c); each
- * table comes from ROM (0x9f1b74b8, 0x9f1b7175, 0x9f1b7438) when DAT_a807d628 is set, otherwise from
- * storage (func_0xa0f9d2e0 at 0x50a, 0x285, 0x48a) into a stack buffer, and is sent with FUN_a00c99a4 in
+ * table comes from ROM (0x9f1b74b8, 0x9f1b7175, 0x9f1b7438) when DAT_a807d628 is set, otherwise read with
+ * func_0xa0f9d2e0 (addresses 0x50a, 0x285, 0x48a) into a stack buffer, and is sent with FUN_a00c99a4 in
  * modes 5, 3 and 4; then DAT_a8078d38 is sent in mode 0 and regs 0 / 3 are written (func_0xa0fb7ee0).
  * Source form: the counter is initialised at its declaration, so the first copy loop has no own init.
  */
