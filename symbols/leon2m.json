@@ -4138,6 +4138,13 @@
       "name": "FUN_a00a835c",
       "status": "matched"
     },
+    "ram:a00a8440": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Draws a three-line menu block at column 0x2A and marks the line selected by bit 12 of DAT_a802d290 word +0xA8",
+      "name": "FUN_a00a8440",
+      "status": "matched"
+    },
     "ram:a00a8570": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
