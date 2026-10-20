@@ -21,7 +21,7 @@ firmware:
 
 ```
 Main processor     [#########-----------]   49 %
-Input processor    [#####---------------]   28 %
+Input processor    [#####---------------]   29 %
 Helper processor   [#########-----------]   48 %
 Overall            [########------------]   43 %
 ```
