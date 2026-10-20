@@ -2528,6 +2528,13 @@
       "name": "FUN_a008d2e0",
       "status": "matched"
     },
+    "ram:a008e270": {
+      "by": "h14",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Byte 0xa802afbd 0x12/0x1c call sequences; otherwise two FUN_a0146a80 calls with ROM records of 0x100242 (bit 6 of 0xa802d290+0x1d4 set for 0x14)",
+      "name": "FUN_a008e270",
+      "status": "matched"
+    },
     "ram:a008e520": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
