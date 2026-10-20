@@ -105,6 +105,8 @@ def main():
     with LOG.open("a") as lg:
         for cpu, fn, r, line, write, _, _ in res:
             print(line); lg.write(time.strftime("%F %T ") + cpu + " " + line + "\n")
+            if a.src and r is not None and (r[2] or r[1] > r[0] + 0.05):   # keep the result of a run on a given draft
+                out = pathlib.Path(a.src).with_suffix(".p2.c"); out.write_text(r[3]); print(f"  best source: {out}")
             if not write or r is None: continue
             start, best, ok, best_src, flags = r
             if not a.src:
