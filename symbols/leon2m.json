@@ -9060,6 +9060,13 @@
       "name": "FUN_a00fc1a0",
       "status": "matched"
     },
+    "ram:a00fc200": {
+      "by": "h12",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes fixed values to 0xcf0120xx registers, calls FUN_a00fe880(3, 1 << p, 1) for p 0..3, sets three state bytes",
+      "name": "FUN_a00fc200",
+      "status": "matched"
+    },
     "ram:a00fc2fc": {
       "by": "near",
       "comment": "near-miss repaired: _DAT_cf012000 via cast address",
