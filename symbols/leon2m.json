@@ -4477,6 +4477,13 @@
       "name": "FUN_a00ba950",
       "status": "matched"
     },
+    "ram:a00bab80": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sends the first len bytes of a UART port's transmit buffer",
+      "name": "FUN_a00bab80",
+      "status": "matched"
+    },
     "ram:a00babe4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
