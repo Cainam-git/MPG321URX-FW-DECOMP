@@ -10431,6 +10431,13 @@
       "name": "FUN_a010d914",
       "status": "matched"
     },
+    "ram:a010e0f4": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores sel/a/b in record 0xa802d704 or 0xa802d804 and the matching 0xd0032xxx/0xd003axxx register pairs and control bits 5-6",
+      "name": "FUN_a010e0f4",
+      "status": "matched"
+    },
     "ram:a010edbc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
