@@ -7651,7 +7651,7 @@
     "ram:a00dbcf0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UserSetGameMode: re-applies the record settings (FUN_a00d8100 steps, mode print, inlined FUN_a00d8c1c / FUN_a00d8ffc steps, bit-11 copy)",
+      "comment": "UserSetGameMode: FUN_a00d8100(0..8) calls, mode print, the inlined FUN_a00d8c1c / FUN_a00d8ffc steps and the copy of bit 11 of word 0xa802d290+0xa8",
       "name": "FUN_a00dbcf0",
       "status": "matched"
     },
