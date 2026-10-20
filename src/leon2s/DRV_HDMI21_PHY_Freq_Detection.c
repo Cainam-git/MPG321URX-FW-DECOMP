@@ -3,10 +3,10 @@
  * _DAT_a8078634: print s_a006a298 with s_a00b4390 (function-name string). FUN_a00a7488(ch, 0x2f54,
  * 0xffffff00, 0x5f); for lane i = 0..3: a7488(ch, 0x2f50, 0xff00ffff, i << 16); FUN_a00a7424(1, 0x18,
  * ch, 0x2f50); FUN_a00b160c(0x14) (delay); u16 ARR_a807905a[port * 4 + i] = (FUN_a00a7314(ch, 0x2f54) &
- * 0x1fff00) >> 8; then a SECOND a7314 read for the print s_a006a2b0 'Lane%d, freq=%ld' (i, same field). void.
- * Fixes vs the autoc draft (78.57, did not compile): BEHAVIOUR: the delay b160c runs BEFORE the read, the
- * print re-reads a7314 (the draft reused one result), the table index is port * 4 + i (draft port * 1);
- * the first print takes the name string; strings are symbols. Aids: none.
+ * 0x1fff00) >> 8; then a SECOND a7314 read for the print s_a006a2b0 'Lane%d, freq=%ld' (i, same field).
+ * Returns nothing.
+ * The delay b160c runs before the read; the print re-reads a7314; the table index is port * 4 + i; the
+ * first print takes the name string. Source form: strings are symbols. Aids: none.
  */
 extern unsigned int _DAT_a8078634;
 extern unsigned short ARR_a807905a[];

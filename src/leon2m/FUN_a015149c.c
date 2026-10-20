@@ -4,10 +4,9 @@
  * signed char compare: ble). m == 2 / 1 / 3 / other select the (a, b) pattern of four
  * FUN_a0109ad0(i, a) + FUN_a0109b14(i, b) pairs for i = 0..3: (0,1), (1,0), (1,1), (0,0); then
  * FUN_a014e7d0().
- * Fixes vs the autoc draft (95.76): the record is DAT_a802e3d0 with the bit-field word at +4, the
- * same union E3D0 as src/leon2m/FUN_a014c7bc.c (f28:4, f24:4, f20:4); the draft read a volatile
- * DAT_a802e3d4 with masks and an extra early read before FUN_a01241fc. FUN_a0142418 declared
- * (u8, u8) void as in FUN_a014c7bc. Aids: none.
+ * Source form: the record is DAT_a802e3d0 with the bit-field word at +4, the same union E3D0 as
+ * src/leon2m/FUN_a014c7bc.c (f28:4, f24:4, f20:4); not volatile; no read of the word before FUN_a01241fc.
+ * FUN_a0142418 declared (u8, u8) void as in FUN_a014c7bc. Aids: none.
  */
 
 extern void FUN_a0109ad0(int, int);

@@ -29,18 +29,17 @@
  *    fw 0xA015462C 'clr %g1; mov %g1, %i0').
  * Can it wait or fail? Its own code has no unbounded loop (two 4-step port loops); waits only inside callees.
  *
- * Register levers (the last 88 words, register names only; gcc 3.4.4 global.c / regrename.c read):
+ * Source form (affects the last 88 words, register names only; gcc 3.4.4 global.c / regrename.c read):
  *   (1) 'extern int FUN_a0154580 (void)' (its real type): the value-returning tail call puts %i0 into
  *       regs_ever_live, so global.c find_reg pass 0 ('never allocate a register for the first time') gives the
- *       FIRST call-saved pseudo %i0 (first-loop i), and found then gets %l0, as in the fw (jf 81.18 -> 93.87,
- *       rawcmp 88 -> 29). 'int FUN_a0153018 (void) { ... return FUN_a0154580 (); }' is also byte-exact; the void
- *       form is kept since main ignores the result. With 'void FUN_a0154580' it is 76.42.
- *   (2) The FUN_a0124e44 test is written '!FUN_a0124e44 (dev)' with the timer arm first (rawcmp 27 -> 0). Why:
+ *       FIRST call-saved pseudo %i0 (first-loop i), and found then gets %l0, as in the fw.
+ *       'int FUN_a0153018 (void) { ... return FUN_a0154580 (); }' gives the same code; the void form is kept
+ *       since main ignores the result. With 'void FUN_a0154580' the registers differ.
+ *   (2) The FUN_a0124e44 test is written '!FUN_a0124e44 (dev)' with the timer arm first. Why:
  *       regrename.c walks blocks in index order and gives each chain the free register renamed LEAST recently
  *       (tick[]). With the timer arm first, its chains take %o4 (sll) and %o2 (add) while 'on' (%l0) is live, so
  *       the FUN_a0151aa4 arm then finds %l0 the oldest free register for i*2 (fw 'bne,a; add %i0,%i0,%l0').
- *   (3) case 4: 'dev = ...;' before 'on = ...;' (fw 'be,a' takes the dev load, 'mov %l6,%l0' in the 'b' slot;
- *       2 words).
+ *   (3) case 4: 'dev = ...;' before 'on = ...;' (fw 'be,a' takes the dev load, 'mov %l6,%l0' in the 'b' slot).
  */
 struct Rec
 {

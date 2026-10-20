@@ -11,9 +11,9 @@
  * into bits 8..11, then calls FUN_a00b1794(1). Always: 0x1018 low byte rewritten with its own value,
  * 0x1038 = 7, 0x1154 = 0x1e (low bytes), and the 12-byte record ARR_a807ccc4[port] word 0 = 0xd, or 8/6
  * when its byte +8 is 1 (8 when ARR_a8078998[port] == 1).
- * BEHAVIOUR fixes against the draft: the print takes the a7314 result (not the param) as its 4th arg;
- * the record store is a full word (st), not a byte; the param is u8, not short.
- * Levers: u8 param (an int param swaps %i0/%l4), per-arm clamp, per-arm record stores (one variable
+ * The print takes the a7314 result as its 4th argument; the record store is a full word (st); the param
+ * is u8.
+ * Source form: u8 param (an int param swaps %i0/%l4), per-arm clamp, per-arm record stores (one variable
  * gives a branch-free subx form). No aids, no volatile.
  */
 extern unsigned int _DAT_a8078634;

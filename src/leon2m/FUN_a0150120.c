@@ -4,8 +4,9 @@
  * 0xa802a49a; on == 1 otherwise: print "##BFree_Mode_GEN1_ON", FUN_a011e148(b); both then FUN_a014fe78(1);
  * on != 1: print "##BFree_Mode_OFF", FUN_a011e148(b), FUN_a014fe78(0). Common tail: FUN_a014faa8(),
  * FUN_a011e220(0x1f, 1), FUN_a011e388(0x1f, 1), tail FUN_a011e028(0x1f, 1) (bb-reorder duplicates it per arm).
- * Fix vs the autoc draft (78.08): one common tail after the if/else (the draft wrote it twice: 59.42); void;
- * FUN_a011e148 takes ONE argument; strings named. Aids: none.
+ * FUN_a011e148 takes one argument. Returns nothing.
+ * Source form: one common tail after the if/else (writing it in both arms gives other code); strings named.
+ * Aids: none.
  */
 extern unsigned char DAT_a802a49a;
 extern unsigned short _DAT_a802a49e;

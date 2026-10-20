@@ -1,5 +1,5 @@
 /* leon2m FUN_a0151c84 @ 0xa0151c84  DispModeTransform
- * Flags: -mcpu=v8 -O3, no -g; with -g gcc adds a nop after the final printf call: 98.7 %.
+ * Flags: -mcpu=v8 -O3, no -g (with -g gcc adds a nop after the final printf call).
  *
  * Converts the RAW active panel row's byte +6 (FUN_a01241fc() = 0xA802E378) into a display mode number using the
  * 3-bit field b = row word 0 bits 17..19 (word & 0xE0000), prints "------>DispModeTransform %d,%d , %d" (byte,
@@ -10,7 +10,7 @@
  * This panel's rows have word 0 = 0x2C120400 (b = 1): raw 0x42 -> 11 (rows 0/1, and row 2 in FW.012), raw 0x40 ->
  * 5 (row 2 in FW.021). Byte-identical in FW.012. Callers: FUN_a0141840, FUN_a0141964; inlined (same source file,
  * gcc -O3) in Disp_Init FUN_a0151db4 and in FUN_a015373c.
- * keys: (1) case SOURCE order 0x10, 0x24, 0x20, 0x11, 0x21, 0x40, 0x41, 0x22/0x42: the
+ * Source form: (1) case SOURCE order 0x10, 0x24, 0x20, 0x11, 0x21, 0x40, 0x41, 0x22/0x42: the
  *   register names inside the cases come from -frename-registers (least-recently-used register, ticks over the
  *   basic blocks in source order), so the computing cases must be in the order 0x11, 0x21, 0x40, 0x41, 0x22; the
  *   constant cases first; (2) case 0x22/0x42 written as an if / else-if chain (with ?: its tail is cross-jumped

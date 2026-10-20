@@ -1,5 +1,5 @@
-/* leon2m FUN_a0151db4 @ 0xa0151db4  Disp_Init (hand; -mcpu=v8 -O3
- * and at -mcpu=v8 -O3 -g). Real size 0x25C bytes.
+/* leon2m FUN_a0151db4 @ 0xa0151db4  Disp_Init. Flags: -mcpu=v8 -O3 -g (-mcpu=v8 -O3 gives the same code).
+ * Real size 0x25C bytes.
  *
  * Prints "Disp_Init", builds a 36-byte output configuration and passes it BY VALUE to FUN_a0105150 (output path
  * set-up, variant A; FUN_a015373c builds the same record for FUN_a0106d64).
@@ -9,9 +9,9 @@
  *   is 2, 0 for 8 bits on other links, 2 for 10 bits, else left unset.
  *   +0x08 = DispModeTransform() (FUN_a0151c84, inlined), +0x0C = 0x80, +0x0D = 0, +0x14 = 0.
  * No direct call by address; System_Initialize FUN_a015209c inlines this function.
- * keys: DispModeTransform CALLED and inlined (its keys: case order, if-chain for 0x22/0x42); packed
+ * Source form: DispModeTransform CALLED and inlined (its source form: case order, if-chain for 0x22/0x42); packed
  *   record fields.
- * SOURCE NOTE: DispModeTransform (FUN_a0151c84, its own byte-exact file) is defined here as a static copy
+ * SOURCE NOTE: DispModeTransform (FUN_a0151c84, also in its own file) is defined here as a static copy
  *   (DispModeTransform_inl) so gcc inlines it exactly as the original did, without a second global definition.
  */
 

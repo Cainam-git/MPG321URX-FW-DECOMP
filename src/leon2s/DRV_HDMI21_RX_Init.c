@@ -3,10 +3,10 @@
  * print s_a006b860 with 999. DRV_HDMI_IF_Init(); for i = 0, 1: DRV_HDMI_IF_Disconnect(i), FUN_a00a1b58(i);
  * for j = 0, 1: FUN_a00a1c74(j, 1); for i = 0, 1: FUN_a00a7488(FUN_a008f4d0(i), 0x2e70, 0xffffffff, 0xf00)
  * and FUN_a00a73ac(0xb / 9 / 10, cfg + 8 bytes) with cfg = word +0x18 of the 0x34-byte record
- * DAT_a807db00[i] (re-read for each call). void.
- * Fixes vs the autoc draft (76.81, did not compile): the third loop was missing (a7488 / 73ac run per port,
- * indexed by the loop counter); the print string is a symbol; 'i = 0' at the declaration (fw 'clr %l1' in
- * the first branch delay slot) and the middle loop has its own counter j (fw %l0). Aids: none.
+ * DAT_a807db00[i] (re-read for each call). Returns nothing.
+ * The a7488 / 73ac calls run per port in the third loop, indexed by its loop counter.
+ * Source form: the print string is a symbol; 'i = 0' at the declaration (fw 'clr %l1' in the first branch
+ * delay slot) and the middle loop has its own counter j (fw %l0). Aids: none.
  */
 struct port_regs {
     unsigned int unk0[6];

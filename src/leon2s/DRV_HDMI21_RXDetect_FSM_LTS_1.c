@@ -3,9 +3,9 @@
  * state word DAT_a807d648[port] != rec word +0x30: if bit 0x800 of _DAT_a8078634, print s_a0067868 with
  * s_a00b4298 (2 args; the function-name string); then rec +0x30 = state. If byte +6 of the 24-byte entry
  * r of DAT_a807cc64 == 1: print s_a0069be8 (1 arg) and state = 2. Returns 0.
- * Fixes vs the autoc draft (75.00, did not compile): FUN_a00961e8 takes the port (fw %o0 = port) and
- * returns u8; the print strings are symbols (s_a0067868 + s_a00b4298, s_a0069be8); written in the form of
- * the accepted twin DRV_HDMI21_RXDetect_FSM_LTS_2 (record pointer + state array). Aids: none.
+ * FUN_a00961e8 takes the port (fw %o0 = port) and returns u8. Source form: the print strings are symbols
+ * (s_a0067868 + s_a00b4298, s_a0069be8); the same form as the twin DRV_HDMI21_RXDetect_FSM_LTS_2 (record
+ * pointer + state array). Aids: none.
  */
 extern unsigned int _DAT_a8078634;
 extern unsigned int DAT_a807d648[];

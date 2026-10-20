@@ -3,9 +3,9 @@
  * Code facts: p (u8), q (u8). For each bit b = 0x01, 0x02, ... 0x80 in turn: if bit b is set in
  * byte DAT_a802cc86 or in byte DAT_a802cc87, call FUN_a00fe880(q, b, t) with t = 10 when p == 1
  * and t = 0 otherwise (two unrolled copies of the 8 tests; the p != 1 copy is the fall-through).
- * cc86 is re-read before each test (calls in between); not volatile. void.
- * Fix vs the autoc draft (81.86): no volatile on the RAM byte cc86 (the draft had it); u8 q with
- * the plain bit tests; FUN_a00fe880(u8, u32, u32) prototype. Aids: none.
+ * cc86 is re-read before each test (calls in between); not volatile. Returns nothing.
+ * Source form: no volatile on the RAM byte cc86; u8 q with the plain bit tests; FUN_a00fe880(u8, u32, u32)
+ * prototype. Aids: none.
  */
 extern unsigned char DAT_a802cc86;
 extern unsigned char DAT_a802cc87;

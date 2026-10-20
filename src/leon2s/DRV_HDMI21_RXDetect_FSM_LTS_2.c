@@ -1,9 +1,11 @@
 /* DRV_HDMI21_RXDetect_FSM_LTS_2 (leon2s, 0xa0098330-0xa00983ec, 47 words). Flags -mcpu=v8 -Os -g.
- Code facts: u8 port. rec = 0xb0-byte record port of DAT_a807d680; if the state word DAT_a807d648[port] != rec word +0x30: if bit 0x800 of
- _DAT_a8078634, print s_a0069c10 '[HDMI21]: =%s, Port ID = %d=' with s_a00b42b8 (the function name) and port; then rec +0x30 = state.
- FUN_a00a73ac(0x16, word +0x18 of the 0x34-byte record port of DAT_a807db00 + 0xa0); state = (FUN_a0098300(port) & 0xff) ? 7 : 3; returns 0.
- Fixes vs draft: the print takes 3 args (fmt, name string, port; the draft passed a volatile word as fmt), records addressed through
- two separate local pointers (one shared rec pointer or inline indexing reorders the smul/add). Aids: none.
+ * Code facts: u8 port. rec = 0xb0-byte record port of DAT_a807d680; if the state word DAT_a807d648[port] !=
+ * rec word +0x30: if bit 0x800 of _DAT_a8078634, print s_a0069c10 '[HDMI21]: =%s, Port ID = %d=' with
+ * s_a00b42b8 (the function name) and port; then rec +0x30 = state.
+ * FUN_a00a73ac(0x16, word +0x18 of the 0x34-byte record port of DAT_a807db00 + 0xa0);
+ * state = (FUN_a0098300(port) & 0xff) ? 7 : 3; returns 0.
+ * The print takes 3 arguments (fmt, name string, port). Source form: records addressed through two separate
+ * local pointers (one shared rec pointer or inline indexing reorders the smul/add). Aids: none.
  */
 extern unsigned int _DAT_a8078634;
 extern unsigned int DAT_a807d648[];
