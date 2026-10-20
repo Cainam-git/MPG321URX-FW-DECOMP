@@ -13440,6 +13440,13 @@
       "name": "FUN_a0148fc0",
       "status": "matched"
     },
+    "ram:a0149018": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Calls FUN_a0151aa4 twice, stores on into bit 25 of word 0xa802e1a0 and calls FUN_a0153970",
+      "name": "FUN_a0149018",
+      "status": "matched"
+    },
     "ram:a014913c": {
       "by": "hand",
       "comment": "byte 0xa802e3d0+0x1c = u8 param; if param != 5: FUN_a011855c() then tail FUN_a014110c(re-read rec+0x1c) (1 arg, restore in the delay slot); else tail FUN_a011855c(). void.",
