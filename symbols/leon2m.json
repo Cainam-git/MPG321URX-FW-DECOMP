@@ -13624,6 +13624,13 @@
       "name": "FUN_a014a820",
       "status": "matched"
     },
+    "ram:a014a8d4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets bit 16 of word 0x70 and halfword 0x74 of one or all four 0x78-byte records at 0xa802df30 and prints the bit",
+      "name": "FUN_a014a8d4",
+      "status": "matched"
+    },
     "ram:a014aa48": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
