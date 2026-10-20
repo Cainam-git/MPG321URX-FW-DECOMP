@@ -904,6 +904,13 @@
       "name": "FUN_CODE_ceee",
       "status": "matched"
     },
+    "CODE:cfa5": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Builds the 32-bit value a:b:c:d in the long at XDATA 0x08C9, one byte per step",
+      "name": "FUN_CODE_cfa5",
+      "status": "matched"
+    },
     "CODE:d059": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
