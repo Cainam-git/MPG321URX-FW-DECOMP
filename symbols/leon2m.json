@@ -9647,6 +9647,13 @@
       "name": "FUN_a01070b4",
       "status": "matched"
     },
+    "ram:a01073b8": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes fixed values to seven hardware registers at 0xcf00e9e8-0xcf0116f0",
+      "name": "FUN_a01073b8",
+      "status": "matched"
+    },
     "ram:a010765c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
