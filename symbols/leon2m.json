@@ -5354,6 +5354,13 @@
       "name": "FUN_a00bccac",
       "status": "matched"
     },
+    "ram:a00bccf4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Reply builder: '0' and digits from 0xa802d427[i], 0xa802d42b[i] (i = byte 0xa802cffd) into reply bytes 7-9, header 0x1c, send 11 bytes",
+      "name": "FUN_a00bccf4",
+      "status": "matched"
+    },
     "ram:a00bcd54": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
