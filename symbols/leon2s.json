@@ -4906,6 +4906,12 @@
       "name": "FUN_a00aa00c",
       "status": "matched"
     },
+    "ram:a00aa200": {
+      "by": "hand",
+      "comment": "Fixed sequence of ten FUN_a00a7d04 register writes",
+      "name": "FUN_a00aa200",
+      "status": "matched"
+    },
     "ram:a00aa2d0": {
       "by": "hand",
       "comment": "",
