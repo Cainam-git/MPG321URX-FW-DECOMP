@@ -1718,6 +1718,12 @@
       "name": "FUN_a006cfac",
       "status": "matched"
     },
+    "ram:a006cfe8": {
+      "by": "hand",
+      "comment": "runs the pending unzip-osd request (flag DAT_a80787f4): prints, calls FUN_a006cc24 with the stored words, clears the flag, calls FUN_a006fedc, prints",
+      "name": "FUN_a006cfe8",
+      "status": "matched"
+    },
     "ram:a006d050": {
       "by": "hand",
       "comment": "init sequence of 16 calls; if b3530(9) == -1 print 'Reliable Check Error!!' via a00734c4",
