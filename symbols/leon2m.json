@@ -7852,6 +7852,13 @@
       "name": "FUN_a00f1d48",
       "status": "matched"
     },
+    "ram:a00f1e0c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Reads an 8-bit block register at 0xCF000000 through a block-base table",
+      "name": "FUN_a00f1e0c",
+      "status": "matched"
+    },
     "ram:a00f1e50": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
