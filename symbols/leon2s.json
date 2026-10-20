@@ -4124,6 +4124,12 @@
       "name": "DRV_HDMI_ModeDetect_FSM_FRL_Chk",
       "status": "matched"
     },
+    "ram:a009740c": {
+      "by": "h16",
+      "comment": "bit tests via FUN_a00a7408 on port record ARR_a807db00[port] words, then FUN_a00a73ac or FUN_a00a73d4 updates of bits 0x10/0x15",
+      "name": "FUN_a009740c",
+      "status": "matched"
+    },
     "ram:a00977cc": {
       "by": "hand",
       "comment": "u16 at +0x32 of the 400-byte record a807d7e0[p1] = p2",
