@@ -28,10 +28,11 @@ tested with Python 3.14, Wine 11.20 and Ghidra 12.1.2. Run all scripts from the 
    ```
 
 3. **Install Keil C51 into its own Wine prefix.** The installer runs silently and installs to
-   `toolchains/keil-prefix/drive_c/Keil_v5/`:
+   `toolchains/keil-prefix/drive_c/Keil_v5/`. Disabling `winemenubuilder` keeps Wine from adding Keil to the desktop
+   menu and from registering file associations:
 
    ```
-   export WINEPREFIX="$PWD/toolchains/keil-prefix" WINEDEBUG=-all
+   export WINEPREFIX="$PWD/toolchains/keil-prefix" WINEDEBUG=-all WINEDLLOVERRIDES="winemenubuilder.exe=d"
    wineboot -i
    wine C51V961.exe /S
    ```
@@ -45,7 +46,13 @@ tested with Python 3.14, Wine 11.20 and Ghidra 12.1.2. Run all scripts from the 
 
 5. **Optionally unpack the GCC 3.4.4 source** into `toolchains/gcc-3.4.4-src/`, for reading the compiler's internals.
 6. **Install Ghidra** (on Arch Linux: `pacman -S ghidra`). It is only needed to regenerate `decomp/`.
-7. **Check the setup** by running `python3 -I tools/verify.py 8051_bank0 leon2s`. Every function should verify,
+7. **Split the firmware** into the parts each processor runs. The checking tools read them from `parts/`:
+
+   ```
+   python3 -I tools/split.py firmware/MSI_MPG321URX_V021_7F69.bin parts
+   ```
+
+8. **Check the setup** by running `python3 -I tools/verify.py 8051_bank0 leon2s`. Every function should verify,
    apart from the entries listed in the [status report](STATUS.md#verification).
 
 ## Downloads
