@@ -6144,6 +6144,13 @@
       "name": "FUN_a00ca380",
       "status": "matched"
     },
+    "ram:a00ca878": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command handler: four digits from receive record bytes 6-9 to bit 15 of 0xa802d46c and bytes 0xa802d470/471/46f, reply 5600+",
+      "name": "FUN_a00ca878",
+      "status": "matched"
+    },
     "ram:a00cab68": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
