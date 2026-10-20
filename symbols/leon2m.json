@@ -6523,6 +6523,13 @@
       "name": "FUN_a00d24e0",
       "status": "matched"
     },
+    "ram:a00d253c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3",
+      "comment": "Frame byte 6 (0/1) sets byte 0xa802d2af to 1/2 with a reset sequence, for 1 also byte 0xa802d2b0 from frame byte 7; returns 0xe0",
+      "name": "FUN_a00d253c",
+      "status": "matched"
+    },
     "ram:a00d25f4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
