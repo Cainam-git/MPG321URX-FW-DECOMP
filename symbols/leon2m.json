@@ -9427,6 +9427,13 @@
       "name": "FUN_a0125e38",
       "status": "matched"
     },
+    "ram:a0126360": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Writes the 16-bit OLED luminance gain to panel register 0x5e and retries until the read-back matches",
+      "name": "FUN_a0126360",
+      "status": "matched"
+    },
     "ram:a01264e8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
