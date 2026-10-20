@@ -4239,6 +4239,13 @@
       "name": "FUN_a00b3b5c",
       "status": "matched"
     },
+    "ram:a00b3ba0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Draws five rows from table 0x196B24 (last row offset by DAT_a802d290 byte +8), then calls FUN_a00a9f30(4, bit 9)",
+      "name": "FUN_a00b3ba0",
+      "status": "matched"
+    },
     "ram:a00b3c80": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
