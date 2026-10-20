@@ -9550,6 +9550,13 @@
       "name": "FUN_a011d194",
       "status": "matched"
     },
+    "ram:a011e028": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets/clears bit 7 (en) of the register picked by ch (1..6, 16..24/31, 25, 26; others: all six 0xcf016120..198)",
+      "name": "FUN_a011e028",
+      "status": "matched"
+    },
     "ram:a011e690": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
