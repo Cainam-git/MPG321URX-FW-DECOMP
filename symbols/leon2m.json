@@ -5473,6 +5473,13 @@
       "name": "FUN_a00c1100",
       "status": "matched"
     },
+    "ram:a00c1188": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: digit 0-1; for 1 writes record halfwords 0x1ac=0x750, 0x1ae=0x402; reply 5600+ via called helpers",
+      "name": "FUN_a00c1188",
+      "status": "matched"
+    },
     "ram:a00c122c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
