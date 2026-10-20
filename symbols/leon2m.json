@@ -7904,6 +7904,13 @@
       "name": "FUN_a00dd3d4",
       "status": "matched"
     },
+    "ram:a00dd43c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "prints n words (32 when n is 0) around addr as lines of address and four word columns through FUN_a00def40 / FUN_a00deffc",
+      "name": "FUN_a00dd43c",
+      "status": "matched"
+    },
     "ram:a00dd540": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
