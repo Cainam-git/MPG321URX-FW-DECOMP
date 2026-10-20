@@ -6744,6 +6744,13 @@
       "name": "FUN_a00f9398",
       "status": "matched"
     },
+    "ram:a00f93a0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Computes centred x/y offsets from block regs 0x10-0x14 and writes them to regs 0x25-0x2f",
+      "name": "FUN_a00f93a0",
+      "status": "matched"
+    },
     "ram:a00f9500": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
