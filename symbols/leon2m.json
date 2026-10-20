@@ -7398,6 +7398,13 @@
       "name": "FUN_a00da714",
       "status": "matched"
     },
+    "ram:a00da754": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UserSetAuroraLEDBarBrightness: sends the command \"5b00740\" + three digits of level * 20 + 20 over FUN_a01487e8, then FUN_a01350dc",
+      "name": "FUN_a00da754",
+      "status": "matched"
+    },
     "ram:a00da840": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
