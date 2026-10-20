@@ -7010,6 +7010,13 @@
       "name": "FUN_a00cae64",
       "status": "matched"
     },
+    "ram:a00caf0c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "digit 0..2 at receive byte 9 sets/clears bit 15 of 0xa802cff4+0xe (2 also sets 0xa802d290 bits and byte 0xa802b08e bit 1), clears bit 15 of +0x14, replies 5600+",
+      "name": "FUN_a00caf0c",
+      "status": "matched"
+    },
     "ram:a00cb1c8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
