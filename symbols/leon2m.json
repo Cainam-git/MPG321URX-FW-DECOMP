@@ -1873,6 +1873,13 @@
       "name": "FUN_a002d5ac",
       "status": "matched"
     },
+    "ram:a002e3c4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets or clears bit n of the register at 0xcf011fc0",
+      "name": "FUN_a002e3c4",
+      "status": "matched"
+    },
     "ram:a002e69c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
