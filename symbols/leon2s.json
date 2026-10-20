@@ -1928,6 +1928,12 @@
       "name": "FUN_a0072c6c",
       "status": "matched"
     },
+    "ram:a0072cb8": {
+      "by": "hand",
+      "comment": "Prints the crash report (PC, trap type, saved registers, stack and code words) and halts",
+      "name": "CED_ALL",
+      "status": "matched"
+    },
     "ram:a0072fd8": {
       "by": "permuter",
       "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
