@@ -838,6 +838,12 @@
       "name": "FUN_CODE_b456",
       "status": "matched"
     },
+    "CODE:ba6d": {
+      "by": "hand",
+      "comment": "store the hi/lo pair of channel ch at 0xA73C and its step (hi - lo) / (5 * (0xA73B & 0x1F)) at 0xA737[ch]",
+      "name": "FUN_CODE_ba6d",
+      "status": "matched"
+    },
     "CODE:bae2": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
