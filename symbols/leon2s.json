@@ -6007,6 +6007,12 @@
       "name": "FUN_a00b0724",
       "status": "matched"
     },
+    "ram:a00b115c": {
+      "by": "h17",
+      "comment": "switch on mode 0..2: two or three FUN_a00a6c98/FUN_a00a6c00 register writes with fixed values",
+      "name": "FUN_a00b115c",
+      "status": "matched"
+    },
     "ram:a00b1224": {
       "by": "hand",
       "comment": "reg 0x55 bits 6 / 4 by mode: 0 -> 0 / 0, 2 -> 1 / 0, 1 -> 1 / 1 (a6c98); case order 0, 2, 1",
