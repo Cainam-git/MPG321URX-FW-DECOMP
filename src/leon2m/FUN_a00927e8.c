@@ -1,5 +1,5 @@
 /* leon2m FUN_a00927e8 @ 0xa00927e8-0xa0092908 (72 words).
- * Steps the selection word 0xa802afec forwards through 0x23..0x25 (modulo 3), skipping positions that FUN_a00aa520
+ * Steps word 0xa802afec forwards through 0x23..0x25 (modulo 3), skipping positions that FUN_a00aa520
  * rejects: FUN_a00a8ee8(afec - 35) first, then v = ((low halfword of afec) - 34) % 3 and afec = v + 35 until
  * FUN_a00aa520(v) returns 1. Then FUN_a00a900c(position, 1); FUN_a0146c40(6, flag, 0) with flag 0 when the position
  * equals byte 0xa8025c56 and 1 otherwise; FUN_a00af44c(0x23, position); for position 0 FUN_a00a9468(1, 3) and

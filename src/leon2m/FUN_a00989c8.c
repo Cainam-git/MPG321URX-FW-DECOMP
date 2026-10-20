@@ -1,6 +1,6 @@
 /* leon2m FUN_a00989c8 @ 0xa00989c8-0xa0098a74 (43 words).
  * v = byte 0xa802d298 (offset 8 of the block at 0xa802d290). Byte 0xa8025c56 = v, then FUN_a00a813c(1, v % 7, 0) and
- * FUN_a00a900c(selection word 0xa802afec - 42, 2). The value is read again, the selection word is set to v + 0x92 and
+ * FUN_a00a900c(word 0xa802afec - 42, 2). The value is read again, word 0xa802afec is set to v + 0x92 and
  * FUN_a00a9650(v % 7, 1) is tail-called. Same code as FUN_a0098434 with a fixed byte instead of an indexed one.
  */
 extern unsigned char DAT_a802d290[];

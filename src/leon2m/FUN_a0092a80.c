@@ -1,5 +1,5 @@
 /* leon2m FUN_a0092a80 @ 0xa0092a80-0xa0092b18 (38 words).
- * Steps the selection word 0xa802afec forwards through 0x26..0x29 (modulo 4), skipping positions that FUN_a00aa520
+ * Steps word 0xa802afec forwards through 0x26..0x29 (modulo 4), skipping positions that FUN_a00aa520
  * rejects: FUN_a00a8ee8(afec - 38) first, then v = ((low halfword of afec) - 37) % 4 and afec = v + 38 until
  * FUN_a00aa520(v) returns 1. Byte 0xa802d433 (offset 0x1a3 of the block at 0xa802d290) is stepped the same way:
  * (b + 1) & 3. Then FUN_a00a900c(afec - 38, 1) and FUN_a00af44c(0x26, afec - 38). Same loop as FUN_a00920f4.

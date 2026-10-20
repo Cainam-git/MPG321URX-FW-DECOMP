@@ -1,5 +1,5 @@
 /* leon2m FUN_a0092d80 @ 0xa0092d80-0xa0092ea8 (74 words).
- * Steps the selection word 0xa802afec forwards through 0x2a..0x33 (modulo 10), skipping positions that FUN_a00aa520
+ * Steps word 0xa802afec forwards through 0x2a..0x33 (modulo 10), skipping positions that FUN_a00aa520
  * rejects: FUN_a00a8ee8(position), FUN_a00aa33c(position, 0) first, then v = ((low halfword of afec) - 41) % 10 and
  * afec = v + 42 until FUN_a00aa520(v) returns 1. The positions form pages of 7: when position / 7 differs from the
  * page before the step, FUN_a00ad1c0(new page) is called. Then FUN_a00a900c(position, 1), FUN_a00aa33c(position, 1)

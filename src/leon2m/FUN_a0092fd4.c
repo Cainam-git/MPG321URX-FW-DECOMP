@@ -1,9 +1,9 @@
 /* leon2m FUN_a0092fd4 @ 0xa0092fd4-0xa0093144 (92 words).
- * Steps the selection word 0xa802afec backwards through 0x34..0x3b (modulo 8), skipping positions that FUN_a00aa520
+ * Steps word 0xa802afec backwards through 0x34..0x3b (modulo 8), skipping positions that FUN_a00aa520
  * rejects: FUN_a00a8ee8(position) first, then v = ((low halfword of afec) - 45) % 8 and afec = v + 52 until
  * FUN_a00aa520(v) returns 1. The positions form pages of 7: when position / 7 differs from the page before the step,
  * FUN_a00aa83c(1 - old page) is called. Then FUN_a00a900c(position, 1) and FUN_a00af44c(0x34, position). For
- * selection 0x35: FUN_a00a9468(1, 3) and FUN_a00b34d4(0, 4); for 0x3b: FUN_a00b34d4(0, 4) and FUN_a00a9468(1, 6);
+ * afec 0x35: FUN_a00a9468(1, 3) and FUN_a00b34d4(0, 4); for 0x3b: FUN_a00b34d4(0, 4) and FUN_a00a9468(1, 6);
  * otherwise byte 0xa802d419 = 0xff, FUN_a00ab4bc(), FUN_a00a9468(1, 2), FUN_a00a9468(2, 5), FUN_a00a9468(0, 0) and
  * FUN_a00b34d4(0, 1). Same loop as FUN_a00920f4.
  */

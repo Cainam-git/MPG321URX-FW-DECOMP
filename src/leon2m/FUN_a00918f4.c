@@ -1,5 +1,5 @@
 /* leon2m FUN_a00918f4 @ 0xa00918f4-0xa00919b4 (48 words).
- * Calls FUN_a00b4144(afec - 2, 2) with the selection word 0xa802afec, sets the selection to 0xe, and while
+ * Calls FUN_a00b4144(afec - 2, 2) with afec = word 0xa802afec, sets afec to 0xe, and while
  * FUN_a00aa520(afec - 0xe) does not return 1 steps it forwards through 0xe..0x14: t = ((low halfword of afec) - 13) %
  * 7, afec = t + 0xe. Then FUN_a00a900c(afec - 0xe, 1). Then FUN_a00af44c(0xe, afec - 0xe) and FUN_a00a9650(byte
  * 0xa802d412, 0). Same loop as FUN_a0091668.

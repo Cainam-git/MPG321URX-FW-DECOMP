@@ -1,5 +1,5 @@
 /* leon2m FUN_a00a13d8 @ 0xa00a13d8-0xa00a14bc (57 words).
- * Calls FUN_a00a900c(selection word 0xa802afec - 52, 2). Then, for selection 0x38, 0x39 or 0x3a, the selection
+ * Calls FUN_a00a900c(word 0xa802afec - 52, 2). Then, for word 0xa802afec 0x38, 0x39 or 0x3a, the word
  * becomes 0xc0, 0xc1 or 0xc2 and byte 0xa8025c56 is set from byte 0xa802d478, 0xa802d47a or 0xa802d47c; other values
  * leave both unchanged. Finally FUN_a00a9650(byte 0xa8025c56, 1) and FUN_a00a813c(1, byte 0xa8025c56, 0).
  */

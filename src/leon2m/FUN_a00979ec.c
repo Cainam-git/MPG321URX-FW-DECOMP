@@ -1,7 +1,7 @@
 /* leon2m FUN_a00979ec @ 0xa00979ec-0xa0097ad0 (57 words).
- * Same sequence as FUN_a00978c8 with these differences: after FUN_a00976f8() the selection word 0xa802afec is set to
+ * Same sequence as FUN_a00978c8 with these differences: after FUN_a00976f8() the word 0xa802afec is set to
  * byte 0xa802d2bf (offset 0x2f of the block at 0xa802d290) + 0x7f, FUN_a00a813c(1, that byte, 0) is called and
- * FUN_a00a9650(selection - 127, 1) follows; at the end byte 0xa8025c54 is also set to that byte, and 0x10 instead of
+ * FUN_a00a9650(word 0xa802afec - 127, 1) follows; at the end byte 0xa8025c54 is also set to that byte, and 0x10 instead of
  * 0xf is written to byte 0xa802b08f before the tail call FUN_a00d4998().
  */
 extern unsigned char DAT_a8025c54;

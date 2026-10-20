@@ -1,5 +1,5 @@
 /* leon2m FUN_a009c75c @ 0xa009c75c-0xa009c83c (56 words).
- * Steps the selection kept in word 0xa802afec forwards through the values 0x77..0x79 (modulo 3). FUN_a00a93bc is
+ * Steps word 0xa802afec forwards through the values 0x77..0x79 (modulo 3). FUN_a00a93bc is
  * called with the current position (afec - 0x77). Then t = ((low halfword of afec) - 0x76) % 3 and afec = t + 0x77
  * repeat until FUN_a00aad30(t) returns 1, so positions that FUN_a00aad30 rejects are skipped. The new position is
  * written into bits 18..19 of word 0xa802d33c (offset 0xac of the block at 0xa802d290). FUN_a00a813c(1, v, position

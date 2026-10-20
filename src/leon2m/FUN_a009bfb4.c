@@ -1,5 +1,5 @@
 /* leon2m FUN_a009bfb4 @ 0xa009bfb4-0xa009c22c (158 words).
- * Steps the selection word 0xa802afec backwards through 0x5c..0x63 (modulo 8). The positions form pages of 7.
+ * Steps word 0xa802afec backwards through 0x5c..0x63 (modulo 8). The positions form pages of 7.
  * FUN_a00a93bc is called with the current position within its page; then t = ((low halfword of afec) - 85) % 8 and
  * afec = t + 0x5c repeat until FUN_a00aad30(t) returns 1. FUN_a00b6b88(position, 1) gives a value that is stored in
  * byte 0xa802d411 (offset 0x181 of the block at 0xa802d290); when the page changed, FUN_a00b6bec(new page) is called.

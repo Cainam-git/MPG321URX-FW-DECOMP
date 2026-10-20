@@ -1,7 +1,7 @@
 /* leon2m FUN_a0091cc0 @ 0xa0091cc0-0xa0091d74 (45 words).
- * Calls FUN_a00b4144(afec - 2, 2) with the selection word 0xa802afec, sets the selection to 0x15, and while
+ * Calls FUN_a00b4144(afec - 2, 2) with afec = word 0xa802afec, sets afec to 0x15, and while
  * FUN_a00aa520(afec - 0x15) does not return 1 steps it forwards through 0x15..0x17: t = ((low halfword of afec) - 20)
- * % 3, afec = t + 0x15. Then FUN_a00a900c(afec - 0x15, 1). When the selection is 0x16, FUN_a00aa258(1, 0) is called.
+ * % 3, afec = t + 0x15. Then FUN_a00a900c(afec - 0x15, 1). When afec is 0x16, FUN_a00aa258(1, 0) is called.
  * Same loop as FUN_a0091668.
  */
 extern unsigned int _DAT_a802afec;

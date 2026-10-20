@@ -1,5 +1,5 @@
 /* leon2m FUN_a009b070 @ 0xa009b070-0xa009b154 (57 words).
- * Steps the selection kept in word 0xa802afec forwards through the values 0xcd..0xcf (modulo 3). FUN_a00a93bc is
+ * Steps word 0xa802afec forwards through the values 0xcd..0xcf (modulo 3). FUN_a00a93bc is
  * called with the current position (afec - 0xcd). Then t = ((low halfword of afec) - 0xcc) % 3 and afec = t + 0xcd
  * repeat until FUN_a00aad30(t) returns 1, so positions that FUN_a00aad30 rejects are skipped. The setting is numbered
  * in reverse: 2 - position is stored in byte 0xa802d2c1 (offset 0x31 of the block at 0xa802d290), then

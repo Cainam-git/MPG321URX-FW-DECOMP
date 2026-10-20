@@ -1,6 +1,6 @@
 /* leon2m FUN_a009221c @ 0xa009221c-0xa00922f0 (53 words).
- * Calls FUN_a00b4144(afec - 2, 2) with the selection word 0xa802afec, then sets the selection to
- * FUN_a01445fc(byte 0xa802d2ae) + 0x1e. While FUN_a00aa520(afec - 0x1e) does not return 1, the selection steps
+ * Calls FUN_a00b4144(afec - 2, 2) with afec = word 0xa802afec, then sets afec to
+ * FUN_a01445fc(byte 0xa802d2ae) + 0x1e. While FUN_a00aa520(afec - 0x1e) does not return 1, afec steps
  * forwards through 0x1e..0x22: t = ((low halfword of afec) - 0x1d) % 5, afec = t + 0x1e. Then FUN_a00a900c(afec -
  * 0x1e, 1), FUN_a0146c40(6, 0, 0), FUN_a00a9468(1, 3) and FUN_a00b34d4(0, 4) are called. Same loop as FUN_a0092b18.
  */

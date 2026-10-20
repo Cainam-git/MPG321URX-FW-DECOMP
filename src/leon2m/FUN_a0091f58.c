@@ -1,5 +1,5 @@
 /* leon2m FUN_a0091f58 @ 0xa0091f58-0xa0092044 (59 words).
- * Calls FUN_a00b4144(afec - 2, 2) with the selection word 0xa802afec, sets the selection to 0x1a when FUN_a00d7d48
+ * Calls FUN_a00b4144(afec - 2, 2) with afec = word 0xa802afec, sets afec to 0x1a when FUN_a00d7d48
  * returns non-zero, else to 0x19 when the word 0xa802d3ac (offset 0x11c of the block at 0xa802d290) is negative or
  * when the word 0xa802d340 (offset 0xb0) is non-zero and FUN_a00d8bd8 returns non-zero, else to 0x18, and while
  * FUN_a00aa520(afec - 0x18) does not return 1 steps it forwards through 0x18..0x1d: t = ((low halfword of afec) - 23)

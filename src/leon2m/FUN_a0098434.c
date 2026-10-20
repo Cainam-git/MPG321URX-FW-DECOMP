@@ -1,7 +1,7 @@
 /* leon2m FUN_a0098434 @ 0xa0098434-0xa00984f0 (47 words).
  * v = byte 0xa802d290[0x18a + k] with k = byte 0xa802d433 (offset 0x1a3). Byte 0xa8025c56 = v, then
- * FUN_a00a813c(1, v % 7, 0) and FUN_a00a900c(selection word 0xa802afec - 38, 2). The value is read again, the
- * selection word is set to v + 0x86 and FUN_a00a9650(v % 7, 1) is tail-called.
+ * FUN_a00a813c(1, v % 7, 0) and FUN_a00a900c(word 0xa802afec - 38, 2). The byte is read again for each use;
+ * word 0xa802afec is set to v + 0x86 and FUN_a00a9650(v % 7, 1) is tail-called.
  */
 extern unsigned char DAT_a802d290[];
 extern unsigned char DAT_a8025c56;

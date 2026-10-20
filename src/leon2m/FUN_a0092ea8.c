@@ -1,5 +1,5 @@
 /* leon2m FUN_a0092ea8 @ 0xa0092ea8-0xa0092f2c (33 words).
- * Calls FUN_a00b4144(afec - 2, 2) with the selection word 0xa802afec, sets the selection to 0x34, and while
+ * Calls FUN_a00b4144(afec - 2, 2) with afec = word 0xa802afec, sets afec to 0x34, and while
  * FUN_a00aa520(afec - 0x34) does not return 1 steps it forwards through 0x34..0x3b: t = ((low halfword of afec) - 51)
  * % 8, afec = t + 0x34. Then FUN_a00a900c(afec - 0x34, 1). Same loop as FUN_a0091668.
  */

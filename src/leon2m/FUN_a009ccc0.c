@@ -1,5 +1,5 @@
 /* leon2m FUN_a009ccc0 @ 0xa009ccc0-0xa009cd74 (45 words).
- * Steps the selection kept in word 0xa802afec forwards through the values 0x7f..0x85 (modulo 7). FUN_a00a93bc is
+ * Steps word 0xa802afec forwards through the values 0x7f..0x85 (modulo 7). FUN_a00a93bc is
  * called with the current position (afec - 0x7f). Then t = ((low halfword of afec) - 0x7e) % 7 and afec = t + 0x7f
  * repeat until FUN_a00aad30(t) returns 1, so positions that FUN_a00aad30 rejects are skipped. FUN_a00a9650(position,
  * 1) follows. Finally FUN_a00a813c(1, v, position != v) is called with v = byte 0xa8025c54. Same loop as
