@@ -1,8 +1,8 @@
-/* leon2m FUN_a013bdb8 @ 0xa013bdb8-0xa013beb0 (62 words), flags -mcpu=v8 -O3 -g. No direct callers (reached
- * through a table). port is the second parameter (the first one is not used). With o = FUN_a013cd4c(port)
- * (halfword fields) a flag is set when ((o->h10 - o->h14) * o->he) >> 1 (unsigned) is above 0x1fff. Calls FUN_a00f8918(port), then runs the body
- * of FUN_a013bd00 with that flag on a new FUN_a013cd4c(port) record: when o->h12 != o->h16 or o->h14 != o->h18,
- * FUN_a00f88e8(port, o->h20 - o->h1c or o->h20) when the flag is set and FUN_a00f8ef4(port); otherwise
+/* leon2m FUN_a013bdb8 @ 0xa013bdb8-0xa013beb0 (62 words), flags -mcpu=v8 -O3 -g. No direct callers (reached through
+ * a table). port is the second parameter (the first one is not used). With o = FUN_a013cd4c(port) (halfword fields)
+ * a flag is set when ((o->h10 - o->h14) * o->he) >> 1 (unsigned) is above 0x1fff. Calls FUN_a00f8918(port), then
+ * runs the body of FUN_a013bd00 with that flag on a new FUN_a013cd4c(port) record: when o->h12 != o->h16 or o->h14
+ * != o->h18, FUN_a00f88e8(port, o->h20 - o->h1c or o->h20) when the flag is set and FUN_a00f8ef4(port); otherwise
  * FUN_a00f8918(port) when FUN_a0121d4c(port) returns 1, else FUN_a00f88e8(port, 0) when the flag is set.
  * Exact form: the body is written out (not as an inlined static function) with the unequal case as the first if arm.
  */
