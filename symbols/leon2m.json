@@ -12845,6 +12845,13 @@
       "name": "FUN_a012b9a0",
       "status": "matched"
     },
+    "ram:a012bb94": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "ORs v into halfword +0x1c of record id at 0xa802d8dc and sends {id, new halfword} with FUN_a01370dc(0x56, 0xc, msg, 0)",
+      "name": "FUN_a012bb94",
+      "status": "matched"
+    },
     "ram:a012bc08": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
