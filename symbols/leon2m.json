@@ -10382,6 +10382,13 @@
       "name": "FUN_a010b6e4",
       "status": "matched"
     },
+    "ram:a010b77c": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "bit sequence on 0xcf00b800 and 0xd00300f0 with func_0x4008d1a0 calls, FUN_a011cf88-dependent bits, then 0x100 to 0xd0030008/0xd0038008",
+      "name": "FUN_a010b77c",
+      "status": "matched"
+    },
     "ram:a010bdcc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
