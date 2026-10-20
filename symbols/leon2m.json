@@ -13145,6 +13145,13 @@
       "name": "FUN_a014489c",
       "status": "matched"
     },
+    "ram:a01448fc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns byte 0x28 of the 0xa802e224 entry of display channel ch (0..0x27, else 0x28), plus 2 for twelve values when a two-call test holds",
+      "name": "FUN_a01448fc",
+      "status": "matched"
+    },
     "ram:a014505c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
