@@ -6269,7 +6269,7 @@
     },
     "ram:a00b258c": {
       "by": "hand",
-      "comment": "prints an address in hex on the UART and, when word aligned, writes val there through FUN_a00b2304 and prints it",
+      "comment": "passes addr and val to FUN_a0061348/FUN_a0061280 and, for addr a multiple of 4, stores val there through FUN_a00b2304",
       "name": "CED_ALL_4",
       "status": "matched"
     },
