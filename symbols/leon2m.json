@@ -4152,6 +4152,13 @@
       "name": "FUN_a00a0c70",
       "status": "matched"
     },
+    "ram:a00a13d8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Maps selection 0x38..0x3a to 0xc0..0xc2 with its stored byte and reports it",
+      "name": "FUN_a00a13d8",
+      "status": "matched"
+    },
     "ram:a00a2264": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
