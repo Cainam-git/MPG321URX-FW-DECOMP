@@ -2,11 +2,11 @@
  * Same loop shape as FUN_a009bf48.
  * Code facts: FUN_a00a93bc(word 0xa802afec - 0x44, as u8); loop: t = (lduh 0xa802afee = low half of word
  * 0xa802afec) - 0x43; t = t % 4 (signed); word 0xa802afec = t + 0x44; repeat until FUN_a00aad30(t) == 1.
- * FUN_a00a9650(afec - 0x44, 1); v = byte 0xa8025c56; tail FUN_a00a813c(1, (u8)(v + 2), 0) when
- * afec - 0x46 == v, else FUN_a00a813c(1, (u8)(v + 2), 1) (two tail calls). void(void).
- * Fix vs the autoc draft (67.86): BEHAVIOUR: the 3rd arg is 0 when equal and 1 otherwise (the draft had them
- * swapped); (unsigned short)_DAT_a802afec for the half-word; u8/void prototypes; 'afec - 0x46 == v' with a u8
- * local v (an unsigned int temp for the left side swaps %g1/%i2). Aids: none.
+ * FUN_a00a9650(afec - 0x44, 1); v = byte 0xa8025c56; tail FUN_a00a813c(1, (u8)(v + 2), 0) when afec - 0x46 == v,
+ * else FUN_a00a813c(1, (u8)(v + 2), 1) (two tail calls). void(void).
+ * Source form: (unsigned short)_DAT_a802afec for the halfword; u8/void prototypes; the test is 'afec - 0x46 == v'
+ * with a u8 local v (an unsigned int temporary for the left side swaps %g1/%i2).
+ * Compiler aids: none.
  */
 extern unsigned char DAT_a8025c56;
 extern unsigned int _DAT_a802afec;

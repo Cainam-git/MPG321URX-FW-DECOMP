@@ -2,8 +2,9 @@
  * Code facts: v = (u8)(byte DAT_a802d290 + 9 + 1). If v > 100: the byte = 100. Else the byte = byte + 1 (stored in
  * the call delay slot), FUN_a00a45c0(5, 8, v, 0xc), FUN_a00b3708(10, 6, re-read byte), FUN_a00d8cd4(). Then
  * FUN_a00d4998() and byte 0xa802b08e |= 2. void(void).
- * Fix vs the autoc draft: real base DAT_a802d290 (draft DAT_a802d299 as u16), void prototypes; the clamp arm
- * comes first in the source (FUN_a00abff8 lever; the increment arm first swaps %o5/%g1, 80.65). Aids: none.
+ * Source form: the record base DAT_a802d290 with a byte offset; void prototypes; the clamp arm comes first in the
+ * source (as in FUN_a00abff8; the increment arm first swaps %o5/%g1).
+ * Compiler aids: none.
  */
 extern unsigned char DAT_a802d290[];
 extern unsigned char DAT_a802b08e;

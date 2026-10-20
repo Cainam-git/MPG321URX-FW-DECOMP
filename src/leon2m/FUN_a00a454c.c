@@ -3,8 +3,9 @@
  * Code facts: v = (u8)(byte 0xa802d290+0xc - 5); if v is outside 5..0x1e the record byte = 5 (clamp), else the
  * record byte = v, FUN_a00b7674(1), FUN_a00d47b0(). Then byte 0xa802b08e |= 2. void(void). gcc folds the range
  * test into '(u8)(b - 10) <= 0x19' (fw add -10 / and 0xff / cmp 0x19 / bleu).
- * Fix vs the autoc draft (66.67): real base DAT_a802d290 (draft: mid-record DAT_a802d29c as a word); the clamp
- * arm FIRST ('v < 5 || v > 0x1e' -> 5; the in-range-first order gives other registers, 82.61). Aids: none.
+ * Source form: the record base DAT_a802d290 with a byte offset; the clamp arm comes first ('v < 5 || v > 0x1e' ->
+ * 5; the in-range arm first gives other registers).
+ * Compiler aids: none.
  */
 struct R290 { unsigned char pad[0xc]; unsigned char b0c; };
 extern struct R290 DAT_a802d290;

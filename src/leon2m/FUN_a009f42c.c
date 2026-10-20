@@ -1,12 +1,9 @@
-/* leon2m FUN_a009f42c @ 0xa009f42c-0xa00a012c (832 words). -mcpu=v8 -O3 -g (also
- * -msoft-float) exact.py None.
- * Plain words: the APP event / timer handler (no
- * arguments, called by FUN_a0087430 and FUN_a00a012c); it steps the APP state machine (state = _DAT_a802afec) on ms
- * timers and port states, counts down the T+0x1a0..0x1a2 timer (b1a2 59..0, then b1a1 - 1) and the 1000 ms aff2
- * countdown; it reads no refresh rate (details below).
- * Callers FUN_a0087430 and FUN_a00a012c (exact src) call it with no arguments.
- * What it does (APP event / timer handler; S = DAT_a802cff4 system flags, T = DAT_a802d290 settings record,
- *   state = _DAT_a802afec; func_0x4008d594(t) = ms since tick t, FUN_a0147724 / func_0x4008d588 = tick now):
+/* leon2m FUN_a009f42c @ 0xa009f42c-0xa00a012c (832 words), flags -mcpu=v8 -O3 -g (also matches with -msoft-float).
+ * No arguments; called by FUN_a0087430 and FUN_a00a012c (both pass no arguments). It steps the state in
+ * _DAT_a802afec on ms timers and port states, counts down the T+0x1a0..0x1a2 timer (b1a2 59..0, then b1a1 - 1) and
+ * the 1000 ms aff2 countdown; it reads no refresh rate (details below).
+ * What it does (S = DAT_a802cff4 system flags, T = DAT_a802d290 settings record, state = _DAT_a802afec;
+ * func_0x4008d594(t) = ms since tick t, FUN_a0147724 / func_0x4008d588 = tick now):
  *   0. return when FUN_a0082c4c() == 1 or S.h4 bits 13-14 are set.
  *   1. ok = every port 0..3 is off (FUN_a0080320(i) == 0) or in port state 4 (FUN_a0143c14(i) == 4). ok and
  *      FUN_a0082c4c() == 0: state 0 / 0x10d with S.h4 bit 9 -> FUN_a008d2e0, FUN_a008ad20, (DAT_a802d284 == 0x3f)
@@ -15,70 +12,66 @@
  *   2. state 0x111: every 100 ms d03a = now.
  *   3. port 0 in state 10, S.h0 bit 8, FUN_a0143e70(0) == 0 and one of T.b190, T+0xa8 bit 12, T.b1a0 (timer
  *      hours), T+0xac bit 22: state 0 -> FUN_a00a5e68(1), state 0x106 (and d036 = now if S.h0 bit 14); state 0x106
- *      -> FUN_a00a5e68(0), (T.b17b == 2) FUN_a00ba184(0), d03c = now, FUN_a00d47b0(); state 0x108 and T.b17b == 2 ->
- *      FUN_a00ba184(0).
+ *      -> FUN_a00a5e68(0), (T.b17b == 2) FUN_a00ba184(0), d03c = now, FUN_a00d47b0(); state 0x108 and T.b17b == 2
+ *      -> FUN_a00ba184(0).
  *   4. S.h0 bit 14 (timer running): every 1000 ms count the T+0x1a0..0x1a2 timer (b1a2 seconds-like 59..0, then
  *      b1a1 - 1) while b1a0 != 0 and b1a1/b1a2 not both 0; clear bit 14 when b1a1 = b1a2 = 0.
  *   5. port 0 in state 10, S.h0 bit 8, low half of state != 0x10a, T.h1f6 != 0x55aa (else d038 = now, aff0 = 0):
  *      after 30000 ms S.hc = 1; after 29000 ms with S.hc == 0 once FUN_a00daa7c(); with S.hc != 0: S.h10 = index
  *      from FUN_a0127a08 against FUN_a0145af8(0xd) (or (0xd value * 60 + 0xb value) / 20 when FUN_a0145af8(0x10)),
- *      then (no FUN_a012792c / FUN_a0127944 / S.h14 bit 15) a FUN_a00b1654(x, y) change -> aff1, FUN_a00b1700(aff1,
- *      3), state 0x10f, d03c = now; else FUN_a009f184().
+ *      then (no FUN_a012792c / FUN_a0127944 / S.h14 bit 15) a FUN_a00b1654(x, y) change -> aff1,
+ *      FUN_a00b1700(aff1, 3), state 0x10f, d03c = now; else FUN_a009f184().
  *   6. state switch: 0/0x111/0x113/0x112/0x115 (0x112 tested twice in the fw chain) -> d03c = now, FUN_a00d47b0;
  *      0x10e, 0x10d (DAT_a802d465 != 0), 0x10b (> 3000 ms) -> (S.h4 bit 15: bit 10, FUN_a00808ac(4, 0)), state 0,
- *      FUN_a00b5080; 0x10c: d03c refresh after 100 ms; 0x116: after T.b0c seconds T.b1aa = 0, FUN_a009b59c;
- *      0x10f (> 3000 ms): as 0x10b, then S.h0 bit 9 -> clear it, d03c = now, state 0x10f, FUN_a00b8668;
- *      0x10a (> 60000 ms): T+0x1dc bits 31/30 both set -> S.he bit 15 from S.h12 == 5 / S.h10 == 4 and
- *      DAT_a8025c56, DAT_a8025c55 2 -> 0, (S.b3f, c55 == 0, he bit 15 clear) c55 = 1, FUN_a00b2d04(); else
- *      (bit 31 clear: state 0x35) FUN_a00b1004(7, state - 0x35); then set bits 31/30, T.b1e5 = T.b1e4 = 0;
- *      other states: (<= 0xe5, 100 ms) FUN_a00b37a4; every 1000 ms: aff2 countdown; states 0x106/0xe1/0xe6/0x41/
- *      0x81 with aff2 == 0 -> 0xe1/0xe6/0x41: aff2 = T.b0c, c55 = T.b13e / T.b13f, T.b1a3 = 0/1/2, state 0x108,
- *      FUN_a00b5080, 2x func_0x4008e2a4, FUN_a00a6b98(0/1/2, 1, 0); 0x81: FUN_a009811c, FUN_a00d47b0; any other
- *      state: copy the T.t197/t19b row of T.b1a0 into b1a1/b1a2 (new b1a0), S.h4 bit 15 -> bit 10, FUN_a00db1ac,
- *      DAT_a802b08e |= 2, FUN_a00d4998, state 0, FUN_a00b5080, FUN_a0083c20() -> state 0x10c, FUN_a00b87d4.
- *   Refresh rate: nothing here reads the rate. It only reads the per-port state (state 10 / 4 from
- *   FUN_a0143c14), the APP state and ms timers; an input mode reaches it only through the port state values.
- * Levers: int return for FUN_a0127a08; the T+0x1dc word as bit-fields b31/b30; the timer arm 'b1a2 != 0'
- *   first; 'if (t != afea) if (t != 0)' nested; the 5-state set test as an inlined early-return function in_set().
- * Further levers:
- *   1. The 1000 ms countdown is 'if (aff2 != 0) aff2--; if (aff2 == 0) { ... }' with no early return. With
- *      'if (aff2 != 0 && --aff2 != 0) return;' predict.c gives the return edge PRED_EARLY_RETURN (67 %), the rest of
+ *      FUN_a00b5080; 0x10c: d03c refresh after 100 ms; 0x116: after T.b0c seconds T.b1aa = 0, FUN_a009b59c; 0x10f
+ *      (> 3000 ms): as 0x10b, then S.h0 bit 9 -> clear it, d03c = now, state 0x10f, FUN_a00b8668; 0x10a (> 60000
+ *      ms): T+0x1dc bits 31/30 both set -> S.he bit 15 from S.h12 == 5 / S.h10 == 4 and DAT_a8025c56, DAT_a8025c55
+ *      2 -> 0, (S.b3f, c55 == 0, he bit 15 clear) c55 = 1, FUN_a00b2d04(); else (bit 31 clear: state 0x35)
+ *      FUN_a00b1004(7, state - 0x35); then set bits 31/30, T.b1e5 = T.b1e4 = 0; other states: (<= 0xe5, 100 ms)
+ *      FUN_a00b37a4; every 1000 ms: aff2 countdown; states 0x106/0xe1/0xe6/0x41/0x81 with aff2 == 0 ->
+ *      0xe1/0xe6/0x41: aff2 = T.b0c, c55 = T.b13e / T.b13f, T.b1a3 = 0/1/2, state 0x108, FUN_a00b5080, 2x
+ *      func_0x4008e2a4, FUN_a00a6b98(0/1/2, 1, 0); 0x81: FUN_a009811c, FUN_a00d47b0; any other state: copy the
+ *      T.t197/t19b row of T.b1a0 into b1a1/b1a2 (new b1a0), S.h4 bit 15 -> bit 10, FUN_a00db1ac, DAT_a802b08e |=
+ *      2, FUN_a00d4998, state 0, FUN_a00b5080, FUN_a0083c20() -> state 0x10c, FUN_a00b87d4.
+ *   Refresh rate: nothing here reads the rate. It only reads the per-port state (state 10 / 4 from FUN_a0143c14),
+ *   the state in _DAT_a802afec and ms timers; an input mode reaches it only through the port state values.
+ * Source form (the exact build depends on each of these):
+ *   - int return for FUN_a0127a08; the T+0x1dc word as bit-fields b31/b30; the timer arm tests 'b1a2 != 0' first;
+ *     'if (t != afea) if (t != 0)' nested; the 5-state set test is an inlined early-return function in_set().
+ *   1. The 1000 ms countdown is 'if (aff2 != 0) aff2--; if (aff2 == 0) { ... }' with no early return. With 'if
+ *      (aff2 != 0 && --aff2 != 0) return;' predict.c gives the return edge PRED_EARLY_RETURN (67 %), the rest of
  *      the default path gets about half the frequency, and bb-reorder's triangle rule (bb-reorder.c:596, integer
- *      frequencies: 2 * freq(arm) >= EDGE_FREQUENCY(skip)) then fails, so both S.h4 bit-15 arms went out of line.
- *      Same code, only the prediction changes (67.27 -> 76.08).
- *   2. The S.he bit-15 value is one '||' condition '(h12 == 5 && c56 == 1) || (h10 == 4 && c56 == 0)' (the fw has one
- *      shared set path).
- *   3. S.h0 is a bit-field word (b14 timer running, b9, b8). With the mask form the 0x4000 constant of the 0x106 arm
- *      was materialised next to its use; the bit-field form gives the fw 'sethi 0x4000' in the first call's delay
- *      slot (call-saved %l0) and removed a 150-word shift (76.92 -> 80.65).
- *   4. The 0x10a arm is written 'if (!(b31 && b30)) { 0x35 / FUN_a00b1004 path } else { he.b15 path }', and the in-set
- *      test 'if (!in_set(AFEC)) { t-row path } else { 0xe1/0xe6/0x41/0x81 arms }'. rnreg LRU ticks follow the
- *      source arm order; the old order broke the rename chain from the h12 == 5 test on, and reorg then deleted the
- *      0x81 test's reloads as redundant (fw reloads aff2 and the state in every test) (80.65 -> 93.99).
- *   5. Statement orders found by permutation search (all stores are to different RAM bytes, the order is free in
- *      C): timer else-arm 'b1a2 = 0x3b' before 'b1a1--'; t-row 'b1a1 = t197[t]; afea = t; b1a2 = t19b[t]' (the load
- *      whose address register dies is scheduled first: sched1 register weight); 0xe1 arm c55 before aff2; b1e4 before
- *      b1e5 (93.99 -> 95.43).
- * Register-allocation levers (the last 38 words, found from -dl/-dg dumps and a gdb trace of
- *   cc1's find_free_reg):
- *   6. aff2 HIGH (fw %o2, %o1 without this form, from 0xa009f84c): local-alloc gave the 0xe6 arm's b0c value (aff2 = b0c) %o2,
- *      a hard conflict for the global aff2 HIGH pseudo, which then took %o1. Statement orders found by a full
- *      search over the 0xe6 / 0xe1 / 0x41 arm orders (24 x 24 x 6): 0xe6 arm 'aff2 = b0c; b1a3 = 1; c55 = b13f;
- *      AFEC = 0x108;' and 0xe1 arm 'aff2 = b0c; c55 = b13e; AFEC = 0x108; b1a3 = 0;' give the fw arms and free %o2
- *      (all stores go to different RAM bytes, so the order is free in C; sched2 puts them back in the fw order).
- *      This also fixed the afea sethi order at 0xa009f8a0 (reorg fills the in-set branch delay slot with the first
- *      insn whose register is dead at the target: with aff2 HIGH in %o2 that is the afea sethi, not the SET sethi).
- *   7. t-row (row address fw %i2, t fw %o3, t19b value fw %o4): local-alloc of the t-row block sorts its quantities
- *      by int(floor_log2(refs) * freq / (death - birth) * 10), ties by birth order (local-alloc.c QTY_CMP_PRI,
- *      qty_compare_1), each takes the first free of %g1 %o5 %o4 %o3 .. over a +-2 widened lifetime. With the stores
- *      'b1a1 = t197[t]; b1a2 = t19b[t]; afea = t;' sched1 gives the order lduh c4000 ior ld19b ld197 st1a2 stafea
- *      st1a1 sth, where the t19b value gets %o4 before the row address, which then gets %o3 (and t prefers it).
- *      That order made the t byte (QI) live 16 insns instead of 15 (global priority 1 < 2 of the SET pointer, so the
- *      two swapped %o1/%o2); reading afea into 'unsigned char a' BEFORE the t load ('if (t != a)') shortens t's
- *      life back to 15 insns, so t is allocated first again (%o2) and the SET pointer gets %o1, as in the fw.
- *   Tools used (not in the repository): a variant runner over rawcmp, a sched1-order printer from the
- *   -dl dump, a small simulator of local-alloc's qty order, gdb breakpoints on cc1 find_free_reg (0x08175d00).
- * Aids: none. volatile: none (all RAM globals).
+ *      frequencies: 2 * freq(arm) >= EDGE_FREQUENCY(skip)) then fails, so both S.h4 bit-15 arms go out of line.
+ *      Same code, only the prediction changes.
+ *   2. The S.he bit-15 value is one '||' condition '(h12 == 5 && c56 == 1) || (h10 == 4 && c56 == 0)' (the fw has
+ *      one shared set path).
+ *   3. S.h0 is a bit-field word (b14 timer running, b9, b8). With the mask form the 0x4000 constant of the 0x106
+ *      arm is materialised next to its use; the bit-field form gives the fw 'sethi 0x4000' in the first call's
+ *      delay slot (call-saved %l0).
+ *   4. The 0x10a arm is written 'if (!(b31 && b30)) { 0x35 / FUN_a00b1004 path } else { he.b15 path }', and the
+ *      in-set test 'if (!in_set(AFEC)) { t-row path } else { 0xe1/0xe6/0x41/0x81 arms }'. rnreg LRU ticks follow
+ *      the source arm order; the other order breaks the rename chain from the h12 == 5 test on, and reorg then
+ *      deletes the 0x81 test's reloads as redundant (the fw reloads aff2 and the state in every test).
+ *   5. Statement orders (all stores are to different RAM bytes, so the order is free in C): timer else-arm 'b1a2 =
+ *      0x3b' before 'b1a1--'; 0xe1 arm c55 before aff2; b1e4 before b1e5.
+ * Register-allocation forms (the last 38 words):
+ *   6. aff2 HIGH (fw %o2 from 0xa009f84c; %o1 with other statement orders): local-alloc gives the 0xe6 arm's b0c
+ *      value (aff2 = b0c) %o2, a hard conflict for the global aff2 HIGH pseudo, which then takes %o1. The 0xe6 arm
+ *      'aff2 = b0c; b1a3 = 1; c55 = b13f; AFEC = 0x108;' and the 0xe1 arm 'aff2 = b0c; c55 = b13e; AFEC = 0x108;
+ *      b1a3 = 0;' give the fw arms and free %o2 (all stores go to different RAM bytes, so the order is free in C;
+ *      sched2 puts them back in the fw order). The same orders give the afea sethi order at 0xa009f8a0 (reorg
+ *      fills the in-set branch delay slot with the first insn whose register is dead at the target: with aff2 HIGH
+ *      in %o2 that is the afea sethi, not the SET sethi).
+ *   7. t-row (row address fw %i2, t fw %o3, t19b value fw %o4): local-alloc of the t-row block sorts its
+ *      quantities by int(floor_log2(refs) * freq / (death - birth) * 10), ties by birth order (local-alloc.c
+ *      QTY_CMP_PRI, qty_compare_1); each takes the first free of %g1 %o5 %o4 %o3 .. over a +-2 widened lifetime.
+ *      With the stores 'b1a1 = t197[t]; b1a2 = t19b[t]; afea = t;' sched1 gives the order lduh c4000 ior ld19b
+ *      ld197 st1a2 stafea st1a1 sth, where the t19b value gets %o4 before the row address, which then gets %o3
+ *      (and t prefers it). That order alone makes the t byte (QI) live 16 insns instead of 15 (global priority 1 <
+ *      2 of the SET pointer, so the two swap %o1/%o2); reading afea into 'unsigned char a' before the t load ('if
+ *      (t != a)') keeps t's life at 15 insns, so t is allocated first (%o2) and the SET pointer gets %o1, as in
+ *      the fw.
+ * Compiler aids: none. No volatile (all RAM globals).
  */
 struct Sys {
     struct { unsigned short b15 : 1, b14 : 1, x10 : 4, b9 : 1, b8 : 1, lo : 8; } s0;
