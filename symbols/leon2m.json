@@ -8958,6 +8958,13 @@
       "name": "FUN_a011909c",
       "status": "matched"
     },
+    "ram:a01190b0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "when FUN_a011cf88() > 0x83 sets bit 5 of 0xcf011800/0xcf011a00, bit 0 of 0xcf012e00 and bit 1 of 0xcf012f74",
+      "name": "FUN_a01190b0",
+      "status": "matched"
+    },
     "ram:a0119114": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
