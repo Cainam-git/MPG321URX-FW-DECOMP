@@ -5459,6 +5459,13 @@
       "name": "FUN_a00c0d10",
       "status": "matched"
     },
+    "ram:a00c0ff4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command: accepts digit 0-1 and sends reply 5600+ via called helpers",
+      "name": "FUN_a00c0ff4",
+      "status": "matched"
+    },
     "ram:a00c1078": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
