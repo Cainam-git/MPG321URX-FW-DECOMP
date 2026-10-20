@@ -11906,6 +11906,13 @@
       "name": "FUN_a0137920",
       "status": "matched"
     },
+    "ram:a0137a68": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sends {id, p[0], p[1], bits p[3..7], 0, 0, 0, 0, p[2]} with FUN_a01370dc(0x21, 9, buf, 1)",
+      "name": "FUN_a0137a68",
+      "status": "matched"
+    },
     "ram:a0137aec": {
       "by": "permuter",
       "comment": "permuter: ",
