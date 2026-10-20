@@ -10761,6 +10761,13 @@
       "name": "FUN_a0110f5c",
       "status": "matched"
     },
+    "ram:a0110fb4": {
+      "by": "h19",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "prints Profile_Load_Table, writes 0x81 to 0xcf011f80 and passes the 0x400 entries at 0x19af00 to FUN_a0113eb4",
+      "name": "FUN_a0110fb4",
+      "status": "matched"
+    },
     "ram:a0111028": {
       "by": "h19",
       "cflags": "-mcpu=v8 -O3 -g",
