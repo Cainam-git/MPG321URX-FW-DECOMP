@@ -3,10 +3,10 @@
  * f = bit 7 of the word DAT_a802d290 + 0xa8 (ld, btst 0x80); the byte DAT_a802af9e = 0x50, then
  * af9e ^= buf[i] for i = 0..9 (loop.c load_mems keeps af9e in a register and writes it back after
  * the loop); buf[10] = af9e; FUN_a01486a8(FUN_a014e478(d290[0x1e]), 0xb, buf). void, no params.
- * Fixes vs the autoc draft: FUN_a01486a8 takes 3 args (it forwards %o2 to FUN_a0133b54),
- * FUN_a014e478 takes d290[0x1e], real base DAT_a802d290 (the draft used a mid-record name), the
- * f == 0 arm first, and a local buffer pointer p (fw keeps &buf in %l0 across the calls).
- * Aid: u8 local bound n = 10 (code-free; tree fold turns 'i < 10' into 'cmp 9; bleu', the fw has
+ * FUN_a01486a8 takes 3 arguments (it forwards %o2 to FUN_a0133b54); FUN_a014e478 takes d290[0x1e]; the base is
+ * the symbol DAT_a802d290.
+ * Source form: the f == 0 arm first, and a local buffer pointer p (fw keeps &buf in %l0 across the calls).
+ * Compiler aid: u8 local bound n = 10 (code-free; tree fold turns 'i < 10' into 'cmp 9; bleu', the fw has
  * 'cmp 0xa; bcs'; same class as FUN_a00aaf48 'n = 7').
  */
 struct Rec290 {

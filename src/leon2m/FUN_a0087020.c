@@ -1,5 +1,5 @@
 /* leon2m FUN_a0087020 @ 0xa0087020..0xa0087430 (1,040 bytes)  App_CoolInitialize: Big chip start-up, step 3 of main()
- * (hand; -mcpu=v8 -O3 -g -msoft-float, also at -mcpu=v8 -O3 -g).
+ * (flags -mcpu=v8 -O3 -g -msoft-float; -mcpu=v8 -O3 -g gives the same code).
  *
  * Caller: main() FUN_a00295a4 (func_0x00027020), once, after FUN_a015266c and before the endless main loop.
  * What the code does (code facts, in order):
@@ -27,12 +27,11 @@
  * Control flow: no loops and no waits in this function (all branches go forward, it always returns via the
  *   tail call); it reads no panel row data itself. It is on the path to the MSI logo
  *   (FUN_a0081e0c).
- * Matching notes: the sched-deps pending-list barrier (34th memory op = the +0x2A store) splits step 2: the +4 bits
- *   11/6, +0x3E, +0x3F, +0x18, +0x2C..+0x32 statements come after it in the source; one logo call after the type-1 block
- *   (bb-reorder duplicates it); FUN_a014aed0 declared int-returning (delay-slot filling).
- * Statement order of step 2: one order that reproduces the target byte for byte (barrier rule + bounded order
- *   search); gcc maps many source orders to the same code. The stores, their
- *   values and their final order are exactly the target's.
+ * Source form: the sched-deps pending-list barrier (34th memory op = the +0x2A store) splits step 2: the +4 bits
+ *   11/6, +0x3E, +0x3F, +0x18, +0x2C..+0x32 statements come after it in the source; one logo call after the type-1
+ *   block (bb-reorder duplicates it); FUN_a014aed0 declared int-returning (delay-slot filling).
+ * Statement order of step 2: one of the many source orders that gcc compiles to the same code. The stores, their
+ *   values and their final order are the firmware's.
  */
 struct CoolState {                      /* 0xA802CFF4 */
     unsigned short a15:1, b14:1, c13:1, d12:1, e11:1, f10:1, g98:2, lo:8;     /* +0x00 */

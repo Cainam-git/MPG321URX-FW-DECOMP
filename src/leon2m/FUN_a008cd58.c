@@ -3,8 +3,8 @@
  * is a ROM address); for u8 i = 0..4: buf[i] = 0 when it is ' ', else buf[i] -= 47 ('0' - 1); then
  * FUN_a0146af4(0, a, b, 5, buf, 0) with u8 a/b. The fw ends with a real 'nop' after that call's delay slot,
  * before ret/restore. void.
- * Fix vs the autoc draft: a plain indexed loop over buf (the draft used Ghidra's base + 8 / p[-8] pointer form),
- * u8 params. Aids: one asm nop at the end (fw real nop, not a delay slot).
+ * Source form: a plain indexed loop over buf; u8 parameters. Aids: one asm nop at the end (fw real nop, not a
+ * delay slot).
  */
 extern void FUN_a0146af4(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char *, unsigned char);
 extern void FUN_a01577f4(unsigned char *, unsigned int, unsigned short);

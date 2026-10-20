@@ -7,9 +7,8 @@
  * or cleared. Index 0 changes nothing (early return).
  * Callers: FUN_a0086ae8, FUN_a0091094.
  * Aids: none. The two loop counters (unsigned int i and the u8-truncated idx) are what the fw
- * keeps (%o3 incremented, %o4 = %o3 & 0xff); a single 'unsigned char i' for-loop gives 53.19.
- * From the mechanical draft, only the table name changed DAT_10051f -> DAT_0010051f
- * (the 99.00 cap was the non-address name).
+ * keeps (%o3 incremented, %o4 = %o3 & 0xff); a single 'unsigned char i' for-loop gives other code.
+ * The ROM table symbol is DAT_0010051f (an address name).
  */
 extern unsigned char DAT_0010051f[];
 extern unsigned short DAT_a802afdc;

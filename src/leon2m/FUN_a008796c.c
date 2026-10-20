@@ -1,5 +1,5 @@
-/* leon2m FUN_a008796c @ 0xa008796c  first initialisation step of main(): register ten callbacks (byte-exact
- * with -mcpu=v8 -O3 -g, gcc 3.4.4).
+/* leon2m FUN_a008796c @ 0xa008796c  first initialisation step of main(): register ten callbacks (flags
+ * -mcpu=v8 -O3 -g, gcc 3.4.4).
  * Calls FUN_a0143700(n, handler) for n = 2, 3, 6, 10, 11, 7, 8, 12, 14, 15 (the last call is a tail call). The
  * handlers are run-time addresses of the RAM copy the program executes from (written func_0x... = literal address;
  * firmware address = value + 0xA0060000): 2 -> 0xA009108C, 3 -> FUN_a00d6054, 6 -> FUN_a00830f4, 10 -> FUN_a0083aa0,

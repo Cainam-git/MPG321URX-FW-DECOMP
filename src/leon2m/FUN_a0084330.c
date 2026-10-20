@@ -1,4 +1,4 @@
-/* leon2m FUN_a0084330 @ 0xa0084330-0xa00844f8 (114 words). -mcpu=v8 -O3 -g.
+/* leon2m FUN_a0084330 @ 0xa0084330-0xa00844f8 (114 words), flags -mcpu=v8 -O3 -g.
  * void(u8 reset).
  * What it does: a change detector for a measured signal of channel 1.
  *   reset != 0: byte 0xa8024020 = 0xff (no state), u16 0xa802af56 = 0, return.
@@ -10,11 +10,12 @@
  *   when f differs from the kept state 0xa8024020 or af5c > 10: FUN_a00830f4(1), and for f == 1 also
  *   FUN_a00d7b20() and FUN_a014a8d4(1, 1, 500); then af58 = v0a, af5a = v06 (fresh reads), af5c = 0.
  *   Always at the end: af56 = r, 0xa8024020 = f.
- * Only the ratio r (10 * v06 / v04) and the two raw values decide. A ratio change of more than 0.5 (r in tenths) flips f and runs the f == 1
- * steps once; values that keep moving (> 20 / > 15 counts) for more than 10 calls re-run the steps.
- * Code facts that fix the source: f set by an if/else (the fw 'bg; mov 1' + 'clr'), abs() (sra/xor/sub), the
- * FUN_a00830f4(1) call written in BOTH arms of 'if (f == 1)' (with one common call before the if the jf score
- * was 42). volatile: none. Aids: none.
+ * Only the ratio r (10 * v06 / v04) and the two raw values decide. A ratio change of more than 0.5 (r in tenths)
+ * flips f and runs the f == 1 steps once; values that keep moving (> 20 / > 15 counts) for more than 10 calls
+ * re-run the steps.
+ * Source form: f set by an if/else (the fw 'bg; mov 1' + 'clr'), abs() (sra/xor/sub), the FUN_a00830f4(1) call
+ * written in BOTH arms of 'if (f == 1)' (one common call before the if gives other code). volatile: none.
+ * Aids: none.
  */
 extern unsigned short DAT_a8024004, DAT_a8024006, DAT_a8024008, DAT_a802400a;
 extern unsigned char DAT_a8024020;

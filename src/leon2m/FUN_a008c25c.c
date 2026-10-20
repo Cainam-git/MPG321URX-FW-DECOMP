@@ -1,5 +1,5 @@
-/* leon2m FUN_a008c25c @ 0xa008c25c (hand), flags -mcpu=v8 -O3 -g (-msoft-float: same code)
- * (rawcmp.py FUN_a008c25c FILE FLAGS a008c25c a008cc28), both flag sets.
+/* leon2m FUN_a008c25c @ 0xa008c25c..0xa008cc28 (627 words), flags -mcpu=v8 -O3 -g (-msoft-float gives the same
+ * code).
  * Factory menu "+" key: steps the item selected by DAT_a802afbd (0..26) up and redraws it.
  *  1..6, 10..12: u8 values at 0xA802E1F6..E1FB / E202..E204, +1 saturating at 0xFF, redraw a group of 3 items;
  *  7..9: 0xA802D2A2..D2A4 +1 up to 100, item shows v*255/100 rounded; 13/14: 0xA802D299/D29A +1 up to 100 (+apply);
@@ -8,11 +8,10 @@
  *  22: Inspection Mode/Pattern 0xA802AFBA 0..7 cyclic (FUN_a01275b0/FUN_a0127724); 23/24: toggles of setting 0x10 / 2;
  *  25: word 0xA802D464 bit 7 toggle ("HDMI CTS"); 26: byte 0xA8024040 ^= 1 (FUN_a014df68(0xD/0xC)).
  * Then a second switch marks the redraw flags in DAT_a802b08e (gcc bit tests 0x1C7E / 0x380 / 0x80000).
- * The last levers (rename-register choices only) came from the SOURCE ORDER of the case blocks and of if/else arms
+ * Source form: the rename-register choices follow the SOURCE ORDER of the case blocks and of if/else arms
  * (rnreg's LRU ticks follow source block order). First switch case order:
  *   6 2 3 7 9 8 10 11 12 4 5 1 13 14 15 16 17 19 21 22 24 23 25 20 26
- * (the tail 16 17 19 21 22 24 23 25 20 26 is the twin FUN_a008b83c's order; found with an
- * availability-aware fw-history LRU replay, then a hill climb with that chain kept together);
+ * (the tail 16 17 19 21 22 24 23 25 20 26 is the twin FUN_a008b83c's order);
  * arms: 15 'if (v <= 7) {..} else store 7', 17 'if (h1f6 == 0x55aa) ..' (both ifs), 21 'if ((u8)r != 2) {r++ ..} else ..',
  * 22 'if (v != 7) { if (v == 6) .. else .. } else ..', 16 'if (v > 8) store 8; else {..}', 23 '== 1' / 24 '!= 1';
  * second switch body order 19 / 7-9 / 1..12. Every case ends in break and the case labels are disjoint, every arm swap

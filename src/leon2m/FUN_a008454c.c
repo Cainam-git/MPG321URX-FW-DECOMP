@@ -1,27 +1,30 @@
-/* leon2m FUN_a008454c: (rawcmp a008454c..a0085984 1294 words / 0 mismatches.
-   -mcpu=v8 -O3 -g). Source-form levers (all behaviour-neutral):
-   - case 2 in the plain form; cases 60 and 62 placed just before case 2 (source order only, each ends in break):
-     all 281 rnreg decisions match the firmware (rnmap 0).
-   - case 17: the line-525 'ac & 0x100000' false path leaves through 'break' of a do { } while (0) that also encloses the
-     second ac test, so it skips that test directly (same as gcc's own jump threading; nothing between the two
-     tests writes memory). 'break' carries no branch prediction, unlike goto. The second test is
-     'if (!(ac & 0x100000)) goto c17j; FUN_a014a8d4(0, 1, 1000); c17j: ;' (call 30 % + goto 70 % = 50 %).
-     Effect: the threading of 76->81 happens at expand time instead of at 19.life, so its jump keeps bp's 5000:
-     bbro bb85 edges are exactly 50/50 (fw), no triangle push of bb86, cold traces 78/124 in fw order, the 'be' delay
-     slot is still filled from the target.
-   - case 17: the nine independent 0xff stores to the non-volatile byte arrays DAT_a8024010[0..3] / DAT_a8024018[0..4]
-     are written in the order that sched gives the firmware store order (same nine stores, same value, nothing between).
-   - documented no-code branch-weight hints, 'do continue; while (0);' (PRED_CONTINUE 56 %, emits no instructions,
-     behaviour-neutral: the continue only leaves the do-while(0)): first statement of case 60's 'w0 & 0x4000' true arm,
-     of case 2's 'FUN_a012792c() == 2 || == 1' body and of case 21's 'a8u.w & 0x80' arm. In case 2 a 'goto d413;
-     d413: ;' (PRED_GOTO, no instructions) comes first, in front of the 'do continue; while (0);'. Effect: cold-tail
-     order 146 first (fw) and the key -6 cold traces in firmware order (204,63,186,78,124).
-   - case 7 delay: 'if (C1) FUN_a0148358(8000); else { if (is55aa() && b1d5) { goto dl; dl: ; t = 100; } else t = 6500;
-     FUN_a0148358(t); }' instead of three FUN_a0148358 calls (same values, same call; t is set on both paths before use;
-     the goto is a no-code hint label in the new arm). This CFG shape puts the key -11 cold traces in
-     firmware order (170,146,58,60,32,96,56) and keeps all 281 rename decisions (rnmap 0).
-   - the four APPActionDispatcher format strings are named by their firmware addresses (contents checked in the image):
-     s_APPEvent -> s_000fefc8, s_KeyEvent -> s_000feff8, s_OSDEvent -> s_000ff028, s_DDCCiEvent -> s_000ff058. */
+/* leon2m FUN_a008454c @ 0xa008454c..0xa0085984 (1294 words), flags -mcpu=v8 -O3 -g.
+ * Source form (all behaviour-neutral):
+ * - case 2 in the plain form; cases 60 and 62 placed just before case 2 (source order only, each ends in break):
+ *   with this order all 281 rename-register decisions are the firmware's.
+ * - case 17: the line-525 'ac & 0x100000' false path leaves through 'break' of a do { } while (0) that also encloses
+ *   the second ac test, so it skips that test directly (same as gcc's own jump threading; nothing between the two
+ *   tests writes memory). 'break' carries no branch prediction, unlike goto. The second test is
+ *   'if (!(ac & 0x100000)) goto c17j; FUN_a014a8d4(0, 1, 1000); c17j: ;' (call 30 % + goto 70 % = 50 %).
+ *   Effect: the threading of 76->81 happens at expand time instead of at 19.life, so its jump keeps bp's 5000:
+ *   bbro bb85 edges are exactly 50/50 (fw), no triangle push of bb86, cold traces 78/124 in fw order, the 'be' delay
+ *   slot is still filled from the target.
+ * - case 17: the nine independent 0xff stores to the non-volatile byte arrays DAT_a8024010[0..3] /
+ *   DAT_a8024018[0..4] are written in the order that sched gives the firmware store order (same nine stores, same
+ *   value, nothing between).
+ * - Compiler aid: code-free branch-weight hints 'do continue; while (0);' (PRED_CONTINUE 56 %, emits no
+ *   instructions, behaviour-neutral: the continue only leaves the do-while(0)) as the first statement of case 60's
+ *   'w0 & 0x4000' true arm, of case 2's 'FUN_a012792c() == 2 || == 1' body and of case 21's 'a8u.w & 0x80' arm.
+ *   In case 2 a 'goto d413; d413: ;' (PRED_GOTO, no instructions) comes first, in front of the
+ *   'do continue; while (0);'. Effect: cold-tail order 146 first (fw) and the key -6 cold traces in firmware order
+ *   (204,63,186,78,124).
+ * - case 7 delay: 'if (C1) FUN_a0148358(8000); else { if (is55aa() && b1d5) { goto dl; dl: ; t = 100; } else
+ *   t = 6500; FUN_a0148358(t); }' instead of three FUN_a0148358 calls (same values, same call; t is set on both
+ *   paths before use; the goto is a no-code hint label in the new arm). This CFG shape puts the key -11 cold traces
+ *   in firmware order (170,146,58,60,32,96,56) and keeps all 281 rename-register decisions.
+ * - the four APPActionDispatcher format strings are named by their firmware addresses (contents checked in the
+ *   image): s_APPEvent -> s_000fefc8, s_KeyEvent -> s_000feff8, s_OSDEvent -> s_000ff028, s_DDCCiEvent -> s_000ff058.
+ */
 
 struct B16
 {

@@ -1,6 +1,5 @@
-/* leon2m FUN_a008b83c @ 0xa008b83c, flags -mcpu=v8 -O3 -g (-mcpu=v8 -O3 -g -msoft-float: same code).
- * (rawcmp.py FUN_a008b83c FILE FLAGS a008b83c a008c25c: 0/648). Hand, from
- * earlier drafts.
+/* leon2m FUN_a008b83c @ 0xa008b83c..0xa008c25c (648 words), flags -mcpu=v8 -O3 -g (-msoft-float gives the same
+ * code).
  * Factory menu "-" key: steps the item selected by DAT_a802afbd (0..26) down and redraws it
  * (near-twin of the "+" key FUN_a008c25c).
  *  1..6, 10..12: u8 values at 0xA802E1F6..E1FB / E202..E204, -1 saturating at 0, redraw a group of 3 items;
@@ -10,13 +9,13 @@
  *  21: FUN_a01266b0() value 2..0 cyclic; 22: Inspection Mode/Pattern 0xA802AFBA 7..0 cyclic (FUN_a01275b0/FUN_a0127724);
  *  23/24: toggles of setting 0x10 / 2; 25: word 0xA802D464 bit 7 toggle; 26: byte 0xA8024040 ^= 1.
  * Then a second switch marks the redraw flags in DAT_a802b08e (gcc bit tests 0x1C7E / 0x380 / 0x80000).
- * Source form notes (behaviour-neutral choices that set gcc's block order and so the rename-register picks):
+ * Source form (behaviour-neutral choices that set gcc's block order and so the rename-register picks):
  *  - first switch cases in the order 1 2 6 7 8 9 10 11 12 4 5 3 13 14 15 16 17 19 21 22 24 23 25 20 26 (nearly
  *    ascending, as in the '+' twin); every case ends in break and the labels are disjoint, so the order
  *    has no effect on behaviour;
  *  - case 6 written like its neighbours ('if (--*v8 == 0xff) *v8 = 0;');
- *  - if/else arms of cases 15, 16, 17, 23, 24 written in the order found by a jf hill-climb; each swap uses the
- *    exact negated condition (v <= 7 / v > 7, v > 8 / v <= 8, != / ==), so behaviour is identical.
+ *  - if/else arms of cases 15, 16, 17, 23, 24 in a chosen order; each swap uses the exact negated condition
+ *    (v <= 7 / v > 7, v > 8 / v <= 8, != / ==), so behaviour is identical.
  * second switch body order 19 / 7-9 / 1..12. No no-code aids, no asm, no volatile.
  */
 struct Fac290 {                         /* 0xA802D290 */

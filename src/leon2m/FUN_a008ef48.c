@@ -1,6 +1,5 @@
 /* leon2m FUN_a008ef48 @ 0xA008EF48..0xA008F354 (259 words) "ShowLogo": draws the power-on MSI logo and switches the
- * panel on. (from a 96.14 % draft): -mcpu=v8 -O3 -g (also -msoft-float), jf
- * 100.00 match=True.
+ * panel on. Flags -mcpu=v8 -O3 -g (-msoft-float gives the same code).
  * Where: start-up step 3 (App_CoolInitialize FUN_a0087020 -> FUN_a0081e0c -> here), i.e. after start-up step 2 with
  * FUN_a0106d64. A Big chip that stops in step 2 never gets here: no logo.
  * What it does at power-on (code facts, in order):
@@ -17,13 +16,13 @@
  *    0xA802CFF8 == 01: FUN_a0122d0c(). FUN_a0146dc0(1,1); tail call FUN_a00a45a8().
  * Can it wait or fail? Its own loops all have constant counts (0xBE8, 63 x 10, 26 x 10). One callee can wait without a
  * limit: FUN_a014512c(1, 1) loops 'while (FUN_a0141a98() == 0) { FUN_a01413d0(); FUN_a01295e4(); FUN_a002ced8(); }'
- * (decomp, not byte-exact here) until panel state byte 0xA802E110 == 6 and 0xA802CC08 != 1; each round relays the
+ * (Ghidra's C of FUN_a014512c) until panel state byte 0xA802E110 == 6 and 0xA802CC08 != 1; each round relays the
  * liveness ring (FUN_a002ced8), so the 8051 check FUN_CODE_7b5a is fed while it waits. Printing (FUN_a00df170) polls
- * the UART at most 0xFFFFF times per byte (decomp).
- * Exact form, documented no-code aids: the loop bound sits in a local 'n = 0xBE8' (a literal bound is folded to
- * 'i <= 0xBE7', the firmware compares LTU/GEU 0xBE8, the same trick as FUN_a01539b8 'rem = 20'); the
- * i > 0x673 arm reads the byte table into a local 'h' first (orders the two hoisted ROM table bases as in the
- * firmware); 0xA802CFF8 bits 14..13 are a 2-bit bitfield (the same field as FUN_a0085984's Scff4 +4 f13).
+ * the UART at most 0xFFFFF times per byte (Ghidra's C).
+ * Compiler aids (no code): the loop bound sits in a local 'n = 0xBE8' (a literal bound is folded to 'i <= 0xBE7',
+ * the firmware compares LTU/GEU 0xBE8, the same as FUN_a01539b8 'rem = 20'); the i > 0x673 arm reads the byte
+ * table into a local 'h' first (orders the two hoisted ROM table bases as in the firmware); 0xA802CFF8 bits 14..13
+ * are a 2-bit bitfield (the same field as FUN_a0085984's Scff4 +4 f13).
  */
 extern unsigned char DAT_a802d290[];
 struct Scff8 { unsigned short b15 : 1; unsigned short f13 : 2; unsigned short rest : 13; };

@@ -3,9 +3,9 @@
  * "APPBlurFree_AfterMute\r\n") (1 arg); FUN_a01438c8(0); FUN_a0150768(1, 0xff); FUN_a014bac4(2, 0x3ff);
  * FUN_a014bc58(0); FUN_a014dbf4(0); word +0xb0 = 0. If bit 14 of the u16 at DAT_a802cff4 + 0x3e is set it is
  * cleared (andn computed before the test, sth in the branch delay slot), else FUN_a00d8cd4(). Word +0xb0 = save.
- * void(void). Fix vs the autoc draft: BEHAVIOUR: the word is restored to the saved byte only, there is no
- * else-store of the u16; real bases d290 / cff4; bit 14 is a 1-bit BIT-FIELD (the mask form gives btst before
- * andn, 83.33). Aids: none.
+ * void(void). The word is restored to the saved byte only; there is no else-store of the u16.
+ * Source form: the bases are the symbols DAT_a802d290 / DAT_a802cff4; bit 14 is a 1-bit bit-field (the mask form
+ * gives btst before andn). Aids: none.
  */
 struct R290 { unsigned char pad[0xb0]; unsigned int wb0; };
 struct Rcff4 { unsigned char pad[0x3e]; unsigned short b15 : 1, b14 : 1, rest : 14; };
