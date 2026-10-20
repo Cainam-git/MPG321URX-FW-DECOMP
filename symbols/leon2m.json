@@ -14443,6 +14443,13 @@
       "name": "FUN_a0141b60",
       "status": "matched"
     },
+    "ram:a0141ce0": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns bits 12-15 of the first halfword of the record at 0xa802e116/128/13a/14c selected by t 0x51-0x81, else 8",
+      "name": "FUN_a0141ce0",
+      "status": "matched"
+    },
     "ram:a01420e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
