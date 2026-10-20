@@ -3806,6 +3806,12 @@
       "name": "FUN_a0096ad8",
       "status": "matched"
     },
+    "ram:a009723c": {
+      "by": "hand",
+      "comment": "FRL lock check step of the HDMI mode-detect state machine (retry, timeout, restart)",
+      "name": "DRV_HDMI_ModeDetect_FSM_FRL_Chk",
+      "status": "matched"
+    },
     "ram:a00977cc": {
       "by": "hand",
       "comment": "u16 at +0x32 of the 400-byte record a807d7e0[p1] = p2",
