@@ -9522,6 +9522,13 @@
       "name": "FUN_a011cd10",
       "status": "matched"
     },
+    "ram:a011ce80": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "copies min(n, 8/8/16/16/40) bytes from 0x9f1b0600/0608/0610/0620/0630 (sel 0..4) into dst",
+      "name": "FUN_a011ce80",
+      "status": "matched"
+    },
     "ram:a011cf88": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
