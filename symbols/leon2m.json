@@ -4672,6 +4672,13 @@
       "name": "FUN_a00b6b88",
       "status": "matched"
     },
+    "ram:a00b6bec": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Calls FUN_a0146b50/FUN_a0146b6c, then FUN_a00a31a4 with entries of DAT_001951dc for 7 or 1 rows (FUN_a0146a80 on rows 5..7 when FUN_a00d7d48() != 0), then FUN_a0146ab0 and three FUN_a0146b20 calls",
+      "name": "FUN_a00b6bec",
+      "status": "matched"
+    },
     "ram:a00b6d58": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
