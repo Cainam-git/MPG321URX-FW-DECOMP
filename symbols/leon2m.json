@@ -5794,6 +5794,13 @@
       "name": "FUN_a00c1704",
       "status": "matched"
     },
+    "ram:a00c17e8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UART command handler: three-digit value 0-30 from the receive record to byte 0xa802d29c, then reply",
+      "name": "FUN_a00c17e8",
+      "status": "matched"
+    },
     "ram:a00c18cc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
