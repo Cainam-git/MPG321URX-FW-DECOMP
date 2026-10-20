@@ -8,7 +8,7 @@
  */
 struct Rec {
     unsigned int top : 16;
-    unsigned int src : 4;
+    unsigned int f12 : 4;
     unsigned int low : 12;
     unsigned char p04[0x0a];
     unsigned short h0e;
@@ -55,7 +55,7 @@ void FUN_a0145508(unsigned char mode)
             continue;
         k = remap(i);
         if (k > 3) { FUN_a00df170(s_001a6dd8); k = 0; }
-        if (__builtin_expect(DAT_a802e224[DAT_a802df30[k].src].kind != 5, 0)) {
+        if (__builtin_expect(DAT_a802e224[DAT_a802df30[k].f12].kind != 5, 0)) {
             DAT_a802df30[i].h0e = DAT_a802df30[i].h28;
             DAT_a802df30[i].h1e = DAT_a802df30[i].h2a;
             DAT_a802df30[i].h20 = DAT_a802df30[i].h2c;

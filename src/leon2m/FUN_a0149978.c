@@ -5,7 +5,7 @@
  * 0xa802e3d0 adds FUN_a012f43c(3, k, 0). Ends with a tail call of FUN_a0142ea8 with bits 12..15 of word 0 of the
  * channel's 0x78-byte record at 0xa802df30.
  */
-struct Rec { unsigned int top : 16; unsigned int src : 4; unsigned int low : 12; unsigned char rest[0x74]; };
+struct Rec { unsigned int top : 16; unsigned int f12 : 4; unsigned int low : 12; unsigned char rest[0x74]; };
 struct Sys { unsigned int flags; unsigned char p04[0x1a]; unsigned char m[4]; };
 extern struct Rec DAT_a802df30[4];
 extern struct Sys DAT_a802e3d0;
@@ -52,5 +52,5 @@ void FUN_a0149978(unsigned char ch, unsigned char p)
     if (i == 0 && (DAT_a802e3d0.flags & 0x200000))
         FUN_a012f43c(3, kind(p), 0);
     if (i < 4)
-        FUN_a0142ea8(DAT_a802df30[i].src);
+        FUN_a0142ea8(DAT_a802df30[i].f12);
 }
