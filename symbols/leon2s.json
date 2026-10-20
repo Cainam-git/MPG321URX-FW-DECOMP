@@ -6725,6 +6725,12 @@
       "name": "FUN_a00d0530",
       "status": "matched"
     },
+    "ram:a00d0798": {
+      "by": "hand",
+      "comment": "sets the state field of record port of DAT_a8078bb0 to 1 or 0 depending on ROM func_0xa0f98af0(0); on success calls FUN_a00d0530(10, 300) and FUN_a00cca38(0)",
+      "name": "FUN_a00d0798",
+      "status": "matched"
+    },
     "ram:a00d21e0": {
       "by": "hand",
       "comment": "bit-range read-modify-write: bits lo..hi of *reg = val",
