@@ -8986,6 +8986,13 @@
       "name": "FUN_a01191fc",
       "status": "matched"
     },
+    "ram:a011932c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "24-bit write of v to register group sel (0xa0/0xb0/0xc0/0xc1) of block blk via the 0xa8027aa8 base table; 0xc0/0xc1 set/clear bit 7 of reg 0x9f first",
+      "name": "FUN_a011932c",
+      "status": "matched"
+    },
     "ram:a0119640": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
