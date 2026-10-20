@@ -1988,6 +1988,13 @@
       "name": "FUN_a002fae0",
       "status": "matched"
     },
+    "ram:a0080320": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Tests byte 0xa802d2af against condition c (always, nonzero, 4..7, equal to 7)",
+      "name": "FUN_a0080320",
+      "status": "matched"
+    },
     "ram:a00803a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
