@@ -1742,6 +1742,12 @@
       "name": "FUN_a006d31c",
       "status": "matched"
     },
+    "ram:a006d39c": {
+      "by": "hand",
+      "comment": "sets the state byte of records 0..6 of DAT_a807a824 to 2",
+      "name": "FUN_a006d39c",
+      "status": "matched"
+    },
     "ram:a006d3c8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
