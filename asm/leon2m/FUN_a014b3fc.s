@@ -1,4 +1,4 @@
-# leon2m FUN_a014b3fc 0xa014b3fc-0xa014b484 (136 bytes)
+# leon2m FUN_a014b3fc 0xa014b3fc-0xa014b4b4 (184 bytes)
 a014b3fc:  9d e3 bf 98  save  %sp, -104, %sp
 a014b400:  82 0e 20 ff  and  %i0, 0xff, %g1
 a014b404:  b0 10 00 19  mov  %i1, %i0
@@ -33,3 +33,15 @@ a014b474:  fa 28 60 22  stb  %i5, [ %g1 + 0x22 ]
 a014b478:  b0 13 e1 a0  or  %o7, 0x1a0, %i0
 a014b47c:  40 00 21 3d  call  0xa0153970
 a014b480:  93 e8 20 00  restore  %g0, 0, %o1
+a014b484:  b8 10 20 01  mov  1, %i4
+a014b488:  10 bf ff ec  b  0xa014b438
+a014b48c:  ba 10 20 09  mov  9, %i5
+a014b490:  b8 10 20 02  mov  2, %i4
+a014b494:  10 bf ff e9  b  0xa014b438
+a014b498:  ba 10 20 00  clr  %i5
+a014b49c:  b8 10 20 02  mov  2, %i4
+a014b4a0:  10 bf ff e6  b  0xa014b438
+a014b4a4:  ba 10 20 02  mov  2, %i5
+a014b4a8:  b8 10 20 04  mov  4, %i4
+a014b4ac:  10 bf ff e3  b  0xa014b438
+a014b4b0:  ba 10 20 04  mov  4, %i5
