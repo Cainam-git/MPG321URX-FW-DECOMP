@@ -3784,6 +3784,13 @@
       "name": "FUN_a009bfb4",
       "status": "matched"
     },
+    "ram:a009c22c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Steps the selection word 0xa802afec forwards through 0x5c..0x63 (pages of 7) and updates the dependent settings",
+      "name": "FUN_a009c22c",
+      "status": "matched"
+    },
     "ram:a009c4a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
