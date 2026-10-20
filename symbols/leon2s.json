@@ -2772,6 +2772,12 @@
       "name": "FUN_a008a040",
       "status": "matched"
     },
+    "ram:a008a110": {
+      "by": "h15",
+      "comment": "For sel 0xc/0xe calls FUN_a00a71fc(port, 3, 0x40, en << 6) and clears/sets bit port+4 of 0xcf014770 when en is set",
+      "name": "FUN_a008a110",
+      "status": "matched"
+    },
     "ram:a008a1b4": {
       "by": "hand",
       "comment": "leaf sibling call. Only for mode 4 or 6: FUN_a00a71fc(port & 0xff, 3, 0x20, (u8)(val << 5)) (the 4th arg is masked 0xe0 by the u8 conversion). void.",
