@@ -7692,6 +7692,12 @@
       "name": "FUN_a00dffb4",
       "status": "matched"
     },
+    "ram:a00dffd8": {
+      "by": "hand",
+      "comment": "checks the phy ID with FUN_a00df8f4, then calls FUN_a00df648(a, b, 1 or 2) for IDs 0..2",
+      "name": "FUN_a00dffd8",
+      "status": "matched"
+    },
     "ram:a00e0090": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
