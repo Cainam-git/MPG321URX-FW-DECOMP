@@ -15182,6 +15182,13 @@
       "name": "FUN_a0147760",
       "status": "matched"
     },
+    "ram:a0147790": {
+      "by": "h13",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns FUN_a00fc334() for 0-7, with 5 kept only when FUN_a00fca40() returns 0x40",
+      "name": "FUN_a0147790",
+      "status": "matched"
+    },
     "ram:a0147814": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
