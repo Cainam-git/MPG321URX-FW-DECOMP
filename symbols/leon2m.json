@@ -5202,6 +5202,12 @@
       "name": "FUN_a00d25f4",
       "status": "matched"
     },
+    "ram:a00d2884": {
+      "by": "hand",
+      "comment": "Tool command: stores command byte 7 (0 or 1) at DAT_a802d274+0x14, saves the record, returns 0xE0",
+      "name": "FUN_a00d2884",
+      "status": "matched"
+    },
     "ram:a00d28d4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
