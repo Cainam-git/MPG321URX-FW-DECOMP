@@ -6618,6 +6618,13 @@
       "name": "FUN_a00e321c",
       "status": "matched"
     },
+    "ram:a00e3524": {
+      "by": "twin",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Same sequence as FUN_a00e3880 on another register block (0x1e1..0x20a)",
+      "name": "FUN_a00e3524",
+      "status": "matched"
+    },
     "ram:a00e3880": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
