@@ -2043,6 +2043,13 @@
       "name": "FUN_a0080978",
       "status": "matched"
     },
+    "ram:a0080af0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Prints a message; for mode 0 updates bit 11 of 0xa802d338 and two bytes, calls FUN_a00db738 or FUN_a00dbcf0 on a change; then FUN_a00d8ffc",
+      "name": "FUN_a0080af0",
+      "status": "matched"
+    },
     "ram:a0080bc0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
