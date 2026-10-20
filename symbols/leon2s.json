@@ -4432,6 +4432,12 @@
       "name": "FUN_a00a5050",
       "status": "matched"
     },
+    "ram:a00a507c": {
+      "by": "hand",
+      "comment": "Fill a 0x48-byte configuration record with default values",
+      "name": "FUN_a00a507c",
+      "status": "matched"
+    },
     "ram:a00a535c": {
       "by": "near",
       "cflags": "-mcpu=v8 -Os",
