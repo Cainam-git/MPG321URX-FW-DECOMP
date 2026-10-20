@@ -4257,6 +4257,13 @@
       "name": "FUN_a00a9468",
       "status": "matched"
     },
+    "ram:a00a9abc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Calls FUN_a00a31a4 with entries of three tables indexed by DAT_a802d290 byte +8, then FUN_a00a9650 and two FUN_a0146b20 calls at a row derived from byte +0x2F",
+      "name": "FUN_a00a9abc",
+      "status": "matched"
+    },
     "ram:a00a9cc8": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
