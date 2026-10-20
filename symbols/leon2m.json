@@ -4228,6 +4228,13 @@
       "name": "FUN_a00a0ee8",
       "status": "matched"
     },
+    "ram:a00a0f6c": {
+      "by": "h10",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "OSDPBPAdjustD: when byte 0xa802d028 > 2, halfword 0xa802d02c +8 up to 0x870, FUN_a0146870, prints",
+      "name": "FUN_a00a0f6c",
+      "status": "matched"
+    },
     "ram:a00a0ff0": {
       "by": "h10",
       "cflags": "-mcpu=v8 -O3 -g",
