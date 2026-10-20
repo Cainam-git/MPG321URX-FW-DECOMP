@@ -7071,6 +7071,13 @@
       "name": "FUN_a00e21e0",
       "status": "matched"
     },
+    "ram:a00e21fc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns bits lo..hi of the value read by FUN_a00e021c",
+      "name": "FUN_a00e21fc",
+      "status": "matched"
+    },
     "ram:a00e2258": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
