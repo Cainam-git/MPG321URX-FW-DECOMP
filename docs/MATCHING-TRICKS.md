@@ -269,6 +269,20 @@ changing the code, and test all pairs.
   later load and store of the same alias set, so it often wins such a tie. Declaring the stored variable with
   another integer type of the same size (`unsigned long` instead of `unsigned int`) gives it its own alias set and
   removes those dependences (FUN_a00d378c).
+- **Identical if/else arms.** The original authors sometimes wrote the same statement in both arms of an if/else.
+  GCC 3.4 merges such arms only after register allocation (cross-jumping), so before that the shared values are
+  live across blocks and go to the global allocator, which can pick another register (%o0 in
+  DRV_HDMI_EQScan_FSM_PHY_EQ). Look for this when a single register differs in a value computed just before a
+  store or call.
+- **Symbol names and GCSE order (-O2/-O3).** GCSE numbers the registers it creates in the order of its hash buckets,
+  and a symbol's hash comes from the characters of its name. When two such registers tie in allocation priority
+  (priorities are truncated to integers in global.c allocno_compare), the lower number wins. The data name is free
+  within the pattern tools/exact.py resolves (DAT_/ARR_/PTR_/s_/u_ + address + optional _suffix); another name can
+  give the firmware order (FUN_a00af44c, ARR_00190cec).
+- **Allocator experiments in gdb.** cc1 has symbols: break on find_free_reg (local-alloc), combine_regs (ties) or
+  find_reg (global; allocno array at the `allocno` symbol, 0x68-byte records: reg, size, calls, refs, freq,
+  live_length, conflicts). Forcing one decision and diffing shows whether that decision alone gives the firmware
+  bytes, before looking for the C that produces it.
 - **Array index or pointer sum.** `*(table + i) = v` and `table[i] = v` can produce different operand order and
   scheduling for the same store; try both (DRV_HDMI21_RXDetect_FSM_LTS_P).
 
