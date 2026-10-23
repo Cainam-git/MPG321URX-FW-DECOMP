@@ -4639,6 +4639,13 @@
       "name": "FUN_a00a01b8",
       "status": "matched"
     },
+    "ram:a00a01fc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "afec sequence: b1a9 == 1 reset path, else copies DAT_a802d290 bytes to 0xa8025c54..56, sets afec from FUN_a00b6b88, bit 11 handling with FUN_a00db738/FUN_a00aacb4, % 7 calls, 0xa802b08f = 0xc",
+      "name": "FUN_a00a01fc",
+      "status": "matched"
+    },
     "ram:a00a03e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
