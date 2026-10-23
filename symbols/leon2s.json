@@ -4316,6 +4316,13 @@
       "name": "DRV_HDMI21_RXDetect_FSM_LTS_4",
       "status": "matched"
     },
+    "ram:a009860c": {
+      "by": "h52",
+      "cflags": "-mcpu=v8 -Os -g -msoft-float",
+      "comment": "clears four 4-bit fields of register words 0xa0/0xa4 or sets them to 5..8 after TxFFE_Max_L, by FUN_a0098300 and FUN_a00a7408 results; counter DAT_a8079086 with prints",
+      "name": "DRV_HDMI21_RXDetect_FSM_LTS_3",
+      "status": "matched"
+    },
     "ram:a0098b60": {
       "by": "hand",
       "comment": "Clears the halfword at 0xa8079054 + 2 * (param_1 & 0xff), then sets bit 2 or bit 3 of the byte at 0xa80788d2 depending on whether the masked argument is 0 or 1.",
