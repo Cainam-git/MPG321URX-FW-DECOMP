@@ -6315,6 +6315,12 @@
       "name": "FUN_a00ae3a0",
       "status": "matched"
     },
+    "ram:a00ae3e4": {
+      "by": "hand",
+      "comment": "sets two register bits under the 0xcf03c840 handshake and copies six FUN_a00a78b4 reads to registers 0xca-0xcf",
+      "name": "FUN_a00ae3e4",
+      "status": "matched"
+    },
     "ram:a00ae5e4": {
       "by": "hand",
       "comment": "Read a port's status byte block from reg 0xf9 and run the matching reg 0x24 bit sequence",
