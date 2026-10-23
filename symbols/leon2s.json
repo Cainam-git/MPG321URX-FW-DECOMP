@@ -8170,6 +8170,12 @@
       "name": "FUN_a00d3c40",
       "status": "matched"
     },
+    "ram:a00d3f54": {
+      "by": "hand",
+      "comment": "stores 1 to DAT_a8078c34 and calls func_0xa0f73950",
+      "name": "FUN_a00d3f54",
+      "status": "matched"
+    },
     "ram:a00d64ec": {
       "by": "hand",
       "comment": "up to 10 tries: hw reg cf013204 |= 1, wait 5, read reg 0x2c0 (page 0x90) via f9639c; stop when bit 1 of the read byte is set",
