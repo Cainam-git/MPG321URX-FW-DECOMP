@@ -11795,6 +11795,13 @@
       "name": "FUN_a0121258",
       "status": "matched"
     },
+    "ram:a012127c": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes the high bits of block register 4 chosen from h and register 0x1a unless FUN_a00fd820 is 0x71/0x81/0xb1",
+      "name": "FUN_a012127c",
+      "status": "matched"
+    },
     "ram:a0121374": {
       "by": "hand",
       "comment": "Returns (*(unsigned int *)0xa802c9e4 >> param_1) & 1, with no explicit & 0x1f on the shift count: sethi, ld, srl %g1,%o0,%g1, retl, and.",
