@@ -8,7 +8,7 @@
  * (struct OutCfg, as in src/leon2m/FUN_a0105150.c) is built on the stack and PASSED BY VALUE to FUN_a0105150:
  *   he/h10/h12 = the packed 16-bit settings at bytes +1/+3/+5 of DAT_a802e1a0 (word loads, odd offsets);
  *   b0/b1 = 1/1 when h10 != 0, 1/0 when only he != 0, b0 = 0 when both are 0 (b1 then not written);
- *   w4 = 3 or 0 by panel-row word0 bits 20..22 == 2 when row byte 7 == 8, 2 when byte 7 == 10, else NOT written;
+ *   w4 = 3 or 0 by row word 0 bits 20..22 == 2 when row byte 7 == 8, 2 when byte 7 == 10, else NOT written;
  *   w8 = display mode from row byte 6 (DispModeTransform, jump table at fw 0xf11a0, f = row word0 bits 17..19):
  *   0x10 -> 1, 0x11 -> f == 1 ? 3 : 4, 0x20 -> 5, 0x21 -> f == 0 ? 0x11 : 8, 0x24 -> 0xe, 0x40 -> f == 0 ? 6 : 5,
  *   0x41 -> f == 2 ? 0xa : f == 0 ? 9 : 8, 0x22/0x42 -> f == 2 ? 0xd : f == 0 ? 0xc : 0xb, others -> 0;
@@ -22,7 +22,7 @@
  *   func_0x40089820(1, 1), FUN_a0138e28(u16 0xa802e214), func_0x4008a880(1, 2, FUN_a002fae0),
  *   func_0x40089820(1, 2); FUN_a010afe4(0), FUN_a010b1b4(0), FUN_a01382b0; "System_Initialize End" when
  *   FUN_a00dd614(0x10) (log level) is non-zero.
- * Nothing here reads the input timing. The post-FRC rate at start-up is the panel row's
+ * Nothing here reads the input timing. The post-FRC rate at start-up is the 0x58-byte row's
  * +0x52 value; in the ROM default row DAT_001a30d0 it is 2400 (240.0 Hz), byte 6 = 0x42, byte 7 = 0x0a, word0
  * 0x2c120400 (f = 1 -> mode 0xb, w4 = 2). All four converter channels start with lock mode 0.
  * Code facts that fix the source: callee prototypes from the call sites (FUN_a015202c and FUN_a01410a4 /

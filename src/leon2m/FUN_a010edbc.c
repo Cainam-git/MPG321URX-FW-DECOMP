@@ -9,10 +9,10 @@
  *   Two pointer tables of 3 register blocks {w0, w4, w8, wc}: T1 = 0x19AED8, T2 = 0x19AECC.
  *   wc = v in T1[ch] then T2[ch]; ch > 2 means "all three blocks" (loop i = 0..2) for every write.
  *   w = T1[ch > 2 ? 0 : ch]->w4 | 0x4000 (bit 14), then w4 = w in T1 and T2 the same way.
- * Globals: DAT_a802d744/784/7c4 (+0x3E byte), DAT_a802d6a4 (pointer to the transformed panel row, reads +0x08 only),
+ * Globals: DAT_a802d744/784/7c4 (+0x3E byte), DAT_a802d6a4 (pointer to the transformed 0x58-byte row, reads +0x08 only),
  *   DAT_0019aed8[3], DAT_0019aecc[3] (pointers to register blocks; writes +0x0C and +0x04, reads +0x04 of T1).
  * Callers: no direct call in asm/leon2m; Ghidra marks the entry unreachable.
- * Panel row fields read: transformed row +0x08 only.
+ * Row fields read: transformed row +0x08 only.
  * Source form: the index select is 'unsigned int idx = ch > 2 ? 0 : c;' used as (unsigned char)idx (selects on the
  *   wide parameter, then truncates: bgu,a / clr %i0 / and 0xff). 'if (ch > 2) c = 0;' is if-converted to subx/and.
  */

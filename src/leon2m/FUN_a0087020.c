@@ -25,7 +25,7 @@
  *    else 0.
  * 6. Tail call FUN_a01243b0(half 0xA802D486 == 0x55AA).
  * Control flow: no loops and no waits in this function (all branches go forward, it always returns via the
- *   tail call); it reads no panel row data itself. It is on the path to the MSI logo
+ *   tail call); it reads no 0x58-byte row data itself. It is on the path to the MSI logo
  *   (FUN_a0081e0c).
  * Source form: the sched-deps pending-list barrier (34th memory op = the +0x2A store) splits step 2: the +4 bits
  *   11/6, +0x3E, +0x3F, +0x18, +0x2C..+0x32 statements come after it in the source; one logo call after the type-1

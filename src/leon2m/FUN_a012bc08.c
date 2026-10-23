@@ -2,7 +2,7 @@
  *
  * Updates the output timing record of channel 'id' (0x24-byte records at 0xA802D8DC) and reports it to
  * the small chip.
- *   div (split factor, only for id != 0) from the RAW panel row byte +6 (FUN_a01241fc() = 0xA802E378, the
+ *   div (split factor, only for id != 0) from the RAW 0x58-byte row byte +6 (FUN_a01241fc() = 0xA802E378, the
  *   untransformed copy): 0x20 -> 1, 0x21 -> 2, 0x22 -> 4, 0x23 -> 8, 0x24 -> 1, 0x25 -> 2, anything else -> 1
  *   (two separate if-chains in the code: 0x20..0x23, then 0x24/0x25).
  *   FUN_a012b9a8(ch, &tm) fills a 24-byte timing block tm: eight 16-bit values h0..h7 at +0..+0xE, byte +0x14,

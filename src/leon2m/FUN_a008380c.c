@@ -4,7 +4,7 @@
  * (string 0xFEED8). Bit 0 of the result goes to FUN_a0148e34, bit 1 to FUN_a0148eb4 (both via pointer-table
  * callers FUN_a0083aa0 / FUN_a0083abc); they set bits 27 / 26 of 0xA802E3D0.
  * Inputs: vfreq = FUN_a0145660(0, 1) (tenths of Hz), ids 7 and 8 of the input record, w = FUN_a014837c(1)
- * (halfword +0x0A of the raw panel row), the active transformed row (DAT_a802d6a4: vf_min +0x4E, vf_max +0x50).
+ * (halfword +0x0A of the raw 0x58-byte row), the active transformed row (DAT_a802d6a4: vf_min +0x4E, vf_max +0x50).
  *   special flag FUN_a014e010() (bit 19 of 0xA802DFA0) == 1: mode 0 outside (vf_min - 2.0 Hz, vf_max + 2.0 Hz);
  *       inside: 1, except an 800x600 input (ids 7/8 = 800/600) below 62.0 Hz gives 0.
  *   otherwise: tentative mode 2 when byte 0xA802D2AF == 0, else 0; port flag FUN_a01485e0(0) set -> 0;

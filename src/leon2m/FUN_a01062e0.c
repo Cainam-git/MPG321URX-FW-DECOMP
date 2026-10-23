@@ -3,7 +3,7 @@
  * FUN_a010a494 return int, a and b are int; the FRC-on test is written positive first.
  *
  * Programs register block 4 of the 0x19A2EC family (0xCF00A800, via FUN_a00f2488 / FUN_a00f2298 /
- * FUN_a00f232c) from the active panel row (DAT_a802d6a4) and two measured values, in one of two recipes:
+ * FUN_a00f232c) from the active 0x58-byte row (DAT_a802d6a4) and two measured values, in one of two recipes:
  *   full != 0: a = b = block 0 reg 0x64 (FRC on: FUN_a010a8f0() twice); regs 0x18 = b, 0x1A = a, 0x61 = 0x12,
  *     0x54 = 0, 0x5B = row +0x2C, 0xBE = row +0x30, 0x5E = row +0x22, 0xA0 = row +0x26, 0x62 = 0x6F = row +0x30 +
  *     +0x32, 0x64 = 0x71 = row +0x0A, 0x66 = 0x73 = row +0x26 + +0x28, 0x68 = 0x75 = row +0x08, 0x79 = row +0x22,

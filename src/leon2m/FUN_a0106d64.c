@@ -3,7 +3,7 @@
  *
  * Called by FUN_a015373c (one call site, a0153954, after DispModeTransform) with a 36-byte output configuration,
  * which it copies word by word to 0xA802D680 (the same record FUN_a0105150 writes; FUN_a01023f4 reads +0x08 there,
- * the display mode). Row = *DAT_a802d6a4 (the transformed panel row).
+ * the display mode). Row = *DAT_a802d6a4 (the transformed 0x58-byte row).
  *   0xCF00ED58 = config byte +0x0C (zero-extended, unconditional; byte +0x0D is not read here);
  *   0xCF00ED5C = 0x20 when (row word0 & 0x700000) == 0x200000 and (unsigned char)(row byte +6 - 8) <= 2
  *   (display mode 8..10), else 0x40; 0xCF00EDA8 = config byte +0x14; with that same condition also

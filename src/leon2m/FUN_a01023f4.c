@@ -5,7 +5,7 @@
  * the firmware's branches.
  *
  * Programs output timing block 'blk' (0x19A2EC register family, FUN_a00f2488 16-bit writes) from the active
- * transformed panel row (DAT_a802d6a4) and the output configuration at 0xA802D680:
+ * transformed 0x58-byte row (DAT_a802d6a4) and the output configuration at 0xA802D680:
  *   0xCF00ED40 = low byte of: 0xE1 (row word0 bit 23 set) or 0x61, OR (cfg +4) << 3, OR 0x10 when row word0 bits
  *   20..22 == 1, bit 2 set when the display mode (cfg +8) is 0 else cleared, bit 1 set when row word0 bit 25 and
  *   cfg byte +2 are both set, else cleared;

@@ -5,7 +5,7 @@
  * Pins: P = FUN_a0124828() = GPIO group 13 bit 5 (0xCF03C478 & 0x20); R = FUN_a01248c8() = GPIO group 9 bit 3
  * (0xCF03C458 & 0x08), the same pin that gates the I2C read of device 0x60 in FUN_a0126878.
  *   state 0 (and 4..15): when P is high -> state 1, timestamp; if FUN_a00803a4() == 1: (if FUN_a0108e54() == 1:
- *            FUN_a01084a8(FUN_a013cda8(0), 0) and FUN_a0109110(0)), then FUN_a00dac38(1, 1, 1) (forces panel row 1),
+ *            FUN_a01084a8(FUN_a013cda8(0), 0) and FUN_a0109110(0)), then FUN_a00dac38(1, 1, 1) (forces 0x58-byte row 1),
  *            FUN_a01023f4(0) and FUN_a0102f6c(); always prints "OLED_FRC_DVDD_ON".
  *   state 1: P low -> state 0; after > 500 ms with R high -> state 2, "OLED_FRC_FRC_READY".
  *   state 2: P low -> state 0; first pass prints "OLED_FRC_Handler %d" (low byte), FUN_a0126704(low byte), sets
@@ -16,7 +16,7 @@
  * is high.
  * Callers: FUN_a0085984, FUN_a014512c.
  * Flag 0x400 is set by the helper at 0xA01295D0 (not in Ghidra's function list), called by the mode-change state
- * machine FUN_a008454c right after FUN_a00dac38 has chosen the panel row; the low byte is that row number
+ * machine FUN_a008454c right after FUN_a00dac38 has chosen the 0x58-byte row; the low byte is that row number
  * (0xA802D893), so state 3 -> 2 re-sends the new row to the FRC chip via FUN_a0126704 (register 0xB2).
  * FW.012 kept the row number in bits 8..9 of its state word and sent ((word >> 8) & 3) here.
  * The state word is a bitfield struct: the original reads the row byte as ldub [base+1] and merges

@@ -19,7 +19,7 @@
  *   reg16 0x5E = avg; FUN_a01026e8(0, low word of *clk) (GPLL_DISPM); reg 0x54 = 2; regs 0x86/0x50 = the bytes
  *   FUN_a0104380 saved (DAT_a802c984/c982); reg16 0x64 = row +0x0A; reg 0x88 = DAT_a802c983.
  * Callers: FUN_a013dc6c (one call, after FUN_a0104380).
- * Panel row fields read: transformed row +0x08 and +0x0A (lim at entry), +0x0A again at the end.
+ * Row fields read: transformed row +0x08 and +0x0A (lim at entry), +0x0A again at the end.
  * Code facts used: the wrap fix is written in both arms of the FUN_a0121258 test (the firmware computes
  *   'lim > 0x3FFFFF' in both predecessors and cross-jumps the rest); -msoft-float keeps 0x400000 inside the loop;
  *   x is a short variable (gives 'cmp x, K; bg'); the declaration order gives the firmware's loop registers.

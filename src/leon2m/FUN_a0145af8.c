@@ -9,7 +9,7 @@
  *   13, 15       16-bit values at +0x13, +0x17 (they cross a word boundary, so the halves are read as bytes)
  *   16, 17       flag bits 7 and 6 of the byte at +0x19
  *   4, 5, other  0xFFFF
- * FUN_a00dac38 calls FUN_a0145af8(2); when that flag is 1 the panel row thresholds use an
+ * FUN_a00dac38 calls FUN_a0145af8(2); when that flag is 1 the 0x58-byte row thresholds use an
  * offset of 0.5 Hz instead of 2.0 Hz. The same bit is sent to another processor as message 0x80 by FUN_a012b884
  * (via FUN_a0138b98 / FUN_a01370dc) and gates bit 31 of 0xA802E3D0 in FUN_a0148d98.
  */

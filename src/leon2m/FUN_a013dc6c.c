@@ -1,4 +1,4 @@
-/* leon2m FUN_a013dc6c @ 0xa013dc6c-0xa013f1e4  input channel bring-up state machine (panel-row reader)
+/* leon2m FUN_a013dc6c @ 0xa013dc6c-0xa013f1e4  input channel bring-up state machine
  * Flags -mcpu=v8 -O3 -g -msoft-float. 1374 words.
  *
  * One step per call for the channel DAT_a802cbd2 (0..3, 0xff = none): record c = DAT_a802df30[ch] (0x78 bytes).
@@ -22,7 +22,7 @@
  *    INC_STEP after the 0x30000000 test, 0xf40-0x1020).
  *  - ch == 0: 'if (DAT_a802e3d0.u0.w & 0x8000000) {set arm} else {clear arm}' (fw falls through into the set arm,
  *    printf s_001a5988 at 0x1078; the clear arm s_001a59a8 is out of line at 0x1414).
- *  - 0xA802E3D0 is its own object (struct E3D0), not part of the 0x58-byte panel row at 0xA802E378: the fw reaches
+ *  - 0xA802E3D0 is its own object (struct E3D0), not part of the 0x58-byte row at 0xA802E378: the fw reaches
  *    w58/w5c/w90/e3d3 as [base+0]/[+4]/[+0x38]/[+3] from one 'or %l4,0x3d0' (0x105c-0x10d8).
  *  - set arm: 'if (DAT_a802df30[0].h08 > lim) FUN_a0107e44(b3 != 0, rate, 1); else FUN_a0107e44(b3 != 0, lim, 1);'
  *    (lim is dead after it; gcc cross-jumps the call: fw 0x1080-0x10a8 'bleu,a' with 'ldub [..+3],%i5' in the slot,

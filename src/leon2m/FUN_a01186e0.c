@@ -1,6 +1,6 @@
 /* leon2m FUN_a01186e0 @ 0xa01186e0-0xa011898c (684 bytes, 171 words), flags -mcpu=v8 -O3 -g.
  *
- * void FUN_a01186e0(arg): output-block (0xCF012Exx/Fxx) set-up from the transformed panel row.
+ * void FUN_a01186e0(arg): output-block (0xCF012Exx/Fxx) set-up from the transformed 0x58-byte row.
  *   0xCF009BB8 bit 1 cleared; delay 50 (func_0x4008d1a0 = FUN_a002d1a0); 0xCF012E80 = 4; FUN_a00f2e98(0xF4, 0,
  *   0x400, arg);
  *   0xCF012E40 = 0x71; 0xCF012E44 = 0x10; mode = word +4 of record 0xA8027A98:
@@ -13,7 +13,7 @@
  *   0xCF011800
  *   and 0xCF011A00; 0xCF012E6C = bit 29 ? 0x12 : 0; F00 = 0x40, F04 = F08 = 0, F0C = F10 = 0xFF, F14 = 0x1F.
  * Callers: no direct call in asm/leon2m.
- * PANEL ROW FIELDS READ: transformed row +0x08 and +0x0A.
+ * ROW FIELDS READ: transformed row +0x08 and +0x0A.
  * Source form (all behaviour-neutral):
  *   - registers as 'volatile unsigned long' (alias set differs from the unsigned int record word, so the mode load
  *     is

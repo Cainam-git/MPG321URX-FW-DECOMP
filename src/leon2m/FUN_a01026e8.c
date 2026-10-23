@@ -16,9 +16,9 @@
  *   Any other ch: nothing after the computation.
  * Lock: 0xCF03C840 is a hardware semaphore shared with another processor: write 1 unless it reads 2 (held by the
  * other side), done when it reads back 1; after 65536 tries it is taken anyway; released by writing 0.
- * Callers include FUN_a0106d64 (output path set-up: DISPM = x, DISP1 = DISP2 = x/2, DISP3 = x/4 from the panel row)
+ * Callers include FUN_a0106d64 (output path set-up: DISPM = x, DISP1 = DISP2 = x/2, DISP3 = x/4 from the 0x58-byte row)
  * and FUN_a0102f6c. The FRC chip's clock (ch 4) and the output pixel clocks come from here; the
- * frequencies themselves are computed by the callers from the active panel row.
+ * frequencies themselves are computed by the callers from the active 0x58-byte row.
  */
 #define R(a) (*(volatile unsigned int *)(a))
 #define SEM R(0xcf03c840)

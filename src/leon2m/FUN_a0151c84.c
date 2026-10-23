@@ -1,7 +1,7 @@
 /* leon2m FUN_a0151c84 @ 0xa0151c84  DispModeTransform
  * Flags: -mcpu=v8 -O3, no -g (with -g gcc adds a nop after the final printf call).
  *
- * Converts the RAW active panel row's byte +6 (FUN_a01241fc() = 0xA802E378) into a display mode number using the
+ * Converts the RAW active 0x58-byte row's byte +6 (FUN_a01241fc() = 0xA802E378) into a display mode number using the
  * 3-bit field b = row word 0 bits 17..19 (word & 0xE0000), prints "------>DispModeTransform %d,%d , %d" (byte,
  * field, mode) and returns the mode. Jump table on byte - 0x10 (0x10..0x42; firmware table at run-time 0xF1008):
  *   0x10 -> 1      0x11 -> 3 if b == 1 else 4      0x20 -> 5      0x21 -> 17 if b == 0 else 8

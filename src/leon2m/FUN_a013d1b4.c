@@ -19,7 +19,7 @@
  *    G = g + X (clamped at 0, signed), H = h + Y (0 when >= 0x800).
  * 4. P+0x4A = A, +0x52 = B, +0x4E = X, +0x58 = Y, +0x50 = G, +0x56 = H, +0x4C = C, +0x54 = D, +0x5A = E,
  *    +0x5C = F.
- * Panel row fields read: RAW active row 0xA802E378 only: +0x08 and +0x0A (scaling, port 0 with 0xA802E3D3 set)
+ * Row fields read: RAW active row 0xA802E378 only: +0x08 and +0x0A (scaling, port 0 with 0xA802E3D3 set)
  *   and +0x26, +0x28, +0x30, +0x32 (port-0 offsets X/Y in the bit-0/bit-30/bit-26 case). No transformed row, no
  *   row index.
  * Source form: union for 0xA802E3D0; 1-bit bitfield for record +0x40 bit 30; nested 'else if (w4 & 0xF0000000)

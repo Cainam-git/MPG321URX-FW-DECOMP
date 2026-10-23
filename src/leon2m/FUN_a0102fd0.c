@@ -13,7 +13,7 @@
  *   other: 0
  * FUN_a0155208 is the 64-bit unsigned divide.
  * Caller FUN_a01070b4 (advisory panel limit check) calls FUN_a0102fd0(0), or (4) when FUN_a010a864()
- * is set, and compares the result with the panel row's clock limits (row +0x10/+0x18, Hz, divided by 10^6).
+ * is set, and compares the result with the 0x58-byte row's clock limits (row +0x10/+0x18, Hz, divided by 10^6).
  * The value is a clock in MHz, not an hfreq.
  */
 #define R(a) (*(volatile unsigned int *)(a))                          /* 8-bit register in a 32-bit word */

@@ -5,7 +5,7 @@
  * In plain words: it puts the four input-channel records (RAM 0xA802DF30, 4 x 0x78 bytes, the records the channel
  * state machine FUN_a013dc6c steps through) into their start state: channel 0 gets state 5, the other three state 0,
  * each gets its id, port number, a 500 timer value and cleared flags, and the output-timing halves are copied from
- * the active panel row. Pure RAM writes: no hardware register, no wait, all loops are fixed (i < 4).
+ * the active 0x58-byte row. Pure RAM writes: no hardware register, no wait, all loops are fixed (i < 4).
  * What it does (code facts from this C; field names of word +0 as in FUN_a013dc6c / FUN_a013ce10):
  *  - E[0]: h74 = 500; w0: state 5, f24 5, step 0, f4 0, id 0, port 0, f16 0; w70: bits 24, 30, 20 set, bits 17, 16
  *    cleared, field 13..12 = 1.
@@ -17,7 +17,7 @@
  *  - i = 0..3: w0 bit 0 = (i == 0) (if/else); w70 bits 31, 29, 28, 27, 26, 25 cleared, field 15..14 = 0, bit 18 set,
  *    bit 22 cleared (bit 22 = 'run the state machine again in this call', FUN_a013dc6c); w68 bit 23 set, bit 20
  *    cleared; halves +0x4A = +0x4C = R.h08, +0x52 = +0x54 = R.h0A, +0x4E = +0x50 = R.h28 + R.h26, +0x58 = +0x56 =
- *    R.h32 + R.h30, +0x5A = +0x5C = 0 (R = the active panel row RAM 0xA802E378).
+ *    R.h32 + R.h30, +0x5A = +0x5C = 0 (R = the active 0x58-byte row RAM 0xA802E378).
  *  - Tail: if RAM word 0xA802E3D0 bit 21 is set, FUN_a01302e0(3, 1) as a tail call.
  * It neither waits nor fails: every loop has a fixed bound, the only call is the tail call, no hardware access.
  * Source form (no-code):

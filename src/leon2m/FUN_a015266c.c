@@ -21,13 +21,13 @@
  * 6. WAIT 3 (no timeout): while (!FUN_a0136fc4()) { if (mask & 0x10) print "\n wait sub init\r\n"; }
  *    FUN_a0136fc4 = MailBox_Read(portal 1 = Small chip, offset 0) bit 0. Then "\n sub init\r\n" (if mask & 0x10).
  * 7. FUN_a012cfac(); FUN_a00fd558(); FUN_a0141964() (display start-up, matched); FUN_a015209c(); FUN_a013c944();
- *    FUN_a012fc04(); FUN_a012b7b8(); if ((raw active panel row word 0 (FUN_a01241fc()) & 0x700000) == 0x200000, i.e.
+ *    FUN_a012fc04(); FUN_a012b7b8(); if ((raw active 0x58-byte row word 0 (FUN_a01241fc()) & 0x700000) == 0x200000, i.e.
  *    link type 2 = eDP) FUN_a012b9a0(); FUN_a0138284(); FUN_a01382e4(); FUN_a01356fc(2, 0); FUN_a01243dc();
  *    FUN_a012c188(); tail call FUN_a01298d8().
  * The three waits have NO timeout and run before main() reaches its main loop (where the command switch
  *   FUN_a00bfcc4 -> FUN_a00bf110 "--->UartSetI2CEnable" is served). So the command switch is served only after the
  *   helper chip has posted a non-zero boot byte AND the Small chip has set both ready bits. This function reads
- *   the panel row only in step 7 (after the waits).
+ *   the 0x58-byte row only in step 7 (after the waits).
  * Matching notes: gcc 3.4 sched-deps flushes its pending memory lists after 32 refs: the 34th memory op of step 1
  *   (clrb +0x31) is a barrier, so bit 18 / +0x33 / +0x36 / +0x32 / +0x34 come after it in the source. Callee return
  *   types: FUN_a013701c / FUN_a0136fc4 / FUN_a00dd614 return unsigned char (btst 0xff at the use).

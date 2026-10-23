@@ -10355,7 +10355,7 @@
     "ram:a01023f4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "output timing apply: programs the output timing block from the active panel row",
+      "comment": "output timing apply: programs the output timing block from the active 0x58-byte row",
       "name": "FUN_a01023f4",
       "status": "matched"
     },
@@ -10499,7 +10499,7 @@
     "ram:a0105c0c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Stores the transformed panel row (by value) at 0xA802D6A8 and points DAT_a802d6a4 at it.",
+      "comment": "Stores the transformed 0x58-byte row (by value) at 0xA802D6A8 and points DAT_a802d6a4 at it.",
       "name": "FUN_a0105c0c",
       "status": "matched"
     },
@@ -10575,7 +10575,7 @@
     "ram:a01062e0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Output block 4 (FRC output timing) set-up from the transformed panel row DAT_a802d6a4: full vs reduced register set, ec00 window regs",
+      "comment": "Output block 4 (FRC output timing) set-up from the transformed 0x58-byte row DAT_a802d6a4: full vs reduced register set, ec00 window regs",
       "name": "FUN_a01062e0",
       "status": "matched"
     },
@@ -12447,7 +12447,7 @@
     "ram:a0124180": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "start-up default panel row: struct copy of ROM row 001a30d0 into the active RAM row e378 (real u64 clock fields give the 8-byte alignment; no aid)",
+      "comment": "start-up default 0x58-byte row: struct copy of ROM row 001a30d0 into the active RAM row e378 (real u64 clock fields give the 8-byte alignment; no aid)",
       "name": "FUN_a0124180",
       "status": "matched"
     },
@@ -13419,7 +13419,7 @@
     },
     "ram:a01295d0": {
       "by": "hand",
-      "comment": "sets bit 0x400 of the OLED FRC state word d892 = request to send the chosen panel row to the panel FRC chip (new function entry)",
+      "comment": "sets bit 0x400 of the OLED FRC state word d892 = request to send the chosen row to the panel FRC chip (new function entry)",
       "name": "FUN_a01295d0",
       "status": "matched"
     },
@@ -15303,14 +15303,14 @@
     "ram:a0141840": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Panel row transform: copy of the raw row with bits 20-22 remapped (1<->2) and byte +6 = display mode (FUN_a0151c84), handed by value to FUN_a0105c0c (DAT_a802d6a4); then FUN_a015373c (call new in FW.021).",
+      "comment": "0x58-byte row transform: copy of the raw row with bits 20-22 remapped (1<->2) and byte +6 = display mode (FUN_a0151c84), handed by value to FUN_a0105c0c (DAT_a802d6a4); then FUN_a015373c (call new in FW.021).",
       "name": "FUN_a0141840",
       "status": "matched"
     },
     "ram:a0141964": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "display output start-up: copy raw panel row, swap link type 1<->2, mode = DispModeTransform, a0105c0c(row), a015373c",
+      "comment": "display output start-up: copy raw 0x58-byte row, swap link type 1<->2, mode = DispModeTransform, a0105c0c(row), a015373c",
       "name": "FUN_a0141964",
       "status": "matched"
     },
@@ -16274,7 +16274,7 @@
     "ram:a01483f4": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Makes a panel row active: copies 0x58 bytes to 0xA802E378, prints clk/Htotal/Vtotal, derives +0x26/+0x28 and +0x48 (vfreq at min clock), builds the transformed copy (FUN_a0141840) and optionally applies it (FUN_a01023f4(0)).",
+      "comment": "Makes a 0x58-byte row active: copies 0x58 bytes to 0xA802E378, prints clk/Htotal/Vtotal, derives +0x26/+0x28 and +0x48 (vfreq at min clock), builds the transformed copy (FUN_a0141840) and optionally applies it (FUN_a01023f4(0)).",
       "name": "FUN_a01483f4",
       "status": "matched"
     },
@@ -17132,7 +17132,7 @@
     "ram:a0151c84": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3",
-      "comment": "DispModeTransform: display mode from the panel row (case order + if-chain keys)",
+      "comment": "DispModeTransform: display mode from the 0x58-byte row (case order + if-chain keys)",
       "name": "FUN_a0151c84",
       "status": "matched"
     },
@@ -17158,7 +17158,7 @@
     "ram:a015209c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "System_Initialize: clocks/PLL, port records, Disp_Init output config (display mode from panel row byte 6), FRCConfigPostFRC at the row rate (ROM default 2400), converter lock mode 0 on ch 0..3",
+      "comment": "System_Initialize: clocks/PLL, port records, Disp_Init output config (display mode from 0x58-byte row byte 6), FRCConfigPostFRC at the row rate (ROM default 2400), converter lock mode 0 on ch 0..3",
       "name": "FUN_a015209c",
       "status": "matched"
     },

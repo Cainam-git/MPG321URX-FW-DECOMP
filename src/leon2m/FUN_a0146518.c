@@ -1,7 +1,7 @@
 /* leon2m FUN_a0146518 @ 0xa0146518  pass the active row's h08 / h0a to FUN_a01199ac
  * Flags: -mcpu=v8 -O3 -g -msoft-float.
  *
- * Tail call FUN_a01199ac(a, b, raw row +0x08, raw row +0x0A, c) with the raw active panel row at 0xA802E378
+ * Tail call FUN_a01199ac(a, b, raw row +0x08, raw row +0x0A, c) with the raw active 0x58-byte row at 0xA802E378
  * (+0x08 / +0x0A are 16-bit timing fields; FUN_a01023f4 programs +0x0A as the active height-related value).
  */
 struct RawRow { unsigned int w0; unsigned short h4; unsigned char b6, b7; unsigned short h08, h0a; };

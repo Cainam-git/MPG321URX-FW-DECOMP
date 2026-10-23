@@ -1,9 +1,9 @@
 /* leon2m FUN_a01107b8 @ 0xa01107b8-0xa0110d64 (1452 bytes, 363 words), flags -mcpu=v8 -O3 -g.
  * Compiler aids: none.
  *
- * What it does (panel-row reader): void(u8 ch). Picks the window record for ch (1: 0xA802D7C4, 2: 0xA802D784,
+ * What it does: void(u8 ch). Picks the window record for ch (1: 0xA802D7C4, 2: 0xA802D784,
  * else 0xA802D744; idx 1/2/0); returns if its width (+0x16) is 0. Splits the window at the column
- * half = row->h08 >> 1 (row = *DAT_a802d6a4, the transformed panel row, re-read 3 times) into part 1 / part 2,
+ * half = row->h08 >> 1 (row = *DAT_a802d6a4, the transformed 0x58-byte row, re-read 3 times) into part 1 / part 2,
  * sets the per-ch enable bits in 0xD0030004 (window fully right of the split) or 0xD0038004 (fully left), scales
  * +0x0C by each part's share of the width, programs the two table blocks at 0x19AED8 / 0x19AECC (+0x10, +0x14),
  * mirrors positions when +0x3E bit 0 is set, calls FUN_a010baf4 / FUN_a010bee4 per part, and when

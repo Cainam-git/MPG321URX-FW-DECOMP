@@ -29,7 +29,7 @@
  *   correction then sets the final clock. Nothing in this function clamps or rejects the rate or the clock: there
  *   is no limit compare on clk, only the 480/960/1920 MHz post-divider choice. FUN_a01070b4 drv_PanelLimitation does
  *   not reject it either (advisory only: its single caller FUN_a014e8d8 discards the bitmask); the 4K cap is the
- *   chosen panel row's max applied in FUN_a013dc6c state 10.
+ *   chosen row's max applied in FUN_a013dc6c state 10.
  * Levers (in plain words):
  *   (1) the lane writes are inlined static helpers lane_wr(o, u8 v), lane_or(o, u32 m), lane_and(o, u8 m): the fw
  *       computes the value once before the a78 == 8 / < 4 test;

@@ -5,7 +5,7 @@
  * row (DAT_a802d6a4, written by DispModeTransform):
  *   modes 5..7  -> one of the four transmitter blocks (register stride 0x8C) is switched on,
  *   modes 8..10 -> two blocks,   any other mode -> all four blocks.
- * On FW.021 a 60 Hz-class input selects panel row 2, whose display mode is 5 (one block); FW.012 used mode 11
+ * On FW.021 a 60 Hz-class input selects 0x58-byte row 2, whose display mode is 5 (one block); FW.012 used mode 11
  * (all four) for the same input. What the blocks are electrically is not stated by
  * any firmware text.
  */

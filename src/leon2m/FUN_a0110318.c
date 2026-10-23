@@ -1,5 +1,5 @@
 /* leon2m FUN_a0110318 @ 0xa0110318-0xa01107b8 (1184 bytes, 296 words), flags -mcpu=v8 -O3 -g.
- * What it does (panel-row reader, sister of FUN_a01107b8): void(u8 ch). Record c = ctx(ch) (0xA802D704, ch 1:
+ * What it does (sister of FUN_a01107b8): void(u8 ch). Record c = ctx(ch) (0xA802D704, ch 1:
  * 0xA802D804);
  * returns if c->h16 (width) is 0; splits [x, x+w) at half = (*DAT_a802d6a4)->h08 >> 1 into first/second, sets the
  * side

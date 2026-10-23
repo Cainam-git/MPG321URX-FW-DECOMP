@@ -1,10 +1,10 @@
-/* leon2m FUN_a015373c @ 0xa015373c  output path set-up after a panel row change
+/* leon2m FUN_a015373c @ 0xa015373c  output path set-up after a row change
  * Flags: -mcpu=v8 -O3 -g (-mcpu=v8 -O3 gives the same code). NEW in FW.021. Real size 564 bytes.
  *
- * Called at the end of FUN_a0141840 (panel row transform) and by FUN_a0141964, so in FW.021 every panel row change
+ * Called at the end of FUN_a0141840 (row transform) and by FUN_a0141964, so in FW.021 every row change
  * (FUN_a00dac38 -> FUN_a01483f4 -> FUN_a0141840) re-runs the output path set-up.
  * Builds a 36-byte output configuration on the stack and passes it BY VALUE to FUN_a0106d64, then FUN_a0139a30.
- * row = FUN_a01241fc() (the raw active panel row at 0xA802E378); rec = the saved-settings record 0xA802E1A0
+ * row = FUN_a01241fc() (the raw active 0x58-byte row at 0xA802E378); rec = the saved-settings record 0xA802E1A0
  * (packed, see FUN_a0145af8): u16 h at +3, u16 v at +5.
  *   +0x00 = 1 when rec.h != 0 (then +0x10 = rec.h, +0x12 = rec.v), else 0 (+0x10/+0x12 left unset).
  *   +0x02 = row word 0 bit 25.          +0x04 = 2 when row byte 7 (bits per colour) == 10, else 0.
@@ -13,7 +13,7 @@
  *           i.e. +0x0C bit 7 = row byte 0x54 bit 5, bit 5 = byte 0x54 bit 7, bit 4 = byte 0x54 bit 6;
  *           +0x0D bits 7..6 = byte 0x54 bits 4..3.
  *   +0x14 = row byte 0x55.
- * The FW.021 panel rows carry byte 0x54 = 0x20 -> +0x0C = 0x80, +0x0D = 0, the same
+ * The FW.021 0x58-byte rows carry byte 0x54 = 0x20 -> +0x0C = 0x80, +0x0D = 0, the same
  *   values Disp_Init FUN_a0151db4 stores as constants; FUN_a0106d64 writes +0x0C to 0xCF00ED58.
  * Callers: FUN_a0141840, FUN_a0141964.
  * Source form: DispModeTransform CALLED (FUN_a0151c84 defined in this file and inlined by gcc -O3; its own

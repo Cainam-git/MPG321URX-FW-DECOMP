@@ -14,7 +14,7 @@
  *      then FUN_a01026e8(0, low 32 bits of *clk).
  *   6. Always: reg 0x86 = 1, reg 0x88 = 6.
  * Callers: FUN_a013dc6c (one call).
- * PANEL ROW FIELDS READ: transformed row +0x20 and +0x24 (bounds for reg 0x82).
+ * ROW FIELDS READ: transformed row +0x20 and +0x24 (bounds for reg 0x82).
  * Source form: n and m are int (callee returns unsigned short, zero-extended right after the call; an
  *   unsigned short variable gives other registers); d is short (gives the srl in the else division).
  */

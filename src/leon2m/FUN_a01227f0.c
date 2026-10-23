@@ -2,7 +2,7 @@
  * FUN_a01227f0 - V-by-One (Vx1) transmitter lane set-up (Big chip, leon2m). '-mcpu=v8 -O3 -g'
  * (0xa01227f0..0xa0122cd8, 314 words).
  *
- * What it does: from the active transformed panel row DAT_a802d6a4 (byte +6 display mode, +7 bits per colour)
+ * What it does: from the active transformed 0x58-byte row DAT_a802d6a4 (byte +6 display mode, +7 bits per colour)
  * prints "Vx1 Lane BW = %ld" (= k * FUN_a0105a94(1, 0) * 5 / 4), writes the Vx1 TX set-up registers
  * 0xCF00EB40..EB60,
  * the reset/strobe sequence on 0xCF01CBB8.., the block enables 0xCF01CD10/CD9C/CE28/CEB4 by mode, the 32 lane

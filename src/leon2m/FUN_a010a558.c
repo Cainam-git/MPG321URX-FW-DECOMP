@@ -1,5 +1,5 @@
 /* leon2m FUN_a010a558 @ 0xa010a558 (179 words), flags -mcpu=v8 -O3 -g. Compiler aids: none.
- * What it does (panel-row reader): if en != 0, logs s_0019acb0, reads the transformed panel row *DAT_a802d6a4 (h0a
+ * What it does: if en != 0, logs s_0019acb0, reads the transformed 0x58-byte row *DAT_a802d6a4 (h0a
  * width, h2c total, h22, h30, h32), programs the 0xCF01E4xx / 0xCF01E6xx / 0xCF01EAxx timing registers (16-bit
  * values split into low byte / high byte register pairs), and calls the inlined FUN_a010a4d0 (reads a 16-bit counter
  * via FUN_a0106274(0) or FUN_a00f3078, >> 2, into 0xCF01EAC4/0xCF01EAC0).

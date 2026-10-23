@@ -26,7 +26,7 @@
  *     if transformed row +0x0A > reg(0, 0x64): off = reg(0, 0x64) / 2, prints "%x,%x\r\n" (reg64, off)
  *   prints "lock mode %x,%x,%x,%x\r\n" (reg64, in_lines, out_lines, off); 0xCF011C48 pair = off;
  *   0xCF011C04 = 0xA0; 0xCF011AE8 pair = 0xFFFF; 0xCF011EC4 = off & 0xFF; 0xCF011EC0 = ((off >> 8) & 0x3F) | 0x40.
- * PANEL ROW FIELDS READ: transformed row *DAT_a802d6a4 only: +0x2C (free run, written to 0xCF011C38 and
+ * ROW FIELDS READ: transformed row *DAT_a802d6a4 only: +0x2C (free run, written to 0xCF011C38 and
  *   0xCF011C48 unchanged) and +0x0A (lock with 0xCF011A80 bit 7 set: compared with reg(0,0x64), caps the lock
  *   offset). +0x0A is read at entry on every path (used only there). No raw-row or row-index reads.
  * The input rate enters only the float arithmetic (in_lines / out_lines); no reject path here.

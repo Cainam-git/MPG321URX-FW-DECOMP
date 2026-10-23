@@ -23,7 +23,7 @@
  *   24: E+0x1C = a; FUN_a011855c(); a != 5: FUN_a014110c(E+0x1C).
  *   31: 0xA802E3FE = a.   32: 0xA802E408 = word; 0/1: FUN_a0150120(word, 0); 2/3: FUN_a0150120(1, 1).
  * Callers: no direct call in asm/leon2m.
- * PANEL ROW FIELDS READ: transformed row +0x0A (case 4 only).
+ * ROW FIELDS READ: transformed row +0x0A (case 4 only).
  * Source form: case order 17,0,4,5,6,7,12,13,9,14,15,16,18,19,20,21,22,23,24,31,32,8 gives the
  *   firmware's block layout; inner a-switches in 21/22 (signed compare tree on the promoted u8); case 32 as an
  *   if-chain (a switch merges 0/1 into a range test); unsigned '/ 100U'.

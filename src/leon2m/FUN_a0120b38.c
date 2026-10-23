@@ -9,7 +9,7 @@
  * In the /32 mode the result is 3,750,000 / cnt, so 60.000 Hz needs cnt = 6250 and gives 600; inputs from about
  * 60.06 to 60.14 Hz (cnt 6235..6244) give 601 (rounded to nearest). 59.94 Hz gives 599.
  * Caller: FUN_a01070b4 (panel limit check) calls FUN_a0120b38(0) and compares the result with the active
- * panel row's max vfreq (600 for the <62 Hz row): 601 > 600 sets violation bit 0x20.
+ * 0x58-byte row's max vfreq (600 for the <62 Hz row): 601 > 600 sets violation bit 0x20.
  * FW.012 has this function byte for byte (file 0x1C7598; only the call distance and the record address
  * 0xA8027A7C differ), so the measurement and its rounding did not change between FW.012 and FW.021.
  */

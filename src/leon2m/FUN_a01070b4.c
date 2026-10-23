@@ -1,6 +1,6 @@
 /* leon2m FUN_a01070b4 @ 0xa01070b4  drv_PanelLimitation, flags -mcpu=v8 -O3 -g.
  *
- * ADVISORY check of the current timing against the active panel row (DAT_a802d6a4, the transformed copy):
+ * ADVISORY check of the current timing against the active 0x58-byte row (DAT_a802d6a4, the transformed copy):
  * it only prints warnings and returns a bitmask, and its only caller FUN_a014e8d8 discards the result.
  *   input vfreq   = FUN_a0120b38(0) (tenths of Hz)  vs row +0x4E/+0x50 -> bits 0x10 (<min) / 0x20 (>max)
  *   FRC off (FUN_a010a864() == 0, prints "[drv_PanelLimitation] FRC OFF"): clock = FUN_a0102fd0(0) MHz,

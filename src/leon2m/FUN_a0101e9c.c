@@ -5,7 +5,7 @@
  * DispModeTransform).
  * Writes three output-format fields; each is a read-modify-write on a 32-bit hardware register:
  *   0xCF00ED58 bits 0..3 (value 0, 1, 4 or 5), 0xCF00EDE0 bits 0..2 and 4..7 (mask 0xF7),
- *   and for display modes 5, 9, 13, 14, 15, 17 only when the active panel row's link type
+ *   and for display modes 5, 9, 13, 14, 15, 17 only when the active 0x58-byte row's link type
  *   (DAT_a802d6a4->w0 bits 20..22) is 1: 0xCF0116D4 bits 4, 6, 7 (mask 0xD0; value 0x00, 0x40 or 0x80).
  *   Mode 16 instead sets bit 3 of 0xCF00ED54. Modes above 17: nothing.
  * Mode -> ED58 / EDE0 / 116D4:  0,1: 0/0  2: 0/01  3: 0/10  4: 4/20  5: 1/30/00  6: 5/40  7: 5/54  8: 1/62

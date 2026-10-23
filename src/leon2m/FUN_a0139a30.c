@@ -1,11 +1,11 @@
-/* leon2m FUN_a0139a30 @ 0xa0139a30  send the active panel row size to the Tensilica core and start it
+/* leon2m FUN_a0139a30 @ 0xa0139a30  send the active 0x58-byte row size to the Tensilica core and start it
  * Flags: -mcpu=v8 -O3 -g -msoft-float.
  *
  * Mailbox portal 2 (Tensilica, func_0x4008c5f8 = MailBox_Write, func_0x4008c4d0 = MailBox_Read): offset 0xA0 =
  * raw active row (0xA802E378) h08 << 16 + h0a; 0xA4 = 0xFFF; 0xA8 = 0x1001; 0xAC = 0xFF0101; 0xC0 = 8 words from
  * 0x1A5340; 0xE0 = 8 words from 0x1A5320. Then waits for offset 0x20 to read 0 (100 tries, 1 ms apart via
  * func_0x4008d1a0) and writes command 0x21000001 to it; gives up silently. Called after the output set-up
- * (FUN_a015373c). Reads the panel row: passes the row's +0x08/+0x0A size on.
+ * (FUN_a015373c). Reads the 0x58-byte row: passes the row's +0x08/+0x0A size on.
  * keys: 0x1001 / 0xFF0101 built from a variable (sethi + add, not a folded constant); the counter
  * decremented before the re-read (add + cmp, not addcc).
  */

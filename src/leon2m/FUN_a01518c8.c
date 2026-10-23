@@ -1,7 +1,7 @@
 /* leon2m FUN_a01518c8 @ 0xa01518c8-0xa01519b4 (59 words). -mcpu=v8 -O3 -g.
  * (hand, written from the asm).
  * What it does: GlobalModeHandler state 5 entry for channel ch:
- *   FUN_a01241fc() (getter of the active panel row 0xa802e378; its result is not used here);
+ *   FUN_a01241fc() (getter of the active 0x58-byte row 0xa802e378; its result is not used here);
  *   pc = the 4-bit port field of DAT_a802df30[ch] (ch 1..3; anything else uses record 0);
  *   FUN_a0118a80(pc, 0, 0, 0); FUN_a010aae8(pc, 0, 0, 0); FUN_a0106ba8(pc);
  *   clear bit 20 (0x100000) of the record's word at +0x68 (c->w68 &= ~0x100000);

@@ -1,9 +1,9 @@
-/* leon2m FUN_a0141840 @ 0xa0141840  display output re-configuration on a panel-row change (MATCH -mcpu=v8 -O3 -g, gcc 3.4.4).
- * Called by FUN_a01483f4 (apply panel row). Twin of the start-up FUN_a0141964 without
- * the flag block: copies the 88-byte raw panel row (FUN_a01241fc), remaps the 3-bit link field (word 0 bits 20..22:
+/* leon2m FUN_a0141840 @ 0xa0141840  display output re-configuration on a row change (MATCH -mcpu=v8 -O3 -g, gcc 3.4.4).
+ * Called by FUN_a01483f4 (apply 0x58-byte row). Twin of the start-up FUN_a0141964 without
+ * the flag block: copies the 88-byte raw 0x58-byte row (FUN_a01241fc), remaps the 3-bit link field (word 0 bits 20..22:
  * 1 -> 2, 2 -> 1, 0 stays 0), stores DispModeTransform FUN_a0151c84 in byte +6, passes the copy by value to
  * FUN_a0105c0c and calls FUN_a015373c (output path set-up, new in FW.021). This is the route by which a newly chosen
- * panel row reaches the output configuration.
+ * 0x58-byte row reaches the output configuration.
  */
 struct PanelRow { unsigned long long q[11]; };
 extern unsigned char *FUN_a01241fc(void);
