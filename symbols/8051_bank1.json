@@ -1104,6 +1104,13 @@
       "name": "FUN_CODE_a775",
       "status": "matched"
     },
+    "CODE:a819": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "copies n bytes from p to XDATA 0xA6AF + off, limited to 0x12 with a CutPwArray OOR message",
+      "name": "FUN_CODE_a819",
+      "status": "matched"
+    },
     "CODE:a8bb": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
