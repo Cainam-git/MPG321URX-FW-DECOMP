@@ -3109,6 +3109,12 @@
       "name": "FUN_a0089e24",
       "status": "matched"
     },
+    "ram:a0089e4c": {
+      "by": "hand",
+      "comment": "returns 0",
+      "name": "FUN_a0089e4c",
+      "status": "matched"
+    },
     "ram:a0089e54": {
       "by": "autoc",
       "comment": "FUN_a00a7940(p1, 0x7d, 0x10, p2)",
