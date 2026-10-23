@@ -5325,6 +5325,12 @@
       "name": "FUN_a00a8370",
       "status": "matched"
     },
+    "ram:a00a8400": {
+      "by": "h43",
+      "comment": "sets or clears mask bits in a byte register of block port (all blocks 0..7 for port > 7)",
+      "name": "FUN_a00a8400",
+      "status": "matched"
+    },
     "ram:a00a8694": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
