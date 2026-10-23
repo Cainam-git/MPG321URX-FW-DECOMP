@@ -7224,6 +7224,12 @@
       "name": "FUN_a00c87e8",
       "status": "matched"
     },
+    "ram:a00c8824": {
+      "by": "h43",
+      "comment": "reads len bytes with FUN_a00c81f8 and forwards them byte by byte through func_0xa0fb65c4/FUN_a00c7654",
+      "name": "FUN_a00c8824",
+      "status": "matched"
+    },
     "ram:a00c89b8": {
       "by": "hand",
       "comment": "Sets or clears bit 0 of register (p, 0, 0xf) through the ROM read and write routines",
