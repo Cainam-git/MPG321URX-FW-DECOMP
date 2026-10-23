@@ -2057,6 +2057,13 @@
       "name": "FUN_a0080bc0",
       "status": "matched"
     },
+    "ram:a0080bd8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets bit 3 of byte 0xA802AF41 when the parameter low byte is 1, else clears it",
+      "name": "FUN_a0080bd8",
+      "status": "matched"
+    },
     "ram:a0080c10": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",

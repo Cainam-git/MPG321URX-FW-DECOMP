@@ -1,4 +1,4 @@
-/* leon2m FUN_a0080bd8 @ 0xa0080bd8 (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a0080bd8 @ 0xa0080bd8 (-mcpu=v8 -O3 -g)
  * Sets bit 3 (0x08) of the byte at 0xA802AF41 if the low byte of the parameter equals 1, otherwise clears it. The
  * parameter is declared unsigned int and masked with 0xff in the compare; both arms use compound assignment.
  */
