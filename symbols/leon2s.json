@@ -4069,6 +4069,12 @@
       "name": "FUN_a0094b0c",
       "status": "matched"
     },
+    "ram:a0094b30": {
+      "by": "h42",
+      "comment": "for 11 <= v <= 0x1ec stores v and writes the bytes of v + 0x400, 0x400 - v, v + 0x3f8 and v + 0x3f4 with FUN_a00a8054(port, 4, 0x14..0x21)",
+      "name": "FUN_a0094b30",
+      "status": "matched"
+    },
     "ram:a0094f64": {
       "by": "hand",
       "comment": "calls FUN_a00a80cc twice (0x10, 0x20) and FUN_a00a8054(port, 0, 0x130, 10)",
