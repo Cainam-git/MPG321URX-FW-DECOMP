@@ -15117,6 +15117,13 @@
       "name": "FUN_a0141edc",
       "status": "matched"
     },
+    "ram:a0141f98": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "type-5 port entry: tick-stamped Mute when Hdcp22Auth check, sets type 2; clears bit k of DAT_a802cc0a/0b otherwise",
+      "name": "FUN_a0141f98",
+      "status": "matched"
+    },
     "ram:a01420e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
