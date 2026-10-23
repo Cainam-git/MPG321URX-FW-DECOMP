@@ -5707,7 +5707,7 @@
     "ram:a00b0034": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "Page dispatch: common frame rows, then per-page row lists from address tables and the FUN_a00af44c/FUN_a00a900c calls",
+      "comment": "Call sequence, then per-id row lists from address tables and FUN_a00a900c/FUN_a00af44c calls",
       "name": "FUN_a00b0034",
       "status": "matched"
     },

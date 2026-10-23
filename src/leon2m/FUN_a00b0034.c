@@ -1,9 +1,9 @@
 /* leon2m FUN_a00b0034 @ 0xa00b0034-0xa00b05d8 (361 words), flags -mcpu=v8 -O3 -g -msoft-float.
  * Callers: FUN_a00911a0, FUN_a00912ac, FUN_a009145c, FUN_a00919b4, FUN_a0092bb4, FUN_a0092f2c.
- * Runs frame() (func_0x4008e2a4(), for q = 5..0x14 FUN_a0146b20(0, 0x13, q, 0x13, 0, 0) and FUN_a0146a80(0x13, q,
+ * Runs seq_a() (func_0x4008e2a4(), for q = 5..0x14 FUN_a0146b20(0, 0x13, q, 0x13, 0, 0) and FUN_a0146a80(0x13, q,
  * 0x13, 0x792, 0), then FUN_a0146b20(0, 0x1c, 0x15, 2, 0, 0) and FUN_a0146c40(5, 0, 0)) and FUN_a00a8c88(), then
- * acts on page (0..8; other values return):
- *   0: frame() again, FUN_a0146b50(0x92, 0), FUN_a0146b6c(0, 0), rows i = 0..2 from the table 0x18a360 (colour
+ * acts on id (0..8; other values return):
+ *   0: seq_a() again, FUN_a0146b50(0x92, 0), FUN_a0146b6c(0, 0), rows i = 0..2 from the table 0x18a360 (third argument
  *      argument 0xd), FUN_a00a900c(0, 0), FUN_a00af44c(0xb, 0);
  *   1: FUN_a00ad02c(0, 0), FUN_a00a900c(0, 0), FUN_a00af44c(0xe, 0);
  *   2: FUN_a0146b50/FUN_a0146b6c as in 0, rows 0..2 from the table 0x188634 (0xf), FUN_a00b6d58(),
@@ -17,10 +17,10 @@
  *      FUN_a00a900c(0, 0), FUN_a00af44c(0x26, 0);
  *   7: FUN_a00ad1c0(0), FUN_a00a900c(0, 0), FUN_a00af44c(0x2a, 0);
  *   8: FUN_a00aa83c(0), FUN_a00a900c(0, 0), FUN_a00af44c(0x34, 0).
- * A row i: when FUN_a00aa520(i) returns 0, FUN_a0146a80(0x14, i * 2 + 6, colour, 0x292, 0); then FUN_a00a31a4(0, 0x14,
+ * A row i: when FUN_a00aa520(i) returns 0, FUN_a0146a80(0x14, i * 2 + 6, third argument, 0x292, 0); then FUN_a00a31a4(0, 0x14,
  * i * 2 + 6, 1, FUN_a00a3844(table, i * 29 + byte 0xa802d290+8), 0) (as in FUN_a00ad02c).
- * Source form: frame() is a static helper inlined twice. The page-0 rows use their own block-local counter (with the
- * shared counter the loop pre-header orders 'clr' before the address 'sethi'); the page-6 loop limit is held in a
+ * Source form: seq_a() is a static helper inlined twice. The id-0 rows use their own block-local counter (with the
+ * shared counter the loop pre-header orders 'clr' before the address 'sethi'); the id-6 loop limit is held in a
  * variable (cmp 4; bcs). The tables are extern array symbols.
  */
 struct R290 { unsigned char p000[8]; unsigned char b008; unsigned char p009[0x1e - 9]; unsigned char b01e;
@@ -47,7 +47,7 @@ extern void FUN_a00b3ba0(void);
 extern void FUN_a00b6d58(void);
 extern unsigned char FUN_a01445fc(unsigned char);
 
-static void frame(void)
+static void seq_a(void)
 {
     unsigned char i;
 
@@ -60,17 +60,17 @@ static void frame(void)
     FUN_a0146c40(5, 0, 0);
 }
 
-void FUN_a00b0034(unsigned char page)
+void FUN_a00b0034(unsigned char id)
 {
     unsigned char i, n, sel, y;
 
-    frame();
+    seq_a();
     FUN_a00a8c88();
-    switch (page) {
+    switch (id) {
     case 0: {
         unsigned char j;
 
-        frame();
+        seq_a();
         FUN_a0146b50(0x92, 0);
         FUN_a0146b6c(0, 0);
         for (j = 0; j <= 2; j++) {
