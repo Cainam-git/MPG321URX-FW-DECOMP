@@ -6971,6 +6971,12 @@
       "name": "FUN_a00c8a80",
       "status": "matched"
     },
+    "ram:a00c8b18": {
+      "by": "h43",
+      "comment": "compares two bytes from FUN_a00c8760 with registers 0x22/0x23 and sets the record state and counter fields",
+      "name": "FUN_a00c8b18",
+      "status": "matched"
+    },
     "ram:a00c90b4": {
       "by": "h43",
       "comment": "reads 20 bytes with FUN_a00c81f8 and compares them group-reversed with DAT_a807d238, setting the record state field",
