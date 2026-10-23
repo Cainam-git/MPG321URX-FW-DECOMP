@@ -122,6 +122,9 @@ symbol names are not allowed.
   reads an `unsigned short` copy: `unsigned short k = port; ... (unsigned char)k`, sometimes with the parameter itself
   declared `unsigned short`. With `int` the copy merges with the parameter and the local registers shift
   (FUN_a00c2758, FUN_a010f064).
+- **A byte mask re-done before each call** (`and %lN,0xff,%o0` after every call, where GCC reuses one masked value):
+  give each call its own guard, e.g. `if (ch < 3) f(ch);` per call. Each join is a CSE boundary
+  (DRV_HDMI_EQScan_FSM_Search_Process; also seen by h52 in leon2s).
 
 ## GCC 3.4.4: same instructions, different order
 
