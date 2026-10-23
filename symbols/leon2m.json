@@ -14559,6 +14559,12 @@
       "name": "FUN_a012b9a8",
       "status": "matched"
     },
+    "ram:a012bae0": {
+      "by": "hand",
+      "comment": "stores DAT_a802e37f to byte 0x15 of the second argument",
+      "name": "FUN_a012bae0",
+      "status": "matched"
+    },
     "ram:a012bb94": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
