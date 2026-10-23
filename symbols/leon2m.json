@@ -3890,6 +3890,13 @@
       "name": "FUN_a00995f0",
       "status": "matched"
     },
+    "ram:a0099658": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "afec 0x47: flag clean-up of DAT_a802d290 (+0xb0, +0x1f, +0xa8) with the cff4 flag step and call sequences; afec above 0x45: byte +0x4a = afec - 0x46 and FUN_a00d5eac(0)",
+      "name": "FUN_a0099658",
+      "status": "matched"
+    },
     "ram:a0099864": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
