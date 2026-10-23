@@ -167,6 +167,9 @@ changing the code, and test all pairs.
   block after the jump is case X, put X second to last.
 - The order of the `case` labels also decides the register names inside the cases; try every order.
 - Write identical `case` bodies separately rather than sharing them; GCC merges them itself, in its own way.
+- **Compare tree off by one case value** (no jump table): GCC balances the tree over the listed case values, so a
+  value whose body equals the default can still change the tree shape. List it explicitly (`case 0x31:` with the
+  default action); its compare disappears later and only the tree shape remains (FUN_a008ed50, FUN_a00c8c64).
 - **An annulled loop increment in the delay slot of a test**, where GCC fills the slot from the fall-through:
   `__builtin_expect(cond, 0)` on that test.
 - **Case blocks past the function's listed end:** the function table needs them merged in first; then the switch
