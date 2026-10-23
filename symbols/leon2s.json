@@ -7488,6 +7488,12 @@
       "name": "FUN_a00ca130",
       "status": "matched"
     },
+    "ram:a00ca4e8": {
+      "by": "hand",
+      "comment": "writes 0x8a bytes of DAT_a807ce50 and four fixed bytes through the 0xcf018e00 register block and reads 32 bytes back",
+      "name": "FUN_a00ca4e8",
+      "status": "matched"
+    },
     "ram:a00cad8c": {
       "by": "hand",
       "comment": "checks the DAT_a807d250 header, retries FUN_a00c2488 up to 30 times and passes DAT_a807ce50 to FUN_a00c80f0",
