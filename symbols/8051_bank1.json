@@ -1228,6 +1228,12 @@
       "name": "FUN_CODE_b5f2",
       "status": "matched"
     },
+    "CODE:b679": {
+      "by": "hand",
+      "comment": "prints the Quad mode and Write enable messages and writes a fixed register sequence",
+      "name": "FUN_CODE_b679",
+      "status": "matched"
+    },
     "CODE:b781": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
