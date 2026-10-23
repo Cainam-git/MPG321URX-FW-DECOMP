@@ -964,6 +964,24 @@
       "name": "FUN_CODE_c1a6",
       "status": "matched"
     },
+    "CODE:c395": {
+      "by": "data",
+      "comment": "NOT CODE: bytes inside the Keil ?C_INITSEG initialisation records 0xC36D..0xC44E (22 records, 0x00 terminator at 0xC44D); Ghidra decoded record bytes as instructions",
+      "name": "FUN_CODE_c395",
+      "status": "matched"
+    },
+    "CODE:c433": {
+      "by": "data",
+      "comment": "NOT CODE: bytes inside the Keil ?C_INITSEG initialisation records 0xC36D..0xC44E (22 records, 0x00 terminator at 0xC44D); Ghidra decoded record bytes as instructions",
+      "name": "FUN_CODE_c433",
+      "status": "matched"
+    },
+    "CODE:c441": {
+      "by": "data",
+      "comment": "NOT CODE: bytes inside the Keil ?C_INITSEG initialisation records 0xC36D..0xC44E (22 records, 0x00 terminator at 0xC44D); Ghidra decoded record bytes as instructions",
+      "name": "FUN_CODE_c441",
+      "status": "matched"
+    },
     "CODE:c44e": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
