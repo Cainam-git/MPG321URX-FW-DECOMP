@@ -11834,6 +11834,13 @@
       "name": "FUN_a0123648",
       "status": "matched"
     },
+    "ram:a0123840": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "tick-bounded poll of 0xcf03c640/0xcf03c648 > 0x83 and FUN_a0121374(0), records which register in DAT_a802d87e",
+      "name": "FUN_a0123840",
+      "status": "matched"
+    },
     "ram:a0123c4c": {
       "by": "hand",
       "comment": "hex digit decoder: '0'..'9' and 'A'..'F' to 0..15, else 0xaa",
