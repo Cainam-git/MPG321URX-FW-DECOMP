@@ -8584,6 +8584,12 @@
       "name": "FUN_a00dbf24",
       "status": "matched"
     },
+    "ram:a00dc040": {
+      "by": "hand",
+      "comment": "stores v to DAT_a807883a and, for v == 0, clears DAT_a80787fc..DAT_a80787ff",
+      "name": "FUN_a00dc040",
+      "status": "matched"
+    },
     "ram:a00dc0a8": {
       "by": "hand",
       "comment": "clears record bytes (a80787fa / 7f8, loop over ARR_a8079c3d[2i], [2i+1]) and the byte 0xa8078838[x] via a constant-address pointer (documented aid: alias order), print via 9f1ccc30",
