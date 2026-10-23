@@ -3792,6 +3792,13 @@
       "name": "FUN_a0098e28",
       "status": "matched"
     },
+    "ram:a0098e6c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets word 0xa802afec and byte 0xa8025c56 from bits 5 and 6 of word 0xa802d338 between FUN_a00a900c and FUN_a00a9650 / FUN_a00a813c",
+      "name": "FUN_a0098e6c",
+      "status": "matched"
+    },
     "ram:a0098f28": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
