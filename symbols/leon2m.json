@@ -12227,6 +12227,13 @@
       "name": "FUN_a0122480",
       "status": "matched"
     },
+    "ram:a0122634": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "for sel 0..3 or all (4): control register 0 when n == 0, else 0xff and (n * 17 - 17) & 0xff to four registers",
+      "name": "FUN_a0122634",
+      "status": "matched"
+    },
     "ram:a01227f0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
