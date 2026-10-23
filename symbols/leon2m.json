@@ -2112,7 +2112,7 @@
       "status": "matched"
     },
     "ram:a0082ec4": {
-      "by": "h14",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Compares channel 1 values 7/8 with u16 0xa8024004/06 and the 12-record table 0xfeb30 and writes four u16 outputs",
       "name": "FUN_a0082ec4",
@@ -2414,7 +2414,7 @@
       "status": "matched"
     },
     "ram:a008a568": {
-      "by": "h14",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Formats a u16 value as 1 or 3 decimal digits and passes it to FUN_a0146af4 with the ROM record selected by id",
       "name": "FUN_a008a568",
@@ -2435,7 +2435,7 @@
       "status": "matched"
     },
     "ram:a008a95c": {
-      "by": "h14",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Sets bit 6 of 0xa802d290+0x1d4 for index 0x14, then two FUN_a0146a80 calls with the ROM record selected by byte 0xa802afbd",
       "name": "FUN_a008a95c",
@@ -2476,14 +2476,14 @@
       "status": "matched"
     },
     "ram:a008b380": {
-      "by": "h14",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Formats the u16 table entry selected by byte 0xa802afb8 with a KHz/MHz format and passes the text with ROM record 15 of 0x100242 to FUN_a00a31a4",
       "name": "FUN_a008b380",
       "status": "matched"
     },
     "ram:a008b5e0": {
-      "by": "h14",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Formats two texts from bytes 0xa802afb8/afb9 and passes them with ROM records 16 and 15 of 0x100242 to FUN_a00a31a4",
       "name": "FUN_a008b5e0",
@@ -2536,14 +2536,14 @@
       "status": "matched"
     },
     "ram:a008d2f8": {
-      "by": "h54",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "fixed call sequence passing ROM strings, table positions and formatted values to FUN_a00a31a4 / FUN_a008a568 / FUN_a0146af4",
       "name": "FUN_a008d2f8",
       "status": "matched"
     },
     "ram:a008e270": {
-      "by": "h14",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Byte 0xa802afbd 0x12/0x1c call sequences; otherwise two FUN_a0146a80 calls with ROM records of 0x100242 (bit 6 of 0xa802d290+0x1d4 set for 0x14)",
       "name": "FUN_a008e270",
@@ -2630,7 +2630,7 @@
       "status": "matched"
     },
     "ram:a0090f30": {
-      "by": "h10",
+      "by": "hand",
       "comment": "Returns 0 when a port 0..3 has FUN_a0080320(p) != 0 and FUN_a0143c14(p) != 4, else 1",
       "name": "FUN_a0090f30",
       "status": "matched"
@@ -2660,7 +2660,7 @@
       "status": "matched"
     },
     "ram:a0090fd8": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "If bit 15 of halfword 0xa802cff8 is set: sets its bit 10 and calls FUN_a00808ac(4, 0); clears word 0xa802afec, tail-calls FUN_a00b5080",
       "name": "FUN_a0090fd8",
@@ -2681,21 +2681,21 @@
       "status": "matched"
     },
     "ram:a00911a0": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Unless bit 10 of 0xa802cff4 or FUN_a013ce6c(0) != 0xc: FUN_a00b5378, then by bit 14 of 0xa802d290 sets afec 1 with FUN_a0146 calls or afec 2 with FUN_a00b4144(0, 1); FUN_a00b0034(0), FUN_a00a45a8",
       "name": "FUN_a00911a0",
       "status": "matched"
     },
     "ram:a00912ac": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "steps word 0xa802afec down through the FUN_a00aa4e0-enabled values (wrap 2 -> 1 / 1 -> 10 by bit 14 of DAT_a802d290) with the FUN_a00a7e00/FUN_a00ab080/FUN_a00a7aec/FUN_a00b3d14/FUN_a00b4144/FUN_a00b0034 calls",
       "name": "FUN_a00912ac",
       "status": "matched"
     },
     "ram:a009145c": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "steps word 0xa802afec up through the FUN_a00aa4e0-enabled values (wrap 10 -> 1 / 1 -> 2 by bit 14 of DAT_a802d290) with the FUN_a00a7e00/FUN_a00ab080/FUN_a00a7aec/FUN_a00b3d14/FUN_a00b4144/FUN_a00b0034 calls",
       "name": "FUN_a009145c",
@@ -2946,7 +2946,7 @@
       "status": "matched"
     },
     "ram:a0093334": {
-      "by": "h24",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "copies bytes 0xa8025c56/0xa8025c55 into word 0xa802d290+0x180/+0xa8, FUN_a00a93bc/FUN_a00a9650/FUN_a00a813c calls, then FUN_a00dbcf0 or FUN_a00db738 when changed",
       "name": "FUN_a0093334",
@@ -2974,7 +2974,7 @@
       "status": "matched"
     },
     "ram:a00935e8": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "copies bit 0 of byte 0xA8025C56 into bit 12 of word 0xA802D338, then FUN_a00a93bc / FUN_a00a9650 / FUN_a00a813c with that bit + 1, word 0xA802AFEC = 0x11, FUN_a00a900c(3, 1)",
       "name": "FUN_a00935e8",
@@ -3040,7 +3040,7 @@
       "status": "matched"
     },
     "ram:a00939b0": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "afec sequence: FUN_a00a93bc/FUN_a00a813c/FUN_a00a9650 calls from 0xa8025c56 and 0xa802afec, copies table bytes t198/t19c[i - 1] of DAT_a802d290, FUN_a00a9468 calls, DAT_a802b08e |= 2",
       "name": "FUN_a00939b0",
@@ -3060,28 +3060,28 @@
       "status": "matched"
     },
     "ram:a0093bac": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Steps byte 0xa802cffc (0x28) by func_0x4008d594 checks of 0xa802d034/0xa802d03a, lowers halfword 0xa802d2e4 by its low nibble for byte 0xa802d2c1 0..2, FUN_a00d7a70(0), b08e |= 2",
       "name": "FUN_a0093bac",
       "status": "matched"
     },
     "ram:a0093d30": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Steps byte 0xa802cffc (0x18) by func_0x4008d594 checks of 0xa802d034/0xa802d03a, raises halfword 0xa802d2e4 within FUN_a014837c(0) - 1728/1344/960, FUN_a00d7a70(0), b08e |= 2",
       "name": "FUN_a0093d30",
       "status": "matched"
     },
     "ram:a0093f90": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Steps byte 0xa802cffc (0x38) by func_0x4008d594 checks of 0xa802d034/0xa802d03a, lowers or clears halfword 0xa802d2e6 for byte 0xa802d2c1 0..2, FUN_a00d7a70(0), b08e |= 2",
       "name": "FUN_a0093f90",
       "status": "matched"
     },
     "ram:a0094108": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Steps byte 0xa802cffc (0x48) by func_0x4008d594 checks of 0xa802d034/0xa802d03a, raises halfword 0xa802d2e6 within FUN_a014837c(1) - 972/756/540, FUN_a00d7a70(0), b08e |= 2",
       "name": "FUN_a0094108",
@@ -3102,42 +3102,42 @@
       "status": "matched"
     },
     "ram:a00943ec": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Copies byte 0xa802d3cf to 0xa8025c55, sets afec 0x108 and byte 0xa802d433 to 1, calls FUN_a00b5080, func_0x4008e2a4 twice, FUN_a00a6b98(1, 1, 0)",
       "name": "FUN_a00943ec",
       "status": "matched"
     },
     "ram:a0094438": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "by DAT_a802d290+0x1a3 (0, 1, 2): stores 0xe1/0xe6/0x41 to 0xa802afec and runs a fixed call sequence; then FUN_a00a45a8() and DAT_a802b08e |= 2",
       "name": "FUN_a0094438",
       "status": "matched"
     },
     "ram:a00945a8": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "By byte 0xa802d433: lowers byte +0x1a5 or +0x1a7 with FUN_a00a6b98 calls, or lowers halfword 0xa802d43c by the low nibble of byte 0xa802cffc and calls FUN_a014654c",
       "name": "FUN_a00945a8",
       "status": "matched"
     },
     "ram:a009478c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "By byte 0xa802d433: lowers byte +0x1a6 or +0x1a8 with FUN_a00a6b98 calls, or lowers halfword 0xa802d43e by the low nibble of byte 0xa802cffc and calls FUN_a014654c",
       "name": "FUN_a009478c",
       "status": "matched"
     },
     "ram:a0094988": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "By byte 0xa802d433: raises byte +0x1a6 or +0x1a8 up to 0x1c with FUN_a00a6b98 calls, or raises halfword 0xa802d43e by the low nibble of byte 0xa802cffc and calls FUN_a014654c",
       "name": "FUN_a0094988",
       "status": "matched"
     },
     "ram:a0094b6c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "By byte 0xa802d433: raises byte +0x1a5 or +0x1a7 up to a FUN_a014837c-based limit with FUN_a00a6b98 calls, or raises halfword 0xa802d43c by the low nibble of byte 0xa802cffc and calls FUN_a014654c",
       "name": "FUN_a0094b6c",
@@ -3200,14 +3200,14 @@
       "status": "matched"
     },
     "ram:a00951a8": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "updates DAT_a802d290+0x1e or +0x20 from FUN_a014459c(0xa802afec + 0x2c), then FUN_a00a8c88/FUN_a00a9abc/FUN_a00a9650/FUN_a00a813c sequence with afec 0x82 or 0x83; clears +0x1a3",
       "name": "FUN_a00951a8",
       "status": "matched"
     },
     "ram:a009530c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "b08f = 0x10, copies byte 0xa8025c55 into 0xa802d2b0 (FUN_a00d5938(1) on change) when byte 0xa802d433 != 0, FUN_a00a8c88, FUN_a00a9abc, afec 0x82/0x83, FUN_a00a9650 x2, FUN_a00a813c",
       "name": "FUN_a009530c",
@@ -3235,7 +3235,7 @@
       "status": "matched"
     },
     "ram:a0095510": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Copies byte 0xa8025c55 to 0xa802d2db (FUN_a00d5eac(1) on change), FUN_a00a8c88, FUN_a00b7ae4, afec = 0x44, FUN_a00a9650 twice, FUN_a00a813c",
       "name": "FUN_a0095510",
@@ -3249,7 +3249,7 @@
       "status": "matched"
     },
     "ram:a0095610": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Copies byte 0xa8025c55 to 0xa802d2dc (FUN_a00d5eac(1) on change), FUN_a00a8c88, FUN_a00b7ae4, afec = 0x45, FUN_a00a9650 twice, FUN_a00a813c",
       "name": "FUN_a0095610",
@@ -3354,7 +3354,7 @@
       "status": "matched"
     },
     "ram:a0095e54": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "clears DAT_a802d290+0x178 under a condition, FUN_a00a93bc/FUN_a00a813c/FUN_a00a9650 with values % 7, afec = 0x15, sets bit 11 of +0xa8, DAT_a802b08e |= 2",
       "name": "FUN_a0095e54",
@@ -3508,21 +3508,21 @@
       "status": "matched"
     },
     "ram:a0096c80": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "bits 18-19 of word 0xA802D33C to byte 0xA8025C56 and FUN_a00a813c, FUN_a00a900c(afec - 0x18, 2), afec = v + 0x77, FUN_a00a9650(v, 1)",
       "name": "FUN_a0096c80",
       "status": "matched"
     },
     "ram:a0096ce4": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "FUN_a00a93bc/FUN_a00a813c/FUN_a00a9650 calls from DAT_a8025c56 and _DAT_a802afec; when 0xa8025c56 differs from bits 18..19 of 0xa802d33c: flag updates and calls; DAT_a802b08e |= 6",
       "name": "FUN_a0096ce4",
       "status": "matched"
     },
     "ram:a0096e14": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "byte 0xA8025C56 bits 0-1 into bits 18-19 of word 0xA802D33C, then FUN_a00a93bc / FUN_a00a9650 / FUN_a00a813c, afec = 0x1d, FUN_a00a900c(5, 1)",
       "name": "FUN_a0096e14",
@@ -3557,28 +3557,28 @@
       "status": "matched"
     },
     "ram:a0097190": {
-      "by": "h24",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "compares FUN_a01445fc of bytes 0xa802d290+0x1e/+0x1a3; reset with FUN_a00b5080, then 0xfe state or copy and FUN_a00b8804",
       "name": "FUN_a0097190",
       "status": "matched"
     },
     "ram:a00972cc": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "flag update of halfword 0xa802cff4+4 and FUN_a00b5080; when DAT_a802d290+0x1a3 differs from 0xa8025c56 also the +0x18 bits and the DAT_a802d290 flag clean-up, FUN_a00da254, DAT_a802b08e |= 2",
       "name": "FUN_a00972cc",
       "status": "matched"
     },
     "ram:a0097498": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Copies two bytes picked by byte 0xa802d430 when it is not 0, stores it to 0xa802afea, sets bit 14 of 0xa802cff4, clears afec, FUN_a00b5080, b08e |= 2",
       "name": "FUN_a0097498",
       "status": "matched"
     },
     "ram:a0097508": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "afec 0x23 copy or flag clean-up of DAT_a802d290 (+0x1a4, +0xb0, +0xac, +0x1f4, +0x4a, +0xa8), stores afec - 0x23 to +0x1f and runs a call sequence under three conditions",
       "name": "FUN_a0097508",
@@ -3592,14 +3592,14 @@
       "status": "matched"
     },
     "ram:a00976f8": {
-      "by": "h25",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "when byte 0x1f of DAT_a802d290 differs from DAT_a8025c56: updates flag bits at 0xa802cff4 and runs a fixed call sequence",
       "name": "FUN_a00976f8",
       "status": "matched"
     },
     "ram:a0097814": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Call sequence on bytes 0xa8025c56 / 0xa802d2af and afec (set to 7); FUN_a00acef4 when the two bytes differ",
       "name": "FUN_a0097814",
@@ -3661,21 +3661,21 @@
       "status": "matched"
     },
     "ram:a0097d3c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Sets byte 0xa802d2bf to 0 (afec 0x7f) or 1 (afec 0x80) and on change calls FUN_a00d91fc(0), FUN_a0148268 twice, FUN_a00da254",
       "name": "FUN_a0097d3c",
       "status": "matched"
     },
     "ram:a0097dec": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "afec sequence: sets DAT_a802d290+0x2f to 0, 1 or byte 0xa8025c54 by afec 0x7f/0x80/other with FUN_a00d91fc/FUN_a0148268/FUN_a00da254 on change; byte 0xa802b08f = 5",
       "name": "FUN_a0097dec",
       "status": "matched"
     },
     "ram:a0097f48": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "afec sequence: sets DAT_a802d290+0x2f by afec 0x7f/0x80/other with FUN_a00d91fc and (not 0x7f) the cff4 flag/FUN_a00b5080 step, FUN_a0148268/FUN_a00da254; then the afec 0x25 call sequence when afec is non-zero",
       "name": "FUN_a0097f48",
@@ -3709,14 +3709,14 @@
       "status": "matched"
     },
     "ram:a00984f0": {
-      "by": "h24",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "passes byte values modulo 7 to FUN_a00a93bc, FUN_a00a813c and FUN_a00a9650, word 0xa802afec = k + 0x26",
       "name": "FUN_a00984f0",
       "status": "matched"
     },
     "ram:a0098618": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "when st[k] / 7 of DAT_a802d290+0x18a differs from byte 0xa8025c56 / 7: FUN_a00a8c88() and FUN_a00b7b8c(0/1); stores the byte and runs the % 7 call sequence; FUN_a00a900c(k, 1)",
       "name": "FUN_a0098618",
@@ -3751,14 +3751,14 @@
       "status": "matched"
     },
     "ram:a0098a74": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "% 7 sequence: FUN_a00a93bc/FUN_a00a813c with byte 0xa8025c56 when its / 7 equals (0xa802afec - 0x92) / 7, else with DAT_a802d290+8; afec = 0x2a; DAT_a802b08e |= 2",
       "name": "FUN_a0098a74",
       "status": "matched"
     },
     "ram:a0098c08": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "FUN_a00a93bc((0xa802afec - 0x92) % 7); copies 0xa8025c56 into DAT_a802d290+8 with FUN_a00a87cc(level) when they differ; FUN_a00a9650/FUN_a00a813c with +8 % 7; FUN_a00a900c(0, 1)",
       "name": "FUN_a0098c08",
@@ -3793,7 +3793,7 @@
       "status": "matched"
     },
     "ram:a0098f28": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "FUN_a00a93bc, FUN_a00a813c; for afec 0xb1 clears bit 6 of word 0xa802d338, else sets it and copies afec bit 0 into bit 5; FUN_a00a9650 / FUN_a00a813c with the bit; afec = 0x2d",
       "name": "FUN_a0098f28",
@@ -3807,7 +3807,7 @@
       "status": "matched"
     },
     "ram:a009906c": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "bit 15 of word 0xA802D338 to byte 0xA8025C56 and FUN_a00a813c, FUN_a00a900c(afec - 42, 2), afec = v + 0xb4, FUN_a00a9650(v, 1), byte 0xA802B08E |= 2",
       "name": "FUN_a009906c",
@@ -3828,7 +3828,7 @@
       "status": "matched"
     },
     "ram:a00991ec": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Toggles bit 22 of word 0xa802d33c, calls FUN_a00a5420(5, bit), sets bit 1 of byte 0xa802b08e",
       "name": "FUN_a00991ec",
@@ -3884,14 +3884,14 @@
       "status": "matched"
     },
     "ram:a0099864": {
-      "by": "h24",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "calls FUN_a0099658, FUN_a0146a80 by FUN_a00d7d48, FUN_a00a813c/FUN_a00a9650 calls, stores 0xd to word 0xa802afec",
       "name": "FUN_a0099864",
       "status": "matched"
     },
     "ram:a0099970": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "FUN_a00a93bc(afec - 68), FUN_a00a9650 / FUN_a00a813c with byte 0xA802D2DA + 2, afec = 13, FUN_a00a900c(2, 1)",
       "name": "FUN_a0099970",
@@ -3959,7 +3959,7 @@
       "status": "matched"
     },
     "ram:a0099c64": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Clears bit 31 of 0xa802d46c, bit 15 of 0xa802d002, byte 0xa8025c56; inlined FUN_a0090fd8; clears bytes 0xa802d033, 0xa802d474; FUN_a00b1ba4(0xa8025c56, 4); afec = 0x10a",
       "name": "FUN_a0099c64",
@@ -4020,7 +4020,7 @@
       "status": "matched"
     },
     "ram:a009a0d4": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Byte 0xa802d47e = (afec != 0xc3), then FUN_a00a93bc, FUN_a00a813c x2, afec = 0x36, FUN_a00a9650, FUN_a00a900c, FUN_a00a9468, FUN_a00b34d4, b08e |= 2",
       "name": "FUN_a009a0d4",
@@ -4083,7 +4083,7 @@
       "status": "matched"
     },
     "ram:a009a480": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "FUN_a00a93bc(byte 0xa802d46f % 7), byte 0xa802d46f = byte 0xa8025c55, FUN_a00af44c(0x34, 3), afec = 0xbf, FUN_a00a9650(4, 1), clears 0xa8025c55",
       "name": "FUN_a009a480",
@@ -4585,14 +4585,14 @@
       "status": "matched"
     },
     "ram:a009e780": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "As FUN_a009e820, then FUN_a014512c(0, 0) when FUN_a0143c14(0) != 10",
       "name": "FUN_a009e780",
       "status": "matched"
     },
     "ram:a009e820": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "FUN_a0080bd8(0), clears bits 7 and 15 of halfword 0xa802cff8, afec = 0, FUN_a00b5080; FUN_a00808ac(4, 0) when byte 0xa802d465 != 0 and FUN_a0143c14(0) != 10",
       "name": "FUN_a009e820",
@@ -4606,7 +4606,7 @@
       "status": "matched"
     },
     "ram:a009e91c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "When (FUN_a0143c14(0) == 10 or bit 9 of 0xa802d290 or afec != 0xfe) and word 0xa802e1a0 < 0: afec = 0x10d, clears byte 0xa802cff5, FUN_a00b867c",
       "name": "FUN_a009e91c",
@@ -4640,7 +4640,7 @@
       "status": "matched"
     },
     "ram:a00a03e8": {
-      "by": "h24",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "byte 0xa802d290+0x1a9 == 1: FUN_a00b5080, FUN_a00b0f48, word 0xa802afec = 0x116, halfword 0xa802d03c = FUN_a002d588(); else FUN_a00a813c/FUN_a00a900c/FUN_a00a9650 with byte +0x182 and the bit-11 copy",
       "name": "FUN_a00a03e8",
@@ -4675,28 +4675,28 @@
       "status": "matched"
     },
     "ram:a00a0ee8": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "OSDPBPAdjustU: when byte 0xa802d028 > 2, halfword 0xa802d02c -8 down to 0x870, FUN_a0146870, prints",
       "name": "FUN_a00a0ee8",
       "status": "matched"
     },
     "ram:a00a0f6c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "OSDPBPAdjustD: when byte 0xa802d028 > 2, halfword 0xa802d02c +8 up to 0x870, FUN_a0146870, prints",
       "name": "FUN_a00a0f6c",
       "status": "matched"
     },
     "ram:a00a0ff0": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "OSDPBPAdjustL: halfword 0xa802d02a -8 down to 0x3c0, FUN_a0146870 with it and 0xa802d02c, prints both",
       "name": "FUN_a00a0ff0",
       "status": "matched"
     },
     "ram:a00a105c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "OSDPBPAdjustR: halfword 0xa802d02a +8 up to 0xb40, FUN_a0146870 with it and 0xa802d02c, prints both",
       "name": "FUN_a00a105c",
@@ -4710,14 +4710,14 @@
       "status": "matched"
     },
     "ram:a00a14bc": {
-      "by": "h25",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "fills five values from the word _DAT_a802afec (switch) and returns the one chosen by sel",
       "name": "FUN_a00a14bc",
       "status": "matched"
     },
     "ram:a00a20d0": {
-      "by": "h25",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "applies the c56 value to record byte 0x1e8 using two inlined FUN_a00a14bc lookups and a fixed call sequence",
       "name": "FUN_a00a20d0",
@@ -4731,7 +4731,7 @@
       "status": "matched"
     },
     "ram:a00a23a4": {
-      "by": "h24",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "switch on byte 0xa8025c56: two inlined FUN_a00a14bc calls, or copy of byte 0xa802d290+0x1eb and FUN_a00a1a68",
       "name": "FUN_a00a23a4",
@@ -4745,7 +4745,7 @@
       "status": "matched"
     },
     "ram:a00a2600": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "switch on byte 0xa8025c56: 0/1 run the afec sequence with record byte 0x1ec, 2 copies 0xa802d47d to 0xa8025c55 and calls FUN_a00a1a68; then FUN_a00dab90 and DAT_a802b08e |= 2",
       "name": "FUN_a00a2600",
@@ -4783,14 +4783,14 @@
       "status": "matched"
     },
     "ram:a00a29a8": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Seven FUN_a01461dc(1, record, k) calls on records 0xa8024188..0xa80240bc",
       "name": "FUN_a00a29a8",
       "status": "matched"
     },
     "ram:a00a2a38": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Eight FUN_a01461dc(1, record, k) calls on records 0xa8024188..0xa80240b0",
       "name": "FUN_a00a2a38",
@@ -4845,7 +4845,7 @@
       "status": "matched"
     },
     "ram:a00a2bdc": {
-      "by": "h10",
+      "by": "hand",
       "comment": "Calls FUN_a01461a8 with the record at 0xa80241a8 and id 0, then with 0xa80241a0 and id 1",
       "name": "FUN_a00a2bdc",
       "status": "matched"
@@ -5007,14 +5007,14 @@
       "status": "matched"
     },
     "ram:a00a2eec": {
-      "by": "h25",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "selects one of 15 table-lookup routines by the byte sel (switch 0xf0..0xfe) and returns its result for index n",
       "name": "FUN_a00a2eec",
       "status": "matched"
     },
     "ram:a00a3024": {
-      "by": "h24",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "returns entry n of one of fifteen byte tables chosen by code 0xf0..0xfe",
       "name": "FUN_a00a3024",
@@ -5187,7 +5187,7 @@
       "status": "matched"
     },
     "ram:a00a5908": {
-      "by": "h50",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Optional FUN_a0146a80 row loop, 27 FUN_a00b32e4 calls relative to (x, y), then FUN_a00b9750 for mode 1",
       "name": "FUN_a00a5908",
@@ -5201,7 +5201,7 @@
       "status": "matched"
     },
     "ram:a00a7aec": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "loop over i 0..6 or 7..8 calling FUN_a00b32e4 with 0x629a (three rows) or 0x659a by i, value c chosen per i",
       "name": "FUN_a00a7aec",
@@ -5220,7 +5220,7 @@
       "status": "matched"
     },
     "ram:a00a7d70": {
-      "by": "h10",
+      "by": "hand",
       "comment": "func_0x4008e2a4, then FUN_a00b32e4 for rows 6..0x15 except 5 and 7 (row 6: 0x7c2, 10)",
       "name": "FUN_a00a7d70",
       "status": "matched"
@@ -5282,7 +5282,7 @@
       "status": "matched"
     },
     "ram:a00a8a78": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Maps the halfword from FUN_a0090fcc to 0, 1 or 2 by value groups (0xc0..0xc2: 1 when p == 2)",
       "name": "FUN_a00a8a78",
@@ -5379,7 +5379,7 @@
       "status": "matched"
     },
     "ram:a00aacb4": {
-      "by": "h10",
+      "by": "hand",
       "comment": "FUN_a0146a80(0x14, row * 2 + 6, 0xd, 0x792 or 0x292 by FUN_a00aa520(row), 0); FUN_a00b6d58 when a == 2 and row == 1",
       "name": "FUN_a00aacb4",
       "status": "matched"
@@ -5530,7 +5530,7 @@
       "status": "matched"
     },
     "ram:a00ad970": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
       "comment": "FUN_a0146b20/FUN_a0146a80 cell loop, table DAT_001890d4 entries to FUN_a00a31a4 by mode, then FUN_a00ad86c/FUN_a00b3614 or FUN_a0146c40(4, 0, 0)",
       "name": "FUN_a00ad970",
@@ -5551,14 +5551,14 @@
       "status": "matched"
     },
     "ram:a00adec0": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Rows from byte 0xa802d3eb & 3 via FUN_a00b32e4, steps the byte modulo 5 (FUN_a00ad970 at 4 and 0), FUN_a00ad86c, FUN_a00d9120, FUN_a00d4998, b08e |= 2",
       "name": "FUN_a00adec0",
       "status": "matched"
     },
     "ram:a00ae020": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "As FUN_a00adec0 but steps byte 0xa802d3eb back modulo 5 (FUN_a00ad970 at 3 and 4)",
       "name": "FUN_a00ae020",
@@ -5579,28 +5579,28 @@
       "status": "matched"
     },
     "ram:a00ae39c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "As FUN_a00adec0 for byte 0xa802d430 (modulo 5, FUN_a00b89c4)",
       "name": "FUN_a00ae39c",
       "status": "matched"
     },
     "ram:a00ae4f0": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "As FUN_a00adec0 for byte 0xa802d430 (+4 modulo 5, FUN_a00b89c4 at 3 and 4)",
       "name": "FUN_a00ae4f0",
       "status": "matched"
     },
     "ram:a00ae638": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "As FUN_a00adec0 for byte 0xa802d412 (modulo 6, FUN_a00b8ca8, FUN_a00dbcf0)",
       "name": "FUN_a00ae638",
       "status": "matched"
     },
     "ram:a00ae790": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "As FUN_a00adec0 for byte 0xa802d412 (+5 modulo 6, FUN_a00b8ca8 at 5 and 3, FUN_a00dbcf0)",
       "name": "FUN_a00ae790",
@@ -5614,35 +5614,35 @@
       "status": "matched"
     },
     "ram:a00aea3c": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "FUN_a00b3ed0/FUN_a00b32e4 sequence with m from FUN_a01445fc(DAT_a802d290+0x1a3), steps the byte, FUN_a00869b0(0xb, 10000) on condition, FUN_a0090f94(10)",
       "name": "FUN_a00aea3c",
       "status": "matched"
     },
     "ram:a00aeb98": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "As FUN_a00adec0 for byte 0xa802d420 (+1 modulo 7, FUN_a00adaf4 at 4 and 0)",
       "name": "FUN_a00aeb98",
       "status": "matched"
     },
     "ram:a00aecec": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "As FUN_a00adec0 for byte 0xa802d420 (+6 modulo 7, FUN_a00adaf4 at 6 and 3)",
       "name": "FUN_a00aecec",
       "status": "matched"
     },
     "ram:a00aee44": {
-      "by": "h61",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
       "comment": "two-argument row list: local en[15] / idx[7] tables, FUN_a0146a80 / FUN_a0146b20 / FUN_a00a31a4 calls per row for mode 0x23, 0xbf, mode + 9 <= 2 and the en[] entries",
       "name": "FUN_a00aee44",
       "status": "matched"
     },
     "ram:a00b0034": {
-      "by": "h50",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
       "comment": "Page dispatch: common frame rows, then per-page row lists from address tables and the FUN_a00af44c/FUN_a00a900c calls",
       "name": "FUN_a00b0034",
@@ -5682,14 +5682,14 @@
       "status": "matched"
     },
     "ram:a00b27fc": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Steps byte 0xa8025c55 by mode bits (calls FUN_a00b0710(1..3, v)) unless one of the early-return tests holds; writes it into bit 15 of halfword 0xa802d002 unless 2 or 3",
       "name": "FUN_a00b27fc",
       "status": "matched"
     },
     "ram:a00b2a1c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Steps byte 0xa8025c55 backwards by mode bits (calls FUN_a00b0710(1..3, v)) unless one of the early-return tests holds; writes it into bit 15 of halfword 0xa802d002 unless 2 or 3",
       "name": "FUN_a00b2a1c",
@@ -5817,7 +5817,7 @@
       "status": "matched"
     },
     "ram:a00b5080": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Calls FUN_a0146dc0(0, 0), FUN_a0146c40(8, 0, 0), sets byte 0xa802b08f to 0x24, FUN_a0146dc0(0, 1), clears bit 15 of halfword 0xa802d032",
       "name": "FUN_a00b5080",
@@ -5864,7 +5864,7 @@
       "status": "matched"
     },
     "ram:a00b6994": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "FUN_a00a9f30(2, 0) when FUN_a00d7d48() returns non-zero, else FUN_a00a9f30(2, bit 15 of word 0xA802D404)",
       "name": "FUN_a00b6994",
@@ -5878,7 +5878,7 @@
       "status": "matched"
     },
     "ram:a00b69f4": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "toggles bit 7 of DAT_a802d290+0xa8 with the call sequences of each direction, then FUN_a00a9f30(5, bit 7) and conditional FUN_a00869b0(0x14, 5000); DAT_a802b08e |= 2",
       "name": "FUN_a00b69f4",
@@ -5905,14 +5905,14 @@
       "status": "matched"
     },
     "ram:a00b6d58": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "FUN_a00a9f30(1, 0) when FUN_a00d7d48() returns non-zero, else FUN_a00a9f30(1, bit 4 of word 0xA802D3AC)",
       "name": "FUN_a00b6d58",
       "status": "matched"
     },
     "ram:a00b6d94": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Toggles bit 4 of word 0xa802d3ac (clears byte 0xa802d408 when set), FUN_a00a9f30(1, bit or 0 by FUN_a00d7d48), FUN_a00d4998, b08e |= 2",
       "name": "FUN_a00b6d94",
@@ -6042,7 +6042,7 @@
       "status": "matched"
     },
     "ram:a00b848c": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "re-maps DAT_a802d290+0x1e, runs a reset sequence when FUN_a0142e8c(0) != 5 and FUN_a0145660(0, 0x16) is 0, then updates bits 10/9 of halfword 0xa802cff4 with FUN_a00b7f9c calls",
       "name": "FUN_a00b848c",
@@ -6108,7 +6108,7 @@
       "status": "matched"
     },
     "ram:a00b8ca8": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
       "comment": "passes table DAT_00195f24 entries to FUN_a00a31a4 for rows by mode, then FUN_a00ad86c and two FUN_a0146b20 cells when 0xa8025c56 >> 2 equals mode, else FUN_a0146c40(4, 0, 0)",
       "name": "FUN_a00b8ca8",
@@ -6191,7 +6191,7 @@
       "status": "matched"
     },
     "ram:a00bb260": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Matches bytes of the record 0xa802d0d0 against rows of FUN_a015468c / FUN_a01546ec / FUN_a0154750 (0xff = any); returns the row number, 0x99 or 0xff",
       "name": "FUN_a00bb260",
@@ -6205,14 +6205,14 @@
       "status": "matched"
     },
     "ram:a00bb908": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Matches bytes of the record 0xa802d040 against rows of FUN_a015468c / FUN_a01546ec / FUN_a0154750 (0xff = any); returns the row number, 0x99 or 0xff",
       "name": "FUN_a00bb908",
       "status": "matched"
     },
     "ram:a00bbabc": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "By FUN_a00bb560(2): clears 0xa802b09a and the bytes at 0xa802d040, sends 5600 strings with FUN_a01487e8, matches rows of FUN_a015463c; prints ucCmdIndex/ucCmdStatus for 4",
       "name": "FUN_a00bbabc",
@@ -6336,7 +6336,7 @@
       "status": "matched"
     },
     "ram:a00bcb38": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Reply frame 0xA802D078: bytes 7, 8 = '0', byte 9 = '0' + word 0xA802D340; command-table row reply",
       "name": "FUN_a00bcb38",
@@ -6546,7 +6546,7 @@
       "status": "matched"
     },
     "ram:a00bdcb0": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Reply frame 0xA802D078: bytes 7, 8 = '0', byte 9 = '0' + byte 0xA802D2BF; command-table row reply",
       "name": "FUN_a00bdcb0",
@@ -6678,7 +6678,7 @@
       "status": "matched"
     },
     "ram:a00be38c": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Reply frame 0xA802D078: bytes 7, 8 = '0', byte 9 = '0' + bit 30 of word 0xA802D484; command-table row reply",
       "name": "FUN_a00be38c",
@@ -6874,7 +6874,7 @@
       "status": "matched"
     },
     "ram:a00bfb28": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "builds the 0x13-byte \"5b00[\" record of FUN_a0145920 values with checksum in 0xa802d078, clears the port receive state and sends it with FUN_a01487e8",
       "name": "FUN_a00bfb28",
@@ -7182,7 +7182,7 @@
       "status": "matched"
     },
     "ram:a00c7e3c": {
-      "by": "h50",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Reads up to five ASCII digits of the port record into the 0xa802d290 structure and replies 5600+",
       "name": "FUN_a00c7e3c",
@@ -7473,14 +7473,14 @@
       "status": "matched"
     },
     "ram:a00ce958": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "prints LoadCustomerEDIDData, passes 512-byte record n of DAT_00010000 to FUN_a014b280, then func_0x4008ced8",
       "name": "FUN_a00ce958",
       "status": "matched"
     },
     "ram:a00ce9c0": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "copies 16 bytes of block blk of 512-byte record n (n < 0x38, else 0) of DAT_00010000",
       "name": "FUN_a00ce9c0",
@@ -7528,7 +7528,7 @@
       "status": "matched"
     },
     "ram:a00d1b48": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "counter and FUN_a0145360 calls by bits 8..23 of DAT_a802d290+8, FUN_a0145c5c resets when +0x1f6 is 0x55aa, writes both records with FUN_a014aed0 and stores 0xbb99; returns 0xe0",
       "name": "FUN_a00d1b48",
@@ -7803,7 +7803,7 @@
       "status": "matched"
     },
     "ram:a00d4998": {
-      "by": "h54",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "copies the current 0xa802d290 values into one of 26 slot entries (byte, word and bit-field arrays) and sets bit 1 of 0xa802b08e",
       "name": "FUN_a00d4998",
@@ -7817,38 +7817,38 @@
       "status": "matched"
     },
     "ram:a00d57e8": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "copies 0x1fc bytes from 0x198524 to DAT_a802d290 and 28 bytes from 0x198508 to DAT_a802d274, writing each with FUN_a014aed0(0x30, ...)",
       "name": "FUN_a00d57e8",
       "status": "matched"
     },
     "ram:a00d58b0": {
-      "by": "h40",
+      "by": "hand",
       "comment": "FUN_a0087a14(byte 0xa802d2aa limited to 4)",
       "name": "FUN_a00d58b0",
       "status": "matched"
     },
     "ram:a00d58d8": {
-      "by": "h40",
+      "by": "hand",
       "comment": "FUN_a0149064(1, bits 16..19 of word 0xa802d2c4)",
       "name": "FUN_a00d58d8",
       "status": "matched"
     },
     "ram:a00d58f8": {
-      "by": "h40",
+      "by": "hand",
       "comment": "FUN_a0149064(0, bits 16..19 of word 0xa802d2c4)",
       "name": "FUN_a00d58f8",
       "status": "matched"
     },
     "ram:a00d5918": {
-      "by": "h40",
+      "by": "hand",
       "comment": "FUN_a0148d98(bit 9 of word 0xa802d290)",
       "name": "FUN_a00d5918",
       "status": "matched"
     },
     "ram:a00d5938": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "FUN_a01479ec(1) when bit 14 of DAT_a802d290+0xa8 is set, then FUN_a0149978(port, byte +0x1f+port) for ports 1..3",
       "name": "FUN_a00d5938",
@@ -7883,34 +7883,34 @@
       "status": "matched"
     },
     "ram:a00d5cd8": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "sets DAT_a802d290+0x3e from FUN_a014468c(FUN_a01445fc(FUN_a014448c(x))) or 0 by bits of +0xac/+0xa8, then FUN_a01478b0(+0x3e, 7)",
       "name": "FUN_a00d5cd8",
       "status": "matched"
     },
     "ram:a00d5da4": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "FUN_a0124a08() when FUN_a0082c4c() is 0, then FUN_a0148f4c(1/2/0 by byte 0xa802d295)",
       "name": "FUN_a00d5da4",
       "status": "matched"
     },
     "ram:a00d5e0c": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "FUN_a0148fc0(1/2/3/0 by bits 12..15 of word 0xa802d2c4)",
       "name": "FUN_a00d5e0c",
       "status": "matched"
     },
     "ram:a00d5e84": {
-      "by": "h40",
+      "by": "hand",
       "comment": "FUN_a0148ef4(bit 30 of word 0xa802d294)",
       "name": "FUN_a00d5e84",
       "status": "matched"
     },
     "ram:a00d5ea4": {
-      "by": "h40",
+      "by": "hand",
       "comment": "empty function",
       "name": "FUN_a00d5ea4",
       "status": "matched"
@@ -7956,7 +7956,7 @@
       "status": "matched"
     },
     "ram:a00d7a70": {
-      "by": "h40",
+      "by": "hand",
       "comment": "passes a copy of the FUN_a00d6054(1) record to FUN_a0149b8c, FUN_a014d474(1, 0/1) around it when the argument is set",
       "name": "FUN_a00d7a70",
       "status": "matched"
@@ -7968,13 +7968,13 @@
       "status": "matched"
     },
     "ram:a00d7b60": {
-      "by": "h40",
+      "by": "hand",
       "comment": "returns 1 when FUN_a014ba68() is 2 or FUN_a014bd70(0) is 1",
       "name": "FUN_a00d7b60",
       "status": "matched"
     },
     "ram:a00d7d48": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "returns 4, or FUN_a014ba68() 1..4 mapped to 1, 2, 3, 5 when FUN_a01438dc(0) is 1, else 0",
       "name": "FUN_a00d7d48",
@@ -8316,7 +8316,7 @@
       "status": "matched"
     },
     "ram:a00dd5e0": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "sets or clears mask bits in word 0xa802b0b0 by the third argument",
       "name": "FUN_a00dd5e0",
@@ -8647,7 +8647,7 @@
       "status": "matched"
     },
     "ram:a00df5dc": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes 1 or 2 to 0xc00d02f4, returns 24-bit value of registers 0xcf000000+4a..+8 times 12 shifted right 17",
       "name": "FUN_a00df5dc",
@@ -9040,48 +9040,48 @@
       "status": "matched"
     },
     "ram:a00e52e8": {
-      "by": "h12",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Adds d to the value read through FUN_a00e0754 with a 0..15 range check and writes it back through FUN_a00e0774",
       "name": "FUN_a00e52e8",
       "status": "matched"
     },
     "ram:a00e7dc8": {
-      "by": "h12",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Checks byte_idx 0..3 and dq_idx 0..7, then calls FUN_a00e05d8 with the computed address and bit mask",
       "name": "FUN_a00e7dc8",
       "status": "matched"
     },
     "ram:a00e9b34": {
-      "by": "h50",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Writes three register fields (index b or table addresses) and returns the FUN_a00e8e6c two-word result",
       "name": "FUN_a00e9b34",
       "status": "matched"
     },
     "ram:a00e9c80": {
-      "by": "h50",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Two-pass window search on register field C with FUN_a00e9b34 results, then writes the midpoints",
       "name": "FUN_a00e9c80",
       "status": "matched"
     },
     "ram:a00ea1f0": {
-      "by": "h49",
+      "by": "hand",
       "comment": "FUN_a00e9c80(p1, p2, p3, i, p4, p6) for i = 0 .. p5 - 1; returns p1",
       "name": "FUN_a00ea1f0",
       "status": "matched"
     },
     "ram:a00ed530": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3",
       "comment": "writes v & 0xf to the field of entry b of tables 0xa8026918/0xa8026908/0xa80268f8 and 0 or 1 (by v 6..11) to two more table fields with FUN_a00e0774; returns 0",
       "name": "FUN_a00ed530",
       "status": "matched"
     },
     "ram:a00ed70c": {
-      "by": "h50",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Register-field sequence with a 16-round search loop on one field, MR1 bit-0 checks and the WL message",
       "name": "FUN_a00ed70c",
@@ -9122,7 +9122,7 @@
       "status": "matched"
     },
     "ram:a00f0380": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "steps register 0x51 of block blk up or down by flag bits of f and byte 0xa802b750 (cnt 0 / 300 special), stores f to 0xa802b750, returns 1 when a flagged step was written",
       "name": "FUN_a00f0380",
@@ -9290,7 +9290,7 @@
       "status": "matched"
     },
     "ram:a00f29d4": {
-      "by": "h12",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Reads a 24-bit value from three 0xcf000000 registers until two reads agree (at most 5 retries)",
       "name": "FUN_a00f29d4",
@@ -9489,7 +9489,7 @@
       "status": "matched"
     },
     "ram:a00f40e4": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "starts a measurement on block blk (registers 0x37/0x36), polls register 0x36 bit 0 with timeout, copies registers 0x3e/0x38 to 0x12/0xe/0xc and calls FUN_a00f8e2c by 0x38 vs 0x3a; 0 on failure, 1 on success",
       "name": "FUN_a00f40e4",
@@ -9563,7 +9563,7 @@
       "status": "matched"
     },
     "ram:a00f6940": {
-      "by": "h12",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Selects by p one set of 0xcf00ee2x/0xcf00ee6x register writes, then writes three bytes to 0xcf00ee44-0xcf00ee4c",
       "name": "FUN_a00f6940",
@@ -9637,7 +9637,7 @@
       "status": "matched"
     },
     "ram:a00f7434": {
-      "by": "h12",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Writes the u16 entries of p (or DAT_0019a378) byte by byte to 0xcf00eec8 between 0xcf00eec4 writes",
       "name": "FUN_a00f7434",
@@ -9658,7 +9658,7 @@
       "status": "matched"
     },
     "ram:a00f76dc": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "reads 32 sums of 3-byte values from register 0xcf00eec8 over 8 selections of 0xcf00ee84 into out when bit 0 of 0xcf00eec4 is clear and start is 0; sets the bit and returns 1 (0 when the bit was set and start is 0)",
       "name": "FUN_a00f76dc",
@@ -9753,7 +9753,7 @@
       "status": "matched"
     },
     "ram:a00f8e44": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "blocks 6/7: v + 1 when three FUN_a00f1a90 register tests pass; then FUN_a00f1d48(blk, 0xe, DAT_a802b7d8[blk] + v) and FUN_a00f1d48(blk, 0xc, v)",
       "name": "FUN_a00f8e44",
@@ -9874,21 +9874,21 @@
       "status": "matched"
     },
     "ram:a00f9d78": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "by bits 12..15 of register 0xd0040098 (3 or 4) copies 20 entries of table 0xa8026ed6 or 0xa8026cb6 to rows 12..15 of 0xa802c864; returns 1",
       "name": "FUN_a00f9d78",
       "status": "matched"
     },
     "ram:a00f9f10": {
-      "by": "h22",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Fills the 16x17 halfword table at 0xa8026ed6 (mode 3) or 0xa8026cb6 (mode 4 in bits 12..15 of 0xd0040098) from 20 values at 0xa802c874 by fixed-weight interpolation; returns 1",
       "name": "FUN_a00f9f10",
       "status": "matched"
     },
     "ram:a00fb434": {
-      "by": "h50",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Register access by id on the 0xd0040000 registers: offset select, read, write, bit-range writes, fixed set-up and size-derived set-up",
       "name": "FUN_a00fb434",
@@ -9902,7 +9902,7 @@
       "status": "matched"
     },
     "ram:a00fbc80": {
-      "by": "h12",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "For p == 0, calls FUN_a00fbaf8 and FUN_a00fb434(10, &word, 0, 0) with per-m values and sets or clears bit 31 of 0xd004002c",
       "name": "FUN_a00fbc80",
@@ -9944,7 +9944,7 @@
       "status": "matched"
     },
     "ram:a00fc200": {
-      "by": "h12",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Writes fixed values to 0xcf01201c/0xcf012000/0xcf012044, calls FUN_a00fe880(3, 1 << p, 1) for p 0..3, stores three bytes",
       "name": "FUN_a00fc200",
@@ -10122,21 +10122,21 @@
       "status": "matched"
     },
     "ram:a00fe880": {
-      "by": "h54",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes a 2-bit field of a hardware register selected by group a and bit b, value chosen by comparing c",
       "name": "FUN_a00fe880",
       "status": "matched"
     },
     "ram:a010031c": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes a 3-bit value into bits 0-2 or 3-5 of 0xcf03c158 or 0xcf03c144 selected by sel",
       "name": "FUN_a010031c",
       "status": "matched"
     },
     "ram:a01003b4": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "when bits 0-1 of block register 4 are set, writes sel into bits 2-3 and sets block register 0x16 bits 0x50 by sel",
       "name": "FUN_a01003b4",
@@ -10156,14 +10156,14 @@
       "status": "matched"
     },
     "ram:a0100a40": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes block registers 0x19/0x1a of blk selected by word 0xa8027a78 and a 43-case switch on byte 0xa8027a75",
       "name": "FUN_a0100a40",
       "status": "matched"
     },
     "ram:a0100e6c": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "sets byte 0xa8027a75 by word 0xa8027a78 and code c; code 0x21 sets register 1 of the port block by the FUN_a00f8dd4/FUN_a00f8df0 size",
       "name": "FUN_a0100e6c",
@@ -10182,14 +10182,14 @@
       "status": "matched"
     },
     "ram:a0101704": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes 0x80 bytes from p to data register 0xcf0160fc between writes of 0x10 and 0 to 0xcf0160f8",
       "name": "FUN_a0101704",
       "status": "matched"
     },
     "ram:a010178c": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
       "comment": "clamps x to 0x3c-0x2af8 and writes 12000000/x - 0.5 bits 10-17 and control values to registers at 0xcf0160c0-0xcf0160f4",
       "name": "FUN_a010178c",
@@ -10312,7 +10312,7 @@
       "status": "matched"
     },
     "ram:a0101bb0": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "optional register reset, then increments byte 0xa802c981 into 0xcf016110/0xcf016114; returns 0 and clears all at 0xff",
       "name": "FUN_a0101bb0",
@@ -10333,7 +10333,7 @@
       "status": "matched"
     },
     "ram:a0101d9c": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes 0 to 0xcf00ec04 and the low byte and bits 8-12 of four values to 0xcf00ec08-0xcf00ec24",
       "name": "FUN_a0101d9c",
@@ -10449,7 +10449,7 @@
       "status": "matched"
     },
     "ram:a0104b2c": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "calls FUN_a00f2298(blk, 0x54, 1), then writes val to the 0xcf013800/0xcf01b000 registers selected by blk",
       "name": "FUN_a0104b2c",
@@ -10462,7 +10462,7 @@
       "status": "matched"
     },
     "ram:a0104d18": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "clamps a and b, writes 1500 / a and ((a * b) << 15) / 15000000 to registers 0xcf012898/9c and 0xcf012998/9c, sets or clears bit 0 of 0xcf012890/0xcf012990",
       "name": "FUN_a0104d18",
@@ -10476,7 +10476,7 @@
       "status": "matched"
     },
     "ram:a0105910": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes six values to registers 0x64/0x68/0x66/0x62/0xa0/0xbe of block blk, raises registers 0x5b/0x5e to sum + 0x10 when not above the sum",
       "name": "FUN_a0105910",
@@ -10547,14 +10547,14 @@
       "status": "matched"
     },
     "ram:a0105d58": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3",
       "comment": "searches 8 records at 0x19a640 for w/h within 10 % and f within 9, prints the Support line and returns found",
       "name": "FUN_a0105d58",
       "status": "matched"
     },
     "ram:a01061c0": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes 0, 1, 2, 4 or 0x10 to register 0xcf00ed80 for sel 0-4",
       "name": "FUN_a01061c0",
@@ -10670,21 +10670,21 @@
       "status": "matched"
     },
     "ram:a01073b8": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes fixed values to seven hardware registers at 0xcf00e9e8-0xcf0116f0",
       "name": "FUN_a01073b8",
       "status": "matched"
     },
     "ram:a0107554": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "clears bit 4 of 0xcf00eac8, then writes 0x33/0x90/0x4e or 0 to registers at 0xcf00e9e8",
       "name": "FUN_a0107554",
       "status": "matched"
     },
     "ram:a01075f8": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "for on == 1 writes 0x33/0x90/0x4e to registers near 0xcf00e9e8 and sets bit 4 of 0xcf00eac8, else clears two registers",
       "name": "FUN_a01075f8",
@@ -10767,7 +10767,7 @@
       "status": "matched"
     },
     "ram:a0107a20": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "for p 0..2 sets or clears bit 5 of registers 0xcf03c348 / 0xcf03c2b8 with FUN_a00fe880(6, 1 or 2, 9 or 0) by byte 0xa8027a82",
       "name": "FUN_a0107a20",
@@ -10836,7 +10836,7 @@
       "status": "matched"
     },
     "ram:a0108f70": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "sets bits 4..5 of registers 0xcf011aa0..0xcf011aac to their index, then clears bits 0..2 of 0xcf011aa4..0xcf011aac",
       "name": "FUN_a0108f70",
@@ -10850,14 +10850,14 @@
       "status": "matched"
     },
     "ram:a01093a8": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "sets or clears one bit of 0xcf011aa0, then bit 6 = 1 exactly when bits 0-3 are all clear",
       "name": "FUN_a01093a8",
       "status": "matched"
     },
     "ram:a0109474": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "sets or clears bit 7 of 0xcf011aa4/0xcf011aa8/0xcf011aac selected by sel 1-3",
       "name": "FUN_a0109474",
@@ -10871,21 +10871,21 @@
       "status": "matched"
     },
     "ram:a01095bc": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "FRC_SetMainBypassMode: prints enable/disable and sets or clears bit 0 of registers near 0xcf011800",
       "name": "FUN_a01095bc",
       "status": "matched"
     },
     "ram:a0109844": {
-      "by": "h40",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "by bits of register 0xcf011d8c converts registers 0xcf011de0/0xcf011e00 (v / 2 or scaled v * 10 / 3 rounded to 32) into 0xcf011f64/0xcf011f6c, or writes 0",
       "name": "FUN_a0109844",
       "status": "matched"
     },
     "ram:a01099fc": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes a and b through FUN_a00f308c to the register pair at 0xcf011de0 + 0x10 * sel (sel 0-3)",
       "name": "FUN_a01099fc",
@@ -10920,7 +10920,7 @@
       "status": "matched"
     },
     "ram:a010a2cc": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "PIVOT enable (mode 1/2) or disable: register bits at 0xcf01e400, 0xcf01e600, 0xcf01ea40 and a print",
       "name": "FUN_a010a2cc",
@@ -10999,14 +10999,14 @@
       "status": "matched"
     },
     "ram:a010abd4": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "waits while bit n+4 of register 0xcf011ff4 is set (at most 0x32 counts of func_0x4008d588), then while it is clear (at most 0x64)",
       "name": "FUN_a010abd4",
       "status": "matched"
     },
     "ram:a010ac68": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "waits while bit 0 of register 0xcf011ff4 is set (at most 0x32 counts of func_0x4008d588), then while it is clear (at most 0x64)",
       "name": "FUN_a010ac68",
@@ -11188,7 +11188,7 @@
       "status": "matched"
     },
     "ram:a010b610": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "sets bits of 0xcf00b844/0xcf00b870 when FUN_a011cf88() > 0x81, then a timed bit sequence on 0xd00300f0 and 0xd00380f0",
       "name": "FUN_a010b610",
@@ -11202,7 +11202,7 @@
       "status": "matched"
     },
     "ram:a010b77c": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "bit sequence on 0xcf00b800 and 0xd00300f0 with func_0x4008d1a0 calls, FUN_a011cf88-dependent bits, then 0x100 to 0xd0030008/0xd0038008",
       "name": "FUN_a010b77c",
@@ -11230,7 +11230,7 @@
       "status": "matched"
     },
     "ram:a010c61c": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "stores sel/a/b in record 0xa802d744/784/7c4 and writes control word and value pairs to register blocks of tables 0x19aed8/0x19aecc",
       "name": "FUN_a010c61c",
@@ -11258,7 +11258,7 @@
       "status": "matched"
     },
     "ram:a010e0f4": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "stores sel/a/b in record 0xa802d704 or 0xa802d804 and the matching 0xd0032xxx/0xd003axxx register pairs and control bits 5-6",
       "name": "FUN_a010e0f4",
@@ -11286,7 +11286,7 @@
       "status": "matched"
     },
     "ram:a010f864": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "clears bit 0 of channel record byte +0x3e and bit 20 or 21 of 0xd0032000/0xd003a000",
       "name": "FUN_a010f864",
@@ -11333,14 +11333,14 @@
       "status": "matched"
     },
     "ram:a0110fb4": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "prints Profile_Load_Table, writes 0x81 to 0xcf011f80 and passes the 0x400 entries at 0x19af00 to FUN_a0113eb4",
       "name": "FUN_a0110fb4",
       "status": "matched"
     },
     "ram:a0111028": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "sets bit 7 of 0xcf0115fc and writes 0xc0 / n - 2 as two bytes to 0xcf0115f0 / 0xcf0115f4",
       "name": "FUN_a0111028",
@@ -11372,14 +11372,14 @@
       "status": "matched"
     },
     "ram:a01118cc": {
-      "by": "h54",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "clears and sets bit groups of hardware registers selected by a and b, some under the 0xcf03c840 wait/set/clear sequence",
       "name": "FUN_a01118cc",
       "status": "matched"
     },
     "ram:a0112b2c": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "passes the words of the ROM set selected by DAT_a802c98e/DAT_a802c98f to FUN_a01129e4 and three globals",
       "name": "FUN_a0112b2c",
@@ -11393,42 +11393,42 @@
       "status": "matched"
     },
     "ram:a0113064": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "p == 0xff: for bits 0..4 set in register 0xCF011A00 calls func_0x4008e3c4(i, 1) and clears bit i in 0xCF011800 / 0xCF011A00; else the same for bit p",
       "name": "FUN_a0113064",
       "status": "matched"
     },
     "ram:a0113138": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "for each set bit i 0..4 of mask calls func_0x4008e3c4(i, 0) and sets bit i of 0xcf011800 and 0xcf011a00; bit 5 calls FUN_a01185d4",
       "name": "FUN_a0113138",
       "status": "matched"
     },
     "ram:a01136a0": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes one of two fixed value sets to the 0xcf0118xx/0xcf011axx registers chosen by DAT_a802c98f",
       "name": "FUN_a01136a0",
       "status": "matched"
     },
     "ram:a0113cd8": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
       "comment": "reads n 8-word blocks from the 0xcf011f94 port after setting the address and waiting for 0x80 at 0xcf011f90",
       "name": "FUN_a0113cd8",
       "status": "matched"
     },
     "ram:a0113eb4": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
       "comment": "writes n 32-byte blocks to the 0xcf011f88 port after setting the 0xcf011fa0..fac address, byte order by mode",
       "name": "FUN_a0113eb4",
       "status": "matched"
     },
     "ram:a011403c": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
       "comment": "reads n 32-byte blocks from the 0xcf011f94 port into a byte buffer, byte order by mode",
       "name": "FUN_a011403c",
@@ -11469,21 +11469,21 @@
       "status": "matched"
     },
     "ram:a0114498": {
-      "by": "h44",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes a byte to a port-selected paged register block",
       "name": "FUN_a0114498",
       "status": "matched"
     },
     "ram:a0114570": {
-      "by": "h61",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "reads one register of the port-selected register block (page register gets bits 8..15, word at 0xcf000000 | (base + low byte) << 2) and returns its low byte",
       "name": "FUN_a0114570",
       "status": "matched"
     },
     "ram:a0114650": {
-      "by": "h44",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
       "comment": "clears and sets a fixed register sequence on ports 0 to 2 through paged register access",
       "name": "FUN_a0114650",
@@ -11502,77 +11502,77 @@
       "status": "matched"
     },
     "ram:a0115584": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "reads 6 bytes via FUN_a011ce80(4), checks the 0xa0 header and XOR, returns byte 3/4/5 by sel or -1",
       "name": "FUN_a0115584",
       "status": "matched"
     },
     "ram:a0115644": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "sets bit 7 of register 0xcf011f80, then sets or clears its bit 0 by on",
       "name": "FUN_a0115644",
       "status": "matched"
     },
     "ram:a0115684": {
-      "by": "h22",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Reads register 0xc6 (sel 0/1) or 0xc7 (sel 2/3) of page 0 of port 0/1/2's register block and returns its low nibble (sel 0/2), high nibble (sel 1/3) or the whole byte",
       "name": "FUN_a0115684",
       "status": "matched"
     },
     "ram:a011579c": {
-      "by": "h61",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "reads register offset 0xc8/0xc9 (by sel) of the port-selected register block with page 0 and returns its low or high nibble or the whole byte",
       "name": "FUN_a011579c",
       "status": "matched"
     },
     "ram:a01158b4": {
-      "by": "h61",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "read-modify-write of register offset 0xc6/0xc7 (by sel) of the port-selected register block: low nibble from val for sel 0/2, else (word & 0xf) | (val << 4)",
       "name": "FUN_a01158b4",
       "status": "matched"
     },
     "ram:a0115a44": {
-      "by": "h61",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "read-modify-write of register offset 0xc8/0xc9 (by sel) of the port-selected register block: low nibble from val for sel 0/2, else (word & 0xf) | (val << 4)",
       "name": "FUN_a0115a44",
       "status": "matched"
     },
     "ram:a0115bd4": {
-      "by": "h61",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "moves the nibbles at register offsets 0xc6/0xc7 and 0xc8/0xc9 of the port-selected block by x - 7, runs two meas sequences on 0xcf012e00/0xcf012f2c, restores the nibbles, returns the OR of the sums",
       "name": "FUN_a0115bd4",
       "status": "matched"
     },
     "ram:a01166d8": {
-      "by": "h22",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Reads register 0x161..0x164 (sel 0..3) of port 0/1/2's register block through its page register and returns the low byte",
       "name": "FUN_a01166d8",
       "status": "matched"
     },
     "ram:a01167ec": {
-      "by": "h61",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes val to register 0x161..0x164 (by sel) of the port-selected register block",
       "name": "FUN_a01167ec",
       "status": "matched"
     },
     "ram:a0116914": {
-      "by": "h44",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "read-modify-writes registers 0x2ce, 0x2cd and 0x5a of a port-selected paged register block",
       "name": "FUN_a0116914",
       "status": "matched"
     },
     "ram:a0116ff4": {
-      "by": "h44",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "reads a port register byte, writes an adjusted value, sums two four-register reads, restores the byte",
       "name": "FUN_a0116ff4",
@@ -11665,7 +11665,7 @@
       "status": "matched"
     },
     "ram:a0118b0c": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "register 0xCF012FF0..FF8 set-up by halfword +0x0a of the transformed row, after FUN_a00f2f88(0xf4, 0, 0x400, p1)",
       "name": "FUN_a0118b0c",
@@ -12145,21 +12145,21 @@
       "status": "matched"
     },
     "ram:a01205c0": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "replaces the low two bits of register 0xcf0116d8 with n for n = 1..3",
       "name": "FUN_a01205c0",
       "status": "matched"
     },
     "ram:a01207ac": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "returns bit 0 of register base + 0 of block blk (bases DAT_001a2fb0) after setting bits 0-1 of 0xcf011428",
       "name": "FUN_a01207ac",
       "status": "matched"
     },
     "ram:a01207f4": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "copies a 12-byte structure into entry n of the table at 0xa8027aac",
       "name": "FUN_a01207f4",
@@ -12236,7 +12236,7 @@
       "status": "matched"
     },
     "ram:a012127c": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes the high bits of block register 4 chosen from h and register 0x1a unless FUN_a00fd820 is 0x71/0x81/0xb1",
       "name": "FUN_a012127c",
@@ -12256,7 +12256,7 @@
       "status": "matched"
     },
     "ram:a01216f8": {
-      "by": "h19",
+      "by": "hand",
       "comment": "sets bit ch of the word at 0xa802c9e4",
       "name": "FUN_a01216f8",
       "status": "matched"
@@ -12289,7 +12289,7 @@
       "status": "matched"
     },
     "ram:a0121c6c": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "waits for bit 7 of FUN_a00f1f9c(p, 0x20) to set and then to clear, each wait bounded by a 16-bit counter",
       "name": "FUN_a0121c6c",
@@ -12340,14 +12340,14 @@
       "status": "matched"
     },
     "ram:a0122480": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes v to one (sel 0..3) or all (sel 4) of four groups of eight 0xcf01cdxx/cexx registers",
       "name": "FUN_a0122480",
       "status": "matched"
     },
     "ram:a0122634": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "for sel 0..3 or all (4): control register 0 when n == 0, else 0xff and (n * 17 - 17) & 0xff to four registers",
       "name": "FUN_a0122634",
@@ -12382,7 +12382,7 @@
       "status": "matched"
     },
     "ram:a0122e24": {
-      "by": "h19",
+      "by": "hand",
       "comment": "writes a, 0x76, b to 0xcf03d024/0xcf011820/0xcf011824, reads 0xcf011828 and restores the saved bytes",
       "name": "FUN_a0122e24",
       "status": "matched"
@@ -12395,7 +12395,7 @@
       "status": "matched"
     },
     "ram:a0123384": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Vx1RxPowerOff: paged register writes through 0xcf03d024 with a nop delay, then the print",
       "name": "FUN_a0123384",
@@ -12427,14 +12427,14 @@
       "status": "matched"
     },
     "ram:a0123744": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "register sequence on 0xcf03c780/0xcf03c66x with func_0x4008e46c(0x13), waits while 0xcf03c660 reads 0x31",
       "name": "FUN_a0123744",
       "status": "matched"
     },
     "ram:a0123840": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
       "comment": "tick-bounded poll of 0xcf03c640/0xcf03c648 > 0x83 and FUN_a0121374(0), records which register in DAT_a802d87e",
       "name": "FUN_a0123840",
@@ -12447,7 +12447,7 @@
       "status": "matched"
     },
     "ram:a0123c80": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "compares n bytes of buf with 0xa802d850; prints File match and returns 1 when all match, else 0",
       "name": "FUN_a0123c80",
@@ -12810,42 +12810,42 @@
       "status": "matched"
     },
     "ram:a01253bc": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "sets/clears port bit i of DAT_a802c9fb and calls FUN_a0133fbc / FUN_a0133f84 for it",
       "name": "FUN_a01253bc",
       "status": "matched"
     },
     "ram:a01254b8": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "sets or clears bit n of the byte at 0xa802c9fa by on",
       "name": "FUN_a01254b8",
       "status": "matched"
     },
     "ram:a01254f8": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "returns byte +8 of the 0x16-byte record at 0x1a42a8 picked by ARR_a802d880[n], or all ones for index 0xff",
       "name": "FUN_a01254f8",
       "status": "matched"
     },
     "ram:a0125530": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "returns byte +9 of the 0x16-byte record at 0x1a42a8 picked by ARR_a802d880[n], or all ones for index 0xff",
       "name": "FUN_a0125530",
       "status": "matched"
     },
     "ram:a0125568": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "returns byte +0xa of the 0x16-byte record at 0x1a42a8 picked by ARR_a802d880[n], or all ones for index 0xff",
       "name": "FUN_a0125568",
       "status": "matched"
     },
     "ram:a01255a0": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "returns halfword +4 of the 0x16-byte record at 0x1a42a8 picked by ARR_a802d880[n], or all ones for index 0xff",
       "name": "FUN_a01255a0",
@@ -12872,7 +12872,7 @@
       "status": "matched"
     },
     "ram:a0125754": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "k = 0 only: sets bytes 6/7 and halfword 4 of the 0xa802a430 record, calls func_0x4008b058 with a stack copy",
       "name": "FUN_a0125754",
@@ -13083,7 +13083,7 @@
       "status": "matched"
     },
     "ram:a0125cb4": {
-      "by": "h41",
+      "by": "hand",
       "comment": "for m 0..3 calls func_0x4008c86c(0xff, 8, x) twice with x = 0xfe or 1 per bit of m",
       "name": "FUN_a0125cb4",
       "status": "matched"
@@ -13120,14 +13120,14 @@
       "status": "matched"
     },
     "ram:a012621c": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "repeats FUN_a0125e60 until its byte stays equal to 0xa802c9fc for 0x32 ticks and returns that byte",
       "name": "FUN_a012621c",
       "status": "matched"
     },
     "ram:a012629c": {
-      "by": "h19",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "fills out from the 3-byte entry at 0x1a4371 picked by the lowest set bit of 1, with FUN_a00de444 of its byte 0",
       "name": "FUN_a012629c",
@@ -13267,7 +13267,7 @@
       "status": "matched"
     },
     "ram:a0127898": {
-      "by": "h19",
+      "by": "hand",
       "comment": "clears the record at 0xa802d896 and sets its byte +0x0f to 2",
       "name": "FUN_a0127898",
       "status": "matched"
@@ -13530,7 +13530,7 @@
       "status": "matched"
     },
     "ram:a012a228": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "counts entries of DAT_a802ca9c/DAT_a802ca5c differing by more than 0x40, returns 0/1 by count and run",
       "name": "FUN_a012a228",
@@ -13556,7 +13556,7 @@
       "status": "matched"
     },
     "ram:a012b078": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "sets two bits of the 16-bit field +0x2d of the 0xA802E1A0 record and byte 1 of row i of DAT_a802d8ae, passes a row copy to FUN_a0137a68",
       "name": "FUN_a012b078",
@@ -13570,7 +13570,7 @@
       "status": "matched"
     },
     "ram:a012b328": {
-      "by": "h49",
+      "by": "hand",
       "comment": "byte +3 of the 22-byte entry p at 0xA802D8AE = v, then FUN_a0137aec(p, v)",
       "name": "FUN_a012b328",
       "status": "matched"
@@ -13582,7 +13582,7 @@
       "status": "matched"
     },
     "ram:a012b418": {
-      "by": "h49",
+      "by": "hand",
       "comment": "bytes +8/+0xa/+0xb of the 22-byte entry p1 at 0xA802D8AE = p2/p3/p4, then FUN_a0137d08(p1..p5)",
       "name": "FUN_a012b418",
       "status": "matched"
@@ -13619,7 +13619,7 @@
       "status": "matched"
     },
     "ram:a012b9a8": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "fills four halfwords of a record from one of three getter sets and derives the other four by /3 and *2",
       "name": "FUN_a012b9a8",
@@ -13688,7 +13688,7 @@
       "status": "matched"
     },
     "ram:a012cd68": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "per-port DDC enable/disable step: FUN_a0133fbc(1 << i, len, x >> 7) or FUN_a0133f84(1 << i)",
       "name": "FUN_a012cd68",
@@ -13714,56 +13714,56 @@
       "status": "matched"
     },
     "ram:a012d4f8": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes one EEPROM byte at the FGA block offset of the 0xA802E1A0 record",
       "name": "FUN_a012d4f8",
       "status": "matched"
     },
     "ram:a012e2ac": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "expands three key-XORed 32-byte blocks into 0x200-byte tables (/100 scaling by DAT_001a31a8) for FUN_a010ae8c",
       "name": "FUN_a012e2ac",
       "status": "matched"
     },
     "ram:a012e3ec": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "reads the FGA table block for one bit of 0x508 from settings storage and passes it to FUN_a012e2ac or FUN_a012e004",
       "name": "FUN_a012e3ec",
       "status": "matched"
     },
     "ram:a012e550": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3",
       "comment": "reads the 3-byte FGA colour entry for a row bit of 0x508 and a column bit of 0x92 from settings storage, returns 1 when both are valid",
       "name": "FUN_a012e550",
       "status": "matched"
     },
     "ram:a012e6c0": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "reads one 18-byte FGA row from settings storage, unpacks it into three groups of four halfwords for FUN_a00f6fe4",
       "name": "FUN_a012e6c0",
       "status": "matched"
     },
     "ram:a012e850": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "reads a 16-bit little-endian EEPROM value at FGA block offset 0x70 + 2 * i",
       "name": "FUN_a012e850",
       "status": "matched"
     },
     "ram:a012e8c0": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "maps byte values 0x10..0x16 to single-bit bytes, default 1",
       "name": "FUN_a012e8c0",
       "status": "matched"
     },
     "ram:a012eb4c": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "reads one EEPROM byte at the FGA block offset of the 0xA802E1A0 record",
       "name": "FUN_a012eb4c",
@@ -13776,13 +13776,13 @@
       "status": "matched"
     },
     "ram:a012f134": {
-      "by": "h41",
+      "by": "hand",
       "comment": "returns bit 4 of the argument as 0 or 1",
       "name": "FUN_a012f134",
       "status": "matched"
     },
     "ram:a012f1ec": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "lowers the state field of channel record ch to the value selected by m, clears its step, calls FUN_a01518c8",
       "name": "FUN_a012f1ec",
@@ -13795,7 +13795,7 @@
       "status": "matched"
     },
     "ram:a012fc20": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "byte +0xa of the port record of channel byte 0xA802A44C, or 0xff",
       "name": "FUN_a012fc20",
@@ -13809,14 +13809,14 @@
       "status": "matched"
     },
     "ram:a01302a4": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Writes bit 0 of v into bit 17 of word +0x70 of record ch of the 0x78-byte records at 0xa802df30",
       "name": "FUN_a01302a4",
       "status": "matched"
     },
     "ram:a01302e0": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "channel on/off: bit 24 of word +0x70, state 5/0, port byte +2 = 2, FUN_a0141d50/FUN_a00f67d0/FUN_a0109474 calls",
       "name": "FUN_a01302e0",
@@ -13829,7 +13829,7 @@
       "status": "matched"
     },
     "ram:a013143c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Maps FUN_a00fd820(port byte +0xb) through the ROM table 0x1a5238 into port bytes +0xc / +0xd (0xff for a == 0)",
       "name": "FUN_a013143c",
@@ -13843,13 +13843,13 @@
       "status": "matched"
     },
     "ram:a0132770": {
-      "by": "h10",
+      "by": "hand",
       "comment": "Tail-calls FUN_a00fdf74(1, 2 or 3) for v 0, 1 or 2/4",
       "name": "FUN_a0132770",
       "status": "matched"
     },
     "ram:a01327e0": {
-      "by": "h10",
+      "by": "hand",
       "comment": "Tail-calls FUN_a00fe1dc(1, 2 or 3) for v 0, 1 or 2/4",
       "name": "FUN_a01327e0",
       "status": "matched"
@@ -13888,7 +13888,7 @@
       "status": "matched"
     },
     "ram:a0132b8c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "When byte 0xa802cb93 is 1: copies byte 0xa802cb92 bytes of 0xa802de40 to dst, clears 0xa802cb93, returns 1; else 0",
       "name": "FUN_a0132b8c",
@@ -13909,7 +13909,7 @@
       "status": "matched"
     },
     "ram:a0132cd4": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "When byte 0xa802cb8f is 1: copies byte 0xa802cb8e bytes of 0xa802de40 to dst, clears 0xa802cb8f, returns 1; else 0",
       "name": "FUN_a0132cd4",
@@ -13948,7 +13948,7 @@
       "status": "matched"
     },
     "ram:a0133a10": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Returns p, or the first of 1..4 for p == 0, whose 35-byte record at 0xa802dd90 has byte 0 != byte 1, else 0",
       "name": "FUN_a0133a10",
@@ -13961,7 +13961,7 @@
       "status": "matched"
     },
     "ram:a0133ae4": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Copies byte +0, halfword +2 and that many data bytes of the record 0xa802d9c6 out, clears byte +0x84",
       "name": "FUN_a0133ae4",
@@ -14012,7 +14012,7 @@
       "status": "matched"
     },
     "ram:a0133fbc": {
-      "by": "h10",
+      "by": "hand",
       "comment": "Prints Enable Internal EDID, func_0x4008f3f4(1, a, 0xa0, len > 0x80, 1), and func_0x4008f3f4(0xe, a, c, 0, 1) when len > 0x100",
       "name": "FUN_a0133fbc",
       "status": "matched"
@@ -14024,13 +14024,13 @@
       "status": "matched"
     },
     "ram:a0134184": {
-      "by": "h10",
+      "by": "hand",
       "comment": "Prints MailBox_SetWakeUpTimer with v when FUN_a00dd614(0x20), then func_0x4008f3f4(0x1c, 0, low byte, high byte, 1)",
       "name": "FUN_a0134184",
       "status": "matched"
     },
     "ram:a0134394": {
-      "by": "h10",
+      "by": "hand",
       "comment": "Prints MailBox_LoadFE2P with a and b when FUN_a00dd614(0x20), then func_0x4008f3f4(0x14, b, a >> 8, a & 0xff, 1) and func_0x4008f3f4(0x12, 0, 0, 0, 2)",
       "name": "FUN_a0134394",
       "status": "matched"
@@ -14079,7 +14079,7 @@
       "status": "matched"
     },
     "ram:a01348a0": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Takes min(n, count 0xa802cb94) bytes from the buffer 0xa802dd50 into dst, shifts the rest down, lowers the count, returns the number taken",
       "name": "FUN_a01348a0",
@@ -14100,7 +14100,7 @@
       "status": "matched"
     },
     "ram:a013562c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "func_0x4008f3f4(0xd, 0, a / 16, b, 0), then FUN_a01350dc and FUN_a0134de0 until the inlined FUN_a0132cd4 copies the bytes to dst",
       "name": "FUN_a013562c",
@@ -14247,14 +14247,14 @@
       "status": "matched"
     },
     "ram:a013797c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Sends {id, p[0], p[1], bits p[3..7], p[8], bits p[9..0x10], halfword p+0x12, p[2]} with FUN_a01370dc(0x20, 9, buf, 1)",
       "name": "FUN_a013797c",
       "status": "matched"
     },
     "ram:a0137a68": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Sends {id, p[0], p[1], bits p[3..7], 0, 0, 0, 0, p[2]} with FUN_a01370dc(0x21, 9, buf, 1)",
       "name": "FUN_a0137a68",
@@ -14305,7 +14305,7 @@
       "status": "matched"
     },
     "ram:a0137cac": {
-      "by": "h49",
+      "by": "hand",
       "comment": "FUN_a01370dc(0x2c, 4, {p1, p2, 0, 0}, 0)",
       "name": "FUN_a0137cac",
       "status": "matched"
@@ -14375,7 +14375,7 @@
       "status": "matched"
     },
     "ram:a01380c4": {
-      "by": "h10",
+      "by": "hand",
       "comment": "Returns 0xff for a != 0, else FUN_a01370dc(0x5d, 4, {a, b, 0, 0}, 0), FUN_a0137344(1), returns byte 0xa802cba3",
       "name": "FUN_a01380c4",
       "status": "matched"
@@ -14431,7 +14431,7 @@
       "status": "matched"
     },
     "ram:a013832c": {
-      "by": "h25",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "packs bits, bytes and halfwords of a record into a 24-byte buffer for FUN_a01370dc(0x50, 0x18, buf, 0)",
       "name": "FUN_a013832c",
@@ -14470,7 +14470,7 @@
       "status": "matched"
     },
     "ram:a0138564": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Sends {bit-reversed p[0], p[2], p[1] >> 6, (p[1] >> 4) & 3} with FUN_a01370dc(0x90, 4, buf, 0)",
       "name": "FUN_a0138564",
@@ -14598,20 +14598,20 @@
       "status": "matched"
     },
     "ram:a0138f2c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Sends {bits, 0, 0, 0} with FUN_a01370dc(0xa3, 4, buf, 0); bits 0..3 = a, b, c, d == 1",
       "name": "FUN_a0138f2c",
       "status": "matched"
     },
     "ram:a0138fb8": {
-      "by": "h10",
+      "by": "hand",
       "comment": "Sends words a, b, c as 12 bytes, lowest byte first, with FUN_a01370dc(0xa6, 12, buf, 0)",
       "name": "FUN_a0138fb8",
       "status": "matched"
     },
     "ram:a0139040": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Sends the mode byte with FUN_a01370dc(0x71, 4, buf, 0), FUN_a0137344(1), copies the four words at 0xa802cb9c + 4 as halfwords to out",
       "name": "FUN_a0139040",
@@ -14644,7 +14644,7 @@
       "status": "matched"
     },
     "ram:a01392f8": {
-      "by": "h10",
+      "by": "hand",
       "comment": "Sends 8 halfwords of the record (low byte first), id and record byte +5 with FUN_a01370dc(0xfe, 0x12, buf, 1)",
       "name": "FUN_a01392f8",
       "status": "matched"
@@ -14914,21 +14914,21 @@
       "status": "matched"
     },
     "ram:a013b544": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Inlined FUN_a013b4e8 body with record 0xa802a468 bytes 0, 1 kept and byte 2 = c",
       "name": "FUN_a013b544",
       "status": "matched"
     },
     "ram:a013b5a0": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Inlined FUN_a013b4e8 body with record 0xa802a468 bytes 0, 2 kept and byte 1 = v",
       "name": "FUN_a013b5a0",
       "status": "matched"
     },
     "ram:a013b5fc": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Inlined FUN_a013b4e8 body with record 0xa802a468 bytes 1, 2 kept and byte 0 = v",
       "name": "FUN_a013b5fc",
@@ -14975,7 +14975,7 @@
       "status": "matched"
     },
     "ram:a013b92c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Returns 1 when halfword +0x3c of the record from FUN_a013cd4c(port) is one of 14 listed values, else 0",
       "name": "FUN_a013b92c",
@@ -14996,35 +14996,35 @@
       "status": "matched"
     },
     "ram:a013bbb8": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Sets halfwords +0x2e..+0x38 of the record from FUN_a013cd4c(port) from +0x28, +0x2a (+-min 0x32), +0x10 and +0x18",
       "name": "FUN_a013bbb8",
       "status": "matched"
     },
     "ram:a013bc5c": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Limits halfwords +0xe, +0x1e, +0x20 of the record from FUN_a013cd4c(port) against halves and doubles of +0x16, +0x10, +0x18",
       "name": "FUN_a013bc5c",
       "status": "matched"
     },
     "ram:a013bd00": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Calls FUN_a00f8918 / FUN_a00f88e8 / FUN_a00f8ef4 for port by halfword compares of the record from FUN_a013cd4c(port) and flag",
       "name": "FUN_a013bd00",
       "status": "matched"
     },
     "ram:a013bdb8": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Flag from ((h10 - h14) * he) >> 1 > 0x1fff of the record from FUN_a013cd4c(port), FUN_a00f8918(port), then the FUN_a013bd00 body (port = second parameter)",
       "name": "FUN_a013bdb8",
       "status": "matched"
     },
     "ram:a013beb0": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Flag from ((h10 - h14) * he) >> 1 > 0x1fff of the record from FUN_a013cd4c(port), FUN_a00f8918(port), then the FUN_a013bd00 body",
       "name": "FUN_a013beb0",
@@ -15100,27 +15100,27 @@
       "status": "matched"
     },
     "ram:a013cecc": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Returns 1 when v is within the limit selected by byte 0xa802e1a7, or v == 3 and bit 21 of word 0xa802e3d0, else 0",
       "name": "FUN_a013cecc",
       "status": "matched"
     },
     "ram:a013cf84": {
-      "by": "h10",
+      "by": "hand",
       "comment": "Sets bit 25 of word +0x70 of the four 0x78-byte records at 0xa802df30",
       "name": "FUN_a013cf84",
       "status": "matched"
     },
     "ram:a013cfc4": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Clears bit 25 of word +0x70 of the four 0x78-byte records at 0xa802df30",
       "name": "FUN_a013cfc4",
       "status": "matched"
     },
     "ram:a013d018": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "For channel ch 0..3: writes src and FUN_a014226c(port byte) into nibbles 12..15 / 8..11 of word 0 when changed or forced; limits nibble 28..31 to 5 when bit 0 of byte +0x70",
       "name": "FUN_a013d018",
@@ -15186,7 +15186,7 @@
       "status": "matched"
     },
     "ram:a013f284": {
-      "by": "h10",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Copies ROM row idx (0x1a5a16, 36 bytes) into the record from FUN_a013cd4c(port), multiplying five fields by the row's first byte when not 0",
       "name": "FUN_a013f284",
@@ -15245,14 +15245,14 @@
       "status": "matched"
     },
     "ram:a0140500": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "for a device with record bit 7 set: FUN_a0124ed0, FUN_a0134464(area base & ~0xfff), FUN_a0124eb4",
       "name": "FUN_a0140500",
       "status": "matched"
     },
     "ram:a0140a0c": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "when DAT_a802cbd9 is set: calls FUN_a01405d0 with the device whose area holds DAT_a802a47a (else 0xff), clears the flag",
       "name": "FUN_a0140a0c",
@@ -15273,7 +15273,7 @@
       "status": "matched"
     },
     "ram:a01410a4": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "passes a stack structure (bits 29-31 cleared, 2, 0x1a3668, 0x1a3648) by value to FUN_a0118e04",
       "name": "FUN_a01410a4",
@@ -15356,28 +15356,28 @@
       "status": "matched"
     },
     "ram:a0141ce0": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "returns bits 12-15 of the first halfword of the record at 0xa802e116/128/13a/14c selected by t 0x51-0x81, else 8",
       "name": "FUN_a0141ce0",
       "status": "matched"
     },
     "ram:a0141d50": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes v into bits 12-15 of record 0-3 at 0xa802e116 selected by t 0x51/0x61/0x71/0x81",
       "name": "FUN_a0141d50",
       "status": "matched"
     },
     "ram:a0141edc": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "for port <= 3 and record type 5, sets bits 10/9/8 from FUN_a0110f4c/FUN_a0110f54(port)",
       "name": "FUN_a0141edc",
       "status": "matched"
     },
     "ram:a0141f98": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "type-5 port entry: tick-stamped Mute when Hdcp22Auth check, sets type 2; clears bit k of DAT_a802cc0a/0b otherwise",
       "name": "FUN_a0141f98",
@@ -15398,14 +15398,14 @@
       "status": "matched"
     },
     "ram:a01421c4": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "maps 0-3 and 6 to 0x51/0x61/0x71/0x81/0xe8, others to 0xff",
       "name": "FUN_a01421c4",
       "status": "matched"
     },
     "ram:a0142218": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "index of the first of 7 records at 0xa802e116 with byte +0x10 equal to v, else 0xff",
       "name": "FUN_a0142218",
@@ -15425,7 +15425,7 @@
       "status": "matched"
     },
     "ram:a014230c": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "returns 1 when i <= 1 and bit 7 of halfword +2 of record i at 0xa802e116 is set",
       "name": "FUN_a014230c",
@@ -15509,7 +15509,7 @@
       "status": "matched"
     },
     "ram:a0142ed0": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "sets byte +0x0a of port record p to m when changed or forced, with FUN_a00fde94/FUN_a00fd594/FUN_a00fd9a0 calls and +0x10 = 1000 or 100",
       "name": "FUN_a0142ed0",
@@ -15762,7 +15762,7 @@
       "status": "matched"
     },
     "ram:a01446e0": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "looks up x in five 3-byte records at 0x1a6da3, swapping results 4 and 6 when FUN_a012ad6c() is 1",
       "name": "FUN_a01446e0",
@@ -15804,7 +15804,7 @@
       "status": "matched"
     },
     "ram:a01452d0": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "stores a then v into the straddling 16-bit field +0x03 of the 0xA802E1A0 record, writes it back, calls FUN_a0104f48",
       "name": "FUN_a01452d0",
@@ -15844,7 +15844,7 @@
       "status": "matched"
     },
     "ram:a0145808": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "stores v into halfword 0x16/0x18/0x1e/0x20 of channel record i by id, then FUN_a00f8e0c/FUN_a00f8e44 or FUN_a012f1ec(i, 2)",
       "name": "FUN_a0145808",
@@ -15958,7 +15958,7 @@
       "status": "matched"
     },
     "ram:a0146370": {
-      "by": "h13",
+      "by": "hand",
       "comment": "tail-calls FUN_a011932c with code 0xa0/0xb0/0xc0/0xc1 for sel 0-3",
       "name": "FUN_a0146370",
       "status": "matched"
@@ -16178,7 +16178,7 @@
       "status": "matched"
     },
     "ram:a0147790": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "returns FUN_a00fc334() for 0-7, with 5 kept only when FUN_a00fca40() returns 0x40",
       "name": "FUN_a0147790",
@@ -16204,7 +16204,7 @@
       "status": "matched"
     },
     "ram:a0147a14": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "scales x by 1023/100 (rounded) and 20914/1023, plus 1, into FUN_a01386ac(0, v)",
       "name": "FUN_a0147a14",
@@ -16235,7 +16235,7 @@
       "status": "matched"
     },
     "ram:a0147bb0": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "returns FUN_a0142e8c(bits 12-15 of record ch at 0xa802df30) when 1-5, else 6",
       "name": "FUN_a0147bb0",
@@ -16248,7 +16248,7 @@
       "status": "matched"
     },
     "ram:a0147d0c": {
-      "by": "h13",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "combines the digit values of s[n-8..n-5] (FUN_a0123c4c) into a 16-bit value",
       "name": "FUN_a0147d0c",
@@ -16828,7 +16828,7 @@
       "status": "matched"
     },
     "ram:a014ce84": {
-      "by": "h51",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "switch on id 6..35 storing a byte of table 0xa802e1f0, calls FUN_a014c118 when byte 0xa802e3db matches",
       "name": "FUN_a014ce84",
@@ -17014,7 +17014,7 @@
       "status": "matched"
     },
     "ram:a014f208": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
       "comment": "clears nibbles of DAT_a802cc80 not found in DAT_a802a480[9] and updates the matching nibble of DAT_a802cc82",
       "name": "FUN_a014f208",
@@ -17235,14 +17235,14 @@
       "status": "matched"
     },
     "ram:a01539b8": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes the 16-byte pattern 0x1a75e6 to EEPROM 0x300..0x43f (20 writes)",
       "name": "FUN_a01539b8",
       "status": "matched"
     },
     "ram:a0153a5c": {
-      "by": "h49",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "writes the 16-byte pattern 0x1a75e6 to EEPROM 0x300..0x4bf (28 writes)",
       "name": "FUN_a0153a5c",

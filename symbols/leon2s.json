@@ -1579,7 +1579,7 @@
       "status": "matched"
     },
     "ram:a006102c": {
-      "by": "h42",
+      "by": "hand",
       "comment": "calls the function pointers DAT_a8079378[0..1] for pending bits of 0x9f12009c and acknowledges them, with bit 12 set-up around the loop",
       "name": "FUN_a006102c",
       "status": "matched"
@@ -1659,7 +1659,7 @@
       "status": "matched"
     },
     "ram:a0061d60": {
-      "by": "h42",
+      "by": "hand",
       "comment": "reads 27 bytes through the DAT_a807cd74 function pointer and unpacks them into halfword fields of DAT_a8078aa0",
       "name": "FUN_a0061d60",
       "status": "matched"
@@ -1695,7 +1695,7 @@
       "status": "matched"
     },
     "ram:a0062a34": {
-      "by": "h42",
+      "by": "hand",
       "comment": "weighted sum of interpolated entries of the 65-column halfword table at DAT_a807cd6c",
       "name": "FUN_a0062a34",
       "status": "matched"
@@ -1719,7 +1719,7 @@
       "status": "matched"
     },
     "ram:a006370c": {
-      "by": "h42",
+      "by": "hand",
       "comment": "checks the signature bytes read through DAT_a807cd74 and, when the stored block differs, reloads it with FUN_a0061d60 and writes the FUN_a0062fc8 result to 0xd0013ffc",
       "name": "FUN_a006370c",
       "status": "matched"
@@ -1875,13 +1875,13 @@
       "status": "matched"
     },
     "ram:a006e2c4": {
-      "by": "h42",
+      "by": "hand",
       "comment": "copies the link timing fields of the port record into the output record (doubled when FUN_a00a2080 is set) and prints them",
       "name": "FUN_a006e2c4",
       "status": "matched"
     },
     "ram:a006e820": {
-      "by": "h42",
+      "by": "hand",
       "comment": "sets the flag bits of status byte +0xd (and bit 6 of +0x12) from the per-port test functions",
       "name": "FUN_a006e820",
       "status": "matched"
@@ -1941,7 +1941,7 @@
       "status": "matched"
     },
     "ram:a006fd78": {
-      "by": "h42",
+      "by": "hand",
       "comment": "waits for word 0 of slot 10 to read 0, then writes id, length and up to 0x1c bytes of d as an 8-word block with FUN_a006fb3c/FUN_a006fad4",
       "name": "FUN_a006fd78",
       "status": "matched"
@@ -2019,7 +2019,7 @@
       "status": "matched"
     },
     "ram:a0072970": {
-      "by": "h15",
+      "by": "hand",
       "comment": "Fills n words of buf with FUN_a00618c0(0x9f0a0100 / 0x9f130100 + off + i * 4) for sel 0 / 1, else with 0",
       "name": "FUN_a0072970",
       "status": "matched"
@@ -2037,7 +2037,7 @@
       "status": "matched"
     },
     "ram:a0072b7c": {
-      "by": "h42",
+      "by": "hand",
       "comment": "clears two bytes of DAT_a80788e8 and writes a fixed sequence to the 0xc00c0000, 0x9f100090 and 0x9f120000 registers",
       "name": "FUN_a0072b7c",
       "status": "matched"
@@ -2055,13 +2055,13 @@
       "status": "matched"
     },
     "ram:a0072e60": {
-      "by": "h42",
+      "by": "hand",
       "comment": "formats an unsigned value in a base into buf with sign, padding and case flags, returns the width",
       "name": "FUN_a0072e60",
       "status": "matched"
     },
     "ram:a0072fd8": {
-      "by": "h49",
+      "by": "hand",
       "comment": "writes n characters of s with FUN_a006122c, CR after each LF",
       "name": "FUN_a0072fd8",
       "status": "matched"
@@ -2158,7 +2158,7 @@
       "status": "matched"
     },
     "ram:a0073c44": {
-      "by": "h55",
+      "by": "hand",
       "comment": "Port initial PHY settings loop over ports 0..3 from the per-port record bytes, with debug prints",
       "name": "DRV_HDMI_InitialSettings",
       "status": "matched"
@@ -2207,7 +2207,7 @@
       "status": "matched"
     },
     "ram:a007501c": {
-      "by": "h42",
+      "by": "hand",
       "comment": "prints the EQ clock messages and clears byte +1 of the port record on the FUN_a0074fc4 and channel-field tests",
       "name": "EQ_handler",
       "status": "matched"
@@ -2219,7 +2219,7 @@
       "status": "matched"
     },
     "ram:a0075190": {
-      "by": "h42",
+      "by": "hand",
       "comment": "clears fields of the 0x898-byte port record by mode and toggles byte +0x29 (bch_en_flag)",
       "name": "bch_en_flag",
       "status": "matched"
@@ -2280,7 +2280,7 @@
       "status": "matched"
     },
     "ram:a0079460": {
-      "by": "h42",
+      "by": "hand",
       "comment": "runs the EQ scan state functions from DAT_a00b3a20 until one returns 0 and, in state 0x10, prints the RVGA values and sets the done byte",
       "name": "FSM_EQSCAN_DONE",
       "status": "matched"
@@ -2310,7 +2310,7 @@
       "status": "matched"
     },
     "ram:a0079ac4": {
-      "by": "h15",
+      "by": "hand",
       "comment": "Takes bits 8..12 of two FUN_a00a7314 results (table-selected arguments) and returns 8/4/2/0 from the smaller one and param_3",
       "name": "FUN_a0079ac4",
       "status": "matched"
@@ -2346,13 +2346,13 @@
       "status": "matched"
     },
     "ram:a007a79c": {
-      "by": "h49",
+      "by": "hand",
       "comment": "FUN_a00a7424 / FUN_a00a7488 set-up for entries 0..3 (tables DAT_a00b3b10 / b18), then the full table writes for the entries whose bit is set in p2",
       "name": "FUN_a007a79c",
       "status": "matched"
     },
     "ram:a007aac4": {
-      "by": "h15",
+      "by": "hand",
       "comment": "Calls FUN_a00a7488(port, n, 0xffff00ff, x << 8) for all four bytes a..d (idx > 3) or for byte idx with n from DAT_a00b3afc",
       "name": "FUN_a007aac4",
       "status": "matched"
@@ -2406,13 +2406,13 @@
       "status": "matched"
     },
     "ram:a007b2a0": {
-      "by": "h42",
+      "by": "hand",
       "comment": "returns a port state value from the 0x18-byte record, FUN_a007517c/FUN_a007ae94, a byte table or the FUN_a007af6c test",
       "name": "FUN_a007b2a0",
       "status": "matched"
     },
     "ram:a007c4b8": {
-      "by": "h55",
+      "by": "hand",
       "comment": "Writes the PICDR PHY register settings of one port, chosen by the record halfword v in ranges below 100/160/300/600",
       "name": "DRV_HDMI_EQScan_FSM_PHY_PICDR",
       "status": "matched"
@@ -2424,13 +2424,13 @@
       "status": "matched"
     },
     "ram:a007d054": {
-      "by": "h42",
+      "by": "hand",
       "comment": "returns a port state value from the 0x18-byte record, FUN_a007517c/FUN_a007cfec, a byte table or the FUN_a007af04 test",
       "name": "FUN_a007d054",
       "status": "matched"
     },
     "ram:a007d688": {
-      "by": "h55",
+      "by": "hand",
       "comment": "Checks the per-channel SCDC values of one port after a settle count and sets word 0 of its ARR_a807ccc4 record, with RVGA index stepping and debug prints",
       "name": "DRV_HDMI_EQScan_FSM_PHY_ChkError",
       "status": "matched"
@@ -2454,13 +2454,13 @@
       "status": "matched"
     },
     "ram:a007f634": {
-      "by": "h49",
+      "by": "hand",
       "comment": "DRV_HDMI_Config_BCH(p != 2, 1) when FUN_a0073520(p) is non-zero",
       "name": "FUN_a007f634",
       "status": "matched"
     },
     "ram:a007f670": {
-      "by": "h42",
+      "by": "hand",
       "comment": "stores the FUN_a007b2a0/FUN_a007d054 results in the port record, calls FUN_a00a73ac and FUN_a007f634, prints the EQ exit messages",
       "name": "DRV_HDMI_EQScan_FSM_Done",
       "status": "matched"
@@ -2472,7 +2472,7 @@
       "status": "matched"
     },
     "ram:a007f7c8": {
-      "by": "h15",
+      "by": "hand",
       "comment": "Calls H1_H2_VTH(port) and prints the low nibble of FUN_a00a7314(port, 0x2178/0x2578/0x2978/0x3178) each print only when bit 0x800 of _DAT_a8078634 is set",
       "name": "HDMI_SET_DESCRAMBLE_MODE",
       "status": "matched"
@@ -2520,13 +2520,13 @@
       "status": "matched"
     },
     "ram:a0083710": {
-      "by": "h42",
+      "by": "hand",
       "comment": "returns bits of DAT_a80789e4 selected by sel (remapped through DAT_a80761a8 for 1..4) as a 3-bit value",
       "name": "FUN_a0083710",
       "status": "matched"
     },
     "ram:a0083870": {
-      "by": "h52",
+      "by": "hand",
       "comment": "reads five hardware register bytes; mode bit 0 copies bits into status byte DAT_a80789e0, bit 1 writes bits 6/7 back and sets bits of DAT_a80789e4",
       "name": "FUN_a0083870",
       "status": "matched"
@@ -2556,7 +2556,7 @@
       "status": "matched"
     },
     "ram:a0083f04": {
-      "by": "h15",
+      "by": "hand",
       "comment": "Four FUN_a00a7718 calls with port FUN_a0083ed0(p) and (0x490, 0x434, 0x433, 0x490) arguments whose last value follows en",
       "name": "FUN_a0083f04",
       "status": "matched"
@@ -2664,7 +2664,7 @@
       "status": "matched"
     },
     "ram:a0085ea8": {
-      "by": "h42",
+      "by": "hand",
       "comment": "runs the per-port set-up sequence (FUN_a00aa3a4, FUN_a00aa45c, FUN_a00aa49c, FUN_a0085b80, FUN_a0085dcc, FUN_a0085b14) for ports 0..4 between register bit clears",
       "name": "FUN_a0085ea8",
       "status": "matched"
@@ -2706,7 +2706,7 @@
       "status": "matched"
     },
     "ram:a008642c": {
-      "by": "h15",
+      "by": "hand",
       "comment": "Passes a 5-byte buffer (code from param_2, four copies of (y << 3) | x) to FUN_a00863d4 and returns 1 when its result is non-zero",
       "name": "FUN_a008642c",
       "status": "matched"
@@ -2754,7 +2754,7 @@
       "status": "matched"
     },
     "ram:a00866e0": {
-      "by": "h42",
+      "by": "hand",
       "comment": "fills the 6-byte records ARR_a807cd2e[lo..hi] from DAT_a807cd00 and two FUN_a0086400 reads",
       "name": "FUN_a00866e0",
       "status": "matched"
@@ -2766,7 +2766,7 @@
       "status": "matched"
     },
     "ram:a0086c48": {
-      "by": "h42",
+      "by": "hand",
       "comment": "fills a 4-byte output from the port record, limited by DAT_a807cd68/DAT_a807cd00, and for port 0 from the FUN_a00a6bb8(k, 0x80) code",
       "name": "FUN_a0086c48",
       "status": "matched"
@@ -2778,7 +2778,7 @@
       "status": "matched"
     },
     "ram:a0086e58": {
-      "by": "h42",
+      "by": "hand",
       "comment": "reads 8 bytes with FUN_a0086400(port, 0x90, 0x200) and unpacks them into the 16-byte output record",
       "name": "FUN_a0086e58",
       "status": "matched"
@@ -2802,7 +2802,7 @@
       "status": "matched"
     },
     "ram:a0087364": {
-      "by": "h15",
+      "by": "hand",
       "comment": "Returns a 4-bit code 5/6/8/9 from the low nibble of the first argument and bit tests 0x77/0x11/7/1 on bytes 4 and 5 of p",
       "name": "FUN_a0087364",
       "status": "matched"
@@ -2863,13 +2863,13 @@
       "status": "matched"
     },
     "ram:a00883d0": {
-      "by": "h28",
+      "by": "hand",
       "comment": "Reads status byte buffer DAT_a80789f0 through FUN_a0086400/FUN_a008639c and updates per-port record bytes and block registers; returns 0, 1 or 2",
       "name": "FUN_a00883d0",
       "status": "matched"
     },
     "ram:a008899c": {
-      "by": "h42",
+      "by": "hand",
       "comment": "returns 1 or 2 from bits 0 and 1 of FUN_a0083710(port) for ports 0-4, else 0",
       "name": "FUN_a008899c",
       "status": "matched"
@@ -2977,7 +2977,7 @@
       "status": "matched"
     },
     "ram:a008996c": {
-      "by": "h15",
+      "by": "hand",
       "comment": "When bit 0 of FUN_a00a78b4(port, 0x7b) is set, compares FUN_a00b2064() with the halfwords of record port of DAT_a807cd04 and updates its bytes and halfword",
       "name": "FUN_a008996c",
       "status": "matched"
@@ -3019,7 +3019,7 @@
       "status": "matched"
     },
     "ram:a008a110": {
-      "by": "h15",
+      "by": "hand",
       "comment": "For sel 0xc/0xe calls FUN_a00a71fc(port, 3, 0x40, en << 6) and clears/sets bit port+4 of 0xcf014770 when en is set",
       "name": "FUN_a008a110",
       "status": "matched"
@@ -3049,7 +3049,7 @@
       "status": "matched"
     },
     "ram:a008a590": {
-      "by": "h42",
+      "by": "hand",
       "comment": "writes seven 9-register groups to 0xcf00f680..0xcf00f6b0 through an inline helper",
       "name": "FUN_a008a590",
       "status": "matched"
@@ -3079,7 +3079,7 @@
       "status": "matched"
     },
     "ram:a008a868": {
-      "by": "h15",
+      "by": "hand",
       "comment": "By flag bits of byte 2 of DAT_a8076688, calls FUN_a008a824(on) and sets or clears bit 7 of 0xcf01120c and 0xcf011218",
       "name": "FUN_a008a868",
       "status": "matched"
@@ -3115,7 +3115,7 @@
       "status": "matched"
     },
     "ram:a008aa18": {
-      "by": "h15",
+      "by": "hand",
       "comment": "Calls FUN_a008a924/FUN_a008a9ec/FUN_a008a95c with the halfword v, chosen by the byte FUN_a0089f84(0) (4..7, 1, other)",
       "name": "FUN_a008aa18",
       "status": "matched"
@@ -3157,7 +3157,7 @@
       "status": "matched"
     },
     "ram:a008b5d0": {
-      "by": "h15",
+      "by": "hand",
       "comment": "For port <= 3: FUN_a00a71fc(port, 7, 0x10, 0) when en is clear, otherwise FUN_a00a71b4 tests of arguments 7, 1, 0xf with FUN_a00a71fc writes",
       "name": "FUN_a008b5d0",
       "status": "matched"
@@ -3175,7 +3175,7 @@
       "status": "matched"
     },
     "ram:a008b75c": {
-      "by": "h42",
+      "by": "hand",
       "comment": "tests and sets bit 2 of register 2 of the port through FUN_a00a71b4/FUN_a00a71fc, then the register 3 sequence",
       "name": "FUN_a008b75c",
       "status": "matched"
@@ -3235,7 +3235,7 @@
       "status": "matched"
     },
     "ram:a008bc44": {
-      "by": "h15",
+      "by": "hand",
       "comment": "For i = 0, 1 sets byte i of DAT_a80766a0 from FUN_a00a6bb8(i, 0x50) bit 6, a FUN_a00b2064 interval and FUN_a008b8d4(i); returns the two bytes as bits 0 and 1",
       "name": "FUN_a008bc44",
       "status": "matched"
@@ -3247,7 +3247,7 @@
       "status": "matched"
     },
     "ram:a008c5d8": {
-      "by": "h42",
+      "by": "hand",
       "comment": "compares FUN_a008c538(idx) against the 28000-36000 window and DAT_a8078b30, and on a change updates the flag, a record bit and port registers 2 and 1",
       "name": "FUN_a008c5d8",
       "status": "matched"
@@ -3266,13 +3266,13 @@
       "status": "matched"
     },
     "ram:a008d0b8": {
-      "by": "h42",
+      "by": "hand",
       "comment": "fills the halfword table DAT_a807d252[hi] with words read through the 0xcf012240/0xcf012244/0xcf012200 registers",
       "name": "FUN_a008d0b8",
       "status": "matched"
     },
     "ram:a008d1d8": {
-      "by": "h15",
+      "by": "hand",
       "comment": "Searches row (v > 0x7ff) of the halfword table DAT_a807d252 for v with DAT_a8078c01 as index; returns 1 when found",
       "name": "FUN_a008d1d8",
       "status": "matched"
@@ -3440,7 +3440,7 @@
       "status": "matched"
     },
     "ram:a008e73c": {
-      "by": "h49",
+      "by": "hand",
       "comment": "sets (p2 == 1) or clears bit 6 of register 0x3b of block (p, 1) and rewrites its low bits via FUN_a00a7fd8 / FUN_a00a8054",
       "name": "FUN_a008e73c",
       "status": "matched"
@@ -3458,7 +3458,7 @@
       "status": "matched"
     },
     "ram:a008ed50": {
-      "by": "h52",
+      "by": "hand",
       "comment": "under the 0xcf03c840 semaphore sets or clears port bits of 0xcf011600 and related registers by port, code and mode; writes 0xcf0124bc from the code",
       "name": "FUN_a008ed50",
       "status": "matched"
@@ -3829,7 +3829,7 @@
       "status": "matched"
     },
     "ram:a00910ec": {
-      "by": "h15",
+      "by": "hand",
       "comment": "Returns FUN_a0074f60(port & 1) (times 4 by an ARR_a807cc64 flag) divided by FUN_a0090d7c(port), times 8, divided by FUN_a0090dec(port), doubled by a FUN_a00a657c(port, 0x144) test",
       "name": "FUN_a00910ec",
       "status": "matched"
@@ -3889,7 +3889,7 @@
       "status": "matched"
     },
     "ram:a0091578": {
-      "by": "h42",
+      "by": "hand",
       "comment": "calls FUN_a0091540 and resets bit-fields of the 0x1c-byte record ARR_a807d580[port] and three bytes of DAT_a8079538",
       "name": "FUN_a0091578",
       "status": "matched"
@@ -4016,7 +4016,7 @@
       "status": "matched"
     },
     "ram:a0091cf4": {
-      "by": "h49",
+      "by": "hand",
       "comment": "when func_0x9f1b7bf8(p) is 0: func_0x9f1b8a1c(p, 0), func_0x9f1b80f0(p, {p3}, 0xa8, p2, 1), func_0x9f1b8a1c(p, bit 0 of register 0x27)",
       "name": "FUN_a0091cf4",
       "status": "matched"
@@ -4202,7 +4202,7 @@
       "status": "matched"
     },
     "ram:a00945f0": {
-      "by": "h42",
+      "by": "hand",
       "comment": "sets the H and V polarity fields with FUN_a00a80cc from FUN_a0091c10/FUN_a0091be8 and prints the Desired Polarity messages",
       "name": "FUN_a00945f0",
       "status": "matched"
@@ -4244,13 +4244,13 @@
       "status": "matched"
     },
     "ram:a0094b30": {
-      "by": "h42",
+      "by": "hand",
       "comment": "for 11 <= v <= 0x1ec stores v and writes the bytes of v + 0x400, 0x400 - v, v + 0x3f8 and v + 0x3f4 with FUN_a00a8054(port, 4, 0x14..0x21)",
       "name": "FUN_a0094b30",
       "status": "matched"
     },
     "ram:a0094e40": {
-      "by": "h42",
+      "by": "hand",
       "comment": "calls FUN_a00a80cc four times with modes chosen from b, a record bit and c (plus FUN_a00a8260 for c == 1)",
       "name": "FUN_a0094e40",
       "status": "matched"
@@ -4383,13 +4383,13 @@
       "status": "matched"
     },
     "ram:a009740c": {
-      "by": "h16",
+      "by": "hand",
       "comment": "bit tests via FUN_a00a7408 on port record ARR_a807db00[port] words, then FUN_a00a73ac or FUN_a00a73d4 updates of bits 0x10/0x15",
       "name": "FUN_a009740c",
       "status": "matched"
     },
     "ram:a00974ec": {
-      "by": "h42",
+      "by": "hand",
       "comment": "derives a status byte from the port register blocks at +4 and +0x14 and stores it in byte +6 of the port record",
       "name": "FUN_a00974ec",
       "status": "matched"
@@ -4425,7 +4425,7 @@
       "status": "matched"
     },
     "ram:a00980a8": {
-      "by": "h42",
+      "by": "hand",
       "comment": "updates the port mode byte +0x189 with register writes depending on FUN_a00a0588 and bit 12 of register +0x80",
       "name": "FUN_a00980a8",
       "status": "matched"
@@ -4455,7 +4455,7 @@
       "status": "matched"
     },
     "ram:a009860c": {
-      "by": "h52",
+      "by": "hand",
       "cflags": "-mcpu=v8 -Os -g -msoft-float",
       "comment": "clears four 4-bit fields of register words 0xa0/0xa4 or sets them to 5..8 after TxFFE_Max_L, by FUN_a0098300 and FUN_a00a7408 results; counter DAT_a8079086 with prints",
       "name": "DRV_HDMI21_RXDetect_FSM_LTS_3",
@@ -4468,7 +4468,7 @@
       "status": "matched"
     },
     "ram:a0099560": {
-      "by": "h16",
+      "by": "hand",
       "comment": "clears bytes 0x8e/0x8f/0x91/0x92..0x95 of record DAT_a807d680[port], sets 0x90 = 100 / DAT_a8078630 (0 if zero), clears 0x50 bytes at +0x3e",
       "name": "FUN_a0099560",
       "status": "matched"
@@ -4480,19 +4480,19 @@
       "status": "matched"
     },
     "ram:a009967c": {
-      "by": "h52",
+      "by": "hand",
       "comment": "per-row value read via FUN_a00a7468/FUN_a00a7314, stored in a 10-column history of the 0xb0-byte port record, compared with the next column",
       "name": "MAX_CED",
       "status": "matched"
     },
     "ram:a0099c18": {
-      "by": "h52",
+      "by": "hand",
       "comment": "sums four 15-bit register fields into a 10-column history of the 0xb0-byte port record and compares the new entry with the next column or column 0",
       "name": "MAX_RSED",
       "status": "matched"
     },
     "ram:a009a41c": {
-      "by": "h42",
+      "by": "hand",
       "comment": "runs the per-port state functions from DAT_a00b4230 for ports 0 and 1 and re-arms the DAT_a8079100 timer descriptor",
       "name": "FUN_a009a41c",
       "status": "matched"
@@ -4504,7 +4504,7 @@
       "status": "matched"
     },
     "ram:a009bef0": {
-      "by": "h42",
+      "by": "hand",
       "comment": "initial RX-detect state: copies the state word, clears the FFE fields of registers 0xa0/0xa4 and 0x90, writes FUN_a00a7424(.., 0x14, j, 0x2f08) and sets state 1",
       "name": "DRV_HDMI21_RXDetect_FSM_Init",
       "status": "matched"
@@ -4552,7 +4552,7 @@
       "status": "matched"
     },
     "ram:a009c5b4": {
-      "by": "h42",
+      "by": "hand",
       "comment": "prints the BCH messages and writes register fields +0xc0/+0xc4/+0xbc of the port register block depending on en and the record halfword +8",
       "name": "DRV_HDMI_Config_BCH",
       "status": "matched"
@@ -4576,7 +4576,7 @@
       "status": "matched"
     },
     "ram:a009c7e8": {
-      "by": "h42",
+      "by": "hand",
       "comment": "prints the audio stable state, sets or clears byte +5 of the port record and calls FUN_a009c794",
       "name": "DRV_HDMI_Set_AudStatus",
       "status": "matched"
@@ -4588,13 +4588,13 @@
       "status": "matched"
     },
     "ram:a009c8b0": {
-      "by": "h42",
+      "by": "hand",
       "comment": "for ports 0/1 with a non-zero eq state word: clears it, prints the MODEDET messages, disables the port events and calls FUN_a009c87c",
       "name": "MODEDET_handler",
       "status": "matched"
     },
     "ram:a009c9b4": {
-      "by": "h42",
+      "by": "hand",
       "comment": "per-port FLT_no_retrain check, MODEDET_handler and the DAT_a00b4258 state functions for ports 0 and 1, then re-arms DAT_a80790f4",
       "name": "FLT_no_retrain",
       "status": "matched"
@@ -4618,7 +4618,7 @@
       "status": "matched"
     },
     "ram:a009e368": {
-      "by": "h23",
+      "by": "hand",
       "comment": "port mode-detect completion: H_Total check, six info block reads or clears, status prints, state 8 or 5",
       "name": "DRV_HDMI_ModeDetect_FSM_Complete",
       "status": "matched"
@@ -4678,7 +4678,7 @@
       "status": "matched"
     },
     "ram:a009fcb8": {
-      "by": "h43",
+      "by": "hand",
       "comment": "checks register 0x60 of the port block and copies registers 0x64-0x7c into a 0x24-byte buffer, or clears it",
       "name": "FUN_a009fcb8",
       "status": "matched"
@@ -4702,7 +4702,7 @@
       "status": "matched"
     },
     "ram:a00a0268": {
-      "by": "h43",
+      "by": "hand",
       "comment": "copies registers 0x80-0x9c of the port block to a byte buffer little-endian, or clears 0x22 bytes when register 0x80 is 0",
       "name": "FUN_a00a0268",
       "status": "matched"
@@ -4732,13 +4732,13 @@
       "status": "matched"
     },
     "ram:a00a07b8": {
-      "by": "h43",
+      "by": "hand",
       "comment": "sets one bit, chosen by a table entry, in one of six register words of the port block",
       "name": "FUN_a00a07b8",
       "status": "matched"
     },
     "ram:a00a0930": {
-      "by": "h43",
+      "by": "hand",
       "comment": "sets or clears a table-selected bit in one of four register words of the port block after FUN_a00a07b8",
       "name": "FUN_a00a0930",
       "status": "matched"
@@ -4762,7 +4762,7 @@
       "status": "matched"
     },
     "ram:a00a0c84": {
-      "by": "h53",
+      "by": "hand",
       "comment": "handles the pending FUN_a00a0588 events 8, 0x1c, 0xe, 0x16, 0xb and 0xc of a port",
       "name": "FUN_a00a0c84",
       "status": "matched"
@@ -4888,7 +4888,7 @@
       "status": "matched"
     },
     "ram:a00a1e28": {
-      "by": "h43",
+      "by": "hand",
       "comment": "computes a u8 code from fields of the 0x190-byte record DAT_a807d7e0[port]",
       "name": "FUN_a00a1e28",
       "status": "matched"
@@ -4955,13 +4955,13 @@
       "status": "matched"
     },
     "ram:a00a2418": {
-      "by": "h43",
+      "by": "hand",
       "comment": "calls FUN_a00a73ac on the port record per set bit of a mask, then with 8 and 9, when FUN_a008d800() > 0x82",
       "name": "FUN_a00a2418",
       "status": "matched"
     },
     "ram:a00a2564": {
-      "by": "h43",
+      "by": "hand",
       "comment": "calls FUN_a00a73d4 for both records per set bit of a mask when FUN_a008d800() > 0x82",
       "name": "FUN_a00a2564",
       "status": "matched"
@@ -5226,7 +5226,7 @@
       "status": "matched"
     },
     "ram:a00a33f4": {
-      "by": "h43",
+      "by": "hand",
       "comment": "searches the last block whose first byte is 2 for the bytes d8 5d c4 01 and stores fields after them in five per-port tables",
       "name": "FUN_a00a33f4",
       "status": "matched"
@@ -5286,7 +5286,7 @@
       "status": "matched"
     },
     "ram:a00a4658": {
-      "by": "h43",
+      "by": "hand",
       "comment": "for both ports updates a flag byte, runs the state-table functions while they return non-zero and re-arms the timer descriptor",
       "name": "FUN_a00a4658",
       "status": "matched"
@@ -5304,7 +5304,7 @@
       "status": "matched"
     },
     "ram:a00a4880": {
-      "by": "h23",
+      "by": "hand",
       "comment": "per-port five-state machine on ARR_a807dc10 driven by FUN_a00a6190/FUN_a00a61d4/FUN_a00a621c results, timers from FUN_a00b2064 and register bits at +0xb4/+0xc0",
       "name": "FUN_a00a4880",
       "status": "matched"
@@ -5425,7 +5425,7 @@
       "status": "matched"
     },
     "ram:a00a66dc": {
-      "by": "h16",
+      "by": "hand",
       "comment": "writes a 16-bit value as byte registers reg and reg + 1 of block DAT_a00b4d9c[port] for ports 0/1, both blocks for port 2",
       "name": "FUN_a00a66dc",
       "status": "matched"
@@ -5620,7 +5620,7 @@
       "status": "matched"
     },
     "ram:a00a7bf8": {
-      "by": "h16",
+      "by": "hand",
       "comment": "read-modify-write of a block register byte for ports 0..4 (mode 1 sets mask bits, else clears); ports 1..4 with reg < 0x60 first rewrite bits 6+ of register base + 0x60 to port - 1",
       "name": "FUN_a00a7bf8",
       "status": "matched"
@@ -5668,7 +5668,7 @@
       "status": "matched"
     },
     "ram:a00a80cc": {
-      "by": "h16",
+      "by": "hand",
       "comment": "read-modify-write of a register byte in block DAT_a00b4d44[port * 6 + sub] (port 0..1, sub 0..5): mode 1 sets mask bits, else clears",
       "name": "FUN_a00a80cc",
       "status": "matched"
@@ -5705,7 +5705,7 @@
       "status": "matched"
     },
     "ram:a00a8400": {
-      "by": "h43",
+      "by": "hand",
       "comment": "sets or clears mask bits in a byte register of block port (all blocks 0..7 for port > 7)",
       "name": "FUN_a00a8400",
       "status": "matched"
@@ -5718,7 +5718,7 @@
       "status": "matched"
     },
     "ram:a00a8708": {
-      "by": "h43",
+      "by": "hand",
       "comment": "writes four data bytes to one of three register groups through SC_MaskSetByte by selector",
       "name": "FUN_a00a8708",
       "status": "matched"
@@ -5730,7 +5730,7 @@
       "status": "matched"
     },
     "ram:a00a88b8": {
-      "by": "h43",
+      "by": "hand",
       "comment": "maps a selector code to a value 0..5 and writes it to a 3-bit field through FUN_a00a6428 by mode",
       "name": "FUN_a00a88b8",
       "status": "matched"
@@ -5748,19 +5748,19 @@
       "status": "matched"
     },
     "ram:a00a9380": {
-      "by": "h49",
+      "by": "hand",
       "comment": "fills an 11-byte record with constants, bytes 3 and 10 by mode 1",
       "name": "FUN_a00a9380",
       "status": "matched"
     },
     "ram:a00a93e4": {
-      "by": "h43",
+      "by": "hand",
       "comment": "clears or sets bit 23 of word 0xe8 of the port 0/1 block from the FUN_a0091c38/FUN_a0091c5c state of entries 0 and 1",
       "name": "FUN_a00a93e4",
       "status": "matched"
     },
     "ram:a00a9870": {
-      "by": "h53",
+      "by": "hand",
       "comment": "updates the per-port packet state groups from the getters and sends or clears the packets, by input type",
       "name": "CONV2HDMITX_UpdatePacket",
       "status": "matched"
@@ -5796,7 +5796,7 @@
       "status": "matched"
     },
     "ram:a00aa308": {
-      "by": "h16",
+      "by": "hand",
       "comment": "writes port 1 registers 0x3d/0x60/0x83/0xa6 via FUN_a00a7cc0 with DAT_a807d3d1 bytes 3..6 when byte 0 is 0xa0, else 0x10",
       "name": "FUN_a00aa308",
       "status": "matched"
@@ -5814,7 +5814,7 @@
       "status": "matched"
     },
     "ram:a00aa49c": {
-      "by": "h16",
+      "by": "hand",
       "comment": "calls FUN_a00a7bf8(port, 8, 0x80/0x40, flag) with the flag pair chosen by mode 3/2/1/other",
       "name": "FUN_a00aa49c",
       "status": "matched"
@@ -5850,13 +5850,13 @@
       "status": "matched"
     },
     "ram:a00aa930": {
-      "by": "h45",
+      "by": "hand",
       "comment": "writes bank registers 9/10/0x63/0x2c-0x2d by mode 0..10",
       "name": "FUN_a00aa930",
       "status": "matched"
     },
     "ram:a00aaf94": {
-      "by": "h53",
+      "by": "hand",
       "comment": "updates the v/w bytes of the DAT_a80792b4 record from a DAT_a00b4dcc table entry and writes them with FUN_a00a7cc0 per port",
       "name": "FUN_a00aaf94",
       "status": "matched"
@@ -5953,19 +5953,19 @@
       "status": "matched"
     },
     "ram:a00abe20": {
-      "by": "h43",
+      "by": "hand",
       "comment": "writes registers 0x200-0x203 and 0x266 of the port from three record bytes between two FUN_a00a6c98 bit writes",
       "name": "FUN_a00abe20",
       "status": "matched"
     },
     "ram:a00abff0": {
-      "by": "h53",
+      "by": "hand",
       "comment": "writes a fixed register sequence for a port with FUN_a00a6c00 and FUN_a00a6c98, with values chosen from the DAT_a807dc18 record",
       "name": "FUN_a00abff0",
       "status": "matched"
     },
     "ram:a00ac41c": {
-      "by": "h16",
+      "by": "hand",
       "comment": "compares DAT_a807931c / en with bit 0 of FUN_a00a6bb8(port, 0x460); prints the FEC ready message on change; rewrites registers 0x30 and 0x460 through FUN_a00a6c98",
       "name": "FUN_a00ac41c",
       "status": "matched"
@@ -6038,7 +6038,7 @@
       "status": "matched"
     },
     "ram:a00aceec": {
-      "by": "h43",
+      "by": "hand",
       "comment": "computes ((a * k / b) * 10000) >> 9 from registers 0x63, 0x66-0x68 and a 2-bit selector in register 0x80",
       "name": "FUN_a00aceec",
       "status": "matched"
@@ -6074,7 +6074,7 @@
       "status": "matched"
     },
     "ram:a00ad27c": {
-      "by": "h16",
+      "by": "hand",
       "comment": "returns 1 when FUN_a00856d0(port) is not 1 and any of the bit pairs 0x11/0x22/0x44/0x88 of FUN_a0085684(port) is fully set",
       "name": "FUN_a00ad27c",
       "status": "matched"
@@ -6098,7 +6098,7 @@
       "status": "matched"
     },
     "ram:a00ad478": {
-      "by": "h43",
+      "by": "hand",
       "comment": "writes the 0xcf0132c0-0xcf0132d8 registers with a factor 1 or 8 and updates the two record flags around FUN_a00acff4",
       "name": "FUN_a00ad478",
       "status": "matched"
@@ -6189,7 +6189,7 @@
       "status": "matched"
     },
     "ram:a00add8c": {
-      "by": "h43",
+      "by": "hand",
       "comment": "sets a 2-bit field of register 0xcf014758/0xcf01475c and a bit of mask DAT_a807de70 according to mode",
       "name": "FUN_a00add8c",
       "status": "matched"
@@ -6201,7 +6201,7 @@
       "status": "matched"
     },
     "ram:a00adf84": {
-      "by": "h43",
+      "by": "hand",
       "comment": "sets a 2-bit field of register 0xcf014798 or 0xcf01479c chosen by FUN_a00add48 according to mode",
       "name": "FUN_a00adf84",
       "status": "matched"
@@ -6225,7 +6225,7 @@
       "status": "matched"
     },
     "ram:a00ae254": {
-      "by": "h43",
+      "by": "hand",
       "comment": "writes the high nibble bits of a value to register 0x44 and 0x40 bits through FUN_a00a6c98",
       "name": "FUN_a00ae254",
       "status": "matched"
@@ -6243,7 +6243,7 @@
       "status": "matched"
     },
     "ram:a00ae3a0": {
-      "by": "h49",
+      "by": "hand",
       "comment": "FUN_a0084c74 / FUN_a0084c94 / FUN_a00a6c98(p, 200, 0x30, ..) with bytes 0x118 / 0x11a / 0x11b of the 300-byte record p at 0xA807DC18",
       "name": "FUN_a00ae3a0",
       "status": "matched"
@@ -6255,7 +6255,7 @@
       "status": "matched"
     },
     "ram:a00ae850": {
-      "by": "h43",
+      "by": "hand",
       "comment": "copies and clears 0x30 registers into a ring of 16 rows when signalled, then pulses register bits and calls FUN_a00856fc(0)",
       "name": "FUN_a00ae850",
       "status": "matched"
@@ -6346,13 +6346,13 @@
       "status": "matched"
     },
     "ram:a00af524": {
-      "by": "h43",
+      "by": "hand",
       "comment": "probes register 0x62 for five selector values written to register 0x60 and returns a 2-bit result",
       "name": "FUN_a00af524",
       "status": "matched"
     },
     "ram:a00af690": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Updates the byte DAT_a8079338[port] from a FUN_a00aceec range test at most once per 0x28 counts of FUN_a00b2064; returns it",
       "name": "FUN_a00af690",
       "status": "matched"
@@ -6645,13 +6645,13 @@
       "status": "matched"
     },
     "ram:a00b1028": {
-      "by": "h43",
+      "by": "hand",
       "comment": "runs a fixed sequence of port set-up calls and register writes, with an optional byte table init",
       "name": "FUN_a00b1028",
       "status": "matched"
     },
     "ram:a00b115c": {
-      "by": "h17",
+      "by": "hand",
       "comment": "switch on mode 0..2: two or three FUN_a00a6c98/FUN_a00a6c00 register writes with fixed values",
       "name": "FUN_a00b115c",
       "status": "matched"
@@ -6941,7 +6941,7 @@
       "status": "matched"
     },
     "ram:a00b25f8": {
-      "by": "h43",
+      "by": "hand",
       "comment": "parses a line of up to 32 characters as a hexadecimal (0x prefix) or decimal number",
       "name": "FUN_a00b25f8",
       "status": "matched"
@@ -6978,7 +6978,7 @@
       "status": "matched"
     },
     "ram:a00c0a88": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Writes 5 bytes of a and 0x11a bytes of b to hardware register blocks with register 0xcf011674 bits 3-4 set",
       "name": "FUN_a00c0a88",
       "status": "matched"
@@ -7002,13 +7002,13 @@
       "status": "matched"
     },
     "ram:a00c0ce8": {
-      "by": "h49",
+      "by": "hand",
       "comment": "writes 5 bytes of a to port registers 0x1a..0x1e and 0x11a bytes of b to register 0xCF01178C, saving and restoring register 0x41 and 0xCF011438",
       "name": "FUN_a00c0ce8",
       "status": "matched"
     },
     "ram:a00c0dfc": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Writes 5 bytes of a to registers 0x1a..0x1e and 0x11a bytes of b through registers 0xa1/0xa2/0xa3 of port",
       "name": "FUN_a00c0dfc",
       "status": "matched"
@@ -7056,7 +7056,7 @@
       "status": "matched"
     },
     "ram:a00c1c18": {
-      "by": "h23",
+      "by": "hand",
       "comment": "reads five blocks into stack buffers, uses constant tables instead when a block is all zero, and passes the buffers to the following calls",
       "name": "FUN_a00c1c18",
       "status": "matched"
@@ -7074,19 +7074,19 @@
       "status": "matched"
     },
     "ram:a00c2758": {
-      "by": "h45",
+      "by": "hand",
       "comment": "three-step port state machine on DAT_a807d5c8 records",
       "name": "FUN_a00c2758",
       "status": "matched"
     },
     "ram:a00c2de4": {
-      "by": "h43",
+      "by": "hand",
       "comment": "rate-limited check of two 16-bit register pairs that steps the counter DAT_a8078c80[port]",
       "name": "FUN_a00c2de4",
       "status": "matched"
     },
     "ram:a00c2f58": {
-      "by": "h43",
+      "by": "hand",
       "comment": "rate-limited check of two 16-bit register pairs that steps the counter DAT_a8078c88[port]",
       "name": "FUN_a00c2f58",
       "status": "matched"
@@ -7098,7 +7098,7 @@
       "status": "matched"
     },
     "ram:a00c3144": {
-      "by": "h43",
+      "by": "hand",
       "comment": "updates the port bit of mask DAT_a8078c5b and the port state byte from FUN_a00c30e4, a timeout and the record status byte",
       "name": "FUN_a00c3144",
       "status": "matched"
@@ -7111,7 +7111,7 @@
       "status": "matched"
     },
     "ram:a00c55c8": {
-      "by": "h53",
+      "by": "hand",
       "comment": "collects the b3..b8 bytes of three DAT_a8078bb0 records into summary bytes and writes them with a counter through the ROM register calls",
       "name": "FUN_a00c55c8",
       "status": "matched"
@@ -7147,7 +7147,7 @@
       "status": "matched"
     },
     "ram:a00c5f18": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Updates bit param_1 of DAT_a8078c58, ORs a bit into DAT_a80788d2 and calls FUN_a00c5da8 when the bit changed; then FUN_a00c5d34",
       "name": "FUN_a00c5f18",
       "status": "matched"
@@ -7183,7 +7183,7 @@
       "status": "matched"
     },
     "ram:a00c76c0": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Sets or clears mask bits in the 8-bit register at ((DAT_9f1c1ec8[idx] + reg) << 2) | 0xcf000000",
       "name": "FUN_a00c76c0",
       "status": "matched"
@@ -7207,7 +7207,7 @@
       "status": "matched"
     },
     "ram:a00c7a4c": {
-      "by": "h43",
+      "by": "hand",
       "comment": "initialises the 24-byte record DAT_a8078bb0[port] (bit-fields and bytes), optionally clearing bytes 3..8",
       "name": "FUN_a00c7a4c",
       "status": "matched"
@@ -7255,7 +7255,7 @@
       "status": "matched"
     },
     "ram:a00c8048": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Writes registers 0xed..0xf3 of port from a, b and n; returns 1 when n is 0",
       "name": "FUN_a00c8048",
       "status": "matched"
@@ -7267,7 +7267,7 @@
       "status": "matched"
     },
     "ram:a00c81f8": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Reads n bytes of port in blocks of 16 through FUN_a00c7fec after polling register 0xf5",
       "name": "FUN_a00c81f8",
       "status": "matched"
@@ -7291,13 +7291,13 @@
       "status": "matched"
     },
     "ram:a00c8444": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Sets or clears bit 4 of register 0xf and bit 3 of register 0xcc of port by bit 28 of DAT_a8078bb0[port]",
       "name": "FUN_a00c8444",
       "status": "matched"
     },
     "ram:a00c850c": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Writes 5 bytes read by FUN_a00c81f8 to registers 0x10..0x14 of port and returns 0x78 when FUN_a00c83e4 reports 0",
       "name": "FUN_a00c850c",
       "status": "matched"
@@ -7321,7 +7321,7 @@
       "status": "matched"
     },
     "ram:a00c86bc": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Reads bytes 0x1d..0x21 of port into a buffer and passes them to FUN_a00c80f0(port, buf, 0x74, 0x10, 5)",
       "name": "FUN_a00c86bc",
       "status": "matched"
@@ -7339,7 +7339,7 @@
       "status": "matched"
     },
     "ram:a00c8824": {
-      "by": "h43",
+      "by": "hand",
       "comment": "reads len bytes with FUN_a00c81f8 and forwards them byte by byte through func_0xa0fb65c4/FUN_a00c7654",
       "name": "FUN_a00c8824",
       "status": "matched"
@@ -7363,19 +7363,19 @@
       "status": "matched"
     },
     "ram:a00c8b18": {
-      "by": "h43",
+      "by": "hand",
       "comment": "compares two bytes from FUN_a00c8760 with registers 0x22/0x23 and sets the record state and counter fields",
       "name": "FUN_a00c8b18",
       "status": "matched"
     },
     "ram:a00c8c64": {
-      "by": "h53",
+      "by": "hand",
       "comment": "reads a two-byte header into the DAT_a8078bb0 record, programs registers through func_0xa0fb65c4 and copies 20 read-back bytes to DAT_a807d238",
       "name": "FUN_a00c8c64",
       "status": "matched"
     },
     "ram:a00c90b4": {
-      "by": "h43",
+      "by": "hand",
       "comment": "reads 20 bytes with FUN_a00c81f8 and compares them group-reversed with DAT_a807d238, setting the record state field",
       "name": "FUN_a00c90b4",
       "status": "matched"
@@ -7423,7 +7423,7 @@
       "status": "matched"
     },
     "ram:a00c9810": {
-      "by": "h43",
+      "by": "hand",
       "comment": "reads len bytes in 16-byte blocks after a count poll and splits them between p and DAT_a807cf08 by index",
       "name": "FUN_a00c9810",
       "status": "matched"
@@ -7483,13 +7483,13 @@
       "status": "matched"
     },
     "ram:a00ca130": {
-      "by": "h53",
+      "by": "hand",
       "comment": "runs the 0xcf018e00 register transfer sequence for a port with debug prints of every byte",
       "name": "FUN_a00ca130",
       "status": "matched"
     },
     "ram:a00cad8c": {
-      "by": "h43",
+      "by": "hand",
       "comment": "checks the DAT_a807d250 header, retries FUN_a00c2488 up to 30 times and passes DAT_a807ce50 to FUN_a00c80f0",
       "name": "FUN_a00cad8c",
       "status": "matched"
@@ -7507,25 +7507,25 @@
       "status": "matched"
     },
     "ram:a00cb3e8": {
-      "by": "h43",
+      "by": "hand",
       "comment": "fills DAT_a807ce50 with 9,1..8, writes it with FUN_a00c7654/FUN_a00c80f0 and polls register 6 bit 7",
       "name": "FUN_a00cb3e8",
       "status": "matched"
     },
     "ram:a00cbb50": {
-      "by": "h45",
+      "by": "hand",
       "comment": "port record update from DAT_a807d250/DAT_a807ce50 bytes with register writes",
       "name": "FUN_a00cbb50",
       "status": "matched"
     },
     "ram:a00cc1d4": {
-      "by": "h43",
+      "by": "hand",
       "comment": "sets the record state field, reads 16 bytes with FUN_a00c7770 and sends them with FUN_a00c80f0",
       "name": "FUN_a00cc1d4",
       "status": "matched"
     },
     "ram:a00cc834": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Sets or clears bit 1 of an indexed register for port 2, else calls FUN_a00c76c0(port, 4, 0x10, on)",
       "name": "FUN_a00cc834",
       "status": "matched"
@@ -7573,7 +7573,7 @@
       "status": "matched"
     },
     "ram:a00ccdb4": {
-      "by": "h43",
+      "by": "hand",
       "comment": "runs a sequence of port checks with stack buffers, setting the record state field to 3 on the first failure",
       "name": "FUN_a00ccdb4",
       "status": "matched"
@@ -7591,7 +7591,7 @@
       "status": "matched"
     },
     "ram:a00cd5e4": {
-      "by": "h53",
+      "by": "hand",
       "comment": "reads a two-byte header and a data block through func_0xa0f96400, writes them to hardware registers and compares the read-back bytes, updating the DAT_a8078bb0 record state",
       "name": "FUN_a00cd5e4",
       "status": "matched"
@@ -7609,13 +7609,13 @@
       "status": "matched"
     },
     "ram:a00cdcdc": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Sets field st of DAT_a8078bb0[port]; compares two 32-byte arrays and calls FUN_a00c79c8 or three 0x400 routines",
       "name": "FUN_a00cdcdc",
       "status": "matched"
     },
     "ram:a00cdde0": {
-      "by": "h23",
+      "by": "hand",
       "comment": "sets the record field to 1, polls FUN_a00c2488 up to 30 times, then writes DAT_a807ce50 in 16 groups of 8 bytes to 0x69220..",
       "name": "FUN_a00cdde0",
       "status": "matched"
@@ -7705,7 +7705,7 @@
       "status": "matched"
     },
     "ram:a00d12e4": {
-      "by": "h53",
+      "by": "hand",
       "comment": "checks and updates the state fields of the DAT_a8078bb0 record of a port and calls the per-port handlers",
       "name": "FUN_a00d12e4",
       "status": "matched"
@@ -7755,7 +7755,7 @@
       "status": "matched"
     },
     "ram:a00d24ac": {
-      "by": "h43",
+      "by": "hand",
       "comment": "writes nine table words into fields of registers 0xd0013f18-0xd0013f28 through the ROM read-modify-write helpers",
       "name": "FUN_a00d24ac",
       "status": "matched"
@@ -7785,7 +7785,7 @@
       "status": "matched"
     },
     "ram:a00d2b88": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Copies three changed values into their stored copies and returns 1 when any changed or a state byte is set",
       "name": "FUN_a00d2b88",
       "status": "matched"
@@ -7905,7 +7905,7 @@
       "status": "matched"
     },
     "ram:a00d6724": {
-      "by": "h43",
+      "by": "hand",
       "comment": "unpacks a nibble-packed record into a 24-byte buffer and copies two bytes of bit-fields after it",
       "name": "FUN_a00d6724",
       "status": "matched"
@@ -7917,7 +7917,7 @@
       "status": "matched"
     },
     "ram:a00d6a54": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Copies the n bytes produced by FUN_a00d68cc into one of two table entries selected by type 1 or 3",
       "name": "FUN_a00d6a54",
       "status": "matched"
@@ -7953,7 +7953,7 @@
       "status": "matched"
     },
     "ram:a00d6e94": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Unpacks bytes of src at an offset from its high nibble into bit-fields, a word, a count and a byte array of o",
       "name": "FUN_a00d6e94",
       "status": "matched"
@@ -7983,13 +7983,13 @@
       "status": "matched"
     },
     "ram:a00d73b4": {
-      "by": "h43",
+      "by": "hand",
       "comment": "tail-calls one of twelve functions with (out, FUN_a00d66bc(a, b)) by a type code",
       "name": "FUN_a00d73b4",
       "status": "matched"
     },
     "ram:a00d74ec": {
-      "by": "h43",
+      "by": "hand",
       "comment": "packs a header, 16 bytes and up to 15 variable-length 20-byte entries into a byte stream",
       "name": "FUN_a00d74ec",
       "status": "matched"
@@ -8079,7 +8079,7 @@
       "status": "matched"
     },
     "ram:a00d7e6c": {
-      "by": "h53",
+      "by": "hand",
       "comment": "builds a 120-byte record message from register values and func_0xa0f96400 reads and sends it with FUN_a00d791c",
       "name": "FUN_a00d7e6c",
       "status": "matched"
@@ -8121,7 +8121,7 @@
       "status": "matched"
     },
     "ram:a00d9524": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Copies a 0x13-byte message from src, rewrites its 4-bit header fields and bits of word 4, passes it to FUN_a00d6a54(&m, 1, 1)",
       "name": "FUN_a00d9524",
       "status": "matched"
@@ -8145,7 +8145,7 @@
       "status": "matched"
     },
     "ram:a00d9a78": {
-      "by": "h43",
+      "by": "hand",
       "comment": "builds a message with FUN_a00d6a54, appends a FUN_a00d9988 result pair to the current ARR_a807a520 row and steps the row index",
       "name": "FUN_a00d9a78",
       "status": "matched"
@@ -8175,13 +8175,13 @@
       "status": "matched"
     },
     "ram:a00d9edc": {
-      "by": "h43",
+      "by": "hand",
       "comment": "sets three bit-fields in a buffer built from the current 11-byte record and copies the result to a register block",
       "name": "FUN_a00d9edc",
       "status": "matched"
     },
     "ram:a00da388": {
-      "by": "h43",
+      "by": "hand",
       "comment": "steps a 4-bit table index, updates per-index counters and clears bit 4 or 5 of register word 0xccc",
       "name": "FUN_a00da388",
       "status": "matched"
@@ -8193,7 +8193,7 @@
       "status": "matched"
     },
     "ram:a00da838": {
-      "by": "h43",
+      "by": "hand",
       "comment": "copies the bytes after a computed offset of the current 0x30-byte record to a register block, one byte per word",
       "name": "FUN_a00da838",
       "status": "matched"
@@ -8205,13 +8205,13 @@
       "status": "matched"
     },
     "ram:a00da9e8": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Compares a table byte selected by the nibbles of record byte 0 with a record byte; returns 1 when they differ and lo < hi",
       "name": "FUN_a00da9e8",
       "status": "matched"
     },
     "ram:a00daa98": {
-      "by": "h43",
+      "by": "hand",
       "comment": "processes the current 0x30-byte record through FUN_a00d6724/FUN_a00da6ac/FUN_a00da838 and steps the record index",
       "name": "FUN_a00daa98",
       "status": "matched"
@@ -8229,7 +8229,7 @@
       "status": "matched"
     },
     "ram:a00db9d4": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Builds a cleared stack message with fixed header bit-fields and passes it to FUN_a00d6a54(&m, 1, 1)",
       "name": "FUN_a00db9d4",
       "status": "matched"
@@ -8247,7 +8247,7 @@
       "status": "matched"
     },
     "ram:a00dbf24": {
-      "by": "h17",
+      "by": "hand",
       "comment": "Sums the fill counts of four 16-entry ring index pairs into DAT_a807883e when DAT_a8078832 is 0",
       "name": "FUN_a00dbf24",
       "status": "matched"
