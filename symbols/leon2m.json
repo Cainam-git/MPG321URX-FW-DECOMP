@@ -5578,6 +5578,13 @@
       "name": "FUN_a00ad02c",
       "status": "matched"
     },
+    "ram:a00ad1c0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "cell loop, then table DAT_001874f8 rows to FUN_a00a31a4 with FUN_a00aa520-gated FUN_a0146a80 markers by mode, FUN_a00b32e4 and the mode 0/1 follow-up calls",
+      "name": "FUN_a00ad1c0",
+      "status": "matched"
+    },
     "ram:a00ad460": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
