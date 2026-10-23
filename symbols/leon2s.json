@@ -1578,6 +1578,12 @@
       "name": "FUN_a0060ff0",
       "status": "matched"
     },
+    "ram:a006102c": {
+      "by": "h42",
+      "comment": "calls the function pointers DAT_a8079378[0..1] for pending bits of 0x9f12009c and acknowledges them, with bit 12 set-up around the loop",
+      "name": "FUN_a006102c",
+      "status": "matched"
+    },
     "ram:a006122c": {
       "by": "hand",
       "comment": "wait (max 0xfffff polls) for bit 5 of status reg c00c0014, then data reg c00c0000 = c",
