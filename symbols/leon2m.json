@@ -7033,6 +7033,12 @@
       "name": "FUN_a00bf110",
       "status": "matched"
     },
+    "ram:a00bf2c8": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a00bf2c8",
+      "status": "matched"
+    },
     "ram:a00bf2d0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
