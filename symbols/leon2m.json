@@ -5316,6 +5316,13 @@
       "name": "FUN_a00a86e8",
       "status": "matched"
     },
+    "ram:a00a87cc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "passes 7 entries (row n of 7) or entry 0x1c of table DAT_0018d3d4 to FUN_a00a31a4, then FUN_a00b32e4(1, 1, 0x792, 0x2d, 0x15, 2, 0x28)",
+      "name": "FUN_a00a87cc",
+      "status": "matched"
+    },
     "ram:a00a89e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
