@@ -2682,6 +2682,12 @@
       "name": "FUN_a00883d0",
       "status": "matched"
     },
+    "ram:a008899c": {
+      "by": "h42",
+      "comment": "returns 1 or 2 from bits 0 and 1 of FUN_a0083710(port) for ports 0-4, else 0",
+      "name": "FUN_a008899c",
+      "status": "matched"
+    },
     "ram:a0088a80": {
       "by": "hand",
       "comment": "Port 0..4: returns 1 when bit 2 of the FUN_a0083710 status byte is set",
