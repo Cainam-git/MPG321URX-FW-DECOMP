@@ -928,7 +928,8 @@
     },
     "CODE:a57e": {
       "by": "hand",
-      "comment": "index step on the 3-byte table at 0xA62F from the FUN_CODE_d94a count, returns FUN_CODE_52be result",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "index step on the 3-byte table at 0xA62F from the FUN_CODE_d94a count, LARGE local result",
       "name": "FUN_CODE_a57e",
       "status": "matched"
     },
