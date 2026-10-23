@@ -1,5 +1,6 @@
 /* leon2s FUN_a00858f0 @ 0xa00858f0 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Returns byte +1 of the 40-byte record (p & 0xff) at 0xA807A928.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern unsigned char ARR_a807a928[];
 

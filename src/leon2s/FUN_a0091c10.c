@@ -1,5 +1,6 @@
 /* leon2s FUN_a0091c10 @ 0xa0091c10 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Returns bit 7 of word 0 of the 0x1C-byte record (p & 0xff) at 0xA807D580.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

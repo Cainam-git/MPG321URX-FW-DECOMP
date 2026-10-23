@@ -1,5 +1,6 @@
 /* leon2s FUN_a00b035c @ 0xa00b035c (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Returns the address 0xA807DCF7 + 300 * (p & 0xff) (byte +0xdf of the 300-byte record p at 0xA807DC18).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

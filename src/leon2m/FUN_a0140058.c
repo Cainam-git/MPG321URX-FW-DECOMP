@@ -1,5 +1,6 @@
 /* leon2m FUN_a0140058 @ 0xa0140058 (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Returns bit 9 of the first halfword of the 0x2A-byte record (p & 0xff) at 0xA802E224.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

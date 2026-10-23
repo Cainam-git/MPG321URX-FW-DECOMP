@@ -1,5 +1,6 @@
 /* leon2s FUN_a00d9e44 @ 0xa00d9e44 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Returns byte DAT_a8078838[byte 0xA8078832].
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

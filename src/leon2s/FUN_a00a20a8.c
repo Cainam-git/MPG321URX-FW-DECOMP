@@ -1,5 +1,6 @@
 /* leon2s FUN_a00a20a8 @ 0xa00a20a8 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Returns byte +1 of the 0xB0-byte record (p & 0xff) at 0xA807D680.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern unsigned char DAT_a807d680[];
 

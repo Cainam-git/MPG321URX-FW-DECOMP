@@ -872,7 +872,7 @@
     },
     "ram:a00608f0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "empty function (returns at once)",
       "name": "FUN_a00608f0",
       "status": "matched"
     },
@@ -1010,7 +1010,7 @@
     },
     "ram:a0060a50": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "empty function (returns at once)",
       "name": "FUN_a0060a50",
       "status": "matched"
     },
@@ -1424,7 +1424,7 @@
     },
     "ram:a0060e70": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "empty function (returns at once)",
       "name": "FUN_a0060e70",
       "status": "matched"
     },
@@ -1948,25 +1948,25 @@
     },
     "ram:a006ffb4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns (byte 0xA80788D4) & 8",
       "name": "FUN_a006ffb4",
       "status": "matched"
     },
     "ram:a006ffc4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns (byte 0xA80788D4) & 0x10",
       "name": "FUN_a006ffc4",
       "status": "matched"
     },
     "ram:a006ffd4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns (byte 0xA80788D4) & 0x20",
       "name": "FUN_a006ffd4",
       "status": "matched"
     },
     "ram:a006ffe4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns (byte 0xA80788D4) & 0x40",
       "name": "FUN_a006ffe4",
       "status": "matched"
     },
@@ -1990,19 +1990,19 @@
     },
     "ram:a0070404": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns (byte 0xA80788D4) & 1",
       "name": "FUN_a0070404",
       "status": "matched"
     },
     "ram:a0070414": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns (byte 0xA80788D4) & 2",
       "name": "FUN_a0070414",
       "status": "matched"
     },
     "ram:a0070424": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns (byte 0xA80788D4) & 4",
       "name": "FUN_a0070424",
       "status": "matched"
     },
@@ -2214,7 +2214,7 @@
     },
     "ram:a007517c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns byte 0xA8078978[(p1 & 0xff)]",
       "name": "FUN_a007517c",
       "status": "matched"
     },
@@ -2647,7 +2647,7 @@
     },
     "ram:a00858f0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns byte +1 of the 40-byte record p at 0xA807A928",
       "name": "FUN_a00858f0",
       "status": "matched"
     },
@@ -2743,7 +2743,7 @@
     },
     "ram:a00866a4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns (word 0xA807A928) >> 0x1d & 1",
       "name": "FUN_a00866a4",
       "status": "matched"
     },
@@ -2948,13 +2948,13 @@
     },
     "ram:a0089420": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns 0",
       "name": "FUN_a0089420",
       "status": "matched"
     },
     "ram:a0089750": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns 1",
       "name": "FUN_a0089750",
       "status": "matched"
     },
@@ -2996,7 +2996,7 @@
     },
     "ram:a0089f84": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns byte 0xA8076690[(p1 & 0xff)]",
       "name": "FUN_a0089f84",
       "status": "matched"
     },
@@ -3297,7 +3297,7 @@
     },
     "ram:a008d8d8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns 1",
       "name": "FUN_a008d8d8",
       "status": "matched"
     },
@@ -3908,7 +3908,7 @@
     },
     "ram:a0091960": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns bit 4 of word 0 of the 0x1C-byte record p at 0xA807D580",
       "name": "FUN_a0091960",
       "status": "matched"
     },
@@ -3980,13 +3980,13 @@
     },
     "ram:a0091be8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns bit 6 of word 0 of the 0x1C-byte record p at 0xA807D580",
       "name": "FUN_a0091be8",
       "status": "matched"
     },
     "ram:a0091c10": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns bit 7 of word 0 of the 0x1C-byte record p at 0xA807D580",
       "name": "FUN_a0091c10",
       "status": "matched"
     },
@@ -3999,7 +3999,7 @@
     },
     "ram:a0091c5c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns bit 30 of word 0 of the 0x1C-byte record p at 0xA807D580",
       "name": "FUN_a0091c5c",
       "status": "matched"
     },
@@ -4275,7 +4275,7 @@
     },
     "ram:a0095c9c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "empty function (returns at once)",
       "name": "FUN_a0095c9c",
       "status": "matched"
     },
@@ -4323,7 +4323,7 @@
     },
     "ram:a0096300": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "empty function (returns at once)",
       "name": "FUN_a0096300",
       "status": "matched"
     },
@@ -4703,13 +4703,13 @@
     },
     "ram:a00a0558": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "empty function (returns at once)",
       "name": "FUN_a00a0558",
       "status": "matched"
     },
     "ram:a00a0560": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "empty function (returns at once)",
       "name": "FUN_a00a0560",
       "status": "matched"
     },
@@ -4889,7 +4889,7 @@
     },
     "ram:a00a20a8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns byte +1 of the 0xB0-byte record p at 0xA807D680",
       "name": "FUN_a00a20a8",
       "status": "matched"
     },
@@ -5089,7 +5089,7 @@
     },
     "ram:a00a29d8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns byte 0xA80790A8[(p1 & 0xff)]",
       "name": "FUN_a00a29d8",
       "status": "matched"
     },
@@ -5531,7 +5531,7 @@
     },
     "ram:a00a7408": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns bit p1 of the bit array at p2 (word p1 >> 5, bit p1 & 31)",
       "name": "FUN_a00a7408",
       "status": "matched"
     },
@@ -5803,13 +5803,13 @@
     },
     "ram:a00aa7bc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns 0",
       "name": "FUN_a00aa7bc",
       "status": "matched"
     },
     "ram:a00aa7c4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns 0",
       "name": "FUN_a00aa7c4",
       "status": "matched"
     },
@@ -5906,13 +5906,13 @@
     },
     "ram:a00abb20": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "empty function (returns at once)",
       "name": "FUN_a00abb20",
       "status": "matched"
     },
     "ram:a00abb28": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "empty function (returns at once)",
       "name": "FUN_a00abb28",
       "status": "matched"
     },
@@ -6472,7 +6472,7 @@
     },
     "ram:a00b02f0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns the address of byte +0xb8 of the 300-byte record p at 0xA807DC18",
       "name": "FUN_a00b02f0",
       "status": "matched"
     },
@@ -6499,7 +6499,7 @@
     },
     "ram:a00b035c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns the address of byte +0xdf of the 300-byte record p at 0xA807DC18",
       "name": "FUN_a00b035c",
       "status": "matched"
     },
@@ -6640,7 +6640,7 @@
     },
     "ram:a00b12c4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns 0",
       "name": "FUN_a00b12c4",
       "status": "matched"
     },
@@ -6852,7 +6852,7 @@
     },
     "ram:a00b2064": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns (word 0xA80793A8)",
       "name": "FUN_a00b2064",
       "status": "matched"
     },
@@ -6888,7 +6888,7 @@
     },
     "ram:a00b22fc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns *p",
       "name": "FUN_a00b22fc",
       "status": "matched"
     },
@@ -7364,7 +7364,7 @@
     },
     "ram:a00c9368": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns 1",
       "name": "FUN_a00c9368",
       "status": "matched"
     },
@@ -7822,7 +7822,7 @@
     },
     "ram:a00d36e4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns (p2 * (0x100 - p3) + p1 * p3 + 0x80) >> 8",
       "name": "FUN_a00d36e4",
       "status": "matched"
     },
@@ -8134,7 +8134,7 @@
     },
     "ram:a00d9e44": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns byte 0xA8078838[byte 0xA8078832]",
       "name": "FUN_a00d9e44",
       "status": "matched"
     },
@@ -8188,13 +8188,13 @@
     },
     "ram:a00dabf8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns 3000",
       "name": "FUN_a00dabf8",
       "status": "matched"
     },
     "ram:a00dac00": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns 3000",
       "name": "FUN_a00dac00",
       "status": "matched"
     },
