@@ -2735,6 +2735,12 @@
       "name": "FUN_a00866b8",
       "status": "matched"
     },
+    "ram:a00866e0": {
+      "by": "h42",
+      "comment": "fills the 6-byte records ARR_a807cd2e[lo..hi] from DAT_a807cd00 and two FUN_a0086400 reads",
+      "name": "FUN_a00866e0",
+      "status": "matched"
+    },
     "ram:a0086bd8": {
       "by": "hand",
       "comment": "u8 result from hw reg cf013000 (see header)",
