@@ -117,6 +117,9 @@ symbol names are not allowed.
 - **Bit-fields instead of masks** for flags in a byte or halfword (big-endian: the first field is the most
   significant bit).
 - **Register tables** read through pointer arrays: try `volatile T *const TAB[N]`.
+- **`unsigned long` versus `unsigned int`** for a 32-bit global or register pointer puts the accesses in a different
+  alias set; when two access forms are mixed in one function, switching one of them to `long` changes scheduling and
+  register ties (FUN_a011c4cc, DRV_HDMI_EQScan_FSM_PHY_PLL).
 - **Narrowing a callee's return type** is only correct when the value really fits. Read the callee's return path first.
 - **A fresh `and %i0,0xff` for one use of a byte parameter** (instead of reusing the masked register) means that use
   reads an `unsigned short` copy: `unsigned short k = port; ... (unsigned char)k`, sometimes with the parameter itself
