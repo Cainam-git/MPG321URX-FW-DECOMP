@@ -1,4 +1,8 @@
 /* leon2s FUN_a0091cf4 @ 0xa0091cf4 (-mcpu=v8 -Os -g)
+ * p = p1 & 0xff. When the low byte of the ROM call func_0x9f1b7bf8(p1) is 0: b = bit 0 of FUN_a00a7fd8(p, 0, 0x27);
+ * func_0x9f1b8a1c(p, 0); the byte p3 is stored in a 1-byte stack buffer and passed as func_0x9f1b80f0(p, buf, 0xa8,
+ * p2 & 0xff, 1); then func_0x9f1b8a1c(p, b). Otherwise nothing.
+ * Source form: b goes through a char local masked with 1 again before the last call (keeps the and 1 of the firmware).
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;
@@ -34,5 +38,4 @@ void FUN_a0091cf4(unsigned char param_1, char param_2,undefined1 param_3)
     t21_ = t21_ & 1;
     func_0x9f1b8a1c(uVar2, t21_);
   }
-  return 0;
 }

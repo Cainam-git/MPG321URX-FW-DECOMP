@@ -3992,8 +3992,8 @@
       "status": "matched"
     },
     "ram:a0091cf4": {
-      "by": "permuter",
-      "comment": "permuter: [walk]; param param_2 char; temp arg func_0x9f1b8a1c#1; void -> int, return 0; split t21_#1; callee func_0x9f1b80f0 unsigned char; local t21_ char; return void",
+      "by": "h49",
+      "comment": "when func_0x9f1b7bf8(p) is 0: func_0x9f1b8a1c(p, 0), func_0x9f1b80f0(p, {p3}, 0xa8, p2, 1), func_0x9f1b8a1c(p, bit 0 of register 0x27)",
       "name": "FUN_a0091cf4",
       "status": "matched"
     },
