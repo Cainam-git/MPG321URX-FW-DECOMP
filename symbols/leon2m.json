@@ -7666,6 +7666,13 @@
       "name": "FUN_a00d5da4",
       "status": "matched"
     },
+    "ram:a00d5e0c": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "FUN_a0148fc0(1/2/3/0 by bits 12..15 of word 0xa802d2c4)",
+      "name": "FUN_a00d5e0c",
+      "status": "matched"
+    },
     "ram:a00d5e84": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
