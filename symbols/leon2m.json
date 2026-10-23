@@ -16778,6 +16778,13 @@
       "name": "FUN_a014ba68",
       "status": "matched"
     },
+    "ram:a014bac4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "dispatches setting id 0..18 to its setter function with v",
+      "name": "FUN_a014bac4",
+      "status": "matched"
+    },
     "ram:a014bc58": {
       "by": "hand",
       "comment": "word 0xA802E408 = p; FUN_a0150120(0,0) / (1,0) / (1,1) for p 0 / 1 / 2-3",
