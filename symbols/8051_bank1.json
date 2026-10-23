@@ -837,6 +837,13 @@
       "name": "FUN_CODE_7ca8",
       "status": "matched"
     },
+    "CODE:8731": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "29 byte writes into the register block at the XDATA 0xA76D pointer, byte 0x10 from bits 1 and 2 of 0xA677",
+      "name": "FUN_CODE_8731",
+      "status": "matched"
+    },
     "CODE:883d": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
