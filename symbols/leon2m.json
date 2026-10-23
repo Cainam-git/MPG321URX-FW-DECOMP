@@ -13796,6 +13796,12 @@
       "name": "FUN_a0125c54",
       "status": "matched"
     },
+    "ram:a0125c6c": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a0125c6c",
+      "status": "matched"
+    },
     "ram:a0125c74": {
       "by": "autoc",
       "comment": "empty function (returns at once)",
