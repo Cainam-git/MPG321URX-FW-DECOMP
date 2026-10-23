@@ -2345,6 +2345,12 @@
       "name": "FUN_a007ebd0",
       "status": "matched"
     },
+    "ram:a007ec30": {
+      "by": "hand",
+      "comment": "calls FUN_a00a73ac or FUN_a00a73d4 for bits 0x10/0x12 by the low bytes of a and b, or FUN_a00a67b8 twice when FUN_a0073520(port) is 0",
+      "name": "FUN_a007ec30",
+      "status": "matched"
+    },
     "ram:a007ed0c": {
       "by": "hand",
       "comment": "sets or clears bit 0x11 of record (port != 2) of ARR_a807db00 when FUN_a0073520(port), else FUN_a00a67b8(port, 0x2f6, 2, on)",
