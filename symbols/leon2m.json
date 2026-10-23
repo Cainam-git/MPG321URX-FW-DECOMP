@@ -7620,6 +7620,12 @@
       "name": "FUN_a00d57e8",
       "status": "matched"
     },
+    "ram:a00d58b0": {
+      "by": "h40",
+      "comment": "FUN_a0087a14(byte 0xa802d2aa limited to 4)",
+      "name": "FUN_a00d58b0",
+      "status": "matched"
+    },
     "ram:a00d58d8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
