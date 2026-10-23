@@ -1,5 +1,6 @@
 /* leon2m FUN_a00dd628 @ 0xa00dd628 (-mcpu=v8 -O2 -g)
- * 
+ * FUN_a01393f0(p1 & 0xff, p2 & 0xff, (u16)p3), then prints "[DBG] Tensilica Cmd: 0x%02X_%02X_%04X" (0x198c30)
+ * with p1, p2, p3 through FUN_a00df170.
  */
 extern int FUN_a01393f0(unsigned int, unsigned int, unsigned short);
 extern int FUN_a00df170();

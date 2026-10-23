@@ -1,4 +1,5 @@
 /* leon2m FUN_a0124f64 @ 0xa0124f64 (-mcpu=v8 -O2)
+ * Returns byte 0 of the 4-byte entry (p & 0xff) of the table at 0x1a4288.
  */
 extern unsigned char DAT_001a4288[]; /* at 0x1a4288 */
 

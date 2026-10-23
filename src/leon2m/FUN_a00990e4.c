@@ -1,5 +1,6 @@
 /* leon2m FUN_a00990e4 @ 0xa00990e4 (-mcpu=v8 -O2 -g)
- * 
+ * FUN_a00a93bc(byte 0xA8025C56); FUN_a00a813c(1, byte 0xA8025C56, 0); with b = bit 15 of word 0xA802D290 + 0xa8:
+ * FUN_a00a9650(b, 0) and FUN_a00a813c(1, b, 1); word 0xA802AFEC = 0x2e; FUN_a00a900c(4, 1); byte 0xA802B08E |= 2.
  */
 // FUN_a00990e4 at 0xa00990e4
 extern unsigned char DAT_a8025c56; // 0xa8025c56

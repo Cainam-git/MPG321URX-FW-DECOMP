@@ -1,4 +1,6 @@
 /* leon2m FUN_a00d2334 @ 0xa00d2334 (-mcpu=v8 -O2 -g)
+ * Copies the 13 bytes src[6..18] (src = p) to bytes 3..15 of the record at 0xA802D274, then
+ * FUN_a014aed0(0x30, 0xA802D274, 0x2e0, 0x1c); returns 0xe0.
  */
 
 extern int FUN_a014aed0(int, unsigned int *, int, int);

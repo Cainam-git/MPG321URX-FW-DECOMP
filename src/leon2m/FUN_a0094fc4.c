@@ -1,5 +1,7 @@
 /* leon2m FUN_a0094fc4 @ 0xa0094fc4 (-mcpu=v8 -O2 -g)
- * 
+ * Byte 0xA802B08F = 0xf; FUN_a00a8c88(); FUN_a00a86e8(); word 0xA802AFEC = 0x7c; FUN_a00a9650(2, 1);
+ * byte 0xA8025C55 = byte 0xA802D434; byte 0xA802B08E |= 2. Returns its first argument unchanged.
+ * Same sequence as FUN_a00953d4 with 0x7c / (2, 1) instead of 0x7b / (1, 1).
  */
 extern unsigned char DAT_a8025c55;
 extern unsigned char DAT_a802b08e;

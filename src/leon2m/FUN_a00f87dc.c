@@ -1,4 +1,7 @@
 /* leon2m FUN_a00f87dc @ 0xa00f87dc (-mcpu=v8 -O3 -g)
+ * Clears the eight halfwords DAT_a802b7d8[0..7], then writes block 8 registers: FUN_a00f1ad4(8, 0x42, 0), (8, 6, 0);
+ * FUN_a00f1d48(8, 0xc, 0x20), (8, 0xe, 0), (8, 0x10, 0x1e0), (8, 0x12, 0x88), (8, 0x14, 0x280); FUN_a00f1ad4(8, 0x16, 0),
+ * (8, 0, 0xa1), (8, 3, 0x80).
  */
 extern unsigned short DAT_a802b7d8[];                 /* 0xa802b7d8 */
 extern void FUN_a00f1ad4(int, int, int);       /* 0xa00f1ad4 */

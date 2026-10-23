@@ -1,4 +1,8 @@
 /* leon2m FUN_a00a8ee8 @ 0xa00a8ee8 (-mcpu=v8 -O3 -g)
+ * v = (2 * p - 9) & 0xff when p > 6, else (2 * p + 5) & 0xff. func_0x4008e2a4(); FUN_a0146a80(0x14, v, 0x11, 0x792, 0) and
+ * (0x14, v + 2, ...); FUN_a0146b20(0, 0x14, v, 0x11, 0, 0) and (0, 0x14, v + 2, 0x11, 0, 0); FUN_a00b3ed0(0, 0, 0, 0);
+ * func_0x4008e2a4(); FUN_a0146a80(0x14, v + 1, 0x11, 0x792, 0); FUN_a00b32e4(0, 0, 0x792, 0x13, v, 3, 0) and
+ * FUN_a00b32e4(0, 0, 0x792, 0x25, v, 3, 0).
  */
 extern void func_0x4008e2a4(void);                          // 0x4008e2a4
 extern void FUN_a0146a80(unsigned short, unsigned short, unsigned char, unsigned short, unsigned char); // 0xa0146a80

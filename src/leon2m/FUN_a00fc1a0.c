@@ -1,5 +1,6 @@
 /* leon2m FUN_a00fc1a0 @ 0xa00fc1a0 (-mcpu=v8 -O2 -g)
- * 
+ * Saves register 0xD0040000, writes it back with bit 29 set, calls FUN_4008d1a0(5) and restores the saved value.
+ * volatile: hardware register.
  */
 extern int FUN_4008d1a0(int, ...);
 

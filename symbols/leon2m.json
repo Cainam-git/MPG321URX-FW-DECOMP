@@ -2955,7 +2955,7 @@
     "ram:a0093694": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "",
+      "comment": "byte 0xA802D290+0x1a0: FUN_a00a813c(1, b + 1, 0), copy to 0xA8025C56, FUN_a00a900c(afec - 14, 2), afec = b + 0x57, FUN_a00a9650(b + 1, 1)",
       "name": "FUN_a0093694",
       "status": "matched"
     },
@@ -3069,7 +3069,7 @@
     "ram:a00943a4": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "byte 0xA8025C55 = byte 0xA802D290+0x13e, word 0xA802AFEC = 0x108, byte +0x1a3 = 0, FUN_a00b5080, func_0x4008e2a4 twice, FUN_a00a6b98(0, 1, 0)",
       "name": "FUN_a00943a4",
       "status": "matched"
     },
@@ -3146,7 +3146,7 @@
     "ram:a0094fc4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "",
+      "comment": "byte 0xA802B08F = 0xf, FUN_a00a8c88, FUN_a00a86e8, word 0xA802AFEC = 0x7c, FUN_a00a9650(2, 1), byte 0xA8025C55 = byte 0xA802D434, byte 0xA802B08E |= 2; returns p1",
       "name": "FUN_a0094fc4",
       "status": "matched"
     },
@@ -3237,7 +3237,7 @@
     "ram:a0095704": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "",
+      "comment": "FUN_a00a8c88, FUN_a00a82c4, byte 0xA802D40B = byte 0xA8025C55, FUN_a00ba184(1), word 0xA802AFEC = 0x40, FUN_a00a9650(1, 1), FUN_a00a9468(1, 2), FUN_a00b34d4(0, 1), byte 0xA802B08E |= 2",
       "name": "FUN_a0095704",
       "status": "matched"
     },
@@ -3760,7 +3760,7 @@
     "ram:a00990e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "",
+      "comment": "FUN_a00a93bc / FUN_a00a813c with byte 0xA8025C56, FUN_a00a9650 / FUN_a00a813c with bit 15 of word 0xA802D338, word 0xA802AFEC = 0x2e, FUN_a00a900c(4, 1), byte 0xA802B08E |= 2",
       "name": "FUN_a00990e4",
       "status": "matched"
     },
@@ -4001,7 +4001,7 @@
     "ram:a009a324": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "",
+      "comment": "FUN_a00a93bc(byte 0xA802D470), FUN_a00af44c(0x34, 3), word 0xA802AFEC = 0xbd, FUN_a00a9650(2, 1), byte 0xA8025C55 = 0, FUN_a00dab20, byte 0xA802B08E |= 2",
       "name": "FUN_a009a324",
       "status": "matched"
     },
@@ -5098,7 +5098,7 @@
     "ram:a00a5420": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "v = 2 * i0 - 8 (i0 > 6) or + 6; three rounds of FUN_a0146a80(0x22, v, 3, 0x742 / 0x542, 0) and FUN_a0146b20(0, j + 0x22, v, 1, j + 0x37 / 0x34, 0) by i1",
       "name": "FUN_a00a5420",
       "status": "matched"
     },
@@ -5207,7 +5207,7 @@
     "ram:a00a8ee8": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: [walk]; return unsigned int; param param_1 unsigned int; sink uVar2 into arms; return void; param param_1 unsigned char",
+      "comment": "v = 2 * p - 9 (p > 6) or + 5; FUN_a0146a80 / FUN_a0146b20 at rows v and v + 2, FUN_a00b3ed0, FUN_a0146a80 at v + 1, two FUN_a00b32e4 calls (0x13, 0x25)",
       "name": "FUN_a00a8ee8",
       "status": "matched"
     },
@@ -5249,7 +5249,7 @@
     "ram:a00a9f30": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "v = 2 * p1 - 8 (p1 > 6) or + 6; three rounds of FUN_a0146a80(0x22, v, 3, 0x792 / 0x592, 0) and FUN_a0146b20(0, j + 0x22, v, 1, j + 0x37 / 0x34, 0) by p2",
       "name": "FUN_a00a9f30",
       "status": "matched"
     },
@@ -5406,7 +5406,7 @@
     },
     "ram:a00ac0c4": {
       "by": "near",
-      "comment": "near-miss repaired: literal 0x18a358->0x18a758",
+      "comment": "FUN_a00a8c88, FUN_a0146b50(0x111, 0), FUN_a0146b6c(0, 0), then five FUN_a00a31a4(0, 0x2a, 2i + 6, 1, FUN_a00a3844(0x18a758, i), 0)",
       "name": "FUN_a00ac0c4",
       "status": "matched"
     },
@@ -7423,7 +7423,7 @@
     },
     "ram:a00d2334": {
       "by": "permuter",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "copies bytes 6..18 of p to 0xA802D274 + 3.., FUN_a014aed0(0x30, 0xA802D274, 0x2e0, 0x1c), returns 0xe0",
       "name": "FUN_a00d2334",
       "status": "matched"
     },
@@ -7936,7 +7936,7 @@
     },
     "ram:a00d99a8": {
       "by": "hand",
-      "comment": "",
+      "comment": "FUN_a0125c34 when FUN_a012792c(), FUN_a0127944() or bit 5 of word 0xA802D338 is non-zero, else FUN_a0125c3c",
       "name": "FUN_a00d99a8",
       "status": "matched"
     },
@@ -8169,7 +8169,7 @@
     },
     "ram:a00dd628": {
       "by": "hand",
-      "comment": "",
+      "comment": "FUN_a01393f0(p1 & 0xff, p2 & 0xff, (u16)p3), then prints \"[DBG] Tensilica Cmd: 0x%02X_%02X_%04X\"",
       "name": "FUN_a00dd628",
       "status": "matched"
     },
@@ -8227,7 +8227,7 @@
     "ram:a00dd904": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "",
+      "comment": "0xCF03CF00..0C set-up, bits 0..3 of p ORed into 0xCF03C02C and bits 4..7 into 0xCF03C200, then 0xCF03CF04 = 0x19, 0x1b",
       "name": "FUN_a00dd904",
       "status": "matched"
     },
@@ -8894,7 +8894,7 @@
     },
     "ram:a00ea1f0": {
       "by": "permuter",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "FUN_a00e9c80(p1, p2, p3, i, p4, p6) for i = 0 .. p5 - 1; returns p1",
       "name": "FUN_a00ea1f0",
       "status": "matched"
     },
@@ -9124,7 +9124,7 @@
     "ram:a00f2c20": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "",
+      "comment": "writes val to register 0xCF000000 + 4 * (DAT_0019a2e0[blk] + reg); blk > 1 writes blocks 0 and 1",
       "name": "FUN_a00f2c20",
       "status": "matched"
     },
@@ -9477,7 +9477,7 @@
     "ram:a00f87dc": {
       "by": "near",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "near-miss repaired: name g_buf->DAT_a802b7d8",
+      "comment": "clears halfwords 0xA802B7D8[0..7], then fixed FUN_a00f1ad4 / FUN_a00f1d48 writes to block 8 (regs 0x42, 6, 0xc..0x14, 0x16, 0, 3)",
       "name": "FUN_a00f87dc",
       "status": "matched"
     },
@@ -9729,7 +9729,7 @@
     "ram:a00fc1a0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "",
+      "comment": "sets bit 29 of register 0xD0040000 around FUN_4008d1a0(5), then restores the saved value",
       "name": "FUN_a00fc1a0",
       "status": "matched"
     },
@@ -10027,7 +10027,7 @@
     "ram:a0101984": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "",
+      "comment": "register 0xCF0160F4 &= 0x9f, then (p & 0xff) << 5 ORed in (two writes)",
       "name": "FUN_a0101984",
       "status": "matched"
     },
@@ -11902,7 +11902,7 @@
     },
     "ram:a0121258": {
       "by": "hand",
-      "comment": "",
+      "comment": "returns bit 2 of FUN_a00f1a90(p, 0) as 0 or 1",
       "name": "FUN_a0121258",
       "status": "matched"
     },
@@ -12353,7 +12353,7 @@
     },
     "ram:a0124f64": {
       "by": "near",
-      "comment": "near-miss repaired: name FUN_table_1a4288->DAT_001a4288",
+      "comment": "returns byte 0 of entry p & 0xff of the 4-byte table at 0x1a4288",
       "name": "FUN_a0124f64",
       "status": "matched"
     },
@@ -12384,7 +12384,7 @@
     },
     "ram:a01250a8": {
       "by": "hand",
-      "comment": "",
+      "comment": "returns byte +1 of record p & 0xff of the 0x16-byte table at 0x1a42a8",
       "name": "FUN_a01250a8",
       "status": "matched"
     },

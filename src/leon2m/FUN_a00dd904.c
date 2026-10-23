@@ -1,5 +1,7 @@
 /* leon2m FUN_a00dd904 @ 0xa00dd904 (-mcpu=v8 -O2 -g)
- * 
+ * Hardware registers (volatile): 0xCF03CF00 = 0, 0xCF03CF04 = 0x1b, 0xCF03CF08 = 0x80, 0xCF03CF0C = 1; bits 0..3 of p
+ * are ORed into 0xCF03C02C and bits 4..7 of p into bits 0..3 of 0xCF03C200 (one test per bit); then 0xCF03CF04 = 0x19
+ * and 0xCF03CF04 = 0x1b. Caller: FUN_a0124448.
  */
 #define DAT_cf03cf00 (*(volatile unsigned int *)0xcf03cf00)
 #define DAT_cf03cf04 (*(volatile unsigned int *)0xcf03cf04)

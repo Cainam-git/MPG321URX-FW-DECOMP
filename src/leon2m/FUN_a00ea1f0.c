@@ -1,4 +1,5 @@
 /* leon2m FUN_a00ea1f0 @ 0xa00ea1f0 (-mcpu=v8 -O2 -g)
+ * Calls FUN_a00e9c80(p1, p2, p3, i, p4, p6) for i = 0 .. p5 - 1 (no call when p5 <= 0) and returns p1.
  */
 
 extern void FUN_a00e9c80();
