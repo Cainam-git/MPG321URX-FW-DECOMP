@@ -7020,6 +7020,12 @@
       "name": "FUN_a00c4e4c",
       "status": "matched"
     },
+    "ram:a00c55c8": {
+      "by": "h53",
+      "comment": "collects the b3..b8 bytes of three DAT_a8078bb0 records into summary bytes and writes them with a counter through the ROM register calls",
+      "name": "FUN_a00c55c8",
+      "status": "matched"
+    },
     "ram:a00c59e0": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
