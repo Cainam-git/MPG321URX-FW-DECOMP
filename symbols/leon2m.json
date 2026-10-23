@@ -9628,6 +9628,13 @@
       "name": "FUN_a00f9f10",
       "status": "matched"
     },
+    "ram:a00fb434": {
+      "by": "h50",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Register access by id on the 0xd0040000 registers: offset select, read, write, bit-range writes, fixed set-up and size-derived set-up",
+      "name": "FUN_a00fb434",
+      "status": "matched"
+    },
     "ram:a00fb9ec": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
