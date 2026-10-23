@@ -6069,6 +6069,12 @@
       "name": "FUN_a00afdb0",
       "status": "matched"
     },
+    "ram:a00afdf4": {
+      "by": "hand",
+      "comment": "tail-calls FUN_a00afdb0(port) for mode 1, else a FUN_a00a8400 sequence on q = FUN_a00add48(port, ...)",
+      "name": "FUN_a00afdf4",
+      "status": "matched"
+    },
     "ram:a00afeb8": {
       "by": "hand",
       "comment": "(port, restart). restart: counter DAT_a807933a = 0, aec50(port, 1). Three a6c98 writes (0x483/0x24/1, 0x483/3/0, 0x486/1/1); r = (u16)FUN_a00acc54(port); a4ec4(0, r); if (u16)(r - 101) <= 0x30: 6c98(port, 0x483, 1, (u8)6bb8(port, 0x21c) == 6 ? 0 : 1). 6c00(port, 0x485, DAT_a00b4df8[counter]); ...",
