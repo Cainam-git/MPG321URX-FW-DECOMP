@@ -10932,6 +10932,13 @@
       "name": "FUN_a01095bc",
       "status": "matched"
     },
+    "ram:a0109654": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "programs the register block 0xcf00f500 (sel 0) or 0xcf00f580 with fixed values and the four bytes of v between 1 ms delays; on 0 clears both control registers",
+      "name": "FUN_a0109654",
+      "status": "matched"
+    },
     "ram:a0109844": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
