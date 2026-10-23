@@ -609,20 +609,8 @@
   {
    "name": "FUN_CODE_4ec1",
    "start": 20161,
-   "end": 20601,
-   "size": 440
-  },
-  {
-   "name": "FUN_CODE_5079",
-   "start": 20601,
-   "end": 20625,
-   "size": 24
-  },
-  {
-   "name": "FUN_CODE_5091",
-   "start": 20625,
    "end": 20681,
-   "size": 56
+   "size": 520
   },
   {
    "name": "FUN_CODE_50c9",
