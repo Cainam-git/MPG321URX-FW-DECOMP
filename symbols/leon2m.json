@@ -15005,6 +15005,13 @@
       "name": "FUN_a0142ea8",
       "status": "matched"
     },
+    "ram:a0142ed0": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets byte +0x0a of port record p to m when changed or forced, with FUN_a00fde94/FUN_a00fd594/FUN_a00fd9a0 calls and +0x10 = 1000 or 100",
+      "name": "FUN_a0142ed0",
+      "status": "matched"
+    },
     "ram:a0142fcc": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
