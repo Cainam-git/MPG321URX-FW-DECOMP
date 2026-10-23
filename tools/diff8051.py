@@ -331,7 +331,19 @@ def exact8051(lst_path, fn, start, code, target, bank, block=None, fn_off=0, out
                         if key not in libs and "HIGH" in part.upper():
                             if _pass == 0: continue    # learn it from its LOW use first
                         if key not in libs and ps < len(target):
-                            libs[key] = target[ps] - po; _libs_save(lib, libs)
+                            v = target[ps]
+                            if "LOW" in part.upper():
+                                # a #HIGH use of the same name (e.g. MOV R2,#HIGH x / MOV R1,#LOW x for a 16-bit CODE
+                                # or XDATA address such as Keil's initialiser constant _?ix1000): learn both bytes
+                                for hr in rows:
+                                    if not (hr[2] and hr[3]) or len(bytes.fromhex(hr[2])) != 2: continue
+                                    hm = re.search(r"#HIGH\s+%s\b(?:\s*\+\s*(0x[0-9A-Fa-f]+|[0-9A-F]+H|\d+))?" % re.escape(nm), hr[4])
+                                    if not hm: continue
+                                    hpo = 0 if not hm[1] else (int(hm[1][:-1], 16) if hm[1].endswith("H") else int(hm[1], 0))
+                                    hp = int(hr[1], 16) + 1
+                                    if hp < len(target) and hpo == po: v = (target[hp] << 8) | target[ps]
+                                    break
+                            libs[key] = v - po; _libs_save(lib, libs)
                         v = libs.get(key, -1000)
                     v += po
                     code[ps] = ((v >> 8) if "HIGH" in part.upper() else v) & 0xFF
