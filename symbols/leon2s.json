@@ -8266,6 +8266,12 @@
       "name": "FUN_a00d3efc",
       "status": "matched"
     },
+    "ram:a00d3f30": {
+      "by": "hand",
+      "comment": "stores 1 or 0 to DAT_a8078c31",
+      "name": "FUN_a00d3f30",
+      "status": "matched"
+    },
     "ram:a00d3f54": {
       "by": "hand",
       "comment": "stores 1 to DAT_a8078c34 and calls func_0xa0f73950",
