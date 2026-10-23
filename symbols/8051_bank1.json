@@ -1985,6 +1985,12 @@
       "name": "FUN_CODE_d9d1",
       "status": "matched"
     },
+    "CODE:d9e1": {
+      "by": "hand",
+      "comment": "returns the 16-bit value stored low byte first at XDATA 0x9A00 + i",
+      "name": "FUN_CODE_d9e1",
+      "status": "matched"
+    },
     "CODE:da3a": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
