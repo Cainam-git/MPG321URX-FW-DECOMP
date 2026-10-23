@@ -13778,6 +13778,12 @@
       "name": "FUN_a0125c3c",
       "status": "matched"
     },
+    "ram:a0125c44": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a0125c44",
+      "status": "matched"
+    },
     "ram:a0125c54": {
       "by": "autoc",
       "comment": "Returns FUN_a00ddae4(0xf) as a byte",
