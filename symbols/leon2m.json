@@ -11014,6 +11014,13 @@
       "name": "FUN_a011553c",
       "status": "matched"
     },
+    "ram:a0115584": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reads 6 bytes via FUN_a011ce80(4), checks the 0xa0 header and XOR, returns byte 3/4/5 by sel or -1",
+      "name": "FUN_a0115584",
+      "status": "matched"
+    },
     "ram:a0115644": {
       "by": "h19",
       "cflags": "-mcpu=v8 -O3 -g",
