@@ -5783,6 +5783,12 @@
       "name": "FUN_a00a7e14",
       "status": "matched"
     },
+    "ram:a00a7e98": {
+      "by": "hand",
+      "comment": "returns the low byte of register reg of port (< 4) of the block with the base table 0xa00b4d64, else 0",
+      "name": "FUN_a00a7e98",
+      "status": "matched"
+    },
     "ram:a00a7f1c": {
       "by": "hand",
       "comment": "Read-modify-write of an 8-bit register of a hardware block (table 0xa00b4d5c, ports 0..3)",
