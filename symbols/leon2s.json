@@ -2508,6 +2508,12 @@
       "name": "FUN_a007b2a0",
       "status": "matched"
     },
+    "ram:a007b394": {
+      "by": "lead",
+      "comment": "final store in both arms of the b8 test",
+      "name": "DRV_HDMI_EQScan_FSM_PHY_EQ",
+      "status": "matched"
+    },
     "ram:a007c4b8": {
       "by": "hand",
       "comment": "Writes the PICDR PHY register settings of one port, chosen by the record halfword v in ranges below 100/160/300/600",
