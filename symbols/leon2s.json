@@ -3692,6 +3692,12 @@
       "name": "FUN_a0090180",
       "status": "matched"
     },
+    "ram:a00901a0": {
+      "by": "hand",
+      "comment": "computes a byte code for the port from FUN_a008fea8, FUN_a008ff08 and the register reads 0x134-0x148",
+      "name": "FUN_a00901a0",
+      "status": "matched"
+    },
     "ram:a0090374": {
       "by": "autoc",
       "comment": "(byte 0xA8078C08) = 0",
