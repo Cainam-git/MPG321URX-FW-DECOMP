@@ -13400,8 +13400,8 @@
       "status": "matched"
     },
     "ram:a012b418": {
-      "by": "permuter",
-      "comment": "permuter: [walk]; swap lines 8; param param_2 char; selfassign idx#1; swap lines 10",
+      "by": "h49",
+      "comment": "bytes +8/+0xa/+0xb of the 22-byte entry p1 at 0xA802D8AE = p2/p3/p4, then FUN_a0137d08(p1..p5)",
       "name": "FUN_a012b418",
       "status": "matched"
     },
