@@ -9439,6 +9439,13 @@
       "name": "FUN_a00f39c0",
       "status": "matched"
     },
+    "ram:a00f40e4": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "starts a measurement on block blk (registers 0x37/0x36), polls register 0x36 bit 0 with timeout, copies registers 0x3e/0x38 to 0x12/0xe/0xc and calls FUN_a00f8e2c by 0x38 vs 0x3a; 0 on failure, 1 on success",
+      "name": "FUN_a00f40e4",
+      "status": "matched"
+    },
     "ram:a00f4434": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
