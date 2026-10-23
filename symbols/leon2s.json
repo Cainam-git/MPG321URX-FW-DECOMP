@@ -5177,6 +5177,12 @@
       "name": "FUN_a00a3a10",
       "status": "matched"
     },
+    "ram:a00a3b68": {
+      "by": "hand",
+      "comment": "Port step of the DRV_HDMI21_TXDetect_FSM_LTS_3 state: SCDC flags, per-lane LTP requests and FFE index update",
+      "name": "FUN_a00a3b68",
+      "status": "matched"
+    },
     "ram:a00a4238": {
       "by": "hand",
       "comment": "HDMI TX FRL training step: lower the FRL rate or give up, write SCDC 0x31",
