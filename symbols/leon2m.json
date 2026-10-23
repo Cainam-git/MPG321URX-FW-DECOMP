@@ -7603,6 +7603,13 @@
       "name": "FUN_a00d5918",
       "status": "matched"
     },
+    "ram:a00d5938": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "FUN_a01479ec(1) when bit 14 of DAT_a802d290+0xa8 is set, then FUN_a0149978(port, byte +0x1f+port) for ports 1..3",
+      "name": "FUN_a00d5938",
+      "status": "matched"
+    },
     "ram:a00d5a28": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
