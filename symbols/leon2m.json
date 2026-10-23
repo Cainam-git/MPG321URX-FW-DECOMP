@@ -5564,6 +5564,13 @@
       "name": "FUN_a00ac0c4",
       "status": "matched"
     },
+    "ram:a00acc40": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "draws two rows of table entries (DAT_0018a6ac/DAT_00193248 and, by bit 11 of DAT_a802d290+0xa8, DAT_00188634/DAT_001951dc or DAT_00188da0/DAT_00195f24) with FUN_a00a31a4 and FUN_a0146a80/FUN_a0146b20 cells",
+      "name": "FUN_a00acc40",
+      "status": "matched"
+    },
     "ram:a00acef4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
