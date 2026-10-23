@@ -2351,6 +2351,12 @@
       "name": "FUN_a007b2a0",
       "status": "matched"
     },
+    "ram:a007c4b8": {
+      "by": "h55",
+      "comment": "Writes the PICDR PHY register settings of one port, chosen by the record halfword v in ranges below 100/160/300/600",
+      "name": "DRV_HDMI_EQScan_FSM_PHY_PICDR",
+      "status": "matched"
+    },
     "ram:a007cfec": {
       "by": "hand",
       "comment": "73520(p): bit 0x10 test of db00[p != 2].w0c + 0x74 via a7408, else bit 0 of reg 0x2f6 (twin of a007af04)",
