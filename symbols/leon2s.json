@@ -7104,6 +7104,12 @@
       "name": "FUN_a00c0f88",
       "status": "matched"
     },
+    "ram:a00c10c4": {
+      "by": "hand",
+      "comment": "writes four byte tables through the 0xa4-0xa7 index/data registers via func_0xa0fb69fc",
+      "name": "FUN_a00c10c4",
+      "status": "matched"
+    },
     "ram:a00c12d8": {
       "by": "hand",
       "comment": "Copies the 16 bytes at 0x9f1c1e38 into the caller's buffer in reverse order (source index 15 - i), using an unsigned short loop index masked with 0xffff that is incremented before the comparison; the source is a plain extern unsigned char array (ldub).",
