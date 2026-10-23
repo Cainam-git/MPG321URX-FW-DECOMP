@@ -4548,7 +4548,7 @@
     },
     "ram:a0099ffc": {
       "by": "hand",
-      "comment": "HDMI 2.1 link-training stable check: rate change, lane lock fail counters and the retry counter per port",
+      "comment": "Per-port state copy, rate field compare, lane lock fail counter and retry counter; sets state 3 on change",
       "name": "DRV_HDMI21_RXDetect_FSM_LTS_Chk_Stable",
       "status": "matched"
     },
