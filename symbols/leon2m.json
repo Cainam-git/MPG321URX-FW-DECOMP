@@ -18026,6 +18026,12 @@
       "name": "FUN_a015c138",
       "status": "matched"
     },
+    "ram:a015c1a8": {
+      "by": "hand",
+      "comment": "C library __locale_charset: returns the pointer stored at 0xA802AAA8",
+      "name": "FUN_a015c1a8",
+      "status": "matched"
+    },
     "ram:a015c1b4": {
       "by": "autoc",
       "comment": "returns 0x1a84f4",
