@@ -1,6 +1,6 @@
 /* 8051_bank0 FUN_CODE_17e2 @ 0x17e2  STBC boot loader: index of a marker byte in IDATA (byte-exact
  * with OPTIMIZE(8,SPEED) REGFILE(R.ORC)).
- * Chip variant 0x20 (FUN_CODE_18bb): first i in 0..5 with IDATA[0x0E + i] == 0x30; otherwise first i with
+ * XDATA 0xD511 == 0x20 (FUN_CODE_18bb): first i in 0..5 with IDATA[0x0E + i] == 0x30; otherwise first i with
  * IDATA[0x08 + i] == 0x60; not found -> 0. Its only caller, main FUN_CODE_151c, stores the result + 1 in XDATA
  * 0xD929. The Keil start-up FUN_CODE_13f7 clears IDATA 0x01..0x7F, so this reads zeros unless that clear is
  * skipped.

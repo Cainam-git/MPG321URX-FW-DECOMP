@@ -6,7 +6,7 @@
  * prints "OLED set/Get Frame rate control"; while the read-back differs and the retry counter at 0xA802C9FD is at
  * most 9 it prints "...->retry", writes, waits, reads again and counts. Nothing happens unless the FRC ready pin
  * (FUN_a01248c8 = GPIO group 9 bit 3) is high.
- * val is the panel parameter row index (0 = 240 Hz row, 1 = 120 Hz row, 2 = 60 Hz row, the byte at 0xA802D893):
+ * val is the row index chosen by FUN_a00dac38 (0, 1 or 2; row +0x52 = 2400 / 1200 / 600; the byte at 0xA802D893):
  * the OLED FRC handler FUN_a01295e4 passes it in its state 2; the OLED power state machine FUN_a0127c78 passes 0.
  * FUN_a0126878 reads the same register (printed by FUN_a00dac38 as SYSAPI_GetPanelParamStruct).
  * FW.012 never selected row 2, so it never sent 2 here; FW.021 sends 2 for inputs below 62.0 Hz.

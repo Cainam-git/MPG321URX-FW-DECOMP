@@ -17,7 +17,7 @@
  *   Otherwise bit 0 of 0xCF012890 / 0xCF012990 is cleared. (0xCF012884.. and 0xCF012984.. are the clock meters 0
  *   and 4 of FUN_a0102fd0, so these are the two output clock paths.)
  *   0xCF00B81C.. via FUN_a00f308c (16-bit register pair writes): row +0x30, +0x26, +0x26 + +0x28, +0x30 + +0x32.
- * Display modes 5 (FW.021 60 Hz row) and 11 (FW.012) behave the same here (neither is 8..10).
+ * Display modes 5 (row 2 in FW.021) and 11 (FW.012) behave the same here (neither is 8..10).
  * keys (the f/a clamp, found with RTL dumps):
  *   - h12 is read into its own unsigned short (a0) together with h10 into an unsigned int (t) BETWEEN the b0 test
  *     and the h10 != 0 test: that puts 'lduh +0x12' in the bne delay slot and keeps a0 (%o5) apart from a (%o4).

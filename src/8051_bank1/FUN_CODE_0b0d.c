@@ -1,16 +1,14 @@
-/* 8051_bank1 FUN_CODE_0b0d @ 0x0b0d  helper-chip START-UP (copy the firmware images to their run-time windows).
- * BYTE-EXACT under OPTIMIZE(8,SPEED) LARGE over the REAL span
- * 0x0B0D..0x147A (2413 B): every non-fixup byte equal and diff8051.exact8051 = None (all fixups resolved, including
- * the three Keil common-entry labels, verified at 0x7352 / 0x7369 / 0x7381 in front of FUN_CODE_738c).
- * NOTE: symbols/8051_bank1.functions.json lists 0b0d as 2186 B (end 0x1397); FUN_CODE_1397 is the
- * else-arm of the last record (entered only by LJMP 1397 at 0x1190 and LJMP 142B at 0x1394), so 0b0d + 1397 must be
- * merged (merges.json) before the judge can see the match. FUN_CODE_738c MUST stay in this file, defined AFTER
- * 0b0d: Keil only builds the common-entry pieces 7352/7369/7381 when the callers and 738c are in one module.
+/* 8051_bank1 FUN_CODE_0b0d @ 0x0b0d  STBC START-UP (copy the firmware images to their run-time windows).
+ * OPTIMIZE(8,SPEED) LARGE. One C function over 0x0B0D..0x147A (2413 B): FUN_CODE_1397 is the else-arm of the
+ * last record (entered only by LJMP 1397 at 0x1190 and LJMP 142B at 0x1394). The three Keil common-entry
+ * pieces 0x7352 / 0x7369 / 0x7381 in front of FUN_CODE_738c come from this module.
+ * Source form: FUN_CODE_738c stays in this file, defined AFTER 0b0d: Keil only builds the common-entry pieces
+ * 7352/7369/7381 when the callers and 738c are in one module.
  *
  * Region 1: f (bit local, BITS 20.0) = 0; scaler/clock set-up writes; Share Structure version check (0x3000,
  * != 1 -> printf CODE 0x821B + endless 0x55 loop); copy of the Share Structure 0x3002.. into the record block
  * 0xA47F..0xA4E8 in 5 pieces; f = 1 for flash size class > 4 (4-byte addressing); dc51(); 0016(); 96eb(&0xA47F);
- * for chip variants 0x16/0x1E/0x1F/0x17 (XDATA 0xD511) c43e(&0xA4D7, f); f150 = 0x39, 0x36; 4a85(&0xA48B);
+ * for XDATA 0xD511 = 0x16/0x1E/0x1F/0x17 c43e(&0xA4D7, f); f150 = 0x39, 0x36; 4a85(&0xA48B);
  * 5dcb(&0xA4AF).
  * Region 2: five image records (long fields of the record block) are copied with FUN_CODE_738c(src, dst, len,
  * f) into two windows each, the unused rest of a window is handed to FUN_CODE_a8bb(addr, len, 0):
@@ -19,10 +17,10 @@
  *          or window 2 (ends 0x9F07C000) when dst is already past window 1; locals t1 = room, t2 = overflow,
  *          t3 = end (XDATA 0xA473 / 0xA477 / 0xA47B);
  *   rec 3  src 0xA4AF, len 0xA4B3: 0x8000 to 0x9F1A0000, next 0x38000 to 0x9F140000, rest to 0x9F180000;
- *   rec 4  src 0xA4C3, len 0xA4C7, only for chip variants 0x16/0x1E/0x1F/0x17 and len != 0: to 0x9F1B0000;
+ *   rec 4  src 0xA4C3, len 0xA4C7, only for XDATA 0xD511 = 0x16/0x1E/0x1F/0x17 and len != 0: to 0x9F1B0000;
  *   rec 5  src 0xA4B7, dst 0xA4BB, len 0xA4BF: like rec 2 with window ends 0x9F178000 / 0x9F1A0000, overflow to
  *          0x9F180000 (0x20000 long).
- * Tail: F1DB..F1DE = bytes of the long at 0xA49F (low byte first), F1DF = 0x43 for chip variant 0x1A else 0x03,
+ * Tail: F1DB..F1DE = bytes of the long at 0xA49F (low byte first), F1DF = 0x43 for XDATA 0xD511 == 0x1A else 0x03,
  * 8e61(), 8f5a(), XDATA32 0xA729 = long 0xA49F.
  * Required source forms in region 2: 'room > len' (not 'len < room' / 'len <= room') for the fit tests (ULCMP
  * with SETB C and the operands in this order); 'src + len' / 't2 + 0x9f060000' operand orders as written; the

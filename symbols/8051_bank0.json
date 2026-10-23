@@ -203,7 +203,7 @@
     },
     "CODE:1616": {
       "by": "hand",
-      "comment": "boot loader: UART 4800 8N1 (timer 1, clock 48/96 MHz by chip variant)",
+      "comment": "boot loader: UART 4800 8N1 (timer 1, clock 48/96 MHz by XDATA 0xD511 == 0x20)",
       "name": "FUN_CODE_1616",
       "status": "matched"
     },
@@ -234,7 +234,7 @@
     "CODE:17e2": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
-      "comment": "boot loader: index of marker 0x30 / 0x60 in IDATA 0x0E / 0x08 by chip variant; main stores +1 at XDATA 0xD929",
+      "comment": "boot loader: index of marker 0x30 / 0x60 in IDATA 0x0E / 0x08 by XDATA 0xD511 == 0x20; main stores +1 at XDATA 0xD929",
       "name": "FUN_CODE_17e2",
       "status": "matched"
     },
@@ -275,13 +275,13 @@
     },
     "CODE:18bb": {
       "by": "hand",
-      "comment": "boot loader: chip variant test, XDATA 0xD511 == 0x20 (CY)",
+      "comment": "boot loader: test XDATA 0xD511 == 0x20 (result in CY)",
       "name": "FUN_CODE_18bb",
       "status": "matched"
     },
     "CODE:18c9": {
       "by": "hand",
-      "comment": "boot loader: 0 for chip variant 0x20 else 1; main writes it *4 to SPI bus mode 0xF0E6",
+      "comment": "boot loader: 0 when XDATA 0xD511 == 0x20 else 1; main writes it *4 to SPI bus mode 0xF0E6",
       "name": "FUN_CODE_18c9",
       "status": "matched"
     },

@@ -11,7 +11,7 @@
  *       vfreq outside [vf_min - 2.0 Hz, vf_max + 2.0 Hz] -> 0;
  *       0xA802D2AF == 0 and byte 0xA802D434 in 4..6 or 8: 1 for 4..6 (keeps the tentative mode when it is 4 and
  *       id 8 == w), 0 for 8;
- *       else FUN_a0148540(0) and vfreq <= 240.0 Hz and chip variant FUN_a011cf88() <= 0x82 -> 3;
+ *       else FUN_a0148540(0) and vfreq <= 240.0 Hz and FUN_a011cf88() <= 0x82 -> 3;
  *       else (FUN_a0148540(0) or byte 0xA802D295) and no bits 12-15 in word 0xA802D2C4 and 0xA802D2AF <= 1 -> 2;
  *       else the tentative mode.
  * The only refresh-rate condition is the +-2.0 Hz window around the active row; on the <62 Hz row that is

@@ -24,7 +24,7 @@
  *     P15": F0CC = 0x30, F1F0 = 0xFF, SFR 0xA5 = 0xFF, port bit P1.4 / P1.5 = (w != 0)  1F c87f(b1,b2)
  *   20 d5a1(0x0C): zero word +0x0C   21 "CMD_WRITE_DPTXHDCP" d171   22 b2 != 0: F1EB bit 3 = 0, F1E0 bit 3 = 1,
  *     else the opposite   23 b1 = 0..5: XDATA 0xCBC1 + b1 = b2   24 de3a(b2,b3)
- *   25 F17C = b1; chip ID 0xD511 = 0x1A or 0x20: A3E0 = b2, A3E1 = b3, F17D = 1, F17E/F17F = FF/FF (0x1A) or AA/00
+ *   25 F17C = b1; XDATA 0xD511 = 0x1A or 0x20: A3E0 = b2, A3E1 = b3, F17D = 1, F17E/F17F = FF/FF (0x1A) or AA/00
  *     (0x20), A35E = 0   26 "CMD_FE2P_SETEXTEND": dee8(b1:b2:b3) (XDATA 0xA717)
  *   27 if c163(): F00A = F0E0 = 0xAA, chip 0x20: FUN_CODE_0022 (empty function); then cb1d, F00A = F0E0 = 0x55
  *   28 b1 0 / 1: bit 0 / bit 2 of XDATA 0xCAB2 = (b2 != 0)   29 FUN_CODE_6c34 'STBC FW updating' flash loop (no return)

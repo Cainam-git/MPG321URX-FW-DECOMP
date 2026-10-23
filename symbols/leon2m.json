@@ -10277,7 +10277,7 @@
     "ram:a0106920": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "block-0 output path on/off; the path and the f1c0 bit depend on the chip code a011cf88 (<= 0x81 vs higher)",
+      "comment": "block-0 output path on/off; the path and the f1c0 bit depend on FUN_a011cf88() (<= 0x81 vs higher)",
       "name": "FUN_a0106920",
       "status": "matched"
     },
@@ -10611,14 +10611,14 @@
     "ram:a010a8f0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "converter output timing read-back: reg pair 0xcf011c30, or 0xcf011af8 shifted by 1/2/3 by chip code and 0xcf011e40 bits",
+      "comment": "converter output timing read-back: reg pair 0xcf011c30, or 0xcf011af8 shifted by 1/2/3 by FUN_a011cf88() and the 0xcf011e40 bits",
       "name": "FUN_a010a8f0",
       "status": "matched"
     },
     "ram:a010a9e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "FRC output frame length: sum of 0xCF011AE0..AF8 scaled x2/x4/x8 by chip variant + 0xCF011E40 bits, or 0xCF011C38 (16 bits)",
+      "comment": "FRC output frame length: sum of 0xCF011AE0..AF8 scaled x2/x4/x8 by FUN_a011cf88() and the 0xCF011E40 bits, or 0xCF011C38 (16 bits)",
       "name": "FUN_a010a9e8",
       "status": "matched"
     },
@@ -11512,7 +11512,7 @@
     "ram:a011cf88": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "chip version code from hw ID 0xcf011444/0xcf011440: 0x80/0x81, 0x82, 0x83, else 0x84; the 60 Hz cap applies only to codes <= 0x82",
+      "comment": "code from register 0xcf011444 / flag 0xcf011440: 0x80/0x81, 0x82, 0x83, else 0x84; FUN_a013dc6c applies the transformed row's +0x50 limit only for codes <= 0x82",
       "name": "FUN_a011cf88",
       "status": "matched"
     },
@@ -12627,7 +12627,7 @@
     "ram:a0126704": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "OLED set Frame rate control: I2C write {0,val} to FRC chip device 0x60 register 0xB2, read back, up to 10 retries; val = panel row index (2 = 60 Hz row, never sent by FW.012).",
+      "comment": "OLED set Frame rate control: I2C write {0,val} to device 0x60 register 0xB2, read back, up to 10 retries; val = row index 0xA802D893 chosen by FUN_a00dac38 (row 2 is never sent by FW.012).",
       "name": "FUN_a0126704",
       "status": "matched"
     },
@@ -15786,7 +15786,7 @@
     "ram:a0148e34": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "SYSAPI_ConfigSystemPostFRCLockMode: FRC Lock bit 27 of e3d0 set only when on and panel row h0a < 0x1000",
+      "comment": "SYSAPI_ConfigSystemPostFRCLockMode: bit 27 of 0xA802E3D0 set only when on and transformed row +0x0a < 0x1000",
       "name": "FUN_a0148e34",
       "status": "matched"
     },

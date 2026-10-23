@@ -1,6 +1,6 @@
-/* 8051_bank0 FUN_CODE_18c9 @ 0x18c9  STBC boot loader: SPI bus-mode factor per chip variant (byte-exact
- * with OPTIMIZE(7,SPEED)).
- * Returns 0 when FUN_CODE_18bb() reports chip variant 0x20 (XDATA 0xD511 == 0x20), else 1. Its only caller is the
+/* 8051_bank0 FUN_CODE_18c9 @ 0x18c9  STBC boot loader: SPI bus-mode factor by XDATA 0xD511
+ * (OPTIMIZE(7,SPEED)).
+ * Returns 0 when FUN_CODE_18bb() reports XDATA 0xD511 == 0x20, else 1. Its only caller is the
  * boot loader main FUN_CODE_151c (LCALL at 0x152e), which multiplies the result by 4 and writes it to XDATA 0xF0E6
  * (SPI flash bus mode register).
  */

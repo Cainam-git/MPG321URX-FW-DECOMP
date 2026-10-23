@@ -8,8 +8,8 @@
  *     0x9F01010C = 0x9F010110 = 0x9F010108 = 0xFFFFFFFF, 0x9F010104 = 0x72310CAD;
  *  2. 0x9F020200 = record +0x18 and 0x9F020204 = record +0x1C (from the partition table via the share structure);
  *  3. prints "Leon2 vs AHB clk is 3:1\r\n" (CODE 0x81D6); 0x9F0000E0 = 5; 0x9F02000C = 0x50000000;
- *  4. chip variant 0x1A (XDATA 0xD511): 0x9F020308 = 0x723105A5, 0x9F020300 = 0x25.
- * The Big chip's boot address 0xA0028000 is a constant here, in helper-chip code.
+ *  4. XDATA 0xD511 == 0x1A: 0x9F020308 = 0x723105A5, 0x9F020300 = 0x25.
+ * The Big chip's boot address 0xA0028000 is a constant here, in the 8051 code.
  */
 typedef union { unsigned long l; unsigned char b[4]; } DW;
 struct CoreCfg { unsigned char pad[0x18]; unsigned long f18; unsigned long f1c; };

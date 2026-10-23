@@ -993,7 +993,7 @@
     "CODE:afdc": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "register set-up by chip id d511 (0x20 / 0x1a): f160..f165, f3e9, f024 / f02c / f02d / f030, f0a6 (volatile: d511 re-read 4x, f02d |= 0xff kept)",
+      "comment": "register set-up by XDATA 0xD511 (0x20 / 0x1a): f160..f165, f3e9, f024 / f02c / f02d / f030, f0a6 (volatile: d511 re-read 4x, f02d |= 0xff kept)",
       "name": "FUN_CODE_afdc",
       "status": "matched"
     },
@@ -1148,7 +1148,7 @@
     "CODE:c43e": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "chip-variant flash copy for chip IDs 0x16/0x1E/0x1F/0x17 (not on this monitor's Big-chip window)",
+      "comment": "flash DMA of the record named by +0x58 of the share structure copy, only for XDATA 0xD511 = 0x16/0x1E/0x1F/0x17; writes no destination address",
       "name": "FUN_CODE_c43e",
       "status": "matched"
     },

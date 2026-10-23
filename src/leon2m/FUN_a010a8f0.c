@@ -3,12 +3,12 @@
  * (the hardware register pair p[0] | p[1] << 8):
  *   bit 7 of hw 0xcf011a80 clear: the pair at 0xcf011c30;
  *   bit 7 set: the pair at 0xcf011af8, shifted left by
- *     1 when the chip code FUN_a011cf88() > 0x82 and bit 3 of hw 0xcf011e40 is set, else
- *     2 when the chip code > 0x83 and bit 2 of 0xcf011e40 is set, else
- *     3 when the chip code > 0x83 and bit 1 of 0xcf011e40 is set, else 0
- *   (the chip code is read again for each test); the result is cut to 16 bits.
- * The multiplier depends on the chip code (FUN_a011cf88: 0x80..0x84 by chip
- * ID) and the 0xcf011e40 bits, not on the input rate itself.
+ *     1 when FUN_a011cf88() > 0x82 and bit 3 of hw 0xcf011e40 is set, else
+ *     2 when the code > 0x83 and bit 2 of 0xcf011e40 is set, else
+ *     3 when the code > 0x83 and bit 1 of 0xcf011e40 is set, else 0
+ *   (FUN_a011cf88 is called again for each test); the result is cut to 16 bits.
+ * The multiplier depends on the code FUN_a011cf88() (0x80..0x84 from register
+ * 0xcf011444) and the 0xcf011e40 bits, not on the input rate itself.
  * Form: early returns per test (an if/else chain into one u16 local gives 88.89).
  * Prototypes from src/leon2m (FUN_a00f3078 takes the register address). volatile only on real hardware
  * registers. Aids: none.

@@ -18,9 +18,9 @@
  *     byte +1 == 0, m = low byte of +0x0E    -> bits 1-4 of 0xCF012890 from m (result truncated to 8 bits) written
  *                                               to BOTH 0xCF012890 and 0xCF012990, then bits 0-4 of 0xCF012890 kept
  *                                               and bits 5-7 from m, written to both; bit 0 = row word0 bit 26
- *   0xCF00E9E0 = 0xCF00E9E4 = 0; byte 0xA802D700 = 0x10 on chip variants > 0x81 (FUN_a011cf88) else 0;
+ *   0xCF00E9E0 = 0xCF00E9E4 = 0; byte 0xA802D700 = 0x10 when FUN_a011cf88() > 0x81 else 0;
  *   0xCF00B814 = 0xCF00B854 = (that << 2) | 3, 0xCF00B818 = 0xCF00B848 = 3; 0xCF00B81C.. = row +0x30, +0x26,
- *   +0x26 + +0x28, +0x30 + +0x32 (16-bit pairs via FUN_a00f308c); variants > 0x83: bit 5 of 0xCF00B844;
+ *   +0x26 + +0x28, +0x30 + +0x32 (16-bit pairs via FUN_a00f308c); codes > 0x83: bit 5 of 0xCF00B844;
  *   0xCF00EC04/08/0C = 0, 0xCF00EC10/14 = row +0x08 low 8 / bits 8-12, 0xCF00EC18/1C = 0, 0xCF00EC20/24 = row +0x0A
  *   low 8 / bits 8-12; 0xCF00EFC0 = 0xC0; bits 6 and 0 of 0xCF00F1C0; bit 0 of 0xCF011360.
  * Register addresses (proven by the bytes): the firmware loads %hi(0xCF00EC00) in the delay slots of 'bleu,a' / 'b'

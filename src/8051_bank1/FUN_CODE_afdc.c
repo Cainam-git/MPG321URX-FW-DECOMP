@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_afdc @ 0xafdc (written from the firmware)
- * Register set-up by chip ID XDATA 0xD511 (0x20 / 0x1A / other): F160..F165 = FF 1F F3 (FF or 3F) 00 FF;
+ * Register set-up by XDATA 0xD511 (0x20 / 0x1A / other): F160..F165 = FF 1F F3 (FF or 3F) 00 FF;
  * F3E9 = 0x0F for 0x1A; then for 0x1A: F024 |= 1C, F02C |= 03, F02D |= BF, F030 |= 04; else F024 |= DC, F02C |= 3F,
  * F02D |= FF, F030 |= BF (0x20) or BB; finally F0A6 |= 3E.
  * volatile is real: 0xD511 is re-read for every test (4 reads), and 'F02D |= 0xFF' keeps its read (MOVX A,@DPTR then

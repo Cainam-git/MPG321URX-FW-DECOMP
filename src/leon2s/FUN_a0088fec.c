@@ -1,5 +1,5 @@
 /* leon2s FUN_a0088fec @ 0xa0088fec-0xa0089058 (27 words), flags -mcpu=v8 -Os -g.
- * Leaf hysteresis on the signed word DAT_a8078a30 with the byte flag DAT_a8078a0f, only when busy == 0:
+ * Leaf test of the signed word DAT_a8078a30 with the byte flag DAT_a8078a0f, only when busy == 0:
  * a30 < 40 and flag clear -> flag = 1, return 1; a30 >= 40 and flag set -> flag = 0, return 1; else
  * return 0. a30 is read once per test (two reads on the flag-set path); it is not volatile.
  * Source form: the two tests are separate '&&' ifs inside 'if (busy == 0)'.

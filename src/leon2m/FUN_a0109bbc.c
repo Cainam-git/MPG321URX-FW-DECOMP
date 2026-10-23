@@ -7,7 +7,7 @@
  *   Run" (0, 0, 0, 0xA802E3CA); FUN_a0148500 (0, 0, ?, raw row +0x52); FUN_a01518c8, FUN_a015209c.
  * lock == 0 (free run): prints "FRC freerun mode\r\n"; 0xCF011C04 = 0x60; 16-bit register pairs 0xCF011C38 and
  *   0xCF011C48 (FUN_a00f308c: low byte at a, high byte at a+4) = transformed row +0x2C (each re-read through
- *   DAT_a802d6a4); then with chip variant v = FUN_a011cf88():
+ *   DAT_a802d6a4); then with v = FUN_a011cf88():
  *     v > 0x82 and 0xCF011E40 bit 3: clear bits 1-2 of 0xCF011E40, 0xCF011AE8 = DAT_a802d702 >> 1
  *     else v > 0x83 and bit 2:       clear bits 1 and 3,         0xCF011AE8 = DAT_a802d702 >> 2
  *     else v > 0x83 and bit 1:       clear bits 2-3,             0xCF011AE8 = DAT_a802d702 >> 3

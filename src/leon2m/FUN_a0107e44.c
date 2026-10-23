@@ -11,8 +11,8 @@
  *   clock (see FUN_a01026e8: post-divider by range, n = f * 2^17 / 12 MHz, skipped when unchanged).
  *   d = (vt1 - row+0x0A - row+0x32 - row+0x30) & 0xFFF (at least 1, also stored at 0xA802D702);
  *   hblank = (ht - x - row+0x28 - row+0x26) & 0xFFF with x = row+0x0A when cls == 1, else row+0x08;
- *   s = row+0x2E - row+0x0A - row+0x32 - row+0x30 selects a shift: >= 0x4000 -> 3 (variants >= 0x84),
- *   0x2000..0x3FFF -> 2 (variants >= 0x84), 0x1000..0x1FFF -> 1 (variants > 0x82), else 0; written to bits 1-3 of
+ *   s = row+0x2E - row+0x0A - row+0x32 - row+0x30 selects a shift: >= 0x4000 -> 3 (codes >= 0x84),
+ *   0x2000..0x3FFF -> 2 (codes >= 0x84), 0x1000..0x1FFF -> 1 (codes > 0x82), else 0; written to bits 1-3 of
  *   0xCF011E40; row+0x30, row+0x32, d and row+0x0A are shifted right by it (each at least 1).
  *   Writes 0xCF011AC0..AF8 and 0xCF011C10..C58 (16-bit register pairs), bit 7 of 0xCF011AA0, bit 7 of 0xCF011A80
  *   when row+0x0A <= 0xFFF, bit 1 of 0xCF011A80, 0xCF011C00 = 0, 0xCF011C04 = 0x60, FUN_a011919c(0/1, 0x44, d'),
