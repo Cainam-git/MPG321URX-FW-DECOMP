@@ -1986,6 +1986,12 @@
       "name": "FUN_CODE_dc0d",
       "status": "matched"
     },
+    "CODE:dc24": {
+      "by": "hand",
+      "comment": "Bit result",
+      "name": "FUN_CODE_dc24",
+      "status": "matched"
+    },
     "CODE:dc92": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
