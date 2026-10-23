@@ -7369,6 +7369,12 @@
       "name": "FUN_a00c8360",
       "status": "matched"
     },
+    "ram:a00c83e4": {
+      "by": "hand",
+      "comment": "counts the set bits of p[0..4] while clearing them; returns total == 20",
+      "name": "FUN_a00c83e4",
+      "status": "matched"
+    },
     "ram:a00c8444": {
       "by": "hand",
       "comment": "Sets or clears bit 4 of register 0xf and bit 3 of register 0xcc of port by bit 28 of DAT_a8078bb0[port]",
