@@ -1633,6 +1633,12 @@
       "name": "FUN_a0061534",
       "status": "matched"
     },
+    "ram:a0061540": {
+      "by": "hand",
+      "comment": "*p = (*p & ~m) | (v & m) on a volatile word",
+      "name": "FUN_a0061540",
+      "status": "matched"
+    },
     "ram:a006155c": {
       "by": "hand",
       "comment": "return (word at addr & ~3) >> ((addr & 3) * 8) & 0xff",
