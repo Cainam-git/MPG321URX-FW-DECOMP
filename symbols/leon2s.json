@@ -2395,7 +2395,7 @@
     },
     "ram:a0083870": {
       "by": "h52",
-      "comment": "reads five hardware register bytes; mode bit 0 updates status byte DAT_a80789e0, bit 1 acknowledges bits 6/7 and builds the flag word DAT_a80789e4",
+      "comment": "reads five hardware register bytes; mode bit 0 copies bits into status byte DAT_a80789e0, bit 1 writes bits 6/7 back and sets bits of DAT_a80789e4",
       "name": "FUN_a0083870",
       "status": "matched"
     },
