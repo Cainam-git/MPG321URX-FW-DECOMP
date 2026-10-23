@@ -5578,6 +5578,13 @@
       "name": "FUN_a00ae790",
       "status": "matched"
     },
+    "ram:a00ae8e0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "FUN_a00b32e4 sequence chosen by q, steps byte 0xa802d433 with FUN_a014459c, optional FUN_a00869b0, sets bit 1 of 0xa802b08e, tail FUN_a0090f94(10)",
+      "name": "FUN_a00ae8e0",
+      "status": "matched"
+    },
     "ram:a00aea3c": {
       "by": "h40",
       "cflags": "-mcpu=v8 -O3 -g",
