@@ -11,5 +11,5 @@ case "$rc" in *"mismatches 0;"*|*"mismatches 0") ;; *) echo "NOT EXACT (rawcmp)"
 grep -q "$f" $c || { echo "fn name missing in file"; exit 1; }
 python3 -I tools/handaccept.py leon2m $by $f $c "$sum" | tail -1
 git add src/leon2m/$f.c symbols/leon2m.json
-git commit -q -m "leon2m $f byte-exact ($by): $sum"
+git commit -q -m "leon2m $f byte-exact ($by): $sum" -- src/leon2m/$f.c symbols/leon2m.json
 git log --oneline -1

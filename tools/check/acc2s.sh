@@ -8,4 +8,4 @@ rc=$(nice -n 19 python3 -I tools/check/rawcmp_l2s.py $f $c "$fl" ${lo#0x} ${hi#0
 case "$j" in "100.00 match=True"*) ;; *) echo "NOT EXACT (jf)"; exit 1;; esac
 case "$rc" in *"mismatches 0;"*|*"mismatches 0") ;; *) echo "NOT EXACT (rawcmp)"; exit 1;; esac
 nice -n 19 python3 -I tools/handaccept.py leon2s $by $f $c "$s" || exit 1
-git add src/leon2s/$f.c symbols/leon2s.json && git commit -qm "leon2s $f byte-exact ($by): $s" && git log --oneline -1
+git add src/leon2s/$f.c symbols/leon2s.json && git commit -qm "leon2s $f byte-exact ($by): $s" -- src/leon2s/$f.c symbols/leon2s.json && git log --oneline -1
