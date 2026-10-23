@@ -915,7 +915,8 @@
     },
     "CODE:a1fe": {
       "by": "hand",
-      "comment": "flag and 5000-count check on FUN_CODE_db7d results with 0xDCB0 bit 1 pulse",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "flag and 5000-count check on FUN_CODE_db7d results, LARGE local result",
       "name": "FUN_CODE_a1fe",
       "status": "matched"
     },
