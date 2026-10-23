@@ -1,8 +1,8 @@
 /* leon2m FUN_a00a5908 @ 0xa00a5908-0xa00a5e68 (344 words), flags -mcpu=v8 -O3 -g.
  * Callers: FUN_a00a5e68, FUN_a00a6b98, FUN_a00b5d10, FUN_a00b8e7c.
  * FUN_a00a5908(x, y, mode): c = 0x11; for mode != 2, c = 0x16 and FUN_a0146a80(x, y + i, c, 0x796, 0) runs for
- * i = 0..c-1. Then 27 calls of FUN_a00b32e4(a, b, colour, p, q, n, id) (u8, u8, u16, u16, u8, u8, u8; the 7th
- * argument on the stack) with p relative to x and q relative to y or to c + y (colours 0x592, 0x9aaa, 0x9aae,
+ * i = 0..c-1. Then 27 calls of FUN_a00b32e4(a, b, c3, p, q, n, id) (u8, u8, u16, u16, u8, u8, u8; the 7th
+ * argument on the stack) with p relative to x and q relative to y or to c + y (third arguments 0x592, 0x9aaa, 0x9aae,
  * 0x9faa, 0xa29a, 0x3092, 0x8a2, ids 9..0x28 and 1..8, n = c - 7 and c - 6 in two calls). For mode 1 it then
  * calls FUN_a0146b50(0x101, 0), FUN_a0146b6c(2, 0) and FUN_a00b9750(x, y).
  * Source form: the loop limit and FUN_a0146a80's third argument are the variable c (cmp 0x16; bcs). x, y, c and mode
