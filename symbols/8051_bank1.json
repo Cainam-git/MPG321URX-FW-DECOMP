@@ -839,6 +839,13 @@
       "name": "FUN_CODE_7765",
       "status": "matched"
     },
+    "CODE:78ba": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "message handler on the XDATA 0xD80D block: status checks, 16-byte copy, ?C?CCASE switch on the first byte",
+      "name": "FUN_CODE_78ba",
+      "status": "matched"
+    },
     "CODE:7a0b": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
