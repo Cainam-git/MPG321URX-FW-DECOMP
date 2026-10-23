@@ -11546,6 +11546,12 @@
       "name": "FUN_a010a854",
       "status": "matched"
     },
+    "ram:a010a85c": {
+      "by": "hand",
+      "comment": "returns 0",
+      "name": "FUN_a010a85c",
+      "status": "matched"
+    },
     "ram:a010a864": {
       "by": "near",
       "comment": "returns bit 0 of register 0xCF011800",
