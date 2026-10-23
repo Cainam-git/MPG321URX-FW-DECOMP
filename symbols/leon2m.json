@@ -11354,6 +11354,13 @@
       "name": "FUN_a01107b8",
       "status": "matched"
     },
+    "ram:a0110d64": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes a table byte, 0x14 and a mode word to the 0xd0030400/0xd0038400 blocks and streams n/4 data words into register +0x408, with 0xd003b000 strobe waits",
+      "name": "FUN_a0110d64",
+      "status": "matched"
+    },
     "ram:a0110f4c": {
       "by": "autoc",
       "comment": "returns 0",
