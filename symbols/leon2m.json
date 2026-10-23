@@ -3164,6 +3164,13 @@
       "name": "FUN_a0095134",
       "status": "matched"
     },
+    "ram:a00951a8": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "updates DAT_a802d290+0x1e or +0x20 from FUN_a014459c(0xa802afec + 0x2c), then FUN_a00a8c88/FUN_a00a9abc/FUN_a00a9650/FUN_a00a813c sequence with afec 0x82 or 0x83; clears +0x1a3",
+      "name": "FUN_a00951a8",
+      "status": "matched"
+    },
     "ram:a009530c": {
       "by": "h10",
       "cflags": "-mcpu=v8 -O3 -g",
