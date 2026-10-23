@@ -6200,6 +6200,12 @@
       "name": "FUN_a00ae5e4",
       "status": "matched"
     },
+    "ram:a00ae850": {
+      "by": "h43",
+      "comment": "copies and clears 0x30 registers into a ring of 16 rows when signalled, then pulses register bits and calls FUN_a00856fc(0)",
+      "name": "FUN_a00ae850",
+      "status": "matched"
+    },
     "ram:a00aea0c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
