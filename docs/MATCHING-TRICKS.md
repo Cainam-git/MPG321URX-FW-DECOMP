@@ -283,6 +283,15 @@ changing the code, and test all pairs.
   find_reg (global; allocno array at the `allocno` symbol, 0x68-byte records: reg, size, calls, refs, freq,
   live_length, conflicts). Forcing one decision and diffing shows whether that decision alone gives the firmware
   bytes, before looking for the C that produces it.
+- **Signatures from the callers.** A %o7 or %o0 choice that nothing in the body explains can come from the
+  function's own signature: in a non-void function %i0 is the return register and is live everywhere, so a
+  parameter copy cannot share it. FUN_a00d0d78 is void with an unsigned char parameter, as its caller declares it.
+  A void function whose last statement is a call becomes a sibling call (call; restore) and switches to the leaf
+  register order; a statement after the call that compiles to nothing (testing the callee's int result) keeps a
+  normal call.
+- **Always-true tests that combine removes.** combine records each register's possible bits before it simplifies;
+  a default value set behind a test that is always true but only removed by combine keeps the full zero-extension
+  mask (FUN_a00f8f78). A no-code aid; name it in the header.
 - **Array index or pointer sum.** `*(table + i) = v` and `table[i] = v` can produce different operand order and
   scheduling for the same store; try both (DRV_HDMI21_RXDetect_FSM_LTS_P).
 
