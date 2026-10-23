@@ -5527,6 +5527,12 @@
       "name": "FUN_a00a4e68",
       "status": "matched"
     },
+    "ram:a00a4ec4": {
+      "by": "hand",
+      "comment": "on: register sequence with a wait on 0xcf03c840; off: computes x from v (150000, v * 250 or v * 333250 / 1000 - 100), x * 10 + x * 2768 / 3 / 1000, writes its three low bytes to 0xcf0127c4..0xcf0127cc",
+      "name": "FUN_a00a4ec4",
+      "status": "matched"
+    },
     "ram:a00a5050": {
       "by": "hand",
       "comment": "clears word DAT_a807dc10[0]",
