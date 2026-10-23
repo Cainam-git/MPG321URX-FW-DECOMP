@@ -8326,6 +8326,12 @@
       "name": "FUN_a00d6694",
       "status": "matched"
     },
+    "ram:a00d66b0": {
+      "by": "hand",
+      "comment": "stores v to DAT_a80760ac",
+      "name": "FUN_a00d66b0",
+      "status": "matched"
+    },
     "ram:a00d66bc": {
       "by": "hand",
       "comment": "Returns 0 if param_1 & 0xff is non-zero (btst 0xff, %o0; bne) or if param_2 & 0xff is not 1 (cmp %o1, 1; bne,a with clr %o0 in the delay slot); otherwise performs the computation. Both paths join at a common return point reached with b.",
