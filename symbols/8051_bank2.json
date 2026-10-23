@@ -1091,6 +1091,13 @@
       "name": "FUN_CODE_d275",
       "status": "matched"
     },
+    "CODE:d393": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "TH1 = -(k * 2000000 / 384 / (b * 100)) and XDATA 0x09D0 = (float)k * 8.0e8 / 6.4e7 with k = CODE 0xE543[a], a above 8 replaced by 7",
+      "name": "FUN_CODE_d393",
+      "status": "matched"
+    },
     "CODE:d426": {
       "by": "hand",
       "comment": "Keil STARTUP.A51 (unmodified) + INIT.A51; SP 61h, main FUN_CODE_b5b4; byte-exact via tools/startup8051.py (src/8051_bank2/startup)",
