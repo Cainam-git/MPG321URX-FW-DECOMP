@@ -14470,6 +14470,12 @@
       "name": "FUN_a012c0f8",
       "status": "matched"
     },
+    "ram:a012c100": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a012c100",
+      "status": "matched"
+    },
     "ram:a012c118": {
       "by": "autoc",
       "comment": "FUN_a01241fc(); returns p1",
