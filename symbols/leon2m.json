@@ -7997,6 +7997,13 @@
       "name": "FUN_a00dd5b8",
       "status": "matched"
     },
+    "ram:a00dd5e0": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets or clears mask bits in word 0xa802b0b0 by the third argument",
+      "name": "FUN_a00dd5e0",
+      "status": "matched"
+    },
     "ram:a00dd614": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
