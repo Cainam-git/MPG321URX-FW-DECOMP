@@ -7845,6 +7845,12 @@
       "name": "FUN_a00d462c",
       "status": "matched"
     },
+    "ram:a00d4660": {
+      "by": "hand",
+      "comment": "limits byte DAT_a802d290+0xb to 100 and passes it to FUN_a014929c",
+      "name": "FUN_a00d4660",
+      "status": "matched"
+    },
     "ram:a00d4690": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -Os -g",
