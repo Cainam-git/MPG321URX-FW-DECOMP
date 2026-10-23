@@ -5801,6 +5801,12 @@
       "name": "FUN_a00a7f1c",
       "status": "matched"
     },
+    "ram:a00a7fa0": {
+      "by": "hand",
+      "comment": "returns the low byte of register reg of port of the block with the base table 0xa00b4d5c",
+      "name": "FUN_a00a7fa0",
+      "status": "matched"
+    },
     "ram:a00a7fd8": {
       "by": "permuter",
       "comment": "low byte of register 0xCF000000 + 4 * (DAT_a00b4d44[p1 * 6 + p2] + p3) for p1 <= 1, p2 <= 5; else 0",
