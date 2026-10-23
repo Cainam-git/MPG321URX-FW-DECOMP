@@ -7591,6 +7591,12 @@
       "name": "FUN_a00d9e44",
       "status": "matched"
     },
+    "ram:a00da388": {
+      "by": "h43",
+      "comment": "steps a 4-bit table index, updates per-index counters and clears bit 4 or 5 of register word 0xccc",
+      "name": "FUN_a00da388",
+      "status": "matched"
+    },
     "ram:a00da6ac": {
       "by": "hand",
       "comment": "edit a record's 4-bit count (n--), shift its bytes, rebuild it via d68cc, copy r words into the register block DAT_a807609c[a8078832] (+0 or +0x30); volatile = register blocks (fw keeps |= / &= bit pulses through the same pointers in d8714)",
