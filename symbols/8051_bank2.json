@@ -501,6 +501,13 @@
       "name": "FUN_CODE_5c20",
       "status": "matched"
     },
+    "CODE:60b9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "writes the FUN_CODE_b317 register sequence after printing device mode, with three read-back checks",
+      "name": "FUN_CODE_60b9",
+      "status": "matched"
+    },
     "CODE:6540": {
       "by": "keil-lib",
       "comment": "Keil C51 library routine ?_PRINTF517?BYTE (C51BFPL.LIB:PRINTF517)",
