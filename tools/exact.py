@@ -81,7 +81,8 @@ def solve_undefined(cpu, obj, text_lo):
 
 
 LAST = (b"", b"")
-RUNTIME = {"leon2m": 0xA0060000}   # leon2m code runs 0xA0060000 below the listing addresses (jump-table words prove it)
+RUNTIME = {"leon2m": 0xA0060000}
+LINK_SHIFTS = {"leon2s": [0xF10000]}   # leon2s code linked 0xF10000 above where it is loaded (jump tables)   # leon2m code runs 0xA0060000 below the listing addresses (jump-table words prove it)
 # except the boot piece, the RAM copy of flash 0xD0000 that runs AT its listing address
 # 0xA0028000..0xA002FB43 (FUN_CODE_0b0d copies 0x7B44 bytes; reset jmp 0xA0029000 is absolute)
 BOOT_PIECE = {"leon2m": (0xA0028000, 0xA002FB44)}
@@ -95,8 +96,10 @@ def jump_tables(cpu, obj, off, got, want, text_lo):
     elsewhere. Exact proof without moving the table: (1) every byte equals the firmware except the sethi/or
     immediates that hold the table address, (2) those immediates in the firmware name one table address T, and
     (3) the firmware table at T holds, entry for entry, the built table's targets at their run-time addresses.
-    Returns None when proven, '' when the object has no jump table, else a reason."""
-    if cpu not in RUNTIME: return ""
+    Returns None when proven, '' when the object has no jump table, else a reason.
+    leon2s: part of the program was linked 0xF10000 above its load address (docs/STATUS.md); its tables hold
+    addresses of that link, so the shift 0xF10000 is also tried there, under the same entry-for-entry proof."""
+    if cpu not in RUNTIME and cpu not in LINK_SHIFTS: return ""
     rel = [(int(o, 16), ty, int(t or "0", 16)) for o, ty, t in re.findall(
         r"^([0-9a-f]+)\s+R_SPARC_(\w+)\s+\.text(?:\+0x([0-9a-f]+))?\s*$", run(tool("objdump"), "-r", "-j", ".text", obj).stdout, re.M)]
     table = sorted((o, t) for o, ty, t in rel if ty == "32" and o < off)
@@ -112,16 +115,20 @@ def jump_tables(cpu, obj, off, got, want, text_lo):
             v = int.from_bytes(b[p:p + 4], "big") & ~mask; b[p:p + 4] = v.to_bytes(4, "big")
     if g != w: return "bytes differ outside the jump-table address"
     base = BASE[cpu]; img = part(cpu)
-    for k, (hi_, lo_) in addr.items():
-        if hi_ is None or lo_ is None: return "jump table address not built by a sethi/or pair"
-        t = hi_ | lo_
-        nxt = min([kk for kk in addr if kk > k] + [off]); ents = [x for o, x in table if k <= o < nxt]
-        sh = shift(cpu, text_lo)
-        at = t + sh - base
-        if at < 0 or at + 4 * len(ents) > len(img): return f"jump table at 0x{t:x} is outside the image"
-        for i, x in enumerate(ents):
-            if int.from_bytes(img[at + 4 * i:at + 4 * i + 4], "big") != (text_lo + x - sh) & 0xffffffff:
-                return f"jump table entry {i} at 0x{t + 4 * i:x} differs"
+    why = None
+    for sh in ([shift(cpu, text_lo)] if cpu in RUNTIME else LINK_SHIFTS[cpu]):
+        why = None
+        for k, (hi_, lo_) in addr.items():
+            if hi_ is None or lo_ is None: return "jump table address not built by a sethi/or pair"
+            t = hi_ | lo_
+            nxt = min([kk for kk in addr if kk > k] + [off]); ents = [x for o, x in table if k <= o < nxt]
+            at = t + sh - base
+            if at < 0 or at + 4 * len(ents) > len(img): why = f"jump table at 0x{t:x} is outside the image"; break
+            bad = [i for i, x in enumerate(ents)
+                   if int.from_bytes(img[at + 4 * i:at + 4 * i + 4], "big") != (text_lo + x - sh) & 0xffffffff]
+            if bad: why = f"jump table entry {bad[0]} at 0x{t + 4 * bad[0]:x} differs"; break
+        if why is None: break
+    if why: return why
     return None
 
 
