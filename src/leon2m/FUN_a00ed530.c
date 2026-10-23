@@ -1,4 +1,5 @@
-/* leon2m FUN_a00ed530 @ 0xa00ed530-0xa00ed70c (119 words), flags -mcpu=v8 -O3 (no -g: the -g build puts a nop between the last call and the return). Caller: FUN_a00ed70c.
+/* leon2m FUN_a00ed530 @ 0xa00ed530-0xa00ed70c (119 words), flags -mcpu=v8 -O3 (no -g: the -g build puts a nop
+ * between the last call and the return). Caller: FUN_a00ed70c.
  * Writes v & 0xf to the register field (reg, mask, shift) of entry b of the word tables 0xa8026918 / 0xa8026908 /
  * 0xa80268f8 with FUN_a00e0774 (b == -1 passes the table addresses themselves), then the value 0 (v 6..11) or 1
  * (other v) to the fields of the tables 0xa80267c8 / 0xa80267b8 / 0xa80267a8 and 0xa8026868 / 0xa8026858 /
