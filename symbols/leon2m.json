@@ -13352,6 +13352,13 @@
       "name": "FUN_a0123840",
       "status": "matched"
     },
+    "ram:a01238e8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "after the 0x96/0x47 handshake on the register pair at 0xf190 + 2 * DAT_a802d87e, reads six register bytes per command 0x52..0x58 into the 7 x 6 table DAT_a802d850 and prints it",
+      "name": "FUN_a01238e8",
+      "status": "matched"
+    },
     "ram:a0123c4c": {
       "by": "hand",
       "comment": "hex digit decoder: '0'..'9' and 'A'..'F' to 0..15, else 0xaa",
