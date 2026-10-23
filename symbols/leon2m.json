@@ -9794,6 +9794,13 @@
       "name": "FUN_a00fe820",
       "status": "matched"
     },
+    "ram:a00fe880": {
+      "by": "h54",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes a 2-bit field of a hardware register selected by group a and bit b, value chosen by comparing c",
+      "name": "FUN_a00fe880",
+      "status": "matched"
+    },
     "ram:a010031c": {
       "by": "h13",
       "cflags": "-mcpu=v8 -O3 -g",
