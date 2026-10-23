@@ -1194,6 +1194,13 @@
       "name": "FUN_CODE_b33e",
       "status": "matched"
     },
+    "CODE:b3cb": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "copies n bytes from p to XDATA 0xA62F + off, limited to 0x1E with a SetZPArry OOR message",
+      "name": "FUN_CODE_b3cb",
+      "status": "matched"
+    },
     "CODE:b456": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
