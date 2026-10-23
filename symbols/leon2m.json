@@ -11879,6 +11879,12 @@
       "name": "FUN_a010b39c",
       "status": "matched"
     },
+    "ram:a010b444": {
+      "by": "hand",
+      "comment": "stores the argument to DAT_a8027a88",
+      "name": "FUN_a010b444",
+      "status": "matched"
+    },
     "ram:a010b610": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
