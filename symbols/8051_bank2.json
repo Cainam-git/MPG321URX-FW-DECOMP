@@ -700,6 +700,13 @@
       "name": "FUN_CODE_a17e",
       "status": "matched"
     },
+    "CODE:a36c": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Switch on cmd over the XDATA bytes 0xF199..0xF19F: register updates, record copies and tail calls per command value",
+      "name": "FUN_CODE_a36c",
+      "status": "matched"
+    },
     "CODE:a547": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
