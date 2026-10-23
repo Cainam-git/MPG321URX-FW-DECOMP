@@ -8318,6 +8318,12 @@
       "name": "FUN_a00db9d4",
       "status": "matched"
     },
+    "ram:a00dba70": {
+      "by": "hand",
+      "comment": "copies 16 register bytes into a message, sets its control bits from two ROM reads or clears them, and sends it with FUN_a00d791c",
+      "name": "FUN_a00dba70",
+      "status": "matched"
+    },
     "ram:a00dbc8c": {
       "by": "hand",
       "comment": "steps a three-state byte through FUN_a00db9d4/FUN_a00dba70 calls, retried when the time difference exceeds 500",
