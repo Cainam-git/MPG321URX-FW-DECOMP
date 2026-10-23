@@ -16579,6 +16579,13 @@
       "name": "FUN_a014eba4",
       "status": "matched"
     },
+    "ram:a014f208": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "clears nibbles of DAT_a802cc80 not found in DAT_a802a480[9] and updates the matching nibble of DAT_a802cc82",
+      "name": "FUN_a014f208",
+      "status": "matched"
+    },
     "ram:a014f620": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
