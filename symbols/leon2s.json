@@ -7139,6 +7139,12 @@
       "name": "FUN_a00c2488",
       "status": "matched"
     },
+    "ram:a00c255c": {
+      "by": "hand",
+      "comment": "exchanges 0x5f/0x20-byte tables over ROM register accessors, xor-combining read-back bytes into DAT_a8078cb8",
+      "name": "FUN_a00c255c",
+      "status": "matched"
+    },
     "ram:a00c2758": {
       "by": "hand",
       "comment": "three-step port state machine on DAT_a807d5c8 records",
