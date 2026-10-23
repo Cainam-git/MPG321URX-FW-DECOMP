@@ -5344,6 +5344,12 @@
       "name": "FUN_a00a8694",
       "status": "matched"
     },
+    "ram:a00a8708": {
+      "by": "h43",
+      "comment": "writes four data bytes to one of three register groups through SC_MaskSetByte by selector",
+      "name": "FUN_a00a8708",
+      "status": "matched"
+    },
     "ram:a00a8844": {
       "by": "hand",
       "comment": "a8708(p, 0, {0,0x10,0,0}), a8708(p, 1, 4 bytes copied from a00b4dc8 via memcpy b15d8), a8708(p, 2, {0x40,0,0,0})",
