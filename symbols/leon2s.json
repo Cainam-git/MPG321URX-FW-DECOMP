@@ -2019,6 +2019,12 @@
       "name": "FUN_a00700cc",
       "status": "matched"
     },
+    "ram:a00703d4": {
+      "by": "hand",
+      "comment": "returns (DAT_a80788d8 >> 8) & (1 << n) when bit n of DAT_a80788d8 is set, else 0",
+      "name": "FUN_a00703d4",
+      "status": "matched"
+    },
     "ram:a0070404": {
       "by": "autoc",
       "comment": "returns (byte 0xA80788D4) & 1",
