@@ -11468,6 +11468,13 @@
       "name": "FUN_a0113138",
       "status": "matched"
     },
+    "ram:a01131d4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "switches to mode m: masks the enabled bits of 0xcf011800/0xcf011a00, reloads the mode rows, restores the bits",
+      "name": "FUN_a01131d4",
+      "status": "matched"
+    },
     "ram:a01136a0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
