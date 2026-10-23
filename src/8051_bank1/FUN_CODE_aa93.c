@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_aa93 @ 0xAA93..0xAB2C (153 bytes), OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC).
+/* 8051_bank1 FUN_CODE_aa93 @ 0xAA93..0xAB2C (153 bytes), OPTIMIZE(8,SPEED) REGFILE(R.ORC) (the same bytes with LARGE added).
  * Writes 0x82 to XDATA 0xF1C0, sets the XDATA byte pointer at 0xA74A to 0xF800 and sends the 0x200 bytes
  * 0xF800..0xF9FF to XDATA 0xF1C3 through it (?C?ILDIX). Then 0xF1C0 = 0x82 again and, twice: FUN_CODE_d5f3(6);
  * wait until bit 1 of FUN_CODE_cf73(5) is set; XDATA 0xF0F0..0xF0F2 = bytes 1..3 of the unsigned long at 0xA75F;

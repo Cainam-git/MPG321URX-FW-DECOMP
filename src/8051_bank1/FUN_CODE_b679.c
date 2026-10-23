@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_b679 @ 0xB679..0xB6FE (133 bytes), OPTIMIZE(8,SPEED) LARGE.
+/* 8051_bank1 FUN_CODE_b679 @ 0xB679..0xB6FE (133 bytes), OPTIMIZE(7,SPEED) (the same bytes at OPTIMIZE(8,SPEED) LARGE).
  * Prints "\r\n<<<< Flash change to Quad mode!!>>>\r\n" (CODE 0xA2B8), FUN_CODE_d5f3(6), prints
  * "\r\nWrite enable!!\r\n" (CODE 0xA2E0); then XDATA 0xF134 |= 0xC0, 0xF11D |= 0x80, 0xF11D &= 0xBF,
  * 0xF075 |= 0x10, 0xF050 = (0xF050 & 0xDF) | 0x04, 0xF0E6 = (0xF0E6 & 0x0C) | 0x41, 0xF0F4 = 3, 0xF0EB = 0,
