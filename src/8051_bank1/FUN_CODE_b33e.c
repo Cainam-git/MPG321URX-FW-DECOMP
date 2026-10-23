@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_b33e @ 0xB33E..0xB3CB (141 bytes), OPTIMIZE(8,SPEED) LARGE.
+/* 8051_bank1 FUN_CODE_b33e @ 0xB33E..0xB3CB (141 bytes), OPTIMIZE(7,SPEED) (the same bytes at OPTIMIZE(8,SPEED) LARGE).
  * FUN_CODE_b33e(sel, v): writes v to one XDATA register chosen by sel: 1 0xF005, 2 0xF006, 3 0xF007, 4 0xF008,
  * 5 0xF009, 6 0xF011, 7 0xF013, 8 0xF115, 9 0xF117, 10 0xF119, 11 0xF11B, 12 0xF11D, 13 0xF11F; other values
  * write nothing. Keil switch with a jump table at 0xB356 (13 LJMPs); each case ends in its own RET.
