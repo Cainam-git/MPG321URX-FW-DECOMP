@@ -2645,6 +2645,12 @@
       "name": "FUN_a0085dcc",
       "status": "matched"
     },
+    "ram:a0085ea8": {
+      "by": "h42",
+      "comment": "runs the per-port set-up sequence (FUN_a00aa3a4, FUN_a00aa45c, FUN_a00aa49c, FUN_a0085b80, FUN_a0085dcc, FUN_a0085b14) for ports 0..4 between register bit clears",
+      "name": "FUN_a0085ea8",
+      "status": "matched"
+    },
     "ram:a0086030": {
       "by": "hand",
       "comment": "a78fc register writes 0x30/0x31: header, len, buf[0..len] for modes 0x80/0x40/0, else 3/0xb pick; sibcall b1794(1)",
