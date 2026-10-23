@@ -11659,6 +11659,12 @@
       "name": "FUN_a0109b14",
       "status": "matched"
     },
+    "ram:a0109b58": {
+      "by": "hand",
+      "comment": "writes 0xa0 to register 0xcf011cc4",
+      "name": "FUN_a0109b58",
+      "status": "matched"
+    },
     "ram:a0109b70": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
