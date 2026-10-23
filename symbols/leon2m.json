@@ -17158,6 +17158,13 @@
       "name": "FUN_a0150120",
       "status": "matched"
     },
+    "ram:a0150248": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Hold-off counter at 0xA802CC88 for FUN_a011dd9c(0x18, ...) when 0xA802CC86 is set",
+      "name": "FUN_a0150248",
+      "status": "matched"
+    },
     "ram:a0150768": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
