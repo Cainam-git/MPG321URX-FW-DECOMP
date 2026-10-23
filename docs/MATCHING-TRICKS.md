@@ -118,6 +118,10 @@ symbol names are not allowed.
   significant bit).
 - **Register tables** read through pointer arrays: try `volatile T *const TAB[N]`.
 - **Narrowing a callee's return type** is only correct when the value really fits. Read the callee's return path first.
+- **A fresh `and %i0,0xff` for one use of a byte parameter** (instead of reusing the masked register) means that use
+  reads an `unsigned short` copy: `unsigned short k = port; ... (unsigned char)k`, sometimes with the parameter itself
+  declared `unsigned short`. With `int` the copy merges with the parameter and the local registers shift
+  (FUN_a00c2758, FUN_a010f064).
 
 ## GCC 3.4.4: same instructions, different order
 
