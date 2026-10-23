@@ -1,5 +1,6 @@
 /* leon2m FUN_a00b3070 @ 0xa00b3070 (-mcpu=v8 -O3 -g -msoft-float)
- * Twin of FUN_a00ab340: same code, other constants.
+ * Calls FUN_a00a8c88(), FUN_a0146b50(0x111, 0) and FUN_a0146b6c(0, 0), then for i = 0 .. 4 FUN_a00a31a4(0, 0x2a, i
+ * * 2 + 6, 1, FUN_a00a3844(0x18E9F8, i * 29 + byte 0xA802D298), 0). Same code as FUN_a00ab340.
  * See FUN_a00ab340 for the explanation; this copy's constants differ, so its comments were removed.
  */
 struct St { unsigned char pad[8]; unsigned char b08; };

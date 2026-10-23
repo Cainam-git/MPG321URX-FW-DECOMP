@@ -1,5 +1,7 @@
 /* leon2s FUN_a00a68d0 @ 0xa00a68d0 (-mcpu=v8 -Os -g)
- * Twin of FUN_a00a6da8: same code, other constants.
+ * k = p1 & 0xff. For k <= 1: v = halfword k of the table at 0xA00B4D9C + p2; with R(x) = register 0xCF000000 | (x
+ * << 2) returns ((R(v + 1) << 8) | (R(v) & 0xff)) as 16 bits. Other k return 0. Same code as FUN_a00a6da8 with
+ * other constants.
  * See FUN_a00a6da8 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern unsigned short DAT_a00b4d9c[];

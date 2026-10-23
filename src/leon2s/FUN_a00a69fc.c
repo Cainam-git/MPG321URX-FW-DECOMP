@@ -1,5 +1,7 @@
 /* leon2s FUN_a00a69fc @ 0xa00a69fc (-mcpu=v8 -Os -g)
- * Twin of FUN_a00a65c4: same code, other constants.
+ * k = p1 & 0xff. Writes p3 & 0xff to the register 0xCF000000 | ((halfword i of the table at 0xA00B4D98 + p2) * 4)
+ * for i = 0 and 1 when k == 2, for i = k when k < 2; other k return without a write. Same code as FUN_a00a65c4
+ * with other constants.
  */
 extern unsigned short DAT_a00b4d98[];
 

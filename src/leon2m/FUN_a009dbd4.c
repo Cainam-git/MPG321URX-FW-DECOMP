@@ -1,5 +1,8 @@
 /* leon2m FUN_a009dbd4 @ 0xa009dbd4 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a009dc84: same code, other constants.
+ * With w = word 0xA802AFEC: calls FUN_a00a93bc(w - 0x44), repeats t = ((low 16 bits of w) - 0x41) % 4 (signed), w
+ * = t + 0x44 until FUN_a00aad30(t) returns 1, calls FUN_a00a9650(w - 0x44, 1), then with v = byte 0xA8025C56
+ * FUN_a00a813c(1, v + 2, 0) when w - 0x46 == v, otherwise FUN_a00a813c(1, v + 2, 1). Same code as FUN_a009dc84
+ * with other constants.
  * See FUN_a009dc84 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern unsigned char DAT_a8025c56;

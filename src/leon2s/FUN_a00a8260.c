@@ -1,5 +1,7 @@
 /* leon2s FUN_a00a8260 @ 0xa00a8260 (-mcpu=v8 -Os -g)
- * Twin of FUN_a00a7d04: same code, other constants.
+ * For p1 (low byte) < 2: with R = register 0xCF000000 | ((halfword p1 of the table at 0xA00B4D40 + p2) * 4), sets
+ * (p4 == 1) or clears (other p4) the bits p3 in the low byte of R and stores that byte back. Same code as
+ * FUN_a00a7d04 with other constants.
  * See FUN_a00a7d04 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern unsigned char DAT_a00b4d40;

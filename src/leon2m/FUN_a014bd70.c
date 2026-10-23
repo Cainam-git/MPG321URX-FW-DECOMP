@@ -1,5 +1,7 @@
 /* leon2m FUN_a014bd70 @ 0xa014bd70 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a0148540: same code, other constants.
+ * k = p1; any k above 3 prints "SYS remapping channel OOR" through FUN_a00df170 and uses 0. Returns
+ * FUN_a0140058(bits 12-15 of word 0 of record k of the 0x78-byte records at 0xA802DF30). Same code as
+ * FUN_a0148540.
  */
 struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* 0x78-byte record */
 extern struct Chan DAT_a802df30[4];

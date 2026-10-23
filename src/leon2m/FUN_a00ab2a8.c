@@ -1,5 +1,6 @@
 /* leon2m FUN_a00ab2a8 @ 0xa00ab2a8 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a00b31a0: same code, other constants.
+ * Calls FUN_a00a8c88(), FUN_a0146b50(0x111, 0) and FUN_a0146b6c(0, 0), then for i = 0 .. 2 FUN_a00a31a4(0, 0x2a, i
+ * * 2 + 6, 1, FUN_a00a3844(0x18F550, i * 29 + byte 0xA802D298), 0). Same code as FUN_a00b31a0.
  * See FUN_a00b31a0 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern unsigned char DAT_a802d290[];

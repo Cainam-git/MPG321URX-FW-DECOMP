@@ -1,5 +1,7 @@
 /* leon2m FUN_a00936fc @ 0xa00936fc (-mcpu=v8 -O3 -g)
- * Twin of FUN_a00934dc: same code, other constants.
+ * Calls FUN_a00a93bc(word 0xA802AFEC - 0x56) and FUN_a00b3070(); v = byte 0xA802D3CF (0xA802D290 + 0x13F); stores
+ * v in byte 0xA8025C55 and v + 0xE2 in word 0xA802AFEC; calls FUN_a00a9650(v, 0), then FUN_a00a9650 with the byte
+ * read again and 1. Same code as FUN_a00934dc with other constants.
  * See FUN_a00934dc for the explanation; this copy's constants differ, so its comments were removed.
  */
 struct R290 { unsigned char pad[0x13f]; unsigned char b; };

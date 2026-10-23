@@ -1,5 +1,7 @@
 /* leon2m FUN_a0139114 @ 0xa0139114 (-mcpu=v8 -O2 -g)
- * Twin of FUN_a013923c: same code, other constants.
+ * b = 2, 3, 4 or 5 for p1 = 0, 1, 2 or 3 (0 for any other p1). Calls FUN_a01370dc(0xa0, 4, buf, 0) with the local
+ * bytes buf = {b, 0, 0, 0} and FUN_a0137344(1); returns byte 0xA802CBA3. Same code as FUN_a013923c with other
+ * constants.
  * See FUN_a013923c for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern unsigned char DAT_a802cba3;

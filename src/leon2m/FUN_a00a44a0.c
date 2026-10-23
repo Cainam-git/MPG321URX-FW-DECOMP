@@ -1,5 +1,7 @@
 /* leon2m FUN_a00a44a0 @ 0xa00a44a0 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a00a4348: same code, other constants.
+ * v = byte 0xA802D29F (0xA802D290 + 0xF) - 1 (8 bits). When v <= 5 stores v back and calls FUN_a00b7530(1) and
+ * FUN_a00d4780(); otherwise stores 0. Sets bit 1 of byte 0xA802B08E and returns p1. Same code as FUN_a00a4348 with
+ * other constants.
  * See FUN_a00a4348 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern unsigned char DAT_a802d290[];

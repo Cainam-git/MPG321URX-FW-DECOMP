@@ -1,5 +1,7 @@
 /* leon2s FUN_a00b1be4 @ 0xa00b1be4 (-mcpu=v8 -Os -g)
- * Twin of FUN_a00b1b18: same code, other constants.
+ * In this order: sets bit 5 of registers 0x9F120030 and 0x9F100090, clears bit 5 of register 0x9F120028, clears
+ * bit 9 of register 0x9F120048, sets bit 9 of register 0x9F120080, sets bit 25 of register 0x9F120048 and sets bit
+ * 5 of register 0x9F120034. Same code as FUN_a00b1b18 with other constants.
  */
 typedef unsigned int uint;
 

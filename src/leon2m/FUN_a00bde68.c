@@ -1,5 +1,6 @@
 /* leon2m FUN_a00bde68 @ 0xa00bde68 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a00be38c: same code, other constants.
+ * Stores '0', '0' and '0' + bit 9 of word 0xA802D290 in bytes 7, 8 and 9 of the byte array 0xA802D078, then calls
+ * FUN_a00bac3c(0x56), FUN_a00ba950(p1) and FUN_a00babe4(p1, 0xb). Same code as FUN_a00be38c with other constants.
  */
 extern unsigned int _DAT_a802d290;
 extern unsigned char DAT_a802d078[];

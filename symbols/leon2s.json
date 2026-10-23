@@ -2184,7 +2184,7 @@
     "ram:a0073578": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00a4610 (constants swapped)",
+      "comment": "When p1 == 0: sets the record at 0xA80789D4 to {0, word 0xA8079038, address of FUN_a0083324} and calls CONV2HDMITX_UpdateInterface_3 with its address",
       "name": "FUN_a0073578",
       "status": "matched"
     },
@@ -3767,7 +3767,7 @@
     "ram:a0090098": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a0090010 (constants swapped)",
+      "comment": "k = p1 & 0xff; v = FUN_a00a6938(k, 0x3a). Returns v << 1 (16 bits) when (FUN_a00a657c(k, 0x144) & 0xE0) == 0x60 or FUN_a008fff0(k) is nonzero, otherwise v",
       "name": "FUN_a0090098",
       "status": "matched"
     },
@@ -3876,7 +3876,7 @@
     "ram:a0090e6c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b1224 (constants swapped)",
+      "comment": "Calls FUN_a00a67b8(p1, 0x126, 1, a) and FUN_a00a67b8(p1, 0x126, 4, b) with (a, b) = (0, 0) for p2 == 0, (1, 0) for p2 == 2 and (1, 1) for p2 == 1; other p2 make no call",
       "name": "FUN_a0090e6c",
       "status": "matched"
     },
@@ -5645,7 +5645,7 @@
     "ram:a00a68d0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00a6da8 (constants swapped)",
+      "comment": "k = p1 & 0xff. For k <= 1: v = halfword k of the table at 0xA00B4D9C + p2; with R(x) = register 0xCF000000 | (x << 2) returns ((R(v + 1) << 8) | (R(v) & 0xff)) as 16 bits. Other k return 0",
       "name": "FUN_a00a68d0",
       "status": "matched"
     },
@@ -5664,7 +5664,7 @@
     "ram:a00a69fc": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00a65c4 (constants swapped)",
+      "comment": "k = p1 & 0xff. Writes p3 & 0xff to the register 0xCF000000 | ((halfword i of the table at 0xA00B4D98 + p2) * 4) for i = 0 and 1 when k == 2, for i = k when k < 2; other k return without a write",
       "name": "FUN_a00a69fc",
       "status": "matched"
     },
@@ -5918,7 +5918,7 @@
     "ram:a00a8260": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00a7d04 (constants swapped)",
+      "comment": "For p1 (low byte) < 2: with R = register 0xCF000000 | ((halfword p1 of the table at 0xA00B4D40 + p2) * 4), sets (p4 == 1) or clears (other p4) the bits p3 in the low byte of R and stores that byte back",
       "name": "FUN_a00a8260",
       "status": "matched"
     },
@@ -5949,7 +5949,7 @@
     "ram:a00a8694": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00a8844 (constants swapped)",
+      "comment": "Calls FUN_a00a8508(p1, 0, a) with a = {0, 0x10, 0, 0}, FUN_a00a8508(p1, 1, c) with c = the 4 bytes copied from 0xA00B4DC8 (FUN_a00b15d8), and FUN_a00a8508(p1, 2, b) with b = {0x40, 0, 0, 0}",
       "name": "FUN_a00a8694",
       "status": "matched"
     },
@@ -7100,7 +7100,7 @@
     "ram:a00b1be4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b1b18 (constants swapped)",
+      "comment": "In this order: sets bit 5 of registers 0x9F120030 and 0x9F100090, clears bit 5 of register 0x9F120028, clears bit 9 of register 0x9F120048, sets bit 9 of register 0x9F120080, sets bit 25 of register 0x9F120048 and sets bit 5 of register 0x9F120034",
       "name": "FUN_a00b1be4",
       "status": "matched"
     },

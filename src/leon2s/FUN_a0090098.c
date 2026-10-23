@@ -1,5 +1,6 @@
 /* leon2s FUN_a0090098 @ 0xa0090098 (-mcpu=v8 -Os -g)
- * Twin of FUN_a0090010: same code, other constants.
+ * k = p1 & 0xff; v = FUN_a00a6938(k, 0x3a). Returns v << 1 (16 bits) when (FUN_a00a657c(k, 0x144) & 0xE0) == 0x60
+ * or FUN_a008fff0(k) is nonzero, otherwise v. Same code as FUN_a0090010 with other constants.
  * See FUN_a0090010 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern unsigned int FUN_a00a657c(unsigned int param_1, unsigned short param_2);
