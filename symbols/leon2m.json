@@ -7655,6 +7655,13 @@
       "name": "FUN_a00d4970",
       "status": "matched"
     },
+    "ram:a00d4998": {
+      "by": "h54",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "copies the current 0xa802d290 values into one of 26 slot entries (byte, word and bit-field arrays) and sets bit 1 of 0xa802b08e",
+      "name": "FUN_a00d4998",
+      "status": "matched"
+    },
     "ram:a00d5748": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
