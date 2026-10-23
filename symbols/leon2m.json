@@ -9363,6 +9363,12 @@
       "name": "FUN_a00e0cb0",
       "status": "matched"
     },
+    "ram:a00e0cd8": {
+      "by": "hand",
+      "comment": "stores v to DAT_a8025d08 and 1 to DAT_a802b54c",
+      "name": "FUN_a00e0cd8",
+      "status": "matched"
+    },
     "ram:a00e0d08": {
       "by": "hand",
       "comment": "empty routine",
