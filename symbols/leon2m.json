@@ -4201,6 +4201,13 @@
       "name": "FUN_a009b4e8",
       "status": "matched"
     },
+    "ram:a009b864": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "steps byte 0xa802d420 down through 6..0 between FUN_a00a9cc8 and FUN_a00a9dac, then FUN_a00a813c(2, v, flag) and FUN_a00b88b8",
+      "name": "FUN_a009b864",
+      "status": "matched"
+    },
     "ram:a009b8e0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
