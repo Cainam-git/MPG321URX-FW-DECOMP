@@ -1588,6 +1588,12 @@
       "name": "FUN_CODE_e525",
       "status": "matched"
     },
+    "CODE:e532": {
+      "by": "hand",
+      "comment": "stores the 16-bit parameter into the unsigned int at XDATA 0x0156",
+      "name": "FUN_CODE_e532",
+      "status": "matched"
+    },
     "CODE:e53b": {
       "by": "hand",
       "comment": "update agent: set I2C half-bit delay XDATA 0x09D2 (non-zero only)",
