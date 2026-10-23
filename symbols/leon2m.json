@@ -10786,6 +10786,13 @@
       "name": "FUN_a01095bc",
       "status": "matched"
     },
+    "ram:a0109844": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "by bits of register 0xcf011d8c converts registers 0xcf011de0/0xcf011e00 (v / 2 or scaled v * 10 / 3 rounded to 32) into 0xcf011f64/0xcf011f6c, or writes 0",
+      "name": "FUN_a0109844",
+      "status": "matched"
+    },
     "ram:a01099fc": {
       "by": "h13",
       "cflags": "-mcpu=v8 -O3 -g",
