@@ -7237,6 +7237,12 @@
       "name": "FUN_a00c1c18",
       "status": "matched"
     },
+    "ram:a00c224c": {
+      "by": "hand",
+      "comment": "shifts p[1..7] to p[0..6], then sets p[7] = old p[0] + 1 (or increments p[6] and clears p[7] when old p[0] was 0xff)",
+      "name": "FUN_a00c224c",
+      "status": "matched"
+    },
     "ram:a00c22a0": {
       "by": "hand",
       "comment": "Sends three 128-byte tables (ROM, or read with func_0xa0f9d2e0) with FUN_a00c99a4 modes 5/3/4, then DAT_a8078d38 in mode 0",
