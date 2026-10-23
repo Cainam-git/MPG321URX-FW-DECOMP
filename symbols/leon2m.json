@@ -12131,6 +12131,13 @@
       "name": "FUN_a0112db0",
       "status": "matched"
     },
+    "ram:a0112fb8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the low byte of register 0xcf011a00",
+      "name": "FUN_a0112fb8",
+      "status": "matched"
+    },
     "ram:a0113064": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
