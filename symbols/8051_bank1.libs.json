@@ -229,6 +229,7 @@
   "data:FUN_CODE_d44e:n": 36,
   "data:FUN_CODE_d44e:t0": 38,
   "data:FUN_CODE_d47f:r": 18,
+  "data:FUN_CODE_d785:b": 30,
   "data:FUN_CODE_d8c8:BITS_22_7": 23,
   "data:FUN_CODE_d94a:DAT_INTMEM_57": 87,
   "data:FUN_CODE_d94a:DAT_INTMEM_59": 89,
@@ -238,7 +239,14 @@
   "data:FUN_CODE_db32:DAT_INTMEM_4d": 77,
   "data:FUN_CODE_db4b:DAT_INTMEM_50": 80,
   "data:FUN_CODE_db64:DAT_INTMEM_53": 83,
+  "data:FUN_CODE_dc0d:b": 26,
+  "data:FUN_CODE_dc24:b": 28,
+  "data:FUN_CODE_de87:BITS_22_6": 22,
   "data:FUN_CODE_deb0:BITS_22_1": 17,
   "data:FUN_CODE_deb0:b": 0,
+  "data:FUN_CODE_defa:DAT_INTMEM_4b": 75,
+  "data:FUN_CODE_df02:BITS_21_5": 13,
+  "data:FUN_CODE_df05:BITS_21_5": 13,
+  "data:FUN_CODE_df08:BITS_21_5": 13,
   "data:FUN_CODE_df0b:BITS_21_6": 14
 }

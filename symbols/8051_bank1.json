@@ -939,8 +939,8 @@
     },
     "CODE:883d": {
       "by": "hand",
-      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
-      "comment": "register write sequence, two FUN_CODE_d27f key pairs with FUN_CODE_ad88 / FUN_CODE_8a51 (module with FUN_CODE_dcd3)",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "register write sequence, two FUN_CODE_d27f key pairs with FUN_CODE_ad88 / FUN_CODE_8a51 (module with d9d1, dcd3, c0a1, cf38)",
       "name": "FUN_CODE_883d",
       "status": "matched"
     },
@@ -1302,6 +1302,14 @@
       "name": "FUN_CODE_bfdd",
       "status": "matched"
     },
+    "CODE:c0a1": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "D523/6033/604D set-up, d500 + dcd3 + d9d1 block, bit result from dd74, 760c and c3e4 checks",
+      "module": "FUN_CODE_883d",
+      "name": "FUN_CODE_c0a1",
+      "status": "matched"
+    },
     "CODE:c163": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
@@ -1549,6 +1557,14 @@
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
       "comment": "stores v >> 8 to 0xF401 + page and reads from 0x6100 + page * 256 + (v & 0xFF) through generic pointers",
       "name": "FUN_CODE_cefd",
+      "status": "matched"
+    },
+    "CODE:cf38": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "D523 set-up, d500 + dcd3 + d9d1 block, bit result from dd74 and c3e4 checks",
+      "module": "FUN_CODE_883d",
+      "name": "FUN_CODE_cf38",
       "status": "matched"
     },
     "CODE:cf73": {
@@ -1831,10 +1847,20 @@
       "name": "FUN_CODE_d9a5",
       "status": "matched"
     },
+    "CODE:d9c3": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_d9d1, in FUN_CODE_d9d1's code segment; emitted by compiling src/8051_bank1/FUN_CODE_883d.c, bytes judged with FUN_CODE_d9d1 over 0xd9c3..0xd9e1",
+      "kind": "common_entry",
+      "module": "FUN_CODE_883d",
+      "name": "FUN_CODE_d9c3",
+      "of": "FUN_CODE_d9d1",
+      "status": "matched"
+    },
     "CODE:d9d1": {
       "by": "hand",
-      "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "XDATA 0x9A00[reg] = val (twin of FUN_CODE_dcd3 for 0x9AB0); FUN_CODE_d9c3 falls into it",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "register write XDATA 0x9A00[reg] = val through a generic pointer, with common-entry block FUN_CODE_d9c3",
+      "module": "FUN_CODE_883d",
       "name": "FUN_CODE_d9d1",
       "status": "matched"
     },
@@ -1941,7 +1967,7 @@
     },
     "CODE:dcd3": {
       "by": "hand",
-      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
       "comment": "register write XDATA 0x9AB0[reg] = val through a generic pointer, with common-entry block FUN_CODE_dccf",
       "module": "FUN_CODE_883d",
       "name": "FUN_CODE_dcd3",
