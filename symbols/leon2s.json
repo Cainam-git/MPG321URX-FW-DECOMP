@@ -7645,6 +7645,12 @@
       "name": "FUN_a00da6ac",
       "status": "matched"
     },
+    "ram:a00da838": {
+      "by": "h43",
+      "comment": "copies the bytes after a computed offset of the current 0x30-byte record to a register block, one byte per word",
+      "name": "FUN_a00da838",
+      "status": "matched"
+    },
     "ram:a00da960": {
       "by": "hand",
       "comment": "Clear bit 4 or 5 of block word 0xccc by a table byte when enabled",
