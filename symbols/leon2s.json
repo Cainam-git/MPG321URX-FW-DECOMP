@@ -4658,6 +4658,12 @@
       "name": "FUN_a00a1df0",
       "status": "matched"
     },
+    "ram:a00a1e28": {
+      "by": "h43",
+      "comment": "computes a u8 code from fields of the 0x190-byte record DAT_a807d7e0[port]",
+      "name": "FUN_a00a1e28",
+      "status": "matched"
+    },
     "ram:a00a1f84": {
       "by": "hand",
       "comment": "writes a 2-bit value from code 4..7 into bits 0-1 or 4-5 of register 0xcf0147f0",
