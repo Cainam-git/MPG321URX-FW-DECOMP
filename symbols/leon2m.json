@@ -9159,7 +9159,7 @@
     "ram:a00ed70c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Register-field sequence with a 16-round search loop on one field, MR1 bit-0 checks and the WL message",
+      "comment": "Register-field sequence with a 16-round loop on one field, MR1 bit-0 checks and the WL message",
       "name": "FUN_a00ed70c",
       "status": "matched"
     },
