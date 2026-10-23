@@ -902,6 +902,13 @@
       "name": "FUN_CODE_8072",
       "status": "matched"
     },
+    "CODE:82d2": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "bit-pattern matcher on the 3-byte state at XDATA 0xA5E6 against the table at 0xA5F9",
+      "name": "FUN_CODE_82d2",
+      "status": "matched"
+    },
     "CODE:83f3": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
