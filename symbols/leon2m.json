@@ -10709,6 +10709,13 @@
       "name": "FUN_a0108e54",
       "status": "matched"
     },
+    "ram:a0108f70": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bits 4..5 of registers 0xcf011aa0..0xcf011aac to their index, then clears bits 0..2 of 0xcf011aa4..0xcf011aac",
+      "name": "FUN_a0108f70",
+      "status": "matched"
+    },
     "ram:a0109110": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
