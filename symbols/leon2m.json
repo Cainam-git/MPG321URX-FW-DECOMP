@@ -11965,6 +11965,13 @@
       "name": "FUN_a0123648",
       "status": "matched"
     },
+    "ram:a0123744": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "register sequence on 0xcf03c780/0xcf03c66x with func_0x4008e46c(0x13), waits while 0xcf03c660 reads 0x31",
+      "name": "FUN_a0123744",
+      "status": "matched"
+    },
     "ram:a0123840": {
       "by": "h41",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
