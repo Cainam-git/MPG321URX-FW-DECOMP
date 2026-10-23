@@ -16071,6 +16071,13 @@
       "name": "FUN_a01461a8",
       "status": "matched"
     },
+    "ram:a01461dc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "fills a 16-byte stack record from p (code 0xa0/0xb0/0xc0/0xc1 by p->b2) and passes it to FUN_a011c4cc(x == 1, &m, c)",
+      "name": "FUN_a01461dc",
+      "status": "matched"
+    },
     "ram:a0146324": {
       "by": "autoc",
       "comment": "p1 = p1 & 0xff; returns FUN_a01198b4(p1)",
