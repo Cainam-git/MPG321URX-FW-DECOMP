@@ -1,4 +1,4 @@
-# leon2m FUN_a00db174 0xa00db174-0xa00db1a8 (52 bytes)
+# leon2m FUN_a00db174 0xa00db174-0xa00db1ac (56 bytes)
 a00db174:  11 2a 00 b5  sethi  %hi(0xa802d400), %o0
 a00db178:  da 02 20 84  ld  [ %o0 + 0x84 ], %o5	! 0xa802d484
 a00db17c:  03 10 00 00  sethi  %hi(0x40000000), %g1
@@ -12,3 +12,4 @@ a00db198:  90 10 20 00  clr  %o0
 a00db19c:  82 13 c0 00  mov  %o7, %g1
 a00db1a0:  40 01 24 87  call  0xa01243bc
 a00db1a4:  9e 10 40 00  mov  %g1, %o7
+a00db1a8:  01 00 00 00  nop
