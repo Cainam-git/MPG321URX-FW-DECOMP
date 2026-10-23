@@ -6743,6 +6743,12 @@
       "name": "FUN_a00c79c8",
       "status": "matched"
     },
+    "ram:a00c7a4c": {
+      "by": "h43",
+      "comment": "initialises the 24-byte record DAT_a8078bb0[port] (bit-fields and bytes), optionally clearing bytes 3..8",
+      "name": "FUN_a00c7a4c",
+      "status": "matched"
+    },
     "ram:a00c7b60": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
