@@ -14665,6 +14665,13 @@
       "name": "FUN_a0140360",
       "status": "matched"
     },
+    "ram:a0140500": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "for a device with record bit 7 set: FUN_a0124ed0, FUN_a0134464(area base & ~0xfff), FUN_a0124eb4",
+      "name": "FUN_a0140500",
+      "status": "matched"
+    },
     "ram:a0140a0c": {
       "by": "h41",
       "cflags": "-mcpu=v8 -O3 -g",
