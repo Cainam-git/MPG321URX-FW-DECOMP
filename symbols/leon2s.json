@@ -5434,6 +5434,12 @@
       "name": "FUN_a00aa88c",
       "status": "matched"
     },
+    "ram:a00aa930": {
+      "by": "h45",
+      "comment": "writes bank registers 9/10/0x63/0x2c-0x2d by mode 0..10",
+      "name": "FUN_a00aa930",
+      "status": "matched"
+    },
     "ram:a00ab4a8": {
       "by": "autoc",
       "comment": "Twin of FUN_a00ab4f8 (opposite direction). Sets bit param_1 in peripheral register 0xcf013280, clears bits 0 and 3 of 0xcf013290, calls FUN_a00b1794(1) (busy-wait delay), then sets bit 0 of 0xcf013284. FUN_a00ab4f8 sets bits 0 and 3 of 0xcf013290 and clears bit 0 of 0xcf013284 instead. Ghidra had added a '& 0x1f' to the shift and a bogus return value.",
