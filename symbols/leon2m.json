@@ -8525,6 +8525,12 @@
       "name": "FUN_a00da848",
       "status": "matched"
     },
+    "ram:a00da850": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a00da850",
+      "status": "matched"
+    },
     "ram:a00da870": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
