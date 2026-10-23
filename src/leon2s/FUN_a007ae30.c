@@ -1,5 +1,7 @@
 /* leon2s FUN_a007ae30 @ 0xa007ae30 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * s = (p2 == 1). Calls FUN_a00a7424(s, 7, p1 & 0xff, 0x1c04); when the low byte of FUN_a0073520(p1 & 0xff) is
+ * nonzero, also calls FUN_a00a7424(s, 7, p1 & 0xff, 0x2c04).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 void FUN_a007ae30(unsigned int param_1, unsigned char param_2)
 {

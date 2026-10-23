@@ -1,5 +1,6 @@
 /* leon2s FUN_a008d8e0 @ 0xa008d8e0 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a00a8054(p1, 1, 0x7c, 0xf) when p2 == 1, otherwise FUN_a00a8054(p1, 1, 0x7c, 0).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern int FUN_a00a8054();
 

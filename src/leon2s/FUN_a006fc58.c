@@ -1,5 +1,7 @@
 /* leon2s FUN_a006fc58 @ 0xa006fc58 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Reads one word through FUN_a006faa8(0, 3, &w, 1), sets bit 16 + (p1 & 0xff) in it and writes it back through
+ * FUN_a006fad4(0, 3, &w, 1).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern void FUN_a006faa8(unsigned int param_1, int param_2, unsigned int *param_3, unsigned int param_4);
 extern void FUN_a006fad4(unsigned int param_1, int param_2, unsigned int *param_3, unsigned int param_4);

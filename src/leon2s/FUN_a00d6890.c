@@ -1,5 +1,7 @@
 /* leon2s FUN_a00d6890 @ 0xa00d6890 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * v = FUN_a00d66bc(p2 & 0xff, p3 & 0xff). When v == 0 returns p1; otherwise sets bit 5 (0x20) of the byte at p1 +
+ * 0x12 and returns FUN_a00d6724(p1, v, p3, p4, p5, p6).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern int FUN_a00d66bc(); /* 0xa00d66bc */
 extern int FUN_a00d6724(); /* 0xa00d6724 */

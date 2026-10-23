@@ -1,5 +1,6 @@
 /* leon2m FUN_a0088654 @ 0xa0088654 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Returns bit 0 of byte 0xA802AF99 and clears that bit.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,6 @@
 /* leon2m FUN_a015e7e0 @ 0xa015e7e0 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Stores halfword 0x2000 at p2 + 8 and word 0 at p2 + 0x30; returns 0.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,7 @@
 /* leon2s FUN_a00a2868 @ 0xa00a2868 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Table 0xA807D7E0 holds records of 400 bytes. For record idx returns halfword +0x1A minus the halfwords +0x1E,
+ * +0x28 and +0x24, truncated to 16 bits.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 // FUN_a00a2868 at 0xa00a2868
 extern unsigned short DAT_a807d7e0[];  // table at 0xa807d7e0, 400-byte records

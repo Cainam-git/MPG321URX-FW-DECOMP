@@ -1,5 +1,7 @@
 /* leon2m FUN_a00d46c4 @ 0xa00d46c4 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Limits byte 0xA802D2A6 (0xA802D290 + 0x16) to at most 100, stores the result back and calls FUN_a014a2a0(1,
+ * value).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern unsigned char DAT_a802d290[23]; /* 0xa802d290 */
 extern int FUN_a014a2a0(int, int);     /* 0xa014a2a0 */

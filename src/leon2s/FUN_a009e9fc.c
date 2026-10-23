@@ -1,5 +1,6 @@
 /* leon2s FUN_a009e9fc @ 0xa009e9fc (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Clears word 0 of record p1 & 0xff of the 0x18-byte records at 0xA807D650.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

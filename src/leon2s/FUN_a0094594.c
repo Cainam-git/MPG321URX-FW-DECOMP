@@ -1,5 +1,7 @@
 /* leon2s FUN_a0094594 @ 0xa0094594 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Table 0xA807A8FC holds records of 0x14 bytes. For record p1 (low byte) writes (byte +0x10 & 0xF0) | (byte +0x11
+ * & 0x0F) through FUN_a00a8054(p1, 1, 2, value) and byte +0x12 through FUN_a00a8054(p1, 1, 0xb, value).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined1;
 

@@ -1,5 +1,7 @@
 /* leon2m FUN_a0082acc @ 0xa0082acc (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a008f354() and FUN_a008ee6c(0xff, 0), clears bit 0 of byte 0xA802AF41, then passes its six arguments
+ * to FUN_a0143da8.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern unsigned char DAT_a802af41; /* 0xa802af41 */
 extern int FUN_a008ee6c(int a, int b); /* 0xa008ee6c */

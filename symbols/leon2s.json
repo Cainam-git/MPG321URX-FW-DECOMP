@@ -5438,7 +5438,7 @@
     },
     "ram:a00a6668": {
       "by": "autoc",
-      "comment": "returns registers 0xCF000000 | (v << 2), (v + 1) << 2, (v + 2) << 2 combined at bits 0, 8, 16; v = halfword k of 0xA00B4D9C + p2, k = p1 if < 2 else 0",
+      "comment": "k = p1 if < 2 else 0, v = halfword k of 0xA00B4D9C + p2; with R(x) = register 0xCF000000 | (x << 2) returns (R(v + 2) << 16) | (R(v + 1) << 8) | R(v)",
       "name": "FUN_a00a6668",
       "status": "matched"
     },

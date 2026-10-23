@@ -1,5 +1,6 @@
 /* leon2s FUN_a00ad828 @ 0xa00ad828 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Returns 1 when p1 is one of 0x06, 0x07, 0x0C, 0x0D, 0x12, 0x13, 0x18, 0x19, 0x20, 0x21, 0x26, 0x27; otherwise 0.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 // FUN_a00ad828 at 0xa00ad828
 extern int FUN_a00ad828(unsigned char param_1);

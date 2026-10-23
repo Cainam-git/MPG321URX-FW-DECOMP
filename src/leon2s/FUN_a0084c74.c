@@ -1,5 +1,6 @@
 /* leon2s FUN_a0084c74 @ 0xa0084c74 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Returns FUN_a00a7614(FUN_a0083ed0(p1) & 0xff, 0xab, p2).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern int FUN_a0083ed0();
 extern int FUN_a00a7614();

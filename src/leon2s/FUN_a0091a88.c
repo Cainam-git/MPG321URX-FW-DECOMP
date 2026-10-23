@@ -1,5 +1,7 @@
 /* leon2s FUN_a0091a88 @ 0xa0091a88 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Table 0xA807D580 holds records of 7 words. For p1 (low byte) 0 or 1, clears bit 14 (0x4000) of word 5 of record
+ * p1; other values return without a write.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern unsigned int ARR_a807d580[];
 

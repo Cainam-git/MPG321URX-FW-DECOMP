@@ -1,5 +1,6 @@
 /* leon2m FUN_a00d4970 @ 0xa00d4970 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a0147a14 with byte 0xA802D2A0 limited to at most 100.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

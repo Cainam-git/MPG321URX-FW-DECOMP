@@ -1,5 +1,7 @@
 /* leon2m FUN_a0136e9c @ 0xa0136e9c (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Packs the eight bytes 0xA802A450 .. 0xA802A457 as 4-bit fields (byte n at bit 4 * n) into one word and writes it
+ * through func_0x4008c5f8(1, 4, &w, 1); then writes (byte 0xA802A457) << 16 through func_0x4008c5f8(1, 8, &w2, 1).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern unsigned char DAT_a802a450[];
 extern unsigned char DAT_a802a457;
