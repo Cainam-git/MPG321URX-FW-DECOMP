@@ -3666,6 +3666,13 @@
       "name": "FUN_a00984f0",
       "status": "matched"
     },
+    "ram:a0098618": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "when st[k] / 7 of DAT_a802d290+0x18a differs from byte 0xa8025c56 / 7: FUN_a00a8c88() and FUN_a00b7b8c(0/1); stores the byte and runs the % 7 call sequence; FUN_a00a900c(k, 1)",
+      "name": "FUN_a0098618",
+      "status": "matched"
+    },
     "ram:a0098794": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
