@@ -2976,6 +2976,12 @@
       "name": "FUN_a008b6f4",
       "status": "matched"
     },
+    "ram:a008b75c": {
+      "by": "h42",
+      "comment": "tests and sets bit 2 of register 2 of the port through FUN_a00a71b4/FUN_a00a71fc, then the register 3 sequence",
+      "name": "FUN_a008b75c",
+      "status": "matched"
+    },
     "ram:a008b838": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
