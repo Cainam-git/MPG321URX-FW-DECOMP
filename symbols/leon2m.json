@@ -4688,6 +4688,13 @@
       "name": "FUN_a00a2548",
       "status": "matched"
     },
+    "ram:a00a2600": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "switch on byte 0xa8025c56: 0/1 run the afec sequence with record byte 0x1ec, 2 copies 0xa802d47d to 0xa8025c55 and calls FUN_a00a1a68; then FUN_a00dab90 and DAT_a802b08e |= 2",
+      "name": "FUN_a00a2600",
+      "status": "matched"
+    },
     "ram:a00a27a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
