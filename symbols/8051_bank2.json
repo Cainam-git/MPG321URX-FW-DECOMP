@@ -588,6 +588,13 @@
       "status": "matched",
       "symbol": "@0+1073"
     },
+    "CODE:6e16": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "per-port state machine step: state byte 0x09CF/0x09CE, command register 0xF193/0xF191, status register 0xF192/0xF190, switch on the state",
+      "name": "FUN_CODE_6e16",
+      "status": "matched"
+    },
     "CODE:7262": {
       "by": "hand",
       "comment": "Keil common-entry (L?) code in front of FUN_CODE_72b0, in FUN_CODE_72b0's code segment; emitted by compiling src/8051_bank2/FUN_CODE_a17e.c, bytes judged with FUN_CODE_72b0 over 0x7262..0x7677",
