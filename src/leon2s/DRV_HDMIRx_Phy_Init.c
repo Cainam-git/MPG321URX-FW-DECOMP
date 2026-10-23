@@ -1,5 +1,7 @@
 /* leon2s DRV_HDMIRx_Phy_Init @ 0xa0074bf8 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When bit 0 of word 0xA8078634 is set, prints "[INIT]: DRV_HDMIRx_Phy_Init %d\r\n" with 999 through FUN_a0073044.
+ * Then calls DRV_HDMI_InitialSettings(), FUN_a0073500(), FUN_a0073578(0) and FUN_a0073540(0, p2, p3, p4, p5, p6).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

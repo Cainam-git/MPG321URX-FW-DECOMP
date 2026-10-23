@@ -1,5 +1,8 @@
 /* leon2s FUN_a008e6b8 @ 0xa008e6b8 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Prints the string at 0xA0068D40 ("ESC[0;34m[HDMI_TX]:  PHY Power Down Setting  \n") through FUN_a00734c4, then
+ * calls FUN_a008d8e0, FUN_a008e3c0, FUN_a008e098, FUN_a008e200, FUN_a008db90, FUN_a008db4c, FUN_a008df7c and
+ * FUN_a008df40 with (p1, 0), and FUN_a008dbd4(p1, 0, 0) between FUN_a008db90 and FUN_a008db4c.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

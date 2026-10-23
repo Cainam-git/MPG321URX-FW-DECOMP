@@ -1,5 +1,8 @@
 /* leon2s FUN_a00c0b48 @ 0xa00c0b48 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a00c7d5c(0, p1, p2) and FUN_a00c7d5c(1, p1, p2). Then for k = 0 and 1: reads func_0xa0fb7fd8(k, 0,
+ * 0xfa) and writes it with bit 5 cleared through func_0xa0fb8054(k, 0, 0xfa, ...), then reads it again and writes
+ * it with bit 5 set.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

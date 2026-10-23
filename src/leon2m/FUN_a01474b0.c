@@ -1,14 +1,17 @@
 /* leon2m FUN_a01474b0 @ 0xa01474b0 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * k = p1 & 0xff; any k above 3 prints "SYS remapping channel OOR" through FUN_a00df170 and uses 0. v = bits 4-7 of
+ * word 0 of record k of the 0x78-byte records at 0xA802DF30. When v == 4 returns p1 & 0xff; otherwise calls
+ * FUN_a00f63bc(v) and returns FUN_a00f7434(p2, p2, p3, p4, p5, p6).
+ * Source form: Ghidra's type and symbol names are kept.
  */
-struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* display channel record, 0x78 bytes */
+struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* 0x78-byte record */
 extern struct Chan DAT_a802df30[4];
 extern int FUN_a00df170(const char *fmt, ...);
 extern int FUN_a00f63bc(int);
 extern int FUN_a00f7434(int, int, int, int, int, int);
 extern char s_001a6dd8[];  /* "SYS remapping channel OOR\r\n" */
 
-/* channel number check: 0..3 pass, anything else is -1 */
+/* 0 .. 3 map to themselves, any other value to -1 */
 static int remap(int ch)
 {
     switch (ch) {

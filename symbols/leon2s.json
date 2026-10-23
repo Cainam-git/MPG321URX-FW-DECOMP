@@ -2178,7 +2178,7 @@
     },
     "ram:a0074bf8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "When bit 0 of word 0xA8078634 is set, prints \"[INIT]: DRV_HDMIRx_Phy_Init %d\\r\\n\" with 999 through FUN_a0073044. Then calls DRV_HDMI_InitialSettings(), FUN_a0073500(), FUN_a0073578(0) and FUN_a0073540(0, p2, p3, p4, p5, p6)",
       "name": "DRV_HDMIRx_Phy_Init",
       "status": "matched"
     },
@@ -2197,7 +2197,7 @@
     },
     "ram:a0074cf8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a0073c24(p1, 0), prints \"TMDS_PowerOff  %d  \\r\\n\" with p1 through FUN_a0073044 and calls FUN_a007381c(p1, 0). When p2 == 1: FUN_a00a7424(1, 7, p1, 0x1c04), for p1 2 or 3 also FUN_a00a7424(1, 7, p1, 0x2c04), FUN_a00a7488(p1, 0x1000, 0xffffff00, 0xf9), FUN_a00a7424(1, b, p1, 0x1c04) for b = 2, 0x10, 0x11 and FUN_a00a7424(1, 0x18, p1, 8000). Otherwise: FUN_a00a7424(0, 7, p1, 0x1c04), for p1 2 or 3 also FUN_a00a7424(0, 7, p1, 0x2c04), and FUN_a00a7488(p1, 0x1000, 0xfffffffe, 0)",
       "name": "TMDS_PowerOff",
       "status": "matched"
     },
@@ -2516,7 +2516,7 @@
     },
     "ram:a007f900": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "For each bit i (0 .. 3) set in p2 (low byte) calls FUN_a00a7424(1, 4, p1 & 0xff, halfword i of the table at 0xA00B3B68); then FUN_a00b1794(1); then the same loop with 0 as the first argument. Returns p1",
       "name": "FUN_a007f900",
       "status": "matched"
     },
@@ -3454,7 +3454,7 @@
     },
     "ram:a008e200": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "k = p1 & 0xff. For r = 0xe and then r = 0x9b: reads v = FUN_a00a7fd8(k, 1, r) and writes ((v & ~7) | p2) & 0xff through FUN_a00a8054(k, 1, r, ...), then reads v again and writes ((v & 0x8F) | (p2 & 0xff) << 4) & 0xff",
       "name": "FUN_a008e200",
       "status": "matched"
     },
@@ -3466,13 +3466,13 @@
     },
     "ram:a008e3c0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "k = p1 & 0xff, s = (p2 & 0xff). Read-modify-writes through FUN_a00a7fd8(k, 1, r) / FUN_a00a8054(k, 1, r, ...): r = 0x7c gets (v & 0xCF) | s << 4; r = 0x9a gets (v & ~3) | p2, then (v & ~8) | s << 2, then (v & 0xCF) | s << 4 (each masked to 8 bits)",
       "name": "FUN_a008e3c0",
       "status": "matched"
     },
     "ram:a008e484": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(a, b, c) = (0, 0, 6) for p2 == 1, (1, 1, 0) for p2 == 2, (0, 0, 0) for any other p2. Calls FUN_a00a80cc(p1, 1, 0x39, 1, a), FUN_a00a80cc(p1, 1, 0x39, 2, b) and FUN_a00a8054(p1, 1, 0x30, c)",
       "name": "FUN_a008e484",
       "status": "matched"
     },
@@ -3490,7 +3490,7 @@
     },
     "ram:a008e6b8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Prints the string at 0xA0068D40 (\"ESC[0;34m[HDMI_TX]:  PHY Power Down Setting  \\n\") through FUN_a00734c4, then calls FUN_a008d8e0, FUN_a008e3c0, FUN_a008e098, FUN_a008e200, FUN_a008db90, FUN_a008db4c, FUN_a008df7c and FUN_a008df40 with (p1, 0), and FUN_a008dbd4(p1, 0, 0) between FUN_a008db90 and FUN_a008db4c",
       "name": "FUN_a008e6b8",
       "status": "matched"
     },
@@ -3508,7 +3508,7 @@
     },
     "ram:a008ecb8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00a80cc(p1, 1, 0x7d, 0x80, 1), FUN_a008e484(p1, 2), FUN_a008e098(p1, 0x1b), FUN_a008e0f0(p1, 3, 0xb), FUN_a008e200(p1, 0x44), FUN_a008e3c0(p1, v) with v = 0 for p2 == 1 or 2 and 0x30 otherwise, FUN_a008e73c(p1, 1) and FUN_a008e2c0(p1, 3, 2)",
       "name": "FUN_a008ecb8",
       "status": "matched"
     },
@@ -4336,7 +4336,7 @@
     },
     "ram:a0095c30": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "For b = 0 and 1 calls FUN_a0091578(b), FUN_a00950a0(b, 0x10), FUN_a0091c84(b, 100) and FUN_a00a80cc(b, 3, 0xf2, 0x10, 1); then FUN_a00a4610(0) and FUN_a00a45d8(0, p2, p3, p4, p5, p6)",
       "name": "FUN_a0095c30",
       "status": "matched"
     },
@@ -4842,7 +4842,7 @@
     },
     "ram:a00a0bfc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p = word 0 of record p1 of the 0x34-byte table 0xA807DB00: read-modify-writes the words p + 0x70, 0x74, 0x78, 0x7C, 0x80, 0x90 (set bytes to 0xFF)",
       "name": "FUN_a00a0bfc",
       "status": "matched"
     },
@@ -5258,7 +5258,7 @@
     },
     "ram:a00a2e48": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p = word 0 of record p1 of the 0x34-byte table 0xA807DB00: ANDs the words p + 0x74, 0x78, 0x7C, 0x90, 0xAC, 0xC4, 0xC8 with byte masks; returns 0",
       "name": "FUN_a00a2e48",
       "status": "matched"
     },
@@ -5858,13 +5858,13 @@
     },
     "ram:a00a9e74": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "A fixed sequence of 25 FUN_a00a7cc0(1, r, v) calls, from (0xe7, 0x70) to (0, 0)",
       "name": "FUN_a00a9e74",
       "status": "matched"
     },
     "ram:a00aa00c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "A fixed sequence of 25 calls to FUN_a00a7d04, FUN_a00a7cc0, FUN_a00a7bf8 and FUN_a00a7b64, all with first argument 0, with FUN_a00b160c(500) after the 14th and after the 16th call",
       "name": "FUN_a00aa00c",
       "status": "matched"
     },
@@ -6015,7 +6015,7 @@
     },
     "ram:a00aba5c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00a7058(p1, 0x3e, 1, 1), FUN_a00a6c00(p1, 0xf7, 7), FUN_a00a6c00(p1, 0xf7, 5), FUN_a00a6c98(p1, 0x20, 1, 1), FUN_a00a6c98(p1, 0x20, 1, 0), FUN_a00a6c98(p1, 0xf7, 0x40, p2), FUN_a00a6c98(p1, 0xf7, 0x10, p3), FUN_a00a6c98(p1, 0xf7, 0x20, p4 & 0xff), FUN_a00a6c98(p1, 0xf7, 0x80, 1) and FUN_a00a6c00(p1, 0xf4, 0xa0)",
       "name": "FUN_a00aba5c",
       "status": "matched"
     },
@@ -6468,7 +6468,7 @@
     },
     "ram:a00af8bc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "k = FUN_a00add48(p1, func_0x9f1c6624(p1) & 0xff) & 0xff. Calls FUN_a00a8370(k, 4 / 5 / 6, byte 0 / 1 / 2 of p2) and FUN_a00a8370(k, 8 / 9 / 10, byte 0 / 1 / 2 of p3)",
       "name": "FUN_a00af8bc",
       "status": "matched"
     },
@@ -7088,7 +7088,7 @@
     },
     "ram:a00c0b48": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00c7d5c(0, p1, p2) and FUN_a00c7d5c(1, p1, p2). Then for k = 0 and 1: reads func_0xa0fb7fd8(k, 0, 0xfa) and writes it with bit 5 cleared through func_0xa0fb8054(k, 0, 0xfa, ...), then reads it again and writes it with bit 5 set",
       "name": "FUN_a00c0b48",
       "status": "matched"
     },
@@ -7365,7 +7365,7 @@
     },
     "ram:a00c7fec": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "For i = 0 .. (p3 & 0xff) - 1 stores the byte func_0xa0fb7fd8(p1, 0, p4) at p2 + i (one read per byte), then calls func_0xa0fc1794(1, p2)",
       "name": "FUN_a00c7fec",
       "status": "matched"
     },
@@ -7569,7 +7569,7 @@
     },
     "ram:a00c9b58": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00c99a4(p1, 0, 6, 4, p2), then FUN_a0fb7ee0(p1, r, v) for (r, v) = (4, 7), (0, 1), (6, 1), (7, 0), (0, 0), (1, 0xfd), (9, 0); then (8, 0x42) and FUN_a0fb7f1c(p1, 0xf, 0x40, 0) when p2 == 0x400, otherwise (8, 0xc2) and FUN_a0fb7f1c(p1, 0xf, 0x40, 1); then (3, 9), waits until bit 5 of FUN_a0fb7fa0(p1, 2) is set, then (3, 0), (8, 0x40) and FUN_a0fb7f1c(p1, 0xf, 0x40, 0)",
       "name": "FUN_a00c9b58",
       "status": "matched"
     },

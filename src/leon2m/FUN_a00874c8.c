@@ -1,5 +1,6 @@
 /* leon2m FUN_a00874c8 @ 0xa00874c8 (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * For each bit i (0 .. 7) set in p1, in ascending order, calls FUN_a014bac4(4 + i, p2 & 0xff).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

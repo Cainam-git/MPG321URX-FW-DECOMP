@@ -1,5 +1,10 @@
 /* leon2s TMDS_PowerOff @ 0xa0074cf8 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a0073c24(p1, 0), prints "TMDS_PowerOff  %d  \r\n" with p1 through FUN_a0073044 and calls
+ * FUN_a007381c(p1, 0). When p2 == 1: FUN_a00a7424(1, 7, p1, 0x1c04), for p1 2 or 3 also FUN_a00a7424(1, 7, p1,
+ * 0x2c04), FUN_a00a7488(p1, 0x1000, 0xffffff00, 0xf9), FUN_a00a7424(1, b, p1, 0x1c04) for b = 2, 0x10, 0x11 and
+ * FUN_a00a7424(1, 0x18, p1, 8000). Otherwise: FUN_a00a7424(0, 7, p1, 0x1c04), for p1 2 or 3 also FUN_a00a7424(0,
+ * 7, p1, 0x2c04), and FUN_a00a7488(p1, 0x1000, 0xfffffffe, 0).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

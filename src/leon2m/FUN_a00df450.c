@@ -1,5 +1,8 @@
 /* leon2m FUN_a00df450 @ 0xa00df450 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * For each byte of the zero-terminated string at p1: waits until bit 5 of func_0x4008c250(0xc00b0000) is set and
+ * writes the byte with func_0x4008c25c(0xc00b0000, byte); after a '\n' byte waits again and writes 0x0D. Returns
+ * the address of the terminating zero byte.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

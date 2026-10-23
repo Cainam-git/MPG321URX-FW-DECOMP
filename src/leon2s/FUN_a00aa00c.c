@@ -1,5 +1,7 @@
 /* leon2s FUN_a00aa00c @ 0xa00aa00c (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * A fixed sequence of 25 calls to FUN_a00a7d04, FUN_a00a7cc0, FUN_a00a7bf8 and FUN_a00a7b64, all with first
+ * argument 0, with FUN_a00b160c(500) after the 14th and after the 16th call.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

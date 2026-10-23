@@ -1,5 +1,7 @@
 /* leon2s FUN_a00c7fec @ 0xa00c7fec (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * For i = 0 .. (p3 & 0xff) - 1 stores the byte func_0xa0fb7fd8(p1, 0, p4) at p2 + i (one read per byte), then
+ * calls func_0xa0fc1794(1, p2).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

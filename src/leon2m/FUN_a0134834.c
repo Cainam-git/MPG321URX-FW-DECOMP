@@ -1,5 +1,7 @@
 /* leon2m FUN_a0134834 @ 0xa0134834 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Copies ((p3 + 3) >> 2) & 0xff groups of four bytes from p2 to p1; each destination byte is stored on its own
+ * (the source is read with byte, halfword and word loads). Returns p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

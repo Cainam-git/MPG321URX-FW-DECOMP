@@ -1,5 +1,7 @@
 /* leon2s FUN_a007f900 @ 0xa007f900 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * For each bit i (0 .. 3) set in p2 (low byte) calls FUN_a00a7424(1, 4, p1 & 0xff, halfword i of the table at
+ * 0xA00B3B68); then FUN_a00b1794(1); then the same loop with 0 as the first argument. Returns p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;
