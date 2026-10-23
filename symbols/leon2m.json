@@ -3549,6 +3549,13 @@
       "name": "FUN_a0097498",
       "status": "matched"
     },
+    "ram:a0097508": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "afec 0x23 copy or flag clean-up of DAT_a802d290 (+0x1a4, +0xb0, +0xac, +0x1f4, +0x4a, +0xa8), stores afec - 0x23 to +0x1f and runs a call sequence under three conditions",
+      "name": "FUN_a0097508",
+      "status": "matched"
+    },
     "ram:a00976a8": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
