@@ -7208,6 +7208,12 @@
       "name": "FUN_a00c0d00",
       "status": "matched"
     },
+    "ram:a00c0d08": {
+      "by": "hand",
+      "comment": "returns 0",
+      "name": "FUN_a00c0d08",
+      "status": "matched"
+    },
     "ram:a00c0d10": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
