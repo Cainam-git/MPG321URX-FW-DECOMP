@@ -2212,6 +2212,12 @@
       "name": "DRV_HDMI_EQScan_FSM_PHY_BA_Turning",
       "status": "matched"
     },
+    "ram:a007796c": {
+      "by": "hand",
+      "comment": "Prints PHY channel fields, steps the 0x1168 bits 8..11 value when 0x1018 is above 0xdf, sets the per-port records",
+      "name": "DRV_HDMI_EQScan_FSM_PHY_PreChkError",
+      "status": "matched"
+    },
     "ram:a0077e68": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
