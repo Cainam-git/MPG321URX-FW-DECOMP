@@ -1584,6 +1584,12 @@
       "name": "FUN_a0061138",
       "status": "matched"
     },
+    "ram:a006119c": {
+      "by": "hand",
+      "comment": "pulses bit 0x4000 through registers 0x9f100090, 0x9f120028, 0x9f120034 and 0x9f10009c",
+      "name": "FUN_a006119c",
+      "status": "matched"
+    },
     "ram:a006122c": {
       "by": "hand",
       "comment": "wait (max 0xfffff polls) for bit 5 of status reg c00c0014, then data reg c00c0000 = c",
