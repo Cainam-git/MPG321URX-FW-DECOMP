@@ -2315,6 +2315,12 @@
       "name": "FUN_a007cfec",
       "status": "matched"
     },
+    "ram:a007d054": {
+      "by": "h42",
+      "comment": "returns a port state value from the 0x18-byte record, FUN_a007517c/FUN_a007cfec, a byte table or the FUN_a007af04 test",
+      "name": "FUN_a007d054",
+      "status": "matched"
+    },
     "ram:a007ebd0": {
       "by": "hand",
       "comment": "Calls FUN_a0073520(masked). If the low byte of the result is zero, tail-calls FUN_a00a67b8(masked, 0x136, 1, 0) (clr %i3 in the be delay slot). Otherwise computes idx = (masked != 2) (xor 2; cmp %g0; addx), loads the word at offset 4 of the 0x34-byte record idx of the table at 0xa807db00 (DAT_a807db00[idx * 13 + 1]), adds 0x34, and tail-calls FUN_a00a73ac(0x10, value) (restore %g0, 0x10, %o0). Returns void.",
