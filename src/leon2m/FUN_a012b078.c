@@ -1,6 +1,7 @@
 /* leon2m FUN_a012b078 @ 0xa012b078-0xa012b164 (59 words).
- * Takes index i and a 2-bit value v. n = nibble i of byte +0x2c of the settings record at 0xA802E1A0; the 16-bit
- * field at +0x2d..+0x2e gets the two bits at position i * 8 + n * 2 replaced by v. Then byte 1 of the 22-byte row
+ * Takes index i and a byte v. n = nibble i of byte +0x2c of the settings record at 0xA802E1A0; in the 16-bit
+ * field at +0x2d..+0x2e the two bits at position i * 8 + n * 2 are cleared and v shifted to that position is
+ * ORed in (v is not masked). Then byte 1 of the 22-byte row
  * i of DAT_a802d8ae is set to v and a copy of that row is passed to FUN_a0137a68(i, &copy).
  * Called by FUN_a014a4d8.
  * Source form: the record is the packed, 4-byte aligned layout used by FUN_a0145c5c (16-bit fields as
