@@ -1,5 +1,7 @@
 /* leon2m FUN_a0121e3c @ 0xa0121e3c (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * k = p1 & 0xff. When FUN_a00f1a90(k, 4) & 0xf is above 1, calls FUN_a00f1ad4(k, 8, 1), FUN_a00f1ad4(k, 9, 0),
+ * FUN_a00f1ad4(k, 10, 0) and FUN_a00f1ad4(k, 0xb, 0).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

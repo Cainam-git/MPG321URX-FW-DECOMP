@@ -1,5 +1,8 @@
 /* leon2m FUN_a002f8d8 @ 0xa002f8d8 (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Prints "SYSAPI_PowerOff" through func_0x0007f170, calls FUN_a002992c(1), the functions at 0x000C4F44, 0x000E512C
+ * (0, 1), 0x000C4F08, 0x000C5C8C, 0x000D86E4, 0x000D96D8, 0x000E0A0C, 0x000D6600 (byte 0xA802E403), 0x000D6384,
+ * 0x000D874C and 0x000BD194, then FUN_a002992c(0), func_0x0007e65c() and func_0x000d3e10(p1, p2, p3, p4, p5, p6).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

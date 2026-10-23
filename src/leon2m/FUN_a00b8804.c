@@ -1,5 +1,7 @@
 /* leon2m FUN_a00b8804 @ 0xa00b8804 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a00d9238(), sets bit 10 of halfword 0xA802CFF4, calls FUN_a00808ac(0, 0), sets bit 1 of byte
+ * 0xA802B08E and calls FUN_a0090fd8(p1, p2, p3, p4, p5, p6).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

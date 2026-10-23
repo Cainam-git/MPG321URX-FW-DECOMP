@@ -1,5 +1,7 @@
 /* leon2m FUN_a00b0a90 @ 0xa00b0a90 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a00b32e4 with 30 fixed seven-argument tuples, from (1, 1, 0x8a2, 0, 0, 1, 1) to (1, 1, 0x3092, 4, 9,
+ * 2, 0x36), then FUN_a00b0710(0, byte 0xA802D43A, p3, p4, p5, p6).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

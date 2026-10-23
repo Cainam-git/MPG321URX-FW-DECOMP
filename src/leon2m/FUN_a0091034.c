@@ -1,5 +1,7 @@
 /* leon2m FUN_a0091034 @ 0xa0091034 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When word 0xA802AFEC == 0x10D and byte 0xA802D2AF == 0: prints "OSDCloseWhenSyncDet" through FUN_a00df170,
+ * clears word 0xA802AFEC and calls FUN_a00b5080() and FUN_a014512c(0, 1, p3, p4, p5, p6).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

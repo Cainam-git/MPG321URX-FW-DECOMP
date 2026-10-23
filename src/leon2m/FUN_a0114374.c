@@ -1,5 +1,8 @@
 /* leon2m FUN_a0114374 @ 0xa0114374 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * k = p2 & 0xff. When k differs from bits 0-1 of register 0xCF01166C calls FUN_a00f1b5c(k, 0, 0x40, 0). Otherwise
+ * writes 1 (p1 != 0) or 0 (p1 == 0) to registers 0xCF015A00 and 0xCF011670 and calls FUN_a00f1b5c(k, 0, 0x40, 1)
+ * or FUN_a00f1b5c(k, 0, 0x40, 0) respectively.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

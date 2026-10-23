@@ -2154,13 +2154,13 @@
     },
     "ram:a007381c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "When p2 == 1: a fixed sequence of FUN_a00a7424(1 or 0, bit, p1, reg) and FUN_a00a7488 calls with FUN_a0073738(p1) after the 13th, ending with FUN_a0073638(p1, 1). Otherwise: FUN_a0073680(p1), FUN_a0073704(p1), then a fixed sequence of FUN_a00a7424 / FUN_a00a7488 calls ending with FUN_a00a7424(1, 0x15, p1, a) for a = 0x1100, 0x1500, 0x1900",
       "name": "FUN_a007381c",
       "status": "matched"
     },
     "ram:a0073be8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a007381c(p1, 1, p3, p4, p5, p6) when FUN_a00a7468(0xe, p1, 0x1f0c) returns 0",
       "name": "FUN_a0073be8",
       "status": "matched"
     },
@@ -2606,7 +2606,7 @@
     },
     "ram:a0083fb8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "j = FUN_a0083ed0(p1 & 0xff) & 0xff; a fixed sequence of 61 FUN_a00a7718(j, r, mask, bit) and FUN_a00a7614(j, r, value) calls, from FUN_a00a7718(j, 0x433, 0x10, 0) to FUN_a00a7614(j, 0x4af, 0xfd)",
       "name": "FUN_a0083fb8",
       "status": "matched"
     },
@@ -2618,7 +2618,7 @@
     },
     "ram:a00848cc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "k = p1 & 0xff, j = FUN_a0083ed0(k) & 0xff. Calls FUN_a00a6c00(k, 0x21d, 0x84) and FUN_a00a7614(j, r, v) for 24 fixed (r, v) pairs; twice FUN_a00a6c98(k, 0xc0, 0x80, 0), FUN_a00a7614(j, 0x403, 0x80), FUN_a00a6c98(k, 0xc0, 0x80, 1) and FUN_a00b1794(5); then FUN_a00a7614(j, r, v) for the same 24 registers with a second set of values",
       "name": "FUN_a00848cc",
       "status": "matched"
     },
@@ -3027,7 +3027,7 @@
     },
     "ram:a0089d38": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls DPTX_IsHPDAction_Off(0) when FUN_a0070424() is nonzero and eDP_IsHPDAction_Off(byte 0xA80761C0). Then for (f, k) = (FUN_a0070424, 0), (FUN_a006ffb4, 1), (FUN_a006ffc4, 2), (FUN_a006ffd4, 3), (FUN_a006ffe4, 4): when the byte result of f() is nonzero, calls DPTX_SetBrilliantMode(k) and FUN_a008996c(k)",
       "name": "FUN_a0089d38",
       "status": "matched"
     },
@@ -7366,7 +7366,7 @@
     },
     "ram:a00c7d5c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Writes a byte stream through func_0xa0fb8054(p1, 0, r, v): to r = 0xfe the bytes 0x19, 0xa2, 0xc4; to r = 0xfc the byte 0, the 5 bytes at p2, the bytes 0, 0, 0xa8, the 0x118 bytes at p3 and 31 zero bytes; then to r = 0xfe the bytes 0x19, 0x4c, 0x2a",
       "name": "FUN_a00c7d5c",
       "status": "matched"
     },

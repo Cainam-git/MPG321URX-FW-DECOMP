@@ -1,5 +1,10 @@
 /* leon2m FUN_a014fe78 @ 0xa014fe78 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a011e6dc(byte 0xA802A49A). When p1 == 1: prints "##SetPSMMixMode_ON" through FUN_a00df170, calls
+ * FUN_a011d748(0x10, 0xff, halfword 0xA802A49C, 0), FUN_a011dd9c(0x10 + i, halfword 0xA802A4B2) for each bit i (0
+ * .. 6) set in byte 0xA802CC87, FUN_a011dd9c(0x18, halfword 0xA802A4B0), FUN_a014fbf0(1) and FUN_a014fd34(byte
+ * 0xA802CC84). Otherwise: prints "##SetPSMMixMode_OFF", the same FUN_a011dd9c calls for the bits of byte
+ * 0xA802CC87, then FUN_a014fbf0(0) and FUN_a014fd34(0).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,8 @@
 /* leon2s FUN_a00c7d5c @ 0xa00c7d5c (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Writes a byte stream through func_0xa0fb8054(p1, 0, r, v): to r = 0xfe the bytes 0x19, 0xa2, 0xc4; to r = 0xfc
+ * the byte 0, the 5 bytes at p2, the bytes 0, 0, 0xa8, the 0x118 bytes at p3 and 31 zero bytes; then to r = 0xfe
+ * the bytes 0x19, 0x4c, 0x2a.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

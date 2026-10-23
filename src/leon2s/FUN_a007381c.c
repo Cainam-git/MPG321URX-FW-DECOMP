@@ -1,5 +1,9 @@
 /* leon2s FUN_a007381c @ 0xa007381c (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When p2 == 1: a fixed sequence of FUN_a00a7424(1 or 0, bit, p1, reg) and FUN_a00a7488 calls with
+ * FUN_a0073738(p1) after the 13th, ending with FUN_a0073638(p1, 1). Otherwise: FUN_a0073680(p1), FUN_a0073704(p1),
+ * then a fixed sequence of FUN_a00a7424 / FUN_a00a7488 calls ending with FUN_a00a7424(1, 0x15, p1, a) for a =
+ * 0x1100, 0x1500, 0x1900.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,8 @@
 /* leon2s FUN_a0089d38 @ 0xa0089d38 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls DPTX_IsHPDAction_Off(0) when FUN_a0070424() is nonzero and eDP_IsHPDAction_Off(byte 0xA80761C0). Then for
+ * (f, k) = (FUN_a0070424, 0), (FUN_a006ffb4, 1), (FUN_a006ffc4, 2), (FUN_a006ffd4, 3), (FUN_a006ffe4, 4): when the
+ * byte result of f() is nonzero, calls DPTX_SetBrilliantMode(k) and FUN_a008996c(k).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

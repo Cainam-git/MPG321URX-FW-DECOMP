@@ -1,5 +1,8 @@
 /* leon2m FUN_a0111088 @ 0xa0111088 (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * For p1 bit 0 calls FUN_a00fe880(9, m, 8) for m = 1, 2, 4, 8; for bit 1 FUN_a00fe880(9, m, 8) for m = 0x10, 0x20,
+ * 0x40, 0x80; for bit 2 FUN_a00fe880(10, m, 8) for m = 1, 2, 4, 8; for bit 3 FUN_a00fe880(10, m, 8) for m = 0x10,
+ * 0x20, 0x40, 0x80.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,7 @@
 /* leon2m FUN_a0132c54 @ 0xa0132c54 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * For ((p3 + 3) >> 2) & 0xff groups of four bytes: builds the big-endian word from the bytes at p1 + 4 * i and
+ * stores it in the word at p2 + 4 * i (the partial value is stored after each byte). Returns p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

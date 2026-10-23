@@ -1,5 +1,8 @@
 /* leon2s FUN_a00848cc @ 0xa00848cc (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * k = p1 & 0xff, j = FUN_a0083ed0(k) & 0xff. Calls FUN_a00a6c00(k, 0x21d, 0x84) and FUN_a00a7614(j, r, v) for 24
+ * fixed (r, v) pairs; twice FUN_a00a6c98(k, 0xc0, 0x80, 0), FUN_a00a7614(j, 0x403, 0x80), FUN_a00a6c98(k, 0xc0,
+ * 0x80, 1) and FUN_a00b1794(5); then FUN_a00a7614(j, r, v) for the same 24 registers with a second set of values.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;
