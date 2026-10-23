@@ -6531,6 +6531,12 @@
       "name": "FUN_a00b2304",
       "status": "matched"
     },
+    "ram:a00b2324": {
+      "by": "hand",
+      "comment": "walks 16-byte rows of words from addr, passing each word's bytes to FUN_a00613cc and FUN_a006122c",
+      "name": "CED_ALL_2",
+      "status": "matched"
+    },
     "ram:a00b24b0": {
       "by": "hand",
       "comment": "passes rows of four words around addr (n words, default 32) to FUN_a0061348 and strings to FUN_a0061280",
