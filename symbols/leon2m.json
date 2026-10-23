@@ -14588,6 +14588,12 @@
       "name": "FUN_a012e82c",
       "status": "matched"
     },
+    "ram:a012e838": {
+      "by": "hand",
+      "comment": "returns 0x508",
+      "name": "FUN_a012e838",
+      "status": "matched"
+    },
     "ram:a012e850": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
