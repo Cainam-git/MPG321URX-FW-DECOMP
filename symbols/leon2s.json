@@ -2146,6 +2146,12 @@
       "name": "FUN_a007517c",
       "status": "matched"
     },
+    "ram:a0075190": {
+      "by": "h42",
+      "comment": "clears fields of the 0x898-byte port record by mode and toggles byte +0x29 (bch_en_flag)",
+      "name": "bch_en_flag",
+      "status": "matched"
+    },
     "ram:a0075278": {
       "by": "near",
       "comment": "near-miss repaired: firmware format string; function name as static const char[]",
