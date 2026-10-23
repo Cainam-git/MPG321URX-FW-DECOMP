@@ -1234,6 +1234,12 @@
       "name": "FUN_CODE_b679",
       "status": "matched"
     },
+    "CODE:b6fe": {
+      "by": "hand",
+      "comment": "register sequence on 0xF0xx/0xF1C0, then stores 0x200 reads of 0xF1C0 through the pointer at 0xA74A",
+      "name": "FUN_CODE_b6fe",
+      "status": "matched"
+    },
     "CODE:b781": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
