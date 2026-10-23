@@ -4533,6 +4533,12 @@
       "name": "FUN_a009facc",
       "status": "matched"
     },
+    "ram:a009fcb8": {
+      "by": "h43",
+      "comment": "checks register 0x60 of the port block and copies registers 0x64-0x7c into a 0x24-byte buffer, or clears it",
+      "name": "FUN_a009fcb8",
+      "status": "matched"
+    },
     "ram:a009fe2c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
