@@ -5,7 +5,7 @@
  * FUN_a00a93bc(word 0xa802afec - 0x48), FUN_a00a9650(b, 0) and FUN_a00a813c(1, b, 1) with b = byte +0x182,
  * stores 0xe to word 0xa802afec and calls FUN_a00a900c(0, 1). With the flag set, calls FUN_a00dbcf0 when
  * bit 11 is clear and FUN_a00db738 when it is set. Finally tail-calls FUN_a00acc40.
- * Exact form: the flag is set by an if/else (an && expression gives subx flag arithmetic); the byte is copied
+ * Source form: the flag is set by an if/else (an && expression gives subx flag arithmetic); the byte is copied
  * before the bit; the bit-clear arm of the last test is written first.
  */
 struct D290 {

@@ -2365,7 +2365,7 @@
     },
     "ram:a007f7c8": {
       "by": "h15",
-      "comment": "Calls H1_H2_VTH(port) and prints the low nibble of FUN_a00a7314(port, 0x2178/0x2578/0x2978/0x3178) while bit 0x800 of _DAT_a8078634 is set",
+      "comment": "Calls H1_H2_VTH(port) and prints the low nibble of FUN_a00a7314(port, 0x2178/0x2578/0x2978/0x3178) each print only when bit 0x800 of _DAT_a8078634 is set",
       "name": "HDMI_SET_DESCRAMBLE_MODE",
       "status": "matched"
     },

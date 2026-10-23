@@ -1,5 +1,5 @@
-/* 8051_bank1 FUN_CODE_c1c1 @ 0xc1c1 (92 B)  Byte-exact with OPTIMIZE(7,SPEED).
- * Runs in register bank 3 ('using 3': PUSH PSW, PSW = 0x18). Two identical event checks: when bit 0 of XDATA 0xDCDF
+/* 8051_bank1 FUN_CODE_c1c1 @ 0xc1c1 (92 B), OPTIMIZE(7,SPEED).
+ * Runs in register bank 3 ('using 3': PUSH PSW, PSW = 0x18). Two identical bit tests: when bit 0 of XDATA 0xDCDF
  * and bit 3 of 0xDCDE are set, it calls FUN_CODE_9339 (bit 0x15 = BITS_22_5 set) or FUN_CODE_b979 (clear) and then
  * sets bit 3 of 0xDCDE again; the same with 0xDCCF / 0xDCCE and FUN_CODE_914b / FUN_CODE_b8fd. Finally it calls
  * FUN_CODE_d214 when the byte XDATA 0xD511 is not 0x20. Only caller FUN_CODE_3091 (0x3107).

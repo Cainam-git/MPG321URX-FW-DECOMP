@@ -5,7 +5,7 @@
  * 0xa802d290+0x1dc and sets bit 1 of byte 0xa802b08e. Then bit 15 of the halfword 0xa802cff4+0x14 is cleared,
  * FUN_a00b2d04() and FUN_a00b88cc() run, followed by FUN_a00baa6c(port) (writes "5600+\r" into the port's
  * transmit buffer), FUN_a00ba950(port) (clears the port's receive bytes) and FUN_a00bab80(port, 6); returns 0.
- * The three port helpers (FUN_a00baa6c, FUN_a00ba950, FUN_a00bab80, copied from their matched sources) are
+ * The three port helpers (FUN_a00baa6c, FUN_a00ba950, FUN_a00bab80, written as in their own sources) are
  * inlined, so each copy repeats the port test. Source form: bit 15 of the halfwords at +0xe and +0x14 and
  * bits 31/30 of the word at +0x1dc are single-bit bit-fields; bit 31 is set before bit 30.
  */

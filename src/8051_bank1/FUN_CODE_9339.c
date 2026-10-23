@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_9339 @ 0x9339 (245 B, byte-exact with OPTIMIZE(8,SPEED) LARGE), register bank 3 ('using 3').
+/* 8051_bank1 FUN_CODE_9339 @ 0x9339 (245 B, OPTIMIZE(8,SPEED) LARGE), register bank 3 ('using 3').
  * LARGE locals: n at XDATA 0xA548, buf[17] at 0xA549..0xA559, h at 0xA55A. Clears n, bit 0x0B (BITS_21_3) and h.
  * While bit 0 of XDATA 0xDCD8 is set, the byte at 0xDCD9 is read and stored to buf[n++] while n < 0x11, else to
  * XDATA 0xA547. XDATA 0xDCDB = buf[3] + 1 when n > 3, else 0. Sets bit 0 of XDATA 0xDCDC and waits until it reads 0.

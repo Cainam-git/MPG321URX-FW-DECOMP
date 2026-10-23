@@ -1,5 +1,5 @@
-/* 8051_bank1 module FUN_CODE_482e: FUN_CODE_482e, FUN_CODE_4cb9, FUN_CODE_62c6, FUN_CODE_6465 (one compile, byte-exact
- * with OPTIMIZE(8,SPEED) LARGE, also with REGFILE(R.ORC) added). All four take a channel ch 0..5 that selects a register block with
+/* 8051_bank1 module FUN_CODE_482e: FUN_CODE_482e, FUN_CODE_4cb9, FUN_CODE_62c6, FUN_CODE_6465 (one compile,
+ * OPTIMIZE(8,SPEED) LARGE, also with REGFILE(R.ORC) added). All four take a channel ch 0..5 that selects a register block with
  * base R = 0xF039 (ch 0), 0xF041 (1), 0xF089 (2), 0xF091 (3), 0xF09B (4), 0xF0B8 (5); any other ch leaves the
  * pointers 0. Register pointers are generic pointers to volatile bytes (62c6 reads R+3 again for every test),
  * accessed through the Keil library ?C?CLDPTR (0x06A4) and ?C?CSTPTR (0x06EA). All four return a bit (carry).

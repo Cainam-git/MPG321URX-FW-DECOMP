@@ -8,7 +8,7 @@
  * 0xa802d290+0xa8 to byte 0xa8025c55; when that bit is set, clears it and, unless (word 0xa802d290+0x180 &
  * 0xffff00) is 0x100, tail-calls FUN_a00dbcf0.
  * The word at +0x180 and its byte +0x182 are one union.
- * Exact form: bit 15 of the halfword is tested as '(short)(h4 & 0x8000)' (same as FUN_a00a0508).
+ * Source form: bit 15 of the halfword is tested as '(short)(h4 & 0x8000)' (same as FUN_a00a0508).
  */
 struct D290 {
     unsigned char p000[0xa8];

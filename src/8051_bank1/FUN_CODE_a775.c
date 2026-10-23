@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_a775 @ 0xa775 (164 B, byte-exact with OPTIMIZE(8,SPEED) LARGE).
+/* 8051_bank1 FUN_CODE_a775 @ 0xa775 (164 B, OPTIMIZE(8,SPEED) LARGE).
  * FUN_CODE_a775(m, x, d): LARGE parameters m (XDATA 0xA4B3) and d (0xA4B4); x stays in R5 and is passed on to
  * FUN_CODE_c389; local v (unsigned long) at 0xA4B5..0xA4B8.
  *   m bit 2: XDATA 0xF054 |= 0x80, 0xF0F9 = 0xEA, 0xF0F6 |= 0x80, 0xF0FA = 0xF0, 0xF02C |= 0x40.

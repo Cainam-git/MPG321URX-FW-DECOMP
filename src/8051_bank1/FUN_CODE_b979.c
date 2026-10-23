@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_b979 @ 0xb979 (123 B, byte-exact with OPTIMIZE(8,SPEED) LARGE), register bank 3 ('using 3').
+/* 8051_bank1 FUN_CODE_b979 @ 0xb979 (123 B, OPTIMIZE(8,SPEED) LARGE), register bank 3 ('using 3').
  * Clears bit 0x0B (BITS_21_3). While bit 0 of XDATA 0xDCD8 is set: the byte at 0xDCD9 is stored to
  * XDATA 0xA548 + i for i = 0 .. 0x10 (i counts up), or to XDATA 0xA547 once i reaches 0x11. Then XDATA 0xDCDB =
  * XDATA[0xA54B] + 1 when more than 3 bytes were stored, else 0. When the high nibble of XDATA 0xA548 is 0x9:

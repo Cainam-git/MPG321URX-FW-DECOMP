@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_6db5 @ 0x6db5  bit FUN_CODE_6db5(ch) (byte-exact with OPTIMIZE(8,SPEED) LARGE).
+/* 8051_bank1 FUN_CODE_6db5 @ 0x6db5  bit FUN_CODE_6db5(ch) (OPTIMIZE(8,SPEED) LARGE).
  * Caller: FUN_CODE_3c4d (0x3FDB). ch selects a register block with base R = 0xF039 (ch 0), 0xF041 (1), 0xF089 (2), 0xF091 (3), 0xF09B (4), 0xF0B8 (5); any other ch leaves the
  * pointers 0. LARGE slots: t 0xA4CF..D0, pc, pd, ps (generic pointers to volatile bytes)
  * 0xA4D1..D9 = R+0, R+4, R+1 (pd is set and not used).

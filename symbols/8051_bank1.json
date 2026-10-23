@@ -1149,7 +1149,7 @@
     },
     "CODE:c1c1": {
       "by": "hand",
-      "comment": "bank-3 event check: DCDF/DCDE and DCCF/DCCE pending bits -> 9339/b979 or 914b/b8fd, then d214 unless XDATA 0xD511 is 0x20",
+      "comment": "register bank 3 bit tests: DCDF/DCDE and DCCF/DCCE pending bits -> 9339/b979 or 914b/b8fd, then d214 unless XDATA 0xD511 is 0x20",
       "name": "FUN_CODE_c1c1",
       "status": "matched"
     },

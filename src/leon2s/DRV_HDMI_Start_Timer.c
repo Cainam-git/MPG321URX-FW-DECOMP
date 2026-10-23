@@ -1,6 +1,6 @@
 /* DRV_HDMI_Start_Timer (leon2s 0xa009c310-0xa009c3bc, 172 bytes), flags -mcpu=v8 -Os -g.
- * When bit 2 of DAT_a8078634 is set, calls FUN_a0073044(s_a006a630, s_a00b4468, type) (strings
- * format string starting "[MODEDET]" with a %s and a %d field, and the function name "DRV_HDMI_Start_Timer"). Then by type: 1 sets word 1 of the
+ * When bit 2 of DAT_a8078634 is set, calls FUN_a0073044(s_a006a630, s_a00b4468, type) (a format
+ * string starting "[MODEDET]" with a %s and a %d field, and the function name "DRV_HDMI_Start_Timer"). Then by type: 1 sets word 1 of the
  * 3-word descriptor DAT_a80790f4 to the byte DAT_a8078631 and passes it to CONV2HDMITX_UpdateInterface_4; 0x14
  * does the same with DAT_a8079100 and DAT_a8078630; 0x15 does both (0xa80790f4 first). Other types do nothing.
  */

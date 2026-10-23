@@ -2920,7 +2920,7 @@
     "ram:a0093334": {
       "by": "h24",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "copies bytes 0xa8025c56/0xa8025c55 into word 0xa802d290+0x180/+0xa8, row calls, then FUN_a00dbcf0 or FUN_a00db738 when changed",
+      "comment": "copies bytes 0xa8025c56/0xa8025c55 into word 0xa802d290+0x180/+0xa8, FUN_a00a93bc/FUN_a00a9650/FUN_a00a813c calls, then FUN_a00dbcf0 or FUN_a00db738 when changed",
       "name": "FUN_a0093334",
       "status": "matched"
     },
@@ -3788,7 +3788,7 @@
     "ram:a0099864": {
       "by": "h24",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "calls FUN_a0099658, FUN_a0146a80 by FUN_a00d7d48, FUN_a00a813c/FUN_a00a9650 rows, stores 0xd to word 0xa802afec",
+      "comment": "calls FUN_a0099658, FUN_a0146a80 by FUN_a00d7d48, FUN_a00a813c/FUN_a00a9650 calls, stores 0xd to word 0xa802afec",
       "name": "FUN_a0099864",
       "status": "matched"
     },
@@ -4537,7 +4537,7 @@
     "ram:a00a03e8": {
       "by": "h24",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "by byte 0xa802d290+0x1a9: reset path (FUN_a00b5080, FUN_a00b0f48, word 0xa802afec = 0x116) or row-value path with FUN_a00a813c/FUN_a00a900c/FUN_a00a9650",
+      "comment": "byte 0xa802d290+0x1a9 == 1: FUN_a00b5080, FUN_a00b0f48, word 0xa802afec = 0x116, halfword 0xa802d03c = FUN_a002d588(); else FUN_a00a813c/FUN_a00a900c/FUN_a00a9650 with byte +0x182 and the bit-11 copy",
       "name": "FUN_a00a03e8",
       "status": "matched"
     },
@@ -4648,25 +4648,25 @@
     },
     "ram:a00a285c": {
       "by": "hand",
-      "comment": "Returns entry n of a table (16-bit index)",
+      "comment": "returns entry n of the word table at 0x1081f0 (4-byte entries, 16-bit index)",
       "name": "FUN_a00a285c",
       "status": "matched"
     },
     "ram:a00a2874": {
       "by": "hand",
-      "comment": "Returns entry n of a table (16-bit index)",
+      "comment": "returns entry n of the byte table at 0x10dfe0 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a2874",
       "status": "matched"
     },
     "ram:a00a288c": {
       "by": "hand",
-      "comment": "Returns entry n of a table (16-bit index)",
+      "comment": "returns entry n of the word table at 0x10e088 (4-byte entries, 16-bit index)",
       "name": "FUN_a00a288c",
       "status": "matched"
     },
     "ram:a00a28a4": {
       "by": "hand",
-      "comment": "Returns entry n of a table (16-bit index)",
+      "comment": "returns entry n of the byte table at 0x115588 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a28a4",
       "status": "matched"
     },
@@ -4752,145 +4752,145 @@
     },
     "ram:a00a2c34": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the word table at 0x12e3f0 (4-byte entries, 16-bit index)",
       "name": "FUN_a00a2c34",
       "status": "matched"
     },
     "ram:a00a2c4c": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the byte table at 0x12fb90 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a2c4c",
       "status": "matched"
     },
     "ram:a00a2c64": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the word table at 0x130de0 (4-byte entries, 16-bit index)",
       "name": "FUN_a00a2c64",
       "status": "matched"
     },
     "ram:a00a2c7c": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the byte table at 0x1394e0 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a2c7c",
       "status": "matched"
     },
     "ram:a00a2c94": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the word table at 0x12fbc0 (4-byte entries, 16-bit index)",
       "name": "FUN_a00a2c94",
       "status": "matched"
     },
     "ram:a00a2cac": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the byte table at 0x130dc0 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a2cac",
       "status": "matched"
     },
     "ram:a00a2cc4": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the word table at 0x13a3fc (4-byte entries, 16-bit index)",
       "name": "FUN_a00a2cc4",
       "status": "matched"
     },
     "ram:a00a2cdc": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the byte table at 0x142b00 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a2cdc",
       "status": "matched"
     },
     "ram:a00a2cf4": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the word table at 0x1395ec (4-byte entries, 16-bit index)",
       "name": "FUN_a00a2cf4",
       "status": "matched"
     },
     "ram:a00a2d0c": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the byte table at 0x1395d0 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a2d0c",
       "status": "matched"
     },
     "ram:a00a2d24": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the word table at 0x142bf0 (4-byte entries, 16-bit index)",
       "name": "FUN_a00a2d24",
       "status": "matched"
     },
     "ram:a00a2d3c": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the byte table at 0x14b2f0 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a2d3c",
       "status": "matched"
     },
     "ram:a00a2d54": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the word table at 0x14d1f0 (4-byte entries, 16-bit index)",
       "name": "FUN_a00a2d54",
       "status": "matched"
     },
     "ram:a00a2d6c": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the byte table at 0x155860 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a2d6c",
       "status": "matched"
     },
     "ram:a00a2d84": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the word table at 0x14b3e8 (4-byte entries, 16-bit index)",
       "name": "FUN_a00a2d84",
       "status": "matched"
     },
     "ram:a00a2d9c": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the byte table at 0x14d1b8 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a2d9c",
       "status": "matched"
     },
     "ram:a00a2db4": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the word table at 0x157878 (4-byte entries, 16-bit index)",
       "name": "FUN_a00a2db4",
       "status": "matched"
     },
     "ram:a00a2dcc": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the byte table at 0x15ff78 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a2dcc",
       "status": "matched"
     },
     "ram:a00a2de4": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the word table at 0x155950 (4-byte entries, 16-bit index)",
       "name": "FUN_a00a2de4",
       "status": "matched"
     },
     "ram:a00a2dfc": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the byte table at 0x157840 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a2dfc",
       "status": "matched"
     },
     "ram:a00a2e14": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the word table at 0x160068 (4-byte entries, 16-bit index)",
       "name": "FUN_a00a2e14",
       "status": "matched"
     },
     "ram:a00a2e2c": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the byte table at 0x166f38 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a2e2c",
       "status": "matched"
     },
     "ram:a00a2e44": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the word table at 0x167000 (4-byte entries, 16-bit index)",
       "name": "FUN_a00a2e44",
       "status": "matched"
     },
     "ram:a00a2e5c": {
       "by": "hand",
-      "comment": "Returns entry n of a word table (16-bit index)",
+      "comment": "returns entry n of the byte table at 0x16dd20 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a2e5c",
       "status": "matched"
     },
@@ -13071,7 +13071,7 @@
     "ram:a0129c10": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "sets byte 0xa802ca04 when on is nonzero; while it is set stores FUN_a0101bb0(on) in it and calls FUN_a0101c64(1) when that is 0",
+      "comment": "sets byte 0xa802ca04 when on is nonzero; then, when it is set, stores FUN_a0101bb0(on) in it and calls FUN_a0101c64(1) when that is 0",
       "name": "FUN_a0129c10",
       "status": "matched"
     },

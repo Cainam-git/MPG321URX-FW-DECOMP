@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_a6cf @ 0xa6cf (166 B, byte-exact with OPTIMIZE(8,SPEED) LARGE).
+/* 8051_bank1 FUN_CODE_a6cf @ 0xa6cf (166 B, OPTIMIZE(8,SPEED) LARGE).
  * bit FUN_CODE_a6cf(ch): LARGE parameter ch at XDATA 0xA476, local k at 0xA477. Clears bit 0x01 (BITS_20_1); ch values
  * above 1 become 0. k = FUN_CODE_aeb2(XDATA[0xA755]) for ch 0, FUN_CODE_aeb2(XDATA[0xA756]) for ch 1. While the count
  * XDATA[0xA753 + ch] is below 2: XDATA[0xA751 + ch] = k and the count is incremented. Otherwise k replaces

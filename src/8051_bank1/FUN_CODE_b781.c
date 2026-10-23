@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_b781 @ 0xb781..0xb802 (129 bytes)
- * MATCH: tools/diff8051.py 8051_bank1 FUN_CODE_b781 -> 129/129 bytes at OPTIMIZE(8,SPEED) LARGE.
+ * OPTIMIZE(8,SPEED) LARGE.
  * Reads 4 blocks of 512 bytes from XDATA 0xA800 upwards through a generic pointer. For each block it forms the 8-bit
  * sum of its bytes and shifts the 32-bit result left by (sum + 8) (?C?LSHL, count in R0); returns the result in R4..R7.
  * LARGE locals (XDATA): i 0xA4B3, sum 0xA4B4, r 0xA4B5..0xA4B8 (cleared by ?C?LSTKXDATA with the inline constant 0),
