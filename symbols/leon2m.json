@@ -3501,9 +3501,9 @@
       "status": "matched"
     },
     "ram:a0096e14": {
-      "by": "permuter",
+      "by": "h49",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: base 0xa802d290 kept in a register: pointer local (basefix)",
+      "comment": "byte 0xA8025C56 bits 0-1 into bits 18-19 of word 0xA802D33C, then FUN_a00a93bc / FUN_a00a9650 / FUN_a00a813c, afec = 0x1d, FUN_a00a900c(5, 1)",
       "name": "FUN_a0096e14",
       "status": "matched"
     },
