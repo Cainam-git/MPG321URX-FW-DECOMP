@@ -832,6 +832,14 @@
       "name": "FUN_CODE_b84b",
       "status": "matched"
     },
+    "CODE:bba9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "sends dev | 1 up to 10 times, then reads buf[0], buf[1] and buf[0] more bytes with FUN_CODE_db1c; returns 1 on no ACK or buf[0] > 10, else 0",
+      "module": "FUN_CODE_c52f",
+      "name": "FUN_CODE_bba9",
+      "status": "matched"
+    },
     "CODE:bcb3": {
       "by": "hand",
       "c51opts": "OPTIMIZE(7,SPEED) LARGE",
@@ -917,6 +925,13 @@
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
       "comment": "SPI flash chip-table lookup: 8-byte records, bytes 5..7 == JEDEC id[3..5] -> index, byte 5 == 0xFF ends -> 0xFF",
       "name": "FUN_CODE_c44e",
+      "status": "matched"
+    },
+    "CODE:c52f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "sends 0x6E 0x00 0x3C, v, F0 0F 6E 91 13 EC, buf[0..0x1FF] and an XOR checksum through FUN_CODE_d275, returns the OR of the header and checksum results",
+      "name": "FUN_CODE_c52f",
       "status": "matched"
     },
     "CODE:c6ea": {
@@ -1491,10 +1506,20 @@
       "name": "FUN_CODE_e3f9",
       "status": "matched"
     },
+    "CODE:e419": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e423, in FUN_CODE_e423's code segment; emitted by compiling src/8051_bank2/FUN_CODE_c52f.c, bytes judged with FUN_CODE_e423 over 0xe419..0xe432",
+      "kind": "common_entry",
+      "module": "FUN_CODE_c52f",
+      "name": "FUN_CODE_e419",
+      "of": "FUN_CODE_e423",
+      "status": "matched"
+    },
     "CODE:e423": {
       "by": "hand",
-      "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "update agent: I2C START on P1.6 SDA / P1.7 SCL",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "I2C START on P1.6 SDA / P1.7 SCL; module with FUN_CODE_c52f / FUN_CODE_bba9 and their common-entry block 0xe419",
+      "module": "FUN_CODE_c52f",
       "name": "FUN_CODE_e423",
       "status": "matched"
     },
