@@ -7898,6 +7898,12 @@
       "name": "FUN_a00d9be4",
       "status": "matched"
     },
+    "ram:a00d9d50": {
+      "by": "hand",
+      "comment": "scans the 0x30-byte records ARR_a8079c98 from index DAT_a80787fc for the first one with bit 6 of byte k + 2 set; returns its 4-bit index or 0xff",
+      "name": "FUN_a00d9d50",
+      "status": "matched"
+    },
     "ram:a00d9e44": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
