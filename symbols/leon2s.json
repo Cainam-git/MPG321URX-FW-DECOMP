@@ -7513,6 +7513,12 @@
       "name": "FUN_a00d72d8",
       "status": "matched"
     },
+    "ram:a00d73b4": {
+      "by": "h43",
+      "comment": "dispatches on a type code to one of twelve converters with (out, FUN_a00d66bc(a, b))",
+      "name": "FUN_a00d73b4",
+      "status": "matched"
+    },
     "ram:a00d7638": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
