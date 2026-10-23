@@ -10860,6 +10860,13 @@
       "name": "FUN_a01019b4",
       "status": "matched"
     },
+    "ram:a0101a00": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the low byte of register 0xcf0160e0",
+      "name": "FUN_a0101a00",
+      "status": "matched"
+    },
     "ram:a0101a28": {
       "by": "autoc",
       "comment": "(word 0xCF0160DC) = p2 & 0xff; (word 0xCF0160C8) = p1 & 0xff",
