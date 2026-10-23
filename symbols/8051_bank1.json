@@ -783,6 +783,13 @@
       "name": "FUN_CODE_6465",
       "status": "matched"
     },
+    "CODE:65e9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "picks the first XDATA register pair whose bit 0 is set, writes it and waits up to 500 ticks of FUN_CODE_d94a without a change",
+      "name": "FUN_CODE_65e9",
+      "status": "matched"
+    },
     "CODE:6917": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
