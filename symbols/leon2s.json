@@ -7868,6 +7868,12 @@
       "name": "FUN_a00cdb0c",
       "status": "matched"
     },
+    "ram:a00cdc40": {
+      "by": "hand",
+      "comment": "sets field st of DAT_a8078bb0[port] to 1",
+      "name": "FUN_a00cdc40",
+      "status": "matched"
+    },
     "ram:a00cdc74": {
       "by": "hand",
       "comment": "record a8078bb0[ch] word 0 bits 16..17 = 01; a = c9368(ch); if a != c972c(): cca38(a) (same body as a00cf980)",
