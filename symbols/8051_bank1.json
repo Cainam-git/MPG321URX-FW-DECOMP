@@ -1034,6 +1034,12 @@
       "name": "FUN_CODE_96eb",
       "status": "matched"
     },
+    "CODE:9a43": {
+      "by": "hand",
+      "comment": "writes a and b to one of 13 XDATA register pairs selected by sel (switch with jump table)",
+      "name": "FUN_CODE_9a43",
+      "status": "matched"
+    },
     "CODE:9b11": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
