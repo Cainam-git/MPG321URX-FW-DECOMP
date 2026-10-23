@@ -1684,7 +1684,7 @@
     },
     "ram:a002a878": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Endless loop with an empty body; does not return",
       "name": "FUN_a002a878",
       "status": "matched"
     },
@@ -2088,7 +2088,7 @@
     "ram:a0082acc": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a008f354() and FUN_a008ee6c(0xff, 0), clears bit 0 of byte 0xA802AF41, then passes its six arguments to FUN_a0143da8",
       "name": "FUN_a0082acc",
       "status": "matched"
     },
@@ -2282,7 +2282,7 @@
     },
     "ram:a0088654": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Returns bit 0 of byte 0xA802AF99 and clears that bit",
       "name": "FUN_a0088654",
       "status": "matched"
     },
@@ -4099,7 +4099,7 @@
     "ram:a009a554": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00a93bc(byte 0xA802D471) and FUN_a00af44c(0x34, 3), stores 0xBE in word 0xA802AFEC, calls FUN_a00a9650(3, 1), clears byte 0xA8025C55, calls FUN_a00dab20() and sets bit 1 of byte 0xA802B08E",
       "name": "FUN_a009a554",
       "status": "matched"
     },
@@ -4615,7 +4615,7 @@
     "ram:a009eaf8": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a008ad20(); calls FUN_a008b2bc() when byte 0xA802D284 == 0x3F; stores the result of FUN_a0147724() in halfword 0xA802AFE8",
       "name": "FUN_a009eaf8",
       "status": "matched"
     },
@@ -5216,7 +5216,7 @@
     },
     "ram:a00a7c88": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls func_0x4008e2a4(), then for j = 4 .. 11 calls FUN_a0146b20(0, 3, j, 0x10, 0, 0) and FUN_a0146a80(3, j, 0x10, 0x792, 0)",
       "name": "FUN_a00a7c88",
       "status": "matched"
     },
@@ -5400,7 +5400,7 @@
     },
     "ram:a00ab080": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls func_0x4008e2a4(), then for j = 5 .. 0x15 calls FUN_a0146a80(1, j, 0x11, 0x792, 0) and FUN_a0146b20(0, 1, j, 0x11, 0, 0)",
       "name": "FUN_a00ab080",
       "status": "matched"
     },
@@ -5807,7 +5807,7 @@
     },
     "ram:a00b5030": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Returns bit 0 of byte 0xA802B08E and clears that bit",
       "name": "FUN_a00b5030",
       "status": "matched"
     },
@@ -7757,21 +7757,21 @@
     "ram:a00d4690": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "limits byte 0xA802D2A5 to at most 100, stores it back and calls FUN_a014a2a0(0, value)",
       "name": "FUN_a00d4690",
       "status": "matched"
     },
     "ram:a00d46c4": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "limits byte 0xA802D2A6 to at most 100, stores it back and calls FUN_a014a2a0(1, value)",
       "name": "FUN_a00d46c4",
       "status": "matched"
     },
     "ram:a00d46f8": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "limits byte 0xA802D2A7 to at most 100, stores it back and calls FUN_a014a2a0(2, value)",
       "name": "FUN_a00d46f8",
       "status": "matched"
     },
@@ -7811,7 +7811,7 @@
     "ram:a00d4970": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a0147a14 with byte 0xA802D2A0 limited to at most 100",
       "name": "FUN_a00d4970",
       "status": "matched"
     },
@@ -8228,7 +8228,7 @@
     },
     "ram:a00dabc8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01272c8(0) when byte 0xA802D47A is 0, otherwise FUN_a01272c8(byte 0xA802D47B)",
       "name": "FUN_a00dabc8",
       "status": "matched"
     },
@@ -8898,7 +8898,7 @@
     },
     "ram:a00e2258": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00e02a0(i, p1, p2) for i = 0, 1, 2 and returns p1",
       "name": "FUN_a00e2258",
       "status": "matched"
     },
@@ -13108,7 +13108,7 @@
     },
     "ram:a0125c54": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Returns FUN_a00ddae4(0xf) as a byte",
       "name": "FUN_a0125c54",
       "status": "matched"
     },
@@ -14103,7 +14103,7 @@
     },
     "ram:a01344cc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Clears a word w, reads into it through func_0x4008c4d0(0, 0xb4, &w, 1) and returns w",
       "name": "FUN_a01344cc",
       "status": "matched"
     },
@@ -14177,7 +14177,7 @@
     "ram:a0136e9c": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Packs the eight bytes 0xA802A450 .. 0xA802A457 as 4-bit fields (byte n at bit 4 * n) into one word and writes it through func_0x4008c5f8(1, 4, &w, 1); then writes (byte 0xA802A457) << 16 through func_0x4008c5f8(1, 8, &w2, 1)",
       "name": "FUN_a0136e9c",
       "status": "matched"
     },
@@ -17158,6 +17158,13 @@
       "name": "FUN_a0150a98",
       "status": "matched"
     },
+    "ram:a0150b08": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Fills three entries of a table selected by sel and passes it to FUN_a00f6508",
+      "name": "FUN_a0150b08",
+      "status": "matched"
+    },
     "ram:a0150da4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
@@ -18268,7 +18275,7 @@
     },
     "ram:a015e7e0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Stores halfword 0x2000 at p2 + 8 and word 0 at p2 + 0x30; returns 0",
       "name": "FUN_a015e7e0",
       "status": "matched"
     },
