@@ -892,6 +892,12 @@
       "name": "FUN_CODE_9bde",
       "status": "matched"
     },
+    "CODE:a1fe": {
+      "by": "hand",
+      "comment": "flag and 5000-count check on FUN_CODE_db7d results with 0xDCB0 bit 1 pulse",
+      "name": "FUN_CODE_a1fe",
+      "status": "matched"
+    },
     "CODE:a4e9": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
