@@ -7892,6 +7892,12 @@
       "name": "FUN_a00d9524",
       "status": "matched"
     },
+    "ram:a00d95e4": {
+      "by": "hand",
+      "comment": "reads record DAT_a8078828[x] & 0xf of table ARR_a807963d[x] (x = DAT_a8078832); copies byte k + 3 to ARR_a8079c3d[lo * 2 + bit] when hi > lo and returns it",
+      "name": "FUN_a00d95e4",
+      "status": "matched"
+    },
     "ram:a00d9698": {
       "by": "hand",
       "comment": "message dispatcher: switch to twelve no-arg handlers, default 9474(v, 4, 0)",
