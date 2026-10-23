@@ -5751,6 +5751,13 @@
       "name": "FUN_a00b69d0",
       "status": "matched"
     },
+    "ram:a00b69f4": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "toggles bit 7 of DAT_a802d290+0xa8 with the call sequences of each direction, then FUN_a00a9f30(5, bit 7) and conditional FUN_a00869b0(0x14, 5000); DAT_a802b08e |= 2",
+      "name": "FUN_a00b69f4",
+      "status": "matched"
+    },
     "ram:a00b6b68": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
