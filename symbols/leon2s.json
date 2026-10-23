@@ -4406,6 +4406,12 @@
       "name": "FUN_a0098048",
       "status": "matched"
     },
+    "ram:a00980a8": {
+      "by": "h42",
+      "comment": "updates the port mode byte +0x189 with register writes depending on FUN_a00a0588 and bit 12 of register +0x80",
+      "name": "FUN_a00980a8",
+      "status": "matched"
+    },
     "ram:a0098240": {
       "by": "hand",
       "comment": "twin of DRV_HDMI21_RXDetect_FSM_LTS_2: state change print and next state from 961e8(port) (see header)",
