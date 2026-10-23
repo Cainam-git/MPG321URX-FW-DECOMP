@@ -1,4 +1,4 @@
-/* leon2m FUN_a00a550c @ 0xa00a550c (-mcpu=v8 -O2 -g)
+/* leon2m FUN_a00a550c @ 0xa00a550c (-mcpu=v8 -O3 -g)
  * Code facts: FUN_a0146a80(3, 1, 6, 0xf9a, 0); a loop i = 0..5 of FUN_a0146b20(0, i + 3, 1, 1, i + 0x15, 0); seven
  * FUN_a0146a80 calls with the constant 0x12aa (first arguments 0x14, 0x1d, 0x25, 0x32, 0x35, 0x35, 0xd); two loops
  * of two rounds, FUN_a0146b20(0, j + 0x14, 0, 1, j + 0x1b, 0) and FUN_a0146b20(0, k + 0x1d, 0, 1, k + 0x1d, 0); then

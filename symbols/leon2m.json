@@ -5172,6 +5172,13 @@
       "name": "FUN_a00a5420",
       "status": "matched"
     },
+    "ram:a00a550c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Fixed sequence of FUN_a0146a80 and FUN_a0146b20 calls with three short loops",
+      "name": "FUN_a00a550c",
+      "status": "matched"
+    },
     "ram:a00a5714": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
