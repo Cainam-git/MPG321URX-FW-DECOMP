@@ -5344,6 +5344,12 @@
       "name": "FUN_a00a8844",
       "status": "matched"
     },
+    "ram:a00a88b8": {
+      "by": "h43",
+      "comment": "maps a selector code to a value 0..5 and writes it to a 3-bit field through FUN_a00a6428 by mode",
+      "name": "FUN_a00a88b8",
+      "status": "matched"
+    },
     "ram:a00a8ec4": {
       "by": "hand",
       "comment": "Copies src bytes 1, 4, 5 and 27 bytes from src+6 to dst bytes 0..2 and dst+4, dst byte 3 = minus their 8-bit sum",
