@@ -728,6 +728,13 @@
       "name": "FUN_CODE_5868",
       "status": "matched"
     },
+    "CODE:5c06": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "clears five words at p and, when FUN_CODE_de12() is clear, fills them with a header word and four words from the 0xA3E3 structure",
+      "name": "FUN_CODE_5c06",
+      "status": "matched"
+    },
     "CODE:5dcb": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
