@@ -736,6 +736,23 @@
       "name": "FUN_CODE_62c6",
       "status": "matched"
     },
+    "CODE:644f": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_6465, in FUN_CODE_6465's code segment; emitted by compiling src/8051_bank1/FUN_CODE_482e.c, bytes judged with FUN_CODE_6465 over 0x644f..0x65e9",
+      "kind": "common_entry",
+      "module": "FUN_CODE_482e",
+      "name": "FUN_CODE_644f",
+      "of": "FUN_CODE_6465",
+      "status": "matched"
+    },
+    "CODE:6465": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Writes v to register R+5 and sets bit 5 of R+0 of channel block ch, then waits up to 12000 passes for bit 0 of R+1",
+      "module": "FUN_CODE_482e",
+      "name": "FUN_CODE_6465",
+      "status": "matched"
+    },
     "CODE:6c34": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",

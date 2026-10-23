@@ -693,8 +693,14 @@
   {
    "name": "FUN_CODE_644f",
    "start": 25679,
+   "end": 25701,
+   "size": 22
+  },
+  {
+   "name": "FUN_CODE_6465",
+   "start": 25701,
    "end": 26089,
-   "size": 410
+   "size": 388
   },
   {
    "name": "FUN_CODE_65e9",

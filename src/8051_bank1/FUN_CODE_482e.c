@@ -1,17 +1,17 @@
-/* 8051_bank1 module FUN_CODE_482e: FUN_CODE_482e, FUN_CODE_4cb9, FUN_CODE_62c6, FUN_CODE_644f (one compile, byte-exact
+/* 8051_bank1 module FUN_CODE_482e: FUN_CODE_482e, FUN_CODE_4cb9, FUN_CODE_62c6, FUN_CODE_6465 (one compile, byte-exact
  * with OPTIMIZE(8,SPEED) LARGE, also with REGFILE(R.ORC) added). All four take a channel ch 0..5 that selects a register block with
  * base R = 0xF039 (ch 0), 0xF041 (1), 0xF089 (2), 0xF091 (3), 0xF09B (4), 0xF0B8 (5); any other ch leaves the
  * pointers 0. Register pointers are generic pointers to volatile bytes (62c6 reads R+3 again for every test),
  * accessed through the Keil library ?C?CLDPTR (0x06A4) and ?C?CSTPTR (0x06EA). All four return a bit (carry).
  * Keil common-entry blocks (OPTIMIZE(8) "reuse of common entry code"): the calls 'FUN_CODE_62c6(ch, buf[i])' in
- * the loops of 482e and 4cb9 share the block 0x62B5..0x62C6 in front of 62c6 (R7 = ch, R5 = buf[i] with i in
- * R4:R5); the calls 'FUN_CODE_644f(ch, buf[i])' share the block 0x644F..0x6465 in front of 644f (buf and i read
+ * the loops of 482e and 4cb9 share the block 0x62B5..0x62C6 (FUN_CODE_62b5) in front of 62c6 (R7 = ch, R5 = buf[i] with i in
+ * R4:R5); the calls 'FUN_CODE_6465(ch, buf[i])' share the block 0x644F..0x6465 (FUN_CODE_644f) in front of 6465 (buf and i read
  * from their adjacent LARGE slots through DPTR). Callers pass A = ch and DPTR = the slot of buf.
  *
  * FUN_CODE_482e(ch, ctl, n, buf), caller FUN_CODE_83f3 (0x84CC); LARGE slots 0xA4B7..0xA4CB (n 0xA4B9, buf
  * 0xA4BB, i 0xA4BE, p0..p3 0xA4C0..), bit local ok = BITS 0x20.1. 0xF00A = 0x55; returns 0 when n is 0;
  * p0..p3 = R+7, R+5, R+4, R+0; ET0 = 0; *p0 = 1, *p2 = 0xFF, *p3 = 0xA77A | 0x02, *p1 = ctl; for i = 0 .. n - 2:
- * 0xF00A = 0x55 and FUN_CODE_62c6(ch, buf[i]); then FUN_CODE_bae2(ch) and FUN_CODE_644f(ch, buf[n - 1]).
+ * 0xF00A = 0x55 and FUN_CODE_62c6(ch, buf[i]); then FUN_CODE_bae2(ch) and FUN_CODE_6465(ch, buf[n - 1]).
  * Returns the AND of all call results. ET0 is left 0.
  * FUN_CODE_4cb9(ch, ctl, w, n, buf), caller FUN_CODE_50c9 (0x5264); LARGE slots 0xA4BD..0xA4D0 (n and buf passed in their slots
  * 0xA4C1 / 0xA4C3). Returns 0 when n is 0; p0..p2 = R+5, R+4, R+0; 0xF00A = 0x55; ET0 = 0; *p1 = 0xFF,
@@ -20,7 +20,7 @@
  * FUN_CODE_62c6(ch, v): ps, pd, pc = R+3, R+5, R+4; up to 1000 passes: return 0 when R+3 bit 3 or bit 4 is set;
  * when bit 6 is set: *pd = v, *pc = 0x40, return 1. Returns 0 after 1000 passes. The two early exits are
  * 'break' (Keil jumps to the shared CLR C / RET).
- * FUN_CODE_644f(ch, v): pd, pc, ps = R+5, R+0, R+1; ET0 = 0; *pd = v; *pc |= 0x20; ET0 = 1; up to 12000 passes:
+ * FUN_CODE_6465(ch, v): pd, pc, ps = R+5, R+0, R+1; ET0 = 0; *pd = v; *pc |= 0x20; ET0 = 1; up to 12000 passes:
  * return 1 when R+1 bit 0 is set. Returns 0 after 12000 passes.
  * No aids.
  */
@@ -29,7 +29,7 @@ extern unsigned char volatile xdata DAT_EXTMEM_f00a;
 extern unsigned char xdata DAT_EXTMEM_a77a;
 bit FUN_CODE_bae2(unsigned char ch);
 bit FUN_CODE_62c6(unsigned char ch, unsigned char v);
-bit FUN_CODE_644f(unsigned char ch, unsigned char v);
+bit FUN_CODE_6465(unsigned char ch, unsigned char v);
 
 bit FUN_CODE_482e(unsigned char ch, unsigned char ctl, unsigned int n, unsigned char *buf)
 {
@@ -93,7 +93,7 @@ bit FUN_CODE_482e(unsigned char ch, unsigned char ctl, unsigned int n, unsigned 
         ok &= FUN_CODE_62c6(ch, buf[i]);
     }
     ok &= FUN_CODE_bae2(ch);
-    ok &= FUN_CODE_644f(ch, buf[i]);
+    ok &= FUN_CODE_6465(ch, buf[i]);
     return ok;
 }
 
@@ -152,7 +152,7 @@ bit FUN_CODE_4cb9(unsigned char ch, unsigned char ctl, unsigned int w, unsigned 
         ok &= FUN_CODE_62c6(ch, buf[i]);
     }
     ok &= FUN_CODE_bae2(ch);
-    ok &= FUN_CODE_644f(ch, buf[i]);
+    ok &= FUN_CODE_6465(ch, buf[i]);
     ET0 = 1;
     return ok;
 }
@@ -211,7 +211,7 @@ bit FUN_CODE_62c6(unsigned char ch, unsigned char v)
     return 0;
 }
 
-bit FUN_CODE_644f(unsigned char ch, unsigned char v)
+bit FUN_CODE_6465(unsigned char ch, unsigned char v)
 {
     unsigned int t;
     unsigned char volatile *pd, *pc, *ps;
