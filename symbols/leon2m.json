@@ -13038,6 +13038,12 @@
       "name": "FUN_a012f12c",
       "status": "matched"
     },
+    "ram:a012f134": {
+      "by": "h41",
+      "comment": "returns bit 4 of the argument as 0 or 1",
+      "name": "FUN_a012f134",
+      "status": "matched"
+    },
     "ram:a012fc04": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
