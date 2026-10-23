@@ -4985,6 +4985,12 @@
       "name": "FUN_a00a151c",
       "status": "matched"
     },
+    "ram:a00a1574": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a00a1574",
+      "status": "matched"
+    },
     "ram:a00a157c": {
       "by": "hand",
       "comment": "sets bytes +0x158/+0x157 of DAT_a807d7e0[port] and calls FUN_a009fed0(port, &record+0x114) when byte +0x159 is 0",
