@@ -8278,6 +8278,12 @@
       "name": "FUN_a00d3f54",
       "status": "matched"
     },
+    "ram:a00d3f70": {
+      "by": "hand",
+      "comment": "stores 1 to DAT_a8078c34 and v to DAT_a8078c30",
+      "name": "FUN_a00d3f70",
+      "status": "matched"
+    },
     "ram:a00d649c": {
       "by": "hand",
       "comment": "writes 0xff to 0xcf01301c and pulses bits 0xc0 of 0xcf013008 and 0x2 of 0xcf013020",
