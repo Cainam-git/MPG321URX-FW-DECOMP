@@ -1,29 +1,19 @@
 /* leon2m FUN_a00bcb38 @ 0xa00bcb38 (-mcpu=v8 -O3 -g)
+ * Reply frame 0xA802D078: bytes 7, 8 = '0', byte 9 = '0' + word 0xA802D340; then FUN_a00bac3c(0x16) (frame bytes from
+ * command-table row 0x16), FUN_a00ba950(port) and FUN_a00babe4(port, 0xb) (sends 11 bytes, tail call).
  */
-typedef unsigned char undefined, undefined1, byte, uchar, bool;
-typedef unsigned short undefined2, ushort, word;
-typedef unsigned int undefined4, uint, ulong, dword, undefined3;
-typedef unsigned long long undefined8, ulonglong;
-typedef long long longlong;
-typedef signed char sbyte;
-typedef int code();
-#define true 1
-#define false 0
-
-extern unsigned int DAT_a802d340;
 extern unsigned char DAT_a802d078[];
-extern void FUN_a00bac3c();
-extern int FUN_a00ba950();
-extern void FUN_a00babe4(undefined1 param_1, undefined1 param_2);
+extern unsigned int DAT_a802d340;
+extern void FUN_a00bac3c(unsigned char param_1);
+extern void FUN_a00ba950(unsigned char port);
+extern void FUN_a00babe4(unsigned char param_1, unsigned char param_2);
 
-unsigned short FUN_a00bcb38(byte param_1)
+void FUN_a00bcb38(unsigned char port)
 {
-    char uVar1;
     DAT_a802d078[7] = 0x30;
     DAT_a802d078[8] = 0x30;
-    DAT_a802d078[9] = (DAT_a802d340 + 0x30);
-    (void)FUN_a00bac3c(0x16);
-    (void)FUN_a00ba950(param_1);
-    FUN_a00babe4(param_1, 0xb);
-    return;
+    DAT_a802d078[9] = DAT_a802d340 + 0x30;
+    FUN_a00bac3c(0x16);
+    FUN_a00ba950(port);
+    FUN_a00babe4(port, 0xb);
 }

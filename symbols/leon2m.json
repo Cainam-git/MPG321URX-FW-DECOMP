@@ -6238,9 +6238,9 @@
       "status": "matched"
     },
     "ram:a00bcb38": {
-      "by": "permuter",
+      "by": "h49",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: global DAT_a802d340 unsigned int",
+      "comment": "Reply frame 0xA802D078: bytes 7, 8 = '0', byte 9 = '0' + word 0xA802D340; command-table row reply",
       "name": "FUN_a00bcb38",
       "status": "matched"
     },
