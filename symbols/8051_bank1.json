@@ -865,6 +865,13 @@
       "name": "FUN_CODE_8b58",
       "status": "matched"
     },
+    "CODE:8d60": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "XDATA 0xF60A..0xF60E / 0xF0EA..0xF0F4 set-up from address and length, then poll of 0xF0E5 bit 1",
+      "name": "FUN_CODE_8d60",
+      "status": "matched"
+    },
     "CODE:8e61": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
