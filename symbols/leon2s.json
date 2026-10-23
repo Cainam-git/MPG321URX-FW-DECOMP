@@ -7085,6 +7085,12 @@
       "name": "FUN_a00cb1d4",
       "status": "matched"
     },
+    "ram:a00cbb50": {
+      "by": "h45",
+      "comment": "port record update from DAT_a807d250/DAT_a807ce50 bytes with register writes",
+      "name": "FUN_a00cbb50",
+      "status": "matched"
+    },
     "ram:a00cc1d4": {
       "by": "h43",
       "comment": "sets the record state field, reads 16 bytes with FUN_a00c7770 and sends them with FUN_a00c80f0",
