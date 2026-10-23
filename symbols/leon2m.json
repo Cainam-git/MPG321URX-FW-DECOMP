@@ -6580,9 +6580,9 @@
       "status": "matched"
     },
     "ram:a00be38c": {
-      "by": "permuter",
+      "by": "h49",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: [walk]; swap lines 11; swap lines 12; drop cast (unsigned char); return unsigned int; callee FUN_a00ba950 unsigned char; swap lines 11",
+      "comment": "Reply frame 0xA802D078: bytes 7, 8 = '0', byte 9 = '0' + bit 30 of word 0xA802D484; command-table row reply",
       "name": "FUN_a00be38c",
       "status": "matched"
     },
