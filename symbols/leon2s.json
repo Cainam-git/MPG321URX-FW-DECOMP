@@ -8728,6 +8728,12 @@
       "name": "FUN_a00dc084",
       "status": "matched"
     },
+    "ram:a00dc090": {
+      "by": "hand",
+      "comment": "returns DAT_a8078853",
+      "name": "FUN_a00dc090",
+      "status": "matched"
+    },
     "ram:a00dc0a8": {
       "by": "hand",
       "comment": "clears record bytes (a80787fa / 7f8, loop over ARR_a8079c3d[2i], [2i+1]) and the byte 0xa8078838[x] via a constant-address pointer (documented aid: alias order), print via 9f1ccc30",
