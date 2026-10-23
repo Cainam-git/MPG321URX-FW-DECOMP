@@ -1868,6 +1868,12 @@
       "name": "LINK_STANDBY",
       "status": "matched"
     },
+    "ram:a006e2c4": {
+      "by": "h42",
+      "comment": "copies the link timing fields of the port record into the output record (doubled when FUN_a00a2080 is set) and prints them",
+      "name": "FUN_a006e2c4",
+      "status": "matched"
+    },
     "ram:a006fa28": {
       "by": "hand",
       "comment": "calls FUN_a006d4e0, LINK_STANDBY, LINK_STANDBY_2 and DP_GetClrSpace for records 0..5 of DAT_a807a824, then FUN_a008c8b0",
