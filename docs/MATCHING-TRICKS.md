@@ -264,6 +264,13 @@ changing the code, and test all pairs.
 - **SPARC register order (GCC 3.4, functions with calls):** %g1-%g7, %o5 down to %o0, then %o7, %l0-%l7,
   %i5-%i0. A value in %o7 in the firmware means %o0 was taken by another value live over the same range
   (config/sparc/sparc.h REG_ALLOC_ORDER).
+- **Scheduler ties and alias sets.** When two ready instructions have the same priority, GCC 3.4 prefers the one
+  with more dependent instructions (haifa-sched.c rank_for_schedule). A store through a pointer depends on every
+  later load and store of the same alias set, so it often wins such a tie. Declaring the stored variable with
+  another integer type of the same size (`unsigned long` instead of `unsigned int`) gives it its own alias set and
+  removes those dependences (FUN_a00d378c).
+- **Array index or pointer sum.** `*(table + i) = v` and `table[i] = v` can produce different operand order and
+  scheduling for the same store; try both (DRV_HDMI21_RXDetect_FSM_LTS_P).
 
 ## Proven dead ends
 
