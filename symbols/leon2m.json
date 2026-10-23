@@ -13623,6 +13623,12 @@
       "name": "FUN_a0125908",
       "status": "matched"
     },
+    "ram:a0125910": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a0125910",
+      "status": "matched"
+    },
     "ram:a0125918": {
       "by": "autoc",
       "comment": "func_0x4008c86c(0xff, 0x40, 1)",
