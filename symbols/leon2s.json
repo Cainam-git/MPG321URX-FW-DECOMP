@@ -7634,6 +7634,12 @@
       "name": "FUN_a00ca6d4",
       "status": "matched"
     },
+    "ram:a00cab10": {
+      "by": "hand",
+      "comment": "compares the read-back buffers of a port, writes its 5-byte row to registers 0x10..0x14 and updates the DAT_a8078bb0 record flags",
+      "name": "FUN_a00cab10",
+      "status": "matched"
+    },
     "ram:a00cad8c": {
       "by": "hand",
       "comment": "checks the DAT_a807d250 header, retries FUN_a00c2488 up to 30 times and passes DAT_a807ce50 to FUN_a00c80f0",
