@@ -1669,6 +1669,12 @@
       "name": "FUN_a00615bc",
       "status": "matched"
     },
+    "ram:a00615cc": {
+      "by": "hand",
+      "comment": "calls FUN_a0061540(p, v, m)",
+      "name": "FUN_a00615cc",
+      "status": "matched"
+    },
     "ram:a00615dc": {
       "by": "autoc",
       "comment": "returns FUN_a006155c(p1)",
