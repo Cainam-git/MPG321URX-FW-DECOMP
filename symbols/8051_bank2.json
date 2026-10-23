@@ -824,6 +824,13 @@
       "name": "FUN_CODE_b317",
       "status": "matched"
     },
+    "CODE:b706": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Apply the CODE table 0xC9D2 of (reg, val, wait) records through b317 / dfbe / ddbb by the top nibble of reg, then set the 0x08CD / 0x08BC / 0x0829 / 0x07D1 defaults and call da02",
+      "name": "FUN_CODE_b706",
+      "status": "matched"
+    },
     "CODE:b84b": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
