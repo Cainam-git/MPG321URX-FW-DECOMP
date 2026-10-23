@@ -1222,6 +1222,12 @@
       "name": "FUN_CODE_b56a",
       "status": "matched"
     },
+    "CODE:b5f2": {
+      "by": "hand",
+      "comment": "register sequence on 0xF0xx/0xF1C0, then sums 0x200 reads of 0xF1C0 into the uint at 0xA74C",
+      "name": "FUN_CODE_b5f2",
+      "status": "matched"
+    },
     "CODE:b781": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
