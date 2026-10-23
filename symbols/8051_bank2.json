@@ -480,11 +480,62 @@
       "name": "FUN_CODE_3e68",
       "status": "matched"
     },
+    "CODE:467e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "sets the DATA 0x22 records, calls 8f9b x4, 5219, b45f and 76b4 in sequence (block 0x8f95, 0x7677 users), returns bytes 14 and 16 of the 0x071B record",
+      "name": "FUN_CODE_467e",
+      "status": "matched"
+    },
     "CODE:4e8e": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
       "comment": "Reads 4 bytes via af07(addr, base + (n-k)*2) for k = 1, 2, 3, 6; the format characters g/G, m/M, i/I and the '~' exclusion are handled.",
       "name": "FUN_CODE_4e8e",
+      "status": "matched"
+    },
+    "CODE:5200": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_5219, in FUN_CODE_5219's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_5219 over 0x5200..0x573b",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_5200",
+      "of": "FUN_CODE_5219",
+      "status": "matched"
+    },
+    "CODE:5203": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_5219, in FUN_CODE_5219's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_5219 over 0x5200..0x573b",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_5203",
+      "of": "FUN_CODE_5219",
+      "status": "matched"
+    },
+    "CODE:520b": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_5219, in FUN_CODE_5219's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_5219 over 0x5200..0x573b",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_520b",
+      "of": "FUN_CODE_5219",
+      "status": "matched"
+    },
+    "CODE:520d": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_5219, in FUN_CODE_5219's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_5219 over 0x5200..0x573b",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_520d",
+      "of": "FUN_CODE_5219",
+      "status": "matched"
+    },
+    "CODE:5219": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "5219(a, p, len): record set-up for the 8 bytes at p, then a switch on p[1] (cases 0/6/8/10/0xFE, 1/3/5/9/11/0xFF, 7) with 69e5 calls; block 0x5200..0x5219",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_5219",
       "status": "matched"
     },
     "CODE:573b": {
@@ -588,6 +639,32 @@
       "status": "matched",
       "symbol": "@0+1073"
     },
+    "CODE:69c3": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_69e5, in FUN_CODE_69e5's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_69e5 over 0x69c3..0x6e16",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_69c3",
+      "of": "FUN_CODE_69e5",
+      "status": "matched"
+    },
+    "CODE:69da": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_69e5, in FUN_CODE_69e5's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_69e5 over 0x69c3..0x6e16",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_69da",
+      "of": "FUN_CODE_69e5",
+      "status": "matched"
+    },
+    "CODE:69e5": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "69e5(a, b): register 0x14 polls, e373 / e1a4 record updates at b and a, e04a copy, prints 0xC973 / 0xC99C / 0xC9AA; common-entry block 0x69c3",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_69e5",
+      "status": "matched"
+    },
     "CODE:6e16": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
@@ -630,6 +707,32 @@
       "name": "FUN_CODE_72b0",
       "status": "matched"
     },
+    "CODE:7677": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_76b4, in FUN_CODE_76b4's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_76b4 over 0x7677..0x7a46",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_7677",
+      "of": "FUN_CODE_76b4",
+      "status": "matched"
+    },
+    "CODE:768a": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_76b4, in FUN_CODE_76b4's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_76b4 over 0x7677..0x7a46",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_768a",
+      "of": "FUN_CODE_76b4",
+      "status": "matched"
+    },
+    "CODE:76b4": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "builds the 0x2E-byte record at 0x082A (0x55534243, len, tag, cb[16]) from the 0x075C record and runs it through 999f / e373 / e1a4 / 8a0e; block 0x7677..0x76b4",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_76b4",
+      "status": "matched"
+    },
     "CODE:7a46": {
       "by": "hand",
       "comment": "Keil common-entry (L?) code in front of FUN_CODE_7a60, in FUN_CODE_7a60's code segment; emitted by compiling src/8051_bank2/FUN_CODE_573b.c, bytes judged with FUN_CODE_7a60 over 0x7a46..0x7ddb",
@@ -670,11 +773,45 @@
       "name": "FUN_CODE_872e",
       "status": "matched"
     },
+    "CODE:8a08": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_8a0e, in FUN_CODE_8a0e's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_8a0e over 0x8a08..0x8cdc",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_8a08",
+      "of": "FUN_CODE_8a0e",
+      "status": "matched"
+    },
+    "CODE:8a0e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "8a0e(a, n, buf, off, f): record at x08c5 + x08cd[1 or 2]: count n, five buffer words from buf, offset, bit flags; 69e5 call; steps x08cd[]",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_8a0e",
+      "status": "matched"
+    },
     "CODE:8cdc": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
       "comment": "reads block 0 into XDATA 0x01E6, tests the MSDOS5.0 / NTFS tables, rereads at bf1b(buf + 0x1C6), then sets 0x041C, 0x042A, 0x01DC, 0x0405, 0x0158, 0x0418 and derived values per EXFAT / NTFS / other layout",
       "name": "FUN_CODE_8cdc",
+      "status": "matched"
+    },
+    "CODE:8f95": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_8f9b, in FUN_CODE_8f9b's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_8f9b over 0x8f95..0x9235",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_8f95",
+      "of": "FUN_CODE_8f9b",
+      "status": "matched"
+    },
+    "CODE:8f9b": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "8f9b(v, typ, addr, h, ep, mps): sets the fields of the 0x0829 record (link type, address, endpoint, speed bits from 9b91(0x80), max length); block 0x8f95",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_8f9b",
       "status": "matched"
     },
     "CODE:9235": {
@@ -685,24 +822,62 @@
       "name": "FUN_CODE_9235",
       "status": "matched"
     },
+    "CODE:94d3": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "94d3(a, b): updates the records at x08c5 + b - 1 and x08c1 + 2 (b - 1) through e373 / e1a4 (count, buffer word, flag bits)",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_94d3",
+      "status": "matched"
+    },
     "CODE:9734": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "loop over the 16-bit count at XDATA 0xF19E: progress byte 0xF194 = i * 255 / n, record 0x0761 (0x2A, 8, a, m >> 9) and FUN_CODE_768a(b), retry when FUN_CODE_e4c9() is set, else a += 0x28, b += 0x5000",
+      "comment": "loop over the 16-bit count at XDATA 0xF19E: progress byte 0xF194 = i * 255 / n, record 0x075C (cb 0x2A, 8, a, m >> 9) and 76b4 (block entry 0x768a), retry when e4c9() is set",
+      "module": "FUN_CODE_467e",
       "name": "FUN_CODE_9734",
+      "status": "matched"
+    },
+    "CODE:9981": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_999f, in FUN_CODE_999f's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_999f over 0x9981..0x9b8d",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_9981",
+      "of": "FUN_CODE_999f",
+      "status": "matched"
+    },
+    "CODE:9982": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_999f, in FUN_CODE_999f's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_999f over 0x9981..0x9b8d",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_9982",
+      "of": "FUN_CODE_999f",
       "status": "matched"
     },
     "CODE:999f": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "32-bit byte-order swap dst<-src over len bytes (whole words, plus one more word if len is not a multiple of 4)",
+      "comment": "32-bit byte-order swap dst<-src over len bytes (whole words, plus one more word if len is not a multiple of 4); block 0x9981..0x999f",
+      "module": "FUN_CODE_467e",
       "name": "FUN_CODE_999f",
+      "status": "matched"
+    },
+    "CODE:9b8d": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_9b91, in FUN_CODE_9b91's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_9b91 over 0x9b8d..0x9d97",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_9b8d",
+      "of": "FUN_CODE_9b91",
       "status": "matched"
     },
     "CODE:9b91": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "32-bit register read via window CD20/CD00 (partner of b317): reg, start 0x40 | bit8<<4, 10 polls, v from bytes +9..+6",
+      "comment": "32-bit register read via window CD20/CD00 (partner of b317); block 0x9b8d = 9b91(0x14)",
+      "module": "FUN_CODE_467e",
       "name": "FUN_CODE_9b91",
       "status": "matched"
     },
@@ -845,11 +1020,29 @@
       "name": "FUN_CODE_b1a9",
       "status": "matched"
     },
+    "CODE:b308": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_b317, in FUN_CODE_b317's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_b317 over 0xb308..0xb45f",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_b308",
+      "of": "FUN_CODE_b317",
+      "status": "matched"
+    },
     "CODE:b317": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "32-bit register write via window CD20/CD00 (by 0x075B): reg, 4 value bytes, start 0x80 | bit8<<4, up to 10 done polls",
+      "comment": "32-bit register write via window CD20/CD00 (by 0x075B); block 0xb308 = b317(0x28, x << 5)",
+      "module": "FUN_CODE_467e",
       "name": "FUN_CODE_b317",
+      "status": "matched"
+    },
+    "CODE:b45f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "b45f(v): for the four words at x08c1 + 0/2/4/6: e373, low 7 bits of byte 7 of the 0x0829 record = v, e1a4; then dac5(0, 2) twice",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_b45f",
       "status": "matched"
     },
     "CODE:b5b4": {
@@ -872,6 +1065,22 @@
       "comment": "member of the af07 updater module",
       "module": "FUN_CODE_a17e",
       "name": "FUN_CODE_b84b",
+      "status": "matched"
+    },
+    "CODE:b97a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "94d3(0, 1), b317 / ddbb register writes, fills 16 words of DATA 0x22 from x08c1 << 5, 16 e1a4 writes at x08b4 + 2 i",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_b97a",
+      "status": "matched"
+    },
+    "CODE:ba96": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "retry loop (n = 1..4) over the 0x07D9 records 6..8 with 5219, b706 / 467e and 35a9(0); returns 1 when 35a9 succeeds, else 0",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_ba96",
       "status": "matched"
     },
     "CODE:bba9": {
@@ -996,6 +1205,14 @@
       "name": "FUN_CODE_c52f",
       "status": "matched"
     },
+    "CODE:c60e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "c60e(a, b, c): e1eb(), record 0x075C = cb 0x28, LBA a, b / 512 blocks, len b, addr c << 5, then tail call 76b4",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_c60e",
+      "status": "matched"
+    },
     "CODE:c6ea": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
@@ -1016,6 +1233,22 @@
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
       "comment": "updater: 512-byte DUALFW tag block at XDATA 0x0440",
       "name": "FUN_CODE_ca42",
+      "status": "matched"
+    },
+    "CODE:cbd9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "cbd9(addr, buf, n): c60e(addr, n, x07d5), then n / 32 times e373(x07d5 + i, 1) and 999f(buf + 32 i, DATA 0x22, 32)",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_cbd9",
+      "status": "matched"
+    },
+    "CODE:cca2": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "cca2(a, p): x0717 = x08c9 + 0x700, 16 times e373(x0717 + i + a * 16, 1) and 999f(p + 32 i, DATA 0x22, 32)",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_cca2",
       "status": "matched"
     },
     "CODE:cd68": {
@@ -1091,6 +1324,14 @@
       "name": "FUN_CODE_d275",
       "status": "matched"
     },
+    "CODE:d2fb": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "clears its 8-byte local record, e373(x08c5, 1); when bit 7 of byte 11 of the 0x08BC record is clear: d938, e373, 999f into the record, dfbe(0x14, 9b91(0x14)), 94d3(1, 1); returns the record",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_d2fb",
+      "status": "matched"
+    },
     "CODE:d393": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
@@ -1102,6 +1343,14 @@
       "by": "hand",
       "comment": "Keil STARTUP.A51 (unmodified) + INIT.A51; SP 61h, main FUN_CODE_b5b4; byte-exact via tools/startup8051.py (src/8051_bank2/startup)",
       "name": "FUN_CODE_d426",
+      "status": "matched"
+    },
+    "CODE:d4b2": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "d4b2(k, p): 16 times e373(x07d5 + i + k * 16, 1) and 999f(p + 32 i, DATA 0x22, 32)",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_d4b2",
       "status": "matched"
     },
     "CODE:d53d": {
@@ -1228,10 +1477,20 @@
       "name": "FUN_CODE_da8a",
       "status": "matched"
     },
+    "CODE:dac1": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_dac5, in FUN_CODE_dac5's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_dac5 over 0xdac1..0xdb1c",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_dac1",
+      "of": "FUN_CODE_dac5",
+      "status": "matched"
+    },
     "CODE:dac5": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "fill n * 32 bytes of the data buffer 0x22 with val",
+      "comment": "fill n * 32 bytes of the data buffer 0x22 with val; block 0xdac1 = dac5(0, 2)",
+      "module": "FUN_CODE_467e",
       "name": "FUN_CODE_dac5",
       "status": "matched"
     },
@@ -1309,10 +1568,20 @@
       "name": "FUN_CODE_dd6a",
       "status": "matched"
     },
+    "CODE:ddb7": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_ddbb, in FUN_CODE_ddbb's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_ddbb over 0xddb7..0xde04",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_ddb7",
+      "of": "FUN_CODE_ddbb",
+      "status": "matched"
+    },
     "CODE:ddbb": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "32-bit reg &= ~mask: b317(reg, 9b91(reg) & ~mask)",
+      "comment": "32-bit reg &= ~mask: b317(reg, 9b91(reg) & ~mask); block 0xddb7 = ddbb(0x10, ...)",
+      "module": "FUN_CODE_467e",
       "name": "FUN_CODE_ddbb",
       "status": "matched"
     },
@@ -1485,10 +1754,56 @@
       "name": "FUN_CODE_e141",
       "status": "matched"
     },
+    "CODE:e17c": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e1a4, in FUN_CODE_e1a4's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_e1a4 over 0xe17c..0xe1b5",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e17c",
+      "of": "FUN_CODE_e1a4",
+      "status": "matched"
+    },
+    "CODE:e190": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e1a4, in FUN_CODE_e1a4's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_e1a4 over 0xe17c..0xe1b5",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e190",
+      "of": "FUN_CODE_e1a4",
+      "status": "matched"
+    },
+    "CODE:e193": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e1a4, in FUN_CODE_e1a4's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_e1a4 over 0xe17c..0xe1b5",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e193",
+      "of": "FUN_CODE_e1a4",
+      "status": "matched"
+    },
+    "CODE:e19e": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e1a4, in FUN_CODE_e1a4's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_e1a4 over 0xe17c..0xe1b5",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e19e",
+      "of": "FUN_CODE_e1a4",
+      "status": "matched"
+    },
+    "CODE:e1a0": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e1a4, in FUN_CODE_e1a4's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_e1a4 over 0xe17c..0xe1b5",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e1a0",
+      "of": "FUN_CODE_e1a4",
+      "status": "matched"
+    },
     "CODE:e1a4": {
       "by": "hand",
-      "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "b1a9(data buffer 0x22, addr, count 098a, 0) (twin of e373)",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "e1a4(addr, n): b1a9(data buffer 0x22, addr, n, 0) (twin of e373); common-entry block 0xe17c..0xe1a4",
+      "module": "FUN_CODE_467e",
       "name": "FUN_CODE_e1a4",
       "status": "matched"
     },
@@ -1559,10 +1874,56 @@
       "name": "FUN_CODE_e331",
       "status": "matched"
     },
+    "CODE:e35b": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e373, in FUN_CODE_e373's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_e373 over 0xe35b..0xe384",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e35b",
+      "of": "FUN_CODE_e373",
+      "status": "matched"
+    },
+    "CODE:e35f": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e373, in FUN_CODE_e373's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_e373 over 0xe35b..0xe384",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e35f",
+      "of": "FUN_CODE_e373",
+      "status": "matched"
+    },
+    "CODE:e362": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e373, in FUN_CODE_e373's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_e373 over 0xe35b..0xe384",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e362",
+      "of": "FUN_CODE_e373",
+      "status": "matched"
+    },
+    "CODE:e36d": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e373, in FUN_CODE_e373's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_e373 over 0xe35b..0xe384",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e36d",
+      "of": "FUN_CODE_e373",
+      "status": "matched"
+    },
+    "CODE:e36f": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e373, in FUN_CODE_e373's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_e373 over 0xe35b..0xe384",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e36f",
+      "of": "FUN_CODE_e373",
+      "status": "matched"
+    },
     "CODE:e373": {
       "by": "hand",
-      "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "abce(data buffer 0x22, addr, count 098a, 0)",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "e373(addr, n): abce(data buffer 0x22, addr, n, 0); common-entry block 0xe35b..0xe373 of the module callers",
+      "module": "FUN_CODE_467e",
       "name": "FUN_CODE_e373",
       "status": "matched"
     },
