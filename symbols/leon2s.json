@@ -7734,6 +7734,12 @@
       "name": "FUN_a00cfb20",
       "status": "matched"
     },
+    "ram:a00cfd38": {
+      "by": "hand",
+      "comment": "reads the 0x69000 data blocks into the DAT_a807ce50/DAT_a807cf08 buffers and sets the DAT_a8078bb0 record flags of a port",
+      "name": "FUN_a00cfd38",
+      "status": "matched"
+    },
     "ram:a00d00e0": {
       "by": "hand",
       "comment": "ch (u8). Word 0 of the 24-byte record DAT_a8078bb0[ch]: bits 16..17 = 1. If FUN_a00cfb20(ch + 8) != 0: bits 16..17 = 3. Else: clear bit 22; func_0xa0fb7940(ch, 0, 0x20, 1) then (.., 0); if bit 0 of func_0xa0fb7acc(0, 6): hw reg 0xcf018d54 |= 2, 0xcf018ddc &= ~1; else 0xcf018d54 &= ~2; then ...",
