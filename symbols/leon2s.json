@@ -7892,6 +7892,12 @@
       "name": "FUN_a00da9e8",
       "status": "matched"
     },
+    "ram:a00daa98": {
+      "by": "h43",
+      "comment": "processes the current 0x30-byte record through FUN_a00d6724/FUN_a00da6ac/FUN_a00da838 and steps the record index",
+      "name": "FUN_a00daa98",
+      "status": "matched"
+    },
     "ram:a00dabf8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
