@@ -4633,6 +4633,13 @@
       "name": "FUN_a009eaf8",
       "status": "matched"
     },
+    "ram:a009eb38": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "key code handler: port checks, key tables 0x1080b8 / 0x1080f8, pointer tables DAT_a80241b0 / DAT_a802422c[state][t], state 0 / 0x10d / 0x113 / 0x114 arms",
+      "name": "FUN_a009eb38",
+      "status": "matched"
+    },
     "ram:a009f42c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
