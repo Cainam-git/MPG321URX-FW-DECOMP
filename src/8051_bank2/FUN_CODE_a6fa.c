@@ -1,5 +1,4 @@
-/* 8051_bank2 FUN_CODE_a6fa @ 0xa6fa..0xa8a3 (425 B; functions.json splits it at 0xa799 into a6fa + a799, and a799 is
- * only the second half: it has no caller of its own). OPTIMIZE(8,SPEED) LARGE; parameter n at XDATA 0x08EB.
+/* 8051_bank2 FUN_CODE_a6fa @ 0xa6fa..0xa8a3 (425 B). OPTIMIZE(8,SPEED) LARGE; parameter n at XDATA 0x08EB.
  * Callers: FUN_CODE_6e16 (0x6e1b), FUN_CODE_b5b4 (x6).
  * XDATA 0x075B is an index (0 or 1) into three per-index tables: 0x0858[] (records of 0x2E bytes, current copy at
  * 0x082A), 0x0783[] (records of 0x27 bytes, current copy at 0x075C) and the byte arrays 0x08D0[], 0x08D2[], 0x08D4[]
