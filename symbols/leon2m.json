@@ -12337,6 +12337,12 @@
       "name": "FUN_a0118174",
       "status": "matched"
     },
+    "ram:a0118180": {
+      "by": "hand",
+      "comment": "stores the argument to DAT_a802c98d",
+      "name": "FUN_a0118180",
+      "status": "matched"
+    },
     "ram:a011818c": {
       "by": "hand",
       "comment": "returns DAT_a802c98c",
