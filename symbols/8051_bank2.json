@@ -1179,16 +1179,20 @@
     },
     "CODE:da66": {
       "by": "hand",
-      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
       "comment": "Keil common entry code of FUN_CODE_da8a (flash_info = table_CB8C[A]; da8a(0xF067, flash_info[2])), emitted by compiling src/8051_bank2/FUN_CODE_0003.c; bytes checked by diff8051 common_entry()",
+      "kind": "common_entry",
+      "module": "FUN_CODE_0003",
       "name": "FUN_CODE_da66",
+      "of": "FUN_CODE_da8a",
       "status": "matched"
     },
     "CODE:da86": {
       "by": "hand",
-      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
       "comment": "Keil common entry code of FUN_CODE_da8a (da8a(0xF000 | R7, XDATA[DPTR])), emitted by compiling src/8051_bank2/FUN_CODE_0003.c; bytes checked by diff8051 common_entry()",
+      "kind": "common_entry",
+      "module": "FUN_CODE_0003",
       "name": "FUN_CODE_da86",
+      "of": "FUN_CODE_da8a",
       "status": "matched"
     },
     "CODE:da8a": {
