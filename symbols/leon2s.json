@@ -4370,6 +4370,12 @@
       "name": "FUN_a009740c",
       "status": "matched"
     },
+    "ram:a00974ec": {
+      "by": "h42",
+      "comment": "derives a status byte from the port register blocks at +4 and +0x14 and stores it in byte +6 of the port record",
+      "name": "FUN_a00974ec",
+      "status": "matched"
+    },
     "ram:a00977cc": {
       "by": "hand",
       "comment": "u16 at +0x32 of the 400-byte record a807d7e0[p1] = p2",
