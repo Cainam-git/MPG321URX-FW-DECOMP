@@ -3750,6 +3750,12 @@
       "name": "FUN_a0091540",
       "status": "matched"
     },
+    "ram:a0091578": {
+      "by": "h42",
+      "comment": "calls FUN_a0091540 and resets bit-fields of the 0x1c-byte record ARR_a807d580[port] and three bytes of DAT_a8079538",
+      "name": "FUN_a0091578",
+      "status": "matched"
+    },
     "ram:a00918ec": {
       "by": "hand",
       "comment": "Sets bit 2 in the word at offset +0x10 of entry (param & 0xff) of the 28-byte record table at 0xa807d580. The index is written ARR_a807d580[iVar1 / 4 + 4] with iVar1 = (param & 0xff) * 28, so the +16 bytes fold into the ld/st displacement [%o5 + 0x10]. Same form as FUN_a0091988.",
