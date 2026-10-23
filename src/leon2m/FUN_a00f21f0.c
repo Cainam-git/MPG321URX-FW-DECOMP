@@ -1,8 +1,8 @@
-/* leon2m FUN_a00f21f0 @ 0xa00f21f0 (-mcpu=v8 -O3 -g, twin of FUN_a00f1ce4)
- * Reads a 16-bit value from two consecutive registers (low byte at reg, high byte at reg + 1, low read first) of a
- * 0x19A2FC-table block; block numbers 8 and up read block 0. Register = 32-bit word at 0xCF000000 + 4 * (base + reg),
- * low 8 bits used. Table 0x19A2FC: blocks 0..7 = 0x1AB0..0x21B0 -> 0xCF006AC0 + 0x400 * block.
- * Used by FUN_a0120b38 (register 0x14/0x15 = the input frame-period counter for the vfreq measurement).
+/* leon2m FUN_a00f21f0 @ 0xa00f21f0 (-mcpu=v8 -O3 -g)
+ * With a = halfword blk of the table at 0x19A2FC + reg (blk 8 and up use entry 0) and R(x) the register word at
+ * 0xCF000000 | (x << 2), returns (R(a + 1) << 8) | (R(a) & 0xff) as 16 bits; R(a) is read first. The table holds
+ * 0x1AB0 .. 0x21B0 (registers 0xCF006AC0 + 0x400 * blk). Same code as FUN_a00f1ce4 with another table.
+ * Called from FUN_a00f36b8, FUN_a0120a18, FUN_a0120b38, FUN_a0120c90 and FUN_a0120de4.
  */
 extern unsigned short DAT_0019a2fc[8];     /* block bases */
 

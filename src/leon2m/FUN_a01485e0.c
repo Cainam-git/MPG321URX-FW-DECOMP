@@ -1,15 +1,13 @@
-/* leon2m FUN_a01485e0 @ 0xa01485e0 (-mcpu=v8 -O3 -g, twin of FUN_a0148540)
- * Asks whether the input port behind channel ch is flagged in the port bitmask at 0xA802CBD3: channel
- * remap 0..3 (else "SYS remapping channel OOR" and channel 0), port P = bits 12-15 of the channel record's first
- * word (0xA802DF30 + 0x78 * ch), FUN_a01400bc(P) = bit P of 0xA802CBD3. FUN_a013f370(port) sets that bit when bit
- * 0x80 of the port status halfword (0xA802E224 + 0x2A * port) is set.
- * Callers: FUN_a008380c (APPGetFRCMode).
+/* leon2m FUN_a01485e0 @ 0xa01485e0 (-mcpu=v8 -O3 -g)
+ * k = p1; any k above 3 prints "SYS remapping channel OOR" through FUN_a00df170 and uses 0. Returns
+ * FUN_a01400bc(bits 12-15 of word 0 of record k of the 0x78-byte records at 0xA802DF30); FUN_a01400bc returns bit n
+ * of byte 0xA802CBD3. Called from FUN_a008380c.
  */
 struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* 0x78-byte record */
 extern struct Chan DAT_a802df30[4];
 extern int FUN_a00df170();                     /* formatted output (vsnprintf) */
 extern char s_001a6dd8[];                      /* "SYS remapping channel OOR\r\n" */
-extern unsigned char FUN_a01400bc(unsigned char);   /* bit n of DAT_a802cbd3 (set by FUN_a013f370 from port status bit 0x80) */
+extern unsigned char FUN_a01400bc(unsigned char);   /* bit n of byte 0xA802CBD3 */
 
 /* 0 .. 3 map to themselves, any other value to -1 */
 static int remap(int ch)

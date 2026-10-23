@@ -1607,14 +1607,14 @@
     "ram:a0029994": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "twin of a0029bc4 (regs 2 / 0x70 / 0x38, hook table + 0x40, 6 bits)",
+      "comment": "with b = 2: FUN_a002c268(0x9f000090, 0, b), FUN_a002c268(0x9f020028, b, b); for each set bit i (0 .. 5) of word 0x9F020070 & ~word 0x9F020038 & 0xFFFF with a nonzero hook in word 0xA802B170 + 0x40 + 4i, calls the hook and writes the bit to 0x9F020070 (hook first when bit i of the second word's high half is set, otherwise write first); then FUN_a002c25c(0x9f020034, b), FUN_a002c25c(0x9f00009c, b), FUN_a002c268(0x9f020028, 0, b), FUN_a002c268(0x9f000090, b, b)",
       "name": "FUN_a0029994",
       "status": "matched"
     },
     "ram:a0029aac": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "twin of a0029bc4 (regs 4 / 0x74 / 0x3c, hook table + 0x80)",
+      "comment": "with b = 4: FUN_a002c268(0x9f000090, 0, b), FUN_a002c268(0x9f020028, b, b); for each set bit i (0 .. 3) of word 0x9F020074 & ~word 0x9F02003C & 0xFFFF with a nonzero hook in word 0xA802B170 + 0x80 + 4i, calls the hook and writes the bit to 0x9F020074 (hook first when bit i of the second word's high half is set, otherwise write first); then FUN_a002c25c(0x9f020034, b), FUN_a002c25c(0x9f00009c, b), FUN_a002c268(0x9f020028, 0, b), FUN_a002c268(0x9f000090, b, b)",
       "name": "FUN_a0029aac",
       "status": "matched"
     },
@@ -1628,14 +1628,14 @@
     "ram:a0029cdc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "twin of a0029bc4 (regs 0x10 / 0x7c / 0x44, hook table + 0x100, 7 bits)",
+      "comment": "with b = 0x10: FUN_a002c268(0x9f000090, 0, b), FUN_a002c268(0x9f020028, b, b); for each set bit i (0 .. 6) of word 0x9F02007C & ~word 0x9F020044 & 0xFFFF with a nonzero hook in word 0xA802B170 + 0x100 + 4i, calls the hook and writes the bit to 0x9F02007C (hook first when bit i of the second word's high half is set, otherwise write first); then FUN_a002c25c(0x9f020034, b), FUN_a002c25c(0x9f00009c, b), FUN_a002c268(0x9f020028, 0, b), FUN_a002c268(0x9f000090, b, b)",
       "name": "FUN_a0029cdc",
       "status": "matched"
     },
     "ram:a0029f14": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "twin of a0029bc4 (regs 0x40 / 0x84 / 0x4c, hook table + 0x180, 7 bits)",
+      "comment": "with b = 0x40: FUN_a002c268(0x9f000090, 0, b), FUN_a002c268(0x9f020028, b, b); for each set bit i (0 .. 6) of word 0x9F020084 & ~word 0x9F02004C & 0xFFFF with a nonzero hook in word 0xA802B170 + 0x180 + 4i, calls the hook and writes the bit to 0x9F020084 (hook first when bit i of the second word's high half is set, otherwise write first); then FUN_a002c25c(0x9f020034, b), FUN_a002c25c(0x9f00009c, b), FUN_a002c268(0x9f020028, 0, b), FUN_a002c268(0x9f000090, b, b)",
       "name": "FUN_a0029f14",
       "status": "matched"
     },
@@ -2497,7 +2497,7 @@
     "ram:a008a878": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a008a794 (index++ wraps 0x1a -> 0xd); asm nop = fw standalone nop",
+      "comment": "calls FUN_a0146a80(x, y, w, 0x790, 0) for the 3-byte entry {x, y, w} of the table at 0x100242 selected by byte 0xA802AFBD, increments the byte (above 0x1A wraps to 0xD), calls FUN_a0146a80(x, y, w, 0x90, 0) for the new entry, then maps the byte to byte 0xA802D2A1 (1 -> 2, 7 -> 3, 0xA / 0x14 -> 1, 4 -> 0) and calls FUN_a00d9764()",
       "name": "FUN_a008a878",
       "status": "matched"
     },
@@ -2860,7 +2860,7 @@
     "ram:a0091ea0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a0091de8 with constant 0x14",
+      "comment": "w = word 0xA802AFEC: FUN_a00a8ee8(w - 0x15), FUN_a00aa258(w - 0x15, 0); repeats t = ((low 16 bits of w) - 0x14) % 3, w = t + 0x15 until FUN_a00aa520(t) returns 1; FUN_a00a900c(w - 0x15, 1), FUN_a00aa258(w - 0x15, 1), FUN_a00af44c(0x15, w - 0x15)",
       "name": "FUN_a0091ea0",
       "status": "matched"
     },
@@ -2909,7 +2909,7 @@
     "ram:a0092364": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a0092444 with loop constant 0x1a",
+      "comment": "w = word 0xA802AFEC: FUN_a00a8ee8(w - 0x1E), FUN_a00aa01c(w - 0x1E, 0); repeats t = ((low 16 bits of w) - 0x1A) % 5, w = t + 0x1E until FUN_a00aa520(t) returns 1; FUN_a00a900c(w - 0x1E, 1), FUN_a00aa01c(w - 0x1E, 1); FUN_a0146c40(6, 0, 0) when w - 0x1E == FUN_a01445fc(byte 0xA802D2AE), else FUN_a0146c40(6, 1, 0)",
       "name": "FUN_a0092364",
       "status": "matched"
     },
@@ -3611,14 +3611,14 @@
     "ram:a0096fe8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a0096f40 with key k: 1445fc check, a8ee8 / aa01c / a900c / b4144 / a9468 / b34d4 arm, else b1e = 14459c(k), b8804(0, 1)",
+      "comment": "when FUN_a01445fc(byte 0xA802D2AE) == 2: FUN_a00a8ee8((word 0xA802AFEC - 30) & 0xff), FUN_a00aa01c(same, 0), FUN_a00a900c(FUN_a01445fc(byte 0xA802D2AE), 0), word 0xA802AFEC = 6, FUN_a00b4144(4, 1), FUN_a00a9468(1, 2), FUN_a00b34d4(0, 1); otherwise byte 0xA802D2AE = FUN_a014459c(2) and FUN_a00b8804(0, 1)",
       "name": "FUN_a0096fe8",
       "status": "matched"
     },
     "ram:a0097090": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a0096f40 with another key k (same shape as a0096fe8)",
+      "comment": "when FUN_a01445fc(byte 0xA802D2AE) == 3: FUN_a00a8ee8((word 0xA802AFEC - 30) & 0xff), FUN_a00aa01c(same, 0), FUN_a00a900c(FUN_a01445fc(byte 0xA802D2AE), 0), word 0xA802AFEC = 6, FUN_a00b4144(4, 1), FUN_a00a9468(1, 2), FUN_a00b34d4(0, 1); otherwise byte 0xA802D2AE = FUN_a014459c(3) and FUN_a00b8804(0, 1)",
       "name": "FUN_a0097090",
       "status": "matched"
     },
@@ -4055,7 +4055,7 @@
     "ram:a0099cfc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a0093464 on bit 15 of word a802d290 + 0x1dc (1-bit bit-field)",
+      "comment": "b = bit 15 of word 0xA802D46C: byte 0xA8025C56 = b, FUN_a00a900c((word 0xA802AFEC - 0x34) & 0xff, 2), word 0xA802AFEC = b + 0xBB, FUN_a00a9650(b, 1), FUN_a00a813c(1, b, 0)",
       "name": "FUN_a0099cfc",
       "status": "matched"
     },
@@ -4101,7 +4101,7 @@
     "ram:a009a020": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a0099c0c on another a802d290 field",
+      "comment": "b = byte 0xA802D47E: byte 0xA8025C56 = b, FUN_a00a900c((word 0xA802AFEC - 0x34) & 0xff, 2), word 0xA802AFEC = b + 0xC3, FUN_a00a9650(b, 1), FUN_a00a813c(1, b, 0) (b read again after each call)",
       "name": "FUN_a009a020",
       "status": "matched"
     },
@@ -5403,7 +5403,7 @@
     "ram:a00a8654": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00b3c80: setup calls, then a goto loop of a00a31a4 draws from a string table indexed by i*29 + a802d290 byte +8",
+      "comment": "FUN_a0146b50(0x111, 0), FUN_a0146b6c(0, 0), then for i = 0 .. 2 FUN_a00a31a4(0, 0x2a, i * 2 + 6, 1, FUN_a00a3844(0x190CEC, i * 29 + byte 0xA802D298), 0)",
       "name": "FUN_a00a8654",
       "status": "matched"
     },
@@ -5424,7 +5424,7 @@
     "ram:a00a89e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00a8654: setup calls, goto loop of a00a31a4 rows from table 0x190748 indexed i*29 + a802d290[8]",
+      "comment": "FUN_a0146b50(0x111, 0), FUN_a0146b6c(0, 0), then for i = 0, 1 FUN_a00a31a4(0, 0x2a, i * 2 + 6, 1, FUN_a00a3844(0x190748, i * 29 + byte 0xA802D298), 0)",
       "name": "FUN_a00a89e4",
       "status": "matched"
     },
@@ -5589,7 +5589,7 @@
     "ram:a00aba34": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00abc64 on byte a802d290[0x14], row 10, 146b50(0xea, 0)",
+      "comment": "v = 0x742 + (0x50 when p1 == 0); FUN_a00ab5f0(0x2c, 10, byte 0xA802D2A4, 7, p1), FUN_a0146a80(0x28 / 0x2b / 0x32, 10, 3 / 1 / 1, v, 0), FUN_a0146b50(0xea, 0), FUN_a00b6ec8(0x29, 10, byte 0xA802D2A4)",
       "name": "FUN_a00aba34",
       "status": "matched"
     },
@@ -5603,7 +5603,7 @@
     "ram:a00abb98": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00abff8: setting byte step with clamp, then ab5f0 / 146a80 / 146b50 / b6ec8 calls and a802b08e |= 2",
+      "comment": "v = byte 0xA802D2A4 + 1; v > 100 stores 100, otherwise stores v and calls FUN_a00ab5f0(0x2c, 10, v, 7, 1), FUN_a0146a80(0x28 / 0x2b / 0x32, 10, 3 / 1 / 1, 0x742, 0), FUN_a0146b50(0xea, 0), FUN_a00b6ec8(0x29, 10, byte), FUN_a00d972c(); sets bit 1 of byte 0xA802B08E",
       "name": "FUN_a00abb98",
       "status": "matched"
     },
@@ -6123,21 +6123,21 @@
     "ram:a00b6f20": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00b7530 (v + a9468 in both arms)",
+      "comment": "FUN_a00ab5f0(0x2c, 6, byte 0xA802D29A, 6, p1); v = 0x742 with FUN_a00a9468(1, 3) when p1 != 0, else 0x792 with FUN_a00a9468(1, 2); FUN_a0146a80(0x28 / 0x2b / 0x32, 6, 3 / 1 / 1, v, 0) with FUN_a0146b20 after the 2nd and 3rd, FUN_a0146b50(0xe6, 0), FUN_a01577f4(buf, \"n%3d\", byte 0xA802D29A), buf[0] = 3, FUN_a0146b6c(2, 0), FUN_a00a31a4(0, 0x28, 6, 2, buf, 0)",
       "name": "FUN_a00b6f20",
       "status": "matched"
     },
     "ram:a00b7054": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00b7530 (v + a9468 in both arms)",
+      "comment": "FUN_a00ab5f0(0x2c, 6, byte 0xA802D299, 6, p1); v = 0x742 with FUN_a00a9468(1, 3) when p1 != 0, else 0x792 with FUN_a00a9468(1, 2); FUN_a0146a80(0x28 / 0x2b / 0x32, 6, 3 / 1 / 1, v, 0) with FUN_a0146b20 after the 2nd and 3rd, FUN_a0146b50(0xe6, 0), FUN_a01577f4(buf, \"n%3d\", byte 0xA802D299), buf[0] = 3, FUN_a0146b6c(2, 0), FUN_a00a31a4(0, 0x28, 6, 2, buf, 0)",
       "name": "FUN_a00b7054",
       "status": "matched"
     },
     "ram:a00b7188": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00b7e68 on record byte a802d290.b49: v = p1 ? 0x742 : 0x792, 146a80 / 146b20 calls with v, buffer call sequence",
+      "comment": "FUN_a00ab5f0(0x2c, 6, (byte 0xA802D2D9 * 20) & 0xff, 6, p1); v = 0x742 with FUN_a00a9468(1, 3) when p1 != 0, else 0x792 with FUN_a00a9468(1, 2); FUN_a0146a80(0x28 / 0x2b / 0x32, 6, 3 / 1 / 1, v, 0) with FUN_a0146b20 after the 2nd and 3rd, FUN_a0146b50(0xe6, 0), FUN_a01577f4(buf, \"n%3d\", byte 0xA802D2D9), buf[0] = 3, FUN_a0146b6c(2, 0), FUN_a00a31a4(0, 0x28, 6, 2, buf, 0)",
       "name": "FUN_a00b7188",
       "status": "matched"
     },
@@ -6150,7 +6150,7 @@
     "ram:a00b7530": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00b7e68: v = p1 ? 0x742 : 0x792 with a9468, 146a80 / 146b20 calls with v, then the buffer call sequence (record byte 0xf)",
+      "comment": "FUN_a00ab5f0(0x2c, 6, (byte 0xA802D29F * 20) & 0xfc, 6, p1); v = 0x742 with FUN_a00a9468(1, 3) when p1 != 0, else 0x792 with FUN_a00a9468(1, 2); FUN_a0146a80(0x28 / 0x2b / 0x32, 6, 3 / 1 / 1, v, 0) with FUN_a0146b20 after the 2nd and 3rd, FUN_a0146b50(0xe6, 0), FUN_a01577f4(buf, \"n%3d\", byte 0xA802D29F), buf[0] = 3, FUN_a0146b6c(2, 0), FUN_a00a31a4(0, 0x28, 6, 2, buf, 0)",
       "name": "FUN_a00b7530",
       "status": "matched"
     },
@@ -6205,7 +6205,7 @@
     "ram:a00b7d14": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00b7e68 (v = 0x742 / 0x792 by p1, 146a80 / 146b20 calls, 1577f4(buf, .., a802d290[0x1df] + 1))",
+      "comment": "n = byte 0xA802D46F * 17, or 100 when the byte is above 5; FUN_a00ab5f0(0x2c, 6, n & 0xff, 6, p1); v = 0x742 with FUN_a00a9468(1, 3) when p1 != 0, else 0x792 with FUN_a00a9468(1, 2); FUN_a0146a80(0x28 / 0x2b / 0x32, 6, 3 / 1 / 1, v, 0) with FUN_a0146b20 after the 2nd and 3rd, FUN_a0146b50(0xe6, 0), FUN_a01577f4(buf, \"n%3d\", byte 0xA802D46F + 1), buf[0] = 3, FUN_a0146b6c(2, 0), FUN_a00a31a4(0, 0x28, 6, 2, buf, 0)",
       "name": "FUN_a00b7d14",
       "status": "matched"
     },
@@ -7297,7 +7297,7 @@
     "ram:a00c135c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00c9e9c on word a802d290 + 0xa8 (no db690 call)",
+      "comment": "b = byte 0xA802D049 (p1 == 2), 0xA802D0A1 (p1 == 3) or 0xA802D0D9; b - '0' above 1 returns 0xFF, otherwise copies its bit 0 into bit 15 of word 0xA802D338, calls FUN_a00b88cc(), FUN_a00baa6c(p1), FUN_a00ba950(p1), FUN_a00bab80(p1, 6) and returns 0",
       "name": "FUN_a00c135c",
       "status": "matched"
     },
@@ -9366,7 +9366,7 @@
     "ram:a00e1fc8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00e1f50: 125e38() == 0 ? (print 0x199698, a802d654 = a8028ff0, a802d658 = 124208()) : (print 0x1996a8, a8027bc0, 124214()); e0e44(0)",
+      "comment": "when FUN_a0125e38() == 0 prints \"Old DDR\" and stores 0xA8028FF0 and FUN_a0124208() in words 0xA802D654 / 0xA802D658, otherwise prints \"New DDR\" and stores 0xA8027BC0 and FUN_a0124214(); then FUN_a00e0e44(0)",
       "name": "FUN_a00e1fc8",
       "status": "matched"
     },
@@ -9432,14 +9432,14 @@
     "ram:a00e260c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00e2588: e0774(a, 0x1e1, 0xf0, 4, x), e0774(a, 0x1ef, 0xf0, 4, y)",
+      "comment": "x = p2, y = p3: x > 9 -> FUN_a00df80c(), FUN_a00e0bc0(), prints \"error: N_adj=%d, should be 0~9.\"; else y > 9 -> the same with \"error: N_det=%d, should be 0~9.\"; else FUN_a00e0774(p1, 0x1e1, 0xf0, 4, x) and FUN_a00e0774(p1, 0x1ef, 0xf0, 4, y)",
       "name": "FUN_a00e260c",
       "status": "matched"
     },
     "ram:a00e2690": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00e2588: e0774(unit, 0x215, 0xf0, 4, a), e0774(unit, 0x1ef, 0x0f, 0, b)",
+      "comment": "a = p2, b = p3: a > 9 -> FUN_a00df80c(), FUN_a00e0bc0(), prints \"error: N_adj=%d, should be 0~9.\" with a; else b > 9 -> the same with \"error: N_det=%d, should be 0~9.\" and b; else FUN_a00e0774(p1, 0x215, 0xf0, 4, a) and FUN_a00e0774(p1, 0x1ef, 0xf, 0, b)",
       "name": "FUN_a00e2690",
       "status": "matched"
     },
@@ -9517,7 +9517,7 @@
     "ram:a00e3880": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00e321c: register sequence for unit p1 via e0774 / e05d8 / e0740, stores the 4 hook pointers a802d65c..668 before each e2d8c call",
+      "comment": "when p2 == 0 and p3 == 3 three FUN_a00e0774 field writes to registers 0x216 / 0x237; a fixed FUN_a00e05d8 / FUN_a00e0740 sequence and FUN_a00dff94(1); six FUN_a00e2d8c(p1, a, a, 0) runs (a = 4, 5, 7, 6, 1, 0), each after storing 0x82BCC, 0x82D1C, 0x82690, 0x829A4 in words 0xA802D664 / 65C / 660 / 668; FUN_a00e02ec results to registers 0x21a / 0x21b / 0x223 / 0x224; last FUN_a00e0774(p1, 0x215, 0xf0, 4, 0)",
       "name": "FUN_a00e3880",
       "status": "matched"
     },
@@ -9788,7 +9788,7 @@
     "ram:a00f21f0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00f1ce4 (constants swapped)",
+      "comment": "returns (R(a + 1) << 8) | (R(a) & 0xff) with a = halfword blk of the table at 0x19A2FC + reg (blk >= 8 uses 0) and R(x) the register 0xCF000000 | (x << 2)",
       "name": "FUN_a00f21f0",
       "status": "matched"
     },
@@ -9851,7 +9851,7 @@
     "ram:a00f2b8c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a00f2c20: register write per block via u16 base table 0x19a2e4[4] (blk 8 = all blocks)",
+      "comment": "writes val to the register 0xCF000000 | ((halfword i of the table at 0x19A2E4 + reg) << 2) for i = 0 .. 3 when blk == 8, for i = blk when blk <= 3; other blk no write",
       "name": "FUN_a00f2b8c",
       "status": "matched"
     },
@@ -14132,7 +14132,7 @@
     "ram:a0127154": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "twin of a0126ae4: write/read-back retry of a 2-byte value over 147aa0 / 147ae8 with debug prints",
+      "comment": "when FUN_a01248c8() is nonzero: writes the two bytes {0, p1} at 0xA802D890 to register 0x1B4 of I2C device 0x60 (FUN_a0147aa0), reads them back into 0xA802D888 (FUN_a0147ae8) with prints and 0x32 delays, and repeats write and read-back while they differ and byte 0xA802C9FD <= 9 (incremented per retry)",
       "name": "FUN_a0127154",
       "status": "matched"
     },
@@ -17214,7 +17214,7 @@
     "ram:a0146e2c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a0147560: f63bc(v), f6d00 with 4 u16 args (see header)",
+      "comment": "k = p1 (above 3 prints \"SYS remapping channel OOR\" and uses 0); v = bits 4-7 of word 0 of 0x78-byte record k at 0xA802DF30; returns when v == 4, otherwise calls FUN_a00f63bc(v) and FUN_a00f6d00(p2, p3, p4, p5) (16-bit arguments)",
       "name": "FUN_a0146e2c",
       "status": "matched"
     },
@@ -17499,7 +17499,7 @@
     "ram:a01485e0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a0148540 (constants swapped)",
+      "comment": "k = p1 (above 3 prints \"SYS remapping channel OOR\" and uses 0); returns FUN_a01400bc(bits 12-15 of word 0 of 0x78-byte record k at 0xA802DF30)",
       "name": "FUN_a01485e0",
       "status": "matched"
     },
@@ -18234,7 +18234,7 @@
     "ram:a014deec": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of a014a654: mode 1421c4(142218(125198(p))) 0x71 -> v 0, 151aa4(0x10, 1); 0x81 -> v 1, 151aa4(0x20, 1); then 12b884(v)",
+      "comment": "v = FUN_a01421c4(FUN_a0142218(FUN_a0125198(p1))): 0x71 -> FUN_a0151aa4(0x10, 1) and FUN_a012b884(0); 0x81 -> FUN_a0151aa4(0x20, 1) and FUN_a012b884(1); other v no call",
       "name": "FUN_a014deec",
       "status": "matched"
     },

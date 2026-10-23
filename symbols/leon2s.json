@@ -2177,7 +2177,7 @@
     },
     "ram:a0073540": {
       "by": "hand",
-      "comment": "twin of a00a45d8 on record a80789d4; asm nop = fw standalone nop",
+      "comment": "when p1 == 0: copies word 0xA8076190 into word +4 of the record at 0xA80789D4 and calls FUN_a00b2194 with the record address",
       "name": "FUN_a0073540",
       "status": "matched"
     },
@@ -4246,7 +4246,7 @@
     },
     "ram:a009262c": {
       "by": "hand",
-      "comment": "twin of a0093084 on regs 0x160..",
+      "comment": "FUN_a00a8054(p1, 0, r, buf[i]) for r = 0x160, 0x161, 0x162 and i = 0, 1, 2; for i < buf[2] FUN_a00a8054(p1, 0, 0x164 + i, buf[2]) while summing buf[4 + i]; then writes -sum (8 bits) to register 0x163",
       "name": "FUN_a009262c",
       "status": "matched"
     },
@@ -4589,7 +4589,7 @@
     },
     "ram:a0098240": {
       "by": "hand",
-      "comment": "twin of DRV_HDMI21_RXDetect_FSM_LTS_2: state change print and next state from 961e8(port) (see header)",
+      "comment": "r = FUN_a00961e8(p1); when word p1 of 0xA807D648 differs from word +0x30 of 0xB0-byte record p1 at 0xA807D680: prints the function name (bit 11 of word 0xA8078634) and copies it; when byte +6 of 24-byte entry r at 0xA807CC64 == 1 prints the string at 0xA0069BE8 and stores 2 in word p1 of 0xA807D648; returns 0",
       "name": "DRV_HDMI21_RXDetect_FSM_LTS_1",
       "status": "matched"
     },
@@ -5815,7 +5815,7 @@
     },
     "ram:a00a7a5c": {
       "by": "hand",
-      "comment": "twin of a00a6f08; returns the last read value",
+      "comment": "v = FUN_a00a79c4(p1, p2); while a further read differs from v and at most 5 retries are done, reads v again; returns v",
       "name": "FUN_a00a7a5c",
       "status": "matched"
     },
@@ -6583,7 +6583,7 @@
     },
     "ram:a00af1e8": {
       "by": "hand",
-      "comment": "twin of a00af320: read 4 bytes via index reg 0x73 / data 0x7a, return (u16 r0:r1 / u16 r2:r3) & 0xff (0 if the divisor is 0)",
+      "comment": "when FUN_a00ad784(p1) (low byte) is 0 returns 0; otherwise reads registers 0xc, 0xd, 0x10, 0x11 through index register 0x73 / data register 0x7a and returns ((r0 << 8) + r1) / ((r2 << 8) + r3) as a byte, 0 when the divisor is 0",
       "name": "FUN_a00af1e8",
       "status": "matched"
     },
@@ -8184,7 +8184,7 @@
     },
     "ram:a00d2c38": {
       "by": "hand",
-      "comment": "twin of d2ca8: if a8078c25 == 1: the same calls with 0, a8078c25 = 0, ROM f834c4(9f1c63d8)",
+      "comment": "when byte 0xA8078C25 == 1: FUN_a00d2210(0, 0), FUN_a00d2288(0, 0), FUN_a00d23bc(0, 0), FUN_a00d2300(0, 0), FUN_a00d2434(0, 0), clears the byte and calls FUN_a0f834c4(0x9F1C63D8)",
       "name": "FUN_a00d2c38",
       "status": "matched"
     },
