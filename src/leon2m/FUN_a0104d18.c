@@ -6,7 +6,7 @@
  * Source form: range tests written as !(x >= lo && x <= hi) (a || of the two compares gives other code).
  */
 #define R(a) (*(volatile unsigned int *)(a))
-extern volatile unsigned int *DAT_a802d6a4;
+extern unsigned int *DAT_a802d6a4;
 
 void FUN_a0104d18(unsigned short a, unsigned short b)
 {
