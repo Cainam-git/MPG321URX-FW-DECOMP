@@ -4527,6 +4527,12 @@
       "name": "MODEDET_handler",
       "status": "matched"
     },
+    "ram:a009c9b4": {
+      "by": "h42",
+      "comment": "per-port FLT_no_retrain check, MODEDET_handler and the DAT_a00b4258 state functions for ports 0 and 1, then re-arms DAT_a80790f4",
+      "name": "FLT_no_retrain",
+      "status": "matched"
+    },
     "ram:a009d5cc": {
       "by": "hand",
       "comment": "Port 0/1: register bit updates and FUN_a009fe60; returns 1 on the \"Run HDMI21 ModeDet\" or eq_done path, 0 on the eq_fail path",
