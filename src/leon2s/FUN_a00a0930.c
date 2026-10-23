@@ -5,7 +5,7 @@
  * above 7), 3 +0x78 (keeps & 0xffffff), 4..6 +0x7c (above bit 7), 7 +0x90 (& 0xff00ff00). mode == 1 or's in
  * mode << bit after the mask; any other mode clears bit `bit` and applies the mask. Types above 7: nothing.
  * Counterpart of FUN_a00a07b8 (same table and blocks; register-block pointers, volatile). The jump table is the
- * 8 words at 0xa00a0b10.
+ * 8 words at 0xa00a0910.
  */
 struct Ent { unsigned int type; unsigned char b4; unsigned char b5; unsigned char b6; unsigned char b7; };
 struct Port34 { volatile unsigned int *regs; unsigned char rest[0x30]; };
