@@ -18243,6 +18243,12 @@
       "name": "FUN_a015eac8",
       "status": "matched"
     },
+    "ram:a015eaf8": {
+      "by": "hand",
+      "comment": "Calls the function pointer at 0xA802CFD4 with two arguments when it is non-null, else returns 0",
+      "name": "FUN_a015eaf8",
+      "status": "matched"
+    },
     "ram:externint(*DAT_a802cff0)(unsignedint,unsignedint);intFUN_a015e9a4(unsignedinta,unsignedintb){if(DAT_a802cff0!=0)returnDAT_a802cff0(a,b);return0;}": {
       "by": "hand",
       "comment": "Loads the function pointer at 0xa802cff0; if non-null, calls it with the two incoming arguments and returns its result, otherwise returns 0. Frame: save %sp, -104, %sp.",
