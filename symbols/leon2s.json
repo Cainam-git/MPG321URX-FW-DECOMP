@@ -6279,6 +6279,12 @@
       "name": "FUN_a00acb94",
       "status": "matched"
     },
+    "ram:a00acc54": {
+      "by": "hand",
+      "comment": "computes a 16-bit value from two 24-bit port register readings, a mode factor and three shift bits, with DAT_a8079320 as the previous reading",
+      "name": "FUN_a00acc54",
+      "status": "matched"
+    },
     "ram:a00aceec": {
       "by": "hand",
       "comment": "computes ((a * k / b) * 10000) >> 9 from registers 0x63, 0x66-0x68 and a 2-bit selector in register 0x80",
