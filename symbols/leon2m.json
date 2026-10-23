@@ -14248,6 +14248,12 @@
       "name": "FUN_a0127974",
       "status": "matched"
     },
+    "ram:a0127980": {
+      "by": "hand",
+      "comment": "stores the argument to DAT_a802d8a4",
+      "name": "FUN_a0127980",
+      "status": "matched"
+    },
     "ram:a012798c": {
       "by": "autoc",
       "comment": "Returns func_0x4008d594(halfword 0xA802D89A) as a halfword",
