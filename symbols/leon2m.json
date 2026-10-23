@@ -13342,6 +13342,13 @@
       "name": "FUN_a012d4f8",
       "status": "matched"
     },
+    "ram:a012e3ec": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reads the FGA table block for one bit of 0x508 from settings storage and passes it to FUN_a012e2ac or FUN_a012e004",
+      "name": "FUN_a012e3ec",
+      "status": "matched"
+    },
     "ram:a012e850": {
       "by": "h41",
       "cflags": "-mcpu=v8 -O3 -g",
