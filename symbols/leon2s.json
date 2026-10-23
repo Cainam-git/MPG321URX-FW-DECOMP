@@ -7561,6 +7561,12 @@
       "name": "FUN_a00d73b4",
       "status": "matched"
     },
+    "ram:a00d74ec": {
+      "by": "h43",
+      "comment": "packs a header, 16 bytes and up to 15 variable-length 20-byte entries into a byte stream",
+      "name": "FUN_a00d74ec",
+      "status": "matched"
+    },
     "ram:a00d7638": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
