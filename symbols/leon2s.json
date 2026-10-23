@@ -7802,6 +7802,12 @@
       "name": "FUN_a00d7ca4",
       "status": "matched"
     },
+    "ram:a00d7e6c": {
+      "by": "h53",
+      "comment": "builds a 120-byte record message from register values and func_0xa0f96400 reads and sends it with FUN_a00d791c",
+      "name": "FUN_a00d7e6c",
+      "status": "matched"
+    },
     "ram:a00d82c8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
