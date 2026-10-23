@@ -1861,6 +1861,12 @@
    "size": 39
   },
   {
+   "name": "FUN_CODE_d785",
+   "start": 55173,
+   "end": 55212,
+   "size": 39
+  },
+  {
    "name": "FUN_CODE_d7ac",
    "start": 55212,
    "end": 55250,
@@ -2047,6 +2053,18 @@
    "size": 23
   },
   {
+   "name": "FUN_CODE_dc0d",
+   "start": 56333,
+   "end": 56356,
+   "size": 23
+  },
+  {
+   "name": "FUN_CODE_dc24",
+   "start": 56356,
+   "end": 56379,
+   "size": 23
+  },
+  {
    "name": "FUN_CODE_dc3b",
    "start": 56379,
    "end": 56401,
@@ -2125,6 +2143,12 @@
    "size": 17
   },
   {
+   "name": "FUN_CODE_dd85",
+   "start": 56709,
+   "end": 56726,
+   "size": 17
+  },
+  {
    "name": "FUN_CODE_dd96",
    "start": 56726,
    "end": 56742,
@@ -2135,6 +2159,12 @@
    "start": 56758,
    "end": 56774,
    "size": 16
+  },
+  {
+   "name": "FUN_CODE_ddd6",
+   "start": 56790,
+   "end": 56805,
+   "size": 15
   },
   {
    "name": "FUN_CODE_dde5",
@@ -2215,6 +2245,12 @@
    "size": 11
   },
   {
+   "name": "FUN_CODE_de87",
+   "start": 56967,
+   "end": 56978,
+   "size": 11
+  },
+  {
    "name": "FUN_CODE_de92",
    "start": 56978,
    "end": 56988,
@@ -2287,9 +2323,33 @@
    "size": 6
   },
   {
+   "name": "FUN_CODE_defa",
+   "start": 57082,
+   "end": 57087,
+   "size": 5
+  },
+  {
    "name": "thunk_FUN_CODE_568f",
    "start": 57087,
    "end": 57090,
+   "size": 3
+  },
+  {
+   "name": "FUN_CODE_df02",
+   "start": 57090,
+   "end": 57093,
+   "size": 3
+  },
+  {
+   "name": "FUN_CODE_df05",
+   "start": 57093,
+   "end": 57096,
+   "size": 3
+  },
+  {
+   "name": "FUN_CODE_df08",
+   "start": 57096,
+   "end": 57099,
    "size": 3
   },
   {
