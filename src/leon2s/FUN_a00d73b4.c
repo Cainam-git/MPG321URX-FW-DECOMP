@@ -1,6 +1,6 @@
 /* leon2s FUN_a00d73b4 @ 0xa00d73b4-0xa00d74ec, -mcpu=v8 -Os -g.
  * (out, u8 a, u8 b, u8 type), void. src = FUN_a00d66bc(a, b); nothing when src is 0. Otherwise a switch on
- * type tail-calls one converter with (out, src): 0x10 FUN_a00d6b4c, 0x11 FUN_a00d6b98, 0x12 FUN_a00d6c98,
+ * type tail-calls one function with (out, src): 0x10 FUN_a00d6b4c, 0x11 FUN_a00d6b98, 0x12 FUN_a00d6c98,
  * 0x13 FUN_a00d6cfc, 0x16 FUN_a00d6dac, 0x17 FUN_a00d6df8, 0x18 FUN_a00d6e94, 0x19 FUN_a00d6f70,
  * 0x1a FUN_a00d714c, 0x1b FUN_a00d7210, 0x1c FUN_a00d7274, 0x38 FUN_a00d72d8; type 0x1f and other values
  * do nothing.

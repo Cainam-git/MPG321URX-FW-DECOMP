@@ -7515,7 +7515,7 @@
     },
     "ram:a00d73b4": {
       "by": "h43",
-      "comment": "dispatches on a type code to one of twelve converters with (out, FUN_a00d66bc(a, b))",
+      "comment": "tail-calls one of twelve functions with (out, FUN_a00d66bc(a, b)) by a type code",
       "name": "FUN_a00d73b4",
       "status": "matched"
     },
