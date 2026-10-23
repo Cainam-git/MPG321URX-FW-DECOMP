@@ -6340,6 +6340,12 @@
       "name": "FUN_a00bae38",
       "status": "matched"
     },
+    "ram:a00baee8": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a00baee8",
+      "status": "matched"
+    },
     "ram:a00baef8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
