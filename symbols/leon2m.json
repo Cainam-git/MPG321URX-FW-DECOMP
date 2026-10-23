@@ -7684,6 +7684,12 @@
       "name": "FUN_a00d7a30",
       "status": "matched"
     },
+    "ram:a00d7a70": {
+      "by": "h40",
+      "comment": "passes a copy of the FUN_a00d6054(1) record to FUN_a0149b8c, FUN_a014d474(1, 0/1) around it when the argument is set",
+      "name": "FUN_a00d7a70",
+      "status": "matched"
+    },
     "ram:a00d7b20": {
       "by": "hand",
       "comment": "Calls FUN_a00d6054(1, buf1) to fill a 16-byte local buffer, copies it to a second 16-byte local, passes the copy to FUN_a0149b8c(1, buf2), and calls FUN_a0149e8c(1). Both parameters are unused; returns void (ret; restore leaves %i0 untouched).",
