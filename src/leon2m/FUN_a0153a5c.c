@@ -1,4 +1,7 @@
 /* leon2m FUN_a0153a5c @ 0xa0153a5c (-mcpu=v8 -O3 -g)
+ * Copies the 16-byte pattern at 0x1a75e6 into a stack buffer (FUN_a013c910) and writes it with FUN_a0140e74(0, addr,
+ * 0x10, buf, 0) to EEPROM addresses 0x300 .. 0x4b0 (28 writes, 0x1c0 bytes); the remainder write after the loop has
+ * length 0 and is skipped.
  */
 
 extern int FUN_a013c910();
@@ -22,5 +25,4 @@ void FUN_a0153a5c(void)
   {
     FUN_a0140e74(0, (unsigned short) ((uVar1 * 0x10) + 0x300), uVar2, (int) auStack_18, 0);
   }
-  return 0;
 }
