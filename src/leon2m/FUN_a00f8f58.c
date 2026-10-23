@@ -1,5 +1,6 @@
 /* leon2m FUN_a00f8f58 @ 0xa00f8f58 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Code: FUN_a00f1b5c(p1, 0x5c, 4, p2).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

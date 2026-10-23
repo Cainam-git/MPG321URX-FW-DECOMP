@@ -1,5 +1,7 @@
 /* leon2m FUN_a00d2994 @ 0xa00d2994 (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Code: (0xA802D274).byte_15 = 0; (0xA802D274).half_16 = 0; FUN_a014aed0(0x30, &(0xA802D274), 0x2e0, 0x1c); returns
+ * 0xe0.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char uchar;
 typedef unsigned short ushort;

@@ -1,5 +1,6 @@
 /* leon2s FUN_a00a29ec @ 0xa00a29ec (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Code: word array 0xA807D648[(p1 & 0xff)] = 0.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

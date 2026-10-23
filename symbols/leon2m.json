@@ -1678,7 +1678,7 @@
     },
     "ram:a002a84c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a002c25c(0x9f020034, 0x8000); FUN_a002c25c(0x9f00009c, 0x8000, p3, p4, p5, p6)",
       "name": "FUN_a002a84c",
       "status": "matched"
     },
@@ -2101,7 +2101,7 @@
     },
     "ram:a0082c0c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802AF44) = (byte 0xA802AF44) | 4",
       "name": "FUN_a0082c0c",
       "status": "matched"
     },
@@ -2146,7 +2146,7 @@
     },
     "ram:a0083adc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a014b65c(5, 1); FUN_a014b65c(6, 1); FUN_a014b65c(0xc, 1); FUN_a014b65c(0xd, 1, p3, p4, p5, p6)",
       "name": "FUN_a0083adc",
       "status": "matched"
     },
@@ -2249,7 +2249,7 @@
     },
     "ram:a0087430": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a008a210(); FUN_a009f42c(); FUN_a0085984(); FUN_a008a174(p1, p2, p3, p4, p5, p6)",
       "name": "FUN_a0087430",
       "status": "matched"
     },
@@ -2327,37 +2327,37 @@
     },
     "ram:a0088714": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA8024028) = 2",
       "name": "FUN_a0088714",
       "status": "matched"
     },
     "ram:a0089f10": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802AF99) = (byte 0xA802AF99) | 1",
       "name": "FUN_a0089f10",
       "status": "matched"
     },
     "ram:a0089f24": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802AF99) = (byte 0xA802AF99) | 8",
       "name": "FUN_a0089f24",
       "status": "matched"
     },
     "ram:a0089f38": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802AF99) = (byte 0xA802AF99) | 4",
       "name": "FUN_a0089f38",
       "status": "matched"
     },
     "ram:a0089f4c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802AF99) = (byte 0xA802AF99) | 2",
       "name": "FUN_a0089f4c",
       "status": "matched"
     },
     "ram:a0089f60": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802AF9E) = p1",
       "name": "FUN_a0089f60",
       "status": "matched"
     },
@@ -2383,7 +2383,7 @@
     },
     "ram:a008a174": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0088724()",
       "name": "FUN_a008a174",
       "status": "matched"
     },
@@ -2531,7 +2531,7 @@
     },
     "ram:a008d2e0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a008ce90(); FUN_a0090fa0(0x113, p2, p3, p4, p5, p6)",
       "name": "FUN_a008d2e0",
       "status": "matched"
     },
@@ -2599,19 +2599,19 @@
     },
     "ram:a008ef24": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(halfword 0xA8024048) = p1",
       "name": "FUN_a008ef24",
       "status": "matched"
     },
     "ram:a008ef30": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(halfword 0xA8024046) = p1",
       "name": "FUN_a008ef30",
       "status": "matched"
     },
     "ram:a008ef3c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(halfword 0xA8024044) = p1",
       "name": "FUN_a008ef3c",
       "status": "matched"
     },
@@ -2637,19 +2637,19 @@
     },
     "ram:a0090f94": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(halfword 0xA802AFF2) = p1",
       "name": "FUN_a0090f94",
       "status": "matched"
     },
     "ram:a0090fa0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802AFEC) = p1",
       "name": "FUN_a0090fa0",
       "status": "matched"
     },
     "ram:a0090fac": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802AFEC) = 0x106; FUN_a00a5e68(1)",
       "name": "FUN_a0090fac",
       "status": "matched"
     },
@@ -2703,7 +2703,7 @@
     },
     "ram:a0091648": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802AFEC) = 0xfe; FUN_a00b5d10(); FUN_a00a45a8(p1, p2, p3, p4, p5, p6)",
       "name": "FUN_a0091648",
       "status": "matched"
     },
@@ -3017,25 +3017,25 @@
     },
     "ram:a0093910": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802AFEC) = 0xc5; FUN_a00b6290(0); FUN_a00b6514(0, 1, p3, p4, p5, p6)",
       "name": "FUN_a0093910",
       "status": "matched"
     },
     "ram:a0093938": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802AFEC) = 0xc6; FUN_a00b6290(0); FUN_a00b6514(1, 1, p3, p4, p5, p6)",
       "name": "FUN_a0093938",
       "status": "matched"
     },
     "ram:a0093960": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802AFEC) = 199; FUN_a00b6290(0); FUN_a00b6514(2, 1, p3, p4, p5, p6)",
       "name": "FUN_a0093960",
       "status": "matched"
     },
     "ram:a0093988": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802AFEC) = 200; FUN_a00b6290(0); FUN_a00b6514(3, 1, p3, p4, p5, p6)",
       "name": "FUN_a0093988",
       "status": "matched"
     },
@@ -3055,7 +3055,7 @@
     },
     "ram:a0093b74": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802AFEC) = 0xdc; FUN_a00a9650(4, 2); FUN_a00a9650(4, 1); FUN_a0146dc0(1, 0, p3, p4, p5, p6)",
       "name": "FUN_a0093b74",
       "status": "matched"
     },
@@ -3314,7 +3314,7 @@
     "ram:a0095acc": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00b69f4(); FUN_a00aa0e8((word 0xA802AFEC) - 0xeU & 0xff, 1); FUN_a00acef4(p1, p2, p3, p4, p5, p6)",
       "name": "FUN_a0095acc",
       "status": "matched"
     },
@@ -3363,7 +3363,7 @@
     "ram:a00961a4": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00b6d94(); FUN_a00aa258((word 0xA802AFEC) - 0x15U & 0xff, 1); FUN_a00d9764(p1, p2, p3, p4, p5, p6)",
       "name": "FUN_a00961a4",
       "status": "matched"
     },
@@ -3391,7 +3391,7 @@
     "ram:a0096338": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00a900c((word 0xA802AFEC) - 0x18U & 0xff, 2); (word 0xA802AFEC) = 0x69; FUN_a00b7054(1); FUN_a00a9650(0, 1, p3, p4, p5, p6)",
       "name": "FUN_a0096338",
       "status": "matched"
     },
@@ -3404,7 +3404,7 @@
     "ram:a00963ac": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00a900c((word 0xA802AFEC) - 0x18U & 0xff, 2); (word 0xA802AFEC) = 0x6a; FUN_a00b6f20(1); FUN_a00a9650(0, 1, p3, p4, p5, p6)",
       "name": "FUN_a00963ac",
       "status": "matched"
     },
@@ -3417,7 +3417,7 @@
     "ram:a0096420": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00a900c((word 0xA802AFEC) - 0x18U & 0xff, 2); (word 0xA802AFEC) = 0x6b; FUN_a00b7188(1); FUN_a00a9650(0, 1, p3, p4, p5, p6)",
       "name": "FUN_a0096420",
       "status": "matched"
     },
@@ -3587,7 +3587,7 @@
     "ram:a00976a8": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00a8ee8((byte 0xA8025C56)); FUN_a00a813c(0, (byte 0xA8025C56), 0); FUN_a00a813c(0, (byte 0xA802D2AF), 0); FUN_a00a900c((word 0xA802AFEC) - 0x23U & 0xff, 2, p3, p4, p5, p6)",
       "name": "FUN_a00976a8",
       "status": "matched"
     },
@@ -3649,7 +3649,7 @@
     },
     "ram:a0097cb4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00d934c(p1, p2, p3, p4, p5, p6)",
       "name": "FUN_a0097cb4",
       "status": "matched"
     },
@@ -3690,7 +3690,7 @@
     },
     "ram:a0098364": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00d934c(p1, p2, p3, p4, p5, p6)",
       "name": "FUN_a0098364",
       "status": "matched"
     },
@@ -3914,13 +3914,13 @@
     "ram:a0099a7c": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00a813c(1, 1, 0); FUN_a00a900c((word 0xA802AFEC) - 0x2aU & 0xff, 2); (word 0xA802AFEC) = 0xb7; FUN_a00a9650(1, 1, p3, p4, p5, p6)",
       "name": "FUN_a0099a7c",
       "status": "matched"
     },
     "ram:a0099ac0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00b8848(p1, p2)",
       "name": "FUN_a0099ac0",
       "status": "matched"
     },
@@ -4524,7 +4524,7 @@
     },
     "ram:a009e2ac": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802AFEC) = 0x105; FUN_a00b83e4(); (word 0xA802AFEC) = 0; returns p1",
       "name": "FUN_a009e2ac",
       "status": "matched"
     },
@@ -4798,49 +4798,49 @@
     },
     "ram:a00a2adc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01461dc(1, 0xa80240d4, 0)",
       "name": "FUN_a00a2adc",
       "status": "matched"
     },
     "ram:a00a2afc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01461dc(1, 0xa8024170, 0)",
       "name": "FUN_a00a2afc",
       "status": "matched"
     },
     "ram:a00a2b1c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01461dc(1, 0xa8024158, 1)",
       "name": "FUN_a00a2b1c",
       "status": "matched"
     },
     "ram:a00a2b3c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01461dc(1, 0xa802414c, 1)",
       "name": "FUN_a00a2b3c",
       "status": "matched"
     },
     "ram:a00a2b5c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01461dc(1, 0xa8024140, 1)",
       "name": "FUN_a00a2b5c",
       "status": "matched"
     },
     "ram:a00a2b7c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01461dc(1, 0xa8024134, 1)",
       "name": "FUN_a00a2b7c",
       "status": "matched"
     },
     "ram:a00a2b9c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01461dc(1, 0xa8024128, 1)",
       "name": "FUN_a00a2b9c",
       "status": "matched"
     },
     "ram:a00a2bbc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01461dc(1, 0xa802411c, 1)",
       "name": "FUN_a00a2bbc",
       "status": "matched"
     },
@@ -5105,7 +5105,7 @@
     },
     "ram:a00a45a8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0146dc0(1, 0)",
       "name": "FUN_a00a45a8",
       "status": "matched"
     },
@@ -5346,7 +5346,7 @@
     },
     "ram:a00aa4c0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00a9468(1, 2); FUN_a00b34d4(0, 1, p3, p4, p5, p6)",
       "name": "FUN_a00aa4c0",
       "status": "matched"
     },
@@ -5873,7 +5873,7 @@
     "ram:a00b69d0": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00a9f30(5, (word 0xA802D338) >> 7 & 1)",
       "name": "FUN_a00b69d0",
       "status": "matched"
     },
@@ -5886,7 +5886,7 @@
     },
     "ram:a00b6b68": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00a9f30(6, (word 0xA802D484) >> 0x1f)",
       "name": "FUN_a00b6b68",
       "status": "matched"
     },
@@ -6050,7 +6050,7 @@
     },
     "ram:a00b8668": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00b7f9c(0x11)",
       "name": "FUN_a00b8668",
       "status": "matched"
     },
@@ -6070,7 +6070,7 @@
     },
     "ram:a00b87d4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a014512c(1, 0); (halfword 0xA802B092) = 0x72c; (halfword 0xA802B094) = 0; FUN_a00b7f9c(0x18, p2, p3, p4, p5, p6)",
       "name": "FUN_a00b87d4",
       "status": "matched"
     },
@@ -6090,13 +6090,13 @@
     },
     "ram:a00b88b8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802B08E) = (byte 0xA802B08E) | 2",
       "name": "FUN_a00b88b8",
       "status": "matched"
     },
     "ram:a00b88cc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802B08E) = (byte 0xA802B08E) | 2",
       "name": "FUN_a00b88cc",
       "status": "matched"
     },
@@ -6151,7 +6151,7 @@
     },
     "ram:a00babe4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01487e8(p1, p2, &(byte 0xA802D078))",
       "name": "FUN_a00babe4",
       "status": "matched"
     },
@@ -7489,14 +7489,14 @@
     "ram:a00cea18": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802D290) = (word 0xA802D290) | 0x4000; FUN_a014b4b4(0xfe, 1)",
       "name": "FUN_a00cea18",
       "status": "matched"
     },
     "ram:a00cea44": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802D290) = (word 0xA802D290) & 0xffffbfff; FUN_a014b4b4(0xfe, 0)",
       "name": "FUN_a00cea44",
       "status": "matched"
     },
@@ -7631,7 +7631,7 @@
     },
     "ram:a00d2994": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(0xA802D274).byte_15 = 0; (0xA802D274).half_16 = 0; FUN_a014aed0(0x30, &(0xA802D274), 0x2e0, 0x1c); returns 0xe0",
       "name": "FUN_a00d2994",
       "status": "matched"
     },
@@ -7777,7 +7777,7 @@
     },
     "ram:a00d47b0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0090f94((byte 0xA802D29C))",
       "name": "FUN_a00d47b0",
       "status": "matched"
     },
@@ -8178,25 +8178,25 @@
     },
     "ram:a00daae8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0126ae4((word 0xA802D46C) >> 0x1d & 1)",
       "name": "FUN_a00daae8",
       "status": "matched"
     },
     "ram:a00dab08": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0126c58((byte 0xA802D46D))",
       "name": "FUN_a00dab08",
       "status": "matched"
     },
     "ram:a00dab20": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0126f4c()",
       "name": "FUN_a00dab20",
       "status": "matched"
     },
     "ram:a00dab30": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns FUN_a0126a4c()",
       "name": "FUN_a00dab30",
       "status": "matched"
     },
@@ -8362,7 +8362,7 @@
     },
     "ram:a00dd808": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802B0AC) = p1",
       "name": "FUN_a00dd808",
       "status": "matched"
     },
@@ -8462,13 +8462,13 @@
     },
     "ram:a00de6a8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c25c(0x9f020320, 0); func_0x4008d1a0(1); func_0x4008c25c(0x9f020320, 5, p3, p4, p5, p6)",
       "name": "FUN_a00de6a8",
       "status": "matched"
     },
     "ram:a00de6d4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c25c(0x9f020320, 5); func_0x4008c25c(0x9f020324, 0xa803e400); func_0x4008a880(1, 0x10, FUN_a002cea8)",
       "name": "FUN_a00de6d4",
       "status": "matched"
     },
@@ -8488,19 +8488,19 @@
     },
     "ram:a00de970": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c25c(0x9f120024, 1)",
       "name": "FUN_a00de970",
       "status": "matched"
     },
     "ram:a00de9a8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c250(0x9f020328)",
       "name": "FUN_a00de9a8",
       "status": "matched"
     },
     "ram:a00de9c0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c250(0x9f02032c)",
       "name": "FUN_a00de9c0",
       "status": "matched"
     },
@@ -8512,7 +8512,7 @@
     },
     "ram:a00de9e0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c250(0x9f020324)",
       "name": "FUN_a00de9e0",
       "status": "matched"
     },
@@ -8525,13 +8525,13 @@
     },
     "ram:a00deb64": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c25c(0x9f120024, 4)",
       "name": "FUN_a00deb64",
       "status": "matched"
     },
     "ram:a00deb80": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c25c(0x9f120024, 8)",
       "name": "FUN_a00deb80",
       "status": "matched"
     },
@@ -8697,13 +8697,13 @@
     },
     "ram:a00dff94": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00de578()",
       "name": "FUN_a00dff94",
       "status": "matched"
     },
     "ram:a00dffa4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00de53c()",
       "name": "FUN_a00dffa4",
       "status": "matched"
     },
@@ -8767,7 +8767,7 @@
     },
     "ram:a00e0740": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00e05d8(p1, p2, p3, p3)",
       "name": "FUN_a00e0740",
       "status": "matched"
     },
@@ -8799,19 +8799,19 @@
     },
     "ram:a00e0ba8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00df170(0x1995c0)",
       "name": "FUN_a00e0ba8",
       "status": "matched"
     },
     "ram:a00e0bc0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00df170(0x1995c8)",
       "name": "FUN_a00e0bc0",
       "status": "matched"
     },
     "ram:a00e0bd8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00df170(0x1995d8)",
       "name": "FUN_a00e0bd8",
       "status": "matched"
     },
@@ -9004,7 +9004,7 @@
     "ram:a00e3f6c": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00e0774(p1, 0x2c, 0xf, 0, p2 >> 1 & 0xf); FUN_a00e0774(p1, 0x2b, 0xff, 0, (p2 & 1) << 7 | (p3 & 0xf) << 3 | p4 >> 0x10 & 7); FUN_a00e0774(p1, 0x2a, 0xff, 0, p4 >> 8 & 0xff); FUN_a00e0774(p1, 0x29, 0xff, 0, p4 & 0xff, p6)",
       "name": "FUN_a00e3f6c",
       "status": "matched"
     },
@@ -9406,13 +9406,13 @@
     },
     "ram:a00f38d4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF020008) = p1 & 0xff",
       "name": "FUN_a00f38d4",
       "status": "matched"
     },
     "ram:a00f38ec": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF020004) = p1 & 0xff",
       "name": "FUN_a00f38ec",
       "status": "matched"
     },
@@ -9424,19 +9424,19 @@
     },
     "ram:a00f3918": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF020014) = p1 & 0xff",
       "name": "FUN_a00f3918",
       "status": "matched"
     },
     "ram:a00f3930": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF020010) = p1 & 0xff",
       "name": "FUN_a00f3930",
       "status": "matched"
     },
     "ram:a00f3948": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF02000C) = p1 & 0xff",
       "name": "FUN_a00f3948",
       "status": "matched"
     },
@@ -9504,19 +9504,19 @@
     },
     "ram:a00f6340": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f1a90(p1, 0x43)",
       "name": "FUN_a00f6340",
       "status": "matched"
     },
     "ram:a00f635c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f1a90(p1, 0x44)",
       "name": "FUN_a00f635c",
       "status": "matched"
     },
     "ram:a00f6378": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f1a90(p1, 0x45)",
       "name": "FUN_a00f6378",
       "status": "matched"
     },
@@ -9564,13 +9564,13 @@
     },
     "ram:a00f6ca4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF00E984) = (word 0xCF00E984) & 0xffffff7f",
       "name": "FUN_a00f6ca4",
       "status": "matched"
     },
     "ram:a00f6cc0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF00E984) = (word 0xCF00E984) | 0x80",
       "name": "FUN_a00f6cc0",
       "status": "matched"
     },
@@ -9666,7 +9666,7 @@
     },
     "ram:a00f87b0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802B7B8) = p1",
       "name": "FUN_a00f87b0",
       "status": "matched"
     },
@@ -9679,7 +9679,7 @@
     },
     "ram:a00f88ac": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f1ce4(p1, 0x12)",
       "name": "FUN_a00f88ac",
       "status": "matched"
     },
@@ -9697,7 +9697,7 @@
     },
     "ram:a00f8918": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00f1b5c(p1, 0x9c, 0x80, 0)",
       "name": "FUN_a00f8918",
       "status": "matched"
     },
@@ -9710,7 +9710,7 @@
     },
     "ram:a00f8cc4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00f1ed8(p1, 0x41, (p2 & 0xffff) >> 2)",
       "name": "FUN_a00f8cc4",
       "status": "matched"
     },
@@ -9735,13 +9735,13 @@
     },
     "ram:a00f8e0c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00f1d48(p1, 0x12, p2)",
       "name": "FUN_a00f8e0c",
       "status": "matched"
     },
     "ram:a00f8e2c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "halfword array 0xA802B7D8[(p1 & 0xff)] = p2",
       "name": "FUN_a00f8e2c",
       "status": "matched"
     },
@@ -9754,7 +9754,7 @@
     },
     "ram:a00f8ef4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00f1b5c(p1, 6, 0x40, 1)",
       "name": "FUN_a00f8ef4",
       "status": "matched"
     },
@@ -9766,7 +9766,7 @@
     },
     "ram:a00f8f58": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00f1b5c(p1, 0x5c, 4, p2)",
       "name": "FUN_a00f8f58",
       "status": "matched"
     },
@@ -9785,19 +9785,19 @@
     },
     "ram:a00f92f4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f1ce4(p1, 0x95)",
       "name": "FUN_a00f92f4",
       "status": "matched"
     },
     "ram:a00f9314": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f1ce4(p1, 0x97)",
       "name": "FUN_a00f9314",
       "status": "matched"
     },
     "ram:a00f9334": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f1ce4(p1, 0x8f)",
       "name": "FUN_a00f9334",
       "status": "matched"
     },
@@ -9830,7 +9830,7 @@
     "ram:a00f9500": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "*p1 = (word 0xA802B7C4); *p2 = (word 0xA802B7C0); *p3 = (word 0xA802B7BC)",
       "name": "FUN_a00f9500",
       "status": "matched"
     },
@@ -9842,7 +9842,7 @@
     },
     "ram:a00f98f4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00f1ad4(p1, 0x9d, p2)",
       "name": "FUN_a00f98f4",
       "status": "matched"
     },
@@ -9951,7 +9951,7 @@
     },
     "ram:a00fc30c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802C970) = p1",
       "name": "FUN_a00fc30c",
       "status": "matched"
     },
@@ -10082,7 +10082,7 @@
     "ram:a00fe44c": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF009BB4) = (p1 & 0xffff) >> 8 & 0x13; (word 0xCF009BB8) = p1 & 0xff",
       "name": "FUN_a00fe44c",
       "status": "matched"
     },
@@ -10144,7 +10144,7 @@
     },
     "ram:a01004cc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF03C880) = p1 & 0xff",
       "name": "FUN_a01004cc",
       "status": "matched"
     },
@@ -10164,13 +10164,13 @@
     },
     "ram:a01016cc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF0160C0) = (word 0xCF0160C0) | 1",
       "name": "FUN_a01016cc",
       "status": "matched"
     },
     "ram:a01016e8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF0160C0) = (word 0xCF0160C0) & 0xfffffffe",
       "name": "FUN_a01016e8",
       "status": "matched"
     },
@@ -10197,7 +10197,7 @@
     "ram:a0101868": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF016104) = p2 << 4 | p1",
       "name": "FUN_a0101868",
       "status": "matched"
     },
@@ -10217,13 +10217,13 @@
     },
     "ram:a01018e8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF0160C0) = (word 0xCF0160C0) | 2",
       "name": "FUN_a01018e8",
       "status": "matched"
     },
     "ram:a010192c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF0160D8) = (word 0xCF0160D8) & 0xf0 | p1 & 0xf",
       "name": "FUN_a010192c",
       "status": "matched"
     },
@@ -10250,14 +10250,14 @@
     },
     "ram:a0101a28": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF0160DC) = p2 & 0xff; (word 0xCF0160C8) = p1 & 0xff",
       "name": "FUN_a0101a28",
       "status": "matched"
     },
     "ram:a0101a4c": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF016108) = (p2 & 0xff) << 4 | p1 & 0xff",
       "name": "FUN_a0101a4c",
       "status": "matched"
     },
@@ -10270,37 +10270,37 @@
     },
     "ram:a0101abc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF01610C) = (word 0xCF01610C) & 1 | (p1 & 0xff) << 3 | (p2 & 0xff) * 2",
       "name": "FUN_a0101abc",
       "status": "matched"
     },
     "ram:a0101af0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF016110) = p1 & 0xff",
       "name": "FUN_a0101af0",
       "status": "matched"
     },
     "ram:a0101b08": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF016114) = p1 & 0xff",
       "name": "FUN_a0101b08",
       "status": "matched"
     },
     "ram:a0101b20": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF016118) = (word 0xCF016118) & 0xbf | (p1 & 0xff) << 6",
       "name": "FUN_a0101b20",
       "status": "matched"
     },
     "ram:a0101b48": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF016110) = p1 & 0xff",
       "name": "FUN_a0101b48",
       "status": "matched"
     },
     "ram:a0101b60": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF016114) = p1 & 0xff",
       "name": "FUN_a0101b60",
       "status": "matched"
     },
@@ -10505,31 +10505,31 @@
     },
     "ram:a0105c84": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f25f8(p1, 0x68)",
       "name": "FUN_a0105c84",
       "status": "matched"
     },
     "ram:a0105ca4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f25f8(p1, 100)",
       "name": "FUN_a0105ca4",
       "status": "matched"
     },
     "ram:a0105cc4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f25f8(p1, 0x5e)",
       "name": "FUN_a0105cc4",
       "status": "matched"
     },
     "ram:a0105ce4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f25f8(p1, 0x5b)",
       "name": "FUN_a0105ce4",
       "status": "matched"
     },
     "ram:a0105d04": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00f2298(0, 0x54, p1)",
       "name": "FUN_a0105d04",
       "status": "matched"
     },
@@ -10562,13 +10562,13 @@
     },
     "ram:a0106274": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f25f8(p1, 100)",
       "name": "FUN_a0106274",
       "status": "matched"
     },
     "ram:a01062c0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f25f8(p1, 0x68)",
       "name": "FUN_a01062c0",
       "status": "matched"
     },
@@ -10581,37 +10581,37 @@
     },
     "ram:a0106860": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f25f8(p1, 0x73)",
       "name": "FUN_a0106860",
       "status": "matched"
     },
     "ram:a0106880": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f25f8(p1, 0x66)",
       "name": "FUN_a0106880",
       "status": "matched"
     },
     "ram:a01068a0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f25f8(p1, 0x6f)",
       "name": "FUN_a01068a0",
       "status": "matched"
     },
     "ram:a01068c0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f25f8(p1, 0x62)",
       "name": "FUN_a01068c0",
       "status": "matched"
     },
     "ram:a01068e0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f25f8(p1, 0x5e)",
       "name": "FUN_a01068e0",
       "status": "matched"
     },
     "ram:a0106900": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f25f8(p1, 0x5b)",
       "name": "FUN_a0106900",
       "status": "matched"
     },
@@ -10644,7 +10644,7 @@
     },
     "ram:a0106d3c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00f2298(p1, 0xd0, p2); FUN_a00f2298(p1, 0xd1, p3, p4, p5, p6)",
       "name": "FUN_a0106d3c",
       "status": "matched"
     },
@@ -10755,7 +10755,7 @@
     },
     "ram:a0107a14": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA8027A82) = p1",
       "name": "FUN_a0107a14",
       "status": "matched"
     },
@@ -10942,13 +10942,13 @@
     },
     "ram:a010a824": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0114374(1, p1)",
       "name": "FUN_a010a824",
       "status": "matched"
     },
     "ram:a010a83c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0114374(0, p1)",
       "name": "FUN_a010a83c",
       "status": "matched"
     },
@@ -11021,13 +11021,13 @@
     },
     "ram:a010ae54": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF00EAC8) = (word 0xCF00EAC8) | 0x80",
       "name": "FUN_a010ae54",
       "status": "matched"
     },
     "ram:a010ae70": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF00EAC8) = (word 0xCF00EAC8) & 0xffffff7f",
       "name": "FUN_a010ae70",
       "status": "matched"
     },
@@ -11047,13 +11047,13 @@
     },
     "ram:a010af34": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF00EAC8) = (word 0xCF00EAC8) | 8",
       "name": "FUN_a010af34",
       "status": "matched"
     },
     "ram:a010af50": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF00EAC8) = (word 0xCF00EAC8) & 0xfffffff7",
       "name": "FUN_a010af50",
       "status": "matched"
     },
@@ -11073,13 +11073,13 @@
     },
     "ram:a010afac": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF00EAC8) = (word 0xCF00EAC8) | 1",
       "name": "FUN_a010afac",
       "status": "matched"
     },
     "ram:a010afc8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF00EAC8) = (word 0xCF00EAC8) & 0xfffffffe",
       "name": "FUN_a010afc8",
       "status": "matched"
     },
@@ -11122,13 +11122,13 @@
     },
     "ram:a010b17c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF00EAC8) = (word 0xCF00EAC8) | 4",
       "name": "FUN_a010b17c",
       "status": "matched"
     },
     "ram:a010b198": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF00EAC8) = (word 0xCF00EAC8) & 0xfffffffb",
       "name": "FUN_a010b198",
       "status": "matched"
     },
@@ -11340,7 +11340,7 @@
     },
     "ram:a01111e4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802C988) = *p1",
       "name": "FUN_a01111e4",
       "status": "matched"
     },
@@ -11353,7 +11353,7 @@
     },
     "ram:a01118c0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802C98E) = p1",
       "name": "FUN_a01118c0",
       "status": "matched"
     },
@@ -11415,7 +11415,7 @@
     },
     "ram:a011433c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xCF01166C) = (word 0xCF01166C) & 0xfc | p1 & 3",
       "name": "FUN_a011433c",
       "status": "matched"
     },
@@ -11470,7 +11470,7 @@
     },
     "ram:a011552c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0114650()",
       "name": "FUN_a011552c",
       "status": "matched"
     },
@@ -11708,13 +11708,13 @@
     },
     "ram:a0119640": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "halfword array 0xA802C9CA[(p2 & 0xff)] = p1",
       "name": "FUN_a0119640",
       "status": "matched"
     },
     "ram:a0119658": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "byte array 0xA802C9C8[(p2 & 0xff)] = p1",
       "name": "FUN_a0119658",
       "status": "matched"
     },
@@ -11773,7 +11773,7 @@
     "ram:a011a554": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "byte array 0xA802C9D0[(p3 & 0xff)] = p1; byte array 0xA802C9D8[(p3 & 0xff)] = p2",
       "name": "FUN_a011a554",
       "status": "matched"
     },
@@ -11835,7 +11835,7 @@
     },
     "ram:a011b36c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "word array 0xA802C9A8[(p2 & 0xff)] = p1",
       "name": "FUN_a011b36c",
       "status": "matched"
     },
@@ -12146,7 +12146,7 @@
     },
     "ram:a012082c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00f1fe0(p1, 0x1a, p2)",
       "name": "FUN_a012082c",
       "status": "matched"
     },
@@ -12179,13 +12179,13 @@
     },
     "ram:a0120c58": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f1f9c(p1, 0x22)",
       "name": "FUN_a0120c58",
       "status": "matched"
     },
     "ram:a0120c74": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a00f1f9c(p1, 0x23)",
       "name": "FUN_a0120c74",
       "status": "matched"
     },
@@ -12276,13 +12276,13 @@
     },
     "ram:a0121cf4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00f1fe0(p1, 0x1e, 0x3f); FUN_a00f1fe0(p1, 0x1f, 0x1f, p4, p5, p6)",
       "name": "FUN_a0121cf4",
       "status": "matched"
     },
     "ram:a0121d1c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00f1fe0(p1, 0x1c, 0x3f); FUN_a00f1fe0(p1, 0x1d, 0x1f, p4, p5, p6)",
       "name": "FUN_a0121d1c",
       "status": "matched"
     },
@@ -12401,7 +12401,7 @@
     },
     "ram:a0123648": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802C9F4) = p1",
       "name": "FUN_a0123648",
       "status": "matched"
     },
@@ -12484,13 +12484,13 @@
     },
     "ram:a01243b0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802C9F9) = p1",
       "name": "FUN_a01243b0",
       "status": "matched"
     },
     "ram:a01243bc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802C9F8) = p1",
       "name": "FUN_a01243bc",
       "status": "matched"
     },
@@ -12523,19 +12523,19 @@
     },
     "ram:a0124850": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00df170(0x1a4358); func_0x4008c86c(0xd, 0x20, 1)",
       "name": "FUN_a0124850",
       "status": "matched"
     },
     "ram:a0124874": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xd, 0x20, 0xfe)",
       "name": "FUN_a0124874",
       "status": "matched"
     },
     "ram:a01248ac": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(9, 8, 0xfe)",
       "name": "FUN_a01248ac",
       "status": "matched"
     },
@@ -12582,13 +12582,13 @@
     },
     "ram:a01249ec": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xff, 1, 1)",
       "name": "FUN_a01249ec",
       "status": "matched"
     },
     "ram:a0124a08": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xff, 1, 0xfe)",
       "name": "FUN_a0124a08",
       "status": "matched"
     },
@@ -12639,37 +12639,37 @@
     },
     "ram:a0124eb4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xc, 0x40, 0)",
       "name": "FUN_a0124eb4",
       "status": "matched"
     },
     "ram:a0124ed0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xc, 0x40, 0xff)",
       "name": "FUN_a0124ed0",
       "status": "matched"
     },
     "ram:a0124eec": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xff, 4, 1)",
       "name": "FUN_a0124eec",
       "status": "matched"
     },
     "ram:a0124f08": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xff, 4, 0xfe)",
       "name": "FUN_a0124f08",
       "status": "matched"
     },
     "ram:a0124f24": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(9, 0x20, 0xfe); FUN_a0138610(0, p2, p3, p4, p5, p6)",
       "name": "FUN_a0124f24",
       "status": "matched"
     },
     "ram:a0124f44": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(9, 0x20, 1); FUN_a0138610(1, p2, p3, p4, p5, p6)",
       "name": "FUN_a0124f44",
       "status": "matched"
     },
@@ -12832,7 +12832,7 @@
     },
     "ram:a01255dc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "byte array 0xA802A428[(p1 & 0xff)] = p2",
       "name": "FUN_a01255dc",
       "status": "matched"
     },
@@ -12866,61 +12866,61 @@
     },
     "ram:a012587c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(6, 4, 1)",
       "name": "FUN_a012587c",
       "status": "matched"
     },
     "ram:a01258b4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(6, 4, 0xfe)",
       "name": "FUN_a01258b4",
       "status": "matched"
     },
     "ram:a01258d0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(7, 2, 1)",
       "name": "FUN_a01258d0",
       "status": "matched"
     },
     "ram:a01258ec": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(7, 2, 0xfe)",
       "name": "FUN_a01258ec",
       "status": "matched"
     },
     "ram:a0125918": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xff, 0x40, 1)",
       "name": "FUN_a0125918",
       "status": "matched"
     },
     "ram:a0125934": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xff, 0x40, 0xfe)",
       "name": "FUN_a0125934",
       "status": "matched"
     },
     "ram:a0125950": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(7, 4, 1)",
       "name": "FUN_a0125950",
       "status": "matched"
     },
     "ram:a012596c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(7, 4, 0xfe)",
       "name": "FUN_a012596c",
       "status": "matched"
     },
     "ram:a0125988": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(5, 0x80, 1)",
       "name": "FUN_a0125988",
       "status": "matched"
     },
     "ram:a01259a4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(5, 0x80, 0xfe)",
       "name": "FUN_a01259a4",
       "status": "matched"
     },
@@ -12932,7 +12932,7 @@
     },
     "ram:a01259f4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(7, 0x80, 0xff); func_0x4008d1a0(200); func_0x4008c86c(7, 0x80, 0)",
       "name": "FUN_a01259f4",
       "status": "matched"
     },
@@ -12963,13 +12963,13 @@
     },
     "ram:a0125aac": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(2, 4, 1)",
       "name": "FUN_a0125aac",
       "status": "matched"
     },
     "ram:a0125ac8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(2, 4, 0xfe)",
       "name": "FUN_a0125ac8",
       "status": "matched"
     },
@@ -13009,19 +13009,19 @@
     },
     "ram:a0125bc4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xff, 0x20, 1)",
       "name": "FUN_a0125bc4",
       "status": "matched"
     },
     "ram:a0125be0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xff, 0x20, 0xfe)",
       "name": "FUN_a0125be0",
       "status": "matched"
     },
     "ram:a0125c18": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xff, 2, 0xfe)",
       "name": "FUN_a0125c18",
       "status": "matched"
     },
@@ -13069,25 +13069,25 @@
     },
     "ram:a0125dc8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xc, 1, 1)",
       "name": "FUN_a0125dc8",
       "status": "matched"
     },
     "ram:a0125de4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xc, 1, 0xfe)",
       "name": "FUN_a0125de4",
       "status": "matched"
     },
     "ram:a0125e00": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xff, 1, 1)",
       "name": "FUN_a0125e00",
       "status": "matched"
     },
     "ram:a0125e1c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008c86c(0xff, 1, 0xfe)",
       "name": "FUN_a0125e1c",
       "status": "matched"
     },
@@ -13253,25 +13253,25 @@
     },
     "ram:a01278e4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802D89F) = p1",
       "name": "FUN_a01278e4",
       "status": "matched"
     },
     "ram:a01278f0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802D8A3) = p1",
       "name": "FUN_a01278f0",
       "status": "matched"
     },
     "ram:a01278fc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802D8A0) = p1",
       "name": "FUN_a01278fc",
       "status": "matched"
     },
     "ram:a0127914": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802D8A5) = p1",
       "name": "FUN_a0127914",
       "status": "matched"
     },
@@ -13283,7 +13283,7 @@
     },
     "ram:a0127938": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802D896) = p1",
       "name": "FUN_a0127938",
       "status": "matched"
     },
@@ -13295,13 +13295,13 @@
     },
     "ram:a0127950": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802D897) = p1",
       "name": "FUN_a0127950",
       "status": "matched"
     },
     "ram:a012795c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802D8A2) = p1",
       "name": "FUN_a012795c",
       "status": "matched"
     },
@@ -13325,7 +13325,7 @@
     },
     "ram:a01279b8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802D8A7) = p1",
       "name": "FUN_a01279b8",
       "status": "matched"
     },
@@ -13337,7 +13337,7 @@
     },
     "ram:a01279d0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802D8A8) = p1",
       "name": "FUN_a01279d0",
       "status": "matched"
     },
@@ -13349,7 +13349,7 @@
     },
     "ram:a01279e8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802D8A9) = p1",
       "name": "FUN_a01279e8",
       "status": "matched"
     },
@@ -13497,7 +13497,7 @@
     },
     "ram:a0129bfc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0101c64(1)",
       "name": "FUN_a0129bfc",
       "status": "matched"
     },
@@ -13575,19 +13575,19 @@
     },
     "ram:a012b86c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0137cac(p1 & 0xff, p2 & 0xff)",
       "name": "FUN_a012b86c",
       "status": "matched"
     },
     "ram:a012b884": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0138b98(p1, (word 0xA802E1A0) >> 0x1b & 1)",
       "name": "FUN_a012b884",
       "status": "matched"
     },
     "ram:a012b8a8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0138bc8(p1, p2)",
       "name": "FUN_a012b8a8",
       "status": "matched"
     },
@@ -13641,7 +13641,7 @@
     },
     "ram:a012c118": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01241fc(); returns p1",
       "name": "FUN_a012c118",
       "status": "matched"
     },
@@ -13681,7 +13681,7 @@
     },
     "ram:a012ced8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802E1D4) = p1",
       "name": "FUN_a012ced8",
       "status": "matched"
     },
@@ -13769,7 +13769,7 @@
     },
     "ram:a012fc04": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a012f43c(0, 0x61, 1)",
       "name": "FUN_a012fc04",
       "status": "matched"
     },
@@ -13856,7 +13856,7 @@
     },
     "ram:a0132a14": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a013855c(p1)",
       "name": "FUN_a0132a14",
       "status": "matched"
     },
@@ -13955,38 +13955,38 @@
     },
     "ram:a0133e34": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008f3f4(0x16, 0, 0, 0, 3)",
       "name": "FUN_a0133e34",
       "status": "matched"
     },
     "ram:a0133e58": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008f3f4(8, p1, 0, 0, 1)",
       "name": "FUN_a0133e58",
       "status": "matched"
     },
     "ram:a0133e7c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008f3f4(7, p1, p2, 0, 1)",
       "name": "FUN_a0133e7c",
       "status": "matched"
     },
     "ram:a0133f24": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008f3f4(6, p1, 0, 0, 1)",
       "name": "FUN_a0133f24",
       "status": "matched"
     },
     "ram:a0133f48": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008f3f4(5, p1, p2, p3 / 0x4b0 & 0xff, 1)",
       "name": "FUN_a0133f48",
       "status": "matched"
     },
     "ram:a0133f84": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008f3f4(2, p1, 0, 0, 1); func_0x4008f3f4(0xf, p1, 0, 0, 1)",
       "name": "FUN_a0133f84",
       "status": "matched"
     },
@@ -14028,7 +14028,7 @@
     },
     "ram:a01344a0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008f3f4(0x26, p1 >> 0x10 & 0xff, p1 >> 8 & 0xff, p1 & 0xff, 1)",
       "name": "FUN_a01344a0",
       "status": "matched"
     },
@@ -14094,7 +14094,7 @@
     },
     "ram:a0136d08": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01350dc(); FUN_a0134de0(p1, p2, p3, p4, p5, p6)",
       "name": "FUN_a0136d08",
       "status": "matched"
     },
@@ -14862,19 +14862,19 @@
     },
     "ram:a013b42c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(halfword 0xA802A46C) = p1; FUN_a013ae00((byte 0xA802A460))",
       "name": "FUN_a013b42c",
       "status": "matched"
     },
     "ram:a013b44c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(halfword 0xA802A46E) = p1; FUN_a013ae00((byte 0xA802A460))",
       "name": "FUN_a013b44c",
       "status": "matched"
     },
     "ram:a013b46c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(halfword 0xA802A470) = p1; FUN_a013ae00((byte 0xA802A460))",
       "name": "FUN_a013b46c",
       "status": "matched"
     },
@@ -14915,7 +14915,7 @@
     },
     "ram:a013b684": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802A462) = p1; FUN_a013ae00((byte 0xA802A460))",
       "name": "FUN_a013b684",
       "status": "matched"
     },
@@ -15419,7 +15419,7 @@
     },
     "ram:a0142380": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a015440c(); FUN_a0154458(); FUN_a0124180(p1, p2, p3, p4, p5, p6)",
       "name": "FUN_a0142380",
       "status": "matched"
     },
@@ -15437,7 +15437,7 @@
     },
     "ram:a01423dc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a011eadc(); FUN_a01205c0(2); FUN_a011fd84(0, 0, 0, 0x500); FUN_a011fd84(1, 0, 0, 0x500)",
       "name": "FUN_a01423dc",
       "status": "matched"
     },
@@ -15470,7 +15470,7 @@
     },
     "ram:a0142e80": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(halfword 0xA802E234) = p1",
       "name": "FUN_a0142e80",
       "status": "matched"
     },
@@ -15496,13 +15496,13 @@
     },
     "ram:a0142fcc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01003b4(p1, p2)",
       "name": "FUN_a0142fcc",
       "status": "matched"
     },
     "ram:a0142fe4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a0100434(p1)",
       "name": "FUN_a0142fe4",
       "status": "matched"
     },
@@ -15522,7 +15522,7 @@
     },
     "ram:a01437dc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "func_0x4008d1a0(p1)",
       "name": "FUN_a01437dc",
       "status": "matched"
     },
@@ -15540,19 +15540,19 @@
     },
     "ram:a0143804": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00df170(0x1a6dc0, p1 & 0xffff); FUN_a0126360(p1 & 0xffff, p2)",
       "name": "FUN_a0143804",
       "status": "matched"
     },
     "ram:a014382c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a011dd9c(0xff, p1)",
       "name": "FUN_a014382c",
       "status": "matched"
     },
     "ram:a01438c8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01397f4(p1)",
       "name": "FUN_a01438c8",
       "status": "matched"
     },
@@ -15593,13 +15593,13 @@
     },
     "ram:a0143d98": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a013cf84()",
       "name": "FUN_a0143d98",
       "status": "matched"
     },
     "ram:a0143da8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a013cfc4()",
       "name": "FUN_a0143da8",
       "status": "matched"
     },
@@ -15657,13 +15657,13 @@
     },
     "ram:a0144114": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns FUN_a0129a24()",
       "name": "FUN_a0144114",
       "status": "matched"
     },
     "ram:a014412c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns FUN_a0129a5c()",
       "name": "FUN_a014412c",
       "status": "matched"
     },
@@ -15683,13 +15683,13 @@
     },
     "ram:a0144268": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns FUN_a0129ab8()",
       "name": "FUN_a0144268",
       "status": "matched"
     },
     "ram:a0144280": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns FUN_a0129af0()",
       "name": "FUN_a0144280",
       "status": "matched"
     },
@@ -15791,13 +15791,13 @@
     },
     "ram:a0145348": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802E3FE) = p1",
       "name": "FUN_a0145348",
       "status": "matched"
     },
     "ram:a0145354": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802E3FF) = p1",
       "name": "FUN_a0145354",
       "status": "matched"
     },
@@ -15845,7 +15845,7 @@
     },
     "ram:a0145eb8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00df170(0x1a6dc0, p1 & 0xffff); FUN_a0126360(p1 & 0xffff, p2)",
       "name": "FUN_a0145eb8",
       "status": "matched"
     },
@@ -15864,13 +15864,13 @@
     },
     "ram:a0145fac": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a013b710(p1)",
       "name": "FUN_a0145fac",
       "status": "matched"
     },
     "ram:a0145fc0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a013b4a4(p1, p2, p3)",
       "name": "FUN_a0145fc0",
       "status": "matched"
     },
@@ -15883,13 +15883,13 @@
     },
     "ram:a0146108": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01195ac(p1)",
       "name": "FUN_a0146108",
       "status": "matched"
     },
     "ram:a014613c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0119640(p1, p3 & 0xff); FUN_a0119658(p2, p3 & 0xff)",
       "name": "FUN_a014613c",
       "status": "matched"
     },
@@ -15901,7 +15901,7 @@
     },
     "ram:a014617c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a0119684(p1)",
       "name": "FUN_a014617c",
       "status": "matched"
     },
@@ -15920,19 +15920,19 @@
     },
     "ram:a0146324": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a01198b4(p1)",
       "name": "FUN_a0146324",
       "status": "matched"
     },
     "ram:a014633c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a01198a0(p1)",
       "name": "FUN_a014633c",
       "status": "matched"
     },
     "ram:a0146354": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a011a554(p1, p2, p3)",
       "name": "FUN_a0146354",
       "status": "matched"
     },
@@ -15951,13 +15951,13 @@
     },
     "ram:a014654c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a011a060(p1, p2, p3)",
       "name": "FUN_a014654c",
       "status": "matched"
     },
     "ram:a0146648": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a011b034(p1, p2, p3, p4, p5)",
       "name": "FUN_a0146648",
       "status": "matched"
     },
@@ -15984,31 +15984,31 @@
     },
     "ram:a0146a80": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a011bed8(p1, p2, p3, p4, p5)",
       "name": "FUN_a0146a80",
       "status": "matched"
     },
     "ram:a0146ab0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a011cc44(p2, p1)",
       "name": "FUN_a0146ab0",
       "status": "matched"
     },
     "ram:a0146af4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a011c338(p1, p2, p3, p4, p5, p6)",
       "name": "FUN_a0146af4",
       "status": "matched"
     },
     "ram:a0146b20": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a011c1ac(p1, p2, p3, p4, p5, p6)",
       "name": "FUN_a0146b20",
       "status": "matched"
     },
     "ram:a0146b50": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a011b3a0(p1, p2)",
       "name": "FUN_a0146b50",
       "status": "matched"
     },
@@ -16027,19 +16027,19 @@
     },
     "ram:a0146be8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a011b3b8(0, p1)",
       "name": "FUN_a0146be8",
       "status": "matched"
     },
     "ram:a0146c00": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a011bac0(p1, p2)",
       "name": "FUN_a0146c00",
       "status": "matched"
     },
     "ram:a0146c14": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a011b648(p1, p2, p3, p4, p5)",
       "name": "FUN_a0146c14",
       "status": "matched"
     },
@@ -16139,20 +16139,20 @@
     },
     "ram:a0147724": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns func_0x4008d588()",
       "name": "FUN_a0147724",
       "status": "matched"
     },
     "ram:a0147740": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xffff; returns func_0x4008d594(p1)",
       "name": "FUN_a0147740",
       "status": "matched"
     },
     "ram:a0147760": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00fc2fc()",
       "name": "FUN_a0147760",
       "status": "matched"
     },
@@ -16191,25 +16191,25 @@
     },
     "ram:a0147aa0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a0125644(p1, p2 & 0xff, p3, p4, p5, p6, p7, p8)",
       "name": "FUN_a0147aa0",
       "status": "matched"
     },
     "ram:a0147ae8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a01256d0(p1, p2 & 0xff, p3, p4, p5, p6, p7)",
       "name": "FUN_a0147ae8",
       "status": "matched"
     },
     "ram:a0147b28": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a0125754(p1, p2, p3, p4, p5, p6, p7, p8)",
       "name": "FUN_a0147b28",
       "status": "matched"
     },
     "ram:a0147b70": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a01257f0(p1, p2, p3, p4, p5, p6, p7)",
       "name": "FUN_a0147b70",
       "status": "matched"
     },
@@ -16222,7 +16222,7 @@
     },
     "ram:a0147c94": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns FUN_a0123840()",
       "name": "FUN_a0147c94",
       "status": "matched"
     },
@@ -16242,19 +16242,19 @@
     },
     "ram:a0148230": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0123648((word 0xA802CC20)); FUN_a0124ed0(); FUN_a0123cf0((byte *)0x0, p2)",
       "name": "FUN_a0148230",
       "status": "matched"
     },
     "ram:a0148254": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0123cf0((byte *)0x5, p2)",
       "name": "FUN_a0148254",
       "status": "matched"
     },
     "ram:a0148358": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0142e80(p1); FUN_a0142ea8(0, p2)",
       "name": "FUN_a0148358",
       "status": "matched"
     },
@@ -16307,13 +16307,13 @@
     },
     "ram:a0148698": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0133ae4()",
       "name": "FUN_a0148698",
       "status": "matched"
     },
     "ram:a01486a8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0133b54(p1, p2)",
       "name": "FUN_a01486a8",
       "status": "matched"
     },
@@ -16332,13 +16332,13 @@
     },
     "ram:a01487cc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0133950(p1, p2)",
       "name": "FUN_a01487cc",
       "status": "matched"
     },
     "ram:a01487e8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01337e8(p1, p2)",
       "name": "FUN_a01487e8",
       "status": "matched"
     },
@@ -16460,25 +16460,25 @@
     },
     "ram:a0149254": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a012d4f8(p1)",
       "name": "FUN_a0149254",
       "status": "matched"
     },
     "ram:a0149268": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns FUN_a012eb4c()",
       "name": "FUN_a0149268",
       "status": "matched"
     },
     "ram:a0149280": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p1 = p1 & 0xff; returns FUN_a012e850(p1)",
       "name": "FUN_a0149280",
       "status": "matched"
     },
     "ram:a014929c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802E3DA) = p1; FUN_a013b684(p1)",
       "name": "FUN_a014929c",
       "status": "matched"
     },
@@ -16600,7 +16600,7 @@
     },
     "ram:a014a7f4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802E3D0) = (word 0xA802E3D0) & 0xffdfffff | (p1 & 1) << 0x15",
       "name": "FUN_a014a7f4",
       "status": "matched"
     },
@@ -16763,13 +16763,13 @@
     },
     "ram:a014bce4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(word 0xA802E408) = p1",
       "name": "FUN_a014bce4",
       "status": "matched"
     },
     "ram:a014bcf0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802E3D9) = p1; FUN_a013ae00(p1)",
       "name": "FUN_a014bcf0",
       "status": "matched"
     },
@@ -16788,7 +16788,7 @@
     },
     "ram:a014c778": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "(byte 0xA802E3DB) = p1; FUN_a014c118(p1)",
       "name": "FUN_a014c778",
       "status": "matched"
     },
@@ -16874,7 +16874,7 @@
     },
     "ram:a014e024": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0138e28(p1)",
       "name": "FUN_a014e024",
       "status": "matched"
     },
@@ -16923,13 +16923,13 @@
     },
     "ram:a014e2f0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns FUN_a010ae38()",
       "name": "FUN_a014e2f0",
       "status": "matched"
     },
     "ram:a014e308": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "returns FUN_a010af18()",
       "name": "FUN_a014e308",
       "status": "matched"
     },
@@ -16948,7 +16948,7 @@
     },
     "ram:a014e7d0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a00fc1a0()",
       "name": "FUN_a014e7d0",
       "status": "matched"
     },
@@ -16961,7 +16961,7 @@
     "ram:a014e8d8": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O2",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a01070b4(); returns 0",
       "name": "FUN_a014e8d8",
       "status": "matched"
     },
@@ -17098,7 +17098,7 @@
     "ram:a01517f4": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a013143c(0, (word 0xA802DF30) >> 0xc & 0xf)",
       "name": "FUN_a01517f4",
       "status": "matched"
     },
@@ -17118,7 +17118,7 @@
     },
     "ram:a01519b4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a011d748(7, 0xd, 0x3c0, 0); FUN_a012ad64(p1, p2, p3, p4, p5, p6)",
       "name": "FUN_a01519b4",
       "status": "matched"
     },
@@ -17203,13 +17203,13 @@
     },
     "ram:a0153970": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0140e74(0, 0x470, 0x50, p1, p2)",
       "name": "FUN_a0153970",
       "status": "matched"
     },
     "ram:a0153994": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0140e74(0, 0x440, 0x30, p1, p2)",
       "name": "FUN_a0153994",
       "status": "matched"
     },
@@ -17717,7 +17717,7 @@
     },
     "ram:a0159840": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a0159734((word 0xA802AA18), p1, p2, p3, p4)",
       "name": "FUN_a0159840",
       "status": "matched"
     },
@@ -17785,19 +17785,19 @@
     },
     "ram:a015b5c4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a015bf7c(p1, 0xfe3ec)",
       "name": "FUN_a015b5c4",
       "status": "matched"
     },
     "ram:a015b5f4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a015ea08(0xa802aa20)",
       "name": "FUN_a015b5f4",
       "status": "matched"
     },
     "ram:a015b60c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a015ea68(0xa802aa20)",
       "name": "FUN_a015b60c",
       "status": "matched"
     },
@@ -17829,7 +17829,7 @@
     },
     "ram:a015b7a0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a015bf7c((word 0xA802AA18), 0xfb75c); FUN_a015b60c(p1, p2, p3, p4, p5, p6)",
       "name": "FUN_a015b7a0",
       "status": "matched"
     },
@@ -17881,7 +17881,7 @@
     },
     "ram:a015c1e4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a015c1b4((word 0xA802AA18))",
       "name": "FUN_a015c1e4",
       "status": "matched"
     },
@@ -17919,13 +17919,13 @@
     },
     "ram:a015cc54": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a015ea08(0xa802aec0)",
       "name": "FUN_a015cc54",
       "status": "matched"
     },
     "ram:a015cc6c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "FUN_a015ea68(0xa802aec0)",
       "name": "FUN_a015cc6c",
       "status": "matched"
     },

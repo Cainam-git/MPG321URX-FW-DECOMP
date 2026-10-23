@@ -1,6 +1,6 @@
 /* leon2m FUN_a008a174 @ 0xa008a174  forwarder (MATCH -mcpu=v8 -Os -g, gcc 3.4.4, autoc).
- * Tail-calls FUN_a0088724 (sibling call: mov %o7,%g1 / call / mov %g1,%o7). Last step of the main-loop task
- * FUN_a0087430.
+ * Code: FUN_a0088724().
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,6 @@
 /* leon2m FUN_a00f8e2c @ 0xa00f8e2c (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Code: halfword array 0xA802B7D8[(p1 & 0xff)] = p2.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

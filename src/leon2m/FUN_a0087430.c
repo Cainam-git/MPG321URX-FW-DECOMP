@@ -1,6 +1,6 @@
 /* leon2m FUN_a0087430 @ 0xa0087430  one of the four main-loop tasks (MATCH -mcpu=v8 -Os -g, gcc 3.4.4, autoc).
- * Called every pass of main() FUN_a00295a4. Runs, in order: FUN_a008a210 (named EVENT_PumpQueue in the public
- * MSI MPG 341CQPX symbol notes), FUN_a009f42c, FUN_a0085984 and FUN_a008a174 (tail call).
+ * Code: FUN_a008a210(); FUN_a009f42c(); FUN_a0085984(); FUN_a008a174(p1, p2, p3, p4, p5, p6).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;
