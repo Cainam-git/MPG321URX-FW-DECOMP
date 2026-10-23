@@ -20,13 +20,13 @@ firmware:
 ## Progress
 
 ```
-Main processor     [#############-------]   68 %
-Input processor    [###########---------]   58 %
+Main processor     [#############-------]   66 %
+Input processor    [###########---------]   59 %
 Helper processor   [#############-------]   67 %
-Overall            [############--------]   65 %
+Overall            [############--------]   64 %
 ```
 
-Percentages are by code size. More than 4,700 of roughly 6,700 functions are done, and the helper processor's boot
+Percentages are by code size. More than 4,800 of roughly 7,300 functions are done, and the helper processor's boot
 loader is complete. `tools/rebuild.py` builds the complete firmware image from the matched functions plus the
 original bytes for everything else, and the result is identical to the original file. Detailed numbers are in the
 [status report](docs/STATUS.md).

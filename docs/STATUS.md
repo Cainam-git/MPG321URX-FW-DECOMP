@@ -4,13 +4,13 @@
 
 | Processor | Section | Matched bytes | Total bytes | Matched | Matched functions | Functions |
 |---|---|---:|---:|---:|---:|---:|
-| Main processor | `leon2m` | 527,625 | 771,793 | 68.4 % | 2,781 | 3,127 |
-| Input processor | `leon2s` | 230,006 | 398,894 | 57.7 % | 1,394 | 1,622 |
+| Main processor | `leon2m` | 531,369 | 810,621 | 65.6 % | 2,787 | 3,730 |
+| Input processor | `leon2s` | 237,682 | 402,114 | 59.1 % | 1,403 | 1,677 |
 | Helper processor | `8051_bank0` (boot loader) | 5,701 | 5,701 | 100.0 % | 46 | 46 |
-| Helper processor | `8051_bank1` (main application) | 37,152 | 48,896 | 76.0 % | 347 | 408 |
-| Helper processor | `8051_bank2` (update agent) | 37,246 | 49,623 | 75.1 % | 227 | 269 |
+| Helper processor | `8051_bank1` (main application) | 37,344 | 49,088 | 76.1 % | 351 | 412 |
+| Helper processor | `8051_bank2` (update agent) | 37,246 | 49,602 | 75.1 % | 227 | 273 |
 | Helper processor | `8051_bank3` (mostly tables) | 4 | 15,768 | 0.0 % | 1 | 1,205 |
-| **Total** | | **837,734** | **1,290,675** | **64.9 %** | **4,796** | **6,677** |
+| **Total** | | **849,346** | **1,332,894** | **63.7 %** | **4,815** | **7,343** |
 
 To recount and update this table and the progress bars in the README, run `python3 -I tools/stats.py`. Byte counts
 come from the function sizes in `symbols/<section>.functions.json`.
