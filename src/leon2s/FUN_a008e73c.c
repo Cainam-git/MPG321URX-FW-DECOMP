@@ -27,9 +27,6 @@ void FUN_a008e73c(unsigned char param_1, unsigned char param_2, int param_3, int
   else
   {
     FUN_a00a80cc(uVar3, 1, 0x3b, 0x40, 0);
-    if (((!param_6) && (!param_6)) && (!param_6))
-    {
-    }
     uVar1 = FUN_a00a7fd8(uVar3, 1, 0x3b) & 0xf1;
     uVar1 = inline_fn(uVar1);
     FUN_a00a8054(uVar3, 1, 0x3b, uVar1, param_5, param_6);

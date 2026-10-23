@@ -3416,8 +3416,8 @@
       "status": "matched"
     },
     "ram:a008e73c": {
-      "by": "permuter",
-      "comment": "sets (p2 == 1) or clears bit 6 of register 0x3b of block (p, 1) and rewrites its low bits (& 0xf0, or & 0xf1 | 1) via FUN_a00a7fd8 / FUN_a00a8054",
+      "by": "h49",
+      "comment": "sets (p2 == 1) or clears bit 6 of register 0x3b of block (p, 1) and rewrites its low bits via FUN_a00a7fd8 / FUN_a00a8054",
       "name": "FUN_a008e73c",
       "status": "matched"
     },
