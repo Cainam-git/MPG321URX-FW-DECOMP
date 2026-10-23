@@ -2315,6 +2315,12 @@
       "name": "FUN_a007af6c",
       "status": "matched"
     },
+    "ram:a007b2a0": {
+      "by": "h42",
+      "comment": "returns a port state value from the 0x18-byte record, FUN_a007517c/FUN_a007ae94, a byte table or the FUN_a007af6c test",
+      "name": "FUN_a007b2a0",
+      "status": "matched"
+    },
     "ram:a007cfec": {
       "by": "hand",
       "comment": "73520(p): bit 0x10 test of db00[p != 2].w0c + 0x74 via a7408, else bit 0 of reg 0x2f6 (twin of a007af04)",
