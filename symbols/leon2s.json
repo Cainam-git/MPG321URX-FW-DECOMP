@@ -5849,6 +5849,12 @@
       "name": "FUN_a00aa538",
       "status": "matched"
     },
+    "ram:a00aa5e8": {
+      "by": "hand",
+      "comment": "writes rate-dependent values to three registers of port 0 or of the other port and optionally tail-calls the follow-up",
+      "name": "FUN_a00aa5e8",
+      "status": "matched"
+    },
     "ram:a00aa7bc": {
       "by": "autoc",
       "comment": "returns 0",
