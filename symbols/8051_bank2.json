@@ -663,6 +663,13 @@
       "name": "FUN_CODE_872e",
       "status": "matched"
     },
+    "CODE:8cdc": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "reads block 0 into XDATA 0x01E6, tests the MSDOS5.0 / NTFS tables, rereads at bf1b(buf + 0x1C6), then sets 0x041C, 0x042A, 0x01DC, 0x0405, 0x0158, 0x0418 and derived values per EXFAT / NTFS / other layout",
+      "name": "FUN_CODE_8cdc",
+      "status": "matched"
+    },
     "CODE:9235": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
