@@ -17191,6 +17191,13 @@
       "name": "FUN_a0154750",
       "status": "matched"
     },
+    "ram:a01547b4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -g",
+      "comment": "Returns the constant 6",
+      "name": "FUN_a01547b4",
+      "status": "matched"
+    },
     "ram:a01547dc": {
       "by": "lib",
       "comment": "toolchain library function ceil from libm.a:s_ceil.o; byte-exact, no C needed",
