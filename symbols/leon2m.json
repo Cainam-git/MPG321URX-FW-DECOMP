@@ -3542,6 +3542,13 @@
       "name": "FUN_a0097190",
       "status": "matched"
     },
+    "ram:a00972cc": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "flag update of halfword 0xa802cff4+4 and FUN_a00b5080; when DAT_a802d290+0x1a3 differs from 0xa8025c56 also the +0x18 bits and the DAT_a802d290 flag clean-up, FUN_a00da254, DAT_a802b08e |= 2",
+      "name": "FUN_a00972cc",
+      "status": "matched"
+    },
     "ram:a0097498": {
       "by": "h10",
       "cflags": "-mcpu=v8 -O3 -g",
