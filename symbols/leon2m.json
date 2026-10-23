@@ -6373,6 +6373,12 @@
       "name": "FUN_a00bb260",
       "status": "matched"
     },
+    "ram:a00bb44c": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a00bb44c",
+      "status": "matched"
+    },
     "ram:a00bb86c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
