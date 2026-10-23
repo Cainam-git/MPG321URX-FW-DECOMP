@@ -1,4 +1,4 @@
-/* leon2s DRV_HDMI21_RXDetect_FSM_LTS_P @ 0xa009ae98-0xa009b5f4 (-mcpu=v8 -Os -g -msoft-float)
+/* leon2s DRV_HDMI21_RXDetect_FSM_LTS_P @ 0xa009ae98-0xa009b5f4 (-mcpu=v8 -Os -g)
  * Link-training state P for port p = port & 0xff (channel 2 for port 0, 3 for port 1, other ports return 0).
  * On entry to the state (word p of DAT_a807d648 differs from +0x30 of record p of DAT_a807d680) copies the state
  * into the record, clears +0x38/+0x39, sets up the port registers and FUN_a00a7488(ch, 0x2e70, ...) with the
