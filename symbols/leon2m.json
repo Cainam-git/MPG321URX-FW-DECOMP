@@ -13116,6 +13116,12 @@
       "name": "FUN_a0121e3c",
       "status": "matched"
     },
+    "ram:a0121eac": {
+      "by": "hand",
+      "comment": "stores the argument to DAT_a802c9e0",
+      "name": "FUN_a0121eac",
+      "status": "matched"
+    },
     "ram:a0121eb8": {
       "by": "hand",
       "comment": "empty routine",
