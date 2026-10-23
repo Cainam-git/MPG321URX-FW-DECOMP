@@ -18135,6 +18135,12 @@
       "name": "FUN_a014dc28",
       "status": "matched"
     },
+    "ram:a014dd10": {
+      "by": "hand",
+      "comment": "tail call to func_0x4008ced8",
+      "name": "FUN_a014dd10",
+      "status": "matched"
+    },
     "ram:a014dd20": {
       "by": "hand",
       "comment": "empty routine",
