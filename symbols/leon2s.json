@@ -5911,6 +5911,12 @@
       "name": "FUN_a00adf64",
       "status": "matched"
     },
+    "ram:a00adf84": {
+      "by": "h43",
+      "comment": "sets a 2-bit field of register 0xcf014798 or 0xcf01479c chosen by FUN_a00add48 according to mode",
+      "name": "FUN_a00adf84",
+      "status": "matched"
+    },
     "ram:a00ae0dc": {
       "by": "hand",
       "comment": "calls FUN_a00a6c98 and FUN_a00a6c00 with values chosen by b, then FUN_a00adf84(a, 8 / b)",
