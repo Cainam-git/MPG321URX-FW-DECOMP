@@ -11146,6 +11146,13 @@
       "name": "FUN_a0114498",
       "status": "matched"
     },
+    "ram:a0114570": {
+      "by": "h61",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reads one register of the port-selected register block (page register gets bits 8..15, word at 0xcf000000 | (base + low byte) << 2) and returns its low byte",
+      "name": "FUN_a0114570",
+      "status": "matched"
+    },
     "ram:a0114650": {
       "by": "h44",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
