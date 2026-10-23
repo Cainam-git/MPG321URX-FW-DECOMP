@@ -12349,6 +12349,12 @@
       "name": "FUN_a011818c",
       "status": "matched"
     },
+    "ram:a0118198": {
+      "by": "hand",
+      "comment": "stores the argument to DAT_a802c98c",
+      "name": "FUN_a0118198",
+      "status": "matched"
+    },
     "ram:a01181a4": {
       "by": "hand",
       "comment": "writes 6 to byte 3 of the record at 0xa8027a90 and clears its bytes 0-2 and the bytes 0xa802c98c/0xa802c98d",
