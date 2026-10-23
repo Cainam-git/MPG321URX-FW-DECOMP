@@ -11012,6 +11012,12 @@
       "name": "FUN_a0101c64",
       "status": "matched"
     },
+    "ram:a0101c9c": {
+      "by": "hand",
+      "comment": "writes its byte argument to register 0xcf0160c8",
+      "name": "FUN_a0101c9c",
+      "status": "matched"
+    },
     "ram:a0101cb4": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
