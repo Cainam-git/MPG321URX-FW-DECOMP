@@ -11242,6 +11242,13 @@
       "name": "FUN_a011579c",
       "status": "matched"
     },
+    "ram:a01158b4": {
+      "by": "h61",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "read-modify-write of register offset 0xc6/0xc7 (by sel) of the port-selected register block: low nibble from val for sel 0/2, else (word & 0xf) | (val << 4)",
+      "name": "FUN_a01158b4",
+      "status": "matched"
+    },
     "ram:a01166d8": {
       "by": "h22",
       "cflags": "-mcpu=v8 -O3 -g",
