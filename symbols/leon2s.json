@@ -6153,8 +6153,8 @@
       "status": "matched"
     },
     "ram:a00ae3a0": {
-      "by": "permuter",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "by": "h49",
+      "comment": "FUN_a0084c74 / FUN_a0084c94 / FUN_a00a6c98(p, 200, 0x30, ..) with bytes 0x118 / 0x11a / 0x11b of the 300-byte record p at 0xA807DC18",
       "name": "FUN_a00ae3a0",
       "status": "matched"
     },
