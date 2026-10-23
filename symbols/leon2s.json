@@ -1614,6 +1614,12 @@
       "name": "FUN_a00613cc",
       "status": "matched"
     },
+    "ram:a0061450": {
+      "by": "hand",
+      "comment": "if bit 0 of 0xc00c0014 is set, stores the byte read from 0xc00c0000 into the 128-byte ring buffer DAT_a80788e8 unless it is full",
+      "name": "FUN_a0061450",
+      "status": "matched"
+    },
     "ram:a0061528": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
