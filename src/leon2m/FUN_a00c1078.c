@@ -1,5 +1,7 @@
 /* leon2m FUN_a00c1078 @ 0xa00c1078 (-mcpu=v8 -O2 -g)
- * This function reads a byte from one of three addresses (selected by the input parameter 0, 1, or 2), subtracts 0x30 ('0'), and if the result is 0 or 1, stores it to a global, calls several functions, and returns 0. Otherwise it returns 0xff. The main uncertainty is whether the compiler will match the exact branch layout and the `sethi`/`or` addressing for the global loads, but the structure matches the proven similar function exactly.
+ * Reads byte 0xA802D049 (port 2), 0xA802D0A1 (port 3) or 0xA802D0D9 (other ports) of the receive buffer; d = byte
+ * - '0'; d > 1 (as a byte) -> returns 0xff. Else byte 0xA802D47E = d, FUN_a00b88cc(), FUN_a00baa6c(port),
+ * FUN_a00ba950(port), FUN_a00bab80(port, 6) and returns 0.
  */
 extern unsigned char DAT_a802d049;
 extern unsigned char DAT_a802d0a1;

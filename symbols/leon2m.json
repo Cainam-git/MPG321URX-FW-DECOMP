@@ -2187,7 +2187,7 @@
     "ram:a00844f8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "The function calls `FUN_a014448c(1)`, checks the lower 8 bits of the result against 0xd, and if equal also checks that `_DAT_a8024006 <= _DAT_a8024004`. It returns 1 if both conditions hold, else 0 (masked with 1). The main uncertainty is the exact return type\u2014the target ends with `and %i0, 1, %i0` before `ret; restore`, suggesting the return value is masked, but the C return type could be int with the mask applied explicitly.",
+      "comment": "returns 1 when FUN_a014448c(1) & 0xff == 0xd and word 0xA8024006 <= word 0xA8024004, else 0 (r & 1 exit)",
       "name": "FUN_a00844f8",
       "status": "matched"
     },
@@ -2308,7 +2308,7 @@
     },
     "ram:a00886dc": {
       "by": "hand",
-      "comment": "The function reads a byte from `DAT_a802af99`, clears bit 5 (mask with 0xdf), stores it back, and returns bit 5 (after shifting right by 5 and masking with 1). The main uncertainty is whether the return type should be `unsigned int` or `unsigned char` \u2014 the assembly leaves the value in `%o0` after the final `and`, which matches an `int` return, but the byte load/store suggests the global is `unsigned char`.",
+      "comment": "clears bit 5 of byte 0xA802AF99 and returns its previous value (0 or 1)",
       "name": "FUN_a00886dc",
       "status": "matched"
     },
@@ -5779,7 +5779,7 @@
     },
     "ram:a00b7474": {
       "by": "hand",
-      "comment": "The function performs a fixed sequence of initialization calls, then reads a byte from a global address, passes it through `FUN_a00a3844`, and uses the result as an argument to `FUN_a00a31a4`. Finally it tail-calls `FUN_a00b34d4` with the first two arguments replaced by constants 3 and 5, and the remaining original parameters unchanged. The main uncertainty is whether the compiler will schedule the assignments of those constants into the delay slots of earlier calls exactly as in the target; the provided C relies on the optimizer to do so, as the original Ghidra output did.",
+      "comment": "fixed call sequence (FUN_a00a8c88 .. FUN_a0146a80), FUN_a00a31a4 with FUN_a00a3844(0x1928b0, byte 0xA802D298), then tail-calls FUN_a00b34d4(3, 5, p3..p6)",
       "name": "FUN_a00b7474",
       "status": "matched"
     },
@@ -7494,7 +7494,7 @@
     "ram:a00d43b4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "This function reads a base value from `FUN_a0144414`, then performs four register reads via `FUN_a0145660` with the same base and different command codes (0xb, 0xe, 0xd, 0xe). It computes `(r1 - r2) * 100 / (r3 - r4)` and returns `100 - that quotient`, masked to a byte. The structure matches the similar finished function exactly (same call order, same arithmetic), differing only in the constants and the final subtraction. The only uncertainty is whether the final `& 0xff` is applied to the result of the subtraction or to the quotient before subtraction; the target shows `and %i0, 0xff` after the `sub`, so it applies to the final result.",
+      "comment": "(100 - (f(0xb) - f(0xe)) * 100 / (f(0xd) - f(0xe))) & 0xff with f(id) = FUN_a0145660(FUN_a0144414() & 0xff, id)",
       "name": "FUN_a00d43b4",
       "status": "matched"
     },
@@ -10998,7 +10998,7 @@
     "ram:a0113064": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "This function clears bits in two memory-mapped registers at 0xcf011800 and 0xcf011a00. If the input parameter is 0xff, it scans bits 0-4 of the original value from 0xcf011a00, calling the external function for each set bit and clearing that bit in both registers. Otherwise, it clears the bit corresponding to the input parameter in both registers. The function always returns 0. The loop structure and call ordering match the assembly; the main uncertainty is whether the return value is truly 0 or if the compiler is using a leftover register that Ghidra misidentified as a 64-bit return.",
+      "comment": "p == 0xff: for bits 0..4 set in register 0xCF011A00 calls func_0x4008e3c4(i, 1) and clears bit i in 0xCF011800 / 0xCF011A00; else the same for bit p",
       "name": "FUN_a0113064",
       "status": "matched"
     },
@@ -16549,7 +16549,7 @@
     },
     "ram:a0152f7c": {
       "by": "hand",
-      "comment": "This function calls `func_0x4008c194` with argument 1, masks the return value to its low byte, and if that byte equals 0x55 it tail-calls `func_0x4008fa34`; otherwise it simply returns. The only uncertainty is the exact semantics of the two external functions (their names are address-based placeholders), but the control flow and the `mov 1, %o0` in the call's delay slot are fully determined by the target assembly.",
+      "comment": "tail-calls func_0x4008fa34 when func_0x4008c194(1) & 0xff == 0x55",
       "name": "FUN_a0152f7c",
       "status": "matched"
     },

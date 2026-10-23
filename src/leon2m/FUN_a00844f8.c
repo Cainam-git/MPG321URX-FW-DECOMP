@@ -1,5 +1,6 @@
 /* leon2m FUN_a00844f8 @ 0xa00844f8 (-mcpu=v8 -O2 -g)
- * The function calls `FUN_a014448c(1)`, checks the lower 8 bits of the result against 0xd, and if equal also checks that `_DAT_a8024006 <= _DAT_a8024004`. It returns 1 if both conditions hold, else 0 (masked with 1). The main uncertainty is the exact return type—the target ends with `and %i0, 1, %i0` before `ret; restore`, suggesting the return value is masked, but the C return type could be int with the mask applied explicitly.
+ * Returns 1 when FUN_a014448c(1) & 0xff == 0xd and the word 0xA8024006 <= the word 0xA8024004, else 0.
+ * Source form: an unsigned char result r returned as 'r & 1' (the firmware ends with 'and %i0, 1, %i0').
  */
 extern unsigned short _DAT_a8024004;
 extern unsigned short _DAT_a8024006;

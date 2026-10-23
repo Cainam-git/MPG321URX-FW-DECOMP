@@ -1,5 +1,6 @@
 /* 8051_bank1 FUN_CODE_d5c8 @ 0xd5c8  MATCH (OPTIMIZE(7,SPEED))
- * This function writes a constant to one xdata register, clears bit 7 of another, then branches on whether a third register equals 0x20 (space): if equal, it keeps only bit 0 of a fourth register; otherwise keeps the low nibble. It then sets bit 0 of a fifth register and tail-calls `FUN_CODE_daad`. The main uncertainty is whether the final call is truly a tail call (LJMP) rather than a call followed by return; the assembly uses LJMP, so this should match.
+ * XDATA 0xD929 = 0x71; 0xD90B &= 0x7F; 0xD904 &= 0x01 when 0xD511 == 0x20, else &= 0x0F; 0xD90C |= 0x01; then
+ * FUN_CODE_daad().
  */
 extern xdata unsigned char DAT_EXTMEM_d929;
 extern xdata unsigned char DAT_EXTMEM_d90b;

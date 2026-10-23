@@ -1,5 +1,6 @@
 /* leon2m FUN_a0113064 @ 0xa0113064 (-mcpu=v8 -O2 -g)
- * This function clears bits in two memory-mapped registers at 0xcf011800 and 0xcf011a00. If the input parameter is 0xff, it scans bits 0-4 of the original value from 0xcf011a00, calling the external function for each set bit and clearing that bit in both registers. Otherwise, it clears the bit corresponding to the input parameter in both registers. The function always returns 0. The loop structure and call ordering match the assembly; the main uncertainty is whether the return value is truly 0 or if the compiler is using a leftover register that Ghidra misidentified as a 64-bit return.
+ * v = byte of register 0xCF011A00; FUN_a011855c(). p == 0xff: for each bit i (0..4) set in v: func_0x4008e3c4(i, 1)
+ * and bit i cleared in 0xCF011800 and 0xCF011A00. Else the same for bit p only.
  */
 extern int FUN_a011855c(void);
 extern int func_0x4008e3c4(unsigned int, unsigned int);

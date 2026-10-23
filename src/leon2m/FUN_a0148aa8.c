@@ -1,5 +1,6 @@
 /* leon2m FUN_a0148aa8 @ 0xa0148aa8 (-mcpu=v8 -O2 -g)
- * This function masks the input parameter to a byte, logs it via a trace function, sets bit 31 of a global based on the LSB of the parameter, then calls another function with the global's address and constant 1. The main uncertainty is whether the final call's second parameter should be `1` (from `restore %g0, 1, %o1`) or something else - the assembly clearly shows the constant 1 being loaded into the delay slot.
+ * Prints "SYSAPI_SetPowerStatus %x" (0x1A6F28) with p & 0xff (FUN_a00df170), puts bit 0 of p into bit 31 of the word
+ * 0xA802E1A0 and calls FUN_a0153970(0xA802E1A0, 1).
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

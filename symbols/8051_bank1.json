@@ -1873,7 +1873,7 @@
     },
     "ram:c085": {
       "by": "hand",
-      "comment": "The function reads two xdata registers at 0xf021 and 0xf022, masks each with 0xF0, and ORs in a shared value from 0xa1e7, then writes back to the respective registers. The main uncertainty is whether the value at 0xa1e7 is read once or twice \u2014 the assembly reads it once into R6 and reuses it for both OR operations, which matches the C above.",
+      "comment": "XDATA 0xF021 / 0xF022: low nibble cleared to (x & 0xF0) | byte 0xA1E7",
       "name": "FUN_CODE_c085",
       "status": "matched"
     },
@@ -1903,7 +1903,7 @@
     },
     "ram:d5c8": {
       "by": "hand",
-      "comment": "This function writes a constant to one xdata register, clears bit 7 of another, then branches on whether a third register equals 0x20 (space): if equal, it keeps only bit 0 of a fourth register; otherwise keeps the low nibble. It then sets bit 0 of a fifth register and tail-calls `FUN_CODE_daad`. The main uncertainty is whether the final call is truly a tail call (LJMP) rather than a call followed by return; the assembly uses LJMP, so this should match.",
+      "comment": "XDATA 0xD929 = 0x71, 0xD90B &= 0x7F, 0xD904 &= 0x01 (0xD511 == 0x20) or 0x0F, 0xD90C |= 1, then FUN_CODE_daad()",
       "name": "FUN_CODE_d5c8",
       "status": "matched"
     },
