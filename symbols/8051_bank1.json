@@ -1768,6 +1768,13 @@
       "name": "FUN_CODE_d31d",
       "status": "matched"
     },
+    "CODE:d385": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "when XDATA 0x3F20 is 1: sets bit 0 of 0x9324, copies it to 0x3F22..0x3F60, writes 1 to 0x3F21; else 0 to 0x3F21",
+      "name": "FUN_CODE_d385",
+      "status": "matched"
+    },
     "CODE:d3b9": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
