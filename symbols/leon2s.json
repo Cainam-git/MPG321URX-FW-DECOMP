@@ -498,12 +498,6 @@
       "name": "FUN_a0060510",
       "status": "matched"
     },
-    "ram:a0060520": {
-      "by": "asm",
-      "comment": "hand-written assembly (privileged instructions); reproduced from disassembly",
-      "name": "FUN_a0060520",
-      "status": "matched"
-    },
     "ram:a0060530": {
       "by": "asm",
       "comment": "hand-written assembly (privileged instructions); reproduced from disassembly",
