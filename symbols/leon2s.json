@@ -7717,6 +7717,12 @@
       "name": "FUN_a00d9e44",
       "status": "matched"
     },
+    "ram:a00d9edc": {
+      "by": "h43",
+      "comment": "sets three bit-fields in a buffer built from the current 11-byte record and copies the result to a register block",
+      "name": "FUN_a00d9edc",
+      "status": "matched"
+    },
     "ram:a00da388": {
       "by": "h43",
       "comment": "steps a 4-bit table index, updates per-index counters and clears bit 4 or 5 of register word 0xccc",
