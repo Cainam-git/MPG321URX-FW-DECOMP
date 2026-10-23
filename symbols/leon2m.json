@@ -13584,6 +13584,13 @@
       "name": "FUN_a01302a4",
       "status": "matched"
     },
+    "ram:a01302e0": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "channel on/off: bit 24 of word +0x70, state 5/0, port byte +2 = 2, FUN_a0141d50/FUN_a00f67d0/FUN_a0109474 calls",
+      "name": "FUN_a01302e0",
+      "status": "matched"
+    },
     "ram:a013129c": {
       "by": "hand",
       "comment": "Calls FUN_a0130438 once, then for i = 0..3 calls FUN_a013d684 and FUN_a013d918 with i & 0xff. Returns void; the and %l1,0xff,%l0 before ret is the delay slot of the loop's ble.",
