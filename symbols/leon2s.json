@@ -4407,6 +4407,12 @@
       "name": "MAX_RSED",
       "status": "matched"
     },
+    "ram:a009a41c": {
+      "by": "h42",
+      "comment": "runs the per-port state functions from DAT_a00b4230 for ports 0 and 1 and re-arms the DAT_a8079100 timer descriptor",
+      "name": "FUN_a009a41c",
+      "status": "matched"
+    },
     "ram:a009a580": {
       "by": "hand",
       "comment": "per-lane PHY freq read (delay then a7314) into ARR_a807905a[port*4+i], print re-reads",
