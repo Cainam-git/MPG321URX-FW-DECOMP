@@ -7934,6 +7934,12 @@
       "name": "FUN_a00cf6bc",
       "status": "matched"
     },
+    "ram:a00cf954": {
+      "by": "hand",
+      "comment": "sets field st of DAT_a8078bb0[port] to 3",
+      "name": "FUN_a00cf954",
+      "status": "matched"
+    },
     "ram:a00cf980": {
       "by": "hand",
       "comment": "record a8078bb0[port] (6 words) bits 16..17 = 01; r = c9368(port); if r != c972c(): cca38(r)",
