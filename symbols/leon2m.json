@@ -7674,8 +7674,8 @@
       "status": "matched"
     },
     "ram:a00d5e84": {
-      "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "by": "h40",
+      "comment": "FUN_a0148ef4(bit 30 of word 0xa802d294)",
       "name": "FUN_a00d5e84",
       "status": "matched"
     },
