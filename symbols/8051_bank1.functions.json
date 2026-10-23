@@ -763,6 +763,12 @@
    "size": 290
   },
   {
+   "name": "FUN_CODE_74af",
+   "start": 29871,
+   "end": 30220,
+   "size": 349
+  },
+  {
    "name": "FUN_CODE_760c",
    "start": 30220,
    "end": 30565,
@@ -1075,6 +1081,12 @@
    "size": 164
   },
   {
+   "name": "FUN_CODE_a819",
+   "start": 43033,
+   "end": 43195,
+   "size": 162
+  },
+  {
    "name": "FUN_CODE_a8bb",
    "start": 43195,
    "end": 43353,
@@ -1175,6 +1187,18 @@
    "start": 45744,
    "end": 45886,
    "size": 142
+  },
+  {
+   "name": "FUN_CODE_b33e",
+   "start": 45886,
+   "end": 46027,
+   "size": 141
+  },
+  {
+   "name": "FUN_CODE_b3cb",
+   "start": 46027,
+   "end": 46166,
+   "size": 139
   },
   {
    "name": "FUN_CODE_b456",
