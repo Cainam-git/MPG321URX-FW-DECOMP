@@ -7073,6 +7073,12 @@
       "name": "FUN_a00c9798",
       "status": "matched"
     },
+    "ram:a00c9810": {
+      "by": "h43",
+      "comment": "reads len bytes in 16-byte blocks after a count poll and splits them between p and DAT_a807cf08 by index",
+      "name": "FUN_a00c9810",
+      "status": "matched"
+    },
     "ram:a00c9968": {
       "by": "hand",
       "comment": "Calls FUN_a00c76c0(param_1, 4, 0x80, flag), where flag is 1 if param_2 & 0xff is non-zero (btst 0xff, %o1) and 0 otherwise. The bne goes to the clr %o3 path and the fall-through sets %o3 to 1; mov 4, %o1 is in the branch delay slot.",
