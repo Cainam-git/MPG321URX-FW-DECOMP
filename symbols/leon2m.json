@@ -14763,6 +14763,12 @@
       "name": "FUN_a0132a30",
       "status": "matched"
     },
+    "ram:a0132a38": {
+      "by": "hand",
+      "comment": "returns 0",
+      "name": "FUN_a0132a38",
+      "status": "matched"
+    },
     "ram:a0132a40": {
       "by": "hand",
       "comment": "Calls FUN_a01398bc(1) if param_1 == 0, FUN_a01398bc(0) if param_1 == 1, otherwise returns. The calls sit inside the branches and are not tail calls (%o7 saved to %g1 and restored around the call). Code: mov %o0,%g1; cmp/be with mov 1,%o0 in the delay slot; cmp/bne with clr %o0 in the delay slot; retl; nop. Returns void.",
