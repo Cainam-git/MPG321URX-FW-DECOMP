@@ -7235,6 +7235,12 @@
       "name": "FUN_a00ccd20",
       "status": "matched"
     },
+    "ram:a00ccdb4": {
+      "by": "h43",
+      "comment": "runs a sequence of port checks with stack buffers, setting the record state field to 3 on the first failure",
+      "name": "FUN_a00ccdb4",
+      "status": "matched"
+    },
     "ram:a00ccf0c": {
       "by": "hand",
       "comment": "cca38(0); record a8078bb0[p] (24 B) bits 16..17 = 01; read 1 byte via f96400(0, 0x90, 0x6921d) into a807ce50: fail -> bits = 00, byte 2 -> bits = 10",
