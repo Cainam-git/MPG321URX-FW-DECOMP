@@ -4837,7 +4837,7 @@
     },
     "ram:a009f5c8": {
       "by": "hand",
-      "comment": "reads the port register block (record a807db00 + 0x18, MMIO as in a0098300), state in a807d680 + 2 (see header)",
+      "comment": "stores 1 in byte p1 of 0xA80790D0 when bits 24-27 of word +0x90 of the block at word +0x18 of 0x34-byte record p1 (0xA807DB00) differ from byte +2 of 0xB0-byte record p1 (0xA807D680), byte p1 of 0xA80790D8 != 0 and word p1 of 0xA807D648 is above 4 and not 7",
       "name": "FUN_a009f5c8",
       "status": "matched"
     },

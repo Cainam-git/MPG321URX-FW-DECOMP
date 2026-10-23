@@ -1,10 +1,9 @@
 /* leon2s FUN_a00a4524 @ 0xa00a4524 (-mcpu=v8 -Os -g)
- * Finished from mechanical Ghidra C. HDMI TX FRL training, link-training-state
- * step for port param_1: when the port entry of 0xa807db6c differs from its copy in 0xa807873c
- * it logs the state change, copies it, writes 0 to register 0x31 and, if bit 5 of register
- * 0x10 is set, writes 0x20 to register 0x10. Then if FUN_a0091960(port) reports 1 the state
- * becomes 2. The log string is the real one from
- * the firmware.
+ * k = p1. When word k of the array 0xA807DB6C differs from word k of the array 0xA807873C: prints
+ * "ESC[1;33m[HDMI_TX_FRL_Training]: Port%d : DRV_HDMI21_TXDetect_FSM_LTS_L" with p1 through FUN_a0073044, copies
+ * the word into 0xA807873C, calls FUN_a0091cf4(k, 0x31, 0) and, when bit 5 of FUN_a0091d64(k, 0x10) is set,
+ * FUN_a0091cf4(k, 0x10, 0x20). Then stores 2 in word k of 0xA807DB6C when the low byte of FUN_a0091960(k) is 1,
+ * clears byte 0xA80791AA and returns 0.
  */
 extern unsigned char DAT_a80791aa;
 extern int FUN_a0073044(const char *, ...);
