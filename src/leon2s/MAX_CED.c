@@ -56,7 +56,7 @@ void MAX_CED(unsigned int param_1)
 {
     unsigned short ced[4] = {0, 0, 0, 0};
     unsigned char ok = 0;
-    unsigned char lanes;
+    unsigned char a;
     unsigned char i, k;
     unsigned char port = param_1;
     union Ced u;
@@ -64,9 +64,9 @@ void MAX_CED(unsigned int param_1)
     unsigned short val;
 
     if (port == 0)
-        lanes = 2;
+        a = 2;
     else if (port == 1)
-        lanes = 3;
+        a = 3;
     else
         return;
 
@@ -75,25 +75,25 @@ void MAX_CED(unsigned int param_1)
 
     for (i = 0; i < DAT_a807d680[port].n; i++) {
         if (i == 0)
-            ok = FUN_a00a7468(0xf, lanes, 0x2e64) != 0;
+            ok = FUN_a00a7468(0xf, a, 0x2e64) != 0;
         else if (i == 1)
-            ok = FUN_a00a7468(0x1f, lanes, 0x2e64) != 0;
+            ok = FUN_a00a7468(0x1f, a, 0x2e64) != 0;
         else if (i == 2)
-            ok = FUN_a00a7468(0xf, lanes, 0x2e68) != 0;
+            ok = FUN_a00a7468(0xf, a, 0x2e68) != 0;
         else if (i == 3)
-            ok = FUN_a00a7468(0x1f, lanes, 0x2e68) != 0;
+            ok = FUN_a00a7468(0x1f, a, 0x2e68) != 0;
         if (ok) {
             if (i == 0) {
-                u.w = FUN_a00a7314(lanes, 0x2e64);
+                u.w = FUN_a00a7314(a, 0x2e64);
                 ced[0] = u.f.c0;
             } else if (i == 1) {
-                u.w = FUN_a00a7314(lanes, 0x2e64);
+                u.w = FUN_a00a7314(a, 0x2e64);
                 ced[1] = u.f.c1;
             } else if (i == 2) {
-                u.w = FUN_a00a7314(lanes, 0x2e68);
+                u.w = FUN_a00a7314(a, 0x2e68);
                 ced[2] = u.f.c0;
             } else if (i == 3) {
-                u.w = FUN_a00a7314(lanes, 0x2e68);
+                u.w = FUN_a00a7314(a, 0x2e68);
                 ced[3] = u.f.c1;
             }
         } else {
