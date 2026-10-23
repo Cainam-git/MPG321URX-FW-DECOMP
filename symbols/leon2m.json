@@ -15926,6 +15926,13 @@
       "name": "FUN_a0146870",
       "status": "matched"
     },
+    "ram:a014692c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "calls func_0x4008e6e4(n, b) for n 0..7, then tail-calls FUN_a011a9e4(p1, p2, p3, p4, p5, b)",
+      "name": "FUN_a014692c",
+      "status": "matched"
+    },
     "ram:a01469e0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
