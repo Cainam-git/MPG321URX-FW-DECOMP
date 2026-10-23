@@ -7145,6 +7145,12 @@
       "name": "FUN_a00ca074",
       "status": "matched"
     },
+    "ram:a00cad8c": {
+      "by": "h43",
+      "comment": "checks the DAT_a807d250 header, retries FUN_a00c2488 up to 30 times and passes DAT_a807ce50 to FUN_a00c80f0",
+      "name": "FUN_a00cad8c",
+      "status": "matched"
+    },
     "ram:a00caee4": {
       "by": "hand",
       "comment": "buf bytes from c7770(ch, 1); 2-bit field at bit 16 of record a8078bb0[ch] (bit-field); tail c80f0 (see header)",
