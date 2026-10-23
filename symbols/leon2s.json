@@ -5760,6 +5760,12 @@
       "name": "FUN_a00ad3e0",
       "status": "matched"
     },
+    "ram:a00ad478": {
+      "by": "h43",
+      "comment": "writes the 0xcf0132c0-0xcf0132d8 registers with a factor 1 or 8 and updates the two record flags around FUN_a00acff4",
+      "name": "FUN_a00ad478",
+      "status": "matched"
+    },
     "ram:a00ad5a4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
