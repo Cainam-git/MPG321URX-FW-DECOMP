@@ -2055,6 +2055,12 @@
       "name": "FUN_a00700cc",
       "status": "matched"
     },
+    "ram:a00703b8": {
+      "by": "hand",
+      "comment": "returns the byte (DAT_a80788d8 & (1 << n))",
+      "name": "FUN_a00703b8",
+      "status": "matched"
+    },
     "ram:a00703d4": {
       "by": "hand",
       "comment": "returns (DAT_a80788d8 >> 8) & (1 << n) when bit n of DAT_a80788d8 is set, else 0",
