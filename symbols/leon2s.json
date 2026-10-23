@@ -1988,6 +1988,12 @@
       "name": "MAILBOX_DUMP",
       "status": "matched"
     },
+    "ram:a0072b7c": {
+      "by": "h42",
+      "comment": "clears two bytes of DAT_a80788e8 and writes a fixed sequence to the 0xc00c0000, 0x9f100090 and 0x9f120000 registers",
+      "name": "FUN_a0072b7c",
+      "status": "matched"
+    },
     "ram:a0072c6c": {
       "by": "hand",
       "comment": "Ring-buffer dequeue on the 128-byte buffer DAT_a80788e8 with head at +0x80 (0xa8078968) and tail at +0x81 (0xa8078969), all addressed from one base (sethi %hi(0xa8078800); or 0xe8). Returns 0 if head == tail (cmp %g1, %o4; be to the retl at 0xa0072cb0). Otherwise stores buf[tail] to *param_1, re-reads tail, increments it, stores it (stb in the delay slot of be) and clears it if bit 7 is set (wrap at 0x80), returning 1. The source indexes the array as DAT_a80788e8[0x80] / [0x81] and re-reads the tail from memory after the branch.",
