@@ -5729,6 +5729,12 @@
       "name": "FUN_a00a93e4",
       "status": "matched"
     },
+    "ram:a00a9870": {
+      "by": "h53",
+      "comment": "updates the per-port packet state groups from the getters and sends or clears the packets, by input type",
+      "name": "CONV2HDMITX_UpdatePacket",
+      "status": "matched"
+    },
     "ram:a00a9c4c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
