@@ -6899,6 +6899,12 @@
       "name": "FUN_a00c30e4",
       "status": "matched"
     },
+    "ram:a00c3144": {
+      "by": "h43",
+      "comment": "updates the port bit of mask DAT_a8078c5b and the port state byte from FUN_a00c30e4, a timeout and the record status byte",
+      "name": "FUN_a00c3144",
+      "status": "matched"
+    },
     "ram:a00c4e4c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
