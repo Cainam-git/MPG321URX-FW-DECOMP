@@ -12355,6 +12355,13 @@
       "name": "FUN_a0125380",
       "status": "matched"
     },
+    "ram:a01253bc": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets/clears port bit i of DAT_a802c9fb and calls FUN_a0133fbc / FUN_a0133f84 for it",
+      "name": "FUN_a01253bc",
+      "status": "matched"
+    },
     "ram:a01254b8": {
       "by": "h19",
       "cflags": "-mcpu=v8 -O3 -g",
