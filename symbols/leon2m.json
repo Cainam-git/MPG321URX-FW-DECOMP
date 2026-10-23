@@ -5828,6 +5828,13 @@
       "name": "FUN_a00aee44",
       "status": "matched"
     },
+    "ram:a00af44c": {
+      "by": "lead",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "table named ARR_00190cec (GCSE bucket order)",
+      "name": "FUN_a00af44c",
+      "status": "matched"
+    },
     "ram:a00b0034": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
