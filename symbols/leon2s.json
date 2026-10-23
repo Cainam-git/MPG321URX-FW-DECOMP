@@ -7542,6 +7542,12 @@
       "name": "FUN_a00cb3e8",
       "status": "matched"
     },
+    "ram:a00cb7a0": {
+      "by": "hand",
+      "comment": "writes a test pattern, polls register 6 and reads back 16 bytes for the DAT_a8078bb0 record of a port",
+      "name": "FUN_a00cb7a0",
+      "status": "matched"
+    },
     "ram:a00cbb50": {
       "by": "hand",
       "comment": "port record update from DAT_a807d250/DAT_a807ce50 bytes with register writes",
