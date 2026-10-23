@@ -11225,7 +11225,7 @@
       "status": "matched"
     },
     "ram:a0113064": {
-      "by": "hand",
+      "by": "h49",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "p == 0xff: for bits 0..4 set in register 0xCF011A00 calls func_0x4008e3c4(i, 1) and clears bit i in 0xCF011800 / 0xCF011A00; else the same for bit p",
       "name": "FUN_a0113064",

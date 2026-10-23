@@ -38,6 +38,4 @@ void FUN_a0113064(unsigned char param_1)
         REG_cf011800 = REG_cf011800 & uVar5;
         REG_cf011a00 = REG_cf011a00 & uVar5;
     }
-
-    return 0;
 }
