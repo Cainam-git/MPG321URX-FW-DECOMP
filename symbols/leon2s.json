@@ -4496,6 +4496,12 @@
       "name": "FUN_a00a0560",
       "status": "matched"
     },
+    "ram:a00a07b8": {
+      "by": "h43",
+      "comment": "sets one bit, chosen by a table entry, in one of six register words of the port block",
+      "name": "FUN_a00a07b8",
+      "status": "matched"
+    },
     "ram:a00a0b10": {
       "by": "hand",
       "comment": "a0930(p, 0x16 / 0xe / 0x1c / 0xb / 8, v); and 0xc too when 8d800() > 0x82",
