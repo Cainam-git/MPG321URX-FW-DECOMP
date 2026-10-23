@@ -7332,6 +7332,12 @@
       "name": "FUN_a00cb1d4",
       "status": "matched"
     },
+    "ram:a00cb3e8": {
+      "by": "h43",
+      "comment": "fills DAT_a807ce50 with 9,1..8, writes it with FUN_a00c7654/FUN_a00c80f0 and polls register 6 bit 7",
+      "name": "FUN_a00cb3e8",
+      "status": "matched"
+    },
     "ram:a00cbb50": {
       "by": "h45",
       "comment": "port record update from DAT_a807d250/DAT_a807ce50 bytes with register writes",
