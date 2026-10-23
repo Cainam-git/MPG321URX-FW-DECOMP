@@ -18199,6 +18199,12 @@
       "status": "matched",
       "symbol": "inbyte"
     },
+    "ram:a015e9a4": {
+      "by": "hand",
+      "comment": "Calls the function pointer at 0xA802CFF0 with two arguments when it is non-null, else returns 0",
+      "name": "FUN_a015e9a4",
+      "status": "matched"
+    },
     "ram:a015e9d8": {
       "by": "hand",
       "comment": "Loads the function pointer _DAT_a802cfec; if non-null, calls it with the single int argument and returns its result, otherwise returns 0. Frame: save %sp, -104, %sp.",
