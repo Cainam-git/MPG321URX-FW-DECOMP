@@ -13067,6 +13067,13 @@
       "name": "FUN_a012ccf0",
       "status": "matched"
     },
+    "ram:a012cd68": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "per-port DDC enable/disable step: FUN_a0133fbc(1 << i, len, x >> 7) or FUN_a0133f84(1 << i)",
+      "name": "FUN_a012cd68",
+      "status": "matched"
+    },
     "ram:a012ce18": {
       "by": "hand",
       "comment": "return 0xffff (u16)",
