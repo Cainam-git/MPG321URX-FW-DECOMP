@@ -8741,6 +8741,12 @@
       "name": "FUN_a00dd660",
       "status": "matched"
     },
+    "ram:a00dd6b0": {
+      "by": "hand",
+      "comment": "returns DAT_a802b0ae",
+      "name": "FUN_a00dd6b0",
+      "status": "matched"
+    },
     "ram:a00dd6c8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
