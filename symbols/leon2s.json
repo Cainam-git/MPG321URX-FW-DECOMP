@@ -8248,6 +8248,12 @@
       "name": "FUN_a00d3c40",
       "status": "matched"
     },
+    "ram:a00d3eb0": {
+      "by": "hand",
+      "comment": "stores v limited to 10000 (1000 for 0) to DAT_a80779dc",
+      "name": "FUN_a00d3eb0",
+      "status": "matched"
+    },
     "ram:a00d3f54": {
       "by": "hand",
       "comment": "stores 1 to DAT_a8078c34 and calls func_0xa0f73950",
