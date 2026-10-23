@@ -3297,7 +3297,7 @@
     },
     "ram:a008c6f8": {
       "by": "hand",
-      "comment": "for the selectors 4..14 picks the port record bit 6 flag and calls FUN_a008b5d0 or FUN_a008b75c/FUN_a008c5d8 with FUN_a008a040(s)",
+      "comment": "for each selector in the local array {4, 6, 8, 10, 12, 14} with FUN_a0089f98(s) set: picks a 20-byte record of ARR_a807a824 and calls FUN_a008b5d0 or FUN_a008b75c + FUN_a008c5d8",
       "name": "FUN_a008c6f8",
       "status": "matched"
     },
