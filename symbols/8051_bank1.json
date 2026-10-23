@@ -1166,6 +1166,12 @@
       "name": "FUN_CODE_ac5b",
       "status": "matched"
     },
+    "CODE:acf2": {
+      "by": "hand",
+      "comment": "writes v to one of 13 XDATA registers or (14) P3 = v | 0xCC, chosen by sel",
+      "name": "FUN_CODE_acf2",
+      "status": "matched"
+    },
     "CODE:af47": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
@@ -1321,11 +1327,24 @@
       "name": "FUN_CODE_bde9",
       "status": "matched"
     },
+    "CODE:be50": {
+      "by": "hand",
+      "comment": "bit result from the ranges 0x14..0x9C of XDATA 0xA672 / 0xA673, prints both when both are in range",
+      "name": "FUN_CODE_be50",
+      "status": "matched"
+    },
     "CODE:beb5": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
       "comment": "AHB bridge 32-bit write (PBus-to-AHB, regs 0xCD80..0xCD8C)",
       "name": "FUN_CODE_beb5",
+      "status": "matched"
+    },
+    "CODE:bf18": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "sets a 2-bit field of XDATA 0xD533 chosen by n between fixed writes to 0xD807 / 0xD800 / 0xD811 / 0xD80D, tail call 0xD8EA",
+      "name": "FUN_CODE_bf18",
       "status": "matched"
     },
     "CODE:bf7b": {
@@ -1359,6 +1378,13 @@
       "by": "hand",
       "comment": "register bank 3 bit tests: DCDF/DCDE and DCCF/DCCE pending bits -> 9339/b979 or 914b/b8fd, then d214 unless XDATA 0xD511 is 0x20",
       "name": "FUN_CODE_c1c1",
+      "status": "matched"
+    },
+    "CODE:c21d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "flash command through the F0Ex registers, reads three F1C0 bytes into XDATA 0xF064..0xF066",
+      "name": "FUN_CODE_c21d",
       "status": "matched"
     },
     "CODE:c278": {
@@ -1430,6 +1456,19 @@
       "name": "FUN_CODE_c5f0",
       "status": "matched"
     },
+    "CODE:c644": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "XDATA 0xA671..0xA673 from FUN_CODE_aeb2 lookups chosen by 0xA69C and 0xA6A5",
+      "name": "FUN_CODE_c644",
+      "status": "matched"
+    },
+    "CODE:c698": {
+      "by": "hand",
+      "comment": "bit result from the ranges 0x42..0xC7 of XDATA 0xA672 / 0xA673, prints both when both are in range",
+      "name": "FUN_CODE_c698",
+      "status": "matched"
+    },
     "CODE:c73e": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
@@ -1463,6 +1502,12 @@
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
       "comment": "set or clear bit 6 (and clear bits 0, 1) of one of seven XDATA registers chosen by a one-hot selector",
       "name": "FUN_CODE_c87f",
+      "status": "matched"
+    },
+    "CODE:c8cd": {
+      "by": "hand",
+      "comment": "bit result from FUN_CODE_aeb2 of XDATA 0xA755 or 0xA756 (n) and that byte",
+      "name": "FUN_CODE_c8cd",
       "status": "matched"
     },
     "CODE:c965": {
@@ -1499,6 +1544,12 @@
       "name": "FUN_CODE_cad5",
       "status": "matched"
     },
+    "CODE:cb65": {
+      "by": "hand",
+      "comment": "writes 0x10 to one of seven XDATA registers per set bit 0..6 of m",
+      "name": "FUN_CODE_cb65",
+      "status": "matched"
+    },
     "CODE:cbac": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
@@ -1511,6 +1562,12 @@
       "c51opts": "OPTIMIZE(8,SPEED)",
       "comment": "Leon2 STOP: core-control = 0x1003 via the AHB bridge",
       "name": "FUN_CODE_cbf2",
+      "status": "matched"
+    },
+    "CODE:cc38": {
+      "by": "hand",
+      "comment": "prints the ring buffer XDATA 0xA208 from read index 0xA1E5 to write index IDATA 0x47",
+      "name": "FUN_CODE_cc38",
       "status": "matched"
     },
     "CODE:cc7d": {
@@ -2172,11 +2229,35 @@
       "name": "FUN_CODE_def4",
       "status": "matched"
     },
+    "CODE:defa": {
+      "by": "hand",
+      "comment": "returns IDATA 0x4B",
+      "name": "FUN_CODE_defa",
+      "status": "matched"
+    },
     "CODE:deff": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
       "comment": "calls FUN_CODE_568f as a tail jump",
       "name": "thunk_FUN_CODE_568f",
+      "status": "matched"
+    },
+    "CODE:df02": {
+      "by": "hand",
+      "comment": "sets bit 0x0D",
+      "name": "FUN_CODE_df02",
+      "status": "matched"
+    },
+    "CODE:df05": {
+      "by": "hand",
+      "comment": "clears bit 0x0D",
+      "name": "FUN_CODE_df05",
+      "status": "matched"
+    },
+    "CODE:df08": {
+      "by": "hand",
+      "comment": "returns bit 0x0D",
+      "name": "FUN_CODE_df08",
       "status": "matched"
     },
     "CODE:df0b": {
