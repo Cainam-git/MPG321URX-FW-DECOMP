@@ -5151,6 +5151,13 @@
       "name": "FUN_a00a5714",
       "status": "matched"
     },
+    "ram:a00a5908": {
+      "by": "h50",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Optional FUN_a0146a80 row loop, 27 FUN_a00b32e4 calls relative to (x, y), then FUN_a00b9750 for mode 1",
+      "name": "FUN_a00a5908",
+      "status": "matched"
+    },
     "ram:a00a788c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
