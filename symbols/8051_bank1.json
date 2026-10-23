@@ -2346,13 +2346,13 @@
     },
     "ram:d66e": {
       "by": "autoc",
-      "comment": "mechanical match (tools/auto8051.py); not yet named or documented",
+      "comment": "bits 0-1 of XDATA 0xA6A5: 0 -> XDATA 0xA76D/E/F = 1, 0xB2, 0x50; 1 -> 1, 0x1A, 0x50; otherwise no write",
       "name": "FUN_CODE_d66e",
       "status": "matched"
     },
     "ram:d75e": {
       "by": "autoc",
-      "comment": "mechanical match (tools/auto8051.py); not yet named or documented",
+      "comment": "clears bit 0 of XDATA 0xDCDE, 0xDCDF, 0xDCCE, 0xDCCF, sets bits 0-1 of XDATA 0xF161, clears bits 3-4 of XDATA 0xCC87",
       "name": "FUN_CODE_d75e",
       "status": "matched"
     },
@@ -2388,13 +2388,13 @@
     },
     "ram:dc51": {
       "by": "autoc",
-      "comment": "mechanical match (tools/auto8051.py); not yet named or documented",
+      "comment": "sets bit 7 of XDATA 0xF1DF, then clears bit 0 of XDATA 0xF1A8 when XDATA 0xD511 == 0x1A",
       "name": "FUN_CODE_dc51",
       "status": "matched"
     },
     "ram:dc67": {
       "by": "autoc",
-      "comment": "mechanical match (tools/auto8051.py); not yet named or documented",
+      "comment": "sets bit 0 of XDATA 0xF1A8 when XDATA 0xD511 == 0x1A, then clears bit 7 of XDATA 0xF1DF",
       "name": "FUN_CODE_dc67",
       "status": "matched"
     },

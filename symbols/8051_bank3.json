@@ -2,7 +2,7 @@
   "functions": {
     "ram:1d4d": {
       "by": "autoc",
-      "comment": "mechanical match (tools/auto8051.py); not yet named or documented",
+      "comment": "calls FUN_CODE_0030()",
       "name": "FUN_CODE_1d4d",
       "status": "matched"
     }

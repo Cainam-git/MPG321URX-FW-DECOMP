@@ -1,8 +1,8 @@
-/* leon2m FUN_a00295a4 @ 0xa00295a4  main() of the Big chip (MATCH -mcpu=v8 -Os -g, gcc 3.4.4, autoc).
+/* leon2m FUN_a00295a4 @ 0xa00295a4 (-mcpu=v8 -Os -g)
  * Called by the reset code (FUN_a0028ff0) once processor state, windows, stack and trap base are set.
- * It runs from the RAM copy of the image (calls carry RAM-relative displacements; firmware address = Ghidra's
- * func_0x000XXXXX + 0xA0060000): three one-time initialisations FUN_a008796c, FUN_a015266c, FUN_a0087020, then an
- * endless loop over the tasks FUN_a01387a4, FUN_a0153018, FUN_a0087430, FUN_a00dcec4.
+ * The calls carry displacements relative to the RAM copy of the image (firmware address = Ghidra's
+ * func_0x000XXXXX + 0xA0060000). Calls FUN_a008796c, FUN_a015266c and FUN_a0087020 once, then FUN_a01387a4,
+ * FUN_a0153018, FUN_a0087430 and FUN_a00dcec4 in an endless loop.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

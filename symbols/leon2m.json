@@ -1562,7 +1562,7 @@
     },
     "ram:a00295a4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "called by the reset code FUN_a0028ff0: calls FUN_a008796c, FUN_a015266c, FUN_a0087020 once, then FUN_a01387a4, FUN_a0153018, FUN_a0087430, FUN_a00dcec4 in an endless loop",
       "name": "FUN_a00295a4",
       "status": "matched"
     },

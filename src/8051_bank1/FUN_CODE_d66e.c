@@ -1,5 +1,7 @@
 /* 8051_bank1 FUN_CODE_d66e @ 0xd66e  OPTIMIZE(7,SPEED)
- * Mechanical: Ghidra's C cleaned by tools/auto8051.py; Ghidra's symbol names are kept.
+ * When bits 0-1 of XDATA 0xA6A5 are 0, stores 1, 0xB2, 0x50 in XDATA 0xA76D, 0xA76E, 0xA76F; when they are 1,
+ * stores 1, 0x1A, 0x50; for 2 or 3 nothing is written.
+ * Source form: Ghidra's symbol names are kept.
  */
 unsigned char xdata DAT_EXTMEM_a6a5 _at_ 0xa6a5;
 unsigned char xdata DAT_EXTMEM_a76d _at_ 0xa76d;
