@@ -2765,6 +2765,12 @@
       "name": "FUN_a0086bd8",
       "status": "matched"
     },
+    "ram:a0086c48": {
+      "by": "h42",
+      "comment": "fills a 4-byte output from the port record, limited by DAT_a807cd68/DAT_a807cd00, and for port 0 from the FUN_a00a6bb8(k, 0x80) code",
+      "name": "FUN_a0086c48",
+      "status": "matched"
+    },
     "ram:a0086df4": {
       "by": "hand",
       "comment": "passes a 2-byte buffer (bit 7 of the second byte from bit 4 of ARR_a807cd2e[port]) to FUN_a00863d4 and returns 1 when it returns non-zero",
