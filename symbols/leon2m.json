@@ -10247,6 +10247,12 @@
       "name": "FUN_a00f6f10",
       "status": "matched"
     },
+    "ram:a00f6f7c": {
+      "by": "hand",
+      "comment": "writes its byte argument to register 0xcf00ef20",
+      "name": "FUN_a00f6f7c",
+      "status": "matched"
+    },
     "ram:a00f6fac": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
