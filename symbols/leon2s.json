@@ -2528,7 +2528,7 @@
     },
     "ram:a007d688": {
       "by": "hand",
-      "comment": "Checks the per-channel SCDC values of one port after a settle count and sets word 0 of its ARR_a807ccc4 record, with RVGA index stepping and debug prints",
+      "comment": "For one port, after a wait counter: checks the per-channel SCDC values and sets word 0 of its ARR_a807ccc4 record, with RVGA index stepping and debug prints",
       "name": "DRV_HDMI_EQScan_FSM_PHY_ChkError",
       "status": "matched"
     },
@@ -2558,7 +2558,7 @@
     },
     "ram:a007ed88": {
       "by": "hand",
-      "comment": "PHY init of one port (debug name DRV_HDMI_EQScan_FSM_PHY_Init): register writes, clock-dependent record halfwords and state record reset",
+      "comment": "PHY init of one port (debug name DRV_HDMI_EQScan_FSM_PHY_Init): register writes, clock-dependent record halfwords and a reset of the port record",
       "name": "HDMI_LINK_DESCRAMBLE_BIT_RATIO_AUTO_MODE",
       "status": "matched"
     },
@@ -4831,7 +4831,7 @@
     "ram:a009ec38": {
       "by": "hand",
       "cflags": "-mcpu=v8 -Os -g -msoft-float",
-      "comment": "HDMI 2.1 link-training error check of port 0/1: FRL rate field handling, TxFFE lane updates, SR detect and state word updates",
+      "comment": "Port 0/1 check named by the firmware DRV_HDMI21_RXDetect_FSM_LTS_Chk_Err: FRL rate field handling, TxFFE lane updates, SR detect and status word updates",
       "name": "DRV_HDMI21_RXDetect_FSM_LTS_Chk_Err",
       "status": "matched"
     },
@@ -5481,7 +5481,7 @@
     },
     "ram:a00a4524": {
       "by": "autoc",
-      "comment": "HDMI TX FRL training, link-training-state step for port param_1: when the port entry of 0xa807db6c differs from its copy in 0xa807873c it logs the state change, copies it, writes 0 to register 0x31 and, if bit 5 of register 0x10 is set, writes 0x20 to register 0x10. Then if FUN_a0091960(port) reports 1 the state becomes 2. The log string is the one from the firmware.",
+      "comment": "For port param_1: when the port entry of 0xa807db6c differs from its copy in 0xa807873c it logs the state change, copies it, writes 0 to register 0x31 and, if bit 5 of register 0x10 is set, writes 0x20 to register 0x10. Then if FUN_a0091960(port) reports 1 the state becomes 2. The log string is the one from the firmware.",
       "name": "FUN_a00a4524",
       "status": "matched"
     },
