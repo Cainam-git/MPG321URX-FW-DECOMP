@@ -6152,6 +6152,12 @@
       "name": "FUN_a00add48",
       "status": "matched"
     },
+    "ram:a00add8c": {
+      "by": "h43",
+      "comment": "sets a 2-bit field of register 0xcf014758/0xcf01475c and a bit of mask DAT_a807de70 according to mode",
+      "name": "FUN_a00add8c",
+      "status": "matched"
+    },
     "ram:a00adf64": {
       "by": "autoc",
       "comment": "Returns bit (param_1 * 4 + param_2) of the status byte at 0xa807de70: four status bits per port. Ghidra had added a shift mask.",
