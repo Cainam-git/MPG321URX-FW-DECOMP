@@ -2471,6 +2471,12 @@
       "name": "FUN_a007ed0c",
       "status": "matched"
     },
+    "ram:a007ed88": {
+      "by": "hand",
+      "comment": "PHY init of one port (debug name DRV_HDMI_EQScan_FSM_PHY_Init): register writes, clock-dependent record halfwords and state record reset",
+      "name": "HDMI_LINK_DESCRAMBLE_BIT_RATIO_AUTO_MODE",
+      "status": "matched"
+    },
     "ram:a007f634": {
       "by": "hand",
       "comment": "DRV_HDMI_Config_BCH(p != 2, 1) when FUN_a0073520(p) is non-zero",
