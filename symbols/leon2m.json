@@ -1871,6 +1871,12 @@
       "name": "FUN_a002cf78",
       "status": "matched"
     },
+    "ram:a002cfac": {
+      "by": "hand",
+      "comment": "returns DAT_a802b0c8",
+      "name": "FUN_a002cfac",
+      "status": "matched"
+    },
     "ram:a002cfb8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
