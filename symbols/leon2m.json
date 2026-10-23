@@ -11263,6 +11263,13 @@
       "name": "FUN_a0115a44",
       "status": "matched"
     },
+    "ram:a0115bd4": {
+      "by": "h61",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "moves the nibbles at register offsets 0xc6/0xc7 and 0xc8/0xc9 of the port-selected block by x - 7, runs two meas sequences on 0xcf012e00/0xcf012f2c, restores the nibbles, returns the OR of the sums",
+      "name": "FUN_a0115bd4",
+      "status": "matched"
+    },
     "ram:a01166d8": {
       "by": "h22",
       "cflags": "-mcpu=v8 -O3 -g",
