@@ -17011,9 +17011,9 @@
       "status": "matched"
     },
     "ram:a01539b8": {
-      "by": "permuter",
+      "by": "h49",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "writes the 16-byte pattern 0x1a75e6 to EEPROM 0x300..0x43f (20 writes)",
       "name": "FUN_a01539b8",
       "status": "matched"
     },
