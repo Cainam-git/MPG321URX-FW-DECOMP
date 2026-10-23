@@ -1799,6 +1799,12 @@
       "name": "FUN_a002c4b8",
       "status": "matched"
     },
+    "ram:a002c4c0": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a002c4c0",
+      "status": "matched"
+    },
     "ram:a002c4d0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
