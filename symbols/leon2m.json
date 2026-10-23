@@ -5433,6 +5433,13 @@
       "name": "FUN_a00aacb4",
       "status": "matched"
     },
+    "ram:a00aad30": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns 0 or 1 for an item index by page byte 0xa802b08f and DAT_a802d290 flags and limits",
+      "name": "FUN_a00aad30",
+      "status": "matched"
+    },
     "ram:a00aaf48": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
