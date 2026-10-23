@@ -9073,6 +9073,13 @@
       "name": "FUN_a00ea1f0",
       "status": "matched"
     },
+    "ram:a00ed530": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3",
+      "comment": "writes v & 0xf to the field of entry b of tables 0xa8026918/0xa8026908/0xa80268f8 and 0 or 1 (by v 6..11) to two more table fields with FUN_a00e0774; returns 0",
+      "name": "FUN_a00ed530",
+      "status": "matched"
+    },
     "ram:a00ed70c": {
       "by": "h50",
       "cflags": "-mcpu=v8 -O3 -g",
