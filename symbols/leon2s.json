@@ -7315,6 +7315,12 @@
       "name": "FUN_a00d2434",
       "status": "matched"
     },
+    "ram:a00d24ac": {
+      "by": "h43",
+      "comment": "writes nine table words into fields of registers 0xd0013f18-0xd0013f28 through the ROM read-modify-write helpers",
+      "name": "FUN_a00d24ac",
+      "status": "matched"
+    },
     "ram:a00d25f4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
