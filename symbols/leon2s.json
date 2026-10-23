@@ -8236,7 +8236,7 @@
     },
     "ram:a00dbc8c": {
       "by": "hand",
-      "comment": "steps a three-state toggle through FUN_a00db9d4/FUN_a00dba70 with a 500-tick retry",
+      "comment": "steps a three-state byte through FUN_a00db9d4/FUN_a00dba70 calls, retried when the time difference exceeds 500",
       "name": "FUN_a00dbc8c",
       "status": "matched"
     },
