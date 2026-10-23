@@ -1388,6 +1388,12 @@
       "name": "FUN_CODE_d6d1",
       "status": "matched"
     },
+    "CODE:d751": {
+      "by": "hand",
+      "comment": "0x041C == 2: 0x03EE / 0x040A = position 0x0117; else 0x0414, 0x0429, 0x0150, 0x01DE, 0x0410 = the record at 0x03F2",
+      "name": "FUN_CODE_d751",
+      "status": "matched"
+    },
     "CODE:d7d0": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
