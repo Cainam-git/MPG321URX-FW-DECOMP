@@ -4,13 +4,13 @@
 
 | Processor | Section | Matched bytes | Total bytes | Matched | Matched functions | Functions |
 |---|---|---:|---:|---:|---:|---:|
-| Main processor | `leon2m` | 534,641 | 810,621 | 66.0 % | 2,792 | 3,731 |
-| Input processor | `leon2s` | 239,765 | 402,113 | 59.6 % | 1,405 | 1,676 |
-| Helper processor | `8051_bank0` (boot loader) | 5,701 | 5,701 | 100.0 % | 46 | 46 |
-| Helper processor | `8051_bank1` (main application) | 37,344 | 49,088 | 76.1 % | 351 | 412 |
-| Helper processor | `8051_bank2` (update agent) | 46,667 | 49,602 | 94.1 % | 268 | 273 |
+| Main processor | `leon2m` | 613,177 | 920,821 | 66.6 % | 2,792 | 3,731 |
+| Input processor | `leon2s` | 241,141 | 410,149 | 58.8 % | 1,427 | 1,676 |
+| Helper processor | `8051_bank0` (boot loader) | 6,009 | 6,009 | 100.0 % | 46 | 46 |
+| Helper processor | `8051_bank1` (main application) | 40,024 | 52,137 | 76.8 % | 351 | 412 |
+| Helper processor | `8051_bank2` (update agent) | 49,007 | 51,942 | 94.3 % | 268 | 273 |
 | Helper processor | `8051_bank3` (mostly tables) | 4 | 15,768 | 0.0 % | 1 | 1,205 |
-| **Total** | | **864,122** | **1,332,893** | **64.8 %** | **4,863** | **7,343** |
+| **Total** | | **949,362** | **1,456,826** | **65.2 %** | **4,885** | **7,343** |
 
 To recount and update this table and the progress bars in the README, run `python3 -I tools/stats.py`. Byte counts
 come from the function sizes in `symbols/<section>.functions.json`.
@@ -28,9 +28,9 @@ come from the function sizes in `symbols/<section>.functions.json`.
   `tools/splits.py` and `tools/mergetails.py`, and by hand where a function's jump-table case blocks, return tail or
   a second routine lay outside or inside its listed range. In 8051 bank 3, most of the 1,205 entries are table bytes
   that the import marked as code; that bank is mostly data.
-- **Known limitation of the byte counts:** for some functions with switch tables, the size recorded in the function
-  table is smaller than the function's range. The counts therefore understate both the matched and the total bytes.
-  A recount based on the ranges is planned.
+- **Byte counts** are the address ranges of the entries in `symbols/<section>.functions.json` (recounted from the
+  ranges on 2026-10-23). In 8051 bank 3 the imported entries overlap each other, so that bank still uses the
+  sizes from the import until its entries are checked.
 
 ## Verification
 

@@ -20,10 +20,10 @@ firmware:
 ## Progress
 
 ```
-Main processor     [#############-------]   66 %
-Input processor    [###########---------]   60 %
-Helper processor   [##############------]   75 %
-Overall            [############--------]   65 %
+Main processor     [#############-------]   67 %
+Input processor    [###########---------]   59 %
+Helper processor   [###############-----]   76 %
+Overall            [#############-------]   65 %
 ```
 
 Percentages are by code size. More than 4,800 of roughly 7,300 functions are done, and the helper processor's boot

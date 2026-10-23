@@ -112,7 +112,7 @@
    "name": "FUN_CODE_0342",
    "start": 834,
    "end": 891,
-   "size": 52
+   "size": 57
   },
   {
    "name": "FUN_CODE_037b",
@@ -160,13 +160,13 @@
    "name": "FUN_CODE_0439",
    "start": 1081,
    "end": 1342,
-   "size": 247
+   "size": 261
   },
   {
    "name": "FUN_CODE_056e",
    "start": 1390,
    "end": 1431,
-   "size": 32
+   "size": 41
   },
   {
    "name": "FUN_CODE_0588",
@@ -268,7 +268,7 @@
    "name": "FUN_CODE_083c",
    "start": 2108,
    "end": 2254,
-   "size": 206
+   "size": 146
   },
   {
    "name": "FUN_CODE_08ce",
@@ -442,7 +442,7 @@
    "name": "FUN_CODE_1c3c",
    "start": 7228,
    "end": 8783,
-   "size": 208
+   "size": 1555
   },
   {
    "name": "FUN_CODE_224f",
@@ -508,7 +508,7 @@
    "name": "FUN_CODE_27f8",
    "start": 10232,
    "end": 10266,
-   "size": 20
+   "size": 34
   },
   {
    "name": "FUN_CODE_2809",
@@ -520,7 +520,7 @@
    "name": "FUN_CODE_2820",
    "start": 10272,
    "end": 11070,
-   "size": 197
+   "size": 798
   },
   {
    "name": "FUN_CODE_2b3e",
@@ -664,7 +664,7 @@
    "name": "FUN_CODE_5f73",
    "start": 24435,
    "end": 24858,
-   "size": 62
+   "size": 423
   },
   {
    "name": "FUN_CODE_611a",
@@ -718,7 +718,7 @@
    "name": "FUN_CODE_6c34",
    "start": 27700,
    "end": 28085,
-   "size": 74
+   "size": 385
   },
   {
    "name": "FUN_CODE_6db5",
@@ -760,7 +760,7 @@
    "name": "FUN_CODE_738c",
    "start": 29580,
    "end": 29871,
-   "size": 290
+   "size": 291
   },
   {
    "name": "FUN_CODE_74af",
@@ -784,13 +784,13 @@
    "name": "FUN_CODE_78ba",
    "start": 30906,
    "end": 31243,
-   "size": 204
+   "size": 337
   },
   {
    "name": "FUN_CODE_7a0b",
    "start": 31243,
    "end": 31578,
-   "size": 334
+   "size": 335
   },
   {
    "name": "FUN_CODE_7b5a",
@@ -976,7 +976,7 @@
    "name": "FUN_CODE_9bde",
    "start": 39902,
    "end": 40106,
-   "size": 17
+   "size": 204
   },
   {
    "name": "FUN_CODE_9caa",
@@ -1000,7 +1000,7 @@
    "name": "FUN_CODE_9f04",
    "start": 40708,
    "end": 40904,
-   "size": 195
+   "size": 196
   },
   {
    "name": "FUN_CODE_9fc8",
@@ -1084,7 +1084,7 @@
    "name": "FUN_CODE_a627",
    "start": 42535,
    "end": 42703,
-   "size": 160
+   "size": 168
   },
   {
    "name": "FUN_CODE_a6cf",
@@ -1180,7 +1180,7 @@
    "name": "FUN_CODE_af47",
    "start": 44871,
    "end": 45020,
-   "size": 33
+   "size": 149
   },
   {
    "name": "FUN_CODE_afdc",
