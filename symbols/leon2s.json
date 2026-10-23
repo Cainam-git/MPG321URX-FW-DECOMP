@@ -7309,6 +7309,12 @@
       "name": "FUN_a00c1550",
       "status": "matched"
     },
+    "ram:a00c1778": {
+      "by": "hand",
+      "comment": "resets the 16-byte record DAT_a807d5c8[port] and four 0xff bytes, then per flag and port calls func_0xa0fb67b8 / func_0xa0fb6aa0 / func_0xa0fb6c98",
+      "name": "FUN_a00c1778",
+      "status": "matched"
+    },
     "ram:a00c18fc": {
       "by": "autoc",
       "comment": "Calls func_0xa0fb65c4(2, 0x41, 0x10), func_0xa0fb65c4(2, 0x3f, 0x74), func_0xa0fb69fc(2, 0x3f, 0x74), func_0xa0fb6aa0(2, 0x43, 1, 1), func_0xa0fb65c4(2, 0x301, 4), func_0xa0fb65c4(2, 0x30e, 0xd), then func_0xa0fb69fc(2, r, v) for (r, v) = (0xa6, 0x41), (0xa4, 0), (0xa5, 1), (0xa7, 0xd), (0xa4, 0x20)",
