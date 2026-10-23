@@ -11193,6 +11193,13 @@
       "name": "FUN_a0115684",
       "status": "matched"
     },
+    "ram:a011579c": {
+      "by": "h61",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reads register offset 0xc8/0xc9 (by sel) of the port-selected register block with page 0 and returns its low or high nibble or the whole byte",
+      "name": "FUN_a011579c",
+      "status": "matched"
+    },
     "ram:a01166d8": {
       "by": "h22",
       "cflags": "-mcpu=v8 -O3 -g",
