@@ -4382,6 +4382,12 @@
       "name": "FUN_a009c58c",
       "status": "matched"
     },
+    "ram:a009c5b4": {
+      "by": "h42",
+      "comment": "prints the BCH messages and writes register fields +0xc0/+0xc4/+0xbc of the port register block depending on en and the record halfword +8",
+      "name": "DRV_HDMI_Config_BCH",
+      "status": "matched"
+    },
     "ram:a009c6e4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
