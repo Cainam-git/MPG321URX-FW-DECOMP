@@ -5160,6 +5160,12 @@
       "name": "FUN_a00a2564",
       "status": "matched"
     },
+    "ram:a00a268c": {
+      "by": "hand",
+      "comment": "returns byte +0x158 of DAT_a807d7e0[port]",
+      "name": "FUN_a00a268c",
+      "status": "matched"
+    },
     "ram:a00a26a8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
