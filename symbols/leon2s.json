@@ -7500,6 +7500,12 @@
       "name": "FUN_a00ca4e8",
       "status": "matched"
     },
+    "ram:a00ca6d4": {
+      "by": "hand",
+      "comment": "writes a 16-byte ROM table through FUN_a00c7654, polls register 8 and reads 32 bytes into DAT_a807d088",
+      "name": "FUN_a00ca6d4",
+      "status": "matched"
+    },
     "ram:a00cad8c": {
       "by": "hand",
       "comment": "checks the DAT_a807d250 header, retries FUN_a00c2488 up to 30 times and passes DAT_a807ce50 to FUN_a00c80f0",
