@@ -13433,6 +13433,13 @@
       "name": "FUN_a012d4f8",
       "status": "matched"
     },
+    "ram:a012e2ac": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "expands three key-XORed 32-byte blocks into 0x200-byte tables (/100 scaling by DAT_001a31a8) for FUN_a010ae8c",
+      "name": "FUN_a012e2ac",
+      "status": "matched"
+    },
     "ram:a012e3ec": {
       "by": "h41",
       "cflags": "-mcpu=v8 -O3 -g",
