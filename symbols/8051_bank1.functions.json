@@ -1105,6 +1105,12 @@
    "size": 157
   },
   {
+   "name": "FUN_CODE_aa93",
+   "start": 43667,
+   "end": 43820,
+   "size": 153
+  },
+  {
    "name": "FUN_CODE_abc4",
    "start": 43972,
    "end": 44123,
@@ -1211,6 +1217,24 @@
    "start": 46442,
    "end": 46578,
    "size": 136
+  },
+  {
+   "name": "FUN_CODE_b5f2",
+   "start": 46578,
+   "end": 46713,
+   "size": 135
+  },
+  {
+   "name": "FUN_CODE_b679",
+   "start": 46713,
+   "end": 46846,
+   "size": 133
+  },
+  {
+   "name": "FUN_CODE_b6fe",
+   "start": 46846,
+   "end": 46977,
+   "size": 131
   },
   {
    "name": "FUN_CODE_b781",
