@@ -1132,6 +1132,13 @@
       "name": "FUN_CODE_a9f6",
       "status": "matched"
     },
+    "CODE:aa93": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "sends 0x200 bytes from XDATA 0xF800 to 0xF1C3 and runs two register sequences that advance the long at 0xA75F",
+      "name": "FUN_CODE_aa93",
+      "status": "matched"
+    },
     "CODE:abc4": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
