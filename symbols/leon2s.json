@@ -4553,7 +4553,7 @@
     },
     "ram:a009ea34": {
       "by": "permuter",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "mode m 1..5: prints its string, then sets the low (p1 0) or high (p1 1) nibble of register 0xCF01474C to m - 1",
       "name": "FUN_a009ea34",
       "status": "matched"
     },
