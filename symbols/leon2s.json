@@ -4659,6 +4659,12 @@
       "name": "FUN_a00a2374",
       "status": "matched"
     },
+    "ram:a00a2418": {
+      "by": "h43",
+      "comment": "calls FUN_a00a73ac on the port record per set bit of a mask, then with 8 and 9, when FUN_a008d800() > 0x82",
+      "name": "FUN_a00a2418",
+      "status": "matched"
+    },
     "ram:a00a2564": {
       "by": "h43",
       "comment": "calls FUN_a00a73d4 for both records per set bit of a mask when FUN_a008d800() > 0x82",
