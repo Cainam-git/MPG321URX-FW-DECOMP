@@ -7,7 +7,9 @@ to DATA instead and can never match. This tool decodes every function of the ban
 writes (MOV/INC/DEC/XCH/DJNZ on Rn, and direct writes to DATA 0..7 = register bank 0), adds the usage of every
 function it calls or jumps to (transitively), and writes symbols/<bank>.orc in C51's REGFILE format:
     "MASK  NAME" per line; mask bit 15 = usage known, 0x2300 = accumulator/DPTR (baseline seen in Keil's own files),
-    low byte = registers: bit 0 = R7, bit 1 = R6, ... bit 7 = R0 (worked out by experiment).
+    low byte = registers: bit 0 = R7, bit 1 = R6, ... bit 7 = R0 (worked out by experiment); bit 12 (0x1000) = the
+    function (or a callee) changes the carry flag. Without it Keil assumes C survives the call and drops a SETB C /
+    CLR C it needs after the call (FUN_CODE_c0a1: 'c3e4() > 100' after a bit-returning call).
 Each function is written as NAME and _NAME (Keil prefixes functions that take register parameters).
 usage: regfile8051.py <bank> [<bank> ...]"""
 import json, pathlib, sys
@@ -30,6 +32,9 @@ for op in range(0xD8, 0xE0): LEN[op] = 2          # DJNZ Rn,rel
 LEN[0x26] = LEN[0x27] = 1; LEN[0x76] = LEN[0x77] = 2; LEN[0x83] = LEN[0x93] = 1; LEN[0x73] = 1
 
 
+CY = 8   # pseudo register number for the carry flag in the usage sets
+
+
 def scan(code, start, end):
     """(registers written as R0..R7 bit set, call/jump targets)"""
     regs, targets, pc = set(), set(), start
@@ -41,6 +46,12 @@ def scan(code, start, end):
         if op in (0x75, 0xF5, 0xD0, 0x05, 0x15, 0xD5, 0xC5, 0x42, 0x43, 0x52, 0x53, 0x62, 0x63, 0x86, 0x87) or 0x88 <= op <= 0x8F:
             if pc + 1 < len(code) and code[pc + 1] < 8: regs.add(code[pc + 1])
         if op == 0x85 and pc + 2 < len(code) and code[pc + 2] < 8: regs.add(code[pc + 2])   # MOV dst,src: dst is byte 3
+        if (0x24 <= op <= 0x2F or 0x34 <= op <= 0x3F or 0x94 <= op <= 0x9F or 0xB4 <= op <= 0xBF
+                or op in (0xC3, 0xD3, 0xB3, 0x13, 0x33, 0xA4, 0x84, 0xD4, 0xA2, 0x72, 0x82, 0xA0, 0xB0)
+                or (op in (0xC2, 0xD2, 0xB2) and pc + 1 < len(code) and code[pc + 1] == 0xD7)
+                or (op in (0xF5, 0x75, 0xD0, 0x85, 0x42, 0x43, 0x52, 0x53, 0x62, 0x63) and pc + 1 < len(code)
+                    and code[pc + 1] == 0xD0)):
+            regs.add(CY)   # writes the carry: ADD/ADDC/SUBB/CJNE/RRC/RLC/MUL/DIV/DA, CLR/SETB/CPL C, MOV/ANL/ORL C, PSW
         if op in (0x12, 0x02) and pc + 2 < len(code): targets.add((code[pc + 1] << 8) | code[pc + 2])
         if op & 0x1F in (0x01, 0x11): targets.add(((pc + 2) & 0xF800) | ((op & 0xE0) << 3) | code[pc + 1])
         pc += n
@@ -63,7 +74,7 @@ def build(bank):
         usage[fn] = regs; return regs
     lines = []
     for f in sorted(fs, key=lambda f: f["start"]):
-        regs = use(f["name"]); mask = 0xA300 | sum(1 << (7 - r) for r in regs)
+        regs = use(f["name"]); mask = 0xA300 | sum(1 << (7 - r) for r in regs if r != CY) | (0x1000 if CY in regs else 0)
         for nm in (f["name"].upper(), "_" + f["name"].upper()): lines.append(f"{mask:04X}  {nm}")
     out = ROOT / "symbols" / f"{bank}.orc"; out.write_text("\n".join(lines) + "\n")
     return out, len(fs)
