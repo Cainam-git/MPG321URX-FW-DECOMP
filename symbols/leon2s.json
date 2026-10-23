@@ -3337,6 +3337,12 @@
       "name": "FUN_a008ecb8",
       "status": "matched"
     },
+    "ram:a008ed50": {
+      "by": "h52",
+      "comment": "under the 0xcf03c840 semaphore sets or clears port bits of 0xcf011600 and related registers by port, code and mode; writes 0xcf0124bc from the code",
+      "name": "FUN_a008ed50",
+      "status": "matched"
+    },
     "ram:a008f270": {
       "by": "autoc",
       "comment": "switch cases in natural order 0, 1, 2",
