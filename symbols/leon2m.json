@@ -8052,6 +8052,13 @@
       "name": "FUN_a00da184",
       "status": "matched"
     },
+    "ram:a00da4b8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "UserGetCECSourceMode: stores FUN_a0083d80() in byte +0x1b4, copies bit 10 or 9 of word +0xa8 to bit 11 and two bytes to +0x181/+0x182, sets or clears bit 7 of 0xa802cffe",
+      "name": "FUN_a00da4b8",
+      "status": "matched"
+    },
     "ram:a00da65c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
