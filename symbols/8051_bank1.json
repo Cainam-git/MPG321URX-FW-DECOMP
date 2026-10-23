@@ -1825,6 +1825,12 @@
       "name": "FUN_CODE_d737",
       "status": "matched"
     },
+    "CODE:d785": {
+      "by": "hand",
+      "comment": "Bit result",
+      "name": "FUN_CODE_d785",
+      "status": "matched"
+    },
     "CODE:d7ac": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
