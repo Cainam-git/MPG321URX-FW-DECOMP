@@ -4889,6 +4889,12 @@
       "name": "FUN_a00a1098",
       "status": "matched"
     },
+    "ram:a00a1104": {
+      "by": "hand",
+      "comment": "sets bytes +0x182/+0x181 of DAT_a807d7e0[port] and calls FUN_a00a0268(port, &record+0x162) when byte +0x183 is 0",
+      "name": "FUN_a00a1104",
+      "status": "matched"
+    },
     "ram:a00a13a0": {
       "by": "hand",
       "comment": "copies fields of port register word 0x1a into ARR_a807d7e0[port] when r[0x19] low 24 bits are 0x1a, else sets bytes 0x10c/0x10d and calls FUN_a009fcb8; then FUN_a00a0b98(port, 0x11, 0)",
