@@ -1,5 +1,5 @@
 /* leon2m FUN_a00c6690 @ 0xa00c6690-0xa00c68d8 (146 words), flags -mcpu=v8 -O3 -g. Called by FUN_a00ccf34.
- * UART command handler: converts the three ASCII digits at bytes 7-9 of the port's receive record (0xa802d040 for
+ * Command handler: converts the three ASCII digits at bytes 7-9 of the port's receive record (0xa802d040 for
  * port 2, 0xa802d098 for port 3, 0xa802d0d0 otherwise) with FUN_a00bae38. A result of 0xff (not digits) or above
  * 100 returns 0xff. Otherwise the value is stored in byte 0xa802d29a, FUN_a00d7de0(), FUN_a00d4998() and
  * FUN_a00b88cc() run, the reply "5600+\r" is written into the port's transmit buffer (FUN_a00baa6c), the port's

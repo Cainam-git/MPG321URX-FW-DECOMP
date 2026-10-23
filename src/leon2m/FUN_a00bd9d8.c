@@ -1,5 +1,5 @@
 /* leon2m FUN_a00bd9d8 @ 0xa00bd9d8-0xa00bdb48 (92 words).
- * Builds a 21-byte UART reply in the buffer at 0xa802d078: [0] = FUN_a015463c(0x2e, 0), [1] = 'b', [2..6] =
+ * Builds a 21-byte reply in the buffer at 0xa802d078: [0] = FUN_a015463c(0x2e, 0), [1] = 'b', [2..6] =
  * FUN_a015463c(0x2e, 2..6), then the bytes 3.. of the record at 0xa802d274 (as many as its byte 2 says) from [7] on,
  * and [0x14] = '\r'. Clears the port's receive state (as in FUN_a00bed38) and tail-calls FUN_a01487e8(port, 0x15,
  * buffer). Same frame code as FUN_a00bc258.

@@ -1,5 +1,5 @@
 /* leon2m FUN_a00cb9d4 @ 0xa00cb9d4-0xa00cbbb0 (119 words).
- * UART command handler: takes byte 9 of the port's receive record (0xa802d040 for port 2, 0xa802d098 for port 3,
+ * Command handler: takes byte 9 of the port's receive record (0xa802d040 for port 2, 0xa802d098 for port 3,
  * 0xa802d0d0 otherwise) as an ASCII digit. A value outside '0'..'1' returns 0xff. Otherwise the digit value is
  * stored in byte 0xa802d47c, FUN_a00dab90 and FUN_a00b88cc run, the reply "5600+\r" is written into the port's
  * transmit buffer (FUN_a00baa6c), the port's receive state is cleared (FUN_a00ba950), the 6-byte reply is sent

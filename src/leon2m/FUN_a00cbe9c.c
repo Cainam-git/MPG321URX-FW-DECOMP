@@ -1,5 +1,5 @@
 /* leon2m FUN_a00cbe9c @ 0xa00cbe9c-0xa00cc140 (169 words), flags -mcpu=v8 -O3 -g. Called by FUN_a00ccf34.
- * UART command handler: adds bytes 6..17 of the port's receive record (0xa802d040 for port 2, 0xa802d098 for
+ * Command handler: adds bytes 6..17 of the port's receive record (0xa802d040 for port 2, 0xa802d098 for
  * port 3, 0xa802d0d0 otherwise) as an 8-bit sum and compares it with byte 18 of the record. When they are equal,
  * the reply "5600+\r" is written into the port's transmit buffer (FUN_a00baa6c) and FUN_a0082c0c() runs. When
  * they differ, "5600" 0xee "\r" is written into the buffer at 0xa802d078 for every port. Then the port's receive

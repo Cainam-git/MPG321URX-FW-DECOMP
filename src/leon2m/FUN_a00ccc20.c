@@ -1,5 +1,5 @@
 /* leon2m FUN_a00ccc20 @ 0xa00ccc20-0xa00cce80 (152 words), flags -mcpu=v8 -O3 -g.
- * UART command handler. When byte 0xa802d2a1 (0xa802d290+0x11) is not 3, it is set to 3 and FUN_a00d9764() runs.
+ * Command handler. When byte 0xa802d2a1 (0xa802d290+0x11) is not 3, it is set to 3 and FUN_a00d9764() runs.
  * Then the three ASCII digits at bytes 7-9 of the port's receive record (0xa802d040 for port 2, 0xa802d098 for
  * port 3, 0xa802d0d0 otherwise) are converted with FUN_a00bae38. A result of 0xff (not digits) or above 100
  * returns 0xff. Otherwise the value is stored in byte 0xa802d2a4, FUN_a00d972c() and FUN_a00b88cc() run, the reply

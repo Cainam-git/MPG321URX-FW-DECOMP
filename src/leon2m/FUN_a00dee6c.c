@@ -1,6 +1,6 @@
 /* leon2m FUN_a00dee6c @ 0xa00dee6c-0xa00deea4 (14 words), flags -mcpu=v8 -O3 -g.
  * Code facts: ROM read func_0x4008c250(0xc00b0014); if bit 0 is set, *out = (u8)func_0x4008c250(0xc00b0000) and
- * returns 1, else returns 0 (UART-style status then data read). The second read is at 0xc00b0000 (fw 'mov %l0,%o0'
+ * returns 1, else returns 0. The second read is at 0xc00b0000 (fw 'mov %l0,%o0'
  * with %l0 = sethi only).
  * Compiler aids: none.
  */

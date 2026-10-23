@@ -18,7 +18,7 @@
  * limit: FUN_a014512c(1, 1) loops 'while (FUN_a0141a98() == 0) { FUN_a01413d0(); FUN_a01295e4(); FUN_a002ced8(); }'
  * (Ghidra's C of FUN_a014512c) until panel state byte 0xA802E110 == 6 and 0xA802CC08 != 1; each round calls
  * FUN_a002ced8 (8051 F204 -> F208 copy), so the ring-1 test of FUN_CODE_7b5a keeps passing while it waits. Printing (FUN_a00df170) polls
- * the UART at most 0xFFFFF times per byte (Ghidra's C).
+ * bit 5 of register 0xC00B0014 at most 0xFFFFF times per byte.
  * Compiler aids (no code): the loop bound sits in a local 'n = 0xBE8' (a literal bound is folded to 'i <= 0xBE7',
  * the firmware compares LTU/GEU 0xBE8, the same as FUN_a01539b8 'rem = 20'); the i > 0x673 arm reads the byte
  * table into a local 'h' first (orders the two hoisted ROM table bases as in the firmware); 0xA802CFF8 bits 14..13

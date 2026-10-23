@@ -1,5 +1,5 @@
 /* leon2m FUN_a00c6228 @ 0xa00c6228-0xa00c6424 (127 words), flags -mcpu=v8 -O3 -g. Called by FUN_a00ccf34.
- * UART command handler: takes byte 9 of the port's receive record (0xa802d040 for port 2, 0xa802d098 for port 3,
+ * Command handler: takes byte 9 of the port's receive record (0xa802d040 for port 2, 0xa802d098 for port 3,
  * 0xa802d0d0 otherwise) as an ASCII digit d. A value above 1 returns 0xff.
  * Otherwise d is stored in bit 17 of the word 0xa802d290+0xac, and FUN_a00d5cd8() and FUN_a00b88cc() run.
  * Then the reply "5600+\r" is written into the port's transmit buffer (FUN_a00baa6c), the receive state is

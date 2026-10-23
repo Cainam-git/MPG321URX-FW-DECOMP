@@ -1,5 +1,5 @@
 /* leon2m FUN_a00bd070 @ 0xa00bd070-0xa00bd244 (117 words).
- * UART reply: fills the 11-byte buffer at 0xa802d078 with [7] = [8] = '0', [9] = the ASCII digit of byte 0xa802d411
+ * Reply: fills the 11-byte buffer at 0xa802d078 with [7] = [8] = '0', [9] = the ASCII digit of byte 0xa802d411
  * when it is 0..7 (unchanged otherwise), [0] = FUN_a015463c(0x23, 0), [1] = 'b', [2..6] = FUN_a015463c(0x23, 2..6)
  * and [10] = '\r', clears the port's receive state (port 2: 0xa802b09a and the record at 0xa802d040; port 3:
  * 0xa802b098 and 0xa802d098; other ports: 0xa802b09c and 0xa802d0d0) and tail-calls FUN_a01487e8(port, 0xb, buffer).

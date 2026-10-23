@@ -1,5 +1,5 @@
 /* leon2m FUN_a00cc140 @ 0xa00cc140-0xa00cc760 (392 words), flags -mcpu=v8 -O3 -g.
- * UART command handler: copies bytes 6..18 of the port's receive record (0xa802d040 for port 2, 0xa802d098 for
+ * Command handler: copies bytes 6..18 of the port's receive record (0xa802d040 for port 2, 0xa802d098 for
  * port 3, 0xa802d0d0 otherwise) to bytes 3..15 of 0xa802d274, then adds bytes 6..18 as an 8-bit sum and compares
  * it with byte 19 of the record. When they are equal, the reply "5600+\r" is written into the port's transmit
  * buffer (FUN_a00baa6c) and FUN_a014aed0(0x30, 0xa802d274, 0x2e0, 0x1c) runs. When they differ, "5600" 0xee "\r"

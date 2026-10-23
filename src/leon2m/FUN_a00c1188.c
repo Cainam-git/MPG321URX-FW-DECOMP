@@ -1,5 +1,5 @@
 /* leon2m FUN_a00c1188 @ 0xa00c1188-0xa00c122c (41 words), flags -mcpu=v8 -O3 -g. No direct callers.
- * UART command handler: takes byte 9 of the port's receive record (0xa802d049 for port 2, 0xa802d0a1 for port 3,
+ * Command handler: takes byte 9 of the port's receive record (0xa802d049 for port 2, 0xa802d0a1 for port 3,
  * 0xa802d0d9 otherwise) as an ASCII digit d. A value above 1 returns 0xff. For d == 1 the halfwords
  * 0xa802d290+0x1ac = 0x750 and +0x1ae = 0x402 are written. Then FUN_a00b88cc(), FUN_a00baa6c(port),
  * FUN_a00ba950(port) and FUN_a00bab80(port, 6) run (called, not inlined) and the function returns 0.

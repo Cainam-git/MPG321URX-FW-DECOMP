@@ -1,5 +1,5 @@
 /* leon2m FUN_a00c7818 @ 0xa00c7818-0xa00c7a5c (145 words), flags -mcpu=v8 -O3 -g. Called by FUN_a00ccf34.
- * UART command handler: takes byte 9 of the port's receive record (0xa802d040 for port 2, 0xa802d098 for port 3,
+ * Command handler: takes byte 9 of the port's receive record (0xa802d040 for port 2, 0xa802d098 for port 3,
  * 0xa802d0d0 otherwise) as an ASCII digit d. A value above 1 returns 0xff.
  * Otherwise, when byte 0xa802d290+0x1f is 0: d is stored in bit 20 of the word 0xa802d290+0xac, and when
  * FUN_a01445fc(byte 0xa802d290+0x1e) returns 0, FUN_a00d91fc(0), FUN_a01439d8(1, 1), FUN_a0148268(0, 1) and

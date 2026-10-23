@@ -1,5 +1,5 @@
 /* leon2m FUN_a00c3820 @ 0xa00c3820-0xa00c3a30 (132 words), flags -mcpu=v8 -O3 -g. Called by FUN_a00ccf34.
- * UART command handler: takes byte 9 of the port's receive record (0xa802d040 for port 2, 0xa802d098 for port 3,
+ * Command handler: takes byte 9 of the port's receive record (0xa802d040 for port 2, 0xa802d098 for port 3,
  * 0xa802d0d0 otherwise) as an ASCII digit d. A value above 5 returns 0xff.
  * Otherwise bit 11 of the word 0xa802d290+0xa8 is cleared, byte 0xa802d290+0x182 = (d + 1) % 6, and
  * FUN_a00dbcf0() and FUN_a00b88cc() run (statement order as written: the word store fills the call delay slot).

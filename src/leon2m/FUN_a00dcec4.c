@@ -1,9 +1,9 @@
-/* leon2m FUN_a00dcec4 @ 0xA00DCEC4..0xA00DD250 (227 words): the Big chip's debug UART command shell "MDBG >>".
+/* leon2m FUN_a00dcec4 @ 0xA00DCEC4..0xA00DD250 (227 words): the Big chip's command shell "MDBG >>".
  * -mcpu=v8 -O3 -g -msoft-float.
  * Hand-written.
  *
  * Code:
- *  - Each call reads at most ONE character from the debug UART with FUN_a00deea4(&c); 0 = nothing received ->
+ *  - Each call reads at most ONE character with FUN_a00deea4(&c) (ring buffer 0xa802b0ec); 0 = nothing received ->
  *    return at once. It never waits.
  *  - Line editor on the buffer 0xA802D498 (0x100 bytes), length int 0xA802D490: backspace (8) removes one char and
  *    echoes "\b \b" (ROM 0x198B28); ESC (0x1B) clears the line and prints "\n\rDBG >>" (0x198B48); '^' as the first
@@ -19,7 +19,7 @@
  *  - Always at the end: prints "MDBG >>" (0x198B08) and length = 0.
  *  Where: polled once per pass of main FUN_a00295a4's main loop (direct-call graph).
  *  Its own code has no wait: one character per call, every loop is bounded (line <= 0xFE chars, 12 table entries,
- *  5 x 32 clear). It is a UART console, separate from the USB interface.
+ *  5 x 32 clear). Its only input is that ring buffer.
  *
  * Source-shape levers (no aids, no volatile, no asm):
  *  1. -msoft-float: loop.c's threshold is (1 + number of non-fixed hard regs); with the FPU regs fixed it is small

@@ -1,5 +1,5 @@
 /*
- * FUN_a00bb1c4: UART command-table lookup. For idx 0..0x82 compares table bytes 2..6 (FUN_a015463c(idx, j);
+ * FUN_a00bb1c4: command-table lookup. For idx 0..0x82 compares table bytes 2..6 (FUN_a015463c(idx, j);
  * 0xff = wildcard) with the received command bytes DAT_a802d0d0[2..6]; returns the first full match or 0xff.
  * Inlined into FUN_a00ce348 case 2 (MSI tool command handling). Flags: -mcpu=v8 -O3 -g.
  * Hand. No compiler aids.

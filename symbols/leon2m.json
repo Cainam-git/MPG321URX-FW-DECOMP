@@ -1882,7 +1882,7 @@
     },
     "ram:a002d5ac": {
       "by": "asm",
-      "comment": "fatal trap hook: UART crash dump ('System Crash. PC= .. Exception= ..', registers, stack, code), 'System Halt.', then branch to itself forever with traps off; hand asm 0/803 words",
+      "comment": "fatal trap hook: crash dump print ('System Crash. PC= .. Exception= ..', registers, stack, code), 'System Halt.', then branch to itself forever with traps off; hand asm 0/803 words",
       "name": "FUN_a002d5ac",
       "status": "matched"
     },
@@ -5949,21 +5949,21 @@
     "ram:a00ba950": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Clears the receive state and receive record of a UART port",
+      "comment": "Clears the receive state and receive record of a port",
       "name": "FUN_a00ba950",
       "status": "matched"
     },
     "ram:a00baa6c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Writes the reply 5600+ CR into a UART port's transmit buffer",
+      "comment": "Writes the reply 5600+ CR into a port's transmit buffer",
       "name": "FUN_a00baa6c",
       "status": "matched"
     },
     "ram:a00bab80": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Sends the first len bytes of a UART port's transmit buffer",
+      "comment": "Sends the first len bytes of a port's transmit buffer",
       "name": "FUN_a00bab80",
       "status": "matched"
     },
@@ -5990,7 +5990,7 @@
     "ram:a00bae38": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Converts three ASCII digits at bytes 7-9 of the port's UART receive record to a number 0-199, 0xff if not digits",
+      "comment": "Converts three ASCII digits at bytes 7-9 of the port's receive record to a number 0-199, 0xff if not digits",
       "name": "FUN_a00bae38",
       "status": "matched"
     },
@@ -6067,7 +6067,7 @@
     "ram:a00bc258": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply with the 18-character string SDC QMC315AA01_D01 in a 37-byte frame, then clears the port's receive state",
+      "comment": "Reply with the 18-character string SDC QMC315AA01_D01 in a 37-byte frame, then clears the port's receive state",
       "name": "FUN_a00bc258",
       "status": "matched"
     },
@@ -6135,7 +6135,7 @@
     "ram:a00bc95c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply: digit (byte 0xa802d412+5)%6 in a frame from table row 0x13, clears receive state, sends",
+      "comment": "Reply: digit (byte 0xa802d412+5)%6 in a frame from table row 0x13, clears receive state, sends",
       "name": "FUN_a00bc95c",
       "status": "matched"
     },
@@ -6247,7 +6247,7 @@
     "ram:a00bd070": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply with the digit of byte 0xa802d411 (0..7) in a frame from table row 0x23, then clears the port's receive state",
+      "comment": "Reply with the digit of byte 0xa802d411 (0..7) in a frame from table row 0x23, then clears the port's receive state",
       "name": "FUN_a00bd070",
       "status": "matched"
     },
@@ -6296,7 +6296,7 @@
     "ram:a00bd59c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply: two decimal digits of byte 0xa802d41c in a frame from table row 0x2a, clears receive state, sends",
+      "comment": "Reply: two decimal digits of byte 0xa802d41c in a frame from table row 0x2a, clears receive state, sends",
       "name": "FUN_a00bd59c",
       "status": "matched"
     },
@@ -6310,7 +6310,7 @@
     "ram:a00bd760": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply with bit 11 of word 0xa802d338 and a digit from byte 0xa802d411 or 0xa802d412 in a frame from table row 0x2c",
+      "comment": "Reply with bit 11 of word 0xa802d338 and a digit from byte 0xa802d411 or 0xa802d412 in a frame from table row 0x2c",
       "name": "FUN_a00bd760",
       "status": "matched"
     },
@@ -6324,7 +6324,7 @@
     "ram:a00bd9d8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply with the bytes of the record at 0xa802d274 in a 21-byte frame from table row 0x2e",
+      "comment": "Reply with the bytes of the record at 0xa802d274 in a 21-byte frame from table row 0x2e",
       "name": "FUN_a00bd9d8",
       "status": "matched"
     },
@@ -6428,7 +6428,7 @@
     "ram:a00bdf28": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply with the bytes of the record at 0xa802d274 and their 8-bit sum in a 22-byte frame from table row 0x43",
+      "comment": "Reply with the bytes of the record at 0xa802d274 and their 8-bit sum in a 22-byte frame from table row 0x43",
       "name": "FUN_a00bdf28",
       "status": "matched"
     },
@@ -6610,28 +6610,28 @@
     "ram:a00be81c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply: three ASCII digits of byte 0xa802d33c*20+20 in a frame from table row 0x78, clears receive state, sends",
+      "comment": "Reply: three ASCII digits of byte 0xa802d33c*20+20 in a frame from table row 0x78, clears receive state, sends",
       "name": "FUN_a00be81c",
       "status": "matched"
     },
     "ram:a00be9a8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply: '1'/'0' from FUN_a0143c14(0) in a frame from table row 0, clears receive state, sends",
+      "comment": "Reply: '1'/'0' from FUN_a0143c14(0) in a frame from table row 0, clears receive state, sends",
       "name": "FUN_a00be9a8",
       "status": "matched"
     },
     "ram:a00beae0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply: builds an 11-byte frame from table row 0x37 and byte 0xa802d2b0, clears receive state, sends",
+      "comment": "Reply: builds an 11-byte frame from table row 0x37 and byte 0xa802d2b0, clears receive state, sends",
       "name": "FUN_a00beae0",
       "status": "matched"
     },
     "ram:a00bec0c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply: builds an 11-byte frame from table row 0x36 and byte 0xa802d2b0, clears receive state, sends",
+      "comment": "Reply: builds an 11-byte frame from table row 0x36 and byte 0xa802d2b0, clears receive state, sends",
       "name": "FUN_a00bec0c",
       "status": "matched"
     },
@@ -6645,14 +6645,14 @@
     "ram:a00bee64": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply: builds an 11-byte frame from table row 0x34 and byte 0xa802d2b0, clears receive state, sends",
+      "comment": "Reply: builds an 11-byte frame from table row 0x34 and byte 0xa802d2b0, clears receive state, sends",
       "name": "FUN_a00bee64",
       "status": "matched"
     },
     "ram:a00bef90": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply: three ASCII digits of FUN_a01445fc(0xa802d2ae) in a frame from table row 0x12, clears receive state, sends",
+      "comment": "Reply: three ASCII digits of FUN_a01445fc(0xa802d2ae) in a frame from table row 0x12, clears receive state, sends",
       "name": "FUN_a00bef90",
       "status": "matched"
     },
@@ -6666,28 +6666,28 @@
     "ram:a00bf2d0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply: digit of byte 0xa802d2a8 in a frame from table row 0xc, clears receive state, sends",
+      "comment": "Reply: digit of byte 0xa802d2a8 in a frame from table row 0xc, clears receive state, sends",
       "name": "FUN_a00bf2d0",
       "status": "matched"
     },
     "ram:a00bf3f8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply: '1'/'0' from FUN_a013f1e4(0) == 1 in a frame from table row 0x31, clears receive state, sends",
+      "comment": "Reply: '1'/'0' from FUN_a013f1e4(0) == 1 in a frame from table row 0x31, clears receive state, sends",
       "name": "FUN_a00bf3f8",
       "status": "matched"
     },
     "ram:a00bf538": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply: three ASCII digits of FUN_a00d8b38() in a frame from table row 0x32, clears receive state, sends",
+      "comment": "Reply: three ASCII digits of FUN_a00d8b38() in a frame from table row 0x32, clears receive state, sends",
       "name": "FUN_a00bf538",
       "status": "matched"
     },
     "ram:a00bf6b0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART reply: '1'/'0' from FUN_a00d7d48() in a frame from table row 0x3f, clears receive state, sends",
+      "comment": "Reply: '1'/'0' from FUN_a00d7d48() in a frame from table row 0x3f, clears receive state, sends",
       "name": "FUN_a00bf6b0",
       "status": "matched"
     },
@@ -6715,7 +6715,7 @@
     "ram:a00c0ff4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: accepts digit 0-1 and sends reply 5600+ via called helpers",
+      "comment": "Command: accepts digit 0-1 and sends reply 5600+ via called helpers",
       "name": "FUN_a00c0ff4",
       "status": "matched"
     },
@@ -6736,7 +6736,7 @@
     "ram:a00c1188": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-1; for 1 writes record halfwords 0x1ac=0x750, 0x1ae=0x402; reply 5600+ via called helpers",
+      "comment": "Command: digit 0-1; for 1 writes record halfwords 0x1ac=0x750, 0x1ae=0x402; reply 5600+ via called helpers",
       "name": "FUN_a00c1188",
       "status": "matched"
     },
@@ -6764,7 +6764,7 @@
     "ram:a00c1400": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-3 -> FUN_a014459c into record byte 0x1e, FUN_a00d9238, cff4 bit 10, reply 5600+",
+      "comment": "Command: digit 0-3 -> FUN_a014459c into record byte 0x1e, FUN_a00d9238, cff4 bit 10, reply 5600+",
       "name": "FUN_a00c1400",
       "status": "matched"
     },
@@ -6792,98 +6792,98 @@
     "ram:a00c1704": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: three-digit value 0-11 from the receive record to byte 0xa802d41a, then reply",
+      "comment": "Command handler: three-digit value 0-11 from the receive record to byte 0xa802d41a, then reply",
       "name": "FUN_a00c1704",
       "status": "matched"
     },
     "ram:a00c17e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: three-digit value 0-30 from the receive record to byte 0xa802d29c, then reply",
+      "comment": "Command handler: three-digit value 0-30 from the receive record to byte 0xa802d29c, then reply",
       "name": "FUN_a00c17e8",
       "status": "matched"
     },
     "ram:a00c18cc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-3 -> FUN_a014459c into record byte 0x1e unless unchanged, FUN_a00d9238, cff4 bit 10, reply 5600+",
+      "comment": "Command: digit 0-3 -> FUN_a014459c into record byte 0x1e unless unchanged, FUN_a00d9238, cff4 bit 10, reply 5600+",
       "name": "FUN_a00c18cc",
       "status": "matched"
     },
     "ram:a00c1adc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: digit 0-1 from the receive record to bit 31 of word 0xa802d3ac, then conditional calls, reply 5600+",
+      "comment": "Command handler: digit 0-1 from the receive record to bit 31 of word 0xa802d3ac, then conditional calls, reply 5600+",
       "name": "FUN_a00c1adc",
       "status": "matched"
     },
     "ram:a00c1d54": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: reads two 4-digit decimal numbers, limits them to 50 and 29, stores them and replies 5600+",
+      "comment": "Command: reads two 4-digit decimal numbers, limits them to 50 and 29, stores them and replies 5600+",
       "name": "FUN_a00c1d54",
       "status": "matched"
     },
     "ram:a00c2180": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: reads two 4-digit decimal numbers, limits them to 49 and 28, stores them and replies 5600+",
+      "comment": "Command: reads two 4-digit decimal numbers, limits them to 49 and 28, stores them and replies 5600+",
       "name": "FUN_a00c2180",
       "status": "matched"
     },
     "ram:a00c25ac": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: reads two 4-digit decimal numbers into 16-bit settings with limits 3745 and 2052, replies 5600+",
+      "comment": "Command: reads two 4-digit decimal numbers into 16-bit settings with limits 3745 and 2052, replies 5600+",
       "name": "FUN_a00c25ac",
       "status": "matched"
     },
     "ram:a00c29d8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-4 into byte 0xa802d3cf, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
+      "comment": "Command: digit 0-4 into byte 0xa802d3cf, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
       "name": "FUN_a00c29d8",
       "status": "matched"
     },
     "ram:a00c2f08": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-4 selects record bytes 0x1a0-0x1a2 from tables, sets cff4 bit 14, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
+      "comment": "Command: digit 0-4 selects record bytes 0x1a0-0x1a2 from tables, sets cff4 bit 14, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
       "name": "FUN_a00c2f08",
       "status": "matched"
     },
     "ram:a00c3180": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-4 into byte 0xa802d3ce, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
+      "comment": "Command: digit 0-4 into byte 0xa802d3ce, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
       "name": "FUN_a00c3180",
       "status": "matched"
     },
     "ram:a00c3380": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-12 into record byte 0x17b, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
+      "comment": "Command: digit 0-12 into record byte 0x17b, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
       "name": "FUN_a00c3380",
       "status": "matched"
     },
     "ram:a00c35d0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-12 into record byte 0x190, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
+      "comment": "Command: digit 0-12 into record byte 0x190, conditional FUN_a0090fd8/FUN_a0090fac calls, reply 5600+",
       "name": "FUN_a00c35d0",
       "status": "matched"
     },
     "ram:a00c3820": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-5, clears record word 0xa8 bit 11, stores (d+1)%6 at byte 0x182, FUN_a00dbcf0, reply 5600+",
+      "comment": "Command: digit 0-5, clears record word 0xa8 bit 11, stores (d+1)%6 at byte 0x182, FUN_a00dbcf0, reply 5600+",
       "name": "FUN_a00c3820",
       "status": "matched"
     },
     "ram:a00c3a30": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-10 into byte 0xa802d3d0, calls FUN_a00d8b30/FUN_a00d4998, reply 5600+",
+      "comment": "Command: digit 0-10 into byte 0xa802d3d0, calls FUN_a00d8b30/FUN_a00d4998, reply 5600+",
       "name": "FUN_a00c3a30",
       "status": "matched"
     },
@@ -6904,91 +6904,91 @@
     "ram:a00c3f54": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-2 into record byte 0x2f, calls FUN_a00da254, reply 5600+",
+      "comment": "Command: digit 0-2 into record byte 0x2f, calls FUN_a00da254, reply 5600+",
       "name": "FUN_a00c3f54",
       "status": "matched"
     },
     "ram:a00c4144": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: digit 0-2 from the receive record to word 0xa802d340 with conditional clears and calls, reply 5600+",
+      "comment": "Command handler: digit 0-2 from the receive record to word 0xa802d340 with conditional clears and calls, reply 5600+",
       "name": "FUN_a00c4144",
       "status": "matched"
     },
     "ram:a00c46d4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: digit 0-1 from the receive record to byte 0xa802d2da; for 1 a sequence of conditional clears and calls, reply 5600+",
+      "comment": "Command handler: digit 0-1 from the receive record to byte 0xa802d2da; for 1 a sequence of conditional clears and calls, reply 5600+",
       "name": "FUN_a00c46d4",
       "status": "matched"
     },
     "ram:a00c5478": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: digit 0-8 from the receive record, FUN_a00d7d48 check for 4-6, byte 0xa802d411 = digit via switch, reply 5600+",
+      "comment": "Command handler: digit 0-8 from the receive record, FUN_a00d7d48 check for 4-6, byte 0xa802d411 = digit via switch, reply 5600+",
       "name": "FUN_a00c5478",
       "status": "matched"
     },
     "ram:a00c5a00": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-3 into byte 0xa802d2a1 via switch, calls FUN_a00d9764, reply 5600+",
+      "comment": "Command: digit 0-3 into byte 0xa802d2a1 via switch, calls FUN_a00d9764, reply 5600+",
       "name": "FUN_a00c5a00",
       "status": "matched"
     },
     "ram:a00c5c18": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-1 into bit 4 of record word 0x11c (clears byte 0x178 when set), FUN_a00d9764/a00d4998, reply 5600+",
+      "comment": "Command: digit 0-1 into bit 4 of record word 0x11c (clears byte 0x178 when set), FUN_a00d9764/a00d4998, reply 5600+",
       "name": "FUN_a00c5c18",
       "status": "matched"
     },
     "ram:a00c5e40": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-4 into bits 16-19 of record word 0x34, calls FUN_a00d58f8/FUN_a00d58d8/FUN_a00d4998, reply 5600+",
+      "comment": "Command: digit 0-4 into bits 16-19 of record word 0x34, calls FUN_a00d58f8/FUN_a00d58d8/FUN_a00d4998, reply 5600+",
       "name": "FUN_a00c5e40",
       "status": "matched"
     },
     "ram:a00c604c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: stores the ASCII digit 0..5 from the receive record in byte 0xa802d29f and replies 5600+",
+      "comment": "Command: stores the ASCII digit 0..5 from the receive record in byte 0xa802d29f and replies 5600+",
       "name": "FUN_a00c604c",
       "status": "matched"
     },
     "ram:a00c6228": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-1 into bit 17 of record word 0xac, calls FUN_a00d5cd8, reply 5600+",
+      "comment": "Command: digit 0-1 into bit 17 of record word 0xac, calls FUN_a00d5cd8, reply 5600+",
       "name": "FUN_a00c6228",
       "status": "matched"
     },
     "ram:a00c6690": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: three-digit value 0-100 from the receive record to byte 0xa802d29a, reply 5600+",
+      "comment": "Command handler: three-digit value 0-100 from the receive record to byte 0xa802d29a, reply 5600+",
       "name": "FUN_a00c6690",
       "status": "matched"
     },
     "ram:a00c762c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-5 into byte 0xa802d2d9, calls FUN_a00d4084/FUN_a00d4998, reply 5600+",
+      "comment": "Command: digit 0-5 into byte 0xa802d2d9, calls FUN_a00d4084/FUN_a00d4998, reply 5600+",
       "name": "FUN_a00c762c",
       "status": "matched"
     },
     "ram:a00c7818": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-1 into bit 20 of record word 0xac, conditional FUN_a00d91fc/a01439d8/a0148268 calls, reply 5600+",
+      "comment": "Command: digit 0-1 into bit 20 of record word 0xac, conditional FUN_a00d91fc/a01439d8/a0148268 calls, reply 5600+",
       "name": "FUN_a00c7818",
       "status": "matched"
     },
     "ram:a00c7a5c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: digit 0-2 from the receive record to byte 0xa802d2af, then a sequence of conditional clears and calls, reply 5600+",
+      "comment": "Command handler: digit 0-2 from the receive record to byte 0xa802d2af, then a sequence of conditional clears and calls, reply 5600+",
       "name": "FUN_a00c7a5c",
       "status": "matched"
     },
@@ -7002,42 +7002,42 @@
     "ram:a00c8410": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-3 -> FUN_a014459c into record byte 0x20, reply 5600+",
+      "comment": "Command: digit 0-3 -> FUN_a014459c into record byte 0x20, reply 5600+",
       "name": "FUN_a00c8410",
       "status": "matched"
     },
     "ram:a00c8614": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-3 -> FUN_a014459c into record byte 0x20, reply 5600+ (same code as FUN_a00c8410)",
+      "comment": "Command: digit 0-3 -> FUN_a014459c into record byte 0x20, reply 5600+ (same code as FUN_a00c8410)",
       "name": "FUN_a00c8614",
       "status": "matched"
     },
     "ram:a00c8818": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-3 -> FUN_a014459c into record byte 0x20, calls FUN_a00d5938/FUN_a0124f44/(FUN_a00d5cd8)/FUN_a0124f24, reply 5600+",
+      "comment": "Command: digit 0-3 -> FUN_a014459c into record byte 0x20, calls FUN_a00d5938/FUN_a0124f44/(FUN_a00d5cd8)/FUN_a0124f24, reply 5600+",
       "name": "FUN_a00c8818",
       "status": "matched"
     },
     "ram:a00c8a44": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-2, stores 2-d at record byte 0x31, calls FUN_a00d7b20, reply 5600+",
+      "comment": "Command: digit 0-2, stores 2-d at record byte 0x31, calls FUN_a00d7b20, reply 5600+",
       "name": "FUN_a00c8a44",
       "status": "matched"
     },
     "ram:a00c8c38": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: two 4-digit numbers from the receive record to halfwords 0xa802d2e4/2e6, limited by FUN_a014837c by mode, reply 5600+",
+      "comment": "Command handler: two 4-digit numbers from the receive record to halfwords 0xa802d2e4/2e6, limited by FUN_a014837c by mode, reply 5600+",
       "name": "FUN_a00c8c38",
       "status": "matched"
     },
     "ram:a00c91dc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-4 into bits 4-7 of record word 0x30, calls FUN_a00d7a70(1), reply 5600+",
+      "comment": "Command: digit 0-4 into bits 4-7 of record word 0x30, calls FUN_a00d7a70(1), reply 5600+",
       "name": "FUN_a00c91dc",
       "status": "matched"
     },
@@ -7058,42 +7058,42 @@
     "ram:a00c9500": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-1 into bit 6 of record word 0xa8, FUN_a00d9978, reply 5600+ via called helpers",
+      "comment": "Command: digit 0-1 into bit 6 of record word 0xa8, FUN_a00d9978, reply 5600+ via called helpers",
       "name": "FUN_a00c9500",
       "status": "matched"
     },
     "ram:a00c95a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-4 into byte 0xa802d3eb, calls FUN_a00d4998/FUN_a00d9120, reply 5600+",
+      "comment": "Command: digit 0-4 into byte 0xa802d3eb, calls FUN_a00d4998/FUN_a00d9120, reply 5600+",
       "name": "FUN_a00c95a4",
       "status": "matched"
     },
     "ram:a00c9788": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-1 into bit 9 of record word 0, FUN_a0148d98(bit), reply 5600+",
+      "comment": "Command: digit 0-1 into bit 9 of record word 0, FUN_a0148d98(bit), reply 5600+",
       "name": "FUN_a00c9788",
       "status": "matched"
     },
     "ram:a00c9980": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: digit 0-3 from the receive record selects one of four action calls, reply 5600+",
+      "comment": "Command handler: digit 0-3 from the receive record selects one of four action calls, reply 5600+",
       "name": "FUN_a00c9980",
       "status": "matched"
     },
     "ram:a00c9be0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-2 into bits 18-19 of record word 0xac, FUN_a00db054, sets 0xa802b08e bit 2, reply 5600+",
+      "comment": "Command: digit 0-2 into bits 18-19 of record word 0xac, FUN_a00db054, sets 0xa802b08e bit 2, reply 5600+",
       "name": "FUN_a00c9be0",
       "status": "matched"
     },
     "ram:a00c9df4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-1 into bit 7 of record word 0x1ec, FUN_a00db12c(0), reply 5600+ via called helpers",
+      "comment": "Command: digit 0-1 into bit 7 of record word 0x1ec, FUN_a00db12c(0), reply 5600+ via called helpers",
       "name": "FUN_a00c9df4",
       "status": "matched"
     },
@@ -7107,14 +7107,14 @@
     "ram:a00c9f44": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-1 into bit 31 of record word 0x1f4, calls FUN_a00d9fdc(2), reply 5600+",
+      "comment": "Command: digit 0-1 into bit 31 of record word 0x1f4, calls FUN_a00d9fdc(2), reply 5600+",
       "name": "FUN_a00c9f44",
       "status": "matched"
     },
     "ram:a00ca158": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: digit 0-1 selects FUN_a0124a68/ab0, stored in bit 30 of record word 0x1f4, FUN_a00db174, reply 5600+",
+      "comment": "Command: digit 0-1 selects FUN_a0124a68/ab0, stored in bit 30 of record word 0x1f4, FUN_a00db174, reply 5600+",
       "name": "FUN_a00ca158",
       "status": "matched"
     },
@@ -7128,7 +7128,7 @@
     "ram:a00ca878": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: four digits from receive record bytes 6-9 to bit 15 of 0xa802d46c and bytes 0xa802d470/471/46f, reply 5600+",
+      "comment": "Command handler: four digits from receive record bytes 6-9 to bit 15 of 0xa802d46c and bytes 0xa802d470/471/46f, reply 5600+",
       "name": "FUN_a00ca878",
       "status": "matched"
     },
@@ -7142,7 +7142,7 @@
     "ram:a00cabf8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: stores the ASCII digit 0..6 from the receive record in byte 0xa802d46f and replies 5600+",
+      "comment": "Command: stores the ASCII digit 0..6 from the receive record in byte 0xa802d46f and replies 5600+",
       "name": "FUN_a00cabf8",
       "status": "matched"
     },
@@ -7170,7 +7170,7 @@
     "ram:a00cb1c8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: stores the ASCII digit 0..2 plus 1 from the receive record in byte 0xa802d479 and replies 5600+",
+      "comment": "Command: stores the ASCII digit 0..2 plus 1 from the receive record in byte 0xa802d479 and replies 5600+",
       "name": "FUN_a00cb1c8",
       "status": "matched"
     },
@@ -7184,35 +7184,35 @@
     "ram:a00cb438": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: stores the ASCII digit 0..2 plus 1 from the receive record in byte 0xa802d47b and replies 5600+",
+      "comment": "Command: stores the ASCII digit 0..2 plus 1 from the receive record in byte 0xa802d47b and replies 5600+",
       "name": "FUN_a00cb438",
       "status": "matched"
     },
     "ram:a00cb618": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: stores the ASCII digit 0..1 from the receive record in byte 0xa802d47a and replies 5600+",
+      "comment": "Command: stores the ASCII digit 0..1 from the receive record in byte 0xa802d47a and replies 5600+",
       "name": "FUN_a00cb618",
       "status": "matched"
     },
     "ram:a00cb7f4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: stores the ASCII digit 0..2 plus 1 from the receive record in byte 0xa802d47d and replies 5600+",
+      "comment": "Command: stores the ASCII digit 0..2 plus 1 from the receive record in byte 0xa802d47d and replies 5600+",
       "name": "FUN_a00cb7f4",
       "status": "matched"
     },
     "ram:a00cb9d4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command: stores the ASCII digit 0..1 from the receive record in byte 0xa802d47c and replies 5600+",
+      "comment": "Command: stores the ASCII digit 0..1 from the receive record in byte 0xa802d47c and replies 5600+",
       "name": "FUN_a00cb9d4",
       "status": "matched"
     },
     "ram:a00cbbb0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: three-digit value 20-100 from the receive record, (v-20)/20 to byte 0xa802d33c and FUN_a00da754, reply 5600+",
+      "comment": "Command handler: three-digit value 20-100 from the receive record, (v-20)/20 to byte 0xa802d33c and FUN_a00da754, reply 5600+",
       "name": "FUN_a00cbbb0",
       "status": "matched"
     },
@@ -7231,35 +7231,35 @@
     "ram:a00cbe9c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: 8-bit sum of receive record bytes 6-17 checked against byte 18, reply 5600+ and FUN_a0082c0c or 5600 0xee",
+      "comment": "Command handler: 8-bit sum of receive record bytes 6-17 checked against byte 18, reply 5600+ and FUN_a0082c0c or 5600 0xee",
       "name": "FUN_a00cbe9c",
       "status": "matched"
     },
     "ram:a00cc140": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: copies receive record bytes 6-18 to 0xa802d277, checks their 8-bit sum against byte 19, FUN_a014aed0 save or 0xee reply",
+      "comment": "Command handler: copies receive record bytes 6-18 to 0xa802d277, checks their 8-bit sum against byte 19, FUN_a014aed0 save or 0xee reply",
       "name": "FUN_a00cc140",
       "status": "matched"
     },
     "ram:a00cc760": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: sets byte 0xa802d2a1 to 3, three-digit value 0-100 from the receive record to byte 0xa802d2a2, reply 5600+",
+      "comment": "Command handler: sets byte 0xa802d2a1 to 3, three-digit value 0-100 from the receive record to byte 0xa802d2a2, reply 5600+",
       "name": "FUN_a00cc760",
       "status": "matched"
     },
     "ram:a00cc9c0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: sets byte 0xa802d2a1 to 3, three-digit value 0-100 from the receive record to byte 0xa802d2a3, reply 5600+",
+      "comment": "Command handler: sets byte 0xa802d2a1 to 3, three-digit value 0-100 from the receive record to byte 0xa802d2a3, reply 5600+",
       "name": "FUN_a00cc9c0",
       "status": "matched"
     },
     "ram:a00ccc20": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command handler: sets byte 0xa802d2a1 to 3, three-digit value 0-100 from the receive record to byte 0xa802d2a4, reply 5600+",
+      "comment": "Command handler: sets byte 0xa802d2a1 to 3, three-digit value 0-100 from the receive record to byte 0xa802d2a4, reply 5600+",
       "name": "FUN_a00ccc20",
       "status": "matched"
     },
@@ -8067,7 +8067,7 @@
     "ram:a00dcec4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "debug UART shell 'MDBG >>' (main loop only, not USB)",
+      "comment": "'MDBG >>' command shell (main loop only, not USB)",
       "name": "FUN_a00dcec4",
       "status": "matched"
     },
@@ -16760,14 +16760,14 @@
     "ram:a015463c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -g",
-      "comment": "UART command-string character: row a, byte b of the 8-byte frame table (row 2 = '580040:' update start)",
+      "comment": "command-string character: row a, byte b of the 8-byte frame table (row 2 = '580040:')",
       "name": "FUN_a015463c",
       "status": "matched"
     },
     "ram:a015468c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -g",
-      "comment": "Returns byte b of row a of the 11-byte UART frame table at 0x1a7a6e",
+      "comment": "Returns byte b of row a of the 11-byte frame table at 0x1a7a6e",
       "name": "FUN_a015468c",
       "status": "matched"
     },

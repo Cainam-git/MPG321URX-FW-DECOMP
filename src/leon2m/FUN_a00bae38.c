@@ -1,5 +1,5 @@
 /* leon2m FUN_a00bae38 @ 0xa00bae38-0xa00baee8 (44 words).
- * Converts the three ASCII digits at bytes 7, 8 and 9 of a UART receive record into a number 0..199 and returns it;
+ * Converts the three ASCII digits at bytes 7, 8 and 9 of a receive record into a number 0..199 and returns it;
  * returns 0xff when byte 7 is not '0' or '1', or byte 8 or 9 is not a decimal digit. The record is selected by the
  * port: 2 -> 0xa802d040, 3 -> 0xa802d098, any other -> 0xa802d0d0. Called by FUN_a00c1608, FUN_a00c165c,
  * FUN_a00c16b0 and FUN_a00ccf34; FUN_a00c6690 and others contain inlined copies.

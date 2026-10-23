@@ -12,7 +12,7 @@
  *     register config : 0x%08X, ld config : 0x%08X" and hang forever. FW.021: the 8051 writes both registers = 0
  *     (FUN_CODE_4a85 from the boot loader's constant record fields), n = 24, bottom 0xA8024000: passes.
  *  5. FUN_a00dd8ac(); func_0x40089858(); prints "NT68500 Leon2M system compiled under Linux\r\n%s" with the
- *     version string "version: 5e5d1dc6407-master commit: 2020-07-31 ..." (tail call of the UART printf FUN_a00df170).
+ *     version string "version: 5e5d1dc6407-master commit: 2020-07-31 ..." (tail call of FUN_a00df170).
  * Data RAM: this is the only Big chip code that reads the data-RAM window registers; it fixes the Big chip's data
  * RAM bottom at 0xA8024000 (top 0xA8040000 by the 8051 copy/fill window, stack top 0xA803FF50). The Big chip's code
  * never addresses 0xA8040000..0xA80FFFFF; no memory window the firmware configures or checks for the Big chip covers

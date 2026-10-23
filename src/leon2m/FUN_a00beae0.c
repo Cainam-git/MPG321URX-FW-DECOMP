@@ -1,5 +1,5 @@
 /* leon2m FUN_a00beae0 @ 0xa00beae0-0xa00bec0c (75 words), flags -mcpu=v8 -O3 -g. Called by FUN_a00bfcc4.
- * Fills the 11-byte UART transmit buffer at 0xa802d078: [7] = [8] = '0', [9] = FUN_a01445fc(byte 0xa802d2b0) + '0',
+ * Fills the 11-byte transmit buffer at 0xa802d078: [7] = [8] = '0', [9] = FUN_a01445fc(byte 0xa802d2b0) + '0',
  * [0] = FUN_a015463c(0x37, 0), [1] = 'b', [2..6] = FUN_a015463c(0x37, 2..6), [10] = '\r'. Then port == 2: clear
  * byte 0xa802b09a and record 0xa802d040 bytes 0, 1, 7, 10, 0x19; port == 3: byte 0xa802b098 and record
  * 0xa802d098; else byte 0xa802b09c and record 0xa802d0d0. Tail call FUN_a01487e8(port, 0xb, buffer).

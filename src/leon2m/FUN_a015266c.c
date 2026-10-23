@@ -24,8 +24,8 @@
  *    FUN_a012fc04(); FUN_a012b7b8(); if ((raw active panel row word 0 (FUN_a01241fc()) & 0x700000) == 0x200000, i.e.
  *    link type 2 = eDP) FUN_a012b9a0(); FUN_a0138284(); FUN_a01382e4(); FUN_a01356fc(2, 0); FUN_a01243dc();
  *    FUN_a012c188(); tail call FUN_a01298d8().
- * The three waits have NO timeout and run before main() reaches its main loop (where the UART command switch
- *   FUN_a00bfcc4 -> UartSetI2CEnable FUN_a00bf110 is served). So the UART command switch is served only after the
+ * The three waits have NO timeout and run before main() reaches its main loop (where the command switch
+ *   FUN_a00bfcc4 -> FUN_a00bf110 "--->UartSetI2CEnable" is served). So the command switch is served only after the
  *   helper chip has posted a non-zero boot byte AND the Small chip has set both ready bits. This function reads
  *   the panel row only in step 7 (after the waits).
  * Matching notes: gcc 3.4 sched-deps flushes its pending memory lists after 32 refs: the 34th memory op of step 1

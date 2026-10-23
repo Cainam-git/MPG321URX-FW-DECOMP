@@ -1,5 +1,5 @@
 /* leon2m FUN_a00ca878 @ 0xa00ca878-0xa00cab68 (188 words), flags -mcpu=v8 -O3 -g.
- * UART command handler: reads bytes 6, 7, 8 and 9 of the port's receive record (0xa802d040 for port 2, 0xa802d098
+ * Command handler: reads bytes 6, 7, 8 and 9 of the port's receive record (0xa802d040 for port 2, 0xa802d098
  * for port 3, 0xa802d0d0 otherwise) one after the other as ASCII digits. Byte 6 must be 0 or 1 and goes to bit 15
  * of the word 0xa802d290+0x1dc; byte 7 (0 or 1) to byte 0xa802d290+0x1e0; byte 8 (0 or 1) to byte
  * 0xa802d290+0x1e1; byte 9 (0..8) to byte 0xa802d290+0x1df. The first digit out of range returns 0xff (the

@@ -1,5 +1,5 @@
 /* leon2m FUN_a00bab80 @ 0xa00bab80-0xa00babe0 (24 words).
- * Sends the first len bytes of a UART port's transmit buffer with FUN_a01487e8(port, len, buffer): port 2 uses the
+ * Sends the first len bytes of a port's transmit buffer with FUN_a01487e8(port, len, buffer): port 2 uses the
  * buffer at 0xa802d128, port 3 the buffer at 0xa802d108, any other port the buffer at 0xa802d078. All three calls
  * are tail calls.
  */

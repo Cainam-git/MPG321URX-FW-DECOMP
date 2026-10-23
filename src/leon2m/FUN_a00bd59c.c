@@ -1,5 +1,5 @@
 /* leon2m FUN_a00bd59c @ 0xa00bd59c-0xa00bd6e4 (82 words), flags -mcpu=v8 -O3 -g. Called by FUN_a00bfcc4.
- * Fills the 11-byte UART transmit buffer at 0xa802d078 with the two-digit decimal value v = byte 0xa802d41c
+ * Fills the 11-byte transmit buffer at 0xa802d078 with the two-digit decimal value v = byte 0xa802d41c
  * (0..19): [7] = '0', [8] = '1' and [9] = v - 10 + '0' when v > 9, else [8] = '0' and [9] = v + '0';
  * [0] = FUN_a015463c(0x2a, 0), [1] = 'b', [2..6] = FUN_a015463c(0x2a, 2..6), [10] = '\r'.
  * Then the port's receive state is cleared (port 2: byte 0xa802b09a and bytes 0, 1, 7, 10, 0x19 of the record

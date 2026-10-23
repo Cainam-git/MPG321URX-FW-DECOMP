@@ -1,5 +1,5 @@
 /* leon2m FUN_a00baa6c @ 0xa00baa6c-0xa00bab30 (49 words).
- * Writes the 6-byte reply "5600+\r" into the transmit buffer of a UART port: port 2 uses the buffer at 0xa802d128,
+ * Writes the 6-byte reply "5600+\r" into the transmit buffer of a port: port 2 uses the buffer at 0xa802d128,
  * port 3 the buffer at 0xa802d108, any other port the buffer at 0xa802d078.
  */
 extern unsigned char DAT_a802d078[], DAT_a802d108[], DAT_a802d128[];

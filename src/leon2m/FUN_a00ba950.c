@@ -1,5 +1,5 @@
 /* leon2m FUN_a00ba950 @ 0xa00ba950-0xa00ba9d0 (32 words).
- * Clears the receive state of one UART port: port 2 clears byte 0xa802b09a and bytes 0, 1, 7, 10, 0x19 of the
+ * Clears the receive state of one port: port 2 clears byte 0xa802b09a and bytes 0, 1, 7, 10, 0x19 of the
  * receive record at 0xa802d040; port 3 clears byte 0xa802b098 and the same bytes of the record at 0xa802d098; any
  * other port clears byte 0xa802b09c and the record at 0xa802d0d0.
  * The same clears appear inline in the reply builders (FUN_a00bed38 and others). The clears are written in

@@ -1,5 +1,5 @@
 /* leon2m FUN_a00c25ac @ 0xa00c25ac-0xa00c29d8 (267 words).
- * UART command handler. Reads two 4-digit ASCII decimal numbers from the port's receive record (bytes 6..9 and
+ * Command handler. Reads two 4-digit ASCII decimal numbers from the port's receive record (bytes 6..9 and
  * 10..13 of the record at 0xa802d040 for port 2, 0xa802d098 for port 3, 0xa802d0d0 otherwise), sets the first to
  * 3745 when it is above 3744, limits the second to 2052, and stores them in the halfwords 0xa802d43c and
  * 0xa802d43e. When the 2-bit field at bits 13..14 of
