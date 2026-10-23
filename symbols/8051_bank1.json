@@ -712,6 +712,13 @@
       "name": "FUN_CODE_4cb9",
       "status": "matched"
     },
+    "CODE:4ec1": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "state machine on XDATA 0xA35E with register pointers into the 0xF180 table and FUN_CODE_d94a timeouts",
+      "name": "FUN_CODE_4ec1",
+      "status": "matched"
+    },
     "CODE:5864": {
       "by": "hand",
       "comment": "Keil common-entry (L?) code in front of FUN_CODE_5868, in FUN_CODE_5868's code segment; emitted by compiling src/8051_bank1/FUN_CODE_5868.c, bytes judged with FUN_CODE_5868 over 0x5864..0x5a39",
