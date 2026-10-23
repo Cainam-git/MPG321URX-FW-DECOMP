@@ -1827,7 +1827,7 @@
     },
     "CODE:d785": {
       "by": "hand",
-      "comment": "Bit result",
+      "comment": "bit 0x1E = one of XDATA 0xA672/0xA673 above 0xD4 and the other below 0x41, returned",
       "name": "FUN_CODE_d785",
       "status": "matched"
     },
@@ -1988,13 +1988,13 @@
     },
     "CODE:dc0d": {
       "by": "hand",
-      "comment": "Bit result",
+      "comment": "bit 0x1A = both bytes XDATA 0xA672/0xA673 below 0x13, returned",
       "name": "FUN_CODE_dc0d",
       "status": "matched"
     },
     "CODE:dc24": {
       "by": "hand",
-      "comment": "Bit result",
+      "comment": "bit 0x1C = both bytes XDATA 0xA672/0xA673 above 0xD4, returned",
       "name": "FUN_CODE_dc24",
       "status": "matched"
     },
@@ -2064,7 +2064,7 @@
     },
     "CODE:dd85": {
       "by": "hand",
-      "comment": "Register read on the 0x9A00 block",
+      "comment": "register read XDATA 0x9A00[reg] through a generic pointer",
       "name": "FUN_CODE_dd85",
       "status": "matched"
     },
@@ -2083,7 +2083,7 @@
     },
     "CODE:ddd6": {
       "by": "hand",
-      "comment": "Delay",
+      "comment": "delay loop of n passes of four NOPs",
       "name": "FUN_CODE_ddd6",
       "status": "matched"
     },
@@ -2128,7 +2128,7 @@
     "CODE:de87": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "Sets bit 0x16 (BITS_22_6) and XDATA 0xA780 = 2, then tail jump to FUN_CODE_a959 (the same ",
+      "comment": "bit 0x16 = 1, XDATA 0xA780 = 2, tail jump to FUN_CODE_a959",
       "name": "FUN_CODE_de87",
       "status": "matched"
     },
