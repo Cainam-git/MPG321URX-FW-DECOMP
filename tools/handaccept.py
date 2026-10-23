@@ -8,6 +8,7 @@ import json, pathlib, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools")); import near, strcheck
 cpu, by, fn, path, summary = sys.argv[1:6]
+if by[:1] == "h" and by[1:].isdigit(): by = "hand"   # worker ids are not recorded
 src = pathlib.Path(path).read_text()
 if not src.lstrip().startswith("/*") or len(src.split("*/")[0]) < 200:
     sys.exit("refused: the file needs a documentation header comment")
