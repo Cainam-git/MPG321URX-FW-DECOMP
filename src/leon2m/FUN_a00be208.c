@@ -1,5 +1,6 @@
 /* leon2m FUN_a00be208 @ 0xa00be208 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a00bdcb0: same code, other constants.
+ * Stores '0', '0' and byte 0xA802D40C + '0' in bytes 7, 8 and 9 of the byte array 0xA802D078, then calls
+ * FUN_a00bac3c(0x65), FUN_a00ba950(p1) and FUN_a00babe4(p1, 0xb). Same code as FUN_a00bdcb0 with other constants.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

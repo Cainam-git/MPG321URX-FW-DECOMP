@@ -1,5 +1,8 @@
 /* leon2m FUN_a00c122c @ 0xa00c122c (-mcpu=v8 -O3 -g)
- * Twin of FUN_a00c1078: same code, other constants.
+ * k = p1 & 0xff; b = byte 0xA802D049 for k == 2, 0xA802D0A1 for k == 3, 0xA802D0D9 otherwise. When b - '0' (8
+ * bits) is above 1 returns 0xFF; otherwise stores b - '0' in byte 0xA802D407, calls FUN_a00b88cc(),
+ * FUN_a00baa6c(k), FUN_a00ba950(k) and FUN_a00bab80(k, 6) and returns 0. Same code as FUN_a00c1078 with other
+ * constants.
  */
 extern unsigned char DAT_a802d049;
 extern unsigned char DAT_a802d0a1;

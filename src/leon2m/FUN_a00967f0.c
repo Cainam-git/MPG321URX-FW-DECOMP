@@ -1,5 +1,7 @@
 /* leon2m FUN_a00967f0 @ 0xa00967f0 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a0096494: same code, other constants.
+ * v = byte 0xA802D434 (0xA802D290 + 0x1A4); stores v in byte 0xA8025C56, calls FUN_a00a813c(1, v, 0) and
+ * FUN_a00a900c((word 0xA802AFEC - 24) & 0xff, 2); reads v again, stores v + 0x70 in word 0xA802AFEC, calls
+ * FUN_a00a9650(v, 1) and stores 0xE in byte 0xA802B08F. Same code as FUN_a0096494 with other constants.
  * See FUN_a0096494 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern unsigned char DAT_a8025c56;   // 0xa8025c56
