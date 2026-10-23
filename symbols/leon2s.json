@@ -2261,6 +2261,12 @@
       "name": "Deskew_HotPlug",
       "status": "matched"
     },
+    "ram:a007890c": {
+      "by": "hand",
+      "comment": "Per-channel RVGA table index apply or best-SCDC search, then record state updates",
+      "name": "DRV_HDMI_EQScan_FSM_Search_Process",
+      "status": "matched"
+    },
     "ram:a0078fe8": {
       "by": "hand",
       "comment": "",
