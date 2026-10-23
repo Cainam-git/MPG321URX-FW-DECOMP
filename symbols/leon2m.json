@@ -14188,6 +14188,12 @@
       "name": "FUN_a01278fc",
       "status": "matched"
     },
+    "ram:a0127908": {
+      "by": "hand",
+      "comment": "stores the argument to DAT_a802d8a1",
+      "name": "FUN_a0127908",
+      "status": "matched"
+    },
     "ram:a0127914": {
       "by": "autoc",
       "comment": "(byte 0xA802D8A5) = p1",
