@@ -472,6 +472,13 @@
       "status": "matched",
       "symbol": "?C?LLDPDATA"
     },
+    "CODE:35a9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "checks the boot sector in the 0x01E6 buffer (MBR offset, EXFAT or FAT fields) and walks the directory for the UPDATE / config .bin entries; 3e68 + ad56 when found",
+      "name": "FUN_CODE_35a9",
+      "status": "matched"
+    },
     "CODE:3e68": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
