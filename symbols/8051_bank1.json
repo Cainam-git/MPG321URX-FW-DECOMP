@@ -837,6 +837,13 @@
       "name": "FUN_CODE_7ca8",
       "status": "matched"
     },
+    "CODE:8072": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "unpack (n + 3) / 4 longs from src into bytes at dst, most significant first",
+      "name": "FUN_CODE_8072",
+      "status": "matched"
+    },
     "CODE:8731": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
@@ -955,6 +962,13 @@
       "name": "FUN_CODE_9caa",
       "status": "matched"
     },
+    "CODE:9f04": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Calls FUN_CODE_2820 (printf, declared `extern void FUN_CODE_2820(void *fmt, ...) large;`) with the generic code pointer 0xffdd52, passed as a `(void code *)` constant so that it is loaded into R3:R2:R1 (MOV R3,#0xff; MOV R2,#0xdd; MOV R1,#0x52) before the LCALL.",
+      "name": "FUN_CODE_9f04",
+      "status": "matched"
+    },
     "CODE:9fc8": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
@@ -1046,6 +1060,20 @@
       "name": "FUN_CODE_afdc",
       "status": "matched"
     },
+    "CODE:b06f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Writes 0xFF to xdata register 0xd910 and related xdata registers via MOV DPTR,#addr; MOV A,#imm; MOVX @DPTR,A, clears a bdata bit (sbit), and ends with a tail call to FUN_CODE_cd07 emitted as LJMP. The registers must be declared xdata so Keil uses MOVX @DPTR addressing instead of direct addressing.",
+      "name": "FUN_CODE_b06f",
+      "status": "matched"
+    },
+    "CODE:b192": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Busy-waits on bit 1 of an xdata status register, compiled as ANL A,#2 / JNZ (an integer comparison in source, not a bit test that would emit JB ACC.1), then performs a dummy read of xdata 0xf1c0 whose value is stored to R4 before A is cleared, so the read value must be used in source.",
+      "name": "FUN_CODE_b192",
+      "status": "matched"
+    },
     "CODE:b228": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
@@ -1135,6 +1163,13 @@
       "name": "FUN_CODE_bd81",
       "status": "matched"
     },
+    "CODE:bde9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Takes a bitmask sel (R7) and a value val (R5). Clears the LSB of val (keeps bits 1-7), then for each set bit in sel writes (current_value & 1) | val to the matching XDATA register: bit 0 -> 0xF040, bit 1 -> 0xF048, bit 2 -> 0xF090, bit 3 -> 0xF098, bit 4 -> 0xF0A2, bit 5 -> 0xF0BF, bit 6 -> 0xF147, bit 7 -> 0xF01B. The MOV R4,AR7 copy in the target is how Keil copies the first parameter.",
+      "name": "FUN_CODE_bde9",
+      "status": "matched"
+    },
     "CODE:beb5": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
@@ -1165,6 +1200,13 @@
       "by": "hand",
       "comment": "register bank 3 bit tests: DCDF/DCDE and DCCF/DCCE pending bits -> 9339/b979 or 914b/b8fd, then d214 unless XDATA 0xD511 is 0x20",
       "name": "FUN_CODE_c1c1",
+      "status": "matched"
+    },
+    "CODE:c278": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Clears bit 0 of eight xdata registers, one per set bit of the byte parameter (copied to R5): bit 0 -> 0xf040, bit 1 -> 0xf048, bit 2 -> 0xf090, bit 3 -> 0xf098, bit 4 -> 0xf0a2, bit 5 -> 0xf0bf, bit 6 -> 0xf147, bit 7 -> 0xf01b. Each bit test is followed by a read-modify-write of its register; `param_1 & (1 << n)` and `(param_1 >> n) & 1` compile identically.",
+      "name": "FUN_CODE_c278",
       "status": "matched"
     },
     "CODE:c2d3": {
@@ -1428,6 +1470,13 @@
       "name": "FUN_CODE_d095",
       "status": "matched"
     },
+    "CODE:d13a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Makes five calls that pass a byte in R7, a byte in R5 and a 16-bit word in R2:R3 (R2 high, R3 low): (0x00, 0x80, 0x01c2), (0x10, 0x00, 0x0640), (0x20, 0x80, 0x0002), (0x30, 0x80, 0x001c), (0x50, 0x80, 0x0136). The callee prototype is (unsigned char, unsigned char, unsigned int).",
+      "name": "FUN_CODE_d13a",
+      "status": "matched"
+    },
     "CODE:d171": {
       "by": "hand",
       "comment": "copy the 0x11A bytes at XDATA 0x3E00 into port byte 0xD5E3 with 0xD5E0 set to 0x22, then restore 0xD5E0",
@@ -1540,6 +1589,13 @@
       "name": "FUN_CODE_d5a1",
       "status": "matched"
     },
+    "CODE:d5c8": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "XDATA 0xD929 = 0x71, 0xD90B &= 0x7F, 0xD904 &= 0x01 (0xD511 == 0x20) or 0x0F, 0xD90C |= 1, then FUN_CODE_daad()",
+      "name": "FUN_CODE_d5c8",
+      "status": "matched"
+    },
     "CODE:d5f3": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
@@ -1602,6 +1658,13 @@
       "name": "FUN_CODE_d7ac",
       "status": "matched"
     },
+    "CODE:d7d2": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Calls FUN_CODE_df0b and tests carry: if set, returns the 32-bit constant 0x00B71B00; otherwise reads xdata 0xd511 and returns 0x02DC6C00 if it equals 0x20, else 0x05B8D800. The 32-bit result is returned in R4:R7 (R4 MSB, R7 LSB); R7 is loaded with 0x00 once before the CJNE and shared by both branches.",
+      "name": "FUN_CODE_d7d2",
+      "status": "matched"
+    },
     "CODE:d81c": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
@@ -1620,6 +1683,13 @@
       "by": "hand",
       "comment": "using 3: r = de20(d929 & 0x0f); dcb1[0] = r * 9; dcb1[1] = r * 15",
       "name": "FUN_CODE_d8a6",
+      "status": "matched"
+    },
+    "CODE:d8c8": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Reads the status byte at xdata 0xA6A6. If it equals 1, writes 0x20 to 0xA66E; otherwise writes 0x10 to 0xA66E, sets SFR bit 0xD2.7, writes 2 to 0xA781 and calls FUN_CODE_a9f6. In both cases it then calls FUN_CODE_d4e1(0).",
+      "name": "FUN_CODE_d8c8",
       "status": "matched"
     },
     "CODE:d92a": {
@@ -1712,11 +1782,25 @@
       "name": "FUN_CODE_db64",
       "status": "matched"
     },
+    "CODE:db7d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Tests a bit of an xdata byte with ANL A,#mask followed by JZ rather than JNB ACC.x; the source must express the test as a mask operation (via a temporary or volatile access) so Keil emits the ANL.",
+      "name": "FUN_CODE_db7d",
+      "status": "matched"
+    },
     "CODE:dbdf": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
       "comment": "b228(0xb0, &v, 1) with the ulong argument v; callers 0x21b3 (LJMP), 0x244b",
       "name": "FUN_CODE_dbdf",
+      "status": "matched"
+    },
+    "CODE:dc92": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Loads the generic code pointer 0xffb545 (R3=0xff, R2=0xb5, R1=0x45) as the call argument. In Keil's generic pointer format R3 holds the memory-type byte, R2 the high byte and R1 the low byte, so the constant is written as 0xffb545.",
+      "name": "FUN_CODE_dc92",
       "status": "matched"
     },
     "CODE:dcbb": {
@@ -1749,11 +1833,25 @@
       "name": "FUN_CODE_dce3",
       "status": "matched"
     },
+    "CODE:dcf6": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "XDATA 0xF053 = 0x83, 0xF055 = 0x06, then FUN_CODE_c389(1, 0)",
+      "name": "FUN_CODE_dcf6",
+      "status": "matched"
+    },
     "CODE:dd09": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
       "comment": "printf 'Enable_DPMRX' (code 0x6ad8), then 8a51(0), 8a51(1); twin of de2e 'Disable_DPMRX'",
       "name": "FUN_CODE_dd09",
+      "status": "matched"
+    },
+    "CODE:dd63": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Writes 1 to xdata 0xa70c if its parameter (R7) equals 1, otherwise writes 0, using an if/else with a separate store in each branch.",
+      "name": "FUN_CODE_dd63",
       "status": "matched"
     },
     "CODE:dd74": {
@@ -1800,6 +1898,13 @@
       "name": "FUN_CODE_de12",
       "status": "matched"
     },
+    "CODE:de2e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Calls FUN_CODE_2820 with the generic pointer to code address 0x6ae7 (R3=0xff code-space type byte, R2=0x6a, R1=0xe7), then tail-jumps (LJMP) to FUN_CODE_d75e. The pointer is held in a local generic `void *` variable to force the three-byte generic representation; the call followed by return compiles to the tail jump under OPTIMIZE(7,SPEED).",
+      "name": "FUN_CODE_de2e",
+      "status": "matched"
+    },
     "CODE:de50": {
       "by": "hand",
       "comment": "bit: ce87() == 0xff",
@@ -1837,6 +1942,13 @@
       "c51opts": "OPTIMIZE(7,SPEED)",
       "comment": "twin of 8051_bank1/FUN_CODE_dedc",
       "name": "FUN_CODE_dee2",
+      "status": "matched"
+    },
+    "CODE:def4": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "FUN_CODE_dcf6(), then FUN_CODE_d987() (LJMP tail call)",
+      "name": "FUN_CODE_def4",
       "status": "matched"
     },
     "CODE:deff": {
@@ -1886,34 +1998,10 @@
       "name": "FUN_CODE_236e",
       "status": "matched"
     },
-    "ram:9f04": {
-      "by": "hand",
-      "comment": "Calls FUN_CODE_2820 (printf, declared `extern void FUN_CODE_2820(void *fmt, ...) large;`) with the generic code pointer 0xffdd52, passed as a `(void code *)` constant so that it is loaded into R3:R2:R1 (MOV R3,#0xff; MOV R2,#0xdd; MOV R1,#0x52) before the LCALL.",
-      "name": "FUN_CODE_9f04",
-      "status": "matched"
-    },
-    "ram:b06f": {
-      "by": "hand",
-      "comment": "Writes 0xFF to xdata register 0xd910 and related xdata registers via MOV DPTR,#addr; MOV A,#imm; MOVX @DPTR,A, clears a bdata bit (sbit), and ends with a tail call to FUN_CODE_cd07 emitted as LJMP. The registers must be declared xdata so Keil uses MOVX @DPTR addressing instead of direct addressing.",
-      "name": "FUN_CODE_b06f",
-      "status": "matched"
-    },
-    "ram:b192": {
-      "by": "hand",
-      "comment": "Busy-waits on bit 1 of an xdata status register, compiled as ANL A,#2 / JNZ (an integer comparison in source, not a bit test that would emit JB ACC.1), then performs a dummy read of xdata 0xf1c0 whose value is stored to R4 before A is cleared, so the read value must be used in source.",
-      "name": "FUN_CODE_b192",
-      "status": "matched"
-    },
     "ram:bbca": {
       "by": "hand",
       "comment": "for each bit i 0..6 set in mask: XDATA 0xF181 + 2i |= 0x80, 0xF180 + 2i = value",
       "name": "FUN_CODE_bbca",
-      "status": "matched"
-    },
-    "ram:bde9": {
-      "by": "hand",
-      "comment": "Takes a bitmask sel (R7) and a value val (R5). Clears the LSB of val (keeps bits 1-7), then for each set bit in sel writes (current_value & 1) | val to the matching XDATA register: bit 0 -> 0xF040, bit 1 -> 0xF048, bit 2 -> 0xF090, bit 3 -> 0xF098, bit 4 -> 0xF0A2, bit 5 -> 0xF0BF, bit 6 -> 0xF147, bit 7 -> 0xF01B. The MOV R4,AR7 copy in the target is how Keil copies the first parameter.",
-      "name": "FUN_CODE_bde9",
       "status": "matched"
     },
     "ram:c085": {
@@ -1922,34 +2010,16 @@
       "name": "FUN_CODE_c085",
       "status": "matched"
     },
-    "ram:c278": {
-      "by": "hand",
-      "comment": "Clears bit 0 of eight xdata registers, one per set bit of the byte parameter (copied to R5): bit 0 -> 0xf040, bit 1 -> 0xf048, bit 2 -> 0xf090, bit 3 -> 0xf098, bit 4 -> 0xf0a2, bit 5 -> 0xf0bf, bit 6 -> 0xf147, bit 7 -> 0xf01b. Each bit test is followed by a read-modify-write of its register; `param_1 & (1 << n)` and `(param_1 >> n) & 1` compile identically.",
-      "name": "FUN_CODE_c278",
-      "status": "matched"
-    },
     "ram:cfe7": {
       "by": "hand",
       "comment": "Accesses IDATA byte DAT_INTMEM_50 at 0x50 through MOV R0,#0x50 indirect addressing. The variable is defined (not declared extern) as unsigned char idata DAT_INTMEM_50 _at_ 0x50, since Keil rejects extern with _at_.",
       "name": "FUN_CODE_cfe7",
       "status": "matched"
     },
-    "ram:d13a": {
-      "by": "hand",
-      "comment": "Makes five calls that pass a byte in R7, a byte in R5 and a 16-bit word in R2:R3 (R2 high, R3 low): (0x00, 0x80, 0x01c2), (0x10, 0x00, 0x0640), (0x20, 0x80, 0x0002), (0x30, 0x80, 0x001c), (0x50, 0x80, 0x0136). The callee prototype is (unsigned char, unsigned char, unsigned int).",
-      "name": "FUN_CODE_d13a",
-      "status": "matched"
-    },
     "ram:d24a": {
       "by": "hand",
       "comment": "Interrupt-style function using register bank 3 (`using 3`, MOV PSW,#0x18). It tests bit 7 of DAT_EXTMEM_d90b with the sequence ANL A,#0x80; XRL A,#0x80; JNZ, which requires the source form `if ((DAT_EXTMEM_d90b & 0x80) ^ 0x80)` rather than a plain bit test (which compiles to XRL/JB ACC.7).",
       "name": "FUN_CODE_d24a",
-      "status": "matched"
-    },
-    "ram:d5c8": {
-      "by": "hand",
-      "comment": "XDATA 0xD929 = 0x71, 0xD90B &= 0x7F, 0xD904 &= 0x01 (0xD511 == 0x20) or 0x0F, 0xD90C |= 1, then FUN_CODE_daad()",
-      "name": "FUN_CODE_d5c8",
       "status": "matched"
     },
     "ram:d66e": {
@@ -1964,22 +2034,10 @@
       "name": "FUN_CODE_d75e",
       "status": "matched"
     },
-    "ram:d7d2": {
-      "by": "hand",
-      "comment": "Calls FUN_CODE_df0b and tests carry: if set, returns the 32-bit constant 0x00B71B00; otherwise reads xdata 0xd511 and returns 0x02DC6C00 if it equals 0x20, else 0x05B8D800. The 32-bit result is returned in R4:R7 (R4 MSB, R7 LSB); R7 is loaded with 0x00 once before the CJNE and shared by both branches.",
-      "name": "FUN_CODE_d7d2",
-      "status": "matched"
-    },
     "ram:d862": {
       "by": "hand",
       "comment": "The key change is swapping the branch order: the firmware tests `JNZ` (jump if non-zero) to the else path, so the `if (a565 == 0)` case must come first in source. The `else` handles the non-zero case with the subtraction comparison. This matches the target's control flow exactly \u2014 the zero test comes first, and the non-zero path (subtraction) is at the end.",
       "name": "FUN_CODE_d862",
-      "status": "matched"
-    },
-    "ram:d8c8": {
-      "by": "hand",
-      "comment": "Reads the status byte at xdata 0xA6A6. If it equals 1, writes 0x20 to 0xA66E; otherwise writes 0x10 to 0xA66E, sets SFR bit 0xD2.7, writes 2 to 0xA781 and calls FUN_CODE_a9f6. In both cases it then calls FUN_CODE_d4e1(0).",
-      "name": "FUN_CODE_d8c8",
       "status": "matched"
     },
     "ram:d969": {
@@ -1992,12 +2050,6 @@
       "by": "hand",
       "comment": "Initializes UART and timer configuration: two calls followed by SFR and bit writes, in order, that enable both timers, external interrupts, the timer 0 interrupt and the serial interrupt, and set the serial interrupt priority. The sfr/sbit addresses are the standard 8052 ones.",
       "name": "FUN_CODE_d987",
-      "status": "matched"
-    },
-    "ram:db7d": {
-      "by": "hand",
-      "comment": "Tests a bit of an xdata byte with ANL A,#mask followed by JZ rather than JNB ACC.x; the source must express the test as a mask operation (via a temporary or volatile access) so Keil emits the ANL.",
-      "name": "FUN_CODE_db7d",
       "status": "matched"
     },
     "ram:dbf6": {
@@ -2024,40 +2076,16 @@
       "name": "FUN_CODE_dc67",
       "status": "matched"
     },
-    "ram:dc92": {
-      "by": "hand",
-      "comment": "Loads the generic code pointer 0xffb545 (R3=0xff, R2=0xb5, R1=0x45) as the call argument. In Keil's generic pointer format R3 holds the memory-type byte, R2 the high byte and R1 the low byte, so the constant is written as 0xffb545.",
-      "name": "FUN_CODE_dc92",
-      "status": "matched"
-    },
-    "ram:dcf6": {
-      "by": "hand",
-      "comment": "XDATA 0xF053 = 0x83, 0xF055 = 0x06, then FUN_CODE_c389(1, 0)",
-      "name": "FUN_CODE_dcf6",
-      "status": "matched"
-    },
     "ram:dd41": {
       "by": "hand",
       "comment": "XDATA 0xA629 = 0; 16-bit FUN_CODE_d94a() result stored big-endian at 0xA5EB/0xA5EC",
       "name": "FUN_CODE_dd41",
       "status": "matched"
     },
-    "ram:dd63": {
-      "by": "hand",
-      "comment": "Writes 1 to xdata 0xa70c if its parameter (R7) equals 1, otherwise writes 0, using an if/else with a separate store in each branch.",
-      "name": "FUN_CODE_dd63",
-      "status": "matched"
-    },
     "ram:de20": {
       "by": "hand",
       "comment": "`using 3` corresponds to register bank 3 (PSW bits RS0=1, RS1=1), which gives PSW value 0x18. This should match the target exactly.",
       "name": "FUN_CODE_de20",
-      "status": "matched"
-    },
-    "ram:de2e": {
-      "by": "hand",
-      "comment": "Calls FUN_CODE_2820 with the generic pointer to code address 0x6ae7 (R3=0xff code-space type byte, R2=0x6a, R1=0xe7), then tail-jumps (LJMP) to FUN_CODE_d75e. The pointer is held in a local generic `void *` variable to force the three-byte generic representation; the call followed by return compiles to the tail jump under OPTIMIZE(7,SPEED).",
-      "name": "FUN_CODE_de2e",
       "status": "matched"
     },
     "ram:de3a": {
@@ -2131,12 +2159,6 @@
       "by": "hand",
       "comment": "Writes its byte parameter (R7) to xdata 0xA62E: MOV DPTR,#0xA62E; MOV A,R7; MOVX @DPTR,A.",
       "name": "FUN_CODE_deee",
-      "status": "matched"
-    },
-    "ram:def4": {
-      "by": "hand",
-      "comment": "FUN_CODE_dcf6(), then FUN_CODE_d987() (LJMP tail call)",
-      "name": "FUN_CODE_def4",
       "status": "matched"
     }
   }
