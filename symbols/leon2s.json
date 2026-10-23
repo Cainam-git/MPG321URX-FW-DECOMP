@@ -4546,6 +4546,12 @@
       "name": "MAX_RSED",
       "status": "matched"
     },
+    "ram:a0099ffc": {
+      "by": "hand",
+      "comment": "HDMI 2.1 link-training stable check: rate change, lane lock fail counters and the retry counter per port",
+      "name": "DRV_HDMI21_RXDetect_FSM_LTS_Chk_Stable",
+      "status": "matched"
+    },
     "ram:a009a41c": {
       "by": "hand",
       "comment": "runs the per-port state functions from DAT_a00b4230 for ports 0 and 1 and re-arms the DAT_a8079100 timer descriptor",
