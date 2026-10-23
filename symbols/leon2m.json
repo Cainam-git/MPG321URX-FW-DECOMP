@@ -11278,6 +11278,13 @@
       "name": "FUN_a010e0f4",
       "status": "matched"
     },
+    "ram:a010e624": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores three bytes in record 0xa802d704/0xa802d804 +0x38..+0x3a and writes (x*1023+50)/100 into bits 0..9 of block words 9..11 in tables 0x19aec4 and 0x19aebc",
+      "name": "FUN_a010e624",
+      "status": "matched"
+    },
     "ram:a010e8ec": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
