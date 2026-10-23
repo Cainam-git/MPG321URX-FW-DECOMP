@@ -2352,6 +2352,12 @@
       "name": "Deskew_HotPlug",
       "status": "matched"
     },
+    "ram:a0077f04": {
+      "by": "hand",
+      "comment": "Per-channel SCDC value collection and PreAEQ index stepping for one port after a count, then word 0 of its ARR_a807ccc4 record = 7",
+      "name": "DRV_HDMI_EQScan_FSM_PHY_R_ChkError",
+      "status": "matched"
+    },
     "ram:a007890c": {
       "by": "hand",
       "comment": "Per-channel RVGA table index apply or best-SCDC search, then record state updates",
