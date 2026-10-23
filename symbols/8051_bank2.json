@@ -685,6 +685,13 @@
       "name": "FUN_CODE_9235",
       "status": "matched"
     },
+    "CODE:9734": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "loop over the 16-bit count at XDATA 0xF19E: progress byte 0xF194 = i * 255 / n, record 0x0761 (0x2A, 8, a, m >> 9) and FUN_CODE_768a(b), retry when FUN_CODE_e4c9() is set, else a += 0x28, b += 0x5000",
+      "name": "FUN_CODE_9734",
+      "status": "matched"
+    },
     "CODE:999f": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
