@@ -11364,6 +11364,13 @@
       "name": "FUN_a01118cc",
       "status": "matched"
     },
+    "ram:a0112b2c": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "passes the words of the ROM set selected by DAT_a802c98e/DAT_a802c98f to FUN_a01129e4 and three globals",
+      "name": "FUN_a0112b2c",
+      "status": "matched"
+    },
     "ram:a0112db0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
