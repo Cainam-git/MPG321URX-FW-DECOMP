@@ -11378,6 +11378,13 @@
       "name": "FUN_a01118cc",
       "status": "matched"
     },
+    "ram:a01129e4": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "switch on sel: writes a, b, c to register groups through FUN_a00f3134",
+      "name": "FUN_a01129e4",
+      "status": "matched"
+    },
     "ram:a0112b2c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
