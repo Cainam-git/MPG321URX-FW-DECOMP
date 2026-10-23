@@ -5487,6 +5487,13 @@
       "name": "FUN_a00ae790",
       "status": "matched"
     },
+    "ram:a00aea3c": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "FUN_a00b3ed0/FUN_a00b32e4 sequence with m from FUN_a01445fc(DAT_a802d290+0x1a3), steps the byte, FUN_a00869b0(0xb, 10000) on condition, FUN_a0090f94(10)",
+      "name": "FUN_a00aea3c",
+      "status": "matched"
+    },
     "ram:a00aeb98": {
       "by": "h10",
       "cflags": "-mcpu=v8 -O3 -g",
