@@ -16709,6 +16709,12 @@
       "name": "FUN_a014464c",
       "status": "matched"
     },
+    "ram:a0144684": {
+      "by": "hand",
+      "comment": "returns 5",
+      "name": "FUN_a0144684",
+      "status": "matched"
+    },
     "ram:a014468c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
