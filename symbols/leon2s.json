@@ -7019,6 +7019,12 @@
       "name": "FUN_a00cb1d4",
       "status": "matched"
     },
+    "ram:a00cc1d4": {
+      "by": "h43",
+      "comment": "sets the record state field, reads 16 bytes with FUN_a00c7770 and sends them with FUN_a00c80f0",
+      "name": "FUN_a00cc1d4",
+      "status": "matched"
+    },
     "ram:a00cc834": {
       "by": "h17",
       "comment": "Sets or clears bit 1 of an indexed register for port 2, else calls FUN_a00c76c0(port, 4, 0x10, on)",
