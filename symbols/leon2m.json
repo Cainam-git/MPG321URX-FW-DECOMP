@@ -17161,7 +17161,7 @@
     "ram:a0150248": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Hold-off counter at 0xA802CC88 for FUN_a011dd9c(0x18, ...) when 0xA802CC86 is set",
+      "comment": "When byte 0xA802CC86 is set: counts halfword 0xA802CC88 down or sets it to 1000 around FUN_a011dd9c(0x18, ...) calls",
       "name": "FUN_a0150248",
       "status": "matched"
     },
