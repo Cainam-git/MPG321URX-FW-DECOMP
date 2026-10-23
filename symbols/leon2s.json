@@ -6952,6 +6952,12 @@
       "name": "FUN_a00b1470",
       "status": "matched"
     },
+    "ram:a00b1494": {
+      "by": "hand",
+      "comment": "returns byte +0x117 of ARR_a807dc18[port]",
+      "name": "FUN_a00b1494",
+      "status": "matched"
+    },
     "ram:a00b14b0": {
       "by": "hand",
       "comment": "returns byte 0x129 of record port of ARR_a807dc18 for ports 0 and 1, else 0",
