@@ -1,4 +1,4 @@
-# leon2m FUN_a00d57e8 0xa00d57e8-0xa00d5938 (252 bytes)
+# leon2m FUN_a00d57e8 0xa00d57e8-0xa00d58b0 (200 bytes)
 a00d57e8:  9d e3 bf 98  save  %sp, -104, %sp
 a00d57ec:  37 2a 00 b4  sethi  %hi(0xa802d000), %i3
 a00d57f0:  b2 16 e2 90  or  %i3, 0x290, %i1	! 0xa802d290
@@ -49,37 +49,3 @@ a00d58a0:  b4 10 22 e0  mov  0x2e0, %i2
 a00d58a4:  40 01 d5 8b  call  0xa014aed0
 a00d58a8:  97 e8 20 1c  restore  %g0, 0x1c, %o3
 a00d58ac:  01 00 00 00  nop
-a00d58b0:  03 2a 00 b4  sethi  %hi(0xa802d000), %g1
-a00d58b4:  d0 08 62 aa  ldub  [ %g1 + 0x2aa ], %o0	! 0xa802d2aa
-a00d58b8:  80 a2 20 04  cmp  %o0, 4
-a00d58bc:  38 80 00 02  bgu,a   0xa00d58c4
-a00d58c0:  90 10 20 04  mov  4, %o0
-a00d58c4:  90 0a 20 ff  and  %o0, 0xff, %o0
-a00d58c8:  82 13 c0 00  mov  %o7, %g1
-a00d58cc:  7f fe c8 52  call  0xa0087a14
-a00d58d0:  9e 10 40 00  mov  %g1, %o7
-a00d58d4:  01 00 00 00  nop
-a00d58d8:  03 2a 00 b4  sethi  %hi(0xa802d000), %g1
-a00d58dc:  d2 10 62 c4  lduh  [ %g1 + 0x2c4 ], %o1	! 0xa802d2c4
-a00d58e0:  92 0a 60 0f  and  %o1, 0xf, %o1
-a00d58e4:  90 10 20 01  mov  1, %o0
-a00d58e8:  82 13 c0 00  mov  %o7, %g1
-a00d58ec:  40 01 cd de  call  0xa0149064
-a00d58f0:  9e 10 40 00  mov  %g1, %o7
-a00d58f4:  01 00 00 00  nop
-a00d58f8:  03 2a 00 b4  sethi  %hi(0xa802d000), %g1
-a00d58fc:  d2 10 62 c4  lduh  [ %g1 + 0x2c4 ], %o1	! 0xa802d2c4
-a00d5900:  92 0a 60 0f  and  %o1, 0xf, %o1
-a00d5904:  90 10 20 00  clr  %o0
-a00d5908:  82 13 c0 00  mov  %o7, %g1
-a00d590c:  40 01 cd d6  call  0xa0149064
-a00d5910:  9e 10 40 00  mov  %g1, %o7
-a00d5914:  01 00 00 00  nop
-a00d5918:  03 2a 00 b4  sethi  %hi(0xa802d000), %g1
-a00d591c:  d0 00 62 90  ld  [ %g1 + 0x290 ], %o0	! 0xa802d290
-a00d5920:  91 32 20 09  srl  %o0, 9, %o0
-a00d5924:  90 0a 20 01  and  %o0, 1, %o0
-a00d5928:  82 13 c0 00  mov  %o7, %g1
-a00d592c:  40 01 cd 1b  call  0xa0148d98
-a00d5930:  9e 10 40 00  mov  %g1, %o7
-a00d5934:  01 00 00 00  nop
