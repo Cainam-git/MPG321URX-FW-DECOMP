@@ -4466,6 +4466,12 @@
       "name": "FUN_a009fe98",
       "status": "matched"
     },
+    "ram:a00a03c8": {
+      "by": "hand",
+      "comment": "returns 1 when the two words behind the port record's pointer pass five field tests, else 0",
+      "name": "FUN_a00a03c8",
+      "status": "matched"
+    },
     "ram:a00a0514": {
       "by": "hand",
       "comment": "",
