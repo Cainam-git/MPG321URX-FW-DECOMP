@@ -3080,6 +3080,13 @@
       "name": "FUN_a00943ec",
       "status": "matched"
     },
+    "ram:a0094438": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "by DAT_a802d290+0x1a3 (0, 1, 2): stores 0xe1/0xe6/0x41 to 0xa802afec and runs a fixed call sequence; then FUN_a00a45a8() and DAT_a802b08e |= 2",
+      "name": "FUN_a0094438",
+      "status": "matched"
+    },
     "ram:a00945a8": {
       "by": "h10",
       "cflags": "-mcpu=v8 -O3 -g",
