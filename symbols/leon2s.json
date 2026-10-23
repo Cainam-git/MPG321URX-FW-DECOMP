@@ -5664,8 +5664,8 @@
       "status": "matched"
     },
     "ram:a00a9380": {
-      "by": "permuter",
-      "comment": "permuter: [walk]; swap lines 15; swap lines 17; swap lines 15; void -> int, return 0; swap lines 18; swap lines 17; swap lines 19; swap lines 20; return void; [walk]; swap lines 18; swap lines 19; swap lines 18; swap lines 20; swap lines 18",
+      "by": "h49",
+      "comment": "fills an 11-byte record with constants, bytes 3 and 10 by mode 1",
       "name": "FUN_a00a9380",
       "status": "matched"
     },

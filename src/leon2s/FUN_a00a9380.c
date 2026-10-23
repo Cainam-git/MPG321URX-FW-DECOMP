@@ -1,4 +1,6 @@
 /* leon2s FUN_a00a9380 @ 0xa00a9380 (-mcpu=v8 -Os -g)
+ * Fills the 11-byte record r: r[0] = 0x7f, r[1] = 0xc0, r[2] = r[4] = r[6] = r[8] = 0, r[5] = r[7] = 1, r[9] = 4; mode 1:
+ * r[3] = 0x84, r[10] = 1, else r[3] = 0xc4, r[10] = 0 (stores in the firmware's order).
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;
@@ -32,6 +34,4 @@ void FUN_a00a9380(unsigned char param_1,undefined1 *param_2)
     param_2[3] = 0xc4;
     param_2[10] = 0;
   }
-  return 0;
-  return 0;
 }
