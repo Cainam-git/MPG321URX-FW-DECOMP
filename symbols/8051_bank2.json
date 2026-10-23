@@ -742,6 +742,13 @@
       "name": "FUN_CODE_abce",
       "status": "matched"
     },
+    "CODE:ad56": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "finds the AA 55 04 record in the block at XDATA 0x01E6, sums n 512-byte blocks read with FUN_CODE_e54b, writes the sum to 0xF19A/0xF19B, returns sum == word 0x0156",
+      "name": "FUN_CODE_ad56",
+      "status": "matched"
+    },
     "CODE:aed9": {
       "by": "hand",
       "comment": "Keil common-entry (L?) code in front of FUN_CODE_af07, in FUN_CODE_af07's code segment; emitted by compiling src/8051_bank2/FUN_CODE_a17e.c, bytes judged with FUN_CODE_af07 over 0xaed9..0xb044",
@@ -1403,7 +1410,7 @@
     "CODE:e141": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "c60e(a, ulong 090b, ulong 07d5) (3 ulong params; the PUSH/POP R4..R7 saves arg 1 while args 2/3 are stored)",
+      "comment": "tail call c60e(a, b, ulong 07d5); b is e141s second unsigned long parameter (XDATA 0x090B)",
       "name": "FUN_CODE_e141",
       "status": "matched"
     },
