@@ -5529,6 +5529,13 @@
       "name": "FUN_a00aecec",
       "status": "matched"
     },
+    "ram:a00b0034": {
+      "by": "h50",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Page dispatch: common frame rows, then per-page row lists from address tables and the FUN_a00af44c/FUN_a00a900c calls",
+      "name": "FUN_a00b0034",
+      "status": "matched"
+    },
     "ram:a00b05d8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
