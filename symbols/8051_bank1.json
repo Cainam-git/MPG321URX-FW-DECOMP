@@ -899,6 +899,13 @@
       "name": "FUN_CODE_9bde",
       "status": "matched"
     },
+    "CODE:9caa": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "count-down of XDATA 0xA62A by the FUN_CODE_d94a elapsed count, Wakeup by timer print",
+      "name": "FUN_CODE_9caa",
+      "status": "matched"
+    },
     "CODE:9fc8": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
