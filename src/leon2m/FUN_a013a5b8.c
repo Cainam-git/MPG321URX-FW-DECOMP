@@ -1,4 +1,6 @@
 /* leon2m FUN_a013a5b8 @ 0xa013a5b8 (-mcpu=v8 -O3 -g)
+ * Same wait as FUN_a013a454 on the word at portal 2 offset 0x20 (at most 100 reads, func_0x4008d1a0(1) between);
+ * when it reads 0, writes 0x52000000 | (p1 & 0xff) << 16 | (p2 & 0xffff) there with func_0x4008c5f8(2, 0x20, &w, 1).
  */
 
 extern void func_0x4008c4d0();

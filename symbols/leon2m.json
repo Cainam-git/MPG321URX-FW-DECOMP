@@ -12417,7 +12417,7 @@
     "ram:a0125230": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "returns byte +0 of the 0x16-byte record at 0x1a42a8 picked by ARR_a802d880[p], or 0xff for index 0xff",
       "name": "FUN_a0125230",
       "status": "matched"
     },
@@ -13052,7 +13052,7 @@
     },
     "ram:a0127a08": {
       "by": "hand",
-      "comment": "",
+      "comment": "returns DAT_a802a440[p & 0xff], or byte 0xA802A443 for p == 0xff",
       "name": "FUN_a0127a08",
       "status": "matched"
     },
@@ -13235,7 +13235,7 @@
     },
     "ram:a012b328": {
       "by": "near",
-      "comment": "near-miss repaired: name arr->DAT_a802d8ae",
+      "comment": "byte +3 of the 22-byte entry p at 0xA802D8AE = v, then FUN_a0137aec(p, v)",
       "name": "FUN_a012b328",
       "status": "matched"
     },
@@ -13326,7 +13326,7 @@
     "ram:a012c16c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "",
+      "comment": "returns ((word 0xA802CB08 >> 4p) & 0xf) << 7",
       "name": "FUN_a012c16c",
       "status": "matched"
     },
@@ -13703,7 +13703,7 @@
     },
     "ram:a013480c": {
       "by": "hand",
-      "comment": "",
+      "comment": "func_0x4008c5f8(0, p, &w, 1) with w = 0 (one zero word to portal 0 offset p)",
       "name": "FUN_a013480c",
       "status": "matched"
     },
@@ -13812,7 +13812,7 @@
     "ram:a01370ac": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "",
+      "comment": "returns bit 29 of the word read with func_0x4008c4d0(1, 0xc, &w, 1)",
       "name": "FUN_a01370ac",
       "status": "matched"
     },
@@ -13859,7 +13859,7 @@
     "ram:a01377e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "",
+      "comment": "returns (p1 & bits 8..15 of the word read with func_0x4008c4d0(1, 0xcc, &w, 1)) != 0",
       "name": "FUN_a01377e8",
       "status": "matched"
     },
@@ -13871,7 +13871,7 @@
     },
     "ram:a01378f0": {
       "by": "permuter",
-      "comment": "permuter: ",
+      "comment": "FUN_a01370dc(0x11, 2, {p1, p2, 0, 0}, 0)",
       "name": "FUN_a01378f0",
       "status": "matched"
     },
@@ -13898,7 +13898,7 @@
     },
     "ram:a0137aec": {
       "by": "permuter",
-      "comment": "permuter: ",
+      "comment": "FUN_a01370dc(0x24, 4, {p1, p2, 0, 0}, 1)",
       "name": "FUN_a0137aec",
       "status": "matched"
     },
@@ -13917,7 +13917,7 @@
     },
     "ram:a0137bb0": {
       "by": "hand",
-      "comment": "",
+      "comment": "FUN_a01370dc(0x87, 4, {0,0,0,0}, 0), FUN_a0137344(1), returns bit 0 of byte 0xA802CBA3",
       "name": "FUN_a0137bb0",
       "status": "matched"
     },
@@ -13929,7 +13929,7 @@
     },
     "ram:a0137c1c": {
       "by": "permuter",
-      "comment": "permuter: ",
+      "comment": "FUN_a01370dc(0x26, 4, {p1, p2, 0, 0}, 1)",
       "name": "FUN_a0137c1c",
       "status": "matched"
     },
@@ -13979,7 +13979,7 @@
     },
     "ram:a0137de0": {
       "by": "permuter",
-      "comment": "permuter: ",
+      "comment": "FUN_a01370dc(0x14, 4, {p1, p2, 0, 0}, 1)",
       "name": "FUN_a0137de0",
       "status": "matched"
     },
@@ -13999,7 +13999,7 @@
     },
     "ram:a013805c": {
       "by": "permuter",
-      "comment": "permuter: ",
+      "comment": "FUN_a01370dc(0x47, 4, {p1, p2, 0, 0}, 1)",
       "name": "FUN_a013805c",
       "status": "matched"
     },
@@ -14095,7 +14095,7 @@
     },
     "ram:a013851c": {
       "by": "hand",
-      "comment": "",
+      "comment": "FUN_a01370dc(0xfd, 4, {p,0,0,0}, 0), FUN_a0137344(1), returns byte 0xA802CBA3",
       "name": "FUN_a013851c",
       "status": "matched"
     },
@@ -14172,13 +14172,13 @@
     },
     "ram:a0138b98": {
       "by": "permuter",
-      "comment": "permuter: ",
+      "comment": "FUN_a01370dc(0x80, 4, {p1, p2, 0, 0}, 0)",
       "name": "FUN_a0138b98",
       "status": "matched"
     },
     "ram:a0138bc8": {
       "by": "permuter",
-      "comment": "permuter: ",
+      "comment": "FUN_a01370dc(0x86, 4, {p1, p2, 0, 0}, 0)",
       "name": "FUN_a0138bc8",
       "status": "matched"
     },
@@ -14190,7 +14190,7 @@
     },
     "ram:a0138c20": {
       "by": "permuter",
-      "comment": "permuter: ",
+      "comment": "FUN_a01370dc(0x78, 4, {p1, p2, 0, 0}, 0)",
       "name": "FUN_a0138c20",
       "status": "matched"
     },
@@ -14420,7 +14420,7 @@
     "ram:a013a454": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "waits (at most 100 x func_0x4008d1a0(1)) for the word at portal 2 offset 0x20 to read 0, then writes p | 0x50000000 there",
       "name": "FUN_a013a454",
       "status": "matched"
     },
@@ -14434,7 +14434,7 @@
     "ram:a013a5b8": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: param param_2 unsigned int",
+      "comment": "waits for the word at portal 2 offset 0x20 to read 0 (at most 100 tries), then writes 0x52000000 | p1 << 16 | (u16)p2",
       "name": "FUN_a013a5b8",
       "status": "matched"
     },
@@ -14764,7 +14764,7 @@
     },
     "ram:a013d178": {
       "by": "hand",
-      "comment": "",
+      "comment": "returns 1 when byte 0xA802E1A7 > 4, else 0",
       "name": "FUN_a013d178",
       "status": "matched"
     },
@@ -16154,7 +16154,7 @@
     "ram:a0149e8c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "",
+      "comment": "remapped channel c (0..3, else \"SYS remapping channel OOR\" and 0): FUN_a012f1ec(c, 3), FUN_a0109474(.., 0), FUN_a013d684, FUN_a013d918, delay 100, FUN_a0109474(.., 1)",
       "name": "FUN_a0149e8c",
       "status": "matched"
     },
@@ -16360,7 +16360,7 @@
     },
     "ram:a014bc58": {
       "by": "hand",
-      "comment": "",
+      "comment": "word 0xA802E408 = p; FUN_a0150120(0,0) / (1,0) / (1,1) for p 0 / 1 / 2-3",
       "name": "FUN_a014bc58",
       "status": "matched"
     },
@@ -16651,7 +16651,7 @@
     "ram:a014fd34": {
       "by": "near",
       "cflags": "-mcpu=v8 -O2",
-      "comment": "near-miss repaired: already exact",
+      "comment": "FUN_a011e8fc(0x10 + i, p) for each bit i set in byte 0xA802CC86",
       "name": "FUN_a014fd34",
       "status": "matched"
     },
@@ -17793,7 +17793,7 @@
     },
     "ram:a015ea68": {
       "by": "hand",
-      "comment": "",
+      "comment": "calls the function pointer at 0xA802CFE0 with p when set and returns its result, else 0",
       "name": "FUN_a015ea68",
       "status": "matched"
     },

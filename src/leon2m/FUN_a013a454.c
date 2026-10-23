@@ -1,4 +1,8 @@
 /* leon2m FUN_a013a454 @ 0xa013a454 (-mcpu=v8 -O3 -g)
+ * Reads the word w at portal 2 offset 0x20 (func_0x4008c4d0(2, 0x20, &w, 1), w preset to 0xffffffff); while it is
+ * non-zero, waits func_0x4008d1a0(1) and reads it again, at most 100 times. When w is 0 it writes
+ * (p & 0xff) | 0x50000000 there with func_0x4008c5f8(2, 0x20, &w, 1); after 100 non-zero reads it writes nothing.
+ * Source form: the firmware's branch layout written with gotos.
  */
 
 extern void func_0x4008c4d0();

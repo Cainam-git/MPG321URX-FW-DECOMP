@@ -1,4 +1,6 @@
 /* leon2m FUN_a014fd34 @ 0xa014fd34 (-mcpu=v8 -O2)
+ * For each bit i (0..7) set in byte 0xA802CC86 calls FUN_a011e8fc(0x10 + i, p & 0xff) (eight separate tests,
+ * the byte read again for each).
  */
 extern unsigned char DAT_a802cc86;
 extern void FUN_a011e8fc(int, int); /* 0xa011e8fc */

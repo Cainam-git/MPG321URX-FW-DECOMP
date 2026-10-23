@@ -1,5 +1,7 @@
 /* leon2m FUN_a0149e8c @ 0xa0149e8c (-mcpu=v8 -O2 -g)
- * 
+ * c = p for p 0..3; other values print "SYS remapping channel OOR" (0x1a6dd8, FUN_a00df170) and use 0.
+ * FUN_a012f1ec(c, 3); FUN_a0109474(FUN_a013cda8(c) & 0xff, 0); FUN_a013d684(c); FUN_a013d918(c);
+ * func_0x4008d1a0(100); FUN_a0109474(FUN_a013cda8(c) & 0xff, 1).
  */
 // FUN_a0149e8c at 0xa0149e8c
 extern int FUN_a00df170();

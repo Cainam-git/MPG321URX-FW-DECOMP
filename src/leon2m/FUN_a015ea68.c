@@ -1,5 +1,6 @@
 /* leon2m FUN_a015ea68 @ 0xa015ea68 (-mcpu=v8 -O2 -g)
- * 
+ * Calls the function pointer at 0xA802CFE0 with p when it is non-null and returns its result; otherwise returns 0.
+ * Same form as FUN_a015e9d8 / FUN_a015ea08.
  */
 extern int (*_DAT_a802cfe0)(int);
 extern int FUN_a015ea68(int param_1);

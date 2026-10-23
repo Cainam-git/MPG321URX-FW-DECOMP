@@ -1,4 +1,6 @@
 /* leon2m FUN_a0125230 @ 0xa0125230 (-mcpu=v8 -O3 -g)
+ * i = ARR_a802d880[p & 0xff]; returns byte 0 of the 22-byte (0x16) record i of the table at 0x1a42a8, or 0xff when i is
+ * 0xff. Same shape as FUN_a01254f8 (+8) and FUN_a0125530 (+9).
  */
 
 extern unsigned char ARR_a802d880[];

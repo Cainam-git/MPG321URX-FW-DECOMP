@@ -1,4 +1,8 @@
 /* leon2s DRV_HDMI21_PHY_PICDR_Reset @ 0xa0080244 (-mcpu=v8 -Os -g)
+ * Prints "[HDMI21]: %s" with the function name when bit 11 (0x800) of DAT_a8078634 is set. Port p 2 uses record 0,
+ * port 3 record 1 of the 0xb0-byte records at 0xA807D680; other ports return. When byte +2 of that record is above
+ * 3: FUN_a007f9d0(p), else DRV_HDMI21_PHY_INV_PICDR_Reset(p) (both tail calls).
+ * Source form: the function name is a separate static const char[] (the firmware keeps it as its own .rodata object).
  */
 extern unsigned int _DAT_a8078634;
 extern void DRV_HDMI21_PHY_INV_PICDR_Reset(unsigned char param_1);

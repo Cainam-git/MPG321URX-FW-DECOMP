@@ -1,4 +1,5 @@
 /* leon2m FUN_a0138bc8 @ 0xa0138bc8 (-mcpu=v8 -O2 -g)
+ * Sends {p1, p2, 0, 0} with FUN_a01370dc(0x86, 4, buf, 0) (4-byte stack buffer).
  */
 extern int FUN_a01370dc();
 

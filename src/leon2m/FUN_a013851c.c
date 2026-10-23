@@ -1,5 +1,5 @@
 /* leon2m FUN_a013851c @ 0xa013851c (-mcpu=v8 -O2 -g)
- * 
+ * Sends {p, 0, 0, 0} with FUN_a01370dc(0xfd, 4, buf, 0), calls FUN_a0137344(1) and returns byte 0xA802CBA3.
  */
 extern void FUN_a01370dc();
 extern int FUN_a0137344();

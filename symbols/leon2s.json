@@ -1876,7 +1876,7 @@
     },
     "ram:a006fb00": {
       "by": "hand",
-      "comment": "",
+      "comment": "word 0xA80788E0 |= 1, byte 0xA80788E4 = 1, FUN_a006fad4(0, 0, &word, 1)",
       "name": "FUN_a006fb00",
       "status": "matched"
     },
@@ -2191,7 +2191,7 @@
     "ram:a0077e7c": {
       "by": "near",
       "cflags": "-mcpu=v8 -Os",
-      "comment": "near-miss repaired: name hotplug_reg->DAT_a80788d2; name printf->FUN_a0073044",
+      "comment": "prints phyidx, then sets bit phyidx (0..3) of byte 0xA80788D2",
       "name": "Deskew_HotPlug",
       "status": "matched"
     },
@@ -2401,7 +2401,7 @@
     },
     "ram:a0080244": {
       "by": "near",
-      "comment": "near-miss repaired: port table symbol at its base; function name as static const char[]; dead ret/restore tail FUN_a00802c4 merged",
+      "comment": "ports 2/3: FUN_a007f9d0(p) when byte +2 of record 0xA807D680[p - 2] > 3, else DRV_HDMI21_PHY_INV_PICDR_Reset(p); prints its name with bit 0x800 of DAT_a8078634",
       "name": "DRV_HDMI21_PHY_PICDR_Reset",
       "status": "matched"
     },
@@ -4564,7 +4564,7 @@
     },
     "ram:a00a16cc": {
       "by": "near",
-      "comment": "near-miss repaired: firmware format string; function name as static const char[]; callees by Ghidra name",
+      "comment": "a == 2: prints \"[VERBOSE]: %s: Port%c\" and returns 0x16; else FUN_a00a2c94(a, b) and returns 0",
       "name": "DRV_HDMI_IF_Enable_RxPort",
       "status": "matched"
     },

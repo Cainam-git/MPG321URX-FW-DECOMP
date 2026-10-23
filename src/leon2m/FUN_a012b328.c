@@ -1,4 +1,6 @@
 /* leon2m FUN_a012b328 @ 0xa012b328 (-mcpu=v8 -O2)
+ * Stores the low byte of v in byte +3 of the 22-byte entry (p & 0xff) of the table at 0xA802D8AE, then returns
+ * FUN_a0137aec(p & 0xff, v & 0xff) (tail call).
  */
 typedef struct {
     unsigned char _pad[3];

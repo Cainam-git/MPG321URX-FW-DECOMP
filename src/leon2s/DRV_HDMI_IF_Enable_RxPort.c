@@ -1,4 +1,6 @@
 /* leon2s DRV_HDMI_IF_Enable_RxPort @ 0xa00a16cc (-mcpu=v8 -Os -g)
+ * a == 2: prints "[VERBOSE]: %s: Port%c " with the function name and 'C' (FUN_a0073044) and returns 0x16.
+ * Otherwise FUN_a00a2c94(a & 0xff, b & 0xff) and returns 0. The function name is a separate static const char[].
  */
 extern int FUN_a0073044(const char *, ...);          /* trace printf */
 extern void FUN_a00a2c94(unsigned int, unsigned int); /* register write */
