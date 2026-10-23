@@ -6448,9 +6448,9 @@
       "status": "matched"
     },
     "ram:a00bdcb0": {
-      "by": "permuter",
+      "by": "h49",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: [walk]; return unsigned short; inline temp uVar1; local uVar1 char; swap lines 20; swap lines 19; callee FUN_a00bac3c void; swap lines 20",
+      "comment": "Reply frame 0xA802D078: bytes 7, 8 = '0', byte 9 = '0' + byte 0xA802D2BF; command-table row reply",
       "name": "FUN_a00bdcb0",
       "status": "matched"
     },
