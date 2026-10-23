@@ -8913,6 +8913,13 @@
       "name": "FUN_a00e7dc8",
       "status": "matched"
     },
+    "ram:a00e9b34": {
+      "by": "h50",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes three register fields (index b or table addresses) and returns the FUN_a00e8e6c two-word result",
+      "name": "FUN_a00e9b34",
+      "status": "matched"
+    },
     "ram:a00e9c80": {
       "by": "h50",
       "cflags": "-mcpu=v8 -O3 -g",
