@@ -4919,6 +4919,12 @@
       "name": "FUN_a00a151c",
       "status": "matched"
     },
+    "ram:a00a157c": {
+      "by": "hand",
+      "comment": "sets bytes +0x158/+0x157 of DAT_a807d7e0[port] and calls FUN_a009fed0(port, &record+0x114) when byte +0x159 is 0",
+      "name": "FUN_a00a157c",
+      "status": "matched"
+    },
     "ram:a00a15c8": {
       "by": "hand",
       "comment": "If the flag DAT_a807db68 is non-zero: with base = word at DAT_a807db00 + param_1 * 0x34 (int param_1, smul; base re-read for each use), calls FUN_a00a73ac(8, base + 4) and FUN_a00a73d4(8, base + 4), FUN_a00b160c(1), FUN_a00962ec(param_1 & 0xff, 1) and DRV_HDMI_Start_Timer(0x15), then returns 0. If the flag is zero, returns 1. Takes one parameter.",
