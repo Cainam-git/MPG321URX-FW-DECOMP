@@ -9,7 +9,7 @@
     "CODE:0003": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "update agent: identify SPI flash (JEDEC 0x9F via c0be, chip table CB8C, 3 retries via F068); module with c0be + da8a",
+      "comment": "identifies the SPI flash chip via c0be / service-bus reads and the CODE 0xCB8C table; module with c0be, e4bf, e1c1, df7f, da8a, e2ab, d1bb, c1a6",
       "name": "FUN_CODE_0003",
       "status": "matched"
     },
@@ -944,14 +944,16 @@
     "CODE:c0be": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "update agent: one SPI flash transaction run remotely by the scaler (F0C0..F0C6 set-up, window A700); module with 0003 + da8a",
+      "comment": "SPI transaction through registers 0xF0C0..0xF0C6 and window 0xA700 over the service bus",
+      "module": "FUN_CODE_0003",
       "name": "FUN_CODE_c0be",
       "status": "matched"
     },
     "CODE:c1a6": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "updater (bank2) - see header",
+      "comment": "per-mode loop over n = (XDATA[0x0644] << 8) >> 3 in steps of 16 calling e1c1, df7f, e4bf",
+      "module": "FUN_CODE_0003",
       "name": "FUN_CODE_c1a6",
       "status": "matched"
     },
@@ -1043,7 +1045,8 @@
     "CODE:d1bb": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "update agent: prepare scaler for update (m=1: F04C/D929/F1A8, quad pins, F0E0=0xAA watchdog off, F0FF|=0x40) / release (m=0)",
+      "comment": "e53b(0x14), P1.4 = 1, de50(m); for m == 1 reads the reply and writes registers F04C, D929, F1A8, F11C/F11D, F0E0, F0FF",
+      "module": "FUN_CODE_0003",
       "name": "FUN_CODE_d1bb",
       "status": "matched"
     },
@@ -1184,7 +1187,8 @@
     "CODE:da8a": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "update agent: service-bus register write 04 78 reg val to I2C 0x6E",
+      "comment": "service-bus register write 04 78 reg val to slave 0x6E, then e4bf(0x0436)",
+      "module": "FUN_CODE_0003",
       "name": "FUN_CODE_da8a",
       "status": "matched"
     },
@@ -1386,10 +1390,20 @@
       "name": "FUN_CODE_df50",
       "status": "matched"
     },
+    "CODE:df76": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_df7f, in FUN_CODE_df7f's code segment; emitted by compiling src/8051_bank2/FUN_CODE_0003.c, bytes judged with FUN_CODE_df7f over 0xdf76..0xdfbe",
+      "kind": "common_entry",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_df76",
+      "of": "FUN_CODE_df7f",
+      "status": "matched"
+    },
     "CODE:df7f": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "10-byte code record 0xcbcc copied to the LARGE local buffer 08f5, [8] = a, [9] = b; bfcf(0x6e, 10, buf); d059(5000)",
+      "comment": "10-byte record from CODE 0xCBCC with bytes 8/9 = a/b sent to slave 0x6E, wait 5000; common-entry block df76 in front",
+      "module": "FUN_CODE_0003",
       "name": "FUN_CODE_df7f",
       "status": "matched"
     },
@@ -1442,10 +1456,20 @@
       "name": "FUN_CODE_e1a4",
       "status": "matched"
     },
+    "CODE:e1b5": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e1c1, in FUN_CODE_e1c1's code segment; emitted by compiling src/8051_bank2/FUN_CODE_0003.c, bytes judged with FUN_CODE_e1c1 over 0xe1b5..0xe1eb",
+      "kind": "common_entry",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_e1b5",
+      "of": "FUN_CODE_e1c1",
+      "status": "matched"
+    },
     "CODE:e1c1": {
       "by": "hand",
-      "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "service packet 02 0f a to slave 0x6E (bfcf), d059(100), e4bf(buf 0x0436)",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "service packet 02 0F a to slave 0x6E, wait 100, tail call e4bf; common-entry block e1b5 in front",
+      "module": "FUN_CODE_0003",
       "name": "FUN_CODE_e1c1",
       "status": "matched"
     },
@@ -1472,8 +1496,9 @@
     },
     "CODE:e2ab": {
       "by": "hand",
-      "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "service packet 02 36 a to slave 0x6E, d059(4000), e4b9(), return buf[2] << 8 | buf[3]",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "service packet 02 36 a to slave 0x6E, wait 4000, reply via e4bf, returns buf[2] << 8 | buf[3]",
+      "module": "FUN_CODE_0003",
       "name": "FUN_CODE_e2ab",
       "status": "matched"
     },
@@ -1591,10 +1616,20 @@
       "name": "FUN_CODE_e4a4",
       "status": "matched"
     },
+    "CODE:e4b9": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e4bf, in FUN_CODE_e4bf's code segment; emitted by compiling src/8051_bank2/FUN_CODE_0003.c, bytes judged with FUN_CODE_e4bf over 0xe4b9..0xe4c9",
+      "kind": "common_entry",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_e4b9",
+      "of": "FUN_CODE_e4bf",
+      "status": "matched"
+    },
     "CODE:e4bf": {
       "by": "hand",
-      "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "update agent: read the service-bus reply (bba9 from slave 0x6E) into buf, wait 2",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "bba9(0x6E, buf), wait 2; common-entry block e4b9 in front",
+      "module": "FUN_CODE_0003",
       "name": "FUN_CODE_e4bf",
       "status": "matched"
     },

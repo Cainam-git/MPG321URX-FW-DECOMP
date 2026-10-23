@@ -1,20 +1,38 @@
-/* 8051_bank2 module: FUN_CODE_0003 @ 0x0003 + FUN_CODE_c0be @ 0xc0be + FUN_CODE_da8a @ 0xda8a (byte-exact
- * with OPTIMIZE(8,SPEED) LARGE; compiled together because Keil's "reuse of common entry code" then emits the shared
- * entry blocks FUN_CODE_da66 / FUN_CODE_da86 in front of da8a exactly as in the firmware). Update agent (AUX 8051).
+/* 8051_bank2 module FUN_CODE_0003: one Keil C51 module, OPTIMIZE(8,SPEED) LARGE, holding FUN_CODE_0003, FUN_CODE_c0be,
+ * FUN_CODE_e4bf, FUN_CODE_e1c1, FUN_CODE_df7f, FUN_CODE_da8a, FUN_CODE_e2ab, FUN_CODE_d1bb and FUN_CODE_c1a6.
+ * Keil's "reuse of common entry code" emits these blocks in front of the callees (all byte-exact with this file):
+ *   FUN_CODE_e4b9 @ 0xe4b9 in front of FUN_CODE_e4bf: R3:R2:R1 = generic pointer to XDATA 0x0436, shared by the
+ *     e4bf(DAT_EXTMEM_0436) calls of da8a, e2ab, d1bb and c1a6;
+ *   FUN_CODE_e1b5 @ 0xe1b5 in front of FUN_CODE_e1c1: R7 = (unsigned char)(i >> 4) (i in R4:R5), from c1a6;
+ *   FUN_CODE_df76 @ 0xdf76 in front of FUN_CODE_df7f: R7 = low byte of c1a6's i (XDATA 0x08F2), R5 = R7 + 0x0E;
+ *   FUN_CODE_da66 @ 0xda66 and FUN_CODE_da86 @ 0xda86 in front of FUN_CODE_da8a, from the da8a calls of 0003 and c0be.
+ * The local of FUN_CODE_c1a6 is named pos: a block operand that names a local of the caller must not share its name
+ * with a local of another function in the module (the judge resolves block operands by name).
  *
- * FUN_CODE_0003: identify the SPI flash chip; returns 0 = known chip, 2 = unknown.
- *   Sends 0x9F (Read JEDEC ID) through the SPI engine FUN_CODE_c0be(buf, 2 bytes out, 1); a Winbond answer EF 40 is
- *   looked up directly in the chip table at CODE 0xCB8C (8-byte records; FUN_CODE_c44e). Otherwise up to 3 tries:
- *   scaler register 0xF068 = CODE[0xCBD6 + try] (FUN_CODE_e2da settles), the ID is read back with service-bus reads of
- *   0xF064..0xF066 (FUN_CODE_e105) and looked up with FUN_CODE_b044. Found: the 8-byte record is copied to XDATA 0x0640
- *   and its byte 2 written to scaler register 0xF067 (the da66 entry block of da8a); result 0. Not found: result 2.
- * FUN_CODE_c0be(buf, n, m): one SPI flash transaction run by the SCALER's SPI controller, driven remotely over the
- *   service bus (FUN_CODE_da8a writes): 0xF0C0 = ((n >> 1) << 4) | 3, 0xF0C1 = 0xA7, 0xF0C2 = 0, 0xF0C3 = 0xA7,
- *   0xF0C4 = n, 0xF0C5 = 0xA7, 0xF0C6 = n + m; the n + m bytes of buf go to the scaler window 0xA700 + i; then
- *   FUN_CODE_e3ab (start), wait 20 units, and 16 bytes are read back from 0xA700.. into buf (FUN_CODE_e105).
- *   Its only caller in the image is FUN_CODE_0003 with the 0x9F ID read (the public MPG 341CQPX write-up says the
- *   same: no write-enable / program / erase command is ever put into this engine's buffer by the update agent).
- * FUN_CODE_da8a: see src/8051_bank2/FUN_CODE_da8a.c (service-bus register write 04 78 hi lo val to slave 0x6E).
+ * FUN_CODE_0003: sends 0x9F through FUN_CODE_c0be(buf, 2, 1); when buf[3..4] = EF 40 the reply is looked up in the
+ *   8-byte records at CODE 0xCB8C with FUN_CODE_c44e. Otherwise up to 3 tries: register 0xF068 = CODE[0xCBD6 + try]
+ *   (FUN_CODE_da8a), FUN_CODE_e2da(), three bytes read from 0xF064..0xF066 (FUN_CODE_e105), lookup with FUN_CODE_b044.
+ *   Found: the record is copied to XDATA 0x0640 and its byte 2 written to register 0xF067; returns 0. Else returns 2.
+ * FUN_CODE_c0be(buf, n, m): writes registers 0xF0C0 = ((n >> 1) << 4) | 3, 0xF0C1 = 0xA7, 0xF0C2 = 0, 0xF0C3 = 0xA7,
+ *   0xF0C4 = n, 0xF0C5 = 0xA7, 0xF0C6 = n + m, the n + m bytes of buf to 0xA700 + i, then FUN_CODE_e3ab(), wait 20,
+ *   and reads 16 bytes from 0xA700.. back into buf (FUN_CODE_e105).
+ * FUN_CODE_e4bf(buf): FUN_CODE_bba9(0x6E, buf), then FUN_CODE_e44b(2).
+ * FUN_CODE_e1c1(a): packet {2, 0x0F, a} in XDATA 0x0436, FUN_CODE_bfcf(0x6E, 3, buf), wait 100, tail call e4bf(buf).
+ * FUN_CODE_df7f(a, b): the 10-byte record at CODE 0xCBCC is struct-copied to XDATA 0x08F5, bytes 8 and 9 become a
+ *   and b, FUN_CODE_bfcf(0x6E, 10, record), tail call FUN_CODE_d059(5000). (An initialised local array compiles to the
+ *   same instructions, but the judge cannot place its init image, so the record and image use their addresses.)
+ * FUN_CODE_da8a(reg, val): packet 04 78 <reg hi> <reg lo> <val> in XDATA 0x0436, r = FUN_CODE_bfcf(0x6E, 5, buf),
+ *   wait 100, e4bf(buf), returns r.
+ * FUN_CODE_e2ab(a): packet 02 36 <a>, bfcf (status not kept), wait 4000, e4bf(buf), returns buf[2] << 8 | buf[3].
+ * FUN_CODE_d1bb(m): FUN_CODE_e53b(0x14), P1.4 = 1, wait 2, FUN_CODE_de50(m). Only for m == 1: wait 5, e4bf(buf) and
+ *   XDATA 0x0648 / 0x0649 = buf[1] / buf[2]; registers 0xF04C = 0x60, 0xD929 = 0x06, 0xF1A8 = 0x02; when register
+ *   0xF050 bit 2 is set: 0xF11C |= 0x40, 0xF11D &= ~0x40; 0xF0E0 = 0xAA; 0xF0FF |= 0x40. Ends with FUN_CODE_e53b(1).
+ * FUN_CODE_c1a6(mode): bit 0: FUN_CODE_e384(), tail call e4bf(XDATA 0x0436). Bit 2 without bit 1: tail call
+ *   FUN_CODE_dd1a(1). Otherwise n = (XDATA[0x0644] << 8) >> 3; with bits 2 and 1: FUN_CODE_e331(8 if that byte is 0x10,
+ *   else 0) and pos runs n / 2 .. n - 1, else 0 .. n - 1, step 16; per step e1c1(pos >> 4) when pos % 16 == 0,
+ *   df7f(pos, pos + 14), e4bf(XDATA 0x0436). Keil idioms: 'if (x == 0x10) e331(8); else e331(0);' (a ?: gives
+ *   MOV R7,#0 instead of CLR A / MOV R7,A); (x << 8) >> 3 gives the 3-step RRC loop (x << 5 gives MUL AB).
+ * Register writes are service-bus packets: FUN_CODE_da8a writes, FUN_CODE_e105 reads (slave 0x6E).
  */
 extern unsigned char code DAT_CODE_cbd6[];
 void FUN_CODE_c0be(unsigned char *buf, unsigned char n, unsigned char m);
@@ -26,7 +44,7 @@ extern struct FlashInfo xdata DAT_EXTMEM_0640;
 extern unsigned char xdata DAT_EXTMEM_0436[];
 unsigned char FUN_CODE_bfcf(unsigned char addr, unsigned char len, unsigned char *buf);
 void FUN_CODE_d059(unsigned int t);
-void FUN_CODE_e4b9(void);
+void FUN_CODE_e4bf(unsigned char *buf);
 unsigned char FUN_CODE_da8a(unsigned int reg, unsigned char val);
 void FUN_CODE_e2da(void);
 unsigned char FUN_CODE_e105(unsigned int reg);
@@ -98,6 +116,153 @@ unsigned char FUN_CODE_da8a(unsigned int reg, unsigned char val)
     DAT_EXTMEM_0436[4] = val;
     r = FUN_CODE_bfcf(0x6e, 5, DAT_EXTMEM_0436);
     FUN_CODE_d059(100);
-    FUN_CODE_e4b9();
+    FUN_CODE_e4bf(DAT_EXTMEM_0436);
     return r;
+}
+
+
+extern unsigned char xdata DAT_EXTMEM_0436[];
+unsigned char FUN_CODE_bfcf(unsigned char addr, unsigned char len, unsigned char *buf);
+unsigned char FUN_CODE_bba9(unsigned char addr, unsigned char *buf);
+void FUN_CODE_d059(unsigned int t);
+void FUN_CODE_e4bf(unsigned char *buf);
+void FUN_CODE_e44b(unsigned char n);
+void FUN_CODE_e478(void);
+void FUN_CODE_e4bf(unsigned char *buf)
+{
+    FUN_CODE_bba9(0x6e, buf);
+    FUN_CODE_e44b(2);
+}
+
+
+extern unsigned char xdata DAT_EXTMEM_0436[];
+unsigned char FUN_CODE_bfcf(unsigned char addr, unsigned char len, unsigned char *buf);
+void FUN_CODE_d059(unsigned int t);
+void FUN_CODE_e4bf(unsigned char *buf);
+void FUN_CODE_e1c1(unsigned char a)
+{
+    DAT_EXTMEM_0436[0] = 2;
+    DAT_EXTMEM_0436[1] = 0x0f;
+    DAT_EXTMEM_0436[2] = a;
+    FUN_CODE_bfcf(0x6e, 3, DAT_EXTMEM_0436);
+    FUN_CODE_d059(100);
+    FUN_CODE_e4bf(DAT_EXTMEM_0436);
+}
+
+
+struct Rec10 { unsigned char b[10]; };
+extern struct Rec10 code DAT_CODE_cbcc;
+extern struct Rec10 xdata DAT_EXTMEM_08f5;
+unsigned char FUN_CODE_bfcf(unsigned char addr, unsigned char len, unsigned char *buf);
+void FUN_CODE_d059(unsigned int t);
+void FUN_CODE_df7f(unsigned char a, unsigned char b)
+{
+    DAT_EXTMEM_08f5 = DAT_CODE_cbcc;
+    DAT_EXTMEM_08f5.b[8] = a;
+    DAT_EXTMEM_08f5.b[9] = b;
+    FUN_CODE_bfcf(0x6e, 10, DAT_EXTMEM_08f5.b);
+    FUN_CODE_d059(5000);
+}
+
+
+extern unsigned char xdata DAT_EXTMEM_0436[];
+unsigned char FUN_CODE_bfcf(unsigned char addr, unsigned char len, unsigned char *buf);
+unsigned char FUN_CODE_bba9(unsigned char addr, unsigned char *buf);
+void FUN_CODE_d059(unsigned int t);
+void FUN_CODE_e4bf(unsigned char *buf);
+void FUN_CODE_e4bf(unsigned char *buf);
+void FUN_CODE_e44b(unsigned char t);
+unsigned char FUN_CODE_da8a(unsigned int reg, unsigned char val);
+
+
+extern unsigned char xdata DAT_EXTMEM_0436[];
+unsigned char FUN_CODE_bfcf(unsigned char addr, unsigned char len, unsigned char *buf);
+void FUN_CODE_d059(unsigned int t);
+void FUN_CODE_e4bf(unsigned char *buf);
+unsigned int FUN_CODE_e2ab(unsigned char a)
+{
+    DAT_EXTMEM_0436[0] = 2;
+    DAT_EXTMEM_0436[1] = 0x36;
+    DAT_EXTMEM_0436[2] = a;
+    FUN_CODE_bfcf(0x6e, 3, DAT_EXTMEM_0436);
+    FUN_CODE_d059(4000);
+    FUN_CODE_e4bf(DAT_EXTMEM_0436);
+    return ((unsigned int)DAT_EXTMEM_0436[2] << 8) | DAT_EXTMEM_0436[3];
+}
+
+
+sfr P1 = 0x90;
+sbit P1_4 = P1 ^ 4;
+extern unsigned char xdata DAT_EXTMEM_0436[];
+extern unsigned char xdata DAT_EXTMEM_0648, DAT_EXTMEM_0649;
+void FUN_CODE_e53b(unsigned char a);
+void FUN_CODE_e44b(unsigned char n);
+void FUN_CODE_de50(unsigned char m);
+void FUN_CODE_e4bf(unsigned char *buf);
+unsigned char FUN_CODE_e105(unsigned int reg);
+unsigned char FUN_CODE_da8a(unsigned int reg, unsigned char val);
+
+void FUN_CODE_d1bb(unsigned char m)
+{
+    FUN_CODE_e53b(0x14);
+    P1_4 = 1;
+    FUN_CODE_e44b(2);
+    FUN_CODE_de50(m);
+    if (m == 1) {
+        FUN_CODE_e44b(5);
+        FUN_CODE_e4bf(DAT_EXTMEM_0436);
+        DAT_EXTMEM_0648 = DAT_EXTMEM_0436[1];
+        DAT_EXTMEM_0649 = DAT_EXTMEM_0436[2];
+        FUN_CODE_da8a(0xf04c, 0x60);
+        FUN_CODE_da8a(0xd929, 0x06);
+        FUN_CODE_da8a(0xf1a8, 0x02);
+        if (FUN_CODE_e105(0xf050) & 0x04) {
+            FUN_CODE_da8a(0xf11c, FUN_CODE_e105(0xf11c) | 0x40);
+            FUN_CODE_da8a(0xf11d, FUN_CODE_e105(0xf11d) & ~0x40);
+        }
+        FUN_CODE_da8a(0xf0e0, 0xaa);
+        FUN_CODE_da8a(0xf0ff, FUN_CODE_e105(0xf0ff) | 0x40);
+    }
+    FUN_CODE_e53b(1);
+}
+
+
+extern unsigned char xdata DAT_EXTMEM_0436[];
+extern unsigned char xdata DAT_EXTMEM_0644;
+extern void FUN_CODE_e384(void);
+extern void FUN_CODE_e4bf(unsigned char *p);
+extern void FUN_CODE_dd1a(unsigned char a);
+extern void FUN_CODE_e331(unsigned char a);
+void FUN_CODE_e1c1(unsigned char a);
+void FUN_CODE_df7f(unsigned char a, unsigned char b);
+
+void FUN_CODE_c1a6(unsigned char mode)
+{
+    unsigned int n;
+    unsigned int pos;
+    if (mode & 1) {
+        FUN_CODE_e384();
+        FUN_CODE_e4bf(DAT_EXTMEM_0436);
+        return;
+    }
+    if ((mode & 4) && !(mode & 2)) {
+        FUN_CODE_dd1a(1);
+        return;
+    }
+    if ((mode & 4) && (mode & 2)) {
+        n = ((unsigned int)DAT_EXTMEM_0644 << 8) >> 3;
+        if (DAT_EXTMEM_0644 == 0x10) FUN_CODE_e331(8); else FUN_CODE_e331(0);
+        for (pos = n >> 1; pos < n; pos += 16) {
+            if ((pos & 0x0f) == 0) FUN_CODE_e1c1(pos >> 4);
+            FUN_CODE_df7f(pos, pos + 14);
+            FUN_CODE_e4bf(DAT_EXTMEM_0436);
+        }
+    } else {
+        n = ((unsigned int)DAT_EXTMEM_0644 << 8) >> 3;
+        for (pos = 0; pos < n; pos += 16) {
+            if ((pos & 0x0f) == 0) FUN_CODE_e1c1(pos >> 4);
+            FUN_CODE_df7f(pos, pos + 14);
+            FUN_CODE_e4bf(DAT_EXTMEM_0436);
+        }
+    }
 }
