@@ -902,6 +902,13 @@
       "name": "FUN_CODE_8072",
       "status": "matched"
     },
+    "CODE:83f3": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "channel register 0 / 0xF8 around FUN_CODE_482e and FUN_CODE_3c4d, AND of their bit results",
+      "name": "FUN_CODE_83f3",
+      "status": "matched"
+    },
     "CODE:8731": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
