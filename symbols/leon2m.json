@@ -7689,6 +7689,13 @@
       "name": "FUN_a00d7b60",
       "status": "matched"
     },
+    "ram:a00d7d48": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns 4, or FUN_a014ba68() 1..4 mapped to 1, 2, 3, 5 when FUN_a01438dc(0) is 1, else 0",
+      "name": "FUN_a00d7d48",
+      "status": "matched"
+    },
     "ram:a00d8034": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
