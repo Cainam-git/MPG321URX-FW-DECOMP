@@ -13039,6 +13039,13 @@
       "name": "FUN_a012cfac",
       "status": "matched"
     },
+    "ram:a012eb4c": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reads one settings-storage byte at the FGA block offset of the 0xA802E1A0 record",
+      "name": "FUN_a012eb4c",
+      "status": "matched"
+    },
     "ram:a012f12c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
