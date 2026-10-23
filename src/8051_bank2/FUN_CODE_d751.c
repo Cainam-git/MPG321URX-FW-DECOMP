@@ -1,4 +1,4 @@
-/* 8051_bank2 FUN_CODE_d751 @ 0xd751 (127 B), OPTIMIZE(8,SPEED) LARGE. Callers: FUN_CODE_1000 and FUN_CODE_1e55 (10 sites).
+/* 8051_bank2 FUN_CODE_d751 @ 0xd751 (127 B), OPTIMIZE(7,SPEED) (the same bytes with OPTIMIZE(8,SPEED) LARGE). Callers: FUN_CODE_1000, FUN_CODE_1e55.
  * Copies a saved position into the working variables. XDATA 0x041C == 2: the long at 0x03EE = the long at 0x0117 and
  * the word at 0x040A = the word at 0x011B (the struct Pos {blk, off} of FUN_CODE_a17e.c). Otherwise the five saved
  * values of the record at 0x03F2 {long a; char n; int p; long b; long c} go to 0x0414 (long), 0x0429 (byte),
