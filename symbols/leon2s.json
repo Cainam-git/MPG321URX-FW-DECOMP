@@ -2328,8 +2328,8 @@
       "status": "matched"
     },
     "ram:a007a79c": {
-      "by": "permuter",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "by": "h49",
+      "comment": "lane register set-up through FUN_a00a7424 / FUN_a00a7488 for lanes 0..3, then the full table writes for the lanes set in p2",
       "name": "FUN_a007a79c",
       "status": "matched"
     },
