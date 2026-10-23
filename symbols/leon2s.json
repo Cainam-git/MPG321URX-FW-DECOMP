@@ -5771,6 +5771,12 @@
       "name": "FUN_a00a7d88",
       "status": "matched"
     },
+    "ram:a00a7dd0": {
+      "by": "hand",
+      "comment": "writes v & 0xff to register reg of port (< 4) of the block with the base table 0xa00b4d64",
+      "name": "FUN_a00a7dd0",
+      "status": "matched"
+    },
     "ram:a00a7e14": {
       "by": "hand",
       "comment": "Read-modify-write of an 8-bit register of a hardware block (table 0xa00b4d64, ports 0..3)",
