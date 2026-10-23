@@ -17364,6 +17364,13 @@
       "name": "FUN_a015266c",
       "status": "matched"
     },
+    "ram:a0152e28": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sequence of FUN_a0152a20 codes on one status byte (bit 31 of 0xA802E3D0 or a count from 0xA802E1A7), returns status * 3",
+      "name": "FUN_a0152e28",
+      "status": "matched"
+    },
     "ram:a0152f70": {
       "by": "near",
       "comment": "returns the byte at 0xA802CF90",
