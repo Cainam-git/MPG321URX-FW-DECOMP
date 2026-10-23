@@ -4713,6 +4713,12 @@
       "name": "FUN_a00a0bfc",
       "status": "matched"
     },
+    "ram:a00a0c84": {
+      "by": "h53",
+      "comment": "handles the pending FUN_a00a0588 events 8, 0x1c, 0xe, 0x16, 0xb and 0xc of a port",
+      "name": "FUN_a00a0c84",
+      "status": "matched"
+    },
     "ram:a00a1098": {
       "by": "hand",
       "comment": "Masks param_2 to a byte (and %i1, 0xff, %i1) and loops over bit positions with counter bVar2 starting at 0: shifts param_2 right by the counter (sra, int shift), tests bit 0 (btst 1), increments the counter and loops while (unsigned char)bVar2 <= 7 (and %l0, 0xff, %g1; cmp %g1, 7; bleu). The counter is used as int for the shift and cast to unsigned char in the loop condition.",
