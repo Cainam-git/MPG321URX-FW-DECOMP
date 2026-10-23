@@ -3708,6 +3708,13 @@
       "name": "FUN_a00989c8",
       "status": "matched"
     },
+    "ram:a0098a74": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "% 7 sequence: FUN_a00a93bc/FUN_a00a813c with byte 0xa8025c56 when its / 7 equals (0xa802afec - 0x92) / 7, else with DAT_a802d290+8; afec = 0x2a; DAT_a802b08e |= 2",
+      "name": "FUN_a0098a74",
+      "status": "matched"
+    },
     "ram:a0098c08": {
       "by": "h40",
       "cflags": "-mcpu=v8 -O3 -g",
