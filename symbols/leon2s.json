@@ -8056,6 +8056,12 @@
       "name": "FUN_a00d25f4",
       "status": "matched"
     },
+    "ram:a00d2618": {
+      "by": "hand",
+      "comment": "sets or clears bit 'bit' of DAT_a8078c36",
+      "name": "FUN_a00d2618",
+      "status": "matched"
+    },
     "ram:a00d264c": {
       "by": "autoc",
       "comment": "fills the 257-entry 16-bit table at 0xa8077a08 with 0x400",
