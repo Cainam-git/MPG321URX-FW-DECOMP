@@ -11343,6 +11343,13 @@
       "name": "FUN_a01136a0",
       "status": "matched"
     },
+    "ram:a0113cd8": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "reads n 8-word blocks from the 0xcf011f94 port after setting the address and waiting for 0x80 at 0xcf011f90",
+      "name": "FUN_a0113cd8",
+      "status": "matched"
+    },
     "ram:a0113eb4": {
       "by": "h41",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
