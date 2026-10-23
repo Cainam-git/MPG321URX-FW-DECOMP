@@ -879,6 +879,13 @@
       "name": "FUN_CODE_9339",
       "status": "matched"
     },
+    "CODE:9522": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Initial CC PHY: two register-block byte sets by XDATA 0xD511, then FUN_CODE_a959 or FUN_CODE_a9f6",
+      "name": "FUN_CODE_9522",
+      "status": "matched"
+    },
     "CODE:96eb": {
       "by": "hand",
       "comment": "STBC start-up before the Big chip runs: loads the bank-2 image block, USB key",
