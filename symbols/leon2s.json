@@ -2176,6 +2176,12 @@
       "name": "FUN_a0074fc4",
       "status": "matched"
     },
+    "ram:a007501c": {
+      "by": "h42",
+      "comment": "prints the EQ clock messages and clears byte +1 of the port record on the FUN_a0074fc4 and channel-field tests",
+      "name": "EQ_handler",
+      "status": "matched"
+    },
     "ram:a007517c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
