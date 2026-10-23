@@ -13010,6 +13010,12 @@
       "name": "FUN_a0121ec0",
       "status": "matched"
     },
+    "ram:a0121ec8": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a0121ec8",
+      "status": "matched"
+    },
     "ram:a0121f20": {
       "by": "autoc",
       "comment": "empty function (returns at once)",
