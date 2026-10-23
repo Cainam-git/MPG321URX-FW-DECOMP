@@ -6565,7 +6565,7 @@
     },
     "ram:a00aec50": {
       "by": "hand",
-      "comment": "returns 1 after the timed register checks of the port (24-bit value 0x8000 and bit 2 of register 0, or the bit-3 path of register 0x4e0) or after the timeout path, else 0; init resets and stores FUN_a00b2064()",
+      "comment": "returns 1 when the register checks of the port pass (24-bit value 0x8000 and bit 2 of register 0, or bit 3 of register 0x4e0) or when FUN_a00b2064() advanced by more than 0x10 since _DAT_a8079328, else 0; with init set it stores FUN_a00b2064() and returns 0",
       "name": "FUN_a00aec50",
       "status": "matched"
     },
