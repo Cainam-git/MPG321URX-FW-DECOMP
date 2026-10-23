@@ -13258,6 +13258,13 @@
       "name": "FUN_a012f134",
       "status": "matched"
     },
+    "ram:a012f1ec": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "lowers the state field of channel record ch to the value selected by m, clears its step, calls FUN_a01518c8",
+      "name": "FUN_a012f1ec",
+      "status": "matched"
+    },
     "ram:a012fc04": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
