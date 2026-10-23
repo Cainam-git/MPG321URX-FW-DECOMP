@@ -7659,6 +7659,13 @@
       "name": "FUN_a00d1f20",
       "status": "matched"
     },
+    "ram:a00d20a4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "maps byte 7 of the record to a value in DAT_a802d290+8 (switch, jump table 0x6ecb0), writes the record with FUN_a014aed0, FUN_a0145360(1), returns 0xe0",
+      "name": "FUN_a00d20a4",
+      "status": "matched"
+    },
     "ram:a00d2334": {
       "by": "permuter",
       "comment": "copies bytes 6..18 of p to 0xA802D274 + 3.., FUN_a014aed0(0x30, 0xA802D274, 0x2e0, 0x1c), returns 0xe0",
