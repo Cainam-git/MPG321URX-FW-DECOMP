@@ -4394,6 +4394,12 @@
       "name": "FUN_a0096ad8",
       "status": "matched"
     },
+    "ram:a0096b08": {
+      "by": "hand",
+      "comment": "FRL init of the mode-detect state machine: PHY register field set-up through the port record register blocks",
+      "name": "DRV_HDMI_ModeDetect_FSM_FRL_Init",
+      "status": "matched"
+    },
     "ram:a009723c": {
       "by": "hand",
       "comment": "FRL lock check step of the HDMI mode-detect state machine (retry, timeout, restart)",
