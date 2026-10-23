@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_d645 @ 0xd645 (no usable draft)
+/* 8051_bank1 FUN_CODE_d645 @ 0xd645
  * Twin of FUN_CODE_d61c on the 0x9A00 block ('on' slot XDATA 0xA474); base as the array symbol (see FUN_CODE_d9d1).
  * Byte-exact with OPTIMIZE(8,SPEED) LARGE.
  */

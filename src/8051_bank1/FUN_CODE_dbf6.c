@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_dbf6 @ 0xdbf6  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_dbf6 @ 0xdbf6  OPTIMIZE(7,SPEED)
  * 
  */
 extern xdata unsigned char DAT_EXTMEM_d511;

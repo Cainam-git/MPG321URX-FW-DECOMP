@@ -1,5 +1,5 @@
 /* FUN_CODE_4e8e, 8051_bank2 (update agent), range 0x4E8E..0x4FFA (364 B).
- * Options: OPTIMIZE(8,SPEED) LARGE. Judge: tools/diff8051.judge MATCH, exact None, 364/364.
+ * Options: OPTIMIZE(8,SPEED) LARGE.
  * Code facts: returns a bit (carry). LARGE parameters addr (ulong, 0x0907..0x090A, ?C?LSTXDATA at entry), base (uint,
  * memory parameter 0x090B..0x090C) and n (uchar, memory parameter 0x090D); local f at 0x090E. It calls
  * FUN_CODE_af07(addr, base + (n - k) * 2) for k = 1, 2, 3, 6 (the second argument goes to af07's memory parameter

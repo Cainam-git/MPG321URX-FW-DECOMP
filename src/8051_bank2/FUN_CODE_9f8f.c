@@ -1,4 +1,4 @@
-/* 8051_bank2 FUN_CODE_9f8f @ 0x9f8f  MATCH (OPTIMIZE(8,SPEED) LARGE, hand)
+/* 8051_bank2 FUN_CODE_9f8f @ 0x9f8f  OPTIMIZE(8,SPEED) LARGE
  * Real span 0x9f8f..0xa17e (495 bytes, includes the inline ?C?LSTKXDATA constant 00 00 00 B7 at 0xa01f).
  *
  * Page loop of the update agent: one 512-byte block per step, with a progress value.

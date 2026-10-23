@@ -1,4 +1,4 @@
-/* 8051_bank2 FUN_CODE_c1a6 @ 0xc1a6  MATCH (OPTIMIZE(8,SPEED) LARGE, hand)
+/* 8051_bank2 FUN_CODE_c1a6 @ 0xc1a6  OPTIMIZE(8,SPEED) LARGE
  *
  * Per-region loop of the update agent, selected by mode (R7, kept in the LARGE-model XDATA block at 0x08EE):
  *   bit 0 set        : FUN_CODE_e384(), then tail call e4bf with the XDATA buffer 0x0436.

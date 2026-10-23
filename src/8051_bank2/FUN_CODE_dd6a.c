@@ -1,5 +1,5 @@
 /* 8051_bank2 FUN_CODE_dd6a @ 0xdd6a  update agent: switch one scaler control bit on / off by a descriptor
- * (byte-exact with OPTIMIZE(8,SPEED) LARGE).
+ * (OPTIMIZE(8,SPEED) LARGE).
  * The descriptor in XDATA 0x064A..0x0651 (filled from the flash-chip record, see FUN_CODE_0003) gives the scaler
  * register (0x064A = high byte, 0x064F = low byte), the bit mask (0x0650) and the polarity (0x0651: 0 = active
  * high). Reads the register over the service bus (FUN_CODE_e105), sets / clears the masked bits according to `on`

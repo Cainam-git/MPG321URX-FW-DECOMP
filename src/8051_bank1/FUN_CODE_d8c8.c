@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_d8c8 @ 0xd8c8  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_d8c8 @ 0xd8c8  OPTIMIZE(7,SPEED)
  * Reads xdata 0xA6A6. If it equals 1, writes 0x20 to xdata 0xA66E; otherwise writes 0x10 to 0xA66E, sets bit
  * 0x22.7 (bit address 0x17, BITS_22_7), writes 2 to xdata 0xA781 and calls FUN_CODE_a9f6. Both paths end with
  * FUN_CODE_d4e1(0).

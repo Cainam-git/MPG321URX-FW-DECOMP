@@ -4,7 +4,7 @@
  * Keil's int != 0 test is MOVX / JNZ to the low byte's JZ / INC DPTR / MOVX / JZ, which is the firmware's
  * 'JNZ de1a' into the second test that the two-char forms (a[0] || a[1]) could not give.
  * Callers 0x38ad (FUN_CODE_38a7), 0x5c56, 0x5c64, 0x5dc2 (FUN_CODE_5c06).
- * Byte-exact with OPTIMIZE(8,SPEED) (MATCH exact None 14/14).
+ * Options: OPTIMIZE(8,SPEED).
  */
 extern unsigned int xdata DAT_EXTMEM_a3ea;
 bit FUN_CODE_de12(void)

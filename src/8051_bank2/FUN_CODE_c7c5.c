@@ -1,5 +1,5 @@
 /* FUN_CODE_c7c5, 8051_bank2 (helper chip updater), range 0xC7C5..0xC89E (217 B).
- * Options: OPTIMIZE(8,SPEED) LARGE. Judge: tools/diff8051.judge (scratch copy) MATCH, exact None, 217/217.
+ * Options: OPTIMIZE(8,SPEED) LARGE.
  * Code facts: k stays in R7 (no call, so the LARGE parameter is never stored). Locals: h 0x090D, n 0x090E, off 0x090F,
  * i 0x0910, v (ulong) 0x0911..0x0914; t is register-only. Walks a record list in XDATA 0x015C: each record starts
  * with a header byte whose high nibble h and low nibble n are lengths; a record is h + n + 1 bytes. It skips k

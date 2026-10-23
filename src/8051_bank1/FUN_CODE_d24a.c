@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_d24a @ 0xd24a  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_d24a @ 0xd24a  OPTIMIZE(7,SPEED)
  * Runs in register bank 3 (`using 3`, MOV PSW,#0x18). When bit 7 of XDATA 0xD90B is set it writes
  * (FUN_CODE_d6bf() + 1) | 0x40 to 0xD929, 0x60 to 0xF04C, 0xC0 to 0xA773 and 0xE0 to 0xA772, and loads Timer 1
  * with TH1 = 0x98, TL1 = 0xC3. The test written as `(x & 0x80) ^ 0x80` with an empty then-branch produces the

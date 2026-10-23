@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_5dcb @ 0x5dcb  Leon2 Sub core set-up (byte-exact with OPTIMIZE(8,SPEED) LARGE)
+/* 8051_bank1 FUN_CODE_5dcb @ 0x5dcb  Leon2 Sub core set-up (OPTIMIZE(8,SPEED) LARGE)
  *
  * Twin of FUN_CODE_4a85 for the Small chip (Leon2 Sub); called by FUN_CODE_0b0d as FUN_CODE_5dcb(&XDATA 0xA4AF). Writes
  * over the AHB bridge (FUN_CODE_beb5): the 8 fixed pairs at CODE 0x8292: 0x9F1000E0 = 5, 0x9F120000 = 0xA0060000 (Sub

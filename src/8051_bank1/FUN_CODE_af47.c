@@ -5,7 +5,7 @@
  * functions.json size 33 is the code before the table; the judged span is 0xaf47..0xafdc (149 B). No volatile needed
  * (each register is read once). 'return r != 0;' also matches; 'return r;' does not (95.97 %).
  * Callers 0x5a85 (FUN_CODE_5a39), 0xa0f2 (FUN_CODE_a085), 0xae3d, 0xae4e (FUN_CODE_ae1d).
- * Byte-exact with OPTIMIZE(8,SPEED) (also with REGFILE(R.ORC); MATCH exact None 149/149).
+ * Options: OPTIMIZE(8,SPEED) (also with REGFILE(R.ORC)).
  */
 #include <reg51.h>
 extern unsigned char xdata DAT_EXTMEM_f000;

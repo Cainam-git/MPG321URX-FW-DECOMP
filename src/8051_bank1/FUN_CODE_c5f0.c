@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_c5f0 @ 0xc5f0  SPI flash: issue Page Program (02h) for the prepared page
- * (byte-exact with OPTIMIZE(8,SPEED) REGFILE(R.ORC)).
+ * (OPTIMIZE(8,SPEED) REGFILE(R.ORC)).
  * Mode 0xF0E6 = (bits 2..3 kept) | 0x01, 0xF0F4 = 3, command 0xF0EA = 02h, 0xF0EB/0xF0EC = 0, 0xF0ED = 0xFF; then the
  * write-buffer controls exactly as the original does them (0xF1C0 = 2, a dummy read of 0xF1C0, 0xF0EE = 0xF1C0,
  * 0xF1C2 written back with its own value, 0xF1C1 = 1, 0xF1C0 = 4),

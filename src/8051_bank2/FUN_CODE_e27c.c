@@ -1,5 +1,5 @@
-/* 8051_bank2 FUN_CODE_e27c @ 0xe27c  MATCH (OPTIMIZE(8,SPEED) LARGE, twin of 8051_bank2/FUN_CODE_e24d)
- * twin of 8051_bank2/FUN_CODE_e24d: byte-exact.
+/* 8051_bank2 FUN_CODE_e27c @ 0xe27c  OPTIMIZE(8,SPEED) LARGE, twin of 8051_bank2/FUN_CODE_e24d
+ * Same code as FUN_CODE_e24d (src/8051_bank2/FUN_CODE_e24d.c), other constants.
  */
 extern unsigned char xdata DAT_EXTMEM_0436[];
 unsigned char FUN_CODE_bfcf(unsigned char addr, unsigned char len, unsigned char *buf);

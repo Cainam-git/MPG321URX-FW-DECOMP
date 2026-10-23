@@ -2,7 +2,7 @@
  * XDATA 0xF04F = 0x10 then 0x11; 0xD570 = 0x80, 0x60, 0x40; 0xD571..0xD577 = 00 00 20 00 00 00 00 (INC DPTR run, so
  * one array); 0xCC8B &= 0xF7; tail printf "0x4570[5] toggle ==> warm Rese..." (code string 0xcec2, FUN_CODE_2820).
  * volatile is real for 0xF04F and 0xD570: the firmware writes them two / three times in a row.
- * Byte-exact with OPTIMIZE(8,SPEED) (MATCH exact None 54/54).
+ * Options: OPTIMIZE(8,SPEED).
  */
 extern unsigned char volatile xdata DAT_EXTMEM_f04f;
 extern unsigned char volatile xdata DAT_EXTMEM_d570[];

@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_de3a @ 0xde3a  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_de3a @ 0xde3a  OPTIMIZE(7,SPEED)
  * Stores p1 (R7) to XDATA 0xD820 and p2 (R5) to XDATA 0xD810. The _at_ variable declarations produce
  * 'MOV DPTR,#addr; MOV A,Rn; MOVX @DPTR,A' for each store, in source order.
  */

@@ -1,6 +1,6 @@
 /* 8051_bank1 FUN_CODE_a4e9 @ 0xa4e9..0xa57e (149 bytes)  MailBox_Read: read n words of the Main <-> helper portal
  *
- * MATCH: tools/diff8051.py 8051_bank1 FUN_CODE_a4e9 -> 149/149 bytes, 100 %, exact None, at OPTIMIZE(8,SPEED) LARGE
+ * Options: OPTIMIZE(8,SPEED) LARGE
  * (level 7 gives 157 bytes). Twin of the byte-exact MailBox_Write src/8051_bank1/FUN_CODE_b228.c.
  * FUN_CODE_a4e9(off, dst, n): for i = 0..n-1 reads the 32-bit AHB word at 0x9F0A0100 + off + 4*i (only the low address
  *   byte changes, 8-bit add) through the AHB bridge FUN_CODE_bcad (address in XDATA 0xA4E7, returns the word) into

@@ -1,4 +1,4 @@
-/* 8051_bank2 FUN_CODE_e516 @ 0xe516  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank2 FUN_CODE_e516 @ 0xe516  OPTIMIZE(7,SPEED)
  * 
  */
 unsigned long FUN_CODE_e516(void)

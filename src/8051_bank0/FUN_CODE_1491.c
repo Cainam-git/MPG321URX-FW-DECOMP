@@ -1,5 +1,5 @@
 /* 8051_bank0 FUN_CODE_1491 @ 0x1491  STBC boot loader: streaming SPI flash read through the FIFO
- * (byte-exact with OPTIMIZE(8,SPEED)).
+ * (OPTIMIZE(8,SPEED)).
  * FUN_CODE_1491(op R7, addr @0x48 (32-bit, big-endian), n @0x4C, dst generic pointer @0x4D): read opcode 0xF0EA =
  * op; 0xF0E6 = (0xF0E6 & 0x0C) | 1 (stream mode, bus-mode bits kept); 0xF0F4 = 0x0B; transfer length
  * 0xF0EB..0xF0ED = 00 02 00, i.e. the controller always fetches 512 bytes whatever n is; address bytes 0xF0F0 =

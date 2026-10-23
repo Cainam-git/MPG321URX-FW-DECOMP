@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_8b58 @ 0x8b58..0x8c5d (261 B)  SPI flash: erase one sector or block ("DoBlockErase")
- * (byte-exact with OPTIMIZE(8,SPEED) LARGE).
+ * (OPTIMIZE(8,SPEED) LARGE).
  * Inputs: sector (R6:R7) = unit number, cmd (R5) = SPI erase opcode. Keil LARGE block: sector 0xA4B3, cmd 0xA4B5,
  * addr 0xA4B6..0xA4B9, sr[] 0xA4BA.. (status bytes, filled by FUN_CODE_7765, handed to FUN_CODE_b456).
  * Steps: printf "DoBlockErase start %04x\r\n" (bank 1 string 0xA33B) with sector; FUN_CODE_dc51 (bracket start);

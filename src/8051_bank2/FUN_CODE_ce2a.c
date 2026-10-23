@@ -1,4 +1,4 @@
-/* 8051_bank2 FUN_CODE_ce2a @ 0xce2a  MATCH (OPTIMIZE(8,SPEED) LARGE, hand)
+/* 8051_bank2 FUN_CODE_ce2a @ 0xce2a  OPTIMIZE(8,SPEED) LARGE
  *
  * DUALFW slot pick: find which of the two firmware regions carries the valid tag.
  * FUN_CODE_e27c(0), then for slot i = 0, 1: FUN_CODE_d53d(base + (i << 12) + 0xFFF) with the 32-bit base at XDATA

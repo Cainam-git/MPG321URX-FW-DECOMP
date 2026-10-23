@@ -1,5 +1,5 @@
 /* 8051_bank1 module FUN_CODE_b2b0: FUN_CODE_ce18 @ 0xce18..0xce4b and FUN_CODE_b2b0 @ 0xb2b0..0xb33e.
- * MATCH: tools/diff8051.py 8051_bank1 FUN_CODE_b2b0 -> 142/142 bytes at OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC).
+ * Options: OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC).
  *   FUN_CODE_ce18 with its common-entry block 0xCE0D..0xCE18 -> 62/62 bytes at the same options, once the learned
  *   XDATA block base ?FUN_CODE_ce18?XD in symbols/8051_bank1.libs.json is 0xA477 (page at 0xA477, x at 0xA478).
  * One Keil module (code): the firmware has the common-entry block 0xCE0D..0xCE18 in front of FUN_CODE_ce18

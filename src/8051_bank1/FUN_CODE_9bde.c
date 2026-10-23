@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_9bde @ 0x9bde .. 0x9ca9 (no usable draft)
+/* 8051_bank1 FUN_CODE_9bde @ 0x9bde .. 0x9ca9
  * Mode n = 0..12 -> register block 0x9A00 writes (FUN_CODE_d9d1(reg, val) = 0x9A00[reg] = val, FUN_CODE_d645(reg, mask,
  * on) = 0x9A00[reg] |= / &= mask): reg 4 = mode byte, reg 3, reg 0x54; n 7..10 also set/clear bit 0 of 0x9A03 and of
  * XDATA 0xDCF0; n = 0 also clears XDATA 0x6043. Other n: nothing.
@@ -6,7 +6,7 @@
  * REGFILE(R.ORC) is needed (Keil then knows d9d1 keeps R5/R7: 'DEC R7' for reg 3 after reg 4; without it 235 B).
  * functions.json size 17 is the code before the table; the judged span is 0x9bde..0x9caa (204 B).
  * Only caller 0xb87d (FUN_CODE_b802).
- * Byte-exact with OPTIMIZE(8,SPEED) REGFILE(R.ORC) (MATCH exact None 204/204).
+ * Options: OPTIMIZE(8,SPEED) REGFILE(R.ORC).
  */
 extern unsigned char xdata DAT_EXTMEM_6043;
 extern unsigned char xdata DAT_EXTMEM_dcf0;

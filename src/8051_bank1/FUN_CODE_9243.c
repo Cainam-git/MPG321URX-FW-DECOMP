@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_9243 @ 0x9243..0x9339 (246 bytes)  STBC mailbox service, once per main-loop pass.
- * MATCH: tools/diff8051.py 8051_bank1 FUN_CODE_9243 -> 246/246 bytes, 100 %, exact None, at OPTIMIZE(8,SPEED) LARGE.
+ * Options: OPTIMIZE(8,SPEED) LARGE.
  * This file is one Keil MODULE: FUN_CODE_8512, FUN_CODE_960f, FUN_CODE_9243, FUN_CODE_a4e9, FUN_CODE_b228. Reason
  * (code): the firmware's FUN_CODE_a4e9 has a Keil OPTIMIZE(8) common-entry block 0xA4D2..0xA4E9 with entry points
  * used only by 8512 (0xA4D2, 0xA4D6), 960f (0xA4E0, 0xA4E3) and 9243 (0xA4E5 'MOV A,#5'), and b228 has the block

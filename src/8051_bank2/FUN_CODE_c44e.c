@@ -1,5 +1,5 @@
 /* FUN_CODE_c44e, 8051_bank2 (helper chip updater), range 0xC44E..0xC52F (225 B).
- * Options: OPTIMIZE(8,SPEED) LARGE. Judge: tools/diff8051.judge (jj.py, scratch copy) MATCH, exact None, 225/225.
+ * Options: OPTIMIZE(8,SPEED) LARGE.
  * Code facts: LARGE parameters id (generic pointer, 0x0902..0x0904, from R3/R2/R1) and tbl (generic pointer, memory
  * parameter 0x0905..0x0907), local i at 0x0908. Table lookup over 8-byte records (all reads ?C?CLDOPTR with a DPTR
  * field offset): for i = 0..254 it returns i when record bytes 5, 6, 7 equal id[3], id[4], id[5]; it stops at the

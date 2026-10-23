@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_bcad @ 0xbcad  AHB bridge 32-bit read (byte-exact with OPTIMIZE(8,SPEED) LARGE)
+/* 8051_bank1 FUN_CODE_bcad @ 0xbcad  AHB bridge 32-bit read (OPTIMIZE(8,SPEED) LARGE)
  *
  * DW FUN_CODE_bcad(DW addr): reads one 32-bit word from the SPARC side's AHB bus through the helper chip's PBus-to-AHB
  * bridge. If the bridge is not ready (XDATA 0xCD8C bit 0 clear) it prints "PBus to AHB bridge Error!!\r\n" (CODE

@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_7a0b @ 0x7a0b..0x7b5a (335 bytes)  STBC power-off hardware sequence.
- * MATCH: tools/diff8051.py 8051_bank1 FUN_CODE_7a0b -> 335/335 bytes, 100 %, exact None, at OPTIMIZE(8,SPEED) (also
+ * Options: OPTIMIZE(8,SPEED) (also
  * LARGE). Keys: 0x5034/0x5035 and 0x5134/0x5135 are one 16-bit register each (fw MOV A,#0FFH / MOVX / INC DPTR /
  * MOV A,#34H: a 16-bit store of 0xFF34); the final call is a tail call (fw LJMP 0xA142).
  * Callers (code): the Big-chip command 0x17 CMD_SYS_POWEROFF case of FUN_CODE_224f (0x2553) and the "SYSTEM CRASH"

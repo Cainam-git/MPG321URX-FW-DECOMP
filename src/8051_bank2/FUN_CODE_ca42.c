@@ -1,4 +1,4 @@
-/* 8051_bank2 FUN_CODE_ca42 @ 0xca42  MATCH (OPTIMIZE(8,SPEED) LARGE, hand)
+/* 8051_bank2 FUN_CODE_ca42 @ 0xca42  OPTIMIZE(8,SPEED) LARGE
  *
  * DUALFW tag block: build a 512-byte block in XDATA 0x0440..0x063F and send it.
  * Skipped (returns at once) when FUN_CODE_e4c9() != 0 (a byte of the table at XDATA 0x07D3 indexed by 0x075B).

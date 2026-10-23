@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_d1a8 @ 0xd1a8 (mechanical draft at 50 %, finished by hand)
+/* 8051_bank1 FUN_CODE_d1a8 @ 0xd1a8
  * 16-entry ring buffer put: head IDATA 0x43, tail IDATA 0x45, data XDATA 0xA1F8[]; returns 0xFF when full; else with
  * EA off stores c, advances the head (wrap above 0x0F), and when IDATA 0x46 is set clears it and sets TI (restarts the
  * serial transmit interrupt); returns 0. Only caller 0xd517. Byte-exact with OPTIMIZE(8,SPEED) (also level 7).

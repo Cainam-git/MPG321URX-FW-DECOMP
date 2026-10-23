@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_d53f @ 0xd53f..0xd56d (46 bytes)
- * MATCH: tools/diff8051.py 8051_bank1 FUN_CODE_d53f -> 46/46 bytes at OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC).
+ * Options: OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC).
  * FUN_CODE_d53f(page, v): stores v >> 8 to XDATA 0xF401 + page, then returns the byte at XDATA
  *   0x6100 + page * 256 + (v & 0xFF). Both accesses go through generic pointers (?C?CSTPTR, ?C?CLDPTR).
  * LARGE parameter: page at XDATA 0xA477 (re-read for the second address); v stays in R4:R5.

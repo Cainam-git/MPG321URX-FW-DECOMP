@@ -6,7 +6,7 @@
  * JUDGE NOTE: the first judge run records '?_FUN_CODE_6f26?BYTE': 42166 (= 0xA4B6, where 6f26 homes R6:R7, see
  * MOV DPTR,#0A4B6H at 0x6f26) in symbols/8051_bank1.libs.json; judged in a scratch copy, symbols/ not written.
  * Only caller 0x243a (case body of the 0x224f switch, no functions.json entry).
- * Byte-exact with OPTIMIZE(8,SPEED) LARGE (MATCH exact None 50/50).
+ * Options: OPTIMIZE(8,SPEED) LARGE.
  */
 extern unsigned char xdata DAT_EXTMEM_a800[];
 extern unsigned long xdata DAT_EXTMEM_a711;

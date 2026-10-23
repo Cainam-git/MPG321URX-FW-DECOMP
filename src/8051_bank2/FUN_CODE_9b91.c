@@ -1,5 +1,5 @@
 /* FUN_CODE_9b91, 8051_bank2 (update agent), range 0x9B91..0x9D97 (518 B).
- * Options: OPTIMIZE(8,SPEED) LARGE. Judge: tools/diff8051.judge MATCH, exact None, 518/518.
+ * Options: OPTIMIZE(8,SPEED) LARGE.
  * Code facts: the 32-bit controller register read, partner of FUN_CODE_b317 (write). LARGE parameter reg (0x0990),
  * locals n (0x0992) and v (ulong, 0x0993..0x0996). reg is cut to 9 bits; XDATA 0x075B selects the register window
  * (1 -> 0xCD20.., else 0xCD00..). Window +1 = reg low byte, +0 = 0x40 + (bit 8 of reg at bit 4), the read command;

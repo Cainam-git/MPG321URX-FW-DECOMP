@@ -1,5 +1,5 @@
 /* 8051_bank2 FUN_CODE_da8a @ 0xda8a  update agent: write one scaler register over the service I2C bus
- * (byte-exact with OPTIMIZE(8,SPEED) LARGE).
+ * (OPTIMIZE(8,SPEED) LARGE).
  * Builds the packet 04 78 <reg hi> <reg lo> <val> in the shared buffer XDATA 0x0436 and sends it to I2C slave
  * 0x6E (the scaler's service address) with FUN_CODE_bfcf(addr, len, buf); waits 100 units (FUN_CODE_d059) and calls
  * FUN_CODE_e4b9 (reads the reply status into the same buffer); returns bfcf's status. Opcode 0x78 = register write

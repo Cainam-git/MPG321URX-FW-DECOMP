@@ -1,5 +1,5 @@
 /* 8051_bank2 FUN_CODE_ceee @ 0xceee  update agent: set / clear the SPI flash's write-protect bits through the scaler
- * (byte-exact with OPTIMIZE(8,SPEED) LARGE).
+ * (OPTIMIZE(8,SPEED) LARGE).
  * Code facts: reads a status byte sr (FUN_CODE_de9a), clears the 10-byte buffer XDATA 0x0436 and sends two service
  * packets to slave 0x6E (FUN_CODE_bfcf, 10 bytes each, 4000-unit wait after each, FUN_CODE_d059):
  *   09 53 <op> 00 .. 00 01   with op = 0x50 when chip-record byte XDATA 0x0641 is set, else 0x06;

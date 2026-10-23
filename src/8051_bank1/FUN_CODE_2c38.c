@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_2c38 @ 0x2c38  external interrupt 0 service routine (byte-exact with OPTIMIZE(7,SPEED)).
+/* 8051_bank1 FUN_CODE_2c38 @ 0x2c38  external interrupt 0 service routine (OPTIMIZE(7,SPEED)).
  * Vector 0x0003 'LJMP 0x2C38'; 'using 1' = MOV PSW,#08H, and Keil saves only ACC, DPH, DPL, PSW.
  * Four register blocks with the same layout are served in turn, each when its bit in XDATA 0xF020 is set
  * (bit 0: registers 0xF039..0xF03F, bit 2: 0xF089..0xF08F, bit 4: 0xF09B..0xF0A1, bit 6: 0xF140..0xF146).

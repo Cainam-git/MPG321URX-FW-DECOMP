@@ -1,5 +1,5 @@
 /* 8051_bank2 FUN_CODE_d1bb @ 0xd1bb  update agent: hand the scaler over for an update (m = 1) or give it back (m = 0)
- * (byte-exact with OPTIMIZE(8,SPEED) LARGE).
+ * (OPTIMIZE(8,SPEED) LARGE).
  * FUN_CODE_e53b(0x14), P1.4 = 1, wait 2, FUN_CODE_de50(m). Only for m == 1, over the service bus (FUN_CODE_da8a /
  * FUN_CODE_e105, slave 0x6E):
  *   wait 5, read the pending reply (FUN_CODE_e4b9 = FUN_CODE_e4bf(XDATA 0x0436) through Keil's common entry) and keep

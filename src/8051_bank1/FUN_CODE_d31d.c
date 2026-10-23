@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_d31d @ 0xd31d  MATCH (OPTIMIZE(8,SPEED), hand)
+/* 8051_bank1 FUN_CODE_d31d @ 0xd31d  OPTIMIZE(8,SPEED)
  *
  * "Update FE2P Addr": stores the new 32-bit FE2P address (the flash window base the LEON cores use to see the
  * flash, see "FE2P_SetLeon2BaseAddress" in the image) at XDATA 0xA4B3..0xA4B6, prints "Update FE2P Addr %08lx\r\n"

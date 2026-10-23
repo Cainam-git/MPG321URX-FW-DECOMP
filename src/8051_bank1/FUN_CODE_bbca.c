@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_bbca @ 0xbbca  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_bbca @ 0xbbca  OPTIMIZE(7,SPEED)
  * For each bit i (0..6) set in mask: XDATA 0xF181 + 2i |= 0x80 and 0xF180 + 2i = value (separate ifs, bit order 0..6).
  */
 extern unsigned char xdata DAT_EXTMEM_f180 _at_ 0xf180;

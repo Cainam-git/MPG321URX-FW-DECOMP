@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_3fe7 @ 0x3fe7..0x42f6 (783 bytes)  STBC application main.
- * MATCH: tools/diff8051.py 8051_bank1 FUN_CODE_3fe7 -> 783/783 bytes, 100 %, exact None, at OPTIMIZE(8,SPEED) (also
+ * Options: OPTIMIZE(8,SPEED) (also
  * with REGFILE(R.ORC); level 7 gives 787 bytes). Keys: 'm = a46f & 4; if (m)' gives the fw ANL A,#04H / JZ (a plain
  * 'if (a46f & 4)' gives JNB ACC.2); the chip-ID test before the loop is '(d511 == 0x1a) | (d511 == 0x20)' with
  * 0xD511 volatile (Keil evaluates the right operand first: fw R7 = (==0x20), R6 = (==0x1a), ORL); 0xA470 is one

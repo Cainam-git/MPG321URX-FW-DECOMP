@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_ac5b @ 0xac5b..0xacf2 (151 B)  SPI flash: 16-bit checksum of one 256-byte page
- * (byte-exact with OPTIMIZE(8,SPEED) LARGE).
+ * (OPTIMIZE(8,SPEED) LARGE).
  * Inputs: a2/a1/a0 = 24-bit flash address, high to low (R7, R5, R3; Keil LARGE keeps them in this function's
  * XDATA block 0xA4BA..0xA4BC, local i at 0xA4BD, sum at 0xA4BE..0xA4BF).
  * Output: unsigned int (R6:R7) = sum of the 256 bytes read starting at that address.

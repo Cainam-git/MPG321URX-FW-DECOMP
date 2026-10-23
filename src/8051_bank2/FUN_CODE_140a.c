@@ -1,5 +1,5 @@
-/* 8051_bank2 FUN_CODE_140a @ 0x140a  MATCH (OPTIMIZE(7,SPEED), twin of 8051_bank0/FUN_CODE_18e8)
- * twin of 8051_bank0/FUN_CODE_18e8: byte-exact.
+/* 8051_bank2 FUN_CODE_140a @ 0x140a  OPTIMIZE(7,SPEED), twin of 8051_bank0/FUN_CODE_18e8
+ * Same code as FUN_CODE_18e8 (src/8051_bank0/FUN_CODE_18e8.c), other constants.
  */
 unsigned char FUN_CODE_140a(void)
 {

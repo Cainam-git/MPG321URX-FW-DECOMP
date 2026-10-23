@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_45aa @ 0x45aa  FUN_CODE_45aa(ch) (byte-exact with OPTIMIZE(8,SPEED) LARGE).
+/* 8051_bank1 FUN_CODE_45aa @ 0x45aa  FUN_CODE_45aa(ch) (OPTIMIZE(8,SPEED) LARGE).
  * Callers: FUN_CODE_8a51 (0x8B36, 0x8B40). A fixed sequence of FUN_CODE_d884(ch, reg, value) calls (ch first, register
  * number second, value third) plus one FUN_CODE_c73e(ch, 0x87, 0x40, 1) call.
  * LARGE slots: ch 0xA4B4, then three byte locals a = 0 (0xA4B5), b = 1 (0xA4B6), c = 0 (0xA4B7), set at the start

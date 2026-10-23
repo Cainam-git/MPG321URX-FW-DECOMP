@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_de66 @ 0xde66  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_de66 @ 0xde66  OPTIMIZE(7,SPEED)
  * Writes the constant 0x37 to xdata 0xD507 and 0xD508. The two plain assignments compile to two MOVX stores,
  * each with its own immediate DPTR load, as in the firmware.
  */

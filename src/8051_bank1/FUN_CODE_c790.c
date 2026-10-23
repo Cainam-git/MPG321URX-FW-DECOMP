@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_c790 @ 0xc790  MATCH (OPTIMIZE(8,SPEED) LARGE, judged with the LARGE memory model) */
+/* 8051_bank1 FUN_CODE_c790 @ 0xc790  OPTIMIZE(8,SPEED) LARGE */
 extern xdata unsigned char DAT_EXTMEM_f01c;
 extern xdata unsigned char DAT_EXTMEM_f01e;
 extern xdata unsigned char DAT_EXTMEM_f085;

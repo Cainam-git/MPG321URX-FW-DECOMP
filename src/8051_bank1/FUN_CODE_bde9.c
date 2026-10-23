@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_bde9 @ 0xbde9  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_bde9 @ 0xbde9  OPTIMIZE(7,SPEED)
  * This function takes a bitmask in `sel` (R7) and a value in `val` (R5). It clears the LSB of `val` (keeping only bits 1-7), then for each set bit in `sel`, it writes `(current_value & 1) | val` to the corresponding XDATA register. The bit-to-register mapping is: bit 0 → 0xF040, bit 1 → 0xF048, bit 2 → 0xF090, bit 3 → 0xF098, bit 4 → 0xF0A2, bit 5 → 0xF0BF, bit 6 → 0xF147, bit 7 → 0xF01B. Keil copies the first parameter with `MOV R4,AR7`, as in the target.
  */
 extern xdata unsigned char DAT_EXTMEM_f040;

@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_d969 @ 0xd969  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_d969 @ 0xd969  OPTIMIZE(7,SPEED)
  * Returns 1 when the distance between param_1 and param_2 is less than param_3, else 0. The unsigned `>`
  * comparison produces the target's SETB C / SUBB compare.
  */

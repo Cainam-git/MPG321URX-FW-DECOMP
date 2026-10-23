@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_d66e @ 0xd66e  MATCH (OPTIMIZE(7,SPEED), autoc)
+/* 8051_bank1 FUN_CODE_d66e @ 0xd66e  OPTIMIZE(7,SPEED)
  * Mechanical: Ghidra's C cleaned by tools/auto8051.py; Ghidra's symbol names are kept.
  */
 unsigned char xdata DAT_EXTMEM_a6a5 _at_ 0xa6a5;

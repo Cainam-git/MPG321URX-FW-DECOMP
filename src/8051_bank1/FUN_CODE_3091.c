@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_3091 @ 0x3091  external interrupt 1 service routine (byte-exact with OPTIMIZE(7,SPEED)).
+/* 8051_bank1 FUN_CODE_3091 @ 0x3091  external interrupt 1 service routine (OPTIMIZE(7,SPEED)).
  * Vector 0x0013 'LJMP 0x3091'; 'using 3' = MOV PSW,#18H, and Keil saves ACC, B, DPH, DPL, PSW (it calls
  * functions). Counterpart of FUN_CODE_2c38 (interrupt 0) for the other register blocks, with the same arrays
  * but descending indices. In order:

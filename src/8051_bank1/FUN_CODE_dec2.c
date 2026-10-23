@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_dec2 @ 0xdec2  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_dec2 @ 0xdec2  OPTIMIZE(7,SPEED)
  * Writes param_1 to XDATA 0xA73C and param_2 to 0xA73D. The two-byte array at 0xA73C produces one MOV DPTR,#0xA73C
  * followed by MOVX @DPTR,A / INC DPTR / MOVX @DPTR,A.
  */

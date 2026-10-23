@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_d9a5 @ 0xd9a5 (no usable draft)
+/* 8051_bank1 FUN_CODE_d9a5 @ 0xd9a5
  * 16-bit register read on the 0x9AB0 block: lo = 0x9AB0[reg], hi = 0x9AB0[reg + 1] (pointer += 1), returns hi:lo.
  * Byte-exact with OPTIMIZE(8,SPEED).
  */

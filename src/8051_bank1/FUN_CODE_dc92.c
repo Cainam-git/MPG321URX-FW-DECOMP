@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_dc92 @ 0xdc92  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_dc92 @ 0xdc92  OPTIMIZE(7,SPEED)
  * Calls FUN_CODE_2820 with the generic pointer 0xFFB545, then FUN_CODE_9522, FUN_CODE_8731, FUN_CODE_cdcd and
  * FUN_CODE_d13a. Keil passes a generic pointer in R3 (memory type, 0xFF = code), R2 (high address byte) and R1
  * (low address byte); the firmware loads R3 = 0xFF, R2 = 0xB5, R1 = 0x45, i.e. code address 0xB545.

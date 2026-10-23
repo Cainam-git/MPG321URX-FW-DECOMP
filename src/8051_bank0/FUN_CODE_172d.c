@@ -1,5 +1,5 @@
 /* 8051_bank0 FUN_CODE_172d @ 0x172d  STBC boot loader: SPI flash command returning one byte
- * (byte-exact with OPTIMIZE(7,SPEED)).
+ * (OPTIMIZE(7,SPEED)).
  * 0xF00A = 0x55, 0xF1C0 = 0 (FIFO off), 0xF0EA = cmd (read opcode register), 0xF0E6 = (0xF0E6 & 0x0C) | 0x41,
  * length 0xF0EB..0xF0ED = 0, 0xF0F4 = 0x07 (read-one-byte transfer), 0xF0E5 = 2 (start read), wait while 0xF0E5
  * bit 1 is set, return 0xF0EF (the byte read). Used with 0x05 Read Status Register (bit 0 WIP, bit 1 WEL) by

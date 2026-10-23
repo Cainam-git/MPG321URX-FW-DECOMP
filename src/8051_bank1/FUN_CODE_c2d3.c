@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_c2d3 @ 0xc2d3  MATCH (OPTIMIZE(8,SPEED) LARGE, mechanical draft, re-judged with the LARGE memory model) */
+/* 8051_bank1 FUN_CODE_c2d3 @ 0xc2d3  OPTIMIZE(8,SPEED) LARGE */
 extern unsigned char xdata DAT_EXTMEM_f039;
 extern unsigned char xdata DAT_EXTMEM_f041;
 extern unsigned char xdata DAT_EXTMEM_f089;

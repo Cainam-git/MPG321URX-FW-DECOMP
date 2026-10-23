@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_beb5 @ 0xbeb5  AHB bridge 32-bit write (byte-exact with OPTIMIZE(8,SPEED) LARGE)
+/* 8051_bank1 FUN_CODE_beb5 @ 0xbeb5  AHB bridge 32-bit write (OPTIMIZE(8,SPEED) LARGE)
  *
  * void FUN_CODE_beb5(DW addr, DW val): writes one 32-bit word to the SPARC side's AHB bus through the PBus-to-AHB
  * bridge. Bridge not ready (XDATA 0xCD8C bit 0 clear): prints "PBus to AHB bridge Error!!\r\n" (CODE 0xDA1D) and

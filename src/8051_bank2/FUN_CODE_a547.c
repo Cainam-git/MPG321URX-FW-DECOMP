@@ -1,5 +1,5 @@
 /* FUN_CODE_a547, 8051_bank2 (helper chip updater), range 0xA547..0xA6FA (435 B; functions.json size 434 is 1 short).
- * Options: OPTIMIZE(8,SPEED) LARGE. Judge: tools/diff8051.judge (jj.py, scratch copy) MATCH, exact None, 435/435.
+ * Options: OPTIMIZE(8,SPEED) LARGE.
  * Code facts: only when FUN_CODE_db76() returns 1 (carry): reads one byte (abce(buf 0x08F2, e4e9(), 1, 0), then
  * bf1b(0x08FB, 1)) as the record count DAT_EXTMEM_042e, clears the ulong 0x0113, and for each record i
  * (local i at 0x08F1) sets rec[i].a (0x0652 + 8 i, ulong) to 1 for i = 0, else rec[i-1].a + (rec[i-1].b + 32) / 32

@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_7ca8 @ 0x7ca8..0x7df1 (329 B)  SPI flash: read len bytes from flash address addr into
- * XDATA at dst ("read flash flashaddr %08lx, Length %d") (byte-exact with OPTIMIZE(8,SPEED) LARGE).
+ * XDATA at dst ("read flash flashaddr %08lx, Length %d") (OPTIMIZE(8,SPEED) LARGE).
  * Inputs: dst (R6:R7, XDATA pointer), addr (unsigned long) and len (unsigned int) in the Keil LARGE parameter
  * block (dst 0xA4B3, addr 0xA4B5..0xA4B8, len 0xA4B9..0xA4BA; locals v 0xA4BB, cur 0xA4BC..0xA4BF, n 0xA4C0..C1).
  * Steps: printf with addr and len (bank 1 string 0xA2F3); FUN_CODE_dc51 (bracket start); FUN_CODE_0016 (pulses

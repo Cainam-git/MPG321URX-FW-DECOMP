@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_236e @ 0x236e  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_236e @ 0x236e  OPTIMIZE(7,SPEED)
  * Passes the three bytes at XDATA 0xA4AE..0xA4B0 to FUN_CODE_abc4, then calls FUN_CODE_c59a with a fresh read of
  * 0xA4AE and finally FUN_CODE_279f. The incremented pointer keeps DPTR live and produces one MOV DPTR followed by
  * INC DPTR; the separate cast for the second read of 0xA4AE produces the target's DPTR reload.

@@ -7,7 +7,7 @@
  * The second 0x1A test is XRL A,#1AH / JNZ in the firmware: '!(d511 ^ 0x1a)' gives it, '== 0x1a' gives CJNE (147 vs
  * 146 B) and a one-case switch gives 98.6 %.
  * Only caller 0x4087 (FUN_CODE_3fe7).
- * Byte-exact with OPTIMIZE(8,SPEED) (MATCH exact None 147/147).
+ * Options: OPTIMIZE(8,SPEED).
  */
 extern unsigned char xdata DAT_EXTMEM_f160, DAT_EXTMEM_f161, DAT_EXTMEM_f162, DAT_EXTMEM_f163, DAT_EXTMEM_f164, DAT_EXTMEM_f165;
 extern unsigned char volatile xdata DAT_EXTMEM_d511;

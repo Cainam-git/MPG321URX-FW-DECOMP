@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_9f04 @ 0x9f04  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_9f04 @ 0x9f04  OPTIMIZE(7,SPEED)
  * The key change is that the call to FUN_CODE_2820 now passes a single generic pointer (0xffdd52) rather than three separate byte arguments. This should make Keil generate the MOV R3,#0xff; MOV R2,#0xdd; MOV R1,#0x52 sequence to load the pointer into R1:R2:R3 (the generic pointer registers) before the LCALL.
  */
 extern unsigned char xdata DAT_EXTMEM_f040 _at_ 0xf040;

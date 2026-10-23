@@ -1,4 +1,4 @@
-/* 8051_bank2 FUN_CODE_d751 @ 0xd751  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank2 FUN_CODE_d751 @ 0xd751  OPTIMIZE(7,SPEED)
  * If XDATA 0x041C == 2: copies the 32-bit value at 0x0117 to 0x03EE and the 16-bit value at 0x011B to 0x040A.
  * Otherwise: copies 32 bits 0x03F2 -> 0x0414, one byte 0x03F6 -> 0x0429, 16 bits 0x03F7 -> 0x0150, and 32 bits
  * 0x03F9 -> 0x01DE and 0x03FD -> 0x0410. The 16-bit copies, declared 'unsigned int', produce the XCH sequence; the

@@ -1,5 +1,5 @@
 /* FUN_CODE_b317, 8051_bank2 (helper chip updater), range 0xB317..0xB45F (328 B).
- * Options: OPTIMIZE(8,SPEED) LARGE. Judge: tools/diff8051.judge (scratch copy) MATCH, exact None, 328/328.
+ * Options: OPTIMIZE(8,SPEED) LARGE.
  * Code facts: the 32-bit controller register write, partner of the read FUN_CODE_9b91 (prototype as used by the
  * accepted callers in src/8051_bank2: void b317(unsigned int reg, unsigned long v)). LARGE parameters reg (0x0990)
  * and v (memory parameter 0x0992..0x0995, = ?_FUN_CODE_b317?BYTE+2), local n at 0x0996. reg is cut to 9 bits.

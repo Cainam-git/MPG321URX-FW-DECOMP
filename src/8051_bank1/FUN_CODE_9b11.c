@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_9b11 @ 0x9b11..0x9bde (205 B)  SPI flash: erase one 4 KB sector ("sector erase")
- * (byte-exact with OPTIMIZE(8,SPEED) LARGE).
+ * (OPTIMIZE(8,SPEED) LARGE).
  * Inputs: sector (R6:R7) = 4 KB sector number, cmd (R5) = SPI erase opcode. Keil LARGE block: sector 0xA4BA,
  * cmd 0xA4BC, addr 0xA4BD..0xA4C0.
  * Steps: FUN_CODE_dc51 (bracket start); Write Enable (FUN_CODE_d5f3(0x06)), wait until Read Status

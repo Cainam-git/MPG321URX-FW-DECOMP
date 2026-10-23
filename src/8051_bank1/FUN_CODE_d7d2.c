@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_d7d2 @ 0xd7d2  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_d7d2 @ 0xd7d2  OPTIMIZE(7,SPEED)
  * Returns a 32-bit constant in R4:R7: 0x00B71B00 (12 000 000) if FUN_CODE_df0b returns carry set; otherwise
  * 0x02DC6C00 (48 000 000) if XDATA 0xD511 equals 0x20, else 0x05B8D800 (96 000 000).
  *

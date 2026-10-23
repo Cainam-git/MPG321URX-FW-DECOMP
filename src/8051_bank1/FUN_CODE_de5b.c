@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_de5b @ 0xde5b  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_de5b @ 0xde5b  OPTIMIZE(7,SPEED)
  * Returns 0 (CLR C) when XDATA 0xA35F == 1, otherwise 1 (SETB C). The 'bit' return type returns the result in the
  * carry flag.
  */

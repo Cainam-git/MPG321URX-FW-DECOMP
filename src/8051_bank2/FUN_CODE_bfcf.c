@@ -1,5 +1,5 @@
 /* 8051_bank2 FUN_CODE_bfcf @ 0xbfcf  update agent: I2C master write of one service-bus packet
- * (byte-exact with OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)).
+ * (OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)).
  * FUN_CODE_bfcf(addr, len, buf): bus start (FUN_CODE_e423); send the slave address byte addr (FUN_CODE_d275 returns
  * non-zero on NACK), retrying up to 10 times with FUN_CODE_e462 between tries; after 10 failures: stop
  * (FUN_CODE_e525) and return 0x0F. Then send buf[0..len-1], OR-ing every byte's NACK status, while keeping an XOR

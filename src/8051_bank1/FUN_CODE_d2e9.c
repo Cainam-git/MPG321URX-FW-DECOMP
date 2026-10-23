@@ -3,7 +3,7 @@
  * res is the LARGE local at XDATA 0xA473. The firmware's 'LCALL 5a39 / MOV A,R7 / MOV DPTR' order comes from
  * 'res |= 5a39()' after 'res = 0' (Keil folds 0 | R7 into MOV A,R7 before the store); 'res = 5a39()' puts MOV DPTR first.
  * Callers 0x4102, 0x41c8 (FUN_CODE_3fe7).
- * Byte-exact with OPTIMIZE(8,SPEED) LARGE (MATCH exact None 52/52).
+ * Options: OPTIMIZE(8,SPEED) LARGE.
  */
 extern unsigned char xdata DAT_EXTMEM_a629;
 unsigned char FUN_CODE_5a39(void);

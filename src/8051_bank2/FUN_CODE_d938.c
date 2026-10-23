@@ -1,5 +1,5 @@
 /* FUN_CODE_d938, 8051_bank2 (helper chip updater), range 0xD938..0xD99E (102 B).
- * Options: OPTIMIZE(8,SPEED) LARGE. Judge: tools/diff8051.judge (scratch copy) MATCH, exact None, 102/102.
+ * Options: OPTIMIZE(8,SPEED) LARGE.
  * Code facts: LARGE parameters addr (ulong, home 0x08F3..0x08F6, stored by ?C?LSTXDATA at entry) and n (0x08F7),
  * local i at 0x08F8. It reads n / 8 words (at least one) from addr into the DATA buffer 0x22 through FUN_CODE_e373,
  * then prints the first n longs of that buffer with printf (FUN_CODE_65ab) and the CODE string 0xC9CB "%08lX\n".

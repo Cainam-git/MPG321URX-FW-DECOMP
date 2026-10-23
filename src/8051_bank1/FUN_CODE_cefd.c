@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_cefd @ 0xcefd..0xcf38 (59 bytes)
- * MATCH: tools/diff8051.py 8051_bank1 FUN_CODE_cefd -> 59/59 bytes at OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC).
+ * Options: OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC).
  * FUN_CODE_cefd(page, v): stores v >> 8 to XDATA 0xF401 + page, then returns the 16-bit value whose low byte is at
  *   XDATA 0x6100 + page * 256 + (v & 0xFF) and whose high byte is at the next address. All accesses go through
  *   generic pointers (?C?CSTPTR, ?C?CLDPTR; the pointer is advanced by 1 between the two reads).

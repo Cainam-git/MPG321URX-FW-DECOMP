@@ -1,4 +1,4 @@
-/* 8051_bank2 FUN_CODE_e1a4 @ 0xe1a4 (mechanical draft at 70.6 %, finished by hand)
+/* 8051_bank2 FUN_CODE_e1a4 @ 0xe1a4
  * Twin of FUN_CODE_e373 with FUN_CODE_b1a9: b1a9(DATA 0x22 buffer, addr (own parameter, R4..R7 unchanged),
  * XDATA 0x098A, 0), tail LJMP; b1a9 small prototype as in FUN_CODE_8437. 8 call sites (0x47f9 ..).
  * Byte-exact with OPTIMIZE(8,SPEED) LARGE.

@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_cfe7 @ 0xcfe7  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_cfe7 @ 0xcfe7  OPTIMIZE(7,SPEED)
  * Sends DAT_INTMEM_50 bytes from the XDATA buffer at 0xA2E8 to the port at XDATA 0xF037. Before each byte it waits
  * while bit 3 of XDATA 0xF036 is set (busy), with a 100-iteration delay loop per poll. Afterwards it clears the
  * count at IDATA 0x50 and writes 0x55 to XDATA 0xF00A.

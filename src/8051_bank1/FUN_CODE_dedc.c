@@ -1,5 +1,5 @@
-/* 8051_bank1 FUN_CODE_dedc @ 0xdedc  MATCH (OPTIMIZE(7,SPEED), twin of 8051_bank2/FUN_CODE_00f6)
- * twin of 8051_bank2/FUN_CODE_00f6: byte-exact.
+/* 8051_bank1 FUN_CODE_dedc @ 0xdedc  OPTIMIZE(7,SPEED), twin of 8051_bank2/FUN_CODE_00f6
+ * Same code as FUN_CODE_00f6 (src/8051_bank2/FUN_CODE_00f6.c), other constants.
  */
 unsigned char xdata DAT_EXTMEM_a759 _at_ 0xa759;
 

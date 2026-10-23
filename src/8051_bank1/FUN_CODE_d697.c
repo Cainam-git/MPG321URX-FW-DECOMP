@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_d697 @ 0xd697 (no draft)
+/* 8051_bank1 FUN_CODE_d697 @ 0xd697
  * Ring-buffer read: when FUN_CODE_dce3() == 0, r = XDATA 0xA566[XDATA 0xA565] and the index 0xA565 steps on,
  * wrapping at 0x80; otherwise r = 0xFF. Returns r.
  * r lives in R6 only with REGFILE(R.ORC) (without it Keil puts r in DATA: 57 %).

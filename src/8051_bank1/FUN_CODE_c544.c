@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_c544 @ 0xc544..0xc59a (86 bytes)  set the boot / wake byte for the Big chip.
- * MATCH: tools/diff8051.py 8051_bank1 FUN_CODE_c544 -> 86/86 bytes, 100 %, exact None, at OPTIMIZE(8,SPEED) LARGE
+ * Options: OPTIMIZE(8,SPEED) LARGE
  * (v and w are LARGE-model XDATA 0xA473 / 0xA474). Keys: 'v' is unsigned char and 'v << 8' is int arithmetic (fw: R6 = v,
  * R5 = R4 = sign of bit 7, R7 = 0); a 'char' parameter adds a second sign extension, a long cast gives ?C?LSHL.
  * What the code does (code facts): reads the 32-bit word at mailbox offset 0xB8 (FUN_CODE_a4e9(0xB8, &w, 1): AHB

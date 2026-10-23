@@ -1,5 +1,5 @@
-/* 8051_bank1 FUN_CODE_0016 @ 0x0016  MATCH (OPTIMIZE(7,SPEED), twin of 8051_bank0/FUN_CODE_18d6)
- * twin of 8051_bank0/FUN_CODE_18d6: byte-exact.
+/* 8051_bank1 FUN_CODE_0016 @ 0x0016  OPTIMIZE(7,SPEED), twin of 8051_bank0/FUN_CODE_18d6
+ * Same code as FUN_CODE_18d6 (src/8051_bank0/FUN_CODE_18d6.c), other constants.
  */
 extern unsigned char volatile xdata DAT_EXTMEM_f0e5;
 

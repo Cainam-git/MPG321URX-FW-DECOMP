@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_b192 @ 0xb192  MATCH (OPTIMIZE(7,SPEED))
+/* 8051_bank1 FUN_CODE_b192 @ 0xb192  OPTIMIZE(7,SPEED)
  * Here's the fix:
  */
 extern void FUN_CODE_dc51(void);
