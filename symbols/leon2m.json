@@ -17484,6 +17484,12 @@
       "name": "FUN_a0147c5c",
       "status": "matched"
     },
+    "ram:a0147c6c": {
+      "by": "hand",
+      "comment": "tail call FUN_a01236e8(c)",
+      "name": "FUN_a0147c6c",
+      "status": "matched"
+    },
     "ram:a0147c94": {
       "by": "autoc",
       "comment": "returns FUN_a0123840()",
