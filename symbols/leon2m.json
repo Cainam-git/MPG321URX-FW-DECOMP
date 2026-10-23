@@ -11940,6 +11940,12 @@
       "name": "FUN_a0110d64",
       "status": "matched"
     },
+    "ram:a0110f44": {
+      "by": "hand",
+      "comment": "returns 1",
+      "name": "FUN_a0110f44",
+      "status": "matched"
+    },
     "ram:a0110f4c": {
       "by": "autoc",
       "comment": "returns 0",
