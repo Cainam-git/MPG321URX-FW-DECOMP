@@ -1298,7 +1298,7 @@
     "CODE:c2d3": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "matches with the LARGE memory model",
+      "comment": "sets bit 6 of XDATA F039/F041/F089/F091/F09B/F0B8/F140/F014 for bits 0..7 of m",
       "name": "FUN_CODE_c2d3",
       "status": "matched"
     },
@@ -1367,14 +1367,14 @@
     "CODE:c790": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "matches with the LARGE memory model",
+      "comment": "clears bit 7 of XDATA F01C/F01E/F085/F087/F099/F0A3/F076 for bits 0..6 of m",
       "name": "FUN_CODE_c790",
       "status": "matched"
     },
     "CODE:c7e0": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "matches with the LARGE memory model",
+      "comment": "clears bit 7 of XDATA 0xF181 + 2i for bits i 0..6 of m",
       "name": "FUN_CODE_c7e0",
       "status": "matched"
     },
@@ -1402,7 +1402,7 @@
     "CODE:c9b0": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "matches with the LARGE memory model",
+      "comment": "clears the XDATA F0xx register bits that FUN_CODE_a775 sets for bits 2/3/4 of m",
       "name": "FUN_CODE_c9b0",
       "status": "matched"
     },
@@ -1720,7 +1720,7 @@
     "CODE:d6bf": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "matches with the LARGE memory model",
+      "comment": "first i 0..5 with CODE 0xDC83[i] == 0x30 (XDATA 0xD511 == 0x20) or CODE 0xDC7D[i] == 0x60, else 0",
       "name": "FUN_CODE_d6bf",
       "status": "matched"
     },
@@ -2141,7 +2141,7 @@
     },
     "ram:dbf6": {
       "by": "hand",
-      "comment": "",
+      "comment": "returns 0x0FA0 when XDATA 0xD511 == 0x20, else 0x1F40 (unsigned long)",
       "name": "FUN_CODE_dbf6",
       "status": "matched"
     },
@@ -2183,7 +2183,7 @@
     },
     "ram:de45": {
       "by": "hand",
-      "comment": "",
+      "comment": "XDATA 0xA715 = c, 0xA716 = 0 when c != 0",
       "name": "FUN_CODE_de45",
       "status": "matched"
     },
@@ -2207,7 +2207,7 @@
     },
     "ram:de7c": {
       "by": "hand",
-      "comment": "",
+      "comment": "XDATA 0xDCB1 = 0x09, 0xDCB2 = 0x0F",
       "name": "FUN_CODE_de7c",
       "status": "matched"
     },

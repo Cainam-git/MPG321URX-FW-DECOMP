@@ -1,4 +1,7 @@
 /* leon2s hdmi_Init_Interrupt @ 0xa00a2fd4 (-mcpu=v8 -Os -g)
+ * Prints "[INIT]: %s" with "_hdmi_Init_Interrupt" when bit 0 of DAT_a8078634 is set (FUN_a0073044); FUN_a00a0514();
+ * FUN_a00a2e48(0) and FUN_a00a2e48(1); FUN_a00b1980(); FUN_a00b1a4c(); returns 0. The function name is a separate
+ * static const char[] (the firmware keeps it apart from the format string).
  */
 /* hdmi_Init_Interrupt at 0xa00a2fd4 */
 

@@ -1,4 +1,7 @@
 /* leon2s FUN_a00aeb6c @ 0xa00aeb6c (-mcpu=v8 -Os)
+ * q = p1 & 0xff. When FUN_a00aeadc(q) & 0xff or FUN_a00aeb24(q) & 0xff is non-zero (tested in that order):
+ * ARR_a8079310[q] = 1; FUN_a00a6c98(q, 0x30, 0x80, 1), (q, 0x463, 1, 1), (q, 0x463, 2, 1), (q, 0x30, 0x80, 0);
+ * FUN_a00ae1c0(q). p2 is not used.
  */
 extern void FUN_a00ae1c0(unsigned int);
 extern void FUN_a00a6c98();

@@ -1,5 +1,6 @@
 /* leon2s FUN_a00d6dac @ 0xa00d6dac (-mcpu=v8 -Os -g)
- * 
+ * h = (src[0] >> 4) - 1; k = h / 2, plus 1 when h is odd; dst[0] = (dst[0] & 0x80) | (src[k + 3] & 0x7f). Same offset
+ * rule as FUN_a00d6e94.
  */
 void FUN_a00d6dac(unsigned char *param_1, unsigned char *param_2)
 {

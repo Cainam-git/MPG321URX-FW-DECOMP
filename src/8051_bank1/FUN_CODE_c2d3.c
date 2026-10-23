@@ -1,4 +1,7 @@
-/* 8051_bank1 FUN_CODE_c2d3 @ 0xc2d3  OPTIMIZE(8,SPEED) LARGE */
+/* 8051_bank1 FUN_CODE_c2d3 @ 0xc2d3  OPTIMIZE(8,SPEED) LARGE
+ * For each bit i (0..7) set in m: sets bit 6 of XDATA 0xF039, 0xF041, 0xF089, 0xF091, 0xF09B, 0xF0B8, 0xF140, 0xF014
+ * (bit 0 .. bit 7, separate tests).
+ */
 extern unsigned char xdata DAT_EXTMEM_f039;
 extern unsigned char xdata DAT_EXTMEM_f041;
 extern unsigned char xdata DAT_EXTMEM_f089;

@@ -1,4 +1,6 @@
-/* 8051_bank1 FUN_CODE_c790 @ 0xc790  OPTIMIZE(8,SPEED) LARGE */
+/* 8051_bank1 FUN_CODE_c790 @ 0xc790  OPTIMIZE(8,SPEED) LARGE
+ * For each bit i (0..6) set in m: clears bit 7 of XDATA 0xF01C, 0xF01E, 0xF085, 0xF087, 0xF099, 0xF0A3, 0xF076.
+ */
 extern xdata unsigned char DAT_EXTMEM_f01c;
 extern xdata unsigned char DAT_EXTMEM_f01e;
 extern xdata unsigned char DAT_EXTMEM_f085;

@@ -5089,7 +5089,7 @@
     },
     "ram:a00a2fd4": {
       "by": "near",
-      "comment": "near-miss repaired: name hdmi_status->DAT_a8078634; format string with \\n; function name as a static const char[] (separate .rodata object)",
+      "comment": "prints its [INIT] line (bit 0 of DAT_a8078634), FUN_a00a0514, FUN_a00a2e48(0/1), FUN_a00b1980, FUN_a00b1a4c; returns 0",
       "name": "hdmi_Init_Interrupt",
       "status": "matched"
     },
@@ -5985,7 +5985,7 @@
     },
     "ram:a00ad5cc": {
       "by": "permuter",
-      "comment": "permuter: ",
+      "comment": "when byte 0xA8079313 is set: bits 0/1 of byte 0xA8079312 from FUN_a00ad3e0(0/1) == 1, then FUN_a00acff4",
       "name": "FUN_a00ad5cc",
       "status": "matched"
     },
@@ -6155,7 +6155,7 @@
     "ram:a00aeb6c": {
       "by": "near",
       "cflags": "-mcpu=v8 -Os",
-      "comment": "near-miss repaired: already exact",
+      "comment": "when FUN_a00aeadc(q) or FUN_a00aeb24(q) is set: ARR_a8079310[q] = 1, register 0x463 bits 0/1 set inside a 0x30 bit-7 window, FUN_a00ae1c0(q)",
       "name": "FUN_a00aeb6c",
       "status": "matched"
     },
@@ -6338,7 +6338,7 @@
     },
     "ram:a00b029c": {
       "by": "hand",
-      "comment": "",
+      "comment": "returns byte +0xdd of the 300-byte record p at 0xA807DC18",
       "name": "FUN_a00b029c",
       "status": "matched"
     },
@@ -6446,7 +6446,7 @@
     },
     "ram:a00b0454": {
       "by": "hand",
-      "comment": "",
+      "comment": "byte +0x125 of the 300-byte record p1 at 0xA807DC18 = p2",
       "name": "FUN_a00b0454",
       "status": "matched"
     },
@@ -6810,7 +6810,7 @@
     },
     "ram:a00b281c": {
       "by": "permuter",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "writes v as 8 upper-case hex digits plus NUL to buf; returns 1 for a NULL buf, else 0",
       "name": "FUN_a00b281c",
       "status": "matched"
     },
@@ -6877,7 +6877,7 @@
     },
     "ram:a00c0f88": {
       "by": "near",
-      "comment": "near-miss repaired: name global_0xa8078620->DAT_a8078620",
+      "comment": "register-port loads through func_0xa0fb65c4: 16 bytes of p2, 0x20a bytes of p3, 11 bytes of 0xA8078620 and 0x140 bytes of p5 (index regs 0x310/0x312/0x30b)",
       "name": "FUN_a00c0f88",
       "status": "matched"
     },
@@ -7106,7 +7106,7 @@
     },
     "ram:a00c80f0": {
       "by": "hand",
-      "comment": "",
+      "comment": "writes header regs 0xed..0xf3 and n bytes of p2 to reg 0xf4, each followed by an unbounded wait for bit 3 of reg 0xf2 to clear; returns 0 (1 for n == 0)",
       "name": "FUN_a00c80f0",
       "status": "matched"
     },
@@ -7130,7 +7130,7 @@
     },
     "ram:a00c8360": {
       "by": "hand",
-      "comment": "",
+      "comment": "FUN_a00c8048(p, 0x74, 0x40, 1), FUN_a00c81f8(p, buf, 1) (first non-zero result returned); bit 6 of buf[0] -> bit 28 of record 0xA8078BB0[p]",
       "name": "FUN_a00c8360",
       "status": "matched"
     },
@@ -7382,7 +7382,7 @@
     },
     "ram:a00cca38": {
       "by": "hand",
-      "comment": "",
+      "comment": "p == 1 sets, other p clear bit 1 of register 0xCF018D00 (and 0xCF018DDC bit 0 / 0xCF018D54 bit 1 when func_0xa0fb7acc(0, 6) bit 0 is set)",
       "name": "FUN_a00cca38",
       "status": "matched"
     },
@@ -7648,7 +7648,7 @@
     },
     "ram:a00d2e9c": {
       "by": "hand",
-      "comment": "",
+      "comment": "FUN_a0fb6fc0(0 or 1, 5, 8) for byte 0xA8078C37 == 4 or 5",
       "name": "FUN_a00d2e9c",
       "status": "matched"
     },
@@ -7768,7 +7768,7 @@
     },
     "ram:a00d6dac": {
       "by": "hand",
-      "comment": "",
+      "comment": "dst[0] = (dst[0] & 0x80) | (src[k + 3] & 0x7f) with k from the high nibble of src[0] (as FUN_a00d6e94)",
       "name": "FUN_a00d6dac",
       "status": "matched"
     },

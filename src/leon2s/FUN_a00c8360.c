@@ -1,5 +1,7 @@
 /* leon2s FUN_a00c8360 @ 0xa00c8360 (-mcpu=v8 -Os -g)
- * 
+ * p = p1 & 0xff. r = FUN_a00c8048(p, 0x74, 0x40, 1) & 0xff, returned when non-zero; then r = FUN_a00c81f8(p, buf, 1) & 0xff,
+ * returned when non-zero; otherwise sets bit 28 of word 0 of the 24-byte record p at 0xA8078BB0 when bit 6 of buf[0]
+ * is set, and returns 0.
  */
 extern unsigned int DAT_a8078bb0[];
 extern int FUN_a00c8048();

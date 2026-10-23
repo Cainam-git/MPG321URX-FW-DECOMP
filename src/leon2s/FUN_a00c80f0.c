@@ -1,5 +1,7 @@
 /* leon2s FUN_a00c80f0 @ 0xa00c80f0 (-mcpu=v8 -Os -g)
- * 
+ * n = p5; n == 0 returns 1. Otherwise ROM register writes func_0xa0fb8054(p1, 0, reg, v): 0xed = p3, 0xee = 0,
+ * 0xef = p4, 0xf0 / 0xf1 = low / high byte of n, 0xf3 = 7; then for each of the n bytes of p2: 0xf4 = byte and a wait
+ * (no limit) until bit 3 of register 0xf2 (func_0xa0fb7fd8(p1, 0, 0xf2)) reads 0. Then func_0xa0fc1794(2); returns 0.
  */
 extern int func_0xa0fb7fd8();
 extern void func_0xa0fb8054();

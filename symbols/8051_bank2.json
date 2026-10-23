@@ -1712,13 +1712,13 @@
     },
     "ram:e4e9": {
       "by": "hand",
-      "comment": "",
+      "comment": "returns the unsigned long at XDATA 0x0717",
       "name": "FUN_CODE_e4e9",
       "status": "matched"
     },
     "ram:e516": {
       "by": "hand",
-      "comment": "",
+      "comment": "returns the unsigned long at XDATA 0x0109",
       "name": "FUN_CODE_e516",
       "status": "matched"
     }

@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_de7c @ 0xde7c  OPTIMIZE(7,SPEED)
- * 
+ * XDATA 0xDCB1 = 0x09 and 0xDCB2 = 0x0F through one pointer (INC DPTR).
  */
 extern xdata unsigned char DAT_EXTMEM_dcb1;
 extern xdata unsigned char DAT_EXTMEM_dcb2;

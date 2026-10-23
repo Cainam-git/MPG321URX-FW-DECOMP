@@ -1,4 +1,7 @@
-/* 8051_bank1 FUN_CODE_d6bf @ 0xd6bf  OPTIMIZE(8,SPEED) LARGE */
+/* 8051_bank1 FUN_CODE_d6bf @ 0xd6bf  OPTIMIZE(8,SPEED) LARGE
+ * Returns the first i in 0..5 with CODE[0xDC83 + i] == 0x30 (when XDATA 0xD511 is 0x20, tested in every round) or
+ * CODE[0xDC7D + i] == 0x60 (other values); 0 when none matches.
+ */
 extern xdata unsigned char DAT_EXTMEM_d511;
 extern code unsigned char DAT_CODE_dc83[];
 extern code unsigned char DAT_CODE_dc7d[];

@@ -1,5 +1,6 @@
 /* leon2s FUN_a00cca38 @ 0xa00cca38 (-mcpu=v8 -Os -g)
- * 
+ * q = bit 0 of func_0xa0fb7acc(0, 6). p == 1: when q, 0xCF018D54 |= 2 and 0xCF018DDC |= 1; then 0xCF018D00 |= 2.
+ * Other p: when q, 0xCF018DDC &= ~1; then 0xCF018D00 &= ~2. volatile: hardware registers.
  */
 extern int func_0xa0fb7acc();
 

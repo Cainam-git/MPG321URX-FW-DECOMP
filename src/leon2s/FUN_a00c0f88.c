@@ -1,4 +1,8 @@
 /* leon2s FUN_a00c0f88 @ 0xa00c0f88 (-mcpu=v8 -Os)
+ * p = p1 & 0xff, register writes func_0xa0fb65c4(p, reg, v) (ROM): 0x310 = 0x21, then the 16 bytes of p2 to 0x312;
+ * register 0x309 rewritten with bits 0-1 = 01 (read with func_0xa0fb657c); the 0x20a bytes of p3 to 0x30b; 0x310 = 0x2d
+ * and the 11 bytes at 0xA8078620 to 0x312; 0x310 = 0x20 and the 0x140 bytes of p5 to 0x312. p4 is not used.
+ * Source form: unsigned short loop counters.
  */
 extern int func_0xa0fb657c(int, int); // 0xa0fb657c
 extern int func_0xa0fb65c4(int, int, int); // 0xa0fb65c4

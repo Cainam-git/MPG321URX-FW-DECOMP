@@ -1,4 +1,6 @@
 /* leon2s FUN_a00b281c @ 0xa00b281c (-mcpu=v8 -Os -g)
+ * Writes v as eight upper-case hex digits (nibbles 7..0; '0'-'9', 'A'-'F' as nibble + '7') and a terminating 0 to buf;
+ * returns 1 when buf is NULL (nothing written), else 0.
  */
 
 int FUN_a00b281c(unsigned char *param_1, unsigned int param_2)

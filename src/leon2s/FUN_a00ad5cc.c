@@ -1,4 +1,6 @@
 /* leon2s FUN_a00ad5cc @ 0xa00ad5cc (-mcpu=v8 -Os -g)
+ * When byte 0xA8079313 is non-zero: sets bit 0 of byte 0xA8079312 when FUN_a00ad3e0(0) & 0xff == 1 and bit 1 when
+ * FUN_a00ad3e0(1) & 0xff == 1, then FUN_a00acff4().
  */
 extern unsigned char DAT_a8079312;
 extern unsigned char DAT_a8079313;
