@@ -2085,6 +2085,12 @@
       "name": "FUN_a0070424",
       "status": "matched"
     },
+    "ram:a0070704": {
+      "by": "hand",
+      "comment": "calls FUN_a0072b04 when the argument is 0",
+      "name": "FUN_a0070704",
+      "status": "matched"
+    },
     "ram:a0072900": {
       "by": "autoc",
       "comment": "Calls FUN_a00b15ac(buf, 0, 0x20) on a 32-byte local buffer and FUN_a006faa8(8, 0, buf, 8); when the low byte of FUN_a006fd04(buf, 8) is nonzero, calls FUN_a0070b7c(buf). Returns p1",
