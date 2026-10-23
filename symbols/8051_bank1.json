@@ -860,6 +860,13 @@
       "name": "FUN_CODE_738c",
       "status": "matched"
     },
+    "CODE:74af": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "prints FillTypeCInfo and copies p[0..9] into the bit-field structure at XDATA 0xA69C",
+      "name": "FUN_CODE_74af",
+      "status": "matched"
+    },
     "CODE:760c": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
