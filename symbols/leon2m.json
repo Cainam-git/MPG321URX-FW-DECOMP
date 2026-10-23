@@ -16082,6 +16082,12 @@
       "name": "FUN_a013b46c",
       "status": "matched"
     },
+    "ram:a013b48c": {
+      "by": "hand",
+      "comment": "stores its three arguments to halfwords 0..2 of DAT_a802a46c",
+      "name": "FUN_a013b48c",
+      "status": "matched"
+    },
     "ram:a013b4a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
