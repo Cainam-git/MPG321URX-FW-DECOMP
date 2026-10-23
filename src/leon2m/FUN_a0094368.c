@@ -1,4 +1,5 @@
 /* leon2m FUN_a0094368 @ 0xa0094368 (-mcpu=v8 -O3 -g)
+ * Byte 0xA802D433 = 2; word 0xA802AFEC = 0x108; FUN_a00b5080(); func_0x4008e2a4() twice; FUN_a00a6b98(2, 1, 0).
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

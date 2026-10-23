@@ -2178,7 +2178,7 @@
     "ram:a0074c78": {
       "by": "near",
       "cflags": "-mcpu=v8 -Os",
-      "comment": "near-miss repaired: string 'TMDS_PowerOn  %d'->'TMDS_PowerOn  %d  \\\\r'",
+      "comment": "prints \"TMDS_PowerOn %d\", then FUN_a007381c / FUN_a00a7424 / FUN_a00a7488 / FUN_a0073c24 / FUN_a00734d8 with port p",
       "name": "TMDS_PowerOn",
       "status": "matched"
     },
@@ -2226,7 +2226,7 @@
     },
     "ram:a0075278": {
       "by": "near",
-      "comment": "near-miss repaired: firmware format string; function name as static const char[]",
+      "comment": "prints its [EQ] line (bit 1 of DAT_a8078634); FUN_a00a7488 writes 0x11 to bytes of 0x1f44 / 0x1f48, 0xa2 to 0x1020 (and 0x21 to 0x3604 when FUN_a0073520(p))",
       "name": "hdmi_PHY_Set_CTLE",
       "status": "matched"
     },
@@ -2269,7 +2269,7 @@
     },
     "ram:a0078fe8": {
       "by": "hand",
-      "comment": "",
+      "comment": "returns 1 when FUN_a00a7468(0x1c, p, 0x1c04) is set and FUN_a0074f60(p) is in 11..0x257",
       "name": "FUN_a0078fe8",
       "status": "matched"
     },
@@ -2527,7 +2527,7 @@
     },
     "ram:a0083e28": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a80789e0 is unsigned char",
+      "comment": "returns the byte at 0xA80789E0",
       "name": "FUN_a0083e28",
       "status": "matched"
     },
@@ -2539,7 +2539,7 @@
     },
     "ram:a0083ec4": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a80789ec is unsigned char",
+      "comment": "returns the byte at 0xA80789EC",
       "name": "FUN_a0083ec4",
       "status": "matched"
     },
@@ -2906,7 +2906,7 @@
     },
     "ram:a0088f84": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a80761b0 is unsigned char",
+      "comment": "returns the byte at 0xA80761B0",
       "name": "FUN_a0088f84",
       "status": "matched"
     },
@@ -3152,7 +3152,7 @@
     },
     "ram:a008b694": {
       "by": "permuter",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "clears (|reg 0x63 - 0x80| <= 15) or sets bit 5 of register 0x60 of port p",
       "name": "FUN_a008b694",
       "status": "matched"
     },
@@ -3249,7 +3249,7 @@
     "ram:a008ced8": {
       "by": "near",
       "cflags": "-mcpu=v8 -Os",
-      "comment": "near-miss repaired: already exact",
+      "comment": "fixed register set-up of the 0xCF0146xx / 0xCF0147xx block with FUN_a00b1d00 calls, two FUN_a00b1794(1) waits and two FUN_a008d800() > 0x81 tests",
       "name": "FUN_a008ced8",
       "status": "matched"
     },
@@ -5870,7 +5870,7 @@
     },
     "ram:a00aba4c": {
       "by": "near",
-      "comment": "near-miss repaired: _DAT_cf034400 via cast address",
+      "comment": "returns bit 0 of register 0xCF034400",
       "name": "FUN_a00aba4c",
       "status": "matched"
     },
@@ -7154,7 +7154,7 @@
     },
     "ram:a00c7b90": {
       "by": "hand",
-      "comment": "",
+      "comment": "register 0xf3 of port p: low nibble = 9 (ROM read / write routines)",
       "name": "FUN_a00c7b90",
       "status": "matched"
     },

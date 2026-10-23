@@ -1,5 +1,6 @@
 /* leon2s FUN_a0078fe8 @ 0xa0078fe8 (-mcpu=v8 -Os -g)
- * 
+ * Returns 1 when FUN_a00a7468(0x1c, p1 & 0xff, 0x1c04) is non-zero and the u16 FUN_a0074f60(p1) is in 11..0x257 (two
+ * calls), else 0. p2 is not used.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

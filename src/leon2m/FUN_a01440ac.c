@@ -1,4 +1,6 @@
 /* leon2m FUN_a01440ac @ 0xa01440ac (-mcpu=v8 -O2 -g)
+ * Maps the byte p 0x51 / 0x61 / 0x71 / 0x81 to 0 / 1 / 2 / 3 (any other value to 0xff) and returns FUN_a0129a10(that
+ * value) (tail call). p2 is not used.
  */
 
 typedef unsigned char undefined;

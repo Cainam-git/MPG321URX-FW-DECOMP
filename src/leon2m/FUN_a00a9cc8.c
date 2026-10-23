@@ -1,4 +1,7 @@
 /* leon2m FUN_a00a9cc8 @ 0xa00a9cc8 (-mcpu=v8 -O3 -g)
+ * v = (2 * p + 5) & 0xff; func_0x4008e2a4(); for i = 0..2: FUN_a0146b20(0, 0x27, v + i, 1, 0, 0) and
+ * FUN_a0146b20(0, 0x34, v + i, 1, 0, 0); then FUN_a00b32e4(0, 0, 0x796, 0x27, v, 3, 0), FUN_a00b32e4(0, 0, 0x796, 0x34,
+ * v, 3, 0), FUN_a0146c40(3, 0, 0) and FUN_a00b3ed0(0, 0, 0, 0).
  */
 
 typedef unsigned char undefined;

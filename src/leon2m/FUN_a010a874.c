@@ -1,4 +1,5 @@
 /* leon2m FUN_a010a874 @ 0xa010a874 (-mcpu=v8 -O2)
+ * Returns bit 4 of the hardware register 0xCF011800 masked in place (0 or 0x10).
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,6 @@
 /* leon2s FUN_a00c7b90 @ 0xa00c7b90 (-mcpu=v8 -Os -g)
- * 
+ * Rewrites register 0xf3 of port p (p & 0xff) through the ROM routines: low nibble set to 9, then bits 1-2 cleared
+ * ((v & 0xf0 | 9) & 0xf9 = v & 0xf0 | 9); read func_0xa0fb7fd8(p, 0, 0xf3), write func_0xa0fb8054(p, 0, 0xf3, value).
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

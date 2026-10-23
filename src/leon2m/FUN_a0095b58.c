@@ -1,4 +1,7 @@
 /* leon2m FUN_a0095b58 @ 0xa0095b58 (-mcpu=v8 -O3 -g)
+ * FUN_a00a93bc(byte 0xA8025C56); FUN_a00a813c(1, byte 0xA8025C56, 0); FUN_a00a9650((word 0xA802AFEC - 0x4e) & 0xff, 0);
+ * FUN_a00a813c(1, byte 0xA802D3EB, 1); word 0xA802AFEC = 0xf; FUN_a00a900c(1, 1); FUN_a00acef4(); then
+ * FUN_a00d4998(p1, p2) (tail call).
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

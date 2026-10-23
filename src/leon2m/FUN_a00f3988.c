@@ -1,4 +1,5 @@
 /* leon2m FUN_a00f3988 @ 0xa00f3988 (-mcpu=v8 -O2)
+ * Returns the low byte of the hardware register 0xCF020000. Counterpart of FUN_a00f3904.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

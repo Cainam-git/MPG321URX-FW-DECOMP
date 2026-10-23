@@ -1,4 +1,6 @@
 /* leon2s FUN_a008b694 @ 0xa008b694 (-mcpu=v8 -Os -g)
+ * d = (low byte of FUN_a00a6bb8(p, 0x63)) - 0x80; |d| & 0xff <= 0xf -> FUN_a00a6c98(p, 0x60, 0x20, 0), else
+ * FUN_a00a6c98(p, 0x60, 0x20, 1) (clears or sets bit 5 of register 0x60). |d| is computed branch-free.
  */
 
 typedef unsigned char undefined;

@@ -1,4 +1,5 @@
 /* leon2m FUN_a013ce6c @ 0xa013ce6c (-mcpu=v8 -O3 -g)
+ * Returns bits 28..31 of word 0 of the 0x78-byte channel record (p & 0xff) at 0xA802DF30 for p 0..3, else 0xd.
  */
 
 typedef unsigned char undefined;

@@ -1,4 +1,5 @@
 /* leon2m FUN_a0090fcc @ 0xa0090fcc (-mcpu=v8 -O2)
+ * Returns the halfword at 0xA802AFEE. A leaf routine without a register window.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

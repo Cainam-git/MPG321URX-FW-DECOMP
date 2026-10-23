@@ -1,4 +1,11 @@
 /* leon2s FUN_a008ced8 @ 0xa008ced8 (-mcpu=v8 -Os)
+ * Fixed hardware register set-up (volatile): 0xCF012448 = 0; 0xCF014760 = 0x50 when FUN_a008d800() & 0xff > 0x81, else 3;
+ * FUN_a00b1d00(n, 0x40, v) for n 0..3 (0x50, 0x50, 0x20, 0x20), 0xCF014754 |= 0x10, FUN_a00b1d00(5, 0x40, 0x40),
+ * 0xCF014754 |= 0x20, FUN_a00b1d00(7, 0x40, 0x40); 0xCF0147C0..CC = 0, 0, 0, 0xc; pulses 0xCF014788 (0xf1, 0xf0) and
+ * 0xCF014790 (1, 0); FUN_a00b1794(1); 0xCF0146C0 = 0x22, 0xCF0146C4 = 8, 0xCF0146FC = 0x80, 0x81, 0x80 and the same
+ * at 0xCF014700 / 704 / 73C; FUN_a00b1794(1); 0xCF0146C4 = 0xCF014704 = 0; when FUN_a008d800() & 0xff > 0x81 again:
+ * 0xCF014774 = 2, FUN_a00b1d00(4, 0x80, 0x80), FUN_a00b1d00(6, 0x80, 0x80); then 0xCF01249C = 0x20 and
+ * 0xCF012498 / 494 / 490 = 0.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

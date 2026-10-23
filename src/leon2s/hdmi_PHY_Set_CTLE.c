@@ -1,4 +1,8 @@
 /* leon2s hdmi_PHY_Set_CTLE @ 0xa0075278 (-mcpu=v8 -Os -g)
+ * Prints "[EQ]: Port%c  %s" with 'A' + p and "_hdmi_PHY_Set_CTLE" when bit 1 of DAT_a8078634 is set. When
+ * FUN_a0073520(p) & 0xff is non-zero: FUN_a00a7488(p, 0x3604, 0xffffff, 0x21000000). Then FUN_a00a7488 on 0x1f44
+ * (bytes 1, 2, 3 = 0x11), 0x1f48 (byte 0 = 0x11) and 0x1020 (byte 3 = 0xa2). The function name is a separate static
+ * const char[].
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

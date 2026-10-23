@@ -1,4 +1,5 @@
 /* leon2m FUN_a0152f70 @ 0xa0152f70 (-mcpu=v8 -O2)
+ * Returns the byte at 0xA802CF90. A leaf routine without a register window.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

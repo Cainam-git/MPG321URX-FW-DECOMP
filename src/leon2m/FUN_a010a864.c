@@ -1,4 +1,5 @@
 /* leon2m FUN_a010a864 @ 0xa010a864 (-mcpu=v8 -O2)
+ * Returns bit 0 of the hardware register 0xCF011800 (as 0 or 1).
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

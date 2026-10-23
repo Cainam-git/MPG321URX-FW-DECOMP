@@ -1869,7 +1869,7 @@
     },
     "ram:a002d588": {
       "by": "near",
-      "comment": "near-miss repaired: _DAT_a802b0ca is unsigned short",
+      "comment": "returns the halfword at 0xA802B0CA",
       "name": "FUN_a002d588",
       "status": "matched"
     },
@@ -1951,7 +1951,7 @@
     },
     "ram:a002f10c": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802c9f0 is unsigned char",
+      "comment": "returns the byte at 0xA802C9F0",
       "name": "FUN_a002f10c",
       "status": "matched"
     },
@@ -2648,7 +2648,7 @@
     },
     "ram:a0090fcc": {
       "by": "near",
-      "comment": "near-miss repaired: _DAT_a802afee is unsigned short",
+      "comment": "returns the halfword at 0xA802AFEE",
       "name": "FUN_a0090fcc",
       "status": "matched"
     },
@@ -3069,7 +3069,7 @@
     "ram:a0094368": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: [walk]; global DAT_a802d433 unsigned int; callee FUN_a00a6b98 unsigned short; callee func_0x4008e2a4 void; global DAT_a802d433 char; callee FUN_a00b5080 void",
+      "comment": "byte 0xA802D433 = 2, word 0xA802AFEC = 0x108, FUN_a00b5080, func_0x4008e2a4 twice, FUN_a00a6b98(2, 1, 0)",
       "name": "FUN_a0094368",
       "status": "matched"
     },
@@ -3307,7 +3307,7 @@
     "ram:a0095b58": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: [walk]; callee FUN_a00a93bc void; param param_2 signed char; param param_1 int; callee FUN_a00d4998 unsigned char; callee FUN_a00a900c void; param param_2 unsigned char; [walk]; callee FUN_a00acef4 void; global DAT_a8025c56 short; volatile _DAT_a802afec; global DAT_a8025c56 signed char; global DAT_a",
+      "comment": "FUN_a00a93bc / FUN_a00a813c / FUN_a00a9650 with bytes 0xA8025C56 and 0xA802D3EB, word 0xA802AFEC = 0xf, FUN_a00a900c(1, 1), FUN_a00acef4, FUN_a00d4998(p1, p2)",
       "name": "FUN_a0095b58",
       "status": "matched"
     },
@@ -5001,7 +5001,7 @@
     },
     "ram:a00a3838": {
       "by": "near",
-      "comment": "near-miss repaired: _DAT_a802b088 is unsigned short",
+      "comment": "returns the halfword at 0xA802B088",
       "name": "FUN_a00a3838",
       "status": "matched"
     },
@@ -5298,7 +5298,7 @@
     "ram:a00a9cc8": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "v = 2p + 5; three rounds of FUN_a0146b20 at 0x27 / 0x34, two FUN_a00b32e4 (0x796), FUN_a0146c40(3, 0, 0), FUN_a00b3ed0(0, 0, 0, 0)",
       "name": "FUN_a00a9cc8",
       "status": "matched"
     },
@@ -8287,7 +8287,7 @@
     },
     "ram:a00dd7f0": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802b0ac is unsigned char",
+      "comment": "returns the byte at 0xA802B0AC",
       "name": "FUN_a00dd7f0",
       "status": "matched"
     },
@@ -9355,7 +9355,7 @@
     },
     "ram:a00f3904": {
       "by": "near",
-      "comment": "near-miss repaired: _DAT_cf020000 via cast address",
+      "comment": "register 0xCF020000 = p & 0xff",
       "name": "FUN_a00f3904",
       "status": "matched"
     },
@@ -9393,7 +9393,7 @@
     },
     "ram:a00f3988": {
       "by": "near",
-      "comment": "near-miss repaired: _DAT_cf020000 via cast address",
+      "comment": "returns the low byte of register 0xCF020000",
       "name": "FUN_a00f3988",
       "status": "matched"
     },
@@ -9506,7 +9506,7 @@
     },
     "ram:a00f6cf4": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802b7b4 is unsigned char",
+      "comment": "returns the byte at 0xA802B7B4",
       "name": "FUN_a00f6cf4",
       "status": "matched"
     },
@@ -9734,7 +9734,7 @@
     "ram:a00f9354": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "returns the 13-bit value (reg 0xac & 0x1f) << 8 | reg 0x9e of block p",
       "name": "FUN_a00f9354",
       "status": "matched"
     },
@@ -9875,7 +9875,7 @@
     },
     "ram:a00fc2fc": {
       "by": "near",
-      "comment": "near-miss repaired: _DAT_cf012000 via cast address",
+      "comment": "register 0xCF012000 = 0",
       "name": "FUN_a00fc2fc",
       "status": "matched"
     },
@@ -9887,7 +9887,7 @@
     },
     "ram:a00fca34": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802c97e is unsigned char",
+      "comment": "returns the byte at 0xA802C97E",
       "name": "FUN_a00fca34",
       "status": "matched"
     },
@@ -10884,13 +10884,13 @@
     },
     "ram:a010a864": {
       "by": "near",
-      "comment": "near-miss repaired: _DAT_cf011800 via cast address",
+      "comment": "returns bit 0 of register 0xCF011800",
       "name": "FUN_a010a864",
       "status": "matched"
     },
     "ram:a010a874": {
       "by": "near",
-      "comment": "near-miss repaired: _DAT_cf011800 via cast address",
+      "comment": "returns register 0xCF011800 & 0x10",
       "name": "FUN_a010a874",
       "status": "matched"
     },
@@ -12343,7 +12343,7 @@
     },
     "ram:a0124168": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802d87e is unsigned char",
+      "comment": "returns the byte at 0xA802D87E",
       "name": "FUN_a0124168",
       "status": "matched"
     },
@@ -13186,7 +13186,7 @@
     },
     "ram:a012792c": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802d896 is unsigned char",
+      "comment": "returns the byte at 0xA802D896",
       "name": "FUN_a012792c",
       "status": "matched"
     },
@@ -13198,7 +13198,7 @@
     },
     "ram:a0127944": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802d897 is unsigned char",
+      "comment": "returns the byte at 0xA802D897",
       "name": "FUN_a0127944",
       "status": "matched"
     },
@@ -13216,7 +13216,7 @@
     },
     "ram:a0127968": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802d8a2 is unsigned char",
+      "comment": "returns the byte at 0xA802D8A2",
       "name": "FUN_a0127968",
       "status": "matched"
     },
@@ -13228,7 +13228,7 @@
     },
     "ram:a01279ac": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802d8a6 is unsigned char",
+      "comment": "returns the byte at 0xA802D8A6",
       "name": "FUN_a01279ac",
       "status": "matched"
     },
@@ -13240,7 +13240,7 @@
     },
     "ram:a01279c4": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802d8a7 is unsigned char",
+      "comment": "returns the byte at 0xA802D8A7",
       "name": "FUN_a01279c4",
       "status": "matched"
     },
@@ -13252,7 +13252,7 @@
     },
     "ram:a01279dc": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802d8a8 is unsigned char",
+      "comment": "returns the byte at 0xA802D8A8",
       "name": "FUN_a01279dc",
       "status": "matched"
     },
@@ -13264,7 +13264,7 @@
     },
     "ram:a01279f4": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802d8a9 is unsigned char",
+      "comment": "returns the byte at 0xA802D8A9",
       "name": "FUN_a01279f4",
       "status": "matched"
     },
@@ -13844,7 +13844,7 @@
     },
     "ram:a0133ad8": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802da4a is unsigned char",
+      "comment": "returns the byte at 0xA802DA4A",
       "name": "FUN_a0133ad8",
       "status": "matched"
     },
@@ -14976,7 +14976,7 @@
     "ram:a013ce6c": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "returns bits 28..31 of word 0 of channel record p (0..3) at 0xA802DF30, else 0xd",
       "name": "FUN_a013ce6c",
       "status": "matched"
     },
@@ -15541,7 +15541,7 @@
     },
     "ram:a0143fb8": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802a47d is unsigned char",
+      "comment": "returns the byte at 0xA802A47D",
       "name": "FUN_a0143fb8",
       "status": "matched"
     },
@@ -15560,7 +15560,7 @@
     },
     "ram:a01440ac": {
       "by": "permuter",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "FUN_a0129a10(0 / 1 / 2 / 3 for p 0x51 / 0x61 / 0x71 / 0x81, else 0xff)",
       "name": "FUN_a01440ac",
       "status": "matched"
     },
@@ -17073,7 +17073,7 @@
     },
     "ram:a0152f70": {
       "by": "near",
-      "comment": "near-miss repaired: DAT_a802cf90 is unsigned char",
+      "comment": "returns the byte at 0xA802CF90",
       "name": "FUN_a0152f70",
       "status": "matched"
     },

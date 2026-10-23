@@ -1,4 +1,6 @@
 /* leon2s TMDS_PowerOn @ 0xa0074c78 (-mcpu=v8 -Os)
+ * Prints "TMDS_PowerOn  %d  \r\n" with p (FUN_a0073044); FUN_a007381c(p, 1); FUN_a00a7424(1, 7, p, 0x1c04) and
+ * (1, 7, p, 0x2c04); FUN_a00a7488(p, 0x1000, 0xffffff00, 0xf9); FUN_a0073c24(p, 1); FUN_a00734d8(p).
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

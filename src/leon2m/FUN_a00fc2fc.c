@@ -1,4 +1,5 @@
 /* leon2m FUN_a00fc2fc @ 0xa00fc2fc (-mcpu=v8 -O2)
+ * Writes 0 to the hardware register 0xCF012000.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;
