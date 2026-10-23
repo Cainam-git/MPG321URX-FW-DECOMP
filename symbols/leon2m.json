@@ -9139,7 +9139,7 @@
     "ram:a00e9c80": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Two-pass window search on register field C with FUN_a00e9b34 results, then writes the midpoints",
+      "comment": "Two-pass stepping of register field C up and down with FUN_a00e9b34 results, then writes the midpoints",
       "name": "FUN_a00e9c80",
       "status": "matched"
     },
