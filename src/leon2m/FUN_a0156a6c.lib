@@ -1,0 +1,3 @@
+libgcc.a _divsi3.o .udiv
+# leon2m FUN_a0156a6c: toolchain library functions .udiv and .div (libgcc.a:_divsi3.o, 688 bytes),
+# byte-exact at their addresses; the archive member is the source, nothing to decompile.
