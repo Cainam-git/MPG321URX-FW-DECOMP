@@ -6013,6 +6013,13 @@
       "name": "FUN_a00b83e4",
       "status": "matched"
     },
+    "ram:a00b848c": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "re-maps DAT_a802d290+0x1e, runs a reset sequence when FUN_a0142e8c(0) != 5 and FUN_a0145660(0, 0x16) is 0, then updates bits 10/9 of halfword 0xa802cff4 with FUN_a00b7f9c calls",
+      "name": "FUN_a00b848c",
+      "status": "matched"
+    },
     "ram:a00b8668": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
