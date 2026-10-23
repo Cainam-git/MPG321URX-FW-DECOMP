@@ -1,5 +1,5 @@
 /* leon2s FUN_a0091ac4 @ 0xa0091ac4 (-mcpu=v8 -Os -g)
- * 
+ * For p & 0xff <= 1 sets bit 31 of word 1 of the 28-byte (7-word) record p at 0xA807D580; other values do nothing.
  */
 extern unsigned int ARR_a807d580[];
 

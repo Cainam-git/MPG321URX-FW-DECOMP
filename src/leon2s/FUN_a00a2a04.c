@@ -1,5 +1,5 @@
 /* leon2s FUN_a00a2a04 @ 0xa00a2a04 (-mcpu=v8 -Os -g)
- * 
+ * Clears bit p + 2 of register 0xCF03C890 (mask 4 << p).
  */
 #define _DAT_cf03c890 (*(volatile unsigned int *)0xcf03c890)
 

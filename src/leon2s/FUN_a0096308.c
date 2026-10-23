@@ -1,4 +1,5 @@
 /* leon2s FUN_a0096308 @ 0xa0096308 (-mcpu=v8 -Os)
+ * Returns 1 when bytes +1 and +2 of the 400-byte record p at 0xA807D7E0 are both 1, else 0.
  */
 extern unsigned char DAT_a807d7e0;
 extern unsigned char DAT_a807d7e2;

@@ -1,4 +1,8 @@
 /* leon2s FUN_a00a1638 @ 0xa00a1638 (-mcpu=v8 -Os -g)
+ * When byte 0xA807DB68 is non-zero: FUN_a00962ec(p & 0xff, 0); bytes +4 and +5 of the 400-byte record p at 0xA807D7E0
+ * = 0; DRV_HDMI_Setup_IntIRQ_Events(p & 0xff, 0); FUN_a00a0b10(p & 0xff, 0); FUN_a00b1a00() for p == 0, else
+ * FUN_a00b1acc(); FUN_a009e9fc(p & 0xff); returns 0. Otherwise returns 1. The record index and the p == 0 test use p
+ * unmasked; p2 is not used.
  */
 
 extern unsigned char ARR_a807d7e0[];

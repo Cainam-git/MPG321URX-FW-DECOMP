@@ -1,4 +1,7 @@
 /* leon2s FUN_a0086540 @ 0xa0086540 (-mcpu=v8 -Os -g)
+ * c = p3, or p3 | 4 when (unsigned char)p3 > 2; d = p4, or p4 | 4 when p4 > 2; b = (d << 3) | c. Fills a 4-byte stack
+ * buffer with b and returns 1 when FUN_a00863d4(p1 & 0xff, 0x80, 0x103, (short)((p2 & 0xf) - 1), buffer) is non-zero,
+ * else 0.
  */
 extern unsigned char FUN_a00863d4(unsigned int param_1, unsigned int param_2, unsigned int param_3, char param_4, unsigned int param_5);
 

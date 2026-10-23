@@ -1,5 +1,6 @@
 /* leon2s FUN_a00a8370 @ 0xa00a8370 (-mcpu=v8 -Os -g)
- * 
+ * Writes p3 & 0xff to register 0xCF000000 + 4 * (DAT_a00b4d20[blk] + p2) with blk = p1 & 0xff; blk > 7 writes it to all
+ * 8 blocks (unsigned char counter).
  */
 extern unsigned short DAT_a00b4d20[];
 

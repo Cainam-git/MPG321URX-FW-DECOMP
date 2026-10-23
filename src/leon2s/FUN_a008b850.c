@@ -1,5 +1,6 @@
 /* leon2s FUN_a008b850 @ 0xa008b850 (-mcpu=v8 -Os -g)
- * 
+ * v = (reg 0x68 << 16) | (reg 0x67 << 8) | reg 0x66, each the low byte of FUN_a00a6bb8(p & 0xff, reg); returns v, or 1
+ * when v is 0.
  */
 extern unsigned int FUN_a00a6bb8(unsigned int param_1, unsigned short param_2);
 

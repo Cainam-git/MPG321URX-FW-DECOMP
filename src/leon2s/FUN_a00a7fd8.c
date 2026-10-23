@@ -1,4 +1,6 @@
 /* leon2s FUN_a00a7fd8 @ 0xa00a7fd8 (-mcpu=v8 -Os -g)
+ * Returns 0 when (p1 & 0xff) > 1 or (p2 & 0xff) > 5; otherwise the low byte of register 0xCF000000 + 4 * (b + p3) with
+ * b = the halfword DAT_a00b4d44[(p1 & 0xff) * 6 + (p2 & 0xff)]. Read counterpart of FUN_a00a80cc (same base table).
  */
 typedef unsigned int uint;
 typedef unsigned short ushort;
