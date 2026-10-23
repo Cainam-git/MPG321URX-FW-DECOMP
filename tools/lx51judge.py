@@ -88,7 +88,8 @@ def judge(bank, fn, cfile, opts="OPTIMIZE(8,SPEED) LARGE"):
     mask = [got[i] != alt[i] for i in range(size)]
     same = sum(1 for i in range(size) if mask[i] or got[i] == fw[i])
     end = imgs[0].get(a0 + size)
-    return {"ok": True, "score": 100.0 * same / size, "match": same == size, "masked": sum(mask),
+    return {"ok": True, "score": 100.0 * same / size, "match": same == size, "masked": sum(mask), "start": start,
+            "masked_at": [i for i in range(size) if mask[i]],
             "first_diff": next((i for i in range(size) if not mask[i] and got[i] != fw[i]), -1),
             "compiled": bytes(b if b is not None else 0 for b in got).hex(), "target": fw.hex(), "tmp": str(t)}
 

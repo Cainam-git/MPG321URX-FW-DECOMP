@@ -47,26 +47,30 @@ def pattern(m, sid):
 def bank(b): return (ROOT / "parts" / f"{b}.bin").read_bytes()
 
 
-def check(b, fn, lib, module, symbol):
-    """None when the library routine's masked bytes sit at fn's address in the bank, else a reason."""
+def segment(b, fn, lib, module, symbol):
+    """(module record, segment id, segment start address in the bank) for fn's library entry, else a reason"""
     fs = {f["name"]: f for f in json.loads((ROOT / "symbols" / f"{b}.functions.json").read_text())["functions"]}
     if fn not in fs: return f"{fn} not in the function list"
     for m in modules(lib):
         if m["name"] != module: continue
         if symbol.startswith("@"):   # a piece inside a library segment (internal entry point Ghidra split off): "@<seg>+<offset>"
-            sid, off = map(int, symbol[1:].split("+")); pat = pattern(m, sid)
-            if not pat: return "segment too short to identify"
-            start = fs[fn]["start"] - off
-            if fs[fn]["end"] - start > len(m["segs"][sid]): return f"{fn} reaches past the end of {module}"
-            return None if start >= 0 and re.match(pat, bank(b)[start:], re.S) else f"{module} bytes not around 0x{fs[fn]['start']:04x}"
+            sid, off = map(int, symbol[1:].split("+"))
+            if fs[fn]["end"] - (fs[fn]["start"] - off) > len(m["segs"][sid]): return f"{fn} reaches past the end of {module}"
+            return m, sid, fs[fn]["start"] - off
         for sid, off, nm in m["pub"]:
-            if nm != symbol: continue
-            pat = pattern(m, sid)
-            if not pat: return "segment too short to identify"
-            start = fs[fn]["start"] - off
-            return None if start >= 0 and re.match(pat, bank(b)[start:], re.S) else f"{symbol} bytes not at 0x{fs[fn]['start']:04x}"
+            if nm == symbol: return m, sid, fs[fn]["start"] - off
         return f"{symbol} not public in {module}"
     return f"module {module} not in {lib}"
+
+
+def check(b, fn, lib, module, symbol):
+    """None when the library routine's masked bytes sit at fn's address in the bank, else a reason."""
+    seg = segment(b, fn, lib, module, symbol)
+    if isinstance(seg, str): return seg
+    m, sid, start = seg; pat = pattern(m, sid)
+    if not pat: return "segment too short to identify"
+    if start >= 0 and re.match(pat, bank(b)[start:], re.S): return None
+    return f"{module} bytes not around 0x{start:04x}" if symbol.startswith("@") else f"{symbol} bytes not at 0x{start:04x}"
 
 
 def scan():

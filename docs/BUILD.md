@@ -95,7 +95,23 @@ tools/check/acc2s.sh hand FUN_a0060000 src.c "One-line description" [flags]  # I
 python3 -I tools/verify.py leon2m leon2s 8051_bank0 8051_bank1 8051_bank2
 python3 -I tools/relink.py leon2m leon2s --jobs 8
 python3 -I tools/progress.py
+python3 -I tools/rebuild.py                    # The complete image, compared with the original file
 ```
 
 A few entries are checked by other tools than `verify.py`, for example the 8051 start-up code by
 `tools/startup8051.py`. The [status report](STATUS.md#verification) lists them all.
+
+`tools/rebuild.py` builds every matched function, including those entries, and writes it at its place in a copy of
+the firmware; all other bytes stay original. It writes `build/MSI_MPG321URX_V021_rebuilt.bin` (or the path given as
+its first argument) and a report next to it (`.txt`), and exits with 1 unless the image is byte-identical to
+`firmware/MSI_MPG321URX_V021_7F69.bin` and every function was built exact. The report gives, per section:
+
+- **source:** bytes built from C and assembly;
+- **library:** bytes of toolchain library routines (`.lib` entries);
+- **original:** bytes taken from the firmware, including (**fields**) the address fields inside built functions that
+  a check takes from the firmware (jump-table and literal-pool addresses, library fixups);
+- **differ:** bytes of the rebuilt image that are not the original's, each listed with its address and function.
+
+It also lists functions that are exact only with flags that `symbols/<section>.json` does not record. Options:
+`--jobs N` (parallel builds, default 4; Keil runs at most 2 at a time) and `--sections leon2m ...` (build only these
+sections; the others stay original). The whole firmware takes about a minute.

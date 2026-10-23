@@ -48,6 +48,6 @@ compares it with the firmware. The entries below are not confirmed by that scrip
 
 ## Remaining work
 
-- Building the complete firmware image from source: all matched functions plus the original bytes for the rest,
-  compared against the original file.
+- Replacing the remaining original bytes of the rebuilt image (`tools/rebuild.py`) with source: unmatched
+  functions, data, tables and resources.
 - 8051 bank 3, and most of the large functions of the two LEON processors.

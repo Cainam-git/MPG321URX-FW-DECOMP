@@ -11,6 +11,7 @@ toolchains themselves are described in the [build guide](../docs/BUILD.md).
 | `split.py` | Cuts the firmware into the parts each processor runs (`parts/`). |
 | `dump_asm.py` | Writes the target assembly of every function (`asm/<section>/`). |
 | `decompile.sh`, `reanalyze8051.sh`, `ghidra/` | Run Ghidra without a user interface: import, naming and export (`decomp/`, `symbols/*.auto.json`). |
+| `rebuild.py` | Builds the complete image from every matched function plus the original bytes for the rest, and compares it with the original file. |
 | `fwdiff.py` | Compares functions between firmware versions, with addresses masked out. |
 | `xref.py`, `lst8051.py`, `extract_func.py` | Reading aids for a single function. |
 

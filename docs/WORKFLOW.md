@@ -18,7 +18,12 @@ decompilations: source code is accepted only when it compiles back to exactly th
    with its compiler flags and a one-line description (`tools/handaccept.py`, `tools/accept8051.py`).
 6. **Re-verify** the whole matched set at any time (`tools/verify.py`, `tools/relink.py`).
 7. **Rebuild** the complete image from source plus the remaining original bytes, and compare it with the original
-   file. This last step is not implemented yet.
+   file (`tools/rebuild.py`):
+   - Every matched function is built the way its check builds it and written at its place in a copy of the firmware.
+     All other bytes stay original, as do the address fields that a check takes from the firmware instead of the
+     build (jump-table, literal-pool and library addresses).
+   - The script writes the image to `build/`, reports per section how many bytes come from source, from toolchain
+     libraries and from the original file, and lists every byte that differs, with its function.
 
 ## Where first drafts come from
 

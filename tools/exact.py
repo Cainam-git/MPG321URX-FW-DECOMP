@@ -185,10 +185,13 @@ def verify_pool(obj, off, size, got, want, pools, img, base):
     return bytes(g), None
 
 
-def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False):
+def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False, placed=None):
     """None when the object gives the firmware's exact bytes for fn at its real address, else a reason.
     sym: the function's name inside the object when it differs (library members); solve: derive the addresses
-    of undefined names from the firmware instead of requiring Ghidra names (library members only)."""
+    of undefined names from the firmware instead of requiring Ghidra names (library members only).
+    placed: a dict that receives the linked bytes for tools/rebuild.py: "lo" (address), "raw" (the bytes as linked,
+    from the last link tried) and, when exact, "final" (raw with the address fields this judge proved taken from the
+    firmware: jump-table and literal-pool addresses, a library member's own code addresses)."""
     if cpu not in BASE: return None
     if fn not in funcs(cpu): return f"{fn} has no disassembly header"
     lo, hi = funcs(cpu)[fn]; base = BASE[cpu]; img = part(cpu); sym = sym or fn
@@ -260,6 +263,7 @@ def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False):
             if not sz or int(sz[1], 16) != lo: last = f"{fn} not placed at 0x{lo:x}"; continue
             run(tool("objcopy"), "-O", "binary", "-j", ".text", elf, out)
             got = out.read_bytes()[off:off + size]
+            if placed is not None: placed.clear(); placed.update(lo=lo, raw=bytes(got))
             nxt = next((a for a in starts(cpu) if a > lo), base + len(img))
             want = img[lo - base:lo - base + len(got)]   # Ghidra often ends a function early: the bytes decide
             global LAST; LAST = (bytes(got), bytes(want))   # for byte-similarity reports (tools/bytesim)
@@ -273,12 +277,14 @@ def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False):
                 why = jump_tables(cpu, obj, off, got, want, text_lo)
                 if why is None: got = want
                 elif why: last = why; continue
-            if got == want and lo + len(got) <= max(nxt, hi): return None
+            if got == want and lo + len(got) <= max(nxt, hi):
+                if placed is not None: placed["final"] = bytes(got)
+                return None
             if got == want: last = f"runs into the next function at 0x{nxt:x}"; continue
             k = next(i for i in range(min(len(got), len(want))) if got[i] != want[i]) & ~3
             last = (f"bytes differ at 0x{lo + k:x}: compiled {got[k:k+4].hex()} vs firmware {want[k:k+4].hex()} "
                     f"(same instruction shape: check the exact address/offset/constant there)")
         if solve and not split_pools and any(re.match(r"\.rodata\.(cst|str)", s_) for s_ in solved):
             # the original link may have spread a member's literal pool among other objects' constants
-            return exact(cpu, fn, obj, sym, solve, True) and last
+            return exact(cpu, fn, obj, sym, solve, True, placed) and last
         return last

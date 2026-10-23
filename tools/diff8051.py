@@ -50,12 +50,29 @@ def funclist(bank):
     have = {f["name"] for f in fs}
     return fs + [{"name": n, "start": a, "end": b, "size": b - a} for n, (a, b) in EXTRA_FUNCS.get(bank, {}).items() if n not in have]
 
+MEMO = None   # set to {} to reuse compiler output for identical inputs within one process (tools/rebuild.py:
+              # module files judged once per member); off by default so long searches do not grow it
+
 def c51(src_dir, name, opts):
+    src_dir = pathlib.Path(src_dir); key = None
+    if MEMO is not None:
+        import hashlib
+        orc = src_dir / "R.ORC"
+        key = (hashlib.sha256((src_dir / (name + ".c")).read_bytes()).hexdigest(),
+               hashlib.sha256(orc.read_bytes() if orc.exists() else b"").hexdigest(), name, opts)
+        if key in MEMO:
+            files, log = MEMO[key]
+            for fn_, data in files.items(): (src_dir / fn_).write_bytes(data)
+            return log
+        before = {p.name for p in src_dir.iterdir()}
     try:
         r = subprocess.run(["wine", str(KEIL / "C51.exe"), name + ".c", opts + " CODE"], cwd=src_dir,
                            env=ENV, capture_output=True, text=True, timeout=300)
     except subprocess.TimeoutExpired:   # a hung wine/C51 run counts as a failed compile, it must not kill the caller
         return "*** ERROR: C51 timed out after 300 s"
+    if key is not None:
+        MEMO[key] = ({p.name: p.read_bytes() for p in src_dir.iterdir() if p.name not in before and p.is_file()},
+                     r.stdout + r.stderr)
     return r.stdout + r.stderr
 
 def omf51_segments(obj):
@@ -213,6 +230,18 @@ def common_entry(txt, label, bank):
     """Address of a label inside a Keil common-entry block ('; FUNCTION L?nnnn (BEGIN)' up to the next FUNCTION
     line, which must be the callee the block falls into): callee start (functions.json) - block length + offset.
     None when the block is missing or its non-fixup bytes differ from the firmware at that address."""
+    blk = common_entry_block(txt, label, bank)
+    if blk is None: return None
+    base, rows, labels = blk
+    img = (ROOT / "parts" / f"{bank}.bin").read_bytes()
+    for o, b, fx in rows:
+        want = img[base + o:base + o + len(b)]
+        if (fx and want[0] != b[0]) or (not fx and want != b): return None
+    return base + labels[label]
+
+def common_entry_block(txt, label, bank):
+    """The common-entry block that holds label, placed in front of its callee: (base address, rows (offset, bytes,
+    has fixup), labels {name: offset}), or None. common_entry() checks its bytes; tools/rebuild.py places them."""
     lines = txt.splitlines()
     for i, ln in enumerate(lines):
         m = re.match(r"\s*; FUNCTION (L\?\d+) \(BEGIN\)", ln)
@@ -230,20 +259,16 @@ def common_entry(txt, label, bank):
         funcs = {f["name"]: f for f in funclist(bank)}
         if nx[1] not in funcs: return None
         size = max(o + len(b) for o, b, _ in rows) if rows else 0
-        base = funcs[nx[1]]["start"] - size
-        img = (ROOT / "parts" / f"{bank}.bin").read_bytes()
-        for o, b, fx in rows:
-            want = img[base + o:base + o + len(b)]
-            if (fx and want[0] != b[0]) or (not fx and want != b): return None
-        return base + labels[label]
+        return funcs[nx[1]]["start"] - size, rows, labels
     return None
 
-def exact8051(lst_path, fn, start, code, target, bank, block=None, fn_off=0):
+def exact8051(lst_path, fn, start, code, target, bank, block=None, fn_off=0, out=None):
     """Fill every operand the linker would patch (Keil flags E/R/F in the listing) with its real value and compare
     all bytes with the firmware. Outside names must carry their address (FUN_CODE_xxxx, DAT_EXTMEM_xxxx, ...);
     own labels resolve inside the function placed at its real address. None = exact, else a short reason.
     block = entry_block() text when fn's segment starts with a common-entry block: start is then the block's address,
-    fn begins at start + fn_off, and the block rows are filled too."""
+    fn begins at start + fn_off, and the block rows are filled too. out: a dict that receives the filled bytes
+    ("code") when exact, for tools/rebuild.py."""
     txt = pathlib.Path(lst_path).read_text(errors="replace")
     m = re.search(r"; FUNCTION (?:_\?|\?|_)?%s \(BEGIN\)(.*?); FUNCTION (?:_\?|\?|_)?%s \(END\)" % (re.escape(fn), re.escape(fn)), txt, re.S)  # _ = register params, _? / ? = reentrant
     brows = [r for r in (re.match(ROW, ln) for ln in (block or "").splitlines()) if r]
@@ -359,7 +384,9 @@ def exact8051(lst_path, fn, start, code, target, bank, block=None, fn_off=0):
                 code[off] = (op[0] & 0x1F) | ((v >> 3) & 0xE0); code[off + 1] = v & 0xFF
             elif len(op) == 3: code[off + 1:off + 3] = bytes([(v >> 8) & 0xFF, v & 0xFF])   # LCALL/LJMP/MOV DPTR,#
             else: return f"operand form of '{asm}' not handled yet"
-    if bytes(code) == target: return None
+    if bytes(code) == target:
+        if out is not None: out["code"] = bytes(code)
+        return None
     k = next((n for n in range(min(len(code), len(target))) if code[n] != target[n]), min(len(code), len(target)))
     return f"linked at 0x{start:04x} the bytes differ at +{k}: compiled {bytes(code[k:k+3]).hex()} vs firmware {target[k:k+3].hex()}"
 
@@ -402,13 +429,16 @@ def judge(bank, fn, cfile, opts=None):
         if i < len(b) and i < len(target) and (i in fx or b[i] == target[i]): same += 1; marks.append(" ")
         else: marks.append("*")
     match = len(b) == len(target) and same == n
-    reason = exact8051(tmp / "u.LST", fn, start, b, target, bank, eb[0] if eb else None, fstart - start) if match and fx else None
+    filled = {}
+    reason = exact8051(tmp / "u.LST", fn, start, b, target, bank, eb[0] if eb else None, fstart - start, filled) if match and fx else None
     reason = why or reason
     if reason: match = False; same = min(same, n - 1)
     return {"ok": True, "match": match, "score": 100.0 * same / n, "len_target": len(target), "len_compiled": len(b),
             "span": (start, end), "block": blk,
             "fixups": sorted(fx), "keil": klines, "ghidra": ghidra_listing(bank, start, end),
-            "target_hex": target.hex(), "compiled_hex": bytes(b).hex(), "marks": "".join(marks), "log": log[-1500:], "exact": reason}
+            "target_hex": target.hex(), "compiled_hex": bytes(b).hex(), "marks": "".join(marks), "log": log[-1500:], "exact": reason,
+            "linked_hex": (filled["code"] if fx else bytes(b)).hex() if match else None,   # fixups filled (exact only)
+            "lst": str(tmp / "u.LST")}
 
 def render(fn, r):
     if not r["ok"]: return f"{fn}: compile failed\n{r['error']}"

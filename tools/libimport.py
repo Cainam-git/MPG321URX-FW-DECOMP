@@ -32,7 +32,7 @@ def member_object(arc, member, td):
     return o if o.exists() else None
 
 
-def check_lib(cpu, fn, lib, member, symbol):
+def check_lib(cpu, fn, lib, member, symbol, placed=None):
     arcs = archives(lib)
     if not arcs: return f"archive {lib} not found"
     why = f"member {member} not in {lib}"
@@ -41,7 +41,7 @@ def check_lib(cpu, fn, lib, member, symbol):
             o = member_object(arc, member, td)
             if not o: continue
             subprocess.run([exact.tool("objcopy"), "-R", ".eh_frame", "-R", ".comment", str(o)], capture_output=True)   # unwind info is not in the firmware
-            why = exact.exact(cpu, fn, str(o), sym=symbol, solve=True)
+            why = exact.exact(cpu, fn, str(o), sym=symbol, solve=True, placed=placed)
             if why is None: return None
     return why
 
