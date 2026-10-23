@@ -13331,6 +13331,13 @@
       "name": "FUN_a012b9a0",
       "status": "matched"
     },
+    "ram:a012b9a8": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "fills four halfwords of a record from one of three getter sets and derives the other four by /3 and *2",
+      "name": "FUN_a012b9a8",
+      "status": "matched"
+    },
     "ram:a012bb94": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
