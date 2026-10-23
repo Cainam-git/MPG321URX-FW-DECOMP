@@ -1,5 +1,7 @@
 /* leon2m FUN_a00b6ec8 @ 0xa00b6ec8 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Formats p3 & 0xff with "n%3d" into an 8-byte local buffer (FUN_a01577f4, sprintf), sets its first byte to 3,
+ * calls FUN_a0146b6c(2, 0) and FUN_a00a31a4(0, p1 & 0xff, p2 & 0xff, 2, buf, 0). Returns p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

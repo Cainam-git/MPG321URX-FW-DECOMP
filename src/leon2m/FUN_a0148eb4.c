@@ -1,5 +1,7 @@
 /* leon2m FUN_a0148eb4 @ 0xa0148eb4 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Prints "SYSAPI_ConfigSystemPostFRCMainBypass = %d" with p1 & 0xff through FUN_a00df170, then copies bit 0 of p1
+ * into bit 26 of word 0xA802E3D0.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

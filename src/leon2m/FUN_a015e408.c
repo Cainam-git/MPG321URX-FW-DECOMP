@@ -1,5 +1,7 @@
 /* leon2m FUN_a015e408 @ 0xa015e408 (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Clears word 0xA802E40C and calls r = FUN_a015e7e0(p2, p3); when r == -1 and word 0xA802E40C is then nonzero,
+ * stores that word at *p1. Returns r.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

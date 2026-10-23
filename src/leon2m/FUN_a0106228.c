@@ -1,5 +1,7 @@
 /* leon2m FUN_a0106228 @ 0xa0106228 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Tests bits 0, 1 and 2 of register 0xCF00ED80 in that order (one register read per test) and returns 1, 2 or 3
+ * for the first one set; when none is set, returns (register >> 2) & 4 from a fourth read.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

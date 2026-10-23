@@ -1,5 +1,7 @@
 /* leon2m FUN_a010b030 @ 0xa010b030 (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Copies 0x40 bytes from 0x19AD1C into a local buffer (FUN_a013c910, byte copy), then calls FUN_a00f2e98(0x76, 0,
+ * 0x40, p1), or with the local buffer instead of p1 when p1 is null.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,7 @@
 /* leon2s FUN_a0090dec @ 0xa0090dec (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * v = FUN_a00a657c(p1, 0x45) & 7. Returns 10 for v = 0, 1, 2, 3 or 5, 0xC for v = 6, 0x10 for v = 7 and 8 for v =
+ * 4.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

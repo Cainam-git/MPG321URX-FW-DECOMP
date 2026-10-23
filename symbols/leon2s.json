@@ -2129,7 +2129,7 @@
     },
     "ram:a0073680": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00a7424 six times with p1: (1, 0x10, p1, 0x3024), (0, 0x10, p1, 0x3004), (1, 8, p1, 0x3034), (0, 8, p1, 0x3014), (1, 0x1e, p1, 0x3018), (0, 0x1d, p1, 0x3018)",
       "name": "FUN_a0073680",
       "status": "matched"
     },
@@ -3170,7 +3170,7 @@
     },
     "ram:a008b2bc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Returns 1 when bits 4-7 of register 0xCF011258 or bits 4-7 of register 0xCF011254 equal p1 & 0xf, otherwise 0",
       "name": "FUN_a008b2bc",
       "status": "matched"
     },
@@ -3754,7 +3754,7 @@
     },
     "ram:a0090dec": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "v = FUN_a00a657c(p1, 0x45) & 7. Returns 10 for v = 0, 1, 2, 3 or 5, 0xC for v = 6, 0x10 for v = 7 and 8 for v = 4",
       "name": "FUN_a0090dec",
       "status": "matched"
     },
@@ -4059,7 +4059,7 @@
     },
     "ram:a0091d64": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "k = p1 & 0xff. Calls func_0x9f1b8048(k, 0xa8, p2 & 0xff, 1), FUN_a00b1794(2) and FUN_a00a7fd8(k, 0, 0xf4) twice; returns the second result as a byte",
       "name": "FUN_a0091d64",
       "status": "matched"
     },
@@ -4739,7 +4739,7 @@
     },
     "ram:a009fe2c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p = word 0 of record p1 of the 0x34-byte table 0xA807DB00: sets, then clears the bits p2 in the word at p + 0x84",
       "name": "FUN_a009fe2c",
       "status": "matched"
     },
@@ -5627,7 +5627,7 @@
     },
     "ram:a00a7488": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "k = p1 & 0xff; v = FUN_a00a7314(k, p2); calls FUN_a00a72c0(k, p2, (v & p3) | p4, p4, p5, p6)",
       "name": "FUN_a00a7488",
       "status": "matched"
     },
@@ -7226,7 +7226,7 @@
     },
     "ram:a00c6730": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00c32f4(), FUN_a00c3ae8(), FUN_a00c44e4() and FUN_a00d17a8(), then passes its six arguments to FUN_a00c601c",
       "name": "FUN_a00c6730",
       "status": "matched"
     },
@@ -7478,7 +7478,7 @@
     },
     "ram:a00c9750": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "k = p1 & 0xff. Returns the low byte of FUN_a00c972c() when k == 2, of FUN_a00c9370(k) when k < 2, otherwise 0",
       "name": "FUN_a00c9750",
       "status": "matched"
     },
@@ -7834,7 +7834,7 @@
     },
     "ram:a00d23bc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "A = 0xD0013F60 when p1 == 0, otherwise 0xD0013F70. Reads w = func_0xa0f71528(A), calls func_0xa0f714b8(&w, 0x1f, 0x1f, p2 & 0xff) and writes w back through func_0xa0f71534(A, w). Returns 1",
       "name": "FUN_a00d23bc",
       "status": "matched"
     },
@@ -8374,7 +8374,7 @@
     },
     "ram:a00dc214": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00d9be4() and FUN_a00dac08(); when byte 0xA8078832 == 0 also FUN_a00dbed4() and FUN_a00dbe74(); then FUN_a00dbf24(). Returns byte 0xA807883E",
       "name": "FUN_a00dc214",
       "status": "matched"
     },

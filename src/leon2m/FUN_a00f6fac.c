@@ -1,5 +1,6 @@
 /* leon2m FUN_a00f6fac @ 0xa00f6fac (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When the low byte of FUN_a011cf88() is above 0x83, sets register 0xCF00EF40 to (register & 0xFE) | (p1 & 1).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

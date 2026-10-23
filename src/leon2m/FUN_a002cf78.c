@@ -1,5 +1,6 @@
 /* leon2m FUN_a002cf78 @ 0xa002cf78 (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When the low byte of func_0x000bcf88() is 0xE0, clears registers 0xCF03C848 and 0xCF03C844. Returns p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

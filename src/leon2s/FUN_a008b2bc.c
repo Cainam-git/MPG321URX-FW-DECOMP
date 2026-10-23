@@ -1,5 +1,6 @@
 /* leon2s FUN_a008b2bc @ 0xa008b2bc (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Returns 1 when bits 4-7 of register 0xCF011258 or bits 4-7 of register 0xCF011254 equal p1 & 0xf, otherwise 0.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

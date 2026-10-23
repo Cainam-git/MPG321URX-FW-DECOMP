@@ -1,5 +1,7 @@
 /* leon2m FUN_a011e690 @ 0xa011e690 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls func_0x4008e2a4(), then sets register 0xCF016404 to (register & 0x3F) | 0x80 when p1 (low byte) == 1,
+ * otherwise to (register & 0x3F) | 0x40.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

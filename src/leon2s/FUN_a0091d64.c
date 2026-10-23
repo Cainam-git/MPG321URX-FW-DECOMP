@@ -1,5 +1,7 @@
 /* leon2s FUN_a0091d64 @ 0xa0091d64 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * k = p1 & 0xff. Calls func_0x9f1b8048(k, 0xa8, p2 & 0xff, 1), FUN_a00b1794(2) and FUN_a00a7fd8(k, 0, 0xf4) twice;
+ * returns the second result as a byte.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,7 @@
 /* leon2s FUN_a00d23bc @ 0xa00d23bc (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * A = 0xD0013F60 when p1 == 0, otherwise 0xD0013F70. Reads w = func_0xa0f71528(A), calls func_0xa0f714b8(&w, 0x1f,
+ * 0x1f, p2 & 0xff) and writes w back through func_0xa0f71534(A, w). Returns 1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern int func_0xa0f71528(unsigned int);
 extern void func_0xa0f714b8(unsigned int *, int, int, unsigned char);

@@ -1,5 +1,6 @@
 /* leon2s FUN_a00c9750 @ 0xa00c9750 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * k = p1 & 0xff. Returns the low byte of FUN_a00c972c() when k == 2, of FUN_a00c9370(k) when k < 2, otherwise 0.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

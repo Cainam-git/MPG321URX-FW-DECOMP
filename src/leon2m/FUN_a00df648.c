@@ -1,5 +1,7 @@
 /* leon2m FUN_a00df648 @ 0xa00df648 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * v = p2 << 17. Writes (v / 0xC) & 0xff, (v / 0xC00) & 0xff and (v / 0xC0000) & 0xff to the registers 0xCF000000 +
+ * p1 * 4, 0xCF000004 + p1 * 4 and 0xCF000008 + p1 * 4.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

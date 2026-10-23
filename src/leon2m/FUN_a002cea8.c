@@ -1,5 +1,6 @@
 /* leon2m FUN_a002cea8 @ 0xa002cea8 (-mcpu=v8 -O2 -g)
- * Calls func_0x0007f170(0x198e40, FUN_a002c250(0x9f020328), FUN_a002c250(0x9f020324)).
+ * Calls func_0x0007f170 with the string "\r\nStack Pointer Overflow! %08X over %08X\r\n" (0x198E40) and the
+ * words FUN_a002c250(0x9f020328) and FUN_a002c250(0x9f020324).
  * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
