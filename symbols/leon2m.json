@@ -12225,6 +12225,12 @@
       "name": "FUN_a0116ff4",
       "status": "matched"
     },
+    "ram:a0118174": {
+      "by": "hand",
+      "comment": "returns DAT_a802c98d",
+      "name": "FUN_a0118174",
+      "status": "matched"
+    },
     "ram:a01181a4": {
       "by": "hand",
       "comment": "writes 6 to byte 3 of the record at 0xa8027a90 and clears its bytes 0-2 and the bytes 0xa802c98c/0xa802c98d",
