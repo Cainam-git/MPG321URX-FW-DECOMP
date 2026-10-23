@@ -14482,6 +14482,12 @@
       "name": "FUN_a012c108",
       "status": "matched"
     },
+    "ram:a012c110": {
+      "by": "hand",
+      "comment": "returns 4",
+      "name": "FUN_a012c110",
+      "status": "matched"
+    },
     "ram:a012c118": {
       "by": "autoc",
       "comment": "FUN_a01241fc(); returns p1",
