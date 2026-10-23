@@ -1,8 +1,8 @@
 /* leon2m FUN_a0098e6c @ 0xa0098e6c-0xa0098f28 (47 words), flags -mcpu=v8 -O3 -g.
  * Calls FUN_a00a900c(word 0xa802afec - 42, 2). Then, from bits 5 and 6 of word 0xa802d338 (offset 0xa8 of
- * the block at 0xa802d290): when bit 6 is set, the selection becomes 0xb2 + bit 5 and byte 0xa8025c56 becomes
- * bit 5 + 1; otherwise the selection becomes 0xb1 and the byte gets bit 6 (0). FUN_a00a9650(selection - 0xb1, 1) and
- * FUN_a00a813c(1, selection - 0xb1, 0) follow.
+ * the block at 0xa802d290): when bit 6 is set, word 0xa802afec becomes 0xb2 + bit 5 and byte 0xa8025c56 becomes
+ * bit 5 + 1; otherwise it becomes 0xb1 and the byte gets bit 6 (0). FUN_a00a9650(word - 0xb1, 1) and
+ * FUN_a00a813c(1, word - 0xb1, 0) follow.
  * Source form: bit 6 is tested through the word view of the union ('w & 0x40', clear case first) and read through
  * the bit-field view, so the stored bit is computed (srl/and) rather than known as 0.
  */
