@@ -5154,6 +5154,12 @@
       "name": "FUN_a00a3024",
       "status": "matched"
     },
+    "ram:a00a3198": {
+      "by": "hand",
+      "comment": "stores the argument to DAT_a802aff4",
+      "name": "FUN_a00a3198",
+      "status": "matched"
+    },
     "ram:a00a3838": {
       "by": "near",
       "comment": "returns the halfword at 0xA802B088",
