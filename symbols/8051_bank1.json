@@ -2081,6 +2081,12 @@
       "name": "FUN_CODE_ddb6",
       "status": "matched"
     },
+    "CODE:ddd6": {
+      "by": "hand",
+      "comment": "Delay",
+      "name": "FUN_CODE_ddd6",
+      "status": "matched"
+    },
     "CODE:dde5": {
       "by": "twin",
       "c51opts": "OPTIMIZE(7,SPEED)",
