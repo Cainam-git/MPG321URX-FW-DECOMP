@@ -6844,6 +6844,12 @@
       "name": "CED_ALL_4",
       "status": "matched"
     },
+    "ram:a00b25f8": {
+      "by": "h43",
+      "comment": "parses a line of up to 32 characters as a hexadecimal (0x prefix) or decimal number",
+      "name": "FUN_a00b25f8",
+      "status": "matched"
+    },
     "ram:a00b2790": {
       "by": "hand",
       "comment": "converts n hexadecimal characters into an int (other characters count as 0)",
