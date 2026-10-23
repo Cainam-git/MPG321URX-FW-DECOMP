@@ -14575,6 +14575,13 @@
       "name": "FUN_a0140360",
       "status": "matched"
     },
+    "ram:a0140a0c": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "when DAT_a802cbd9 is set: calls FUN_a01405d0 with the device whose area holds DAT_a802a47a (else 0xff), clears the flag",
+      "name": "FUN_a0140a0c",
+      "status": "matched"
+    },
     "ram:a0140ab4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
