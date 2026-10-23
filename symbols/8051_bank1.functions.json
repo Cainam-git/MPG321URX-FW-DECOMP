@@ -645,8 +645,14 @@
   {
    "name": "FUN_CODE_5864",
    "start": 22628,
+   "end": 22632,
+   "size": 4
+  },
+  {
+   "name": "FUN_CODE_5868",
+   "start": 22632,
    "end": 23097,
-   "size": 469
+   "size": 465
   },
   {
    "name": "FUN_CODE_5a39",
