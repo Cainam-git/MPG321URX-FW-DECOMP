@@ -1,0 +1,9 @@
+# leon2s switchdataD_a00a0798 0xa00a0798-0xa00a07b8 (32 bytes)
+a00a0798:  a0 0a 08 0c  unknown
+a00a079c:  a0 0a 08 0c  unknown
+a00a07a0:  a0 0a 08 0c  unknown
+a00a07a4:  a0 0a 08 34  unknown
+a00a07a8:  a0 0a 08 5c  unknown
+a00a07ac:  a0 0a 08 88  unknown
+a00a07b0:  a0 0a 08 b0  unknown
+a00a07b4:  a0 0a 08 dc  unknown
