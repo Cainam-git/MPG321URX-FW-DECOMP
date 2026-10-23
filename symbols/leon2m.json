@@ -1572,6 +1572,12 @@
       "name": "FUN_a00295e4",
       "status": "matched"
     },
+    "ram:a00295ec": {
+      "by": "hand",
+      "comment": "returns its byte argument",
+      "name": "FUN_a00295ec",
+      "status": "matched"
+    },
     "ram:a0029818": {
       "by": "hand",
       "comment": "empty routine",
