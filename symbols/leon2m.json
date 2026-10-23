@@ -11252,6 +11252,13 @@
       "name": "FUN_a0113138",
       "status": "matched"
     },
+    "ram:a01136a0": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes one of two fixed value sets to the 0xcf0118xx/0xcf011axx registers chosen by DAT_a802c98f",
+      "name": "FUN_a01136a0",
+      "status": "matched"
+    },
     "ram:a011433c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
