@@ -1566,6 +1566,12 @@
       "name": "FUN_a00295a4",
       "status": "matched"
     },
+    "ram:a00295e4": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a00295e4",
+      "status": "matched"
+    },
     "ram:a0029820": {
       "by": "autoc",
       "comment": "Calls FUN_a002c268(0x9F020034 + p1 * 4, 0, p2), then FUN_a002c25c(0x9F02006C + p1 * 4, p2, p3, p4, p5, p6)",
