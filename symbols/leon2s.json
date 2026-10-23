@@ -4719,6 +4719,12 @@
       "name": "FUN_a00a07b8",
       "status": "matched"
     },
+    "ram:a00a0930": {
+      "by": "h43",
+      "comment": "sets or clears a table-selected bit in one of four register words of the port block after FUN_a00a07b8",
+      "name": "FUN_a00a0930",
+      "status": "matched"
+    },
     "ram:a00a0b10": {
       "by": "hand",
       "comment": "a0930(p, 0x16 / 0xe / 0x1c / 0xb / 8, v); and 0xc too when 8d800() > 0x82",
