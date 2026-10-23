@@ -2055,8 +2055,8 @@
       "status": "matched"
     },
     "ram:a0072fd8": {
-      "by": "permuter",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "by": "h49",
+      "comment": "writes n characters of s with FUN_a006122c, CR after each LF",
       "name": "FUN_a0072fd8",
       "status": "matched"
     },
