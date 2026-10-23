@@ -16130,6 +16130,13 @@
       "name": "FUN_a014c7bc",
       "status": "matched"
     },
+    "ram:a014ce84": {
+      "by": "h51",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "switch on id 6..35 storing a byte of table 0xa802e1f0, calls FUN_a014c118 when byte 0xa802e3db matches",
+      "name": "FUN_a014ce84",
+      "status": "matched"
+    },
     "ram:a014d3d4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
