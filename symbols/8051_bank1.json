@@ -10,7 +10,7 @@
     "CODE:0022": {
       "by": "template",
       "c51opts": "OPTIMIZE(7,SPEED)",
-      "comment": "template",
+      "comment": "empty function (RET)",
       "name": "FUN_CODE_0022",
       "status": "matched"
     },
@@ -2087,28 +2087,28 @@
     "CODE:df0f": {
       "by": "template",
       "c51opts": "OPTIMIZE(7,SPEED)",
-      "comment": "template",
+      "comment": "empty function (RET)",
       "name": "FUN_CODE_df0f",
       "status": "matched"
     },
     "CODE:df14": {
       "by": "template",
       "c51opts": "OPTIMIZE(7,SPEED)",
-      "comment": "template",
+      "comment": "empty function (RET)",
       "name": "FUN_CODE_df14",
       "status": "matched"
     },
     "CODE:df16": {
       "by": "template",
       "c51opts": "OPTIMIZE(7,SPEED)",
-      "comment": "template",
+      "comment": "empty function (RET)",
       "name": "FUN_CODE_df16",
       "status": "matched"
     },
     "CODE:df17": {
       "by": "template",
       "c51opts": "OPTIMIZE(7,SPEED)",
-      "comment": "template",
+      "comment": "empty function (RET)",
       "name": "FUN_CODE_df17",
       "status": "matched"
     },

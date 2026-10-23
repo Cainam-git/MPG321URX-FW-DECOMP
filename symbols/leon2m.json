@@ -4831,13 +4831,13 @@
     },
     "ram:a00a2c04": {
       "by": "near",
-      "comment": "near-miss repaired: name arr_125928->DAT_00125928",
+      "comment": "returns entry n of the word table at 0x125928 (4-byte entries, 16-bit index)",
       "name": "FUN_a00a2c04",
       "status": "matched"
     },
     "ram:a00a2c1c": {
       "by": "near",
-      "comment": "near-miss repaired: name arr_12e2f8->DAT_0012e2f8",
+      "comment": "returns entry n of the byte table at 0x12e2f8 (1-byte entries, 16-bit index)",
       "name": "FUN_a00a2c1c",
       "status": "matched"
     },

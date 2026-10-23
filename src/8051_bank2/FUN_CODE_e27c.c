@@ -1,5 +1,5 @@
 /* 8051_bank2 FUN_CODE_e27c @ 0xe27c  OPTIMIZE(8,SPEED) LARGE, twin of 8051_bank2/FUN_CODE_e24d
- * Same code as FUN_CODE_e24d (src/8051_bank2/FUN_CODE_e24d.c), other constants.
+ * Same instruction shape as FUN_CODE_e24d (src/8051_bank2/FUN_CODE_e24d.c); the addresses and constants are the ones in the code below.
  */
 extern unsigned char xdata DAT_EXTMEM_0436[];
 unsigned char FUN_CODE_bfcf(unsigned char addr, unsigned char len, unsigned char *buf);

@@ -1723,7 +1723,7 @@
     "CODE:e551": {
       "by": "template",
       "c51opts": "OPTIMIZE(7,SPEED)",
-      "comment": "template",
+      "comment": "empty function (RET)",
       "name": "FUN_CODE_e551",
       "status": "matched"
     },
