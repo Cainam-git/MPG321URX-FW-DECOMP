@@ -15878,6 +15878,13 @@
       "name": "FUN_a0145808",
       "status": "matched"
     },
+    "ram:a0145920": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns byte id (remapped for 24..35) of the 0xA802E1F0 block, 0xff for other ids",
+      "name": "FUN_a0145920",
+      "status": "matched"
+    },
     "ram:a0145af8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
