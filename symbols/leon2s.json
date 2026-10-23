@@ -4509,6 +4509,12 @@
       "name": "DRV_HDMI21_PHY_Freq_Detection",
       "status": "matched"
     },
+    "ram:a009a698": {
+      "by": "hand",
+      "comment": "Per-lane SR detect check on PHY page 2/3: collects a lane bit mask from FUN_a00a7468 and register 0x2d00, with PHY register writes and debug prints",
+      "name": "SR_detect_fail_ch",
+      "status": "matched"
+    },
     "ram:a009bef0": {
       "by": "hand",
       "comment": "initial RX-detect state: copies the state word, clears the FFE fields of registers 0xa0/0xa4 and 0x90, writes FUN_a00a7424(.., 0x14, j, 0x2f08) and sets state 1",
