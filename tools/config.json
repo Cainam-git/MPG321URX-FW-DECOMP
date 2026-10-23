@@ -5,7 +5,8 @@
     "cflags": "-mcpu=v8 -Os -g",
     "note": "gcc 3.4.4 -Os -g (debug info changes the epilogue nop); -O2 is clearly worse here",
     "alt_cflags": [
-      "-mcpu=v8 -Os"
+      "-mcpu=v8 -Os",
+      "-mcpu=v8 -Os -g -msoft-float"
     ]
   },
   "leon2m": {
