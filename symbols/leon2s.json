@@ -5398,6 +5398,12 @@
       "name": "FUN_a00a9380",
       "status": "matched"
     },
+    "ram:a00a93e4": {
+      "by": "h43",
+      "comment": "clears or sets bit 23 of word 0xe8 of the port 0/1 block from the FUN_a0091c38/FUN_a0091c5c state of entries 0 and 1",
+      "name": "FUN_a00a93e4",
+      "status": "matched"
+    },
     "ram:a00a9c4c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
