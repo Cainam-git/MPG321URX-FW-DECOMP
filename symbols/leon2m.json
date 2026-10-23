@@ -16044,6 +16044,12 @@
       "name": "FUN_a013cfc4",
       "status": "matched"
     },
+    "ram:a013d008": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a013d008",
+      "status": "matched"
+    },
     "ram:a013d018": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
