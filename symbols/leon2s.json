@@ -2393,6 +2393,12 @@
       "name": "FUN_a0083648",
       "status": "matched"
     },
+    "ram:a0083870": {
+      "by": "h52",
+      "comment": "reads five hardware register bytes; mode bit 0 updates status byte DAT_a80789e0, bit 1 acknowledges bits 6/7 and builds the flag word DAT_a80789e4",
+      "name": "FUN_a0083870",
+      "status": "matched"
+    },
     "ram:a0083e28": {
       "by": "near",
       "comment": "near-miss repaired: DAT_a80789e0 is unsigned char",
