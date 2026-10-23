@@ -1701,6 +1701,12 @@
       "name": "FUN_CODE_d0cc",
       "status": "matched"
     },
+    "CODE:d103": {
+      "by": "hand",
+      "comment": "timer 0 interrupt: reloads TL0/TH0 from XDATA 0xA773/0xA772, counts IDATA 0x57..0x58, steps XDATA 0xA1E4 through 0..9",
+      "name": "FUN_CODE_d103",
+      "status": "matched"
+    },
     "CODE:d13a": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
