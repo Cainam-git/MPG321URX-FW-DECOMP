@@ -5020,6 +5020,12 @@
       "name": "FUN_a00a4610",
       "status": "matched"
     },
+    "ram:a00a4658": {
+      "by": "h43",
+      "comment": "for both ports updates a flag byte, runs the state-table functions while they return non-zero and re-arms the timer descriptor",
+      "name": "FUN_a00a4658",
+      "status": "matched"
+    },
     "ram:a00a47b0": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
