@@ -17261,6 +17261,13 @@
       "name": "FUN_a01519b4",
       "status": "matched"
     },
+    "ram:a01519d8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Switch on sel 0x04/0x08/0x10/0x20: per-entry calls of FUN_a012cd68/FUN_a0124df8 or FUN_a0107ba4/FUN_a0107a20 with argument 1",
+      "name": "FUN_a01519d8",
+      "status": "matched"
+    },
     "ram:a0151aa4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
