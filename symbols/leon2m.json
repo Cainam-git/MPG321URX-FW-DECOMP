@@ -10193,6 +10193,12 @@
       "name": "FUN_a00f6cc0",
       "status": "matched"
     },
+    "ram:a00f6cdc": {
+      "by": "hand",
+      "comment": "writes its byte argument to register 0xcf00eed8",
+      "name": "FUN_a00f6cdc",
+      "status": "matched"
+    },
     "ram:a00f6cf4": {
       "by": "near",
       "comment": "returns the byte at 0xA802B7B4",
