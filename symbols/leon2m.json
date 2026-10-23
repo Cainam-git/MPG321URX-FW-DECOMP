@@ -13613,9 +13613,9 @@
       "status": "matched"
     },
     "ram:a012fc20": {
-      "by": "permuter",
+      "by": "h49",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: [walk]; selfassign result#0; local nibble short; drop cast (unsigned int); inline temp offset",
+      "comment": "byte +0xa of the port record of channel byte 0xA802A44C, or 0xff",
       "name": "FUN_a012fc20",
       "status": "matched"
     },
