@@ -4605,6 +4605,12 @@
       "name": "MODEDET_handler_2",
       "status": "matched"
     },
+    "ram:a009dfa8": {
+      "by": "hand",
+      "comment": "Returns the shifted ratio of words +0x50 and +0x54 of the record pointed to by entry param of 0xA807DB00, 0 when the divisor is 0",
+      "name": "FUN_a009dfa8",
+      "status": "matched"
+    },
     "ram:a009e368": {
       "by": "h23",
       "comment": "port mode-detect completion: H_Total check, six info block reads or clears, status prints, state 8 or 5",
