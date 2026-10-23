@@ -34,6 +34,12 @@ symbol names are not allowed.
 - **Try every optimisation level.** Each LEON file was compiled with its own flags: mostly `-O2 -g`, often `-O3`, with
   or without `-g` and `-msoft-float`, sometimes `-Os -g` or no optimisation at all. The flags of every matched
   function are recorded in `symbols/<section>.json`.
+- **Run `tools/show.py` early** on a large `-O3` draft: it tries every recorded flag set. `-msoft-float` changes
+  loop-invariant hoisting even in integer-only code, so a constant or table address hoisted in your build but
+  reloaded in the loop by the firmware (or the reverse) points to it (FUN_a0114650, FUN_a00ad970, FUN_a00aee44,
+  leon2s DRV_HDMI21_RXDetect_FSM_LTS_3).
+- **Ghidra lists leftover `%i1`-`%i3` as tail-call arguments.** The callee's own register reads give the real
+  parameter count; a delay-slot `mov k,%o0` before a tail call is usually that call's argument.
 
 ## Reading Ghidra's output
 
@@ -147,6 +153,13 @@ symbol names are not allowed.
   volatile, so both writes stay.
 - **Search the order of independent statements** (byte copies, store groups): a small brute-force search over all
   orders is quick.
+- **`(unsigned char)` casts instead of `& 0xff` / `>> 8`** on a 16-bit value change which copies GCC makes and the
+  order of the byte stores.
+- **Read-modify-write through inlined helpers:** nest the read inside the write call, `wr(p, r, rd(p, r) & m)`; the
+  helper's parameter copy keeps the firmware's second `and 0xff`.
+- **Case order of large switches:** a hill-climb over the order of the `case` blocks, judged by the score, settles
+  register names and block order where a full permutation search is too big (`work/h42/climb.py` does the same for
+  single statements).
 
 ## GCC 3.4.4: blocks in a different order
 
@@ -195,6 +208,9 @@ changing the code, and test all pairs.
 | A 4-byte constant after `LCALL ?C?LSTKXDATA` | Inline data; Ghidra ends the function there. Fix the end before judging. |
 | A 4-byte struct copy | Compiles to `?C?COPY` with R6:R7 = 4. |
 | The print function `FUN_CODE_2820` with extra arguments | Declare it `extern void FUN_CODE_2820(void *fmt, ...) large;` and pass the format as `(void code *)0xNNNN`. |
+| An XDATA address re-read for every access | Declare that variable `volatile`. |
+| `MOV R2,#HIGH x / MOV R1,#LOW x` then `?C?COPY` from CODE | An initialised local array (`unsigned char a[2] = {0, 0};`); its initialiser bytes sit at x. |
+| Shared entry code (a few instructions, then the function) in front of a callee | Keil common-entry blocks: built only when the callee and at least three call sites with that sequence are in one module file; define callees before callers. |
 
 - **Register files.** Banks 0 and 1 were built with whole-program register optimisation. With the register files
   `symbols/8051_bank*.orc` (`tools/regfile8051.py`), C51 keeps parameters in R6/R7 across calls, as the firmware does.
