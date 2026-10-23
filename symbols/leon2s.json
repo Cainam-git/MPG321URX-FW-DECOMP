@@ -4250,6 +4250,12 @@
       "name": "FUN_a0099610",
       "status": "matched"
     },
+    "ram:a009967c": {
+      "by": "h52",
+      "comment": "per-row value read via FUN_a00a7468/FUN_a00a7314, stored in a 10-column history of the 0xb0-byte port record, compared with the next column",
+      "name": "MAX_CED",
+      "status": "matched"
+    },
     "ram:a009a580": {
       "by": "hand",
       "comment": "per-lane PHY freq read (delay then a7314) into ARR_a807905a[port*4+i], print re-reads",
