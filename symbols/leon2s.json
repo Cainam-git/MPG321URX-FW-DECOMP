@@ -3252,6 +3252,12 @@
       "name": "FUN_a008c5d8",
       "status": "matched"
     },
+    "ram:a008c6f8": {
+      "by": "hand",
+      "comment": "for the selectors 4..14 picks the port record bit 6 flag and calls FUN_a008b5d0 or FUN_a008b75c/FUN_a008c5d8 with FUN_a008a040(s)",
+      "name": "FUN_a008c6f8",
+      "status": "matched"
+    },
     "ram:a008c8b0": {
       "by": "autoc",
       "comment": "For each of four units (4, 6, 0xc, 0xe): if FUN_a0089f98(unit) reports something (non-zero 16-bit value), it runs FUN_a008b9ec(n) and then FUN_a008a1b4(unit, FUN_a008a040(unit) & 0xff, 1). Ghidra lost the unit argument of the check.",
