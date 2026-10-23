@@ -8348,6 +8348,13 @@
       "name": "FUN_a00df51c",
       "status": "matched"
     },
+    "ram:a00df5dc": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes 1 or 2 to 0xc00d02f4, returns 24-bit value of registers 0xcf000000+4a..+8 times 12 shifted right 17",
+      "name": "FUN_a00df5dc",
+      "status": "matched"
+    },
     "ram:a00df648": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
