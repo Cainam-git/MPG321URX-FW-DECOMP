@@ -10988,6 +10988,13 @@
       "name": "FUN_a0114498",
       "status": "matched"
     },
+    "ram:a0114650": {
+      "by": "h44",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "clears and sets a fixed register sequence on ports 0 to 2 through paged register access",
+      "name": "FUN_a0114650",
+      "status": "matched"
+    },
     "ram:a011552c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
