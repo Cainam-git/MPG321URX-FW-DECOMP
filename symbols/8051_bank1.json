@@ -1630,6 +1630,13 @@
       "name": "FUN_CODE_d44e",
       "status": "matched"
     },
+    "CODE:d47f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "calls the 97c4/c6ec/d086 sequence around FUN_CODE_6781(x) and returns whether it returned 0",
+      "name": "FUN_CODE_d47f",
+      "status": "matched"
+    },
     "CODE:d4e1": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
