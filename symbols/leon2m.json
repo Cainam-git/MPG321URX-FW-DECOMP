@@ -5737,6 +5737,13 @@
       "name": "FUN_a00b0fc0",
       "status": "matched"
     },
+    "ram:a00b1700": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Row/column byte table output by id (FUN_a0146b20 per byte), id text entries and the size-dependent FUN_a014654c position",
+      "name": "FUN_a00b1700",
+      "status": "matched"
+    },
     "ram:a00b27fc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
