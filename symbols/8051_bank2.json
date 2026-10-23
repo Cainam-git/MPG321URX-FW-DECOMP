@@ -2107,12 +2107,6 @@
       "name": "FUN_CODE_4ffa",
       "status": "matched"
     },
-    "ram:d751": {
-      "by": "hand",
-      "comment": "Checks the flag at xdata 0x41c. If it equals 2, copies a 32-bit value 0x117 -> 0x3ee and a 16-bit value 0x11b -> 0x40a. Otherwise copies 32-bit 0x3f2 -> 0x414, byte 0x3f6 -> 0x429, 16-bit 0x3f7 -> 0x150, and 32-bit 0x3f9 -> 0x1de and 0x3fd -> 0x410. The 16-bit copies compile to the XCH pattern; byte and 32-bit copies are direct MOVX sequences.",
-      "name": "FUN_CODE_d751",
-      "status": "matched"
-    },
     "ram:e4e9": {
       "by": "hand",
       "comment": "returns the unsigned long at XDATA 0x0717",
