@@ -11322,6 +11322,13 @@
       "name": "FUN_a01136a0",
       "status": "matched"
     },
+    "ram:a0113eb4": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "writes n 32-byte blocks to the 0xcf011f88 port after setting the 0xcf011fa0..fac address, byte order by mode",
+      "name": "FUN_a0113eb4",
+      "status": "matched"
+    },
     "ram:a011433c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
