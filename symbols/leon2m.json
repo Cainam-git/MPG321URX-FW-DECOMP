@@ -16401,6 +16401,13 @@
       "name": "FUN_a014b0c4",
       "status": "matched"
     },
+    "ram:a014b280": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores val or 0xff to DAT_a802e1a0[0x1b + v] for the table entry selected by the FUN_a01421c4 code, then FUN_a012c80c(v, 0, param_3, param_4, 0)",
+      "name": "FUN_a014b280",
+      "status": "matched"
+    },
     "ram:a014b360": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
