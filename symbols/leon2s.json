@@ -4949,6 +4949,12 @@
       "name": "FUN_a00a1098",
       "status": "matched"
     },
+    "ram:a00a10ec": {
+      "by": "hand",
+      "comment": "clears word i of DAT_a8079184",
+      "name": "FUN_a00a10ec",
+      "status": "matched"
+    },
     "ram:a00a1104": {
       "by": "hand",
       "comment": "sets bytes +0x182/+0x181 of DAT_a807d7e0[port] and calls FUN_a00a0268(port, &record+0x162) when byte +0x183 is 0",
