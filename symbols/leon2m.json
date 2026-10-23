@@ -14862,6 +14862,12 @@
       "name": "FUN_a0133cbc",
       "status": "matched"
     },
+    "ram:a0133cf4": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a0133cf4",
+      "status": "matched"
+    },
     "ram:a0133e34": {
       "by": "autoc",
       "comment": "func_0x4008f3f4(0x16, 0, 0, 0, 3)",
