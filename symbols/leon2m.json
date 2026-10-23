@@ -17203,6 +17203,12 @@
       "name": "FUN_a0147a80",
       "status": "matched"
     },
+    "ram:a0147a88": {
+      "by": "hand",
+      "comment": "returns 0xff",
+      "name": "FUN_a0147a88",
+      "status": "matched"
+    },
     "ram:a0147aa0": {
       "by": "autoc",
       "comment": "p1 = p1 & 0xff; returns FUN_a0125644(p1, p2 & 0xff, p3, p4, p5, p6, p7, p8)",
