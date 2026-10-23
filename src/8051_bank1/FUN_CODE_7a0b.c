@@ -2,8 +2,8 @@
  * MATCH: tools/diff8051.py 8051_bank1 FUN_CODE_7a0b -> 335/335 bytes, 100 %, exact None, at OPTIMIZE(8,SPEED) (also
  * LARGE). Keys: 0x5034/0x5035 and 0x5134/0x5135 are one 16-bit register each (fw MOV A,#0FFH / MOVX / INC DPTR /
  * MOV A,#34H: a 16-bit store of 0xFF34); the final call is a tail call (fw LJMP 0xA142).
- * Callers (code): the Big-chip command 0x17 CMD_SYS_POWEROFF case of FUN_CODE_224f (0x2553) and the crash path of
- * the liveness check FUN_CODE_7b5a (0x7C9C), both right after STOP Leon2 Main (cbac), STOP Leon2 Sub (cbf2),
+ * Callers (code): the Big-chip command 0x17 CMD_SYS_POWEROFF case of FUN_CODE_224f (0x2553) and the "SYSTEM CRASH"
+ * path of FUN_CODE_7b5a (0x7C9C), both right after STOP Leon2 Main (cbac), STOP Leon2 Sub (cbf2),
  * 0xF150 = 9 and 0xF152 |= 0x40.
  * What the code does (code facts): bit 0x0E = 1; 0xF1E0 = 0xC1; writes the same 13-value pattern into the two register
  *   blocks 0x5000 and 0x5100 (+9 = 0x93, +5 = 0x53, +0xE = 0, +8 = 6, +6 = 0x1C, +0x34 = 0xFF34, +2 = 0x14, +0 = 0x88,
@@ -14,7 +14,7 @@
  *   0xA772/0xA773 = 0xFC/0x18, i.e. 1000 counts per tick, then the clock switch FUN_CODE_d802); FUN_CODE_a142(1).
  *   The individual hardware registers are not named; from the callers, this is the hardware part of the power-off
  *   path (the command handler prints "CMD_SYS_POWEROFF" before the call).
- * After a liveness-check trip the 8051 runs exactly the CMD_SYS_POWEROFF hardware sequence and then
+ * After the FUN_CODE_7b5a "SYSTEM CRASH" path the 8051 runs exactly the CMD_SYS_POWEROFF hardware sequence and then
  *   parks in 'SJMP $' instead of entering the run-state-1 wake-source polling of FUN_CODE_3fe7, so no wake source is
  *   polled after a trip; only an external reset restarts the 8051.
  * volatile: the 0x50xx/0x51xx/0xD5xx/0xD9xx/0xDAxx/0xE1xx/0xF1xx addresses are treated as hardware registers

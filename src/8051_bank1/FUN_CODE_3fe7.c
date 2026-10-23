@@ -11,16 +11,16 @@
  *    "\r\n------NT68500 MCU Test program -----\n" (CODE 0xCA8D); 0xA771 = 0x6B / 0x3B / 0x0B by 0xF050 bit 2 / bit 5;
  *    0xF00A = 0xF0E0 = 0xF0E2 = 0xAA; XDATA 0xA800..0xAFFF = 0xFF (dd96); wake word 0xA46F = 0xF0DD; 0xF230 = 0;
  *    FUN_CODE_0b0d (share structure, Big/Small chip set-up, RUN Leon2 Main); grace bit BITS_20_0 = 1 and
- *    FUN_CODE_7b5a (restarts both liveness timers); FUN_CODE_c544(1) and, if 0xF0DD had bit 2, c544(2); EA = 1;
+ *    FUN_CODE_7b5a (restarts both tick stamps 0xA35A / 0xA35C); FUN_CODE_c544(1) and, if 0xF0DD had bit 2, c544(2); EA = 1;
  *    afdc, dde5, d095; for chip IDs 0x1A / 0x20: 0xF60B = 0, 0xF60C = 0x80, 0xF60A |= 0x80.
  *  - FUN_CODE_c544(v): reads the 32-bit mailbox word at offset 0xB8 (FUN_CODE_a4e9),
  *    replaces bits 15..8 with v and writes it back (FUN_CODE_b228). The Big chip's start-up WAIT 1 FUN_a0133564
  *    reads exactly this byte (portal 0 +0xB8, (word >> 8) & 0xFF). So the 8051 releases the Big chip's first wait
- *    only here, after its own start-up and right after the liveness timers were restarted.
+ *    only here, after its own start-up and right after the tick stamps of FUN_CODE_7b5a were restarted.
  *  - Endless loop, every pass: for chip IDs 0x1A / 0x20 FUN_CODE_4ec1; 0xF00A = 0x55 and 0xF0E0 = 0x55; then by
  *    run state XDATA 0xA770:
  *      2 (running): FUN_CODE_9243 (mailbox command from the Big chip -> FUN_CODE_224f), BITS_20_0 = 0,
- *        FUN_CODE_7b5a (three-core liveness check; it never returns once a ring has stalled).
+ *        FUN_CODE_7b5a ("SYSTEM CRASH" check; it never returns once a ring byte has stayed unchanged past its limit).
  *      0 (set by Big-chip command 0x16 CMD_SYS_POWERSAVING in FUN_CODE_224f) or 1 (command 0x17 CMD_SYS_POWEROFF):
  *        poll the wake sources (state 0: 42f6, a1fe, ae1d, d2e9 -> 4, a57e -> 5..11 by its code 0..10 (0x0D = none),
  *        9d75 -> 0x13, deb0 -> 3, a085 -> code + 0x0D (0xFF = none); state 1: d2e9 -> 2, 9caa -> 0x0C, deb0 -> 3)

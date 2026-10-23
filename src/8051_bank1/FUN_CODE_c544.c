@@ -12,8 +12,8 @@
  *   (word >> 8) & 0xFF, i.e. exactly this byte (FUN_a015266c waits on it without timeout; the exact
  *   release condition is in FUN_a015266c, not re-read here).
  * Timing: the Big chip leaves WAIT 1 only after this call, which FUN_CODE_3fe7 makes after FUN_CODE_0b0d and
- *   after it restarted the liveness timers (grace call of FUN_CODE_7b5a). So the 15000-tick ring-1 limit counts from
- *   about the moment the Big chip is released, and covers its whole start-up up to the first main-loop relay.
+ *   after it restarted the tick stamps 0xA35A / 0xA35C (grace call of FUN_CODE_7b5a). So the 15000-tick ring-1 limit counts from
+ *   about the moment the Big chip is released, and covers its whole start-up up to the first main-loop call of FUN_a002ced8.
  */
 extern void FUN_CODE_a4e9(unsigned char off, unsigned long *dst, unsigned char n);
 extern void FUN_CODE_b228(unsigned char off, unsigned long *src, unsigned char n);

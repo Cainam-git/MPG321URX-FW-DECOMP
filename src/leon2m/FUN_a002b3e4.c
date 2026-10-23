@@ -3,7 +3,7 @@
  * FUN_a012cfac, only when they write defaults). FUN_a0140e74 calls it with tries 1, stop 1, at most 16 bytes.
  * Code facts: copies the 10-byte bus descriptor *d to RAM 0xA802D992 (FW.021 bus ROM 0x1A69E0[0]: SCL port 6 mask
  * 0x80, SDA port 6 mask 0x40, delay 4, device 0xA0, 2 address bytes, mode 2); device byte = dev, or with 1 address byte
- * dev | ((addr >> 7) & 0xE); relays the liveness ring FUN_a002ced8 once, then per try: n = 0; if mode == 2: START
+ * dev | ((addr >> 7) & 0xE); calls FUN_a002ced8 (8051 F204 -> F208 copy) once, then per try: n = 0; if mode == 2: START
  * (FUN_a002a910), device byte with up to 10 tries (FUN_a002d23c delay between; 10 NACKs -> STOP, return 0), address
  * byte(s) (ACK not checked), data bytes until one is NACKed (ok == 1) -> n = bytes ACKed; STOP if 'stop'; try count + 1.
  * Then FUN_a002ced8 again; repeats while (last byte NACKed && count <= tries). Returns n.

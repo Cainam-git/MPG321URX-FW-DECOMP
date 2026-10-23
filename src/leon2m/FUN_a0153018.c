@@ -1,5 +1,5 @@
 /* leon2m FUN_a0153018 @ 0xA0153018..0xA015373C (457 words), a main-loop task (usage-time counters, per-port
- * service, liveness relay at the end), called from main FUN_a00295a4's main loop (RAM 0x400895C8, no argument,
+ * service, FUN_a0154580 -> FUN_a002ced8 at the end), called from main FUN_a00295a4's main loop (RAM 0x400895C8, no argument,
  * result not used) after FUN_a01387a4.
  * -mcpu=v8 -O3 -g -msoft-float.
  * What it does, in order (code facts from the asm):
@@ -25,7 +25,7 @@
  * 5. FUN_a0150248(u16 +0x20 of entry ((word 0xA802DF30 >> 12) & 15) of the 0x2A-byte table 0xA802E224 / 10);
  *    func_0x4008c194(1) == 0x55 -> func_0x4008fa34(); FUN_a014d5f4(); if bit 21 of word 0xA802E3D0 and ports 0 and
  *    3 are in state 0x0C: every 20th pass FUN_a0150df8() (byte 0xA802CF97 counts). Last: FUN_a0154580() (tail
- *    call, 'call; restore' at 0xA015326C and 0xA015359C; the liveness relay; it returns int 0,
+ *    call, 'call; restore' at 0xA015326C and 0xA015359C; it ends with FUN_a002ced8 and returns int 0,
  *    fw 0xA015462C 'clr %g1; mov %g1, %i0').
  * Can it wait or fail? Its own code has no unbounded loop (two 4-step port loops); waits only inside callees.
  *

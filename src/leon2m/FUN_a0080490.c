@@ -22,8 +22,8 @@
  *    Clear: FUN_a014512c(0, 1), FUN_a01439d8(2, 0), 10-tick delay, FUN_a0125cb4(3), FUN_a01258b4 (port 6 bit 2 = 0),
  *    FUN_a01258ec (port 7 bit 1 = 0), FUN_a0125934, FUN_a0125a24, FUN_a0125de4 (port 0xC bit 0 = 0); arg == 0:
  *    FUN_a008767c(1); tail call func_0x4008f8d8.
- * Can it wait or fail? No loop of its own. FUN_a014512c(0, 1) waits for the panel-off state with no limit but relays
- * the liveness ring each round (decomp of FUN_a014512c, see FUN_a008ef48.c); the 10-tick delay needs the timer IRQ.
+ * Can it wait or fail? No loop of its own. FUN_a014512c(0, 1) waits for the panel-off state with no limit but calls
+ * FUN_a002ced8 (8051 F204 -> F208 copy) each round (decomp of FUN_a014512c, see FUN_a008ef48.c); the 10-tick delay needs the timer IRQ.
  * Pins named "0xFF/..." go to FUN_a002c86c with port 0xFF, which does nothing (ports > 17, see FUN_a002c86c).
  * Source form: the two printed bytes are int locals (the firmware masks them at the call), the 'w0b0 != 0' and
  * 'arg == 0' tests are nested ifs (an '&&' becomes set-flag code), the byte 0xA802D033 store comes before the

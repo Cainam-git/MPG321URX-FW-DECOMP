@@ -15,7 +15,7 @@
  * At power-on it runs only when FUN_a0153c74 finds the system record bad or FUN_a012cfac (FGA_Init) finds no
  * 0x77..0x7A marker.
  * Can it wait or fail? WAIT: yes, the ACK poll above waits for ever if the storage chip never ACKs its address after
- * a write, and nothing relays the liveness ring inside that loop. FAIL: a failed write is not detected: the return
+ * a write, and nothing calls FUN_a002ced8 inside that loop. FAIL: a failed write is not detected: the return
  * of FUN_a002b3e4 (ACKed byte count) is ignored, the function returns nothing.
  * Source form: (1) the bit-7 path is written FIRST ('if (b0 < 0) { bit-7 path } else { I2C }'): with
  * -frename-registers (on at -O3) the register renaming walks the basic blocks in source order and picks the least

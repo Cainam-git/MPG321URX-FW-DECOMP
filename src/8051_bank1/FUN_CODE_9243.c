@@ -31,8 +31,8 @@
  *      none -> stop); FUN_CODE_5c06(msg) fills an outgoing message (header 0 = nothing to send -> stop); write the
  *      payload words to +0x64+20*i and then the header to +0x60+20*i; FUN_CODE_ddf4 advances 0xA3E2.
  * Dead Big chip: both loops are bounded (100 rounds), so this function cannot hang the 8051 when the Big chip is
- *   dead: with a halted Big chip no command and no message arrives, 9243 returns, and the liveness check
- *   FUN_CODE_7b5a that FUN_CODE_3fe7 calls right after it trips once the 15000-tick ring-1 limit is passed.
+ *   dead: with a halted Big chip no command and no message arrives, 9243 returns, and the "SYSTEM CRASH"
+ *   check FUN_CODE_7b5a that FUN_CODE_3fe7 calls right after it trips once the 15000-tick ring-1 limit is passed.
  *   Everything the tool path needs from the 8051 (command 7 = I2C slave set-up, command 0x29 = flash loop) only
  *   happens when the Big chip writes a command word here.
  * volatile only on 0xF00A (hardware register); everything else is RAM or goes through the AHB bridge functions.

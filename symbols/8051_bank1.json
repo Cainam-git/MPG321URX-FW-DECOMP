@@ -672,7 +672,7 @@
     "CODE:3fe7": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "STBC application main: start-up then endless loop (releases Big chip WAIT 1, runs the liveness check every pass)",
+      "comment": "STBC application main: start-up then endless loop (releases Big chip WAIT 1, runs FUN_CODE_7b5a every pass)",
       "name": "FUN_CODE_3fe7",
       "status": "matched"
     },
@@ -812,14 +812,14 @@
     "CODE:7a0b": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "power-off hardware sequence (used by the power-off command and the crash path)",
+      "comment": "power-off hardware sequence (used by the power-off command and the SYSTEM CRASH path of FUN_CODE_7b5a)",
       "name": "FUN_CODE_7a0b",
       "status": "matched"
     },
     "CODE:7b5a": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "STBC three-core liveness check: a stalled Big/Small chip -> SYSTEM CRASH, RESET, stop both cores, then the 8051 loops forever",
+      "comment": "ring bytes F204/F20C and F240/F248 against tick stamps: over 15000 / 10000 ticks prints \"###SYSTEM CRASH, RESET###\", stops both Leon2 cores, then the 8051 loops forever",
       "name": "FUN_CODE_7b5a",
       "status": "matched"
     },

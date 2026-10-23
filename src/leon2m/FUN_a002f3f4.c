@@ -13,7 +13,7 @@
  *     mode 2: handshake on portal 0 +0xB8: low byte := 1, then waits WITHOUT timeout until the low byte reads 2;
  *     then as mode 1. mode 1 and 2: waits WITHOUT timeout until portal 0 +0 reads 0 again (command done).
  * Dependency: every Big chip -> 8051 command with mode 1/2 (e.g. the I2C slave 0x6E set-up of the MSI update
- *   entry FUN_a00bf110) needs a running 8051; if the 8051 has parked itself (liveness check FUN_CODE_7b5a,
+ *   entry FUN_a00bf110) needs a running 8051; if the 8051 has parked itself ("SYSTEM CRASH" check FUN_CODE_7b5a,
  *   'SJMP $'), the Big chip hangs here forever.
  */
 extern void FUN_a002c4d0(unsigned char portal, unsigned char offset, unsigned int *buf, unsigned char count);

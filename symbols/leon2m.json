@@ -1719,7 +1719,7 @@
     "ram:a002b3e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "bit-banged I2C page write for the settings write (bounded retries, keeps the alive signal going)",
+      "comment": "bit-banged I2C page write for the settings write (bounded retries, calls FUN_a002ced8 first)",
       "name": "FUN_a002b3e4",
       "status": "matched"
     },
@@ -1812,7 +1812,7 @@
     },
     "ram:a002ced8": {
       "by": "hand",
-      "comment": "liveness-ring relay: passes the helper chip's alive tokens on (Big chip side)",
+      "comment": "copies 0xCF03C810 -> 0xCF03C820 and 0xCF03C900 -> 0xCF03C910 (8051 bytes F204 -> F208 and F240 -> F244, checked by FUN_CODE_7b5a)",
       "name": "FUN_a002ced8",
       "status": "matched"
     },
@@ -16425,7 +16425,7 @@
     "ram:a0153018": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "main-loop task: 200 ms poll, usage-time counters, per-port service, then the liveness relay",
+      "comment": "main-loop task: 200 ms poll, usage-time counters, per-port service, then FUN_a0154580 (ends with FUN_a002ced8)",
       "name": "FUN_a0153018",
       "status": "matched"
     },
@@ -16492,7 +16492,7 @@
     "ram:a0154580": {
       "by": "hand",
       "cflags": "-mcpu=v8 -g",
-      "comment": "main-loop helper: one-shot request, then always the liveness relay (unoptimised unit)",
+      "comment": "if byte 0xA802A4C0 == 1: stores FUN_a011cf88()/FUN_a011d0a8() at 0xA802CF9C/9D, FUN_a01544d4(), clears it; then always FUN_a002ced8 (unoptimised unit)",
       "name": "FUN_a0154580",
       "status": "matched"
     },
