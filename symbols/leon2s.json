@@ -7856,6 +7856,12 @@
       "name": "FUN_a00d97bc",
       "status": "matched"
     },
+    "ram:a00d9a78": {
+      "by": "h43",
+      "comment": "builds a message with FUN_a00d6a54, appends a FUN_a00d9988 result pair to the current ARR_a807a520 row and steps the row index",
+      "name": "FUN_a00d9a78",
+      "status": "matched"
+    },
     "ram:a00d9be4": {
       "by": "hand",
       "comment": "void(void) status/copy routine: word +16 union with a 16-bit flags field, unsigned lo/hi compare, three buffer copies",
