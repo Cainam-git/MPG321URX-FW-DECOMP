@@ -14588,6 +14588,13 @@
       "name": "FUN_a012ad6c",
       "status": "matched"
     },
+    "ram:a012af40": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "updates a 2-bit field of the halfword at DAT_a802e1a0+0x2f or a nibble of +0x31 with v, sets byte 0 of row i of DAT_a802d8ae and passes a copy of the row to FUN_a0137a68",
+      "name": "FUN_a012af40",
+      "status": "matched"
+    },
     "ram:a012b078": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
