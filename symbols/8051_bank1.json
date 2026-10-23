@@ -851,6 +851,13 @@
       "name": "FUN_CODE_8f5a",
       "status": "matched"
     },
+    "CODE:9053": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Copies n bytes from p to XDATA 0xA5ED + off (limited to 0x3C) and prints them as hex through FUN_CODE_2820",
+      "name": "FUN_CODE_9053",
+      "status": "matched"
+    },
     "CODE:914b": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
