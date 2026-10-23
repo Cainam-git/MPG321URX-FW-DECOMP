@@ -2693,6 +2693,12 @@
       "name": "FUN_a0086df4",
       "status": "matched"
     },
+    "ram:a0086e58": {
+      "by": "h42",
+      "comment": "reads 8 bytes with FUN_a0086400(port, 0x90, 0x200) and unpacks them into the 16-byte output record",
+      "name": "FUN_a0086e58",
+      "status": "matched"
+    },
     "ram:a0086fb0": {
       "by": "hand",
       "comment": "byte maximum of p[8..] or p[0xc..] depending on mode",
