@@ -8260,6 +8260,12 @@
       "name": "FUN_a00d3ef0",
       "status": "matched"
     },
+    "ram:a00d3efc": {
+      "by": "hand",
+      "comment": "returns 2, 0 or DAT_a807d54f depending on DAT_a8078c38",
+      "name": "FUN_a00d3efc",
+      "status": "matched"
+    },
     "ram:a00d3f54": {
       "by": "hand",
       "comment": "stores 1 to DAT_a8078c34 and calls func_0xa0f73950",
