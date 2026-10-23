@@ -834,7 +834,7 @@
     "CODE:b5b4": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "Main loop of the bank (from the start-up code): serial and port set-up, 0xF198 commands to a36c, mode 0x09C6 changes run the host or device init through a6fa / b706 / 60b9 / 5c20 / 6e16",
+      "comment": "Main loop of the bank (from the start-up code): SFR set-up, 0xF198 commands to a36c, mode 0x09C6 changes run the host or device init through a6fa / b706 / 60b9 / 5c20 / 6e16",
       "name": "FUN_CODE_b5b4",
       "status": "matched"
     },
