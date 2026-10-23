@@ -237,6 +237,10 @@ def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False, placed=None):
             # which then matched at a wrong place, e.g. in FUN_a0120c90)
             data = b.read_bytes() if mc else b.read_bytes().rstrip(b"\0") + b"\0"
             hits = [] if split_pools and merge else [m.start() for m in re.finditer(re.escape(data), img)][:4]
+            if not hits and not merge and sec == ".rodata":   # plain .rodata (e.g. the initialiser of a local array) is
+                # not a string: the firmware need not have a 0 after it; try the section exactly as compiled
+                data = b.read_bytes()
+                hits = [m.start() for m in re.finditer(re.escape(data), img)][:4]
             if not hits and mc:   # a mergeable literal pool; the original link merged each entry with other
                 # objects' constants, so its entries need not be adjacent: place it outside the image and check every
                 # literal reference against the firmware's own address bits (verify_pool below)
