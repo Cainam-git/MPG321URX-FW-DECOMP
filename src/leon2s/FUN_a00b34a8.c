@@ -1,4 +1,7 @@
-/* leon2s FUN_a00b34a8 @ 0xa00b34a8 (-mcpu=v8 -Os)
+/* leon2s FUN_a00b34a8 @ 0xa00b34a8, flags -mcpu=v8 -Os.
+ * Clears the bytes 0xA807DEC4, 0xA807DEA8, 0xA807E0B0, 0xA807DEB0 and the word 0xA807DEAC, zeroes the five
+ * 32-byte rows at 0xA807DFF0..0xA807E08F, then prints three lines with FUN_a0061280: a dash rule,
+ * "    Welcome to User's Command Line Debug" and a second dash rule.
  */
 extern unsigned char DAT_a807dec4;
 extern unsigned int _DAT_a807deac;

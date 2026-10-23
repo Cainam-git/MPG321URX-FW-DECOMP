@@ -18,7 +18,7 @@
  *   state 2 OFFSENSING: per-second tick; sub 0..4.   state 3 QSM: sub 0..3.   state 4 power off: sub 0..2.
  *   Blink (state 1 sub 6, state 2 sub 3): every 500 ms, 7 steps, odd step = colour 0/0/0, even step = 0xff/0xff/0xff
  *     (state 1) or 0xff/0x10/0 (state 2) via FUN_a00da860 (an empty stub in FW.021: retl; nop).
- * ROW-PICKER CALL #1  FUN_a00dac38(0,1,0) @0xA0128E50: state 2, sub 4, >500 ms, S.target==0 ("OFFSENSING DONE !Goto
+ * CALL #1  FUN_a00dac38(0,1,0) @0xA0128E50: state 2, sub 4, >500 ms, S.target==0 ("OFFSENSING DONE !Goto
  *   Display"), and (FUN_a0143db8(0) || G.b1d5). CALL #2 @0xA01290B4: state 1, sub 7, S.target==0 ("ELSENING DONE
  *   !Goto Display"), and FUN_a0143c14(0)==10. Both are the "sensing done -> back to display" step after a power-off
  *   cycle; FUN_a0127c78 never checks the input signal.

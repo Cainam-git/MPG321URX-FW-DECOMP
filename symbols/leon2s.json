@@ -1660,7 +1660,7 @@
     },
     "ram:a0062308": {
       "by": "hand",
-      "comment": "void(void) table init of the RAM block DAT_a8078aa0: 34 u16 constants at +0x82..+0x86, +0x30..+0x40, +0x08..+0x16, +0x02/+0x04, +0x5a..+0x66, +0x18/+0x1a, +0x06, +0x68/+0x6a, plus the byte +0x58 = 9. Fix vs draft: the byte +0x58 and the u16 +0x06 take ONE register holding 9 (fw 'mov 9,%o3' then ...",
+      "comment": "void(void) table init of the RAM block DAT_a8078aa0: 34 u16 constants at +0x82..+0x86, +0x30..+0x40, +0x08..+0x16, +0x02/+0x04, +0x5a..+0x66, +0x18/+0x1a, +0x06, +0x68/+0x6a, plus the byte +0x58 = 9",
       "name": "FUN_a0062308",
       "status": "matched"
     },
@@ -6231,13 +6231,13 @@
     },
     "ram:a00b1418": {
       "by": "hand",
-      "comment": "The function masks the first argument to a byte, calls the register-read helper with that byte and constant 0x3a, then returns only bit 0x40 of the result. The original Ghidra decompilation incorrectly introduced a fake 64-bit return and an extra unused parameter; the actual function takes one argument and returns the masked helper result directly.",
+      "comment": "returns FUN_a00a6bb8(port & 0xff, 0x3a) & 0x40",
       "name": "FUN_a00b1418",
       "status": "matched"
     },
     "ram:a00b1434": {
       "by": "hand",
-      "comment": "The function masks its first argument to a byte, calls the register-read helper with that byte and the constant 0x2a9, and returns bit 2 (value 4) of the result. The original Ghidra output had a spurious 64-bit CONCAT44 return and an unused second parameter; the actual function is a simple int-returning call with a bit test.",
+      "comment": "returns FUN_a00a6bb8(port & 0xff, 0x2a9) & 4",
       "name": "FUN_a00b1434",
       "status": "matched"
     },
@@ -6498,7 +6498,7 @@
     "ram:a00b34a8": {
       "by": "near",
       "cflags": "-mcpu=v8 -Os",
-      "comment": "near-miss repaired: byte-exact as submitted; restore %lo() idiom not recognised by the shape judge",
+      "comment": "clears five state bytes/words and the 5 x 32-byte rows at 0xA807DFF0, prints the \"Welcome to User's Command Line Debug\" banner",
       "name": "FUN_a00b34a8",
       "status": "matched"
     },

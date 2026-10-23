@@ -2018,7 +2018,7 @@
     "ram:a00803a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "checks up to four sources (by byte 0xA802D2AF) with FUN_a0143c14(i) <= 4; gate for the FRC handler's call into the fix point",
+      "comment": "checks up to four sources (by byte 0xA802D2AF) with FUN_a0143c14(i) <= 4; FUN_a01295e4 calls FUN_a00dac38(1,1,1) only when it returns 1",
       "name": "FUN_a00803a4",
       "status": "matched"
     },
@@ -2121,7 +2121,7 @@
     "ram:a008380c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3",
-      "comment": "APPGetFRCMode: panel FRC mode picker, byte-exact at -O3 no -g",
+      "comment": "APPGetFRCMode: FRC mode 0..3 of channel 0 (prints \"APPGetFRCMode %x\"; bits 0/1 to FUN_a0148e34 / FUN_a0148eb4), -O3 without -g",
       "name": "FUN_a008380c",
       "status": "matched"
     },
@@ -2194,7 +2194,7 @@
     "ram:a008454c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "caller 1 of the fix point (row 1b); case-7 single delay call, case-17 store order, goto+continue no-code hints documented",
+      "comment": "switch on the action code from FUN_a008a210 (calls FUN_a00dac38(1,1,0) and FUN_a01295d0); case-7 single delay call, case-17 store order, goto+continue no-code hints documented",
       "name": "FUN_a008454c",
       "status": "matched"
     },
@@ -2436,7 +2436,7 @@
     },
     "ram:a008abe0": {
       "by": "hand",
-      "comment": "v = FUN_a01266b0() (u16, no argument); tail FUN_a008a568(0x15, v) (u8, u16: sll/srl 16 of the return value). void(void). Fix vs the autoc draft (66.67): FUN_a01266b0 takes no arguments (the draft passed param_1/param_2, which only sat in %o0/%o1); real prototypes from src/. Aids: none.",
+      "comment": "v = FUN_a01266b0() (u16, no argument); tail FUN_a008a568(0x15, v) (u8, u16). void(void)",
       "name": "FUN_a008abe0",
       "status": "matched"
     },
@@ -8895,7 +8895,7 @@
     "ram:a00f1e50": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "The function writes a value to a hardware register at 0xCF000000 + 4*(table[block]+reg). If the block index is 8 or more, it writes to all 8 table entries; otherwise it writes to just the selected entry. The main uncertainty is whether the original used a do-while loop with the index masked to 8 bits (as in the reference functions) or a different loop form; the structure here follows the proven byte-exact pattern from FUN_a00f2c20.",
+      "comment": "writes val to register 0xCF000000 + 4 * (DAT_0019a30c[blk] + reg); blk > 7 writes it to all 8 table entries",
       "name": "FUN_a00f1e50",
       "status": "matched"
     },
@@ -9584,7 +9584,7 @@
     "ram:a00fc044": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "output picture-path set-up with the active row size; panel row reader",
+      "comment": "output picture-path set-up with the active row size; reads row +0x08 / +0x0A",
       "name": "FUN_a00fc044",
       "status": "matched"
     },
@@ -9720,7 +9720,7 @@
     "ram:a00fdf74": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "panel-row reader (H1), byte-exact",
+      "comment": "Set_INTERNAL_1_INPUT_Path: selects the source of internal path 1 (twin of FUN_a00fe1dc); reads transformed row +0x00 bits 20-22",
       "name": "FUN_a00fdf74",
       "status": "matched"
     },
@@ -9734,7 +9734,7 @@
     "ram:a00fe1dc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "panel-row reader (H1), byte-exact",
+      "comment": "Set_INTERNAL_2_INPUT_Path: selects the source of internal path 2 (twin of FUN_a00fdf74); reads transformed row +0x00 bits 20-22",
       "name": "FUN_a00fe1dc",
       "status": "matched"
     },
@@ -10042,7 +10042,7 @@
     "ram:a010325c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "output pixel clock (480p proof chain), byte-exact",
+      "comment": "output pixel clock calculation (-msoft-float)",
       "name": "FUN_a010325c",
       "status": "matched"
     },
@@ -10075,14 +10075,14 @@
     "ram:a0104380": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "panel-row reader (H1), byte-exact",
+      "comment": "corrects a clock value from measured register-block counts (0x19A2EC block family); reads transformed row +0x20 / +0x24",
       "name": "FUN_a0104380",
       "status": "matched"
     },
     "ram:a01045a0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "output-clock measure and correct (panel-row reader), byte-exact",
+      "comment": "measures and corrects the output clock (second half of FUN_a0104380); reads transformed row +0x08 / +0x0A",
       "name": "FUN_a01045a0",
       "status": "matched"
     },
@@ -10296,7 +10296,7 @@
     "ram:a01070b4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "drv_PanelLimitation (bug function), byte-exact",
+      "comment": "drv_PanelLimitation: compares the current timing with the transformed row limits, prints the PANEL_MIN/MAX warnings and returns a bitmask",
       "name": "FUN_a01070b4",
       "status": "matched"
     },
@@ -10413,7 +10413,7 @@
     "ram:a0107e44": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "FRCConfigPostFRC (output clock/timing), byte-exact; documented branch-weight hints",
+      "comment": "FRCConfigPostFRC (output clock/timing); documented branch-weight hints",
       "name": "FUN_a0107e44",
       "status": "matched"
     },
@@ -10553,7 +10553,7 @@
     "ram:a010a558": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "panel-row reader: timing registers from the transformed panel row (h0a/h2c/h22/h30/h32); inlines FUN_a010a4d0",
+      "comment": "timing registers from the transformed row (h0a/h2c/h22/h30/h32); inlines FUN_a010a4d0",
       "name": "FUN_a010a558",
       "status": "matched"
     },
@@ -10856,14 +10856,14 @@
     "ram:a010edbc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "panel-row reader (H1), byte-exact",
+      "comment": "programs half of transformed row +0x08 into the output channel register blocks (twin of FUN_a010f7a4)",
       "name": "FUN_a010edbc",
       "status": "matched"
     },
     "ram:a010f7a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "programs row +0x08/2 into the 0xD003x output blocks; panel row reader",
+      "comment": "programs row +0x08/2 into the 0xD003x output blocks",
       "name": "FUN_a010f7a4",
       "status": "matched"
     },
@@ -10884,14 +10884,14 @@
     "ram:a0110318": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "channel window set-up, port-B sister of FUN_a01107b8 (panel-row reader); inlines FUN_a010d914 set_fmt + FUN_a010dbc4 set_pos",
+      "comment": "channel window set-up, port-B sister of FUN_a01107b8; inlines FUN_a010d914 set_fmt + FUN_a010dbc4 set_pos",
       "name": "FUN_a0110318",
       "status": "matched"
     },
     "ram:a01107b8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "channel window set-up, port-A sister of FUN_a0110318 (panel-row reader: split at row->h08/2, mirror, tables 0x19AED8/0x19AECC)",
+      "comment": "channel window set-up, port-A sister of FUN_a0110318 (split at row->h08/2, mirror, tables 0x19AED8/0x19AECC)",
       "name": "FUN_a01107b8",
       "status": "matched"
     },
@@ -10943,7 +10943,7 @@
     "ram:a011149c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Vx1 transmitter start-up sequence, link type 0 (panel-row reader)",
+      "comment": "Vx1 transmitter start-up sequence, link type 0 (reads transformed row word 0)",
       "name": "FUN_a011149c",
       "status": "matched"
     },
@@ -11119,7 +11119,7 @@
     "ram:a01186e0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Vx1 panel-link timing setup from the panel row (h08/h0a), byte-exact",
+      "comment": "Vx1 panel-link timing setup from the transformed row (h08/h0a)",
       "name": "FUN_a01186e0",
       "status": "matched"
     },
@@ -11721,7 +11721,7 @@
     "ram:a01215e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mode-table helper (480p chain): input register checks on regs 4/3/0x56/0x8f with a delay; the 0/1 flag tested as 'b & 1'",
+      "comment": "callee of FUN_a013f370: input register checks on regs 4/3/0x56/0x8f with a delay; the 0/1 flag tested as 'b & 1'",
       "name": "FUN_a01215e8",
       "status": "matched"
     },
@@ -11734,7 +11734,7 @@
     "ram:a0121714": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "switch one input port's receiver block on/off; panel row reader (+0x22)",
+      "comment": "switch one input port's receiver block on/off; reads row +0x22",
       "name": "FUN_a0121714",
       "status": "matched"
     },
@@ -12851,7 +12851,7 @@
     "ram:a0127c78": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "CALLER 2 of the fix point: OLED power/sensing state machine, byte-exact",
+      "comment": "OLED power/sensing state machine (calls FUN_a00dac38(0,1,0) twice)",
       "name": "FUN_a0127c78",
       "status": "matched"
     },
@@ -12882,7 +12882,7 @@
     "ram:a01295e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "OLED FRC handler: state machine that sends the chosen panel row to the FRC chip (I2C 0x60) and resends on request; calls the fix point FUN_a00dac38(1,1,1)",
+      "comment": "OLED FRC handler: state machine that sends the row index 0xA802D893 to I2C device 0x60 register 0xB2 and resends on request; calls FUN_a00dac38(1,1,1)",
       "name": "FUN_a01295e4",
       "status": "matched"
     },
@@ -14086,7 +14086,7 @@
     "ram:a0139a30": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "sends the active row size to the Tensilica core (mailbox portal 2) and starts it; panel row reader",
+      "comment": "sends the active row size to the Tensilica core (mailbox portal 2) and starts it",
       "name": "FUN_a0139a30",
       "status": "matched"
     },
@@ -14405,14 +14405,14 @@
     "ram:a013bfa8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "input -> output timing record (480p chain), byte-exact",
+      "comment": "input -> output timing record (FUN_a013cd4c record from port record 0xA802E224 + 0x2A*port)",
       "name": "FUN_a013bfa8",
       "status": "matched"
     },
     "ram:a013c040": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "480p proof chain, byte-exact",
+      "comment": "port 0 only: copies the 0x3C-byte timing block at record +6 and calls FUN_a01086fc(0, &copy, w, h, il, 0, 0); writes record +0x68",
       "name": "FUN_a013c040",
       "status": "matched"
     },
@@ -14528,7 +14528,7 @@
     "ram:a013d918": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "channel window set-up (panel-row reader); no compiler aids",
+      "comment": "channel window set-up; no compiler aids",
       "name": "FUN_a013d918",
       "status": "matched"
     },
@@ -14541,7 +14541,7 @@
     "ram:a013dc6c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "input channel bring-up state machine (panel-row reader; caps the output rate at the chosen row's max)",
+      "comment": "input channel bring-up state machine (states 8/10 limit the rate to transformed row +0x50 when FUN_a011cf88() <= 0x82)",
       "name": "FUN_a013dc6c",
       "status": "matched"
     },
@@ -14836,7 +14836,7 @@
     },
     "ram:a014285c": {
       "by": "hand",
-      "comment": "port timing record fill from measurement (480p chain), byte-exact",
+      "comment": "port timing record fill from measurement (FUN_a0120a18 hfreq, FUN_a0120b38 vfreq, ...)",
       "name": "FUN_a014285c",
       "status": "matched"
     },
@@ -15310,7 +15310,7 @@
     "ram:a0146518": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "passes the active row's +0x08/+0x0A to FUN_a01199ac; panel row reader",
+      "comment": "passes the active row's +0x08/+0x0A to FUN_a01199ac",
       "name": "FUN_a0146518",
       "status": "matched"
     },
@@ -15639,7 +15639,7 @@
     "ram:a0148500": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "re-apply the active row's nominal rate (FRCConfigPostFRC + FRC lock set-up); panel row reader",
+      "comment": "re-apply the active row's nominal rate (FRCConfigPostFRC + FRC lock set-up)",
       "name": "FUN_a0148500",
       "status": "matched"
     },
@@ -15862,7 +15862,7 @@
     "ram:a0149bf0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "SYSAPI_ConfigSystemPIPMode: sets the PIP/PBP mode (the fix point's input class 0xA802E1A7); real range 668 bytes",
+      "comment": "SYSAPI_ConfigSystemPIPMode: sets the PIP/PBP mode (byte 0xA802E1A7, read by FUN_a00dac38); real range 668 bytes",
       "name": "FUN_a0149bf0",
       "status": "matched"
     },
@@ -16132,7 +16132,7 @@
     "ram:a014c7bc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "SYSAPI command dispatcher (panel-row reader); FUN_a0142418 has 2 args; 2 no-code continue hints documented",
+      "comment": "SYSAPI command switch (varargs) for the 0xA802E3D0 object; FUN_a0142418 has 2 args; 2 no-code continue hints documented",
       "name": "FUN_a014c7bc",
       "status": "matched"
     },
@@ -16553,7 +16553,7 @@
     "ram:a0153c74": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "system-settings check at start-up (reads the stored record, writes ROM defaults if its version/header words are wrong). Bytes exact: exact.py exact() None + rawcmp 0/350; jf shape score 85 only from a diff.py normaliser quirk on 'or %r,%lo(DAT_00020000)' base registers",
+      "comment": "system-settings check at start-up: reads the stored record (device 0, 0x470 / 0x440), writes the ROM defaults when its version/header words are wrong",
       "name": "FUN_a0153c74",
       "status": "matched"
     },

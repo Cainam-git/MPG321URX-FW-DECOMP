@@ -505,7 +505,7 @@
     "CODE:0b0d": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "helper-chip start-up: hardware set-up, Share Structure check, record copy, core image copies (with FUN_CODE_1397, one C function 0x0B0D..0x147A)",
+      "comment": "STBC start-up: hardware set-up, Share Structure check, record copy, core image copies (with FUN_CODE_1397, one C function 0x0B0D..0x147A)",
       "name": "FUN_CODE_0b0d",
       "status": "matched"
     },
@@ -881,7 +881,7 @@
     },
     "CODE:96eb": {
       "by": "hand",
-      "comment": "helper-chip start-up before the Big chip runs: loads the bank-2 image block, USB key",
+      "comment": "STBC start-up before the Big chip runs: loads the bank-2 image block, USB key",
       "name": "FUN_CODE_96eb",
       "status": "matched"
     },
