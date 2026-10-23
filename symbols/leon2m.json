@@ -10563,6 +10563,13 @@
       "name": "FUN_a0107a14",
       "status": "matched"
     },
+    "ram:a0107a20": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "for p 0..2 sets or clears bit 5 of registers 0xcf03c348 / 0xcf03c2b8 with FUN_a00fe880(6, 1 or 2, 9 or 0) by byte 0xa8027a82",
+      "name": "FUN_a0107a20",
+      "status": "matched"
+    },
     "ram:a0107ba4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
