@@ -1,5 +1,6 @@
 /* leon2s FUN_a0090f28 @ 0xa0090f28 (-mcpu=v8 -Os -g)
- * The difference was the base address: the target computes `sethi %hi(0xa807d000), %g1` then `or %g1, 0x3e4, %g1`, giving base `0xa807d3e4`. The array should be declared at that base, not at `0xa807d471` (which was Ghidra's incorrect merged base+offset). Now the index multiplication and the final `+0x8d` match the target's instruction sequence exactly.
+ * Returns byte +0x8d of entry (p & 0xff) of the 0xB0-byte records at 0xA807D3E4. Source form: the array is
+ * declared at the record base 0xA807D3E4 (the firmware builds that base with sethi/or), the +0x8d in the index.
  */
 extern unsigned char ARR_a807d3e4[];
 

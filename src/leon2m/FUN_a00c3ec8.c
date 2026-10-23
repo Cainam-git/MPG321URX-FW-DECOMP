@@ -1,5 +1,7 @@
 /* leon2m FUN_a00c3ec8 @ 0xa00c3ec8 (-mcpu=v8 -O2 -g)
- * This function reads a mode-dependent digit (from one of three globals based on the parameter), validates it's at most 2 after subtracting '0', stores it, and performs initialization calls — including `FUN_a00d5eac(1)`. The `mov 1, %o0` before the comparison is the compiler hoisting the argument setup for that call.
+ * Reads byte 0xA802D049 (port 2), 0xA802D0A1 (port 3) or 0xA802D0D9 (other ports); d = byte - '0'; d > 2 (as a
+ * byte) -> returns 0xff. Else byte 0xA802D2DB = d, FUN_a00d5eac(1), FUN_a00baa6c(port), FUN_a00ba950(port),
+ * FUN_a00bab80(port, 6) and returns 0. The firmware sets the argument 1 of FUN_a00d5eac before the compare.
  */
 extern unsigned char DAT_a802d049;
 extern unsigned char DAT_a802d0a1;

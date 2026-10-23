@@ -1,5 +1,6 @@
 /* leon2s FUN_a00911bc @ 0xa00911bc (-mcpu=v8 -Os -g)
- * The function takes an input, masks it to 0/1, calls FUN_a0074f60, then checks a byte at `0xa807cc64 + param_1*24 + 4`; if non-zero, it shifts the call result left by 2 and returns it as a 16-bit value. The key fix is declaring the array at the exact base address `0xa807cc64` and using the `+4` offset to match the target's `ldub [%g1 + 4]`.
+ * q = p & 1; r = FUN_a0074f60(q); when byte +4 of the 24-byte entry q at 0xA807CC64 is non-zero, r <<= 2; returns
+ * (u16)r. Source form: the array is declared at 0xA807CC64 with the +4 in the index.
  */
 extern int FUN_a0074f60();
 extern unsigned char ARR_a807cc64[];

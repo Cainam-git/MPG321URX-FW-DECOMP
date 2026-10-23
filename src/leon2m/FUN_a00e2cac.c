@@ -1,5 +1,6 @@
 /* leon2m FUN_a00e2cac @ 0xa00e2cac (-mcpu=v8 -O2 -g)
- * The function polls a status/flag through `FUN_a00e0514` up to six times; if any poll returns nonzero it restarts the count. After six consecutive zero polls it reads two values through `FUN_a00e02ec` and returns `(value_at_0x202 << 8) | value_at_0x201`. The only change from the provided Ghidra C is forcing the first read's shift to happen before the second read by storing the shifted result in `uVar2` first, matching the target's `sll %o0, 8, %i0` placement.
+ * FUN_a00e05d8(p, 0x1e2, 1, 1); then polls FUN_a00e0514(p, 0x213, 1): a non-zero result restarts the count (no
+ * limit); after six zero results returns (FUN_a00e02ec(p, 0x202) << 8) | FUN_a00e02ec(p, 0x201).
  */
 extern int FUN_a00e05d8(int, int, int, int);       /* 0xa00e05d8 */
 extern unsigned int FUN_a00e0514(int, int, int);   /* 0xa00e0514 */

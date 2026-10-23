@@ -1,5 +1,6 @@
 /* leon2s FUN_a00b00e0 @ 0xa00b00e0 (-mcpu=v8 -Os -g)
- * The function masks the first parameter to a byte, calls a hardware function, then a second function with the masked result, and finally calls a third function with either 1 or 0 as the last argument depending on whether the original second parameter was non-zero. The key fix is capturing the result of `FUN_a00add48` (Ghidra dropped it) and using an if/else with separate calls instead of passing a boolean expression directly, matching the `btst`/`bne` branch pattern in the assembly.
+ * p = p1 & 0xff; u = FUN_a00add48(p, func_0x9f1c6624(p) & 0xff); FUN_a00a8400(u & 0xff, 0xb, 3, p2 != 0 ? 1 : 0)
+ * (two calls, one per arm). Source form: u holds the FUN_a00add48 result.
  */
 extern int func_0x9f1c6624(unsigned int param_1);
 extern unsigned int FUN_a00add48(unsigned int param_1, unsigned int param_2);

@@ -3563,7 +3563,7 @@
     },
     "ram:a0090f28": {
       "by": "hand",
-      "comment": "The difference was the base address: the target computes `sethi %hi(0xa807d000), %g1` then `or %g1, 0x3e4, %g1`, giving base `0xa807d3e4`. The array should be declared at that base, not at `0xa807d471` (which was Ghidra's incorrect merged base+offset). Now the index multiplication and the final `+0x8d` match the target's instruction sequence exactly.",
+      "comment": "returns byte +0x8d of entry p & 0xff of the 0xB0-byte records at 0xA807D3E4",
       "name": "FUN_a0090f28",
       "status": "matched"
     },
@@ -3662,13 +3662,13 @@
     },
     "ram:a00911bc": {
       "by": "hand",
-      "comment": "The function takes an input, masks it to 0/1, calls FUN_a0074f60, then checks a byte at `0xa807cc64 + param_1*24 + 4`; if non-zero, it shifts the call result left by 2 and returns it as a 16-bit value. The key fix is declaring the array at the exact base address `0xa807cc64` and using the `+4` offset to match the target's `ldub [%g1 + 4]`.",
+      "comment": "r = FUN_a0074f60(p & 1), shifted left by 2 when byte +4 of the 24-byte entry at 0xA807CC64 is non-zero; returns (u16)r",
       "name": "FUN_a00911bc",
       "status": "matched"
     },
     "ram:a0091204": {
       "by": "hand",
-      "comment": "Initialises the per-port data structure at 0xa807d3e4 + port*0xb0. Eight calls (likely hardware register reads) store their 16-bit results at +0x98, +0x96, +0x9a, +0x9c, +0xa0, +0x9e, +0xa2, +0xa4. Three FUN_a00a657c reads with register addresses 0x55, 0x55 and 0x30 store extracted bits at +0x8f, +0x90, +0x8d. Three more calls store at +0x94, +0x92 and +0x8e. The first eight functions are declared with one parameter, because the assembly passes only one argument (mov %i0, %o0), although other prototypes list a second, ignored parameter. Whether the byte stores need explicit casts to produce the and/sra sequences of the target is not established.",
+      "comment": "fills the 0xB0-byte entry p & 0xff at 0xA807D3E4: u16 +0x92..+0xA4 from ten getters, bytes +0x8D..+0x90 from FUN_a00a657c(port, 0x55 / 0x30) bits and FUN_a0090dec",
       "name": "FUN_a0091204",
       "status": "matched"
     },
@@ -3698,7 +3698,7 @@
     },
     "ram:a00914fc": {
       "by": "hand",
-      "comment": "The function clears a specific bit in a peripheral register at 0xcf03c890. The bit position is given by the parameter. This matches the target exactly: it loads the register value, computes the mask by shifting 1 left by the parameter, performs an AND-NOT operation, and stores the result back. Ghidra's cleaned version already captures the correct structure; the only difference is the parameter type (byte vs. int), which the automated tooling handles.",
+      "comment": "clears bit p of register 0xCF03C890",
       "name": "FUN_a00914fc",
       "status": "matched"
     },
@@ -5041,7 +5041,7 @@
     },
     "ram:a00a61d4": {
       "by": "hand",
-      "comment": "The first call's argument is set by clr %o0 before the first comparison and the second path's argument 1 by mov 1, %o0 in the branch delay slot. When neither comparison matches, the bne goes to 0xa00a6210 (and %l0, 1, %i0), skipping the call, and the function returns l0 & 1.",
+      "comment": "returns 1 for p == 0x71 with FUN_a00ad784(0) & 0xff == 1 or p == 0x81 with FUN_a00ad784(1) & 0xff == 1, else 0",
       "name": "FUN_a00a61d4",
       "status": "matched"
     },
@@ -5236,7 +5236,7 @@
     },
     "ram:a00a7468": {
       "by": "hand",
-      "comment": "The function calls `FUN_a00a7368` with the byte and halfword parameters, then passes that result as the second argument to `FUN_a00a7408`, returning its result via a tail call (the `restore` in the delay slot). The first parameter is passed through unchanged to the second call.",
+      "comment": "returns FUN_a00a7408(p1, FUN_a00a7368(p2, p3)) (tail call)",
       "name": "FUN_a00a7468",
       "status": "matched"
     },
@@ -6047,7 +6047,7 @@
     },
     "ram:a00b00e0": {
       "by": "hand",
-      "comment": "The function masks the first parameter to a byte, calls a hardware function, then a second function with the masked result, and finally calls a third function with either 1 or 0 as the last argument depending on whether the original second parameter was non-zero. The key fix is capturing the result of `FUN_a00add48` (Ghidra dropped it) and using an if/else with separate calls instead of passing a boolean expression directly, matching the `btst`/`bne` branch pattern in the assembly.",
+      "comment": "FUN_a00a8400(FUN_a00add48(p, func_0x9f1c6624(p) & 0xff) & 0xff, 0xb, 3, p2 != 0)",
       "name": "FUN_a00b00e0",
       "status": "matched"
     },
@@ -7239,7 +7239,7 @@
     },
     "ram:a00d264c": {
       "by": "autoc",
-      "comment": "Fills the 257-entry 16-bit table at 0xa8077a08 with 0x400 (likely a gamma/LUT reset to a flat default). Written as a plain array loop; Ghidra's byte-offset form changed the address operand order.",
+      "comment": "fills the 257-entry 16-bit table at 0xa8077a08 with 0x400",
       "name": "FUN_a00d264c",
       "status": "matched"
     },

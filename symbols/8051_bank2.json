@@ -1622,7 +1622,7 @@
     },
     "ram:e4a4": {
       "by": "hand",
-      "comment": "This function sets up a zero byte, calls `FUN_CODE_e331` with it, then calls `FUN_CODE_df7f` with two 0x0e values, and finally tail-jumps to `LAB_CODE_e4bf` passing a generic pointer to xdata address 0x0436. The pointer\u2019s underlying type (char, int, etc.) is unknown, and whether `LAB_CODE_e4bf` expects additional registers left from the previous call is unclear\u2014but the target does not set them, so they are likely unused. The LJMP confirms a tail call; Keil should emit it because the called function is void and it\u2019s the last statement.",
+      "comment": "FUN_CODE_e331(0), FUN_CODE_df7f(0x0E, 0x0E), then LJMP to LAB_CODE_e4bf with a generic pointer to XDATA 0x0436",
       "name": "FUN_CODE_e4a4",
       "status": "matched"
     },

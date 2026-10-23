@@ -1,5 +1,5 @@
 /* leon2s FUN_a00a7468 @ 0xa00a7468 (-mcpu=v8 -Os -g)
- * The function calls `FUN_a00a7368` with the byte and halfword parameters, then passes that result as the second argument to `FUN_a00a7408`, returning its result via a tail call (the `restore` in the delay slot). The first parameter is passed through unchanged to the second call.
+ * Returns FUN_a00a7408(p1, FUN_a00a7368(p2, p3)) (tail call; p1 passed through unchanged).
  */
 typedef unsigned int uint;
 
