@@ -16279,6 +16279,12 @@
       "name": "FUN_a013d1b4",
       "status": "matched"
     },
+    "ram:a013d670": {
+      "by": "hand",
+      "comment": "returns DAT_a802e1a7 != 0",
+      "name": "FUN_a013d670",
+      "status": "matched"
+    },
     "ram:a013d684": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
