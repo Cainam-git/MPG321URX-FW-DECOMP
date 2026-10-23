@@ -3,8 +3,8 @@
  * Runs seq_a() (func_0x4008e2a4(), for q = 5..0x14 FUN_a0146b20(0, 0x13, q, 0x13, 0, 0) and FUN_a0146a80(0x13, q,
  * 0x13, 0x792, 0), then FUN_a0146b20(0, 0x1c, 0x15, 2, 0, 0) and FUN_a0146c40(5, 0, 0)) and FUN_a00a8c88(), then
  * acts on id (0..8; other values return):
- *   0: seq_a() again, FUN_a0146b50(0x92, 0), FUN_a0146b6c(0, 0), rows i = 0..2 from the table 0x18a360 (third argument
- *      argument 0xd), FUN_a00a900c(0, 0), FUN_a00af44c(0xb, 0);
+ *   0: seq_a() again, FUN_a0146b50(0x92, 0), FUN_a0146b6c(0, 0), rows i = 0..2 from the table 0x18a360 (FUN_a0146a80
+ *      third argument 0xd), FUN_a00a900c(0, 0), FUN_a00af44c(0xb, 0);
  *   1: FUN_a00ad02c(0, 0), FUN_a00a900c(0, 0), FUN_a00af44c(0xe, 0);
  *   2: FUN_a0146b50/FUN_a0146b6c as in 0, rows 0..2 from the table 0x188634 (0xf), FUN_a00b6d58(),
  *      FUN_a00a900c(0, 0), FUN_a00af44c(0x15, 0);
