@@ -3090,6 +3090,12 @@
       "name": "FUN_a008bd1c",
       "status": "matched"
     },
+    "ram:a008c5d8": {
+      "by": "h42",
+      "comment": "compares FUN_a008c538(idx) against the 28000-36000 window and DAT_a8078b30, and on a change updates the flag, a record bit and port registers 2 and 1",
+      "name": "FUN_a008c5d8",
+      "status": "matched"
+    },
     "ram:a008c8b0": {
       "by": "autoc",
       "comment": "For each of four units (4, 6, 0xc, 0xe): if FUN_a0089f98(unit) reports something (non-zero 16-bit value), it runs FUN_a008b9ec(n) and then FUN_a008a1b4(unit, FUN_a008a040(unit) & 0xff, 1). Ghidra lost the unit argument of the check.",
