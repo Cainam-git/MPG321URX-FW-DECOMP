@@ -16095,6 +16095,12 @@
       "name": "FUN_a013b4a4",
       "status": "matched"
     },
+    "ram:a013b4d0": {
+      "by": "hand",
+      "comment": "stores its three arguments to bytes 0..2 of DAT_a802a468",
+      "name": "FUN_a013b4d0",
+      "status": "matched"
+    },
     "ram:a013b4e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
