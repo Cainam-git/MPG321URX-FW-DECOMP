@@ -1754,6 +1754,13 @@
       "name": "FUN_a0063950",
       "status": "matched"
     },
+    "ram:a006c9c0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -Os -g -msoft-float",
+      "comment": "reads n blocks of 8 words through the 0xcf011f80 register block (byte order by DAT_a80787e0)",
+      "name": "FUN_a006c9c0",
+      "status": "matched"
+    },
     "ram:a006cb98": {
       "by": "hand",
       "comment": "w = 0x1e0 if p4 == 0 or p6 < p3, else p5; if w <= 0x1e0: 6c9c0(p1, (p7 >> 5) + (p2 >> 3) + p6 * 60, w >> 3)",
