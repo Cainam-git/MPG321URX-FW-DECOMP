@@ -3,8 +3,8 @@
  * this address. A NULL locale only returns "C". Otherwise the locale must compare equal (FUN_a015e078 = strcmp) to
  * "C" or to ""; then category and locale are stored in words +0x30 and +0x34 of the record p and "C" is returned,
  * else 0 is returned. Written in C because the archive member also defines its own data (.data/.bss), which the
- * firmware keeps at its own addresses. "C" and "" are the read-only string objects at 0x1A83E0 and 0xFF5E0
- * (the linker merged "" into the tail of another string), declared as externs.
+ * firmware keeps at its own addresses. "C" and "" are the read-only string objects at 0x1A83E0 and 0xFF5E0,
+ * declared as externs.
  */
 struct reent {
     int unused[12];
