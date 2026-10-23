@@ -2062,6 +2062,12 @@
       "name": "FUN_CODE_dd74",
       "status": "matched"
     },
+    "CODE:dd85": {
+      "by": "hand",
+      "comment": "Register read on the 0x9A00 block",
+      "name": "FUN_CODE_dd85",
+      "status": "matched"
+    },
     "CODE:dd96": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
