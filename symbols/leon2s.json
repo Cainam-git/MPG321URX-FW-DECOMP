@@ -2285,6 +2285,12 @@
       "name": "FSM_EQSCAN_DONE",
       "status": "matched"
     },
+    "ram:a00795a0": {
+      "by": "hand",
+      "comment": "reads and prints the H21 SCDC error counters of each channel for ports 2 and 3",
+      "name": "DRV_HDMI21_Print_SCDC_Error",
+      "status": "matched"
+    },
     "ram:a00798fc": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
