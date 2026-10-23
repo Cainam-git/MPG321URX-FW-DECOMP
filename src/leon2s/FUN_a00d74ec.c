@@ -1,5 +1,5 @@
 /* leon2s FUN_a00d74ec @ 0xa00d74ec-0xa00d7638, -mcpu=v8 -Os -g.
- * (const struct In *p, u8 *d), void. Packs p into the byte stream d with a u8 write index k:
+ * (struct In *p, u8 *d), void. Packs p into the byte stream d with a u8 write index k:
  * d[0] = p->h & 0x7f, then the 16 bytes p->a, then n = p->n & 0xf; then for each of the n 20-byte entries
  * e[j] (from p + 0x12): e.b0; when bit 7 of e.b0 is clear, the top 3 bits of e.b1, e.b2, the 16 bytes e.c and
  * e.last; when it is set, only the top 2 bits of e.b1.
