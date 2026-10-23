@@ -7844,6 +7844,12 @@
       "name": "FUN_a00ccfa8",
       "status": "matched"
     },
+    "ram:a00cd2f0": {
+      "by": "hand",
+      "comment": "sets field st of DAT_a8078bb0[port] to 3",
+      "name": "FUN_a00cd2f0",
+      "status": "matched"
+    },
     "ram:a00cd4fc": {
       "by": "hand",
       "comment": "ch (u8); f = bits 16..17 of word 0 of the 24-byte record DAT_a8078bb0[ch] (lduh, and 3). If f != 2: r = func_0xa0f9639c(0, 0x90, 0x68029, buf) (buf = 24 bytes at %fp-32); r != 0: f = 3, buf[0] = 0, return; else if bit 0 of buf[0] is clear: f = 3, return. Then (f was 2, or buf[0] bit 0 set): f = ...",
