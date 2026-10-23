@@ -905,6 +905,14 @@
       "name": "FUN_CODE_c44e",
       "status": "matched"
     },
+    "CODE:c6ea": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "sends 0x6E 0x00 0x3C, three addr bytes, F0 0F 6E 91 13 EC, 511 x 0xFF + v and an XOR checksum through FUN_CODE_d275, returns the OR of the header and checksum results",
+      "module": "FUN_CODE_d275",
+      "name": "FUN_CODE_c6ea",
+      "status": "matched"
+    },
     "CODE:c7c5": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
@@ -975,10 +983,19 @@
       "name": "FUN_CODE_d1bb",
       "status": "matched"
     },
+    "CODE:d261": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_d275, in FUN_CODE_d275's code segment; emitted by compiling src/8051_bank2/FUN_CODE_d275.c, bytes judged with FUN_CODE_d275 over 0xd261..0xd2fb",
+      "kind": "common_entry",
+      "module": "FUN_CODE_d275",
+      "name": "FUN_CODE_d261",
+      "of": "FUN_CODE_d275",
+      "status": "matched"
+    },
     "CODE:d275": {
       "by": "hand",
-      "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "update agent: bit-banged I2C byte send, returns 0 = ACK / 1 = NACK, SCL stretch timeout",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "bit-banged I2C byte send on P1.6/P1.7, returns 0 = ACK / 1 = NACK; module with FUN_CODE_c6ea and its common-entry block 0xd261",
       "name": "FUN_CODE_d275",
       "status": "matched"
     },
