@@ -846,6 +846,13 @@
       "name": "FUN_CODE_738c",
       "status": "matched"
     },
+    "CODE:760c": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "range checks on FUN_CODE_dd74 / FUN_CODE_d9a5 register values, bit result",
+      "name": "FUN_CODE_760c",
+      "status": "matched"
+    },
     "CODE:7765": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
