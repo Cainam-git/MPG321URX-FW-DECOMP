@@ -879,6 +879,13 @@
       "name": "FUN_CODE_9339",
       "status": "matched"
     },
+    "CODE:942e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "fixed FUN_CODE_d884 / FUN_CODE_c73e register sequence for ch with four constant flag locals",
+      "name": "FUN_CODE_942e",
+      "status": "matched"
+    },
     "CODE:9522": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
