@@ -4480,7 +4480,7 @@
     },
     "ram:a00a03c8": {
       "by": "hand",
-      "comment": "returns 1 when the two words behind the port record's pointer pass five field tests, else 0",
+      "comment": "returns 1 when five byte tests on the two words at the entry's register pointer pass, else 0",
       "name": "FUN_a00a03c8",
       "status": "matched"
     },
