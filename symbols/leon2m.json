@@ -13391,6 +13391,13 @@
       "name": "FUN_a012e550",
       "status": "matched"
     },
+    "ram:a012e6c0": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reads one 18-byte FGA row from settings storage, unpacks it into three groups of four halfwords for FUN_a00f6fe4",
+      "name": "FUN_a012e6c0",
+      "status": "matched"
+    },
     "ram:a012e850": {
       "by": "h41",
       "cflags": "-mcpu=v8 -O3 -g",
