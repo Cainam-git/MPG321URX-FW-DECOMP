@@ -497,7 +497,7 @@
     "CODE:5c20": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "FOTG210 USB OTG interrupt service: device group/sub status, reset/suspend/resume handling, fotg210 debug printfs",
+      "comment": "FOTG210 USB OTG interrupt service: device group/sub status, reset/suspend/resume handling, prints \"fotg210: ...\" messages",
       "name": "FUN_CODE_5c20",
       "status": "matched"
     },

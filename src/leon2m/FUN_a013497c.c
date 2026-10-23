@@ -26,7 +26,7 @@
  *   function with an unsigned short count; case 3 'next' is unsigned int.
  * Compiler aids (no code): case 3 compares '(int)next == rd' - fold puts a bare variable second, the cast keeps the
  *   firmware operand order 'cmp next, rd'; the value is <= 0x1f, an equality test, so the cast changes nothing.
- * Callees: FUN_a00dd614(level) debug-level test returning unsigned char; FUN_a00df170 = debug printf (int, K&R).
+ * Callees: FUN_a00dd614(level) level test returning unsigned char; FUN_a00df170 = printf-style output (int, K&R).
  */
 struct UartRing { unsigned char wr, rd, data[32], ovf; };
 struct Msg4 { unsigned char port, pad; unsigned short len; unsigned char data[0x80]; unsigned char ready; };

@@ -12,7 +12,7 @@
  * (MailBox_Write func_0x4008c5f8) to release it. Then the next round.
  * Inputs: none. Output: none. Globals: DAT_a802cb8c (u8 slot index 0..3, read and written).
  * Calls: func_0x4008c4d0 = MailBox_Read(portal, offset, buf, words), func_0x4008c5f8 = MailBox_Write (same args),
- *   FUN_a00dd614 (debug level test), FUN_a00df170 (debug printf), FUN_a013497c (message decoder).
+ *   FUN_a00dd614 (level test), FUN_a00df170 (printf-style output), FUN_a013497c (message decoder).
  * Caller: FUN_a01387a4.
  * Source form: the index advance is written 'if (++idx > 3) idx = 0;' at all three places; the if/else form
  *   (idx + 1 > 3 ? 0 : idx + 1) gives separate %hi registers for the stores.

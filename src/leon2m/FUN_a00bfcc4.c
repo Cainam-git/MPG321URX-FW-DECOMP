@@ -1,15 +1,15 @@
-/* leon2m FUN_a00bfcc4 @ 0xa00bfcc4..0xa00c0adc (902 insns)  Big chip UART/tool command switch (rescue path): MSI
- * tool -> 8051 mailbox portal 0 -> FUN_a00ce348 case 2 -> FUN_a00bfcc4(4, row) -> handler.
+/* leon2m FUN_a00bfcc4 @ 0xa00bfcc4..0xa00c0adc (902 insns)  131-case switch on a command-table row index:
+ * FUN_a00ce348 case 2 -> FUN_a00bfcc4(4, row) -> handler.
  * Flags -mcpu=v8 -O3 -g (also matches with -msoft-float). The 131-entry jump table at 0xA00BA428 (entries
  * image-relative, +0xA0060000) is built from the same source.
  *
  * What the code does (code facts):
  * - cmd (byte) > 0x82 or a hole in the table (1, 0xb, 0xc, 0xe, 0x10, 0x11, 0x40, 0x44, 0x47, 0x48, 0x4d..0x55,
  *   0x57..0x64, 0x67, 0x69, 0x6d, 0x79..0x7b): return, nothing done.
- * - 28 commands tail-call their handler with the port byte (case 2 = FUN_a00bf110 UartSetI2CEnable, the entry of
- *   MSI's official update; 0 = FUN_a00be9a8, 3/4/5 = FUN_a00bbda0/bbf1c/bc098, 7/8/9 = bc3f8/bc574/bc6f0, ... see
+ * - 28 commands tail-call their handler with the port byte (case 2 = FUN_a00bf110, which prints "--->UartSetI2CEnable";
+ *   0 = FUN_a00be9a8, 3/4/5 = FUN_a00bbda0/bbf1c/bc098, 7/8/9 = bc3f8/bc574/bc6f0, ... see
  *   the switch).
- * - The other 63 commands are "read a setting" replies: bytes 7, 8, 9 of the reply frame 0xA802D078 = three ASCII
+ * - The other 63 commands send a reply frame: bytes 7, 8, 9 of the reply frame 0xA802D078 = three ASCII
  *   digits (mostly '0', '0', '0' + value: a status byte, or one/two bits of a status word such as
  *   0xA802D338/D33C/D46C/D484), then FUN_a00bac3c(cmd) (or FUN_a00bacc4(cmd) for 6, 0xa, 0xd, 0xf) fills bytes
  *   0..6 and 10 from command-table row cmd, FUN_a00ba950(port), and FUN_a00babe4(port, 11) (= FUN_a01487e8(port,
@@ -19,8 +19,8 @@
  *   0x41 builds the whole frame itself (bytes 35 62 30 30 5C 30 30 30 31 31 0D = "5b00" backslash "00011" CR) and
  *     calls FUN_a00babe4(port, 0x26).
  *   0x4c: digit = bit 20 of word 0xA802D33C, or '0' when byte 0xA802D2AF != 0 (both read off one 0xA802D290 base).
- * - No loops, no hardware registers, no waits; every path returns. This is the only route from the tool command
- *   task to FUN_a00bf110; it reads no panel/timing state.
+ * - No loops, no hardware registers, no waits; every path returns. This is the only call path from FUN_a00ce348
+ *   to FUN_a00bf110; it reads no timing state.
  *
  * Source form: every inlined case body is the standalone handler of that command (FUN_a00bc3b0 .. FUN_a00be7d4,
  *   which exist uncalled in the firmware), written directly in the case. The case order in the source is the order

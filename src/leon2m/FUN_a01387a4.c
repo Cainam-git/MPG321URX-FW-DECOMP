@@ -7,8 +7,8 @@
  * offset 0xC (byte 2 = mask "ma"); then for each of 7 record ids reads 4 words at offset id << 4, checks the record
  * number against DAT_a802a450[i] (1..9) and copies flags/fields into template slot rec[0]-1. Type 5 records get the
  * full field copy (and are set to type 2 when their bit is set in ma); others just set their bit in 'mask'.
- * The first time (DAT_a802cb98 == 0) it debug-prints the 4 record words. At the end, if ma and mask are nonzero
- * and (mask & ma) & 0xff is nonzero, it debug-prints that value and sends a 12-byte message {value, 0...} via
+ * The first time (DAT_a802cb98 == 0) it prints the 4 record words (FUN_a00df170). At the end, if ma and mask are nonzero
+ * and (mask & ma) & 0xff is nonzero, it prints that value and sends a 12-byte message {value, 0...} via
  * FUN_a01370dc(0x81, 0xc, m, 0).
  * Inputs: none. Output: none. Globals: DAT_a802dec0[] (templates, written), DAT_a802a450[] (read),
  * DAT_a802cb98 (print-once flag, written).

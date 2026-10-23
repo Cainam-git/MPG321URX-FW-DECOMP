@@ -1,10 +1,10 @@
-/* leon2m FUN_a00baef8 @ 0xa00baef8..0xa00bb1c4 (716 bytes)  UART frame reader / classifier for one port (UART
- * command path). Flags -mcpu=v8 -O3 -g (also matches with -msoft-float).
+/* leon2m FUN_a00baef8 @ 0xa00baef8..0xa00bb1c4 (716 bytes)  reads bytes of one port into the buffer 0xA802D0D0
+ * and returns a frame class (2, 4, 8, 0x10, 0x40). Flags -mcpu=v8 -O3 -g (also matches with -msoft-float).
  * Compiler aids: none.
  *
  * What the code does (code facts; only caller FUN_a00ce348 passes port 4):
  *   n = 0; FUN_a01487cc(port, 0x30 - DAT_a802b09c, &DAT_a802d0d0[DAT_a802b09c], &n) appends at most 0x30 - count
- *     bytes to the receive buffer at DAT_a802d0d0 (FUN_a01487cc = UART ring read wrapper, n = bytes read).
+ *     bytes to the receive buffer at DAT_a802d0d0 (FUN_a01487cc forwards to the ring read FUN_a0133950, n = bytes read).
  *   n == 0 and timer 0xf expired (FUN_a0086a3c(0xf) == 0) and DAT_a802b096 == 1 -> DAT_a802b096 = 0, return 0x40
  *     (receive timeout -> caller clears the buffer).
  *   DAT_a802b09c += n. First byte neither '5' nor 0 and timer expired -> DAT_a802b096 = 1, FUN_a00869b0(0xf,
@@ -14,7 +14,7 @@
  *   Expected frame length k: byte1 '8' -> 7; byte1 'b' -> by byte5 (0xa6: 0x29; 0xa5/0xa7/0xa8: 10; 0x3c+'6',
  *     0x3c/0x3e/0x3f+'2', 0x65..0x67+'1' (byte4), or (byte5 & 0xf0) > 0x5f: 0x19; else 10); other: 0.
  *   count <= (k & 0x3f) -> 8; byte[k & 0x3f] != '\r' -> 0x10 (bad frame); else DAT_a802b096 = 0 and return 2 ('8'
- *     frame: tool command, e.g. "580040:" = update entry), 4 ('b' frame) or 0x10.
+ *     frame, e.g. "580040:" = row 2 of the command table FUN_a015463c), 4 ('b' frame) or 0x10.
  * Types from the asm: k is unsigned int (bleu compare, and 0x3f index), n is the u16 stack local at %fp-10,
  * FUN_a0086a3c returns unsigned short (sll 16 test), FUN_a01487cc(u8, u16, u8 *, u16 *) as FUN_a0133950.
  * Source form: the four 0x19 conditions are separate else-if arms (one || chain gives the opposite prediction on

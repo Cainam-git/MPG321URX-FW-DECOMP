@@ -2201,7 +2201,7 @@
     "ram:a0085984": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "APPTimerRoutine, Big chip main-loop task (bug function; rescue path)",
+      "comment": "APPTimerRoutine: main-loop task called from FUN_a0087430; calls the port-4 frame task FUN_a00ce348 twice",
       "name": "FUN_a0085984",
       "status": "matched"
     },
@@ -5976,14 +5976,14 @@
     "ram:a00baef8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "rescue path frame reader (MSI tool UART frames)",
+      "comment": "reads up to 0x30 - count bytes of a port into 0xA802D0D0 and classifies the frame by bytes 0, 1, 4, 5 and the CR at its end: returns 2, 4, 8, 0x10 or 0x40",
       "name": "FUN_a00baef8",
       "status": "matched"
     },
     "ram:a00bb1c4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART command-table lookup (rescue path, inlined into FUN_a00ce348)",
+      "comment": "first row 0..0x82 of the command table FUN_a015463c whose chars 2..6 match the received bytes (0xff = wildcard, 0xff = none); inlined into FUN_a00ce348",
       "name": "FUN_a00bb1c4",
       "status": "matched"
     },
@@ -6638,7 +6638,7 @@
     "ram:a00bf110": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UartSetI2CEnable: Big chip entry into the official USB/UART update (rescue) path",
+      "comment": "prints \"--->UartSetI2CEnable\": reply frame from command-table row 2, clears the port's receive state, GPIO set-up, I2C slave 0x6E set-up",
       "name": "FUN_a00bf110",
       "status": "matched"
     },
@@ -6673,7 +6673,7 @@
     "ram:a00bfcc4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "rescue path: MSI tool command dispatcher (91 inlined handlers)",
+      "comment": "131-case switch on the command-table row: 28 cases tail-call a handler (case 2 = FUN_a00bf110), 63 send an 11-byte reply frame",
       "name": "FUN_a00bfcc4",
       "status": "matched"
     },
@@ -7251,7 +7251,7 @@
     "ram:a00ce348": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "rescue path: MSI tool command task (port 4), documented asm-label aid",
+      "comment": "port-4 frame task: FUN_a00baef8(4), command-table lookup, then FUN_a00bfcc4 or a reply; documented asm-label aid",
       "name": "FUN_a00ce348",
       "status": "matched"
     },
@@ -8294,7 +8294,7 @@
     "ram:a00df170": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "debug printf to the UART (vsnprintf into 80 bytes, polled send with timeout, CR after LF); called by the fix point",
+      "comment": "printf-style output: vsnprintf into 80 bytes, each byte written to 0xC00B0000 after polling bit 5 of 0xC00B0014 (at most 0xFFFFF polls), CR after LF",
       "name": "FUN_a00df170",
       "status": "matched"
     },
@@ -10379,7 +10379,7 @@
     "ram:a0107bac": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "GPIO pin set-up for the update UART pads (rescue path, called by UartSetI2CEnable)",
+      "comment": "GPIO/pin-mux set-up of one pin (callers FUN_a00bf110 and FUN_a012b7b8)",
       "name": "FUN_a0107bac",
       "status": "matched"
     },
@@ -13274,7 +13274,7 @@
     "ram:a0133950": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "UART ring-buffer read (rescue chain)",
+      "comment": "receive ring-buffer read of port 0..4 (35-byte rings at 0xA802DD90; port > 4 prints \"UART buf index over!\")",
       "name": "FUN_a0133950",
       "status": "matched"
     },
@@ -13419,14 +13419,14 @@
     "ram:a013497c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "rescue path: portal-0 message decoder (MSI tool -> 8051 mailbox -> Big chip)",
+      "comment": "portal-0 message decoder (EDID / I2C / UART / IR parts into their buffers; called by FUN_a0134de0)",
       "name": "FUN_a013497c",
       "status": "matched"
     },
     "ram:a0134de0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "rescue path: portal-0 mailbox slot poll (H2), byte-exact",
+      "comment": "portal-0 mailbox slot poll; passes a found slot to FUN_a013497c",
       "name": "FUN_a0134de0",
       "status": "matched"
     },
@@ -13854,7 +13854,7 @@
     "ram:a01387a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "mailbox reader (bug function + rescue path), byte-exact (H5)",
+      "comment": "portal-1 record reader: FUN_a01350dc, FUN_a0134de0, then copies 7 records into the template slots 0xA802DEC0 and sends (mask & ma) with FUN_a01370dc(0x81, 0xc, m, 0)",
       "name": "FUN_a01387a4",
       "status": "matched"
     },

@@ -1,11 +1,11 @@
-/* leon2m FUN_a0133950 @ 0xa0133950  UART ring-buffer read. Flags: -mcpu=v8 -O3 -g.
+/* leon2m FUN_a0133950 @ 0xa0133950  ring-buffer read (port > 4: "UART buf index over!"). Flags: -mcpu=v8 -O3 -g.
  *
- * Copies up to len bytes from the receive ring of UART port (0..4) into buf and counts them in *pn. Each ring is 35
+ * Copies up to len bytes from the receive ring of port (0..4) into buf and counts them in *pn. Each ring is 35
  * bytes at 0xA802DD90 + 35 * port: write index, read index, 32 data bytes, overflow byte; the read index wraps at 32.
- * Stops early when the ring is empty (read index == write index). port > 4 prints the error string at 0x001A53E0 and
+ * Stops early when the ring is empty (read index == write index). port > 4 prints "UART buf index over!" (0x001A53E0) and
  * returns without touching *pn.
- * Update tool input: the command framer FUN_a00baef8 reads the update tool's bytes through
- * FUN_a01487cc -> this function before dispatching them to the command switch FUN_a00bfcc4.
+ * Caller chain: FUN_a00baef8 reads its frame bytes through FUN_a01487cc -> this function; FUN_a00ce348 then passes
+ * matched frames to the command switch FUN_a00bfcc4.
  */
 struct UartRing { unsigned char wr, rd, data[32], ovf; };
 extern struct UartRing DAT_a802dd90[];

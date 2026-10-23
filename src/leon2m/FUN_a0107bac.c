@@ -5,8 +5,8 @@
  * grp 0, set (grp << pin) for grp 1. Output enable: oe != 0 -> 0xCF03C3F8 |= 1 << pin and shadow 0xA8027A87 &= ~bit;
  * oe == 0 -> shadow |= bit and 0xCF03C3F8 &= ~bit. Per pin 0..6 one more enable bit set (oe) or cleared: pin 0/1 ->
  * 0xCF03C348 bit 6/7, pin 2..6 -> 0xCF03C34C bits 3..7. Then 0xCF03C1A8 = shadow and 0xCF03C354 |= 0x80.
- * Called by FUN_a00bf110 (UartSetI2CEnable) as FUN_a0107bac(0, FUN_a0125124(0xA802E14A), 0, 0): it switches the
- * update UART's pads (UART command path).
+ * Called by FUN_a00bf110 ("--->UartSetI2CEnable") as FUN_a0107bac(0, FUN_a0125124(0xA802E14A), 0, 0), and by
+ * FUN_a012b7b8.
  * Source form:
  *   - the mux word is chosen with one ?: expression, which makes it a leaf function like the firmware (an
  *     if-assignment needs a register window).
