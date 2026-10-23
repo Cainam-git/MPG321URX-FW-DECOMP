@@ -1688,6 +1688,12 @@
       "name": "FUN_a00629fc",
       "status": "matched"
     },
+    "ram:a0062a34": {
+      "by": "h42",
+      "comment": "weighted sum of interpolated entries of the 65-column halfword table at DAT_a807cd6c",
+      "name": "FUN_a0062a34",
+      "status": "matched"
+    },
     "ram:a0062b64": {
       "by": "hand",
       "comment": "returns (h << 18) + (0x1000 - h) * (FUN_a0062a34(x) >> 2) with h = DAT_a8078aa4",
