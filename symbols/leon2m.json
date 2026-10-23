@@ -10033,6 +10033,12 @@
       "name": "FUN_a00f39c0",
       "status": "matched"
     },
+    "ram:a00f39d4": {
+      "by": "hand",
+      "comment": "stores the argument to DAT_a802b79c",
+      "name": "FUN_a00f39d4",
+      "status": "matched"
+    },
     "ram:a00f40e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
