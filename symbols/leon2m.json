@@ -13032,6 +13032,13 @@
       "name": "FUN_a012ad6c",
       "status": "matched"
     },
+    "ram:a012b078": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets two bits of the 16-bit field +0x2d of the 0xA802E1A0 record and byte 1 of row i of DAT_a802d8ae, passes a row copy to FUN_a0137a68",
+      "name": "FUN_a012b078",
+      "status": "matched"
+    },
     "ram:a012b22c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
