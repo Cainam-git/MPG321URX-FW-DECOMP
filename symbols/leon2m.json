@@ -18038,6 +18038,12 @@
       "name": "FUN_a015c1b4",
       "status": "matched"
     },
+    "ram:a015c1c0": {
+      "by": "hand",
+      "comment": "C library setlocale: FUN_a015c138 (_setlocale_r) with the reent pointer at 0xA802AA18",
+      "name": "FUN_a015c1c0",
+      "status": "matched"
+    },
     "ram:a015c1e4": {
       "by": "autoc",
       "comment": "FUN_a015c1b4((word 0xA802AA18))",
