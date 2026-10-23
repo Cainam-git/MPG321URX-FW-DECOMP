@@ -1,5 +1,6 @@
 /* leon2s FUN_a00a5cb4 @ 0xa00a5cb4 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * k = p1 & 0xff; calls FUN_a00a507c(k, buf) with an 80-byte local buffer, then VBP_tmp(k, buf, 1).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,6 @@
 /* leon2s FUN_a00629fc @ 0xa00629fc (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * For i from byte p1 + 0x58 up to 14, stores 0x3FF in halfword i of the halfword array at p1 + 0x5A.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

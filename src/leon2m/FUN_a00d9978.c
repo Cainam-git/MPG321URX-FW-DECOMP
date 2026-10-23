@@ -1,5 +1,6 @@
 /* leon2m FUN_a00d9978 @ 0xa00d9978 (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a0125aac() when bit 6 (0x40) of word 0xA802D338 is set, otherwise FUN_a0125ac8().
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

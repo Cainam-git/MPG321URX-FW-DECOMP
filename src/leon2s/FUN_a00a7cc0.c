@@ -1,5 +1,7 @@
 /* leon2s FUN_a00a7cc0 @ 0xa00a7cc0 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * For p1 (low byte) < 2 writes p3 & 0xff to the register 0xCF000000 | ((t + p2) * 4), where t is halfword p1 of
+ * the table at 0xA00B4D6C.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

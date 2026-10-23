@@ -1,5 +1,7 @@
 /* leon2m FUN_a01476e4 @ 0xa01476e4 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Table 0xA802DF30 holds records of 0x78 bytes. Returns FUN_a00f8f34(bits 12-15 of word 0 of record p1 & 0xff) as
+ * a byte.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

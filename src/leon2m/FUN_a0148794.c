@@ -1,5 +1,6 @@
 /* leon2m FUN_a0148794 @ 0xa0148794 (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a0133f48(p2) when p1 != 0, otherwise FUN_a0133f24(p2, p3, p4).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

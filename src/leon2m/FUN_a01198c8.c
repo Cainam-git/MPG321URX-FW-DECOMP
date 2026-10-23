@@ -1,5 +1,6 @@
 /* leon2m FUN_a01198c8 @ 0xa01198c8 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Writes p1 & 3 to bits 2-3 of byte 0xA802C9B0 when p2 == 0, otherwise to bits 4-5 of that byte.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,7 @@
 /* leon2s FUN_a009fe98 @ 0xa009fe98 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Table 0xA807DB00 holds records of 0x34 bytes. With p = word 0 of record p1 & 0xff, sets bits 0x71 in the word at
+ * p + 0x84, then calls FUN_a009fe2c(p1 & 0xff, 0xea8a).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

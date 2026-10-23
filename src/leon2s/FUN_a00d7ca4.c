@@ -1,5 +1,6 @@
 /* leon2s FUN_a00d7ca4 @ 0xa00d7ca4 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Clears bit 7 of the word at p + 0xC0, where p is word (byte 0xA8078832) of the word table at 0xA80760A4.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

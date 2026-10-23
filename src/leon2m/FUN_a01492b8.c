@@ -1,5 +1,6 @@
 /* leon2m FUN_a01492b8 @ 0xa01492b8 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Stores p1 in byte 0xA802E3D7; calls FUN_a012a774(1) when p1 == 1, otherwise FUN_a012ad64().
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

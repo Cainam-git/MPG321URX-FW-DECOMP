@@ -1,5 +1,6 @@
 /* leon2s FUN_a00ad060 @ 0xa00ad060 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * p1 == 2 clears byte 0xA8079312; p1 == 0 or 1 clears bit p1 of that byte; p1 > 2 returns without a write.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;
