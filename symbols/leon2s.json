@@ -5306,6 +5306,12 @@
       "name": "FUN_a00a7940",
       "status": "matched"
     },
+    "ram:a00a79c4": {
+      "by": "hand",
+      "comment": "reads three consecutive byte registers of a port block and combines them (reg 0x50: third | first << 16 | second << 8)",
+      "name": "FUN_a00a79c4",
+      "status": "matched"
+    },
     "ram:a00a7a5c": {
       "by": "hand",
       "comment": "twin of a00a6f08; returns the last read value",
