@@ -10961,6 +10961,13 @@
       "name": "FUN_a0114420",
       "status": "matched"
     },
+    "ram:a0114498": {
+      "by": "h44",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes a byte to a port-selected paged register block",
+      "name": "FUN_a0114498",
+      "status": "matched"
+    },
     "ram:a011552c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
