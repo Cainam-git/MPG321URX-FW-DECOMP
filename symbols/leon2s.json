@@ -2796,6 +2796,12 @@
       "name": "FUN_a0087db4",
       "status": "matched"
     },
+    "ram:a0087ec8": {
+      "by": "hand",
+      "comment": "Register set-up through FUN_a00a7940/FUN_a00a78fc; port 0 selects reg 0x66/0x67 values from FUN_a00876ec and FUN_a0087710; writes eight halfwords to regs 0x56..0x65",
+      "name": "FUN_a0087ec8",
+      "status": "matched"
+    },
     "ram:a00883d0": {
       "by": "h28",
       "comment": "Reads status byte buffer DAT_a80789f0 through FUN_a0086400/FUN_a008639c and updates per-port record bytes and block registers; returns 0, 1 or 2",
