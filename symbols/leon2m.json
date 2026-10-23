@@ -9664,6 +9664,12 @@
       "name": "FUN_a00eecd0",
       "status": "matched"
     },
+    "ram:a00ef034": {
+      "by": "hand",
+      "comment": "stores its two arguments to DAT_a802b74e and DAT_a802b74c",
+      "name": "FUN_a00ef034",
+      "status": "matched"
+    },
     "ram:a00ef048": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
