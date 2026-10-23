@@ -760,6 +760,13 @@
       "name": "FUN_CODE_6465",
       "status": "matched"
     },
+    "CODE:6917": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "copies bytes from one of four XDATA rings (ch 1..4) to buf up to the ring's write index and returns the count",
+      "name": "FUN_CODE_6917",
+      "status": "matched"
+    },
     "CODE:6c34": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
