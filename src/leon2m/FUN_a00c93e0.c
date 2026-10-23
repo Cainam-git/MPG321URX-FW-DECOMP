@@ -1,5 +1,7 @@
 /* leon2m FUN_a00c93e0 @ 0xa00c93e0 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a00c9470: same code, other constants.
+ * k = p1 & 0xff; b = byte 0xA802D049 for k == 2, 0xA802D0A1 for k == 3, 0xA802D0D9 otherwise. Returns 0xFF when b
+ * != '1' or byte 0xA802D2AF == 0; otherwise calls FUN_a00d934c(), FUN_a00baa6c(k), FUN_a00ba950(k) and
+ * FUN_a00bab80(k, 6) and returns 0. Same code as FUN_a00c9470.
  * See FUN_a00c9470 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern unsigned char DAT_a802d049;

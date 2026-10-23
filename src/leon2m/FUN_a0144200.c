@@ -1,5 +1,6 @@
 /* leon2m FUN_a0144200 @ 0xa0144200 (-mcpu=v8 -O2 -g)
- * Twin of FUN_a01440ac: same code, other constants.
+ * Returns FUN_a0129aa4(k) with k = 0, 1, 2 or 3 for p1 = 0x51, 0x61, 0x71 or 0x81 and k = 0xFF for any other p1.
+ * Same code as FUN_a01440ac.
  * See FUN_a01440ac for the explanation; this copy's constants differ, so its comments were removed.
  */
 typedef unsigned char undefined;

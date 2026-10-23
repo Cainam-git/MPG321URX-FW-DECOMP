@@ -1,5 +1,7 @@
 /* leon2s FUN_a00d2210 @ 0xa00d2210 (-mcpu=v8 -Os -g)
- * Twin of FUN_a00d2300: same code, other constants.
+ * Reads w = func_0xa0f71528(0xD0013FD0), calls func_0xa0f714b8(&w, b, b, p2 & 0xff) with b = 0x1f when p1 == 0 and
+ * 0x1e otherwise, and writes w back through func_0xa0f71534(0xD0013FD0, w). Returns 1. Same code as FUN_a00d2300
+ * with other constants.
  * See FUN_a00d2300 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern int func_0xa0f71528(unsigned int);

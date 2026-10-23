@@ -1,5 +1,8 @@
 /* leon2m FUN_a00c0d10 @ 0xa00c0d10 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a00c135c: same code, other constants.
+ * b = byte 0xA802D049 for p1 == 2, 0xA802D0A1 for p1 == 3, 0xA802D0D9 otherwise. When b - '0' (8 bits) is above 1
+ * returns 0xFF; otherwise copies its bit 0 into bit 12 of word 0xA802D338 (0xA802D290 + 0xA8), calls
+ * FUN_a0090fd8(), FUN_a00baa6c(p1), FUN_a00ba950(p1) and FUN_a00bab80(p1, 6) and returns 0. Same code as
+ * FUN_a00c135c with other constants.
  * See FUN_a00c135c for the explanation; this copy's constants differ, so its comments were removed.
  */
 struct R290 { unsigned char pad[0xa8]; unsigned int wa8; };

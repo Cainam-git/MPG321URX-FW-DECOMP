@@ -4327,7 +4327,7 @@
     "ram:a009b95c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a009ba34 (constants swapped)",
+      "comment": "With w = word 0xA802AFEC: calls FUN_a00a93bc(w + 0x19), repeats t = ((low 16 bits of w) - 0xE5) % 3 (signed), w = t + 0xE7 until FUN_a00aad30(t) returns 1, stores w + 0x19 in byte 0xA802D2DB, calls FUN_a00a9650(w + 0x19, 1) and FUN_a00d5eac(1); with v = byte 0xA8025C55 calls FUN_a00a813c(1, v, 0) when w - 0xE7 == v, otherwise FUN_a00a813c(1, v, 1); sets bit 1 of byte 0xA802B08E and calls FUN_a014a8d4(1, 0, 0)",
       "name": "FUN_a009b95c",
       "status": "matched"
     },
@@ -4835,7 +4835,7 @@
     "ram:a00a2264": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00a27a4 (constants swapped)",
+      "comment": "Copies byte 0xA8025C55 into byte 0xA802D479 (0xA802D290 + 0x1E9), stores 2 in byte 0xA8025C56, calls FUN_a00a93bc(0) and FUN_a00a8c88(), stores 0xC0 in word 0xA802AFEC, calls FUN_a00ac718(0x38) and FUN_a00a9650(byte 0xA8025C56, 1), stores 0xFF in byte 0xA802D419, calls FUN_a00ab4bc(), FUN_a00a9468(1, 2), FUN_a00a9468(2, 5), FUN_a00a9468(0, 0), FUN_a00b344c(7), FUN_a00b34d4(0, 1) and FUN_a00dac00(), and sets bit 1 of byte 0xA802B08E",
       "name": "FUN_a00a2264",
       "status": "matched"
     },
@@ -4849,7 +4849,7 @@
     "ram:a00a2548": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00a27a4 (constants swapped)",
+      "comment": "Copies byte 0xA8025C55 into byte 0xA802D47B (0xA802D290 + 0x1EB), stores 2 in byte 0xA8025C56, calls FUN_a00a93bc(0) and FUN_a00a8c88(), stores 0xC1 in word 0xA802AFEC, calls FUN_a00ac718(0x39) and FUN_a00a9650(byte 0xA8025C56, 1), stores 0xFF in byte 0xA802D419, calls FUN_a00ab4bc(), FUN_a00a9468(1, 2), FUN_a00a9468(2, 5), FUN_a00a9468(0, 0), FUN_a00b344c(7), FUN_a00b34d4(0, 1) and FUN_a00dabc8(), and sets bit 1 of byte 0xA802B08E",
       "name": "FUN_a00a2548",
       "status": "matched"
     },
@@ -5593,7 +5593,7 @@
     "ram:a00abdc8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00abb98 (constants swapped)",
+      "comment": "v = byte 0xA802D2A3 (0xA802D290 + 0x13) + 1. When v > 100 stores 100; otherwise stores v and calls FUN_a00ab5f0(0x2c, 8, v, 7, 1), FUN_a0146a80(0x28, 8, 3, 0x742, 0), FUN_a0146a80(0x2b, 8, 1, 0x742, 0), FUN_a0146a80(0x32, 8, 1, 0x742, 0), FUN_a0146b50(0xe8, 0), FUN_a00b6ec8(0x29, 8, byte 0xA802D2A3) and FUN_a00d462c(). Sets bit 1 of byte 0xA802B08E",
       "name": "FUN_a00abdc8",
       "status": "matched"
     },
@@ -5704,14 +5704,14 @@
     "ram:a00ae174": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00adc98 (constants swapped)",
+      "comment": "m = (byte 0xA802D433 (0xA802D290 + 0x1A3) * 2 + 4) & 0xff. Calls FUN_a00b3ed0(0, 0, 0, 0); for m == 10 FUN_a00b32e4(0, 0, 0x792, 3, 10, 2, 0) and FUN_a00b32e4(1, 0, 0x3092, 3, 0xc, 1, 0x11), otherwise FUN_a00b32e4(0, 0, 0x792, 3, m, 3, 0); then FUN_a00b32e4(0, 0, 0x792, 0x12, m, 3, 0). Stores (byte + 1) % 3 back, calls FUN_a00ad86c(byte, 1) and sets bit 1 of byte 0xA802B08E",
       "name": "FUN_a00ae174",
       "status": "matched"
     },
     "ram:a00ae288": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00addac (constants swapped)",
+      "comment": "m = (byte 0xA802D433 (0xA802D290 + 0x1A3) * 2 + 4) & 0xff. Calls FUN_a00b3ed0(0, 0, 0, 0); for m == 10 FUN_a00b32e4(0, 0, 0x792, 3, 10, 2, 0) and FUN_a00b32e4(1, 0, 0x3092, 3, 0xc, 1, 0x11), otherwise FUN_a00b32e4(0, 0, 0x792, 3, m, 3, 0); then FUN_a00b32e4(0, 0, 0x792, 0x12, m, 3, 0). Stores (byte + 2) % 3 back, calls FUN_a00ad86c(byte, 1) and sets bit 1 of byte 0xA802B08E",
       "name": "FUN_a00ae288",
       "status": "matched"
     },
@@ -6329,7 +6329,7 @@
     "ram:a00bacc4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00bac3c (constants swapped)",
+      "comment": "k = p1 & 0xff. Fills the byte array 0xA802D078: [0] = FUN_a015463c(k, 0), [1] = 0x62, [2] .. [6] = FUN_a015463c(k, 2 .. 6), [10] = 0x0D",
       "name": "FUN_a00bacc4",
       "status": "matched"
     },
@@ -6652,14 +6652,14 @@
     "ram:a00bd4a4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00bd6e4 (constants swapped)",
+      "comment": "v = byte 0xA802D41A. Stores '0' in byte 7 of the byte array 0xA802D078 and, for v > 9, '1' and v + 0x26 in bytes 8 and 9, otherwise '0' and v + '0'; then calls FUN_a00bac3c(0x28), FUN_a00ba950(p1) and FUN_a00babe4(p1, 0xb)",
       "name": "FUN_a00bd4a4",
       "status": "matched"
     },
     "ram:a00bd520": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00bd6e4 (constants swapped)",
+      "comment": "v = byte 0xA802D41B. Stores '0' in byte 7 of the byte array 0xA802D078 and, for v > 9, '1' and v + 0x26 in bytes 8 and 9, otherwise '0' and v + '0'; then calls FUN_a00bac3c(0x29), FUN_a00ba950(p1) and FUN_a00babe4(p1, 0xb)",
       "name": "FUN_a00bd520",
       "status": "matched"
     },
@@ -7217,7 +7217,7 @@
     "ram:a00c0d10": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00c135c (constants swapped)",
+      "comment": "b = byte 0xA802D049 for p1 == 2, 0xA802D0A1 for p1 == 3, 0xA802D0D9 otherwise. When b - '0' (8 bits) is above 1 returns 0xFF; otherwise copies its bit 0 into bit 12 of word 0xA802D338 (0xA802D290 + 0xA8), calls FUN_a0090fd8(), FUN_a00baa6c(p1), FUN_a00ba950(p1) and FUN_a00bab80(p1, 6) and returns 0",
       "name": "FUN_a00c0d10",
       "status": "matched"
     },
@@ -7259,7 +7259,7 @@
     "ram:a00c12b4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00c9e9c (constants swapped)",
+      "comment": "b = byte 0xA802D049 for p1 == 2, 0xA802D0A1 for p1 == 3, 0xA802D0D9 otherwise. When b - '0' (8 bits) is above 1 returns 0xFF; otherwise copies its bit 0 into bit 22 of word 0xA802D33C (0xA802D290 + 0xAC), calls FUN_a0090fd8(), FUN_a00b88cc(), FUN_a00baa6c(p1), FUN_a00ba950(p1) and FUN_a00bab80(p1, 6) and returns 0",
       "name": "FUN_a00c12b4",
       "status": "matched"
     },
@@ -7553,7 +7553,7 @@
     "ram:a00c93e0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00c9470 (constants swapped)",
+      "comment": "k = p1 & 0xff; b = byte 0xA802D049 for k == 2, 0xA802D0A1 for k == 3, 0xA802D0D9 otherwise. Returns 0xFF when b != '1' or byte 0xA802D2AF == 0; otherwise calls FUN_a00d934c(), FUN_a00baa6c(k), FUN_a00ba950(k) and FUN_a00bab80(k, 6) and returns 0",
       "name": "FUN_a00c93e0",
       "status": "matched"
     },
@@ -7644,7 +7644,7 @@
     "ram:a00cab68": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00cb3a8 (constants swapped)",
+      "comment": "k = p1 & 0xff; b = byte 0xA802D049 for k == 2, 0xA802D0A1 for k == 3, 0xA802D0D9 otherwise. When b - '0' (8 bits) is above 1 returns 0xFF; otherwise stores b - '0' in byte 0xA802D471, calls FUN_a00dab20(), FUN_a00b88cc(), FUN_a00baa6c(k), FUN_a00ba950(k) and FUN_a00bab80(k, 6) and returns 0",
       "name": "FUN_a00cab68",
       "status": "matched"
     },
@@ -7658,14 +7658,14 @@
     "ram:a00cadd4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00cb3a8 (constants swapped)",
+      "comment": "k = p1 & 0xff; b = byte 0xA802D049 for k == 2, 0xA802D0A1 for k == 3, 0xA802D0D9 otherwise. When b - '0' (8 bits) is above 1 returns 0xFF; otherwise stores b - '0' in byte 0xA802D470, calls FUN_a00dab20(), FUN_a00b88cc(), FUN_a00baa6c(k), FUN_a00ba950(k) and FUN_a00bab80(k, 6) and returns 0",
       "name": "FUN_a00cadd4",
       "status": "matched"
     },
     "ram:a00cae64": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00c9e9c (constants swapped)",
+      "comment": "b = byte 0xA802D049 for p1 == 2, 0xA802D0A1 for p1 == 3, 0xA802D0D9 otherwise. When b - '0' (8 bits) is above 1 returns 0xFF; otherwise copies its bit 0 into bit 15 of word 0xA802D46C (0xA802D290 + 0x1DC), calls FUN_a00dab20(), FUN_a00b88cc(), FUN_a00baa6c(p1), FUN_a00ba950(p1) and FUN_a00bab80(p1, 6) and returns 0",
       "name": "FUN_a00cae64",
       "status": "matched"
     },
@@ -15612,14 +15612,14 @@
     "ram:a01397f4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a0139968 (constants swapped)",
+      "comment": "When p1 (low byte) differs from byte 0xA802A45A: reads a word w (preset to 0xFFFFFFFF) through func_0x4008c4d0(2, 0x20, &w, 1); while it is nonzero, calls func_0x4008d1a0(1) and reads again, at most 100 times. When w reads 0, writes (p1 & 0xff) | 0x82000000 through func_0x4008c5f8(2, 0x20, &w, 1). Then stores p1 in byte 0xA802A45A",
       "name": "FUN_a01397f4",
       "status": "matched"
     },
     "ram:a01398bc": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a013a454 (constants swapped)",
+      "comment": "Reads a word w (preset to 0xFFFFFFFF) through func_0x4008c4d0(2, 0x20, &w, 1); while it is nonzero, calls func_0x4008d1a0(1) and reads again, at most 100 times. When w reads 0, writes (p1 & 0xff) | 0x60000000 through func_0x4008c5f8(2, 0x20, &w, 1); otherwise returns without a write",
       "name": "FUN_a01398bc",
       "status": "matched"
     },
@@ -15710,7 +15710,7 @@
     "ram:a013a500": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a013a5b8 (constants swapped)",
+      "comment": "Reads a word w (preset to 0xFFFFFFFF) through func_0x4008c4d0(2, 0x20, &w, 1); while it is nonzero, calls func_0x4008d1a0(1) and reads again, at most 100 times. When w reads 0, writes 0x51000000 | (p1 & 0xff) << 16 | (sign-extended low 16 bits of p2) through func_0x4008c5f8(2, 0x20, &w, 1); otherwise returns without a write",
       "name": "FUN_a013a500",
       "status": "matched"
     },
@@ -15724,7 +15724,7 @@
     "ram:a013a670": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a013a5b8 (constants swapped)",
+      "comment": "Reads a word w (preset to 0xFFFFFFFF) through func_0x4008c4d0(2, 0x20, &w, 1); while it is nonzero, calls func_0x4008d1a0(1) and reads again, at most 100 times. When w reads 0, writes 0x53000000 | (p1 & 0xff) << 16 | (sign-extended low 16 bits of p2) through func_0x4008c5f8(2, 0x20, &w, 1); otherwise returns without a write",
       "name": "FUN_a013a670",
       "status": "matched"
     },
@@ -15789,7 +15789,7 @@
     "ram:a013aa38": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a013a454 (constants swapped)",
+      "comment": "Reads a word w (preset to 0xFFFFFFFF) through func_0x4008c4d0(2, 0x20, &w, 1); while it is nonzero, calls func_0x4008d1a0(1) and reads again, at most 100 times. When w reads 0, writes (p1 & 0xff) | 0x42000000 through func_0x4008c5f8(2, 0x20, &w, 1); otherwise returns without a write",
       "name": "FUN_a013aa38",
       "status": "matched"
     },
@@ -16647,7 +16647,7 @@
     "ram:a0144200": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a01440ac (constants swapped)",
+      "comment": "Returns FUN_a0129aa4(k) with k = 0, 1, 2 or 3 for p1 = 0x51, 0x61, 0x71 or 0x81 and k = 0xFF for any other p1",
       "name": "FUN_a0144200",
       "status": "matched"
     },
@@ -17115,14 +17115,14 @@
     "ram:a0147560": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a01474b0 (constants swapped)",
+      "comment": "k = p1 & 0xff; any k above 3 prints \"SYS remapping channel OOR\" through FUN_a00df170 and uses 0. v = bits 4-7 of word 0 of record k of the 0x78-byte records at 0xA802DF30. When v == 4 returns p1 & 0xff; otherwise calls FUN_a00f63bc(v) and returns FUN_a00f643c(p2, p2, p3, p4, p5, p6)",
       "name": "FUN_a0147560",
       "status": "matched"
     },
     "ram:a0147610": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a01474b0 (constants swapped)",
+      "comment": "k = p1 & 0xff; any k above 3 prints \"SYS remapping channel OOR\" through FUN_a00df170 and uses 0. v = bits 4-7 of word 0 of record k of the 0x78-byte records at 0xA802DF30. When v == 4 returns p1 & 0xff; otherwise calls FUN_a00f63bc(v) and returns FUN_a00f6508(p2, p2, p3, p4, p5, p6)",
       "name": "FUN_a0147610",
       "status": "matched"
     },
@@ -17692,7 +17692,7 @@
     "ram:a014a768": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a014a654 (constants swapped)",
+      "comment": "v = FUN_a01421c4(FUN_a0142218(FUN_a0125198(p1))). For v == 0x71 calls FUN_a0151aa4(0x10, 1) with k = 0, for v == 0x81 FUN_a0151aa4(0x20, 1) with k = 1; in both cases then FUN_a012b260(k, p2) and FUN_a0153970(0xA802E1A0, 0). Other v make no call",
       "name": "FUN_a014a768",
       "status": "matched"
     },
@@ -19456,7 +19456,7 @@
     "ram:a015e444": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a015e134 (constants swapped)",
+      "comment": "Clears word 0xA802E40C and calls r = FUN_a015e7fc(p2, p3, p4); when r == -1 and word 0xA802E40C is then nonzero, stores that word at *p1. Returns r",
       "name": "FUN_a015e444",
       "status": "matched"
     },

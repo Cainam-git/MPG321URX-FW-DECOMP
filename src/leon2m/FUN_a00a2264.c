@@ -1,5 +1,9 @@
 /* leon2m FUN_a00a2264 @ 0xa00a2264 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a00a27a4: same code, other constants.
+ * Copies byte 0xA8025C55 into byte 0xA802D479 (0xA802D290 + 0x1E9), stores 2 in byte 0xA8025C56, calls
+ * FUN_a00a93bc(0) and FUN_a00a8c88(), stores 0xC0 in word 0xA802AFEC, calls FUN_a00ac718(0x38) and
+ * FUN_a00a9650(byte 0xA8025C56, 1), stores 0xFF in byte 0xA802D419, calls FUN_a00ab4bc(), FUN_a00a9468(1, 2),
+ * FUN_a00a9468(2, 5), FUN_a00a9468(0, 0), FUN_a00b344c(7), FUN_a00b34d4(0, 1) and FUN_a00dac00(), and sets bit 1
+ * of byte 0xA802B08E. Same code as FUN_a00a27a4 with other constants.
  * See FUN_a00a27a4 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern unsigned char DAT_a8025c55;   // 0xa8025c55

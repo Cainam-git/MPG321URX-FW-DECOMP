@@ -1,5 +1,7 @@
 /* leon2m FUN_a00bd4a4 @ 0xa00bd4a4 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a00bd6e4: same code, other constants.
+ * v = byte 0xA802D41A. Stores '0' in byte 7 of the byte array 0xA802D078 and, for v > 9, '1' and v + 0x26 in bytes
+ * 8 and 9, otherwise '0' and v + '0'; then calls FUN_a00bac3c(0x28), FUN_a00ba950(p1) and FUN_a00babe4(p1, 0xb).
+ * Same code as FUN_a00bd6e4 with other constants.
  * See FUN_a00bd6e4 for the explanation; this copy's constants differ, so its comments were removed.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;

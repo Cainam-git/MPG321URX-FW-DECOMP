@@ -1,5 +1,6 @@
 /* leon2m FUN_a00bacc4 @ 0xa00bacc4 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a00bac3c: same code, other constants.
+ * k = p1 & 0xff. Fills the byte array 0xA802D078: [0] = FUN_a015463c(k, 0), [1] = 0x62, [2] .. [6] =
+ * FUN_a015463c(k, 2 .. 6), [10] = 0x0D. Same code as FUN_a00bac3c.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

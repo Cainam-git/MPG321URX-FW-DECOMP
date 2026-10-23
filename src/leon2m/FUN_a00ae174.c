@@ -1,5 +1,9 @@
 /* leon2m FUN_a00ae174 @ 0xa00ae174 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a00adc98: same code, other constants.
+ * m = (byte 0xA802D433 (0xA802D290 + 0x1A3) * 2 + 4) & 0xff. Calls FUN_a00b3ed0(0, 0, 0, 0); for m == 10
+ * FUN_a00b32e4(0, 0, 0x792, 3, 10, 2, 0) and FUN_a00b32e4(1, 0, 0x3092, 3, 0xc, 1, 0x11), otherwise
+ * FUN_a00b32e4(0, 0, 0x792, 3, m, 3, 0); then FUN_a00b32e4(0, 0, 0x792, 0x12, m, 3, 0). Stores (byte + 1) % 3
+ * back, calls FUN_a00ad86c(byte, 1) and sets bit 1 of byte 0xA802B08E. Same code as FUN_a00adc98 with other
+ * constants.
  * See FUN_a00adc98 for the explanation; this copy's constants differ, so its comments were removed.
  */
 struct St {

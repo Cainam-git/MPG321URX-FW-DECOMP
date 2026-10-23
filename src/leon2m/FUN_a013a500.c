@@ -1,5 +1,8 @@
 /* leon2m FUN_a013a500 @ 0xa013a500 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a013a5b8: same code, other constants.
+ * Reads a word w (preset to 0xFFFFFFFF) through func_0x4008c4d0(2, 0x20, &w, 1); while it is nonzero, calls
+ * func_0x4008d1a0(1) and reads again, at most 100 times. When w reads 0, writes 0x51000000 | (p1 & 0xff) << 16 |
+ * (sign-extended low 16 bits of p2) through func_0x4008c5f8(2, 0x20, &w, 1); otherwise returns without a write.
+ * Same code as FUN_a013a5b8 with other constants.
  * See FUN_a013a5b8 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern void func_0x4008c4d0();

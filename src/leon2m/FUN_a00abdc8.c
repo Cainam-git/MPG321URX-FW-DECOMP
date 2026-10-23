@@ -1,5 +1,8 @@
 /* leon2m FUN_a00abdc8 @ 0xa00abdc8 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a00abb98: same code, other constants.
+ * v = byte 0xA802D2A3 (0xA802D290 + 0x13) + 1. When v > 100 stores 100; otherwise stores v and calls
+ * FUN_a00ab5f0(0x2c, 8, v, 7, 1), FUN_a0146a80(0x28, 8, 3, 0x742, 0), FUN_a0146a80(0x2b, 8, 1, 0x742, 0),
+ * FUN_a0146a80(0x32, 8, 1, 0x742, 0), FUN_a0146b50(0xe8, 0), FUN_a00b6ec8(0x29, 8, byte 0xA802D2A3) and
+ * FUN_a00d462c(). Sets bit 1 of byte 0xA802B08E. Same code as FUN_a00abb98 with other constants.
  * See FUN_a00abb98 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern unsigned char DAT_a802d290[];

@@ -8105,14 +8105,14 @@
     "ram:a00d2210": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00d2300 (constants swapped)",
+      "comment": "Reads w = func_0xa0f71528(0xD0013FD0), calls func_0xa0f714b8(&w, b, b, p2 & 0xff) with b = 0x1f when p1 == 0 and 0x1e otherwise, and writes w back through func_0xa0f71534(0xD0013FD0, w). Returns 1",
       "name": "FUN_a00d2210",
       "status": "matched"
     },
     "ram:a00d2288": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00d2300 (constants swapped)",
+      "comment": "Reads w = func_0xa0f71528(0xD0013FE0), calls func_0xa0f714b8(&w, b, b, p2 & 0xff) with b = 0x1f when p1 == 0 and 0x1e otherwise, and writes w back through func_0xa0f71534(0xD0013FE0, w). Returns 1",
       "name": "FUN_a00d2288",
       "status": "matched"
     },

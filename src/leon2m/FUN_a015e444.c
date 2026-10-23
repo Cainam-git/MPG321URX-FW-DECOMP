@@ -1,5 +1,6 @@
 /* leon2m FUN_a015e444 @ 0xa015e444 (-mcpu=v8 -O2 -g)
- * Twin of FUN_a015e134: same code, other constants.
+ * Clears word 0xA802E40C and calls r = FUN_a015e7fc(p2, p3, p4); when r == -1 and word 0xA802E40C is then nonzero,
+ * stores that word at *p1. Returns r. Same code as FUN_a015e134.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;
