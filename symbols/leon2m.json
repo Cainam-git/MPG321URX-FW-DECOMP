@@ -11229,6 +11229,13 @@
       "name": "FUN_a010c61c",
       "status": "matched"
     },
+    "ram:a010d530": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores three bytes in channel record 0xa802d744/784/7c4 +0x3b..+0x3d and writes (x*255+50)/100-0x80 into bits 16..23 of block words 0x3d..0x3f in tables 0x19aed8 and 0x19aecc",
+      "name": "FUN_a010d530",
+      "status": "matched"
+    },
     "ram:a010d914": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
