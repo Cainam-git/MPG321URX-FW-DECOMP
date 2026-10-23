@@ -13498,6 +13498,12 @@
       "name": "FUN_a0125350",
       "status": "matched"
     },
+    "ram:a0125364": {
+      "by": "hand",
+      "comment": "returns 0",
+      "name": "FUN_a0125364",
+      "status": "matched"
+    },
     "ram:a012536c": {
       "by": "hand",
       "comment": "Returns (byte at 0xa802c9fa >> param_1) & 1, shifting by the raw parameter with no & 0x1f mask; GCC emits sra for the promoted unsigned char operand.",
