@@ -2125,6 +2125,13 @@
       "name": "FUN_CODE_de50",
       "status": "matched"
     },
+    "CODE:de87": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Sets bit 0x16 (BITS_22_6) and XDATA 0xA780 = 2, then tail jump to FUN_CODE_a959 (the same ",
+      "name": "FUN_CODE_de87",
+      "status": "matched"
+    },
     "CODE:de92": {
       "by": "hand",
       "comment": "bit: dee2() == 0",
