@@ -14906,6 +14906,13 @@
       "name": "FUN_a012eb4c",
       "status": "matched"
     },
+    "ram:a012ec24": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "unpacks 10-bit values from s (low 2-bit groups in every fifth byte), interpolates 4 points between consecutive values (8 at the end) and writes them with FUN_a010ae8c(ch, idx, n, buf)",
+      "name": "FUN_a012ec24",
+      "status": "matched"
+    },
     "ram:a012f12c": {
       "by": "autoc",
       "comment": "empty function (returns at once)",
