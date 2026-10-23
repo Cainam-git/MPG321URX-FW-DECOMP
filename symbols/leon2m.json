@@ -8984,7 +8984,7 @@
       "status": "matched"
     },
     "ram:a00ea1f0": {
-      "by": "permuter",
+      "by": "h49",
       "comment": "FUN_a00e9c80(p1, p2, p3, i, p4, p6) for i = 0 .. p5 - 1; returns p1",
       "name": "FUN_a00ea1f0",
       "status": "matched"
