@@ -1188,6 +1188,12 @@
       "name": "FUN_CODE_b2b0",
       "status": "matched"
     },
+    "CODE:b33e": {
+      "by": "hand",
+      "comment": "writes v to one of 13 XDATA registers selected by sel (switch with jump table)",
+      "name": "FUN_CODE_b33e",
+      "status": "matched"
+    },
     "CODE:b456": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
