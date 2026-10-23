@@ -4533,6 +4533,12 @@
       "name": "FUN_a009fe98",
       "status": "matched"
     },
+    "ram:a00a0268": {
+      "by": "h43",
+      "comment": "copies registers 0x80-0x9c of the port block to a byte buffer little-endian, or clears 0x22 bytes when register 0x80 is 0",
+      "name": "FUN_a00a0268",
+      "status": "matched"
+    },
     "ram:a00a03c8": {
       "by": "hand",
       "comment": "returns 1 when five byte tests on the two words at the entry's register pointer pass, else 0",
