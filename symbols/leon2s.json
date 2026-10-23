@@ -7628,6 +7628,12 @@
       "name": "FUN_a00d66bc",
       "status": "matched"
     },
+    "ram:a00d6724": {
+      "by": "h43",
+      "comment": "unpacks a nibble-packed record into a 24-byte buffer and copies two bytes of bit-fields after it",
+      "name": "FUN_a00d6724",
+      "status": "matched"
+    },
     "ram:a00d6890": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
