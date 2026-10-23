@@ -7663,6 +7663,12 @@
       "name": "FUN_a00d3d30",
       "status": "matched"
     },
+    "ram:a00d4084": {
+      "by": "hand",
+      "comment": "limits byte 0xa802d2d9 to 5 and tail-calls FUN_a01471a0(0, 0xd, 3 * value)",
+      "name": "FUN_a00d4084",
+      "status": "matched"
+    },
     "ram:a00d40c8": {
       "by": "hand",
       "comment": "v = 145660(ch, 0x14) clamped to 0x3f; 145808(ch, 0x14, v, 1)",
