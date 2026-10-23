@@ -1694,6 +1694,13 @@
       "name": "FUN_CODE_d095",
       "status": "matched"
     },
+    "CODE:d0cc": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "calls FUN_CODE_8b58(sector, cmd) for n + 1 consecutive sectors",
+      "name": "FUN_CODE_d0cc",
+      "status": "matched"
+    },
     "CODE:d13a": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
