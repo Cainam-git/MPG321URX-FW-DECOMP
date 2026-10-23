@@ -6205,6 +6205,13 @@
       "name": "FUN_a00b8ca8",
       "status": "matched"
     },
+    "ram:a00b8e7c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "set-up calls, then by byte 0xa802d41a[page] (1..11) rows / FUN_a00ad86c / FUN_a0146b20 calls with byte 0xa8025c56, then the DAT_001928b0 rows",
+      "name": "FUN_a00b8e7c",
+      "status": "matched"
+    },
     "ram:a00ba068": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
