@@ -7206,6 +7206,12 @@
       "name": "FUN_a00c8b18",
       "status": "matched"
     },
+    "ram:a00c8c64": {
+      "by": "h53",
+      "comment": "reads a two-byte header into the DAT_a8078bb0 record, programs registers through func_0xa0fb65c4 and copies 20 read-back bytes to DAT_a807d238",
+      "name": "FUN_a00c8c64",
+      "status": "matched"
+    },
     "ram:a00c90b4": {
       "by": "h43",
       "comment": "reads 20 bytes with FUN_a00c81f8 and compares them group-reversed with DAT_a807d238, setting the record state field",
