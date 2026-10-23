@@ -811,6 +811,13 @@
       "name": "FUN_CODE_6db5",
       "status": "matched"
     },
+    "CODE:71f0": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "register set-up of the 0x5000/0x5100 blocks and 0xD9xx/0xE1xx bits, then FUN_CODE_a142(1)",
+      "name": "FUN_CODE_71f0",
+      "status": "matched"
+    },
     "CODE:7352": {
       "by": "hand",
       "comment": "Keil common-entry (L?) code in front of FUN_CODE_738c, in FUN_CODE_738c's code segment; emitted by compiling src/8051_bank1/FUN_CODE_0b0d.c, bytes judged with FUN_CODE_738c over 0x7352..0x74af",
