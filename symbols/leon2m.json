@@ -14539,6 +14539,12 @@
       "name": "FUN_a012b394",
       "status": "matched"
     },
+    "ram:a012b3f0": {
+      "by": "hand",
+      "comment": "returns DAT_a802cb00[i]",
+      "name": "FUN_a012b3f0",
+      "status": "matched"
+    },
     "ram:a012b418": {
       "by": "hand",
       "comment": "bytes +8/+0xa/+0xb of the 22-byte entry p1 at 0xA802D8AE = p2/p3/p4, then FUN_a0137d08(p1..p5)",
