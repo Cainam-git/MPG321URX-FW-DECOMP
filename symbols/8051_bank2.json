@@ -790,6 +790,12 @@
       "name": "FUN_CODE_af07",
       "status": "matched"
     },
+    "CODE:b1a9": {
+      "by": "hand",
+      "comment": "Write n 32-byte blocks of buf to port 0xCD31 after writing the 32-bit address to 0xCD35..0xCD38, word bytes in order or reversed by f",
+      "name": "FUN_CODE_b1a9",
+      "status": "matched"
+    },
     "CODE:b317": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
