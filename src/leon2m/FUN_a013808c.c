@@ -1,5 +1,6 @@
 /* leon2m FUN_a013808c @ 0xa013808c (-mcpu=v8 -O2 -g)
- * Twin of FUN_a013851c: same code, other constants.
+ * Calls FUN_a01370dc(0x5c, 4, buf, 0) with the local bytes buf = {p1, 0, 0, 0} and FUN_a0137344(1); returns byte
+ * 0xA802CBA3. Same code as FUN_a013851c with other constants.
  */
 extern void FUN_a01370dc();
 extern int FUN_a0137344();

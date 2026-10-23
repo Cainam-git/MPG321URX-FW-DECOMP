@@ -1,5 +1,7 @@
 /* leon2m FUN_a01266b0 @ 0xa01266b0 (-mcpu=v8 -O3 -g)
- * Twin of FUN_a0126878: same code, other constants.
+ * When FUN_a01248c8() returns nonzero, reads two bytes of register 0x1E of I2C device 0x60 into 0xA802D888 through
+ * FUN_a0147ae8(0x60, 2, 0x1e, 5, 0, 0xA802D888, 2). Returns the bytes at 0xA802D888 and 0xA802D889 as a big-endian
+ * halfword. Same code as FUN_a0126878 with other constants.
  */
 extern unsigned char FUN_a01248c8(void);   /* GPIO group 9 bit 3 is high */
 extern unsigned short FUN_a0147ae8();      /* I2C register read */

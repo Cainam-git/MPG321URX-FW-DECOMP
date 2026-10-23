@@ -1,5 +1,6 @@
 /* leon2m FUN_a00d45f8 @ 0xa00d45f8 (-mcpu=v8 -Os -g)
- * Twin of FUN_a00d4690: same code, other constants.
+ * Limits byte 0xA802D2A2 (0xA802D290 + 0x12) to at most 100, stores the result back and calls FUN_a014a11c(0,
+ * value). Same code as FUN_a00d4690 with other constants.
  */
 extern unsigned char DAT_a802d290[]; /* 0xa802d290 */
 extern int FUN_a014a11c(int, int);   /* 0xa014a11c */

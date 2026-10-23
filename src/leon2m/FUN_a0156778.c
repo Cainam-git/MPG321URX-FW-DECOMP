@@ -1,5 +1,6 @@
 /* leon2m FUN_a0156778 @ 0xa0156778 (-mcpu=v8 -O2 -g)
- * Twin of FUN_a01567dc: same code, other constants.
+ * Unpacks the doubles a and b with FUN_a015734c into two 6-word local buffers; returns -1 when word 0 of either
+ * buffer is <= 1, otherwise FUN_a0157480(buf1, buf2). Same code as FUN_a01567dc.
  * See FUN_a01567dc for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern void FUN_a015734c(double *, unsigned int *);

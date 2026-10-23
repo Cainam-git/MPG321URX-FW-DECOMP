@@ -2296,7 +2296,7 @@
     "ram:a0088688": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a00b5048 (constants swapped)",
+      "comment": "Returns bit 3 of byte 0xA802AF99 and clears that bit",
       "name": "FUN_a0088688",
       "status": "matched"
     },
@@ -6443,14 +6443,14 @@
     "ram:a00bcb80": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00be424 (constants swapped)",
+      "comment": "Stores '0', '0' and '0' + bit 31 of word 0xA802D3AC in bytes 7, 8 and 9 of the byte array 0xA802D078, then calls FUN_a00bac3c(0x17), FUN_a00ba950(p1) and FUN_a00babe4(p1, 0xb)",
       "name": "FUN_a00bcb80",
       "status": "matched"
     },
     "ram:a00bcbcc": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00be38c (constants swapped)",
+      "comment": "Stores '0', '0' and '0' + bit 12 of word 0xA802D338 in bytes 7, 8 and 9 of the byte array 0xA802D078, then calls FUN_a00bac3c(0x18), FUN_a00ba950(p1) and FUN_a00babe4(p1, 0xb)",
       "name": "FUN_a00bcbcc",
       "status": "matched"
     },
@@ -6506,14 +6506,14 @@
     "ram:a00bce2c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00be38c (constants swapped)",
+      "comment": "Stores '0', '0' and '0' + bit 7 of word 0xA802D338 in bytes 7, 8 and 9 of the byte array 0xA802D078, then calls FUN_a00bac3c(0x20), FUN_a00ba950(p1) and FUN_a00babe4(p1, 0xb)",
       "name": "FUN_a00bce2c",
       "status": "matched"
     },
     "ram:a00bce7c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00be38c (constants swapped)",
+      "comment": "Stores '0', '0' and '0' + bit 13 of word 0xA802D338 in bytes 7, 8 and 9 of the byte array 0xA802D078, then calls FUN_a00bac3c(0x21), FUN_a00ba950(p1) and FUN_a00babe4(p1, 0xb)",
       "name": "FUN_a00bce7c",
       "status": "matched"
     },
@@ -6534,7 +6534,7 @@
     "ram:a00bd244": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00be38c (constants swapped)",
+      "comment": "Stores '0', '0' and '0' + bit 4 of word 0xA802D3AC in bytes 7, 8 and 9 of the byte array 0xA802D078, then calls FUN_a00bac3c(0x24), FUN_a00ba950(p1) and FUN_a00babe4(p1, 0xb)",
       "name": "FUN_a00bd244",
       "status": "matched"
     },
@@ -6771,7 +6771,7 @@
     "ram:a00be340": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a00be424 (constants swapped)",
+      "comment": "Stores '0', '0' and '0' + bit 31 of word 0xA802D484 in bytes 7, 8 and 9 of the byte array 0xA802D078, then calls FUN_a00bac3c(0x6e), FUN_a00ba950(p1) and FUN_a00babe4(p1, 0xb)",
       "name": "FUN_a00be340",
       "status": "matched"
     },
@@ -7847,14 +7847,14 @@
     "ram:a00d45f8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00d4690 (constants swapped)",
+      "comment": "limits byte 0xA802D2A2 to at most 100, stores it back and calls FUN_a014a11c(0, value)",
       "name": "FUN_a00d45f8",
       "status": "matched"
     },
     "ram:a00d462c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00d46c4 (constants swapped)",
+      "comment": "limits byte 0xA802D2A3 to at most 100, stores it back and calls FUN_a014a11c(1, value)",
       "name": "FUN_a00d462c",
       "status": "matched"
     },
@@ -8062,7 +8062,7 @@
     "ram:a00d79b0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a00d7b20 (constants swapped)",
+      "comment": "Calls FUN_a00d6054(1, buf1) with a 16-byte local buffer, copies it into a second 16-byte buffer, then calls FUN_a0149b8c(1, buf2) and FUN_a014a060(1)",
       "name": "FUN_a00d79b0",
       "status": "matched"
     },
@@ -8339,7 +8339,7 @@
     "ram:a00dab90": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a00dabc8 (constants swapped)",
+      "comment": "FUN_a0127154(0) when byte 0xA802D47C is 0, otherwise FUN_a0127154(byte 0xA802D47D)",
       "name": "FUN_a00dab90",
       "status": "matched"
     },
@@ -8865,14 +8865,14 @@
     "ram:a00e021c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a002c250 (constants swapped)",
+      "comment": "Returns the word at address p1",
       "name": "FUN_a00e021c",
       "status": "matched"
     },
     "ram:a00e0228": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a002c25c (constants swapped)",
+      "comment": "Stores p2 in the word at address p1",
       "name": "FUN_a00e0228",
       "status": "matched"
     },
@@ -10451,7 +10451,7 @@
     "ram:a0101c64": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a0109110 (constants swapped)",
+      "comment": "Sets bit 7 of register 0xCF016118 when p1 != 0, otherwise clears it",
       "name": "FUN_a0101c64",
       "status": "matched"
     },
@@ -13329,7 +13329,7 @@
     "ram:a01264e8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a0126878 (constants swapped)",
+      "comment": "when FUN_a01248c8() is nonzero reads register 0x5E of I2C device 0x60 into 0xA802D888 (FUN_a0147ae8); returns the two bytes there as a big-endian halfword",
       "name": "FUN_a01264e8",
       "status": "matched"
     },
@@ -13343,7 +13343,7 @@
     "ram:a01266b0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a0126878 (constants swapped)",
+      "comment": "when FUN_a01248c8() is nonzero reads register 0x1E of I2C device 0x60 into 0xA802D888 (FUN_a0147ae8); returns the two bytes there as a big-endian halfword",
       "name": "FUN_a01266b0",
       "status": "matched"
     },
@@ -13378,14 +13378,14 @@
     "ram:a01269a4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a0126878 (constants swapped)",
+      "comment": "when FUN_a01248c8() is nonzero reads register 0xD0 of I2C device 0x60 into 0xA802D888 (FUN_a0147ae8); returns the two bytes there as a big-endian halfword",
       "name": "FUN_a01269a4",
       "status": "matched"
     },
     "ram:a01269f8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a0126878 (constants swapped)",
+      "comment": "when FUN_a01248c8() is nonzero reads register 0x10 of I2C device 0x60 into 0xA802D888 (FUN_a0147ae8); returns the two bytes there as a big-endian halfword",
       "name": "FUN_a01269f8",
       "status": "matched"
     },
@@ -13691,7 +13691,7 @@
     "ram:a0129af0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a0129a5c (constants swapped)",
+      "comment": "Returns the number of set bits among bits 0-3 of halfword 0xA802CA00 (tested in the order 0, 1, 3, 2)",
       "name": "FUN_a0129af0",
       "status": "matched"
     },
@@ -14402,7 +14402,7 @@
     "ram:a01377a4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "twin of FUN_a01377e8 (constants swapped)",
+      "comment": "Clears a word w, reads into it through func_0x4008c4d0(1, 0xc, &w, 1) and returns 1 when p1 & (bits 8-15 of w) is nonzero, otherwise 0",
       "name": "FUN_a01377a4",
       "status": "matched"
     },
@@ -14499,7 +14499,7 @@
     "ram:a0137cdc": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a01381c4 (constants swapped)",
+      "comment": "Calls FUN_a01370dc(0x28, 4, buf, 0) with the local bytes buf = {p1, 0, 0, 0}",
       "name": "FUN_a0137cdc",
       "status": "matched"
     },
@@ -14536,7 +14536,7 @@
     "ram:a0137fa0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a01381c4 (constants swapped)",
+      "comment": "Calls FUN_a01370dc(0x43, 4, buf, 0) with the local bytes buf = {p1, 0, 0, 0}",
       "name": "FUN_a0137fa0",
       "status": "matched"
     },
@@ -14556,7 +14556,7 @@
     "ram:a013808c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a013851c (constants swapped)",
+      "comment": "Calls FUN_a01370dc(0x5c, 4, buf, 0) with the local bytes buf = {p1, 0, 0, 0} and FUN_a0137344(1); returns byte 0xA802CBA3",
       "name": "FUN_a013808c",
       "status": "matched"
     },
@@ -14639,7 +14639,7 @@
     "ram:a01384e4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a01384ac (constants swapped)",
+      "comment": "Calls FUN_a01370dc(0x22, 4, buf, 0) with the local bytes buf = {p1, p2, 0, 0}, then FUN_a0137344(1)",
       "name": "FUN_a01384e4",
       "status": "matched"
     },
@@ -14665,7 +14665,7 @@
     "ram:a0138610": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a01381c4 (constants swapped)",
+      "comment": "Calls FUN_a01370dc(0x91, 4, buf, 0) with the local bytes buf = {p1, 0, 0, 0}",
       "name": "FUN_a0138610",
       "status": "matched"
     },
@@ -14786,7 +14786,7 @@
     "ram:a0138f04": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a0138eb4 (constants swapped)",
+      "comment": "Calls FUN_a01370dc(0xa2, 4, buf, 0) with four local zero bytes",
       "name": "FUN_a0138f04",
       "status": "matched"
     },
@@ -15070,7 +15070,7 @@
     "ram:a013adcc": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a0138eb4 (constants swapped)",
+      "comment": "Calls FUN_a013ab9c(0x95, 4, buf, 0) with four local zero bytes",
       "name": "FUN_a013adcc",
       "status": "matched"
     },
@@ -17800,7 +17800,7 @@
     "ram:a01566b0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a0156714 (constants swapped)",
+      "comment": "Unpacks the doubles a and b with FUN_a015734c into two 6-word local buffers; returns 1 when word 0 of either buffer is <= 1, otherwise FUN_a0157480(buf1, buf2)",
       "name": "FUN_a01566b0",
       "status": "matched"
     },
@@ -17813,7 +17813,7 @@
     "ram:a0156778": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a01567dc (constants swapped)",
+      "comment": "Unpacks the doubles a and b with FUN_a015734c into two 6-word local buffers; returns -1 when word 0 of either buffer is <= 1, otherwise FUN_a0157480(buf1, buf2)",
       "name": "FUN_a0156778",
       "status": "matched"
     },
@@ -18493,7 +18493,7 @@
     "ram:a015e774": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a0156714 (constants swapped)",
+      "comment": "Unpacks the doubles a and b with FUN_a015734c into two 6-word local buffers; returns 1 when word 0 of either buffer is <= 1, otherwise FUN_a0157480(buf1, buf2)",
       "name": "FUN_a015e774",
       "status": "matched"
     },
@@ -18594,14 +18594,14 @@
     "ram:a015ea98": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a015e9d8 (constants swapped)",
+      "comment": "Calls the function pointer in word 0xA802CFDC with p1 and returns its result when the pointer is not null; otherwise returns 0",
       "name": "FUN_a015ea98",
       "status": "matched"
     },
     "ram:a015eac8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "twin of FUN_a015e9d8 (constants swapped)",
+      "comment": "Calls the function pointer in word 0xA802CFD8 with p1 and returns its result when the pointer is not null; otherwise returns 0",
       "name": "FUN_a015eac8",
       "status": "matched"
     },

@@ -1,5 +1,6 @@
 /* leon2s FUN_a0087710 @ 0xa0087710 (-mcpu=v8 -Os -g)
- * Twin of FUN_a00876ec: same code, other constants.
+ * Returns byte +0x14 of record p1 & 0xff of the 40-byte records at 0xA807A928. Same code as FUN_a00876ec with
+ * other constants.
  * See FUN_a00876ec for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern unsigned char ARR_a807a928[];

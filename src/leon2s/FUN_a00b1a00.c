@@ -1,5 +1,6 @@
 /* leon2s FUN_a00b1a00 @ 0xa00b1a00 (-mcpu=v8 -Os -g)
- * Twin of FUN_a00b1b98: same code, other constants.
+ * Sets bit 6 of register 0x9F120048, then clears bit 22 of it, then sets bit 6 of register 0x9F120080 and bit 5 of
+ * register 0x9F120034. Same code as FUN_a00b1b98 with other constants.
  */
 #define REG_9f120048 (*(volatile unsigned int *)0x9f120048)
 #define REG_9f120080 (*(volatile unsigned int *)0x9f120080)

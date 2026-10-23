@@ -1,5 +1,6 @@
 /* leon2s FUN_a00afd3c @ 0xa00afd3c (-mcpu=v8 -Os -g)
- * Twin of FUN_a00afd04: same code, other constants.
+ * k = p1 & 0xff. Stores p2 in byte +0x116 of record k of the 300-byte records at 0xA807DC18, then calls
+ * FUN_a00abff0(k), FUN_a00ac66c(k) and FUN_a00af98c(k). Same code as FUN_a00afd04 with other constants.
  */
 extern int FUN_a00abff0(int);
 extern int FUN_a00ac66c(int);

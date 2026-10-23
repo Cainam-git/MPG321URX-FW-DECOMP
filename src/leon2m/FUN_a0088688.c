@@ -1,5 +1,5 @@
 /* leon2m FUN_a0088688 @ 0xa0088688 (-mcpu=v8 -O2 -g)
- * Twin of FUN_a00b5048: same code, other constants.
+ * Returns bit 3 of byte 0xA802AF99 and clears that bit. Same code as FUN_a00b5048 with other constants.
  */
 extern unsigned char DAT_a802af99;
 

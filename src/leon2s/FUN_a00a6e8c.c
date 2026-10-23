@@ -1,5 +1,6 @@
 /* leon2s FUN_a00a6e8c @ 0xa00a6e8c (-mcpu=v8 -Os -g)
- * Twin of FUN_a00a6938: same code, other constants.
+ * Reads v = FUN_a00a6da8(p1, p2); while a further read differs from v (16 bits) and at most 5 retries are done,
+ * reads v again. Returns v. Same code as FUN_a00a6938.
  * See FUN_a00a6938 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern unsigned int FUN_a00a6da8(unsigned char, unsigned short);

@@ -2883,7 +2883,7 @@
     "ram:a0087710": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00876ec (constants swapped)",
+      "comment": "Returns byte +0x14 of record p1 & 0xff of the 40-byte records at 0xA807A928",
       "name": "FUN_a0087710",
       "status": "matched"
     },
@@ -5072,7 +5072,7 @@
     "ram:a00a2320": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a009c794 (constants swapped)",
+      "comment": "q = word +4 of record p1 of the 0x34-byte table 0xA807DB00: p2 == 1 -> FUN_a00a73ac(0x15, q + 0x24), else FUN_a00a73d4(0x15, q + 0x24)",
       "name": "FUN_a00a2320",
       "status": "matched"
     },
@@ -5611,7 +5611,7 @@
     "ram:a00a6e8c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00a6938 (constants swapped)",
+      "comment": "Reads v = FUN_a00a6da8(p1, p2); while a further read differs from v (16 bits) and at most 5 retries are done, reads v again. Returns v",
       "name": "FUN_a00a6e8c",
       "status": "matched"
     },
@@ -6173,7 +6173,7 @@
     "ram:a00acb00": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00acac0 (constants swapped)",
+      "comment": "k = p1 & 0xff; returns ((FUN_a00a6bb8(k, 0x8b) & 0xff) << 8) + (FUN_a00a6bb8(k, 0x8c) & 0xff) as 16 bits",
       "name": "FUN_a00acb00",
       "status": "matched"
     },
@@ -6336,7 +6336,7 @@
     "ram:a00add0c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a0087d50 (constants swapped)",
+      "comment": "Calls FUN_a00a6c98(p1, 3, 0x20, 1) when p2 != 0, otherwise FUN_a00a6c98(p1, 3, 0x20, 0)",
       "name": "FUN_a00add0c",
       "status": "matched"
     },
@@ -6566,7 +6566,7 @@
     "ram:a00afd3c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00afd04 (constants swapped)",
+      "comment": "k = p1 & 0xff. Stores p2 in byte +0x116 of record k of the 300-byte records at 0xA807DC18, then calls FUN_a00abff0(k), FUN_a00ac66c(k) and FUN_a00af98c(k)",
       "name": "FUN_a00afd3c",
       "status": "matched"
     },
@@ -6979,7 +6979,7 @@
     "ram:a00b1a00": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b1b98 (constants swapped)",
+      "comment": "Sets bit 6 of register 0x9F120048, then clears bit 22 of it, then sets bit 6 of register 0x9F120080 and bit 5 of register 0x9F120034",
       "name": "FUN_a00b1a00",
       "status": "matched"
     },
@@ -7294,7 +7294,7 @@
     "ram:a00c4e4c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a0088f28 (constants swapped)",
+      "comment": "Returns 1 when bit 5 of FUN_a0fb7e98(p1 & 0xff, 0x2e) is set, otherwise 0",
       "name": "FUN_a00c4e4c",
       "status": "matched"
     },

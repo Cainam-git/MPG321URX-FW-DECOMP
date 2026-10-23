@@ -1,5 +1,6 @@
 /* leon2m FUN_a00d79b0 @ 0xa00d79b0 (-mcpu=v8 -O2 -g)
- * Twin of FUN_a00d7b20: same code, other constants.
+ * Calls FUN_a00d6054(1, buf1) with a 16-byte local buffer, copies it into a second 16-byte buffer, then calls
+ * FUN_a0149b8c(1, buf2) and FUN_a014a060(1). Same code as FUN_a00d7b20.
  * See FUN_a00d7b20 for the explanation; this copy's constants differ, so its comments were removed.
  */
 extern void FUN_a00d6054(int, void *);

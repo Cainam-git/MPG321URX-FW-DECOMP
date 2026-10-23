@@ -1,7 +1,8 @@
 /* leon2m FUN_a015eac8 @ 0xa015eac8 (-mcpu=v8 -O2 -g)
- * Twin of FUN_a015e9d8: same code, other constants.
+ * Calls the function pointer in word 0xA802CFD8 with p1 and returns its result when the pointer is not null;
+ * otherwise returns 0. Same code as FUN_a015e9d8 with other constants.
  */
-/* Global function pointer at 0xa802cfd8 (DRAM) */
+/* Global function pointer at 0xa802cfd8 */
 typedef int (*code)(int);
 extern code _DAT_a802cfd8;
 
