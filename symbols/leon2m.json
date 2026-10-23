@@ -17178,6 +17178,12 @@
       "name": "FUN_a014782c",
       "status": "matched"
     },
+    "ram:a01478a8": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a01478a8",
+      "status": "matched"
+    },
     "ram:a01479ec": {
       "by": "autoc",
       "comment": "Calls FUN_a0124f44() when p1 != 0, otherwise FUN_a0124f24()",
