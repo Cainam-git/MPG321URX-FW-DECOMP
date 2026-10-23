@@ -4737,6 +4737,13 @@
       "name": "FUN_a00a1cf0",
       "status": "matched"
     },
+    "ram:a00a1eec": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "decrements byte 0xa8025c55 down to the FUN_a00a14bc minimum and passes its 1..100 position between minimum and maximum to FUN_a00b7e68",
+      "name": "FUN_a00a1eec",
+      "status": "matched"
+    },
     "ram:a00a20d0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
