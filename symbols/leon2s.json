@@ -4195,6 +4195,12 @@
       "name": "FUN_a0094594",
       "status": "matched"
     },
+    "ram:a00945f0": {
+      "by": "h42",
+      "comment": "sets the H and V polarity fields with FUN_a00a80cc from FUN_a0091c10/FUN_a0091be8 and prints the Desired Polarity messages",
+      "name": "FUN_a00945f0",
+      "status": "matched"
+    },
     "ram:a009498c": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
