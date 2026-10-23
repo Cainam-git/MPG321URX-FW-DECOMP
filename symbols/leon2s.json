@@ -2121,6 +2121,12 @@
       "name": "FUN_a0073c24",
       "status": "matched"
     },
+    "ram:a0073c44": {
+      "by": "h55",
+      "comment": "Port initial PHY settings loop over ports 0..3 from the per-port record bytes, with debug prints",
+      "name": "DRV_HDMI_InitialSettings",
+      "status": "matched"
+    },
     "ram:a0074bf8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
