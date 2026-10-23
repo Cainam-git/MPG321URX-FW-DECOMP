@@ -13844,6 +13844,12 @@
       "name": "FUN_a0125ca4",
       "status": "matched"
     },
+    "ram:a0125cac": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a0125cac",
+      "status": "matched"
+    },
     "ram:a0125cb4": {
       "by": "hand",
       "comment": "for m 0..3 calls func_0x4008c86c(0xff, 8, x) twice with x = 0xfe or 1 per bit of m",
