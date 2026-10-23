@@ -15970,6 +15970,12 @@
       "name": "FUN_a013c144",
       "status": "matched"
     },
+    "ram:a013c894": {
+      "by": "hand",
+      "comment": "returns 0",
+      "name": "FUN_a013c894",
+      "status": "matched"
+    },
     "ram:a013c910": {
       "by": "hand",
       "comment": "byte copy (memcpy-like, returns dst)",
