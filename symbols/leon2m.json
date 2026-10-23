@@ -1769,6 +1769,13 @@
       "name": "FUN_a002c204",
       "status": "matched"
     },
+    "ram:a002c218": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the low byte of register 0xcf03c894",
+      "name": "FUN_a002c218",
+      "status": "matched"
+    },
     "ram:a002c250": {
       "by": "hand",
       "comment": "Reg_Read32: return the 32-bit word at addr",
