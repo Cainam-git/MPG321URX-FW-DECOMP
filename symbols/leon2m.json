@@ -7638,6 +7638,13 @@
       "name": "FUN_a00d5c2c",
       "status": "matched"
     },
+    "ram:a00d5cd8": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets DAT_a802d290+0x3e from FUN_a014468c(FUN_a01445fc(FUN_a014448c(x))) or 0 by bits of +0xac/+0xa8, then FUN_a01478b0(+0x3e, 7)",
+      "name": "FUN_a00d5cd8",
+      "status": "matched"
+    },
     "ram:a00d5e84": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
