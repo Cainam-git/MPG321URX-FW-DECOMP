@@ -1,5 +1,6 @@
 /* leon2m FUN_a0133564 @ 0xa0133564 (-mcpu=v8 -O2 -g)
- * Twin of FUN_a0133514: same code, other constants.
+ * Clears a word w, reads into it through func_0x4008c4d0(0, 0xb8, &w, 1) and returns bits 8-15 of w. Same code as
+ * FUN_a0133514 with other constants.
  */
 extern int func_0x4008c4d0();
 

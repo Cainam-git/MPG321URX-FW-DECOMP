@@ -1,5 +1,6 @@
 /* leon2s FUN_a00a26e0 @ 0xa00a26e0 (-mcpu=v8 -Os -g)
- * Twin of FUN_a00a26fc: same code, other constants.
+ * Returns byte +0x18 of record p1 & 0xff of the 400-byte records at 0xA807D7E0. Same code as FUN_a00a26fc with
+ * other constants.
  */
 extern unsigned char ARR_a807d7e0[];
 

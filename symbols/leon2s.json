@@ -1611,7 +1611,7 @@
     "ram:a0061528": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00618c0 (constants swapped)",
+      "comment": "Returns the word at address p1",
       "name": "FUN_a0061528",
       "status": "matched"
     },
@@ -1648,7 +1648,7 @@
     "ram:a00618cc": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a0061534 (constants swapped)",
+      "comment": "Stores p2 in the word at address p1",
       "name": "FUN_a00618cc",
       "status": "matched"
     },
@@ -3805,21 +3805,21 @@
     "ram:a0090f44": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a008f9e4 (constants swapped)",
+      "comment": "Returns byte +0x8E of record p1 & 0xff of the 0xB0-byte records at 0xA807D3E4",
       "name": "FUN_a0090f44",
       "status": "matched"
     },
     "ram:a0090f60": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a008f9e4 (constants swapped)",
+      "comment": "Returns byte +0x8F of record p1 & 0xff of the 0xB0-byte records at 0xA807D3E4",
       "name": "FUN_a0090f60",
       "status": "matched"
     },
     "ram:a0090f7c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a008f9e4 (constants swapped)",
+      "comment": "Returns byte +0x90 of record p1 & 0xff of the 0xB0-byte records at 0xA807D3E4",
       "name": "FUN_a0090f7c",
       "status": "matched"
     },
@@ -4060,7 +4060,7 @@
     "ram:a0091c38": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a009193c (constants swapped)",
+      "comment": "Returns byte +1 of record p1 & 0xff of the 28-byte records at 0xA807D580",
       "name": "FUN_a0091c38",
       "status": "matched"
     },
@@ -5061,21 +5061,21 @@
     "ram:a00a26a8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00a26fc (constants swapped)",
+      "comment": "Returns byte +0x184 of record p1 & 0xff of the 400-byte records at 0xA807D7E0",
       "name": "FUN_a00a26a8",
       "status": "matched"
     },
     "ram:a00a26c4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00a26fc (constants swapped)",
+      "comment": "Returns byte +0x185 of record p1 & 0xff of the 400-byte records at 0xA807D7E0",
       "name": "FUN_a00a26c4",
       "status": "matched"
     },
     "ram:a00a26e0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00a26fc (constants swapped)",
+      "comment": "Returns byte +0x18 of record p1 & 0xff of the 400-byte records at 0xA807D7E0",
       "name": "FUN_a00a26e0",
       "status": "matched"
     },
@@ -5088,14 +5088,14 @@
     "ram:a00a2718": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00a26fc (constants swapped)",
+      "comment": "Returns byte +0x2F of record p1 & 0xff of the 400-byte records at 0xA807D7E0",
       "name": "FUN_a00a2718",
       "status": "matched"
     },
     "ram:a00a2734": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00a26fc (constants swapped)",
+      "comment": "Returns byte +0x30 of record p1 & 0xff of the 400-byte records at 0xA807D7E0",
       "name": "FUN_a00a2734",
       "status": "matched"
     },
@@ -5186,14 +5186,14 @@
     "ram:a00a2978": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00a26fc (constants swapped)",
+      "comment": "Returns byte +0x7 of record p1 & 0xff of the 400-byte records at 0xA807D7E0",
       "name": "FUN_a00a2978",
       "status": "matched"
     },
     "ram:a00a2994": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00a26fc (constants swapped)",
+      "comment": "Returns byte +0x18 of record p1 & 0xff of the 400-byte records at 0xA807D7E0",
       "name": "FUN_a00a2994",
       "status": "matched"
     },
@@ -5986,7 +5986,7 @@
     "ram:a00ab674": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0x112 of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00ab674",
       "status": "matched"
     },
@@ -6561,7 +6561,7 @@
     "ram:a00b0248": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0xB6 of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b0248",
       "status": "matched"
     },
@@ -6574,7 +6574,7 @@
     "ram:a00b0280": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0xB7 of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b0280",
       "status": "matched"
     },
@@ -6587,14 +6587,14 @@
     "ram:a00b02b8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0xDC of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b02b8",
       "status": "matched"
     },
     "ram:a00b02d4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0xDE of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b02d4",
       "status": "matched"
     },
@@ -6607,21 +6607,21 @@
     "ram:a00b0308": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0xF0 of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b0308",
       "status": "matched"
     },
     "ram:a00b0324": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0xEF of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b0324",
       "status": "matched"
     },
     "ram:a00b0340": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0xF1 of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b0340",
       "status": "matched"
     },
@@ -6634,49 +6634,49 @@
     "ram:a00b0374": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0xF2 of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b0374",
       "status": "matched"
     },
     "ram:a00b0390": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0xF3 of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b0390",
       "status": "matched"
     },
     "ram:a00b03ac": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0xF4 of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b03ac",
       "status": "matched"
     },
     "ram:a00b03c8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0xF5 of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b03c8",
       "status": "matched"
     },
     "ram:a00b03e4": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0xF6 of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b03e4",
       "status": "matched"
     },
     "ram:a00b0400": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0xF7 of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b0400",
       "status": "matched"
     },
     "ram:a00b041c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0xF8 of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b041c",
       "status": "matched"
     },
@@ -6695,14 +6695,14 @@
     "ram:a00b0470": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0x125 of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b0470",
       "status": "matched"
     },
     "ram:a00b048c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
-      "comment": "twin of FUN_a00b0264 (constants swapped)",
+      "comment": "Returns byte +0x127 of record p1 & 0xff of the 300-byte records at 0xA807DC18",
       "name": "FUN_a00b048c",
       "status": "matched"
     },

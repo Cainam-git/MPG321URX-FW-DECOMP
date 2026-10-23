@@ -1,5 +1,6 @@
 /* leon2m FUN_a0138e8c @ 0xa0138e8c (-mcpu=v8 -O2 -g)
- * Twin of FUN_a0138bf8: same code, other constants.
+ * Calls FUN_a01370dc(0x7a, 1, &p1, 0) with the address of its byte parameter. Same code as FUN_a0138bf8 with other
+ * constants.
  */
 extern int FUN_a01370dc();
 
