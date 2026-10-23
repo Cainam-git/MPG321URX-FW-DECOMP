@@ -4533,6 +4533,12 @@
       "name": "Jay_EQ_End",
       "status": "matched"
     },
+    "ram:a009d87c": {
+      "by": "hand",
+      "comment": "Selects PLL settings by mode for port 0/1 (Set PLL n bits Mode / Use Internal PLL) and stores the bit count in the port record",
+      "name": "MODEDET_handler_2",
+      "status": "matched"
+    },
     "ram:a009e368": {
       "by": "h23",
       "comment": "port mode-detect completion: H_Total check, six info block reads or clears, status prints, state 8 or 5",
