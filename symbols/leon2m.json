@@ -18409,6 +18409,12 @@
       "name": "FUN_a014e758",
       "status": "matched"
     },
+    "ram:a014e7bc": {
+      "by": "hand",
+      "comment": "returns DAT_a802cc18[i]",
+      "name": "FUN_a014e7bc",
+      "status": "matched"
+    },
     "ram:a014e7d0": {
       "by": "autoc",
       "comment": "FUN_a00fc1a0()",
