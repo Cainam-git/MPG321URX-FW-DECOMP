@@ -7646,6 +7646,12 @@
       "name": "FUN_a00caee4",
       "status": "matched"
     },
+    "ram:a00caf78": {
+      "by": "hand",
+      "comment": "waits for the st field of a port record, reads 32 bytes with FUN_a00c81f8 into DAT_a807cd88 and compares them with DAT_a807d088",
+      "name": "FUN_a00caf78",
+      "status": "matched"
+    },
     "ram:a00cb1d4": {
       "by": "hand",
       "comment": "port record st bit-field: status checks set st 0, zero u16 count st 3, else 16-byte read, write-back burst, 5-byte ce38 -> cda8 copy",
