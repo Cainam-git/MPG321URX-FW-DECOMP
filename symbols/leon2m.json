@@ -8063,6 +8063,13 @@
       "name": "FUN_a00d7d48",
       "status": "matched"
     },
+    "ram:a00d7de0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "limits DAT_a802d290+0xa to 100 and passes its float-mapped value (or the default byte 0x19852e) to FUN_a014bcf0 by the chk() state",
+      "name": "FUN_a00d7de0",
+      "status": "matched"
+    },
     "ram:a00d8034": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
