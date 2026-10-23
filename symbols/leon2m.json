@@ -11421,6 +11421,12 @@
       "name": "FUN_a010795c",
       "status": "matched"
     },
+    "ram:a01079f4": {
+      "by": "hand",
+      "comment": "stores its two arguments to bytes 3 and 4 of DAT_a8027a82",
+      "name": "FUN_a01079f4",
+      "status": "matched"
+    },
     "ram:a0107a08": {
       "by": "hand",
       "comment": "stores the argument to DAT_a8027a84",
