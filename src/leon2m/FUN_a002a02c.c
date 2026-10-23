@@ -1,5 +1,5 @@
 /* leon2m FUN_a002a02c @ 0xa002a02c-0xa002a144 (70 words).
- * Interrupt dispatcher for bit 0x80, built like FUN_a0029994. FUN_a002c268(0x9f000090, 0, 0x80) and
+ * Built like FUN_a0029994, for bit 0x80. FUN_a002c268(0x9f000090, 0, 0x80) and
  * FUN_a002c268(0x9f020028, 0x80, 0x80) first; then pending = status 0x9f020088 & ~mask 0x9f020050 (low 16 bits), and
  * l2 = the mask's upper 16 bits. For sources 0 and 1 with their bit set in pending and a non-zero hook in the word
  * table at 0xa802b170 (entries 0x70 and 0x71): when the bit is also set in l2 the hook runs and the bit is

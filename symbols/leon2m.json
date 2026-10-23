@@ -1603,14 +1603,14 @@
     "ram:a0029bc4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "interrupt dispatch: pending = reg 9f020078 & ~mask reg 9f020040 (low 16); for each pending bit call hook table a802b170[0x30 + i] and ack via c25c (order by bit in the high half)",
+      "comment": "pending = reg 9f020078 & ~mask reg 9f020040 (low 16); for each pending bit call hook table a802b170[0x30 + i] and ack via c25c (order by bit in the high half)",
       "name": "FUN_a0029bc4",
       "status": "matched"
     },
     "ram:a0029cdc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "This function initializes two hardware register blocks, reads two interrupt status registers, then scans a 6-bit mask (bits 0\u20135) against two 16-bit masks derived from those registers. For each set bit, it checks a callback table at 0xa802b170+0x100 and conditionally invokes the callback and/or writes an acknowledge register depending on the second mask. After the loop, it clears the status registers and performs a final tail-call write sequence. The main uncertainty is the exact loop bound (7 iterations vs 6) and whether the final call's return value is actually used (the tail-call pattern suggests it is returned).",
+      "comment": "twin of a0029bc4 (regs 0x10 / 0x7c / 0x44, hook table + 0x100, 7 bits)",
       "name": "FUN_a0029cdc",
       "status": "matched"
     },
@@ -1624,7 +1624,7 @@
     "ram:a002a02c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "Interrupt dispatcher for bit 0x80: runs and acknowledges the pending hooks of sources 0 and 1",
+      "comment": "bit 0x80 (regs 0x88 / 0x50): runs and acknowledges the pending hooks of sources 0 and 1",
       "name": "FUN_a002a02c",
       "status": "matched"
     },
@@ -1638,7 +1638,7 @@
     "ram:a002a344": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "Interrupt dispatcher for bit 0x400: runs and acknowledges the pending hooks of sources 0 and 1",
+      "comment": "bit 0x400 (regs 0x94 / 0x5c): runs and acknowledges the pending hooks of sources 0 and 1",
       "name": "FUN_a002a344",
       "status": "matched"
     },
@@ -1651,7 +1651,7 @@
     "ram:a002a4c4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "Interrupt dispatcher for bit 0x1000: runs and acknowledges the pending hooks of 10 sources",
+      "comment": "bit 0x1000 (regs 0x9c / 0x64): runs and acknowledges the pending hooks of 10 sources",
       "name": "FUN_a002a4c4",
       "status": "matched"
     },
@@ -1665,14 +1665,14 @@
     "ram:a002a614": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "Interrupt dispatcher for bit 0x2000: runs and acknowledges the pending hooks of 3 sources",
+      "comment": "bit 0x2000 (regs 0xa0 / 0x68): runs and acknowledges the pending hooks of 3 sources",
       "name": "FUN_a002a614",
       "status": "matched"
     },
     "ram:a002a734": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "Interrupt dispatcher for bit 0x4000: runs and acknowledges the pending hooks of 7 sources",
+      "comment": "bit 0x4000 (regs 0xa4 / 0x6c): runs and acknowledges the pending hooks of 7 sources",
       "name": "FUN_a002a734",
       "status": "matched"
     },

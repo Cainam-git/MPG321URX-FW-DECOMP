@@ -1,6 +1,6 @@
 /* leon2m FUN_a0029bc4 @ 0xa0029bc4-0xa0029cdc (70 words), flags -mcpu=v8 -O3 -g -msoft-float (with plain
  * -O3 -g, loop.c hoists the shift constant 1 into %l1).
- * Code facts: interrupt dispatcher, twin of src/leon2m/FUN_a0029cdc.c with 8/0x78/0x40 and 4 sources:
+ * Code facts: twin of src/leon2m/FUN_a0029cdc.c with 8/0x78/0x40 and 4 sources:
  * FUN_a002c268(0x9f000090, 0, 8); FUN_a002c268(0x9f020028, 8, 8); t1 = FUN_a002c250(0x9f020078);
  * t2 = FUN_a002c250(0x9f020040); pending = t1 & ~t2 & 0xffff; l2 = t2 >> 16; for i = 0..3 with bit = 1 << i
  * set in pending and a non-zero hook at 0xa802b170 + 0xc0 + 4*i: bit set in l2 -> hook() then ack
