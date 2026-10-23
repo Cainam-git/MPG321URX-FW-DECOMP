@@ -722,6 +722,12 @@
       "name": "FUN_CODE_aa43",
       "status": "matched"
     },
+    "CODE:abce": {
+      "by": "hand",
+      "comment": "Read n 32-byte blocks from port 0xCD34 into buf after writing the 32-bit address to 0xCD35..0xCD38, word bytes in order or reversed by f",
+      "name": "FUN_CODE_abce",
+      "status": "matched"
+    },
     "CODE:aed9": {
       "by": "hand",
       "comment": "Keil common-entry (L?) code in front of FUN_CODE_af07, in FUN_CODE_af07's code segment; emitted by compiling src/8051_bank2/FUN_CODE_a17e.c, bytes judged with FUN_CODE_af07 over 0xaed9..0xb044",
