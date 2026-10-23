@@ -6051,6 +6051,13 @@
       "name": "FUN_a00b88e0",
       "status": "matched"
     },
+    "ram:a00b8ca8": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "passes table DAT_00195f24 entries to FUN_a00a31a4 for rows by mode, then FUN_a00ad86c and two FUN_a0146b20 cells when 0xa8025c56 >> 2 equals mode, else FUN_a0146c40(4, 0, 0)",
+      "name": "FUN_a00b8ca8",
+      "status": "matched"
+    },
     "ram:a00ba068": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
