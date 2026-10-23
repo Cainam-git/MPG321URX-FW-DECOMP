@@ -1596,6 +1596,12 @@
       "name": "FUN_a0061200",
       "status": "matched"
     },
+    "ram:a0061224": {
+      "by": "hand",
+      "comment": "endless loop",
+      "name": "FUN_a0061224",
+      "status": "matched"
+    },
     "ram:a006122c": {
       "by": "hand",
       "comment": "wait (max 0xfffff polls) for bit 5 of status reg c00c0014, then data reg c00c0000 = c",
