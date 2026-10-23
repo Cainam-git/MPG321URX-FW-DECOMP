@@ -1,5 +1,5 @@
 /* 8051_bank1 FUN_CODE_bbca @ 0xbbca  MATCH (OPTIMIZE(7,SPEED))
- * The function takes two byte parameters: a mask and a value. For each of the 7 low bits set in the mask, it sets bit 7 of the corresponding high register (0xF181, 0xF183, ..., 0xF18D) and writes the value byte to the adjacent low register (0xF180, 0xF182, ..., 0xF18C). The structure is a sequence of independent if-blocks in ascending bit order, each performing a read-modify-write on the high register followed by a write to the low register. The mask is kept in R6 (matching the target's `MOV R6,R7` at entry) and the value in R5, matching the register usage in the firmware's byte pattern.
+ * For each bit i (0..6) set in mask: XDATA 0xF181 + 2i |= 0x80 and 0xF180 + 2i = value (separate ifs, bit order 0..6).
  */
 extern unsigned char xdata DAT_EXTMEM_f180 _at_ 0xf180;
 extern unsigned char xdata DAT_EXTMEM_f181 _at_ 0xf181;

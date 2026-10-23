@@ -830,6 +830,13 @@
       "name": "FUN_CODE_7ca8",
       "status": "matched"
     },
+    "CODE:8a51": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "DP_EnableMRX: XDATA 0xDCDE/0xDCCE register set-up, 7-byte CODE table copy by 0xD511, 45aa/942e calls",
+      "name": "FUN_CODE_8a51",
+      "status": "matched"
+    },
     "CODE:8b58": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
