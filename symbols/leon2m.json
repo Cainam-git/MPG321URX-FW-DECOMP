@@ -13039,6 +13039,13 @@
       "name": "FUN_a012cfac",
       "status": "matched"
     },
+    "ram:a012d4f8": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes one settings-storage byte at the FGA block offset of the 0xA802E1A0 record",
+      "name": "FUN_a012d4f8",
+      "status": "matched"
+    },
     "ram:a012eb4c": {
       "by": "h41",
       "cflags": "-mcpu=v8 -O3 -g",
