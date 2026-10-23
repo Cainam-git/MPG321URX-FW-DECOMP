@@ -17235,6 +17235,13 @@
       "name": "FUN_a0150da4",
       "status": "matched"
     },
+    "ram:a0150df8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "calls FUN_a0115644(1), FUN_a011337c(3), then FUN_a01139c8 for 16 rows of the 0xa802cc90/cd90/ce90 byte tables and tail-calls FUN_a011337c(0x10)",
+      "name": "FUN_a0150df8",
+      "status": "matched"
+    },
     "ram:a0151494": {
       "by": "autoc",
       "comment": "empty function (returns at once)",
