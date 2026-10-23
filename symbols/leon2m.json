@@ -14600,6 +14600,12 @@
       "name": "FUN_a012e840",
       "status": "matched"
     },
+    "ram:a012e848": {
+      "by": "hand",
+      "comment": "returns 7",
+      "name": "FUN_a012e848",
+      "status": "matched"
+    },
     "ram:a012e850": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
