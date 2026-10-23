@@ -11476,9 +11476,9 @@
       "status": "matched"
     },
     "ram:a0118b0c": {
-      "by": "hand",
+      "by": "h49",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "",
+      "comment": "register 0xCF012FF0..FF8 set-up by halfword +0x0a of the transformed row, after FUN_a00f2f88(0xf4, 0, 0x400, p1)",
       "name": "FUN_a0118b0c",
       "status": "matched"
     },
