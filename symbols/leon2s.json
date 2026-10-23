@@ -6676,7 +6676,7 @@
     },
     "ram:a00b0e54": {
       "by": "hand",
-      "comment": "builds two nibble tables from DAT_a8078768 and FUN_a00a0083ec4 and writes them to registers 0xcf0117c0-0xcf0117ec",
+      "comment": "builds two nibble tables from DAT_a8078768 and FUN_a0083ec4 and writes them to registers 0xcf0117c0-0xcf0117ec",
       "name": "FUN_a00b0e54",
       "status": "matched"
     },
