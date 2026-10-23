@@ -1,5 +1,6 @@
 /* leon2m FUN_a0141a98 @ 0xa0141a98 (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Returns 1 when byte 0xA802E110 == 6 and byte 0xA802CC08 == 1, otherwise 0.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

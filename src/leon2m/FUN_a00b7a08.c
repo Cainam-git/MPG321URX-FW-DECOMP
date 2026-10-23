@@ -1,5 +1,6 @@
 /* leon2m FUN_a00b7a08 @ 0xa00b7a08 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a00a9f30(1, 1) when bit 30 (0x40000000) of word 0xA802D484 is set, otherwise FUN_a00a9f30(1, 0).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,7 @@
 /* leon2m FUN_a0102f6c @ 0xa0102f6c (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * With v = (word +0x34 / 10) * halfword +0x22 of the record whose address is in word 0xA802D6A4, calls
+ * FUN_a01026e8(0, v), FUN_a01026e8(1, v >> 1), FUN_a01026e8(2, v >> 1) and FUN_a01026e8(3, v >> 2).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

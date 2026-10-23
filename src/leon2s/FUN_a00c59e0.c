@@ -1,5 +1,11 @@
 /* leon2s FUN_a00c59e0 @ 0xa00c59e0 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * k = p1 & 0xff. Only when bits 0-1 of func_0xa0fb7e98(k, 0x71) are both set: when bit 6 of func_0xa0fb7e98(k,
+ * 0x2e) is clear, calls func_0xa0fb7dd0(k, 0x71, 3) only; otherwise func_0xa0fb7dd0(k, 0x71, 3),
+ * func_0xa0fb7e14(k, 0x37, 4, 0), func_0xa0fb7e14(k, 0x88, 0x40, 1), func_0xa0fb7e14(k, 0x37, 1, 1), waits until
+ * bit 0 of func_0xa0fb7e98(k, 0x37) is set, calls func_0xa0fb7e14(k, 0x88, 0x40, 0), and when bits 0-1 of
+ * func_0xa0fb7e98(k, 0x71) are then not both set, calls func_0xa0fb7e14(k, 0x2e, 0x28, 1) and sets bit 23 of word
+ * 0 of record k of the 0x10-byte table 0xA807D5C8.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

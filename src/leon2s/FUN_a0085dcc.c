@@ -1,5 +1,9 @@
 /* leon2s FUN_a0085dcc @ 0xa0085dcc (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Sets bits 0-4 of register 0xCF013280 and writes 0x86, 0x95 and 0x55 to registers 0xCF013284, 0xCF013288 and
+ * 0xCF01328C. With k = p1 & 0xff calls FUN_a00ab584(), FUN_a00ab4a8(k) and FUN_a00a78fc(k, r, v) for (r, v) =
+ * (0x32, 0), (0x31, 0xd1), (0x35, 0x13), (0x35, 0x91), (0x33, 8); for k == 0 also FUN_a00a7940(0, 0x21, 6, 1) and
+ * FUN_a00a78fc(0, 0x31, 0xb). Clears byte 0xA8078A0D.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

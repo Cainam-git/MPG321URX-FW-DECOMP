@@ -1,5 +1,10 @@
 /* leon2m FUN_a0106bfc @ 0xa0106bfc (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * k = p1 & 0xff. When bits 0-1 of FUN_a00f2254(k, 0x54) are neither 2 nor 3 (two reads): for k < 4 calls
+ * FUN_a00f2298(k, 0x6b, p2 & 0xff), FUN_a00f2298(k, 0x6c, p3), FUN_a00f2298(k, 0x6d, p4), func_0x4008e3c4(k, 1),
+ * FUN_a0118a28(k, 1), FUN_a00f2298(k, 0x54, 2) and FUN_a0106920(k, 0); for k == 0 also FUN_a01023f4(0) and
+ * FUN_a01026e8(0, v), (1, v >> 1), (2, v >> 1), (3, v >> 2) with v = (word +0x34 / 10) * halfword +0x22 of the
+ * record whose address is in word 0xA802D6A4. Finally writes 0x40 to register 0xCF011658.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

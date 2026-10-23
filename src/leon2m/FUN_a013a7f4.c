@@ -1,5 +1,7 @@
 /* leon2m FUN_a013a7f4 @ 0xa013a7f4 (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Clears a word w, reads into it through func_0x4008c4d0(2, 0x4c, &w, 1) and returns 1 when the low byte of w is
+ * nonzero, otherwise 0.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

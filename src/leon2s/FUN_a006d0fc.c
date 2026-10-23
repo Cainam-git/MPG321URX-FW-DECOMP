@@ -1,5 +1,9 @@
 /* leon2s FUN_a006d0fc @ 0xa006d0fc (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls TMDS_PowerOff(k, 0) for k = 0 .. 3 and FUN_a00ab4f8(k) for k = 0 .. 4, clears registers 0xCF012448 and
+ * 0xCF014760, then calls FUN_a00afdb0(2), FUN_a00afdf4(0, 1), FUN_a00afdf4(1, 1), FUN_a00b0568(0),
+ * FUN_a00b0568(1), FUN_a0095c9c(0), FUN_a0095c9c(1), FUN_a00a9e74(), FUN_a00aa200(), FUN_a0083f04(0, 0, 0),
+ * FUN_a0083f04(1, 0, 0), FUN_a00ad478(1), FUN_a008a7a0(), FUN_a006d3d8() and FUN_a0088fd4(0, p2, p3, p4, p5, p6).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

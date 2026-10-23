@@ -1,5 +1,9 @@
 /* leon2s DRV_HDMI21_PHY_INV_PICDR_Reset @ 0xa007aca0 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When bit 11 of word 0xA8078634 is set, prints the function name with the format at 0xA00678C8 through
+ * FUN_a0073044. Calls FUN_a00a7488(p1, a, 0xff00ffff, 0x20000) for a = 0x2028, 0x2428, 0x2828, 0x3028, 0x2008,
+ * 0x2408, 0x2808, 0x3008, then FUN_a00b1794(1), then FUN_a00a7488(p1, a, 0xff00ffff, 0) for a = 0x2008, 0x2408,
+ * 0x2808, 0x3008, 0x2028, 0x2428, 0x2828, 0x3028.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

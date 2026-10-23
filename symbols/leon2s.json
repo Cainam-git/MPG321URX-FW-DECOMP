@@ -1787,7 +1787,7 @@
     },
     "ram:a006d0fc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls TMDS_PowerOff(k, 0) for k = 0 .. 3 and FUN_a00ab4f8(k) for k = 0 .. 4, clears registers 0xCF012448 and 0xCF014760, then calls FUN_a00afdb0(2), FUN_a00afdf4(0, 1), FUN_a00afdf4(1, 1), FUN_a00b0568(0), FUN_a00b0568(1), FUN_a0095c9c(0), FUN_a0095c9c(1), FUN_a00a9e74(), FUN_a00aa200(), FUN_a0083f04(0, 0, 0), FUN_a0083f04(1, 0, 0), FUN_a00ad478(1), FUN_a008a7a0(), FUN_a006d3d8() and FUN_a0088fd4(0, p2, p3, p4, p5, p6)",
       "name": "FUN_a006d0fc",
       "status": "matched"
     },
@@ -1907,7 +1907,7 @@
     },
     "ram:a006faa8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a0072970(1, ((p2 + (p1 & 0xff) * 4) * 4) & 0xfc, p3, p4 & 0xff)",
       "name": "FUN_a006faa8",
       "status": "matched"
     },
@@ -2396,7 +2396,7 @@
     },
     "ram:a007aca0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "When bit 11 of word 0xA8078634 is set, prints the function name with the format at 0xA00678C8 through FUN_a0073044. Calls FUN_a00a7488(p1, a, 0xff00ffff, 0x20000) for a = 0x2028, 0x2428, 0x2828, 0x3028, 0x2008, 0x2408, 0x2808, 0x3008, then FUN_a00b1794(1), then FUN_a00a7488(p1, a, 0xff00ffff, 0) for a = 0x2008, 0x2408, 0x2808, 0x3008, 0x2028, 0x2428, 0x2828, 0x3028",
       "name": "DRV_HDMI21_PHY_INV_PICDR_Reset",
       "status": "matched"
     },
@@ -2702,7 +2702,7 @@
     },
     "ram:a0085dcc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Sets bits 0-4 of register 0xCF013280 and writes 0x86, 0x95 and 0x55 to registers 0xCF013284, 0xCF013288 and 0xCF01328C. With k = p1 & 0xff calls FUN_a00ab584(), FUN_a00ab4a8(k) and FUN_a00a78fc(k, r, v) for (r, v) = (0x32, 0), (0x31, 0xd1), (0x35, 0x13), (0x35, 0x91), (0x33, 8); for k == 0 also FUN_a00a7940(0, 0x21, 6, 1) and FUN_a00a78fc(0, 0x31, 0xb). Clears byte 0xA8078A0D",
       "name": "FUN_a0085dcc",
       "status": "matched"
     },
@@ -4409,7 +4409,7 @@
     },
     "ram:a0096428": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p = word 0 of record p1 of the 0x34-byte table 0xA807DB00: returns FUN_a00a7408(0x18, p + 0x70) != 0",
       "name": "FUN_a0096428",
       "status": "matched"
     },
@@ -4469,7 +4469,7 @@
     },
     "ram:a0097ed0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p = word 0 of record p1 of the 0x34-byte table 0xA807DB00: returns FUN_a00a7408(4, p + 0x30) != 0",
       "name": "FUN_a0097ed0",
       "status": "matched"
     },
@@ -4602,7 +4602,7 @@
     },
     "ram:a009c3bc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p = word 0 of record p1 of the 0x34-byte table 0xA807DB00: returns FUN_a00a7408(10, p + 0x54) != 0",
       "name": "FUN_a009c3bc",
       "status": "matched"
     },
@@ -4644,7 +4644,7 @@
     },
     "ram:a009c6e4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p = word 0 of record p1 of the 0x34-byte table 0xA807DB00: returns FUN_a00a7408(0x11, p + 0x70) != 0",
       "name": "FUN_a009c6e4",
       "status": "matched"
     },
@@ -5167,7 +5167,7 @@
     },
     "ram:a00a28a4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p = word 0 of record p1 of the 0x34-byte table 0xA807DB00: returns FUN_a00a7408(0x11, p + 4) != 0",
       "name": "FUN_a00a28a4",
       "status": "matched"
     },
@@ -5859,7 +5859,7 @@
     },
     "ram:a00a9c4c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "A fixed sequence of 33 FUN_a00a7cc0(1, r, v) calls, from (0xe5, 0x82) to (0xad, 0), with FUN_a00b160c(500) after the 13th and after the 15th call",
       "name": "FUN_a00a9c4c",
       "status": "matched"
     },
@@ -6245,7 +6245,7 @@
     },
     "ram:a00ad734": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00a6c98(p1 & 0xff, 0x20, 8, 1), then FUN_a00a6c98(p1 & 0xff, 0x20, 8, 0)",
       "name": "FUN_a00ad734",
       "status": "matched"
     },
@@ -7240,7 +7240,7 @@
     },
     "ram:a00c59e0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "k = p1 & 0xff. Only when bits 0-1 of func_0xa0fb7e98(k, 0x71) are both set: when bit 6 of func_0xa0fb7e98(k, 0x2e) is clear, calls func_0xa0fb7dd0(k, 0x71, 3) only; otherwise func_0xa0fb7dd0(k, 0x71, 3), func_0xa0fb7e14(k, 0x37, 4, 0), func_0xa0fb7e14(k, 0x88, 0x40, 1), func_0xa0fb7e14(k, 0x37, 1, 1), waits until bit 0 of func_0xa0fb7e98(k, 0x37) is set, calls func_0xa0fb7e14(k, 0x88, 0x40, 0), and when bits 0-1 of func_0xa0fb7e98(k, 0x71) are then not both set, calls func_0xa0fb7e14(k, 0x2e, 0x28, 1) and sets bit 23 of word 0 of record k of the 0x10-byte table 0xA807D5C8",
       "name": "FUN_a00c59e0",
       "status": "matched"
     },
