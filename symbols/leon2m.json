@@ -17901,6 +17901,12 @@
       "status": "matched",
       "symbol": "_fwalk_reent"
     },
+    "ram:a015c138": {
+      "by": "hand",
+      "comment": "C library _setlocale_r: accepts only the C locale and stores category and locale in the reent record",
+      "name": "FUN_a015c138",
+      "status": "matched"
+    },
     "ram:a015c1b4": {
       "by": "autoc",
       "comment": "returns 0x1a84f4",
