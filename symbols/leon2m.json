@@ -11060,6 +11060,12 @@
       "name": "FUN_a0105c0c",
       "status": "matched"
     },
+    "ram:a0105c78": {
+      "by": "hand",
+      "comment": "returns DAT_a8027a80",
+      "name": "FUN_a0105c78",
+      "status": "matched"
+    },
     "ram:a0105c84": {
       "by": "autoc",
       "comment": "p1 = p1 & 0xff; returns FUN_a00f25f8(p1, 0x68)",
