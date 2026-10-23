@@ -153,6 +153,8 @@ symbol names are not allowed.
   volatile, so both writes stay.
 - **Search the order of independent statements** (byte copies, store groups): a small brute-force search over all
   orders is quick.
+- **`cmp x,K; mov K+1,%o; subx %o,0,%n`** is `n = K + (x >= K)`; the `?:` and `K+1 - (x < K)` forms fold to branches
+  (FUN_a00a3b68, FUN_a00b1700).
 - **`(unsigned char)` casts instead of `& 0xff` / `>> 8`** on a 16-bit value change which copies GCC makes and the
   order of the byte stores.
 - **Read-modify-write through inlined helpers:** nest the read inside the write call, `wr(p, r, rd(p, r) & m)`; the
@@ -175,6 +177,7 @@ frequency 0 to 2, so their order is decided by ties. Branch predictions are the 
 | A provably always-true or always-false test that is folded away later, e.g. `__builtin_expect(!(u16 >> 16), 1)` | Changes predictions without changing the final code. The comment must prove the test is constant. |
 | The same call duplicated in the else branch | Merges into the same code, but changes the predicted probability. |
 | A long `\|\|` chain in one `else if`, versus separate arms | Flips predictions. |
+| A sign test written as a signed 1-bit bit-field (`w.b31`, through a union view) or `w >> 31` instead of `w < 0` | Same `cmp 0; bl` instruction, but without GCC's negative-compare prediction; places the blocks as the firmware does (FUN_a0097508, FUN_a00aad30, FUN_a0153b20). |
 
 **Try pairs, not only single hints.** Predictions combine non-additively, so two hints together can produce an
 order that neither gives alone. `FUN_a013dc6c` only matched with a specific pair of `__builtin_expect` hints. Each one
