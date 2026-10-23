@@ -7679,6 +7679,12 @@
       "name": "FUN_a00d5e84",
       "status": "matched"
     },
+    "ram:a00d5ea4": {
+      "by": "h40",
+      "comment": "empty function",
+      "name": "FUN_a00d5ea4",
+      "status": "matched"
+    },
     "ram:a00d5eac": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
