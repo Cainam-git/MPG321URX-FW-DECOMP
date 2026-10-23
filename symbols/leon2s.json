@@ -1922,6 +1922,12 @@
       "name": "FUN_a006fd04",
       "status": "matched"
     },
+    "ram:a006fd78": {
+      "by": "h42",
+      "comment": "waits for word 0 of slot 10 to read 0, then writes id, length and up to 0x1c bytes of d as an 8-word block with FUN_a006fb3c/FUN_a006fad4",
+      "name": "FUN_a006fd78",
+      "status": "matched"
+    },
     "ram:a006ffb4": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
