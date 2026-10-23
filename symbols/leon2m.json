@@ -10421,6 +10421,13 @@
       "name": "FUN_a00f8f58",
       "status": "matched"
     },
+    "ram:a00f8f78": {
+      "by": "lead",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "always-true test around the default block value",
+      "name": "FUN_a00f8f78",
+      "status": "matched"
+    },
     "ram:a00f913c": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
