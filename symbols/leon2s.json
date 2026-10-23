@@ -5868,6 +5868,12 @@
       "name": "FUN_a00abba8",
       "status": "matched"
     },
+    "ram:a00abff0": {
+      "by": "h53",
+      "comment": "writes a fixed register sequence for a port with FUN_a00a6c00 and FUN_a00a6c98, with values chosen from the DAT_a807dc18 record",
+      "name": "FUN_a00abff0",
+      "status": "matched"
+    },
     "ram:a00ac41c": {
       "by": "h16",
       "comment": "compares DAT_a807931c / en with bit 0 of FUN_a00a6bb8(port, 0x460); prints the FEC ready message on change; rewrites registers 0x30 and 0x460 through FUN_a00a6c98",
