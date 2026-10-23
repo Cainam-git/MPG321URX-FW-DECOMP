@@ -5606,6 +5606,13 @@
       "name": "FUN_a00aecec",
       "status": "matched"
     },
+    "ram:a00aee44": {
+      "by": "h61",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "two-argument row list: local en[15] / idx[7] tables, FUN_a0146a80 / FUN_a0146b20 / FUN_a00a31a4 calls per row for mode 0x23, 0xbf, mode + 9 <= 2 and the en[] entries",
+      "name": "FUN_a00aee44",
+      "status": "matched"
+    },
     "ram:a00b0034": {
       "by": "h50",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
