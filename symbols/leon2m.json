@@ -17514,11 +17514,13 @@
       "status": "matched",
       "symbol": "__truncdfsf2"
     },
-    "ram:a0156a74": {
-      "by": "asm",
-      "comment": "hand-written assembly (privileged instructions); reproduced from disassembly",
-      "name": "FUN_a0156a74",
-      "status": "matched"
+    "ram:a0156a6c": {
+      "by": "lib",
+      "comment": "toolchain library functions .udiv (+0) and .div (+8) from libgcc.a:_divsi3.o; byte-exact, no C needed",
+      "lib": "libgcc.a:_divsi3.o",
+      "name": "FUN_a0156a6c",
+      "status": "matched",
+      "symbol": ".udiv"
     },
     "ram:a0156d1c": {
       "by": "lib",
