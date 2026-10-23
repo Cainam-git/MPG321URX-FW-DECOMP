@@ -2538,6 +2538,12 @@
       "name": "DRV_HDMI21_ReStart_AEQ2",
       "status": "matched"
     },
+    "ram:a007fffc": {
+      "by": "hand",
+      "comment": "writes the pre-AEQ R/C values of the four channels with FUN_a00a7488 and runs the restart call sequence for ports 2 and 3",
+      "name": "DRV_HDMI21_Set_PHY_PreAEQ",
+      "status": "matched"
+    },
     "ram:a0080244": {
       "by": "near",
       "comment": "ports 2/3: FUN_a007f9d0(p) when byte +2 of record 0xA807D680[p - 2] > 3, else DRV_HDMI21_PHY_INV_PICDR_Reset(p); prints its name with bit 0x800 of DAT_a8078634",
