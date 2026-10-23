@@ -17366,6 +17366,13 @@
       "name": "FUN_a01542c4",
       "status": "matched"
     },
+    "ram:a015440c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Copies the 0x30-byte ROM default part at 0x20140 to RAM 0xA802E1F0",
+      "name": "FUN_a015440c",
+      "status": "matched"
+    },
     "ram:a01544cc": {
       "by": "autoc",
       "comment": "empty function (returns at once)",
