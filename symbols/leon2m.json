@@ -9552,6 +9552,13 @@
       "name": "FUN_a00f7608",
       "status": "matched"
     },
+    "ram:a00f76dc": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reads 32 sums of 3-byte values from register 0xcf00eec8 over 8 selections of 0xcf00ee84 into out when bit 0 of 0xcf00eec4 is clear and start is 0; sets the bit and returns 1 (0 when the bit was set and start is 0)",
+      "name": "FUN_a00f76dc",
+      "status": "matched"
+    },
     "ram:a00f7894": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
