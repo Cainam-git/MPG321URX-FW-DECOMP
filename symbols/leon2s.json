@@ -8120,6 +8120,12 @@
       "name": "FUN_a00d0798",
       "status": "matched"
     },
+    "ram:a00d0d78": {
+      "by": "lead",
+      "comment": "void, unsigned char port; final call result tested",
+      "name": "FUN_a00d0d78",
+      "status": "matched"
+    },
     "ram:a00d12e4": {
       "by": "hand",
       "comment": "checks and updates the state fields of the DAT_a8078bb0 record of a port and calls the per-port handlers",
