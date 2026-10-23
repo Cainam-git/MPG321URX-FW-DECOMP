@@ -9733,6 +9733,13 @@
       "name": "FUN_a00f9bbc",
       "status": "matched"
     },
+    "ram:a00f9d78": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "by bits 12..15 of register 0xd0040098 (3 or 4) copies 20 entries of table 0xa8026ed6 or 0xa8026cb6 to rows 12..15 of 0xa802c864; returns 1",
+      "name": "FUN_a00f9d78",
+      "status": "matched"
+    },
     "ram:a00f9f10": {
       "by": "h22",
       "cflags": "-mcpu=v8 -O3 -g",
