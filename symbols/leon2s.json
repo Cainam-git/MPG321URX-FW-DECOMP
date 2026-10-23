@@ -5743,6 +5743,12 @@
       "name": "FUN_a00ae238",
       "status": "matched"
     },
+    "ram:a00ae254": {
+      "by": "h43",
+      "comment": "writes the high nibble bits of a value to register 0x44 and 0x40 bits through FUN_a00a6c98",
+      "name": "FUN_a00ae254",
+      "status": "matched"
+    },
     "ram:a00ae344": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
