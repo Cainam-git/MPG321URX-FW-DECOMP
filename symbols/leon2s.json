@@ -6563,6 +6563,12 @@
       "name": "FUN_a00aec2c",
       "status": "matched"
     },
+    "ram:a00aec50": {
+      "by": "hand",
+      "comment": "returns 1 after the timed register checks of the port (24-bit value 0x8000 and bit 2 of register 0, or the bit-3 path of register 0x4e0) or after the timeout path, else 0; init resets and stores FUN_a00b2064()",
+      "name": "FUN_a00aec50",
+      "status": "matched"
+    },
     "ram:a00aee08": {
       "by": "hand",
       "comment": "Writes a 16-bit value to regs 0x8b/0x8c and the n-bit mask (1 << n) - 1 to reg 0x9a of a port, between bit updates of regs 0x482/0x9f/0x32",
