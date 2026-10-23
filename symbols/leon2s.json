@@ -4262,6 +4262,12 @@
       "name": "MAX_CED",
       "status": "matched"
     },
+    "ram:a0099c18": {
+      "by": "h52",
+      "comment": "sums four 15-bit register fields into a 10-column history of the 0xb0-byte port record and compares the new entry with the next column or column 0",
+      "name": "MAX_RSED",
+      "status": "matched"
+    },
     "ram:a009a580": {
       "by": "hand",
       "comment": "per-lane PHY freq read (delay then a7314) into ARR_a807905a[port*4+i], print re-reads",
