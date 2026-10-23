@@ -1,5 +1,6 @@
 /* leon2m FUN_a015b738 @ 0xa015b738 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When bit 9 (0x200) of the halfword at p1 + 0xC is clear, calls FUN_a015ea08(p1 + 0x58). Returns 0.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -2479,7 +2479,7 @@
     },
     "ram:a007f798": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "When bit 11 (0x800) of word 0xA8078634 is set, passes the string \"[HDMI21]: H1_H2_VTH \\r\" to FUN_a00734c4",
       "name": "H1_H2_VTH",
       "status": "matched"
     },
@@ -2761,7 +2761,7 @@
     },
     "ram:a00866b8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Clears bit 7 of byte 0 of record p1 & 0xff of the 6-byte records at 0xA807CD2E",
       "name": "FUN_a00866b8",
       "status": "matched"
     },
@@ -2960,7 +2960,7 @@
     },
     "ram:a0089058": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Returns a byte with bits p1 .. p2 set (bits above 7 dropped); 0 when p1 > p2",
       "name": "FUN_a0089058",
       "status": "matched"
     },
@@ -3351,7 +3351,7 @@
     },
     "ram:a008da34": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "k = p1 & 0xff. Reads v = FUN_a00a7fd8(k, 1, 0x7f), sets bits 2-3 of v to 2 when p2 == 1, to 3 when p2 == 2 and to 1 for any other p2, and writes v back through FUN_a00a8054(k, 1, 0x7f, v)",
       "name": "FUN_a008da34",
       "status": "matched"
     },
@@ -3627,7 +3627,7 @@
     },
     "ram:a008fff0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Returns byte 0xA8078C08 when p1 == 1, otherwise 0",
       "name": "FUN_a008fff0",
       "status": "matched"
     },
@@ -4907,7 +4907,7 @@
     },
     "ram:a00a1df0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00a1710() when p1 != 0, otherwise FUN_a00a1734()",
       "name": "FUN_a00a1df0",
       "status": "matched"
     },
@@ -5567,7 +5567,7 @@
     },
     "ram:a00a73ac": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Sets bit (p1 & 0x1f) of word p1 >> 5 of the word array at p2",
       "name": "FUN_a00a73ac",
       "status": "matched"
     },
@@ -6135,7 +6135,7 @@
     },
     "ram:a00ad5a4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Returns bit p1 of byte 0xA8079312 for p1 < 2, otherwise 0",
       "name": "FUN_a00ad5a4",
       "status": "matched"
     },
@@ -6640,13 +6640,13 @@
     },
     "ram:a00b0518": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00b1b18() when p1 == 0, otherwise FUN_a00b1be4()",
       "name": "FUN_a00b0518",
       "status": "matched"
     },
     "ram:a00b0540": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00b1b98() when p1 == 0, otherwise FUN_a00b1c64()",
       "name": "FUN_a00b0540",
       "status": "matched"
     },
@@ -6990,7 +6990,7 @@
     },
     "ram:a00b288c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Adds up all bytes of p1 and of p2 and returns 0x30 + (sum & 0xf)",
       "name": "FUN_a00b288c",
       "status": "matched"
     },
@@ -7724,7 +7724,7 @@
     },
     "ram:a00cfb20": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00cfab8() and returns word p1 of the word table at 0xA8078B60",
       "name": "FUN_a00cfb20",
       "status": "matched"
     },
@@ -7742,7 +7742,7 @@
     },
     "ram:a00d0530": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00cfab8(), stores p2 in word p1 of the word table at 0xA8078B60 and returns p1 * 4",
       "name": "FUN_a00d0530",
       "status": "matched"
     },
@@ -8134,7 +8134,7 @@
     },
     "ram:a00d82c8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Sets bits 0-6 of a local byte to 2 (bit 7 keeps the byte's previous stack contents) and calls FUN_a00d791c(&byte, 2, 1, 1, 1). Returns p1",
       "name": "FUN_a00d82c8",
       "status": "matched"
     },

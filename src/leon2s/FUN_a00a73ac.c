@@ -1,5 +1,6 @@
 /* leon2s FUN_a00a73ac @ 0xa00a73ac (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Sets bit (p1 & 0x1f) of word p1 >> 5 of the word array at p2.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

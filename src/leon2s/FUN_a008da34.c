@@ -1,5 +1,7 @@
 /* leon2s FUN_a008da34 @ 0xa008da34 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * k = p1 & 0xff. Reads v = FUN_a00a7fd8(k, 1, 0x7f), sets bits 2-3 of v to 2 when p2 == 1, to 3 when p2 == 2 and
+ * to 1 for any other p2, and writes v back through FUN_a00a8054(k, 1, 0x7f, v).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern unsigned int FUN_a00a7fd8(unsigned int, unsigned short, unsigned short);
 extern void FUN_a00a8054(unsigned int, unsigned int, unsigned short, unsigned int);

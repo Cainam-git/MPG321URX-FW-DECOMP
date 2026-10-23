@@ -1,5 +1,6 @@
 /* leon2s H1_H2_VTH @ 0xa007f798 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When bit 11 (0x800) of word 0xA8078634 is set, passes the string "[HDMI21]: H1_H2_VTH \r" to FUN_a00734c4.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

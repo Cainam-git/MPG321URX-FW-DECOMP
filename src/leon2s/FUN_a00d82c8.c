@@ -1,5 +1,7 @@
 /* leon2s FUN_a00d82c8 @ 0xa00d82c8 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Sets bits 0-6 of a local byte to 2 (bit 7 keeps the byte's previous stack contents) and calls
+ * FUN_a00d791c(&byte, 2, 1, 1, 1). Returns p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

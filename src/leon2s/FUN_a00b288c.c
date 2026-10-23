@@ -1,5 +1,6 @@
 /* leon2s FUN_a00b288c @ 0xa00b288c (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Adds up all bytes of p1 and of p2 and returns 0x30 + (sum & 0xf).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

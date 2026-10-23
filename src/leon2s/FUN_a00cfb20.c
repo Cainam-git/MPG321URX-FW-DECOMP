@@ -1,5 +1,6 @@
 /* leon2s FUN_a00cfb20 @ 0xa00cfb20 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a00cfab8() and returns word p1 of the word table at 0xA8078B60.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

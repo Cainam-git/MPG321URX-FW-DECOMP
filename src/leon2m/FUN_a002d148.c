@@ -1,5 +1,6 @@
 /* leon2m FUN_a002d148 @ 0xa002d148 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When the function pointer in word 0xA802B0DC is not null, calls it with 3. Returns p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;
