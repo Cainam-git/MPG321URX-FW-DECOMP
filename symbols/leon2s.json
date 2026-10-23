@@ -2436,8 +2436,8 @@
       "status": "matched"
     },
     "ram:a007f634": {
-      "by": "permuter",
-      "comment": "permuter: ",
+      "by": "h49",
+      "comment": "DRV_HDMI_Config_BCH(p != 2, 1) when FUN_a0073520(p) is non-zero",
       "name": "FUN_a007f634",
       "status": "matched"
     },
