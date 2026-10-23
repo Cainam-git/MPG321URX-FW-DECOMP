@@ -4075,6 +4075,12 @@
       "name": "FUN_a0094b30",
       "status": "matched"
     },
+    "ram:a0094e40": {
+      "by": "h42",
+      "comment": "calls FUN_a00a80cc four times with modes chosen from b, a record bit and c (plus FUN_a00a8260 for c == 1)",
+      "name": "FUN_a0094e40",
+      "status": "matched"
+    },
     "ram:a0094f64": {
       "by": "hand",
       "comment": "calls FUN_a00a80cc twice (0x10, 0x20) and FUN_a00a8054(port, 0, 0x130, 10)",
