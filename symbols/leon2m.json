@@ -15942,6 +15942,12 @@
       "name": "FUN_a013adcc",
       "status": "matched"
     },
+    "ram:a013adf4": {
+      "by": "hand",
+      "comment": "stores the argument to DAT_a802a460",
+      "name": "FUN_a013adf4",
+      "status": "matched"
+    },
     "ram:a013b42c": {
       "by": "autoc",
       "comment": "(halfword 0xA802A46C) = p1; FUN_a013ae00((byte 0xA802A460))",
