@@ -11033,6 +11033,13 @@
       "name": "FUN_a010edbc",
       "status": "matched"
     },
+    "ram:a010f064": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes two packed halfword pairs, a flag-or of word 0 and 0x50005 into the channel register blocks of tables 0x19aef0 and 0x19aee4",
+      "name": "FUN_a010f064",
+      "status": "matched"
+    },
     "ram:a010f7a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
