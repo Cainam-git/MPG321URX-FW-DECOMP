@@ -16360,6 +16360,13 @@
       "name": "FUN_a014a388",
       "status": "matched"
     },
+    "ram:a014a588": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "selects k from the FUN_a01421c4 code and m from q (1..3), then FUN_a012af40(k, m & 3) and FUN_a0153970 when k != 0xff",
+      "name": "FUN_a014a588",
+      "status": "matched"
+    },
     "ram:a014a654": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
