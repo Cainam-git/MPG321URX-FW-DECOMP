@@ -7651,6 +7651,12 @@
       "name": "FUN_a00cc1d4",
       "status": "matched"
     },
+    "ram:a00cc2f8": {
+      "by": "hand",
+      "comment": "checks the DAT_a807d250 status bytes and sends the counter word of the DAT_a8078bb0 record of a port, printing the read-back bytes",
+      "name": "FUN_a00cc2f8",
+      "status": "matched"
+    },
     "ram:a00cc834": {
       "by": "hand",
       "comment": "Sets or clears bit 1 of an indexed register for port 2, else calls FUN_a00c76c0(port, 4, 0x10, on)",
