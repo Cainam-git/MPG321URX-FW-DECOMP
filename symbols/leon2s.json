@@ -7946,6 +7946,12 @@
       "name": "FUN_a00d3704",
       "status": "matched"
     },
+    "ram:a00d38a8": {
+      "by": "hand",
+      "comment": "reads three register values of the source selected by DAT_a8078c37 into DAT_a807d548 and limits halfword +0x1c to 10000",
+      "name": "FUN_a00d38a8",
+      "status": "matched"
+    },
     "ram:a00d3c40": {
       "by": "hand",
       "comment": "state step: runs only when reg cf03c80c == 0x99; bit test a8078c36 >> c37, f724b4/d2e00/d2b88/d3364 checks set state byte a8078c38 (0/2/4) and call the d2xxx/d3xxx handlers",
