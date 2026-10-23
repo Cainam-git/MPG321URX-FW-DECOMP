@@ -2680,6 +2680,13 @@
       "name": "FUN_a00911a0",
       "status": "matched"
     },
+    "ram:a009145c": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "steps word 0xa802afec up through the FUN_a00aa4e0-enabled values (wrap 10 -> 1 / 1 -> 2 by bit 14 of DAT_a802d290) with the FUN_a00a7e00/FUN_a00ab080/FUN_a00a7aec/FUN_a00b3d14/FUN_a00b4144/FUN_a00b0034 calls",
+      "name": "FUN_a009145c",
+      "status": "matched"
+    },
     "ram:a0091648": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
