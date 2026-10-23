@@ -6674,6 +6674,12 @@
       "name": "FUN_a00b0724",
       "status": "matched"
     },
+    "ram:a00b0e54": {
+      "by": "hand",
+      "comment": "builds two nibble tables from DAT_a8078768 and FUN_a00a0083ec4 and writes them to registers 0xcf0117c0-0xcf0117ec",
+      "name": "FUN_a00b0e54",
+      "status": "matched"
+    },
     "ram:a00b1028": {
       "by": "hand",
       "comment": "runs a fixed sequence of port set-up calls and register writes, with an optional byte table init",
