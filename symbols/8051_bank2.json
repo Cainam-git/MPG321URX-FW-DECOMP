@@ -721,6 +721,13 @@
       "name": "FUN_CODE_a547",
       "status": "matched"
     },
+    "CODE:a6fa": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Save the current records of index 0x075B into its table slots, switch the index to n, load the records of the new index and recompute the address set at 0x07D5 / 0x08BC / 0x08B4",
+      "name": "FUN_CODE_a6fa",
+      "status": "matched"
+    },
     "CODE:aa43": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
