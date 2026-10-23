@@ -8030,6 +8030,12 @@
       "name": "FUN_a00d9e44",
       "status": "matched"
     },
+    "ram:a00d9e5c": {
+      "by": "hand",
+      "comment": "returns the 4-bit distance between the byte pair selected by mode (2: DAT_a8078800/808[DAT_a8078832], 4: DAT_a80787fc/fd), else 0",
+      "name": "FUN_a00d9e5c",
+      "status": "matched"
+    },
     "ram:a00d9edc": {
       "by": "h43",
       "comment": "sets three bit-fields in a buffer built from the current 11-byte record and copies the result to a register block",
