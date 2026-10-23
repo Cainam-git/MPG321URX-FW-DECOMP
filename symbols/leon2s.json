@@ -7586,6 +7586,12 @@
       "name": "FUN_a00c91f8",
       "status": "matched"
     },
+    "ram:a00c9334": {
+      "by": "hand",
+      "comment": "sets field st of DAT_a8078bb0[port] to 1",
+      "name": "FUN_a00c9334",
+      "status": "matched"
+    },
     "ram:a00c9368": {
       "by": "autoc",
       "comment": "returns 1",
