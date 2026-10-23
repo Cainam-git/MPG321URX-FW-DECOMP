@@ -837,6 +837,13 @@
       "name": "FUN_CODE_7ca8",
       "status": "matched"
     },
+    "CODE:883d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "register write sequence, two FUN_CODE_d27f key pairs with FUN_CODE_ad88 / FUN_CODE_8a51 (module with FUN_CODE_dcd3)",
+      "name": "FUN_CODE_883d",
+      "status": "matched"
+    },
     "CODE:8a51": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
@@ -1705,10 +1712,20 @@
       "name": "FUN_CODE_dcbb",
       "status": "matched"
     },
+    "CODE:dccf": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_dcd3, in FUN_CODE_dcd3's code segment; emitted by compiling src/8051_bank1/FUN_CODE_883d.c, bytes judged with FUN_CODE_dcd3 over 0xdccf..0xdce3",
+      "kind": "common_entry",
+      "module": "FUN_CODE_883d",
+      "name": "FUN_CODE_dccf",
+      "of": "FUN_CODE_dcd3",
+      "status": "matched"
+    },
     "CODE:dcd3": {
       "by": "hand",
-      "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "write val to the xdata byte at 0x9ab0 + reg (generic pointer; twin of dd74)",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "register write XDATA 0x9AB0[reg] = val through a generic pointer, with common-entry block FUN_CODE_dccf",
+      "module": "FUN_CODE_883d",
       "name": "FUN_CODE_dcd3",
       "status": "matched"
     },
