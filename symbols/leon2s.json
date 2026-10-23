@@ -6289,6 +6289,12 @@
       "name": "FUN_a00b0724",
       "status": "matched"
     },
+    "ram:a00b1028": {
+      "by": "h43",
+      "comment": "runs a fixed sequence of port set-up calls and register writes, with an optional byte table init",
+      "name": "FUN_a00b1028",
+      "status": "matched"
+    },
     "ram:a00b115c": {
       "by": "h17",
       "comment": "switch on mode 0..2: two or three FUN_a00a6c98/FUN_a00a6c00 register writes with fixed values",
