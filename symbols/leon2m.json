@@ -13354,6 +13354,12 @@
       "name": "FUN_a0124ea4",
       "status": "matched"
     },
+    "ram:a0124eac": {
+      "by": "hand",
+      "comment": "returns 1",
+      "name": "FUN_a0124eac",
+      "status": "matched"
+    },
     "ram:a0124eb4": {
       "by": "autoc",
       "comment": "func_0x4008c86c(0xc, 0x40, 0)",
