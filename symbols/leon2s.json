@@ -6123,6 +6123,12 @@
       "name": "FUN_a00af464",
       "status": "matched"
     },
+    "ram:a00af524": {
+      "by": "h43",
+      "comment": "probes register 0x62 for five selector values written to register 0x60 and returns a 2-bit result",
+      "name": "FUN_a00af524",
+      "status": "matched"
+    },
     "ram:a00af690": {
       "by": "h17",
       "comment": "Updates the byte DAT_a8079338[port] from a FUN_a00aceec range test at most once per 0x28 counts of FUN_a00b2064; returns it",
