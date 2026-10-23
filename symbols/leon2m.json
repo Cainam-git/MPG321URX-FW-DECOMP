@@ -17422,6 +17422,12 @@
       "name": "FUN_a0148824",
       "status": "matched"
     },
+    "ram:a014882c": {
+      "by": "hand",
+      "comment": "returns 0",
+      "name": "FUN_a014882c",
+      "status": "matched"
+    },
     "ram:a0148854": {
       "by": "hand",
       "comment": "1 when byte e1a0[7] > 4, else 0",
