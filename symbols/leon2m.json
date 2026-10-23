@@ -7613,6 +7613,13 @@
       "name": "FUN_a00d5748",
       "status": "matched"
     },
+    "ram:a00d57e8": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "copies 0x1fc bytes from 0x198524 to DAT_a802d290 and 28 bytes from 0x198508 to DAT_a802d274, writing each with FUN_a014aed0(0x30, ...)",
+      "name": "FUN_a00d57e8",
+      "status": "matched"
+    },
     "ram:a00d58d8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
