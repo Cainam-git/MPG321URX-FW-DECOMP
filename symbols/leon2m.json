@@ -2265,6 +2265,12 @@
       "name": "FUN_a00844f8",
       "status": "matched"
     },
+    "ram:a008453c": {
+      "by": "hand",
+      "comment": "returns bit 0 of DAT_a802af41",
+      "name": "FUN_a008453c",
+      "status": "matched"
+    },
     "ram:a008454c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
