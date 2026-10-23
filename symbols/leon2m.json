@@ -13046,6 +13046,13 @@
       "name": "FUN_a012d4f8",
       "status": "matched"
     },
+    "ram:a012e850": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reads a 16-bit little-endian settings-storage value at FGA block offset 0x70 + 2 * i",
+      "name": "FUN_a012e850",
+      "status": "matched"
+    },
     "ram:a012e8c0": {
       "by": "h41",
       "cflags": "-mcpu=v8 -O3 -g",
