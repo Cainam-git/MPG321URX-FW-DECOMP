@@ -5652,6 +5652,12 @@
       "name": "FUN_a00acb94",
       "status": "matched"
     },
+    "ram:a00aceec": {
+      "by": "h43",
+      "comment": "computes ((a * k / b) * 10000) >> 9 from registers 0x63, 0x66-0x68 and a 2-bit selector in register 0x80",
+      "name": "FUN_a00aceec",
+      "status": "matched"
+    },
     "ram:a00acff4": {
       "by": "hand",
       "comment": "hardware register 0xcf0132c0 |= 2; FUN_a00b1794(1); register &= ~2; if byte +0x11f of port record ARR_a807dc18[0] or [1] (300-byte records, see FUN_a00ac66c) == 1: byte 0xa8079316 = 0. void.",
