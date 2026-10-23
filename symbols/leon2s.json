@@ -2048,6 +2048,12 @@
       "name": "CED_ALL",
       "status": "matched"
     },
+    "ram:a0072e60": {
+      "by": "h42",
+      "comment": "formats an unsigned value in a base into buf with sign, padding and case flags, returns the width",
+      "name": "FUN_a0072e60",
+      "status": "matched"
+    },
     "ram:a0072fd8": {
       "by": "permuter",
       "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
