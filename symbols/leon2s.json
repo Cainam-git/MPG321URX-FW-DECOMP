@@ -7556,6 +7556,12 @@
       "name": "FUN_a00c8a80",
       "status": "matched"
     },
+    "ram:a00c8aec": {
+      "by": "hand",
+      "comment": "sets field st of DAT_a8078bb0[port] to 3",
+      "name": "FUN_a00c8aec",
+      "status": "matched"
+    },
     "ram:a00c8b18": {
       "by": "hand",
       "comment": "compares two bytes from FUN_a00c8760 with registers 0x22/0x23 and sets the record state and counter fields",
