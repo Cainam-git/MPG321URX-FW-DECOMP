@@ -100,8 +100,8 @@ def keil_listing(lst_path, fn):
             b = bytes.fromhex(hx)
             if len(code) < off: code.extend(b"\0" * (off - len(code)))
             code[off:off + len(b)] = b
-            if flag in ("E", "R", "F"):
-                for k in range(1, len(b)): fx.add(off + k)
+            if flag in ("E", "R", "F"):   # instructions: operand bytes after the opcode; DW table rows: both bytes
+                for k in range(0 if asm.upper().startswith("DW") else 1, len(b)): fx.add(off + k)
             out.append(f"{r.group(1)}  {hx:<8} {asm}")
         elif asm: out.append(f"{r.group(1)}  {'':<8} {asm}")
     return out, bytes(code), fx
@@ -267,6 +267,11 @@ def exact8051(lst_path, fn, start, code, target, bank, block=None, fn_off=0):
         for r in rows:
             if not (r[2] and r[3]): continue
             off, op, asm = int(r[1], 16), bytes.fromhex(r[2]), r[4].strip()
+            if asm.upper().startswith("DW ") and len(op) == 2:
+                # ?C?CCASE / jump-table row: a big-endian 16-bit address of one of the function's own labels
+                nm = asm.split(None, 1)[1].strip().upper()
+                if nm not in labels: return f"cannot resolve table row '{asm}'"
+                v = start + labels[nm]; code[off:off + 2] = bytes([(v >> 8) & 0xFF, v & 0xFF]); continue
             if len(op) in (2, 3) and op[0] not in (0x02, 0x12, 0x90) and (op[0] & 0x1F) not in (0x01, 0x11):
                 # small model: direct DATA / BIT operand bytes (MOV dir,..., MOV dir,#imm, ORL dir,#, JB bit,...). Each name
                 # maps to one byte in text order (0x85 MOV dst,src stores src first). Names with an address suffix resolve to
