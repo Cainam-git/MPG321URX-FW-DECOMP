@@ -12213,6 +12213,13 @@
       "name": "FUN_a0121f58",
       "status": "matched"
     },
+    "ram:a0122480": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes v to one (sel 0..3) or all (sel 4) of four groups of eight 0xcf01cdxx/cexx registers",
+      "name": "FUN_a0122480",
+      "status": "matched"
+    },
     "ram:a01227f0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
