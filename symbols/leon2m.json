@@ -18305,6 +18305,14 @@
       "status": "matched",
       "symbol": "__mdiff"
     },
+    "ram:a015d690": {
+      "by": "lib",
+      "comment": "toolchain library function _ulp from libc.a:mprec.o (112 bytes); byte-exact, no C needed",
+      "lib": "libc.a:mprec.o",
+      "name": "FUN_a015d690",
+      "status": "matched",
+      "symbol": "_ulp"
+    },
     "ram:a015d700": {
       "by": "lib",
       "comment": "toolchain library function _b2d from libc.a:mprec.o; byte-exact, no C needed",
@@ -18344,6 +18352,14 @@
       "name": "FUN_a015d9e4",
       "status": "matched",
       "symbol": "_realloc_r"
+    },
+    "ram:a015ded4": {
+      "by": "lib",
+      "comment": "toolchain library function isinf from libc.a:s_isinf.o (56 bytes; called by _vfprintf_r, a libc.a function); byte-exact, no C needed",
+      "lib": "libc.a:s_isinf.o",
+      "name": "FUN_a015ded4",
+      "status": "matched",
+      "symbol": "isinf"
     },
     "ram:a015df0c": {
       "by": "autoc",
@@ -18425,6 +18441,14 @@
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
       "name": "FUN_a015e484",
       "status": "matched"
+    },
+    "ram:a015e4c4": {
+      "by": "lib",
+      "comment": "toolchain library functions .urem (+0) and .rem (+8) from libgcc.a:_modsi3.o (688 bytes); byte-exact, no C needed",
+      "lib": "libgcc.a:_modsi3.o",
+      "name": "FUN_a015e4c4",
+      "status": "matched",
+      "symbol": ".urem"
     },
     "ram:a015e774": {
       "by": "twin",
