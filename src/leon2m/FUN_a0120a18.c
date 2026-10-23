@@ -1,8 +1,8 @@
-/* leon2m FUN_a0120a18 @ 0xa0120a18-0xa0120b38 (288 bytes)  input LINE RATE in 100 Hz units
+/* leon2m FUN_a0120a18 @ 0xa0120a18-0xa0120b38 (288 bytes)  hfreq of input block 'port' in 100 Hz units
  * Flags -mcpu=v8 -O3 -g.
  * cnt = 13-bit line-period count of input block `port` (register 0x12/0x13, 96 MHz ticks per line).
  * 147 <= cnt <= 8000: rate = (96000000 / cnt + 50) / 100 (integer divide, then ROUNDED to 100 Hz).
- *   e.g. 480p (525 lines) at 60.000 Hz: 31500 Hz -> cnt 3047 -> 315; a 480p line rate of 31551.9 Hz -> cnt 3042 or
+ *   e.g. 480p (525 lines) at 60.000 Hz: 31500 Hz -> cnt 3047 -> 315; an input of 31551.9 Hz -> cnt 3042 or
  *   3043
  *   (hardware) -> 316 or 315: this value decides whether such a timing stays inside the FRC Back Check window
  *   (FUN_a0131518).

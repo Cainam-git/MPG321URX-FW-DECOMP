@@ -11,8 +11,8 @@
  *   version); 0x7F = HDMI 2.1 Extended Metadata Packet, organisation 1 / tag 1 = VTEM,
  *   0x36A bits 0-1 = VRR_EN / M_CONST.
  * Caller: FUN_a006d61c(rec, port) sets rec[0xd] bit 2 when the result has bit 0 or bit 2; that byte reaches the
- *   main chip through mailbox portal 1 and becomes the switch that sends the panel row picker FUN_a00dac38 (Leon2M)
- *   to its line-rate path.
+ *   main chip through mailbox portal 1 and ends in the 0xA802CBD4 port bit that selects the hfreq branch of
+ *   FUN_a00dac38 (Leon2M).
  * key: the 0x16C test written as if (bit set) { r |= 2; if (0x169 bit 5) r &= ~0x10; else r |= 0x10; }
  *   else r |= 0x10; (other orders lose the be,a / bne delay-slot shape).
  */

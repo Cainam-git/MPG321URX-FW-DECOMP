@@ -1798,7 +1798,7 @@
     },
     "ram:a006d414": {
       "by": "hand",
-      "comment": "small chip: sets port record type rec.b0 (line-rate/VRR chain)",
+      "comment": "small chip: sets port record type rec.b0",
       "name": "FUN_a006d414",
       "status": "matched"
     },
@@ -1840,7 +1840,7 @@
     },
     "ram:a006d61c": {
       "by": "hand",
-      "comment": "port status flags; rec[0xd] bit 2 = the line-rate switch (FreeSync/HDMI VRR detected)",
+      "comment": "port status flags; rec[0xd] bit 2 = FUN_a008f79c result bit 0 or 2 (reaches the Big chip's 0xA802CBD4 port bit)",
       "name": "FUN_a006d61c",
       "status": "matched"
     },
@@ -1882,7 +1882,7 @@
     },
     "ram:a006fbac": {
       "by": "hand",
-      "comment": "4-word mailbox descriptor of one input port (carries the line-rate switch flags byte)",
+      "comment": "4-word mailbox descriptor of one input port (byte 1 of word 0 = flags byte rec[0xd])",
       "name": "FUN_a006fbac",
       "status": "matched"
     },
@@ -1936,7 +1936,7 @@
     },
     "ram:a00700cc": {
       "by": "hand",
-      "comment": "publish the input port records + status words to the Big chip (VRR line-rate switch chain), documented no-code aid x>>8",
+      "comment": "publish the input port records + status words to the Big chip , documented no-code aid x>>8",
       "name": "FUN_a00700cc",
       "status": "matched"
     },
@@ -3303,7 +3303,7 @@
     },
     "ram:a008f79c": {
       "by": "hand",
-      "comment": "VRR signalling detector of an HDMI receiver port (FreeSync SPD / HDMI VTEM checks); source of the line-rate switch",
+      "comment": "VRR signalling detector of an HDMI receiver port (FreeSync SPD / HDMI VTEM checks); result bits 0/2 -> rec[0xd] bit 2 in FUN_a006d61c",
       "name": "FUN_a008f79c",
       "status": "matched"
     },

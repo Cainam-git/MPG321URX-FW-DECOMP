@@ -9,7 +9,7 @@
  * Derived fields: +0x26 = +0x28 = (htot_min - field +0x08) / 48 * 16 (signed division), and +0x48 =
  * clk_min / htot_min / vtot_min * 10 (refresh rate at the minimum clock, tenths of Hz; 64-bit divides).
  * Row layout used here (all big-endian): +0x08 u16, +0x10 u64 clk_min (Hz), +0x18 u64 clk_max (Hz),
- * +0x20/22/24 htotal min/typ/max, +0x2A/2C/2E vtotal min/typ/max, +0x4A/4C min/max line rate, +0x4E/50 min/max
+ * +0x20/22/24 htotal min/typ/max, +0x2A/2C/2E vtotal min/typ/max, +0x4A/4C min/max hfreq, +0x4E/50 min/max
  * vfreq (tenths of Hz; row 2 (<62 Hz) max 600).
  * Callers: FUN_a00dac38 (apply 1 when the row changes by measurement, 0 for the class fallback to row 1) and
  * FUN_a0129810.

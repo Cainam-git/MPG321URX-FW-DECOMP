@@ -2,13 +2,13 @@
  *
  * Returns field 'id' of display channel ch's input timing record (0x78-byte records at 0xA802DF30; channel number
  * through the same 0..3 remap helper as FUN_a0148540; out of range ids return 0xFFFF):
- *   0 +0x06 line rate ("hfrq" in FUN_a00dac38)   1 +0x08 vfreq (tenths of Hz)   2 port record +0x20 (port P =
+ *   0 +0x06 hfreq ("hfrq" in FUN_a00dac38)   1 +0x08 vfreq (tenths of Hz)   2 port record +0x20 (port P =
  *   bits 12-15 of word +0, records 0x2A bytes at 0xA802E224)   3 code from byte +0x0A: 2 -> 1, 4 -> 2, 8 -> 3,
  *   else 0   4 +0x0E   5 +0x30   6 +0x2E   7 +0x12   8 +0x14   9 +0x16   10 +0x18 active lines ("active_in")
  *   11 +0x1A   12 +0x1E   13 +0x34   14 +0x32   15 +0x1C   16 +0x20   17 +0x2C   18 +0x38   19 +0x36
  *   20 byte +0x26   21 byte 0xA802E222 (global)   22 byte +0x3A   23 +0x3C
- * FUN_a00dac38 (row select) and FUN_a008380c (APPGetFRCMode) read the input vfreq (id 1),
- * line rate (id 0), active lines (id 10) and ids 7, 8 through this function.
+ * FUN_a00dac38 and FUN_a008380c (APPGetFRCMode) read the input vfreq (id 1),
+ * hfreq (id 0), active lines (id 10) and ids 7, 8 through this function.
  * Source order of the cases matters: the original lists case 23 between 21 and 22 (gcc emits the second-to-last
  * case block first, which is where the original has id 23).
  */

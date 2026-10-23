@@ -1,10 +1,10 @@
-/* leon2m FUN_a013f370 @ 0xa013f370  per-port mode match; publishes the line-rate switch into 0xA802CBD4
+/* leon2m FUN_a013f370 @ 0xa013f370  per-port mode match; sets or clears bit 'port' of 0xA802CBD4
  * Flags: -mcpu=v8 -O3 -g -msoft-float.
  *
  * t = FUN_a013cd4c(port) (pointer to the port's timing record).
  * Port status P = 0xA802E224 + 42*port:
  *   P.h0 bit 0x400 set -> 0xA802CBD4 |= 1 << port, else 0xA802CBD4 &= ~(1 << port)   (read back by FUN_a0148540 /
- *   FUN_a0121258 = 'bit port of 0xA802CBD4', i.e. the line-rate switch read by the row picker FUN_a00dac38);
+ *   FUN_a0121258 = 'bit port of 0xA802CBD4'; FUN_a00dac38 reads it through FUN_a0148540(0));
  *   P.h0 bit 0x80 -> 0xA802CBD3 bit port the same way.
  * Then FUN_a01215e8(port) and, by FUN_a0142e8c(port):
  *   != 5: best match over the mode table 0x1A5A16 (36-byte rows, ends at row.w2 == 0xFFFF): rows whose +0x22 id is

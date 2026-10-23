@@ -1,7 +1,7 @@
 /* leon2m FUN_a014285c @ 0xa014285c-0xa0142910 (180 bytes)  fill a port timing record from the input measurement
  * Flags: -mcpu=v8 -O2 -g and -mcpu=v8 -O3 -g both give this code.
  * FUN_a00f92d4(port) != 0: values from the FUN_a00f93xx getters (+0x24 = 8); else from the measurement block:
- * +0x1E = FUN_a0120a18(port) = line rate in 100 Hz units ((96e6/count + 50)/100), +0x20 = FUN_a0120b38(port) =
+ * +0x1E = FUN_a0120a18(port) = hfreq in 100 Hz units ((96e6/count + 50)/100), +0x20 = FUN_a0120b38(port) =
  * vfreq in 0.1 Hz, +0x22/+0x23/+0x24 bytes and +0x26 from FUN_a0120c58/c74/bf4/c90. FUN_a00f92d4(port) is bit 7
  * of register 0x8C read through FUN_a00f1a90.
  */

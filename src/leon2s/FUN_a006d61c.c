@@ -2,14 +2,14 @@
  *
  * rec = 20-byte port record (0xA807A824 + 20 * (id - 1)), port = receiver index. r = FUN_a008f79c(port) (the VRR
  * signalling detector):
- *   rec[0xd] bit 2 (0x04) = r bit 0 OR r bit 2   <- the line-rate switch
+ *   rec[0xd] bit 2 (0x04) = r bit 0 OR r bit 2   <- reaches the Big chip's 0xA802CBD4 port bit
  *   rec[0xd] bit 3 = r bit 1; bit 4 = r bit 4; bit 7 = r bit 3; (each a separate read-modify-write of rec[0xd])
  *   halfword +0xe bit 14 = FUN_a008f9e4(port), bit 15 = FUN_a008f9c0(port);
  *   type rec[0] == 5: halfword +0x12 bit 6 = FUN_a0091420(0, port); other types: FUN_a0091420(1, port), bit 6 cleared;
  *   rec[0xd] bit 6 = bit <port> of 0xA8078C35, bit 5 = bit <port> of 0xA8078C5B.
  * rec[0xd] is published by FUN_a006fbac (byte 1 of descriptor word 0) through MailBox_Write FUN_a0072a4c to portal 1,
  * read by the Big chip's FUN_a01387a4 into template +0xc, copied by FUN_a0136d20 into port entry bit 4, and from
- * there reaches the line-rate path of the panel row picker FUN_a00dac38. r bit 0 = AMD FreeSync SPD InfoFrame seen,
+ * there 0xA802CBD4, which selects the hfreq branch of FUN_a00dac38. r bit 0 = AMD FreeSync SPD InfoFrame seen,
  * bit 2 = HDMI 2.1 VTEM with VRR_EN (see FUN_a008f79c).
  * Source form: the type test written as 'if (rec->b0 != 5) {...} else ...' (other port first).
  */

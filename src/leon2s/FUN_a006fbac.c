@@ -5,7 +5,7 @@
  * buf[1] = rec[0xc] | (rec[0x12] & 0x1f) << 8 | rec h2 << 16; buf[2] = h4 | h6 << 16; buf[3] = h8 | ha << 16;
  * then FUN_a006fb3c(buf, 4). Caller: FUN_a00700cc (id = port id, n = id - 1), which publishes buf through
  * FUN_a006fad4 to mailbox portal 1 slot <port>, where the Big chip's FUN_a01387a4 reads it: buf[0] byte 1 = rec[0xd]
- * = the flags byte whose bit 2 is the line-rate switch (set by FUN_a006d61c from the VRR
+ * = the flags byte whose bit 2 reaches the Big chip's 0xA802CBD4 port bit (set by FUN_a006d61c from the VRR
  * detector FUN_a008f79c).
  * key: buf[1] written as 'buf[1] = buf[1] | a | b' (left to right), not 'buf[1] |= a | b'.
  */

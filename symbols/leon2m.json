@@ -1972,7 +1972,7 @@
     "ram:a002f550": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "refresh the four port entries from the Small-chip templates (RAM copy 0x4008F550); line-rate switch chain link",
+      "comment": "refresh the four port entries from the Small-chip templates (RAM copy 0x4008F550); never writes entry bit 4",
       "name": "FUN_a002f550",
       "status": "matched"
     },
@@ -7937,7 +7937,7 @@
     "ram:a00dac38": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "SYSAPI_GetPanelParamStruct: panel row picker (refresh / line-rate row choice)",
+      "comment": "prints \"SYSAPI_GetPanelParamStruct %x,%x\": selects and applies row 0/1/2 of the 0x58-byte rows at 0x198380 by vfreq, or by hfreq * 2160 / active when FUN_a0148540(0) is set",
       "name": "FUN_a00dac38",
       "status": "matched"
     },
@@ -9172,7 +9172,7 @@
     "ram:a00f446c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "link-training / EQ calibration (3 stages); only rate input: line rate x sweep value <= 2050000",
+      "comment": "link-training / EQ calibration (3 stages); only rate input: hfreq (FUN_a0120a18) x sweep value <= 2050000",
       "name": "FUN_a00f446c",
       "status": "matched"
     },
@@ -11644,7 +11644,7 @@
     "ram:a0120a18": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "480p proof chain, byte-exact",
+      "comment": "hfreq of an input block in 100 Hz units: (96000000 / count + 50) / 100 for count 147..8000, else 120000 / (reg 0x57 + 1) or 0xFFFF; sets reg 0x2E bit 7 when <= 332",
       "name": "FUN_a0120a18",
       "status": "matched"
     },
@@ -13481,7 +13481,7 @@
     "ram:a0136d20": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "copy Small-chip port template into port entry; entry bit 4 = template flags bit 2 (line-rate switch)",
+      "comment": "copy Small-chip port template into port entry; entry bit 4 = template flags bit 2 (-> port status bit 0x400 -> 0xA802CBD4)",
       "name": "FUN_a0136d20",
       "status": "matched"
     },
@@ -14554,7 +14554,7 @@
     "ram:a013f370": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "per-port mode match; publishes the line-rate switch into 0xA802CBD4 (last main-chip link of the switch chain)",
+      "comment": "per-port mode match; sets bit 'port' of 0xA802CBD4 from port status bit 0x400",
       "name": "FUN_a013f370",
       "status": "matched"
     },
@@ -14738,7 +14738,7 @@
     "ram:a0142168": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "port id byte -> index into the port entry table 0xA802E116 (line-rate switch chain)",
+      "comment": "port id byte -> index into the port entry table 0xA802E116",
       "name": "FUN_a0142168",
       "status": "matched"
     },
@@ -14830,7 +14830,7 @@
     "ram:a0142910": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "per-port sync state machine; copies port-entry flags incl. the line-rate switch into the port status",
+      "comment": "per-port sync state machine; copies port-entry flags incl. entry bit 4 -> status bit 0x400 into the port status",
       "name": "FUN_a0142910",
       "status": "matched"
     },
@@ -15177,7 +15177,7 @@
     "ram:a0145660": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "input timing getter: field id of a channel's input measurement record (vfreq, line rate, active lines ...)",
+      "comment": "input timing getter: field id of a channel's input measurement record (vfreq, hfreq, active lines ...)",
       "name": "FUN_a0145660",
       "status": "matched"
     },
@@ -15633,7 +15633,7 @@
     "ram:a0148540": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Bit P of port mask 0xA802CBD4, P = bits 12-15 of display channel ch's record (0xA802DF30 + 0x78*ch); set by FUN_a013f370 from port status bit 0x400. Selects hfreq-based panel row choice in FUN_a00dac38.",
+      "comment": "Bit P of port mask 0xA802CBD4, P = bits 12-15 of channel ch's record (0xA802DF30 + 0x78*ch); set by FUN_a013f370 from port status bit 0x400. Selects the hfreq branch of FUN_a00dac38.",
       "name": "FUN_a0148540",
       "status": "matched"
     },

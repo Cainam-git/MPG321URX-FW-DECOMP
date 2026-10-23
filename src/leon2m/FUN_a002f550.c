@@ -11,7 +11,7 @@
  *     AND E +2 bit 15 (template flags bit 5): on first sight (0xA802CC0B bit b clear) set it and store the tick
  *     FUN_a002d588() in 0xA802CC0C[n - 2]; then while FUN_a002d594(start) (= ticks since) < 1000 print
  *     'Mute when Hdcp22Auth\r\n' and set the type nibble to 2. Finally if type != 5: 0xA802CC0A &= ~b.
- * Line-rate switch: this function never touches entry bit 4 (0x10, the line-rate switch); it only
+ * Entry bit 4 (0x10, source of the 0xA802CBD4 port bit): this function never touches it; it only
  *   calls FUN_a0136d20 (which writes it) and changes bits 0x400/0x200/0x100 (E0/E1) and the type nibble 5 -> 2 (E2/E3,
  *   for up to 1000 ticks after first sight, the window in which it prints 'Mute when Hdcp22Auth').
  *   A type rewritten to 2 makes FUN_a0142910's type-5 test fail for that port.

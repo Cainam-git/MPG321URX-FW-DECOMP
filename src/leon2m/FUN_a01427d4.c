@@ -2,7 +2,7 @@
  * table at 0xA802E224.
  * What it does at power-on (code facts): for the 8 entries p = 0xA802E224 + 42*i (i = 0..7): p+0xB = i (port id),
  * p+2 (state) = 1, p+9 = 1, and the flag halfword p+0 loses bit 12 (0x1000) and bit 4 (0x10, the bit FUN_a0142910
- * fills from the timing-entry bit 4 = the line-rate switch). Then entries 0..3 get state 2 (= the state in
+ * fills from the timing-entry bit 4). Then entries 0..3 get state 2 (= the state in
  * which FUN_a0142910's per-port sync state machine starts to look for a signal; state 1 = idle).
  * Can it fail or wait? No: two fixed loops of 8 and 4 turns, RAM only, no registers, no calls.
  * It runs before FUN_a0106d64; plain RAM init of input-port state.

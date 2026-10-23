@@ -11,7 +11,7 @@
  *     h0c + 0x10 when v <= h0c), up to 32 passes: FUN_a0121e3c, reg 0x36 = 0x41, wait <= 0x63 timer ticks for
  *     reg 0x36 bit 0 to clear (else abort flag, orig back, fail); reg 0x49: class = bits 6..7, step = bits 0..5:
  *     class 0 = done, 1 = v += step (must stay <= 2 * h0c), 2/3 = v -= step (must stay >= h0c); then the
- *     LINE-RATE CHECK: FUN_a0120a18(blk) (input line rate, 100 Hz units) * v must be <= 2050000 (0x1f47d0), else
+ *     HFREQ CHECK: FUN_a0120a18(blk) (hfreq, 100 Hz units) * v must be <= 2050000 (0x1f47d0), else
  *     orig back, DAT_a802b7ad = 1, fail; then FUN_a00f42b8(blk, v).
  *   Stage 1: 4 probes FUN_a00f42b8(base - 2 .. base + 1) with the metric FUN_a00f3f64; keeps max (with the
  *     DAT_a802b7af / b0 bytes of that probe) and min; position = max pos, even-aligned unless |max - min| == 1;
@@ -22,7 +22,7 @@
  *     << 16 + reg 0x43, smoothed s = v/4 + prev/2 + prev2/4; from j = 4 the position with the smallest
  *     |s - last s| wins; FUN_a00f37d0(best - 1). Then FUN_a00f3c18(blk, p) again; on success the callback
  *     steps to 100, regs 0x2a / 0x4a are restored, return 1.
- * Rate: the only rate input is the line rate in the stage-0 bound. Arithmetic from the code (not measured):
+ * Rate: the only rate input is the hfreq value in the stage-0 bound. Arithmetic from the code (not measured):
  *   2160p with 2250 total lines is about 135.0 kHz at 60.000 Hz (rate 1350), so the stage-0 sweep value must stay
  *   <= 2050000 / 1350 = 1518; at rate 1352 (135.2 kHz) the bound is 2050000 / 1352 = 1516.
  *
@@ -42,7 +42,7 @@
  *     body, |max - min| via abs() (fw 'xor sign, x' order).
  *   - stage 2: init order best, p1, p2, last, bestd; 'pos = (pos - 1) & 0x3f' before s.
  *   - also: goto loops in stages 0 / 1 (no loop-invariant motion in the fw), FUN_a00f3528
- *     returns unsigned short, u16 stage-1 positions, 'h2 = h + h' before the 'cur <= h' test, the line-rate
+ *     returns unsigned short, u16 stage-1 positions, 'h2 = h + h' before the 'cur <= h' test, the hfreq
  *     limit as a local 'lim = 2050000; pr = rate * cur; if (lim < pr)', history 'p3 = p2; p2 = p1; p1 = val',
  *     e read before FUN_a00f3580, af / b0 unsigned int, 'goto abort2' for the ok == 0 abort.
  * volatile only on the hardware register 0xcf020114.

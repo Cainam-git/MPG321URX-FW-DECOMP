@@ -1,4 +1,5 @@
-/* leon2m FUN_a00dac38 @ 0xa00dac38  SYSAPI_GetPanelParamStruct = the panel row picker. Flags -mcpu=v8 -O3 -g.
+/* leon2m FUN_a00dac38 @ 0xa00dac38  selects and applies row 0, 1 or 2 of the 0x58-byte
+ * rows at 0x198380 and prints "SYSAPI_GetPanelParamStruct %x,%x". Flags -mcpu=v8 -O3 -g.
  *
  * off = 20 (5 when FUN_a0145af8(2) == 1). Reads vfreq (tenths of Hz, id 1), hfreq (id 0) and active lines (id 10)
  * via FUN_a0145660(0, n) (ids 8 and 7 are read and ignored).
@@ -8,18 +9,18 @@
  * otherwise: prints 'hfrq(%d) = %d', 'active_in(%d) = %d', 'vfreq(%d) = %d' (port from FUN_a0108e54), then
  *   'scaler_hfrq_out = %d' (p0 / 1000) and 'Vfreq %d %d %d' (p0 / 2348 three times; p0 is only ever 0 or 1).
  *   Input class 0xA802E1A7 == 0 or 2:
- *     h = (u16)hfreq * 2160 / (u16)active * 1000, or (u16)hfreq * 1000 when active is 0 (2160 = panel height; the
+ *     h = (u16)hfreq * 2160 / (u16)active * 1000, or (u16)hfreq * 1000 when active is 0 (the constant 2160; the
  *       MAG 271QPX build has 1440 here);
- *     FUN_a0148540(0) != 0: mode by line rate: h / 2348 <= 699 -> 2, <= 1299 -> 1, else 0;
- *     otherwise by refresh: vfreq < off + 600 -> 2, < off + 1200 -> 1, else 0;
+ *     FUN_a0148540(0) != 0: mode by h: h / 2348 <= 699 -> 2, <= 1299 -> 1, else 0;
+ *     otherwise by vfreq: vfreq < off + 600 -> 2, < off + 1200 -> 1, else 0;
  *     if mode differs from the current row: select it, copy and apply it with FUN_a01483f4(&row, 1).
  *   Any other class: as the force path but FUN_a01483f4(&row, 0).
  * Always ends printing 'SYSAPI_GetPanelParamStruct %x,%x' with FUN_a0126878() and the current row.
- * Row 2 (the 60 Hz row) is chosen below 62.0 Hz (refresh path) or for h/2348 <= 699 (line-rate path); FW.012 had
- *   only the refresh path and no row 2. The two limits are the immediates 0x2bb (699) and 0x258 (600).
+ * Row 2 is chosen for vfreq < off + 600 (vfreq branch) or for h/2348 <= 699 (h branch); FW.012 had
+ *   only the vfreq branch and no row 2. The two limits are the immediates 0x2bb (699) and 0x258 (600).
  * Callers (all four call sites, void to each): FUN_a008454c (1,1,0), FUN_a0127c78 (0,1,0) twice, FUN_a01295e4
  * (1,1,1).
- * Source form: the line-rate value is one expression ((u16)hfreq * 2160 / a * 1000, with a = (u16)active held in
+ * Source form: h is one expression ((u16)hfreq * 2160 / a * 1000, with a = (u16)active held in
  *   an unsigned int), so gcc reuses the zero-extended active from its print; the callees' signatures (FUN_a01295c4
  *   unsigned char, FUN_a0126878 unsigned short, FUN_a0145af8 unsigned short), but FUN_a0145660 declared
  *   int-returning (the firmware extends its results at the uses).

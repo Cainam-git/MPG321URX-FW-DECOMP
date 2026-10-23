@@ -2,7 +2,7 @@
  * Flags: -mcpu=v8 -O3 -g (-mcpu=v8 -O3 gives the same code). NEW in FW.021. Real size 564 bytes.
  *
  * Called at the end of FUN_a0141840 (panel row transform) and by FUN_a0141964, so in FW.021 every panel row change
- * (row picker FUN_a00dac38 -> FUN_a01483f4 -> FUN_a0141840) re-runs the output path set-up.
+ * (FUN_a00dac38 -> FUN_a01483f4 -> FUN_a0141840) re-runs the output path set-up.
  * Builds a 36-byte output configuration on the stack and passes it BY VALUE to FUN_a0106d64, then FUN_a0139a30.
  * row = FUN_a01241fc() (the raw active panel row at 0xA802E378); rec = the saved-settings record 0xA802E1A0
  * (packed, see FUN_a0145af8): u16 h at +3, u16 v at +5.

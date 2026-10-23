@@ -7,7 +7,7 @@
  *   two more. A comparison against the firmware must use the real range, the jump table included.
  *
  * Code facts:
- *   PIP state block 0xA802E1A0 (byte +7 = 0xA802E1A7 = the current PIP/PBP mode; the panel row picker FUN_a00dac38
+ *   PIP state block 0xA802E1A0 (byte +7 = 0xA802E1A7 = the current PIP/PBP mode; FUN_a00dac38
  *   reads it as its input class). Window table 0xA802DF30, 4 entries of 0x78 bytes (+0x00 cfg word, bits 12-15 passed to
  *   FUN_a0101e24; +0x40 ctl word).
  *   1. Leaving mode 0 for any non-zero mode, or leaving mode 2 for any mode other than 0/2:

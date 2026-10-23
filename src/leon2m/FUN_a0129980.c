@@ -1,7 +1,7 @@
 /* leon2m FUN_a0129980 @ 0xa0129980  bitmask of the port entries whose source is present
  * ( -mcpu=v8 -O3 -g -msoft-float).
  *
- * For each of the 7 port entries (18-byte records at 0xA802E116, the table of the line-rate switch chain): bit i of
+ * For each of the 7 port entries (18-byte records at 0xA802E116): bit i of
  * the halfword 0xA802CA00 = FUN_a0124d24(entry[i] byte +0x10) != 0 AND FUN_a0125140(entry[i] byte +0x10) != 0xFF,
  * else cleared.
  */

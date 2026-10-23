@@ -8,7 +8,7 @@
  *   template flags byte +0xc spread into the entry bits:
  *     flags bit 0 -> h0 bit 6 (0x40)   bit 1 -> h0 bit 5 (0x20)   bit 2 -> h0 bit 4 (0x10)   bit 3 -> h0 bit 3 (0x08)
  *     bit 4 -> h0 bit 2 (0x04)          bit 5 -> h2 bit 15 (+2, 0x8000)   bit 6 -> h0 bit 1   bit 7 -> h0 bit 0.
- * Line-rate switch chain: entry h0 bit 4 (0x10) = template +0xc bit 2, entry type nibble = template +0;
+ * Copy chain to the 0xA802CBD4 port bit: entry h0 bit 4 (0x10) = template +0xc bit 2, entry type nibble = template +0;
  *   index n (not t) selects the entry.
  * Callers: only FUN_a002f550 (RAM copy at 0x4008F550, four calls; its listing shows 'call 0xd6d20').
  * Returns nothing (the Ghidra 'uint' result is the leftover %i0).

@@ -4,7 +4,7 @@
  * 1. ids[7] = port ids from mailbox word 0 (FUN_a006fca8). For each slot i (0..6): id = ids[i], n = id - 1,
  *    rec = port record 0xA807A824 + 20 * n. When id is 1..9 and the record's 'changed' bytes +0xf or +0x10 are 1:
  *    print "InputPortidx  %d" n, FUN_a006fbac(id, n, buf) builds the 4-word descriptor (buf[0] byte 1 = rec+0xd,
- *    the flags byte whose bit 2 is the line-rate switch), FUN_a006fad4(slot map[2i+1], 0, buf, 4) writes it to
+ *    the flags byte whose bit 2 reaches the Big chip's 0xA802CBD4 port bit), FUN_a006fad4(slot map[2i+1], 0, buf, 4) writes it to
  *    mailbox portal 1 slot i+1 (read by the Big chip's FUN_a01387a4); if +0x10 was 1: FUN_a006fc58(i) and clear it;
  *    clear +0xf.
  * 2. word 2 byte 0 -> DAT_a80788d3; word 3 bits 8..15 = FUN_a0083e28(); FUN_a006fedc() (word 3 bits 24..31);
@@ -12,7 +12,7 @@
  *    if DAT_a80788d2 != 0: print "RxHPDStatus : %02X" DAT_a80788d2 and pulse 0x9f1cc264(0/1) + 0x9f1cc0a8()
  *    for bits 4/5 of the word.
  * 3. word 0 (DAT_a80788e0): bits 1..2 = 0x9f1c3efc() & 3, write; bits 4..31 = the 7 port type nibbles
- *    (rec[i].b0 & 0xf, 4 bits each), write. This nibble is the type the Big chip tests for 5 (line-rate path).
+ *    (rec[i].b0 & 0xf, 4 bits each), write. This nibble is the type the Big chip tests for 5 (FUN_a0142910 copies entry bit 4 only then).
  *
  * Source form:
  *  - the record address is integer arithmetic 'n * sizeof(struct PortRec) + b' (Ghidra shows the same shape:
