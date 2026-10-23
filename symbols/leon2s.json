@@ -3307,6 +3307,12 @@
       "name": "FUN_a008c8b0",
       "status": "matched"
     },
+    "ram:a008c9a8": {
+      "by": "hand",
+      "comment": "per-selector set-up sequence: FUN_a008ae80/aba8/bddc/c5d8, register pulses for sel 8-14, FUN_a008b32c and the sel 4/6/12/14 follow-up calls",
+      "name": "FUN_a008c9a8",
+      "status": "matched"
+    },
     "ram:a008ced8": {
       "by": "near",
       "cflags": "-mcpu=v8 -Os",
