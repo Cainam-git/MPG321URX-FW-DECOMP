@@ -5137,6 +5137,13 @@
       "name": "FUN_a00a788c",
       "status": "matched"
     },
+    "ram:a00a7aec": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "loop over i 0..6 or 7..8 calling FUN_a00b32e4 with 0x629a (three rows) or 0x659a by i, value c chosen per i",
+      "name": "FUN_a00a7aec",
+      "status": "matched"
+    },
     "ram:a00a7c88": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
