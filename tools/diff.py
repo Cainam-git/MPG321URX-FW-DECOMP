@@ -42,8 +42,11 @@ def compiled(cpu, obj, fn):
     return rows, relocs
 
 REG = r'%[a-z]\d'
-def normalise(rows, relocs):
-    """relocs: None for the firmware side (addresses are concrete), dict for objects."""
+def normalise(rows, relocs, lo0_copies=()):
+    """relocs: None for the firmware side (addresses are concrete), dict for objects.
+    lo0_copies (firmware side): row indices where the compiled object completes an address into another register
+    with a %lo of 0 ("or %a, %lo(sym), %b", which objdump prints as "mov %a, %b"); the firmware's "mov" there is
+    that completion, not a copy of the %hi part."""
     starts = {a for a, _, _ in rows}
     lo, hi = min(starts, default=0), max(starts, default=0)
     sethi_regs = {}          # reg -> instruction index of the last sethi into it
@@ -108,7 +111,11 @@ def normalise(rows, relocs):
                     if re.match(r'^(or|add) (\S+), %lo\(ADDR\), \2$', ins): completed.add(d.group(1))
                     else: del sethi_regs[d.group(1)]; completed.discard(d.group(1))
                 cp = re.match(r'^mov (' + REG + r'), (' + REG + r')$', ins)   # a copy of a sethi'd register carries the address on
-                if cp and cp.group(1) != cp.group(2) and cp.group(1) in sethi_regs:
+                if cp and cp.group(1) != cp.group(2) and cp.group(1) in sethi_regs and i in lo0_copies \
+                        and cp.group(1) not in completed:   # the object completes the address here with a %lo of 0
+                    ins = f"or {cp.group(1)}, %lo(ADDR), {cp.group(2)}"
+                    sethi_regs[cp.group(2)] = i; completed.add(cp.group(2))
+                elif cp and cp.group(1) != cp.group(2) and cp.group(1) in sethi_regs:
                     sethi_regs[cp.group(2)] = i
                     if cp.group(1) in completed: completed.add(cp.group(2))
                     else: completed.discard(cp.group(2))
@@ -129,7 +136,12 @@ last_reason = None   # why the last shape match was not byte-exact (for feedback
 def compare(cpu, fn, obj):
     t = target(cpu, fn); c, relocs = compiled(cpu, obj, fn)
     if not c: raise SystemExit(f"function {fn} not found in {obj}")
-    tn, cn = normalise(t, None), normalise(c, relocs)
+    cn = normalise(c, relocs)
+    # rows where the object completes an address into another register with a %lo of 0 ("mov %a, %b" + LO10)
+    lo0 = {i for i, (a, _, ins) in enumerate(c) if relocs.get(a) in ("LO10", "13")
+           and re.match(r'^mov\s+(' + REG + r'),\s*(' + REG + r')', ins.split("!")[0].strip())
+           and len(set(re.findall(REG, ins.split("!")[0]))) == 2}
+    tn = normalise(t, None, lo0)
     # Ghidra often ends a function before its trailing padding nop; if the compiled code has
     # extra trailing nops and the firmware has exactly those nops right after, they belong to it
     extra = len(cn) - len(tn)
