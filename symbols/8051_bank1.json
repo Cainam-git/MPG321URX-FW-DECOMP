@@ -944,6 +944,13 @@
       "name": "FUN_CODE_883d",
       "status": "matched"
     },
+    "CODE:8947": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "loads five register pointers for ch from CODE tables and writes 0xA0, 0xE8, 0, v and XDATA 0xA6DE through them",
+      "name": "FUN_CODE_8947",
+      "status": "matched"
+    },
     "CODE:8a51": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
