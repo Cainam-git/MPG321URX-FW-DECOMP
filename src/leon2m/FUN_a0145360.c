@@ -8,7 +8,7 @@
  * Required forms: switch (gcc decision tree: 1 first, ble, 2, 3), struct records, -msoft-float.
  * AID: the FUN_a01542c4 argument uses a second extern name DAT_a802df36 for the channel records
  * seen from +6 (same 0x78 stride). The fw builds 0xa802df36 with its own sethi|or and adds i*0x78 (offset first);
- * '&DAT_a802df30[i].h06' lets CSE reuse the hoisted df30 base + 6 (70.79). No volatile, no asm.
+ * '&DAT_a802df30[i].h06' lets CSE reuse the hoisted df30 base + 6. No volatile, no asm.
  */
 struct Chan { unsigned int w0; unsigned short h04, h06; unsigned char rest[0x70]; };
 struct Port { unsigned char b[9]; unsigned char b09; unsigned char rest[0x20]; };

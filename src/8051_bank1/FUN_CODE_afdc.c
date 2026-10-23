@@ -3,9 +3,9 @@
  * F3E9 = 0x0F for 0x1A; then for 0x1A: F024 |= 1C, F02C |= 03, F02D |= BF, F030 |= 04; else F024 |= DC, F02C |= 3F,
  * F02D |= FF, F030 |= BF (0x20) or BB; finally F0A6 |= 3E.
  * volatile is real: 0xD511 is re-read for every test (4 reads), and 'F02D |= 0xFF' keeps its read (MOVX A,@DPTR then
- * MOV A,#0FFH); without volatile on F02D 81.6 %, without it on D511 57.8 %.
+ * MOV A,#0FFH); without volatile on F02D or on D511 the bytes differ.
  * The second 0x1A test is XRL A,#1AH / JNZ in the firmware: '!(d511 ^ 0x1a)' gives it, '== 0x1a' gives CJNE (147 vs
- * 146 B) and a one-case switch gives 98.6 %.
+ * 146 B) and a one-case switch gives other code.
  * Only caller 0x4087 (FUN_CODE_3fe7).
  * Options: OPTIMIZE(8,SPEED).
  */

@@ -4,7 +4,7 @@
  * 0x0410 = 0x0418 * 4 (?C?LMUL FUN_CODE_32f5), 0x01DE = 0x0418 * 4 / (uint at 0x042A) (?C?ULDIV FUN_CODE_3380,
  * the product computed again), 0x0150 (uint) = 0, 0x0429 = 0. Both arms end with 0x0409 = 0.
  * Form: 0x0409 = 0 written in each arm (Keil cross-jumps the shared MOVX / MOV DPTR,#0409 / MOVX / RET tail);
- * one store after the if gives 137 B (v/d5c5_1.c). 0x0429 is declared uchar here (only the byte at
+ * one store after the if gives 137 B. 0x0429 is declared uchar here (only the byte at
  * 0x0429 is written). No aids.
  */
 extern bit DAT_BIT_000b;

@@ -6,7 +6,7 @@
  * 0x091A), and after each call tests the byte DAT_EXTMEM_01e6[DAT_EXTMEM_011b] (uint index): 'g'/'G' sets f bit 0,
  * 'm'/'M' bit 1, 'i'/'I' bit 2, and for k = 6 anything but '~' sets bit 3. Returns (f & 0x0F) == 0x0F.
  * Shape lever: the tested byte is named twice in each || test (Keil reads it once and keeps it in R7); a local
- * 'c = ...; if (c == 'g' || c == 'G')' puts it in R6 (v/4e8e_1.c, 98.4 %).
+ * 'c = ...; if (c == 'g' || c == 'G')' puts it in R6.
  * Caller: FUN_CODE_140d (0x1881), a part of FUN_CODE_1000 in the af07 updater module (FUN_CODE_a17e); 4e8e uses no
  * common-entry block, so the bytes do not say whether it sits in that module. Judge key: ?FUN_CODE_4e8e?XD 2311
  * (0x0907). No aids.

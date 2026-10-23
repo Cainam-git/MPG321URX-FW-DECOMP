@@ -1,6 +1,5 @@
 /* FUN_CODE_bf7b, 8051_bank1, range 0xBF7B..0xBFDD (98 B).
- * Options: OPTIMIZE(8,SPEED) (also MATCH with REGFILE(R.ORC) added). Judge: tools/diff8051.judge (jj.py, scratch
- * copy) MATCH, exact None, 98/98.
+ * Options: OPTIMIZE(8,SPEED) (also with REGFILE(R.ORC) added).
  * Code facts: one transfer on the register block at 0xD800: 0xD80D = 0x2E (status / command), 0xD820 = a (R7),
  * 0xD810 = d (R5). The start tick FUN_CODE_d94a() (uint tick counter) is kept in the global uint 0xA484. It then
  * waits while none of the status bits 0x2E of 0xD80D is set, writing 0x55 to 0xF00A and 0xF0E0 on every pass,

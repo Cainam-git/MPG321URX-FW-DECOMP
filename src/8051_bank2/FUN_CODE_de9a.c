@@ -1,5 +1,5 @@
-/* 8051_bank2 FUN_CODE_de9a @ 0xde9a  BYTE-EXACT under OPTIMIZE(8,SPEED) LARGE (also plain OPTIMIZE(8,SPEED));
- * hand C (97.3 % at O8) + the tail form below.
+/* 8051_bank2 FUN_CODE_de9a @ 0xde9a  OPTIMIZE(8,SPEED) LARGE (also plain OPTIMIZE(8,SPEED));
+ * the tail form below is required.
  * Reads the flash status: clears the 10-byte service buffer XDATA 0x0436, sends the packet 09 53 05 00 .. 00 11 to
  * slave 0x6E (FUN_CODE_bfcf), waits 100 units (FUN_CODE_d059), reads the reply back (FUN_CODE_bba9), waits 5 units
  * (FUN_CODE_e44b) and returns FUN_CODE_e105(0xF880) (scaler register read). Only caller: FUN_CODE_ceee (status sr).

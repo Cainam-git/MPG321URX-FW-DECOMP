@@ -4,7 +4,7 @@
  * Then FUN_a014e878(v) and tail FUN_a00d9120(). void(void).
  * Each path calls FUN_a014e878 with its own constant and the shared calls are cross-jumped: the fw keeps the
  * constant in %o0 per path. Case 3 shares the bit-clear block ('goto zero', the fw sends case 3 to the same
- * clr %o0 block). A v variable gives an extra mov / and 1 (73.81) and if-conversion of the bit test (50.00).
+ * clr %o0 block). A v variable gives an extra mov / and 1, and if-conversion of the bit test.
  * Aids: none.
  */
 extern unsigned int DAT_a802d404;

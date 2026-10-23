@@ -4,11 +4,10 @@
  * (code): the firmware's FUN_CODE_a4e9 has a Keil OPTIMIZE(8) common-entry block 0xA4D2..0xA4E9 with entry points
  * used only by 8512 (0xA4D2, 0xA4D6), 960f (0xA4E0, 0xA4E3) and 9243 (0xA4E5 'MOV A,#5'), and b228 has the block
  * 0xB222 used by 9243's two calls. Keil builds such a block only from calls inside the same module, so these
- * functions were one module; without 8512 in the unit 9243 drops to 50.8 %.
- * Status of the other members in THIS unit: FUN_CODE_a4e9 and FUN_CODE_b228 are the byte-exact bodies
- *   (FUN_CODE_a4e9 MATCH 149/149 standalone; src/8051_bank1/FUN_CODE_b228.c). FUN_CODE_8512
- *   (61.8 %) and FUN_CODE_960f (43.2 %) are NOT byte-exact yet: their logic is read from the firmware and their
- *   call sites already give the exact a4e9 block, but two shapes differ: (1) the slot test 'ULCMP / JZ +2 / SJMP
+ * functions were one module; without 8512 in the unit the bytes of 9243 differ.
+ * Other members of this unit: FUN_CODE_a4e9 and FUN_CODE_b228 are the bodies of src/8051_bank1/FUN_CODE_a4e9.c and
+ *   FUN_CODE_b228.c. FUN_CODE_8512 and FUN_CODE_960f are written from the firmware logic and are not byte-exact
+ *   (not matched in symbols); their call sites give the a4e9 block, but two shapes of their own bytes differ: (1) the slot test 'ULCMP / JZ +2 / SJMP
  *   break' (fw 0x9649, 0x96A6, 0x859E, 0x85EA; every 'if (..) break' form tried gives a direct JNZ/JZ), (2) in 8512
  *   the bit mask '1 << n' is fw 'CLR A / INC A / MOV R0,R7' (this source gives 'CLR A / MOV R0,R7 / INC A').
  * Key for 9243: the d5a1 argument is '(unsigned int)(idx * 20 + 0x10)' (fw zero-extends R4/R5 with CLR A).

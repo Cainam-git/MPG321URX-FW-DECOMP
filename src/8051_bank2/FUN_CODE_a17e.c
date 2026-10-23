@@ -5,28 +5,15 @@
  * All code in this file is real firmware C: NO synthetic callers, NO stub bodies (SYN_A..SYN_G and the 72b0 / bf1b /
  * df50 stubs are gone; documented no-code aids are listed below).
  *
- * Per-function status in THIS file (plain judge = tools/diff8051.py, js2 = the same judge with
- * in-process functions entries / SPAN_END only, a scratch copy; tools/ not changed):
- *   FUN_CODE_a17e  494 B             MATCH, exact None (plain judge)
- *   FUN_CODE_9235  670 B             MATCH, exact None (plain judge)
- *   FUN_CODE_aa43  395 B             MATCH, exact None (plain judge)
- *   FUN_CODE_9d97  504 B             MATCH, exact None (plain judge)
- *   FUN_CODE_bdbd  266 B             MATCH, exact None (plain judge)
- *   FUN_CODE_af07  46 + 317 B        MATCH, exact None, judged with its block 0xaed9..0xaf06
- *   FUN_CODE_3e68  2070 B            MATCH, exact None (plain judge)
- *   FUN_CODE_bf1b  69 + 195 B        MATCH, exact None, with its block 0xbec7..0xbf1a (plain judge)
- *   FUN_CODE_df50  35 + 38 B         MATCH, exact None, block 0xdf2d..0xdf4f (js2: functions.json has
- *                                    df44 = 0xdf44..0xdf76; the C function starts at 0xdf50)
- *   FUN_CODE_813c  763 B             MATCH, exact None (plain judge)
- *   FUN_CODE_b84b  303 B             MATCH, exact None (plain judge). 'x0152 += x0105' is written
- *                                    in BOTH arms; Keil cross-jumps the two arm tails and keeps the fw
- *                                    'LCALL ?C?LSTXDATA; RET' (one shared += after the if/else = LJMP)
- *   Final check of this file (OPTIMIZE(8,SPEED) LARGE): ALL members above MATCH, exact None, plus
- *   FUN_CODE_1000  3669 B            MATCH, exact None (plain judge, SPAN_END 0x1e55)
- *   FUN_CODE_872e  730 B             MATCH, exact None (plain judge)
- *   FUN_CODE_72b0  78 + 967 B        MATCH, exact None, with its chain 0x7262..0x72af (js2: functions.json
- *                                    has 72a5 = 0x72a5..0x7677; the C function starts at 0x72b0)
- *   FUN_CODE_1e55  3359 B            MATCH, exact None (plain judge, SPAN_END 0x2b74)
+ * Members of this module (bytes; a common-entry block in front where noted):
+ *   FUN_CODE_a17e  494 B;  FUN_CODE_9235  670 B;  FUN_CODE_aa43  395 B;  FUN_CODE_9d97  504 B;
+ *   FUN_CODE_bdbd  266 B;  FUN_CODE_af07  46 + 317 B (block 0xaed9..0xaf06);  FUN_CODE_3e68  2070 B;
+ *   FUN_CODE_bf1b  69 + 195 B (block 0xbec7..0xbf1a);  FUN_CODE_df50  35 + 38 B (block 0xdf2d..0xdf4f; functions.json
+ *   has df44 = 0xdf44..0xdf76, the C function starts at 0xdf50);  FUN_CODE_813c  763 B;  FUN_CODE_b84b  303 B
+ *   ('x0152 += x0105' is written in BOTH arms; Keil cross-jumps the two arm tails and keeps the firmware's
+ *   'LCALL ?C?LSTXDATA; RET', one shared += after the if/else gives LJMP);  FUN_CODE_1000  3669 B (to 0x1e55);
+ *   FUN_CODE_872e  730 B;  FUN_CODE_72b0  78 + 967 B (chain 0x7262..0x72af; functions.json has 72a5 =
+ *   0x72a5..0x7677, the C function starts at 0x72b0);  FUN_CODE_1e55  3359 B (to 0x2b74).
  *   The extra 72b0 chain level L?0220 is removed with a no-code aid in 1e55's two loop tails (see 'Loop tails').
  *   FUN_CODE_1234 / 13c8 / 13eb / 140a / 140d are pieces inside FUN_CODE_1000, 2342 / 272d pieces inside 1e55,
  *   7262 / 7263 / 72a5, bec7 / bf0c / bf10 / bf15, df2d / df44, aed9..af03 are common-entry block pieces.

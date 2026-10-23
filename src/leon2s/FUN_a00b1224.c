@@ -5,7 +5,7 @@
  * and 0x10, mode 1 sets both, mode 2 sets 0x40 and clears 0x10. Any other mode does nothing.
  * The second call of each case is a sibcall (call + restore). FUN_a00a6c98 is void
  * (u32, u16, u32, u32), the accepted prototype in src/leon2s.
- * Aids: none. The case SOURCE order 0, 2, 1 gives the fw block layout (other orders 80.49).
+ * Aids: none. The case SOURCE order 0, 2, 1 gives the fw block layout (other orders give another layout).
  */
 extern void FUN_a00a6c98(unsigned int, unsigned short, unsigned int, unsigned int);
 

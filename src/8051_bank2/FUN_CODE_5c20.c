@@ -20,7 +20,7 @@
  * Tail 'LCALL 65ab; RET': the last 'if' jumps over the call to the RET (JZ 0x60b8), no aid needed. The "bulk
  * ISO interrupt" printf shares the dma-error LCALL (LJMP 0x6081, Keil cross-jump) and the reset / suspend arms
  * share the '[0x100] = v' store tail (SJMP 0x5ff4), both from the plain C below.
- * First draft had '[0x138] |= 0x100' (99.8 %, OR on R6 instead of R5).
+ * '[0x138] |= 0x100' gives the OR on R6 instead of R5.
  */
 unsigned long FUN_CODE_9b91(unsigned int reg);
 void FUN_CODE_b317(unsigned int reg, unsigned long v);

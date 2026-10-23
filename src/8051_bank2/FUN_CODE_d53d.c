@@ -1,6 +1,6 @@
 /* FUN_CODE_d53d, 8051_bank2 (helper chip updater), range 0xD53D..0xD5C5 (136 B).
- * Options: OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC). Judge: tools/diff8051.judge (jj.py, scratch copy) MATCH,
- * exact None, 136/136. Without REGFILE(R.ORC) it is 251 B (17.5 %): the firmware keeps nak in R2 and the XOR sum in
+ * Options: OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC).
+ * Without REGFILE(R.ORC) it is 251 B: the firmware keeps nak in R2 and the XOR sum in
  * R3 across every FUN_CODE_d275 call, which Keil only does when the register-usage file says d275 leaves R2/R3 alone.
  * Code facts: the ulong parameter v lives in its LARGE home 0x08F0..0x08F3 (?C?LSTXDATA at entry). It sends one
  * bit-banged I2C frame on the service bus: START (e423), the bytes 0x6E, 0x04, 0x4A, v bits 16..23, v bits 8..15,

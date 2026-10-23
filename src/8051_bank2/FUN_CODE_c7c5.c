@@ -8,7 +8,7 @@
  * Shape levers: the step is written into t again ('t = ((t & 0xf0) >> 4) + (t & 0x0f) + 1; off += t;' keeps it in
  * R6), and the header after the walk is named twice ('n = DAT_EXTMEM_015c[off] & 0x0f; h = (DAT_EXTMEM_015c[off] &
  * 0xf0) >> 4;'): Keil reads it once into R6. Reusing t there gives t a memory slot, a block-local copy
- * is 45.9 %. The index is a uchar sum (unsigned char)(off + n + i).
+ * gives other code. The index is a uchar sum (unsigned char)(off + n + i).
  * Callers: FUN_CODE_140d (0x14F8), FUN_CODE_1e55 (0x2315), FUN_CODE_9235 (0x93DF), all in the af07 updater module
  * (FUN_CODE_a17e); c7c5 itself has no common-entry block, so it stands alone. No aids.
  */

@@ -4,7 +4,7 @@
  * Code: fill n * 32 bytes of the DATA buffer at 0x22 with val. LARGE parameters val (0x0986), n (0x0987); locals
  * i (0x0988) and p (generic pointer 00:0022 at 0x0989, ?C?CSTOPTR FUN_CODE_31f3 stores). The test i < n * 32 is a
  * signed int compare (XRL #80h). Declaration order matters: i before p gives the firmware's block layout
- * (p before i: 83 B, v/dac5_2.c). DAT_0022 as in FUN_CODE_e373. No aids.
+ * (p before i: 83 B). DAT_0022 as in FUN_CODE_e373. No aids.
  */
 extern unsigned char data DAT_0022[];
 void FUN_CODE_dac5(unsigned char val, unsigned char n)

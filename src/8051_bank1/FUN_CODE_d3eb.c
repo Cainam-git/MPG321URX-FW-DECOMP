@@ -3,8 +3,8 @@
  * the same flash address / length pair as FUN_CODE_d3b9 (its twin).
  * Same Keil shape as d3b9: arg 1 into R6:R7 and PUSHed while args 2/3 go to 6f26's LARGE parameter block
  * (+2 = 0xA4B8, +6 = 0xA4BC).
- * JUDGE NOTE: the first judge run records '?_FUN_CODE_6f26?BYTE': 42166 (= 0xA4B6, where 6f26 homes R6:R7, see
- * MOV DPTR,#0A4B6H at 0x6f26) in symbols/8051_bank1.libs.json; judged in a scratch copy, symbols/ not written.
+ * Link key: '?_FUN_CODE_6f26?BYTE' = 0xA4B6 (where 6f26 homes R6:R7, see MOV DPTR,#0A4B6H at 0x6f26), recorded in
+ * symbols/8051_bank1.libs.json.
  * Only caller 0x243a (case body of the 0x224f switch, no functions.json entry).
  * Options: OPTIMIZE(8,SPEED) LARGE.
  */

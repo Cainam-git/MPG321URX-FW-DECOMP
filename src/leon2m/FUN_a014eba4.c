@@ -6,7 +6,7 @@
  * Callers: no direct 'call 0xa014eba4' in asm/leon2m (reached indirectly / via a table).
  * Aids: ONE - the table read goes through 'static inline get(n)' (an inlined accessor, no code
  * of its own). Why: with a direct 'a == DAT_a802a480[i]' gcc emits 'cmp %o0, %i0' (operands
- * swapped vs the fw 'cmp %i0, %o0') and the loop shape shifts: jf 85.71. The accessor's
+ * swapped vs the fw 'cmp %i0, %o0') and the loop shape shifts. The accessor's
  * return conversion gives the fw operand order. Callee prototype = its real one
  * (src/leon2m/FUN_a013863c.c: void, four unsigned char parameters).
  */

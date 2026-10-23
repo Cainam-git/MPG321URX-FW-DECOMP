@@ -1,6 +1,6 @@
 /* FUN_CODE_cd68, 8051_bank2 (helper chip updater), range 0xCD68..0xCE2A (194 B).
- * Options: OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC). Judge: tools/diff8051.judge (jj.py, scratch copy) MATCH,
- * exact None, 194/194. Without REGFILE(R.ORC) it is 243 B (29.6 %): both loop counters stay in R4:R5 across the
+ * Options: OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC).
+ * Without REGFILE(R.ORC) it is 243 B: both loop counters stay in R4:R5 across the
  * d275 / e462 / db1c calls only when the register-usage file says those callees leave R4/R5 alone.
  * Code facts: bit-banged I2C read on the service bus. LARGE parameters dev (0x08F0), buf (generic pointer,
  * 0x08F1..0x08F3) and len (uint, memory parameter 0x08F4..0x08F5); locals b (0x08F6) and n (uint, 0x08F7..0x08F8).
@@ -9,7 +9,7 @@
  * stores to n and b and then drops (n is overwritten with len), then len bytes are read into buf[j] (?C?CSTOPTR);
  * the last byte gets six e462 delays and db1c(1) (NACK = last), the others db1c(0). STOP, return 0.
  * Shape lever: the last-byte arm and the other arm each have their own 'buf[j] = db1c(k);' (Keil cross-jumps the
- * shared tail). A flag variable 'b = 1 / b = 0; buf[j] = db1c(b)' stores b and is 79.1 % (206 B).
+ * shared tail). A flag variable 'b = 1 / b = 0; buf[j] = db1c(b)' stores b and is 206 B.
  * Caller: FUN_CODE_ce2a (0xCE87). No aids.
  */
 void FUN_CODE_e423(void);

@@ -7,7 +7,7 @@
  * FUN_a01577f4(buf[8] at %fp-16, 0x1981d0, (u8)(DAT_a802d290[0x1df] + 1)); buf[0] = 3;
  * FUN_a0146b6c(2, 0); FUN_a00a31a4(0, 0x28, 6, 2, buf, 0). void, one param.
  * Required forms: real base DAT_a802d290[0x1df]; v is assigned in BOTH arms
- * with the '!= 0' arm first (a default 'v = 0x742' moves the mov into the bleu delay slot: 97.65);
+ * with the '!= 0' arm first (a default 'v = 0x742' moves the mov into the bleu delay slot);
  * the twin's prototypes. Aids: none.
  */
 extern unsigned char DAT_a802d290[];

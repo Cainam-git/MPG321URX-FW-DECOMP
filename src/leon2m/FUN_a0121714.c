@@ -7,7 +7,7 @@
  * on == 0: FUN_a00f1ad4(ch, 0x55, 0xC0); reg 0x54 by port type FUN_a00fd820(ch): 0x11/0x71/0x81 -> 0x20,
  *   0x12/0x13/0x21 -> 0x21, 0x31/0x41/0x51/0x61 -> 0x20 when word 0 of entry ch (12-byte entries at 0xA8027AAC)
  *   is 1, else 0x90; any other type -> 0x90; then FUN_a00f1b5c(ch, 0x94, 0x20, 0) and set bit ch of 0xA802C9E4.
- * Change-rule reader of the panel row (scorecard row 1c): only the 'on' path reads row +0x22.
+ * Only the 'on' path reads row +0x22.
  * key: one FUN_a00f1ad4 call per case group (gcc cross-jumps them), not a value variable.
  */
 struct PanelParam { unsigned int w0; unsigned short h4; unsigned char b6, b7; unsigned short h08, h0a; unsigned char b0c[0x14];

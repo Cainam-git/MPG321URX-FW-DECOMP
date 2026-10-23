@@ -11,7 +11,7 @@
  * tests into ONE shared 'f = 1' block (the fw single 'mov 1' block; else-if arms give separate blocks and the last
  * one is if-converted); the h06 range as two ifs (one || is folded into a range test); 'if (h08 >= 0x993) return 1;
  * return 0;' (fw subx). Flag 'int f' tested 'if (f & 1)': plain 'if (f)' lets jump bypassing thread the flag away
- * (73.42), an unsigned char flag gives 'btst 0xff' instead of the fw 'cmp %g1, 0' (98.73). This is the same
+ * an unsigned char flag gives 'btst 0xff' instead of the fw 'cmp %g1, 0'. This is the same
  * 'b & 1' flag lever as in FUN_a01215e8. Aids: none (no volatile, no asm, no hint).
  */
 struct Rec { unsigned char p00[6]; unsigned short h06, h08; unsigned char p0a[0x3c - 0x0a]; unsigned short h3c; };

@@ -13,7 +13,7 @@
  * a pointer to a caller-made stack copy, so the callee (src/leon2m/FUN_a01483f4.c, 'unsigned char *src')
  * sees the same pointer; the copy is now made by the call expansion (after the DAT_a802d892.ch store in
  * RTL order), which gives the fw sched2 order of the 11 ldd/std pieces and the stb. A named local copy
- * plus '&row' (92.00) gives the same instructions in another order.
+ * plus '&row' gives the same instructions in another order.
  * Further levers: v as unsigned int, the row index v (not the constant 1: fw 'add %o5,0x58,%g1'),
  * nested ifs (an && chain is if-converted). Aids: none. volatile: none (no hardware register here).
  */

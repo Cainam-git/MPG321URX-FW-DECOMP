@@ -6,8 +6,8 @@
  * on == 1 and 0xA002C7DC for the other case); port 0 and port > 17: nothing.
  * Can it wait or fail? No: a leaf, one read-modify-write, no loop.
  * Exact: both compiled jump tables equal the firmware tables and are referenced by the same dispatch.
- * jf 99.00 'jump table at 0xa002c7dc is outside the image' = the tools/exact.py boot-piece limitation (see
- * FUN_a002cd38.c). Exact form: 'if (on == 1) set-switch else clear-switch' (gcc moves the == arm out of line).
+ * The jump table at 0xa002c7dc lies outside the image piece that tools/exact.py links (see FUN_a002cd38.c).
+ * Source form: 'if (on == 1) set-switch else clear-switch' (gcc moves the == arm out of line).
  * volatile = real hardware registers.
  */
 void FUN_a002cb30(unsigned char port, unsigned char mask, unsigned char on)

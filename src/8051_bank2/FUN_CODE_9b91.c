@@ -7,7 +7,7 @@
  * v = (v << 8) + byte, i.e. +6 is the low byte. The last step and the return are shared by both arms (Keil
  * cross-jumps the then-arm into the else-arm tail at 0x9D4D).
  * Shape lever: '(unsigned long)' on the byte: Keil then loads the byte first and PUSHes it across the ?C?LSHL call,
- * as the firmware does; without the cast it shifts first (v/9b91_1.c and v/9b91_2.c, 38.8 %).
+ * as the firmware does; without the cast it shifts first.
  * 0x9B8D (MOV R7,#14H / MOV R6,#0, 4 B) in front of this function is a Keil common-entry block = 9b91(0x0014), used
  * by d2fb (0xD375), 69da (x4) and 0x4CE2; it needs those callers in this function's module, so it is not part of this file.
  * Callers (byte scan): 5c20 x13, 60b9 x9, 7a46 x6, 8f95 x2, 69da, b97a, ddbb, dfbe, e004, e3f9, and 9 sites outside

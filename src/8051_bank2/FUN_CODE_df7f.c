@@ -4,7 +4,7 @@
  * 0xCBCC (09 2d aa 55 cc 33 e2 1d ff ff) is struct-copied (?C?COPY = FUN_CODE_3153) to xdata 0x08F5, bytes 8 and 9
  * become a and b, then bfcf(0x6e, 10, &buf) and tail call d059(5000).
  * Form note: an initialised local array at 0x08F5 (`unsigned char buf[10] = {...}`, which Keil builds as ?C?COPY
- * from an init image) compiles to the SAME instructions (v/df7f_L.c, 98.4 %), but
+ * from an init image) compiles to the SAME instructions, but
  * the judge cannot place it: it learns the init image _?ix1000 from its LOW byte only and then fills HIGH with 0x00.
  * So the buffer and the image are named by their firmware addresses here (DAT_EXTMEM_08f5, DAT_CODE_cbcc).
  * Same pattern and note as FUN_CODE_e384 (0x08F3 / 0xCBC4, 8 bytes).

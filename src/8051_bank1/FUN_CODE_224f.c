@@ -5,7 +5,7 @@
  * Why d5a1 is in this unit (code): 0xD59B..0xD5A0 'MOV R6,#0 / MOV R5,#0 / MOV R4,#0' is the Keil OPTIMIZE(8)
  *   common-entry block of FUN_CODE_d5a1(unsigned long). Its only users are the two calls in 224f (0x2654 with
  *   R7 = 0x0C, 0x27B1 with R7 = 0): so the source calls are d5a1(0x0C) / d5a1(0), and d5a1 was in the same module.
- *   Without d5a1 in the unit Keil emits 'CLR A / MOV R7,A' at 0x27AF (99.9 %). FUN_CODE_d59b is not a function.
+ *   Without d5a1 in the unit Keil emits 'CLR A / MOV R7,A' at 0x27AF. FUN_CODE_d59b is not a function.
  * FUN_CODE_d5a1(off): v = 0; FUN_CODE_b228((uchar)off, &v, 1): writes the 32-bit word 0 to portal +off.
  * Parameter p (XDATA 0xA4A9, ulong) = the command word read by FUN_CODE_9243 (or one word of a command list,
  *   FUN_CODE_1c3c). cmd = bits 7..0, b1 = bits 15..8, b2 = bits 23..16, b3 = bits 31..24, w = bits 31..16.
@@ -30,7 +30,7 @@
  *   28 b1 0 / 1: bit 0 / bit 2 of XDATA 0xCAB2 = (b2 != 0)   29 FUN_CODE_6c34 'STBC FW updating' flash loop (no return)
  *   2A dd09 ("Enable_DPMRX")   2B de2e   30 d70f(b1,b2,b3)   31 ba6d(b1,b2,b3)
  *   03 04 0B 0C 10 2C..2F: no action (table entry = tail); the empty cases are needed for the jump table
- *   (without them Keil builds a ?C?CCASE search instead, 40.4 %).
+ *   (without them Keil builds a ?C?CCASE search instead).
  * Tail 0x279F: for every cmd except 0, 0x16 and 0x17: d5a1(0) = command word +0x00 := 0 (the 8051 clears the
  *   command word = acknowledges it).
  * Case order in this file = code order in the firmware (Keil places case bodies in source order).

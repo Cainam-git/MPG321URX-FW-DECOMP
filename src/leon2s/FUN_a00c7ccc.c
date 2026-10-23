@@ -4,7 +4,7 @@
  * (port, 0, 0xf) / func_0xa0fb8054(port, 0, 0xf, v). Mode 1: clear bit 2, func_0xa0fc1794(1)
  * (delay), re-read and write (u8)(v | 4). Any other mode: write v & 0xfb. Both arms end in their
  * OWN sibcall to func_0xa0fb8054 (crossjumped into one call + restore); with one call at the join
- * the fw's early %i0/%i1/%i2 arg sets of the mode-1 arm do not appear (69.44).
+ * the fw's early %i0/%i1/%i2 arg sets of the mode-1 arm do not appear.
  * Aids: none.
  */
 extern unsigned int func_0xa0fb7fd8(unsigned int, unsigned int, unsigned int);

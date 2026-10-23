@@ -16,7 +16,7 @@
  *     r's def has a SUBREG destination (r is HImode), so expand_preferences skips it. r keeps only the %i0
  *     preference of the return temp and gets %i0.
  *   - The per-outer-arm 'r = t >> 16' keeps r's def and the return extension in different blocks at combine
- *     time, so the return zero-extension stays (one 'r = t >> 16' after the if/else folds it: 86.96).
+ *     time, so the return zero-extension stays (one 'r = t >> 16' after the if/else folds it).
  *   - Signed 'int t' and '* 0x10000 / 0x10000' give the same code. Unsigned 'r', or 'return t >> 16' in the arms,
  *     give 86.96.
  * Aid: the identity '(u16 value << 16) >> 16' (t holds the u16 clock in its high half). It is

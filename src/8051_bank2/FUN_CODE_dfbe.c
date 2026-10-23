@@ -3,7 +3,7 @@
  * FUN_CODE_b706 (0xb7bc), FUN_CODE_d2fb (0xd382).
  * Code: set bits in a 32-bit controller register: v = 9b91(reg) (local at 0x098C), b317(reg, v | mask) (value into
  * b317's parameter home 0x0992 with ?C?LSTXDATA), tail LJMP. LARGE parameters reg (0x0986) and mask (0x098A..).
- * Operand order matters: `mask | v` loads v first and is 72 B (v/dfbe_2.c). Prototypes as in the accepted bank-2
+ * Operand order matters: `mask | v` loads v first and is 72 B. Prototypes as in the accepted bank-2
  * files (9b91 / b317 register helpers). No aids.
  */
 unsigned long FUN_CODE_9b91(unsigned int reg);

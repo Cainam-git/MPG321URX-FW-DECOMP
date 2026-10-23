@@ -3,7 +3,6 @@
  *
  * Tail call FUN_a01199ac(a, b, raw row +0x08, raw row +0x0A, c) with the raw active panel row at 0xA802E378
  * (+0x08 / +0x0A are 16-bit timing fields; FUN_a01023f4 programs +0x0A as the active height-related value).
- * Change-rule reader of the panel row (scorecard row 1c).
  */
 struct RawRow { unsigned int w0; unsigned short h4; unsigned char b6, b7; unsigned short h08, h0a; };
 extern struct RawRow DAT_a802e378;

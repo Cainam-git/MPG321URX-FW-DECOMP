@@ -19,7 +19,7 @@
  * Order: the USB MCU is loaded by the 8051 BEFORE the Big chip is started (0x0C46 is before 4a85 / 8e61). After
  *   the 7b5a trip F1E0 stays 0xC1, the value 96eb uses while it holds the block.
  * volatile only on hardware registers: 0xF1xx, 0xD511 and 0xD5AF (its bit pulse re-reads the register at
- *   0x96F9; without volatile 35.5 %). 0xCD0A / 0xCD2A are plain (same bytes either way).
+ *   0x96F9; without volatile the bytes differ). 0xCD0A / 0xCD2A are plain (same bytes either way).
  */
 #pragma LARGE
 #include <intrins.h>

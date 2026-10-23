@@ -9,7 +9,7 @@
  *   (FUN_a011cf88 is called again for each test); the result is cut to 16 bits.
  * The multiplier depends on the code FUN_a011cf88() (0x80..0x84 from register
  * 0xcf011444) and the 0xcf011e40 bits, not on the input rate itself.
- * Form: early returns per test (an if/else chain into one u16 local gives 88.89).
+ * Form: early returns per test (an if/else chain into one u16 local gives other code).
  * Prototypes from src/leon2m (FUN_a00f3078 takes the register address). volatile only on real hardware
  * registers. Aids: none.
  */

@@ -8,7 +8,7 @@
  * Code facts used for the type: the fw copies with ldd/std, so both objects are 8-byte aligned;
  * the field layout is the one other src/leon2m files use for DAT_a802e378 (w0, h4, b6, b7, h08,
  * h0a, ..., h4e, h50, h52). An all-u64 array struct gives the same instructions but a different
- * sched2 slot for the spill reload (96.77); with the real mixed-field layout it is exact.
+ * sched2 slot for the spill reload; with the real mixed-field layout it is exact.
  * The row's real 64-bit fields (clk_min / clk_max at +0x10/+0x18, as in FUN_a01483f4) give the 8-byte alignment
  * that makes the fw use ldd/std, so no __attribute__((aligned(8))) aid is needed. Any struct with an 8-byte member
  * gives the same bytes.

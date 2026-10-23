@@ -1,6 +1,5 @@
 /* FUN_CODE_bfdd, 8051_bank1, range 0xBFDD..0xC03F (98 B).
- * Options: OPTIMIZE(8,SPEED) (also MATCH with REGFILE(R.ORC) added). Judge: tools/diff8051.judge (scratch
- * copy) MATCH, exact None, 98/98.
+ * Options: OPTIMIZE(8,SPEED) (also with REGFILE(R.ORC) added).
  * Code facts: serial-port interrupt service routine (interrupt 4: the vector at CODE 0x0023 is 'LJMP 0xBFDD',
  * thunk_FUN_CODE_bfdd; 'using 1' = MOV PSW,#08H, and Keil saves only ACC, DPH, DPL, PSW). RX (RI): clear RI, the
  * byte goes to IDATA 0x5D and into the 16-byte ring DAT_EXTMEM_a1e8[] at the IDATA write index 0x42 (wraps after
