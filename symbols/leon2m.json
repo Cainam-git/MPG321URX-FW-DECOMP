@@ -9179,6 +9179,12 @@
       "name": "FUN_a00dffb4",
       "status": "matched"
     },
+    "ram:a00dffcc": {
+      "by": "hand",
+      "comment": "returns DAT_a802b530",
+      "name": "FUN_a00dffcc",
+      "status": "matched"
+    },
     "ram:a00dffd8": {
       "by": "hand",
       "comment": "checks the phy ID with FUN_a00df8f4, then calls FUN_a00df648(a, b, 1 or 2) for IDs 0..2",
