@@ -518,6 +518,13 @@
       "of": "FUN_CODE_0b0d",
       "status": "matched"
     },
+    "CODE:1c3c": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "handles one word record: splits the header word, copies the payload to a buffer and dispatches 15 record types",
+      "name": "FUN_CODE_1c3c",
+      "status": "matched"
+    },
     "CODE:224f": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
@@ -1616,7 +1623,7 @@
     "CODE:d9d1": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
-      "comment": "9a00[reg] = val; note: d9c3 falls into it (likely a common-entry block of this module, callers cf38 / c0a1)",
+      "comment": "XDATA 0x9A00[reg] = val (twin of FUN_CODE_dcd3 for 0x9AB0); FUN_CODE_d9c3 falls into it",
       "name": "FUN_CODE_d9d1",
       "status": "matched"
     },
@@ -1868,7 +1875,7 @@
     },
     "ram:bbca": {
       "by": "hand",
-      "comment": "The function takes two byte parameters: a mask and a value. For each of the 7 low bits set in the mask, it sets bit 7 of the corresponding high register (0xF181, 0xF183, ..., 0xF18D) and writes the value byte to the adjacent low register (0xF180, 0xF182, ..., 0xF18C). The structure is a sequence of independent if-blocks in ascending bit order, each performing a read-modify-write on the high register followed by a write to the low register. The mask is kept in R6 (matching the target's `MOV R6,R7` at entry) and the value in R5, matching the register usage in the firmware's byte pattern.",
+      "comment": "for each bit i 0..6 set in mask: XDATA 0xF181 + 2i |= 0x80, 0xF180 + 2i = value",
       "name": "FUN_CODE_bbca",
       "status": "matched"
     },
@@ -1994,13 +2001,13 @@
     },
     "ram:dcf6": {
       "by": "hand",
-      "comment": "The issue is the argument order in the call. Keil C51 passes the first byte parameter in R7 and the second in R5. The target has `MOV R5,#0` then `MOV R7,#1`, meaning the first argument is 1 and the second is 0. Ghidra's decompilation showed `FUN_CODE_c389(0,1)` but the actual assembly shows R7=1, R5=0, so the arguments are reversed.",
+      "comment": "XDATA 0xF053 = 0x83, 0xF055 = 0x06, then FUN_CODE_c389(1, 0)",
       "name": "FUN_CODE_dcf6",
       "status": "matched"
     },
     "ram:dd41": {
       "by": "hand",
-      "comment": "Clears the flag at xdata 0xa629, calls FUN_CODE_d94a, which returns an unsigned int in R6:R7, and stores that value big-endian to xdata 0xa5eb-0xa5ec. The function takes no parameters; R6:R7 after the call is the return value of FUN_CODE_d94a.",
+      "comment": "XDATA 0xA629 = 0; 16-bit FUN_CODE_d94a() result stored big-endian at 0xA5EB/0xA5EC",
       "name": "FUN_CODE_dd41",
       "status": "matched"
     },
@@ -2097,7 +2104,7 @@
     },
     "ram:def4": {
       "by": "hand",
-      "comment": "This function simply calls two other functions in sequence: first `FUN_CODE_dcf6` then `FUN_CODE_d987`. It matches the target's two-instruction structure exactly. There are no parameters, return values, or branches to worry about. The only uncertainty is whether the compiler might reorder or inline these calls, but with the given optimization settings and separate external functions, it should produce the direct LCALL/LJMP sequence as expected.",
+      "comment": "FUN_CODE_dcf6(), then FUN_CODE_d987() (LJMP tail call)",
       "name": "FUN_CODE_def4",
       "status": "matched"
     }
