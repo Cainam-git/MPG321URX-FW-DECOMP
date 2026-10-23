@@ -8913,6 +8913,13 @@
       "name": "FUN_a00e7dc8",
       "status": "matched"
     },
+    "ram:a00e9c80": {
+      "by": "h50",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Two-pass window search on register field C with FUN_a00e9b34 results, then writes the midpoints",
+      "name": "FUN_a00e9c80",
+      "status": "matched"
+    },
     "ram:a00ea1f0": {
       "by": "permuter",
       "comment": "FUN_a00e9c80(p1, p2, p3, i, p4, p6) for i = 0 .. p5 - 1; returns p1",
