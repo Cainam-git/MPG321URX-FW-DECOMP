@@ -1,5 +1,7 @@
 /* leon2s FUN_a00c5d34 @ 0xa00c5d34 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When p1 < 4 calls func_0xa0fb7e14(p1, 0x2e, 0x40, p2); otherwise, with k = p1 - 4, func_0xa0fb6c98(k, 0x30,
+ * 0x80, 1), func_0xa0fb6c98(k, 0x2a8, 2, p2) and func_0xa0fb6c98(k, 0x30, 0x80, 0).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

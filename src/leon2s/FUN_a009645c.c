@@ -1,5 +1,7 @@
 /* leon2s FUN_a009645c @ 0xa009645c (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Sets (p2 == 1) or clears (other p2) bit 5 (0x20) of register 0xCF0146FC when p1 == 0, of register 0xCF01473C
+ * otherwise.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

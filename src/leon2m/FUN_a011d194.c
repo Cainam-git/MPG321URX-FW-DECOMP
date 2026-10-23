@@ -1,5 +1,7 @@
 /* leon2m FUN_a011d194 @ 0xa011d194 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a0104b2c(8, 0xb0), FUN_a011e028(0, 0), FUN_a011e028(0x1f, 0), FUN_a0101e68(), FUN_a00f328c(),
+ * FUN_a0123384(), FUN_a0106ba8(8) and FUN_a011552c(), then writes 0xF to register 0xCF0115C0. Returns p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

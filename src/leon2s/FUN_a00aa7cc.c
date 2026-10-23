@@ -1,5 +1,8 @@
 /* leon2s FUN_a00aa7cc @ 0xa00aa7cc (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * For p1 == 0 maps v = FUN_a00a7acc(0, 10) & 0xff as 0x11 -> 0, 0x22 -> 1, 0x66 -> 2, 0x44 -> 4, 0x33 -> 5; for
+ * other p1 maps v = FUN_a00a7acc(p1, 99) & 0x70 as 0x10 -> 0, 0x20 -> 1, 0x60 -> 2, 0x40 -> 4, 0x30 -> 5. Any
+ * other v returns 7.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern int FUN_a00a7acc();
 

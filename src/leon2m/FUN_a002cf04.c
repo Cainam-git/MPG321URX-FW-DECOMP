@@ -1,5 +1,7 @@
 /* leon2m FUN_a002cf04 @ 0xa002cf04 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When the low byte of func_0x000bcf88() is 0xE0: for register 0xCF03C844 and then register 0xCF03C848, repeatedly
+ * writes 1 when the register does not read 2, until it reads 1. Returns p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

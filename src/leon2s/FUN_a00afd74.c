@@ -1,5 +1,7 @@
 /* leon2s FUN_a00afd74 @ 0xa00afd74 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When p1 == 0: stores p2 in byte 0xA807DD2A and calls FUN_a00abff0(0), FUN_a00ac66c(0) and FUN_a00af98c(0, p2,
+ * p3, p4, p5, p6). Other p1 return without a call.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

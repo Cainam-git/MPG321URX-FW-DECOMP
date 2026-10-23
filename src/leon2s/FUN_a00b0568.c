@@ -1,5 +1,7 @@
 /* leon2s FUN_a00b0568 @ 0xa00b0568 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When byte p1 of the array at 0xA8079318 is nonzero: calls FUN_a00b0540(p1), FUN_a00ae3a0(p1) and
+ * FUN_a008442c(p1), clears that byte, and calls FUN_a00abba8() when bytes 0 and 1 of the array are then both 0.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern void FUN_a008442c(unsigned char param_1);
 extern void FUN_a00abba8(void);

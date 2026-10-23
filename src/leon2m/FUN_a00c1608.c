@@ -1,5 +1,7 @@
 /* leon2m FUN_a00c1608 @ 0xa00c1608 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * k = p1 & 0xff; v = FUN_a00bae38(k). When the low byte of v is below 0xC: stores it in byte 0xA802D41D, calls
+ * FUN_a00b88cc(), FUN_a00baa6c(k), FUN_a00ba950(k) and FUN_a00bab80(k, 6) and returns 0; otherwise returns 0xFF.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

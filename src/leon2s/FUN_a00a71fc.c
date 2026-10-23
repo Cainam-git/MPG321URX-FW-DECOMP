@@ -1,5 +1,8 @@
 /* leon2s FUN_a00a71fc @ 0xa00a71fc (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * With R(i) = register 0xCF000000 | ((halfword i of the table at 0xA00B4D88 + p2) * 4), sets R(i) to ((R(i) & ~p3)
+ * | (p3 & p4)) & 0xff for i = 0 .. 3 when p1 (low byte) == 4, and for i = p1 when p1 < 4. Other p1 return without
+ * an access.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern unsigned short DAT_a00b4d88[];
 

@@ -1,5 +1,8 @@
 /* leon2s FUN_a00b18d0 @ 0xa00b18d0 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a0096204(), FUN_a00b17e8(), FUN_a0072b7c(), FUN_a00b1e70() and FUN_a00b18ac(), prints "\n\rNT68500
+ * Leon2S system compiled under Linux\n\r%s\n\r" with "SWVERSION" through FUN_a0073044 and sets bit 7 of register
+ * 0xCF0114FC. Returns p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

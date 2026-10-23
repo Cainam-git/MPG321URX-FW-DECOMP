@@ -2148,7 +2148,7 @@
     },
     "ram:a0073738": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00a7424(e, b, p1, 0x361c) for (e, b) = (0, 0), (0, 1), (1, 4), (1, 5), (1, 7), (1, 0), (1, 1), then FUN_a00b1794(0x32), FUN_a00a7424(0, 7, p1, 0x361c), FUN_a00a7488(p1, 0x361c, 0xfffff8ff, 0x300) and FUN_a00a7488(p1, 0x361c, 0xffff8fff, 0x3000)",
       "name": "FUN_a0073738",
       "status": "matched"
     },
@@ -2306,7 +2306,7 @@
     },
     "ram:a00798fc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00a7488(p1, a, 0xffffff, 0x38000000) for a = 0x217c, 0x257c, 0x297c, 0x317c, then FUN_a00a7424(1, 7, p1, a) for a = 0x2178, 0x2578, 0x2978, 0x3178",
       "name": "FUN_a00798fc",
       "status": "matched"
     },
@@ -2384,7 +2384,7 @@
     },
     "ram:a007abbc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00a7424(0, 7, p1, a) for a = 0x2178, 0x2578, 0x2978, 0x3178, then FUN_a00a7488(p1, a, 0xffffff, 0x18000000) for a = 0x217c, 0x257c, 0x297c, 0x317c",
       "name": "FUN_a007abbc",
       "status": "matched"
     },
@@ -2666,7 +2666,7 @@
     },
     "ram:a00857d0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "k = FUN_a0083ed0(p1 & 0xff) & 0xff; calls FUN_a00a7718(k, a, 4, p2) for a = 0x551, 0x651, 0x751, 0x851",
       "name": "FUN_a00857d0",
       "status": "matched"
     },
@@ -3195,7 +3195,7 @@
     },
     "ram:a008b53c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "v = ((p2 << 17) / 0xC) << 9. Calls FUN_a00a7168(p1, 4, (v / 10000) & 0xff), FUN_a00a7168(p1, 5, (v / 0x271000) & 0xff) and FUN_a00a7168(p1, 6, v / 0x27100000) (bytes 0, 1 and 2 of v / 10000), then FUN_a00a71fc(p1, 2, 4, 0) and FUN_a00a71fc(p1, 7, 0x10, 0)",
       "name": "FUN_a008b53c",
       "status": "matched"
     },
@@ -4409,7 +4409,7 @@
     },
     "ram:a009645c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Sets (p2 == 1) or clears (other p2) bit 5 (0x20) of register 0xCF0146FC when p1 == 0, of register 0xCF01473C otherwise",
       "name": "FUN_a009645c",
       "status": "matched"
     },
@@ -5598,7 +5598,7 @@
     },
     "ram:a00a71fc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "With R(i) = register 0xCF000000 | ((halfword i of the table at 0xA00B4D88 + p2) * 4), sets R(i) to ((R(i) & ~p3) | (p3 & p4)) & 0xff for i = 0 .. 3 when p1 (low byte) == 4, and for i = p1 when p1 < 4. Other p1 return without an access",
       "name": "FUN_a00a71fc",
       "status": "matched"
     },
@@ -5924,7 +5924,7 @@
     },
     "ram:a00aa7cc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "For p1 == 0 maps v = FUN_a00a7acc(0, 10) & 0xff as 0x11 -> 0, 0x22 -> 1, 0x66 -> 2, 0x44 -> 4, 0x33 -> 5; for other p1 maps v = FUN_a00a7acc(p1, 99) & 0x70 as 0x10 -> 0, 0x20 -> 1, 0x60 -> 2, 0x40 -> 4, 0x30 -> 5. Any other v returns 7",
       "name": "FUN_a00aa7cc",
       "status": "matched"
     },
@@ -6317,7 +6317,7 @@
     },
     "ram:a00ae344": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "k = p1 & 0xff. Reads v = FUN_a00a6bb8(k, 0x40), writes (v | 0xC0) & 0xff through FUN_a00a6c00(k, 0x40, ...), then calls FUN_a00ad09c(k, p2, p3, p4, p5, p6)",
       "name": "FUN_a00ae344",
       "status": "matched"
     },
@@ -6499,7 +6499,7 @@
     },
     "ram:a00afd74": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "When p1 == 0: stores p2 in byte 0xA807DD2A and calls FUN_a00abff0(0), FUN_a00ac66c(0) and FUN_a00af98c(0, p2, p3, p4, p5, p6). Other p1 return without a call",
       "name": "FUN_a00afd74",
       "status": "matched"
     },
@@ -6713,7 +6713,7 @@
     },
     "ram:a00b0568": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "When byte p1 of the array at 0xA8079318 is nonzero: calls FUN_a00b0540(p1), FUN_a00ae3a0(p1) and FUN_a008442c(p1), clears that byte, and calls FUN_a00abba8() when bytes 0 and 1 of the array are then both 0",
       "name": "FUN_a00b0568",
       "status": "matched"
     },
@@ -6875,7 +6875,7 @@
     },
     "ram:a00b18d0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a0096204(), FUN_a00b17e8(), FUN_a0072b7c(), FUN_a00b1e70() and FUN_a00b18ac(), prints \"\\n\\rNT68500 Leon2S system compiled under Linux\\n\\r%s\\n\\r\" with \"SWVERSION\" through FUN_a0073044 and sets bit 7 of register 0xCF0114FC. Returns p1",
       "name": "FUN_a00b18d0",
       "status": "matched"
     },
@@ -7142,7 +7142,7 @@
     },
     "ram:a00c18fc": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls func_0xa0fb65c4(2, 0x41, 0x10), func_0xa0fb65c4(2, 0x3f, 0x74), func_0xa0fb69fc(2, 0x3f, 0x74), func_0xa0fb6aa0(2, 0x43, 1, 1), func_0xa0fb65c4(2, 0x301, 4), func_0xa0fb65c4(2, 0x30e, 0xd), then func_0xa0fb69fc(2, r, v) for (r, v) = (0xa6, 0x41), (0xa4, 0), (0xa5, 1), (0xa7, 0xd), (0xa4, 0x20)",
       "name": "FUN_a00c18fc",
       "status": "matched"
     },
@@ -7245,7 +7245,7 @@
     },
     "ram:a00c5d34": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "When p1 < 4 calls func_0xa0fb7e14(p1, 0x2e, 0x40, p2); otherwise, with k = p1 - 4, func_0xa0fb6c98(k, 0x30, 0x80, 1), func_0xa0fb6c98(k, 0x2a8, 2, p2) and func_0xa0fb6c98(k, 0x30, 0x80, 0)",
       "name": "FUN_a00c5d34",
       "status": "matched"
     },
