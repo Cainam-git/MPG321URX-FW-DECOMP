@@ -7429,6 +7429,13 @@
       "name": "FUN_a00d1ad4",
       "status": "matched"
     },
+    "ram:a00d1b48": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "counter and FUN_a0145360 calls by bits 8..23 of DAT_a802d290+8, FUN_a0145c5c resets when +0x1f6 is 0x55aa, writes both records with FUN_a014aed0 and stores 0xbb99; returns 0xe0",
+      "name": "FUN_a00d1b48",
+      "status": "matched"
+    },
     "ram:a00d1ce4": {
       "by": "hand",
       "comment": "tool command: Burn In byte 0xA802D465 = cmd[7] (0/1), save settings, ack 0xE0 (row 1e)",
