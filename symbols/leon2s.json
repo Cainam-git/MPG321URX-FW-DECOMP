@@ -8234,6 +8234,12 @@
       "name": "FUN_a00db9d4",
       "status": "matched"
     },
+    "ram:a00dbc8c": {
+      "by": "hand",
+      "comment": "steps a three-state toggle through FUN_a00db9d4/FUN_a00dba70 with a 500-tick retry",
+      "name": "FUN_a00dbc8c",
+      "status": "matched"
+    },
     "ram:a00dbe74": {
       "by": "hand",
       "comment": "if byte 0xa8078841 & 0x30: FUN_a00db784(); i = byte 0xa8078832; if byte 0xa8078828[i] == byte 0xa8078830[i]: tail FUN_a00dbc8c(). void.",
