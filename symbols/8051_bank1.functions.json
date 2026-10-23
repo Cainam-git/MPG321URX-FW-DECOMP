@@ -1141,6 +1141,12 @@
    "size": 151
   },
   {
+   "name": "FUN_CODE_acf2",
+   "start": 44274,
+   "end": 44424,
+   "size": 150
+  },
+  {
    "name": "FUN_CODE_ad88",
    "start": 44424,
    "end": 44573,
@@ -1339,9 +1345,21 @@
    "size": 103
   },
   {
+   "name": "FUN_CODE_be50",
+   "start": 48720,
+   "end": 48821,
+   "size": 101
+  },
+  {
    "name": "FUN_CODE_beb5",
    "start": 48821,
    "end": 48920,
+   "size": 99
+  },
+  {
+   "name": "FUN_CODE_bf18",
+   "start": 48920,
+   "end": 49019,
    "size": 99
   },
   {
@@ -1397,6 +1415,12 @@
    "start": 49601,
    "end": 49693,
    "size": 92
+  },
+  {
+   "name": "FUN_CODE_c21d",
+   "start": 49693,
+   "end": 49784,
+   "size": 91
   },
   {
    "name": "FUN_CODE_c278",
@@ -1459,6 +1483,18 @@
    "size": 84
   },
   {
+   "name": "FUN_CODE_c644",
+   "start": 50756,
+   "end": 50840,
+   "size": 84
+  },
+  {
+   "name": "FUN_CODE_c698",
+   "start": 50840,
+   "end": 50924,
+   "size": 84
+  },
+  {
    "name": "FUN_CODE_c6ec",
    "start": 50924,
    "end": 51006,
@@ -1493,6 +1529,12 @@
    "start": 51327,
    "end": 51405,
    "size": 78
+  },
+  {
+   "name": "FUN_CODE_c8cd",
+   "start": 51405,
+   "end": 51481,
+   "size": 76
   },
   {
    "name": "FUN_CODE_c965",
@@ -1531,6 +1573,12 @@
    "size": 72
   },
   {
+   "name": "FUN_CODE_cb65",
+   "start": 52069,
+   "end": 52140,
+   "size": 71
+  },
+  {
    "name": "FUN_CODE_cbac",
    "start": 52140,
    "end": 52210,
@@ -1541,6 +1589,12 @@
    "start": 52210,
    "end": 52280,
    "size": 70
+  },
+  {
+   "name": "FUN_CODE_cc38",
+   "start": 52280,
+   "end": 52349,
+   "size": 69
   },
   {
    "name": "FUN_CODE_cc7d",
