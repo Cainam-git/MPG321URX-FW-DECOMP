@@ -1055,6 +1055,13 @@
       "name": "FUN_CODE_a1fe",
       "status": "matched"
     },
+    "CODE:a36c": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "copies n bytes from src to XDATA 0xA800 + off, limited to the 0x800-byte window (KeyDetArray OOR message)",
+      "name": "FUN_CODE_a36c",
+      "status": "matched"
+    },
     "CODE:a4e9": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
