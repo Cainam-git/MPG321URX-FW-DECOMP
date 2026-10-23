@@ -1735,6 +1735,18 @@
    "size": 55
   },
   {
+   "name": "FUN_CODE_d0cc",
+   "start": 53452,
+   "end": 53507,
+   "size": 55
+  },
+  {
+   "name": "FUN_CODE_d103",
+   "start": 53507,
+   "end": 53562,
+   "size": 55
+  },
+  {
    "name": "FUN_CODE_d13a",
    "start": 53562,
    "end": 53617,
@@ -1798,6 +1810,12 @@
    "name": "FUN_CODE_d351",
    "start": 54097,
    "end": 54149,
+   "size": 52
+  },
+  {
+   "name": "FUN_CODE_d385",
+   "start": 54149,
+   "end": 54201,
    "size": 52
   },
   {
@@ -2027,6 +2045,12 @@
    "start": 55761,
    "end": 55777,
    "size": 16
+  },
+  {
+   "name": "FUN_CODE_d9e1",
+   "start": 55777,
+   "end": 55807,
+   "size": 30
   },
   {
    "name": "FUN_CODE_da3a",
