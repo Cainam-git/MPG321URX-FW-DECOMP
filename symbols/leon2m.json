@@ -8816,6 +8816,12 @@
       "name": "FUN_a00ddacc",
       "status": "matched"
     },
+    "ram:a00ddad4": {
+      "by": "hand",
+      "comment": "empty routine",
+      "name": "FUN_a00ddad4",
+      "status": "matched"
+    },
     "ram:a00ddae4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
