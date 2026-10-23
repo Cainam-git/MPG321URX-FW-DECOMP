@@ -4274,6 +4274,12 @@
       "name": "FUN_a009c794",
       "status": "matched"
     },
+    "ram:a009c7e8": {
+      "by": "h42",
+      "comment": "prints the audio stable state, sets or clears byte +5 of the port record and calls FUN_a009c794",
+      "name": "DRV_HDMI_Set_AudStatus",
+      "status": "matched"
+    },
     "ram:a009c87c": {
       "by": "hand",
       "comment": "Clears bytes +4, +1 and +0x2d of ARR_a807d7e0[port] and calls DRV_HDMI_Set_AudStatus(port, 0)",
