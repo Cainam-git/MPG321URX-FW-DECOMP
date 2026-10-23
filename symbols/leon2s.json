@@ -6912,8 +6912,8 @@
       "status": "matched"
     },
     "ram:a00c0ce8": {
-      "by": "permuter",
-      "comment": "permuter: [walk]; cast (uint) signed char; flip uVar4 < 5; split uVar5#0; param param_1 signed char; temp arg func_0xa0fb65c4#2; temp arg func_0xa0fb65c4#1; drop cast (signed char); split t11_#1; local t11_ unsigned short; param param_2 unsigned int",
+      "by": "h49",
+      "comment": "writes 5 bytes of a to port registers 0x1a..0x1e and 0x11a bytes of b to register 0xCF01178C, saving and restoring register 0x41 and 0xCF011438",
       "name": "FUN_a00c0ce8",
       "status": "matched"
     },
