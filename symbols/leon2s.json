@@ -4509,6 +4509,12 @@
       "name": "FUN_a0098b60",
       "status": "matched"
     },
+    "ram:a0098e88": {
+      "by": "hand",
+      "comment": "LTS SCDC error check for ports 0 and 1: rate and lock checks, per-lane error counting and PreAEQ index selection",
+      "name": "DRV_HDMI21_RXDetect_FSM_LTS_Chk_SCDC_Err",
+      "status": "matched"
+    },
     "ram:a0099560": {
       "by": "hand",
       "comment": "clears bytes 0x8e/0x8f/0x91/0x92..0x95 of record DAT_a807d680[port], sets 0x90 = 100 / DAT_a8078630 (0 if zero), clears 0x50 bytes at +0x3e",
