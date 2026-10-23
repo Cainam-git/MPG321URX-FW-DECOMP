@@ -13046,6 +13046,13 @@
       "name": "FUN_a012d4f8",
       "status": "matched"
     },
+    "ram:a012e8c0": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "maps byte values 0x10..0x16 to single-bit bytes, default 1",
+      "name": "FUN_a012e8c0",
+      "status": "matched"
+    },
     "ram:a012eb4c": {
       "by": "h41",
       "cflags": "-mcpu=v8 -O3 -g",
