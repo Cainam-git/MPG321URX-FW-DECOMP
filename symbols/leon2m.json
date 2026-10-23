@@ -11082,6 +11082,13 @@
       "name": "FUN_a010bdcc",
       "status": "matched"
     },
+    "ram:a010bee4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores a position pair into record 0xa802d744/784/7c4 and programs register block words 1, 6, 0x34, 0x35 of table 0x19aed8/0x19aecc and a per-record bit of 0xd0030008/0xd0038008",
+      "name": "FUN_a010bee4",
+      "status": "matched"
+    },
     "ram:a010c194": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
