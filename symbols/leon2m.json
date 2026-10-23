@@ -5821,9 +5821,9 @@
       "status": "matched"
     },
     "ram:a00b6d58": {
-      "by": "permuter",
+      "by": "h49",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "FUN_a00a9f30(1, 0) when FUN_a00d7d48() returns non-zero, else FUN_a00a9f30(1, bit 4 of word 0xA802D3AC)",
       "name": "FUN_a00b6d58",
       "status": "matched"
     },
