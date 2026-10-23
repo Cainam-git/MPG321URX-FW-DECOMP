@@ -10501,6 +10501,13 @@
       "name": "FUN_a00f9994",
       "status": "matched"
     },
+    "ram:a00f99e8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns bits lo..hi of x",
+      "name": "FUN_a00f99e8",
+      "status": "matched"
+    },
     "ram:a00f9a00": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
