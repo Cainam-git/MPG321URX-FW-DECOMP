@@ -7513,6 +7513,12 @@
       "name": "FUN_a00c9370",
       "status": "matched"
     },
+    "ram:a00c9398": {
+      "by": "hand",
+      "comment": "runs the FUN_a00c9368/FUN_a00c9370 state checks of a port and updates its DAT_a8078bb0 record and registers 0x71..0x73",
+      "name": "FUN_a00c9398",
+      "status": "matched"
+    },
     "ram:a00c966c": {
       "by": "hand",
       "comment": "retry c7bf8(p) and c8328(p, &v) up to 10x each with fc1794(10) waits; 0 if still failing, else 0x22 when v stays 4, 0x14 otherwise",
