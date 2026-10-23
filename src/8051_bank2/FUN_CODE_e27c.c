@@ -1,5 +1,5 @@
-/* 8051_bank2 FUN_CODE_e27c @ 0xe27c  OPTIMIZE(8,SPEED) LARGE, twin of 8051_bank2/FUN_CODE_e24d
- * Same instruction shape as FUN_CODE_e24d (src/8051_bank2/FUN_CODE_e24d.c); the addresses and constants are the ones in the code below.
+/* 8051_bank2 FUN_CODE_e27c @ 0xe27c  OPTIMIZE(8,SPEED) LARGE
+ * Stores 2, 0x0F and a in XDATA 0x0436 .. 0x0438, then calls FUN_CODE_bfcf(0x6e, 3, 0x0436), FUN_CODE_d059(100) and FUN_CODE_e4bf(0x0436). Same code as FUN_CODE_e24d with other addresses and constants.
  */
 extern unsigned char xdata DAT_EXTMEM_0436[];
 unsigned char FUN_CODE_bfcf(unsigned char addr, unsigned char len, unsigned char *buf);

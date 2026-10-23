@@ -1,5 +1,5 @@
-/* 8051_bank1 FUN_CODE_dee2 @ 0xdee2  OPTIMIZE(7,SPEED), twin of 8051_bank1/FUN_CODE_dedc
- * Same instruction shape as FUN_CODE_dedc (src/8051_bank1/FUN_CODE_dedc.c); the addresses and constants are the ones in the code below.
+/* 8051_bank1 FUN_CODE_dee2 @ 0xdee2  OPTIMIZE(7,SPEED)
+ * Returns XDATA 0xA0F3. Same code as FUN_CODE_dedc with other addresses and constants.
  */
 unsigned char xdata DAT_EXTMEM_a0f3 _at_ 0xa0f3;
 

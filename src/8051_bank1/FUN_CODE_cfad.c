@@ -1,7 +1,7 @@
-/* 8051_bank1 FUN_CODE_cfad @ 0xcfad
- * Twin of FUN_CODE_d021: sends IDATA 0x4D bytes from XDATA 0xA2B0[] to XDATA 0xF0FB, waiting while bit 3 of XDATA
- * 0xF0FA is set (volatile real: polled); then IDATA 0x4D = 0 and XDATA 0xF00A = 0x55. Callers 0x1f87, 0xdb47.
- * Byte-exact with OPTIMIZE(8,SPEED) (also level 7).
+/* 8051_bank1 FUN_CODE_cfad @ 0xcfad  OPTIMIZE(8,SPEED)
+ * For i = 0 .. IDATA 0x4D - 1: while bit 3 of XDATA 0xF0FA is set runs a 100-step delay loop, then writes XDATA
+ * 0xA2B0[i] to XDATA 0xF0FB. Then clears IDATA 0x4D and writes 0x55 to XDATA 0xF00A. Same code as FUN_CODE_d021
+ * with other addresses. XDATA 0xF0FA is volatile (it is polled). Called from 0x1F87 and 0xDB47.
  */
 extern unsigned char idata DAT_INTMEM_4d;
 extern unsigned char xdata DAT_EXTMEM_a2b0[];

@@ -1,5 +1,5 @@
-/* 8051_bank1 FUN_CODE_0016 @ 0x0016  OPTIMIZE(7,SPEED), twin of 8051_bank0/FUN_CODE_18d6
- * Same instruction shape as FUN_CODE_18d6 (src/8051_bank0/FUN_CODE_18d6.c); the addresses and constants are the ones in the code below.
+/* 8051_bank1 FUN_CODE_0016 @ 0x0016  OPTIMIZE(7,SPEED)
+ * Sets bit 6 of XDATA 0xF0E5, then clears it. Same code as FUN_CODE_18d6 with other addresses and constants.
  */
 extern unsigned char volatile xdata DAT_EXTMEM_f0e5;
 

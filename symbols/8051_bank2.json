@@ -57,7 +57,7 @@
     "CODE:140a": {
       "by": "twin",
       "c51opts": "OPTIMIZE(7,SPEED)",
-      "comment": "twin of 8051_bank0/FUN_CODE_18e8",
+      "comment": "Returns 0",
       "name": "FUN_CODE_140a",
       "status": "matched"
     },
@@ -1854,7 +1854,7 @@
     "CODE:e27c": {
       "by": "twin",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "twin of 8051_bank2/FUN_CODE_e24d",
+      "comment": "Stores 2, 0x0F and a in XDATA 0x0436 .. 0x0438, then calls FUN_CODE_bfcf(0x6e, 3, 0x0436), FUN_CODE_d059(100) and FUN_CODE_e4bf(0x0436)",
       "name": "FUN_CODE_e27c",
       "status": "matched"
     },
@@ -2058,14 +2058,14 @@
     "CODE:e4f8": {
       "by": "twin",
       "c51opts": "OPTIMIZE(7,SPEED)",
-      "comment": "twin of 8051_bank2/FUN_CODE_e4e9",
+      "comment": "Returns the 32-bit value at XDATA 0x0109",
       "name": "FUN_CODE_e4f8",
       "status": "matched"
     },
     "CODE:e507": {
       "by": "twin",
       "c51opts": "OPTIMIZE(7,SPEED)",
-      "comment": "twin of 8051_bank1/FUN_CODE_dde5",
+      "comment": "Returns the 32-bit value at XDATA 0x0113",
       "name": "FUN_CODE_e507",
       "status": "matched"
     },

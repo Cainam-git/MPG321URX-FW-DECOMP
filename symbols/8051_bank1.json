@@ -3,7 +3,7 @@
     "CODE:0016": {
       "by": "twin",
       "c51opts": "OPTIMIZE(7,SPEED)",
-      "comment": "twin of 8051_bank0/FUN_CODE_18d6",
+      "comment": "Sets bit 6 of XDATA 0xF0E5, then clears it",
       "name": "FUN_CODE_0016",
       "status": "matched"
     },
@@ -1671,7 +1671,7 @@
     },
     "CODE:cfad": {
       "by": "hand",
-      "comment": "twin of d021: idata 0x4d bytes of a2b0[] to f0fb, status f0fa",
+      "comment": "for i < IDATA 0x4D: waits while bit 3 of XDATA 0xF0FA is set, then writes XDATA 0xA2B0[i] to XDATA 0xF0FB; then clears IDATA 0x4D and writes 0x55 to XDATA 0xF00A",
       "name": "FUN_CODE_cfad",
       "status": "matched"
     },
@@ -1864,7 +1864,7 @@
     "CODE:d645": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "twin of d61c on array 9a00",
+      "comment": "sets (on == 1) or clears the bits mask in XDATA 0x9A00 + reg",
       "name": "FUN_CODE_d645",
       "status": "matched"
     },
@@ -2173,7 +2173,7 @@
     "CODE:dde5": {
       "by": "twin",
       "c51opts": "OPTIMIZE(7,SPEED)",
-      "comment": "twin of 8051_bank2/FUN_CODE_e4e9",
+      "comment": "Returns the 32-bit value at XDATA 0xA729",
       "name": "FUN_CODE_dde5",
       "status": "matched"
     },
@@ -2237,14 +2237,14 @@
     "CODE:dedc": {
       "by": "twin",
       "c51opts": "OPTIMIZE(7,SPEED)",
-      "comment": "twin of 8051_bank2/FUN_CODE_00f6",
+      "comment": "Returns XDATA 0xA759",
       "name": "FUN_CODE_dedc",
       "status": "matched"
     },
     "CODE:dee2": {
       "by": "twin",
       "c51opts": "OPTIMIZE(7,SPEED)",
-      "comment": "twin of 8051_bank1/FUN_CODE_dedc",
+      "comment": "Returns XDATA 0xA0F3",
       "name": "FUN_CODE_dee2",
       "status": "matched"
     },
