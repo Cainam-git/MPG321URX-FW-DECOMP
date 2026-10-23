@@ -8038,6 +8038,13 @@
       "name": "FUN_a00d2a28",
       "status": "matched"
     },
+    "ram:a00d3bb4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reads the records DAT_a802d290 (0x1fc bytes) and DAT_a802d274 (0x1c bytes) with FUN_a014ae1c and, when halfwords differ from the defaults at 0x198524 / 0x198508, copies the defaults and writes them back with FUN_a014aed0",
+      "name": "FUN_a00d3bb4",
+      "status": "matched"
+    },
     "ram:a00d3d30": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
