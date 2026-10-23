@@ -712,6 +712,22 @@
       "name": "FUN_CODE_4cb9",
       "status": "matched"
     },
+    "CODE:5864": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_5868, in FUN_CODE_5868's code segment; emitted by compiling src/8051_bank1/FUN_CODE_5868.c, bytes judged with FUN_CODE_5868 over 0x5864..0x5a39",
+      "kind": "common_entry",
+      "module": "FUN_CODE_5868",
+      "name": "FUN_CODE_5864",
+      "of": "FUN_CODE_5868",
+      "status": "matched"
+    },
+    "CODE:5868": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "packs bytes p[4i..4i+3] into the unsigned long q[i] (first byte most significant) for i < (n + 3) / 4; module with FUN_CODE_38a7 for the common-entry block 0x5864",
+      "name": "FUN_CODE_5868",
+      "status": "matched"
+    },
     "CODE:5dcb": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
