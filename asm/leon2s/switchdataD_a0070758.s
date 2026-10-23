@@ -1,0 +1,10 @@
+# leon2s switchdataD_a0070758 0xa0070758-0xa007077c (36 bytes)
+a0070758:  a0 07 0c 80  unknown
+a007075c:  a0 07 0c 80  unknown
+a0070760:  a0 07 0c 90  unknown
+a0070764:  a0 07 0c 90  unknown
+a0070768:  a0 07 0c a4  unknown
+a007076c:  a0 07 0c a4  unknown
+a0070770:  a0 07 0c b8  unknown
+a0070774:  a0 07 0c c0  unknown
+a0070778:  a0 07 0c c8  unknown

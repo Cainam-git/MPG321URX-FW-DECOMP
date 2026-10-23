@@ -1,4 +1,4 @@
-# leon2m FUN_a0123384 0xa0123384-0xa01234b4 (304 bytes)
+# leon2m FUN_a0123384 0xa0123384-0xa01234b8 (308 bytes)
 a0123384:  17 33 c0 f1  sethi  %hi(0xcf03c400), %o3
 a0123388:  9a 12 e1 48  or  %o3, 0x148, %o5	! 0xcf03c548
 a012338c:  d2 03 40 00  ld  [ %o5 ], %o1
@@ -75,3 +75,4 @@ a01234a4:  90 12 a0 90  or  %o2, 0x90, %o0
 a01234a8:  82 13 c0 00  mov  %o7, %g1
 a01234ac:  7f fe ef 31  call  0xa00df170
 a01234b0:  9e 10 40 00  mov  %g1, %o7
+a01234b4:  01 00 00 00  nop

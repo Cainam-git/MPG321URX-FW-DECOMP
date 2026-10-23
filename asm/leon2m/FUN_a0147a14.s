@@ -1,4 +1,4 @@
-# leon2m FUN_a0147a14 0xa0147a14-0xa0147a7c (104 bytes)
+# leon2m FUN_a0147a14 0xa0147a14-0xa0147a80 (108 bytes)
 a0147a14:  90 0a 20 ff  and  %o0, 0xff, %o0
 a0147a18:  83 2a 20 0a  sll  %o0, 0xa, %g1
 a0147a1c:  9a 20 40 08  sub  %g1, %o0, %o5
@@ -25,3 +25,4 @@ a0147a6c:  90 10 20 00  clr  %o0
 a0147a70:  82 13 c0 00  mov  %o7, %g1
 a0147a74:  7f ff c3 0e  call  0xa01386ac
 a0147a78:  9e 10 40 00  mov  %g1, %o7
+a0147a7c:  01 00 00 00  nop

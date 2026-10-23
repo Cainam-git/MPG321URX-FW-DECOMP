@@ -1,4 +1,4 @@
-# leon2m FUN_a00cead4 0xa00cead4-0xa00ceb20 (76 bytes)
+# leon2m FUN_a00cead4 0xa00cead4-0xa00ceb24 (80 bytes)
 a00cead4:  9a 10 20 6e  mov  0x6e, %o5
 a00cead8:  82 10 3f 88  mov  -120, %g1
 a00ceadc:  d8 2a 20 09  stb  %o4, [ %o0 + 9 ]
@@ -18,3 +18,4 @@ a00ceb10:  90 10 20 50  mov  0x50, %o0
 a00ceb14:  82 13 c0 00  mov  %o7, %g1
 a00ceb18:  7f fe ed 12  call  0xa0089f60
 a00ceb1c:  9e 10 40 00  mov  %g1, %o7
+a00ceb20:  01 00 00 00  nop
