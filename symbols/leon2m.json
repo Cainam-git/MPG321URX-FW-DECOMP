@@ -2172,6 +2172,12 @@
       "name": "FUN_a0082c0c",
       "status": "matched"
     },
+    "ram:a0082c38": {
+      "by": "hand",
+      "comment": "returns bit 14 of DAT_a802af42",
+      "name": "FUN_a0082c38",
+      "status": "matched"
+    },
     "ram:a0082c4c": {
       "by": "autoc",
       "comment": "returns (byte 0xA802AF41) & 1",
