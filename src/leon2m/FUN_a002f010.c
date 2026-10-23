@@ -1,5 +1,7 @@
 /* leon2m FUN_a002f010 @ 0xa002f010 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Clears registers 0xCF007330 and 0xCF007334, calls FUN_a002e3c4(2, 1) and sets bit 2 of word 0xA802C9E4. Returns
+ * p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

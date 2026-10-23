@@ -1,5 +1,10 @@
 /* leon2m FUN_a00f913c @ 0xa00f913c (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When p3 != 0: prints "ESC[1;35mEnable PrePattern\r\nESC[m" through FUN_a00df170, writes a fixed list of values
+ * to registers 0xa4 .. 0x59 of p1 through FUN_a00f1ad4 / FUN_a00f1d48 / FUN_a00f1b5c (0x8c gets p2 | 0x80), sets
+ * bit 4 of register 0xCF011400 and calls FUN_a00f1ad4(p1, 0x55, 0xf0). Otherwise calls FUN_a00f1ad4(p1, 0xa4, 0)
+ * and FUN_a00f1b5c(p1, 0x94, 0x10, 0), clears bit 4 of register 0xCF011400 and calls FUN_a00f1ad4(p1, 0x55, 0xc0)
+ * and FUN_a00f1ad4(p1, 0x8c, 0).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;
@@ -11,7 +16,7 @@ typedef int code();
 #define true 1
 #define false 0
 #define CONCAT44(a, b) (((unsigned long long)(a) << 32) | (unsigned int)(b))
-#define _DAT_cf011400 (*(volatile unsigned int *)0xcf011400)   /* peripheral register */
+#define _DAT_cf011400 (*(volatile unsigned int *)0xcf011400)
 extern int FUN_a00df170();
 extern void FUN_a00f1ad4();
 extern void FUN_a00f1b5c();

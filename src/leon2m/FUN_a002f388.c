@@ -1,5 +1,7 @@
 /* leon2m FUN_a002f388 @ 0xa002f388 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Reads a word w (cleared first) through FUN_a002c4d0(0, 0xb8, &w, 1), sets its low byte to 1 and writes it
+ * through FUN_a002c5f8(0, 0xb8, &w, 1), then repeats the read until the low byte of w is 2. Returns p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,7 @@
 /* leon2m FUN_a008b330 @ 0xa008b330 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When FUN_a0090fcc() returns 0x113, or returns 0x114 on a second call, returns FUN_a0090fd8(p1, p2, p3, p4, p5,
+ * p6); otherwise returns p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

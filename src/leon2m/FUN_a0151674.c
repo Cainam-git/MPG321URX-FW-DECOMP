@@ -1,5 +1,7 @@
 /* leon2m FUN_a0151674 @ 0xa0151674 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * When bits 20-22 of the word at the address returned by FUN_a01241fc() hold 1 (& 0x700000 == 0x100000), returns
+ * FUN_a0122d0c(p1, p2); otherwise returns p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

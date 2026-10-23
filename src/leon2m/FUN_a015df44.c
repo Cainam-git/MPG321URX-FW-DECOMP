@@ -1,5 +1,7 @@
 /* leon2m FUN_a015df44 @ 0xa015df44 (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * r = FUN_a015e484(word 0xA802AA18, signed halfword at p1 + 0xE, p2, p3). When r < 0 clears bit 12 of the halfword
+ * at p1 + 0xC, otherwise adds r to the word at p1 + 0x50. Returns r.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

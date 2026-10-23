@@ -1,5 +1,6 @@
 /* leon2m FUN_a0148ef4 @ 0xa0148ef4 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Copies bit 0 of p1 into bit 25 of word 0xA802E3D0, then calls FUN_a012f1ec(k, 1) for k = 0 .. 3.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,7 @@
 /* leon2m FUN_a01328d4 @ 0xa01328d4 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * v = bits 12-15 of word 0 of record p1 & 0xff of the 0x78-byte records at 0xA802DF30 for p1 < 4, otherwise 0xFF;
+ * calls FUN_a0142fcc(v, p2).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,7 @@
 /* leon2m FUN_a0099dd8 @ 0xa0099dd8 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a00a93bc((word 0xA802AFEC + 0x45) & 0xff) and FUN_a00a813c(1, bit 15 of word 0xA802D46C, 1), stores
+ * 0x37 in word 0xA802AFEC, calls FUN_a00a900c(3, 1), FUN_a00a9468(1, 2) and FUN_a00b34d4(0, 1).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;
