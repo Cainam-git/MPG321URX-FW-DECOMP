@@ -882,6 +882,12 @@
       "name": "FUN_CODE_a4e9",
       "status": "matched"
     },
+    "CODE:a57e": {
+      "by": "hand",
+      "comment": "index step on the 3-byte table at 0xA62F from the FUN_CODE_d94a count, returns FUN_CODE_52be result",
+      "name": "FUN_CODE_a57e",
+      "status": "matched"
+    },
     "CODE:a6cf": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
