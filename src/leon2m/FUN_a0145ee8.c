@@ -8,7 +8,7 @@ struct Chan { unsigned int hi24 : 24; unsigned int f4 : 4; unsigned int lo4 : 4;
 extern struct Chan DAT_a802df30[4];
 extern void FUN_a00f63bc(unsigned int);
 extern void FUN_a013b6e4(int);
-extern int FUN_a00df170();                     /* debug printf */
+extern int FUN_a00df170();                     /* formatted output (vsnprintf) */
 extern char s_001a6dd8[];                      /* "SYS remapping channel OOR\r\n" */
 
 static int remap(int ch)

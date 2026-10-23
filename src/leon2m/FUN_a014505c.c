@@ -3,11 +3,11 @@
  * entry (bits 12..15 of the first word of channel record ch) of the 42-byte records at 0xa802e224. A
  * channel number outside 0..3 prints "SYS remapping channel OOR" and uses channel 0. Same lookup as FUN_a0143ff0.
  */
-struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* display channel record, 0x78 bytes */
+struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* 0x78-byte record */
 extern struct Chan DAT_a802df30[4];
 struct Tab42 { unsigned char data[42]; };
 extern struct Tab42 DAT_a802e224[];
-extern int FUN_a00df170();                     /* debug printf */
+extern int FUN_a00df170();                     /* formatted output (vsnprintf) */
 extern char s_001a6dd8[];                      /* "SYS remapping channel OOR\r\n" */
 extern int FUN_a0142168(unsigned char);
 extern unsigned char FUN_a014230c(unsigned char);

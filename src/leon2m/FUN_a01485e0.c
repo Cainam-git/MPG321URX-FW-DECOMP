@@ -5,13 +5,13 @@
  * 0x80 of the port status halfword (0xA802E224 + 0x2A * port) is set.
  * Callers: FUN_a008380c (APPGetFRCMode).
  */
-struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* display channel record, 0x78 bytes */
+struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* 0x78-byte record */
 extern struct Chan DAT_a802df30[4];
-extern int FUN_a00df170();                     /* debug printf */
+extern int FUN_a00df170();                     /* formatted output (vsnprintf) */
 extern char s_001a6dd8[];                      /* "SYS remapping channel OOR\r\n" */
 extern unsigned char FUN_a01400bc(unsigned char);   /* bit n of DAT_a802cbd3 (set by FUN_a013f370 from port status bit 0x80) */
 
-/* channel number check: 0..3 pass, anything else is -1 */
+/* 0 .. 3 map to themselves, any other value to -1 */
 static int remap(int ch)
 {
     switch (ch) {

@@ -3,9 +3,9 @@
  * 0x78-byte records at 0xa802df30). A channel number outside 0..3 prints "SYS remapping channel OOR" and uses
  * channel 0.
  */
-struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* display channel record, 0x78 bytes */
+struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* 0x78-byte record */
 extern struct Chan DAT_a802df30[4];
-extern int FUN_a00df170();                     /* debug printf */
+extern int FUN_a00df170();                     /* formatted output (vsnprintf) */
 extern char s_001a6dd8[];                      /* "SYS remapping channel OOR\r\n" */
 
 static int remap(int ch)

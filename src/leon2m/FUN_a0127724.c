@@ -12,7 +12,7 @@
 extern unsigned char FUN_a01248c8(void);   /* GPIO group 9 bit 3 is high */
 extern unsigned short FUN_a0147aa0();      /* I2C register write */
 extern unsigned short FUN_a0147ae8();      /* I2C register read */
-extern int FUN_a00df170();                 /* debug printf */
+extern int FUN_a00df170();                 /* formatted output (vsnprintf) */
 extern void func_0x4008d1a0(int ms);       /* delay */
 extern unsigned char DAT_a802d890[2];      /* bytes written to register 0x1C8 */
 extern unsigned char DAT_a802d888[2];      /* bytes read back */

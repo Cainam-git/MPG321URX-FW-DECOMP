@@ -5,7 +5,7 @@
  * with (port, r, g, b), where port = bits 12..15 of the channel record word 0 (DAT_a802df30[ch].w0).
  * Used by the colour cycler FUN_a0082b00 (row 1e: Burn In colour table) and the fill-colour tool command.
  */
-struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* display channel record, 0x78 bytes */
+struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* 0x78-byte record */
 extern struct Chan DAT_a802df30[4];
 extern void FUN_a010385c(int);
 extern void FUN_a0106bfc(int, int, int, int);
@@ -13,7 +13,7 @@ extern void FUN_a0103808(int, int, int, int);
 extern void FUN_a0118a80(int, int, int, int);
 extern int FUN_a010aae8(int, int, int, int);
 
-/* channel number check: 0..3 pass, anything else is -1 */
+/* 0 .. 3 map to themselves, any other value to -1 */
 static int remap(int ch)
 {
     switch (ch) {

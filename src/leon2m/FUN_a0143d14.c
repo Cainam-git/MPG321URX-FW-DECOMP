@@ -3,11 +3,11 @@
  * FUN_a013cea0(channel) as a byte. Same shape as FUN_a0148c94. Called by the APP event generator FUN_a0080c10
  * (row 1e).
  */
-extern int FUN_a00df170();                     /* debug printf */
+extern int FUN_a00df170();                     /* formatted output (vsnprintf) */
 extern char s_001a6dd8[];                      /* "SYS remapping channel OOR\r\n" */
 extern unsigned char FUN_a013cea0(unsigned char);
 
-/* channel number check: 0..3 pass, anything else is -1 */
+/* 0 .. 3 map to themselves, any other value to -1 */
 static int remap(int ch)
 {
     switch (ch) {

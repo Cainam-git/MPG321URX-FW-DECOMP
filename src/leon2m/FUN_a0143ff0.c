@@ -7,11 +7,11 @@
  * The remap() switch reproduces the target's range check: it returns -1 for any other value, which the unsigned
  * char local turns into 0xFF > 3.
  */
-struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* display channel record, 0x78 bytes */
+struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* 0x78-byte record */
 extern struct Chan DAT_a802df30[4];
 struct Tab42 { unsigned char data[42]; };
 extern struct Tab42 DAT_a802e224[];
-extern int FUN_a00df170();                     /* debug printf */
+extern int FUN_a00df170();                     /* formatted output (vsnprintf) */
 extern char s_001a6dd8[];                      /* "SYS remapping channel OOR\r\n" */
 extern int FUN_a0142168(unsigned char);
 extern int FUN_a0129a10(int);

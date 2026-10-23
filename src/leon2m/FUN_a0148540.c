@@ -11,13 +11,13 @@
  * FUN_a00dac38 calls FUN_a0148540(0). When it returns 1 that function chooses its row from
  * hfreq * 2160 / active * 1000 / 2348 instead of from vfreq.
  */
-struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* display channel record, 0x78 bytes */
+struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* 0x78-byte record */
 extern struct Chan DAT_a802df30[4];
-extern int FUN_a00df170();                     /* debug printf */
+extern int FUN_a00df170();                     /* formatted output (vsnprintf) */
 extern char s_001a6dd8[];                      /* "SYS remapping channel OOR\r\n" */
 extern unsigned char FUN_a0140098(unsigned char);   /* bit n of DAT_a802cbd4 */
 
-/* channel number check: 0..3 pass, anything else is -1 */
+/* 0 .. 3 map to themselves, any other value to -1 */
 static int remap(int ch)
 {
     switch (ch) {

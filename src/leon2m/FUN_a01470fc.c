@@ -5,7 +5,7 @@
  */
 struct Chan { unsigned int hi24 : 24; unsigned int f4 : 4; unsigned int lo4 : 4; unsigned char rest[0x74]; };
 extern struct Chan DAT_a802df30[4];
-extern int FUN_a00df170();                     /* debug printf */
+extern int FUN_a00df170();                     /* formatted output (vsnprintf) */
 extern char s_001a6dd8[];                      /* "SYS remapping channel OOR\r\n" */
 
 static int remap(int ch)
