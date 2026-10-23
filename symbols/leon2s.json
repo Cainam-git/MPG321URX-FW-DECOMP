@@ -5916,6 +5916,12 @@
       "name": "FUN_a00abba8",
       "status": "matched"
     },
+    "ram:a00abe20": {
+      "by": "h43",
+      "comment": "writes registers 0x200-0x203 and 0x266 of the port from three record bytes between two FUN_a00a6c98 bit writes",
+      "name": "FUN_a00abe20",
+      "status": "matched"
+    },
     "ram:a00abff0": {
       "by": "h53",
       "comment": "writes a fixed register sequence for a port with FUN_a00a6c00 and FUN_a00a6c98, with values chosen from the DAT_a807dc18 record",
