@@ -7037,6 +7037,12 @@
       "name": "FUN_a00cd4fc",
       "status": "matched"
     },
+    "ram:a00cd5e4": {
+      "by": "h53",
+      "comment": "reads a two-byte header and a data block through func_0xa0f96400, writes them to hardware registers and compares the read-back bytes, updating the DAT_a8078bb0 record state",
+      "name": "FUN_a00cd5e4",
+      "status": "matched"
+    },
     "ram:a00cdb0c": {
       "by": "hand",
       "comment": "Port record step: init block and register copy when f28 is clear, then saturating counters",
