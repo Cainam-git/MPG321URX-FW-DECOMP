@@ -4678,6 +4678,12 @@
       "name": "SR_detect_fail_ch",
       "status": "matched"
     },
+    "ram:a009ae98": {
+      "by": "lead",
+      "comment": "pointer form of the state-6 store",
+      "name": "DRV_HDMI21_RXDetect_FSM_LTS_P",
+      "status": "matched"
+    },
     "ram:a009bef0": {
       "by": "hand",
       "comment": "initial RX-detect state: copies the state word, clears the FFE fields of registers 0xa0/0xa4 and 0x90, writes FUN_a00a7424(.., 0x14, j, 0x2f08) and sets state 1",
