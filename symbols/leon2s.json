@@ -5779,6 +5779,12 @@
       "name": "FUN_a00adf64",
       "status": "matched"
     },
+    "ram:a00ae0dc": {
+      "by": "hand",
+      "comment": "calls FUN_a00a6c98 and FUN_a00a6c00 with values chosen by b, then FUN_a00adf84(a, 8 / b)",
+      "name": "FUN_a00ae0dc",
+      "status": "matched"
+    },
     "ram:a00ae1c0": {
       "by": "autoc",
       "comment": "Pulse on port param_1: saves register 0, clears its bit 5, sets bit 6 of register 0x30, busy-waits 35000 nop iterations, then writes the saved value back to register 0 (FUN_a00a6c00). Probably a reset or calibration kick. The delay loop has an explicit nop that Ghidra drops.",
