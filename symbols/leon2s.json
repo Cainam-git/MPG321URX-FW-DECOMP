@@ -2357,6 +2357,12 @@
       "name": "FUN_a007f634",
       "status": "matched"
     },
+    "ram:a007f670": {
+      "by": "h42",
+      "comment": "stores the FUN_a007b2a0/FUN_a007d054 results in the port record, calls FUN_a00a73ac and FUN_a007f634, prints the EQ exit messages",
+      "name": "DRV_HDMI_EQScan_FSM_Done",
+      "status": "matched"
+    },
     "ram:a007f798": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
