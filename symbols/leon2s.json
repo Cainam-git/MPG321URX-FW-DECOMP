@@ -1874,6 +1874,12 @@
       "name": "LINK_STANDBY",
       "status": "matched"
     },
+    "ram:a006e0e4": {
+      "by": "hand",
+      "comment": "sets the flag bits of status byte +0xd and halfwords +0xe/+0x12 from the port record and the per-port test functions",
+      "name": "FUN_a006e0e4",
+      "status": "matched"
+    },
     "ram:a006e2c4": {
       "by": "hand",
       "comment": "copies the link timing fields of the port record into the output record (doubled when FUN_a00a2080 is set) and prints them",
