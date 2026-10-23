@@ -1726,7 +1726,7 @@
     "ram:a002bb28": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "bit-banged I2C random read of the settings storage (bounded retries)",
+      "comment": "bit-banged I2C random read of the EEPROM (bounded retries)",
       "name": "FUN_a002bb28",
       "status": "matched"
     },
@@ -12992,6 +12992,13 @@
       "name": "FUN_a0129c10",
       "status": "matched"
     },
+    "ram:a012a228": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "counts entries of DAT_a802ca9c/DAT_a802ca5c differing by more than 0x40, returns 0/1 by count and run",
+      "name": "FUN_a012a228",
+      "status": "matched"
+    },
     "ram:a012a700": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
@@ -13077,7 +13084,7 @@
     "ram:a012bc08": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "output timing record of a display channel from the raw panel row; reported to the small chip (msg 0x51)",
+      "comment": "output timing record of a channel from the raw row 0xA802E378; reported to the small chip (msg 0x51)",
       "name": "FUN_a012bc08",
       "status": "matched"
     },
@@ -13158,14 +13165,14 @@
     "ram:a012d4f8": {
       "by": "h41",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "writes one settings-storage byte at the FGA block offset of the 0xA802E1A0 record",
+      "comment": "writes one EEPROM byte at the FGA block offset of the 0xA802E1A0 record",
       "name": "FUN_a012d4f8",
       "status": "matched"
     },
     "ram:a012e850": {
       "by": "h41",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "reads a 16-bit little-endian settings-storage value at FGA block offset 0x70 + 2 * i",
+      "comment": "reads a 16-bit little-endian EEPROM value at FGA block offset 0x70 + 2 * i",
       "name": "FUN_a012e850",
       "status": "matched"
     },
@@ -13179,7 +13186,7 @@
     "ram:a012eb4c": {
       "by": "h41",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "reads one settings-storage byte at the FGA block offset of the 0xA802E1A0 record",
+      "comment": "reads one EEPROM byte at the FGA block offset of the 0xA802E1A0 record",
       "name": "FUN_a012eb4c",
       "status": "matched"
     },
@@ -14626,21 +14633,21 @@
     "ram:a01400e0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "start-up: settings-storage (EEPROM) layout from ROM tables (cannot fail)",
+      "comment": "start-up: EEPROM layout from ROM tables (cannot fail)",
       "name": "FUN_a01400e0",
       "status": "matched"
     },
     "ram:a0140304": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "settings-storage usable test (leaf, cannot wait)",
+      "comment": "EEPROM usable test (leaf, cannot wait)",
       "name": "FUN_a0140304",
       "status": "matched"
     },
     "ram:a0140360": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "settings-storage read wrapper: ROM record bit 7 clear -> bit-banged I2C read (FUN_a002bb28), set -> copy from the flash window; void, no own wait",
+      "comment": "EEPROM read wrapper: ROM record bit 7 clear -> bit-banged I2C read (FUN_a002bb28), set -> copy from the flash window; void, no own wait",
       "name": "FUN_a0140360",
       "status": "matched"
     },
@@ -14661,7 +14668,7 @@
     "ram:a0140e74": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "settings-storage write: page writes with a ready poll that has no limit (only if the chip never answers)",
+      "comment": "EEPROM write: page writes with a ready poll that has no limit (only if the chip never answers)",
       "name": "FUN_a0140e74",
       "status": "matched"
     },
@@ -15096,7 +15103,7 @@
     "ram:a0144298": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Returns whether byte 9 of the port record selected by display channel ch equals 5",
+      "comment": "Returns whether byte 9 of the port record selected by channel ch equals 5",
       "name": "FUN_a0144298",
       "status": "matched"
     },
@@ -15157,14 +15164,14 @@
     "ram:a01448fc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Returns byte 0x28 of the 0xa802e224 entry of display channel ch (0..0x27, else 0x28), plus 2 for twelve values when a two-call test holds",
+      "comment": "Returns byte 0x28 of the 0xa802e224 entry of channel ch (0..0x27, else 0x28), plus 2 for twelve values when a two-call test holds",
       "name": "FUN_a01448fc",
       "status": "matched"
     },
     "ram:a014505c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Returns whether FUN_a014230c accepts the FUN_a0142168 value of display channel ch's port byte 0xa",
+      "comment": "Returns whether FUN_a014230c accepts the FUN_a0142168 value of channel ch's port byte 0xa",
       "name": "FUN_a014505c",
       "status": "matched"
     },
@@ -15211,7 +15218,7 @@
     "ram:a0145508": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Mode 0 calls FUN_a01544cc; mode 1 copies halfwords 0x28/0x2a/0x2c to 0x0e/0x1e/0x20 of the display channel records that pass two tests",
+      "comment": "Mode 0 calls FUN_a01544cc; mode 1 copies halfwords 0x28/0x2a/0x2c to 0x0e/0x1e/0x20 of the channel records that pass two tests",
       "name": "FUN_a0145508",
       "status": "matched"
     },
@@ -15457,35 +15464,35 @@
     "ram:a0146ef4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Calls FUN_a00f6898 or FUN_a00f67d0 (by b) with bits 4..7 of display channel ch unless they are 4",
+      "comment": "Calls FUN_a00f6898 or FUN_a00f67d0 (by b) with bits 4..7 of channel ch unless they are 4",
       "name": "FUN_a0146ef4",
       "status": "matched"
     },
     "ram:a0147064": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Returns bits 4..7 of the first word of display channel record ch",
+      "comment": "Returns bits 4..7 of the first word of channel record ch",
       "name": "FUN_a0147064",
       "status": "matched"
     },
     "ram:a01470fc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Writes v into bits 4..7 of the first word of display channel record ch",
+      "comment": "Writes v into bits 4..7 of the first word of channel record ch",
       "name": "FUN_a01470fc",
       "status": "matched"
     },
     "ram:a01471a0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "For display channel ch: FUN_a00f63bc with its bits 4..7, then a 16-way switch on item that tail-calls one of 13 routines with v",
+      "comment": "For channel ch: FUN_a00f63bc with its bits 4..7, then a 16-way switch on item that tail-calls one of 13 routines with v",
       "name": "FUN_a01471a0",
       "status": "matched"
     },
     "ram:a014737c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Calls FUN_a00f7894 with {a, b, mode value} between two FUN_a00f63bc calls (bits 4..7 of display channel ch, then the previous byte 0xa802b7b4)",
+      "comment": "Calls FUN_a00f7894 with {a, b, mode value} between two FUN_a00f63bc calls (bits 4..7 of channel ch, then the previous byte 0xa802b7b4)",
       "name": "FUN_a014737c",
       "status": "matched"
     },
@@ -15758,14 +15765,14 @@
     "ram:a0148aec": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Calls FUN_a00f93a0(port of display channel ch, a, b)",
+      "comment": "Calls FUN_a00f93a0(port of channel ch, a, b)",
       "name": "FUN_a0148aec",
       "status": "matched"
     },
     "ram:a0148bc4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Calls FUN_a00f9528(port of display channel ch, v)",
+      "comment": "Calls FUN_a00f9528(port of channel ch, v)",
       "name": "FUN_a0148bc4",
       "status": "matched"
     },
@@ -15877,7 +15884,7 @@
     "ram:a0149978": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Calls FUN_a012f43c and, by flags of 0xa802e3d0, FUN_a01328d4 for display channel ch, then tail-calls FUN_a0142ea8 with bits 12..15 of its record word 0",
+      "comment": "Calls FUN_a012f43c and, by flags of 0xa802e3d0, FUN_a01328d4 for channel ch, then tail-calls FUN_a0142ea8 with bits 12..15 of its record word 0",
       "name": "FUN_a0149978",
       "status": "matched"
     },

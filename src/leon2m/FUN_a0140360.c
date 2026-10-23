@@ -1,10 +1,10 @@
 /* leon2m FUN_a0140360 @ 0xa0140360..0xa0140500 (104 words), -mcpu=v8 -O3 -g (also
  * -msoft-float).
  *
- * What it does, in plain words: "read len bytes of settings storage device 'dev' starting at offset addr into buf".
+ * What it does, in plain words: "read len bytes of EEPROM device 'dev' starting at offset addr into buf".
  * It is the settings-read wrapper used by FUN_a0153c74 (start-up settings check) and by
- * FUN_a012cfac (FGA_Init). It looks up the 38-byte ROM record DAT_001a69fe[dev] (byte 0 = b0, the storage kind):
- *  - b0 bit 7 CLEAR: an I2C storage chip. The 10-byte bus descriptor DAT_001a69e0[b0] (5 u16: pins / device / mode)
+ * FUN_a012cfac (FGA_Init). It looks up the 38-byte ROM record DAT_001a69fe[dev] (byte 0 = b0, the device kind):
+ *  - b0 bit 7 CLEAR: an I2C EEPROM chip. The 10-byte bus descriptor DAT_001a69e0[b0] (5 u16: pins / device / mode)
  *    is copied to the stack and func_0x4008bb28(&desc, addr, len, buf) does the read (= FUN_a002bb28 in the RAM
  *    piece: bit-banged I2C random read, bounded except FUN_a002ab04's late-ACK loop).
  *  - b0 bit 7 SET: a memory-mapped area (no bus traffic). base = D[b0].h0 + (b1 << 11) + E[dev].h0 when the area

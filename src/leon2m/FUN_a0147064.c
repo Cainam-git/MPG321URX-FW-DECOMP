@@ -1,5 +1,5 @@
 /* leon2m FUN_a0147064 @ 0xa0147064-0xa01470fc (38 words).
- * Returns bits 4..7 of the first word of display channel record ch (the 0x78-byte records at 0xa802df30). A channel
+ * Returns bits 4..7 of the first word of channel record ch (the 0x78-byte records at 0xa802df30). A channel
  * number outside 0..3 prints "SYS remapping channel OOR" and uses channel 0. Same code as FUN_a0143e70, which returns
  * bit 29 of the word at +0x70.
  */

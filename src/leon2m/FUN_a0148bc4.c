@@ -1,5 +1,5 @@
 /* leon2m FUN_a0148bc4 @ 0xa0148bc4-0xa0148c84 (48 words).
- * Calls FUN_a00f9528(port, v) with port = bits 12..15 of the first word of display channel record ch (the 0x78-byte
+ * Calls FUN_a00f9528(port, v) with port = bits 12..15 of the first word of channel record ch (the 0x78-byte
  * records at 0xa802df30). A channel number outside 0..3 prints "SYS remapping channel OOR" and uses channel 0.
  */
 struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* display channel record, 0x78 bytes */

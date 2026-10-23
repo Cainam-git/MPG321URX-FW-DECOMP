@@ -10,7 +10,7 @@
  *      with a, b, c = 0xF251..0xF253; on a mismatch 0xF261 = 0x55 and "checksum error %04X, %04X" (expected, sum).
  *   3  FUN_CODE_d81c(0xF251): set the flash's extended address register (address bits 24..31).
  *   4  FUN_CODE_b192(0xF251, 0xF252, 0xF253) (the three bytes also stored at 0xA4B3.., 0xA4B6 = 0).
- *   5  FUN_CODE_bd81(0xF251, 0xF252, 0xF253) (same storage).
+ *   5  FUN_CODE_bd81(0xF251, 0xF252, 0xF253) (the same three bytes).
  *   6  FUN_CODE_dc51(); FUN_CODE_7765(xdata 0xA776); FUN_CODE_dc67().
  *   7  FUN_CODE_dc51(); FUN_CODE_b456(xdata 0xA776); FUN_CODE_dc67().
  *   8  endless loop (waits to be reset).

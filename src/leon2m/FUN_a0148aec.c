@@ -1,5 +1,5 @@
 /* leon2m FUN_a0148aec @ 0xa0148aec-0xa0148bc4 (54 words).
- * Calls FUN_a00f93a0(port, a, b) with port = bits 12..15 of the first word of display channel record ch (the
+ * Calls FUN_a00f93a0(port, a, b) with port = bits 12..15 of the first word of channel record ch (the
  * 0x78-byte records at 0xa802df30). A channel number outside 0..3 prints "SYS remapping channel OOR" and uses
  * channel 0.
  */

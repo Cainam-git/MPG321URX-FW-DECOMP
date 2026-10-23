@@ -1,7 +1,7 @@
-/* leon2m FUN_a0140e74 @ 0xa0140e74..0xa01410a4 (140 words): settings-storage WRITE.
+/* leon2m FUN_a0140e74 @ 0xa0140e74..0xa01410a4 (140 words): EEPROM WRITE.
  * Flags: -mcpu=v8 -O3 -g.
  *
- * Plain words: writes len bytes from buf to settings storage 'dev' at storage address addr. The ROM record table
+ * Plain words: writes len bytes from buf to EEPROM 'dev' at EEPROM address addr. The ROM record table
  * DAT_001a69fe[dev] (0x26 bytes per device) says how: its byte b0 with bit 7 SET selects the second path (not
  * used by FW.021 dev 0), bit 7 CLEAR the bit-banged I2C chip with bus number b = b0 (FW.021 dev 0: b0 = 0).
  *  - b0 bit 7 set: FUN_a0140b78(dev), offset off = DAT_a802cc00[dev].h0 if the area table DAT_001a6a24[b].b2 == 1,
@@ -14,7 +14,7 @@
  *    probe) at 0xA0140F6C..0xA0140F78 with NO counter. After the last chunk the pin goes back to 'level'.
  * At power-on it runs only when FUN_a0153c74 finds the system record bad or FUN_a012cfac (FGA_Init) finds no
  * 0x77..0x7A marker.
- * Can it wait or fail? WAIT: yes, the ACK poll above waits for ever if the storage chip never ACKs its address after
+ * Can it wait or fail? WAIT: yes, the ACK poll above waits for ever if the EEPROM chip never ACKs its address after
  * a write, and nothing calls FUN_a002ced8 inside that loop. FAIL: a failed write is not detected: the return
  * of FUN_a002b3e4 (ACKed byte count) is ignored, the function returns nothing.
  * Source form: (1) the bit-7 path is written FIRST ('if (b0 < 0) { bit-7 path } else { I2C }'): with

@@ -1,7 +1,7 @@
 /*
  * FUN_a00c1c18 (leon2s, 0xa00c1c18-0xa00c224c, 1588 bytes), flags -mcpu=v8 -Os -g.
  * Clears registers 0xcf012b84 / 0xcf012b88, writes 0x44 to 0xcf012b8c, calls the ROM routine
- * func_0xa0f83044(s_9f1b7538, 0) and func_0xa0fb67b8(2, 0x2e, 4, 1). Reads 5 bytes from storage address 0x138
+ * func_0xa0f83044(s_9f1b7538, 0) and func_0xa0fb67b8(2, 0x2e, 4, 1). Reads 5 bytes from address 0x138
  * (func_0xa0f9d2e0(addr, len, buf)) into a: all zero -> FUN_a00c0c08(a, b); else reads 0x11a bytes from 0x20
  * into b, sets b[0x118] = 0x68 when a is 24 c8 eb 3e 9c (else 0) and b[0x119] = 0. Calls FUN_a00c0ce8,
  * FUN_a00c0dfc and FUN_a00c1318 each with (0, a, b) and (1, a, b). Reads 5 bytes from 0x260 into a: all zero

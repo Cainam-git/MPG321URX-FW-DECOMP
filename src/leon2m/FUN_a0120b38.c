@@ -1,6 +1,6 @@
 /* leon2m FUN_a0120b38 @ 0xa0120b38  (-mcpu=v8 -O3 -g)
  *
- * Measured input vertical refresh rate of display channel blk, in tenths of Hz (0xFFFF = no valid measurement).
+ * Measured input vertical refresh rate of channel blk, in tenths of Hz (0xFFFF = no valid measurement).
  *   cnt = FUN_a00f21f0(blk, 0x14): a 16-bit frame-period count from registers 0x14/0x15 of the 0x19A2FC-table
  *         block (block 0: 0xCF006B10/0xCF006B14).
  *   cnt outside 1027..18750 -> 0xFFFF.

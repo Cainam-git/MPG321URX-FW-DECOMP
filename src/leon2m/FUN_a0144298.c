@@ -1,5 +1,5 @@
 /* leon2m FUN_a0144298 @ 0xa0144298-0xa0144350 (46 words).
- * Returns 1 when byte 9 of the port record selected by display channel ch equals 5, else 0. The port record is
+ * Returns 1 when byte 9 of the port record selected by channel ch equals 5, else 0. The port record is
  * entry (bits 12..15 of the channel's first word) of the 42-byte records at 0xa802e224; the channel record is entry
  * ch of the 0x78-byte records at 0xa802df30. A channel number outside 0..3 prints "SYS remapping channel OOR" and
  * uses channel 0. Same lookup as FUN_a0143ff0.

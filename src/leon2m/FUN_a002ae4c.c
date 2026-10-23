@@ -1,5 +1,5 @@
 /* leon2m FUN_a002ae4c @ 0xa002ae4c..0xa002b058 (131 words)  bit-banged I2C: read one byte and send ACK / NACK
- * Called by FUN_a002bb28 once per data byte of a settings-storage read (start-up step 5, before
+ * Called by FUN_a002bb28 once per data byte of an EEPROM read (start-up step 5, before
  * the hook, via FUN_a0153c74 -> FUN_a0140360). Bus = descriptor at RAM 0xA802D992 (see FUN_a002ab04.c).
  * What it does (code facts): SDA released and driven 1; 8 bits MSB first: SCL high and released, wait until SCL
  * reads high (0xFFFF countdown), SCL taken, delay, sample SDA into the byte, SCL low, delay. Then SDA taken and

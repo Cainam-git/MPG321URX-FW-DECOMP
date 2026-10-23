@@ -1,6 +1,6 @@
 /* leon2m FUN_a0145660 @ 0xa0145660  input timing getter (-mcpu=v8 -O3 -g)
  *
- * Returns field 'id' of display channel ch's input timing record (0x78-byte records at 0xA802DF30; channel number
+ * Returns field 'id' of channel ch's input timing record (0x78-byte records at 0xA802DF30; channel number
  * through the same 0..3 remap helper as FUN_a0148540; out of range ids return 0xFFFF):
  *   0 +0x06 hfreq ("hfrq" in FUN_a00dac38)   1 +0x08 vfreq (tenths of Hz)   2 port record +0x20 (port P =
  *   bits 12-15 of word +0, records 0x2A bytes at 0xA802E224)   3 code from byte +0x0A: 2 -> 1, 4 -> 2, 8 -> 3,

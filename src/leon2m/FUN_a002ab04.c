@@ -1,5 +1,5 @@
 /* leon2m FUN_a002ab04 @ 0xa002ab04..0xa002ae4c (210 words)  bit-banged I2C: send one byte and read the ACK
- * Part of the settings-storage read FUN_a002bb28 (start-up step 5, via
+ * Part of the EEPROM read FUN_a002bb28 (start-up step 5, via
  * FUN_a0153c74 -> FUN_a0140360). The bus is the 10-byte descriptor copied by FUN_a002bb28 to RAM 0xA802D992: SCL =
  * (port b0, mask b1), SDA = (port b2, mask b3), half-bit delay h4 (FW.021 descriptor ROM 0x1A69E0[0]: SCL port 6
  * mask 0x80, SDA port 6 mask 0x40, delay 4). GPIO helpers: FUN_a002c86c(port, mask, level) drives a pin,

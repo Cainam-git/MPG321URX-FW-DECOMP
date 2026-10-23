@@ -1,5 +1,5 @@
 /* leon2m FUN_a0145508 @ 0xa0145508-0xa0145644 (79 words).
- * mode 0 tail-calls FUN_a01544cc. mode 1 visits display channels 0..3: for each channel i where FUN_a013ce6c(i)
+ * mode 0 tail-calls FUN_a01544cc. mode 1 visits channels 0..3: for each channel i where FUN_a013ce6c(i)
  * returns 0xc and the 0x2a-byte entry at 0xa802e224 selected by bits 12..15 of word 0 of record i (0x78-byte records
  * at 0xa802df30, through the channel check that reports "SYS remapping channel OOR") does not hold 5 in byte 9, record
  * i gets byte 0x26 = 0x20 and the halfwords at 0x28, 0x2a and 0x2c are copied to 0x0e, 0x1e and 0x20. Other modes do

@@ -1,5 +1,5 @@
 /* leon2m FUN_a01470fc @ 0xa01470fc-0xa01471a0 (41 words).
- * Writes the low 4 bits of v into bits 4..7 of the first word of display channel record ch (the 0x78-byte records at
+ * Writes the low 4 bits of v into bits 4..7 of the first word of channel record ch (the 0x78-byte records at
  * 0xa802df30). A channel number outside 0..3 prints "SYS remapping channel OOR" and uses channel 0. Setter
  * counterpart of FUN_a0147064.
  */

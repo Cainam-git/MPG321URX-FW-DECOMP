@@ -1,6 +1,6 @@
 /* leon2m FUN_a014505c @ 0xa014505c-0xa014512c (52 words).
  * Returns 1 when FUN_a014230c(FUN_a0142168(byte 0xa of the port record)) is non-zero, else 0. The port record is
- * entry (bits 12..15 of the first word of display channel record ch) of the 42-byte records at 0xa802e224. A
+ * entry (bits 12..15 of the first word of channel record ch) of the 42-byte records at 0xa802e224. A
  * channel number outside 0..3 prints "SYS remapping channel OOR" and uses channel 0. Same lookup as FUN_a0143ff0.
  */
 struct Chan { unsigned int w0; unsigned char rest[0x74]; };   /* display channel record, 0x78 bytes */

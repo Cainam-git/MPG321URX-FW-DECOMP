@@ -1,6 +1,6 @@
 /* leon2m FUN_a0145ee8 @ 0xa0145ee8-0xa0145fac (49 words).
  * When off is non-zero, only FUN_a013b6e4(0) is called. Otherwise FUN_a013b6e4(1), then it reads bits 4..7 of the
- * first word of display channel record ch (the 0x78-byte records at 0xa802df30) and calls FUN_a00f63bc(value) unless
+ * first word of channel record ch (the 0x78-byte records at 0xa802df30) and calls FUN_a00f63bc(value) unless
  * the value is 4. A channel number outside 0..3 prints "SYS remapping channel OOR" and uses channel 0. Same field as
  * FUN_a0147064 and FUN_a01470fc.
  */

@@ -1,15 +1,15 @@
 /* leon2m FUN_a012cfac @ 0xa012cfac..0xa012d4f8 (339 words) "FGA_Init", start-up step 2 (FUN_a015266c)
  * (after WAIT 3 FUN_a0136fc4, before FUN_a0141964).
  * Flags -mcpu=v8 -O3 -g -msoft-float (without -msoft-float it does not match; see item 3 below).
- * In plain words: at every power-on this checks one marker byte in the settings storage that says "the FGA colour
+ * In plain words: at every power-on this checks one marker byte in the EEPROM that says "the FGA colour
  * defaults were written". If the marker is 0x77..0x7A it returns at once and writes nothing. Otherwise it writes the
- * default FGA tables into the settings storage and finally the marker 0x77, so the next boot skips the writes.
+ * default FGA tables into the EEPROM and finally the marker 0x77, so the next boot skips the writes.
  * What it does (code facts):
  *  - saved = FUN_a00fe47c() (u16: (reg 0xCF009BB4 << 8) | reg 0xCF009BB8, a plain register read); print "FGA_Init".
  *  - Location of the FGA block, from the RAM copy of the settings record S (0xA802E1A0, loaded by FUN_a0153c74):
  *    dev = byte S[0x34], addr = u16 S[0x35..0x36] (bitfield in the word at +0x34), sel = byte S[0x37].
  *    fga_off(sub) = ((sel <= 1 ? 0x120 : 0x240) & 0x360) + sub. FW.021 ROM defaults: dev 0, addr 0x0500, sel 1 ->
- *    marker at storage 0x620.
+ *    marker at EEPROM 0x620.
  *  - Reads ONE marker byte: FUN_a0140360(dev, addr + fga_off(0), 1, &mark). If mark - 0x77 <= 3 (0x77..0x7A):
  *    return, no write (0xA012D024 -> 0xA012D4F0).
  *  - Else print "Load Default FGA %02X" (mark) and write defaults, all through FUN_a0140e74 (flag 0):

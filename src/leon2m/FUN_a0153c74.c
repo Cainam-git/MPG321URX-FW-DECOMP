@@ -3,26 +3,26 @@
  * 'sethi %hi(DAT_00020000); or %r, %lo(DAT_00020000)' prints as 'mov', so the later field loads are labelled
  * differently. The byte-exact link check (tools/exact.py) finds the bytes equal to the firmware.
  *
- * Storage below is device 0 of FUN_a0140360 (read) and FUN_a0140e74 (write):
+ * The EEPROM below is device 0 (ROM record "DG_EEPROM1") of FUN_a0140360 (read) and FUN_a0140e74 (write):
  *  1. FUN_a0140304(0) == 0 (FW.021 returns 1): print 'DG_SYSSETTING OPR is invalid 1'
- *     (s_001a7620) and write the ROM defaults: P = 0x30 bytes ROM 0x20140 -> storage 0x440, S = 0x50 bytes ROM
- *     0x20170 -> storage 0x470 (flag 1).
- *  2. Else check(): read S from storage 0x470 into a zeroed buffer twice per round until the version word +0x3A reads
+ *     (s_001a7620) and write the ROM defaults: P = 0x30 bytes ROM 0x20140 -> EEPROM 0x440, S = 0x50 bytes ROM
+ *     0x20170 -> EEPROM 0x470 (flag 1).
+ *  2. Else check(): read S from EEPROM 0x470 into a zeroed buffer twice per round until the version word +0x3A reads
  *     the same twice (no round counter; a chip that never answers leaves the buffer unchanged, so it ends),
  *     print '%04x,%04x' (stored ver, ROM ver). Result 1 if ver != ROM 0x7690, or +0x40 != ROM 0x04C0, or +0x3E !=
  *     ROM 0x0470; result 2 if +0x38 != ROM 0x0001 or +0x3C != FUN_a012ce18(); else 0.
  *     Result 1: print 'SysNvram_IsEmpty 1' (s_001a7608) and write the ROM defaults as in step 1.
  *     Else check() runs a SECOND time (full read again; the source calls it in 'else if (check() == 2)'); result 2:
- *     print 'SysNvram_IsEmpty 2', copy the 16-byte pattern ROM s_001a75e6 (16 x 0xFF) with FUN_a013c910, write it to storage
+ *     print 'SysNvram_IsEmpty 2', copy the 16-byte pattern ROM s_001a75e6 (16 x 0xFF) with FUN_a013c910, write it to the EEPROM
  *     0x300..0x43F in 20 chunks of 16 (remainder 0, no extra write), read S, set +0x38 / +0x1A / +0x3E / +0x40 from ROM
  *     and +0x3C = FUN_a012ce18(), write S back (flag 1).
- *  3. Always: read P (storage 0x440, 0x30 bytes) into RAM 0xA802E1F0 and S (0x470, 0x50) into RAM 0xA802E1A0.
+ *  3. Always: read P (EEPROM 0x440, 0x30 bytes) into RAM 0xA802E1F0 and S (0x470, 0x50) into RAM 0xA802E1A0.
  *  4. ROM self-check: ROM 0x20168 != 0xA5A5 -> print 'While : 3' and HANG for ever; ROM 0x201B2 != ROM 0x20168 ->
  *     'While : 4' and HANG. Both are ROM constants (flash 0x128168 / 0x1281B2 = A5A5 / A5A5 in FW.021),
  *     so these hangs are not taken.
  *  5. If the RAM function pointer 0xA802CC4C is non-zero, call it.
  * Can it wait or fail? The stable-read loop has no counter but needs two DIFFERENT consecutive version words to spin.
- * Every storage write goes through FUN_a0140e74, whose ACK poll has no limit; writes happen only on the
+ * Every EEPROM write goes through FUN_a0140e74, whose ACK poll has no limit; writes happen only on the
  * stored bytes listed in step 2. The ROM hangs in step 4 cannot trigger with these ROM bytes.
  * Source form: (1) the 'not usable' arm FIRST ('if (!FUN_a0140304(0)) ... else if (check() == 1) ... else if
  * (check() == 2)'): gives the firmware's register renaming AND its stack-slot sharing (the defaults copy reuses the

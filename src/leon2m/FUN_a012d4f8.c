@@ -1,5 +1,5 @@
 /* leon2m FUN_a012d4f8 @ 0xa012d4f8
- * Writes the byte argument to settings storage with FUN_a0140e74(dev, addr + fga_off(0), 1, &v, 1). The location
+ * Writes the byte argument to EEPROM with FUN_a0140e74(dev, addr + fga_off(0), 1, &v, 1). The location
  * comes from the RAM settings record at 0xA802E1A0: dev = byte +0x34, addr = 16-bit field +0x35..0x36, sel = byte
  * +0x37; fga_off(sub) is ((sel <= 1 ? 0x120 : 0x240) & 0x360) + sub (the same static helper as in FUN_a012cfac).
  * Called by FUN_a0149254. The byte is passed by address, so the parameter is stored to its stack slot.

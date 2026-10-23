@@ -1,5 +1,5 @@
 /* leon2m FUN_a0149978 @ 0xa0149978-0xa0149b8c (133 words).
- * For display channel ch (0..3; other values report "SYS remapping channel OOR" and use channel 0) and port p, with
+ * For channel ch (0..3; other values report "SYS remapping channel OOR" and use channel 0) and port p, with
  * k = FUN_a01421c4(FUN_a0142218(FUN_a0125198(p))): calls FUN_a012f43c(ch, k, 0). When bit 23 of word 0xa802e3d0 is
  * set and k is 0x71, FUN_a01328d4(ch, b & 3) follows with b = byte 0xa802e3ee + ch. For channel 0, bit 21 of
  * 0xa802e3d0 adds FUN_a012f43c(3, k, 0). Ends with a tail call of FUN_a0142ea8 with bits 12..15 of word 0 of the

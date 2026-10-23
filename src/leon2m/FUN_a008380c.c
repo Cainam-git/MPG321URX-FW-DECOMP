@@ -1,6 +1,6 @@
 /* leon2m FUN_a008380c @ 0xa008380c (165 words)  APPGetFRCMode (flags -mcpu=v8 -O3, no -g)
  *
- * Chooses the frame-rate-conversion (FRC) mode 0..3 for display channel 0 and prints "APPGetFRCMode %x"
+ * Chooses the frame-rate-conversion (FRC) mode 0..3 for channel 0 and prints "APPGetFRCMode %x"
  * (string 0xFEED8). Bit 0 of the result goes to FUN_a0148e34, bit 1 to FUN_a0148eb4 (both via pointer-table
  * callers FUN_a0083aa0 / FUN_a0083abc); they set bits 27 / 26 of 0xA802E3D0.
  * Inputs: vfreq = FUN_a0145660(0, 1) (tenths of Hz), ids 7 and 8 of the input record, w = FUN_a014837c(1)

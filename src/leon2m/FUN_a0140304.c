@@ -1,4 +1,4 @@
-/* leon2m FUN_a0140304 @ 0xa0140304..0xa0140360 (23 words)  settings-storage "area usable?" test, called with dev 0 by
+/* leon2m FUN_a0140304 @ 0xa0140304..0xa0140360 (23 words)  EEPROM "area usable?" test, called with dev 0 by
  * FUN_a0153c74 (start-up step 5) before it reads the system settings.
  * What it does (code facts): b = byte +0 of the 38-byte ROM record DAT_001a69fe[dev] (FW.021 record 0 "DG_EEPROM1":
  * b = 0). If b read as a signed byte is >= 0 (bit 7 clear) it returns 1. Otherwise it returns 1 only if byte +8 of

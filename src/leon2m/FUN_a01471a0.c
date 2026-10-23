@@ -1,5 +1,5 @@
 /* leon2m FUN_a01471a0 @ 0xa01471a0-0xa014737c (119 words).
- * For display channel ch (0..3; other values report "SYS remapping channel OOR" and use channel 0) whose bits 4..7
+ * For channel ch (0..3; other values report "SYS remapping channel OOR" and use channel 0) whose bits 4..7
  * in word 0 of its 0x78-byte record at 0xa802df30 are not 4: passes those bits to FUN_a00f63bc, then dispatches on
  * item (jump table at 0xe3398) with value v: items 0..8 tail-call FUN_a00f6d80, FUN_a00f6dd8, FUN_a00f6e30,
  * FUN_a00f6e88, FUN_a00f6ecc, FUN_a00f6f10, FUN_a00f6f54, FUN_a00f6f7c and FUN_a00f6f94 with v; item 9

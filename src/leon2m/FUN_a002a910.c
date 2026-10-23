@@ -1,5 +1,5 @@
 /* leon2m FUN_a002a910 @ 0xa002a910..0xa002ab04 (125 words)  bit-banged I2C START with bus recovery.
- * Called twice per settings-storage read by FUN_a002bb28 (start and repeated start), start-up step 5
+ * Called twice per EEPROM read by FUN_a002bb28 (start and repeated start), start-up step 5
  * (FUN_a0153c74 -> FUN_a0140360 -> FUN_a002bb28). Bus = descriptor at RAM 0xA802D992 (see
  * FUN_a002ab04.c; FW.021: SCL port 6 mask 0x80, SDA port 6 mask 0x40, delay 4).
  * What it does (code facts): SCL taken, SDA driven 1, SCL driven 1 and released, wait until SCL reads high (0xFFFF

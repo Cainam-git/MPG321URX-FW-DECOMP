@@ -1,5 +1,5 @@
 /* leon2m FUN_a012e850 @ 0xa012e850
- * Reads two bytes from settings storage at addr + fga_off(0x70) + 2 * i (i = byte argument) and returns them as a
+ * Reads two bytes from EEPROM at addr + fga_off(0x70) + 2 * i (i = byte argument) and returns them as a
  * little-endian 16-bit value (first byte low). The location comes from the RAM settings record at 0xA802E1A0:
  * dev = byte +0x34, addr = 16-bit field +0x35..0x36, sel = byte +0x37; fga_off(sub) is
  * ((sel <= 1 ? 0x120 : 0x240) & 0x360) + sub (the same static helper as in FUN_a012cfac). Called by FUN_a0149280.

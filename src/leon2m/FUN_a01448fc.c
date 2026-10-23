@@ -1,5 +1,5 @@
 /* leon2m FUN_a01448fc @ 0xa01448fc-0xa014505c (472 words).
- * For display channel ch (0..3; other values report "SYS remapping channel OOR" and use channel 0), with blk = bits
+ * For channel ch (0..3; other values report "SYS remapping channel OOR" and use channel 0), with blk = bits
  * 12..15 of word 0 of its 0x78-byte record at 0xa802df30, returns t = byte 0x28 of entry blk of the 0x2a-byte table
  * at 0xa802e224 for t 0..0x27 (jump table at 0xe30a8) and 0x28 for larger t. For t = 2, 3, 8, 9, 0xe, 0xf, 0x14,
  * 0x15, 0x1c, 0x1d, 0x22 and 0x23 it returns t + 2 instead when FUN_a00fd820(blk) returns 0xb1 and

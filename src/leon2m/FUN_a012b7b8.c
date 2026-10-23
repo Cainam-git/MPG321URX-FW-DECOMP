@@ -1,7 +1,7 @@
 /* leon2m FUN_a012b7b8 @ 0xa012b7b8..0xa012b86c (45 words)  start-up step 7 of FUN_a015266c (after the display
  * start-up): input-side set-up chosen by the settings bit 25.
  * What it does (code facts): s = bit 25 of the first word of the settings record in RAM (0xA802E1A0, loaded from
- * storage 0x470 by FUN_a0153c74; the same bit FUN_a012ad6c returns and FUN_a0141b60 uses to swap the input entries
+ * EEPROM 0x470 by FUN_a0153c74; the same bit FUN_a012ad6c returns and FUN_a0141b60 uses to swap the input entries
  * 2/3 between port numbers 5 and 6). Then FUN_a012b458(s), FUN_a012b458(!s), FUN_a0107a14(s); then pin set-up
  * FUN_a0107bac(0, FUN_a0125124(entry 2 +0x10), 1, 0) and FUN_a0107bac(1, FUN_a0125124(entry 3 +0x10), 1, 0)
  * (entries of the 18-byte table 0xA802E116; FUN_a0125124(k) = byte +2 of ROM port record 0x1A42A8[k]); finally the

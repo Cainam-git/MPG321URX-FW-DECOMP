@@ -1,5 +1,5 @@
 /* leon2m FUN_a01400e0 @ 0xa01400e0..0xa0140304 (137 words)  start-up step 5 of FUN_a015266c (first call after WAIT 2):
- * lays out the settings-storage ("EEPROM") areas from the two ROM descriptor tables.
+ * lays out the EEPROM areas from the two ROM descriptor tables.
  * What it does (code facts):
  *  - 3 ROM records A[i] (36 bytes, DAT_001a6a24 = flash 0x2AEA24: h0 size, b2 kind, b3 group, name at +4; FW.021:
  *    "OPR_EEPROM_1/2/3", size 0x8000 / 0 / 0, kind 2, group 1 / 2 / 3): per group a running u16 offset (local

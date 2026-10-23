@@ -1,8 +1,8 @@
-/* leon2m FUN_a002bb28 @ 0xa002bb28..0xa002be7c (213 words): bit-banged I2C random read of the settings storage,
+/* leon2m FUN_a002bb28 @ 0xa002bb28..0xa002be7c (213 words): bit-banged I2C random read of the EEPROM,
  * FUN_a002bb28(bus, addr, len, buf) -> bytes read. Runs at start-up step 5: FUN_a0153c74 ->
  * FUN_a0140360(dev 0, ...) -> here (called as the RAM copy 0x4008BB28), and for the FGA marker read in FUN_a012cfac.
  * Flags -mcpu=v8 -O3 -g (-msoft-float gives the same code).
- * In plain words: it copies the bus description, sends START + device byte (up to 10 tries), the storage address,
+ * In plain words: it copies the bus description, sends START + device byte (up to 10 tries), the EEPROM address,
  * a repeated START with the read command, reads len bytes (the last one with NACK) and sends STOP. If the device
  * never answers the device byte it sends STOP and returns 0 without touching buf.
  * Code facts:
