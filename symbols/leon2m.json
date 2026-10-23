@@ -1903,6 +1903,12 @@
       "name": "FUN_a002d10c",
       "status": "matched"
     },
+    "ram:a002d138": {
+      "by": "hand",
+      "comment": "stores 1 to DAT_a802b0bd",
+      "name": "FUN_a002d138",
+      "status": "matched"
+    },
     "ram:a002d148": {
       "by": "autoc",
       "comment": "When the function pointer in word 0xA802B0DC is not null, calls it with 3. Returns p1",
