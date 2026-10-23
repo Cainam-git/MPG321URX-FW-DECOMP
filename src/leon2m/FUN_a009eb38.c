@@ -1,13 +1,13 @@
 /* leon2m FUN_a009eb38 @ 0xa009eb38-0xa009f184 (1612 bytes), called by FUN_a008a210.
- * Handles one key code (S = DAT_a802cff4, T = DAT_a802d290, state = _DAT_a802afec):
+ * Handles one event value ev passed by FUN_a008a210 (S = DAT_a802cff4, T = DAT_a802d290, state = _DAT_a802afec):
  *   1. returns unless some i in 0..3 has FUN_a0080320(i) != 0 and FUN_a0143c14(i) != 0, and returns when bits 13..14
  *      of S+4 are 1.
- *   2. key bits 6..7 = 0: t = byte table 0x1080b8[key & 0x3f]; unless t == 0x1e or the pointer
+ *   2. ev bits 6..7 = 0: t = byte table 0x1080b8[ev & 0x3f]; unless t == 0x1e or the pointer
  *      DAT_a80241b0[t] is 0: calls it, d03c = func_0x4008d588(), FUN_a0091094(). Bits 6..7 = 1 continue below,
  *      other values return.
  *   3. state 0x113 / 0x114 with T.b1d5 != 0 and byte S+6 == 1: FUN_a008ad20(), FUN_a008b2bc() when
  *      DAT_a802d284 == 0x3f, afe8 = FUN_a0147724().
- *   4. t = byte table 0x1080f8[key & 0x3f]; t == 7: calls the pointer _DAT_a8024244 (when non-zero) and
+ *   4. t = byte table 0x1080f8[ev & 0x3f]; t == 7: calls the pointer _DAT_a8024244 (when non-zero) and
  *      FUN_a0091094(); t == 6 returns.
  *   5. ok = no port i with FUN_a0080320(i) != 0 and FUN_a0143c14(i) != 4. With ok and (bit 9 of T word 0 or
  *      T.b1d5 != 0): when T.h1f6 == 0x55aa, T.b1d6 == 0x55, t in 1..4, FUN_a0146dfc(0) == 0 and T.b1d5 == 0:
@@ -25,11 +25,11 @@
  *      FUN_a0080bd8(1), FUN_a008ee6c(0xff, 0), FUN_a00869b0(4, 8000), FUN_a00869b0(0xb, 10000), state 0xfe,
  *      FUN_a00b5d10(), FUN_a00a45a8(), aff2 = 0x14, bits 14 and 15 of S+0x3e set. Otherwise the
  *      DAT_a802422c[state][t] call as above, with FUN_a00d47b0() skipped when bit 15 of S+0x3e is set.
- * Source form: the two key-bit cases are tests of (key & 0xc0) with the 0x40 case first; the state 0x114 arm
+ * Source form: the two ev bits 6..7 cases are tests of (ev & 0xc0) with the 0x40 case first; the state 0x114 arm
  * jumps into the state 0x113 arm (goto); the redundant 't != 6' test and the four separate FUN_a014459c calls
  * are written as in the firmware.
  * Compiler aid: __builtin_expect on the S+4 bits 13..14 test (emits no instructions; it changes the predicted
- * probability of that early return, which places the key-bits 0 call path and the 0x55aa block in front of the
+ * probability of that early return, which places the ev bits 6..7 = 0 call path and the 0x55aa block in front of the
  * 0x40 path as in the firmware).
  */
 struct Sys {
@@ -93,7 +93,7 @@ extern unsigned short func_0x4008d588(void);
 #define SYS DAT_a802cff4
 #define SET DAT_a802d290
 
-void FUN_a009eb38(unsigned int key)
+void FUN_a009eb38(unsigned int ev)
 {
     unsigned char ok, i, t;
 
@@ -108,14 +108,14 @@ void FUN_a009eb38(unsigned int key)
         return;
     if (__builtin_expect(SYS.h4.m == 1, 0))
         return;
-    if ((key & 0xc0) == 0x40) {
+    if ((ev & 0xc0) == 0x40) {
         if ((AFEC == 0x113 || AFEC == 0x114) && SET.b1d5 != 0 && SYS.b6 == 1) {
             FUN_a008ad20();
             if (DAT_a802d284 == 0x3f)
                 FUN_a008b2bc();
             DAT_a802afe8 = FUN_a0147724();
         }
-        t = DAT_001080f8[key & 0x3f];
+        t = DAT_001080f8[ev & 0x3f];
         if (t == 7) {
             if (_DAT_a8024244 == 0)
                 return;
@@ -224,9 +224,9 @@ void FUN_a009eb38(unsigned int key)
         FUN_a0091094();
         return;
     }
-    if ((key & 0xc0) != 0)
+    if ((ev & 0xc0) != 0)
         return;
-    t = DAT_001080b8[key & 0x3f];
+    t = DAT_001080b8[ev & 0x3f];
     if (t == 0x1e)
         return;
     if (DAT_a80241b0[t] == 0)
