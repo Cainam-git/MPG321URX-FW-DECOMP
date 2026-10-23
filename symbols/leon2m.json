@@ -12469,6 +12469,12 @@
       "name": "FUN_a0125c8c",
       "status": "matched"
     },
+    "ram:a0125cb4": {
+      "by": "h41",
+      "comment": "for m 0..3 calls func_0x4008c86c(0xff, 8, x) twice with x = 0xfe or 1 per bit of m",
+      "name": "FUN_a0125cb4",
+      "status": "matched"
+    },
     "ram:a0125dc8": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
