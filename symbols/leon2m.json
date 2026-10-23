@@ -17151,6 +17151,13 @@
       "name": "FUN_a0150768",
       "status": "matched"
     },
+    "ram:a0150a98": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Scales the parameter byte by 48/255 and passes a four-entry table to FUN_a00f643c",
+      "name": "FUN_a0150a98",
+      "status": "matched"
+    },
     "ram:a0150da4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
