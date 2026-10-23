@@ -17606,6 +17606,22 @@
       "status": "matched",
       "symbol": "memset"
     },
+    "ram:a0157798": {
+      "by": "lib",
+      "comment": "toolchain library function _sprintf_r from libc.a:sprintf.o; byte-exact, no C needed",
+      "lib": "libc.a:sprintf.o",
+      "name": "FUN_a0157798",
+      "status": "matched",
+      "symbol": "_sprintf_r"
+    },
+    "ram:a01577f4": {
+      "by": "lib",
+      "comment": "toolchain library function sprintf from libc.a:sprintf.o; byte-exact, no C needed",
+      "lib": "libc.a:sprintf.o",
+      "name": "FUN_a01577f4",
+      "status": "matched",
+      "symbol": "sprintf"
+    },
     "ram:a0157858": {
       "by": "lib",
       "comment": "toolchain library function strlen from libc.a:strlen.o; byte-exact, no C needed",
@@ -17629,6 +17645,22 @@
       "name": "FUN_a0157a60",
       "status": "matched",
       "symbol": "_vfprintf_r"
+    },
+    "ram:a01595f4": {
+      "by": "lib",
+      "comment": "toolchain library function vsnprintf from libc.a:vsnprintf.o; byte-exact, no C needed",
+      "lib": "libc.a:vsnprintf.o",
+      "name": "FUN_a01595f4",
+      "status": "matched",
+      "symbol": "vsnprintf"
+    },
+    "ram:a0159658": {
+      "by": "lib",
+      "comment": "toolchain library function _vsnprintf_r from libc.a:vsnprintf.o; byte-exact, no C needed",
+      "lib": "libc.a:vsnprintf.o",
+      "name": "FUN_a0159658",
+      "status": "matched",
+      "symbol": "_vsnprintf_r"
     },
     "ram:a01596b8": {
       "by": "lib",
