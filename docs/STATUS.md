@@ -55,7 +55,7 @@ compares it with the firmware. The entries below are not confirmed by that scrip
   entries (8051 banks 1 and 2 done, the two LEON sections in progress). The totals in the table grow as entries are
   added.
 - 8051 bank 1 functions that differ from Keil C51 9.60.7 only in the order of operand loads before shift loops and
-  a few related register choices; they appear to need an older C51 release, which is not available.
+  a few related register choices; none of the available C51 releases produces the firmware's order.
 - Two leon2s functions (`FUN_a00c3ae8`, `FUN_a00dd488`) call addresses 0xF10000 above the matching routines; that
   code was linked at another base address.
 - 8051 bank 3, and most of the large functions of the two LEON processors.
