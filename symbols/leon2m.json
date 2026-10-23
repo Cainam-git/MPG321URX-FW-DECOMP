@@ -4730,6 +4730,13 @@
       "name": "FUN_a00a14bc",
       "status": "matched"
     },
+    "ram:a00a1cf0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "increments byte 0xa8025c55 up to the FUN_a00a14bc maximum and passes its 1..100 position between minimum and maximum to FUN_a00b7e68",
+      "name": "FUN_a00a1cf0",
+      "status": "matched"
+    },
     "ram:a00a20d0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
