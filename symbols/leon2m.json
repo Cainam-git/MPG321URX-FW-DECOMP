@@ -8925,6 +8925,13 @@
       "name": "FUN_a00ef1b0",
       "status": "matched"
     },
+    "ram:a00f0380": {
+      "by": "h40",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "steps register 0x51 of block blk up or down by flag bits of f and byte 0xa802b750 (cnt 0 / 300 special), stores f to 0xa802b750, returns 1 when a flagged step was written",
+      "name": "FUN_a00f0380",
+      "status": "matched"
+    },
     "ram:a00f0b58": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
