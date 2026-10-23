@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_a57e @ 0xa57e..0xa627 (169 bytes), OPTIMIZE(8,SPEED).
+/* 8051_bank1 FUN_CODE_a57e @ 0xa57e..0xa627 (169 bytes), OPTIMIZE(7,SPEED).
  * When the index XDATA 0xA64D is 0x1F it is set to 0, the 16-bit count from FUN_CODE_d94a is stored to XDATA
  * 0xA64E/0xA64F and FUN_CODE_b802 and FUN_CODE_883d are called. Then the result of FUN_CODE_52be is stored to XDATA
  * 0xA473; a value other than 0x0D is returned. For 0x0D: when (FUN_CODE_d94a() - stored count) / 10 is greater than
