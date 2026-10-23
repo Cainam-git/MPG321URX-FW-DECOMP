@@ -899,6 +899,13 @@
       "name": "FUN_CODE_9bde",
       "status": "matched"
     },
+    "CODE:9fc8": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "FUN_CODE_6f26 call on XDATA 0xA800 + off, then FE2P WriteByte print of five bytes",
+      "name": "FUN_CODE_9fc8",
+      "status": "matched"
+    },
     "CODE:a1fe": {
       "by": "hand",
       "comment": "flag and 5000-count check on FUN_CODE_db7d results with 0xDCB0 bit 1 pulse",
