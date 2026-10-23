@@ -7141,6 +7141,12 @@
       "name": "FUN_a00c0c2c",
       "status": "matched"
     },
+    "ram:a00c0c34": {
+      "by": "hand",
+      "comment": "returns 0",
+      "name": "FUN_a00c0c34",
+      "status": "matched"
+    },
     "ram:a00c0c74": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
