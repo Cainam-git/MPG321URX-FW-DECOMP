@@ -1,7 +1,7 @@
 /* leon2s FUN_a007a79c @ 0xa007a79c (-mcpu=v8 -Os -g)
- * p = p1 & 0xff. FUN_a007a708(p); for lanes i = 0..3: FUN_a00a7424(0, 7, p, DAT_a00b3b18[i]) and
- * FUN_a00a7488(p, DAT_a00b3b10[i], 0xffffff, 0x18000000). Then for each lane i whose bit is set in p2 & 0xff, the same
- * two calls followed by FUN_a00a7488(p, reg, mask, value) on the lane's registers from the halfword tables
+ * p = p1 & 0xff. FUN_a007a708(p); for i = 0..3: FUN_a00a7424(0, 7, p, DAT_a00b3b18[i]) and
+ * FUN_a00a7488(p, DAT_a00b3b10[i], 0xffffff, 0x18000000). Then for each i whose bit is set in p2 & 0xff, the same
+ * two calls followed by FUN_a00a7488(p, reg, mask, value) on the registers of entry i from the halfword tables
  * DAT_a00b3b40 / b50 / b38 / b48 (value 0x88000000 / 0x88), DAT_a00b3b30 / b28 (bytes 1 and 2 cleared), and again
  * b40 / b50 / b38 / b48 with 0x8000000 / 8.
  * Compiler aid: the clear-bit case is written 'if (p || i) goto skip; else goto skip;'. It emits no extra

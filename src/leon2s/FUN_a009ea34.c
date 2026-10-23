@@ -2,6 +2,8 @@
  * m = p2 & 0xff. For m 1..5: prints the string at 0xA006AF70 + 0x20 * (m - 1) (DAT_a006af70 .. DAT_a006aff0,
  * FUN_a0073044), then rewrites register 0xCF01474C: p1 0 -> (reg & 0xf0) | (m - 1); p1 1 -> (reg & 0x0f) | (m - 1) << 4
  * (mode 1 only masks). m 6 and other values change nothing. volatile: hardware register.
+ * Compiler aid: case 6 is written 'if (p1) break; else break;'. It emits no instruction of its own; without it the
+ * switch range test changes (an extra cmp/bgu).
  */
 
 extern unsigned int DAT_a006af70;

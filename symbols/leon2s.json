@@ -2329,7 +2329,7 @@
     },
     "ram:a007a79c": {
       "by": "h49",
-      "comment": "lane register set-up through FUN_a00a7424 / FUN_a00a7488 for lanes 0..3, then the full table writes for the lanes set in p2",
+      "comment": "FUN_a00a7424 / FUN_a00a7488 set-up for entries 0..3 (tables DAT_a00b3b10 / b18), then the full table writes for the entries whose bit is set in p2",
       "name": "FUN_a007a79c",
       "status": "matched"
     },
