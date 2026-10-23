@@ -14594,6 +14594,12 @@
       "name": "FUN_a012e838",
       "status": "matched"
     },
+    "ram:a012e840": {
+      "by": "hand",
+      "comment": "returns 0x92",
+      "name": "FUN_a012e840",
+      "status": "matched"
+    },
     "ram:a012e850": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
