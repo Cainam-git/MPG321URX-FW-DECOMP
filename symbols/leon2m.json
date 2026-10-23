@@ -18441,6 +18441,12 @@
       "name": "FUN_a014e8ec",
       "status": "matched"
     },
+    "ram:a014e960": {
+      "by": "hand",
+      "comment": "returns DAT_a802a480[i]",
+      "name": "FUN_a014e960",
+      "status": "matched"
+    },
     "ram:a014e974": {
       "by": "hand",
       "comment": "9-bit mask of DAT_a802a480[0..8] entries equal to p",
