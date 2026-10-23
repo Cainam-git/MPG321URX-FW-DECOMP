@@ -12894,6 +12894,12 @@
       "name": "FUN_a011d194",
       "status": "matched"
     },
+    "ram:a011d1fc": {
+      "by": "hand",
+      "comment": "writes 6 to register 0xcf03c374",
+      "name": "FUN_a011d1fc",
+      "status": "matched"
+    },
     "ram:a011d740": {
       "by": "hand",
       "comment": "empty routine",
