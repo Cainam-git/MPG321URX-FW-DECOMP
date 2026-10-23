@@ -2736,6 +2736,12 @@
       "name": "FUN_a0087794",
       "status": "matched"
     },
+    "ram:a0087824": {
+      "by": "hand",
+      "comment": "Three-pass channel loop: per-channel setup, retry loop over FUN_a0087110/FUN_a008743c results, final per-channel status prints",
+      "name": "TRAINING_NORESPONSE",
+      "status": "matched"
+    },
     "ram:a0087d50": {
       "by": "hand",
       "comment": "Writes register field 0x70 with value 0x20 through the same callee in both branches, passing 1 if param_2 != 0 and 0 otherwise (if/else with a call in each branch). Both parameters are unsigned char, giving and %o0,0xff,%g1 for param_1 and btst 0xff,%o1 for param_2. Returns void.",
