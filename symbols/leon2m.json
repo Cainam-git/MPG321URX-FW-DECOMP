@@ -15073,6 +15073,13 @@
       "name": "FUN_a01451fc",
       "status": "matched"
     },
+    "ram:a01452d0": {
+      "by": "h41",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores a then v into the straddling 16-bit field +0x03 of the 0xA802E1A0 record, writes it back, calls FUN_a0104f48",
+      "name": "FUN_a01452d0",
+      "status": "matched"
+    },
     "ram:a0145348": {
       "by": "autoc",
       "comment": "mechanical match (tools/autoc.py); not yet named or documented",
