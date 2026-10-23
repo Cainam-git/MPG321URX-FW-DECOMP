@@ -9620,9 +9620,9 @@
       "status": "matched"
     },
     "ram:a00f8e44": {
-      "by": "permuter",
+      "by": "h49",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: [walk]; temp arg FUN_a00f1d48#2; selfassign t02_#2; return char; swap param_2 + 1; return unsigned short; local t02_ short; local t02_ unsigned short",
+      "comment": "blocks 6/7: v + 1 when three FUN_a00f1a90 register tests pass; then FUN_a00f1d48(blk, 0xe, DAT_a802b7d8[blk] + v) and FUN_a00f1d48(blk, 0xc, v)",
       "name": "FUN_a00f8e44",
       "status": "matched"
     },
