@@ -2982,6 +2982,12 @@
       "name": "FUN_a008a470",
       "status": "matched"
     },
+    "ram:a008a590": {
+      "by": "h42",
+      "comment": "writes seven 9-register groups to 0xcf00f680..0xcf00f6b0 through an inline helper",
+      "name": "FUN_a008a590",
+      "status": "matched"
+    },
     "ram:a008a6f4": {
       "by": "hand",
       "comment": "Writes fixed values to a set of configuration registers at 0xcf011000, then performs read-modify-writes on three registers: setting 0x40, setting bits 5-7 (0xe0) and clearing bit 7. Registers are accessed through direct register macros, giving sethi/or pairs and st instructions in target order.",
