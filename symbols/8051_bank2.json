@@ -1307,6 +1307,13 @@
       "name": "FUN_CODE_e04a",
       "status": "matched"
     },
+    "CODE:e0c9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Copies n bytes from a generic pointer to the XDATA array at 0x064A starting at element off",
+      "name": "FUN_CODE_e0c9",
+      "status": "matched"
+    },
     "CODE:e105": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
