@@ -1,0 +1,8 @@
+/* FUN_a00deda8 (leon2m 0xa00deda8-0xa00dedb0, 8 bytes, leaf), flags -mcpu=v8 -O2 -g.
+ * Returns 0. Nothing in the image refers to it: no call, branch, sethi/or constant or address word. It lies between
+ * FUN_a00deda0 and FUN_a00dedb0. Source form: a constant return; the value is set in the retl delay slot.
+ */
+int FUN_a00deda8(void)
+{
+    return 0;
+}

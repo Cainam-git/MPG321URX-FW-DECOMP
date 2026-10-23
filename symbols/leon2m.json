@@ -8998,6 +8998,12 @@
       "name": "FUN_a00deda0",
       "status": "matched"
     },
+    "ram:a00deda8": {
+      "by": "hand",
+      "comment": "returns 0",
+      "name": "FUN_a00deda8",
+      "status": "matched"
+    },
     "ram:a00dedc8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
