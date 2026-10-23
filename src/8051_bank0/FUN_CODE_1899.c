@@ -1,6 +1,5 @@
 /* 8051_bank0 FUN_CODE_1899 @ 0x1899..0x18AB (18 bytes)  STBC boot loader: "partition table failed?".
- * MATCH: tools/diff8051.py 8051_bank0 FUN_CODE_1899 ->
- * 18/18, exact None, OPTIMIZE(7,SPEED).
+ * Options: OPTIMIZE(7,SPEED).
  * What it does (code): clears result bit 0x20.1, calls FUN_CODE_0003(NULL) (the partition-table loader: table at CODE
  *   0x6000 -> share structure XDATA 0x3000, see src/8051_bank0/FUN_CODE_0003.c) and sets bit 0x20.1 when 0003 returns
  *   0 (carry clear). It returns that bit in carry: 1 = failure.

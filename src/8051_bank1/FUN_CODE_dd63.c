@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_dd63 @ 0xdd63  OPTIMIZE(7,SPEED)
+/* 8051_bank1 FUN_CODE_dd63 @ 0xdd63  OPTIMIZE(8,SPEED) LARGE
  * Writes 1 to XDATA 0xA70C if the parameter equals 1, else writes 0. The if/else form produces the target's
  * compare and the two separate store paths.
  */

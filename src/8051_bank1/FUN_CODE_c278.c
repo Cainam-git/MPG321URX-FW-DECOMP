@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_c278 @ 0xc278  OPTIMIZE(7,SPEED)
+/* 8051_bank1 FUN_CODE_c278 @ 0xc278  OPTIMIZE(8,SPEED) LARGE
  * Clears bit 0 of one xdata register per set bit of param_1 (bit 0 -> 0xF040, 1 -> 0xF048, 2 -> 0xF090,
  * 3 -> 0xF098, 4 -> 0xF0A2, 5 -> 0xF0BF, 6 -> 0xF147, 7 -> 0xF01B). The parameter is copied to R5 and each bit is
  * tested in turn, followed by a read-modify-write of the matching register. 'param_1 & (1 << n)' and

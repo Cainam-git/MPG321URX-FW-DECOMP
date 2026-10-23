@@ -1992,12 +1992,6 @@
       "name": "FUN_CODE_df17",
       "status": "matched"
     },
-    "ram:236e": {
-      "by": "hand",
-      "comment": "Accesses consecutive xdata bytes through one incremented pointer so that Keil keeps DPTR and emits INC DPTR between byte accesses instead of a separate MOV DPTR per byte. The second access to 0xa4ae goes through a fresh pointer cast, which reproduces the DPTR reload at that point.",
-      "name": "FUN_CODE_236e",
-      "status": "matched"
-    },
     "ram:bbca": {
       "by": "hand",
       "comment": "for each bit i 0..6 set in mask: XDATA 0xF181 + 2i |= 0x80, 0xF180 + 2i = value",

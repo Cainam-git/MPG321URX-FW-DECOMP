@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_db7d @ 0xdb7d  OPTIMIZE(7,SPEED)
+/* 8051_bank1 FUN_CODE_db7d @ 0xdb7d  OPTIMIZE(8,SPEED)
  * Returns 1 (in C) when param_1 == 0 and bit 6 of xdata 0xDCB0 is set, or when param_1 != 0 and bit 7 of
  * 0xDCB0 is set; otherwise returns 0. Assigning the masked byte to the temporary tmp before the test makes Keil
  * emit ANL A,#mask followed by JZ, as in the firmware, instead of a JNB ACC.x bit test.

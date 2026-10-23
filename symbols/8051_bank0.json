@@ -269,7 +269,7 @@
     },
     "CODE:1899": {
       "by": "hand",
-      "comment": "boot loader helper",
+      "comment": "boot loader helper. The call to FUN_CODE_0003 passes a generic pointer (R3:R2:R1) set to NULL: the firmware loads R3=0, R2=0, R1=0, not three byte arguments in R7/R5/R3. FUN_CODE_0f3f is ?C?CLDPTR (load a char through a generic pointer in R3:R2:R1). With the parameter declared as a generic pointer and a constant NULL argument, Keil emits MOV R3,#0 / MOV R2,#0 / MOV R1,#0 directly instead of CLR A followed by register moves.",
       "name": "FUN_CODE_1899",
       "status": "matched"
     },
@@ -281,6 +281,7 @@
     },
     "CODE:18c9": {
       "by": "hand",
+      "c51opts": "OPTIMIZE(7,SPEED) REGFILE(R.ORC)",
       "comment": "boot loader: 0 when XDATA 0xD511 == 0x20 else 1; main writes it *4 to SPI bus mode 0xF0E6",
       "name": "FUN_CODE_18c9",
       "status": "matched"
@@ -315,22 +316,10 @@
       "name": "FUN_CODE_7f9d",
       "status": "matched"
     },
-    "ram:1899": {
-      "by": "hand",
-      "comment": "The call to FUN_CODE_0003 passes a generic pointer (R3:R2:R1) set to NULL: the firmware loads R3=0, R2=0, R1=0, not three byte arguments in R7/R5/R3. FUN_CODE_0f3f is ?C?CLDPTR (load a char through a generic pointer in R3:R2:R1). With the parameter declared as a generic pointer and a constant NULL argument, Keil emits MOV R3,#0 / MOV R2,#0 / MOV R1,#0 directly instead of CLR A followed by register moves.",
-      "name": "FUN_CODE_1899",
-      "status": "matched"
-    },
     "ram:18d6": {
       "by": "hand",
       "comment": "Read-modify-write sequence on an xdata register: an OR-store followed by a fresh MOVX A,@DPTR read and an AND-store. The variable must be declared volatile so that Keil re-reads it after the OR-store instead of keeping the value in A.",
       "name": "FUN_CODE_18d6",
-      "status": "matched"
-    },
-    "ram:18e2": {
-      "by": "autoc",
-      "comment": "mechanical match (tools/auto8051.py); not yet named or documented",
-      "name": "FUN_CODE_18e2",
       "status": "matched"
     }
   }

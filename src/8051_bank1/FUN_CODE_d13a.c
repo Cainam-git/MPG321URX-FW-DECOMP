@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_d13a @ 0xd13a  OPTIMIZE(7,SPEED)
+/* 8051_bank1 FUN_CODE_d13a @ 0xd13a  OPTIMIZE(8,SPEED)
  * What if the function takes 3 parameters: (byte in R7, byte in R5, word in R2:R3)? That gives:
  * - Call 1: R7=0x00, R5=0x80, R2:R3=0x01c2
  * - Call 2: R7=0x10, R5=0x00, R2:R3=0x0640
