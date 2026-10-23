@@ -14070,6 +14070,12 @@
       "name": "FUN_a0127914",
       "status": "matched"
     },
+    "ram:a0127920": {
+      "by": "hand",
+      "comment": "returns DAT_a802d8a5",
+      "name": "FUN_a0127920",
+      "status": "matched"
+    },
     "ram:a012792c": {
       "by": "near",
       "comment": "returns the byte at 0xA802D896",
