@@ -8752,6 +8752,12 @@
       "name": "FUN_a00dc214",
       "status": "matched"
     },
+    "ram:a00dc264": {
+      "by": "hand",
+      "comment": "stores v to DAT_a8078832",
+      "name": "FUN_a00dc264",
+      "status": "matched"
+    },
     "ram:a00dcc50": {
       "by": "hand",
       "comment": "Two separate read-modify-writes of the volatile register 0xcf0116dc: reg &= 0x3f (ld/and/st), then reg |= (param_1 & 0xff) << 6 (ld/sll/or/st), placing an 8-bit field at bits 6-13.",
