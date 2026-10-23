@@ -11207,6 +11207,13 @@
       "name": "FUN_a01166d8",
       "status": "matched"
     },
+    "ram:a01167ec": {
+      "by": "h61",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes val to register 0x161..0x164 (by sel) of the port-selected register block",
+      "name": "FUN_a01167ec",
+      "status": "matched"
+    },
     "ram:a0116914": {
       "by": "h44",
       "cflags": "-mcpu=v8 -O3 -g",
