@@ -7831,6 +7831,12 @@
       "name": "FUN_a00d4558",
       "status": "matched"
     },
+    "ram:a00d4560": {
+      "by": "hand",
+      "comment": "FUN_a014ce84(n, FUN_a0145920(n), 1) for n = 0..5",
+      "name": "FUN_a00d4560",
+      "status": "matched"
+    },
     "ram:a00d45f8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
