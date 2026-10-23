@@ -5099,6 +5099,12 @@
       "name": "FUN_a00a338c",
       "status": "matched"
     },
+    "ram:a00a33f4": {
+      "by": "h43",
+      "comment": "searches the last block whose first byte is 2 for the bytes d8 5d c4 01 and stores fields after them in five per-port tables",
+      "name": "FUN_a00a33f4",
+      "status": "matched"
+    },
     "ram:a00a3578": {
       "by": "hand",
       "comment": "TxFFE mode switch per port: mode 1 'TxFFE_Preshoot', mode 3 'TxFFE_NO' (reg RMWs), else 'TxFFE_Normal(Exit Mode)[%d]'; values from 2-byte records a807872a[a80791f0[port]] and u16 a8078732[idx]; e0f0 / e200 / e3c0 calls",
