@@ -153,6 +153,18 @@ symbol names are not allowed.
   volatile, so both writes stay.
 - **Search the order of independent statements** (byte copies, store groups): a small brute-force search over all
   orders is quick.
+- **One assignment serving two paths:** when the firmware sets a variable once before a test and both outcomes use
+  that value, the test reads a copy taken before the assignment:
+  `unsigned int t = v; v = 0; if (t != 0x8000 || ...) goto out;` (FUN_a00aec50).
+- **A sub-expression computed into its own variable first** (`z = x * 10;` before an unrelated division) changes
+  the creation order of instructions and so how the scheduler breaks ties (FUN_a00a4ec4).
+- **`do { stmt } while (once);` with `int once = 0`** is a no-code aid (the loop compiles to nothing) that moves the
+  statement's instructions relative to its neighbours; a literal `while (0)` is removed too early to have the
+  effect (FUN_a00d3bb4, found by the permuter).
+- **A struct copy written as `memcpy`** (GCC expands it inline) places the address computation differently from a
+  plain struct assignment (FUN_a012af40).
+- **A row pointer taken inside a copy loop** gives `[row + index]` operand order instead of `[index + row]`
+  (FUN_a01238e8).
 - **`cmp x,K; mov K+1,%o; subx %o,0,%n`** is `n = K + (x >= K)`; the `?:` and `K+1 - (x < K)` forms fold to branches
   (FUN_a00a3b68, FUN_a00b1700).
 - **`(unsigned char)` casts instead of `& 0xff` / `>> 8`** on a 16-bit value change which copies GCC makes and the
@@ -248,6 +260,10 @@ changing the code, and test all pairs.
 - **Compiler aids.** A statement that emits no instructions but changes register allocation or block order (an empty
   `if (v) { }`, `x++; x--;`, `__builtin_expect`) is accepted only when the file header names it and says what it
   changes.
+
+- **SPARC register order (GCC 3.4, functions with calls):** %g1-%g7, %o5 down to %o0, then %o7, %l0-%l7,
+  %i5-%i0. A value in %o7 in the firmware means %o0 was taken by another value live over the same range
+  (config/sparc/sparc.h REG_ALLOC_ORDER).
 
 ## Proven dead ends
 
