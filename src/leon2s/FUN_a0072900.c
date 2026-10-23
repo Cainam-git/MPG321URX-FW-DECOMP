@@ -1,5 +1,7 @@
 /* leon2s FUN_a0072900 @ 0xa0072900 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a00b15ac(buf, 0, 0x20) on a 32-byte local buffer and FUN_a006faa8(8, 0, buf, 8); when the low byte of
+ * FUN_a006fd04(buf, 8) is nonzero, calls FUN_a0070b7c(buf). Returns p1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

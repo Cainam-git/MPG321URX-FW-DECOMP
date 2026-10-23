@@ -1,5 +1,7 @@
 /* leon2m FUN_a00e21a4 @ 0xa00e21a4 (-mcpu=v8 -O3 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * m = (1 << (p2 + 1)) - (1 << p3) (bits p3 .. p2), f = (p4 << p3) & m, v = FUN_a00e021c(p1); calls
+ * FUN_a00e0228(p1, (v & ~m) | f, p3, f, p5, p6).
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

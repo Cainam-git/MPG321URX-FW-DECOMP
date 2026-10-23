@@ -1,5 +1,7 @@
 /* leon2m FUN_a00b621c @ 0xa00b621c (-mcpu=v8 -O2 -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Calls FUN_a00a8c88(), FUN_a0146b50(0x111, 0) and FUN_a0146b6c(0, 0), then for i = 0 .. 3 calls FUN_a00a31a4(0,
+ * 0x2a, i * 2 + 6, 1, FUN_a00a3844(0x196b24, i), 0). 0x196B24 holds a table of word addresses.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 extern void FUN_a00a8c88(void); /* 0xa00a8c88 */
 extern void FUN_a0146b50(unsigned int, unsigned int); /* 0xa0146b50 */

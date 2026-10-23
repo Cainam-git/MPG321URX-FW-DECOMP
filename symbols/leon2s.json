@@ -2021,7 +2021,7 @@
     },
     "ram:a0072900": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00b15ac(buf, 0, 0x20) on a 32-byte local buffer and FUN_a006faa8(8, 0, buf, 8); when the low byte of FUN_a006fd04(buf, 8) is nonzero, calls FUN_a0070b7c(buf). Returns p1",
       "name": "FUN_a0072900",
       "status": "matched"
     },
@@ -2360,7 +2360,7 @@
     },
     "ram:a007a708": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00a7424(0, 7, p1, a) for a = 0x1178, 0x1578, 0x1978, then FUN_a00a7488(p1, a, 0xffffff, 0x18000000) for a = 0x117c, 0x157c, 0x197c",
       "name": "FUN_a007a708",
       "status": "matched"
     },
@@ -2684,7 +2684,7 @@
     },
     "ram:a0085b14": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00a7940(p1, 0x28, 8, 0), then FUN_a00a78fc(p1, r, v) for (r, v) = (0x21, 0x31), (7, 0x30), (0x22, 4), (0x23, 0x32), (0x24, 0x96)",
       "name": "FUN_a0085b14",
       "status": "matched"
     },
@@ -3201,7 +3201,7 @@
     },
     "ram:a008b6f4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00a6c98(p1, 0x5a, 0x80, 0), FUN_a00a6c98(p1, 0x50, 0x80, 0), FUN_a00a6c98(p1, 0x5a, 0x80, 1), FUN_a00a6c98(p1, 0x50, 0x80, 1) and FUN_a00a6c00(p1, 0x54, 0xff)",
       "name": "FUN_a008b6f4",
       "status": "matched"
     },
@@ -3640,7 +3640,7 @@
     },
     "ram:a008ffa4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "s = 0 when p1 == 0, s = 1 when p1 == 1. For those two values calls FUN_a0083618(s, 1), FUN_a008ff58(p1) and FUN_a007f8a4(s); any other p1 returns without a call",
       "name": "FUN_a008ffa4",
       "status": "matched"
     },
@@ -4234,7 +4234,7 @@
     },
     "ram:a00944e0": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls FUN_a00a80cc(p1, 0, 0x86, 0x80, 1), FUN_a00a8054(p1, 0, 0x88, 0xd6), FUN_a00a8054(p1, 0, 0x56, 0x2e), FUN_a00a8054(p1, 0, 8, 0x30), FUN_a00a80cc(p1, 0, 0x12f, 0x80, 1), FUN_a00a8054(p1, 3, 0xbe, 0xff), FUN_a00a8054(p1, 3, 0xbf, 0xff) and FUN_a00a80cc(p1, 0, 0x49, 0x20, 1)",
       "name": "FUN_a00944e0",
       "status": "matched"
     },
@@ -4499,7 +4499,7 @@
     },
     "ram:a00983ec": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "k = p1: when word k of 0xA807D648 != word +0x30 of 0xB0-byte record k at 0xA807D680, prints the function name (bit 11 of word 0xA8078634) and copies it there; then word k of 0xA807D648 = 7; returns 0",
       "name": "DRV_HDMI21_RXDetect_FSM_LTS_4",
       "status": "matched"
     },
@@ -4998,7 +4998,7 @@
     },
     "ram:a00a22d4": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "s = 2 when p1 == 0, s = 3 when p1 == 1. For those two values calls FUN_a0083618(s, 1), FUN_a009f66c(p1) and FUN_a007f8a4(s); any other p1 returns without a call",
       "name": "FUN_a00a22d4",
       "status": "matched"
     },
@@ -5228,7 +5228,7 @@
     },
     "ram:a00a2c94": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "p = word 0 of record p1 of the 0x34-byte table 0xA807DB00: p2 == 1 -> FUN_a00a73ac(0, p + 8), p2 == 0 -> FUN_a00a73d4(0, p + 8); returns 0",
       "name": "FUN_a00a2c94",
       "status": "matched"
     },
@@ -5736,7 +5736,7 @@
     },
     "ram:a00a8210": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "For p1 (low byte) < 2: with t = halfword p1 of the table at 0xA00B4D40, sets the register R = 0xCF000000 | ((t + p2) * 4) to ((R & ~p3) | p4) & 0xff. Other p1 return without an access",
       "name": "FUN_a00a8210",
       "status": "matched"
     },
@@ -6130,7 +6130,7 @@
     },
     "ram:a00ad09c": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "k = p1 & 0xff. Reads v = FUN_a00a6bb8(k, 0x44) and writes v | 3 through FUN_a00a6c00(k, 0x44, v | 3)",
       "name": "FUN_a00ad09c",
       "status": "matched"
     },
@@ -6305,7 +6305,7 @@
     },
     "ram:a00ae378": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "k = p1 & 0xff. Reads v = FUN_a00a6bb8(k, 0x40) and writes (v | 0x80) & 0xff through FUN_a00a6c00(k, 0x40, ...)",
       "name": "FUN_a00ae378",
       "status": "matched"
     },
@@ -7557,7 +7557,7 @@
     },
     "ram:a00c9de8": {
       "by": "autoc",
-      "comment": "mechanical match (tools/autoc.py); not yet named or documented",
+      "comment": "Calls func_0xa0fc15ac(buf, 0, 0x180) on a 384-byte local buffer, then FUN_a00c9d28(p1 & 0xff, buf, 6, p2) and FUN_a00c99a4(p1 & 0xff, buf, 4, 0, p2)",
       "name": "FUN_a00c9de8",
       "status": "matched"
     },

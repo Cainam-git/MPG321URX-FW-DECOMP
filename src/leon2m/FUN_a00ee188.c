@@ -1,5 +1,8 @@
 /* leon2m FUN_a00ee188 @ 0xa00ee188 (-mcpu=v8 -O2)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Returns 0 for p1 <= 0x535 (1333), 1 for p1 <= 0x74A (1866), 2 for p1 <= 0x960 (2400) and 3 for p1 <= 0xA6B
+ * (2667). For larger p1 calls FUN_a00df80c() and FUN_a00e0bc0(), prints "Error: Undefined MR6 tCCD_L for DDR speed
+ * = %d." with p1 through FUN_a00df170 and returns -1.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;

@@ -1,5 +1,7 @@
 /* leon2s FUN_a00a2c94 @ 0xa00a2c94 (-mcpu=v8 -Os -g)
- * Mechanical: Ghidra's C cleaned by tools/autoc.py; Ghidra's type and symbol names are kept.
+ * Table 0xA807DB00 holds records of 0x34 bytes; p = word 0 of record p1 & 0xff. Calls FUN_a00a73ac(0, p + 8) when
+ * p2 == 1 and FUN_a00a73d4(0, p + 8) when p2 == 0. Returns 0.
+ * Source form: Ghidra's type and symbol names are kept.
  */
 typedef unsigned char undefined, undefined1, byte, uchar, bool;
 typedef unsigned short undefined2, ushort, word;
