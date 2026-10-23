@@ -1,4 +1,4 @@
-/* leon2m FUN_a00a5908 @ 0xa00a5908-0xa00a5e68 (346 words), flags -mcpu=v8 -O3 -g.
+/* leon2m FUN_a00a5908 @ 0xa00a5908-0xa00a5e68 (344 words), flags -mcpu=v8 -O3 -g.
  * Callers: FUN_a00a5e68, FUN_a00a6b98, FUN_a00b5d10, FUN_a00b8e7c.
  * FUN_a00a5908(x, y, mode): c = 0x11; for mode != 2, c = 0x16 and FUN_a0146a80(x, y + i, c, 0x796, 0) runs for
  * i = 0..c-1. Then 27 calls of FUN_a00b32e4(a, b, colour, p, q, n, id) (u8, u8, u16, u16, u8, u8, u8; the 7th
