@@ -22371,6 +22371,14 @@
       "status": "matched",
       "symbol": "__gtsf2"
     },
+    "ram:a0155bdc": {
+      "by": "lib",
+      "comment": "toolchain library function __gesf2 from libgcc.a:_ge_sf.o (the code is identical to __gtsf2; __fixunssfsi, FUN_a01551bc, calls it as __gesf2); byte-exact, no C needed",
+      "lib": "libgcc.a:_ge_sf.o",
+      "name": "FUN_a0155bdc",
+      "status": "matched",
+      "symbol": "__gesf2"
+    },
     "ram:a0155c40": {
       "by": "lib",
       "comment": "toolchain library function __floatsisf from libgcc.a:_si_to_sf.o; byte-exact, no C needed",
