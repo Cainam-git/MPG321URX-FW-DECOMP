@@ -3808,6 +3808,13 @@
       "name": "FUN_a00957e8",
       "status": "matched"
     },
+    "ram:a009584c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "runs a fixed call sequence (FUN_a00a9468, FUN_a00b34d4, FUN_a00a900c) with DAT_a802afec = 0xc",
+      "name": "FUN_a009584c",
+      "status": "matched"
+    },
     "ram:a00958c4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
