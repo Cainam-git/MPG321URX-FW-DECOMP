@@ -15535,6 +15535,13 @@
       "name": "FUN_a0129c10",
       "status": "matched"
     },
+    "ram:a012a128": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns |DAT_a802ca9c[i] - DAT_a802ca5c[i]| as a halfword",
+      "name": "FUN_a012a128",
+      "status": "matched"
+    },
     "ram:a012a228": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
