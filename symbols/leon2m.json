@@ -7096,6 +7096,13 @@
       "name": "FUN_a00ba068",
       "status": "matched"
     },
+    "ram:a00ba184": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Table value chosen from FUN_a00b9c68 result passed to FUN_a0146a80 for i = 0..2, with change check",
+      "name": "FUN_a00ba184",
+      "status": "matched"
+    },
     "ram:a00ba3e8": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a00bd070; proven entry for entry by its exact check",
