@@ -6653,6 +6653,13 @@
       "name": "FUN_a00b05d8",
       "status": "matched"
     },
+    "ram:a00b0710": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Selects up to four row values and a column by sel and calls FUN_a00ad5a4 for each with a flag chosen by st",
+      "name": "FUN_a00b0710",
+      "status": "matched"
+    },
     "ram:a00b0a90": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
