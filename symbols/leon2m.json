@@ -19271,6 +19271,13 @@
       "name": "FUN_a01410a4",
       "status": "matched"
     },
+    "ram:a014110c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "applies setting c (FUN_a01186e0 with DAT_a8027bb0[c]) when it changed, then FUN_a01185d4",
+      "name": "FUN_a014110c",
+      "status": "matched"
+    },
     "ram:a014118c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
