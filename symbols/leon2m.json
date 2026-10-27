@@ -11319,6 +11319,13 @@
       "name": "FUN_a00f2e74",
       "status": "matched"
     },
+    "ram:a00f2e98": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes dev, off and len bytes of buf to registers 0xcf011780..0xcf011788 / 0xcf01178c with 0x20-nop delays",
+      "name": "FUN_a00f2e98",
+      "status": "matched"
+    },
     "ram:a00f3078": {
       "by": "hand",
       "comment": "16-bit value from two MMIO words: (p[1] << 8) | p[0]; volatile = real 0xcf01xxxx registers (callers)",
