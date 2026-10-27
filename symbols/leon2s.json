@@ -6262,6 +6262,12 @@
       "name": "FUN_a00ab8b8",
       "status": "matched"
     },
+    "ram:a00ab964": {
+      "by": "hand",
+      "comment": "Switch on the low byte of param_2: passes (p1, 5, mask) to FUN_a00a6fc0 or (p1, 0x4e0/0x4e1, mask) to FUN_a00a6c00",
+      "name": "FUN_a00ab964",
+      "status": "matched"
+    },
     "ram:a00aba14": {
       "by": "hand",
       "comment": "clears eight bytes of record port of ARR_a807dc18",
