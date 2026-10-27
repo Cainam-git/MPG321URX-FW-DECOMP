@@ -1161,6 +1161,13 @@
       "name": "FUN_CODE_a36c",
       "status": "matched"
     },
+    "CODE:a41f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "one 0x200-byte read through the 0xF0E5..0xF1C0 registers with command op, printing each byte (16 per line with the offset)",
+      "name": "FUN_CODE_a41f",
+      "status": "matched"
+    },
     "CODE:a4d2": {
       "by": "hand",
       "comment": "Keil common-entry (L?) code in front of FUN_CODE_a4e9, in FUN_CODE_a4e9's code segment; emitted by compiling src/8051_bank1/FUN_CODE_9243.c, bytes judged with FUN_CODE_a4e9 over 0xa4d2..0xa57e",
