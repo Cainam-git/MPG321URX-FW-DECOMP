@@ -17975,6 +17975,13 @@
       "name": "FUN_a0141b60",
       "status": "matched"
     },
+    "ram:a0141c98": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets the 4-bit field at bits 12..15 of DAT_a802e116[0..6] to 1",
+      "name": "FUN_a0141c98",
+      "status": "matched"
+    },
     "ram:a0141ce0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
