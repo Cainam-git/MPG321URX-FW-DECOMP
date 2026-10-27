@@ -5470,6 +5470,13 @@
       "name": "FUN_a00a28a4",
       "status": "matched"
     },
+    "ram:a00a28bc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "calls FUN_a01461dc(1, t, 0) for five halfword tables",
+      "name": "FUN_a00a28bc",
+      "status": "matched"
+    },
     "ram:a00a29a8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
