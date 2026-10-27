@@ -1,4 +1,4 @@
-/* 8051_bank0 FUN_CODE_1616 @ 0x1616  STBC boot loader: UART set-up, 4800 baud 8N1 (byte-exact
+/* 8051_bank0 FUN_CODE_1616 @ 0x1616  STBC boot loader: UART set-up, 4800 baud 8N1 (built
  * with OPTIMIZE(7,SPEED)).
  * Clock = 48 MHz when FUN_CODE_18bb() reports XDATA 0xD511 == 0x20, else 96 MHz; timer 1 in 8-bit
  * auto-reload mode (TMOD 0x21) with SMOD = 1 (PCON 0x80): TH1 = -(clock * 2 / 384 / 4800) (52 -> 0xCC, or 104 ->

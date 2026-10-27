@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_4a85 @ 0x4a85  Leon2 Main core set-up (byte-exact with OPTIMIZE(8,SPEED) LARGE;
+/* 8051_bank1 FUN_CODE_4a85 @ 0x4a85  Leon2 Main core set-up (built with OPTIMIZE(8,SPEED) LARGE;
  * real size 0x234: Ghidra had cut it at an inline ?C?LSTKXDATA constant).
  *
  * Called once by the helper chip's start-up FUN_CODE_0b0d as FUN_CODE_4a85(&XDATA 0xA48B), the Main record built from

@@ -1,4 +1,4 @@
-/* 8051_bank0 FUN_CODE_0c83 @ 0x0c83  STBC boot loader: choose and verify the SPI flash bus mode (byte-exact
+/* 8051_bank0 FUN_CODE_0c83 @ 0x0c83  STBC boot loader: choose and verify the SPI flash bus mode (built
  * with OPTIMIZE(8,SPEED) REGFILE(R.ORC); FUN_CODE_124f is compiled in the same file because Keil's
  * "reuse of common entry code" then emits the two shared parameter set-ups FUN_CODE_123a / FUN_CODE_1249 in front of
  * it, as in the firmware).

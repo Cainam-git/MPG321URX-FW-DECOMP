@@ -1,4 +1,4 @@
-/* 8051_bank0 FUN_CODE_124f @ 0x124f  STBC boot loader: generic SPI flash transfer (byte-exact
+/* 8051_bank0 FUN_CODE_124f @ 0x124f  STBC boot loader: generic SPI flash transfer (built
  * with OPTIMIZE(8,SPEED)).
  * FUN_CODE_124f(n_out, out, n_in, in): sends n_out bytes (out[0] = the opcode) and then reads n_in bytes into in.
  * 0xF0E6 = (0xF0E6 & 0x0C) | 0x41; transfer length = n_out + n_in - 1 in 0xF0EB..0xF0ED (bytes 2..0); 0xF0F4 =

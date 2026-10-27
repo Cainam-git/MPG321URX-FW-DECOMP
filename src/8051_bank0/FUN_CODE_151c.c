@@ -1,4 +1,4 @@
-/* 8051_bank0 FUN_CODE_151c @ 0x151c  STBC boot loader main (byte-exact with OPTIMIZE(8,SPEED)
+/* 8051_bank0 FUN_CODE_151c @ 0x151c  STBC boot loader main (built with OPTIMIZE(8,SPEED)
  * REGFILE(R.ORC); entered from the Keil start-up FUN_CODE_13f7 after reset vector LJMP 0x13F7).
  * Order of work: interrupts off (EA = 0; the boot loader takes no interrupt); XDATA 0xD929 = FUN_CODE_17e2() + 1;
  * SPI bus mode 0xF0E6 = FUN_CODE_18c9() * 4 (0 or 4 by XDATA 0xD511 == 0x20); 0xF00A = 0xF0E0 = 0xAA; UART 4800 8N1

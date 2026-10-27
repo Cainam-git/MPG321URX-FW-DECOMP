@@ -1,4 +1,4 @@
-/* 8051_bank2 FUN_CODE_cee9 @ 0xcee9  update agent: "e551(); write-protect off" wrapper (byte-exact
+/* 8051_bank2 FUN_CODE_cee9 @ 0xcee9  update agent: "e551(); write-protect off" wrapper (built
  * with OPTIMIZE(8,SPEED) LARGE + LX51 linker code packing: tools/lx51judge.py 8051_bank2 FUN_CODE_cee9 <this file>).
  * void FUN_CODE_cee9(void) { FUN_CODE_e551(); FUN_CODE_ceee(0); } - Keil C51 emits LCALL e551; R7 = 0; LJMP ceee and
  * the LX51 linker removes the final LJMP because FUN_CODE_ceee is placed directly behind it (5 bytes remain). This is

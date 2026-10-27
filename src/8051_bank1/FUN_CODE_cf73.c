@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_cf73 @ 0xcf73  SPI flash: send a command and read one byte back (byte-exact
+/* 8051_bank1 FUN_CODE_cf73 @ 0xcf73  SPI flash: send a command and read one byte back (built
  * with OPTIMIZE(8,SPEED) REGFILE(R.ORC)).
  * 0xF1C0 = 0 (cleared first), 0xF0EA = command byte for a
  * read transfer, 0xF0E6 mode as in FUN_CODE_d5f3, no address (0xF0EB..0xF0ED = 0), 0xF0F4 = 7 (one-byte read

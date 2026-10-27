@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_8e61 @ 0x8e61  Leon2 Main RUN (byte-exact with OPTIMIZE(8,SPEED); real
+/* 8051_bank1 FUN_CODE_8e61 @ 0x8e61  Leon2 Main RUN (built with OPTIMIZE(8,SPEED); real
  * size 0xF9: Ghidra stopped after the first LCALL ?C?LSTKXDATA because the 4-byte constant follows the call inline).
  *
  * Starts the Big chip (Leon2 Main) in two phases through its core-control register 0x9F020008, using the helper

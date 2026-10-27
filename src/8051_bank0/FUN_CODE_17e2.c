@@ -1,4 +1,4 @@
-/* 8051_bank0 FUN_CODE_17e2 @ 0x17e2  STBC boot loader: index of a marker byte in IDATA (byte-exact
+/* 8051_bank0 FUN_CODE_17e2 @ 0x17e2  STBC boot loader: index of a marker byte in IDATA (built
  * with OPTIMIZE(8,SPEED) REGFILE(R.ORC)).
  * XDATA 0xD511 == 0x20 (FUN_CODE_18bb): first i in 0..5 with IDATA[0x0E + i] == 0x30; otherwise first i with
  * IDATA[0x08 + i] == 0x60; not found -> 0. Its only caller, main FUN_CODE_151c, stores the result + 1 in XDATA

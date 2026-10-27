@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_8f5a @ 0x8f5a  Leon2 Sub RUN (byte-exact with OPTIMIZE(8,SPEED); real
+/* 8051_bank1 FUN_CODE_8f5a @ 0x8f5a  Leon2 Sub RUN (built with OPTIMIZE(8,SPEED); real
  * size 0xF9, twin of FUN_CODE_8e61).
  *
  * Starts the Small chip (Leon2 Sub) in two phases through its core-control register 0x9F120008, using the 8051's

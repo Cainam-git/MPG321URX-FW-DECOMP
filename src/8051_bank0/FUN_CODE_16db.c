@@ -1,4 +1,4 @@
-/* 8051_bank0 FUN_CODE_16db @ 0x16db  STBC boot loader: SPI flash command with one data byte (byte-exact
+/* 8051_bank0 FUN_CODE_16db @ 0x16db  STBC boot loader: SPI flash command with one data byte (built
  * with OPTIMIZE(7,SPEED)).
  * FIFO-mode write of opcode cmd (R7) plus one data byte val (R5): 0xF1C0 = 0x80 (FIFO reset), 0xF0E6 = (0xF0E6 &
  * 0x0C) | 0x41, 0xF0F4 = 0x03 (transfer type), length 0xF0EB..0xF0ED = 00 00 01, 0xF0EE = cmd, 0xF1C0 = 0x82 (FIFO

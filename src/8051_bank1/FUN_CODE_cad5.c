@@ -1,4 +1,4 @@
-/* 8051_bank1 FUN_CODE_cad5 @ 0xcad5  SPI flash: send a command followed by one data byte (byte-exact
+/* 8051_bank1 FUN_CODE_cad5 @ 0xcad5  SPI flash: send a command followed by one data byte (built
  * with OPTIMIZE(8,SPEED) REGFILE(R.ORC); also without REGFILE: no calls here).
  * 0xF1C0/0xF1C3 = write-data buffer: 0x80 before the set-up, 0x82, then the data byte into 0xF1C3, then 0x84.
  * 0xF0E6 mode as in FUN_CODE_d5f3,

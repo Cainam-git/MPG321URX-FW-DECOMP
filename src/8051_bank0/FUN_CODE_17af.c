@@ -1,4 +1,4 @@
-/* 8051_bank0 FUN_CODE_17af @ 0x17af  STBC boot loader: SPI flash command without data (byte-exact
+/* 8051_bank0 FUN_CODE_17af @ 0x17af  STBC boot loader: SPI flash command without data (built
  * with OPTIMIZE(7,SPEED)).
  * Sends one opcode (cmd in R7) to the SPI flash through the scaler's SPI controller: XDATA 0xF0E6 = (0xF0E6 & 0x0C) |
  * 0x41 (keeps the bus-mode bits 2-3, selects plain command mode), 0xF0EE = opcode, 0xF0EB..0xF0ED = 0 (no address /

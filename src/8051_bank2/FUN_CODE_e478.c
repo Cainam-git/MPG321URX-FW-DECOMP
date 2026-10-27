@@ -1,4 +1,4 @@
-/* 8051_bank2 FUN_CODE_e478 @ 0xe478  update agent: base delay (byte-exact with OPTIMIZE(8,SPEED)
+/* 8051_bank2 FUN_CODE_e478 @ 0xe478  update agent: base delay (built with OPTIMIZE(8,SPEED)
  * LARGE). Spins over a NOP as many times as the 16-bit calibration value in XDATA 0x09D0 says.
  */
 extern unsigned char xdata DAT_EXTMEM_0436[];

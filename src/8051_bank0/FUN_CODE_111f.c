@@ -1,4 +1,4 @@
-/* 8051_bank0 FUN_CODE_111f @ 0x111f  STBC boot loader: identify the SPI flash chip (byte-exact
+/* 8051_bank0 FUN_CODE_111f @ 0x111f  STBC boot loader: identify the SPI flash chip (built
  * with OPTIMIZE(8,SPEED)).
  * Walks the FUN_CODE_18e8() = 57 six-byte records at CODE 0x4000 ([0] chip index, [1] manufacturer, [2] memory
  * type, [3] capacity, [4] size code, [5] flags) against the JEDEC ID in XDATA 0xF064..0xF066 (FUN_CODE_1777).

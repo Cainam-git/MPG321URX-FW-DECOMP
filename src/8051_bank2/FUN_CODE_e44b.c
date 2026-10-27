@@ -1,4 +1,4 @@
-/* 8051_bank2 FUN_CODE_e44b @ 0xe44b  update agent: delay (byte-exact with OPTIMIZE(8,SPEED) LARGE
+/* 8051_bank2 FUN_CODE_e44b @ 0xe44b  update agent: delay (built with OPTIMIZE(8,SPEED) LARGE
  * REGFILE(R.ORC)). Calls the base delay FUN_CODE_e478 four times per unit, n units (n in R7, counted in R5).
  */
 extern unsigned char xdata DAT_EXTMEM_0436[];
