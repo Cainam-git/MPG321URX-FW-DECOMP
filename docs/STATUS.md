@@ -24,6 +24,9 @@ come from the function sizes in `symbols/<section>.functions.json`.
   - For the 8051, `tools/diff8051.py` compares the Keil object byte for byte, except for the bytes the linker fills in.
 - **Library functions:** Routines recognised byte for byte in the toolchains' own libraries (`tools/libmatch.py`,
   `tools/libimport.py`, `tools/keillib.py`) count as matched. They are recorded as `.lib` entries.
+- **Jump tables:** A LEON jump table (`switchdataD_*` entry) counts as matched when the exact check of the matched
+  function whose switch uses it proves every entry (`tools/acctable.py`, recorded with `"kind": "jump_table"`):
+  the compiled table's targets equal the firmware words at the address the function loads.
 - **Function counts:** These come from Ghidra's function table (`symbols/<section>.functions.json`), corrected with
   `tools/splits.py` and `tools/mergetails.py`, and by hand where a function's jump-table case blocks, return tail or
   a second routine lay outside or inside its listed range. In 8051 bank 3, most of the 1,205 entries are table bytes

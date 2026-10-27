@@ -1929,6 +1929,14 @@
       "name": "FUN_a006d61c",
       "status": "matched"
     },
+    "ram:a006d7a8": {
+      "by": "table",
+      "comment": "jump table of the switch in LINK_STANDBY; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a006d7a8",
+      "of": "LINK_STANDBY",
+      "status": "matched"
+    },
     "ram:a006d7bc": {
       "by": "hand",
       "comment": "HDMI RX link state machine per port; state 5 latches the restart flag; compares only HDE/VDE/Htotal, never the refresh rate",
@@ -2646,6 +2654,14 @@
       "name": "FUN_a0083648",
       "status": "matched"
     },
+    "ram:a00836f4": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0083710; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00836f4",
+      "of": "FUN_a0083710",
+      "status": "matched"
+    },
     "ram:a0083710": {
       "by": "hand",
       "comment": "returns bits of DAT_a80789e4 selected by sel (remapped through DAT_a80761a8 for 1..4) as a 3-bit value",
@@ -2983,6 +2999,14 @@
       "name": "FUN_a0087db4",
       "status": "matched"
     },
+    "ram:a0087e60": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0087ec8; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0087e60",
+      "of": "FUN_a0087ec8",
+      "status": "matched"
+    },
     "ram:a0087ec8": {
       "by": "hand",
       "comment": "Register set-up through FUN_a00a7940/FUN_a00a78fc; port 0 selects reg 0x66/0x67 values from FUN_a00876ec and FUN_a0087710; writes eight halfwords to regs 0x56..0x65",
@@ -3145,6 +3169,14 @@
       "name": "FUN_a0089f98",
       "status": "matched"
     },
+    "ram:a0089ff4": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a008a040; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0089ff4",
+      "of": "FUN_a008a040",
+      "status": "matched"
+    },
     "ram:a008a040": {
       "by": "hand",
       "comment": "Return a selected 2-bit status field of registers 0xcf0111c0..d4 (0xff for unknown selectors)",
@@ -3167,6 +3199,14 @@
       "by": "autoc",
       "comment": "Writes 0x40 to register 0xCF011024 when p1 == 1; any other p1 returns without a write",
       "name": "FUN_a008a1f8",
+      "status": "matched"
+    },
+    "ram:a008a224": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a008a238; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a008a224",
+      "of": "FUN_a008a238",
       "status": "matched"
     },
     "ram:a008a238": {
@@ -4720,6 +4760,14 @@
       "name": "FUN_a009c434",
       "status": "matched"
     },
+    "ram:a009c468": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a009c4a4; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a009c468",
+      "of": "FUN_a009c4a4",
+      "status": "matched"
+    },
     "ram:a009c4a4": {
       "by": "hand",
       "comment": "switch to a u8 result from the db00 +4 register block (MMIO volatile); c434 takes 1 arg",
@@ -4925,10 +4973,26 @@
       "name": "FUN_a00a0560",
       "status": "matched"
     },
+    "ram:a00a0798": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00a07b8; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00a0798",
+      "of": "FUN_a00a07b8",
+      "status": "matched"
+    },
     "ram:a00a07b8": {
       "by": "hand",
       "comment": "sets one bit, chosen by a table entry, in one of six register words of the port block",
       "name": "FUN_a00a07b8",
+      "status": "matched"
+    },
+    "ram:a00a0910": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00a0930; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00a0910",
+      "of": "FUN_a00a0930",
       "status": "matched"
     },
     "ram:a00a0930": {
@@ -5527,6 +5591,14 @@
       "name": "FUN_a00a47e0",
       "status": "matched"
     },
+    "ram:a00a486c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00a4880; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00a486c",
+      "of": "FUN_a00a4880",
+      "status": "matched"
+    },
     "ram:a00a4880": {
       "by": "hand",
       "comment": "per-port five-state machine on ARR_a807dc10 driven by FUN_a00a6190/FUN_a00a61d4/FUN_a00a621c results, timers from FUN_a00b2064 and register bits at +0xb4/+0xc0",
@@ -6109,6 +6181,14 @@
       "name": "FUN_a00aa88c",
       "status": "matched"
     },
+    "ram:a00aa904": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00aa930; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00aa904",
+      "of": "FUN_a00aa930",
+      "status": "matched"
+    },
     "ram:a00aa930": {
       "by": "hand",
       "comment": "writes bank registers 9/10/0x63/0x2c-0x2d by mode 0..10",
@@ -6289,6 +6369,14 @@
       "by": "autoc",
       "comment": "p1 = p1 & 0xff; returns FUN_a00a6e8c(p1, 0x92)",
       "name": "FUN_a00acb60",
+      "status": "matched"
+    },
+    "ram:a00acb80": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00acb94; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00acb80",
+      "of": "FUN_a00acb94",
       "status": "matched"
     },
     "ram:a00acb94": {

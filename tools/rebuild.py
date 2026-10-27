@@ -57,7 +57,9 @@ def leon_build(sec, fn, src, fl):
 def leon_place(pl):
     raw, fin = pl["raw"], pl.get("final")
     keep = [i for i in range(len(raw)) if fin is not None and raw[i] != fin[i]]
-    return [(pl["lo"], raw, keep)]
+    # jump tables the judge proved entry for entry (tools/exact.py): built from the compiled table's targets
+    tabs = [(a, b"".join(v.to_bytes(4, "big") for v in vals), []) for a, vals in pl.get("tables", [])]
+    return [(pl["lo"], raw, keep)] + tabs
 
 
 def leon(sec, fn, entry):
@@ -170,6 +172,7 @@ def main():
         fl = {f["name"]: f for f in diff8051.funclist(sec)} if sec in BANKS else {}
         for e in ents:
             fn = e["name"]
+            if sec in LEON and e.get("kind") == "jump_table": later.append((sec, e, None)); continue   # built with its function
             if sec in LEON: jobs.append((leon, (sec, fn, e))); continue
             f = fl.get(fn, {})
             if e.get("by") == "data": data.append((sec, fn, f.get("start"), f.get("end"))); continue
@@ -186,6 +189,7 @@ def main():
         return r
     with ThreadPoolExecutor(a.jobs) as ex: results = list(ex.map(run, jobs))
     for sec, e, f in later:   # common-entry blocks outside the own segment; others must lie inside a placed span
+        if sec in LEON: continue
         r = common_blocks(sec, e["name"], f.get("start", -1), lsts[sec]) if f and e.get("kind") is None else None
         if r: results.append(r)
     img = bytearray(fw); state = bytearray(len(fw))   # 0 original, 1 source, 2 library, 3 kept (address field)
@@ -205,9 +209,11 @@ def main():
                     conflicts.append((r["sec"], at, prev, r["fn"]))
                 img[at] = v; state[at] = code[r["kind"]]; owner[at] = r["fn"]
     # pieces judged inside another function's span must be covered by it
+    tabs = {sec: {t["name"]: (t["start"], t["end"]) for t in json.loads((ROOT / "symbols" / f"{sec}.functions.json")
+            .read_text())["functions"]} for sec in LEON if sec in a.sections}
     for sec, e, f in later:
         if any(r["fn"] == e["name"] and r["sec"] == sec for r in results): continue
-        lo, hi = f.get("start"), f.get("end")
+        lo, hi = tabs[sec].get(e["name"], (None, None)) if sec in LEON else (f.get("start"), f.get("end"))
         if lo is None or any(not state[file_off(sec, x)] for x in range(lo, hi)):
             results.append(res(sec, e["name"], False, "not covered by a built function"))
     out = pathlib.Path(a.out); out.parent.mkdir(parents=True, exist_ok=True); out.write_bytes(img)

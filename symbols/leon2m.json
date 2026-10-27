@@ -1998,6 +1998,14 @@
       "name": "FUN_a002e3c4",
       "status": "matched"
     },
+    "ram:a002e408": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a002e46c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a002e408",
+      "of": "FUN_a002e46c",
+      "status": "matched"
+    },
     "ram:a002e46c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
@@ -7963,6 +7971,14 @@
       "name": "FUN_a00cead4",
       "status": "matched"
     },
+    "ram:a00cecb0": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00d20a4; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00cecb0",
+      "of": "FUN_a00d20a4",
+      "status": "matched"
+    },
     "ram:a00cf280": {
       "by": "hand",
       "comment": "returns 2",
@@ -9027,6 +9043,46 @@
       "name": "FUN_a00ddae4",
       "status": "matched"
     },
+    "ram:a00ddc50": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00dddb8; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00ddc50",
+      "of": "FUN_a00dddb8",
+      "status": "matched"
+    },
+    "ram:a00ddc98": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00ddf24; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00ddc98",
+      "of": "FUN_a00ddf24",
+      "status": "matched"
+    },
+    "ram:a00ddce0": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00de088; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00ddce0",
+      "of": "FUN_a00de088",
+      "status": "matched"
+    },
+    "ram:a00ddd28": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00de1fc; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00ddd28",
+      "of": "FUN_a00de1fc",
+      "status": "matched"
+    },
+    "ram:a00ddd70": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00de444; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00ddd70",
+      "of": "FUN_a00de444",
+      "status": "matched"
+    },
     "ram:a00dddb8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
@@ -9316,6 +9372,62 @@
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "v = p2 << 17. Writes (v / 0xC) & 0xff, (v / 0xC00) & 0xff and (v / 0xC0000) & 0xff to the registers 0xCF000000 + p1 * 4, 0xCF000004 + p1 * 4 and 0xCF000008 + p1 * 4",
       "name": "FUN_a00df648",
+      "status": "matched"
+    },
+    "ram:a00df698": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00df80c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00df698",
+      "of": "FUN_a00df80c",
+      "status": "matched"
+    },
+    "ram:a00df6cc": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00df8f4; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00df6cc",
+      "of": "FUN_a00df8f4",
+      "status": "matched"
+    },
+    "ram:a00df700": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00dfa10; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00df700",
+      "of": "FUN_a00dfa10",
+      "status": "matched"
+    },
+    "ram:a00df734": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00dfb30; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00df734",
+      "of": "FUN_a00dfb30",
+      "status": "matched"
+    },
+    "ram:a00df768": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00dfc50; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00df768",
+      "of": "FUN_a00dfc50",
+      "status": "matched"
+    },
+    "ram:a00df79c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00dfc50; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00df79c",
+      "of": "FUN_a00dfc50",
+      "status": "matched"
+    },
+    "ram:a00df7d0": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00dfc50; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00df7d0",
+      "of": "FUN_a00dfc50",
       "status": "matched"
     },
     "ram:a00df804": {
@@ -9855,6 +9967,14 @@
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "unit p setup: dffb4 / dfc50, if full: v = 115584(p) (or 0x10), e05d8 register writes (0x110, 1, 0, 0x24d.. incl. reads 0x247 / 0x248), dffa4(1)",
       "name": "FUN_a00eecd0",
+      "status": "matched"
+    },
+    "ram:a00eef5c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00ef048; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00eef5c",
+      "of": "FUN_a00ef048",
       "status": "matched"
     },
     "ram:a00ef034": {
@@ -10690,6 +10810,14 @@
       "name": "FUN_a00f9910",
       "status": "matched"
     },
+    "ram:a00f9940": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00fb434; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00f9940",
+      "of": "FUN_a00fb434",
+      "status": "matched"
+    },
     "ram:a00f9988": {
       "by": "hand",
       "comment": "returns the word *p",
@@ -11030,6 +11158,14 @@
       "name": "FUN_a01004cc",
       "status": "matched"
     },
+    "ram:a010062c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0100a40; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a010062c",
+      "of": "FUN_a0100a40",
+      "status": "matched"
+    },
     "ram:a01006d8": {
       "by": "hand",
       "comment": "stores the argument to DAT_a8027a74",
@@ -11261,6 +11397,46 @@
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "returns (word 0xCF0160C8) & 0xff",
       "name": "FUN_a0101cb4",
+      "status": "matched"
+    },
+    "ram:a0101cc8": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0101e9c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0101cc8",
+      "of": "FUN_a0101e9c",
+      "status": "matched"
+    },
+    "ram:a0101d10": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a01026e8; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0101d10",
+      "of": "FUN_a01026e8",
+      "status": "matched"
+    },
+    "ram:a0101d24": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0102fd0; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0101d24",
+      "of": "FUN_a0102fd0",
+      "status": "matched"
+    },
+    "ram:a0101d5c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0104b2c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0101d5c",
+      "of": "FUN_a0104b2c",
+      "status": "matched"
+    },
+    "ram:a0101d80": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a01061c0; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0101d80",
+      "of": "FUN_a01061c0",
       "status": "matched"
     },
     "ram:a0101d94": {
@@ -12215,6 +12391,46 @@
       "by": "autoc",
       "comment": "Calls FUN_a00f1b5c(0, 0xaf, 0x80, 1)",
       "name": "FUN_a010b39c",
+      "status": "matched"
+    },
+    "ram:a010b3bc": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a010c194; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a010b3bc",
+      "of": "FUN_a010c194",
+      "status": "matched"
+    },
+    "ram:a010b3e4": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a010c61c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a010b3e4",
+      "of": "FUN_a010c61c",
+      "status": "matched"
+    },
+    "ram:a010b3f8": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a010d914; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a010b3f8",
+      "of": "FUN_a010d914",
+      "status": "matched"
+    },
+    "ram:a010b41c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a010e0f4; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a010b41c",
+      "of": "FUN_a010e0f4",
+      "status": "matched"
+    },
+    "ram:a010b430": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a010e0f4; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a010b430",
+      "of": "FUN_a010e0f4",
       "status": "matched"
     },
     "ram:a010b444": {
@@ -13195,6 +13411,62 @@
       "by": "hand",
       "comment": "writes 6 to register 0xcf03c374",
       "name": "FUN_a011d1fc",
+      "status": "matched"
+    },
+    "ram:a011d3f0": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a011e028; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a011d3f0",
+      "of": "FUN_a011e028",
+      "status": "matched"
+    },
+    "ram:a011d470": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a011e148; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a011d470",
+      "of": "FUN_a011e148",
+      "status": "matched"
+    },
+    "ram:a011d570": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a011e388; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a011d570",
+      "of": "FUN_a011e388",
+      "status": "matched"
+    },
+    "ram:a011d5f0": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a011e438; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a011d5f0",
+      "of": "FUN_a011e438",
+      "status": "matched"
+    },
+    "ram:a011d60c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a011e4c8; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a011d60c",
+      "of": "FUN_a011e4c8",
+      "status": "matched"
+    },
+    "ram:a011d630": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a011e8fc; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a011d630",
+      "of": "FUN_a011e8fc",
+      "status": "matched"
+    },
+    "ram:a011d650": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a011e8fc; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a011d650",
+      "of": "FUN_a011e8fc",
       "status": "matched"
     },
     "ram:a011d740": {
@@ -14481,6 +14753,30 @@
       "by": "hand",
       "comment": "empty routine",
       "name": "FUN_a0126310",
+      "status": "matched"
+    },
+    "ram:a0126318": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0127c78; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0126318",
+      "of": "FUN_a0127c78",
+      "status": "matched"
+    },
+    "ram:a012632c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0127c78; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a012632c",
+      "of": "FUN_a0127c78",
+      "status": "matched"
+    },
+    "ram:a012634c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0127c78; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a012634c",
+      "of": "FUN_a0127c78",
       "status": "matched"
     },
     "ram:a0126360": {
@@ -16695,6 +16991,30 @@
       "name": "FUN_a013c894",
       "status": "matched"
     },
+    "ram:a013c89c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a013cecc; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a013c89c",
+      "of": "FUN_a013cecc",
+      "status": "matched"
+    },
+    "ram:a013c8bc": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a013dc6c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a013c8bc",
+      "of": "FUN_a013dc6c",
+      "status": "matched"
+    },
+    "ram:a013c8dc": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a013dc6c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a013c8dc",
+      "of": "FUN_a013dc6c",
+      "status": "matched"
+    },
     "ram:a013c910": {
       "by": "hand",
       "comment": "byte copy (memcpy-like, returns dst)",
@@ -17021,6 +17341,14 @@
       "by": "hand",
       "comment": "returns DAT_a802e110",
       "name": "FUN_a0141ae8",
+      "status": "matched"
+    },
+    "ram:a0141af4": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a01421c4; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0141af4",
+      "of": "FUN_a01421c4",
       "status": "matched"
     },
     "ram:a0141b60": {
@@ -19197,6 +19525,46 @@
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "calls FUN_a0115644(1), FUN_a011337c(3), then FUN_a01139c8 for 16 rows of the 0xa802cc90/cd90/ce90 byte tables and tail-calls FUN_a011337c(0x10)",
       "name": "FUN_a0150df8",
+      "status": "matched"
+    },
+    "ram:a0151008": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0151c84; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0151008",
+      "of": "FUN_a0151c84",
+      "status": "matched"
+    },
+    "ram:a01510d4": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0151db4; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a01510d4",
+      "of": "FUN_a0151db4",
+      "status": "matched"
+    },
+    "ram:a01511a0": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a015209c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a01511a0",
+      "of": "FUN_a015209c",
+      "status": "matched"
+    },
+    "ram:a015126c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0152e28; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a015126c",
+      "of": "FUN_a0152e28",
+      "status": "matched"
+    },
+    "ram:a015128c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a015373c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a015128c",
+      "of": "FUN_a015373c",
       "status": "matched"
     },
     "ram:a0151494": {

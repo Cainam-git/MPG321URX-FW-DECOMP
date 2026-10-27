@@ -91,12 +91,13 @@ def shift(cpu, addr):
     return 0 if lo <= addr < hi else RUNTIME[cpu]
 
 
-def jump_tables(cpu, obj, off, got, want, text_lo):
+def jump_tables(cpu, obj, off, got, want, text_lo, found=None):
     """gcc 3.4 here puts a switch's jump table in .text in front of the function; the firmware keeps its tables
     elsewhere. Exact proof without moving the table: (1) every byte equals the firmware except the sethi/or
     immediates that hold the table address, (2) those immediates in the firmware name one table address T, and
     (3) the firmware table at T holds, entry for entry, the built table's targets at their run-time addresses.
-    Returns None when proven, '' when the object has no jump table, else a reason.
+    Returns None when proven, '' when the object has no jump table, else a reason. found: a list that receives,
+    when proven, each table's firmware address and its entries (tools/acctable.py records the tables as matched).
     leon2s: part of the program was linked 0xF10000 above its load address (docs/STATUS.md); its tables hold
     addresses of that link, so the shift 0xF10000 is also tried there, under the same entry-for-entry proof."""
     if cpu not in RUNTIME and cpu not in LINK_SHIFTS: return ""
@@ -117,7 +118,7 @@ def jump_tables(cpu, obj, off, got, want, text_lo):
     base = BASE[cpu]; img = part(cpu)
     why = None
     for sh in ([shift(cpu, text_lo)] if cpu in RUNTIME else LINK_SHIFTS[cpu]):
-        why = None
+        why = None; tabs = []
         for k, (hi_, lo_) in addr.items():
             if hi_ is None or lo_ is None: return "jump table address not built by a sethi/or pair"
             t = hi_ | lo_
@@ -127,9 +128,32 @@ def jump_tables(cpu, obj, off, got, want, text_lo):
             bad = [i for i, x in enumerate(ents)
                    if int.from_bytes(img[at + 4 * i:at + 4 * i + 4], "big") != (text_lo + x - sh) & 0xffffffff]
             if bad: why = f"jump table entry {bad[0]} at 0x{t + 4 * bad[0]:x} differs"; break
+            tabs.append((at + base, [(text_lo + x - sh) & 0xffffffff for x in ents]))
         if why is None: break
     if why: return why
+    if found is not None: found.extend(tabs)
     return None
+
+
+def linked_tables(cpu, obj, off, text, text_lo):
+    """Jump tables the link placed in front of the function at the firmware's own table address (gcc 3.4 puts a
+    switch's table in .text before its function; where the firmware has it there too, the link reproduces it): the
+    runs of R_SPARC_32 words before the function whose linked values equal the firmware words at that address.
+    Returns [(firmware address, [entry values])] for runs that equal the firmware entirely."""
+    words = sorted(int(o, 16) for o in re.findall(r"^([0-9a-f]+)\s+R_SPARC_32\s+\.text(?:\+0x[0-9a-f]+)?\s*$",
+                   run(tool("objdump"), "-r", "-j", ".text", obj).stdout, re.M) if int(o, 16) < off)
+    runs = []
+    for o in words:
+        if runs and runs[-1][-1] + 4 == o: runs[-1].append(o)
+        else: runs.append([o])
+    base = BASE[cpu]; img = part(cpu); out = []
+    for r in runs:
+        vals = [int.from_bytes(text[o:o + 4], "big") for o in r]
+        at = text_lo + r[0] - base
+        if at < 0 or at + 4 * len(r) > len(img): continue
+        if all(int.from_bytes(img[at + 4 * i:at + 4 * i + 4], "big") == v for i, v in enumerate(vals)):
+            out.append((text_lo + r[0], vals))
+    return out
 
 
 def code_addresses(cpu, obj, elf, off, got, want, text_lo):
@@ -192,6 +216,9 @@ def verify_pool(obj, off, size, got, want, pools, img, base):
     return bytes(g), None
 
 
+TABLES = {}   # (cpu, fn) -> [(firmware address, [entry values])] of the jump tables proven by the last exact check
+
+
 def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False, placed=None):
     """None when the object gives the firmware's exact bytes for fn at its real address, else a reason.
     sym: the function's name inside the object when it differs (library members); solve: derive the addresses
@@ -200,6 +227,7 @@ def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False, placed=None):
     from the last link tried) and, when exact, "final" (raw with the address fields this judge proved taken from the
     firmware: jump-table and literal-pool addresses, a library member's own code addresses)."""
     if cpu not in BASE: return None
+    TABLES.pop((cpu, fn), None)
     if fn not in funcs(cpu): return f"{fn} has no disassembly header"
     lo, hi = funcs(cpu)[fn]; base = BASE[cpu]; img = part(cpu); sym = sym or fn
     m = re.search(r"^([0-9a-f]+)(?: ([0-9a-f]+))? [Tt] " + re.escape(sym) + "$", run(tool("nm"), "-S", obj).stdout, re.M)
@@ -285,11 +313,14 @@ def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False, placed=None):
             if got != want and len(got) == len(want) and solve:
                 got = code_addresses(cpu, obj, elf, off, got, want, text_lo)
             if got != want and len(got) == len(want):
-                why = jump_tables(cpu, obj, off, got, want, text_lo)
-                if why is None: got = want
+                tabs = []
+                why = jump_tables(cpu, obj, off, got, want, text_lo, tabs)
+                if why is None: got = want; TABLES[(cpu, fn)] = tabs
                 elif why: last = why; continue
             if got == want and lo + len(got) <= max(nxt, hi):
-                if placed is not None: placed["final"] = bytes(got)
+                if (cpu, fn) not in TABLES and off:
+                    TABLES[(cpu, fn)] = linked_tables(cpu, obj, off, out.read_bytes(), text_lo)
+                if placed is not None: placed["final"] = bytes(got); placed["tables"] = TABLES.get((cpu, fn), [])
                 return None
             if got == want: last = f"runs into the next function at 0x{nxt:x}"; continue
             k = next(i for i in range(min(len(got), len(want))) if got[i] != want[i]) & ~3

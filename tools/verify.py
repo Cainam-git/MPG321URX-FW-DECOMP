@@ -26,6 +26,9 @@ def check(cpu, fn, entry):
         opts = [entry["c51opts"]] if "c51opts" in entry else None
         r = diff8051.judge(cpu, fn, str(p), opts[0]) if opts else diff8051.judge(cpu, fn, str(p))
         return fn, None if r.get("match") else f"{r.get('score', 0):.1f}%"
+    if entry.get("kind") == "jump_table":   # proven entry for entry inside its matched function (tools/acctable.py)
+        import acctable
+        return fn, acctable.check(cpu, fn, entry)
     lib = ROOT / "src" / cpu / f"{fn}.lib"
     if lib.exists():   # toolchain library function: the archive member is the source (tools/libimport.py)
         import libimport
