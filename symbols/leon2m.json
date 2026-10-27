@@ -6824,6 +6824,13 @@
       "name": "FUN_a00b6514",
       "status": "matched"
     },
+    "ram:a00b65e4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Steps one decimal digit of the selected byte pair at 0xa802d290+0x198/+0x19c up or down, then FUN_a00b6290(0)",
+      "name": "FUN_a00b65e4",
+      "status": "matched"
+    },
     "ram:a00b6994": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
