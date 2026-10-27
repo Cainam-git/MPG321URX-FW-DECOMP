@@ -12836,6 +12836,12 @@
       "name": "FUN_a011b3b8",
       "status": "matched"
     },
+    "ram:a011b3cc": {
+      "by": "hand",
+      "comment": "delay loop of 0xa0 nops",
+      "name": "FUN_a011b3cc",
+      "status": "matched"
+    },
     "ram:a011b3e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
