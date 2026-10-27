@@ -2338,6 +2338,12 @@
       "name": "FUN_CODE_dbaf",
       "status": "matched"
     },
+    "CODE:dbc8": {
+      "by": "hand",
+      "comment": "clears bit n of XDATA 0xA0F3; shifted 1 staged in ACC",
+      "name": "FUN_CODE_dbc8",
+      "status": "matched"
+    },
     "CODE:dbdf": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
