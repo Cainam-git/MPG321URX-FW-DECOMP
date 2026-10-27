@@ -6721,6 +6721,13 @@
       "name": "FUN_a00b2c18",
       "status": "matched"
     },
+    "ram:a00b2d04": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Clears or sets the bytes +0x1e2..+0x1e7 of DAT_a802d290 and bit 15 / bit 8 of DAT_a802cff4 halfwords by DAT_a8025c55, DAT_a8025c56 and bits 31 and 30 of word +0x1dc, with calls to FUN_a0090fd8, FUN_a00b1ba4, FUN_a0090fa0 and FUN_a00dab4c",
+      "name": "FUN_a00b2d04",
+      "status": "matched"
+    },
     "ram:a00b3070": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
