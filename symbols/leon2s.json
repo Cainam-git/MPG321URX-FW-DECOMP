@@ -4604,6 +4604,12 @@
       "name": "FUN_a009584c",
       "status": "matched"
     },
+    "ram:a00958d4": {
+      "by": "hand",
+      "comment": "Runs the numbered port set-up steps through FUN_a00950a0 and the bit-selected calls of the ARR_a807d580 record",
+      "name": "FUN_a00958d4",
+      "status": "matched"
+    },
     "ram:a0095c30": {
       "by": "autoc",
       "comment": "For b = 0 and 1 calls FUN_a0091578(b), FUN_a00950a0(b, 0x10), FUN_a0091c84(b, 100) and FUN_a00a80cc(b, 3, 0xf2, 0x10, 1); then FUN_a00a4610(0) and FUN_a00a45d8(0, p2, p3, p4, p5, p6)",
