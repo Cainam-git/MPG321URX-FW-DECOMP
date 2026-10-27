@@ -11653,6 +11653,12 @@
       "name": "FUN_a0104d18",
       "status": "matched"
     },
+    "ram:a0104e50": {
+      "by": "hand",
+      "comment": "sets bits 1..4 of v into register 0xcf012890 and writes the byte to 0xcf012890/0xcf012990",
+      "name": "FUN_a0104e50",
+      "status": "matched"
+    },
     "ram:a0105150": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
