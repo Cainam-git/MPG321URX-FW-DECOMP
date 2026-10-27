@@ -14631,6 +14631,13 @@
       "name": "FUN_a01131d4",
       "status": "matched"
     },
+    "ram:a011337c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Derives a 0/1/2 state from status register bits selected by sel and writes it one-hot to bits 0..2 of 0xcf01345c",
+      "name": "FUN_a011337c",
+      "status": "matched"
+    },
     "ram:a01136a0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
