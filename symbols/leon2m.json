@@ -16693,6 +16693,13 @@
       "name": "FUN_a012b394",
       "status": "matched"
     },
+    "ram:a012b39c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bit n of DAT_a802caf8, or clears it and stores 1 to DAT_a802cb00[n]",
+      "name": "FUN_a012b39c",
+      "status": "matched"
+    },
     "ram:a012b3f0": {
       "by": "hand",
       "comment": "returns DAT_a802cb00[i]",
