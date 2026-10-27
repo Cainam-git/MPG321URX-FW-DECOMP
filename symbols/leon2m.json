@@ -13644,6 +13644,13 @@
       "name": "FUN_a010ec70",
       "status": "matched"
     },
+    "ram:a010ed50": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "clears bit 1 of s->b3e and copies s words +4/+8 to word 9 of register blocks DAT_0019aed8[c]/DAT_0019aecc[c]",
+      "name": "FUN_a010ed50",
+      "status": "matched"
+    },
     "ram:a010edbc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
