@@ -3752,6 +3752,12 @@
       "name": "FUN_a008e7c0",
       "status": "matched"
     },
+    "ram:a008e958": {
+      "by": "hand",
+      "comment": "Semaphore-guarded update of 0xcf014754 / 0xcf01477c for sel, then the 0xcf014748 nibble and print for rate 1..6",
+      "name": "FUN_a008e958",
+      "status": "matched"
+    },
     "ram:a008ecb8": {
       "by": "autoc",
       "comment": "Calls FUN_a00a80cc(p1, 1, 0x7d, 0x80, 1), FUN_a008e484(p1, 2), FUN_a008e098(p1, 0x1b), FUN_a008e0f0(p1, 3, 0xb), FUN_a008e200(p1, 0x44), FUN_a008e3c0(p1, v) with v = 0 for p2 == 1 or 2 and 0x30 otherwise, FUN_a008e73c(p1, 1) and FUN_a008e2c0(p1, 3, 2)",
