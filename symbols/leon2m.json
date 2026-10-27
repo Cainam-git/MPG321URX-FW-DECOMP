@@ -5169,6 +5169,13 @@
       "name": "FUN_a009e91c",
       "status": "matched"
     },
+    "ram:a009e9a8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores 0x10e to DAT_a802afec and tail-calls FUN_a00b8774 under three flag tests",
+      "name": "FUN_a009e9a8",
+      "status": "matched"
+    },
     "ram:a009ea08": {
       "by": "hand",
       "comment": "stores 0x10c to DAT_a802afec and tail-calls FUN_a00b87d4",
