@@ -10662,6 +10662,13 @@
       "name": "FUN_a00fc30c",
       "status": "matched"
     },
+    "ram:a00fc318": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes 1 to register 0xcf012034 and clears DAT_a802c97c",
+      "name": "FUN_a00fc318",
+      "status": "matched"
+    },
     "ram:a00fca34": {
       "by": "near",
       "comment": "returns the byte at 0xA802C97E",
