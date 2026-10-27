@@ -243,6 +243,44 @@ changing the code, and test all pairs.
 - **Old Keil versions under Wine** share one fixed temporary file per Wine prefix. Give every parallel job its own
   prefix.
 
+## More patterns
+
+LEON (GCC 3.4.4):
+
+- **Find a matched twin first.** Compare the target's opcode sequence with every matched function of the same
+  section (`difflib.SequenceMatcher` over the mnemonics). Ratios above about 0.8 are usually ports of one source with
+  other registers, addresses or constants (FUN_a00a6aa0 from FUN_a00a8400, FUN_a00f1374 from FUN_a00f232c).
+- **A struct pointer versus a word pointer.** When the firmware reloads a global after each store through a pointer
+  parameter and your build hoists it, the parameter is a plain `unsigned int *` (`m[0]` to `m[4]`), not a struct
+  pointer: GCC treats stores to struct fields as not aliasing scalar globals (FUN_a0135004).
+- **A buffer copied into a global ring** keeps the firmware's load and store order only as `unsigned long w[4]`, its own
+  alias set (FUN_a0136384). A data pointer kept as `unsigned int p` and cast at each use keeps per-byte stores that a
+  pointer type lets GCC drop (FUN_a0136a10).
+- **A constant that must not be folded** into a sum: pass it through an inline helper parameter (FUN_a0135ae8).
+- **`x >= K` as `cmp; subx`** after a loop whose own test is `cmp K-1; bleu`: the final compare uses a local holding K
+  (`unsigned char n = 4; ... return i >= n;`). A literal K is folded to `x > K-1` and branches (FUN_a014f32c).
+- **Five case labels whose delay slots differ** give the case order of the source; trying all orders found
+  `case 2, 3, 4, 1, default` (FUN_a0121ed0). Explicit empty cases reproduce small compare trees (FUN_a01454c4).
+- **Register-field writes** keep the firmware's redundant `and` with the mask after the shift only through an inlined
+  helper `wr(volatile unsigned int *r, mask, shift, val) { *r = (*r & ~mask) | ((val << shift) & mask); }`
+  (FUN_a00f99a0, FUN_a00fbaa4); plain C and bit fields drop it.
+- **Result in an `unsigned char` local before the return** fixed a register swap and an extra `mov` (FUN_a0132dd8).
+- **Inlined static copies of small neighbours** keep paying: FUN_a01234b8 is four copies of FUN_a0122dbc,
+  FUN_a0104eb0 three neighbours, FUN_a00d0fa0 a checksum helper.
+- **A test written as `flag == 1`** instead of `flag` fixed the block order of FUN_a009cd74.
+- **Judge with `tools/diff.py` or `tools/exact.py`.** A raw comparison that skips address fields can report a match
+  where one `sethi` names a different global.
+
+Keil C51:
+
+- **A call and return, or `Jcc +2; SJMP`, at the end of both arms** of an if/else: write the shared statement in both
+  arms (FUN_CODE_8622, FUN_CODE_db96, FUN_CODE_dbaf, FUN_CODE_18ab).
+- **`& 0xff` on a char operand** changes which operand is loaded first and stops the merging of a repeated array read
+  (FUN_CODE_dae3).
+- **An `unsigned int` read-modify-write** keeps the compiler's temporary out of R7 (FUN_CODE_a41f).
+- **A 4-byte constant after `LCALL ?C?LSTKXDATA`** often looks like `LCALL` or `AJMP` to a non-function address;
+  check such callers before adding a function-table entry (0x5F3C, 0xDAC4).
+
 ## Diagnosis
 
 - **Two judges.** `tools/check/jf.py` scores the match and checks exact bytes. `tools/check/rawcmp.py` compares the raw
