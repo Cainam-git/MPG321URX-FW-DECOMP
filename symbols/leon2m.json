@@ -14055,6 +14055,13 @@
       "name": "FUN_a01227f0",
       "status": "matched"
     },
+    "ram:a0122cd8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores a (1..16) to DAT_a802c9ec and b (< 32) to DAT_a8027b0c",
+      "name": "FUN_a0122cd8",
+      "status": "matched"
+    },
     "ram:a0122d0c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
