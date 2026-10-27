@@ -6450,6 +6450,13 @@
       "name": "FUN_a00ac0c4",
       "status": "matched"
     },
+    "ram:a00ac388": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Formats the 0xa802d290 byte pairs as n%d%d : %d%d strings and passes them with fixed rows to FUN_a00a31a4",
+      "name": "FUN_a00ac388",
+      "status": "matched"
+    },
     "ram:a00ac718": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
