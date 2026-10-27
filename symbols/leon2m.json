@@ -20018,6 +20018,12 @@
       "name": "FUN_a0147c94",
       "status": "matched"
     },
+    "ram:a0147cac": {
+      "by": "hand",
+      "comment": "returns the index of the first zero byte in p[0..44] (44 when none)",
+      "name": "FUN_a0147cac",
+      "status": "matched"
+    },
     "ram:a0147d0c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
