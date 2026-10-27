@@ -6276,6 +6276,12 @@
       "name": "FUN_a00ab690",
       "status": "matched"
     },
+    "ram:a00ab6e0": {
+      "by": "hand",
+      "comment": "Sets registers 0x26..0x2c of port from 48000 / val (skipped when val is 0 or unchanged without force)",
+      "name": "FUN_a00ab6e0",
+      "status": "matched"
+    },
     "ram:a00ab884": {
       "by": "hand",
       "comment": "set or clear bit p of a mask (1 << p in each arm), see file",
