@@ -12300,6 +12300,13 @@
       "name": "FUN_a010d874",
       "status": "matched"
     },
+    "ram:a010d89c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "clears bit 0 of registers 0xd0032000 and 0xd003a000",
+      "name": "FUN_a010d89c",
+      "status": "matched"
+    },
     "ram:a010d914": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
