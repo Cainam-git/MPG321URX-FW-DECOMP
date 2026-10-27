@@ -15653,6 +15653,12 @@
       "name": "FUN_a01344f4",
       "status": "matched"
     },
+    "ram:a0134684": {
+      "by": "hand",
+      "comment": "increments DAT_a802cb8d modulo 4 (wraps above 3)",
+      "name": "FUN_a0134684",
+      "status": "matched"
+    },
     "ram:a013480c": {
       "by": "hand",
       "comment": "func_0x4008c5f8(0, p, &w, 1) with w = 0 (one zero word to portal 0 offset p)",
