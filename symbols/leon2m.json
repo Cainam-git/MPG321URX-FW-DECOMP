@@ -4060,6 +4060,13 @@
       "name": "FUN_a00967f0",
       "status": "matched"
     },
+    "ram:a0096858": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Runs a fixed sequence of checks and calls on the DAT_a802cff4 and DAT_a802d290 flags and ends with FUN_a0149bf0",
+      "name": "FUN_a0096858",
+      "status": "matched"
+    },
     "ram:a0096b54": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
