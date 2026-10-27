@@ -5957,6 +5957,13 @@
       "name": "FUN_a00a50c4",
       "status": "matched"
     },
+    "ram:a00a5218": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "When byte 0xa802d290+0x4a is 0: pending-flag calls, sets it, then FUN_a0146b20/FUN_a0146a80 rows by its value; sets bit 1 of 0xa802b08e",
+      "name": "FUN_a00a5218",
+      "status": "matched"
+    },
     "ram:a00a5420": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
