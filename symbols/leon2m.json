@@ -13448,6 +13448,13 @@
       "name": "FUN_a010b77c",
       "status": "matched"
     },
+    "ram:a010b884": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bits of registers 0xcf00b844 and 0xcf00b870 depending on c == 1",
+      "name": "FUN_a010b884",
+      "status": "matched"
+    },
     "ram:a010b8e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
