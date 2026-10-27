@@ -18555,6 +18555,13 @@
       "name": "FUN_a013588c",
       "status": "matched"
     },
+    "ram:a0135ae8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Send two bytes and a buffer in 16-byte chunks through the ring DAT_a802da6c",
+      "name": "FUN_a0135ae8",
+      "status": "matched"
+    },
     "ram:a0135dc0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
