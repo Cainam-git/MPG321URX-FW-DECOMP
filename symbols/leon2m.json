@@ -18541,6 +18541,13 @@
       "name": "FUN_a01350dc",
       "status": "matched"
     },
+    "ram:a0135344": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Send two bytes through the ring DAT_a802da6c, then poll FUN_a0132b8c for the reply",
+      "name": "FUN_a0135344",
+      "status": "matched"
+    },
     "ram:a013562c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
