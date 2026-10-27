@@ -15597,6 +15597,13 @@
       "name": "FUN_a011d740",
       "status": "matched"
     },
+    "ram:a011dd9c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes v & 3 and (unsigned short)v >> 2 to one of 17 register pairs at 0xcf016130..0xcf0164d0 selected by ch",
+      "name": "FUN_a011dd9c",
+      "status": "matched"
+    },
     "ram:a011e028": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
