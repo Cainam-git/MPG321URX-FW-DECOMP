@@ -23,7 +23,7 @@ firmware:
 Main processor     [##############------]   73 %
 Input processor    [#############-------]   66 %
 Helper processor   [###############-----]   78 %
-Overall            [##############------]   71 %
+Overall            [##############------]   72 %
 ```
 
 Percentages are by code size. More than 5,700 of roughly 7,500 functions are done, and the helper processor's boot
