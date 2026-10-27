@@ -14398,6 +14398,13 @@
       "name": "FUN_a0121ec8",
       "status": "matched"
     },
+    "ram:a0121ed0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "maps 1, 2, 3, 4 to 1, 2, 3, 5 (else 0)",
+      "name": "FUN_a0121ed0",
+      "status": "matched"
+    },
     "ram:a0121f20": {
       "by": "autoc",
       "comment": "empty function (returns at once)",
