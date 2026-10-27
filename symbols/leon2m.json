@@ -14183,6 +14183,13 @@
       "name": "FUN_a0110084",
       "status": "matched"
     },
+    "ram:a01100a4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "recomputes s->w4/w8 from s->w0 and writes them (with a c-dependent flag bit) to word 9 of DAT_0019aed8[c]/DAT_0019aecc[c]",
+      "name": "FUN_a01100a4",
+      "status": "matched"
+    },
     "ram:a01101a8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
