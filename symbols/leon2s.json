@@ -6395,6 +6395,12 @@
       "name": "FUN_a00a93e4",
       "status": "matched"
     },
+    "ram:a00a94f4": {
+      "by": "hand",
+      "comment": "Copies per-type getter results into record p by input type 0x31..0x81 and passes a built packet to FUN_a00925b8 for 0x71/0x81",
+      "name": "CONV2HDMITX_UpdateInterface",
+      "status": "matched"
+    },
     "ram:a00a9870": {
       "by": "hand",
       "comment": "updates the per-port packet state groups from the getters and sends or clears the packets, by input type",
