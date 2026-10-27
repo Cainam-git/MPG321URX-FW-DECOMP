@@ -61,28 +61,28 @@ void FUN_CODE_9243(void);
 
 unsigned char FUN_CODE_8512(void)
 {
-    unsigned long hdr;
+    unsigned long head;
     unsigned char r;
     unsigned char start;
 
     r = 0xff;
     DAT_EXTMEM_a3e3 = 0;
     for (r = 0; r < 4; r++) {
-        FUN_CODE_a4e9(r * 20 + 0x60, &hdr, 1);
-        if ((hdr & 0x0f) == 3) DAT_EXTMEM_a3e3 |= 1 << ((hdr >> 8) & 0xff);
+        FUN_CODE_a4e9(r * 20 + 0x60, &head, 1);
+        if ((head & 0x0f) == 3) DAT_EXTMEM_a3e3 |= 1 << ((head >> 8) & 0xff);
     }
     start = DAT_EXTMEM_a3e2;
     for (r = 0; r < 4; r++) {
-        FUN_CODE_a4e9(DAT_EXTMEM_a3e2 * 20 + 0x60, &hdr, 1);
-        if ((hdr & 0x0f) == 0) break;
+        FUN_CODE_a4e9(DAT_EXTMEM_a3e2 * 20 + 0x60, &head, 1);
+        if ((head & 0x0f) == 0) break;
         DAT_EXTMEM_a3e2++;
         if (DAT_EXTMEM_a3e2 >= 4) DAT_EXTMEM_a3e2 = 0;
     }
     if (r != 0 && r != 4) {
         DAT_EXTMEM_a3e2 = start;
         for (r = 0; r < 4; r++) {
-            FUN_CODE_a4e9(DAT_EXTMEM_a3e2 * 20 + 0x60, &hdr, 1);
-            if ((hdr & 0x0f) == 0) break;
+            FUN_CODE_a4e9(DAT_EXTMEM_a3e2 * 20 + 0x60, &head, 1);
+            if ((head & 0x0f) == 0) break;
             DAT_EXTMEM_a3e2++;
             if (DAT_EXTMEM_a3e2 >= 4) DAT_EXTMEM_a3e2 = 0;
         }

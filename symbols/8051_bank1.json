@@ -1154,10 +1154,56 @@
       "name": "FUN_CODE_a36c",
       "status": "matched"
     },
+    "CODE:a4d2": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_a4e9, in FUN_CODE_a4e9's code segment; emitted by compiling src/8051_bank1/FUN_CODE_9243.c, bytes judged with FUN_CODE_a4e9 over 0xa4d2..0xa57e",
+      "kind": "common_entry",
+      "module": "FUN_CODE_9243",
+      "name": "FUN_CODE_a4d2",
+      "of": "FUN_CODE_a4e9",
+      "status": "matched"
+    },
+    "CODE:a4d6": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_a4e9, in FUN_CODE_a4e9's code segment; emitted by compiling src/8051_bank1/FUN_CODE_9243.c, bytes judged with FUN_CODE_a4e9 over 0xa4d2..0xa57e",
+      "kind": "common_entry",
+      "module": "FUN_CODE_9243",
+      "name": "FUN_CODE_a4d6",
+      "of": "FUN_CODE_a4e9",
+      "status": "matched"
+    },
+    "CODE:a4e0": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_a4e9, in FUN_CODE_a4e9's code segment; emitted by compiling src/8051_bank1/FUN_CODE_9243.c, bytes judged with FUN_CODE_a4e9 over 0xa4d2..0xa57e",
+      "kind": "common_entry",
+      "module": "FUN_CODE_9243",
+      "name": "FUN_CODE_a4e0",
+      "of": "FUN_CODE_a4e9",
+      "status": "matched"
+    },
+    "CODE:a4e3": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_a4e9, in FUN_CODE_a4e9's code segment; emitted by compiling src/8051_bank1/FUN_CODE_9243.c, bytes judged with FUN_CODE_a4e9 over 0xa4d2..0xa57e",
+      "kind": "common_entry",
+      "module": "FUN_CODE_9243",
+      "name": "FUN_CODE_a4e3",
+      "of": "FUN_CODE_a4e9",
+      "status": "matched"
+    },
+    "CODE:a4e5": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_a4e9, in FUN_CODE_a4e9's code segment; emitted by compiling src/8051_bank1/FUN_CODE_9243.c, bytes judged with FUN_CODE_a4e9 over 0xa4d2..0xa57e",
+      "kind": "common_entry",
+      "module": "FUN_CODE_9243",
+      "name": "FUN_CODE_a4e5",
+      "of": "FUN_CODE_a4e9",
+      "status": "matched"
+    },
     "CODE:a4e9": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "MailBox_Read: n words from the Big chip mailbox",
+      "comment": "MailBox_Read: n words from the Big chip mailbox; common-entry chain 0xa4d2..0xa4e9 from the 8512, 960f and 9243 calls",
+      "module": "FUN_CODE_9243",
       "name": "FUN_CODE_a4e9",
       "status": "matched"
     },
