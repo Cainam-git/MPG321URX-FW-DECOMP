@@ -1200,10 +1200,20 @@
       "name": "FUN_CODE_b192",
       "status": "matched"
     },
+    "CODE:b222": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_b228, in FUN_CODE_b228's code segment; emitted by compiling src/8051_bank1/FUN_CODE_9243.c, bytes judged with FUN_CODE_b228 over 0xb222..0xb2b0",
+      "kind": "common_entry",
+      "module": "FUN_CODE_9243",
+      "name": "FUN_CODE_b222",
+      "of": "FUN_CODE_b228",
+      "status": "matched"
+    },
     "CODE:b228": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "post n words to the Big chip mailbox portal 0x9F0A0100 + off (AHB bridge)",
+      "comment": "post n words to the Big chip mailbox portal 0x9F0A0100 + off (AHB bridge); common-entry block 0xb222 from the 9243 calls",
+      "module": "FUN_CODE_9243",
       "name": "FUN_CODE_b228",
       "status": "matched"
     },
