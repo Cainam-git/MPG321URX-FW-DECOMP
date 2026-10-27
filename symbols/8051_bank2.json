@@ -112,6 +112,14 @@
       "status": "matched",
       "symbol": "?C?FPDIV"
     },
+    "CODE:2d1a": {
+      "by": "keil-lib",
+      "comment": "Keil C51 run-time library routine ?C?FCASTL (C51BFPC.LIB:?C?FCAST)",
+      "lib": "C51BFPC.LIB:?C?FCAST",
+      "name": "FUN_CODE_2d1a",
+      "status": "matched",
+      "symbol": "?C?FCASTL"
+    },
     "CODE:2d24": {
       "by": "keil-lib",
       "comment": "Keil C51 library routine ?C?FCASTC (C51BFPC.LIB:?C?FCAST)",
@@ -384,6 +392,14 @@
       "status": "matched",
       "symbol": "?C?LLDCODE"
     },
+    "CODE:34a0": {
+      "by": "keil-lib",
+      "comment": "Keil C51 run-time library routine ?C?LILDXDATA1 (C51BC.LIB:?C?LILDXDATA)",
+      "lib": "C51BC.LIB:?C?LILDXDATA",
+      "name": "FUN_CODE_34a0",
+      "status": "matched",
+      "symbol": "?C?LILDXDATA1"
+    },
     "CODE:34a2": {
       "by": "keil-lib",
       "comment": "Keil C51 library routine ?C?LILDXDATA8 (C51BC.LIB:?C?LILDXDATA)",
@@ -614,6 +630,14 @@
       "status": "matched",
       "symbol": "@0+84"
     },
+    "CODE:65a5": {
+      "by": "keil-lib",
+      "comment": "Keil C51 run-time library routine _SPRINTF517 (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_65a5",
+      "status": "matched",
+      "symbol": "_SPRINTF517"
+    },
     "CODE:65ab": {
       "by": "keil-lib",
       "comment": "Keil C51 library routine _PRINTF517 (C51BFPL.LIB:PRINTF517)",
@@ -645,6 +669,14 @@
       "name": "FUN_CODE_6971",
       "status": "matched",
       "symbol": "@0+1073"
+    },
+    "CODE:6984": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+1092) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_6984",
+      "status": "matched",
+      "symbol": "@0+1092"
     },
     "CODE:69c3": {
       "by": "hand",

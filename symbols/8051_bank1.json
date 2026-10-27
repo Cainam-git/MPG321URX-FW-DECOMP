@@ -216,6 +216,14 @@
       "status": "matched",
       "symbol": "@0+44"
     },
+    "CODE:05e6": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?COPY (internal entry point, segment 0+56) (C51C.LIB:?C?COPY)",
+      "lib": "C51C.LIB:?C?COPY",
+      "name": "FUN_CODE_05e6",
+      "status": "matched",
+      "symbol": "@0+56"
+    },
     "CODE:0603": {
       "by": "keil-lib",
       "comment": "piece of Keil C51 library routine ?C?COPY (internal entry point, segment 0+85) (C51C.LIB:?C?COPY)",
@@ -224,6 +232,14 @@
       "status": "matched",
       "symbol": "@0+85"
     },
+    "CODE:0606": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?COPY (internal entry point, segment 0+88) (C51C.LIB:?C?COPY)",
+      "lib": "C51C.LIB:?C?COPY",
+      "name": "FUN_CODE_0606",
+      "status": "matched",
+      "symbol": "@0+88"
+    },
     "CODE:064a": {
       "by": "keil-lib",
       "comment": "piece of Keil C51 library routine ?C?COPY (internal entry point, segment 0+156) (C51C.LIB:?C?COPY)",
@@ -231,6 +247,14 @@
       "name": "FUN_CODE_064a",
       "status": "matched",
       "symbol": "@0+156"
+    },
+    "CODE:0651": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?COPY (internal entry point, segment 0+163) (C51C.LIB:?C?COPY)",
+      "lib": "C51C.LIB:?C?COPY",
+      "name": "FUN_CODE_0651",
+      "status": "matched",
+      "symbol": "@0+163"
     },
     "CODE:067e": {
       "by": "keil-lib",
@@ -643,6 +667,14 @@
       "status": "matched",
       "symbol": "@0+84"
     },
+    "CODE:281a": {
+      "by": "keil-lib",
+      "comment": "Keil C51 run-time library routine _SPRINTF517 (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_281a",
+      "status": "matched",
+      "symbol": "_SPRINTF517"
+    },
     "CODE:2820": {
       "by": "keil-lib",
       "comment": "Keil C51 library routine _PRINTF517 (C51BFPL.LIB:PRINTF517)",
@@ -674,6 +706,14 @@
       "name": "FUN_CODE_2be6",
       "status": "matched",
       "symbol": "@0+1073"
+    },
+    "CODE:2bf9": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+1092) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_2bf9",
+      "status": "matched",
+      "symbol": "@0+1092"
     },
     "CODE:2c38": {
       "by": "hand",

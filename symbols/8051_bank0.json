@@ -28,6 +28,14 @@
       "status": "matched",
       "symbol": "@0+9"
     },
+    "CODE:0941": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+26) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0941",
+      "status": "matched",
+      "symbol": "@0+26"
+    },
     "CODE:094b": {
       "by": "keil-lib",
       "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+36) (C51S.LIB:PRINTF)",
@@ -52,6 +60,14 @@
       "status": "matched",
       "symbol": "@0+76"
     },
+    "CODE:0980": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+89) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0980",
+      "status": "matched",
+      "symbol": "@0+89"
+    },
     "CODE:0989": {
       "by": "keil-lib",
       "comment": "Keil C51 library routine _PRINTF (C51S.LIB:PRINTF)",
@@ -60,6 +76,14 @@
       "status": "matched",
       "symbol": "_PRINTF"
     },
+    "CODE:0bab": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+644) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0bab",
+      "status": "matched",
+      "symbol": "@0+644"
+    },
     "CODE:0bba": {
       "by": "keil-lib",
       "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+659) (C51S.LIB:PRINTF)",
@@ -67,6 +91,14 @@
       "name": "FUN_CODE_0bba",
       "status": "matched",
       "symbol": "@0+659"
+    },
+    "CODE:0c44": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+797) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0c44",
+      "status": "matched",
+      "symbol": "@0+797"
     },
     "CODE:0c83": {
       "by": "hand",
