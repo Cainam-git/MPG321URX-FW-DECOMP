@@ -15945,6 +15945,13 @@
       "name": "FUN_a012f1ec",
       "status": "matched"
     },
+    "ram:a012f3b4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns bits 12..15 of DAT_a802df30[c] word 0 (c <= 3), else 0xff",
+      "name": "FUN_a012f3b4",
+      "status": "matched"
+    },
     "ram:a012fc04": {
       "by": "autoc",
       "comment": "FUN_a012f43c(0, 0x61, 1)",
