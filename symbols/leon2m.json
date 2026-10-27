@@ -6202,7 +6202,7 @@
     "ram:a00a9650": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Row setup by mode: FUN_a00a9468/FUN_a00b34d4 choice, plane calls and row fills (inlines FUN_a00a8a78 twice)",
+      "comment": "Calls chosen by mode and the FUN_a00a8a78 result, then FUN_a0146c40/FUN_a014667c/FUN_a0146870 and FUN_a00b32e4 or FUN_a0146b20 calls (inlines FUN_a00a8a78 twice)",
       "name": "FUN_a00a9650",
       "status": "matched"
     },
