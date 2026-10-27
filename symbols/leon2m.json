@@ -11026,6 +11026,12 @@
       "name": "FUN_a0101a70",
       "status": "matched"
     },
+    "ram:a0101aa0": {
+      "by": "hand",
+      "comment": "clears bit 0 of register 0xcf01610c",
+      "name": "FUN_a0101aa0",
+      "status": "matched"
+    },
     "ram:a0101abc": {
       "by": "autoc",
       "comment": "(word 0xCF01610C) = (word 0xCF01610C) & 1 | (p1 & 0xff) << 3 | (p2 & 0xff) * 2",
