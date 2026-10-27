@@ -1827,6 +1827,12 @@
       "name": "FUN_a006cb98",
       "status": "matched"
     },
+    "ram:a006cc24": {
+      "by": "hand",
+      "comment": "Expands (count, value) word pairs from a 480-word ring into 256-word blocks passed to FUN_a006c788",
+      "name": "FUN_a006cc24",
+      "status": "matched"
+    },
     "ram:a006cfac": {
       "by": "hand",
       "comment": "request setter: e4 {a,b,c,d}, mode byte e0, flag f4 = 1, tail fedc()",
