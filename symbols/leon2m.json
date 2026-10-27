@@ -8364,7 +8364,7 @@
     "ram:a00c3c14": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Command handler: digit 0-2 into byte 0xa802d290+0x19 unless busy, reply 5600+",
+      "comment": "Command handler: digit 0-2 into byte 0xa802d290+0x19 when bytes 0x1f/word 0xb0 allow it, reply 5600+",
       "name": "FUN_a00c3c14",
       "status": "matched"
     },
