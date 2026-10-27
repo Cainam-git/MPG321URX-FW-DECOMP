@@ -6598,6 +6598,13 @@
       "name": "FUN_a00baa6c",
       "status": "matched"
     },
+    "ram:a00bab30": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns byte b of DAT_a802d040, DAT_a802d098 or DAT_a802d0d0 (a = 2, 3, other)",
+      "name": "FUN_a00bab30",
+      "status": "matched"
+    },
     "ram:a00bab80": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
