@@ -6684,6 +6684,13 @@
       "name": "FUN_a00bb44c",
       "status": "matched"
     },
+    "ram:a00bb454": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores 35 36 30 30 36 0d to DAT_a802d128 and tail-calls FUN_a01487e8(c, 6, DAT_a802d128)",
+      "name": "FUN_a00bb454",
+      "status": "matched"
+    },
     "ram:a00bb4e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
