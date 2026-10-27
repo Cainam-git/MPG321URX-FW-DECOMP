@@ -995,6 +995,13 @@
       "name": "FUN_CODE_83f3",
       "status": "matched"
     },
+    "CODE:8622": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "97c4, up to 10 tries of 6781(dev), reg byte(s) through 6781, 97c4, 6781(dev | 1) tries, n bytes from 8c5d into buf, c6ec",
+      "name": "FUN_CODE_8622",
+      "status": "matched"
+    },
     "CODE:8731": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
