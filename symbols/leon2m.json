@@ -6216,6 +6216,13 @@
       "name": "FUN_a00a8ee8",
       "status": "matched"
     },
+    "ram:a00a900c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets row values from sel and mode and issues the fixed FUN_a0146a80/FUN_a0146b20/FUN_a00b32e4 call sequence",
+      "name": "FUN_a00a900c",
+      "status": "matched"
+    },
     "ram:a00a93bc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
