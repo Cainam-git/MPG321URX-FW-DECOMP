@@ -1755,6 +1755,13 @@
       "name": "FUN_a002b3e4",
       "status": "matched"
     },
+    "ram:a002b758": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Bit-banged I2C write of wbuf then read of rlen bytes into rbuf, returns bytes read",
+      "name": "FUN_a002b758",
+      "status": "matched"
+    },
     "ram:a002bb28": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
