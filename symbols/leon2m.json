@@ -8862,6 +8862,14 @@
       "name": "FUN_a00cead4",
       "status": "matched"
     },
+    "ram:a00ceb24": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00cf2d4; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00ceb24",
+      "of": "FUN_a00cf2d4",
+      "status": "matched"
+    },
     "ram:a00cec3c": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a00d1220; proven entry for entry by its exact check",
@@ -20172,6 +20180,14 @@
       "kind": "jump_table",
       "name": "switchdataD_a01434e8",
       "of": "FUN_a014bac4",
+      "status": "matched"
+    },
+    "ram:a0143534": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a014c118; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0143534",
+      "of": "FUN_a014c118",
       "status": "matched"
     },
     "ram:a0143590": {
