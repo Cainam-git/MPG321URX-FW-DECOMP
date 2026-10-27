@@ -1,9 +1,9 @@
 {
   "functions": {
-    "ram:1d4d": {
-      "by": "autoc",
-      "comment": "calls FUN_CODE_0030()",
-      "name": "FUN_CODE_1d4d",
+    "CODE:d8dc": {
+      "by": "data",
+      "comment": "NOT CODE: 0xFF fill after the Xtensa program image; the partition-table record at file 0x6038 gives the image as flash 0x30000, length 0xD8DC, and no code in banks 0-2 reads or jumps into this range",
+      "name": "FILL_CODE_d8dc",
       "status": "matched"
     }
   }
