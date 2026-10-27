@@ -10751,6 +10751,12 @@
       "name": "FUN_a00e406c",
       "status": "matched"
     },
+    "ram:a00e40f4": {
+      "by": "hand",
+      "comment": "Checks PHY status registers 0x43/0x41/0x3e/0x395 by bit mode and returns 0..3",
+      "name": "FUN_a00e40f4",
+      "status": "matched"
+    },
     "ram:a00e4278": {
       "by": "autoc",
       "comment": "retry loop: 1 = toggle and retry once, 3 = again, else stop; param_2 == 1 / == 2 as separate branches; int return",
