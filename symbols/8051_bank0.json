@@ -305,6 +305,13 @@
       "name": "FUN_CODE_1899",
       "status": "matched"
     },
+    "CODE:18ab": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "comment": "calls FUN_CODE_18bb and returns 0 as an unsigned long",
+      "name": "FUN_CODE_18ab",
+      "status": "matched"
+    },
     "CODE:18bb": {
       "by": "hand",
       "comment": "boot loader: test XDATA 0xD511 == 0x20 (result in CY)",
