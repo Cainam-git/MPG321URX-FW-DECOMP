@@ -15542,6 +15542,13 @@
       "name": "FUN_a0121714",
       "status": "matched"
     },
+    "ram:a01218c8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Register set-up of block 8 and channel blocks 0..7, interrupt handler registration",
+      "name": "FUN_a01218c8",
+      "status": "matched"
+    },
     "ram:a0121b50": {
       "by": "autoc",
       "comment": "Calls FUN_a00f2068(p1, 0x40, 1, 1) when p2 != 0, otherwise FUN_a00f2068(p1, 0x40, 1, 0)",
