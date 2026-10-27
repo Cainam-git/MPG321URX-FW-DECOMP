@@ -2359,6 +2359,12 @@
       "name": "DRV_HDMI_EQScan_FSM_PHY_PreAEQ",
       "status": "matched"
     },
+    "ram:a007731c": {
+      "by": "hand",
+      "comment": "Writes the stored RCT/CFT values of the three channels back through FUN_a00a7488 and sets the next EQ state",
+      "name": "DRV_HDMI_EQScan_FSM_PHY_RunAEQ",
+      "status": "matched"
+    },
     "ram:a007796c": {
       "by": "hand",
       "comment": "Prints PHY channel fields, steps the 0x1168 bits 8..11 value when 0x1018 is above 0xdf, sets the per-port records",
