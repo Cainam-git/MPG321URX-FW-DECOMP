@@ -13078,6 +13078,13 @@
       "name": "FUN_a0112fcc",
       "status": "matched"
     },
+    "ram:a0112fe0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets or clears bit n of register 0xcf011800",
+      "name": "FUN_a0112fe0",
+      "status": "matched"
+    },
     "ram:a0113064": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
