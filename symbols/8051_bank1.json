@@ -2178,6 +2178,12 @@
       "name": "FUN_CODE_d8c8",
       "status": "matched"
     },
+    "CODE:d8ea": {
+      "by": "hand",
+      "comment": "XDATA 0xD801 = 0x78 >> (XDATA 0xD520 & 3), shifted value staged in ACC",
+      "name": "FUN_CODE_d8ea",
+      "status": "matched"
+    },
     "CODE:d92a": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
