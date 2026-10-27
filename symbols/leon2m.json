@@ -16273,6 +16273,13 @@
       "name": "FUN_a012f3b4",
       "status": "matched"
     },
+    "ram:a012f3ec": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "maps DAT_a802e1a7 (0..7) to 1,2,2,3,4,2,3,4 (else 1)",
+      "name": "FUN_a012f3ec",
+      "status": "matched"
+    },
     "ram:a012fc04": {
       "by": "autoc",
       "comment": "FUN_a012f43c(0, 0x61, 1)",
