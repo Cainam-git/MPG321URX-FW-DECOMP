@@ -15231,6 +15231,13 @@
       "name": "FUN_a0122250",
       "status": "matched"
     },
+    "ram:a01223b0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes a fixed constant sequence to registers 0xcf01cc58..0xcf01cf9c",
+      "name": "FUN_a01223b0",
+      "status": "matched"
+    },
     "ram:a0122480": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
