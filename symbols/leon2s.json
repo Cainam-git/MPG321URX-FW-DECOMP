@@ -2988,6 +2988,12 @@
       "name": "FUN_a00866e0",
       "status": "matched"
     },
+    "ram:a008686c": {
+      "by": "hand",
+      "comment": "Reads 16 bytes into the 6-byte record ARR_a807cd2e[port], range-checks bytes 2, 3 and 5 and sets bits of byte 0",
+      "name": "FUN_a008686c",
+      "status": "matched"
+    },
     "ram:a0086bd8": {
       "by": "hand",
       "comment": "u8 result from hw reg cf013000 (see header)",
