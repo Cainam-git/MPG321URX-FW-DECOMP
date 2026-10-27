@@ -3019,6 +3019,14 @@
       "name": "FUN_a0087ec8",
       "status": "matched"
     },
+    "ram:a00883b4": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00883d0; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00883b4",
+      "of": "FUN_a00883d0",
+      "status": "matched"
+    },
     "ram:a00883d0": {
       "by": "hand",
       "comment": "Reads status byte buffer DAT_a80789f0 through FUN_a0086400/FUN_a008639c and updates per-port record bytes and block registers; returns 0, 1 or 2",
@@ -7252,6 +7260,14 @@
       "name": "FUN_a00b1c64",
       "status": "matched"
     },
+    "ram:a00b1cdc": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00b1d00; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00b1cdc",
+      "of": "FUN_a00b1d00",
+      "status": "matched"
+    },
     "ram:a00b1d00": {
       "by": "hand",
       "comment": "Writes registers 0, 1, 4..6, 8..10 and 3 of unit sel through FUN_a00a832c (0 or 0xd0, 0xea, bytes of a and b, then 3 / 7 / 3)",
@@ -8016,6 +8032,12 @@
       "name": "FUN_a00cc2f8",
       "status": "matched"
     },
+    "ram:a00cc5f8": {
+      "by": "hand",
+      "comment": "Sets record state 1 when bit 28 is set, reads 32 bytes into DAT_a807d088, copies DAT_a807ce50 to DAT_a807cd88, sets the state from the checks and the compare, then sets bit 21",
+      "name": "FUN_a00cc5f8",
+      "status": "matched"
+    },
     "ram:a00cc834": {
       "by": "hand",
       "comment": "Sets or clears bit 1 of an indexed register for port 2, else calls FUN_a00c76c0(port, 4, 0x10, on)",
@@ -8232,6 +8254,14 @@
       "name": "FUN_a00d01f4",
       "status": "matched"
     },
+    "ram:a00d0260": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00d03a0; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00d0260",
+      "of": "FUN_a00d03a0",
+      "status": "matched"
+    },
     "ram:a00d03a0": {
       "by": "hand",
       "comment": "Switches on byte 2 of record port of DAT_a8078bb0 (0..0x4f) and tail-calls the handler of that value with port",
@@ -8250,10 +8280,34 @@
       "name": "FUN_a00d0798",
       "status": "matched"
     },
+    "ram:a00d0828": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00d0968; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00d0828",
+      "of": "FUN_a00d0968",
+      "status": "matched"
+    },
     "ram:a00d0968": {
       "by": "hand",
       "comment": "Switches on byte 2 of record port of DAT_a8078bb0 (0..0x4f) and tail-calls the handler of that value with port",
       "name": "FUN_a00d0968",
+      "status": "matched"
+    },
+    "ram:a00d0af8": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00d0d78; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00d0af8",
+      "of": "FUN_a00d0d78",
+      "status": "matched"
+    },
+    "ram:a00d0c38": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00d0d78; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00d0c38",
+      "of": "FUN_a00d0d78",
       "status": "matched"
     },
     "ram:a00d0d78": {
