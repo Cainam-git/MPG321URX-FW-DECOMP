@@ -7469,6 +7469,12 @@
       "name": "FUN_a00c12d8",
       "status": "matched"
     },
+    "ram:a00c1318": {
+      "by": "hand",
+      "comment": "Saves registers, writes 5 key bytes to 0x280.. and 0xe8, streams 0x11a bytes of buf into 0xcf01178c, then restores the registers",
+      "name": "FUN_a00c1318",
+      "status": "matched"
+    },
     "ram:a00c1550": {
       "by": "autoc",
       "comment": "Twin of FUN_a00c0f88 on the other register bank (0x400-0x406 via 0xa0fb6c00 / 0xa0fb6c98). Saves the low byte of control register 0xcf00f21c and clears its bits 3-4, then streams four blocks into the port's protection engine: 320 bytes from param_5 (backwards), 522 bytes from param_3, 24 zero bytes plus 16 bytes from param_2 (backwards), and the fixed 11-byte table at 0xa8078610. Restores the saved byte at the end. The saved value must be a byte variable to match.",
