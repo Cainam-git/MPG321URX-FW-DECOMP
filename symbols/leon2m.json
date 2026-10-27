@@ -18418,6 +18418,12 @@
       "name": "FUN_a014aa48",
       "status": "matched"
     },
+    "ram:a014aa7c": {
+      "by": "hand",
+      "comment": "stores v & 1 to bit 19 of DAT_a802e3d0",
+      "name": "FUN_a014aa7c",
+      "status": "matched"
+    },
     "ram:a014aaa0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
