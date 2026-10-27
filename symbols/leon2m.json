@@ -13588,6 +13588,13 @@
       "name": "FUN_a010b4fc",
       "status": "matched"
     },
+    "ram:a010b530": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores v to word k of register block c of DAT_0019aed8 and DAT_0019aecc (all 3 blocks for c > 2)",
+      "name": "FUN_a010b530",
+      "status": "matched"
+    },
     "ram:a010b5dc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
