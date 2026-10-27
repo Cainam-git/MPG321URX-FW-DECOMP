@@ -20,8 +20,8 @@ firmware:
 ## Progress
 
 ```
-Main processor     [###############-----]   77 %
-Input processor    [##############------]   75 %
+Main processor     [###############-----]   78 %
+Input processor    [###############-----]   76 %
 Helper processor   [###############-----]   78 %
 Overall            [###############-----]   77 %
 ```
