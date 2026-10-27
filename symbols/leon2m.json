@@ -21321,6 +21321,13 @@
       "name": "FUN_a01492b8",
       "status": "matched"
     },
+    "ram:a014931c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Byte v stored per channel k, FUN_a01328d4(k, v & 3 or 0) when the channel's table entry type is 0x71",
+      "name": "FUN_a014931c",
+      "status": "matched"
+    },
     "ram:a0149978": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
