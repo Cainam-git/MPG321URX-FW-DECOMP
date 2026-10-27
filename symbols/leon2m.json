@@ -1794,6 +1794,12 @@
       "name": "FUN_a002c268",
       "status": "matched"
     },
+    "ram:a002c284": {
+      "by": "hand",
+      "comment": "returns the low byte of the aligned word at a & ~3 shifted right by (a & 3) * 8",
+      "name": "FUN_a002c284",
+      "status": "matched"
+    },
     "ram:a002c2d4": {
       "by": "hand",
       "comment": "returns the low byte of register 0xcf000000 + 4 * r",
