@@ -51,6 +51,15 @@ How `MSI_MPG321URX_V021_7F69.bin` is laid out, and how its four processors start
 | 0x2A0380 | 3 × 0x58 | Panel mode table (240, 120 and 60 Hz), see [panel modes](#panel-modes) | CPU 0x198380 |
 | 0x2B0600 | 0x200 | Trailer: a table of 8-byte values, then 0x05/0x19/0x7D words and 0xFF padding. It is not a checksum. | |
 
+## What changes between versions
+
+Comparing the official versions FW.012, FW.016, FW.020 and FW.021 (`firmware/`):
+
+- **The whole 8051 part is identical in all four**, byte for byte: the boot loader, the main application and the
+  update agent. It was built once and has been copied into every release unchanged since.
+- **The Tensilica program is different in every version.** It is rebuilt for each release; the copy in FW.021 is
+  dated "Nov 10 2025".
+
 ## Address numbering
 
 - **Leon2M main program:** The CPU address is the file offset minus 0x108000. Function names such as
