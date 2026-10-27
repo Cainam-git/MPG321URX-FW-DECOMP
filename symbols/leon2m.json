@@ -20848,6 +20848,13 @@
       "name": "FUN_a014e758",
       "status": "matched"
     },
+    "ram:a014e768": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns bit 5 of DAT_a802e224[c]; sets DAT_a802cc18[c] to 2 or counts it down",
+      "name": "FUN_a014e768",
+      "status": "matched"
+    },
     "ram:a014e7bc": {
       "by": "hand",
       "comment": "returns DAT_a802cc18[i]",
