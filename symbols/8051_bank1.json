@@ -2256,6 +2256,13 @@
       "name": "FUN_CODE_db96",
       "status": "matched"
     },
+    "CODE:dbaf": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "sets bit 0x17, XDATA 0xA781 = (FUN_CODE_da74() != 0), calls FUN_CODE_a9f6",
+      "name": "FUN_CODE_dbaf",
+      "status": "matched"
+    },
     "CODE:dbdf": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
