@@ -2347,6 +2347,12 @@
       "name": "DRV_HDMI_EQScan_FSM_PHY_BA_Turning",
       "status": "matched"
     },
+    "ram:a0075858": {
+      "by": "hand",
+      "comment": "Picks the RCT table value of a port channel from its SCDC error tables and stores it with a status halfword",
+      "name": "RCT_Value",
+      "status": "matched"
+    },
     "ram:a0076e68": {
       "by": "hand",
       "comment": "Per-channel pre-AEQ table step (RCT/CFT register writes) or RVGA index advance, then state update",
