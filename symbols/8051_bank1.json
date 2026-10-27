@@ -12,6 +12,12 @@
       "name": "FUN_CODE_0006",
       "status": "matched"
     },
+    "CODE:000e": {
+      "by": "hand",
+      "comment": "returns the IDATA byte 0x49",
+      "name": "FUN_CODE_000e",
+      "status": "matched"
+    },
     "CODE:0016": {
       "by": "twin",
       "c51opts": "OPTIMIZE(7,SPEED)",
