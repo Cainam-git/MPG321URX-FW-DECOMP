@@ -1641,6 +1641,13 @@
       "name": "FUN_CODE_c0a1",
       "status": "matched"
     },
+    "CODE:c103": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "reads mailbox word 0x0C, replaces its low byte with the FUN_CODE_65e9 bit, writes it back, prints it when set",
+      "name": "FUN_CODE_c103",
+      "status": "matched"
+    },
     "CODE:c163": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
