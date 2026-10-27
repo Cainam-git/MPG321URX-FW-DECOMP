@@ -10,8 +10,8 @@
  * above 0x64 with bit 0x11 of regs + 0x24 set, FUN_a00a73d4(0x11, regs + 0x24), and the counter is incremented
  * when byte 6 of DAT_a807cc64[sel], bit 0x11 of word 1 of DAT_a807db00[p].regs0 are set and the record byte 1 is
  * 0. Finally state = 7.
- * Source form: 'sel = 2;' before the port test (permuter hint; testing p == 0 first keeps the port byte in one
- * register for the loop's record address).
+ * Source form: 'sel = 2;' assigned before the port test (keeps the port byte in one register for the record
+ * address of the loop).
  */
 struct Port {
     volatile unsigned int *regs0;

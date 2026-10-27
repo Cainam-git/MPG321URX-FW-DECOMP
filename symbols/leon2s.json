@@ -4884,7 +4884,7 @@
     },
     "ram:a009bba8": {
       "by": "hand",
-      "comment": "On a state change clears the lane fields of words 0x28/0x29 and restarts the port, then updates the DAT_a8079054 counter and sets state 7",
+      "comment": "On a state change clears four 4-bit fields of words 0x28/0x29 and calls the port set-up, then updates the DAT_a8079054 counter and sets state 7",
       "name": "DRV_HDMI21_RXDetect_FSM_LTS_L",
       "status": "matched"
     },
