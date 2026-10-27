@@ -13524,6 +13524,13 @@
       "name": "FUN_a01073b8",
       "status": "matched"
     },
+    "ram:a010740c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "By c writes 0x10, 0x90, 0 or 0xf4 to 0xcf00e9f8 and 0xcf00eab8, packs a and b into 0xcf00e9fc and 0xcf00eabc for c = 2, updates bits of 0xcf00e9e8 and copies it to 0xcf00eaa8",
+      "name": "FUN_a010740c",
+      "status": "matched"
+    },
     "ram:a0107554": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
