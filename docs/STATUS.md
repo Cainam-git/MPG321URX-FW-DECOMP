@@ -7,10 +7,10 @@
 | Main processor | `leon2m` | 741,345 | 933,857 | 79.4 % | 3,584 | 3,846 |
 | Input processor | `leon2s` | 319,061 | 411,733 | 77.5 % | 1,567 | 1,686 |
 | Helper processor | `8051_bank0` (boot loader) | 6,182 | 6,182 | 100.0 % | 52 | 52 |
-| Helper processor | `8051_bank1` (main application) | 44,378 | 53,226 | 83.4 % | 397 | 430 |
+| Helper processor | `8051_bank1` (main application) | 44,567 | 53,226 | 83.7 % | 398 | 430 |
 | Helper processor | `8051_bank2` (update agent) | 51,944 | 52,590 | 98.8 % | 280 | 283 |
 | Tensilica processor | `8051_bank3` (Xtensa program image) | 10,020 | 65,536 | 15.3 % | 1 | 2 |
-| **Total** | | **1,172,930** | **1,523,124** | **77.0 %** | **5,881** | **6,299** |
+| **Total** | | **1,173,119** | **1,523,124** | **77.0 %** | **5,882** | **6,299** |
 
 To recount and update this table and the progress bars in the README, run `python3 -I tools/stats.py`. Byte counts
 come from the function sizes in `symbols/<section>.functions.json`.
