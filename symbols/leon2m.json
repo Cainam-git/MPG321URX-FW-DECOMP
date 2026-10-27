@@ -11018,6 +11018,13 @@
       "name": "FUN_a00f2708",
       "status": "matched"
     },
+    "ram:a00f295c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the 24-bit value from registers DAT_0019a2ec[c] + k .. + 2 (c > 7 -> 0)",
+      "name": "FUN_a00f295c",
+      "status": "matched"
+    },
     "ram:a00f29d4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
