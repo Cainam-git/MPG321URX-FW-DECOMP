@@ -10170,6 +10170,13 @@
       "name": "FUN_a00f1298",
       "status": "matched"
     },
+    "ram:a00f1374": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Read-modify-write of one register in one or all four blocks with bases DAT_a8026a7e",
+      "name": "FUN_a00f1374",
+      "status": "matched"
+    },
     "ram:a00f154c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
