@@ -13669,6 +13669,13 @@
       "name": "FUN_a011cd10",
       "status": "matched"
     },
+    "ram:a011cd80": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reads register 0xcf01178c or 0xcf0117a0 (c), delays 0xa0 nops, returns its low byte",
+      "name": "FUN_a011cd80",
+      "status": "matched"
+    },
     "ram:a011ce80": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
