@@ -4460,6 +4460,12 @@
       "name": "FUN_a0094b30",
       "status": "matched"
     },
+    "ram:a0094c54": {
+      "by": "hand",
+      "comment": "Reads 16 timing registers of port through FUN_a00a7fd8 and prints the VTOTAL/VDE/VSW/VFP and HTOTAL/HDE/HSW/HFP pairs when register 9 bit 0 is set",
+      "name": "FUN_a0094c54",
+      "status": "matched"
+    },
     "ram:a0094e40": {
       "by": "hand",
       "comment": "calls FUN_a00a80cc four times with modes chosen from b, a record bit and c (plus FUN_a00a8260 for c == 1)",
