@@ -15311,6 +15311,13 @@
       "name": "FUN_a012ad80",
       "status": "matched"
     },
+    "ram:a012adac": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the byte (a << 3) | (b << 2) | (c << 1) | d",
+      "name": "FUN_a012adac",
+      "status": "matched"
+    },
     "ram:a012af40": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
