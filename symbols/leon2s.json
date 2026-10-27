@@ -4586,6 +4586,12 @@
       "name": "FUN_a00931fc",
       "status": "matched"
     },
+    "ram:a009332c": {
+      "by": "hand",
+      "comment": "Writes 0x84, 1, 10, four copied bytes, a packed byte, nine read bytes and their negated byte sum from src registers to dst registers through FUN_a00a8054",
+      "name": "FUN_a009332c",
+      "status": "matched"
+    },
     "ram:a0094308": {
       "by": "hand",
       "comment": "Calls FUN_a00a80cc(param_1, 0, 0xd, 4, 1) if param_2 != 0, else FUN_a00a80cc(param_1, 0, 0xd, 4, 0); written as if/else with a call in each branch, so %o4 = 1 is set on the common path and cleared to 0 only in the else branch.",
