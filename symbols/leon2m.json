@@ -17788,6 +17788,12 @@
       "name": "FUN_a0148834",
       "status": "matched"
     },
+    "ram:a014883c": {
+      "by": "hand",
+      "comment": "returns the first byte of two-byte entry c of the table at 0x1a6db2",
+      "name": "FUN_a014883c",
+      "status": "matched"
+    },
     "ram:a0148854": {
       "by": "hand",
       "comment": "1 when byte e1a0[7] > 4, else 0",
