@@ -3650,6 +3650,12 @@
       "name": "FUN_a008db90",
       "status": "matched"
     },
+    "ram:a008dbd4": {
+      "by": "hand",
+      "comment": "Fixed FUN_a00a80cc / FUN_a00a8054 register-field sequence on bank 1 of a port for on and off",
+      "name": "FUN_a008dbd4",
+      "status": "matched"
+    },
     "ram:a008df40": {
       "by": "hand",
       "comment": "Calls FUN_a00a8054(param_1, 1, 9, 0x43) if param_2 != 0, else FUN_a00a8054(param_1, 1, 9, 0x42). Code tests param_2 with btst 0xff,%o1, masks param_1, loads the defaults %o1=1, %o2=9, %o3=0x43 before the bne, and in the zero path reloads them with %o3=0x42. Returns void.",
