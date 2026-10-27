@@ -7758,6 +7758,12 @@
       "name": "FUN_a00c4e4c",
       "status": "matched"
     },
+    "ram:a00c4e70": {
+      "by": "hand",
+      "comment": "Writes the summed per-entry settings of a port's enabled entries and its counter bytes to the port registers",
+      "name": "FUN_a00c4e70",
+      "status": "matched"
+    },
     "ram:a00c55c8": {
       "by": "hand",
       "comment": "collects the b3..b8 bytes of three DAT_a8078bb0 records into summary bytes and writes them with a counter through the ROM register calls",
