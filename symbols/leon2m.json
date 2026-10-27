@@ -15106,6 +15106,13 @@
       "name": "FUN_a0123654",
       "status": "matched"
     },
+    "ram:a01236e8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes c / 0x70 to 0xcf03c668 / 0xcf03c660, waits, then 7 or 0xf to 0xcf01c100 and 0xcf01c500",
+      "name": "FUN_a01236e8",
+      "status": "matched"
+    },
     "ram:a0123744": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
