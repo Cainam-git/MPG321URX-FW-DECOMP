@@ -2678,6 +2678,12 @@
       "name": "DRV_HDMI21_PHY_PICDR_Reset",
       "status": "matched"
     },
+    "ram:a0083324": {
+      "by": "hand",
+      "comment": "Per-port EQ detect pass over ports 0..3: reset flags, FRL rate update, EQ_handler_3 / EQ_handler / FUN_a0079460",
+      "name": "DRV_HDMI_EQDetect_Timer",
+      "status": "matched"
+    },
     "ram:a0083618": {
       "by": "autoc",
       "comment": "byte array 0xA8076198[(p1 & 0xff)] = p2",
