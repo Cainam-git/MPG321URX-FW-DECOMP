@@ -8194,6 +8194,12 @@
       "of": "FUN_a00d20a4",
       "status": "matched"
     },
+    "ram:a00cf1ec": {
+      "by": "hand",
+      "comment": "returns byte +0 of the DAT_a8025c58 entry whose byte +1 is c, else 0",
+      "name": "FUN_a00cf1ec",
+      "status": "matched"
+    },
     "ram:a00cf23c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
