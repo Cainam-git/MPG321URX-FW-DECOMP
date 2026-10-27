@@ -6,7 +6,7 @@
  */
 #define R40 (*(volatile unsigned int *)0xcf03c840)
 #define R428 (*(volatile unsigned int *)0xcf013428)
-static void lock(void)
+static void wait_c840(void)
 {
     unsigned short t = 0xffff;
     do {
@@ -17,19 +17,19 @@ static void lock(void)
     } while (t--);
     R40 = 1;
 }
-static void unlock(void)
+static void clear_c840(void)
 {
     R40 = 0;
 }
 void FUN_a0113810(unsigned char on)
 {
     if (on) {
-        lock();
+        wait_c840();
         R428 |= 1;
-        unlock();
+        clear_c840();
     } else {
-        lock();
+        wait_c840();
         R428 &= ~1u;
-        unlock();
+        clear_c840();
     }
 }
