@@ -1632,6 +1632,13 @@
       "name": "FUN_a0029cdc",
       "status": "matched"
     },
+    "ram:a0029df4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Dispatches pending sources 0..15 of status 0x9f020080 to the hooks at 0xa802b170 entries 0x50..0x5f (bit 0x20)",
+      "name": "FUN_a0029df4",
+      "status": "matched"
+    },
     "ram:a0029f14": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
