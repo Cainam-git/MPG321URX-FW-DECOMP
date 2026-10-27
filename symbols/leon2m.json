@@ -22200,6 +22200,13 @@
       "name": "FUN_a014f620",
       "status": "matched"
     },
+    "ram:a014f6f4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sets bit-fields of a 3-byte local record, calls FUN_a00fe880/FUN_a014f620 per set bit and passes a copy to FUN_a0138564",
+      "name": "FUN_a014f6f4",
+      "status": "matched"
+    },
     "ram:a014f888": {
       "by": "hand",
       "comment": "stores the argument to DAT_a802a4b2",
