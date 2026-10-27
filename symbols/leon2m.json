@@ -13924,6 +13924,12 @@
       "name": "FUN_a0125318",
       "status": "matched"
     },
+    "ram:a0125334": {
+      "by": "hand",
+      "comment": "returns byte +0xf of 0x16-byte entry i of the table at 0x1a42a8",
+      "name": "FUN_a0125334",
+      "status": "matched"
+    },
     "ram:a0125350": {
       "by": "hand",
       "comment": "Returns (byte at 0xa802c9fb >> param_1) & 1, shifting by the raw parameter with no & 0x1f mask (sra %g1, %o0, %g1).",
