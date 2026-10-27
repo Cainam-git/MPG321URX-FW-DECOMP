@@ -19112,6 +19112,13 @@
       "name": "FUN_a013d018",
       "status": "matched"
     },
+    "ram:a013d0ec": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "calls the two callback pointers of DAT_a802cc1c (or clears bits 26/27 of DAT_a802e3d0) for c = 0",
+      "name": "FUN_a013d0ec",
+      "status": "matched"
+    },
     "ram:a013d178": {
       "by": "hand",
       "comment": "returns 1 when byte 0xA802E1A7 > 4, else 0",
