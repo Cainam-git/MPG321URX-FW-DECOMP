@@ -13641,6 +13641,13 @@
       "name": "FUN_a0123648",
       "status": "matched"
     },
+    "ram:a0123654": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bit 0, then clears bit 1 of register 0xcf03c780",
+      "name": "FUN_a0123654",
+      "status": "matched"
+    },
     "ram:a0123744": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
