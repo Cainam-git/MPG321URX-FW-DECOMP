@@ -2205,6 +2205,13 @@
       "name": "FUN_CODE_dac8",
       "status": "matched"
     },
+    "CODE:dae3": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "writes the 16-bit v low byte first to XDATA 0x9A00 + i and 0x9A00 + i + 1 through a generic pointer",
+      "name": "FUN_CODE_dae3",
+      "status": "matched"
+    },
     "CODE:db05": {
       "by": "hand",
       "comment": "if i < 0x10: f230[i] = v",
