@@ -10292,6 +10292,13 @@
       "name": "FUN_a00f0b58",
       "status": "matched"
     },
+    "ram:a00f1100": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns DAT_a802b746 (c = 2, 6), DAT_a802b742 (c = 3, 7), else 0",
+      "name": "FUN_a00f1100",
+      "status": "matched"
+    },
     "ram:a00f1298": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
