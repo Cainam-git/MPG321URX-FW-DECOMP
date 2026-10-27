@@ -4432,6 +4432,12 @@
       "name": "FUN_a0092064",
       "status": "matched"
     },
+    "ram:a0092100": {
+      "by": "hand",
+      "comment": "Writes a 0x82/2/0x0d packet to registers 0x140..0x152 from record ARR_a807d580[port], with color-space prints and checksum",
+      "name": "FUN_a0092100",
+      "status": "matched"
+    },
     "ram:a00924dc": {
       "by": "autoc",
       "comment": "FUN_a00a80cc(p1, 0, 0x13e, 3, p2)",
