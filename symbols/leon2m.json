@@ -12616,6 +12616,12 @@
       "name": "FUN_a0118ad4",
       "status": "matched"
     },
+    "ram:a0118af0": {
+      "by": "hand",
+      "comment": "sets bit 7 of register 0xcf012ff0",
+      "name": "FUN_a0118af0",
+      "status": "matched"
+    },
     "ram:a0118b0c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
