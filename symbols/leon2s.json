@@ -6235,7 +6235,7 @@
     },
     "ram:a00a89c0": {
       "by": "hand",
-      "comment": "Writes the FUN_a00a8260 / FUN_a00a6440 register sets for sel 0..2 and returns the checked bit 0 of FUN_a00a88b8",
+      "comment": "Calls FUN_a00a8260 / FUN_a00a6440 with fixed arguments for sel 0..2 and returns the checked bit 0 of FUN_a00a88b8",
       "name": "FUN_a00a89c0",
       "status": "matched"
     },

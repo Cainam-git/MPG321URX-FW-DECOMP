@@ -1,4 +1,4 @@
-/* leon2s FUN_a00a89c0 @ 0xa00a89c0-0xa00a8cac (203 words), flags -mcpu=v8 -Os -g.
+/* leon2s FUN_a00a89c0 @ 0xa00a89c0-0xa00a8cac (187 words), flags -mcpu=v8 -Os -g.
  * unsigned char (u8 sel, u8 mode, u8 port, u16 d, u8 e, u8 f). ok = bit 0 of FUN_a00a88b8(sel, mode, port).
  * sel 0: FUN_a00a8260(port, 0x59, 4, e), (port, 0x50, 1, f). sel 1: FUN_a00a6440(4, port, 0x55, 0xff, low
  * byte of d), (4, port, 0x56, 0xff, high byte of d), FUN_a00a8260(port, 0x59, 0x10, e), (port, 0x54, 7, f),
