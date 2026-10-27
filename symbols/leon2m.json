@@ -6628,6 +6628,13 @@
       "name": "FUN_a00bb44c",
       "status": "matched"
     },
+    "ram:a00bb4e8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores 35 36 30 30 2b 0d to DAT_a802d128[0..5]",
+      "name": "FUN_a00bb4e8",
+      "status": "matched"
+    },
     "ram:a00bb520": {
       "by": "hand",
       "comment": "empty routine",
