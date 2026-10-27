@@ -12778,6 +12778,13 @@
       "name": "FUN_a010d530",
       "status": "matched"
     },
+    "ram:a010d838": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "clears bits 0, 16..18 and sets c << 16 in register 0xd003002c, written to 0xd003002c and 0xd003802c",
+      "name": "FUN_a010d838",
+      "status": "matched"
+    },
     "ram:a010d874": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
