@@ -2112,6 +2112,13 @@
       "name": "FUN_CODE_daad",
       "status": "matched"
     },
+    "CODE:dac8": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "stores the Timer 0 reload 0xFF06 at XDATA 0xA772/0xA773 and calls FUN_CODE_9975(1, 4800)",
+      "name": "FUN_CODE_dac8",
+      "status": "matched"
+    },
     "CODE:db05": {
       "by": "hand",
       "comment": "if i < 0x10: f230[i] = v",
