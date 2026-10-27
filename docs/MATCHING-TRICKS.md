@@ -281,6 +281,11 @@ LEON (GCC 3.4.4):
 
 Keil C51:
 
+- **The value loaded before the count in a shift loop** (`MOV A,#k` or `MOV A,Rn` before `MOV R0,count`): the
+  programmer wrote the value into the accumulator first, `ACC = k; x = ACC << n;` (`ACC` from `reg51.h`). Without
+  that, Keil C51 9.60.7 loads the count first at every optimisation level. Valid only when nothing else loads A
+  between the store and the shift and the count is already in a register (FUN_CODE_d8ea, FUN_CODE_568f,
+  FUN_CODE_38a7 and four more).
 - **A call and return, or `Jcc +2; SJMP`, at the end of both arms** of an if/else: write the shared statement in both
   arms (FUN_CODE_8622, FUN_CODE_db96, FUN_CODE_dbaf, FUN_CODE_18ab).
 - **`& 0xff` on a char operand** changes which operand is loaded first and stops the merging of a repeated array read
@@ -351,4 +356,5 @@ Keil C51:
 | Rewriting states or steps as separate static functions | GCC 3.4's inliner turns returns into plain jumps; the result is identical to writing the code in place. |
 | A single prediction hint per attempt, for block-order problems | Not enough when two ties must break together; test pairs. |
 | Other Keil releases for the 8051 | Every published release was tested. 9.02a, 9.03 and 9.59 to 9.60a fail functions that already match; the rest give the same code as 9.60.7. |
+| Treating the shift-order difference as a compiler-version problem | Wrong for values: the firmware's order comes from source that writes the value to `ACC` first (see the Keil section). Computed counts in large functions and 16-bit shifts with parameters still in R4:R5 remain open. |
 | Fake `volatile`, inline assembly, invented names | Not allowed; they produce code the original did not have. |
