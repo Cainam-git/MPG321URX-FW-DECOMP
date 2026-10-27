@@ -12545,6 +12545,13 @@
       "name": "FUN_a010b77c",
       "status": "matched"
     },
+    "ram:a010b8e8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bit 0 of registers 0xd0030004 and 0xd0038004",
+      "name": "FUN_a010b8e8",
+      "status": "matched"
+    },
     "ram:a010b948": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
