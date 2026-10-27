@@ -4418,6 +4418,12 @@
       "name": "FUN_a0092cec",
       "status": "matched"
     },
+    "ram:a0092db8": {
+      "by": "hand",
+      "comment": "Builds a 161-byte block from the words DAT_a807955c and halfwords of DAT_a8079538 and passes it to FUN_a0092944",
+      "name": "FUN_a0092db8",
+      "status": "matched"
+    },
     "ram:a0093034": {
       "by": "autoc",
       "comment": "p1 = p1 & 0xff; FUN_a0092890(p1, 0); FUN_a0092cec(p1, p2); FUN_a0092890(p1, 1, p3, p4, p5, p6)",
