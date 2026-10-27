@@ -1215,7 +1215,7 @@
     "CODE:c60e": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "c60e(a, b, c): e1eb(), record 0x075C = cb 0x28, LBA a, b / 512 blocks, len b, addr c << 5, then tail call 76b4",
+      "comment": "c60e(a, b, c): e1f3(record 0x075C, 0x27), record 0x075C = cb 0x28, LBA a, b / 512 blocks, len b, addr c << 5, then tail call 76b4",
       "module": "FUN_CODE_467e",
       "name": "FUN_CODE_c60e",
       "status": "matched"
@@ -1835,6 +1835,23 @@
       "comment": "service packet 02 0F a to slave 0x6E, wait 100, tail call e4bf; common-entry block e1b5 in front",
       "module": "FUN_CODE_0003",
       "name": "FUN_CODE_e1c1",
+      "status": "matched"
+    },
+    "CODE:e1eb": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e1f3, in FUN_CODE_e1f3's code segment; emitted by compiling src/8051_bank2/FUN_CODE_467e.c, bytes judged with FUN_CODE_e1f3 over 0xe1eb..0xe21d",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e1eb",
+      "of": "FUN_CODE_e1f3",
+      "status": "matched"
+    },
+    "CODE:e1f3": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "e1f3(p, n): clears n bytes at p; common-entry block 0xe1eb..0xe1f3 = e1f3(record 0x075C, 0x27)",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e1f3",
       "status": "matched"
     },
     "CODE:e21d": {

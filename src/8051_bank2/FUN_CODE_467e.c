@@ -9,6 +9,7 @@
  *   0xB308 -> b317 (467e)                             0x8A08 -> 8a0e (76b4)
  *   0x69C3..0x69E5 -> 69e5 (5219, 8a0e)               0x5200..0x5219 -> 5219 (ba96)
  *   0x8F95 -> 8f9b (467e)                             0x7677..0x76B4 -> 76b4 (467e, 9734)
+ *   0xE1EB..0xE1F3 -> e1f3 (467e x4, 9734, c60e: e1f3(&0x075C record, 0x27))
  * A block holds the instructions that the call sites share in front of the LCALL, including the tail of the statement
  * before the call (the 76b4 block stores the request fields addr, n, id and st; the e35b entry stores the local
  * 0x0907 of 5219). LJMP (tail) call sites are never merged (c60e, b45f's last dac5 call, 94d3's last e1a4 call).
@@ -23,7 +24,8 @@
  *   0x0829 = DATA pointer to a 28-byte descriptor (struct QH, fields named by offset).
  *   DATA 0x0022 = 32-byte word buffer: e373(addr, n) reads n * 32 bytes at addr into it (abce), e1a4(addr, n) writes
  *     it back (b1a9); 999f swaps the bytes of each 32-bit word between two buffers.
- *   0x075C struct Req (request record read by 76b4): id, st, cblen, dir, cb[16], len, addr, n.
+ *   0x075C struct Req (0x27 bytes, cleared with e1f3, read by 76b4): id, st, cblen, dir, cb[16], len, addr, n, and res
+ *     at 0x0780 (set from the 32-byte buffer after the last stage).
  *   0x082A struct CBW (0x2E bytes): 76b4 sets sig = 0x55534243, len, tag, flags, lun, cblen, cb[] and copies it with
  *     999f into DATA 0x0022; ep_in 0x0856 / ep_out 0x0857.
  *   0x07D9 struct pkt[10]: 8-byte records passed to 5219 (byte [1] selects the switch case, [6] is the length).
@@ -36,6 +38,7 @@
  *   descriptor set-up and transfer sequences (69e5 prints "HC SendPort TERM %BX, temp_addr_02 %08X\n" 0xC973 and
  *   "D_GET(STATUS,pd) [%08lX]\n" 0xC9AA). 76b4: builds the 0x082A record from 0x075C and runs the three stages.
  *   ba96: retry loop over 5219 / 467e / 35a9. 9734 / c60e: fill 0x075C (cb[0] = 0x2A / 0x28) and call 76b4.
+ *   e1f3(p, n): clears n bytes at p.
  * Source forms the bytes depend on (each checked against the alternatives):
  *   - Masked field updates are written 'x = x & keep | v & mask' with the operand Keil must evaluate first on the
  *     side the firmware evaluates first; '(v << 0) & mask' (a field written with shift 0, 8a0e off and b45f v) makes
@@ -60,7 +63,7 @@ struct QH { unsigned long w0; unsigned int i4; unsigned char b6; unsigned char b
             unsigned char b26; unsigned char b27; };
 struct Dev { struct TD idata *td; unsigned long a; unsigned long b; unsigned long c; unsigned long d; };
 struct Req { unsigned long id; unsigned char st; unsigned char cblen; unsigned char dir; unsigned char cb[16]; unsigned long len;
-             unsigned long addr; unsigned int n; };
+             unsigned long addr; unsigned int n; unsigned char r7d[3]; unsigned int res; unsigned char r82; };
 struct CBW { unsigned long sig; unsigned long tag; unsigned long len; unsigned char flags; unsigned char lun; unsigned char cblen;
              unsigned char cb[16]; unsigned char pad[13]; unsigned char ep_in; unsigned char ep_out; };
 struct pkt { unsigned char b[8]; };
@@ -80,7 +83,6 @@ extern unsigned char xdata DAT_EXTMEM_071b;
 extern unsigned char xdata DAT_EXTMEM_075b;
 extern unsigned char xdata DAT_EXTMEM_07d1[2];
 extern unsigned char xdata DAT_EXTMEM_07d3[];
-extern unsigned int xdata DAT_EXTMEM_0780;
 extern unsigned char xdata DAT_EXTMEM_08cd[3];
 extern unsigned char xdata DAT_EXTMEM_cd00, DAT_EXTMEM_cd01, DAT_EXTMEM_cd02, DAT_EXTMEM_cd03, DAT_EXTMEM_cd04, DAT_EXTMEM_cd05;
 extern unsigned char xdata DAT_EXTMEM_cd06, DAT_EXTMEM_cd07, DAT_EXTMEM_cd08, DAT_EXTMEM_cd09;
@@ -92,7 +94,6 @@ extern void FUN_CODE_abce(unsigned char *buf, unsigned long addr, unsigned char 
 extern void FUN_CODE_b1a9(unsigned char *buf, unsigned long addr, unsigned char n, unsigned char f) small;
 extern void FUN_CODE_65ab(void *fmt, ...) large;
 extern void FUN_CODE_e04a(unsigned long a, unsigned long b, unsigned char n);
-extern void FUN_CODE_e1eb(void);
 extern unsigned char FUN_CODE_e4c9(void);
 extern void FUN_CODE_e4d9(void);
 extern void FUN_CODE_d938(unsigned long addr, unsigned char n);
@@ -124,6 +125,7 @@ void FUN_CODE_8f9b(unsigned long v, unsigned long typ, unsigned long addr, unsig
 struct pair FUN_CODE_467e(void);
 void FUN_CODE_9734(unsigned long a);
 void FUN_CODE_c60e(unsigned long a, unsigned long b, unsigned long c);
+void FUN_CODE_e1f3(unsigned char *p, unsigned char n);
 
 void FUN_CODE_69e5(unsigned long a, unsigned long b)
 {
@@ -574,7 +576,7 @@ void FUN_CODE_76b4(void)
     pg[4] = 0;
     FUN_CODE_8a0e(DAT_EXTMEM_082a.ep_in, 0x1f, pg, 0, 1);
     FUN_CODE_e373(DAT_EXTMEM_08bc.a, 1);
-    DAT_EXTMEM_0780 = (unsigned char)((unsigned long data *)DAT_0022)[3];
+    DAT_EXTMEM_075c.res = (unsigned char)((unsigned long data *)DAT_0022)[3];
     DAT_EXTMEM_08de = DAT_EXTMEM_08de + 1;
 }
 
@@ -780,7 +782,7 @@ struct pair FUN_CODE_467e(void)
         FUN_CODE_e44b(1);
         if (FUN_CODE_e4c9()) return r;
         for (i = 0; i < 10; i++) {
-            FUN_CODE_e1eb();
+            FUN_CODE_e1f3((unsigned char *)&DAT_EXTMEM_075c, sizeof(DAT_EXTMEM_075c));
             DAT_EXTMEM_075c.cb[0] = 0;
             DAT_EXTMEM_075c.cblen = 6;
             DAT_EXTMEM_075c.dir = 2;
@@ -790,11 +792,11 @@ struct pair FUN_CODE_467e(void)
             DAT_EXTMEM_075c.st = 0;
             FUN_CODE_76b4();
             FUN_CODE_e44b(1);
-            if (DAT_EXTMEM_0780 == 0) {
+            if (DAT_EXTMEM_075c.res == 0) {
                 FUN_CODE_e4d9();
                 break;
             }
-            FUN_CODE_e1eb();
+            FUN_CODE_e1f3((unsigned char *)&DAT_EXTMEM_075c, sizeof(DAT_EXTMEM_075c));
             DAT_EXTMEM_075c.cb[0] = 3;
             DAT_EXTMEM_075c.cb[4] = 0x12;
             DAT_EXTMEM_075c.cblen = 6;
@@ -812,7 +814,7 @@ struct pair FUN_CODE_467e(void)
             DAT_EXTMEM_07d3[DAT_EXTMEM_075b]++;
         }
         if (FUN_CODE_e4c9()) return r;
-        FUN_CODE_e1eb();
+        FUN_CODE_e1f3((unsigned char *)&DAT_EXTMEM_075c, sizeof(DAT_EXTMEM_075c));
         DAT_EXTMEM_075c.cb[0] = 0x12;
         DAT_EXTMEM_075c.cb[4] = 0x24;
         DAT_EXTMEM_075c.cblen = 6;
@@ -824,7 +826,7 @@ struct pair FUN_CODE_467e(void)
         DAT_EXTMEM_075c.st = 0;
         FUN_CODE_76b4();
         FUN_CODE_e44b(1);
-        FUN_CODE_e1eb();
+        FUN_CODE_e1f3((unsigned char *)&DAT_EXTMEM_075c, sizeof(DAT_EXTMEM_075c));
         DAT_EXTMEM_075c.cb[0] = 0x25;
         DAT_EXTMEM_075c.cblen = 10;
         DAT_EXTMEM_075c.dir = 2;
@@ -872,7 +874,7 @@ void FUN_CODE_9734(unsigned long a)
     i = 0;
     while (i < n) {
         DAT_EXTMEM_f194 = (unsigned long)i * 0xff / n;
-        FUN_CODE_e1eb();
+        FUN_CODE_e1f3((unsigned char *)&DAT_EXTMEM_075c, sizeof(DAT_EXTMEM_075c));
         DAT_EXTMEM_075c.cb[0] = 0x2a;
         DAT_EXTMEM_075c.cb[1] = 8;
         DAT_EXTMEM_075c.cb[2] = a >> 24;
@@ -902,7 +904,7 @@ void FUN_CODE_9734(unsigned long a)
 
 void FUN_CODE_c60e(unsigned long a, unsigned long b, unsigned long c)
 {
-    FUN_CODE_e1eb();
+    FUN_CODE_e1f3((unsigned char *)&DAT_EXTMEM_075c, sizeof(DAT_EXTMEM_075c));
     DAT_EXTMEM_075c.cb[0] = 0x28;
     DAT_EXTMEM_075c.cb[2] = a >> 24;
     DAT_EXTMEM_075c.cb[3] = a >> 16;
@@ -917,4 +919,10 @@ void FUN_CODE_c60e(unsigned long a, unsigned long b, unsigned long c)
     DAT_EXTMEM_075c.id ^= 0x80000000;
     DAT_EXTMEM_075c.st = 0;
     FUN_CODE_76b4();
+}
+
+void FUN_CODE_e1f3(unsigned char *p, unsigned char n)
+{
+    unsigned char i;
+    for (i = 0; i < n; i++) p[i] = 0;
 }
