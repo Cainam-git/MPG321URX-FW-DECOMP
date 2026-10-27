@@ -17169,6 +17169,12 @@
       "name": "FUN_a01327e0",
       "status": "matched"
     },
+    "ram:a0132850": {
+      "by": "hand",
+      "comment": "tail call FUN_a00fe718(c) for c = 0..3",
+      "name": "FUN_a0132850",
+      "status": "matched"
+    },
     "ram:a01328d4": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
