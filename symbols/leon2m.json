@@ -17565,6 +17565,12 @@
       "name": "FUN_a01423a8",
       "status": "matched"
     },
+    "ram:a01423b0": {
+      "by": "hand",
+      "comment": "returns 0 for c = 0, 1 for c = 1, else 3",
+      "name": "FUN_a01423b0",
+      "status": "matched"
+    },
     "ram:a01423dc": {
       "by": "autoc",
       "comment": "FUN_a011eadc(); FUN_a01205c0(2); FUN_a011fd84(0, 0, 0, 0x500); FUN_a011fd84(1, 0, 0, 0x500)",
