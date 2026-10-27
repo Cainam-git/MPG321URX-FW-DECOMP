@@ -12078,6 +12078,13 @@
       "name": "FUN_a00f6fac",
       "status": "matched"
     },
+    "ram:a00f6fe4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Write the 3x3 coefficient rows and row values of a 12-halfword table to 0xcf00e98c..0xcf00e9a4 by mask",
+      "name": "FUN_a00f6fe4",
+      "status": "matched"
+    },
     "ram:a00f7434": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
