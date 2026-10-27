@@ -20899,6 +20899,13 @@
       "name": "FUN_a014e974",
       "status": "matched"
     },
+    "ram:a014ea54": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores c into the first zero nibble of DAT_a802cc82",
+      "name": "FUN_a014ea54",
+      "status": "matched"
+    },
     "ram:a014eaa8": {
       "by": "hand",
       "comment": "shifts DAT_a802cc82 right by 4 with c in the top nibble, returns the old low nibble",
