@@ -15658,6 +15658,13 @@
       "name": "FUN_a012c130",
       "status": "matched"
     },
+    "ram:a012c138": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores v >> 7 into nibble i of DAT_a802cb08",
+      "name": "FUN_a012c138",
+      "status": "matched"
+    },
     "ram:a012c16c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
