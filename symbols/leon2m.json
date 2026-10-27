@@ -8606,6 +8606,13 @@
       "name": "FUN_a00ca380",
       "status": "matched"
     },
+    "ram:a00ca410": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Command handler: digit 0-1, for 1 byte 0xa802d290+0x1e5 = 1, bit 8 of 0xa802cff4 cleared, FUN_a00dab4c(1), reply 5600+",
+      "name": "FUN_a00ca410",
+      "status": "matched"
+    },
     "ram:a00ca878": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
