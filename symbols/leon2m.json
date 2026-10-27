@@ -3470,6 +3470,13 @@
       "name": "FUN_a0093144",
       "status": "matched"
     },
+    "ram:a00932a8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "runs a fixed call sequence with DAT_a802afec = 0xe and clears bit 11 of DAT_a802d290 word +0xa8",
+      "name": "FUN_a00932a8",
+      "status": "matched"
+    },
     "ram:a0093334": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
