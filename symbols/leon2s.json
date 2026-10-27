@@ -4892,6 +4892,12 @@
       "name": "FLT_no_retrain",
       "status": "matched"
     },
+    "ram:a009d2f8": {
+      "by": "hand",
+      "comment": "Per-port DSC state step: mode-change checks on DAT_a807d7e0/DAT_a807d650, FUN_a00a1150, and the frame-count drift test on register 0x98",
+      "name": "FUN_a009d2f8",
+      "status": "matched"
+    },
     "ram:a009d5cc": {
       "by": "hand",
       "comment": "Port 0/1: register bit updates and FUN_a009fe60; returns 1 on the \"Run HDMI21 ModeDet\" or eq_done path, 0 on the eq_fail path",
