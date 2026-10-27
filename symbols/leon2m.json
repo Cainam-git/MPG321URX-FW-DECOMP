@@ -20034,6 +20034,12 @@
       "name": "FUN_a014f208",
       "status": "matched"
     },
+    "ram:a014f32c": {
+      "by": "hand",
+      "comment": "returns 1 when no nibble of DAT_a802cc80 equals c",
+      "name": "FUN_a014f32c",
+      "status": "matched"
+    },
     "ram:a014f620": {
       "by": "autoc",
       "comment": "When p1 == 0 calls FUN_a00fe880(0x11, m, 0xb) for m = 1, 2, 4, 8, 0x10; when p1 == 1 calls FUN_a00fe880(10, m, 0xb) for m = 8, 0x10, 0x20, 0x40, 0x80; other p1 return without a call",
