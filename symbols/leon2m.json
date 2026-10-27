@@ -7089,6 +7089,13 @@
       "name": "FUN_a00b8e7c",
       "status": "matched"
     },
+    "ram:a00b9c68": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Max/min of three shorts and a scaled 0..360 value from their differences, 0xffff when the spread is 3 or less",
+      "name": "FUN_a00b9c68",
+      "status": "matched"
+    },
     "ram:a00ba068": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
