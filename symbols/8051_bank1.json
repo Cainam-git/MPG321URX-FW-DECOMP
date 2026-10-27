@@ -749,6 +749,13 @@
       "name": "FUN_CODE_5dcb",
       "status": "matched"
     },
+    "CODE:5f73": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "sets (on) or clears the mask bits of register sel = 1..13 (ORed with its partner register) or of port P3 (sel 14)",
+      "name": "FUN_CODE_5f73",
+      "status": "matched"
+    },
     "CODE:611a": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
