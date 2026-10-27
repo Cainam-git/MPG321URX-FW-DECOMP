@@ -12017,6 +12017,13 @@
       "name": "FUN_a010795c",
       "status": "matched"
     },
+    "ram:a01079c0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "copies five bytes from p to DAT_a8027a82",
+      "name": "FUN_a01079c0",
+      "status": "matched"
+    },
     "ram:a01079f4": {
       "by": "hand",
       "comment": "stores its two arguments to bytes 3 and 4 of DAT_a8027a82",
