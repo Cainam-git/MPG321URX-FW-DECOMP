@@ -12698,6 +12698,13 @@
       "name": "FUN_a010d914",
       "status": "matched"
     },
+    "ram:a010daf8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns word k of register block DAT_0019aec4[c] (c > 1 -> 0)",
+      "name": "FUN_a010daf8",
+      "status": "matched"
+    },
     "ram:a010de54": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
