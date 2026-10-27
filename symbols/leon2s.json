@@ -2390,6 +2390,12 @@
       "name": "FUN_a0078fe8",
       "status": "matched"
     },
+    "ram:a0079054": {
+      "by": "hand",
+      "comment": "Reads the 0x1ea0/0x1ea4 error values of a port, resets on errors, else writes back the CCT/RCT fields and prints them",
+      "name": "FUN_a0079054",
+      "status": "matched"
+    },
     "ram:a0079460": {
       "by": "hand",
       "comment": "runs the EQ scan state functions from DAT_a00b3a20 until one returns 0 and, in state 0x10, prints the RVGA values and sets the done byte",
