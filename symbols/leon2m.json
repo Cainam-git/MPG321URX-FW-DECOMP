@@ -4851,6 +4851,13 @@
       "name": "FUN_a009b4e8",
       "status": "matched"
     },
+    "ram:a009b59c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Mode byte 0xa802cff4+0xa dispatch with record updates and FUN_a00b1004 calls, then FUN_a00b88b8",
+      "name": "FUN_a009b59c",
+      "status": "matched"
+    },
     "ram:a009b864": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
