@@ -14290,7 +14290,7 @@
     "ram:a0113810": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "sets or clears bit 0 of register 0xcf013428 inside a 0xcf03c840 acquire/release sequence",
+      "comment": "sets or clears bit 0 of register 0xcf013428 between a 0xcf03c840 = 1 wait loop and 0xcf03c840 = 0",
       "name": "FUN_a0113810",
       "status": "matched"
     },
