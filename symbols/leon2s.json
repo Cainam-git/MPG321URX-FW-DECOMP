@@ -9044,6 +9044,12 @@
       "name": "FUN_a00dac00",
       "status": "matched"
     },
+    "ram:a00db53c": {
+      "by": "hand",
+      "comment": "Sends the 16-byte blocks of row DAT_a80787fe of DAT_a807a520 through func_0xa0f963d4 after the 0x11/0x14 entry handling, then steps the row index",
+      "name": "FUN_a00db53c",
+      "status": "matched"
+    },
     "ram:a00db9d4": {
       "by": "hand",
       "comment": "Builds a cleared stack message with fixed header bit-fields and passes it to FUN_a00d6a54(&m, 1, 1)",
