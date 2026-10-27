@@ -2864,6 +2864,13 @@
       "name": "FUN_a008cdf0",
       "status": "matched"
     },
+    "ram:a008ce90": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Fixed call sequence, seven ROM strings, the byte string of 0xa802d274 and two number fields of word 0xa802e1a8",
+      "name": "FUN_a008ce90",
+      "status": "matched"
+    },
     "ram:a008d2e0": {
       "by": "autoc",
       "comment": "FUN_a008ce90(); FUN_a0090fa0(0x113, p2, p3, p4, p5, p6)",
