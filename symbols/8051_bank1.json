@@ -2249,6 +2249,13 @@
       "name": "FUN_CODE_db7d",
       "status": "matched"
     },
+    "CODE:db96": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "sets bit 0x16, XDATA 0xA780 = (FUN_CODE_da74() != 0), calls FUN_CODE_a959",
+      "name": "FUN_CODE_db96",
+      "status": "matched"
+    },
     "CODE:dbdf": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
