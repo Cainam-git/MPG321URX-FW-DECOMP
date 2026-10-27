@@ -14322,6 +14322,12 @@
       "name": "FUN_a0123304",
       "status": "matched"
     },
+    "ram:a0123344": {
+      "by": "hand",
+      "comment": "tail call FUN_a00f2ca8(blk, 0x9c, 4, on == 1)",
+      "name": "FUN_a0123344",
+      "status": "matched"
+    },
     "ram:a0123384": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
