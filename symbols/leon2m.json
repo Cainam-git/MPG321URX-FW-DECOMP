@@ -12596,6 +12596,13 @@
       "name": "FUN_a0104e80",
       "status": "matched"
     },
+    "ram:a0104eb0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "applies FUN_a0104e50(v), FUN_a0104e80(v) and FUN_a0104cb0() inline",
+      "name": "FUN_a0104eb0",
+      "status": "matched"
+    },
     "ram:a0105150": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
