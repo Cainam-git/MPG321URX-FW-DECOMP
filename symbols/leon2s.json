@@ -7966,6 +7966,12 @@
       "name": "FUN_a00ca6d4",
       "status": "matched"
     },
+    "ram:a00ca8c4": {
+      "by": "hand",
+      "comment": "Sets record state 1, checks DAT_a807d250, reads n bytes into DAT_a807ce50, copies parts of it to DAT_a807ce38/DAT_a807ce48 with wait loops, then calls FUN_a00c99a4 and FUN_a00ca4e8 when bit 19 is clear",
+      "name": "FUN_a00ca8c4",
+      "status": "matched"
+    },
     "ram:a00cab10": {
       "by": "hand",
       "comment": "compares the read-back buffers of a port, writes its 5-byte row to registers 0x10..0x14 and updates the DAT_a8078bb0 record flags",
