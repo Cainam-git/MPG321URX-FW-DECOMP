@@ -3177,6 +3177,12 @@
       "name": "FUN_a0089058",
       "status": "matched"
     },
+    "ram:a0089090": {
+      "by": "hand",
+      "comment": "Polls the HPD state of the selected ports, collects action flags and runs the flagged steps with trace prints",
+      "name": "eDP_IsHPDAction_Off",
+      "status": "matched"
+    },
     "ram:a0089420": {
       "by": "autoc",
       "comment": "returns 0",
