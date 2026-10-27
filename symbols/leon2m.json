@@ -11560,6 +11560,13 @@
       "name": "FUN_a00f6d80",
       "status": "matched"
     },
+    "ram:a00f6dd8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "flips bit 7 of c and passes it to _DAT_a802b7b8(1, v) or writes it to register 0xcf00ef08",
+      "name": "FUN_a00f6dd8",
+      "status": "matched"
+    },
     "ram:a00f6e30": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
