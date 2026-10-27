@@ -6548,6 +6548,13 @@
       "name": "FUN_a00babe4",
       "status": "matched"
     },
+    "ram:a00bac04": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores 35 36 30 30 ee 0d to DAT_a802d078[0..5]",
+      "name": "FUN_a00bac04",
+      "status": "matched"
+    },
     "ram:a00bac3c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
