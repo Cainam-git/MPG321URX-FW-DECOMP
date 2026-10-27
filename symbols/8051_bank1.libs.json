@@ -128,6 +128,8 @@
   "?_FUN_CODE_c73e?BYTE": 42169,
   "?_printf?BYTE": 42263,
   "data:?FUN_CODE_beb5?BYTE": 236,
+  "data:FUN_CODE_0006:DAT_INTMEM_47": 71,
+  "data:FUN_CODE_000e:DAT_INTMEM_49": 73,
   "data:FUN_CODE_0b0d:?_FUN_CODE_738c?BIT": 1,
   "data:FUN_CODE_0b0d:?_FUN_CODE_c43e?BIT": 1,
   "data:FUN_CODE_0b0d:f": 0,

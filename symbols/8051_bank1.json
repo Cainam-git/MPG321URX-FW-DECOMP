@@ -1394,6 +1394,13 @@
       "name": "FUN_CODE_bfdd",
       "status": "matched"
     },
+    "CODE:c03f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "copies bits 0..3 of m into XDATA 0xA1E7, then sets the low nibbles of 0xF021 and 0xF022 to it",
+      "name": "FUN_CODE_c03f",
+      "status": "matched"
+    },
     "CODE:c0a1": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
