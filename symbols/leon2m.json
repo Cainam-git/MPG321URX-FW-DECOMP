@@ -7984,6 +7984,13 @@
       "name": "FUN_a00bf6b0",
       "status": "matched"
     },
+    "ram:a00bf7dc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Reply: digit chosen from the (x, y) pair of FUN_a0145660(0, 7/8), buffer filled and sent",
+      "name": "FUN_a00bf7dc",
+      "status": "matched"
+    },
     "ram:a00bfb28": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
