@@ -4581,6 +4581,12 @@
       "name": "FUN_a009645c",
       "status": "matched"
     },
+    "ram:a0096538": {
+      "by": "hand",
+      "comment": "Sets the FRL PLL of port for rate: rate-range flags, PLL steps, prints the target and programs the r18 register block",
+      "name": "FRL_PLL",
+      "status": "matched"
+    },
     "ram:a0096a6c": {
       "by": "hand",
       "comment": "Clears the first word of the two 24-byte (0x18) records at 0xa807d650 and 0xa807d668: loop i = 0..1 with i & 0xff, offset i*24 computed as (i+i+i) << 3, clr [%o3 + %o5].",
