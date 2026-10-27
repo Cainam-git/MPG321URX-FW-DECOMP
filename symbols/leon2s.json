@@ -4886,6 +4886,12 @@
       "name": "FUN_a0098b60",
       "status": "matched"
     },
+    "ram:a0098bb0": {
+      "by": "hand",
+      "comment": "Reads the four SCDC error counters of port 2 or 3 into the record and returns a bit per channel above the limit",
+      "name": "DRV_HDMI21_RX_SCDC_Chk_Err",
+      "status": "matched"
+    },
     "ram:a0098e88": {
       "by": "hand",
       "comment": "LTS SCDC error check for ports 0 and 1: rate and lock checks, per-lane error counting and PreAEQ index selection",
