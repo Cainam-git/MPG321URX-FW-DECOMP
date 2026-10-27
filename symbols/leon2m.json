@@ -18048,6 +18048,13 @@
       "name": "FUN_a0134184",
       "status": "matched"
     },
+    "ram:a01341dc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Register selected by index, read, bits set and cleared through func_0x4008f3f4 0x19/0x1a, address index through 0x18",
+      "name": "FUN_a01341dc",
+      "status": "matched"
+    },
     "ram:a0134394": {
       "by": "hand",
       "comment": "Prints MailBox_LoadFE2P with a and b when FUN_a00dd614(0x20), then func_0x4008f3f4(0x14, b, a >> 8, a & 0xff, 1) and func_0x4008f3f4(0x12, 0, 0, 0, 2)",
