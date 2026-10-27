@@ -11127,6 +11127,13 @@
       "name": "FUN_a00e4538",
       "status": "matched"
     },
+    "ram:a00e47f8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3",
+      "comment": "Configures and checks the registers of one byte index through FUN_a00e05d8 / FUN_a00e0788, returns 0 or -1",
+      "name": "FUN_a00e47f8",
+      "status": "matched"
+    },
     "ram:a00e52e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
