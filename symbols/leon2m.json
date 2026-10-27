@@ -21147,6 +21147,13 @@
       "name": "FUN_a0147d0c",
       "status": "matched"
     },
+    "ram:a0147d70": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Checks a file name's 4-digit FileNameChkSum against a byte sum of the data blocks; returns 2 / 3, or 5 for a long name",
+      "name": "FUN_a0147d70",
+      "status": "matched"
+    },
     "ram:a0148120": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
