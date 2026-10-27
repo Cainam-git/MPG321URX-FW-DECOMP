@@ -16775,6 +16775,13 @@
       "name": "FUN_a013f370",
       "status": "matched"
     },
+    "ram:a0140034": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns halfword +0xa of 0x24-byte entry i of DAT_001a5a16",
+      "name": "FUN_a0140034",
+      "status": "matched"
+    },
     "ram:a0140058": {
       "by": "autoc",
       "comment": "returns bit 9 of halfword +0 of the 0x2A-byte record p at 0xA802E224",
