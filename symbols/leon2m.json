@@ -11763,6 +11763,13 @@
       "name": "FUN_a0106274",
       "status": "matched"
     },
+    "ram:a0106294": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes 9 (c == 1) or 0 to register 0xcf00ec00",
+      "name": "FUN_a0106294",
+      "status": "matched"
+    },
     "ram:a01062c0": {
       "by": "autoc",
       "comment": "p1 = p1 & 0xff; returns FUN_a00f25f8(p1, 0x68)",
