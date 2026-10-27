@@ -12507,6 +12507,13 @@
       "name": "FUN_a0104c34",
       "status": "matched"
     },
+    "ram:a0104cb0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets or clears bit 0 of registers 0xcf012890/0xcf012990 from bit 26 of *DAT_a802d6a4",
+      "name": "FUN_a0104cb0",
+      "status": "matched"
+    },
     "ram:a0104d18": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
