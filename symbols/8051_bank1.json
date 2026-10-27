@@ -1843,6 +1843,13 @@
       "name": "FUN_CODE_d3eb",
       "status": "matched"
     },
+    "CODE:d41d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "clears the XDATA record at 0xA3E5 (byte 0xA3E7, words 0xA3E8, 0xA3E5, 0xA3EA, 32 longs at 0xA3EC)",
+      "name": "FUN_CODE_d41d",
+      "status": "matched"
+    },
     "CODE:d44e": {
       "by": "hand",
       "comment": "delay: n++; t0 = d94a(); while (d94a() - t0 < n) f00a = 0x55",
