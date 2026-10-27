@@ -2361,7 +2361,7 @@
     },
     "ram:a007731c": {
       "by": "hand",
-      "comment": "Writes the stored RCT/CFT values of the three channels back through FUN_a00a7488 and sets the next EQ state",
+      "comment": "Writes the rct/cft entries of Ch0..Ch2 through FUN_a00a7488 and sets word 0 of ARR_a807ccc4[port] to 0xb or 0xf",
       "name": "DRV_HDMI_EQScan_FSM_PHY_RunAEQ",
       "status": "matched"
     },
