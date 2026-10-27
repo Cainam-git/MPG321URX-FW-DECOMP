@@ -8880,6 +8880,13 @@
       "name": "FUN_a00d3d30",
       "status": "matched"
     },
+    "ram:a00d3dbc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "rewrites *p as (*p - 0x7e) * 0x381 / 0x381 + 0x7e under two DAT_a802d290 flag tests",
+      "name": "FUN_a00d3dbc",
+      "status": "matched"
+    },
     "ram:a00d4084": {
       "by": "hand",
       "comment": "limits byte 0xa802d2d9 to 5 and tail-calls FUN_a01471a0(0, 0xd, 3 * value)",
