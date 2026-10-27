@@ -8568,6 +8568,12 @@
       "of": "FUN_a00d20a4",
       "status": "matched"
     },
+    "ram:a00cf194": {
+      "by": "hand",
+      "comment": "maps 5, 6, 8, 0xb to 1, 4, 7, 0x17 (else 0)",
+      "name": "FUN_a00cf194",
+      "status": "matched"
+    },
     "ram:a00cf1ec": {
       "by": "hand",
       "comment": "returns byte +0 of the DAT_a8025c58 entry whose byte +1 is c, else 0",
