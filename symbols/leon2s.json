@@ -5929,6 +5929,12 @@
       "name": "FUN_a00a507c",
       "status": "matched"
     },
+    "ram:a00a5148": {
+      "by": "hand",
+      "comment": "Writes a clock-derived 24-bit value to three byte registers by mode, with a range shift written under the 0xcf03c840 lock",
+      "name": "FUN_a00a5148",
+      "status": "matched"
+    },
     "ram:a00a535c": {
       "by": "near",
       "cflags": "-mcpu=v8 -Os",
