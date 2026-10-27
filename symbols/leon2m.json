@@ -4949,6 +4949,13 @@
       "name": "FUN_a009ccc0",
       "status": "matched"
     },
+    "ram:a009cd74": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Steps word 0xa802afec up through rows 0x86.. (mod 12) until FUN_a00aad30 accepts, with page calls",
+      "name": "FUN_a009cd74",
+      "status": "matched"
+    },
     "ram:a009cfd4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
