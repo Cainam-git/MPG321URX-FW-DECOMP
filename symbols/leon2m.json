@@ -10191,6 +10191,13 @@
       "name": "FUN_a00f19a4",
       "status": "matched"
     },
+    "ram:a00f19dc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes byte v to register 0xcf000000 + 4 * (DAT_0019a2d8[c] + r)",
+      "name": "FUN_a00f19dc",
+      "status": "matched"
+    },
     "ram:a00f1a18": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
