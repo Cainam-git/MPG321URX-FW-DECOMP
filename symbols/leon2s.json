@@ -3790,6 +3790,12 @@
       "name": "FUN_a008fb5c",
       "status": "matched"
     },
+    "ram:a008fb7c": {
+      "by": "hand",
+      "comment": "Sets the port bits in 0xcf00f224/0xcf011640 from FUN_a00a657c/FUN_a008fb5c and writes the bit-depth code through FUN_a00a7488; returns 8/10/12/16",
+      "name": "FUN_a008fb7c",
+      "status": "matched"
+    },
     "ram:a008fdc8": {
       "by": "hand",
       "comment": "Masks param_1 to a byte, calls FUN_a008fb5c with it, then calls FUN_a00a67b8 with the same first three arguments and a fourth argument of 1 if (result & 0xff) == 1, else 0. The condition is evaluated before the branch and each branch has its own call sequence.",
