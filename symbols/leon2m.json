@@ -15105,6 +15105,13 @@
       "name": "FUN_a0122d5c",
       "status": "matched"
     },
+    "ram:a0122dbc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes v to register 0x7600 + b with 0xcf03d024 set to a (saved and restored)",
+      "name": "FUN_a0122dbc",
+      "status": "matched"
+    },
     "ram:a0122e24": {
       "by": "hand",
       "comment": "writes a, 0x76, b to 0xcf03d024/0xcf011820/0xcf011824, reads 0xcf011828 and restores the saved bytes",
