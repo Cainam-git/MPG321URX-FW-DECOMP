@@ -13791,6 +13791,13 @@
       "name": "FUN_a010edbc",
       "status": "matched"
     },
+    "ram:a010ef64": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "clears bit 14 of word 1 of the DAT_0019aed8/DAT_0019aecc register blocks of c (all three for c > 2)",
+      "name": "FUN_a010ef64",
+      "status": "matched"
+    },
     "ram:a010f064": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
