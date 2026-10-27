@@ -1446,10 +1446,19 @@
       "name": "FUN_CODE_bcad",
       "status": "matched"
     },
+    "CODE:bd18": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_bd1b, in FUN_CODE_bd1b's code segment; emitted by compiling src/8051_bank1/FUN_CODE_bd1b.c, bytes judged with FUN_CODE_bd1b over 0xbd18..0xbd81",
+      "kind": "common_entry",
+      "module": "FUN_CODE_bd1b",
+      "name": "FUN_CODE_bd18",
+      "of": "FUN_CODE_bd1b",
+      "status": "matched"
+    },
     "CODE:bd1b": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "OR the source byte and the mask into the target byte through the pointers at 0xA709 / 0xA701, then wait for the mask bits (IDATA 0x60 counter)",
+      "comment": "OR the source byte and the mask into the target byte through the pointers at 0xA709 / 0xA701, then wait for the mask bits (IDATA 0x60 counter); module with its common-entry block 0xBD18",
       "name": "FUN_CODE_bd1b",
       "status": "matched"
     },
