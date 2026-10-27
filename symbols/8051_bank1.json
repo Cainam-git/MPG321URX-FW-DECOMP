@@ -1989,6 +1989,13 @@
       "name": "FUN_CODE_d7d2",
       "status": "matched"
     },
+    "CODE:d7f7": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "bit: FUN_CODE_da74() == 0 and XDATA 0xA672 > 0xD4, or == 1 and 0xA673 > 0xD4 (bit 0x1D)",
+      "name": "FUN_CODE_d7f7",
+      "status": "matched"
+    },
     "CODE:d81c": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
