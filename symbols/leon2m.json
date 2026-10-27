@@ -13692,6 +13692,12 @@
       "name": "FUN_a011e4c8",
       "status": "matched"
     },
+    "ram:a011e5fc": {
+      "by": "hand",
+      "comment": "splits v into registers 0xcf016184 (bits 4..5) and 0xcf016188 (low byte)",
+      "name": "FUN_a011e5fc",
+      "status": "matched"
+    },
     "ram:a011e630": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
