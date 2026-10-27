@@ -6319,6 +6319,12 @@
       "name": "FUN_a00a8f28",
       "status": "matched"
     },
+    "ram:a00a9020": {
+      "by": "hand",
+      "comment": "Builds a 9-byte 0x82/2/0x0d packet from four input bytes, with checksum in byte 3",
+      "name": "FUN_a00a9020",
+      "status": "matched"
+    },
     "ram:a00a9380": {
       "by": "hand",
       "comment": "fills an 11-byte record with constants, bytes 3 and 10 by mode 1",
