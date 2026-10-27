@@ -1,6 +1,6 @@
 /* FUN_a014dd98 (leon2m 0xa014dd98-0xa014de48, 176 bytes), flags -mcpu=v8 -O3 -g.
  * The FUN_a014de48 operation followed by a call: maps c = 0..3 to k = c (other values to 0xff); when k is at most
- * 4, stores b & 1 to bit 4 of the halfword at +0 of the DAT_a802e224 entry of the port of DAT_a802df30[k] and calls
+ * 4, stores b & 1 to bit 4 of the halfword at +0 of the DAT_a802e224 entry of entry DAT_a802df30[k] and calls
  * FUN_a01312d4(k, b) as a tail call. Called by FUN_a00830f4, FUN_a008454c, FUN_a00d5eac, FUN_a00d5f3c,
  * FUN_a00db738, FUN_a00dbcf0, FUN_a00dc3dc. Source form: the form of FUN_a014de48 (switch mapping c to k, one-bit
  * bit-field).
