@@ -1996,6 +1996,12 @@
       "name": "FUN_CODE_d81c",
       "status": "matched"
     },
+    "CODE:d83f": {
+      "by": "hand",
+      "comment": "FUN_CODE_db64(XDATA 0xA1E6), FUN_CODE_d021(), prints it with k %BX, increments 0xA1E6",
+      "name": "FUN_CODE_d83f",
+      "status": "matched"
+    },
     "CODE:d884": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
