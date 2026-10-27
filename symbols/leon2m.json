@@ -7055,6 +7055,13 @@
       "name": "FUN_a00b77b4",
       "status": "matched"
     },
+    "ram:a00b789c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Calls FUN_a0146b50(0x111, 0) and FUN_a0146b6c(0, 0), passes two FUN_a00a3844 table entries to FUN_a00a31a4, then tail-calls FUN_a00a813c(1, bit 15 of DAT_a802d290 + 0xa8, 1)",
+      "name": "FUN_a00b789c",
+      "status": "matched"
+    },
     "ram:a00b7944": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
