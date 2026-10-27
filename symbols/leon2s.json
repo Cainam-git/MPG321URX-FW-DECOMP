@@ -8184,6 +8184,12 @@
       "name": "FUN_a00cfb20",
       "status": "matched"
     },
+    "ram:a00cfb40": {
+      "by": "hand",
+      "comment": "Sets record state bits, reads two 16-byte blocks into DAT_a807cd88, fills DAT_a807d088 from FUN_a00c7770 and sets the state bits from the first difference",
+      "name": "FUN_a00cfb40",
+      "status": "matched"
+    },
     "ram:a00cfd38": {
       "by": "hand",
       "comment": "reads the 0x69000 data blocks into the DAT_a807ce50/DAT_a807cf08 buffers and sets the DAT_a8078bb0 record flags of a port",
