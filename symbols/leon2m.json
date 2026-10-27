@@ -14015,6 +14015,12 @@
       "name": "FUN_a012560c",
       "status": "matched"
     },
+    "ram:a0125628": {
+      "by": "hand",
+      "comment": "returns byte +0xd of 0x16-byte entry i of the table at 0x1a42a8",
+      "name": "FUN_a0125628",
+      "status": "matched"
+    },
     "ram:a0125644": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
