@@ -10874,6 +10874,12 @@
       "name": "FUN_a00fd820",
       "status": "matched"
     },
+    "ram:a00fd980": {
+      "by": "hand",
+      "comment": "stores a non-zero c to DAT_a802c980 and returns 1, else returns 0",
+      "name": "FUN_a00fd980",
+      "status": "matched"
+    },
     "ram:a00fd9a0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
