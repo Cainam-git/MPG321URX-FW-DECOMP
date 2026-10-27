@@ -6220,6 +6220,13 @@
       "name": "FUN_a00a9f30",
       "status": "matched"
     },
+    "ram:a00aa0e8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Selects a flag bit by index and passes the derived values to FUN_a00b32e4, FUN_a00a9468 and FUN_a00b34d4",
+      "name": "FUN_a00aa0e8",
+      "status": "matched"
+    },
     "ram:a00aa4c0": {
       "by": "autoc",
       "comment": "FUN_a00a9468(1, 2); FUN_a00b34d4(0, 1, p3, p4, p5, p6)",
