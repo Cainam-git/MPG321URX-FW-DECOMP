@@ -14975,6 +14975,13 @@
       "name": "FUN_a012bae0",
       "status": "matched"
     },
+    "ram:a012baf0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "clears halfword +0x1c of 0x24-byte entry i of DAT_a802d8dc",
+      "name": "FUN_a012baf0",
+      "status": "matched"
+    },
     "ram:a012bb94": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
