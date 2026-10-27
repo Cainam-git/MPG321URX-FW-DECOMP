@@ -5011,6 +5011,12 @@
       "name": "FUN_a00a0560",
       "status": "matched"
     },
+    "ram:a00a0588": {
+      "by": "hand",
+      "comment": "Returns 1 when the enable and status bits of interrupt id (table 0xa00b4a00) are set in the register block of port",
+      "name": "FUN_a00a0588",
+      "status": "matched"
+    },
     "ram:a00a0798": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a00a07b8; proven entry for entry by its exact check",
