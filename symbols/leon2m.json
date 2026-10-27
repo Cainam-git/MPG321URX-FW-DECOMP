@@ -3435,6 +3435,13 @@
       "name": "FUN_a0092b18",
       "status": "matched"
     },
+    "ram:a0092bb4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "runs a fixed call sequence from DAT_a802afec - 42 and stores 9 to DAT_a802afec",
+      "name": "FUN_a0092bb4",
+      "status": "matched"
+    },
     "ram:a0092c58": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
