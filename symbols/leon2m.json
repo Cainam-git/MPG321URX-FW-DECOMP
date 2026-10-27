@@ -21089,6 +21089,12 @@
       "name": "FUN_a014f32c",
       "status": "matched"
     },
+    "ram:a014f374": {
+      "by": "hand",
+      "comment": "tail call FUN_a0138674(i, v), i the index of nibble c in DAT_a802cc80, when found",
+      "name": "FUN_a014f374",
+      "status": "matched"
+    },
     "ram:a014f620": {
       "by": "autoc",
       "comment": "When p1 == 0 calls FUN_a00fe880(0x11, m, 0xb) for m = 1, 2, 4, 8, 0x10; when p1 == 1 calls FUN_a00fe880(10, m, 0xb) for m = 8, 0x10, 0x20, 0x40, 0x80; other p1 return without a call",
