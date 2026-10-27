@@ -3878,6 +3878,13 @@
       "name": "FUN_a0095c94",
       "status": "matched"
     },
+    "ram:a0095d5c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "syncs DAT_a802d290[0x15b] from DAT_a8025c56 and runs a fixed call sequence with DAT_a802afec = 0xf",
+      "name": "FUN_a0095d5c",
+      "status": "matched"
+    },
     "ram:a0095dd8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
