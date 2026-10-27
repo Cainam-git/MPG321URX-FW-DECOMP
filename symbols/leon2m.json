@@ -14093,6 +14093,13 @@
       "name": "FUN_a01136a0",
       "status": "matched"
     },
+    "ram:a0113810": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets or clears bit 0 of register 0xcf013428 inside a 0xcf03c840 acquire/release sequence",
+      "name": "FUN_a0113810",
+      "status": "matched"
+    },
     "ram:a0113cd8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
