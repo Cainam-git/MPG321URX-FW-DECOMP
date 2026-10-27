@@ -9050,6 +9050,12 @@
       "name": "FUN_a00db53c",
       "status": "matched"
     },
+    "ram:a00db784": {
+      "by": "hand",
+      "comment": "Reads the 48-byte row DAT_a80787fd of DAT_a8079c98 from 0x1400 or 0x1600 by flag bits of DAT_a8078841, steps the row index and handles a 0x11 entry",
+      "name": "FUN_a00db784",
+      "status": "matched"
+    },
     "ram:a00db9d4": {
       "by": "hand",
       "comment": "Builds a cleared stack message with fixed header bit-fields and passes it to FUN_a00d6a54(&m, 1, 1)",
