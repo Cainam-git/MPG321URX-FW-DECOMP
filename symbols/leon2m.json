@@ -18150,7 +18150,7 @@
     },
     "ram:a0137864": {
       "by": "hand",
-      "comment": "sends the 2-byte message {2 + c, v} through FUN_a01370dc(2, 2, buf, 0)",
+      "comment": "calls FUN_a01370dc(2, 2, {2 + c, v, 0, 0}, 0) (first byte 0 for c > 3)",
       "name": "FUN_a0137864",
       "status": "matched"
     },
