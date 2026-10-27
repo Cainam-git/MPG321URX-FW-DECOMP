@@ -17456,6 +17456,13 @@
       "name": "FUN_a0146108",
       "status": "matched"
     },
+    "ram:a014611c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns 0x14000 for c = 0, else 0x6000",
+      "name": "FUN_a014611c",
+      "status": "matched"
+    },
     "ram:a014613c": {
       "by": "autoc",
       "comment": "FUN_a0119640(p1, p3 & 0xff); FUN_a0119658(p2, p3 & 0xff)",
