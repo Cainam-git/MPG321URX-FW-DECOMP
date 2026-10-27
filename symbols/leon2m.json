@@ -10440,6 +10440,13 @@
       "name": "FUN_a00f39f8",
       "status": "matched"
     },
+    "ram:a00f3a04": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "copies the 16-byte record *p to DAT_a802b79c",
+      "name": "FUN_a00f3a04",
+      "status": "matched"
+    },
     "ram:a00f40e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
