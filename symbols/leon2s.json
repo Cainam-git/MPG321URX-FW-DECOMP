@@ -8226,6 +8226,12 @@
       "name": "FUN_a00d01f4",
       "status": "matched"
     },
+    "ram:a00d03a0": {
+      "by": "hand",
+      "comment": "Switches on byte 2 of record port of DAT_a8078bb0 (0..0x4f) and tail-calls the handler of that value with port",
+      "name": "FUN_a00d03a0",
+      "status": "matched"
+    },
     "ram:a00d0530": {
       "by": "autoc",
       "comment": "Calls FUN_a00cfab8(), stores p2 in word p1 of the word table at 0xA8078B60 and returns p1 * 4",
