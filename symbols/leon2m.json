@@ -9473,6 +9473,13 @@
       "name": "FUN_a00e0c68",
       "status": "matched"
     },
+    "ram:a00e0c88": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores v to DAT_a802b554 when DAT_a802b548 is 0",
+      "name": "FUN_a00e0c88",
+      "status": "matched"
+    },
     "ram:a00e0ca8": {
       "by": "hand",
       "comment": "empty routine",
