@@ -13648,6 +13648,13 @@
       "name": "FUN_a011b3e8",
       "status": "matched"
     },
+    "ram:a011b4b0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes v to register 0xcf011780 or 0xcf011794 (c), then delays 0xa0 nops",
+      "name": "FUN_a011b4b0",
+      "status": "matched"
+    },
     "ram:a011b4f0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
