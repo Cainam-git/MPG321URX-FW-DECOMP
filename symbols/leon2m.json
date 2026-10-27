@@ -13728,6 +13728,13 @@
       "name": "FUN_a010c4a0",
       "status": "matched"
     },
+    "ram:a010c54c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores v to s->b26 and to word 5 of the DAT_0019aec4/DAT_0019aebc register blocks of c",
+      "name": "FUN_a010c54c",
+      "status": "matched"
+    },
     "ram:a010c61c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
