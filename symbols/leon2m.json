@@ -11914,6 +11914,13 @@
       "name": "FUN_a00f8938",
       "status": "matched"
     },
+    "ram:a00f8a98": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Block p set-up from FUN_a00fd820 type, sizes /4 rounded up; for p 1 a retry loop on register 0x4a bits 0..1",
+      "name": "FUN_a00f8a98",
+      "status": "matched"
+    },
     "ram:a00f8cc4": {
       "by": "autoc",
       "comment": "FUN_a00f1ed8(p1, 0x41, (p2 & 0xffff) >> 2)",
