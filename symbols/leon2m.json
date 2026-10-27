@@ -13658,6 +13658,13 @@
       "name": "FUN_a010b948",
       "status": "matched"
     },
+    "ram:a010b96c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns whether the status bit selected by c is set in either register of its pair",
+      "name": "FUN_a010b96c",
+      "status": "matched"
+    },
     "ram:a010baac": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
