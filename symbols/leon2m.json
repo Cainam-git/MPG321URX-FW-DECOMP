@@ -8634,6 +8634,13 @@
       "name": "FUN_a00cfa68",
       "status": "matched"
     },
+    "ram:a00d0e48": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "builds a reply header in p from mode and req[3]/req[6], copies req[3..6]",
+      "name": "FUN_a00d0e48",
+      "status": "matched"
+    },
     "ram:a00d0f68": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
