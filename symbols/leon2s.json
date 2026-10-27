@@ -3357,6 +3357,12 @@
       "name": "FUN_a008ae18",
       "status": "matched"
     },
+    "ram:a008ae80": {
+      "by": "hand",
+      "comment": "mode switch with on/off byte: register bits and field writes through FUN_a00a67b8 / FUN_a00a6c98",
+      "name": "FUN_a008ae80",
+      "status": "matched"
+    },
     "ram:a008b2bc": {
       "by": "autoc",
       "comment": "Returns 1 when bits 4-7 of register 0xCF011258 or bits 4-7 of register 0xCF011254 equal p1 & 0xf, otherwise 0",
