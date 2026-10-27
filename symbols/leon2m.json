@@ -17949,6 +17949,13 @@
       "name": "FUN_a01370ac",
       "status": "matched"
     },
+    "ram:a01370dc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sends a checksummed eight-word command through mailbox portal 1 offset 0x80, optional wait for the reply slot",
+      "name": "FUN_a01370dc",
+      "status": "matched"
+    },
     "ram:a013730c": {
       "by": "hand",
       "comment": "Zeroes the local unsigned int local_18[3] (std) and then stores param_1 into its first byte with stb %i0, written through an unsigned char pointer cast rather than local_18[0] = param_1.",
