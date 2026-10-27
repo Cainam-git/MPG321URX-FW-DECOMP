@@ -20996,6 +20996,12 @@
       "name": "FUN_a014dc28",
       "status": "matched"
     },
+    "ram:a014dc74": {
+      "by": "hand",
+      "comment": "tail call FUN_a00fe880 with (0xd,0x40)/(0xf,4)/(0xd,0x80)/(0xf,8) for c = 1..4 and m = on ? 0xf : 0",
+      "name": "FUN_a014dc74",
+      "status": "matched"
+    },
     "ram:a014dd10": {
       "by": "hand",
       "comment": "tail call to func_0x4008ced8",
