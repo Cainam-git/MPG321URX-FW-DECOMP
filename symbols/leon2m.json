@@ -10808,6 +10808,13 @@
       "name": "FUN_a00f1374",
       "status": "matched"
     },
+    "ram:a00f14e4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the halfword from registers DAT_a8026a7e[c] + k and + 1 (c > 3 -> 0)",
+      "name": "FUN_a00f14e4",
+      "status": "matched"
+    },
     "ram:a00f154c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
