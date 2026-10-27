@@ -13102,6 +13102,13 @@
       "name": "FUN_a0105150",
       "status": "matched"
     },
+    "ram:a0105790": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Computes a 16-bit value from a record table entry and a 64-bit field and writes it to registers 0x62 and 0x6f of block ch",
+      "name": "FUN_a0105790",
+      "status": "matched"
+    },
     "ram:a0105910": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
