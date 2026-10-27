@@ -22232,6 +22232,13 @@
       "name": "FUN_a01544cc",
       "status": "matched"
     },
+    "ram:a01544d4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -g",
+      "comment": "sets DAT_a802cf98 to 3 or 0 from DAT_a802cf9d and calls FUN_a01004cc with it when DAT_a802cf9c & 0xf0 == 0x80",
+      "name": "FUN_a01544d4",
+      "status": "matched"
+    },
     "ram:a0154574": {
       "by": "hand",
       "cflags": "-mcpu=v8 -g",
