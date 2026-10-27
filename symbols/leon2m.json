@@ -8902,6 +8902,13 @@
       "name": "FUN_a00cf288",
       "status": "matched"
     },
+    "ram:a00cf2d4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Fills a byte buffer according to byte 4 of a byte record (14 values, inner switch with jump table 0xa00ceb24)",
+      "name": "FUN_a00cf2d4",
+      "status": "matched"
+    },
     "ram:a00cfa68": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
