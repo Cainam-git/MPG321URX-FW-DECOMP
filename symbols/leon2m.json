@@ -9673,6 +9673,13 @@
       "name": "FUN_a00e0234",
       "status": "matched"
     },
+    "ram:a00e0268": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the word at {0xc0020000, 0xc0030000, 0xc0040000}[i] + off",
+      "name": "FUN_a00e0268",
+      "status": "matched"
+    },
     "ram:a00e02a0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
