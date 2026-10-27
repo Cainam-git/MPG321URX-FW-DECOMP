@@ -18731,6 +18731,13 @@
       "name": "FUN_a013f370",
       "status": "matched"
     },
+    "ram:a013ffb0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the index of the DAT_001a5a16 entry with halfword +0x22 == k (scan ends at +2 == 0xffff)",
+      "name": "FUN_a013ffb0",
+      "status": "matched"
+    },
     "ram:a0140034": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
