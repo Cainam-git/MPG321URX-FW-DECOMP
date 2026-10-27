@@ -21321,6 +21321,13 @@
       "name": "FUN_a01492b8",
       "status": "matched"
     },
+    "ram:a01492f0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Stores v in byte 6 of 0xa802e3d0, FUN_a01198c8(v, 0) then FUN_a01198c8(byte, 1)",
+      "name": "FUN_a01492f0",
+      "status": "matched"
+    },
     "ram:a014931c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
