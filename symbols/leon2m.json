@@ -6177,6 +6177,13 @@
       "name": "FUN_a00b52f8",
       "status": "matched"
     },
+    "ram:a00b5d10": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Fixed set-up call sequence, two FUN_a0146b20 loops, DAT_00196b24 rows and FUN_a01445fc(T.b01e) value calls",
+      "name": "FUN_a00b5d10",
+      "status": "matched"
+    },
     "ram:a00b60cc": {
       "by": "hand",
       "comment": "v set in both arms by (p1 & 0xff) test, then calls with v (a00b7e68 family)",
