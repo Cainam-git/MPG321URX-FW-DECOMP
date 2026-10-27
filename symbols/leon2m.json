@@ -15928,6 +15928,12 @@
       "name": "FUN_a0133d28",
       "status": "matched"
     },
+    "ram:a0133d4c": {
+      "by": "hand",
+      "comment": "tail call func_0x4008f3f4(0x25, a, b, c, 1)",
+      "name": "FUN_a0133d4c",
+      "status": "matched"
+    },
     "ram:a0133d78": {
       "by": "hand",
       "comment": "tail call func_0x4008f3f4(0x28, a, b, 0, 1)",
