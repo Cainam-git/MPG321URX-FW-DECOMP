@@ -3177,6 +3177,12 @@
       "name": "FUN_a008996c",
       "status": "matched"
     },
+    "ram:a0089a38": {
+      "by": "hand",
+      "comment": "Recomputes registers 0x7e, 0x7c and 0x7b of a port from clk, bpp and lane count when they changed",
+      "name": "DPTX_SetBrilliantMode",
+      "status": "matched"
+    },
     "ram:a0089d38": {
       "by": "autoc",
       "comment": "Calls DPTX_IsHPDAction_Off(0) when FUN_a0070424() is nonzero and eDP_IsHPDAction_Off(byte 0xA80761C0). Then for (f, k) = (FUN_a0070424, 0), (FUN_a006ffb4, 1), (FUN_a006ffc4, 2), (FUN_a006ffd4, 3), (FUN_a006ffe4, 4): when the byte result of f() is nonzero, calls DPTX_SetBrilliantMode(k) and FUN_a008996c(k)",
