@@ -1884,6 +1884,12 @@
       "name": "FUN_CODE_d53f",
       "status": "matched"
     },
+    "CODE:d56d": {
+      "by": "hand",
+      "comment": "bit: (byte at pointer table 0xB13E entry n & mask) != 0, writes the first read value back",
+      "name": "FUN_CODE_d56d",
+      "status": "matched"
+    },
     "CODE:d59b": {
       "by": "hand",
       "comment": "Keil common-entry (L?) code in front of FUN_CODE_d5a1, in FUN_CODE_d5a1's code segment; emitted by compiling src/8051_bank1/FUN_CODE_224f.c, bytes judged with FUN_CODE_d5a1 over 0xd59b..0xd5c8",
