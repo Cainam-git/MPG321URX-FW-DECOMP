@@ -13791,6 +13791,13 @@
       "name": "FUN_a010f064",
       "status": "matched"
     },
+    "ram:a010f65c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes s->w4/w8 plus a line offset derived from s to registers 0xd0032280/0xd003a280 or +4",
+      "name": "FUN_a010f65c",
+      "status": "matched"
+    },
     "ram:a010f724": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
