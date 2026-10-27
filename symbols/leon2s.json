@@ -2678,6 +2678,12 @@
       "name": "FUN_a007f9e8",
       "status": "matched"
     },
+    "ram:a007fa0c": {
+      "by": "hand",
+      "comment": "Steps index k 0x10..0x2f, records per-lane FUN_a00a7314 values below 100 and writes the mid index per lane with FUN_a007aac4",
+      "name": "DRV_HDMI21_IQ_Scan_byCED",
+      "status": "matched"
+    },
     "ram:a007fde0": {
       "by": "hand",
       "comment": "per-lane register rewrite for rates 4..6 and the restart call sequence for ports 2 and 3",
