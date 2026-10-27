@@ -8464,6 +8464,12 @@
       "name": "FUN_a00d27fc",
       "status": "matched"
     },
+    "ram:a00d2920": {
+      "by": "hand",
+      "comment": "Prints the Static HDR state and reads back the TMO LUT when register 0xd0013ff0 reads 2; prints Re-apply HDR when it reads 0x55",
+      "name": "FUN_a00d2920",
+      "status": "matched"
+    },
     "ram:a00d2b88": {
       "by": "hand",
       "comment": "Copies three changed values into their stored copies and returns 1 when any changed or a state byte is set",
