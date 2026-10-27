@@ -5120,6 +5120,12 @@
       "name": "FLT_no_retrain",
       "status": "matched"
     },
+    "ram:a009cb34": {
+      "by": "hand",
+      "comment": "Compares the port timing values with the stored ones and prints the differences",
+      "name": "H_ACTIVE_DIFF",
+      "status": "matched"
+    },
     "ram:a009d2f8": {
       "by": "hand",
       "comment": "Per-port DSC state step: mode-change checks on DAT_a807d7e0/DAT_a807d650, FUN_a00a1150, and the frame-count drift test on register 0x98",
