@@ -4564,6 +4564,12 @@
       "name": "FUN_a0095ef8",
       "status": "matched"
     },
+    "ram:a0095f20": {
+      "by": "hand",
+      "comment": "Computes the HDMI TX (FRL) video clock of port, sets the clock-range registers and settings a..d through FUN_a00a80cc/FUN_a008d9xx and prints the read-backs",
+      "name": "FUN_a0095f20",
+      "status": "matched"
+    },
     "ram:a00961e8": {
       "by": "hand",
       "comment": "return 3 if p == 1, else 2",
