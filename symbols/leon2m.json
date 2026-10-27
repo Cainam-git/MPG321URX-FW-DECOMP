@@ -8037,6 +8037,12 @@
       "name": "FUN_a00d28d4",
       "status": "matched"
     },
+    "ram:a00d2974": {
+      "by": "hand",
+      "comment": "copies p[6] and p[7] to DAT_a802b09f and DAT_a802b09e, returns 0xe0",
+      "name": "FUN_a00d2974",
+      "status": "matched"
+    },
     "ram:a00d2994": {
       "by": "autoc",
       "comment": "(0xA802D274).byte_15 = 0; (0xA802D274).half_16 = 0; FUN_a014aed0(0x30, &(0xA802D274), 0x2e0, 0x1c); returns 0xe0",
