@@ -2182,6 +2182,12 @@
       "name": "FUN_CODE_dc92",
       "status": "matched"
     },
+    "CODE:dca7": {
+      "by": "hand",
+      "comment": "FUN_CODE_d5f3(0x06), FUN_CODE_d5f3(0xC7), then waits while bit 1 of FUN_CODE_cf73(0x05) is set",
+      "name": "FUN_CODE_dca7",
+      "status": "matched"
+    },
     "CODE:dcbb": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
