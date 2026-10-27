@@ -17457,6 +17457,13 @@
       "name": "FUN_a01356fc",
       "status": "matched"
     },
+    "ram:a0136384": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sends the 18 bytes at DAT_a802d9a0 as message type 10 through the ring DAT_a802da6c",
+      "name": "FUN_a0136384",
+      "status": "matched"
+    },
     "ram:a0136d08": {
       "by": "autoc",
       "comment": "FUN_a01350dc(); FUN_a0134de0(p1, p2, p3, p4, p5, p6)",
