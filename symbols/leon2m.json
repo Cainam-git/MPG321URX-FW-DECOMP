@@ -11107,6 +11107,13 @@
       "name": "FUN_a00fd9a0",
       "status": "matched"
     },
+    "ram:a00fdf44": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes c * 0x11 (c <= 7) or 0 to register 0xcf02010c",
+      "name": "FUN_a00fdf44",
+      "status": "matched"
+    },
     "ram:a00fdf74": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
