@@ -11749,6 +11749,13 @@
       "name": "FUN_a0109bbc",
       "status": "matched"
     },
+    "ram:a010a2b0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns bit 7 of register 0xcf01ea40 as 0/1",
+      "name": "FUN_a010a2b0",
+      "status": "matched"
+    },
     "ram:a010a2cc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
