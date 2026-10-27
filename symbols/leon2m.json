@@ -12834,6 +12834,13 @@
       "name": "FUN_a010e8ec",
       "status": "matched"
     },
+    "ram:a010ec70": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets c << 16 into bits 16..18 of register 0xd003002c, written to 0xd003002c and 0xd003802c",
+      "name": "FUN_a010ec70",
+      "status": "matched"
+    },
     "ram:a010edbc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
