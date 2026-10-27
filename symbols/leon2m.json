@@ -6770,6 +6770,13 @@
       "name": "FUN_a00b52f8",
       "status": "matched"
     },
+    "ram:a00b5378": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "fixed layout call sequence (FUN_a0146xxx / FUN_a00b32e4) with the inlined FUN_a00b5080 / FUN_a00b52f8 bodies",
+      "name": "FUN_a00b5378",
+      "status": "matched"
+    },
     "ram:a00b5d10": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
@@ -8776,6 +8783,14 @@
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Stores 0x6E, 0x88, 2, 0, 0xFE, 1, p2, p3, p4, p5 in the bytes p1[0] .. p1[9] and calls FUN_a0089f60(0x50)",
       "name": "FUN_a00cead4",
+      "status": "matched"
+    },
+    "ram:a00cec3c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00d1220; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00cec3c",
+      "of": "FUN_a00d1220",
       "status": "matched"
     },
     "ram:a00cecb0": {
@@ -17675,6 +17690,14 @@
       "of": "FUN_a012fcf4",
       "status": "matched"
     },
+    "ram:a012f1cc": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0130438; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a012f1cc",
+      "of": "FUN_a0130438",
+      "status": "matched"
+    },
     "ram:a012f1ec": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
@@ -17864,6 +17887,14 @@
       "kind": "jump_table",
       "name": "switchdataD_a0132a74",
       "of": "FUN_a0132d44",
+      "status": "matched"
+    },
+    "ram:a0132b2c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a01341dc; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0132b2c",
+      "of": "FUN_a01341dc",
       "status": "matched"
     },
     "ram:a0132b74": {
