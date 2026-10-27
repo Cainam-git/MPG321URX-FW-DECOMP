@@ -5223,6 +5223,12 @@
       "name": "FUN_a009fe98",
       "status": "matched"
     },
+    "ram:a009fed0": {
+      "by": "hand",
+      "comment": "Copies the 0x87/1 register packet of port into record d: table lookups, ordered x/y halfword pairs and raw bytes",
+      "name": "FUN_a009fed0",
+      "status": "matched"
+    },
     "ram:a00a0268": {
       "by": "hand",
       "comment": "copies registers 0x80-0x9c of the port block to a byte buffer little-endian, or clears 0x22 bytes when register 0x80 is 0",
