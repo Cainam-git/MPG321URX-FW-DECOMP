@@ -8929,6 +8929,13 @@
       "name": "FUN_a00d3dbc",
       "status": "matched"
     },
+    "ram:a00d3e28": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "maps c through a two-segment line with knee DAT_a802d46a and rescales (v - 126) * 100 / 897",
+      "name": "FUN_a00d3e28",
+      "status": "matched"
+    },
     "ram:a00d4084": {
       "by": "hand",
       "comment": "limits byte 0xa802d2d9 to 5 and tail-calls FUN_a01471a0(0, 0xd, 3 * value)",
