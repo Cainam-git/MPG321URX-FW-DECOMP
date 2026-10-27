@@ -1969,7 +1969,7 @@
     },
     "ram:a006e444": {
       "by": "hand",
-      "comment": "One pass of the five-state port link sequence for the second receiver type, with power flags and status prints",
+      "comment": "One pass of a five-state port link sequence (rec[0] = state) with power flags, ARR_a807d7e0 timing copies and status prints",
       "name": "LINK_STANDBY_2",
       "status": "matched"
     },

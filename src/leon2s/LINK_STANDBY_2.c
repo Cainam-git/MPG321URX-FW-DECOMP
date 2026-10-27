@@ -1,5 +1,5 @@
 /* LINK_STANDBY_2 (leon2s 0xa006e444-0xa006e820, 988 bytes), flags -mcpu=v8 -Os -g.
- * void (port record rec, u8 port); the same pass structure as LINK_STANDBY for the second receiver type.
+ * void (port record rec, u8 port); the same state structure as LINK_STANDBY with other callees and records.
  * f = FUN_a00961e8(port) indexes the 24-byte link table DAT_a807cc64; ports > 1: nothing. On the first pass
  * (DAT_a8078892 == 0) the power flags DAT_a8078890[0..1] are set to 1. Link-table byte +6 = bit 7 of rec
  * halfword +0x12. rec[0] = state, port record ARR_a807d7e0[port] (400 bytes):
