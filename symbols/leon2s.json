@@ -3159,6 +3159,12 @@
       "name": "FUN_a0089420",
       "status": "matched"
     },
+    "ram:a0089428": {
+      "by": "hand",
+      "comment": "Collects the per-port HPD action flags and runs the selected FUN_a0088b60 / FUN_a008686c / FUN_a00866b8 / FUN_a008661c steps",
+      "name": "DPTX_IsHPDAction_Off",
+      "status": "matched"
+    },
     "ram:a0089750": {
       "by": "autoc",
       "comment": "returns 1",
