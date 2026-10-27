@@ -16075,6 +16075,12 @@
       "name": "FUN_a012f1ec",
       "status": "matched"
     },
+    "ram:a012f2dc": {
+      "by": "hand",
+      "comment": "returns the index of c in the 4-byte table DAT_001a5238, or 0xff",
+      "name": "FUN_a012f2dc",
+      "status": "matched"
+    },
     "ram:a012f3b4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
