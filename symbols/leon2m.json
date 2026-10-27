@@ -15304,6 +15304,13 @@
       "name": "FUN_a012ad6c",
       "status": "matched"
     },
+    "ram:a012ad80": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "packs four 2-bit values a, b, c, d into one byte (a highest)",
+      "name": "FUN_a012ad80",
+      "status": "matched"
+    },
     "ram:a012af40": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
