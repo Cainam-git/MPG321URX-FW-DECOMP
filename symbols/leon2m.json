@@ -20168,7 +20168,7 @@
     "ram:a0144414": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "returns the first channel whose DAT_a802e224 port byte +9 is not 5, else 0xff",
+      "comment": "returns the first i with byte +9 of DAT_a802e224[(DAT_a802df30[i].w >> 12) & 0xf] not 5, else 0xff",
       "name": "FUN_a0144414",
       "status": "matched"
     },
