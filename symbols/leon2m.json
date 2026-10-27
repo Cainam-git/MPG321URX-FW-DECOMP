@@ -6966,6 +6966,13 @@
       "name": "FUN_a00b7e68",
       "status": "matched"
     },
+    "ram:a00b7f9c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Set-up call sequence by page, then rows to FUN_a00a31a4 per page (switch over 0x11..0x1e)",
+      "name": "FUN_a00b7f9c",
+      "status": "matched"
+    },
     "ram:a00b83e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
