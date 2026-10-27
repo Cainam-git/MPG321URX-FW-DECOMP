@@ -12190,6 +12190,13 @@
       "name": "FUN_a01010f4",
       "status": "matched"
     },
+    "ram:a01011c0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns 1 for c in {2, 3, 8, 9, 0xe, 0xf, 0x14, 0x15, 0x1c, 0x1d, 0x22, 0x23}",
+      "name": "FUN_a01011c0",
+      "status": "matched"
+    },
     "ram:a010128c": {
       "by": "hand",
       "comment": "returns 1 for c = 0 or 1, else 0",
