@@ -5772,6 +5772,12 @@
       "name": "FUN_a00a535c",
       "status": "matched"
     },
+    "ram:a00a53b0": {
+      "by": "hand",
+      "comment": "Packs an 80-byte record into the register words of a port's block, with the VBP delay-line check",
+      "name": "VBP_tmp",
+      "status": "matched"
+    },
     "ram:a00a5cb4": {
       "by": "autoc",
       "comment": "k = p1 & 0xff; calls FUN_a00a507c(k, buf) with an 80-byte local buffer, then VBP_tmp(k, buf, 1)",
