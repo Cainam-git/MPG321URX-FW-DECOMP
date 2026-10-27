@@ -19002,6 +19002,12 @@
       "name": "FUN_a014e974",
       "status": "matched"
     },
+    "ram:a014eaa8": {
+      "by": "hand",
+      "comment": "shifts DAT_a802cc82 right by 4 with c in the top nibble, returns the old low nibble",
+      "name": "FUN_a014eaa8",
+      "status": "matched"
+    },
     "ram:a014eb14": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3",
