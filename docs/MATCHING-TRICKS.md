@@ -275,6 +275,11 @@ LEON (GCC 3.4.4):
   matched routines next to it that nothing calls: they are its inlined static helpers (FUN_a00f793c).
 - **The order of struct field initialisations** can decide the register allocation of a whole function:
   `r.c = 16; r.b = 0; r.a = 0;` took FUN_a00f793c from 97.5 % to 100 % register-blind.
+- **Two instructions in the wrong order where a later use decides it:** an empty `for (;;) break;` between the two
+  statements splits the late scheduling pass there, so they keep source order. It adds no instructions; document
+  it in the header as a compiler aid (FUN_a00f6fe4, FUN_a0135ae8, FUN_a013358c).
+- **Reads through a pointer parameter that must not lose stores they might overlap:** keep the address as an
+  `unsigned int` copy and cast at each read; the reads then have no known memory base (FUN_a0136a10).
 - **A test written as `flag == 1`** instead of `flag` fixed the block order of FUN_a009cd74.
 - **Judge with `tools/diff.py` or `tools/exact.py`.** A raw comparison that skips address fields can report a match
   where one `sethi` names a different global.
