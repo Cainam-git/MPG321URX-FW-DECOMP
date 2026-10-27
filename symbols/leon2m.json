@@ -20270,6 +20270,13 @@
       "name": "FUN_a0148c94",
       "status": "matched"
     },
+    "ram:a0148d34": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "tail call FUN_a011dd9c(7, v) for c = 0..2",
+      "name": "FUN_a0148d34",
+      "status": "matched"
+    },
     "ram:a0148d98": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
