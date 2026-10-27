@@ -59,8 +59,9 @@ compares it with the firmware. The entries below are not confirmed by that scrip
   the original file, with every matched function built from source.
 - Code that was in no function range: the gaps between the listed functions of all sections have been checked and
   the missing routines and jump tables added. Further additions make the totals in the table grow.
-- 8051 bank 1 functions that differ from Keil C51 9.60.7 only in the order of operand loads before shift loops and
-  a few related register choices; none of the available C51 releases produces the firmware's order.
+- 8051 functions that differ only in the order of the loads before a shift loop. Where the shifted value is a
+  constant or a register, writing it to `ACC` first gives the firmware's order (see the matching notes); the
+  functions with a computed shift count, and 16-bit shifts next to register parameters, are still open.
 - The Tensilica program (about 300 functions); its compiler has not been identified and none is installed.
 - The unmatched LEON functions, most of them large. Functions that were tried but not matched yet have notes on
   what still differs.
