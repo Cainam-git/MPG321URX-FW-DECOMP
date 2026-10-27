@@ -2012,6 +2012,12 @@
       "name": "FUN_CODE_d47f",
       "status": "matched"
     },
+    "CODE:d4b0": {
+      "by": "hand",
+      "comment": "XDATA 0xF40E = (1 << n) | (0x10 << n) when XDATA 0xD511 is 0x20, bit-0 test of 0x7E7A; shifted constants staged in ACC",
+      "name": "FUN_CODE_d4b0",
+      "status": "matched"
+    },
     "CODE:d4e1": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
