@@ -8976,6 +8976,12 @@
       "name": "FUN_a00d8714",
       "status": "matched"
     },
+    "ram:a00d8d20": {
+      "by": "hand",
+      "comment": "Fetch a 30-byte response, build a type-0x22 command with copied table bytes and send it",
+      "name": "FUN_a00d8d20",
+      "status": "matched"
+    },
     "ram:a00d8f58": {
       "by": "hand",
       "comment": "builds a message header (bit-fields type:7, n:4) and response nibble; ROM memset (see header)",
