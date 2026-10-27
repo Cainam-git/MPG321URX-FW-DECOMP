@@ -9784,6 +9784,13 @@
       "name": "FUN_a00ddae4",
       "status": "matched"
     },
+    "ram:a00ddbe0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "maps 1..8 to 0xf00c..0xf00f, 0xf081..0xf084 (else 0)",
+      "name": "FUN_a00ddbe0",
+      "status": "matched"
+    },
     "ram:a00ddc50": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a00dddb8; proven entry for entry by its exact check",
