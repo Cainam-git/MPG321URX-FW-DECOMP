@@ -1511,7 +1511,7 @@
     "CODE:c03f": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "copies bits 0..3 of m into XDATA 0xA1E7, then sets the low nibbles of 0xF021 and 0xF022 to it",
+      "comment": "copies bits 0..3 of m into XDATA 0xA1E7, then writes (reg & 0xF0) | 0xA1E7 to 0xF021 and 0xF022",
       "name": "FUN_CODE_c03f",
       "status": "matched"
     },
