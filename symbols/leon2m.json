@@ -17564,6 +17564,13 @@
       "name": "FUN_a012fc20",
       "status": "matched"
     },
+    "ram:a012fc70": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns FUN_a00fd820(port of c), replaced for 0xb1 by DAT_a802e224[port of DAT_a802a44c] byte +0xa (0xff if unset)",
+      "name": "FUN_a012fc70",
+      "status": "matched"
+    },
     "ram:a012fcf4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
