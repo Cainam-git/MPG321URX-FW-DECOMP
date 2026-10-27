@@ -1859,6 +1859,13 @@
       "name": "FUN_a002c3c8",
       "status": "matched"
     },
+    "ram:a002c3f4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes the two bytes of halfword v to registers r + k and r + k + 1, base 0xcf000000",
+      "name": "FUN_a002c3f4",
+      "status": "matched"
+    },
     "ram:a002c4a8": {
       "by": "hand",
       "comment": "empty routine",
