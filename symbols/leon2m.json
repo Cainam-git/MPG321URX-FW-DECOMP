@@ -2810,6 +2810,13 @@
       "name": "FUN_a008b380",
       "status": "matched"
     },
+    "ram:a008b58c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns 0x4e shifted by DAT_a802afb9 - 4, then right by DAT_a802afb8, as a halfword",
+      "name": "FUN_a008b58c",
+      "status": "matched"
+    },
     "ram:a008b5e0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
