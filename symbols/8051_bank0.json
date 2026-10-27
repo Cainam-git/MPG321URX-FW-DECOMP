@@ -147,6 +147,14 @@
       "status": "matched",
       "symbol": "?C?LMUL"
     },
+    "CODE:1008": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?ULDIV (internal entry point, segment 0+0) (C51BC.LIB:?C?ULDIV)",
+      "lib": "C51BC.LIB:?C?ULDIV",
+      "name": "FUN_CODE_1008",
+      "status": "matched",
+      "symbol": "@0+0"
+    },
     "CODE:1044": {
       "by": "keil-lib",
       "comment": "Keil C51 library routine ?C?ULDIV (C51BC.LIB:?C?ULDIV)",

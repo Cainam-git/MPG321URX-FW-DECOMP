@@ -32,6 +32,14 @@
       "name": "FUN_CODE_0022",
       "status": "matched"
     },
+    "CODE:0026": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FPADD (internal entry point, segment 0+0) (C51BFPC.LIB:?C?FPADD)",
+      "lib": "C51BFPC.LIB:?C?FPADD",
+      "name": "FUN_CODE_0026",
+      "status": "matched",
+      "symbol": "@0+0"
+    },
     "CODE:002d": {
       "by": "keil-lib",
       "comment": "Keil C51 library routine ?C?FPADD (C51BFPC.LIB:?C?FPADD)",
@@ -71,6 +79,14 @@
       "name": "FUN_CODE_0204",
       "status": "matched",
       "symbol": "@0+230"
+    },
+    "CODE:0224": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FPDIV (internal entry point, segment 0+0) (C51BFPC.LIB:?C?FPDIV)",
+      "lib": "C51BFPC.LIB:?C?FPDIV",
+      "name": "FUN_CODE_0224",
+      "status": "matched",
+      "symbol": "@0+0"
     },
     "CODE:0227": {
       "by": "keil-lib",
@@ -176,6 +192,14 @@
       "status": "matched",
       "symbol": "?C?FPCONVERT"
     },
+    "CODE:053e": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FTNPWR (internal entry point, segment 0+0) (C51BFPC.LIB:?C?FTNPWR)",
+      "lib": "C51BFPC.LIB:?C?FTNPWR",
+      "name": "FUN_CODE_053e",
+      "status": "matched",
+      "symbol": "@0+0"
+    },
     "CODE:056e": {
       "by": "keil-lib",
       "comment": "Keil C51 library routine ?C?FTNPWR (C51BFPC.LIB:?C?FTNPWR)",
@@ -207,6 +231,14 @@
       "name": "FUN_CODE_059c",
       "status": "matched",
       "symbol": "@0+94"
+    },
+    "CODE:05ae": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?COPY (internal entry point, segment 0+0) (C51C.LIB:?C?COPY)",
+      "lib": "C51C.LIB:?C?COPY",
+      "name": "FUN_CODE_05ae",
+      "status": "matched",
+      "symbol": "@0+0"
     },
     "CODE:05da": {
       "by": "keil-lib",
@@ -335,6 +367,14 @@
       "name": "FUN_CODE_07b1",
       "status": "matched",
       "symbol": "?C?LMUL"
+    },
+    "CODE:0800": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?ULDIV (internal entry point, segment 0+0) (C51BC.LIB:?C?ULDIV)",
+      "lib": "C51BC.LIB:?C?ULDIV",
+      "name": "FUN_CODE_0800",
+      "status": "matched",
+      "symbol": "@0+0"
     },
     "CODE:083c": {
       "by": "keil-lib",

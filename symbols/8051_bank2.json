@@ -104,6 +104,14 @@
       "status": "matched",
       "symbol": "?C?FPMUL"
     },
+    "CODE:2c7a": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FPDIV (internal entry point, segment 0+0) (C51BFPC.LIB:?C?FPDIV)",
+      "lib": "C51BFPC.LIB:?C?FPDIV",
+      "name": "FUN_CODE_2c7a",
+      "status": "matched",
+      "symbol": "@0+0"
+    },
     "CODE:2c7d": {
       "by": "keil-lib",
       "comment": "Keil C51 library routine ?C?FPDIV (C51BFPC.LIB:?C?FPDIV)",
@@ -192,6 +200,22 @@
       "status": "matched",
       "symbol": "?C?FPCONVERT"
     },
+    "CODE:2f1b": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FPADD (internal entry point, segment 0+0) (C51BFPC.LIB:?C?FPADD)",
+      "lib": "C51BFPC.LIB:?C?FPADD",
+      "name": "FUN_CODE_2f1b",
+      "status": "matched",
+      "symbol": "@0+0"
+    },
+    "CODE:3013": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FTNPWR (internal entry point, segment 0+0) (C51BFPC.LIB:?C?FTNPWR)",
+      "lib": "C51BFPC.LIB:?C?FTNPWR",
+      "name": "FUN_CODE_3013",
+      "status": "matched",
+      "symbol": "@0+0"
+    },
     "CODE:3043": {
       "by": "keil-lib",
       "comment": "Keil C51 library routine ?C?FTNPWR (C51BFPC.LIB:?C?FTNPWR)",
@@ -223,6 +247,14 @@
       "name": "FUN_CODE_3071",
       "status": "matched",
       "symbol": "@0+94"
+    },
+    "CODE:3083": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?COPY (internal entry point, segment 0+0) (C51C.LIB:?C?COPY)",
+      "lib": "C51C.LIB:?C?COPY",
+      "name": "FUN_CODE_3083",
+      "status": "matched",
+      "symbol": "@0+0"
     },
     "CODE:3153": {
       "by": "keil-lib",
@@ -319,6 +351,14 @@
       "name": "FUN_CODE_32f5",
       "status": "matched",
       "symbol": "?C?LMUL"
+    },
+    "CODE:3344": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?ULDIV (internal entry point, segment 0+0) (C51BC.LIB:?C?ULDIV)",
+      "lib": "C51BC.LIB:?C?ULDIV",
+      "name": "FUN_CODE_3344",
+      "status": "matched",
+      "symbol": "@0+0"
     },
     "CODE:3380": {
       "by": "keil-lib",

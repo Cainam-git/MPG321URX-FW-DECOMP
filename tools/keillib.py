@@ -92,7 +92,7 @@ def scan():
     # function (38 in the three banks). Kept only when the piece lies wholly inside the matched segment.
     for b, s0, e0, lib, mod, sid in inner:
         for f in ends[b]:
-            if s0 < f["start"] and f["end"] <= e0: found.setdefault((b, f["name"]), (lib, mod, f"@{sid}+{f['start'] - s0}", e0 - s0))
+            if s0 <= f["start"] and f["end"] <= e0: found.setdefault((b, f["name"]), (lib, mod, f"@{sid}+{f['start'] - s0}", e0 - s0))
     return found
 
 
