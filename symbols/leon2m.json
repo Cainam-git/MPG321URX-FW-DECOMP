@@ -1832,6 +1832,13 @@
       "name": "FUN_a002c338",
       "status": "matched"
     },
+    "ram:a002c364": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns (low byte of reg 4r) << 8 | low byte of reg 4r + 4, base 0xcf000000",
+      "name": "FUN_a002c364",
+      "status": "matched"
+    },
     "ram:a002c4a8": {
       "by": "hand",
       "comment": "empty routine",
