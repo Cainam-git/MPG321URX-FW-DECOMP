@@ -267,6 +267,14 @@ LEON (GCC 3.4.4):
 - **Result in an `unsigned char` local before the return** fixed a register swap and an extra `mov` (FUN_a0132dd8).
 - **Inlined static copies of small neighbours** keep paying: FUN_a01234b8 is four copies of FUN_a0122dbc,
   FUN_a0104eb0 three neighbours, FUN_a00d0fa0 a checksum helper.
+- **Parameters zero-extended at every use** (`and %lN, 0xff` before each use, no mask at entry, the parameter copied
+  out of `%i0` with a plain `mov`): an old-style definition, `int f(port, ch) unsigned char port, ch; { ... }`. The
+  arguments arrive as `int` and GCC extends them per use (RCT_Value: 85 % with `unsigned int` parameters and casts,
+  99.6 % at once as a K&R definition).
+- **Big functions are often built from caller-less matched neighbours.** Before writing a large function, look for
+  matched routines next to it that nothing calls: they are its inlined static helpers (FUN_a00f793c).
+- **The order of struct field initialisations** can decide the register allocation of a whole function:
+  `r.c = 16; r.b = 0; r.a = 0;` took FUN_a00f793c from 97.5 % to 100 % register-blind.
 - **A test written as `flag == 1`** instead of `flag` fixed the block order of FUN_a009cd74.
 - **Judge with `tools/diff.py` or `tools/exact.py`.** A raw comparison that skips address fields can report a match
   where one `sethi` names a different global.
