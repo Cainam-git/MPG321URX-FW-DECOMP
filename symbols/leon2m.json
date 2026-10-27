@@ -11121,6 +11121,12 @@
       "name": "FUN_a01018e8",
       "status": "matched"
     },
+    "ram:a0101904": {
+      "by": "hand",
+      "comment": "clears bit 6 of register 0xcf016118 and writes 0xff to 0xcf016114",
+      "name": "FUN_a0101904",
+      "status": "matched"
+    },
     "ram:a010192c": {
       "by": "autoc",
       "comment": "(word 0xCF0160D8) = (word 0xCF0160D8) & 0xf0 | p1 & 0xf",
