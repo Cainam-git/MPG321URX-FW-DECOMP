@@ -19916,6 +19916,12 @@
       "name": "FUN_a014eaa8",
       "status": "matched"
     },
+    "ram:a014ead0": {
+      "by": "hand",
+      "comment": "returns the index of nibble c in DAT_a802cc80 (4 if absent)",
+      "name": "FUN_a014ead0",
+      "status": "matched"
+    },
     "ram:a014eb14": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3",
