@@ -11809,6 +11809,13 @@
       "name": "FUN_a0109554",
       "status": "matched"
     },
+    "ram:a0109598": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns bit n of register 0xcf011a00 as 0/1",
+      "name": "FUN_a0109598",
+      "status": "matched"
+    },
     "ram:a01095bc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
