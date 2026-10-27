@@ -4,8 +4,8 @@
  * Halfwords h[3] (fp-144): h[0] = total - a - c - d, h[1] = c, h[2] = d, from the halfwords +8, +0xa, +0xc,
  * +0xe of DAT_a8079538. Stack block m (fp-312): m[0..9] = 7f 80 00 06 00 01 00 02 00 88, m[10..30] = s[0..20];
  * then four groups 0x7f, 0, n (n = 1..4) followed by s[21..48], s[49..76], s[77..104] (28 bytes each) and
- * s[105..127] (23 bytes); m[150..160] = h[0], h[1], h[2] (low byte first), 0x7f, 0x40, 5, h[2] high byte,
- * q (low byte first). Then FUN_a0092944(port, m).
+ * s[105..127] (23 bytes); m[150..154] = h[0] low, h[0] high, h[1] low, h[1] high, h[2] low; m[155..157] =
+ * 0x7f, 0x40, 5; m[158] = h[2] high; m[159], m[160] = q low, q high. Then FUN_a0092944(port, m).
  * Source form: q is computed right after s is filled; the independent byte and halfword stores are written
  * in the order the firmware schedules them.
  */
