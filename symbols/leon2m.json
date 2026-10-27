@@ -10888,6 +10888,12 @@
       "name": "FUN_a0100e6c",
       "status": "matched"
     },
+    "ram:a010128c": {
+      "by": "hand",
+      "comment": "returns 1 for c = 0 or 1, else 0",
+      "name": "FUN_a010128c",
+      "status": "matched"
+    },
     "ram:a01016cc": {
       "by": "autoc",
       "comment": "(word 0xCF0160C0) = (word 0xCF0160C0) | 1",
