@@ -2,7 +2,7 @@
  * k = FUN_CODE_dee2(); for the ten 3-byte records at XDATA 0xA62F (fields a, b, c): when (a & 0x1F) is 1..6,
  * r is set if bit (c & 0x0F) or bit (c >> 4) of k is set; when (a & 0x1F) is 7..10, r is set if bit (c & 0x0F)
  * of k is set. Returns r (bit, cleared first).
- * Options: OPTIMIZE(8,SPEED) LARGE.
+ * Options: OPTIMIZE(8,SPEED) (no XDATA locals: the LARGE build gives the same bytes).
  * Source form: each shift count goes to its own local (c, d, e), then the value 1 is written to ACC (reg51.h);
  * Keil then knows A = 1 and the shift starts 'MOV A,#01H; MOV R6,#00H; MOV R0,AR7'.
  */
