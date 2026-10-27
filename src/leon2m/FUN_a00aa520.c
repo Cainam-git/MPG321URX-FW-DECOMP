@@ -9,7 +9,7 @@
  *             FUN_a00d7d48() != 0; for sel 1 or 3 when A; for sel 1 when byte +0x178 != 0; for sel 1 or 3 when
  *             FUN_a00d7d48() != 0; for sel 4 when byte +0x1f == 2; for sel 5 when byte +0x1f != 0.
  *   m 7:      0 for sel 6 when byte +0x1f != 0; for sel 7 when word +0xb0 != 0 and FUN_a00d8bd8() != 0.
- * All other cases return 1. Called by FUN_a00aa83c and other row loops (FUN_a0091668, FUN_a0091784, ...).
+ * All other cases return 1. Called by FUN_a00aa83c, FUN_a0091668, FUN_a0091784, FUN_a00b0034 and about 40 others.
  * Source form: old-style (K&R) definition of the byte parameter (zero-extended at each use); m tested with an
  * if/else-if chain; the bit 31 test as w >> 31 on an unsigned word; the tests that stay branches in the
  * firmware (byte +0x178 / sel 1, byte +0x1f == 2 / sel 4, m 7) are nested ifs, the others && conditions.
