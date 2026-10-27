@@ -2064,6 +2064,13 @@
       "name": "FUN_CODE_d9e1",
       "status": "matched"
     },
+    "CODE:d9ff": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "writes 7 to the byte at pointer table 0xB13E entry n",
+      "name": "FUN_CODE_d9ff",
+      "status": "matched"
+    },
     "CODE:da3a": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
