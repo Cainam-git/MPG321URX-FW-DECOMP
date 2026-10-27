@@ -12051,6 +12051,13 @@
       "name": "FUN_a0100434",
       "status": "matched"
     },
+    "ram:a0100468": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "tail call FUN_a00f1b5c(blk, 0xab, 4, on != 0) when b is 0xe1 or 0xe2",
+      "name": "FUN_a0100468",
+      "status": "matched"
+    },
     "ram:a01004cc": {
       "by": "autoc",
       "comment": "(word 0xCF03C880) = p1 & 0xff",
