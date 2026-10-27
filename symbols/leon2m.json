@@ -17743,6 +17743,13 @@
       "name": "FUN_a01356fc",
       "status": "matched"
     },
+    "ram:a013588c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Sends len bytes from p as message type 7 through the ring DAT_a802da6c, chunk index from addr >> 4",
+      "name": "FUN_a013588c",
+      "status": "matched"
+    },
     "ram:a0135dc0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
