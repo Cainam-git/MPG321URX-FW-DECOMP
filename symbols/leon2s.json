@@ -2438,6 +2438,12 @@
       "name": "FUN_a007a630",
       "status": "matched"
     },
+    "ram:a007a648": {
+      "by": "hand",
+      "comment": "For each set bit i (0..3) of mask, calls FUN_a00a7488 twice (tables 0xa00b3b10, 0xa00b3b20) and FUN_a00a7424(1, 7, port, table 0xa00b3b18[i])",
+      "name": "FUN_a007a648",
+      "status": "matched"
+    },
     "ram:a007a6f0": {
       "by": "autoc",
       "comment": "FUN_a007a648(p1, 0xf)",
