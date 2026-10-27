@@ -8200,6 +8200,12 @@
       "name": "FUN_a00cf280",
       "status": "matched"
     },
+    "ram:a00cf288": {
+      "by": "hand",
+      "comment": "stores 0x80 (a < 0x60) or a b-dependent 0x80..0x200 (a == 0x60) to *p",
+      "name": "FUN_a00cf288",
+      "status": "matched"
+    },
     "ram:a00cfa68": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
