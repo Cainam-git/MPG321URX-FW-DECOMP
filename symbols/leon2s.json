@@ -1712,6 +1712,12 @@
       "name": "FUN_a00618d8",
       "status": "matched"
     },
+    "ram:a0061adc": {
+      "by": "hand",
+      "comment": "Prints the Dynamic HDR metadata and bezier anchors, then reads back the TMO LUT through register 0xd0013f60/0xd0013f64, when register 0xd0013ff0 reads 1",
+      "name": "targeted_system_display_maximum_luminance",
+      "status": "matched"
+    },
     "ram:a0061d60": {
       "by": "hand",
       "comment": "reads 27 bytes through the DAT_a807cd74 function pointer and unpacks them into halfword fields of DAT_a8078aa0",
