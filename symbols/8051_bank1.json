@@ -1343,6 +1343,13 @@
       "name": "FUN_CODE_acf2",
       "status": "matched"
     },
+    "CODE:ad88": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "0xDCAC = 2 << ch and ten 0xDCA1 bytes when XDATA 0xD511 is 0x20, else four FUN_CODE_9e3f calls; shifted 2 staged in ACC",
+      "name": "FUN_CODE_ad88",
+      "status": "matched"
+    },
     "CODE:aeb2": {
       "by": "hand",
       "comment": "returns the XDATA byte selected by n = 1..12 (0xF3C5..0xF3CC, 0xF3D5, 0xF3D6, 0xF5D5, 0xF5D6), else 0xFF",
