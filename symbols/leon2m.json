@@ -10111,6 +10111,13 @@
       "name": "FUN_a00f30a8",
       "status": "matched"
     },
+    "ram:a00f30c8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores bytes 0, 1, 2 of v to words p[0], p[1], p[2]",
+      "name": "FUN_a00f30c8",
+      "status": "matched"
+    },
     "ram:a00f30f0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
