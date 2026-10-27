@@ -10207,6 +10207,12 @@
       "name": "FUN_a00f6940",
       "status": "matched"
     },
+    "ram:a00f6c6c": {
+      "by": "hand",
+      "comment": "clears bit 0 of register 0xcf00e984",
+      "name": "FUN_a00f6c6c",
+      "status": "matched"
+    },
     "ram:a00f6ca4": {
       "by": "autoc",
       "comment": "(word 0xCF00E984) = (word 0xCF00E984) & 0xffffff7f",
