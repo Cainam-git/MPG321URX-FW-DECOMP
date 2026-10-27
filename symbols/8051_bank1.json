@@ -2184,6 +2184,12 @@
       "name": "FUN_CODE_d8ea",
       "status": "matched"
     },
+    "CODE:d90a": {
+      "by": "hand",
+      "comment": "index of the lowest set bit of FUN_CODE_dee2(), 0xFF when none; shifted byte staged in ACC",
+      "name": "FUN_CODE_d90a",
+      "status": "matched"
+    },
     "CODE:d92a": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
