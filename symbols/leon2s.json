@@ -3331,6 +3331,14 @@
       "name": "FUN_a008aaf8",
       "status": "matched"
     },
+    "ram:a008ab5c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a008aba8; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a008ab5c",
+      "of": "FUN_a008aba8",
+      "status": "matched"
+    },
     "ram:a008aba8": {
       "by": "hand",
       "comment": "Switch on sel (1..0x13): clears or sets bit b of 0xcf014770 and sets fields of one of the registers 0xcf0111c0..0xcf0111d4",
@@ -5015,6 +5023,14 @@
       "by": "autoc",
       "comment": "empty function (returns at once)",
       "name": "FUN_a00a0560",
+      "status": "matched"
+    },
+    "ram:a00a0568": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00a0588; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00a0568",
+      "of": "FUN_a00a0588",
       "status": "matched"
     },
     "ram:a00a0588": {
