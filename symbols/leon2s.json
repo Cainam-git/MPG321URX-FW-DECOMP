@@ -6129,6 +6129,12 @@
       "name": "FUN_a00a88b8",
       "status": "matched"
     },
+    "ram:a00a8cac": {
+      "by": "hand",
+      "comment": "Runs the three FUN_a00a89c0 packet-switch steps for HDMI inputs 0x31..0x61 or DP inputs 0x71/0x81 and prints the failure messages",
+      "name": "HDMITX_PacketSwitch_Bypass",
+      "status": "matched"
+    },
     "ram:a00a8ec4": {
       "by": "hand",
       "comment": "Copies src bytes 1, 4, 5 and 27 bytes from src+6 to dst bytes 0..2 and dst+4, dst byte 3 = minus their 8-bit sum",
