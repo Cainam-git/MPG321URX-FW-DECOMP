@@ -17627,7 +17627,7 @@
     "ram:a012fc70": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "returns FUN_a00fd820(port of c), replaced for 0xb1 by DAT_a802e224[port of DAT_a802a44c] byte +0xa (0xff if unset)",
+      "comment": "returns FUN_a00fd820(DAT_a802df30[c] bits 12..15), for 0xb1 byte +0xa of the DAT_a802e224 entry of DAT_a802a44c",
       "name": "FUN_a012fc70",
       "status": "matched"
     },
