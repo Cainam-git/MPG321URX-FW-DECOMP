@@ -8286,6 +8286,12 @@
       "name": "FUN_a00d0530",
       "status": "matched"
     },
+    "ram:a00d0550": {
+      "by": "hand",
+      "comment": "Unless FUN_a00cfb20(10) or DAT_a807d636 blocks it, clears record words, writes 24 zeros, 16 bytes of DAT_a807d638 and 11 bytes of DAT_a807ce50 through FUN_a00c7654, sets state 1 and calls FUN_a00d0530(10, 100)",
+      "name": "FUN_a00d0550",
+      "status": "matched"
+    },
     "ram:a00d0798": {
       "by": "hand",
       "comment": "sets the state field of record port of DAT_a8078bb0 to 1 or 0 depending on ROM func_0xa0f98af0(0); on success calls FUN_a00d0530(10, 300) and FUN_a00cca38(0)",
