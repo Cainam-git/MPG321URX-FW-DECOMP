@@ -3191,7 +3191,7 @@
     },
     "ram:a0089090": {
       "by": "hand",
-      "comment": "Polls the HPD state of the selected ports, collects action flags and runs the flagged steps with trace prints",
+      "comment": "Per-port FUN_a008899c/FUN_a0088af0 results set action flag bits; the flagged FUN_a0088c5c/FUN_a00883d0/FUN_a0088b60/FUN_a00866e0 steps follow",
       "name": "eDP_IsHPDAction_Off",
       "status": "matched"
     },
