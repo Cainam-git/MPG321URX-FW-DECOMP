@@ -3459,6 +3459,12 @@
       "name": "FUN_a008bd1c",
       "status": "matched"
     },
+    "ram:a008bddc": {
+      "by": "hand",
+      "comment": "port setup by mode: FUN_a008bd1c selection and register sequences through FUN_a00a71fc / FUN_a00a7168",
+      "name": "FUN_a008bddc",
+      "status": "matched"
+    },
     "ram:a008c5d8": {
       "by": "hand",
       "comment": "compares FUN_a008c538(idx) against the 28000-36000 window and DAT_a8078b30, and on a change updates the flag, a record bit and port registers 2 and 1",
