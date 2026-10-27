@@ -4177,6 +4177,12 @@
       "name": "FUN_a0091578",
       "status": "matched"
     },
+    "ram:a00916a8": {
+      "by": "hand",
+      "comment": "Copies bit and byte fields of record ARR_a807a8fc[port] into record ARR_a807d580[port] when bit 2 of its word 4 is set",
+      "name": "FUN_a00916a8",
+      "status": "matched"
+    },
     "ram:a00918ec": {
       "by": "hand",
       "comment": "Sets bit 2 in the word at offset +0x10 of entry (param & 0xff) of the 28-byte record table at 0xa807d580. The index is written ARR_a807d580[iVar1 / 4 + 4] with iVar1 = (param & 0xff) * 28, so the +16 bytes fold into the ld/st displacement [%o5 + 0x10]. Same form as FUN_a0091988.",
