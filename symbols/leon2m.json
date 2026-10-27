@@ -7075,6 +7075,13 @@
       "name": "FUN_a00b88e0",
       "status": "matched"
     },
+    "ram:a00b89c4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Formats byte pairs of 0xa802d290 as n%d%d : %d%d for FUN_a00a31a4, then as FUN_a00b8ca8",
+      "name": "FUN_a00b89c4",
+      "status": "matched"
+    },
     "ram:a00b8ca8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
