@@ -1812,6 +1812,13 @@
       "name": "FUN_a002c2d4",
       "status": "matched"
     },
+    "ram:a002c2f0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the low byte of register 0xcf000000 + 4 * (r + k)",
+      "name": "FUN_a002c2f0",
+      "status": "matched"
+    },
     "ram:a002c318": {
       "by": "hand",
       "comment": "writes byte v to register 0xcf000000 + 4 * r",
