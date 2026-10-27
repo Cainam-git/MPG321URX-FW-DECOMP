@@ -14214,6 +14214,13 @@
       "name": "FUN_a01191fc",
       "status": "matched"
     },
+    "ram:a011926c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "rounds a up to a multiple of 36 (DAT_a802c9c0[b] == 0x18) or 9",
+      "name": "FUN_a011926c",
+      "status": "matched"
+    },
     "ram:a01192d0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
