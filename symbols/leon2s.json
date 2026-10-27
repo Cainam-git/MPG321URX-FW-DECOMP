@@ -7826,6 +7826,14 @@
       "name": "FUN_a00c3ae8",
       "status": "matched"
     },
+    "ram:a00c44ac": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00c44e4; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00c44ac",
+      "of": "FUN_a00c44e4",
+      "status": "matched"
+    },
     "ram:a00c44e4": {
       "by": "hand",
       "comment": "Two-record state machine over DAT_a807d608 with port registers 0x400-0x40e",
