@@ -18583,6 +18583,13 @@
       "name": "FUN_a0136600",
       "status": "matched"
     },
+    "ram:a0136a10": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Send a byte buffer as 16-byte chunks through the ring DAT_a802da6c with optional prints",
+      "name": "FUN_a0136a10",
+      "status": "matched"
+    },
     "ram:a0136d08": {
       "by": "autoc",
       "comment": "FUN_a01350dc(); FUN_a0134de0(p1, p2, p3, p4, p5, p6)",
