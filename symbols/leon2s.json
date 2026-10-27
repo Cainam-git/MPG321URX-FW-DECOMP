@@ -2165,6 +2165,12 @@
       "name": "FUN_a0072fd8",
       "status": "matched"
     },
+    "ram:a0073044": {
+      "by": "hand",
+      "comment": "printf-style output of fmt and arguments through FUN_a0072fd8 and FUN_a0072e60",
+      "name": "FUN_a0073044",
+      "status": "matched"
+    },
     "ram:a00734c4": {
       "by": "autoc",
       "comment": "FUN_a0061280(p1); returns (ulonglong)p2 << 0x20",
