@@ -4081,6 +4081,13 @@
       "name": "FUN_a0096e14",
       "status": "matched"
     },
+    "ram:a0096e9c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "runs one of two fixed call sequences depending on FUN_a01445fc(DAT_a802d290[0x1e])",
+      "name": "FUN_a0096e9c",
+      "status": "matched"
+    },
     "ram:a0096f40": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
