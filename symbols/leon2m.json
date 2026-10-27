@@ -12086,6 +12086,13 @@
       "name": "FUN_a00fe6c8",
       "status": "matched"
     },
+    "ram:a00fe718": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bits 6..7 of register 0xcf0116dc from c (0..2) with 0xcf02dc04 bit 5 set, or clears that bit (c = 3)",
+      "name": "FUN_a00fe718",
+      "status": "matched"
+    },
     "ram:a00fe7d8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
