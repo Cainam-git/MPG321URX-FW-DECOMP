@@ -5730,6 +5730,13 @@
       "name": "FUN_a00aa4e0",
       "status": "matched"
     },
+    "ram:a00aa83c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Fixed FUN_a0146b20/FUN_a0146a80 sequence, then 7 rows (page 0) or 1 row of DAT_00185e78 to FUN_a00a31a4, then FUN_a00b32e4",
+      "name": "FUN_a00aa83c",
+      "status": "matched"
+    },
     "ram:a00aa9d8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
