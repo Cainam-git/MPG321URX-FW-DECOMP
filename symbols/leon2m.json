@@ -6584,6 +6584,13 @@
       "name": "FUN_a00b37a4",
       "status": "matched"
     },
+    "ram:a00b3860": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Fixed call sequence with two formatted rows (n%4dX%4d, n%d HZ) and the FW.021 / model strings to FUN_a00a31a4",
+      "name": "FUN_a00b3860",
+      "status": "matched"
+    },
     "ram:a00b3ac8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
