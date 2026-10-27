@@ -1,5 +1,11 @@
 {
   "functions": {
+    "CODE:0000": {
+      "by": "hand",
+      "comment": "reset vector ?C_STARTUP: LJMP A627h (STARTUP.A51)",
+      "name": "thunk_FUN_CODE_a627",
+      "status": "matched"
+    },
     "CODE:0016": {
       "by": "twin",
       "c51opts": "OPTIMIZE(7,SPEED)",
@@ -1108,6 +1114,12 @@
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
       "comment": "index step on the 3-byte table at 0xA62F from the FUN_CODE_d94a count, LARGE local result",
       "name": "FUN_CODE_a57e",
+      "status": "matched"
+    },
+    "CODE:a627": {
+      "by": "hand",
+      "comment": "Keil STARTUP.A51 (clears XDATA A000h..AFFFh and F800h..FFFFh) + INIT.A51; SP 67h, main FUN_CODE_3fe7; checked with tools/startup8051.py (src/8051_bank1/startup)",
+      "name": "FUN_CODE_a627",
       "status": "matched"
     },
     "CODE:a6cf": {

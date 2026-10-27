@@ -11,7 +11,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools")); import diff8051
 KEIL, ENV = diff8051.KEIL, diff8051.ENV
 # start-up of each bank that has one: start, stack, main, initseg, end (the reset LJMP at 0x0000 is part of it)
-STARTUPS = {"8051_bank0": (0x13F7, 0x5B, 0x151C, 0x185F, 0x1491), "8051_bank2": (0xD426, 0x62, 0xB5B4, 0xC36D, 0xD4B2)}
+STARTUPS = {"8051_bank0": (0x13F7, 0x5B, 0x151C, 0x185F, 0x1491), "8051_bank2": (0xD426, 0x62, 0xB5B4, 0xC36D, 0xD4B2),
+            "8051_bank1": (0xA627, 0x68, 0x3FE7, 0x708C, 0xA6CF)}
 
 
 def run(t, *a):
