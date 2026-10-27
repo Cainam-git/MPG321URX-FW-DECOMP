@@ -5013,7 +5013,7 @@
     },
     "ram:a00a0588": {
       "by": "hand",
-      "comment": "Returns 1 when the enable and status bits of interrupt id (table 0xa00b4a00) are set in the register block of port",
+      "comment": "Returns 1 when the enable and status bits of entry id (table 0xa00b4a00) are set in the register block of port",
       "name": "FUN_a00a0588",
       "status": "matched"
     },
