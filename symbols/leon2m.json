@@ -10871,6 +10871,13 @@
       "name": "FUN_a00f1690",
       "status": "matched"
     },
+    "ram:a00f16d8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes v to register DAT_a8026a7a[c] + k (c == 2: entries 0 and 1)",
+      "name": "FUN_a00f16d8",
+      "status": "matched"
+    },
     "ram:a00f176c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
