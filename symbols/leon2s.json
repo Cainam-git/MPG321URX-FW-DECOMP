@@ -8244,6 +8244,12 @@
       "name": "FUN_a00d0798",
       "status": "matched"
     },
+    "ram:a00d0968": {
+      "by": "hand",
+      "comment": "Switches on byte 2 of record port of DAT_a8078bb0 (0..0x4f) and tail-calls the handler of that value with port",
+      "name": "FUN_a00d0968",
+      "status": "matched"
+    },
     "ram:a00d0d78": {
       "by": "lead",
       "comment": "void, unsigned char port; final call result tested",
