@@ -8374,6 +8374,12 @@
       "name": "FUN_a00d5f9c",
       "status": "matched"
     },
+    "ram:a00d5fa4": {
+      "by": "hand",
+      "comment": "tail call FUN_a014a0d8(bit 29 of DAT_a802d294)",
+      "name": "FUN_a00d5fa4",
+      "status": "matched"
+    },
     "ram:a00d6054": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
