@@ -17638,6 +17638,13 @@
       "name": "FUN_a0134de0",
       "status": "matched"
     },
+    "ram:a0135004": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "clears m[0..3] and pops one 5-word entry of DAT_a802da6c (index DAT_a802cb96, wraps after 0x24) into m",
+      "name": "FUN_a0135004",
+      "status": "matched"
+    },
     "ram:a01350dc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
