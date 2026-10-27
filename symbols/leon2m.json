@@ -17603,6 +17603,13 @@
       "name": "FUN_a0135dc0",
       "status": "matched"
     },
+    "ram:a0136054": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Builds a 10-byte port message from FUN_a01250c4/FUN_a0124b88 and sends it as type 0xb through the ring DAT_a802da6c",
+      "name": "FUN_a0136054",
+      "status": "matched"
+    },
     "ram:a0136384": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
