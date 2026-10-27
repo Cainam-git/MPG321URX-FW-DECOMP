@@ -8116,6 +8116,13 @@
       "name": "FUN_a00cfa68",
       "status": "matched"
     },
+    "ram:a00d0f68": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "XORs x with the (p[1] & 0x7f) + 2 bytes at p",
+      "name": "FUN_a00d0f68",
+      "status": "matched"
+    },
     "ram:a00d1a34": {
       "by": "hand",
       "comment": "tests on the return values of 143c14(0) / 13ce6c(0); returns 0xe0 (see header)",
