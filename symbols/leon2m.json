@@ -21285,6 +21285,13 @@
       "name": "FUN_a014f894",
       "status": "matched"
     },
+    "ram:a014f8a0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores v to DAT_a802a4a8..DAT_a802a4af for each bit set in m",
+      "name": "FUN_a014f8a0",
+      "status": "matched"
+    },
     "ram:a014f92c": {
       "by": "hand",
       "comment": "stores the argument to DAT_a802a4b0",
