@@ -15459,6 +15459,12 @@
       "name": "FUN_a0133cfc",
       "status": "matched"
     },
+    "ram:a0133d04": {
+      "by": "hand",
+      "comment": "tail call func_0x4008f3f4(0x2b, 0, 0, 0, 1)",
+      "name": "FUN_a0133d04",
+      "status": "matched"
+    },
     "ram:a0133e34": {
       "by": "autoc",
       "comment": "func_0x4008f3f4(0x16, 0, 0, 0, 3)",
