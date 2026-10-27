@@ -4793,6 +4793,12 @@
       "name": "FUN_a009e624",
       "status": "matched"
     },
+    "ram:a009e65c": {
+      "by": "hand",
+      "comment": "decrements a non-zero byte DAT_a802d290 + 0x1df and tail-calls FUN_a00b7d14(1)",
+      "name": "FUN_a009e65c",
+      "status": "matched"
+    },
     "ram:a009e694": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
