@@ -4736,6 +4736,12 @@
       "name": "FUN_a009e91c",
       "status": "matched"
     },
+    "ram:a009ea08": {
+      "by": "hand",
+      "comment": "stores 0x10c to DAT_a802afec and tail-calls FUN_a00b87d4",
+      "name": "FUN_a009ea08",
+      "status": "matched"
+    },
     "ram:a009ea78": {
       "by": "hand",
       "comment": "stores 0x112 to DAT_a802afec",
