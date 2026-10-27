@@ -817,6 +817,13 @@
       "name": "FUN_CODE_4ec1",
       "status": "matched"
     },
+    "CODE:568f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "scan of IDATA 0x29 bits 0..7 with per-index XDATA bit-0 tests; mask 1 << i staged in ACC",
+      "name": "FUN_CODE_568f",
+      "status": "matched"
+    },
     "CODE:5864": {
       "by": "hand",
       "comment": "Keil common-entry (L?) code in front of FUN_CODE_5868, in FUN_CODE_5868's code segment; emitted by compiling src/8051_bank1/FUN_CODE_5868.c, bytes judged with FUN_CODE_5868 over 0x5864..0x5a39",
