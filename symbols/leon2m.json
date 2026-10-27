@@ -4754,6 +4754,12 @@
       "name": "FUN_a009ea40",
       "status": "matched"
     },
+    "ram:a009ea5c": {
+      "by": "hand",
+      "comment": "stores 0x111 to DAT_a802afec and tail-calls FUN_a008a878",
+      "name": "FUN_a009ea5c",
+      "status": "matched"
+    },
     "ram:a009ea78": {
       "by": "hand",
       "comment": "stores 0x112 to DAT_a802afec",
