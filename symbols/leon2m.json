@@ -18005,6 +18005,13 @@
       "name": "FUN_a012f3ec",
       "status": "matched"
     },
+    "ram:a012f43c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Updates the port records of channel ch for value v and sets byte +0x76 of its channel record",
+      "name": "FUN_a012f43c",
+      "status": "matched"
+    },
     "ram:a012fc04": {
       "by": "autoc",
       "comment": "FUN_a012f43c(0, 0x61, 1)",
