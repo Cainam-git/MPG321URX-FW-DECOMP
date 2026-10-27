@@ -6,6 +6,12 @@
       "name": "thunk_FUN_CODE_a627",
       "status": "matched"
     },
+    "CODE:0006": {
+      "by": "hand",
+      "comment": "returns the IDATA byte 0x47",
+      "name": "FUN_CODE_0006",
+      "status": "matched"
+    },
     "CODE:0016": {
       "by": "twin",
       "c51opts": "OPTIMIZE(7,SPEED)",
