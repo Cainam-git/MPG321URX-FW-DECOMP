@@ -8963,6 +8963,13 @@
       "name": "FUN_a00dd808",
       "status": "matched"
     },
+    "ram:a00dd814": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets DAT_a802b0ac to (a == 1) and stores b to DAT_a802b0a8",
+      "name": "FUN_a00dd814",
+      "status": "matched"
+    },
     "ram:a00dd83c": {
       "by": "autoc",
       "comment": "Returns the number of bytes before the first zero byte of the string at p1",
