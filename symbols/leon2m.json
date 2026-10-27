@@ -11142,6 +11142,13 @@
       "name": "FUN_a00ed70c",
       "status": "matched"
     },
+    "ram:a00edc70": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Saves six register fields, calls FUN_a00ec6b8, restores the fields and scales the two result words",
+      "name": "FUN_a00edc70",
+      "status": "matched"
+    },
     "ram:a00ee188": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O2",
