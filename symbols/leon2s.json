@@ -2872,6 +2872,12 @@
       "name": "FUN_a0085b14",
       "status": "matched"
     },
+    "ram:a0085b80": {
+      "by": "hand",
+      "comment": "Writes the port register sequence through FUN_a00a7940 / FUN_a00a78fc and keeps the two written values in DAT_a807cd68 or DAT_a807cd00",
+      "name": "FUN_a0085b80",
+      "status": "matched"
+    },
     "ram:a0085dcc": {
       "by": "autoc",
       "comment": "Sets bits 0-4 of register 0xCF013280 and writes 0x86, 0x95 and 0x55 to registers 0xCF013284, 0xCF013288 and 0xCF01328C. With k = p1 & 0xff calls FUN_a00ab584(), FUN_a00ab4a8(k) and FUN_a00a78fc(k, r, v) for (r, v) = (0x32, 0), (0x31, 0xd1), (0x35, 0x13), (0x35, 0x91), (0x33, 8); for k == 0 also FUN_a00a7940(0, 0x21, 6, 1) and FUN_a00a78fc(0, 0x31, 0xb). Clears byte 0xA8078A0D",
