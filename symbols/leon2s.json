@@ -2099,6 +2099,12 @@
       "name": "FUN_a0070424",
       "status": "matched"
     },
+    "ram:a0070434": {
+      "by": "hand",
+      "comment": "Collects eight halfword values from getters selected by the port byte of s and writes them little-endian to d",
+      "name": "FUN_a0070434",
+      "status": "matched"
+    },
     "ram:a0070704": {
       "by": "hand",
       "comment": "calls FUN_a0072b04 when the argument is 0",
