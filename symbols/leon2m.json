@@ -13153,6 +13153,13 @@
       "name": "FUN_a0109148",
       "status": "matched"
     },
+    "ram:a0109278": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes a and b with FUN_a00f308c to the register pairs of port 0..3 at 0xcf011b08",
+      "name": "FUN_a0109278",
+      "status": "matched"
+    },
     "ram:a01093a8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
