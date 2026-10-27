@@ -15218,6 +15218,13 @@
       "name": "FUN_a0123654",
       "status": "matched"
     },
+    "ram:a012367c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes the bytes of v to 0xcf03c670..0xcf03c67c, starts command 0x31 at 0xcf03c660 and waits",
+      "name": "FUN_a012367c",
+      "status": "matched"
+    },
     "ram:a01236e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
