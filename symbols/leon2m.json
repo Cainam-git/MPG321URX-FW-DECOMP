@@ -21718,7 +21718,7 @@
     "ram:a014de48": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "sets bit 4 of DAT_a802e224[port of DAT_a802df30[c]] to b (c = 0..3)",
+      "comment": "sets bit 4 of DAT_a802e224[(DAT_a802df30[c].w >> 12) & 0xf] to b (c = 0..3)",
       "name": "FUN_a014de48",
       "status": "matched"
     },
