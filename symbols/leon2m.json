@@ -14812,6 +14812,13 @@
       "name": "FUN_a011ca58",
       "status": "matched"
     },
+    "ram:a011cae0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bits 5..7 of register DAT_a8027aa8[c] + 0x80 to 0, 4, 3 or 7 by mode",
+      "name": "FUN_a011cae0",
+      "status": "matched"
+    },
     "ram:a011cc44": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
