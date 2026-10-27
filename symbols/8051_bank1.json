@@ -1172,6 +1172,12 @@
       "name": "FUN_CODE_acf2",
       "status": "matched"
     },
+    "CODE:aeb2": {
+      "by": "hand",
+      "comment": "returns the XDATA byte selected by n = 1..12 (0xF3C5..0xF3CC, 0xF3D5, 0xF3D6, 0xF5D5, 0xF5D6), else 0xFF",
+      "name": "FUN_CODE_aeb2",
+      "status": "matched"
+    },
     "CODE:af47": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
