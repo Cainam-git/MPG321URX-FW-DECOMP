@@ -21272,6 +21272,13 @@
       "name": "FUN_a014aed0",
       "status": "matched"
     },
+    "ram:a014af84": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns FUN_a0125124(DAT_a802e116[k] byte +0x10), k from the 0x51/0x61/0x71/0x81 code of c",
+      "name": "FUN_a014af84",
+      "status": "matched"
+    },
     "ram:a014b01c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
