@@ -3752,6 +3752,14 @@
       "name": "FUN_a008e7c0",
       "status": "matched"
     },
+    "ram:a008e940": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a008e958; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a008e940",
+      "of": "FUN_a008e958",
+      "status": "matched"
+    },
     "ram:a008e958": {
       "by": "hand",
       "comment": "Semaphore-guarded update of 0xcf014754 / 0xcf01477c for sel, then the 0xcf014748 nibble and print for rate 1..6",
