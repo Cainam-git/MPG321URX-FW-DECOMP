@@ -11167,6 +11167,13 @@
       "name": "FUN_a00f3134",
       "status": "matched"
     },
+    "ram:a00f3194": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes 0xe0 to register 0xcf0200d4 and sets 0xe0 in 0xcf020114",
+      "name": "FUN_a00f3194",
+      "status": "matched"
+    },
     "ram:a00f328c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
