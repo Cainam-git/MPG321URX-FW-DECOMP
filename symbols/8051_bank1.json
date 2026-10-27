@@ -1338,6 +1338,13 @@
       "name": "FUN_CODE_aa93",
       "status": "matched"
     },
+    "CODE:ab2c": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Stores 1 << (p >> 8), or p >> 8 when XDATA 0xD511 is 0x20, to XDATA int 0xA774 and its bytes to 0xF405/0xF406 or 0xF407/0xF408 by sel, and v to 0x6500 or 0x6600 at the low byte of p",
+      "name": "FUN_CODE_ab2c",
+      "status": "matched"
+    },
     "CODE:abc4": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
