@@ -17134,6 +17134,13 @@
       "name": "FUN_a0129c10",
       "status": "matched"
     },
+    "ram:a0129edc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Scaled byte 0xa802a449 from record byte 8, table search for index 0xa802a44a against FUN_a0101cb4(), set-up calls",
+      "name": "FUN_a0129edc",
+      "status": "matched"
+    },
     "ram:a012a128": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
