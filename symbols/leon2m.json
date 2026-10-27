@@ -4772,6 +4772,12 @@
       "name": "FUN_a009ea88",
       "status": "matched"
     },
+    "ram:a009eaa4": {
+      "by": "hand",
+      "comment": "stores 0x111 to DAT_a802afec and tail-calls FUN_a008a95c",
+      "name": "FUN_a009eaa4",
+      "status": "matched"
+    },
     "ram:a009eaf8": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
