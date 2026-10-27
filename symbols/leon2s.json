@@ -6233,6 +6233,12 @@
       "name": "FUN_a00a88b8",
       "status": "matched"
     },
+    "ram:a00a89c0": {
+      "by": "hand",
+      "comment": "Writes the FUN_a00a8260 / FUN_a00a6440 register sets for sel 0..2 and returns the checked bit 0 of FUN_a00a88b8",
+      "name": "FUN_a00a89c0",
+      "status": "matched"
+    },
     "ram:a00a8cac": {
       "by": "hand",
       "comment": "Runs the three FUN_a00a89c0 packet-switch steps for HDMI inputs 0x31..0x61 or DP inputs 0x71/0x81 and prints the failure messages",
