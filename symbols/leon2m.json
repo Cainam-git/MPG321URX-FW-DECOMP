@@ -12823,7 +12823,7 @@
     "ram:a01012a8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Sets DAT_a8027a75 from the port's input type and resolution, then writes the 0xf2..0xfd block registers (3x5 table for port 0)",
+      "comment": "Sets DAT_a8027a75 from FUN_a00fd820/FUN_a00f8dd4/FUN_a00f8df0 results, then writes block registers 0xf2..0xfd (3x5 table for port 0)",
       "name": "FUN_a01012a8",
       "status": "matched"
     },
