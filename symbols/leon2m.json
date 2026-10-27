@@ -15563,6 +15563,12 @@
       "name": "FUN_a012ced8",
       "status": "matched"
     },
+    "ram:a012cee4": {
+      "by": "hand",
+      "comment": "stores halfword v to bits 8..23 of word DAT_a802e1a0 + 0x34",
+      "name": "FUN_a012cee4",
+      "status": "matched"
+    },
     "ram:a012cf10": {
       "by": "hand",
       "comment": "stores the argument to DAT_a802e1d7",
