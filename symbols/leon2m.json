@@ -8800,6 +8800,12 @@
       "name": "FUN_a00d8034",
       "status": "matched"
     },
+    "ram:a00d8064": {
+      "by": "hand",
+      "comment": "tail call FUN_a014bd0c(c) for c = 0..3",
+      "name": "FUN_a00d8064",
+      "status": "matched"
+    },
     "ram:a00d80b0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
