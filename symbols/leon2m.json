@@ -18544,7 +18544,7 @@
     "ram:a0135344": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Send two bytes through the ring DAT_a802da6c, then poll FUN_a0132b8c for the reply",
+      "comment": "Writes one ring entry with cmd | 0x80 and the bytes b1, b2 to DAT_a802da6c, then calls FUN_a01350dc and FUN_a0134de0 until the inlined FUN_a0132b8c(p) returns non-zero",
       "name": "FUN_a0135344",
       "status": "matched"
     },
