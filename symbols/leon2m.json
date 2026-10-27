@@ -6616,6 +6616,12 @@
       "name": "FUN_a00bb260",
       "status": "matched"
     },
+    "ram:a00bb414": {
+      "by": "hand",
+      "comment": "clears DAT_a802b09a and 0x32 bytes at DAT_a802d040",
+      "name": "FUN_a00bb414",
+      "status": "matched"
+    },
     "ram:a00bb44c": {
       "by": "hand",
       "comment": "empty routine",
