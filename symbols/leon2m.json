@@ -11167,6 +11167,13 @@
       "name": "FUN_a00f3134",
       "status": "matched"
     },
+    "ram:a00f3164": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns p[0] | p[1] << 8 | p[2] << 16 | p[3] << 24 from words p[0..3]",
+      "name": "FUN_a00f3164",
+      "status": "matched"
+    },
     "ram:a00f3194": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
