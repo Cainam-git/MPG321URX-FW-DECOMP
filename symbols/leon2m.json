@@ -17311,6 +17311,13 @@
       "name": "FUN_a0132cd4",
       "status": "matched"
     },
+    "ram:a0132d44": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "maps 1..13 to 0x11..0x1d and 18 to 0x11 (else 0)",
+      "name": "FUN_a0132d44",
+      "status": "matched"
+    },
     "ram:a0132dd8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
