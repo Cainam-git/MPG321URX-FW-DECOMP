@@ -13897,6 +13897,13 @@
       "name": "FUN_a01111e4",
       "status": "matched"
     },
+    "ram:a01111f4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes a fixed constant sequence to registers 0xcf01cc58..0xcf01cfac",
+      "name": "FUN_a01111f4",
+      "status": "matched"
+    },
     "ram:a011149c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
