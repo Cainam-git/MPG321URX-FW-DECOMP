@@ -9181,6 +9181,12 @@
       "name": "FUN_a00d8714",
       "status": "matched"
     },
+    "ram:a00d87fc": {
+      "by": "hand",
+      "comment": "Builds command 0x20 from a FUN_a00d73b4 response: data read with func_0xa0f96400 in 16-byte chunks or copied from address-range tables",
+      "name": "FUN_a00d87fc",
+      "status": "matched"
+    },
     "ram:a00d8d20": {
       "by": "hand",
       "comment": "Fetch a 30-byte response, build a type-0x22 command with copied table bytes and send it",
