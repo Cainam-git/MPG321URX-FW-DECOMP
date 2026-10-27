@@ -11210,6 +11210,13 @@
       "name": "FUN_a00ea1f0",
       "status": "matched"
     },
+    "ram:a00ec340": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes register fields derived from (p3 + p4 - 1) / 2 divided by n, using entry b of the field tables",
+      "name": "FUN_a00ec340",
+      "status": "matched"
+    },
     "ram:a00ed528": {
       "by": "hand",
       "comment": "empty routine",
