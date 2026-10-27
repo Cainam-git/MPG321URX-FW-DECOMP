@@ -21809,6 +21809,13 @@
       "name": "FUN_a014bd70",
       "status": "matched"
     },
+    "ram:a014c118": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Selects three byte values for a byte argument (23-entry switch, jump table 0xa0143534) and passes them plus 1 to FUN_a013b4a4",
+      "name": "FUN_a014c118",
+      "status": "matched"
+    },
     "ram:a014c778": {
       "by": "autoc",
       "comment": "(byte 0xA802E3DB) = p1; FUN_a014c118(p1)",
