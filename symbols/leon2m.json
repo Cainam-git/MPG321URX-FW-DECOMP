@@ -12205,6 +12205,13 @@
       "name": "FUN_a0107554",
       "status": "matched"
     },
+    "ram:a01075a8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "clears bit 4 of register 0xcf00eac8 and sets/clears bit 0 of 0xcf00ea00 (c == 1)",
+      "name": "FUN_a01075a8",
+      "status": "matched"
+    },
     "ram:a01075f8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
