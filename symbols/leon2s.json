@@ -3549,7 +3549,7 @@
     },
     "ram:a008cba8": {
       "by": "hand",
-      "comment": "Copies 3 configuration bytes to DAT_a8076688 and applies them through register writes and the FUN_a00b115c / FUN_a00b1224 groups",
+      "comment": "Copies 3 bytes from src to DAT_a8076688 and does the register writes and FUN_a00b115c / FUN_a00b1224 calls they select",
       "name": "FUN_a008cba8",
       "status": "matched"
     },
