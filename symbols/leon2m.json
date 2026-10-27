@@ -1776,6 +1776,12 @@
       "name": "FUN_a002c218",
       "status": "matched"
     },
+    "ram:a002c22c": {
+      "by": "hand",
+      "comment": "clears bit n of register 0xcf03c894",
+      "name": "FUN_a002c22c",
+      "status": "matched"
+    },
     "ram:a002c250": {
       "by": "hand",
       "comment": "Reg_Read32: return the 32-bit word at addr",
