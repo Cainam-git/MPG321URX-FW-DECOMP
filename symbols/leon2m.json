@@ -11664,6 +11664,13 @@
       "name": "FUN_a00f9994",
       "status": "matched"
     },
+    "ram:a00f99a0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bit 31 of register 0xd0040000 to (v != 0) and bits 0..3 of 0xd00400d8 to v, returns 0",
+      "name": "FUN_a00f99a0",
+      "status": "matched"
+    },
     "ram:a00f99e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
