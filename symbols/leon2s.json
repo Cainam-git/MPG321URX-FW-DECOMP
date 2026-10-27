@@ -1967,6 +1967,12 @@
       "name": "FUN_a006e2c4",
       "status": "matched"
     },
+    "ram:a006e444": {
+      "by": "hand",
+      "comment": "One pass of the five-state port link sequence for the second receiver type, with power flags and status prints",
+      "name": "LINK_STANDBY_2",
+      "status": "matched"
+    },
     "ram:a006e820": {
       "by": "hand",
       "comment": "sets the flag bits of status byte +0xd (and bit 6 of +0x12) from the per-port test functions",
