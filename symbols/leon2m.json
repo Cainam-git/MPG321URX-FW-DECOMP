@@ -12308,6 +12308,13 @@
       "name": "FUN_a0109474",
       "status": "matched"
     },
+    "ram:a0109514": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets or clears bit n of register 0xcf011800",
+      "name": "FUN_a0109514",
+      "status": "matched"
+    },
     "ram:a0109554": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
