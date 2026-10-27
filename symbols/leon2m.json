@@ -8648,6 +8648,13 @@
       "name": "FUN_a00d10b4",
       "status": "matched"
     },
+    "ram:a00d1110": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "fills p[1], p[7], copies 13 bytes from DAT_a802d274 + 3 to p + 8 and stores the XOR checksum to p[0x15]",
+      "name": "FUN_a00d1110",
+      "status": "matched"
+    },
     "ram:a00d1a34": {
       "by": "hand",
       "comment": "tests on the return values of 143c14(0) / 13ce6c(0); returns 0xe0 (see header)",
