@@ -11358,6 +11358,13 @@
       "name": "FUN_a00f6940",
       "status": "matched"
     },
+    "ram:a00f6ab4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "clears bit 6/7 of register 0xcf00ee40 or 0xcf00ee68 selected by c (0..4)",
+      "name": "FUN_a00f6ab4",
+      "status": "matched"
+    },
     "ram:a00f6c38": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
