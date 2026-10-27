@@ -7806,6 +7806,12 @@
       "name": "FUN_a00c5fb0",
       "status": "matched"
     },
+    "ram:a00c601c": {
+      "by": "hand",
+      "comment": "Per-port record and event-bit update over ports 0..5, calling the port start and status routines",
+      "name": "FUN_a00c601c",
+      "status": "matched"
+    },
     "ram:a00c6730": {
       "by": "autoc",
       "comment": "Calls FUN_a00c32f4(), FUN_a00c3ae8(), FUN_a00c44e4() and FUN_a00d17a8(), then passes its six arguments to FUN_a00c601c",
