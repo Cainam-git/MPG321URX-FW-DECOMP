@@ -9163,6 +9163,13 @@
       "name": "FUN_a00d42e0",
       "status": "matched"
     },
+    "ram:a00d430c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets parameter 0xb of the first channel to (100 - level) * (p[0xd] - p[0xe]) / 100 + p[0xe]",
+      "name": "FUN_a00d430c",
+      "status": "matched"
+    },
     "ram:a00d43b4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
