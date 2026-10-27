@@ -13755,6 +13755,13 @@
       "name": "FUN_a0110084",
       "status": "matched"
     },
+    "ram:a01101a8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "recomputes s->w4/w8 from s->w0 and writes them to registers 0xd0032280/0xd003a280 or +4",
+      "name": "FUN_a01101a8",
+      "status": "matched"
+    },
     "ram:a011023c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
