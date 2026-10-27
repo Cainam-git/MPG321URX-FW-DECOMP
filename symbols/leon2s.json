@@ -4648,6 +4648,14 @@
       "name": "FUN_a0094fb0",
       "status": "matched"
     },
+    "ram:a0095058": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00950a0; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0095058",
+      "of": "FUN_a00950a0",
+      "status": "matched"
+    },
     "ram:a00950a0": {
       "by": "hand",
       "comment": "Command switch 0..17 over the record DAT_a807d580[port]",
@@ -6347,6 +6355,14 @@
       "by": "hand",
       "comment": "Copies src bytes 1, 4, 5 and 10 bytes from src+6 to dst bytes 0..2 and dst+4, dst byte 3 = minus their 8-bit sum",
       "name": "FUN_a00a8f28",
+      "status": "matched"
+    },
+    "ram:a00a8f8c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00a9020; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00a8f8c",
+      "of": "FUN_a00a9020",
       "status": "matched"
     },
     "ram:a00a9020": {
