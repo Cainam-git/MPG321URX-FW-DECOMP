@@ -6150,6 +6150,13 @@
       "name": "FUN_a00a8bc0",
       "status": "matched"
     },
+    "ram:a00a8c88": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Rows 5..0x14 through FUN_a0146b20/FUN_a0146a80, then FUN_a00b3ed0 for listed FUN_a0090fcc values",
+      "name": "FUN_a00a8c88",
+      "status": "matched"
+    },
     "ram:a00a8ee8": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
