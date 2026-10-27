@@ -12262,6 +12262,13 @@
       "name": "FUN_a00f9500",
       "status": "matched"
     },
+    "ram:a00f9528": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Accumulates weighted 24-bit register samples into three sums by state and stores the sums divided by 5000",
+      "name": "FUN_a00f9528",
+      "status": "matched"
+    },
     "ram:a00f9880": {
       "by": "hand",
       "comment": "Clears and sets bit 3 of block-0 register 3 around FUN_4008d1a0(0x28) and prints toggle for preFRC",
