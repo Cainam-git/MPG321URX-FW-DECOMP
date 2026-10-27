@@ -7723,6 +7723,12 @@
       "name": "FUN_a00c32f4",
       "status": "matched"
     },
+    "ram:a00c3ae8": {
+      "by": "hand",
+      "comment": "State machine of the 16-byte records DAT_a807d5e8[0..1] over the window registers, switch on byte +0xd",
+      "name": "FUN_a00c3ae8",
+      "status": "matched"
+    },
     "ram:a00c4e4c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
