@@ -16059,6 +16059,13 @@
       "name": "FUN_a012cf1c",
       "status": "matched"
     },
+    "ram:a012cf64": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the value for key c from the halfword pair table DAT_001a5168 (12 entries)",
+      "name": "FUN_a012cf64",
+      "status": "matched"
+    },
     "ram:a012cfac": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
