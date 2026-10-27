@@ -9783,6 +9783,13 @@
       "name": "FUN_a00dc2dc",
       "status": "matched"
     },
+    "ram:a00dcd38": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Converts a text (cut at newline, 32 characters) to a number: 0x hex or up to 9 decimal digits",
+      "name": "FUN_a00dcd38",
+      "status": "matched"
+    },
     "ram:a00dcec4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
