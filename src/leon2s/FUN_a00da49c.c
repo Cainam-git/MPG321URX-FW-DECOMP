@@ -8,7 +8,7 @@
  * FUN_a00d9edc(0, 1, DAT_a8079c48[k] + 1) and flag = 1, else FUN_a00d9edc(0, 0, DAT_a8078868 + 1),
  * FUN_a00da030(..) and DAT_a8079c48[k] -= DAT_a8078868. Then sets bit 4 (x == 0) or bit 5 of word 0xccc of the
  * block DAT_a80760a4[k], calls func_0xa0fbe1c0(k) and returns 1. k is re-read from DAT_a8078832 after each call.
- * Source form: the store order inside the two counter-step arms (found by search).
+ * Source form: the order of the four stores in each counter-step arm (DAT_a8079c48, flag, counter, DAT_a8078838).
  */
 extern unsigned char DAT_a8078832;
 extern unsigned char DAT_a8078800[];
