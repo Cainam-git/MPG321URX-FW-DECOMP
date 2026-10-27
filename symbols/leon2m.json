@@ -19965,6 +19965,13 @@
       "name": "FUN_a0144350",
       "status": "matched"
     },
+    "ram:a0144414": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the first channel whose DAT_a802e224 port byte +9 is not 5, else 0xff",
+      "name": "FUN_a0144414",
+      "status": "matched"
+    },
     "ram:a0144484": {
       "by": "hand",
       "comment": "returns 6",
