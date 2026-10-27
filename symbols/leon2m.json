@@ -9946,6 +9946,13 @@
       "name": "FUN_a00db174",
       "status": "matched"
     },
+    "ram:a00db1ac": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Tests of the FUN_a0090fcc value with record updates and calls per value range (inlines FUN_a00d934c)",
+      "name": "FUN_a00db1ac",
+      "status": "matched"
+    },
     "ram:a00db690": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
