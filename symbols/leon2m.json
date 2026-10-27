@@ -18127,6 +18127,12 @@
       "name": "FUN_a013782c",
       "status": "matched"
     },
+    "ram:a0137864": {
+      "by": "hand",
+      "comment": "sends the 2-byte message {2 + c, v} through FUN_a01370dc(2, 2, buf, 0)",
+      "name": "FUN_a0137864",
+      "status": "matched"
+    },
     "ram:a01378f0": {
       "by": "permuter",
       "comment": "FUN_a01370dc(0x11, 2, {p1, p2, 0, 0}, 0)",
