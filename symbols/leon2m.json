@@ -12861,6 +12861,13 @@
       "name": "FUN_a0108544",
       "status": "matched"
     },
+    "ram:a01085a4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "divides *p by (reg 0xcf0116d0 & 0x7f) + 1 and adds 1 when c is 0 and reg 0xcf011a00 bit 4 is set",
+      "name": "FUN_a01085a4",
+      "status": "matched"
+    },
     "ram:a01085f8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
