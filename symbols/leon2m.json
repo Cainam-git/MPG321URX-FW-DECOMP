@@ -4220,6 +4220,13 @@
       "name": "FUN_a0098280",
       "status": "matched"
     },
+    "ram:a00982f0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "like FUN_a0097b7c with DAT_a802d290[0x1a3] = 1 and offset 0xd4",
+      "name": "FUN_a00982f0",
+      "status": "matched"
+    },
     "ram:a0098364": {
       "by": "autoc",
       "comment": "FUN_a00d934c(p1, p2, p3, p4, p5, p6)",
