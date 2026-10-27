@@ -1502,6 +1502,13 @@
       "name": "FUN_CODE_bae2",
       "status": "matched"
     },
+    "CODE:bb56": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Stores 1 << (p >> 8), or p >> 8 when XDATA 0xD511 is 0x20, to 0xF405/0xF406 or 0xF407/0xF408 by sel, sets 0xD50B and 0xD50C, returns 0xD50D",
+      "name": "FUN_CODE_bb56",
+      "status": "matched"
+    },
     "CODE:bc3d": {
       "by": "hand",
       "comment": "interrupt helper: latch the F028/F027 count, compute (0xFFFF - count) / 75 into IDATA 0x5B and append it to the ring buffer at 0xA566",
