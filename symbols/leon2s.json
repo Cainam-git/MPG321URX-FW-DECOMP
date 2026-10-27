@@ -8206,6 +8206,12 @@
       "name": "FUN_a00cf6bc",
       "status": "matched"
     },
+    "ram:a00cf7b4": {
+      "by": "hand",
+      "comment": "Sets record state 1 when bit 22 is set (else 3), reads 16 bytes and 4 bytes through the ROM routines, then passes DAT_a807ce50 in 8-pair blocks to func_0xa0f963d4",
+      "name": "FUN_a00cf7b4",
+      "status": "matched"
+    },
     "ram:a00cf954": {
       "by": "hand",
       "comment": "sets field st of DAT_a8078bb0[port] to 3",
