@@ -2082,6 +2082,12 @@
       "name": "FUN_a002f088",
       "status": "matched"
     },
+    "ram:a002f0b4": {
+      "by": "hand",
+      "comment": "clears registers 0xcf008330/0xcf008334 and sets bit 6 of DAT_a802c9e4",
+      "name": "FUN_a002f0b4",
+      "status": "matched"
+    },
     "ram:a002f10c": {
       "by": "near",
       "comment": "returns the byte at 0xA802C9F0",
