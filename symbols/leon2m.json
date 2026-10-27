@@ -12799,6 +12799,13 @@
       "name": "FUN_a010bdcc",
       "status": "matched"
     },
+    "ram:a010bea4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns word k of register block DAT_0019aed8[c] or DAT_0019aecc[c] (sel)",
+      "name": "FUN_a010bea4",
+      "status": "matched"
+    },
     "ram:a010bee4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
