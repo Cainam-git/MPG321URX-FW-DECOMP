@@ -11372,6 +11372,13 @@
       "name": "FUN_a00f6508",
       "status": "matched"
     },
+    "ram:a00f66a4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "clears bits of registers 0xcf00ef00/0xcf00ef30 for each bit set in m",
+      "name": "FUN_a00f66a4",
+      "status": "matched"
+    },
     "ram:a00f67d0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
