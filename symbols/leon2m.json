@@ -18417,6 +18417,12 @@
       "name": "FUN_a0145360",
       "status": "matched"
     },
+    "ram:a01454c4": {
+      "by": "hand",
+      "comment": "tail-calls FUN_a01539b8 (c = 2) or FUN_a0153a5c (c > 3)",
+      "name": "FUN_a01454c4",
+      "status": "matched"
+    },
     "ram:a0145508": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
