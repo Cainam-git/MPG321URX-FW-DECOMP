@@ -6052,6 +6052,13 @@
       "name": "FUN_a00a8230",
       "status": "matched"
     },
+    "ram:a00a82c4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "prints four entries of the DAT_0018f984 string table (from byte 8 of DAT_a802d290) through FUN_a00a31a4",
+      "name": "FUN_a00a82c4",
+      "status": "matched"
+    },
     "ram:a00a835c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
