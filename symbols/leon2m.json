@@ -14369,6 +14369,13 @@
       "name": "FUN_a011a848",
       "status": "matched"
     },
+    "ram:a011a974": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bits 0x2f (on) or keeps bits 0xd0 of register DAT_a8027aa8[k] + 0x30",
+      "name": "FUN_a011a974",
+      "status": "matched"
+    },
     "ram:a011a9e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
