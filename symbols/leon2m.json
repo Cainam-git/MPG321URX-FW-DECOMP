@@ -1894,6 +1894,13 @@
       "name": "FUN_a002c42c",
       "status": "matched"
     },
+    "ram:a002c464": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "clears mask and sets v in register 0xcf000000 + 4 * (r + k)",
+      "name": "FUN_a002c464",
+      "status": "matched"
+    },
     "ram:a002c4a8": {
       "by": "hand",
       "comment": "empty routine",
