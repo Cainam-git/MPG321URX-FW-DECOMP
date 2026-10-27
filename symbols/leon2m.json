@@ -2370,6 +2370,13 @@
       "name": "FUN_a0083b60",
       "status": "matched"
     },
+    "ram:a0083be0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "tail-calls FUN_a00d3dbc when DAT_a802d290 word +0xa8 bit 11 is set and byte +0x181 is 7",
+      "name": "FUN_a0083be0",
+      "status": "matched"
+    },
     "ram:a0083c20": {
       "by": "autoc",
       "comment": "returns (halfword 0xA802AF42) >> 5 & 1",
