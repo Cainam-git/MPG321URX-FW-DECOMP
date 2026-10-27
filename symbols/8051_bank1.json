@@ -767,6 +767,14 @@
       "name": "FUN_CODE_3091",
       "status": "matched"
     },
+    "CODE:38a7": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "fills the XDATA 0xA3E3 record from one of four sources and packs the buffer with FUN_CODE_5868; mask bit staged in ACC",
+      "module": "FUN_CODE_5868",
+      "name": "FUN_CODE_38a7",
+      "status": "matched"
+    },
     "CODE:3c4d": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",

@@ -26,9 +26,11 @@
  *     returns non-zero: buf[i] = FUN_CODE_d697(); count = i.
  *   The XDATA bytes 0xA3E3..0xA46E are one structure (Keil addresses 0xA3E5/0xA3E6, 0xA3E8/0xA3E9 and
  *   0xA46C/0xA46D with INC DPTR, as for members of one object); the field names describe positions only.
- * Status: FUN_CODE_5868 and its block are byte-exact. FUN_CODE_38a7 (933 of 934 bytes) differs only in the shift
- *   '1 << ch' (firmware 'MOV A,#1 / MOV R0,AR6', Keil 9.60.7 'MOV R0,A / MOV A,#1').
+ * Source form (FUN_CODE_38a7, 'mask |= 1 << ch'): the mask byte and ch are copied to locals m and c; the 1 is
+ *   written to ACC (reg51.h) and the shift reads ACC, so Keil loads A ('MOV A,#01H') before the count
+ *   ('MOV R0,AR6').
  */
+#include <reg51.h>
 struct rec_a3e3 {
     unsigned char mask;         /* 0xA3E3 */
     unsigned char e4;           /* 0xA3E4 */
@@ -70,6 +72,7 @@ void FUN_CODE_38a7(void)
     unsigned char i, j, ch;
     unsigned char buf[128];
     unsigned int w;
+    unsigned char m, c;
 
     ch = 0xff;
     if (!FUN_CODE_de12()) return;
@@ -100,7 +103,10 @@ void FUN_CODE_38a7(void)
         DAT_EXTMEM_a3e3.e6 = 0;
         DAT_EXTMEM_a3e3.ch = ch;
         FUN_CODE_5868(buf, DAT_EXTMEM_a3e3.d, DAT_EXTMEM_a3e3.len);
-        DAT_EXTMEM_a3e3.mask |= 1 << ch;
+        m = DAT_EXTMEM_a3e3.mask;
+        c = ch;
+        ACC = 1;
+        DAT_EXTMEM_a3e3.mask = m | (ACC << c);
     } else if (FUN_CODE_de9c()) {
         DAT_EXTMEM_a3e3.type = 1;
         w = DAT_EXTMEM_a3e3.off;
