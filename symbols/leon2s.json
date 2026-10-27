@@ -1967,6 +1967,14 @@
       "name": "FUN_a006e2c4",
       "status": "matched"
     },
+    "ram:a006e430": {
+      "by": "table",
+      "comment": "jump table of the switch in LINK_STANDBY_2; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a006e430",
+      "of": "LINK_STANDBY_2",
+      "status": "matched"
+    },
     "ram:a006e444": {
       "by": "hand",
       "comment": "One pass of a five-state port link sequence (rec[0] = state) with power flags, ARR_a807d7e0 timing copies and status prints",
@@ -4448,6 +4456,14 @@
       "by": "hand",
       "comment": "switch on mode & 0xf (a7fd8 / a8054 register calls), tail 9d980(port, k) (see header)",
       "name": "FUN_a0092064",
+      "status": "matched"
+    },
+    "ram:a00920ec": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0092100; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00920ec",
+      "of": "FUN_a0092100",
       "status": "matched"
     },
     "ram:a0092100": {

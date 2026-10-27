@@ -11155,6 +11155,14 @@
       "name": "FUN_a00e4538",
       "status": "matched"
     },
+    "ram:a00e47dc": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00e47f8; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00e47dc",
+      "of": "FUN_a00e47f8",
+      "status": "matched"
+    },
     "ram:a00e47f8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3",
