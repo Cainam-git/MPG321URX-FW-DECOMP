@@ -15096,6 +15096,13 @@
       "name": "FUN_a01200f8",
       "status": "matched"
     },
+    "ram:a01202c0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes (b << 6) | a | (d << 3) to register DAT_001a2fb0[c] + 0x50 and sets bit 0 of + 0x51",
+      "name": "FUN_a01202c0",
+      "status": "matched"
+    },
     "ram:a01205c0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
