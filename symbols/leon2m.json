@@ -15090,6 +15090,13 @@
       "name": "FUN_a0123184",
       "status": "matched"
     },
+    "ram:a01231e4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the halfword from registers DAT_001a3070[c] + 0x40/0x41",
+      "name": "FUN_a01231e4",
+      "status": "matched"
+    },
     "ram:a0123304": {
       "by": "hand",
       "comment": "tail call FUN_a00f2ca8(blk, 3, 4, on == 1)",
