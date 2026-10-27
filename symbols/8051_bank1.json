@@ -2349,12 +2349,6 @@
       "name": "FUN_CODE_bbca",
       "status": "matched"
     },
-    "ram:c085": {
-      "by": "hand",
-      "comment": "XDATA 0xF021 / 0xF022: low nibble cleared to (x & 0xF0) | byte 0xA1E7",
-      "name": "FUN_CODE_c085",
-      "status": "matched"
-    },
     "ram:cfe7": {
       "by": "hand",
       "comment": "Accesses IDATA byte DAT_INTMEM_50 at 0x50 through MOV R0,#0x50 indirect addressing. The variable is defined (not declared extern) as unsigned char idata DAT_INTMEM_50 _at_ 0x50, since Keil rejects extern with _at_.",
