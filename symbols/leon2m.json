@@ -19499,6 +19499,13 @@
       "name": "FUN_a013f370",
       "status": "matched"
     },
+    "ram:a013fbe8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Next ROM row with the same high byte of halfword 0x22, copied into the port record (FUN_a013f284), FUN_a01542c4",
+      "name": "FUN_a013fbe8",
+      "status": "matched"
+    },
     "ram:a013ffb0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
