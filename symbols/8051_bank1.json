@@ -1036,6 +1036,13 @@
       "name": "FUN_CODE_7ca8",
       "status": "matched"
     },
+    "CODE:7f36": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "compares the bytes read by FUN_CODE_8622 with the 6-byte field at XDATA 0xA60B, returns 1 when equal",
+      "name": "FUN_CODE_7f36",
+      "status": "matched"
+    },
     "CODE:8072": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
