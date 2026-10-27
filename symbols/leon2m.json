@@ -17947,6 +17947,14 @@
       "of": "FUN_a012f3ec",
       "status": "matched"
     },
+    "ram:a012f16c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a012f43c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a012f16c",
+      "of": "FUN_a012f43c",
+      "status": "matched"
+    },
     "ram:a012f18c": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a012fcf4; proven entry for entry by its exact check",
