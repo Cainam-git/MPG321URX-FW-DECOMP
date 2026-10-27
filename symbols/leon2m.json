@@ -18863,6 +18863,13 @@
       "name": "FUN_a014837c",
       "status": "matched"
     },
+    "ram:a01483b8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -Os -g",
+      "comment": "copies 0x58 bytes from DAT_a802e378 to p",
+      "name": "FUN_a01483b8",
+      "status": "matched"
+    },
     "ram:a01483f4": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
