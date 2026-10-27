@@ -11855,6 +11855,13 @@
       "name": "FUN_a00f7894",
       "status": "matched"
     },
+    "ram:a00f793c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "initialises the four ACE selector blocks with default tables (inlined neighbour routines)",
+      "name": "FUN_a00f793c",
+      "status": "matched"
+    },
     "ram:a00f87b0": {
       "by": "autoc",
       "comment": "(word 0xA802B7B8) = p1",
