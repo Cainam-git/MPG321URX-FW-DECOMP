@@ -8968,6 +8968,12 @@
       "name": "FUN_a00da388",
       "status": "matched"
     },
+    "ram:a00da49c": {
+      "by": "hand",
+      "comment": "Steps the per-k counters DAT_a8078800/DAT_a8079c48 through FUN_a00d9edc and FUN_a00da030, sets bit 4 or 5 of register 0xccc of block k and calls func_0xa0fbe1c0(k)",
+      "name": "FUN_a00da49c",
+      "status": "matched"
+    },
     "ram:a00da6ac": {
       "by": "hand",
       "comment": "edit a record's 4-bit count (n--), shift its bytes, rebuild it via d68cc, copy r words into the register block DAT_a807609c[a8078832] (+0 or +0x30); volatile = register blocks (fw keeps |= / &= bit pulses through the same pointers in d8714)",
