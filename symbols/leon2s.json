@@ -5674,6 +5674,12 @@
       "name": "FUN_a00a5ce8",
       "status": "matched"
     },
+    "ram:a00a5d8c": {
+      "by": "hand",
+      "comment": "Unpacks the fields of register words 0x10..0x48 of the block DAT_a807dc04[port].regs into a 0x48-byte record",
+      "name": "FUN_a00a5d8c",
+      "status": "matched"
+    },
     "ram:a00a60ac": {
       "by": "hand",
       "comment": "port 0: dc04[port]->wb0 bit 0, else 2",
