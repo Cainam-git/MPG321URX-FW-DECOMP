@@ -1794,6 +1794,12 @@
       "name": "FUN_a002c268",
       "status": "matched"
     },
+    "ram:a002c2d4": {
+      "by": "hand",
+      "comment": "returns the low byte of register 0xcf000000 + 4 * r",
+      "name": "FUN_a002c2d4",
+      "status": "matched"
+    },
     "ram:a002c4a8": {
       "by": "hand",
       "comment": "empty routine",
