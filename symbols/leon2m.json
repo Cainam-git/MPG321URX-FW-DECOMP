@@ -6569,6 +6569,13 @@
       "name": "FUN_a00bacc4",
       "status": "matched"
     },
+    "ram:a00badc0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores DAT_a802d290[0x12..0x14] + 0x30 to DAT_a802d078[7..9]",
+      "name": "FUN_a00badc0",
+      "status": "matched"
+    },
     "ram:a00bae38": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
