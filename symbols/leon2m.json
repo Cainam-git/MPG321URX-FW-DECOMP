@@ -9492,6 +9492,13 @@
       "name": "FUN_a00e0cb0",
       "status": "matched"
     },
+    "ram:a00e0cb8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores v to DAT_a802b550 when DAT_a802b53c is 0",
+      "name": "FUN_a00e0cb8",
+      "status": "matched"
+    },
     "ram:a00e0cd8": {
       "by": "hand",
       "comment": "stores v to DAT_a8025d08 and 1 to DAT_a802b54c",
