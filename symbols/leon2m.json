@@ -11170,6 +11170,13 @@
       "name": "FUN_a00e47f8",
       "status": "matched"
     },
+    "ram:a00e4f8c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Checks register fields of unit for mode 4 against a byte mask built from DAT_a8026988, otherwise against fixed values",
+      "name": "FUN_a00e4f8c",
+      "status": "matched"
+    },
     "ram:a00e52e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
