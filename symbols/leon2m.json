@@ -8076,6 +8076,13 @@
       "name": "FUN_a00d1d34",
       "status": "matched"
     },
+    "ram:a00d1e08": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets DAT_a802b09d from p[7] (1 -> 0, 0 -> 1), returns 0xe0",
+      "name": "FUN_a00d1e08",
+      "status": "matched"
+    },
     "ram:a00d1e3c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
