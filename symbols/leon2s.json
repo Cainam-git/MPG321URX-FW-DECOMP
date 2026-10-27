@@ -7717,10 +7717,26 @@
       "name": "FUN_a00c3144",
       "status": "matched"
     },
+    "ram:a00c32bc": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00c32f4; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00c32bc",
+      "of": "FUN_a00c32f4",
+      "status": "matched"
+    },
     "ram:a00c32f4": {
       "by": "hand",
       "comment": "State machine of the 16-byte records DAT_a807d5c8[0..1] over the port registers, switch on byte +0xd",
       "name": "FUN_a00c32f4",
+      "status": "matched"
+    },
+    "ram:a00c3ab0": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00c3ae8; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00c3ab0",
+      "of": "FUN_a00c3ae8",
       "status": "matched"
     },
     "ram:a00c3ae8": {
