@@ -14900,6 +14900,13 @@
       "name": "FUN_a012b354",
       "status": "matched"
     },
+    "ram:a012b370": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns halfword +0xe of 0x12-byte entry i of DAT_a802e116",
+      "name": "FUN_a012b370",
+      "status": "matched"
+    },
     "ram:a012b394": {
       "by": "autoc",
       "comment": "returns 0",
