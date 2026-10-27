@@ -11713,6 +11713,13 @@
       "name": "FUN_a00fb9ec",
       "status": "matched"
     },
+    "ram:a00fbaa4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "saves and clears (c != 0) or restores bit 31 of register 0xd0040000 via DAT_a802b7e8, returns 1",
+      "name": "FUN_a00fbaa4",
+      "status": "matched"
+    },
     "ram:a00fbc80": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
