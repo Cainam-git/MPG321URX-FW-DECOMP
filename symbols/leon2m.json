@@ -8749,7 +8749,7 @@
     "ram:a00d0e48": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "builds a reply header in p from mode and req[3]/req[6], copies req[3..6]",
+      "comment": "fills p[0..2] from mode, req[3] and req[6] and copies req[3..6] to p[3..6]",
       "name": "FUN_a00d0e48",
       "status": "matched"
     },
