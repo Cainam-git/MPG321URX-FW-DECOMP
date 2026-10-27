@@ -5995,6 +5995,13 @@
       "name": "FUN_a00a45a8",
       "status": "matched"
     },
+    "ram:a00a45c0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes a row of cells for val (full cells, one partial cell, remaining cells up to len) with FUN_a0146a80 and FUN_a0146b20",
+      "name": "FUN_a00a45c0",
+      "status": "matched"
+    },
     "ram:a00a493c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
