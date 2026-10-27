@@ -10,7 +10,8 @@
  * 'LCALL FUN_CODE_d086' in front of FUN_CODE_bd1b (entered from FUN_CODE_6781 at 0x67E7 and 0x685C); Keil builds
  * such a block only from the 'FUN_CODE_d086(); FUN_CODE_bd1b();' call sequences inside one module. FUN_CODE_d086 is
  * the body of src/8051_bank1/FUN_CODE_d086.c. FUN_CODE_d05e, c6ec, 97c4, 8c5d and 6781 are written from the
- * firmware logic and are not byte-exact (not matched in symbols); their calls give the block.
+ * firmware logic but do not yet compile to the firmware's bytes (not recorded as matched); their calls give the
+ * block.
  */
 extern unsigned char * xdata DAT_EXTMEM_a6fe;
 extern unsigned char * xdata DAT_EXTMEM_a701;
