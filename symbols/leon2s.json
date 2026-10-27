@@ -6276,6 +6276,14 @@
       "name": "FUN_a00ab8b8",
       "status": "matched"
     },
+    "ram:a00ab93c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00ab964; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00ab93c",
+      "of": "FUN_a00ab964",
+      "status": "matched"
+    },
     "ram:a00ab964": {
       "by": "hand",
       "comment": "Switch on the low byte of param_2: passes (p1, 5, mask) to FUN_a00a6fc0 or (p1, 0x4e0/0x4e1, mask) to FUN_a00a6c00",
