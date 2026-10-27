@@ -7579,6 +7579,13 @@
       "name": "FUN_a00b34a8",
       "status": "matched"
     },
+    "ram:a00b3530": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -g",
+      "comment": "For n == 9 updates byte 0 of the nine ARR_a807a824 records from register 0xcf03c880 bits and copies 0xcf03c910 to 0xcf03c920",
+      "name": "FUN_a00b3530",
+      "status": "matched"
+    },
     "ram:a00c0a04": {
       "by": "hand",
       "comment": "for the first of six records of DAT_a807d5c8 with bit n set in byte 4 returns a bit of a ROM read (func_0xa0fb7e98 or func_0xa0fb6bb8)",
