@@ -6501,6 +6501,13 @@
       "name": "FUN_a00b2a1c",
       "status": "matched"
     },
+    "ram:a00b2c18": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "toggles bit 15 of DAT_a802cff4 + 0xe and tail-calls FUN_a00b0710(1, bit) unless blocked by DAT_a802cff4/DAT_a802d290 state",
+      "name": "FUN_a00b2c18",
+      "status": "matched"
+    },
     "ram:a00b3070": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
