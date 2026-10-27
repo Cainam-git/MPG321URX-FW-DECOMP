@@ -14716,6 +14716,12 @@
       "name": "FUN_a012b328",
       "status": "matched"
     },
+    "ram:a012b354": {
+      "by": "hand",
+      "comment": "returns byte +3 of 0x16-byte entry i of DAT_a802d8ae",
+      "name": "FUN_a012b354",
+      "status": "matched"
+    },
     "ram:a012b394": {
       "by": "autoc",
       "comment": "returns 0",
