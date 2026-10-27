@@ -19379,6 +19379,13 @@
       "name": "FUN_a01446e0",
       "status": "matched"
     },
+    "ram:a0144768": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns byte +2 of the DAT_001a6da3 entry whose byte +1 is c, else 0",
+      "name": "FUN_a0144768",
+      "status": "matched"
+    },
     "ram:a014489c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
