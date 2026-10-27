@@ -14602,6 +14602,13 @@
       "name": "FUN_a0116ff4",
       "status": "matched"
     },
+    "ram:a0117f48": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Saves registers, sets 0xcf013454 by port, runs FUN_a0115bd4/FUN_a0116ff4 by mode, restores registers",
+      "name": "FUN_a0117f48",
+      "status": "matched"
+    },
     "ram:a0118174": {
       "by": "hand",
       "comment": "returns DAT_a802c98d",
