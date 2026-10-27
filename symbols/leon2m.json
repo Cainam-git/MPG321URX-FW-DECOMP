@@ -18669,6 +18669,13 @@
       "name": "FUN_a013aa38",
       "status": "matched"
     },
+    "ram:a013ab9c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sends a checksummed eight-word command through mailbox portal 1 offset 0x80 (func_0x4008d23c delays)",
+      "name": "FUN_a013ab9c",
+      "status": "matched"
+    },
     "ram:a013adcc": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
