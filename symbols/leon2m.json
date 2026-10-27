@@ -9166,7 +9166,7 @@
     "ram:a00d430c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "sets parameter 0xb of the first channel to (100 - level) * (p[0xd] - p[0xe]) / 100 + p[0xe]",
+      "comment": "calls FUN_a0145808(id, 0xb, (100 - level) * (hi - lo) / 100 + lo, 1) with hi/lo from FUN_a0145660(id, 0xd/0xe)",
       "name": "FUN_a00d430c",
       "status": "matched"
     },
