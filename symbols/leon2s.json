@@ -3792,7 +3792,7 @@
     },
     "ram:a008fb7c": {
       "by": "hand",
-      "comment": "Sets the port bits in 0xcf00f224/0xcf011640 from FUN_a00a657c/FUN_a008fb5c and writes the bit-depth code through FUN_a00a7488; returns 8/10/12/16",
+      "comment": "Sets the port bits in 0xcf00f224/0xcf011640 from FUN_a00a657c/FUN_a008fb5c, writes bits 0..2 of register 0x45 through FUN_a00a7488 and returns 8/10/12/16",
       "name": "FUN_a008fb7c",
       "status": "matched"
     },
