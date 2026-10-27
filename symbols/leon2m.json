@@ -10986,6 +10986,12 @@
       "name": "FUN_a01019b4",
       "status": "matched"
     },
+    "ram:a01019e4": {
+      "by": "hand",
+      "comment": "clears bit 3 of register 0xcf0160c0",
+      "name": "FUN_a01019e4",
+      "status": "matched"
+    },
     "ram:a0101a00": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
