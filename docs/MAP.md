@@ -1,6 +1,6 @@
 # Firmware map
 
-How `MSI_MPG321URX_V021_7F69.bin` is laid out, and how its three processors start and work together.
+How `MSI_MPG321URX_V021_7F69.bin` is laid out, and how its four processors start and work together.
 
 ## The file
 
@@ -16,13 +16,14 @@ How `MSI_MPG321URX_V021_7F69.bin` is laid out, and how its three processors star
 | Encryption or compression | None |
 | File name | `MSI_MPG321URX_V021_XXXX.bin`, where `XXXX` is the 16-bit sum of all bytes, in uppercase hexadecimal. The value is not stored inside the file. |
 
-## The three processors
+## The four processors
 
 | Processor | Architecture | Responsibilities |
 |---|---|---|
-| **8051** | 8-bit, bank-switched, Keil C51 | Boot loader, power sequencing, starting and supervising the LEON processors, update channel, OSD resources. |
+| **8051** | 8-bit, Keil C51 | Boot loader, power sequencing, loading the other processors' programs, supervising Leon2M, update channel, OSD resources. |
 | **Leon2M** (main) | LEON2, SPARC V8 | Picture pipeline, panel and OLED control, frame-rate conversion, on-screen menu logic, update service, USB mode selection. |
 | **Leon2S** (input) | LEON2, SPARC V8 | HDMI 2.1 and DisplayPort receiver, link training, mode detection. |
+| **Tensilica core** | Xtensa (windowed calls), compiler not identified | Not worked out yet. Its strings name it "NT68500 Tensilica S/W" and mention LED driver chips (AS3824, "LDC"). See [the Tensilica program](#the-tensilica-program). |
 
 ## Regions
 
@@ -32,8 +33,9 @@ How `MSI_MPG321URX_V021_7F69.bin` is laid out, and how its three processors star
 | 0x006000 | 0x02000 | Partition table (0x6000) and slot area (0x7000–0x7FFF), read by the boot loader | |
 | 0x008000 | 0x08000 | Empty (0xFF) | |
 | 0x010000 | 0x10000 | 8051 bank 1: main application | CODE 0x0000 |
-| 0x020000 | 0x10000 | 8051 bank 2: update agent | CODE 0x0000 |
-| 0x030000 | 0x10000 | 8051 bank 3: mostly tables; "Nov 10 2025" at 0x3B2C4, FAT/NTFS signatures at 0x2E0AB | CODE 0x0000 |
+| 0x020000 | 0x10000 | 8051 bank 2: update agent; contains a FAT disk boot sector ("MSDOS5.0", volume "UPDATE") at 0x2E0AB | CODE 0x0000 |
+| 0x030000 | 0x0D8DC | Tensilica program (see [the Tensilica program](#the-tensilica-program)); built "Nov 10 2025" (string at 0x3B2C4) | Xtensa 0x40000000 |
+| 0x03D8DC | 0x02724 | Empty (0xFF) | |
 | 0x040000 | 0x10000 | Empty (0xFF) | |
 | 0x050000 | 0x80000 | Leon2S program, copied to RAM by the 8051 | CPU 0xA0060000 |
 | 0x0D0000 | 0x07B44 | Leon2M start-up code (reset, trap handlers, early C), copied to RAM by the 8051 | CPU 0xA0028000 |
@@ -57,8 +59,11 @@ How `MSI_MPG321URX_V021_7F69.bin` is laid out, and how its three processors star
 - **Leon2M start-up code** runs at the address in its name (0xA0028000–0xA002FB43).
 - **Leon2M data RAM** spans 0xA8024000–0xA8040000. The area after the initialised data is filled by a DMA job of the
   8051.
-- **Leon2S** runs code from 0xA0060000 and uses data RAM at 0xA8076000–0xA807FF94.
-- **8051 banks** are each imported as an independent 64 KB program starting at CODE 0x0000.
+- **Leon2S** runs code from 0xA0060000 and uses data RAM at 0xA8076000–0xA807FF94. Part of its program was linked
+  0xF10000 above the address it runs at, so some calls, switch tables and string addresses in it point 0xF10000
+  higher than the code they refer to. `tools/exact.py` checks those addresses at that offset.
+- **8051 banks 0 to 2** are each imported as an independent 64 KB program starting at CODE 0x0000.
+- **The Tensilica program** starts at Xtensa address 0x40000000 (file offset 0x030000).
 
 ## Start-up sequence
 
@@ -67,6 +72,8 @@ How `MSI_MPG321URX_V021_7F69.bin` is laid out, and how its three processors star
 2. **8051 application** (bank 1, `FUN_CODE_3fe7`):
    - Copies the Leon2M start-up code and data and the Leon2S program to RAM (`FUN_CODE_0b0d`, using the DMA routine
      `FUN_CODE_738c` and the fill routine `FUN_CODE_a8bb`).
+   - Loads the Tensilica program: the boot loader passes its partition-table record (flash 0x030000, length
+     0xD8DC) on, and `FUN_CODE_0b0d` hands it to `FUN_CODE_c43e`, which starts the flash DMA in `FUN_CODE_8d60`.
    - Points the Leon2M code window at file offset 0x108000 (`FUN_CODE_4a85`).
    - Starts the bank 2 update agent (`FUN_CODE_96eb`) and releases Leon2M (`FUN_CODE_c544`).
    - From then on checks on every loop that Leon2M is alive (`FUN_CODE_7b5a`). After 15,000 ticks without a sign of
@@ -109,9 +116,29 @@ The panel can be driven in three modes. Each is described by one row of the pane
 - **Panel controller:** `FUN_a01295e4` and `FUN_a0126704` send the row number to it over I2C (address 0x60,
   register 0xB2).
 
+## The Tensilica program
+
+The last 8051 flash bank (file offset 0x030000) does not contain 8051 code. It holds a complete program for the
+chip's Tensilica Xtensa core, 0xD8DC bytes long, followed by empty space (0xFF). No 8051 code calls into it; the
+8051 only copies it out as one block at start-up.
+
+| File offset | Contents |
+|---|---|
+| 0x030000–0x0303FF | Exception and interrupt vectors |
+| 0x030400–0x03053F | Reset code |
+| 0x030800–0x03AC37 | Program code: about 300 functions |
+| 0x03AC38–0x03ACF7 | Table of the sections that the reset code copies to the core's RAM |
+| 0x03ACF8–0x03C767 | Read-only data: text messages, switch tables |
+| 0x03C768–0x03D083 | Constants used by the code |
+| 0x03D088–0x03D8DB | Initialised variables |
+
+The program prints a banner with "NVT_Formal_RG20189" and "NT68500 FW Version", and its messages mention LED driver
+chips (AS3824, "LDC"). The compiler that built it has not been identified; no compiler name is stored in it.
+
 ## Open questions
 
 - How the 8051 switches between banks 1 and 2 (which special function register selects the bank).
 - The meaning of the pointer table at 0x12FFF0 and the table set at 0x0E0000–0x0FFFFF.
 - Which processor reads the region 0x210000–0x27FFFF.
 - The meaning of most flag bits in the input channel records (0xA802DF30) and of saved setting 2.
+- What the Tensilica program does, and which compiler built it.

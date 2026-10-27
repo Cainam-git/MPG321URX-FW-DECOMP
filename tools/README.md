@@ -27,7 +27,7 @@ toolchains themselves are described in the [build guide](../docs/BUILD.md).
 | `check/jf.py`, `check/rawcmp.py`, `check/rawcmp_l2s.py` | Check with one fixed set of compiler flags, and an independent raw word comparison. |
 | `check/shapej.py`, `check/casecmp.py`, `check/jtscan.py`, `check/p2o3*.py` | Register-independent shape comparison, switch-case comparison, jump-table scan, and permutation search with fixed flags. |
 | `verify.py`, `relink.py` | Re-check or rebuild every matched function. |
-| `acctable.py` | Records a LEON jump table (`switchdataD_*`) as matched when the exact check of a matched function proves it entry for entry. |
+| `acctable.py` | Records a LEON jump table (`switchdataD_*`) as matched when the exact check of a matched function proves it entry for entry; with `--gaps` it also adds tables that had no entry in the function table yet. |
 | `progress.py` | Counts matched functions and bytes per section. |
 | `stats.py` | Updates the progress bars in `README.md` and the table in `docs/STATUS.md`. |
 

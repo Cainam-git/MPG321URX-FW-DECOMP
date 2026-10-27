@@ -37,6 +37,7 @@ Each matched function records how its source was obtained in the `by` field of `
 | Assembly | `asm` | Routines that were written in assembly in the original: trap tables, start-up code, privileged instructions. |
 | Search | `permuter`, `near` | Near-misses closed by automatic source permutation (`tools/permuter*.py`) or mechanical repair (`tools/nearfix.py`). |
 | Individual work | `hand` | Written and tuned function by function. |
+| Jump tables | `table` | A switch's table of jump addresses, proven entry for entry by the check of the function that uses it (`tools/acctable.py`). |
 | Other | `template`, `data` | Keil start-up templates, and data that was mistaken for code. |
 
 Most source files begin with a comment describing what the function does, who calls it, the data it uses, and any

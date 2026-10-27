@@ -4,8 +4,9 @@
 |---|---|
 | **Scaler** | The main chip of a monitor. It receives the HDMI or DisplayPort signal, processes the picture and drives the panel. In this monitor: the Novatek NT68500. |
 | **Firmware** | The program that runs on the scaler. The `.bin` file is a complete copy of it. |
-| **8051** | A small 8-bit processor inside the scaler. Here it boots the system, starts and supervises the two LEON processors, and handles power sequencing and firmware updates. Programmed in C with the Keil C51 compiler. |
+| **8051** | A small 8-bit processor inside the scaler. Here it boots the system, loads the programs of the other processors, supervises the main LEON processor, and handles power sequencing and firmware updates. Programmed in C with the Keil C51 compiler. |
 | **LEON2 / SPARC** | A 32-bit processor design based on the SPARC V8 architecture. The scaler contains two: "Leon2M" handles the picture pipeline, panel control and on-screen menu logic; "Leon2S" handles the HDMI 2.1 and DisplayPort inputs. Programmed in C with a GCC-based compiler. |
+| **Tensilica / Xtensa** | A configurable 32-bit processor design. The scaler contains one Xtensa core with its own program, which the 8051 copies out of the firmware at start-up. What it does has not been worked out yet. |
 | **Bank** | The 8051 can only address 64 KB of program code at a time, so its code is split into banks that it switches between. |
 | **DRAM** | The scaler's working memory. Code and data are copied there from the firmware at start-up. |
 | **OSD** | On-screen display: the menu that appears when the monitor's button is pressed. |

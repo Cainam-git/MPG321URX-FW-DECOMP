@@ -21,8 +21,9 @@ How the compilers that built the original firmware were identified, and which op
   code was built for `-mcpu=v8`.
 - **Version:** GCC 4.4.2 (BCC 1.0.x) and GCC 7 or later (BCC2) produce different prologues, delay-slot use and
   instruction scheduling. GCC 3.4.4 reproduces the original code.
-- **Input processor (Leon2S):** `-mcpu=v8 -Os -g`. With `-g`, GCC 3.4 places a `nop` after a function's final call,
-  exactly as the firmware does.
+- **Input processor (Leon2S):** Mostly `-mcpu=v8 -Os -g`, some files with `-msoft-float`, and a few without
+  optimisation (`-g` only). With `-g`, GCC 3.4 places a `nop` after a function's final call, exactly as the firmware
+  does.
 - **Main processor (Leon2M):** The flags vary per file:
   - Mostly `-O2 -g`, and often `-O3`, with or without `-g`.
   - `-msoft-float` for code that uses floating point, since the firmware has no floating-point instructions and
@@ -32,6 +33,14 @@ How the compilers that built the original firmware were identified, and which op
   The flags of every function are recorded in `symbols/leon2m.json`.
 - **Libraries:** Library code (libc, libm, libgcc, libnosys and the BCC runtime) is taken directly from the
   toolchain's own archives (`tools/libmatch.py`).
+
+## Tensilica program: not identified yet
+
+- The program stores no compiler name.
+- Its code is unoptimised and uses the Xtensa windowed calling convention.
+- Its banner contains "NVT_Formal_RG20189". That has the form of a release name of Cadence's own Xtensa tools
+  (RG-2018.9), but this is not proven.
+- No suitable compiler is installed, so this program is not decompiled yet.
 
 ## Comparison tools
 

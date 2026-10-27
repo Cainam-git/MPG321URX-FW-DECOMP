@@ -61,7 +61,7 @@ tested with Python 3.14, Wine 11.20 and Ghidra 12.1.2. Run all scripts from the 
 |---|---|---:|---|
 | `sparc-elf-3.4.4-1.0.52.tar.bz2` | [download.gaisler.com/anonftp/bcc/bin/linux](https://download.gaisler.com/anonftp/bcc/bin/linux/) | 62,204,306 | `0e864c0e1f4cf0b3816f56132635dbcc6e78a68db80d664be1a87bfe93d210a5` |
 | `sparc-elf-4.4.2-1.0.52.tar.bz2` | [download.gaisler.com/anonftp/bcc/bin/linux](https://download.gaisler.com/anonftp/bcc/bin/linux/) | 52,473,470 | `9e2cbb787d3cc4cf30c8aa730ed50eace70caae7d784a4e66b22b001ff4d5765` |
-| `C51V961.exe` | [Keil C51 evaluation](https://www.keil.com/demo/eval/c51.htm) (free, after a registration form) | 109,869,064 | `f23f2f5a5eda77d710ed8cf50ff44a04f35260afefe082b352ac08c059b63379` |
+| `C51V961.exe` | [Keil C51 evaluation](https://www.keil.com/demo/eval/c51.htm) (free, after a registration form; direct file: [c51v961.exe](https://www.keil.com/files/eval/c51v961.exe)) | 109,869,064 | `f23f2f5a5eda77d710ed8cf50ff44a04f35260afefe082b352ac08c059b63379` |
 | `gcc-3.4.4.tar.bz2` | [ftp.gnu.org/gnu/gcc/gcc-3.4.4](https://ftp.gnu.org/gnu/gcc/gcc-3.4.4/) | 27,565,872 | `3444179840638cb8664e8e53604900c4521d29d57785a5091202ee4937d8d0fd` |
 
 Keil may offer a newer installer than `C51V961.exe`. A different compiler version can produce different code, so
