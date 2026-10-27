@@ -1188,6 +1188,13 @@
       "name": "FUN_CODE_9caa",
       "status": "matched"
     },
+    "CODE:9d75": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "Over the ten records at XDATA 0xA62F, returns whether bit (c & 0x0F) or (c >> 4) of FUN_CODE_dee2() is set for the records with (a & 0x1F) in 1..6 or 7..10",
+      "name": "FUN_CODE_9d75",
+      "status": "matched"
+    },
     "CODE:9e3f": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
