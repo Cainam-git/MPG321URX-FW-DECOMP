@@ -2089,6 +2089,13 @@
       "name": "FUN_a002e46c",
       "status": "matched"
     },
+    "ram:a002e658": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the low byte of register 0xcf000000 + 4 * (DAT_a8027aa8[c] + k), c > 1 -> 0",
+      "name": "FUN_a002e658",
+      "status": "matched"
+    },
     "ram:a002e69c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
