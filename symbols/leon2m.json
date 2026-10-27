@@ -10555,6 +10555,13 @@
       "name": "FUN_a00f6940",
       "status": "matched"
     },
+    "ram:a00f6c38": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bit DAT_a802b7b4 + 4 of register 0xcf00ee80 (byte write-back)",
+      "name": "FUN_a00f6c38",
+      "status": "matched"
+    },
     "ram:a00f6c6c": {
       "by": "hand",
       "comment": "clears bit 0 of register 0xcf00e984",
