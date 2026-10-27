@@ -17273,6 +17273,13 @@
       "name": "FUN_a012f2dc",
       "status": "matched"
     },
+    "ram:a012f31c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the next DAT_001a5238 index after p[10] whose byte has the same bits 2..7",
+      "name": "FUN_a012f31c",
+      "status": "matched"
+    },
     "ram:a012f3b4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
