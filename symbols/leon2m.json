@@ -8410,6 +8410,13 @@
       "name": "FUN_a00c4144",
       "status": "matched"
     },
+    "ram:a00c4430": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Command handler: digit 0-1 into bit 7 of word 0xa802d290+0xa8 with dependent clears and calls, reply 5600+",
+      "name": "FUN_a00c4430",
+      "status": "matched"
+    },
     "ram:a00c46d4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
