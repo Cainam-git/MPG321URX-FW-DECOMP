@@ -3357,6 +3357,14 @@
       "name": "FUN_a008ae18",
       "status": "matched"
     },
+    "ram:a008ae34": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a008ae80; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a008ae34",
+      "of": "FUN_a008ae80",
+      "status": "matched"
+    },
     "ram:a008ae80": {
       "by": "hand",
       "comment": "mode switch with on/off byte: register bits and field writes through FUN_a00a67b8 / FUN_a00a6c98",
@@ -3463,6 +3471,14 @@
       "by": "autoc",
       "comment": "k = p1 & 0xff. Reads v = FUN_a00a71b4(k, 2) and writes ((v & ~3) | p2) & 0xff through FUN_a00a7168(k, 2, ...)",
       "name": "FUN_a008bd1c",
+      "status": "matched"
+    },
+    "ram:a008bd48": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a008bddc; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a008bd48",
+      "of": "FUN_a008bddc",
       "status": "matched"
     },
     "ram:a008bddc": {
