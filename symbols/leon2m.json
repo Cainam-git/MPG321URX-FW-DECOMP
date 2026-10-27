@@ -8866,6 +8866,13 @@
       "name": "FUN_a00d1184",
       "status": "matched"
     },
+    "ram:a00d1220": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "fills reply record p for a command byte and stores the 0x50-seeded XOR checksum",
+      "name": "FUN_a00d1220",
+      "status": "matched"
+    },
     "ram:a00d1a34": {
       "by": "hand",
       "comment": "tests on the return values of 143c14(0) / 13ce6c(0); returns 0xe0 (see header)",
