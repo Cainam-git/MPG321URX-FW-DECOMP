@@ -1164,7 +1164,7 @@
     "CODE:a41f": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "one 0x200-byte read through the 0xF0E5..0xF1C0 registers with command op, printing each byte (16 per line with the offset)",
+      "comment": "0x200-byte read through the 0xF0E5..0xF1C0 registers with command op; each byte and every 16th offset passed to FUN_CODE_2820",
       "name": "FUN_CODE_a41f",
       "status": "matched"
     },
