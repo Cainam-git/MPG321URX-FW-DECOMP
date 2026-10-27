@@ -1818,6 +1818,13 @@
       "name": "FUN_CODE_cad5",
       "status": "matched"
     },
+    "CODE:cb1d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "comment": "reads mailbox word 0xB8, sets its low byte to 2, writes it back and reads it again",
+      "name": "FUN_CODE_cb1d",
+      "status": "matched"
+    },
     "CODE:cb65": {
       "by": "hand",
       "comment": "writes 0x10 to one of seven XDATA registers per set bit 0..6 of m",
