@@ -1188,6 +1188,13 @@
       "name": "FUN_CODE_9caa",
       "status": "matched"
     },
+    "CODE:9e3f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Writes 1 << (reg >> 8), or reg >> 8 when XDATA 0xD511 is 0x20, to 0xF405/0xF406 or 0xF407/0xF408 by ch, sets 0xD50B and 0xD50C, then sets or clears the bits v of 0xD50D by f and stores the result to 0x6500 or 0x6600 at the low byte of reg",
+      "name": "FUN_CODE_9e3f",
+      "status": "matched"
+    },
     "CODE:9f04": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
