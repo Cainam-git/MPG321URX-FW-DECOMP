@@ -1216,6 +1216,13 @@
       "name": "FUN_CODE_9fc8",
       "status": "matched"
     },
+    "CODE:a085": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Over the six 2-byte entries at XDATA 0xA611 with byte 0 in 0x10..0x1F, returns the first index whose FUN_CODE_af47(e[0] - 0x10, 1 << (e[1] & 0x0F)) bit equals bit 4 of e[1] (printed with FUN_CODE_2820), else 0xFF",
+      "name": "FUN_CODE_a085",
+      "status": "matched"
+    },
     "CODE:a1fe": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
