@@ -22393,6 +22393,13 @@
       "name": "FUN_a014eba4",
       "status": "matched"
     },
+    "ram:a014ebf8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Moves the four-bit values of DAT_a802cc80 and DAT_a802cc82 to place c in its field",
+      "name": "FUN_a014ebf8",
+      "status": "matched"
+    },
     "ram:a014f208": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
