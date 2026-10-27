@@ -2540,6 +2540,12 @@
       "name": "FUN_a007af6c",
       "status": "matched"
     },
+    "ram:a007afdc": {
+      "by": "hand",
+      "comment": "Compares the CDKT state with FUN_a00a7468(0x1c, port, 0x1c04), updates the EQ records of the port and prints the state changes",
+      "name": "EQ_handler_3",
+      "status": "matched"
+    },
     "ram:a007b2a0": {
       "by": "hand",
       "comment": "returns a port state value from the 0x18-byte record, FUN_a007517c/FUN_a007ae94, a byte table or the FUN_a007af6c test",
