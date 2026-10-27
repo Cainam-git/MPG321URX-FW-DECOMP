@@ -12991,6 +12991,13 @@
       "name": "FUN_a010d89c",
       "status": "matched"
     },
+    "ram:a010d8c4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes 0x40020000 (c == 1) or 0x40000000 to registers 0xd003210c and 0xd003a10c",
+      "name": "FUN_a010d8c4",
+      "status": "matched"
+    },
     "ram:a010d914": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
