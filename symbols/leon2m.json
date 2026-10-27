@@ -11393,6 +11393,13 @@
       "name": "FUN_a00f6ab4",
       "status": "matched"
     },
+    "ram:a00f6b34": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bits of registers 0xcf00ef00/0xcf00ef30 for each bit set in m",
+      "name": "FUN_a00f6b34",
+      "status": "matched"
+    },
     "ram:a00f6c38": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
