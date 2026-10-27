@@ -15112,6 +15112,13 @@
       "name": "FUN_a0121f58",
       "status": "matched"
     },
+    "ram:a0122250": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes a register set-up sequence to 0xcf01c8xx and shifts a walking bit through 0xcf01cbb8",
+      "name": "FUN_a0122250",
+      "status": "matched"
+    },
     "ram:a0122480": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
