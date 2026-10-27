@@ -5432,6 +5432,13 @@
       "name": "FUN_a00a105c",
       "status": "matched"
     },
+    "ram:a00a10c8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Record state reset to byte 0x1f = 2 with the matching clears and calls, value 0xa8025c56 dependent tail",
+      "name": "FUN_a00a10c8",
+      "status": "matched"
+    },
     "ram:a00a13d8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
