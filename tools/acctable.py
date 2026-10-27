@@ -3,8 +3,9 @@
 A table counts as matched when the exact check of a matched function proves it entry for entry (tools/exact.py,
 jump_tables): the function's switch compiles to the same targets, and the firmware table holds them at the
 addresses the function's sethi/or pair names. The table's whole range must be covered by tables proven that way.
-usage: acctable.py <cpu> [--write]   lists the tables the matched functions prove; --write records them in
-       symbols/<cpu>.json (kind "jump_table", "of" = the function whose switch uses it)"""
+usage: acctable.py <cpu> [--write] [--gaps]   lists the tables the matched functions prove; --write records them in
+       symbols/<cpu>.json (kind "jump_table", "of" = the function whose switch uses it); --gaps also adds a
+       switchdataD_<address> entry to symbols/<cpu>.functions.json for each proven table that no entry covers yet"""
 import json, pathlib, sys
 from concurrent.futures import ThreadPoolExecutor
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -54,6 +55,19 @@ def main():
     with ThreadPoolExecutor(12) as ex:
         res = dict(zip([n for n, _ in users], ex.map(lambda it: proven(cpu, *it), users)))
     found = {}
+    if "--gaps" in sys.argv and write:   # proven tables in no entry yet: add the entry, then record it below
+        import fcntl
+        lock = open(ROOT / "work" / "lock-accept", "a"); fcntl.flock(lock, fcntl.LOCK_EX)
+        fp = ROOT / "symbols" / f"{cpu}.functions.json"; d = json.loads(fp.read_text()); fl = d["functions"]
+        for fn, tabs in res.items():
+            for a, vals in tabs:
+                e = a + 4 * len(vals)
+                if any(x["start"] < e and a < x["end"] for x in fl): continue
+                name = f"switchdataD_{a:08x}"
+                fl.append({"name": name, "start": a, "end": e, "size": e - a}); todo[name] = (a, e); rg[name] = (a, e)
+                print(f"new entry {name} {e - a} B")
+        fl.sort(key=lambda x: x["start"]); fp.write_text(json.dumps(d, separators=(",", ":")))
+        fcntl.flock(lock, fcntl.LOCK_UN)
     for name, (lo, hi) in sorted(todo.items(), key=lambda x: x[1]):
         for fn, tabs in res.items():
             if tabs and covered(lo, hi, tabs): found[name] = fn; break

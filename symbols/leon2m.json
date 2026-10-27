@@ -6626,6 +6626,14 @@
       "name": "FUN_a00b3238",
       "status": "matched"
     },
+    "ram:a00b32ac": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00b7f9c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00b32ac",
+      "of": "FUN_a00b7f9c",
+      "status": "matched"
+    },
     "ram:a00b32e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
@@ -9970,6 +9978,14 @@
       "of": "FUN_a00ddae4",
       "status": "matched"
     },
+    "ram:a00dd8e0": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00ddbe0; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00dd8e0",
+      "of": "FUN_a00ddbe0",
+      "status": "matched"
+    },
     "ram:a00dd904": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
@@ -11557,6 +11573,14 @@
       "kind": "jump_table",
       "name": "switchdataD_a00f6394",
       "of": "FUN_a00f6940",
+      "status": "matched"
+    },
+    "ram:a00f63a8": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00f6ab4; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00f63a8",
+      "of": "FUN_a00f6ab4",
       "status": "matched"
     },
     "ram:a00f63bc": {
@@ -17474,6 +17498,14 @@
       "name": "FUN_a012eb4c",
       "status": "matched"
     },
+    "ram:a012eba4": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a012eeb0; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a012eba4",
+      "of": "FUN_a012eeb0",
+      "status": "matched"
+    },
     "ram:a012ec24": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
@@ -17698,6 +17730,14 @@
       "by": "hand",
       "comment": "Calls FUN_a01398bc(1) if param_1 == 0, FUN_a01398bc(0) if param_1 == 1, otherwise returns. The calls sit inside the branches and are not tail calls (%o7 saved to %g1 and restored around the call). Code: mov %o0,%g1; cmp/be with mov 1,%o0 in the delay slot; cmp/bne with clr %o0 in the delay slot; retl; nop. Returns void.",
       "name": "FUN_a0132a40",
+      "status": "matched"
+    },
+    "ram:a0132a74": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0132d44; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0132a74",
+      "of": "FUN_a0132d44",
       "status": "matched"
     },
     "ram:a0132b74": {
