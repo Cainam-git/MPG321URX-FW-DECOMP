@@ -7027,6 +7027,13 @@
       "name": "FUN_a00bacc4",
       "status": "matched"
     },
+    "ram:a00bad4c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes c as three ASCII decimal digits to DAT_a802d078[7..9]",
+      "name": "FUN_a00bad4c",
+      "status": "matched"
+    },
     "ram:a00badc0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
