@@ -20327,6 +20327,13 @@
       "name": "FUN_a0146370",
       "status": "matched"
     },
+    "ram:a01463f8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "dispatches (v, sel) to one of four FUN_a011c6c8..FUN_a011c8e4 by c",
+      "name": "FUN_a01463f8",
+      "status": "matched"
+    },
     "ram:a014648c": {
       "by": "hand",
       "comment": "dispatches to FUN_a011b3e8 / FUN_a011c998 / FUN_a011ca58 by c",
