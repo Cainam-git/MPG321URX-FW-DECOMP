@@ -14511,6 +14511,13 @@
       "name": "FUN_a011b3e8",
       "status": "matched"
     },
+    "ram:a011b428": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes bytes 0..2 of v to one of two register triples (c), then delays 0xa0 nops",
+      "name": "FUN_a011b428",
+      "status": "matched"
+    },
     "ram:a011b4b0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
