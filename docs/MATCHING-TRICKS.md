@@ -291,6 +291,12 @@ Keil C51:
   that, Keil C51 9.60.7 loads the count first at every optimisation level. Valid only when nothing else loads A
   between the store and the shift and the count is already in a register (FUN_CODE_d8ea, FUN_CODE_568f,
   FUN_CODE_38a7 and four more).
+- **Shift with a constant after `ACC = k;`:** `c = p >> 8; ACC = 1; w = 1 << c;` also gives the value-first order:
+  Keil knows A already holds the constant and drops its own load. For 16-bit results this avoids `ACC << c`, which
+  makes Keil move register parameters to memory (FUN_CODE_bb56, FUN_CODE_ab2c, FUN_CODE_9e3f, FUN_CODE_9d75).
+- **Shift counts in large functions:** give every shift site its own count local; one local reused at several sites
+  lives across the function and goes to XDATA. In LARGE loops a count stays in a register only when the call that
+  uses it sits inside an `if` condition or an `if` block without `else` (FUN_CODE_5a39, FUN_CODE_a085).
 - **A call and return, or `Jcc +2; SJMP`, at the end of both arms** of an if/else: write the shared statement in both
   arms (FUN_CODE_8622, FUN_CODE_db96, FUN_CODE_dbaf, FUN_CODE_18ab).
 - **`& 0xff` on a char operand** changes which operand is loaded first and stops the merging of a repeated array read
