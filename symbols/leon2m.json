@@ -4415,6 +4415,13 @@
       "name": "FUN_a009934c",
       "status": "matched"
     },
+    "ram:a00993a8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "toggles bit 30 of DAT_a802d290 word +0x1f4 and runs the matching call sequence",
+      "name": "FUN_a00993a8",
+      "status": "matched"
+    },
     "ram:a0099440": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
