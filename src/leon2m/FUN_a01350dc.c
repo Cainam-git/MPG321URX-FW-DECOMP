@@ -7,7 +7,8 @@
  * byte DAT_a802cb96, wraps after 0x24; write index byte DAT_a802cb97); an empty ring gives words 0..3 = 0. A zero
  * first word ends the function; else words 1..4 are written to offset slot * 20 + 0x14 and then word 0 to
  * slot * 20 + 0x10 (MailBox_Write func_0x4008c5f8), and the index is advanced.
- * Callers: FUN_a01356fc.
+ * Callers: FUN_a00da754, FUN_a00dc3dc, FUN_a0135344, FUN_a013562c, FUN_a01356fc, FUN_a013588c, FUN_a0135ae8,
+ * FUN_a0135dc0, FUN_a0136054, FUN_a0136384, FUN_a0136600, FUN_a0136a10, FUN_a0136d08, FUN_a01387a4.
  * Source form: the message is a 5-word local structure initialised to zero at its declaration (std pairs); the
  * empty-ring branch clears words 3, 2, 1, 0 in that order; index advances as 'if (++idx > 3) idx = 0;'.
  */
