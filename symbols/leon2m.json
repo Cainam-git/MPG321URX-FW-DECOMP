@@ -6910,6 +6910,13 @@
       "name": "FUN_a00b7a08",
       "status": "matched"
     },
+    "ram:a00b7a44": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "calls FUN_a00a31a4 with FUN_a00a3844(DAT_001909ec, i * 29 + b) for i = 0..2, then FUN_a00a813c",
+      "name": "FUN_a00b7a44",
+      "status": "matched"
+    },
     "ram:a00b7ae4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
