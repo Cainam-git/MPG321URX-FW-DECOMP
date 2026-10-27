@@ -9767,6 +9767,13 @@
       "name": "FUN_a00dd904",
       "status": "matched"
     },
+    "ram:a00dda4c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes a fixed sequence of constants to registers 0xcf03cf40..0xcf03cf6c",
+      "name": "FUN_a00dda4c",
+      "status": "matched"
+    },
     "ram:a00ddac4": {
       "by": "hand",
       "comment": "empty routine",
