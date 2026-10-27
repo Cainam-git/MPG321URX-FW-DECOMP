@@ -6332,6 +6332,12 @@
       "name": "FUN_a00abba8",
       "status": "matched"
     },
+    "ram:a00abbc4": {
+      "by": "hand",
+      "comment": "Writes registers 0x3b0..0x3c4 of port through FUN_a00a6c00/FUN_a00a6c98 from bytes +0x110..+0x124 of record ARR_a807dc18[port]",
+      "name": "FUN_a00abbc4",
+      "status": "matched"
+    },
     "ram:a00abe20": {
       "by": "hand",
       "comment": "writes registers 0x200-0x203 and 0x266 of the port from three record bytes between two FUN_a00a6c98 bit writes",
