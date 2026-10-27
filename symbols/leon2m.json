@@ -17525,6 +17525,13 @@
       "name": "FUN_a01420e4",
       "status": "matched"
     },
+    "ram:a0142110": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns (DAT_a802e116[i] halfword >> 12) == 5",
+      "name": "FUN_a0142110",
+      "status": "matched"
+    },
     "ram:a0142140": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
