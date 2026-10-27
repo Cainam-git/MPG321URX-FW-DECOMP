@@ -17058,6 +17058,13 @@
       "name": "FUN_a01420e4",
       "status": "matched"
     },
+    "ram:a0142140": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns bit 6 of halfword +0 of 0x12-byte entry i of DAT_a802e116",
+      "name": "FUN_a0142140",
+      "status": "matched"
+    },
     "ram:a0142168": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
