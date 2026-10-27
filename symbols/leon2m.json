@@ -9324,6 +9324,12 @@
       "name": "FUN_a00de578",
       "status": "matched"
     },
+    "ram:a00de5c0": {
+      "by": "hand",
+      "comment": "delay loop of n x 0x9c40 nops",
+      "name": "FUN_a00de5c0",
+      "status": "matched"
+    },
     "ram:a00de604": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
