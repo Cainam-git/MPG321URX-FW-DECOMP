@@ -17474,6 +17474,13 @@
       "name": "FUN_a012ec24",
       "status": "matched"
     },
+    "ram:a012eeb0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Prints LoadGamma : v and runs the call sequence for v (switch over 0x11..0x30)",
+      "name": "FUN_a012eeb0",
+      "status": "matched"
+    },
     "ram:a012f12c": {
       "by": "autoc",
       "comment": "empty function (returns at once)",
