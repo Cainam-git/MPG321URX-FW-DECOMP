@@ -5383,6 +5383,13 @@
       "name": "FUN_a00a2264",
       "status": "matched"
     },
+    "ram:a00a231c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "when DAT_a8025c56 == 2, copies a DAT_a802d47x byte selected by DAT_a802afec to DAT_a8025c55 and tail-calls FUN_a00a1a68",
+      "name": "FUN_a00a231c",
+      "status": "matched"
+    },
     "ram:a00a23a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
