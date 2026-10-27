@@ -851,7 +851,7 @@
     "CODE:5a39": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "Scans the six entries at XDATA 0xA5ED for the first hit (FUN_CODE_af47 bit test for 0x10..0x1E, FUN_CODE_aeb2 level test for 0x30..0x38), reports it through FUN_CODE_2820/db05/dafe, then checks the 0xA5EB time stamp; returns found",
+      "comment": "Scans the six entries at XDATA 0xA5ED for the first one that passes the FUN_CODE_af47 test (byte 0 in 0x10..0x1E) or the FUN_CODE_aeb2 test (byte 0 in 0x30..0x38), calls FUN_CODE_2820/db05/dafe for it, then compares FUN_CODE_d94a() with XDATA int 0xA5EB; returns found",
       "name": "FUN_CODE_5a39",
       "status": "matched"
     },
