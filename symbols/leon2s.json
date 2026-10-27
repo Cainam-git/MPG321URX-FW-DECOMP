@@ -8522,6 +8522,12 @@
       "name": "FUN_a00d6b4c",
       "status": "matched"
     },
+    "ram:a00d6b98": {
+      "by": "hand",
+      "comment": "Copies a 19-byte block from src + n + 3 into dst (n from src[0] >> 4), with masked fields in dst[0], dst[1] and dst[0x12]",
+      "name": "FUN_a00d6b98",
+      "status": "matched"
+    },
     "ram:a00d6c98": {
       "by": "hand",
       "comment": "Computes an index from the high nibble of param_2[0] and merges bits from two bytes of param_2 into param_1[0] and param_1[1]. The second source mask is held in an unsigned int temporary so GCC emits and %o5, 0xf0 instead of and %o5, -16.",
