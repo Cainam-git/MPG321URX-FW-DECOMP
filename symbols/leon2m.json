@@ -13665,6 +13665,13 @@
       "name": "FUN_a010c194",
       "status": "matched"
     },
+    "ram:a010c390": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores v to s->b26 and v into bits 16..23 (plus bit 0) of word 4 of the register blocks of c",
+      "name": "FUN_a010c390",
+      "status": "matched"
+    },
     "ram:a010c61c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
