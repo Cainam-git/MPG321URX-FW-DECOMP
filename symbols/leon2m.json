@@ -9184,6 +9184,12 @@
       "name": "FUN_a00decf4",
       "status": "matched"
     },
+    "ram:a00ded78": {
+      "by": "hand",
+      "comment": "stores x to word i at DAT_a802b0c4 + 0xc when byte DAT_a802b0c4 is non-zero",
+      "name": "FUN_a00ded78",
+      "status": "matched"
+    },
     "ram:a00deda0": {
       "by": "hand",
       "comment": "returns 0",
