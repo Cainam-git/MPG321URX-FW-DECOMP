@@ -12106,6 +12106,13 @@
       "name": "FUN_a00f9f10",
       "status": "matched"
     },
+    "ram:a00fa560": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "copies bits 16..25 of reg 0xd0040014 to DAT_a802bec0 and flags a change of its top 2 bits in DAT_a802b7fe",
+      "name": "FUN_a00fa560",
+      "status": "matched"
+    },
     "ram:a00fb434": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
