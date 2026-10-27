@@ -18274,6 +18274,13 @@
       "name": "FUN_a0133564",
       "status": "matched"
     },
+    "ram:a013358c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Send two bytes and a buffer in 16-byte chunks through the ring DAT_a802da6c without waiting",
+      "name": "FUN_a013358c",
+      "status": "matched"
+    },
     "ram:a01337e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
