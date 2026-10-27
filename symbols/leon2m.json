@@ -8714,6 +8714,13 @@
       "name": "FUN_a00cea44",
       "status": "matched"
     },
+    "ram:a00cea70": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "updates the 16-bit crc with the 8 bits of data, polynomial 0x1021, MSB first",
+      "name": "FUN_a00cea70",
+      "status": "matched"
+    },
     "ram:a00cead4": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
