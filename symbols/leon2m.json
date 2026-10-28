@@ -10682,6 +10682,13 @@
       "name": "FUN_a00df51c",
       "status": "matched"
     },
+    "ram:a00df588": {
+      "by": "permuter",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "name": "FUN_a00df588",
+      "status": "matched"
+    },
     "ram:a00df5dc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
