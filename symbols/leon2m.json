@@ -7050,6 +7050,13 @@
       "name": "FUN_a00b621c",
       "status": "matched"
     },
+    "ram:a00b6290": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Issues FUN_a0146b20 / FUN_a0146a80 calls at k * 2 + 6 (k = byte 0xa802d433 + 2) and the decimal digits of two indexed bytes of 0xa802d290",
+      "name": "FUN_a00b6290",
+      "status": "matched"
+    },
     "ram:a00b6514": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
