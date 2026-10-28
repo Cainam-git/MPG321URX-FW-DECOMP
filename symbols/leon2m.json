@@ -18467,6 +18467,13 @@
       "name": "FUN_a0132dd8",
       "status": "matched"
     },
+    "ram:a0132e1c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Fill the 12-byte table DAT_a802d9b8 with up to six code/entry byte pairs, four fixed pairs when bit 31 of DAT_a802e3d0 is set",
+      "name": "FUN_a0132e1c",
+      "status": "matched"
+    },
     "ram:a01334ec": {
       "by": "hand",
       "comment": "Calls func_0x4008c4d0(0, 0xc, &local, 1) with local a zero-initialized 4-byte buffer and returns the least-significant byte of what the callee wrote there. Declared with two unused uint parameters and a uint return with an explicit cast; frame 112 bytes.",
