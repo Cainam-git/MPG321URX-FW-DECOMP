@@ -14970,6 +14970,13 @@
       "name": "FUN_a011403c",
       "status": "matched"
     },
+    "ram:a01141fc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes five fixed values, two constant byte tables and a final 0 to registers 0xcf015a80..0xcf015bc0",
+      "name": "FUN_a01141fc",
+      "status": "matched"
+    },
     "ram:a011433c": {
       "by": "autoc",
       "comment": "(word 0xCF01166C) = (word 0xCF01166C) & 0xfc | p1 & 3",
