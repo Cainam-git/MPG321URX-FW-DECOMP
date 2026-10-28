@@ -1315,6 +1315,13 @@
       "name": "FUN_CODE_c7c5",
       "status": "matched"
     },
+    "CODE:c89e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Skips n records of the XDATA 0x015C list (record = high + low nibble of its header + 1 bytes), then returns the sum of byte[off + i + 1] >> (i * 8) for i below the low nibble of that header",
+      "name": "FUN_CODE_c89e",
+      "status": "matched"
+    },
     "CODE:ca42": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
