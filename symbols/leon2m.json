@@ -20225,7 +20225,7 @@
     },
     "ram:a013dc6c": {
       "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "cflags": "-mcpu=v8 -O3 -g",
       "comment": "input channel bring-up state machine (states 8/10 limit the rate to transformed row +0x50 when FUN_a011cf88() <= 0x82)",
       "name": "FUN_a013dc6c",
       "status": "matched"

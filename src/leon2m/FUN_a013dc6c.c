@@ -182,7 +182,7 @@ extern int FUN_a012b404();
 extern int FUN_a00f6898();
 extern int FUN_a00f63bc(int);
 extern int FUN_a00f6b34();
-extern int FUN_a00eef7c();
+extern void FUN_a00eef7c(unsigned char p);
 extern void *FUN_a013c910(void *dst, const void *src, int n);
 extern void FUN_a013dbcc(unsigned char, void *, struct S16 *);
 extern void FUN_a00ef1b0(int, int, struct S16 *);
