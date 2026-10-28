@@ -18050,6 +18050,13 @@
       "name": "FUN_a012d4f8",
       "status": "matched"
     },
+    "ram:a012e004": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Expands three key-XORed 32-byte blocks into 0x200-byte tables for FUN_a010ae8c (flag set) or FUN_a010af6c",
+      "name": "FUN_a012e004",
+      "status": "matched"
+    },
     "ram:a012e2ac": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
