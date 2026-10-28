@@ -16580,6 +16580,13 @@
       "name": "FUN_a0124df8",
       "status": "matched"
     },
+    "ram:a0124e44": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "for n <= 7 and record byte +0xe != 0xff returns whether the low byte of func_0x4008cd38(+0xe, +0xf) equals byte +0x10, else 1",
+      "name": "FUN_a0124e44",
+      "status": "matched"
+    },
     "ram:a0124ea4": {
       "by": "hand",
       "comment": "returns 0",
