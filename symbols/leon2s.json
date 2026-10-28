@@ -9701,6 +9701,13 @@
       "name": "FUN_a00dac00",
       "status": "matched"
     },
+    "ram:a00dae90": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -Os -g -msoft-float",
+      "comment": "Reads a 64-byte table through func_0xa0fc1394, collects runs of equal bytes into id/start/count tables, adjusts them and writes 3-byte records with func_0xa0f963d4(0, 0x80, 0x1c0, 2, rec)",
+      "name": "FUN_a00dae90",
+      "status": "matched"
+    },
     "ram:a00db53c": {
       "by": "hand",
       "comment": "Sends the 16-byte blocks of row DAT_a80787fe of DAT_a807a520 through func_0xa0f963d4 after the 0x11/0x14 entry handling, then steps the row index",
