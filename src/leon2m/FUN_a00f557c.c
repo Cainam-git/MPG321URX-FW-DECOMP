@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f557c @ 0xa00f557c-0xa00f59c4, flags -mcpu=v8 -O3 -g -msoft-float.
+/* leon2m FUN_a00f557c @ 0xa00f557c-0xa00f59c4, flags -mcpu=v8 -O3 -g.
  * Runs three measurement steps for block 'port' and returns 1 when FUN_a00f51b4 and FUN_a00f4e60 both return
  * nonzero, else 0.
  *   Saves block register 0x2a (FUN_a00f2254) and 0x4a (FUN_a00f1a90), sets 0x2a = 0 and clears bit 0x20 of 0x4a
