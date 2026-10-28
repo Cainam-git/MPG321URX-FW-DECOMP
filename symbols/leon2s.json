@@ -5138,6 +5138,12 @@
       "name": "DRV_HDMI21_RXDetect_FSM_Init",
       "status": "matched"
     },
+    "ram:a009c188": {
+      "by": "hand",
+      "comment": "Fills the timer descriptors for type 1, 0x14 or 0x15 and passes them to CONV2HDMITX_UpdateInterface_3",
+      "name": "DRV_HDMI_Init_Timer",
+      "status": "matched"
+    },
     "ram:a009c284": {
       "by": "hand",
       "comment": "Logs the call when bit 2 of DAT_a8078634 is set, then passes timer descriptor 0xa80790f4 and/or 0xa8079100 to FUN_a00b222c by type (1, 0x14, 0x15)",
