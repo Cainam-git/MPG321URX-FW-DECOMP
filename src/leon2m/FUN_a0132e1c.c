@@ -1,4 +1,4 @@
-/* leon2m FUN_a0132e1c @ 0xa0132e1c-0xa0133238 (230 words), -mcpu=v8 -O3 -g.
+/* leon2m FUN_a0132e1c @ 0xa0132e1c-0xa0133238 (263 words), -mcpu=v8 -O3 -g.
  * Clears the 12-byte table DAT_a802d9b8 and fills it with byte pairs (code, entry), at most six pairs.
  * When bit 31 of the word DAT_a802e3d0 is set it writes four fixed pairs for (c, m) = (3, 4), (3, 8), (11, 2),
  * (2, 0x10) and returns. Otherwise n is taken from the byte DAT_a802e1a7 (0 -> 1, 1/2/5 -> 2, 3/6 -> 3, 4/7 -> 4,
