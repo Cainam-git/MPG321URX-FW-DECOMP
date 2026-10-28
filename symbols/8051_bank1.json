@@ -1451,6 +1451,13 @@
       "name": "FUN_CODE_ad88",
       "status": "matched"
     },
+    "CODE:ae1d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "reads the a69c bit-field record and sets or clears bits 4..5 of XDATA 0xDCCF or 0xDCDF",
+      "name": "FUN_CODE_ae1d",
+      "status": "matched"
+    },
     "CODE:aeb2": {
       "by": "hand",
       "comment": "returns the XDATA byte selected by n = 1..12 (0xF3C5..0xF3CC, 0xF3D5, 0xF3D6, 0xF5D5, 0xF5D6), else 0xFF",
