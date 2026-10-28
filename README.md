@@ -17,7 +17,7 @@ The monitor is driven by a Novatek NT68500 scaler chip. The firmware holds progr
 | **Main processor** (LEON2, "Leon2M") | Picture pipeline, panel control and on-screen menu logic. |
 | **Input processor** (LEON2, "Leon2S") | Receiving and decoding the HDMI and DisplayPort signals. |
 | **Helper processor** (8051) | Booting the system, loading the programs of the other processors, supervising the main processor, power and firmware updates. |
-| **Tensilica processor** (Xtensa) | Dims an LED backlight zone by zone. The main processor starts it and sets its zone grid, but never switches on the LED driver chips or reads its results, so in this QD-OLED monitor it does no useful work. |
+| **Tensilica processor** (Xtensa) | LED backlight dimming. Started, but unused in this OLED monitor. |
 
 ## Progress
 
