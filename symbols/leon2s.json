@@ -4922,6 +4922,12 @@
       "name": "FUN_a0095d78",
       "status": "matched"
     },
+    "ram:a0095e08": {
+      "by": "hand",
+      "comment": "For port 0 or 1 calls FUN_a0095d78(port) when FUN_a0070404/FUN_a0070414 is set, else FUN_a00950a0(port, 9) and FUN_a0091578(port) when FUN_a0091bac(port) is set",
+      "name": "FUN_a0095e08",
+      "status": "matched"
+    },
     "ram:a0095ea4": {
       "by": "hand",
       "comment": "when FUN_a009584c() is 0, calls FUN_a0095e08, FUN_a00916a8 and FUN_a00958d4 with 0 and 1",
