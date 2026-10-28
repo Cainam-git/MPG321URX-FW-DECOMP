@@ -183,7 +183,7 @@ extern unsigned char xdata DAT_EXTMEM_01fa;
 extern unsigned char xdata DAT_EXTMEM_042c;
 struct Clu { unsigned int n; unsigned long first; };
 extern struct Clu xdata DAT_EXTMEM_010d;
-extern unsigned int FUN_CODE_c89e(unsigned char c);
+extern unsigned long FUN_CODE_c89e(unsigned char c);
 extern unsigned long FUN_CODE_c7c5(unsigned char c);
 void FUN_CODE_9235(void)
 {
