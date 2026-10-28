@@ -41,12 +41,14 @@ How `MSI_MPG321URX_V021_7F69.bin` is laid out, and how its four processors start
 | 0x0D0000 | 0x07B44 | Leon2M start-up code (reset, trap handlers, early C), copied to RAM by the 8051 | CPU 0xA0028000 |
 | 0x0D7B44 | 0x144C0 | Unused (0xFF) | |
 | 0x0EC000 | 0x06F38 | Leon2M initialised data, copied by the 8051 to the start of Leon2M data RAM | CPU 0xA8024000 |
-| 0x0F2F38 | | Panel timing tables | |
+| 0x0F2F38 | 0x150C8 | Empty (0xFF) | |
 | 0x108000 | | Start of the Leon2M code window; the code runs directly from flash | CPU 0x00000000 |
 | 0x118000 | 0x6E00 | EDID table, inside the code window | CPU 0x10000 |
 | 0x120000 | 0xE6B00 | Leon2M main program | CPU 0x18000 onward |
 | 0x206B00 | ~0x9500 | Leon2M read-only data (debug strings, version) | |
-| 0x210000 | 0x70000 | OSD resources: menus, fonts and string tables for more than 20 languages | |
+| 0x210000 | 0x001F0 | End of the Leon2M read-only data (menu debug messages) | CPU 0x108000 |
+| 0x2101F0 | 0x65BF8 | Menu fonts: the character pictures and character widths of 15 fonts (see [menu text](#menu-text)) | CPU 0x1081F0 |
+| 0x275DE8 | 0x0A218 | Menu texts in every language, found through tables of text addresses | CPU 0x16DDE8 |
 | 0x280000 | 0x30652 | Leon2M data image ("SWVERSION", version block) | |
 | 0x2A0380 | 3 × 0x58 | Panel mode table (240, 120 and 60 Hz), see [panel modes](#panel-modes) | CPU 0x198380 |
 | 0x2B0600 | 0x200 | Trailer: a table of 8-byte values, then 0x05/0x19/0x7D words and 0xFF padding. It is not a checksum. | |
@@ -129,6 +131,32 @@ The panel can be driven in three modes. Each is described by one row of the pane
 - **Panel controller:** `FUN_a01295e4` and `FUN_a0126704` send the row number to it over I2C (address 0x60,
   register 0xB2).
 
+## Menu text
+
+The menu's fonts and texts sit in flash at 0x2101F0–0x27FFFF. The 8051 does not copy them anywhere: they are part of
+the Leon2M code window (partition entry 5: flash 0x108000, length 0x1A8654), and Leon2M reads them in place.
+
+- **Texts:** each message has a table with one text address per language (for example the panel protection message
+  "After 1 mins, panel protection ..." at 0x275DE8). `FUN_a00a3844` picks the entry for the current language.
+- **Fonts:** a text can switch font with a byte from 0xF0 to 0xFE. The text drawing routine `FUN_a00a31a4` reads
+  those bytes, and `FUN_a00a2eec` fetches the character picture from the table of the chosen font (one lookup
+  routine per table at 0xa00a285c–0xa00a2e74). Byte tables with values such as 7, 13 and 19 hold the character
+  widths.
+
+## Monitor control from the PC (DDC/CI)
+
+A PC can read and change monitor settings over the video cable (DDC/CI, the I2C address 0x6E). Leon2M handles these
+commands in `FUN_a0088724`, which picks the routine for each setting code from two tables with one routine address
+per code:
+
+| Table | File offset | Used for |
+|---|---|---|
+| Read a setting ("GetVCP") | 0x130254 | Codes with their own routine: 02 04 05 06 08 0B 0C 0E 10 12 14 16 18 1A 1E 1F 20 30 3E 52 60 62 6C 6E 70 8D AC AE B2 B6 C0 C6 C8 C9 CA CC D6 DC DF EC F1 F4 FE FF |
+| Change a setting ("SetVCP") | 0x12FE58 | Codes with their own routine: 02 04 05 06 08 0C 0E 10 12 14 16 18 1A 1E 20 30 3E 60 62 6C 6E 70 72 8D CA CC D6 DC EC F1 F8 F9 FA FE |
+
+Every other code goes to one shared routine. In the VESA MCCS standard, for example, 0x10 is brightness, 0x12
+contrast, 0x60 the input source, 0x62 the volume and 0xD6 the power mode.
+
 ## The Tensilica program
 
 The last 8051 flash bank (file offset 0x030000) does not contain 8051 code. It holds a complete program for the
@@ -187,8 +215,6 @@ chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised
 
 ## Open questions
 
-- The meaning of the pointer table at 0x12FFF0 and the table set at 0x0E0000–0x0FFFFF.
-- Which processor reads the region 0x210000–0x27FFFF.
 - The meaning of most flag bits in the input channel records (0xA802DF30) and of saved setting 2.
 - Whether the chip's dimming hardware changes the picture on this OLED panel, and which compiler built the
   Tensilica program.
