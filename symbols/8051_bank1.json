@@ -1687,7 +1687,7 @@
     "CODE:bd1b": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "OR the source byte and the mask into the target byte through the pointers at 0xA709 / 0xA701, then wait for the mask bits (IDATA 0x60 counter); module with its common-entry block 0xBD18",
+      "comment": "set *0xA701 (OR of *0xA709 and mask 0xA705), then wait for the mask bits (IDATA 0x60 counter); module with d086, 97c4, c6ec, 8c5d, 6781 and the common-entry block 0xBD18",
       "name": "FUN_CODE_bd1b",
       "status": "matched"
     },
