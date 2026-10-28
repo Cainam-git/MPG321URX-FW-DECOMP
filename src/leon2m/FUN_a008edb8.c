@@ -1,4 +1,4 @@
-/* leon2m FUN_a008edb8 @ 0xa008edb8-0xa008ee70 (46 words), flags -mcpu=v8 -O3 -g.
+/* leon2m FUN_a008edb8 @ 0xa008edb8-0xa008ee6c (45 words), flags -mcpu=v8 -O3 -g.
  * Keeps a 16-bit mask in DAT_a802afd8. id == 0xff with on == 0 clears the mask first. Then it searches the 16
  * two-byte ROM entries at 0x10051f for the one whose second byte (offset +1) equals id; the found index (& 0xf,
  * 16 = not found wraps to 0) selects entry idx: index 0 changes nothing (early return), otherwise
