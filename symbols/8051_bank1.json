@@ -1251,6 +1251,13 @@
       "name": "FUN_CODE_a085",
       "status": "matched"
     },
+    "CODE:a142": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "calls FUN_CODE_5f73 and FUN_CODE_d44e for three 0xA6AF entries chosen by sel while entry byte 0 is 0x10..0x1E",
+      "name": "FUN_CODE_a142",
+      "status": "matched"
+    },
     "CODE:a1fe": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
