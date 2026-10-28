@@ -1189,6 +1189,14 @@
       "name": "FUN_CODE_8b58",
       "status": "matched"
     },
+    "CODE:8c5d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "last: 8 rounds of bd1b / delay / sample the 0xA704 bit of *0xA6FE into b / a701 clear, then a6fe clear or set by last; returns b",
+      "module": "FUN_CODE_bd1b",
+      "name": "FUN_CODE_8c5d",
+      "status": "matched"
+    },
     "CODE:8d60": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
