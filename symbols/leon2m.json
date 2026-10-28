@@ -6857,7 +6857,7 @@
     "ram:a00b3d14": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "draws rows 0..6 or 7..8 of the DAT_00196dc0 string table with FUN_a00a31a4, then two FUN_a0146b20 entries",
+      "comment": "calls FUN_a00a31a4 with FUN_a00a3844 entries 0..6 or 7..8 of DAT_00196dc0, then FUN_a0146b20 twice",
       "name": "FUN_a00b3d14",
       "status": "matched"
     },
