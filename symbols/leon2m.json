@@ -22121,6 +22121,13 @@
       "name": "FUN_a0149018",
       "status": "matched"
     },
+    "ram:a0149064": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "mode through a 0..4 identity switch; ch 0/1 store mode & 0xf in bits 24-27 / 20-23 of DAT_a802e3d0 word +4; then FUN_a0142418(ch, mode)",
+      "name": "FUN_a0149064",
+      "status": "matched"
+    },
     "ram:a0149130": {
       "by": "hand",
       "comment": "Stores v into byte 0xa802e3ed",
