@@ -9094,6 +9094,12 @@
       "name": "FUN_a00d12e4",
       "status": "matched"
     },
+    "ram:a00d17a8": {
+      "by": "hand",
+      "comment": "Per port 0..2 checks the link state, updates the DAT_a8078ba0 flag and DAT_a8078ba4 time and calls FUN_a00c7a4c / FUN_a00d12e4",
+      "name": "FUN_a00d17a8",
+      "status": "matched"
+    },
     "ram:a00d21e0": {
       "by": "hand",
       "comment": "bit-range read-modify-write: bits lo..hi of *reg = val",
