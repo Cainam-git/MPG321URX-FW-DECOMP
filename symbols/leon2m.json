@@ -12044,6 +12044,13 @@
       "name": "FUN_a00f67d0",
       "status": "matched"
     },
+    "ram:a00f6834": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "FUN_a00f2298(blk, 0x20, ...) of FUN_a00f2254(blk, 0x20) & ~0x5f, with the low nibble of p and bit 0x50 set or cleared by bit 7 of p when p != 0",
+      "name": "FUN_a00f6834",
+      "status": "matched"
+    },
     "ram:a00f6898": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
