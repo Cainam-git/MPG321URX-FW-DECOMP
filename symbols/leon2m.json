@@ -10660,6 +10660,13 @@
       "name": "FUN_a00deef0",
       "status": "matched"
     },
+    "ram:a00def40": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes the string s to 0xC00B0000 one character at a time after waiting for bit 5 of 0xC00B0014 (at most 0xFFFFF polls), adding '\\r' after '\\n'",
+      "name": "FUN_a00def40",
+      "status": "matched"
+    },
     "ram:a00deffc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
