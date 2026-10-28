@@ -4289,6 +4289,12 @@
       "name": "FUN_a0091204",
       "status": "matched"
     },
+    "ram:a00912ec": {
+      "by": "hand",
+      "comment": "writes registers 0x4b, 0x4c, 0x4d of port p by FUN_a008fea8(p) and bits 5..7 of register 0x144",
+      "name": "FUN_a00912ec",
+      "status": "matched"
+    },
     "ram:a0091388": {
       "by": "hand",
       "comment": "Reads a = FUN_a00a6668(param_1, 0x106) & 0xfffff (in %l1) and b = FUN_a00a6668(param_1, 0x10c) & 0xfffff (in %l0). If either is zero it returns 0; otherwise it returns ((unsigned short)FUN_a00911bc(param_1) * a / b * 0x2710) >> 7, with 0x2710 (10000) formed as 0x2400 | 0x310.",
