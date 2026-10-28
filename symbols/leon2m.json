@@ -11995,6 +11995,13 @@
       "name": "FUN_a00f6508",
       "status": "matched"
     },
+    "ram:a00f65d8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes 17 table bytes (p->v[i] for the set bits of p->mask, or 0x80) through the 0xCF00EF38/0xCF00EF3C index/data pair",
+      "name": "FUN_a00f65d8",
+      "status": "matched"
+    },
     "ram:a00f66a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
