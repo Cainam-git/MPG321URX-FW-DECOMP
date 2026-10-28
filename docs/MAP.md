@@ -20,7 +20,7 @@ How `MSI_MPG321URX_V021_7F69.bin` is laid out, and how its four processors start
 
 | Processor | Architecture | Responsibilities |
 |---|---|---|
-| **8051** | 8-bit, Keil C51 | Boot loader, power sequencing, loading the other processors' programs, supervising Leon2M, update channel, OSD resources. |
+| **8051** | 8-bit, Keil C51 | Boot loader, power sequencing, loading the other processors' programs, supervising Leon2M, update channel. A second 8051 core in the chip's USB controller runs bank 2. |
 | **Leon2M** (main) | LEON2, SPARC V8 | Picture pipeline, panel and OLED control, frame-rate conversion, on-screen menu logic, update service, USB mode selection. |
 | **Leon2S** (input) | LEON2, SPARC V8 | HDMI 2.1 and DisplayPort receiver, link training, mode detection. |
 | **Tensilica core** | Xtensa (windowed calls); kept as assembly source, its compiler is not available | Zone dimming ("LDC"): processes the chip's per-zone picture measurements every frame. Made for LED backlights; in this OLED monitor its LED drivers are never switched on. See [the Tensilica program](#the-tensilica-program). |
@@ -33,7 +33,7 @@ How `MSI_MPG321URX_V021_7F69.bin` is laid out, and how its four processors start
 | 0x006000 | 0x02000 | Partition table (0x6000) and slot area (0x7000–0x7FFF), read by the boot loader | |
 | 0x008000 | 0x08000 | Empty (0xFF) | |
 | 0x010000 | 0x10000 | 8051 bank 1: main application | CODE 0x0000 |
-| 0x020000 | 0x10000 | 8051 bank 2: update agent; contains a FAT disk boot sector ("MSDOS5.0", volume "UPDATE") at 0x2E0AB | CODE 0x0000 |
+| 0x020000 | 0x10000 | 8051 bank 2: update agent, run by the USB controller's 8051 core; contains a FAT disk boot sector ("MSDOS5.0", volume "UPDATE") at 0x2E0AB | CODE 0x0000 |
 | 0x030000 | 0x0D8DC | Tensilica program (see [the Tensilica program](#the-tensilica-program)); built "Nov 10 2025" (string at 0x3B2C4) | Xtensa 0x40000000 |
 | 0x03D8DC | 0x02724 | Empty (0xFF) | |
 | 0x040000 | 0x10000 | Empty (0xFF) | |
@@ -107,7 +107,9 @@ Comparing the official versions FW.012, FW.016, FW.020 and FW.021 (`firmware/`):
 2. Leon2M polls the mailbox (`FUN_a0134de0`) and decodes the message (`FUN_a013497c`).
 3. The command task `FUN_a00ce348`, called from the main loop's timer routine `FUN_a0085984`, runs the command
    switch (`FUN_a00bfcc4`); the update command is handled by `FUN_a00bf110`.
-4. The 8051's update channel (I2C slave 0x6E, `FUN_CODE_6c34`) is opened by a command from Leon2M (`FUN_CODE_224f`).
+4. Leon2M sends the 8051 commands (`FUN_CODE_224f`): command 7 sets up the I2C slave address 0x6E for MSI's tool,
+   and command 0x29 starts the flash loop `FUN_CODE_6c34`, which then writes the flash as told through a mailbox at
+   XDATA 0xF250.
 5. The USB mode pins (GPIO 7.7 and 5.0) are driven by `FUN_a0083ff0`.
 
 ## Panel modes
