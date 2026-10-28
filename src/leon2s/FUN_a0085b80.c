@@ -22,7 +22,7 @@ extern volatile unsigned char DAT_a807cd68[];
 extern volatile unsigned char DAT_a807cd00[];
 extern void FUN_a00a7940(unsigned int port, short reg, unsigned int mask, unsigned int mode);
 extern void FUN_a00a78fc(unsigned int, unsigned short, unsigned int);
-extern unsigned int FUN_a00a78b4(unsigned int, unsigned short);
+extern unsigned char FUN_a00a78b4(unsigned int, unsigned short);
 extern void FUN_a0085914(unsigned char);
 
 void FUN_a0085b80(unsigned char port)
