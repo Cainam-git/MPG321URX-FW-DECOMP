@@ -273,6 +273,22 @@ LEON (GCC 3.4.4):
   block's source is copied with its types unchanged, or when matched neighbours that nothing calls are pasted in and
   called (FUN_a00c0adc, FUN_a014f3d8, FUN_a0104f48). Comparing the instruction sequences of unmatched and matched
   functions, ignoring registers, finds such pairs.
+- **A block guarded by `x == K` that the firmware shows with constant offsets** may still index with `x` in the
+  source (a copied per-port block): constant propagation folds the offsets, but the extra `(x & 0xff)` computations
+  stay visible to GCSE, which then keeps later masks and tests (FUN_a00d17a8).
+- **A value GCSE should reuse but the firmware loads again:** look for a second read of it on another path into that
+  block, for example the first condition of an `&&` chain reading `b[1]` directly instead of a copy (FUN_a00cef6c).
+- **Per-arm `sethi` of the same high part:** each arm names the global directly, or holds its own copy of the
+  statements (merged later by cross-jumping); a local pointer shared by the arms keeps one address
+  (FUN_a00db054, FUN_a011d670).
+- **A limit or divisor that depends on a flag** is written `i < (b8 ? 3u : 1u)` or `pre / (b8 ? 5u : 7u)`: the `?:`
+  divisor stops the narrowing to `unsigned char` (`cmp 0` instead of `btst 0xff`), and the `u` suffix gives unsigned
+  compares and the multiply-by-reciprocal (DRV_HDMI_EQScan_FSM_PHY_PreRVGA).
+- **The same string in two source files** is one copy in the firmware: the linker merges identical strings of
+  mergeable sections. Write the literal in both files; `tools/exact.py` then checks such pools per reference
+  (DRV_HDMI_EQScan_FSM_PHY_PreRVGA, RCT_Value).
+- **One masked copy of a value passed around:** the source has a local holding that value (`unsigned int y = k * 2 +
+  6;` passed as `(unsigned char)y`) (FUN_a00b6290, FUN_a00a7e00, FUN_a01112c0).
 - **A local table that is first cleared and then has every element stored:** GCC 3.4 does this for a union (or a
   struct with an uninitialised member) initialised through one member, for example
   `const union { unsigned short h[12]; unsigned int w[6]; } m = { { ... } };`. A plain array is only cleared first when
