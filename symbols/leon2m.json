@@ -12172,8 +12172,8 @@
       "status": "matched"
     },
     "ram:a00f6340": {
-      "by": "autoc",
-      "comment": "p1 = p1 & 0xff; returns FUN_a00f1a90(p1, 0x43)",
+      "by": "hand",
+      "comment": "Returns FUN_a00f1a90(blk, 0x43)",
       "name": "FUN_a00f6340",
       "status": "matched"
     },
