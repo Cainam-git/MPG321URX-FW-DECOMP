@@ -5881,7 +5881,7 @@
     },
     "ram:a00a3810": {
       "by": "hand",
-      "comment": "compares and copies the per-port state words, reads byte tables and calls the port setup routines; returns 0",
+      "comment": "copies ARR_a807db6c[p] to DAT_a807873c[p] when they differ, writes DAT_a80791fc and ARR_a807d580 from DAT_a80791d8, sets ARR_a807db6c[p] to 2 or 6; returns 0",
       "name": "FUN_a00a3810",
       "status": "matched"
     },
