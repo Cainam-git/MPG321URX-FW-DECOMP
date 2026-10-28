@@ -54,6 +54,12 @@ compares it with the firmware. The entries below are not confirmed by that scrip
 | `8051_bank3 FILL_CODE_d8dc` | Not code: 0xFF fill after the Xtensa image (partition-table length 0xD8DC), recorded as data. |
 | `8051_bank2 FUN_CODE_cee9` | Built with the LX51 linker's code packing and checked with `tools/lx51judge.py`. |
 
+## Known deviations from strict C
+
+- `8051_bank1 FUN_CODE_8c5d`: the bit accumulator `b` is read before it is assigned, exactly as in the firmware,
+  which has no store to it before the loop. The loop shifts all eight initial bits out, so the returned value does
+  not depend on the initial contents. Initialising it would add two instructions the firmware does not have.
+
 ## Remaining work
 
 - Replacing the remaining original bytes of the rebuilt image (`tools/rebuild.py`) with source: unmatched
