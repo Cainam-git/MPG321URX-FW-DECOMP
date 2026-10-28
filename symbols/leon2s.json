@@ -2614,6 +2614,12 @@
       "name": "DRV_HDMI_EQScan_FSM_PHY_PICDR",
       "status": "matched"
     },
+    "ram:a007cea4": {
+      "by": "hand",
+      "comment": "prints the port, writes 0x1e90/0x1f08 and, by the ARR_a807cc64 h range, 0x1e90/0x119c; sets the ARR_a807ccc4 word to 3",
+      "name": "DRV_HDMI_EQScan_FSM_PHY_DPHY",
+      "status": "matched"
+    },
     "ram:a007cfec": {
       "by": "hand",
       "comment": "73520(p): bit 0x10 test of db00[p != 2].w0c + 0x74 via a7408, else bit 0 of reg 0x2f6 (twin of a007af04)",
