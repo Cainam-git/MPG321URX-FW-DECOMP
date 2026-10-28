@@ -2586,6 +2586,13 @@
       "name": "FUN_a0087430",
       "status": "matched"
     },
+    "ram:a0087458": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns 2 or 3 from the x range and bit 7 of 0xa802d338 when FUN_a0143c14(0) > 8 and FUN_a00d7d48() is 0, else 0",
+      "name": "FUN_a0087458",
+      "status": "matched"
+    },
     "ram:a00874c8": {
       "by": "autoc",
       "comment": "For each bit i (0 .. 7) set in p1, in ascending order, calls FUN_a014bac4(4 + i, p2 & 0xff)",
