@@ -3,8 +3,8 @@
  * (high), 0x54 and 0x55 (FUN_a00a78b4), 1 when that value is 0. The low byte of register 2 selects
  * k = 0xa2 (6), 0x10e (10), 0x21c (20), 0x32a (30) or 0x21c (any other value); returns a * k / b truncated to
  * 16 bits.
- * Source form: one complete formula per case, as in FUN_a00aceec; FUN_a00a78b4 is declared returning int here
- * (the firmware compares the switch value signed).
+ * Source form: one complete formula per case, as in FUN_a00aceec. FUN_a00a78b4 is declared returning int here;
+ * src/leon2s/FUN_a00a78b4.c defines it as returning unsigned int; the firmware compares the switch value signed.
  */
 extern int FUN_a00a7a5c(unsigned char port, unsigned short reg);
 extern int FUN_a00a78b4(unsigned int, unsigned short);
