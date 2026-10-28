@@ -12178,8 +12178,8 @@
       "status": "matched"
     },
     "ram:a00f635c": {
-      "by": "autoc",
-      "comment": "p1 = p1 & 0xff; returns FUN_a00f1a90(p1, 0x44)",
+      "by": "hand",
+      "comment": "Returns FUN_a00f1a90(blk, 0x44)",
       "name": "FUN_a00f635c",
       "status": "matched"
     },
