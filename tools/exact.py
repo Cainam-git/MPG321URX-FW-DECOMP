@@ -5,7 +5,7 @@ reg+%g0 vs +0 encodings and invented outside names. diff.compare() calls exact()
 tool (permute, permuter, verify, relink, ...) only calls a function matched when its bytes are the firmware's.
 exact(cpu, fn, obj) -> None if exact, else a short reason (also usable as feedback for hand work).
 """
-import functools, pathlib, re, subprocess, tempfile
+import functools, pathlib, re, subprocess, tempfile, threading
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 BIN = ROOT / "toolchains/sparc-elf-3.4.4/bin/sparc-elf-"
 BASE = {"leon2s": 0xA0060000, "leon2m": 0xA0028000}
@@ -216,7 +216,16 @@ def verify_pool(obj, off, size, got, want, pools, img, base):
     return bytes(g), None
 
 
-TABLES = {}   # (cpu, fn) -> [(firmware address, [entry values])] of the jump tables proven by the last exact check
+class _ThreadTables(threading.local):
+    """per thread, so a check running in parallel for the same function cannot clear another thread's result"""
+    def __init__(self): self.v = {}
+    def pop(self, k, d=None): return self.v.pop(k, d)
+    def get(self, k, d=None): return self.v.get(k, d)
+    def __setitem__(self, k, x): self.v[k] = x
+    def __contains__(self, k): return k in self.v
+
+
+TABLES = _ThreadTables()   # (cpu, fn) -> [(firmware address, [entry values])] of the jump tables proven by the last exact check
 
 
 def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False, placed=None):
@@ -256,10 +265,10 @@ def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False, placed=None):
         defs += ["--defsym", f"{name}=0x{a:x}"]
     with tempfile.TemporaryDirectory() as td:
         td = pathlib.Path(td)
-        place = []; pools = []
+        place = []; pools = []; merged = False
         for sec, ssz in re.findall(r"\]\s+(\.\S+)\s+\w+\s+\w+\s+\w+\s+(\w+)\s+\w+\s+\S*A", run(tool("readelf"), "-SW", obj).stdout):
             if sec == ".text" or int(ssz, 16) == 0: continue
-            merge = re.match(r"\.rodata\.(cst|str)", sec)
+            merge = re.match(r"\.rodata\.(cst|str)", sec); merged = merged or bool(merge)
             if sec in solved and not (split_pools and merge):   # library member: its relocations say where the
                 # firmware keeps this section (second try: mergeable constants and strings checked per reference)
                 place.append((sec, [solved[sec] - base])); continue
@@ -326,7 +335,8 @@ def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False, placed=None):
             k = next(i for i in range(min(len(got), len(want))) if got[i] != want[i]) & ~3
             last = (f"bytes differ at 0x{lo + k:x}: compiled {got[k:k+4].hex()} vs firmware {want[k:k+4].hex()} "
                     f"(same instruction shape: check the exact address/offset/constant there)")
-        if solve and not split_pools and any(re.match(r"\.rodata\.(cst|str)", s_) for s_ in solved):
-            # the original link may have spread a member's literal pool among other objects' constants
+        if not split_pools and (merged or any(re.match(r"\.rodata\.(cst|str)", s_) for s_ in solved)):
+            # the original link may have spread the literal pool among other objects' constants, or the pool's bytes
+            # also occur by chance elsewhere in the image: check every literal reference at its own address instead
             return exact(cpu, fn, obj, sym, solve, True, placed) and last
         return last
