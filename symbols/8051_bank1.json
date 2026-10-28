@@ -796,6 +796,13 @@
       "name": "FUN_CODE_3fe7",
       "status": "matched"
     },
+    "CODE:42f6": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "timed update of the 0xA735 record: toggles bits at an XDATA address or steps 0xE84B record bytes towards hi / lo",
+      "name": "FUN_CODE_42f6",
+      "status": "matched"
+    },
     "CODE:45aa": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
