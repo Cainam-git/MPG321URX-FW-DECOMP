@@ -4867,7 +4867,7 @@
     },
     "ram:a0097680": {
       "by": "hand",
-      "comment": "Waits up to 50 passes for FUN_a00a7408(0x19) when hold is set, then returns ((r20[0x10] * 960 << FUN_a00a7408(0xc)) + 0x8000 >> 16) / (((r0[2] & 0xc0) >> 6) + 1) of the port register block, or 0",
+      "comment": "With hold set, calls FUN_a00b1794(1) while FUN_a00a7408(0x19) returns 0 with a counter from 50 (0 when it runs out), then returns ((r20[0x10] * 960 << FUN_a00a7408(0xc)) + 0x8000 >> 16) / (((r0[2] & 0xc0) >> 6) + 1) of the port register block, or 0",
       "name": "FUN_a0097680",
       "status": "matched"
     },

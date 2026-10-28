@@ -1,8 +1,8 @@
 /* leon2s FUN_a0097680 @ 0xa0097680-0xa00977cc, flags -mcpu=v8 -Os -g.
  * Reads one value from the register block of port 'port' and scales it. Called by FSM_MODE_DETECT_STANDBY.
  * Data: DAT_a807db00[port] (0x34-byte entries) holds the register block pointers r0 (+0) and r20 (+0x20).
- *   hold != 0: FUN_a00a73ac(0x18, r20 + 0xe), then up to 50 passes of FUN_a00b1794(1) while
- *   FUN_a00a7408(0x19, r20 + 0xe) returns 0; returns 0 when the count runs out.
+ *   hold != 0: n = 50, FUN_a00a73ac(0x18, r20 + 0xe); while FUN_a00a7408(0x19, r20 + 0xe) returns 0:
+ *   FUN_a00b1794(1), leave when n is 0, else n--; returns 0 when n is 0 after the loop.
  *   When FUN_a00a7408(0x19, r20 + 0xe) != 0: a = r20[0x10],
  *   r = (((a * 960) << FUN_a00a7408(0xc, r0 + 2)) + 0x8000 >> 16) / (((r0[2] & 0xc0) >> 6) + 1), else r = 0.
  *   hold == 0: FUN_a00a73ac(0x18, r20 + 0xe) at the end. Returns r (unsigned short).
