@@ -1754,6 +1754,12 @@
       "name": "FUN_a00624b4",
       "status": "matched"
     },
+    "ram:a0062718": {
+      "by": "hand",
+      "comment": "Unsigned interpolation between a and b by x within lo and hi",
+      "name": "FUN_a0062718",
+      "status": "matched"
+    },
     "ram:a00629fc": {
       "by": "autoc",
       "comment": "For i from byte p1 + 0x58 up to 14, stores 0x3FF in halfword i of the halfword array at p1 + 0x5A",
