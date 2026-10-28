@@ -3,7 +3,7 @@
  */
 extern unsigned char ARR_a807cd2e[];
 
-int FUN_a0087074(unsigned int param_1)
+unsigned char FUN_a0087074(unsigned int param_1)
 {
     return (ARR_a807cd2e[(param_1 & 0xff) * 6 + 1] ^ 0x14) == 0;
 }
