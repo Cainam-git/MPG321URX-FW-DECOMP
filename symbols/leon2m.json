@@ -1667,6 +1667,13 @@
       "name": "FUN_a002a144",
       "status": "matched"
     },
+    "ram:a002a25c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Masks bit 0x200 at 0x9f000090, runs the hook of table 0xa802b170 entry 0x90 for a pending source and acknowledges it at 0x9f020090",
+      "name": "FUN_a002a25c",
+      "status": "matched"
+    },
     "ram:a002a344": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
