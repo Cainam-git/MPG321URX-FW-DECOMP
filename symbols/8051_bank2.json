@@ -1003,6 +1003,14 @@
       "name": "FUN_CODE_a6fa",
       "status": "matched"
     },
+    "CODE:a8a3": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "mode bit 4: d1bb, 0003, 8437 calls, returns a status bit; else the c1a6 / 9f8f / ca42 call sequence around register 0xF1E0, then an endless loop",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_a8a3",
+      "status": "matched"
+    },
     "CODE:aa43": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
