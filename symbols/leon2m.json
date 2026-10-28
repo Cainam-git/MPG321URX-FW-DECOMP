@@ -20164,6 +20164,13 @@
       "name": "FUN_a0140ab4",
       "status": "matched"
     },
+    "ram:a0140b78": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Call FUN_a01405d0 / FUN_a0134394 for device dev depending on its area record and the halfword DAT_a802a47a, then store the row address in DAT_a802a47a",
+      "name": "FUN_a0140b78",
+      "status": "matched"
+    },
     "ram:a0140e74": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
