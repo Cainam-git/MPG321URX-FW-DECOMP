@@ -8,7 +8,7 @@
  * Exact form: case order 0x80, 0x40, 0x20, 0x10, 2, 4 (the case order decides the block layout).
  */
 extern unsigned char FUN_a00bb560(unsigned char);
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 extern unsigned char FUN_a015463c(unsigned short, unsigned short);
 extern unsigned char FUN_a00bb908(unsigned char);
 extern int FUN_a00df170();
