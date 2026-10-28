@@ -1,19 +1,10 @@
-/* leon2m FUN_a00dffa4 @ 0xa00dffa4 (-mcpu=v8 -Os -g)
- * Code: FUN_a00de53c().
- * Source form: Ghidra's type and symbol names are kept.
+/* leon2m FUN_a00dffa4 @ 0xa00dffa4-0xa00dffb0 (3 words), flags -mcpu=v8 -Os -g.
+ * Passes its argument n on to FUN_a00de53c(n) as a tail call (FUN_a00de53c runs n rounds of a fixed nop loop).
+ * Callers: FUN_a00e0090 (n = 1), FUN_a00e0788 (n = 2) and others.
  */
-typedef unsigned char undefined, undefined1, byte, uchar, bool;
-typedef unsigned short undefined2, ushort, word;
-typedef unsigned int undefined4, uint, ulong, dword, undefined3;
-typedef unsigned long long undefined8, ulonglong;
-typedef long long longlong;
-typedef signed char sbyte;
-typedef int code();
-extern int FUN_a00de53c();
+extern void FUN_a00de53c(unsigned int n);
 
-void FUN_a00dffa4(void)
-
+void FUN_a00dffa4(unsigned int n)
 {
-  FUN_a00de53c();
-  return;
+    FUN_a00de53c(n);
 }
