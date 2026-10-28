@@ -10,7 +10,7 @@ struct Rgb { unsigned char c0, c1, c2; };
 struct E1f0 { unsigned char p00[6]; struct Rgb s06; struct Rgb s09; unsigned char p0c[0x12 - 0xc]; struct Rgb s12;
               unsigned char p15[0x21 - 0x15]; struct Rgb s21; };
 extern struct E1f0 DAT_a802e1f0;
-extern void FUN_a0145360(int);
+extern void FUN_a0145360(unsigned char);
 
 int FUN_a00d23b8(unsigned char *p)
 {
