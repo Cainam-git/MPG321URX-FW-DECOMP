@@ -1,24 +1,15 @@
-/* leon2s FUN_a007ac7c @ 0xa007ac7c (-mcpu=v8 -Os -g)
- * Code: FUN_a007a708(p1); FUN_a007abbc(p1); FUN_a0079e00(p1, p2, p3, p4, p5, p6).
- * Source form: Ghidra's type and symbol names are kept.
+/* leon2s FUN_a007ac7c @ 0xa007ac7c-0xa007aca0 (-mcpu=v8 -Os -g)
+ * void (u8 port). Calls FUN_a007a708(port) and FUN_a007abbc(port), then tail-calls FUN_a0079e00(port).
+ * The port byte is masked once at entry ('and %i0,0xff,%i0') and passed unchanged to all three routines.
+ * All three callees take an unsigned char port, as in their own definitions.
  */
-typedef unsigned char undefined, undefined1, byte, uchar, bool;
-typedef unsigned short undefined2, ushort, word;
-typedef unsigned int undefined4, uint, ulong, dword, undefined3;
-typedef unsigned long long undefined8, ulonglong;
-typedef long long longlong;
-typedef signed char sbyte;
-typedef int code();
-extern int FUN_a0079e00();
-extern int FUN_a007a708();
-extern int FUN_a007abbc();
+extern void FUN_a007a708(unsigned char);
+extern void FUN_a007abbc(unsigned char);
+extern void FUN_a0079e00(unsigned char);
 
-void FUN_a007ac7c(undefined1 param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,
-                 undefined4 param_5,undefined4 param_6)
-
+void FUN_a007ac7c(unsigned char port)
 {
-  FUN_a007a708(param_1);
-  FUN_a007abbc(param_1);
-  FUN_a0079e00(param_1,param_2,param_3,param_4,param_5,param_6);
-  return;
+    FUN_a007a708(port);
+    FUN_a007abbc(port);
+    FUN_a0079e00(port);
 }

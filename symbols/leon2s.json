@@ -2642,8 +2642,8 @@
       "status": "matched"
     },
     "ram:a007ac7c": {
-      "by": "autoc",
-      "comment": "FUN_a007a708(p1); FUN_a007abbc(p1); FUN_a0079e00(p1, p2, p3, p4, p5, p6)",
+      "by": "hand",
+      "comment": "FUN_a007a708(port), FUN_a007abbc(port), then FUN_a0079e00(port)",
       "name": "FUN_a007ac7c",
       "status": "matched"
     },
