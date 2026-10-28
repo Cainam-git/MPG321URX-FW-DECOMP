@@ -1,22 +1,13 @@
-/* leon2m FUN_a0029820 @ 0xa0029820 (-mcpu=v8 -Os -g)
- * Calls FUN_a002c268(0x9F020034 + p1 * 4, 0, p2), then FUN_a002c25c(0x9F02006C + p1 * 4, p2, p3, p4, p5, p6).
- * Source form: Ghidra's type and symbol names are kept.
+/* leon2m FUN_a0029820 @ 0xa0029820-0xa0029858 (14 words).
+ * FUN_a0029820(n, m): clears the bits of m in the register 0x9f020034 + 4 * n through FUN_a002c268(p, 0, m), then
+ * writes m to the register 0x9f02006c + 4 * n with FUN_a002c25c (tail call). m is an unsigned short.
+ * The next function, FUN_a0029858, contains two inlined copies of this body.
  */
-typedef unsigned char undefined, undefined1, byte, uchar, bool;
-typedef unsigned short undefined2, ushort, word;
-typedef unsigned int undefined4, uint, ulong, dword, undefined3;
-typedef unsigned long long undefined8, ulonglong;
-typedef long long longlong;
-typedef signed char sbyte;
-typedef int code();
-extern int FUN_a002c25c();
-extern int FUN_a002c268();
+extern void FUN_a002c25c(unsigned int addr, unsigned int value);
+extern void FUN_a002c268(volatile unsigned int *p, unsigned int v, unsigned int mask);
 
-void FUN_a0029820(int param_1,undefined2 param_2,undefined4 param_3,undefined4 param_4,
-                 undefined4 param_5,undefined4 param_6)
-
+void FUN_a0029820(int n, unsigned short m)
 {
-  FUN_a002c268(param_1 * 4 + -0x60fdffcc,0,param_2);
-  FUN_a002c25c(param_1 * 4 + -0x60fdff94,param_2,param_3,param_4,param_5,param_6);
-  return;
+    FUN_a002c268((volatile unsigned int *)(0x9f020034 + n * 4), 0, m);
+    FUN_a002c25c(0x9f02006c + n * 4, m);
 }

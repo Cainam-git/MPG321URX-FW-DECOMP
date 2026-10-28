@@ -1586,7 +1586,7 @@
     },
     "ram:a0029820": {
       "by": "autoc",
-      "comment": "Calls FUN_a002c268(0x9F020034 + p1 * 4, 0, p2), then FUN_a002c25c(0x9F02006C + p1 * 4, p2, p3, p4, p5, p6)",
+      "comment": "FUN_a002c268(0x9f020034 + 4n, 0, m), then FUN_a002c25c(0x9f02006c + 4n, m)",
       "name": "FUN_a0029820",
       "status": "matched"
     },
