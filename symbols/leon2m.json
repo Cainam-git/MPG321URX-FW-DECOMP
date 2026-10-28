@@ -4024,6 +4024,13 @@
       "name": "FUN_a0095e54",
       "status": "matched"
     },
+    "ram:a0095fb0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "updates the d290 copies of c54/c55/c56, m = FUN_a00b6b88(c56, 0); FUN_a00b6bec(m / 7) when afec's page differs; afec = 0x15; FUN_a00db738/FUN_a00dbcf0 when changed",
+      "name": "FUN_a0095fb0",
+      "status": "matched"
+    },
     "ram:a00961a4": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
