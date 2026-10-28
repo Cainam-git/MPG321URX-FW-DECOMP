@@ -14,12 +14,12 @@ extern void FUN_a00a7424(unsigned int param_1, unsigned int param_2, unsigned in
 extern void FUN_a00a7488(unsigned int param_1, unsigned short param_2, unsigned int param_3, unsigned int param_4);
 extern unsigned short DAT_a00b3b10[4];
 extern unsigned short DAT_a00b3b18[4];
-extern unsigned short DAT_a00b3b28[4];
-extern unsigned short DAT_a00b3b30[4];
-extern unsigned short DAT_a00b3b38[4];
-extern unsigned short DAT_a00b3b40[4];
-extern unsigned short DAT_a00b3b48[4];
-extern unsigned short DAT_a00b3b50[4];
+extern const unsigned short DAT_a00b3b28[4];
+extern const unsigned short DAT_a00b3b30[4];
+extern const unsigned short DAT_a00b3b38[4];
+extern const unsigned short DAT_a00b3b40[4];
+extern const unsigned short DAT_a00b3b48[4];
+extern const unsigned short DAT_a00b3b50[4];
 void FUN_a007a79c(unsigned int param_1, int param_2)
 {
   int i;
