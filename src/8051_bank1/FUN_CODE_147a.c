@@ -17,13 +17,9 @@
  * type 3: clears the count byte; offset = p[4] (p[2] == 0x50 and n > 0) or 0 (p[2] != 0x50).
  * Callers: FUN_CODE_914b (0x9216), FUN_CODE_9339 (0x9401).
  * volatile on 0xDC00..: every loop writes the same port address n times; each store is kept only for volatile.
- * Source forms: shifts by sel * 4 read the accumulator after a constant store ('c = sel * 4; ACC = 2; ... 2 << c',
- *   'x |= (e = sel * 4, ACC = 1, ACC << e)', ACC from reg51.h, one count local per site), which loads A before the
- *   count; type 1 tests 'p[2] + i < 7' and reads 'p[(int)i + 4]' (the int value of i stays in R7 for the index);
- *   the type-2 read is written in both arms of 'if (sel == 0)' as 'T[I64 + i]' / 'T[I65 + i]' (Keil merges the
- *   tails).
+ * Source form: the type-2 read is written in both arms of 'if (sel == 0)' as 'T[I64 + i]' / 'T[I65 + i]' (Keil
+ *   merges the tails).
  */
-#include <reg51.h>
 extern unsigned char volatile xdata DAT_EXTMEM_dc00[];
 extern unsigned char xdata DAT_EXTMEM_dcdb, DAT_EXTMEM_dccb;
 extern unsigned char xdata DAT_EXTMEM_a6ef[], DAT_EXTMEM_a6f6[];
@@ -59,7 +55,6 @@ void FUN_CODE_147a(unsigned char type, unsigned char *p, unsigned char sel) usin
         }
         if (p[1] == 6) {
             c = sel * 4;
-            ACC = 2;
             if (!(DAT_EXTMEM_a6fd & (2 << c))) DAT_EXTMEM_dc00[base] = 2;
             else DAT_EXTMEM_dc00[base] = 1;
             for (DAT_INTMEM_5b.i = 0; DAT_INTMEM_5b.i < DAT_INTMEM_5b.n - 1; DAT_INTMEM_5b.i++)
@@ -96,10 +91,10 @@ void FUN_CODE_147a(unsigned char type, unsigned char *p, unsigned char sel) usin
                             else DAT_EXTMEM_dc00[base] = 0x11;
                         } else if ((q[1] & 0x0f) == 1) {
                             DAT_EXTMEM_dc00[base] = 7;
-                            DAT_EXTMEM_a6fd |= (e1 = sel * 4, ACC = 1, ACC << e1);
+                            DAT_EXTMEM_a6fd |= (1 << (sel * 4));
                         } else {
                             DAT_EXTMEM_dc00[base] = 0x77;
-                            DAT_EXTMEM_a6fd |= (e2 = sel * 4, ACC = 1, ACC << e2);
+                            DAT_EXTMEM_a6fd |= (1 << (sel * 4));
                         }
                     } else if (DAT_INTMEM_5b.i + p[2] == 3) {
                         if (q[3] == 0) DAT_EXTMEM_dc00[base] = 0;
@@ -108,7 +103,7 @@ void FUN_CODE_147a(unsigned char type, unsigned char *p, unsigned char sel) usin
                             else DAT_EXTMEM_dc00[base] = 0;
                         } else if ((q[1] & 0x0f) == 4) {
                             DAT_EXTMEM_dc00[base] = 0x77;
-                            DAT_EXTMEM_a6fd |= (e3 = sel * 4, ACC = 1, ACC << e3);
+                            DAT_EXTMEM_a6fd |= (1 << (sel * 4));
                         } else {
                             DAT_EXTMEM_dc00[base] = 0;
                         }
@@ -149,13 +144,13 @@ void FUN_CODE_147a(unsigned char type, unsigned char *p, unsigned char sel) usin
         if ((p[0] & 0x0f) == 0x0f) break;
         if (p[1] == 1) {
             for (DAT_INTMEM_5b.i = 0; DAT_INTMEM_5b.i < DAT_INTMEM_5b.n; DAT_INTMEM_5b.i++) {
-                if (p[2] + DAT_INTMEM_5b.i < 7) q[DAT_INTMEM_5b.i + p[2]] = p[(int)DAT_INTMEM_5b.i + 4];
+                if (p[2] + DAT_INTMEM_5b.i < 7) q[DAT_INTMEM_5b.i + p[2]] = p[DAT_INTMEM_5b.i + 4];
             }
         } else if (p[1] == 6 && p[2] == 0) {
             if (p[3] == 0 && p[4] == 2) {
-                DAT_EXTMEM_a6fd &= ~(e4 = sel * 4, ACC = 2, ACC << e4);
+                DAT_EXTMEM_a6fd &= ~(2 << (sel * 4));
             } else if (p[3] == 0 && p[4] == 1) {
-                DAT_EXTMEM_a6fd |= (e5 = sel * 4, ACC = 2, ACC << e5);
+                DAT_EXTMEM_a6fd |= (2 << (sel * 4));
                 if (DAT_EXTMEM_a6ee == 0) DAT_EXTMEM_a6ee = 1;
             }
         }

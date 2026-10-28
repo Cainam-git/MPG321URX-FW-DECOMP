@@ -26,10 +26,10 @@
     ]
   },
   "8051": {
-    "keil_bin": "toolchains/keil-prefix/drive_c/Keil_v5/C51/BIN",
+    "keil_bin": "toolchains/keil-prefix/drive_c/K957/C51/BIN",
     "wineprefix": "toolchains/keil-prefix",
     "c51opts": "OPTIMIZE(7,SPEED)",
-    "note": "Keil C51 9.60.7 eval under Wine. Level 7 matches more sampled functions than level 8, but FUN_CODE_dee8 needs 8 (tail LJMP): mixed per file, judge tries both; banks 0/1 use Keil whole-program register optimisation -> REGFILE(R.ORC) option sets (symbols/<bank>.orc from tools/regfile8051.py)",
+    "note": "Keil C51 9.57 eval under Wine (c51v957.exe, unpacked into the Wine prefix as C:\\K957 with a TOOLS.INI [C51] PATH entry; 9.59 and later order shift operands differently). Level 7 matches more sampled functions than level 8, but FUN_CODE_dee8 needs 8 (tail LJMP): mixed per file, judge tries both; banks 0/1 use Keil whole-program register optimisation -> REGFILE(R.ORC) option sets (symbols/<bank>.orc from tools/regfile8051.py)",
     "alt_c51opts": [
       "OPTIMIZE(8,SPEED)",
       "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",

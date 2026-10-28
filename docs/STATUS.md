@@ -69,8 +69,6 @@ compares it with the firmware. The entries below are not confirmed by that scrip
   the original file, with every matched function built from source.
 - Code that was in no function range: the gaps between the listed functions of all sections have been checked and
   the missing routines and jump tables added. Further additions make the totals in the table grow.
-- The last two 8051 functions (`8051_bank1 FUN_CODE_50c9` and `FUN_CODE_d351`), which differ only in the order of
-  a few register loads.
 - The unmatched LEON functions, most of them large. Functions that were tried but not matched yet have notes on
   what still differs.
 - The Tensilica program as C: it is matched as assembly source; C source would need its original compiler, which is

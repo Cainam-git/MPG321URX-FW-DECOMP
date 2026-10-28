@@ -9,7 +9,7 @@ The toolchains are not stored in git. They live in a `toolchains/` folder inside
 |---|---|---|
 | Compiling for the LEON processors | Gaisler BCC 1.0.52 with GCC 3.4.4 | `toolchains/sparc-elf-3.4.4/` |
 | Disassembly for `tools/fwdiff.py` | Gaisler BCC 1.0.52 with GCC 4.4.2 | `toolchains/sparc-elf-4.4.2/` |
-| Compiling for the 8051 | Keil C51 9.60 evaluation edition, running under Wine | `toolchains/keil-prefix/` (a Wine prefix) |
+| Compiling for the 8051 | Keil C51 9.57 evaluation edition, running under Wine | `toolchains/keil-prefix/drive_c/K957/` (in a Wine prefix) |
 | Assembling the Tensilica program | Espressif xtensa-esp32-elf GCC 8.4.0 esp-2020r3 (binutils 2.31.1) | `toolchains/xtensa-esp32-elf/` |
 | Permutation search | decomp-permuter | `toolchains/decomp-permuter/` |
 | Compiler internals (optional) | GCC 3.4.4 source code | `toolchains/gcc-3.4.4-src/` |
@@ -34,14 +34,15 @@ tested with Python 3.14, Wine 11.20 and Ghidra 12.1.2. Run all scripts from the 
    tar -xzf xtensa-esp32-elf-gcc8_4_0-esp-2020r3-linux-amd64.tar.gz -C toolchains/
    ```
 
-3. **Install Keil C51 into its own Wine prefix.** The installer runs silently and installs to
-   `toolchains/keil-prefix/drive_c/Keil_v5/`. Disabling `winemenubuilder` keeps Wine from adding Keil to the desktop
-   menu and from registering file associations:
+3. **Unpack Keil C51 9.57 into its own Wine prefix.** The installer is not run; 7-Zip extracts it, and a
+   `TOOLS.INI` tells the compiler where it lives. Disabling `winemenubuilder` keeps Wine from adding entries to the
+   desktop menu:
 
    ```
    export WINEPREFIX="$PWD/toolchains/keil-prefix" WINEDEBUG=-all WINEDLLOVERRIDES="winemenubuilder.exe=d"
    wineboot -i
-   wine C51V961.exe /S
+   7z x -o"$WINEPREFIX/drive_c/K957" c51v957.exe
+   printf '[C51]\r\nPATH="C:\\K957\\C51"\r\nVERSION=V957\r\n' > "$WINEPREFIX/drive_c/K957/TOOLS.INI"
    ```
 
 4. **Get decomp-permuter**, at the commit used here:
@@ -68,12 +69,12 @@ tested with Python 3.14, Wine 11.20 and Ghidra 12.1.2. Run all scripts from the 
 |---|---|---:|---|
 | `sparc-elf-3.4.4-1.0.52.tar.bz2` | [download.gaisler.com/anonftp/bcc/bin/linux](https://download.gaisler.com/anonftp/bcc/bin/linux/) | 62,204,306 | `0e864c0e1f4cf0b3816f56132635dbcc6e78a68db80d664be1a87bfe93d210a5` |
 | `sparc-elf-4.4.2-1.0.52.tar.bz2` | [download.gaisler.com/anonftp/bcc/bin/linux](https://download.gaisler.com/anonftp/bcc/bin/linux/) | 52,473,470 | `9e2cbb787d3cc4cf30c8aa730ed50eace70caae7d784a4e66b22b001ff4d5765` |
-| `C51V961.exe` | [Keil C51 evaluation](https://www.keil.com/demo/eval/c51.htm) (free, after a registration form; direct file: [c51v961.exe](https://www.keil.com/files/eval/c51v961.exe)) | 109,869,064 | `f23f2f5a5eda77d710ed8cf50ff44a04f35260afefe082b352ac08c059b63379` |
+| `c51v957.exe` | [Keil C51 evaluation, release 9.57](https://www.keil.com/files/eval/c51v957.exe) (free) | 80,783,992 | `87cbba7cff52ae4567d8a4a1a7851483e0153b518ef0f798f492043806fd258a` |
 | `xtensa-esp32-elf-gcc8_4_0-esp-2020r3-linux-amd64.tar.gz` | [github.com/espressif/crosstool-NG, release esp-2020r3](https://github.com/espressif/crosstool-NG/releases/tag/esp-2020r3) | 85,731,226 | `674080a12f9c5ebe5a3a5ce51c6deaeffe6dfb06d6416233df86f25b574e9279` |
 | `gcc-3.4.4.tar.bz2` | [ftp.gnu.org/gnu/gcc/gcc-3.4.4](https://ftp.gnu.org/gnu/gcc/gcc-3.4.4/) | 27,565,872 | `3444179840638cb8664e8e53604900c4521d29d57785a5091202ee4937d8d0fd` |
 
-Keil may offer a newer installer than `C51V961.exe`. A different compiler version can produce different code, so
-check that the 8051 functions still verify before relying on it.
+Use release 9.57 exactly. Other releases produce different code for some 8051 functions (see
+[toolchains](TOOLCHAINS.md)).
 
 ## Regenerating local folders
 

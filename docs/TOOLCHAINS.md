@@ -6,7 +6,9 @@ How the compilers that built the original firmware were identified, and which op
 
 - **Evidence:** The Keil runtime routine `?C?CLDPTR` appears byte for byte at 0x0F3F (bank 0), 0x106A4 (bank 1) and
   0x23179 (bank 2). Keil C51 is also the standard compiler in Novatek scaler SDKs.
-- **Version:** C51 9.60, evaluation edition, running under Wine. Its limits (2 KB of object code per link, no
+- **Version:** C51 9.57, evaluation edition, running under Wine. It is the only release that reproduces every 8051
+  function: 9.59 and later load the count before the value in shift loops (FUN_CODE_d351 cannot match there), and
+  9.02a and 9.03 differ in other functions (see the [matching notes](MATCHING-TRICKS.md)). Its limits (2 KB of object code per link, no
   floating point) do not matter when matching one function at a time.
 - **Options per file:** `OPTIMIZE(7,SPEED)` or `OPTIMIZE(8,SPEED)`, since a tail jump (`LJMP`) needs level 8, with
   `LARGE` where used.

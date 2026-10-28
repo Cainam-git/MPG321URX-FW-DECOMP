@@ -2258,6 +2258,12 @@
       "name": "FUN_CODE_d31d",
       "status": "matched"
     },
+    "CODE:d351": {
+      "by": "hand",
+      "comment": "When XDATA 0xD511 is 0x20, writes (1 << i) | (0x10 << i) to XDATA 0xF40E for i = 0..3, each followed by a read and write-back of XDATA 0x7E7A",
+      "name": "FUN_CODE_d351",
+      "status": "matched"
+    },
     "CODE:d385": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",

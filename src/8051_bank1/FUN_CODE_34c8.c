@@ -11,12 +11,9 @@
  *   At position 3, q[3] = p[i + 4]; if q[3] > 0 and d737(0x8E) & 0x0F is 1: by d737(0x8D) & 0x0F (1, 2, 4) writes
  *   (1, 0), (0x11, 0), (0x11, 0x11) to 0x97 / 0x98.
  * type 1, p[1] == 6, p[2] == 0, p[3] == 0: p[4] == 2 clears bit 4*sel + 1 of 0xA6FD, p[4] == 1 sets it.
- * Source forms (as in FUN_CODE_147a): shifts by sel * 4 read the accumulator after a constant store
- *   ('c = sel * 4; ACC = 2; ... 2 << c', 'x |= (e = sel * 4, ACC = 1, ACC << e)', ACC from reg51.h, one count
- *   local per site), which loads A before the count; the position tests are written 'p[2] + i == k' and the first
- *   store index 'i + p[2]', the second 'p[2] + i'; 'p[(int)i + 4]' keeps the int value of i in a register pair.
+ * Source form: the position tests are written 'p[2] + i == k', the first store index 'i + p[2]', the second
+ *   'p[2] + i'.
  */
-#include <reg51.h>
 extern unsigned char xdata DAT_EXTMEM_dcdb, DAT_EXTMEM_dccb;
 extern unsigned char xdata DAT_EXTMEM_a6ef[], DAT_EXTMEM_a6f6[];
 extern unsigned char xdata DAT_EXTMEM_a6fd;
@@ -46,7 +43,6 @@ void FUN_CODE_34c8(unsigned char type, unsigned char *p, unsigned char sel) usin
     case 0:
         if (p[1] == 6) {
             c = sel * 4;
-            ACC = 2;
             if (!(DAT_EXTMEM_a6fd & (2 << c))) FUN_CODE_d884(sel, 0xa8, 2);
             else FUN_CODE_d884(sel, 0xa8, 1);
         }
@@ -55,7 +51,7 @@ void FUN_CODE_34c8(unsigned char type, unsigned char *p, unsigned char sel) usin
         if (p[1] == 1) {
             for (DAT_INTMEM_5b.i = 0; DAT_INTMEM_5b.i < DAT_INTMEM_5b.n; DAT_INTMEM_5b.i++) {
                 if (p[2] + DAT_INTMEM_5b.i == 2) {
-                    q[DAT_INTMEM_5b.i + p[2]] = p[(int)DAT_INTMEM_5b.i + 4];
+                    q[DAT_INTMEM_5b.i + p[2]] = p[DAT_INTMEM_5b.i + 4];
                     if (FUN_CODE_d737(sel, 0x8f) == 0) {
                         FUN_CODE_d884(sel, 0x97, 0);
                         FUN_CODE_d884(sel, 0x98, 0);
@@ -74,11 +70,11 @@ void FUN_CODE_34c8(unsigned char type, unsigned char *p, unsigned char sel) usin
                         FUN_CODE_d884(sel, 0x99, FUN_CODE_d737(sel, 0x99) | 1);
                         FUN_CODE_d884(sel, 0xa8, 7);
                     } else if (q[DAT_INTMEM_5b.i + p[2]] == 0) {
-                        DAT_EXTMEM_a6fd |= (e1 = sel * 4, ACC = 1, ACC << e1);
+                        DAT_EXTMEM_a6fd |= (1 << (sel * 4));
                     }
                 }
                 if (p[2] + DAT_INTMEM_5b.i == 3) {
-                                        q[p[2] + DAT_INTMEM_5b.i] = p[(int)DAT_INTMEM_5b.i + 4];
+                                        q[p[2] + DAT_INTMEM_5b.i] = p[DAT_INTMEM_5b.i + 4];
                     if (q[DAT_INTMEM_5b.i + p[2]] > 0 && (FUN_CODE_d737(sel, 0x8e) & 0x0f) == 1) {
                         if ((FUN_CODE_d737(sel, 0x8d) & 0x0f) == 1) {
                             FUN_CODE_d884(sel, 0x97, 1);
@@ -95,9 +91,9 @@ void FUN_CODE_34c8(unsigned char type, unsigned char *p, unsigned char sel) usin
             }
         } else if (p[1] == 6 && p[2] == 0) {
             if (p[3] == 0 && p[4] == 2) {
-                DAT_EXTMEM_a6fd &= ~(e4 = sel * 4, ACC = 2, ACC << e4);
+                DAT_EXTMEM_a6fd &= ~(2 << (sel * 4));
             } else if (p[3] == 0 && p[4] == 1) {
-                DAT_EXTMEM_a6fd |= (e5 = sel * 4, ACC = 2, ACC << e5);
+                DAT_EXTMEM_a6fd |= (2 << (sel * 4));
             }
         }
         break;

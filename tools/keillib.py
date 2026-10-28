@@ -9,7 +9,7 @@ usage: keillib.py [--dry]          check(bank, fn, lib, module, symbol) is used 
 """
 import functools, json, pathlib, re, struct, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-LIBDIR = ROOT / "toolchains/keil-prefix/drive_c/Keil_v5/C51/LIB"
+LIBDIR = ROOT / "toolchains/keil-prefix/drive_c/K957/C51/LIB"
 BANKS = ("8051_bank0", "8051_bank1", "8051_bank2")
 
 
