@@ -89,7 +89,7 @@ extern void FUN_a014a768(int, int);
 extern void FUN_a0124b40(void);
 extern void FUN_a0124a68(void);
 extern void FUN_a0148aa8(int);
-extern void FUN_a0145360(int);
+extern void FUN_a0145360(unsigned char);
 extern void FUN_a014782c(int);
 extern void FUN_a0125950(void);
 extern void FUN_a012587c(void);
