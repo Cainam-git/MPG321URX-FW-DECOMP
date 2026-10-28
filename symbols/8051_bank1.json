@@ -2080,9 +2080,47 @@
       "name": "FUN_CODE_d021",
       "status": "matched"
     },
+    "CODE:d05b": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_d086, in FUN_CODE_d086's code segment; emitted by compiling src/8051_bank1/FUN_CODE_bd1b.c, bytes judged with FUN_CODE_d086 over 0xd05b..0xd095",
+      "kind": "common_entry",
+      "module": "FUN_CODE_bd1b",
+      "name": "FUN_CODE_d05b",
+      "of": "FUN_CODE_d086",
+      "status": "matched"
+    },
+    "CODE:d05e": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_d086, in FUN_CODE_d086's code segment; emitted by compiling src/8051_bank1/FUN_CODE_bd1b.c, bytes judged with FUN_CODE_d086 over 0xd05b..0xd095",
+      "kind": "common_entry",
+      "module": "FUN_CODE_bd1b",
+      "name": "FUN_CODE_d05e",
+      "of": "FUN_CODE_d086",
+      "status": "matched"
+    },
+    "CODE:d07e": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_d086, in FUN_CODE_d086's code segment; emitted by compiling src/8051_bank1/FUN_CODE_bd1b.c, bytes judged with FUN_CODE_d086 over 0xd05b..0xd095",
+      "kind": "common_entry",
+      "module": "FUN_CODE_bd1b",
+      "name": "FUN_CODE_d07e",
+      "of": "FUN_CODE_d086",
+      "status": "matched"
+    },
+    "CODE:d080": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_d086, in FUN_CODE_d086's code segment; emitted by compiling src/8051_bank1/FUN_CODE_bd1b.c, bytes judged with FUN_CODE_d086 over 0xd05b..0xd095",
+      "kind": "common_entry",
+      "module": "FUN_CODE_bd1b",
+      "name": "FUN_CODE_d080",
+      "of": "FUN_CODE_d086",
+      "status": "matched"
+    },
     "CODE:d086": {
       "by": "hand",
-      "comment": "delay: empty loop i = 0..99 (unsigned int)",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "delay: empty loop i = 0..99 (unsigned int); with the common-entry chain 0xD05B..0xD085 built from the 0xA701/0xA709/0xA705 updates of module FUN_CODE_bd1b",
+      "module": "FUN_CODE_bd1b",
       "name": "FUN_CODE_d086",
       "status": "matched"
     },
