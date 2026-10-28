@@ -1861,6 +1861,14 @@
       "name": "FUN_CODE_c698",
       "status": "matched"
     },
+    "CODE:c6ec": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "clear *0xA6FE, delay, FUN_CODE_bd1b(), delay, set *0xA6FE (OR of *0xA706, mask 0xA704)",
+      "module": "FUN_CODE_bd1b",
+      "name": "FUN_CODE_c6ec",
+      "status": "matched"
+    },
     "CODE:c73e": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
