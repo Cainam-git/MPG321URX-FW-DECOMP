@@ -24,7 +24,7 @@ extern unsigned char DAT_a8078a28[];
 extern unsigned char DAT_a80761c8[];
 extern int FUN_a0073044(const char *, ...);
 extern unsigned int FUN_a0089898(unsigned char);
-extern unsigned char FUN_a00a78b4(unsigned char, unsigned short);
+extern unsigned char FUN_a00a78b4(unsigned int, unsigned short);
 extern void FUN_a00a78fc(unsigned char, unsigned short, unsigned char);
 extern unsigned char FUN_a008d800(void);
 extern void FUN_a00a7940(unsigned int, short, unsigned int, unsigned int);
