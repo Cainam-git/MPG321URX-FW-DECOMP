@@ -9821,6 +9821,13 @@
       "name": "FUN_a00d8bd8",
       "status": "matched"
     },
+    "ram:a00d8c1c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "limits byte 0xa802d290+0x19 to 3, saves it at +0x8f, clears +0x19 around FUN_a014913c(5) and restores it, unless the +0xb0 / FUN_a00d8bd8 test returns early",
+      "name": "FUN_a00d8c1c",
+      "status": "matched"
+    },
     "ram:a00d8ffc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
