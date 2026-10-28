@@ -1784,6 +1784,12 @@
       "name": "FUN_a0062b94",
       "status": "matched"
     },
+    "ram:a0062bac": {
+      "by": "hand",
+      "comment": "Picks a row of DAT_a80761d0 by p2 * 500 / p1, interpolates its y and f values into DAT_a8078aa0, sets DAT_a8078a60/DAT_a8078a5c and fills out[0..0x100] with FUN_a0062b64 values",
+      "name": "FUN_a0062bac",
+      "status": "matched"
+    },
     "ram:a0062f3c": {
       "by": "hand",
       "comment": "calls FUN_a00b192c (mode 1) or writes 0x55 to 0xcf03c800, then polls 0xcf03c804 for 0xdd; on timeout writes 0x88 and returns 0",
