@@ -2079,6 +2079,12 @@
       "name": "FUN_a006fd78",
       "status": "matched"
     },
+    "ram:a006fedc": {
+      "by": "hand",
+      "comment": "Packs eight flag bytes into the top byte of a word read and written through FUN_a006faa8 / FUN_a006fad4",
+      "name": "FUN_a006fedc",
+      "status": "matched"
+    },
     "ram:a006ffb4": {
       "by": "autoc",
       "comment": "returns (byte 0xA80788D4) & 8",
