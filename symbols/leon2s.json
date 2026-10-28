@@ -2416,6 +2416,12 @@
       "name": "DRV_HDMI_EQScan_FSM_PHY_R_ChkError",
       "status": "matched"
     },
+    "ram:a00787f4": {
+      "by": "hand",
+      "comment": "Two passes over i = 0..2: writes DAT_a00b3b0a[i] / DAT_a00b3b04[i] through FUN_a00a7424 and FUN_a00a7488 (masks 0xff00ffff, values 0x2c0000 / 0xff0000), FUN_a00b1794(1), then two more FUN_a00a7424 writes per i",
+      "name": "FUN_a00787f4",
+      "status": "matched"
+    },
     "ram:a007890c": {
       "by": "hand",
       "comment": "Per-channel RVGA table index apply or best-SCDC search, then record state updates",
