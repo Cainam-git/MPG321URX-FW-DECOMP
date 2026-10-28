@@ -13,7 +13,7 @@
 extern volatile unsigned char DAT_a807cd00[];
 extern unsigned char DAT_a807cd2d;
 extern unsigned char DAT_a807a94d;
-extern unsigned int FUN_a00a78b4(unsigned int, unsigned short);
+extern unsigned char FUN_a00a78b4(unsigned int, unsigned short);
 extern unsigned char FUN_a00858f0(unsigned int);
 extern unsigned int FUN_a00adf64(unsigned char, int);
 extern unsigned char FUN_a00a29d8(unsigned int);
