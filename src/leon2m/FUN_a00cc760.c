@@ -16,7 +16,7 @@ struct R290 { unsigned char p000[0x11]; unsigned char b011; unsigned char b012; 
 extern struct R290 DAT_a802d290;
 extern void FUN_a00d9764(void);
 extern void FUN_a00d45f8(void);
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 extern void FUN_a00b88cc(void);
 
 void FUN_a00baa6c(unsigned char port)
