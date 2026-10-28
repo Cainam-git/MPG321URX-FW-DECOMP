@@ -1043,6 +1043,13 @@
       "name": "FUN_CODE_7ca8",
       "status": "matched"
     },
+    "CODE:7df1": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "sets up the 0xF0xx transfer registers, writes wn bytes from wbuf and reads rn bytes into rbuf through 0xF1C3 / 0xF1C8",
+      "name": "FUN_CODE_7df1",
+      "status": "matched"
+    },
     "CODE:7f36": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
