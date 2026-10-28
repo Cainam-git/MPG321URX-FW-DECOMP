@@ -9723,6 +9723,12 @@
       "name": "FUN_a00dcc80",
       "status": "matched"
     },
+    "ram:a00dd154": {
+      "by": "hand",
+      "comment": "Computes a value from the word at DAT_a8079538 + 0x20, a divisor from 0xc0110004 and two factors, and writes its bytes to 0xcf014104-0xcf01410c",
+      "name": "FUN_a00dd154",
+      "status": "matched"
+    },
     "ram:a00dd37c": {
       "by": "autoc",
       "comment": "FUN_a00dcdb8(p1); FUN_a00dd154(p1, p2, p3, p4, p5, p6)",
