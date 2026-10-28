@@ -477,3 +477,20 @@ if __name__ == "__main__":
     r = judge(bank, fn, cfile)
     txt = render(fn, r)
     print(txt.splitlines()[-1] if "--quiet" in sys.argv else txt)
+
+def vector(bank, fn, entry):
+    """an interrupt vector entry (kind "vector", "of" = the interrupt function): C51 places 'LJMP <function>' at
+    8 * n + 3 for 'interrupt n'. Proven when the function's source declares that interrupt number and the firmware
+    holds that LJMP at the entry. Returns (reason or None, address, bytes)"""
+    funcs = {f["name"]: f for f in funclist(bank)}
+    isr = funcs.get(entry["of"]); me = funcs.get(fn)
+    if not isr or not me: return f"{fn} or {entry['of']} not in the function list", 0, b""
+    src = (ROOT / "src" / bank / f"{entry.get('module', entry['of'])}.c")
+    m = re.search(r"\b" + re.escape(entry["of"]) + r"\s*\([^)]*\)[^{;]*\binterrupt\s+(\d+)", src.read_text(errors="replace")) if src.exists() else None
+    if not m: return f"{entry['of']} does not declare an interrupt number", 0, b""
+    at = 8 * int(m.group(1)) + 3
+    want = bytes([0x02, isr["start"] >> 8, isr["start"] & 0xff])
+    have = (ROOT / "parts" / f"{bank}.bin").read_bytes()[at:at + 3]
+    if me["start"] != at: return f"{fn} starts at 0x{me['start']:04x}, interrupt {m.group(1)} vector is 0x{at:04x}", 0, b""
+    if have != want: return f"firmware holds {have.hex()} at 0x{at:04x}, not LJMP {entry['of']}", 0, b""
+    return None, at, want

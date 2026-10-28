@@ -6,16 +6,40 @@
       "name": "thunk_FUN_CODE_a627",
       "status": "matched"
     },
+    "CODE:0003": {
+      "by": "vector",
+      "comment": "interrupt vector: LJMP FUN_CODE_2c38, placed by C51 for the 'interrupt' number declared in FUN_CODE_2c38's source",
+      "kind": "vector",
+      "name": "thunk_FUN_CODE_2c38",
+      "of": "FUN_CODE_2c38",
+      "status": "matched"
+    },
     "CODE:0006": {
       "by": "hand",
       "comment": "returns the IDATA byte 0x47",
       "name": "FUN_CODE_0006",
       "status": "matched"
     },
+    "CODE:000b": {
+      "by": "vector",
+      "comment": "interrupt vector: LJMP FUN_CODE_d103, placed by C51 for the 'interrupt' number declared in FUN_CODE_d103's source",
+      "kind": "vector",
+      "name": "FUN_CODE_000b",
+      "of": "FUN_CODE_d103",
+      "status": "matched"
+    },
     "CODE:000e": {
       "by": "hand",
       "comment": "returns the IDATA byte 0x49",
       "name": "FUN_CODE_000e",
+      "status": "matched"
+    },
+    "CODE:0013": {
+      "by": "vector",
+      "comment": "interrupt vector: LJMP FUN_CODE_3091, placed by C51 for the 'interrupt' number declared in FUN_CODE_3091's source",
+      "kind": "vector",
+      "name": "thunk_FUN_CODE_3091",
+      "of": "FUN_CODE_3091",
       "status": "matched"
     },
     "CODE:0016": {
@@ -30,6 +54,14 @@
       "c51opts": "OPTIMIZE(7,SPEED)",
       "comment": "empty function (RET)",
       "name": "FUN_CODE_0022",
+      "status": "matched"
+    },
+    "CODE:0023": {
+      "by": "vector",
+      "comment": "interrupt vector: LJMP FUN_CODE_bfdd, placed by C51 for the 'interrupt' number declared in FUN_CODE_bfdd's source",
+      "kind": "vector",
+      "name": "thunk_FUN_CODE_bfdd",
+      "of": "FUN_CODE_bfdd",
       "status": "matched"
     },
     "CODE:0026": {

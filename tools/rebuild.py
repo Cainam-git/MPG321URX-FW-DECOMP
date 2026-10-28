@@ -163,7 +163,7 @@ def main():
         if not p.exists() or p.read_bytes() != fw[off:off + ln]:
             sys.exit(f"parts/{sec}.bin is missing or differs from the firmware: run tools/split.py first")
     diff8051.MEMO = {}
-    jobs, later, data, lsts = [], [], [], {b: set() for b in BANKS}
+    jobs, later, data, lsts, vecs = [], [], [], {b: set() for b in BANKS}, []
     for sec in [s for s in BANKS + LEON if s in a.sections]:   # Keil jobs first, so Wine and GCC overlap
         ents = [v for v in json.loads((ROOT / "symbols" / f"{sec}.json").read_text())["functions"].values()
                 if v.get("status") == "matched"]
@@ -177,6 +177,9 @@ def main():
             f = fl.get(fn, {})
             if e.get("by") == "data": data.append((sec, fn, f.get("start"), f.get("end"))); continue
             if f.get("start") in st: continue   # reset jump and start-up code: the start-up build above
+            if e.get("kind") == "vector":   # interrupt vector LJMP of a matched interrupt function (diff8051.vector)
+                why, at, b = diff8051.vector(sec, fn, e)
+                vecs.append(res(sec, fn, why is None, why, [(at, b, [])] if why is None else None)); continue
             if e.get("kind") in ("part", "common_entry"): later.append((sec, e, f)); continue
             d = ROOT / "src" / sec
             if not (d / f"{fn}.lib").exists() and not (d / f"{e.get('module', fn)}.c").exists():
@@ -188,6 +191,7 @@ def main():
         if done[0] % 250 == 0: print(f"  {done[0]}/{len(jobs)} built, {time.time() - t0:.0f} s", file=sys.stderr)
         return r
     with ThreadPoolExecutor(a.jobs) as ex: results = list(ex.map(run, jobs))
+    results += vecs
     for sec, e, f in later:   # common-entry blocks outside the own segment; others must lie inside a placed span
         if sec in LEON: continue
         r = common_blocks(sec, e["name"], f.get("start", -1), lsts[sec]) if f and e.get("kind") is None else None

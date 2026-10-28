@@ -12,6 +12,8 @@ GCC = str(ROOT / "toolchains/sparc-elf-3.4.4/bin/sparc-elf-gcc"); AS = str(ROOT 
 
 def check(cpu, fn, entry):
     if cpu.startswith("8051"):
+        if entry.get("kind") == "vector":   # LJMP placed by C51 for 'interrupt n' of the matched function in "of"
+            return fn, diff8051.vector(cpu, fn, entry)[0]
         if entry.get("kind") in ("common_entry", "part"):   # piece judged inside its function's span (accept8051)
             own = next((v for v in json.loads((ROOT / "symbols" / f"{cpu}.json").read_text())["functions"].values()
                         if v.get("name") == entry["of"] and v.get("status") == "matched" and not v.get("kind")), None)
