@@ -23,7 +23,7 @@ How `MSI_MPG321URX_V021_7F69.bin` is laid out, and how its four processors start
 | **8051** | 8-bit, Keil C51 | Boot loader, power sequencing, loading the other processors' programs, supervising Leon2M, update channel, OSD resources. |
 | **Leon2M** (main) | LEON2, SPARC V8 | Picture pipeline, panel and OLED control, frame-rate conversion, on-screen menu logic, update service, USB mode selection. |
 | **Leon2S** (input) | LEON2, SPARC V8 | HDMI 2.1 and DisplayPort receiver, link training, mode detection. |
-| **Tensilica core** | Xtensa (windowed calls); kept as assembly source, its compiler is not available | Not worked out yet. Its strings name it "NT68500 Tensilica S/W" and mention LED driver chips (AS3824, "LDC"). See [the Tensilica program](#the-tensilica-program). |
+| **Tensilica core** | Xtensa (windowed calls); kept as assembly source, its compiler is not available | Local dimming of an LED backlight ("LDC"): LED zone layout from Leon2M, brightness per zone, LED driver chips (AS3824). See [the Tensilica program](#the-tensilica-program). |
 
 ## Regions
 
@@ -141,6 +141,24 @@ chip's Tensilica Xtensa core, 0xD8DC bytes long, followed by empty space (0xFF).
 | 0x03C768–0x03D083 | Constants used by the code |
 | 0x03D088–0x03D8DB | Initialised variables |
 
+### What it does
+
+Its messages and command names describe local dimming of an LED backlight, which the firmware calls "LDC":
+
+- **Panel set-up:** it receives the LED layout from Leon2M ("Leon2M conf LED_col = %d, LED_row = %d") and the panel
+  data (resolution, LED rows and columns, driver duty limits, driver type).
+- **Zone brightness:** it divides the picture into segments and merges each into one value ("Segment Merge Mode":
+  maximum, average, average without black, blend), applies gain tables and limits ("LDC_GainTable", "ZonePeakingPercent",
+  "UserGlobalGain"), and drives each LED by pulse width and current ("PDIM", "ADIM").
+- **LED drivers:** it sets up AS3824 LED driver chips (current, PWM period, HDR mode, per-channel PWM).
+- **Communication:** commands from the other processors arrive through a mailbox ("MailBox Cmd"), including power up and
+  power down.
+- **Debug:** a command line on the serial port ("Welcome to User's Command Line Debug") with memory read and write, GPIO
+  and UART tests, and a printf self-test.
+
+This monitor has a QD-OLED panel, which lights every pixel itself and has no backlight. Whether the main processor sets
+the Tensilica program up and sends it work in this monitor has not been checked.
+
 The program prints a banner with "NVT_Formal_RG20189" and "NT68500 FW Version", and its messages mention LED driver
 chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised; it is not the output of GCC (see
 [toolchains](TOOLCHAINS.md)). The source in `src/tensilica/` is assembly that rebuilds it byte for byte.
@@ -151,4 +169,4 @@ chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised
 - The meaning of the pointer table at 0x12FFF0 and the table set at 0x0E0000–0x0FFFFF.
 - Which processor reads the region 0x210000–0x27FFFF.
 - The meaning of most flag bits in the input channel records (0xA802DF30) and of saved setting 2.
-- What the Tensilica program does, and which compiler built it.
+- Whether the Tensilica program does any work in this OLED monitor, and which compiler built it.
