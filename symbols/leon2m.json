@@ -10683,9 +10683,9 @@
       "status": "matched"
     },
     "ram:a00df588": {
-      "by": "permuter",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "permuter: decomp-permuter (AST mutations), judged by exact bytes",
+      "comment": "writes v << lo into bits lo..hi (smaller and larger of a and b) of register addr via FUN_a00e021c / FUN_a00e0228",
       "name": "FUN_a00df588",
       "status": "matched"
     },
