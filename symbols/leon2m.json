@@ -19806,6 +19806,13 @@
       "name": "FUN_a0139b90",
       "status": "matched"
     },
+    "ram:a0139c3c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Counts the shifts of 0x20 and 0x40 down to 1 and writes 0x2b000000 | a | b << 8 through the ROM mailbox after polling offset 0x20",
+      "name": "FUN_a0139c3c",
+      "status": "matched"
+    },
     "ram:a0139d38": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
