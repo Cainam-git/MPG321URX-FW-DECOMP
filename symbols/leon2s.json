@@ -8255,6 +8255,12 @@
       "name": "FUN_a00c68f8",
       "status": "matched"
     },
+    "ram:a00c6968": {
+      "by": "hand",
+      "comment": "Reads byte blocks with func_0xa0f9d2e0 (by sel 1 or 2) and compares a 24-bit value with a byte sum plus the count of bytes >= 0x80",
+      "name": "FUN_a00c6968",
+      "status": "matched"
+    },
     "ram:a00c7654": {
       "by": "hand",
       "comment": "write twin of a00c7770: idx > 2 ROM print, else hw word ((tbl[idx]+reg)<<2)|0xcf000000 = val",
