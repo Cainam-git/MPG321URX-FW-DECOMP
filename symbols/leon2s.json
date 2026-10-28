@@ -2325,6 +2325,12 @@
       "name": "DRV_HDMI_PHY_Clr_EQ_Err",
       "status": "matched"
     },
+    "ram:a0074ef4": {
+      "by": "hand",
+      "comment": "for ch < 3 calls FUN_a00a7488(port, DAT_a00b3b78[ch], 0xff0000f0, (rct & 0xf) | (cft << 8)) from entry idx of DAT_a00b3a64",
+      "name": "FUN_a0074ef4",
+      "status": "matched"
+    },
     "ram:a0074f60": {
       "by": "hand",
       "comment": "Masks param_1 to a byte once and reuses it (kept in %l0), calls FUN_a00a7488 twice with different masks/values (results discarded), calls the delay FUN_a00b160c(5), then returns (FUN_a00a7314(...) >> 8) & 0x1fff.",
