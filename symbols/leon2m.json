@@ -14793,6 +14793,13 @@
       "name": "FUN_a010e8ec",
       "status": "matched"
     },
+    "ram:a010ebd0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reads reg 0xd0030420, then writes a word chosen by b (0/1) and c (0..2) to regs 0xd0030420 and 0xd0038420",
+      "name": "FUN_a010ebd0",
+      "status": "matched"
+    },
     "ram:a010ec70": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
