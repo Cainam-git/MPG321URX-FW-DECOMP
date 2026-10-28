@@ -1,5 +1,5 @@
 /* leon2s FUN_a00802cc @ 0xa00802cc-0xa0080494, flags -mcpu=v8 -Os -g.
- * For port p (low byte 2 -> k = 0, 3 -> k = 1, else return) and lane mask m (0 -> return), two passes over
+ * For port p (low byte 2 -> k = 0, 3 -> k = 1, else return) and bit mask m (0 -> return), two passes over
  * i < ARR_a807d680[k][0] for each set bit i <= 3 of m:
  *   first pass: a = DAT_a00b3b70[i]; FUN_a00a7424(0, 0x10, p, a), FUN_a00a7424(1, 4, p, DAT_a00b3b10[i]),
  *   FUN_a00a7424(0, 0, p, a), FUN_a00a7424(1, 0x11, p, a), FUN_a00a7488(p, DAT_a00b3b18[i], 0xff0000f0,
