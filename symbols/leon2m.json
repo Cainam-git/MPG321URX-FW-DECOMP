@@ -9344,6 +9344,13 @@
       "name": "FUN_a00d1f20",
       "status": "matched"
     },
+    "ram:a00d1f58": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Stores frame byte 7 into component (byte 6) of the 0xa802e1f0 entry chosen by 0xa802d2a1, calls the component's routine and FUN_a0145360(0), returns 0xe0 (0xe3 for other components)",
+      "name": "FUN_a00d1f58",
+      "status": "matched"
+    },
     "ram:a00d20a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
