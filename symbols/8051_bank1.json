@@ -878,6 +878,13 @@
       "name": "FUN_CODE_4ec1",
       "status": "matched"
     },
+    "CODE:52be": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "switch on bits 0..4 of record byte 0xA62F[0xA64D]: calls the selected bit functions, returns the selector or 0x0D, then tests keys 7..10",
+      "name": "FUN_CODE_52be",
+      "status": "matched"
+    },
     "CODE:568f": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
