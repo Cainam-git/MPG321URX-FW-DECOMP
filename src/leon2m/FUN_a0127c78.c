@@ -74,7 +74,7 @@ extern unsigned short func_0x4008d588(void);
 extern void func_0x4008d1a0(int ms);
 extern unsigned short FUN_a0145af8(unsigned int);
 extern void FUN_a0145c5c(unsigned int, unsigned short);
-extern void FUN_a0145360(int);
+extern void FUN_a0145360(unsigned char);
 extern int FUN_a014aed0();
 extern void FUN_a014512c(unsigned int, unsigned int);
 extern unsigned char FUN_a0143c14(unsigned char);
