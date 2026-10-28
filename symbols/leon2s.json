@@ -2960,6 +2960,12 @@
       "name": "FUN_a00858f0",
       "status": "matched"
     },
+    "ram:a0085914": {
+      "by": "hand",
+      "comment": "Sets the low 3 bits of a port register from link state values and helper results",
+      "name": "FUN_a0085914",
+      "status": "matched"
+    },
     "ram:a0085b14": {
       "by": "autoc",
       "comment": "Calls FUN_a00a7940(p1, 0x28, 8, 0), then FUN_a00a78fc(p1, r, v) for (r, v) = (0x21, 0x31), (7, 0x30), (0x22, 4), (0x23, 0x32), (0x24, 0x96)",
