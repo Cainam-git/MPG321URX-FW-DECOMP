@@ -23,7 +23,7 @@ struct Se1a0 {
 extern struct S290 DAT_a802d290;
 extern struct S274 DAT_a802d274;
 extern struct Se1a0 DAT_a802e1a0;
-extern void FUN_a0145360(int);
+extern void FUN_a0145360(unsigned char);
 extern void FUN_a0149254(unsigned char);
 extern void FUN_a0145c5c(int, int);
 extern void FUN_a00dc3dc(void);
