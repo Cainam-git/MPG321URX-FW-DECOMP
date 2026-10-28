@@ -6128,6 +6128,12 @@
       "name": "FUN_a00a66dc",
       "status": "matched"
     },
+    "ram:a00a67b8": {
+      "by": "hand",
+      "comment": "read-modify-write of the low byte of register reg of block port (table DAT_a00b4d9c, port 2 = blocks 0 and 1): mode 1 sets mask bits, else clears them",
+      "name": "FUN_a00a67b8",
+      "status": "matched"
+    },
     "ram:a00a68d0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
