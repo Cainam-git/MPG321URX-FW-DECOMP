@@ -24534,32 +24534,6 @@
       "comment": "Calls the function pointer at 0xA802CFD4 with two arguments when it is non-null, else returns 0",
       "name": "FUN_a015eaf8",
       "status": "matched"
-    },
-    "ram:externint(*DAT_a802cff0)(unsignedint,unsignedint);intFUN_a015e9a4(unsignedinta,unsignedintb){if(DAT_a802cff0!=0)returnDAT_a802cff0(a,b);return0;}": {
-      "by": "hand",
-      "comment": "Loads the function pointer at 0xa802cff0; if non-null, calls it with the two incoming arguments and returns its result, otherwise returns 0. Frame: save %sp, -104, %sp.",
-      "name": "FUN_a015e9a4",
-      "status": "matched"
-    },
-    "ram:externint(*_DAT_a802cfd4)(int,int);intFUN_a015eaf8(intparam_1,intparam_2){intr=0;if(_DAT_a802cfd4!=0){r=_DAT_a802cfd4(param_1,param_2);}returnr;}": {
-      "by": "hand",
-      "comment": "Wrapper around the function pointer at 0xa802cfd4: if non-NULL, calls it with the two int arguments and returns its result, otherwise returns 0. Written as int r = 0; if (ptr) r = ptr(a, b); return r; which gives one converging ret; restore with clr %i0 in the branch delay slot and mov %o0, %i0 after the call.",
-      "name": "FUN_a015eaf8",
-      "status": "matched"
-    },
-    "ram:externunsignedcharDAT_a802af41;voidFUN_a0080bd8(unsignedintparam_1){if((param_1&0xff)==1)DAT_a802af41|=8;elseDAT_a802af41&=~8;}": {
-      "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Sets bit 3 (value 8) of the byte DAT_a802af41 if (param_1 & 0xff) == 1, otherwise clears it. Written with compound assignments and an unsigned int parameter; the target uses %o5 for the loaded byte in the set path, %o0 in the clear path and %g1 for the OR result.",
-      "name": "FUN_a0080bd8",
-      "status": "matched"
-    },
-    "ram:externvoidFUN_a0146a80(unsignedshortparam_1,unsignedshortparam_2,unsignedcharparam_3,unsignedshortparam_4,unsignedcharparam_5);externvoidFUN_a0146b20(unsignedcharparam_1,unsignedshortparam_2,unsignedshortparam_3,unsignedcharparam_4,unsignedcharparam_5,unsignedcharparam_6);voidFUN_a00a550c(void){unsignedchari;unsignedcharj;unsignedchark;FUN_a0146a80(3,1,6,0xf9a,0);i=0;do{FUN_a0146b20(0,(unsignedshort)(i+3),1,1,i+0x15,0);i++;}while(i<=5);FUN_a0146a80(0x14,0,2,0x12aa,0);FUN_a0146a80(0x1d,0,2,0x12aa,0);FUN_a0146a80(0x25,0,1,0x12aa,0);FUN_a0146a80(0x32,0,1,0x12aa,0);FUN_a0146a80(0x35,0,1,0x12aa,0);FUN_a0146a80(0x35,0,1,0x12aa,0);FUN_a0146a80(0xd,2,1,0x12aa,0);j=0;do{FUN_a0146b20(0,(unsignedshort)(j+0x14),0,1,j+0x1b,0);j++;}while(j<=1);k=0;do{FUN_a0146b20(0,(unsignedshort)(k+0x1d),0,1,k+0x1d,0);k++;}while(k<=1);FUN_a0146b20(0,0x25,0,1,0x1f,0);FUN_a0146b20(0,0x32,0,1,0x20,0);FUN_a0146b20(0,0x35,0,1,0x21,0);FUN_a0146b20(0,0xd,2,1,0x22,0);}": {
-      "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "fixed FUN_a0146a80 / FUN_a0146b20 call sequence: one call, a 6-round loop, seven calls with 0x12aa, two 2-round loops, four calls; void",
-      "name": "FUN_a00a550c",
-      "status": "matched"
     }
   }
 }

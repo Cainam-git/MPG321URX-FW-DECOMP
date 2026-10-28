@@ -9839,12 +9839,6 @@
       "comment": "FUN_a00dcdb8(p1); FUN_a00dd154(p1, p2, p3, p4, p5, p6)",
       "name": "FUN_a00dd37c",
       "status": "matched"
-    },
-    "ram:externunsignedcharARR_a80790a8[];externunsignedintARR_a807db00[];unsignedshortFUN_a009dfa8(unsignedintparam_1){unsignedintuVar2;unsignedintuVar4;unsignedintiVar3;unsignedcharbVar1;param_1&=0xff;iVar3=ARR_a807db00[param_1*13+8];bVar1=ARR_a80790a8[param_1];uVar4=(*(unsignedint*)(iVar3+0x54)>>2)<<bVar1;uVar2=0;if(uVar4!=0){uVar2=(*(unsignedint*)(iVar3+0x50)<<bVar1)/uVar4;}returnuVar2&0xffff;}": {
-      "by": "hand",
-      "comment": "With p = ARR_a807db00[(param_1 & 0xff) * 13 + 8] (word at offset 0x20 of the 0x34-byte record, smul 0x34) and b = ARR_a80790a8[param_1], computes d = (*(p + 0x54) >> 2) << b and returns ((d != 0) ? (*(p + 0x50) << b) / d : 0) & 0xffff.",
-      "name": "FUN_a009dfa8",
-      "status": "matched"
     }
   }
 }
