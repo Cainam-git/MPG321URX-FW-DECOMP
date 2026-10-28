@@ -15264,6 +15264,13 @@
       "name": "FUN_a0118b9c",
       "status": "matched"
     },
+    "ram:a0118be4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Stores two table pointers in DAT_a8027a98 and writes 15 and 16 byte pairs from constant tables or the given tables to registers 0xcf012fd0..0xcf012fe8",
+      "name": "FUN_a0118be4",
+      "status": "matched"
+    },
     "ram:a011909c": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
