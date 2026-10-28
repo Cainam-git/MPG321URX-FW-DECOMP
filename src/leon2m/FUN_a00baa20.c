@@ -4,7 +4,7 @@
  * word. It lies between FUN_a00ba9d8 and FUN_a00baa6c.
  */
 extern unsigned char DAT_a802d078[];
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 
 void FUN_a00baa20(unsigned char c)
 {
