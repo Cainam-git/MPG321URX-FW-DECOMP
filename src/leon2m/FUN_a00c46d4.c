@@ -31,7 +31,7 @@ extern void FUN_a00d5eac(int);
 extern void FUN_a00d4998(void);
 extern void FUN_a00d5f3c(void);
 extern void FUN_a0148268(int, int);
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 extern void FUN_a00b88cc(void);
 
 void FUN_a00baa6c(unsigned char port)
