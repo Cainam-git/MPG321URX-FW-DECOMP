@@ -262,6 +262,10 @@ LEON (GCC 3.4.4):
   function sit back to back. GCC copies the initialiser with an implicit `memcpy` call; declare
   `extern void *memcpy(void *, const void *, unsigned int) __asm__("FUN_a013c910");` (a link name only, no code).
   `const` also lets the reads be scheduled independently of volatile register stores (FUN_a0118be4, FUN_a0118e04).
+- **A local table that is first cleared and then has every element stored:** GCC 3.4 does this for a union (or a
+  struct with an uninitialised member) initialised through one member, for example
+  `const union { unsigned short h[12]; unsigned int w[6]; } m = { { ... } };`. A plain array is only cleared first when
+  elements are missing or at least 75 % of them are zero (FUN_a0150b8c).
 - **`x >= K` as `cmp; subx`** after a loop whose own test is `cmp K-1; bleu`: the final compare uses a local holding K
   (`unsigned char n = 4; ... return i >= n;`). A literal K is folded to `x > K-1` and branches (FUN_a014f32c).
 - **Five case labels whose delay slots differ** give the case order of the source; trying all orders found
