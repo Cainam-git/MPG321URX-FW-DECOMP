@@ -2190,6 +2190,12 @@
       "name": "FUN_CODE_e551",
       "status": "matched"
     },
+    "CODE:f080": {
+      "by": "data",
+      "comment": "NOT CODE: 0xFF fill (erased flash); the three apparent LJMP 0xF080 at 0x0053, 0x00E9 and 0xB10E are the bytes F0 80 xx of MOVX @DPTR,A; SJMP inside matched functions",
+      "name": "FUN_CODE_f080",
+      "status": "matched"
+    },
     "ram:4ffa": {
       "by": "hand",
       "comment": "Returns the byte at xdata 0x075B: MOV DPTR,#0x075B; MOVX A,@DPTR; MOV R7,A; RET.",
