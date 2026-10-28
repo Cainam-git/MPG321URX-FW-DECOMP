@@ -18876,6 +18876,13 @@
       "name": "FUN_a01344f4",
       "status": "matched"
     },
+    "ram:a013453c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Scans the 4 portal-0 slots at 0x10 + 20 * slot from index DAT_a802cb8d (twice when it skipped some) for a word with low nibble 0; returns the slot or 0xff",
+      "name": "FUN_a013453c",
+      "status": "matched"
+    },
     "ram:a0134684": {
       "by": "hand",
       "comment": "increments DAT_a802cb8d modulo 4 (wraps above 3)",
