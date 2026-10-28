@@ -8232,6 +8232,13 @@
       "name": "FUN_a00c0adc",
       "status": "matched"
     },
+    "ram:a00c0b34": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns byte 8 of the port's receive record minus '0' (low byte), or 0xff when that is above 100",
+      "name": "FUN_a00c0b34",
+      "status": "matched"
+    },
     "ram:a00c0be4": {
       "by": "hand",
       "comment": "returns 0",
