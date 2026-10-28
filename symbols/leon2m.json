@@ -2960,6 +2960,13 @@
       "name": "FUN_a008ed00",
       "status": "matched"
     },
+    "ram:a008edb8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "searches the 2-byte table at 0x10051f for id and sets or clears that bit of DAT_a802afd8, stores on in DAT_a802afc8[idx]",
+      "name": "FUN_a008edb8",
+      "status": "matched"
+    },
     "ram:a008ee6c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
