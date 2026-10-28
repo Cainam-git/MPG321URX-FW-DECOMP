@@ -6542,6 +6542,12 @@
       "name": "FUN_a00a8400",
       "status": "matched"
     },
+    "ram:a00a8508": {
+      "by": "hand",
+      "comment": "Updates packet register words of a port from four bytes by selection",
+      "name": "FUN_a00a8508",
+      "status": "matched"
+    },
     "ram:a00a8694": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
