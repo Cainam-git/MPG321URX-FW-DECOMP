@@ -5879,6 +5879,12 @@
       "name": "FUN_a00a3788",
       "status": "matched"
     },
+    "ram:a00a3810": {
+      "by": "hand",
+      "comment": "compares and copies the per-port state words, reads byte tables and calls the port setup routines; returns 0",
+      "name": "FUN_a00a3810",
+      "status": "matched"
+    },
     "ram:a00a3a10": {
       "by": "hand",
       "comment": "u8 port. If ARR_a807db6c[port] != ARR_a807873c[port]: print DAT_a006bb50 (port), copy it. DAT_a80791aa = 1. If bit 6 of FUN_a0091d64(port, 0x40): 1cf4(port, 0x31, (f4[port] << 4 | fc[port]) & 0xff), 4ac4(port, 1), ARR_a80791f0[port] = 0, then a8054(port,4,0xe2, low byte) and a8054(port,4,0xe3, ...",
