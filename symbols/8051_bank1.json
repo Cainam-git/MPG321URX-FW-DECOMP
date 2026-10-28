@@ -878,6 +878,13 @@
       "name": "FUN_CODE_4ec1",
       "status": "matched"
     },
+    "CODE:50c9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "Writes n bytes from p through FUN_CODE_4cb9 in blocks ending at multiples of 8 of the address, for one of six channel register pairs; returns the AND of the call results",
+      "name": "FUN_CODE_50c9",
+      "status": "matched"
+    },
     "CODE:52be": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
