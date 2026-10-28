@@ -64,6 +64,9 @@ Comparing the official versions FW.012, FW.016, FW.020 and FW.021 (`firmware/`):
 
 ## Address numbering
 
+Each processor sees the flash and its memory at its own addresses. This section converts between them and the
+file offsets used in this map.
+
 - **Leon2M main program:** The CPU address is the file offset minus 0x108000. Function names such as
   `FUN_a00dac38` use Ghidra's import base, which is the CPU address plus 0xA0060000. To find a function in the file,
   subtract 0xA0000000 from the number in its name and add 0xA8000.
@@ -78,6 +81,9 @@ Comparing the official versions FW.012, FW.016, FW.020 and FW.021 (`firmware/`):
 
 ## Start-up sequence
 
+In short: the 8051 starts first, copies the other programs into place, starts the USB controller and the two LEON
+processors, and then watches the main processor for as long as the monitor is on.
+
 1. **8051 boot loader** (bank 0, `FUN_CODE_13f7` → `FUN_CODE_151c`): reads the flash ID and the partition table,
    then starts the bank 1 application.
 2. **8051 application** (bank 1, `FUN_CODE_3fe7`):
@@ -87,10 +93,10 @@ Comparing the official versions FW.012, FW.016, FW.020 and FW.021 (`firmware/`):
      0xD8DC) on, and `FUN_CODE_0b0d` hands it to `FUN_CODE_c43e`, which starts the flash DMA in `FUN_CODE_8d60`.
    - Points the Leon2M code window at file offset 0x108000 (`FUN_CODE_4a85`).
    - Starts the bank 2 update agent (`FUN_CODE_96eb`) and releases Leon2M (`FUN_CODE_c544`).
-   - The banks are never switched. Each one is a whole program linked at CODE 0x0000 and copied by hardware: the
-     boot loader starts bank 1 with the copy block at 0xF1D0..0xF1D8, and bank 1 loads bank 2 into the chip's USB
-     controller with the copy block at 0xF166..0xF16F (flash 0x020000, length 0xE552, then the key "USBONE" at
-     0xF1E5). Bank 1 keeps running after that, so bank 2 runs on that second controller, not in place of bank 1.
+   - The 8051 never switches between banks. Each bank is a complete program that the chip's hardware copies into
+     place: the boot loader has bank 1 copied for the 8051 itself (copy registers 0xF1D0..0xF1D8), and bank 1 has
+     bank 2 copied into the USB controller (registers 0xF166..0xF16F, then the start key "USBONE"). Bank 1 keeps
+     running afterwards, so the two programs run side by side.
    - From then on checks on every loop that Leon2M is alive (`FUN_CODE_7b5a`). After 15,000 ticks without a sign of
      life it prints "###SYSTEM CRASH, RESET###", stops both LEON processors and runs the power-off sequence
      (`FUN_CODE_7a0b`).
@@ -102,6 +108,9 @@ Comparing the official versions FW.012, FW.016, FW.020 and FW.021 (`firmware/`):
    - Signals that it is alive to the 8051 through `FUN_a002ced8`.
 
 ## Update path
+
+In short: MSI's PC tool reaches the main processor through the 8051. The main processor then opens the connection for
+the tool and puts the 8051 into its flash-writing loop, which writes the new firmware.
 
 1. MSI Gaming Intelligence talks to the 8051, which passes commands to Leon2M through a mailbox.
 2. Leon2M polls the mailbox (`FUN_a0134de0`) and decodes the message (`FUN_a013497c`).
@@ -121,6 +130,9 @@ The panel can be driven in three modes. Each is described by one row of the pane
 | 0 | 2291 MHz | 4064 | 2348–11764 | 240 Hz | 11 |
 | 1 | 2300 MHz | 8160 | 2348–5884 | 120 Hz | 11 |
 | 2 | 576 MHz | 4088 | 2348–2944 | 60 Hz | 5 |
+
+In short: inputs up to about 62 Hz use the 60 Hz mode, inputs up to about 122 Hz the 120 Hz mode, and faster inputs
+the 240 Hz mode.
 
 - **Choosing the row:** `FUN_a00dac38` measures the input refresh rate (in 0.1 Hz units) or line rate and picks:
   - Row 2 below `off + 600`, row 1 below `off + 1200`, and row 0 otherwise, where `off` is 20 (2 Hz), or 5
