@@ -11898,6 +11898,13 @@
       "name": "FUN_a00f51b4",
       "status": "matched"
     },
+    "ram:a00f557c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Saves block registers 0x2a/0x4a and three values, writes 0xcf02010c, averages three readings over a sampling loop, calls FUN_a00f51b4 and FUN_a00f4e60, restores the saved values, returns 1 when both return nonzero",
+      "name": "FUN_a00f557c",
+      "status": "matched"
+    },
     "ram:a00f6340": {
       "by": "autoc",
       "comment": "p1 = p1 & 0xff; returns FUN_a00f1a90(p1, 0x43)",
