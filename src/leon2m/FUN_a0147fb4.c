@@ -11,13 +11,13 @@
 #define RB(a) (*(volatile unsigned int *)(0xcf000000 | ((a) << 2)))
 
 extern unsigned char FUN_a0124168(void);
-extern unsigned char *FUN_a0124174(void);
+extern unsigned int FUN_a0124174(void);
 extern void FUN_a01238e8(void);
 extern void func_0x4008ced8(void);
-extern unsigned char FUN_a0123c80(const unsigned char *s, unsigned char n);
+extern unsigned char FUN_a0123c80(unsigned char *buf, unsigned char n);
 extern int FUN_a0147d70(void);
 
-unsigned char FUN_a0147fb4(const unsigned char *s)
+unsigned char FUN_a0147fb4(unsigned char *s)
 {
     unsigned char i, last = 0, ch;
     unsigned int n;
