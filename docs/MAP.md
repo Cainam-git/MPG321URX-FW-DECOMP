@@ -85,6 +85,10 @@ Comparing the official versions FW.012, FW.016, FW.020 and FW.021 (`firmware/`):
      0xD8DC) on, and `FUN_CODE_0b0d` hands it to `FUN_CODE_c43e`, which starts the flash DMA in `FUN_CODE_8d60`.
    - Points the Leon2M code window at file offset 0x108000 (`FUN_CODE_4a85`).
    - Starts the bank 2 update agent (`FUN_CODE_96eb`) and releases Leon2M (`FUN_CODE_c544`).
+   - The banks are never switched. Each one is a whole program linked at CODE 0x0000 and copied by hardware: the
+     boot loader starts bank 1 with the copy block at 0xF1D0..0xF1D8, and bank 1 loads bank 2 into the chip's USB
+     controller with the copy block at 0xF166..0xF16F (flash 0x020000, length 0xE552, then the key "USBONE" at
+     0xF1E5). Bank 1 keeps running after that, so bank 2 runs on that second controller, not in place of bank 1.
    - From then on checks on every loop that Leon2M is alive (`FUN_CODE_7b5a`). After 15,000 ticks without a sign of
      life it prints "###SYSTEM CRASH, RESET###", stops both LEON processors and runs the power-off sequence
      (`FUN_CODE_7a0b`).
@@ -183,7 +187,6 @@ chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised
 
 ## Open questions
 
-- How the 8051 switches between banks 1 and 2 (which special function register selects the bank).
 - The meaning of the pointer table at 0x12FFF0 and the table set at 0x0E0000–0x0FFFFF.
 - Which processor reads the region 0x210000–0x27FFFF.
 - The meaning of most flag bits in the input channel records (0xA802DF30) and of saved setting 2.
