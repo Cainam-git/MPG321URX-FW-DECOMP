@@ -14499,6 +14499,13 @@
       "name": "FUN_a010db74",
       "status": "matched"
     },
+    "ram:a010dbc4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores pos/w20 into the DAT_a802d704/d804 context and writes (pos +- DAT_a802d700) << 16 | w20 to word 0 of DAT_0019aec4/0019aebc[ch]",
+      "name": "FUN_a010dbc4",
+      "status": "matched"
+    },
     "ram:a010de54": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
