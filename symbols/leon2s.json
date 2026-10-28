@@ -2429,6 +2429,12 @@
       "name": "RCT_Value",
       "status": "matched"
     },
+    "ram:a0075ffc": {
+      "by": "hand",
+      "comment": "Prints RVGA, RCT and CCT of three channels from ARR_a807a9f0[port], then runs three empty counting loops bounded by byte 8 of ARR_a807ccc4[port]",
+      "name": "EQ_handler_2",
+      "status": "matched"
+    },
     "ram:a0076e68": {
       "by": "hand",
       "comment": "Per-channel pre-AEQ table step (RCT/CFT register writes) or RVGA index advance, then state update",
