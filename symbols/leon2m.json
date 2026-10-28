@@ -11856,6 +11856,13 @@
       "name": "FUN_a00f3a04",
       "status": "matched"
     },
+    "ram:a00f3f64": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Steps a probe position from 4 to 0x40, records the positions of the smallest and largest block readings and returns their difference",
+      "name": "FUN_a00f3f64",
+      "status": "matched"
+    },
     "ram:a00f40e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
