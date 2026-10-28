@@ -8485,6 +8485,12 @@
       "name": "FUN_a00c86bc",
       "status": "matched"
     },
+    "ram:a00c8760": {
+      "by": "hand",
+      "comment": "Calls FUN_a00c8048(port, 0x74, 8, 2); prints and returns a non-zero result, else calls FUN_a00c81f8(port, buf, 2) and returns 0",
+      "name": "FUN_a00c8760",
+      "status": "matched"
+    },
     "ram:a00c87c0": {
       "by": "autoc",
       "comment": "FUN_a00c8048(p1, 0xa0, (p2 & 0xff) * 0x80 + 0x78, 8); returns (ulonglong)p2 << 0x20",
