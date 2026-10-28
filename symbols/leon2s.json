@@ -2441,6 +2441,13 @@
       "name": "EQ_handler_2",
       "status": "matched"
     },
+    "ram:a0076180": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -Os -g -msoft-float",
+      "comment": "Per channel applies the RVGA table value or scans the RVGA/pre word tables for counts and minima, then calls RCT_Value and writes the RVGA register",
+      "name": "DRV_HDMI_EQScan_FSM_PHY_PreRVGA",
+      "status": "matched"
+    },
     "ram:a0076e68": {
       "by": "hand",
       "comment": "Per-channel pre-AEQ table step (RCT/CFT register writes) or RVGA index advance, then state update",
