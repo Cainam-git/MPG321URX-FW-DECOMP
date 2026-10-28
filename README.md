@@ -20,14 +20,14 @@ The monitor is driven by a Novatek NT68500 scaler chip. The firmware holds progr
 ## Progress
 
 ```
-Main processor      [################----]   82 %
-Input processor     [################----]   85 %
-Helper processor    [###################-]  100 %
-Tensilica processor [###-----------------]   15 %
-Overall             [################----]   81 %
+Main processor      [################----]   81 %
+Input processor     [################----]   84 %
+Helper processor    [###################-]   99 %
+Tensilica processor [####################]  100 %
+Overall             [################----]   84 %
 ```
 
-Percentages are by code size. More than 6,000 of roughly 6,300 functions are done, and the helper processor's boot
+Percentages are by code size. More than 6,300 of roughly 6,600 functions are done, and the helper processor's boot
 loader is complete. `tools/rebuild.py` builds the complete firmware image from the matched functions plus the
 original bytes for everything else, and the result is identical to the original file. Detailed numbers are in the
 [status report](docs/STATUS.md).
