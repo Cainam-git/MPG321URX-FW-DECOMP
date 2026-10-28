@@ -9533,6 +9533,12 @@
       "name": "FUN_a00d904c",
       "status": "matched"
     },
+    "ram:a00d90dc": {
+      "by": "hand",
+      "comment": "Builds command 0x38 from the FUN_a00d73b4 record and func_0xa0fb6bb8 values, writes 20 bytes to 0xcf018e04, reads 20 bytes back into the command and passes it to FUN_a00d791c",
+      "name": "FUN_a00d90dc",
+      "status": "matched"
+    },
     "ram:a00d9474": {
       "by": "hand",
       "comment": "Sends a 19-byte packet (id, 16 register bytes from +0xd00, a, b) with FUN_a00d791c and sets bit 5 of the block's first register",
