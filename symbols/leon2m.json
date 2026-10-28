@@ -2620,6 +2620,13 @@
       "name": "FUN_a00875ec",
       "status": "matched"
     },
+    "ram:a008767c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Selects 0, 2 or 3 from FUN_a0143c14, FUN_a0145660, FUN_a00d7d48 and words +0xa8/+0xb0 of DAT_a802d290, then calls FUN_a014bac4 and per-selection call sequences",
+      "name": "FUN_a008767c",
+      "status": "matched"
+    },
     "ram:a008796c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
