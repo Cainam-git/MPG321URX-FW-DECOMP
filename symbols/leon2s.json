@@ -6221,6 +6221,12 @@
       "name": "FUN_a00a6fc0",
       "status": "matched"
     },
+    "ram:a00a7058": {
+      "by": "hand",
+      "comment": "read-modify-write of the low byte of register reg of block port (table DAT_a00b4d90, port 2 = blocks 0 and 1): mode 1 sets mask bits, else clears them",
+      "name": "FUN_a00a7058",
+      "status": "matched"
+    },
     "ram:a00a7168": {
       "by": "hand",
       "comment": "Write the low byte of a value to a hardware register via the port base table 0xa00b4d88",
