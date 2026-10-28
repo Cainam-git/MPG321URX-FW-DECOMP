@@ -3,6 +3,8 @@
  * (unsigned char or unsigned short): 0 FUN_a014f974, 1 FUN_a014f980, 2 FUN_a014f888, 3 FUN_a014f894,
  * 4..11 FUN_a014f8a0(1 << (id - 4), v), 12 FUN_a014f92c, 13 FUN_a014f938, 14 FUN_a014f944, 15 FUN_a014f98c,
  * 16 FUN_a014f95c, 17 FUN_a014f950, 18 FUN_a014f968; other ids do nothing. All calls are tail calls.
+ * v is an unsigned short parameter: callers pass a 16-bit value (FUN_a008767c narrows its computed value to
+ * 16 bits before the call).
  */
 extern void FUN_a014f888(unsigned short);
 extern void FUN_a014f894(unsigned short);
@@ -17,7 +19,7 @@ extern void FUN_a014f974(unsigned char);
 extern void FUN_a014f980(unsigned char);
 extern void FUN_a014f98c(unsigned char);
 
-void FUN_a014bac4(unsigned int id, unsigned int v)
+void FUN_a014bac4(unsigned int id, unsigned short v)
 {
     switch (id) {
     case 0:
