@@ -11884,6 +11884,13 @@
       "name": "FUN_a00f4e60",
       "status": "matched"
     },
+    "ram:a00f51b4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Samples three values of a block until ten stable readings, writes their averages plus an offset and returns 1, or restores them and returns 0",
+      "name": "FUN_a00f51b4",
+      "status": "matched"
+    },
     "ram:a00f6340": {
       "by": "autoc",
       "comment": "p1 = p1 & 0xff; returns FUN_a00f1a90(p1, 0x43)",
