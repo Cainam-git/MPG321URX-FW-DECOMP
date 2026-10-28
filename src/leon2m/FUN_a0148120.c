@@ -3,17 +3,17 @@
  * ch = FUN_a0124168() (byte DAT_a802d87e), FUN_a0124174() is called; while register 0xcf000000 + 4 * (2 * ch +
  * 0xf190) reads 0x96: FUN_a01238e8() and FUN_a0123c80(s, last); when that returns 1, 0x48 is written to register
  * 2 * ch + 0xf191, the function waits until it no longer reads 0x48 and returns 2. Otherwise returns 4.
- * No direct callers were found. Exact form: last is copied through an unsigned int into the dead loop index
+ * No direct callers were found. Source form: last is copied through an unsigned int into the dead loop index
  * (n = last; i = n;) before the calls; that keeps it in a call-saved register as in the firmware.
  */
 #define RB(a) (*(volatile unsigned int *)(0xcf000000 | ((a) << 2)))
 
 extern unsigned char FUN_a0124168(void);
-extern unsigned char *FUN_a0124174(void);
+extern unsigned int FUN_a0124174(void);
 extern void FUN_a01238e8(void);
-extern unsigned char FUN_a0123c80(const unsigned char *s, unsigned char n);
+extern unsigned char FUN_a0123c80(unsigned char *buf, unsigned char n);
 
-int FUN_a0148120(const unsigned char *s)
+int FUN_a0148120(unsigned char *s)
 {
     unsigned char i, last = 0, ch;
     unsigned int n;
