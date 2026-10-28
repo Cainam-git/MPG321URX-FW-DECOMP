@@ -3045,7 +3045,7 @@
       "status": "matched"
     },
     "ram:a0086540": {
-      "by": "permuter",
+      "by": "hand",
       "comment": "b = ((p4 > 2 ? p4 | 4 : p4) << 3) | (p3 > 2 ? p3 | 4 : p3) in a 4-byte buffer; returns FUN_a00863d4(p1, 0x80, 0x103, (p2 & 0xf) - 1, buf) != 0",
       "name": "FUN_a0086540",
       "status": "matched"
