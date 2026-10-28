@@ -108,7 +108,7 @@ extern void FUN_a00bac3c(unsigned char);
 extern void FUN_a00bacc4(unsigned char);
 extern unsigned char FUN_a00ba950(unsigned char);
 extern void FUN_a00babe4(unsigned char, unsigned char);
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 extern unsigned char DAT_a802d078[];
 
 void FUN_a00bfcc4(unsigned char port, unsigned char cmd)
