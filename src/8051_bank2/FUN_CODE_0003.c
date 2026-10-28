@@ -1,5 +1,6 @@
 /* 8051_bank2 module FUN_CODE_0003: one Keil C51 module, OPTIMIZE(8,SPEED) LARGE, holding FUN_CODE_0003, FUN_CODE_c0be,
- * FUN_CODE_e4bf, FUN_CODE_e1c1, FUN_CODE_df7f, FUN_CODE_da8a, FUN_CODE_e2ab, FUN_CODE_d1bb and FUN_CODE_c1a6.
+ * FUN_CODE_e4bf, FUN_CODE_e1c1, FUN_CODE_df7f, FUN_CODE_da8a, FUN_CODE_e2ab, FUN_CODE_d1bb, FUN_CODE_c1a6 and
+ * FUN_CODE_a8a3.
  * Keil's "reuse of common entry code" emits these blocks in front of the callees (all byte-exact with this file):
  *   FUN_CODE_e4b9 @ 0xe4b9 in front of FUN_CODE_e4bf: R3:R2:R1 = generic pointer to XDATA 0x0436, shared by the
  *     e4bf(DAT_EXTMEM_0436) calls of da8a, e2ab, d1bb and c1a6;
@@ -32,8 +33,21 @@
  *   else 0) and pos runs n / 2 .. n - 1, else 0 .. n - 1, step 16; per step e1c1(pos >> 4) when pos % 16 == 0,
  *   df7f(pos, pos + 14), e4bf(XDATA 0x0436). Keil idioms: 'if (x == 0x10) e331(8); else e331(0);' (a ?: gives
  *   MOV R7,#0 instead of CLR A / MOV R7,A); (x << 8) >> 3 gives the 3-step RRC loop (x << 5 gives MUL AB).
+ * FUN_CODE_a8a3(mode) (bit result): with mode bit 4: d1bb(1), r = 0003(); mode 0x11: FUN_CODE_ce2a(), r |=
+ *   FUN_CODE_8437(mode), prints "result = %d\r\n" (CODE 0xCB51) with r through FUN_CODE_65ab; other modes: XDATA
+ *   0x0435 = 0, 0x0434 = 2, r |= FUN_CODE_8437(mode). Then FUN_CODE_ceee(0), register 0xD7E0 = 0x81, FUN_CODE_e21d(1),
+ *   FUN_CODE_e24d(0xF3); returns 1 when r is 0 and FUN_CODE_00fc() returns 0 (XDATA 0xF19A = 0 first), else 0.
+ *   Without bit 4: XDATA 0x06F2 = 0, d1bb(1), register 0xF0DE = 0x21, 0003(), t = register 0xF1E0, 0xF1E0 = t & 0xF7;
+ *   with bit 2 or 3: (bit 3: FUN_CODE_dd6a(0)) FUN_CODE_cee9(), e4bf(buf), FUN_CODE_e44b(10), FUN_CODE_e4a4(), and for
+ *   bit 3 FUN_CODE_dd6a(1) and the same three calls again; otherwise the three calls once. Then c1a6(mode), ceee(0),
+ *   e4bf(buf), 0xF1E0 = t, FUN_CODE_9f8f(mode); with bit 2 or 3: (bit 3: dd6a(0)) FUN_CODE_ca42(mode), ceee(1) (bit 3:
+ *   dd6a(1), ceee(1)); 0xF1E0 = t & 0xF7, 0xF1E0 = t, d1bb(0), then an endless loop.
+ *   Compiler aid: 'ACC = ACC;' (sfr ACC) at the end of the inner 'if (mode & 8)' block emits no instructions; it keeps
+ *   Keil from cross-jumping that block's 'cee9(); e4bf(buf); e44b(10);' into the identical else-branch calls, so both
+ *   copies stay as in the firmware (SJMP over the second copy).
  * Register writes are service-bus packets: FUN_CODE_da8a writes, FUN_CODE_e105 reads (slave 0x6E).
  */
+#include <absacc.h>
 extern unsigned char code DAT_CODE_cbd6[];
 void FUN_CODE_c0be(unsigned char *buf, unsigned char n, unsigned char m);
 unsigned char FUN_CODE_c44e(unsigned char *buf, void *tbl);
@@ -265,4 +279,99 @@ void FUN_CODE_c1a6(unsigned char mode)
             FUN_CODE_e4bf(DAT_EXTMEM_0436);
         }
     }
+}
+
+sfr ACC = 0xE0;
+struct TagRegion { unsigned char cur; unsigned char next; };
+extern struct TagRegion xdata DAT_EXTMEM_0434;
+extern unsigned char xdata DAT_EXTMEM_06f2;
+extern void FUN_CODE_65ab(void *fmt, ...) large;
+void FUN_CODE_d1bb(unsigned char m);
+unsigned char FUN_CODE_0003(void);
+void FUN_CODE_ce2a(void);
+unsigned char FUN_CODE_8437(unsigned char mode);
+void FUN_CODE_e21d(unsigned char a);
+void FUN_CODE_e24d(unsigned char a);
+unsigned char FUN_CODE_00fc(void);
+void FUN_CODE_dd6a(bit on);
+void FUN_CODE_e4a4(void);
+void FUN_CODE_c1a6(unsigned char mode);
+void FUN_CODE_9f8f(unsigned char mode);
+void FUN_CODE_ca42(unsigned char mode);
+unsigned char FUN_CODE_da8a(unsigned int reg, unsigned char val);
+unsigned char FUN_CODE_e105(unsigned int reg);
+void FUN_CODE_ceee(unsigned char on);
+void FUN_CODE_e44b(unsigned char n);
+void FUN_CODE_cee9(void);
+
+bit FUN_CODE_a8a3(unsigned char mode)
+{
+    unsigned char t;
+    unsigned char r;
+    r = 0;
+    if (mode & 0x10) {
+        FUN_CODE_d1bb(1);
+        r |= FUN_CODE_0003();
+        if (mode == 0x11) {
+            FUN_CODE_ce2a();
+            r |= FUN_CODE_8437(mode);
+            FUN_CODE_65ab((void code *)0xcb51, (unsigned int)r);
+        } else {
+            DAT_EXTMEM_0434.next = 0;
+            DAT_EXTMEM_0434.cur = 2;
+            r |= FUN_CODE_8437(mode);
+        }
+        FUN_CODE_ceee(0);
+        FUN_CODE_da8a(0xd7e0, 0x81);
+        FUN_CODE_e21d(1);
+        FUN_CODE_e24d(0xf3);
+        if (r == 0) {
+            XBYTE[0xF19A] = 0;
+            if (FUN_CODE_00fc() == 0) r = 1;
+            else r = 0;
+        } else r = 0;
+        return r;
+    }
+    DAT_EXTMEM_06f2 = 0;
+    FUN_CODE_d1bb(1);
+    FUN_CODE_da8a(0xf0de, 0x21);
+    FUN_CODE_0003();
+    t = FUN_CODE_e105(0xf1e0);
+    FUN_CODE_da8a(0xf1e0, t & 0xf7);
+    if ((mode & 4) || (mode & 8)) {
+        if (mode & 8) FUN_CODE_dd6a(0);
+        FUN_CODE_cee9();
+        FUN_CODE_e4bf(DAT_EXTMEM_0436);
+        FUN_CODE_e44b(10);
+        FUN_CODE_e4a4();
+        if (mode & 8) {
+            FUN_CODE_dd6a(1);
+            FUN_CODE_cee9();
+            FUN_CODE_e4bf(DAT_EXTMEM_0436);
+            FUN_CODE_e44b(10);
+            ACC = ACC;
+        }
+    } else {
+        FUN_CODE_cee9();
+        FUN_CODE_e4bf(DAT_EXTMEM_0436);
+        FUN_CODE_e44b(10);
+    }
+    FUN_CODE_c1a6(mode);
+    FUN_CODE_ceee(0);
+    FUN_CODE_e4bf(DAT_EXTMEM_0436);
+    FUN_CODE_da8a(0xf1e0, t);
+    FUN_CODE_9f8f(mode);
+    if ((mode & 4) || (mode & 8)) {
+        if (mode & 8) FUN_CODE_dd6a(0);
+        FUN_CODE_ca42(mode);
+        FUN_CODE_ceee(1);
+        if (mode & 8) {
+            FUN_CODE_dd6a(1);
+            FUN_CODE_ceee(1);
+        }
+    }
+    FUN_CODE_da8a(0xf1e0, t & 0xf7);
+    FUN_CODE_da8a(0xf1e0, t);
+    FUN_CODE_d1bb(0);
+    for (;;) ;
 }

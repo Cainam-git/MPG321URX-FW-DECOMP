@@ -9,7 +9,7 @@
     "CODE:0003": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "identifies the SPI flash chip via c0be / service-bus reads and the CODE 0xCB8C table; module with c0be, e4bf, e1c1, df7f, da8a, e2ab, d1bb, c1a6",
+      "comment": "identifies the SPI flash chip via c0be / service-bus reads and the CODE 0xCB8C table; module with c0be, e4bf, e1c1, df7f, da8a, e2ab, d1bb, c1a6, a8a3",
       "name": "FUN_CODE_0003",
       "status": "matched"
     },
