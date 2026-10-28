@@ -600,6 +600,13 @@
       "of": "FUN_CODE_0b0d",
       "status": "matched"
     },
+    "CODE:147a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "writes n bytes per type and sel to the byte port 0xDCDD / 0xDCCD from CODE tables, the q table or constants",
+      "name": "FUN_CODE_147a",
+      "status": "matched"
+    },
     "CODE:1c3c": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
