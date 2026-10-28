@@ -4,20 +4,20 @@
  * handler word table[0x80 + n] at 0xA802B170 is non-zero, the handler is called and bit n is written to 0x9F02008C
  * through FUN_a002c25c; the handler runs first when bit n is also set in t2 >> 16, after the write otherwise. Ends
  * with FUN_a002c25c(0x9F020034, 0x100), FUN_a002c25c(0x9F00009C, 0x100), FUN_a002c268(0x9F020028, 0, 0x100) and
- * FUN_a002c268(0x9F000090, 0x100, 0x100), whose result is returned.
+ * FUN_a002c268(0x9F000090, 0x100, 0x100) as a tail call.
  */
 extern unsigned int FUN_a002c250(unsigned int addr);
 extern void FUN_a002c25c(unsigned int addr, unsigned int value);
-extern unsigned int FUN_a002c268(unsigned int addr, unsigned int value, unsigned int count);
+extern void FUN_a002c268(volatile unsigned int *p, unsigned int v, unsigned int mask);
 
-unsigned int FUN_a002a144(void)
+void FUN_a002a144(void)
 {
     unsigned int t1, t2, l0, l2;
     unsigned int *table;
     unsigned int i1;
 
-    FUN_a002c268(0x9f000090, 0, 0x100);
-    FUN_a002c268(0x9f020028, 0x100, 0x100);
+    FUN_a002c268((volatile unsigned int *)0x9f000090, 0, 0x100);
+    FUN_a002c268((volatile unsigned int *)0x9f020028, 0x100, 0x100);
 
     t1 = FUN_a002c250(0x9f02008c);
     t2 = FUN_a002c250(0x9f020054);
@@ -45,6 +45,6 @@ unsigned int FUN_a002a144(void)
 
     FUN_a002c25c(0x9f020034, 0x100);
     FUN_a002c25c(0x9f00009c, 0x100);
-    FUN_a002c268(0x9f020028, 0, 0x100);
-    return FUN_a002c268(0x9f000090, 0x100, 0x100);
+    FUN_a002c268((volatile unsigned int *)0x9f020028, 0, 0x100);
+    FUN_a002c268((volatile unsigned int *)0x9f000090, 0x100, 0x100);
 }
