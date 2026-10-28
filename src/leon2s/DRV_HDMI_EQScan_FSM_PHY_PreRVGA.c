@@ -23,7 +23,7 @@
  * limits are written '(b8 ? 3u : 1u)', '(b8 ? 9u : 0xdu)', '(b8 ? 4u : 6u)' and the divisor '(b8 ? 5u : 7u)'
  * (re-read at each use); the RVGA register value is an if/else into its own variable; the two zero tests are
  * nested ifs; the first row word is read with j = 0 before the j loop; the index byte is stored before the
- * word; the shared "u32TotalSCDC" format string is the firmware's string at 0xa0066c70 (s_a0066c70).
+ * word; the "u32TotalSCDC" format string is the same literal as in RCT_Value (one copy in the image).
  */
 struct EqRec {
     unsigned char _0[9];
@@ -50,7 +50,6 @@ extern const unsigned char DAT_a00b3ac8[];
 extern const unsigned short DAT_a00b3b90[];
 extern const unsigned short DAT_a00b3b96[];
 extern unsigned char DAT_a0066df8[];
-extern const char s_a0066c70[];
 extern int FUN_a0073044(const void *, ...);
 extern void *FUN_a00b15ac(unsigned char *dst, unsigned char v, int n);
 extern unsigned int FUN_a00a7314(unsigned int, unsigned short);
@@ -174,7 +173,8 @@ int DRV_HDMI_EQScan_FSM_PHY_PreRVGA(port)
                         else
                             v = ARR_a807a9f0[port].t668[i][j][ch];
                         if ((_DAT_a8078634 & 2) != 0)
-                            FUN_a0073044(s_a0066c70, (char)(port + 'A'), ch, j, v, bidx, m);
+                            FUN_a0073044("[EQ]: # Port%c, CH%d, index = %d  u32TotalSCDC = %ld  / u8BestRCTIdx = %d  u32BestSCDC = %ld  \n",
+                                     (char)(port + 'A'), ch, j, v, bidx, m);
                         if (v < m) {
                             bidx = j;
                             m = v;
@@ -188,7 +188,8 @@ int DRV_HDMI_EQScan_FSM_PHY_PreRVGA(port)
                 for (i = 0; i < (ARR_a807ccc4[port].b8 ? 3u : 1u); i++) {
                     v = scdc[i][ch];
                     if ((_DAT_a8078634 & 2) != 0)
-                        FUN_a0073044(s_a0066c70, (char)(port + 'A'), ch, j, v, bidx, m);
+                        FUN_a0073044("[EQ]: # Port%c, CH%d, index = %d  u32TotalSCDC = %ld  / u8BestRCTIdx = %d  u32BestSCDC = %ld  \n",
+                                 (char)(port + 'A'), ch, j, v, bidx, m);
                     if (v < m) {
                         m = v;
                         bi = i;
