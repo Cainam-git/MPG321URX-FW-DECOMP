@@ -15,7 +15,7 @@ extern char s_000ff5e8[];
 extern void FUN_a00d8cd4(void);
 extern void FUN_a00df170(char *);
 extern void FUN_a01438c8(int);
-extern void FUN_a014bac4(int, int);
+extern void FUN_a014bac4(unsigned int, unsigned short);
 extern void FUN_a014bc58(int);
 extern void FUN_a014dbf4(int);
 extern void FUN_a0150768(int, int);
