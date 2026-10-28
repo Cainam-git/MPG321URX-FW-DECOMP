@@ -18130,6 +18130,13 @@
       "name": "FUN_a012e8c0",
       "status": "matched"
     },
+    "ram:a012e928": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Copy an 18-byte row into DAT_a802cb40 at the slot selected by m, reading and writing the 0x36-byte block of device DAT_a802e1a0 per flags",
+      "name": "FUN_a012e928",
+      "status": "matched"
+    },
     "ram:a012eb4c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
