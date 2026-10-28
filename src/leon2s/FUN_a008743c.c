@@ -14,9 +14,6 @@
  * Source forms the exact build depends on: lo = 0 at its declaration and 'lo = 0; hi = 0;' in the '!all' arm,
  * cnt = 0 at its declaration (lo's zero is copied from that register); mode set in both arms of the bit 5 test;
  * in the 8/9 and cnt paths the bit clear comes first ('if (port != 0) { ...; goto next; }').
- * FUN_a008642c, FUN_a0086540, FUN_a0087364 and FUN_a0087074 are declared returning unsigned char here (their
- * definitions return int / unsigned int / unsigned int / int); the firmware masks each result to 8 bits right
- * after the call, as in FUN_a0087110.
  */
 struct Lane {
     unsigned char ok : 1;
