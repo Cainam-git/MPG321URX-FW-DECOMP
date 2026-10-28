@@ -19506,7 +19506,7 @@
     "ram:a013aae4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "polls word 0x20 of portal 2 up to 100 times until it reads 0, then writes 0x61000000 | a << 16 | b to it",
+      "comment": "reads a word via func_0x4008c4d0(2, 0x20) up to 100 times until it is 0, then writes 0x61000000 | a << 16 | b via func_0x4008c5f8",
       "name": "FUN_a013aae4",
       "status": "matched"
     },
