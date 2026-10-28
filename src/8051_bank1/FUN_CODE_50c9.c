@@ -5,23 +5,12 @@
  * running address: per block it writes 0x55 to 0xF00A, calls FUN_CODE_4cb9(ch, ctl | ((addr >> 7) & 0x0E), addr,
  * len, p), clears the result bit when that call returns 0, advances addr, p and n by len, and calls FUN_CODE_d94a
  * and FUN_CODE_d44e(10). Finally it writes 0xF8 to the first register and returns the result bit.
- * Compiler aids (each emits no code):
- * - 'w = 0;' before 'w = addr;': w is defined before the byte temp of the load, so Keil assigns it R2:R3 first and
- *   loads addr straight into R2:R3 ('MOVX A,@DPTR; MOV R2,A; INC DPTR; MOVX A,@DPTR; MOV R3,A'); without it the high
- *   byte goes through a temp ('MOV R4,A ... MOV R2,AR4').
- * - '(unsigned char)w == (unsigned char)w ? E : E' (both outcomes identical, Keil merges them): with it Keil loads
- *   the shifted value low byte first ('MOV A,R3; MOV R6,AR2') before the 'w >> 7' loop, as the firmware does.
- * - 'if (FUN_CODE_4cb9(..)) ok &= CY; else ok &= CY;' (both arms identical): FUN_CODE_4cb9 returns a bit, which Keil
- *   passes in the carry flag CY, so each arm is 'ok &= result'. This form keeps w in R2:R3 across the call
- *   ('PUSH AR2/AR3 ... POP') and gives the firmware's 'ANL C,ok; MOV ok,C'.
  */
 extern unsigned char volatile xdata DAT_EXTMEM_f00a;
 bit FUN_CODE_4cb9(unsigned char ch, unsigned char ctl, unsigned int w, unsigned int n, unsigned char *buf);
 extern unsigned int FUN_CODE_d94a(void);
 void FUN_CODE_d44e(unsigned int t);
 
-sfr ACC = 0xE0;
-sbit CY = 0xD7;
 bit FUN_CODE_50c9(unsigned char ch, unsigned char ctl, unsigned char c, unsigned char *p, unsigned int n)
 {
     unsigned int addr;
@@ -29,7 +18,6 @@ bit FUN_CODE_50c9(unsigned char ch, unsigned char ctl, unsigned char c, unsigned
     unsigned int t;
     unsigned char volatile *q1, *q2;
     bit ok;
-    unsigned int w;
 
     ok = 1;
     addr = 0;
@@ -69,12 +57,10 @@ bit FUN_CODE_50c9(unsigned char ch, unsigned char ctl, unsigned char c, unsigned
     addr = c;
     while (n != 0) {
         DAT_EXTMEM_f00a = 0x55;
-        w = 0;
-        w = addr;
-        len = 8 - (w & 7);
+        len = 8 - (addr & 7);
         if (n < len) len = n;
-        x = ctl | ((unsigned char)w == (unsigned char)w ? ((unsigned char)(w >> 7) & 0x0e) : ((unsigned char)(w >> 7) & 0x0e));
-        if (FUN_CODE_4cb9(ch, x, w, len, p)) ok &= CY; else ok &= CY;
+        x = ctl | ((addr >> 7) & 0x0e);
+        ok &= FUN_CODE_4cb9(ch, x, addr, len, p);
         addr += len;
         p += len;
         n -= len;

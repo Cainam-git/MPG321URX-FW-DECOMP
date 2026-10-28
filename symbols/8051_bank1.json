@@ -816,7 +816,7 @@
     "CODE:38a7": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "fills the XDATA 0xA3E3 record from one of four sources and packs the buffer with FUN_CODE_5868; mask bit staged in ACC",
+      "comment": "fills the XDATA 0xA3E3 record from one of four sources and packs the buffer with FUN_CODE_5868",
       "module": "FUN_CODE_5868",
       "name": "FUN_CODE_38a7",
       "status": "matched"
@@ -895,7 +895,7 @@
     "CODE:568f": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "scan of IDATA 0x29 bits 0..7 with per-index XDATA bit-0 tests; mask 1 << i staged in ACC",
+      "comment": "scan of IDATA 0x29 bits 0..7 with per-index XDATA bit-0 tests",
       "name": "FUN_CODE_568f",
       "status": "matched"
     },
@@ -1538,7 +1538,7 @@
     "CODE:ad88": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
-      "comment": "0xDCAC = 2 << ch and ten 0xDCA1 bytes when XDATA 0xD511 is 0x20, else four FUN_CODE_9e3f calls; shifted 2 staged in ACC",
+      "comment": "0xDCAC = 2 << ch and ten 0xDCA1 bytes when XDATA 0xD511 is 0x20, else four FUN_CODE_9e3f calls",
       "name": "FUN_CODE_ad88",
       "status": "matched"
     },
@@ -2307,7 +2307,7 @@
     },
     "CODE:d4b0": {
       "by": "hand",
-      "comment": "XDATA 0xF40E = (1 << n) | (0x10 << n) when XDATA 0xD511 is 0x20, bit-0 test of 0x7E7A; shifted constants staged in ACC",
+      "comment": "XDATA 0xF40E = (1 << n) | (0x10 << n) when XDATA 0xD511 is 0x20, bit-0 test of 0x7E7A",
       "name": "FUN_CODE_d4b0",
       "status": "matched"
     },
@@ -2479,13 +2479,13 @@
     },
     "CODE:d8ea": {
       "by": "hand",
-      "comment": "XDATA 0xD801 = 0x78 >> (XDATA 0xD520 & 3), shifted value staged in ACC",
+      "comment": "XDATA 0xD801 = 0x78 >> (XDATA 0xD520 & 3)",
       "name": "FUN_CODE_d8ea",
       "status": "matched"
     },
     "CODE:d90a": {
       "by": "hand",
-      "comment": "index of the lowest set bit of FUN_CODE_dee2(), 0xFF when none; shifted byte staged in ACC",
+      "comment": "index of the lowest set bit of FUN_CODE_dee2(), 0xFF when none",
       "name": "FUN_CODE_d90a",
       "status": "matched"
     },
@@ -2650,7 +2650,7 @@
     },
     "CODE:dbc8": {
       "by": "hand",
-      "comment": "clears bit n of XDATA 0xA0F3; shifted 1 staged in ACC",
+      "comment": "clears bit n of XDATA 0xA0F3",
       "name": "FUN_CODE_dbc8",
       "status": "matched"
     },

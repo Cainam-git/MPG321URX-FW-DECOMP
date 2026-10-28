@@ -16,8 +16,7 @@
  * Compiler aid (960f, 8512): each slot-test 'break' is written as '{ ACC = ACC; break; }' (sfr ACC). 'ACC = ACC;'
  *   emits no instructions; the then-arm keeps a statement until after the jumps are laid out, which leaves the
  *   firmware's 'JZ / JNZ +2; SJMP exit' pair after ?C?ULCMP (a bare 'break' gives one inverted jump).
- * Source form (8512): the mask is '(c = (head >> 8) & 0xff, ACC = 1, ACC << c)' (ACC from reg51.h); Keil knows A = 0
- *   from the '& 0xff' of the high bytes and emits 'CLR A; INC A' before 'MOV R0,AR7' as in the firmware.
+ * Source form (8512): the mask is '1 << ((head >> 8) & 0xff)'.
  * Key for 9243: the d5a1 argument is '(unsigned int)(idx * 20 + 0x10)' (fw zero-extends R4/R5 with CLR A).
  * Mailbox layout (code facts; AHB 0x9F0A0100 + offset = the Main <-> helper portal, FUN_CODE_a4e9 = read n words,
  *   FUN_CODE_b228 = write n words):
@@ -73,13 +72,12 @@ unsigned char FUN_CODE_8512(void)
     unsigned long head;
     unsigned char r;
     unsigned char start;
-    unsigned char c;
 
     r = 0xff;
     DAT_EXTMEM_a3e3 = 0;
     for (r = 0; r < 4; r++) {
         FUN_CODE_a4e9(r * 20 + 0x60, &head, 1);
-        if ((head & 0x0f) == 3) DAT_EXTMEM_a3e3 |= (c = (head >> 8) & 0xff, ACC = 1, ACC << c);
+        if ((head & 0x0f) == 3) DAT_EXTMEM_a3e3 |= 1 << ((head >> 8) & 0xff);
     }
     start = DAT_EXTMEM_a3e2;
     for (r = 0; r < 4; r++) {

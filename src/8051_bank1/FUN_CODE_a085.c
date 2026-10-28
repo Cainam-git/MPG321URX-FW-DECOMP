@@ -5,11 +5,9 @@
  * LARGE locals: i at XDATA 0xA473, r at 0xA474, e at 0xA475..0xA476.
  * Options: OPTIMIZE(8,SPEED) LARGE.
  * volatile: the firmware reads the entry again after the range test (same in FUN_CODE_b881, FUN_CODE_5a39, FUN_CODE_a142).
- * Source form: the call arguments go to locals first (n, c), then the value 1 is written to ACC (reg51.h) and the
- * mask is 'ACC << c', so Keil loads A ('MOV A,#01H') before the count ('MOV R0,AR6'). The comparison is cast to
+ * Source form: the call arguments go to locals first (n, c) and the mask is '1 << c'. The comparison is cast to
  * unsigned char (its 0/1 value goes to R7 before the test).
  */
-#include <reg51.h>
 extern volatile unsigned char xdata DAT_EXTMEM_a611[6][2];
 extern void FUN_CODE_2820(void *fmt, ...) large;
 bit FUN_CODE_af47(unsigned char n, unsigned char mask);
@@ -27,8 +25,7 @@ unsigned char FUN_CODE_a085(void)
             e[1] = DAT_EXTMEM_a611[i][1];
             n = e[0] - 0x10;
             c = e[1] & 0x0f;
-            ACC = 1;
-            if ((unsigned char)(FUN_CODE_af47(n, ACC << c) == ((e[1] & 0x10) >> 4))) {
+            if ((unsigned char)(FUN_CODE_af47(n, 1 << c) == ((e[1] & 0x10) >> 4))) {
                 FUN_CODE_2820((void code *)0x98d2, i, e[0], e[1]);
                 r = i;
                 break;

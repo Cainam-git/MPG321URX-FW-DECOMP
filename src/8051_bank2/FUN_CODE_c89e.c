@@ -6,12 +6,6 @@
  * a record is high + low + 1 bytes. It skips n records, then for i = 0 .. (low nibble of that header) - 1 adds
  * byte[off + i + 1] >> (i * 8) to v (an 8-bit right shift, so only i = 0 adds a non-zero value) and returns v.
  * Twin of FUN_CODE_c7c5 (same walk; c7c5 shifts left as a long).
- * Shift order: the firmware loads the byte into A before the count into R0 ('MOV A,R6; MOV R0,AR7' after the
- *   'MOV R7,A' of i * 8). That order comes from the byte and the count in named locals t and c, with the shift
- *   written as the result of a '?:' on 't == t' whose two outcomes are the same expression.
- * Compiler aid: the '?:' 't == t ? t >> c : t >> c' emits no code (both outcomes are identical; Keil merges them and
- *   drops the test). Inside the '?:' t and c stay in registers; as a plain 't >> c' in this loop Keil places them in
- *   XDATA (a library store of v follows in the loop body).
  * Caller: FUN_CODE_a17e (0x010D = FUN_CODE_c89e(0x042C), two sites).
  */
 extern unsigned char xdata DAT_EXTMEM_015c[];
@@ -29,7 +23,7 @@ unsigned long FUN_CODE_c89e(unsigned char n)
     k = DAT_EXTMEM_015c[off] & 0x0f;
     v = 0;
     for (i = 0; i < k; i++) {
-        v = v + (t = DAT_EXTMEM_015c[(unsigned char)(off + i) + 1], c = i * 8, t == t ? t >> c : t >> c);
+        v = v + (DAT_EXTMEM_015c[(unsigned char)(off + i) + 1] >> (i * 8));
     }
     return v;
 }

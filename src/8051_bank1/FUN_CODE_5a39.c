@@ -10,8 +10,7 @@
  * otherwise 0xA5EB = FUN_CODE_d94a(). Returns found.
  * LARGE locals: i at XDATA 0xA474, e at 0xA475..0xA476, k at 0xA477, found at 0xA478.
  * Options: OPTIMIZE(8,SPEED) LARGE.
- * Source form: the af47 arguments go to locals first (n, c), then the value 1 is written to ACC (reg51.h) and the
- * mask is 'ACC << c', so Keil loads A ('MOV A,#01H') before the count ('MOV R0,AR6'). The comparison is cast to
+ * Source form: the af47 arguments go to locals first (n, c) and the mask is '1 << c'. The comparison is cast to
  * unsigned char. The three '0xA5EB = FUN_CODE_d94a()' arms after the loop are written out each (Keil merges
  * their common code, which gives the firmware's 'JNZ / SJMP' pairs).
   * FUN_CODE_db05(v, i): XDATA 0xF230[i] = v for i < 0x10 (v in R7, i in R5).
@@ -22,7 +21,6 @@
  * R5 unchanged (it then sets R5 = 1 with 'INC R5') and also moves the preceding 'FUN_CODE_db05(1, 0)' call into
  * the block.
  */
-#include <reg51.h>
 
 void FUN_CODE_db05(unsigned char v, unsigned char i);
 extern unsigned char xdata DAT_EXTMEM_a5ed[6][2];
@@ -48,8 +46,7 @@ unsigned char FUN_CODE_5a39(void)
         if ((unsigned char)(e[0] + 0xf0) < 0x0f) {
             n = e[0] + 0xf0;
             c = e[1] & 0x0f;
-            ACC = 1;
-            if ((unsigned char)(FUN_CODE_af47(n, ACC << c) == ((e[1] & 0x10) >> 4))) {
+            if ((unsigned char)(FUN_CODE_af47(n, 1 << c) == ((e[1] & 0x10) >> 4))) {
                 FUN_CODE_2820((void code *)0x98d2, i, e[0], e[1]);
                 FUN_CODE_db05(1, 0);
                 FUN_CODE_db05(e[0], 1);

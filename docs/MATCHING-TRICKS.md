@@ -336,15 +336,9 @@ LEON (GCC 3.4.4):
 
 Keil C51:
 
-- **The value loaded before the count in a shift loop** (`MOV A,#k` or `MOV A,Rn` before `MOV R0,count`): the
-  programmer wrote the value into the accumulator first, `ACC = k; x = ACC << n;` (`ACC` from `reg51.h`). Without
-  that, Keil C51 9.59 and later load the count first at every optimisation level; 9.57 gives this order from the
-  plain `x = k << n;` as well, so files written this way also match with 9.57. Valid only when nothing else loads A
-  between the store and the shift and the count is already in a register (FUN_CODE_d8ea, FUN_CODE_568f,
-  FUN_CODE_38a7 and four more).
-- **Shift with a constant after `ACC = k;`:** `c = p >> 8; ACC = 1; w = 1 << c;` also gives the value-first order:
-  Keil knows A already holds the constant and drops its own load. For 16-bit results this avoids `ACC << c`, which
-  makes Keil move register parameters to memory (FUN_CODE_bb56, FUN_CODE_ab2c, FUN_CODE_9e3f, FUN_CODE_9d75).
+- **The value loaded before the count in a shift loop** (`MOV A,#k` or `MOV A,Rn` before `MOV R0,count`): C51 9.57
+  gives this order from the plain `x = k << n;`. 9.59 and later load the count first at every optimisation level;
+  that difference is how the compiler version was found (see "Compiler version" above).
 - **Shift counts in large functions:** give every shift site its own count local; one local reused at several sites
   lives across the function and goes to XDATA. In LARGE loops a count stays in a register only when the call that
   uses it sits inside an `if` condition or an `if` block without `else` (FUN_CODE_5a39, FUN_CODE_a085).
@@ -358,7 +352,7 @@ Keil C51:
   count locals of the call in registers (FUN_CODE_b881).
 - **A conditional expression with two identical arms** (`t == t ? t >> c : t >> c`, `n == K ? f() : f()`,
   `m = m == m ? m : m;`) emits no code, but changes which variables Keil keeps in registers and the order of loads and
-  register copies (FUN_CODE_c89e, FUN_CODE_9975). Document it in the header as a no-code aid.
+  register copies (FUN_CODE_9975). Document it in the header as a no-code aid.
 - **A 16-bit value loaded into R2:R3 instead of R4:R5:** convert through `unsigned long` and back,
   `(unsigned int)(unsigned long)n >> 8` (FUN_CODE_6f26).
 - **Low byte first:** `(x & 0xffffff00) | ((unsigned long)r & 0xff)` evaluates the low-byte value first
@@ -433,5 +427,4 @@ Keil C51:
 | Rewriting states or steps as separate static functions | GCC 3.4's inliner turns returns into plain jumps; the result is identical to writing the code in place. |
 | A single prediction hint per attempt, for block-order problems | Not enough when two ties must break together; test pairs. |
 | Other Keil releases for the 8051 | C51 9.57 is the release that reproduces every function. 9.59 and later load the shift count before the value (FUN_CODE_d351 cannot match); 9.02a and 9.03 differ in other functions. |
-| Treating the shift-order difference as a compiler-version problem | Wrong for values: the firmware's order comes from source that writes the value to `ACC` first (see the Keil section). Computed counts in large functions and 16-bit shifts with parameters still in R4:R5 remain open. |
 | Fake `volatile`, inline assembly, invented names | Not allowed; they produce code the original did not have. |

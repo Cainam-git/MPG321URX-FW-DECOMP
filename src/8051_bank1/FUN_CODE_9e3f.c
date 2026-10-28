@@ -5,10 +5,8 @@
  * for other ch, to 0xF407 / 0xF408 and 0xD50B = 0x86. Then 0xD50C = low byte of reg, t = XDATA 0xD50D with the
  * bits of v set (f == 1) or cleared (otherwise), and t is stored to 0x6500 (ch 0) or 0x6600 at the low byte of reg.
  * Options: OPTIMIZE(8,SPEED) LARGE.
- * Source form: before each shift the value 1 is written to ACC (reg51.h); Keil then knows A = 1 and the shift
- * starts 'MOV A,#01H; MOV R6,#00H; MOV R0,AR7'. Each branch has its own count local (n, d).
+ * Source form: each branch has its own count local (n, d).
  */
-#include <reg51.h>
 
 extern unsigned char xdata DAT_EXTMEM_d511;
 extern unsigned char xdata DAT_EXTMEM_f405, DAT_EXTMEM_f406, DAT_EXTMEM_f407, DAT_EXTMEM_f408;
@@ -27,7 +25,6 @@ void FUN_CODE_9e3f(unsigned char ch, unsigned int reg, unsigned char v, unsigned
             w = (unsigned char)(reg >> 8);
         } else {
             n = reg >> 8;
-            ACC = 1;
             w = 1 << n;
         }
         DAT_EXTMEM_f405 = (unsigned char)w;
@@ -38,7 +35,6 @@ void FUN_CODE_9e3f(unsigned char ch, unsigned int reg, unsigned char v, unsigned
             w = (unsigned char)(reg >> 8);
         } else {
             d = reg >> 8;
-            ACC = 1;
             w = 1 << d;
         }
         DAT_EXTMEM_f407 = (unsigned char)w;

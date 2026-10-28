@@ -6,10 +6,8 @@
  * 0xF09F, 0xF0BC, 0xF144, 0xF018 gets 0x10 when bit 0 of 0xF040, 0xF048, 0xF090, 0xF098, 0xF0A2, 0xF0BF, 0xF147,
  * 0xF01B (same order) is set, and bit 0x10 is cleared; then bit 6 is set in 0xF039, 0xF041, 0xF089, 0xF091, 0xF09B,
  * 0xF0B8, 0xF140, 0xF014 under the same bit-0 tests.
- * Source form: the mask 1 << i is built in a local m from ACC (reg51.h): 'ACC = 1; m = ACC << i;', so Keil loads
- * A ('MOV A,#01H') before the count ('MOV R0,AR7').
+ * Source form: the mask 1 << i is built in a local m.
  */
-#include <reg51.h>
 
 extern unsigned char idata DAT_INTMEM_29;
 extern unsigned int xdata DAT_EXTMEM_a000;
@@ -46,8 +44,7 @@ void FUN_CODE_568f(void)
             case 7: if (DAT_EXTMEM_f015 & 1) f = 1; break;
             }
             if (f) {
-                ACC = 1;
-                m = ACC << i;
+                m = 1 << i;
                 DAT_INTMEM_29 &= ~m;
                 DAT_EXTMEM_a0f3 |= m;
             }

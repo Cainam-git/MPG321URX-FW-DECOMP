@@ -26,11 +26,8 @@
  *     returns non-zero: buf[i] = FUN_CODE_d697(); count = i.
  *   The XDATA bytes 0xA3E3..0xA46E are one structure (Keil addresses 0xA3E5/0xA3E6, 0xA3E8/0xA3E9 and
  *   0xA46C/0xA46D with INC DPTR, as for members of one object); the field names describe positions only.
- * Source form (FUN_CODE_38a7, 'mask |= 1 << ch'): the mask byte and ch are copied to locals m and c; the 1 is
- *   written to ACC (reg51.h) and the shift reads ACC, so Keil loads A ('MOV A,#01H') before the count
- *   ('MOV R0,AR6').
+ * Source form (FUN_CODE_38a7, 'mask |= 1 << ch'): the mask byte and ch are copied to locals m and c.
  */
-#include <reg51.h>
 struct rec_a3e3 {
     unsigned char mask;         /* 0xA3E3 */
     unsigned char e4;           /* 0xA3E4 */
@@ -105,8 +102,7 @@ void FUN_CODE_38a7(void)
         FUN_CODE_5868(buf, DAT_EXTMEM_a3e3.d, DAT_EXTMEM_a3e3.len);
         m = DAT_EXTMEM_a3e3.mask;
         c = ch;
-        ACC = 1;
-        DAT_EXTMEM_a3e3.mask = m | (ACC << c);
+        DAT_EXTMEM_a3e3.mask = m | (1 << c);
     } else if (FUN_CODE_de9c()) {
         DAT_EXTMEM_a3e3.type = 1;
         w = DAT_EXTMEM_a3e3.off;
