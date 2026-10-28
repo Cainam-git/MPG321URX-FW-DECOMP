@@ -57,7 +57,7 @@ extern unsigned short FUN_a01266b0(void);
 extern void FUN_a012653c(unsigned char);
 extern unsigned short FUN_a0145af8(unsigned int id);
 extern void FUN_a0145c5c(int, int);
-extern void FUN_a0145360(int);
+extern void FUN_a0145360(unsigned char);
 extern void FUN_a0146b50(unsigned short, unsigned char);
 extern void FUN_a0146b6c(int, int);
 extern void FUN_a00a31a4(unsigned char, unsigned short, unsigned short, unsigned char, const char *, unsigned char);
