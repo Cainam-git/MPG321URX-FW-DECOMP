@@ -6,7 +6,7 @@
  */
 extern unsigned char FUN_a00863d4(unsigned int, unsigned int, unsigned int, char, unsigned int);
 
-int FUN_a008642c(unsigned int param_1, unsigned int param_2, unsigned int param_3, unsigned char x, unsigned char y)
+unsigned char FUN_a008642c(unsigned int param_1, unsigned int param_2, unsigned int param_3, unsigned char x, unsigned char y)
 {
     unsigned char buf[5];
     unsigned char uVar1;
