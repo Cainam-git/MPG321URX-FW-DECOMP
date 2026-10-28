@@ -10604,6 +10604,13 @@
       "name": "FUN_a00df170",
       "status": "matched"
     },
+    "ram:a00df278": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes the characters of string p to register 0xC00B0000 (wait on bit 5 of 0xC00B0014, '\\r' after '\\n'); returns 0",
+      "name": "FUN_a00df278",
+      "status": "matched"
+    },
     "ram:a00df368": {
       "by": "autoc",
       "comment": "Returns bit 0 of func_0x4008c250(0xc00b0014)",
