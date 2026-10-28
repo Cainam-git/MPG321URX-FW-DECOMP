@@ -12184,8 +12184,8 @@
       "status": "matched"
     },
     "ram:a00f6378": {
-      "by": "autoc",
-      "comment": "p1 = p1 & 0xff; returns FUN_a00f1a90(p1, 0x45)",
+      "by": "hand",
+      "comment": "Returns FUN_a00f1a90(blk, 0x45)",
       "name": "FUN_a00f6378",
       "status": "matched"
     },
