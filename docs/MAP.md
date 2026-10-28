@@ -121,8 +121,9 @@ The panel can be driven in three modes. Each is described by one row of the pane
 | 2 | 576 MHz | 4088 | 2348–2944 | 60 Hz | 5 |
 
 - **Choosing the row:** `FUN_a00dac38` measures the input refresh rate (in 0.1 Hz units) or line rate and picks:
-  - Row 2 below `off + 600`, row 1 below `off + 1200`, and row 0 otherwise, where `off` is 20, or 5 when saved
-    setting 2 is enabled.
+  - Row 2 below `off + 600`, row 1 below `off + 1200`, and row 0 otherwise, where `off` is 20 (2 Hz), or 5
+    (0.5 Hz) when the factory menu switch "PHY CTS AUTO" (saved setting 2) is on. That switch is item 24 of the
+    factory menu (`FUN_a008c25c`), meant for signal compliance tests (CTS); it is saved with the other settings.
   - When it uses the line rate instead, it compares `h / 2348` against 699 and 1299.
 - **Applying it:** `FUN_a01483f4` copies the chosen row to 0xA802E378. `FUN_a0141840` builds a transformed copy, with
   the display mode from `FUN_a0151c84`, and re-runs the output set-up (`FUN_a015373c` → `FUN_a0106d64`).
@@ -215,6 +216,7 @@ chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised
 
 ## Open questions
 
-- The meaning of most flag bits in the input channel records (0xA802DF30) and of saved setting 2.
+- The meaning of most flag bits in the input channel records (0xA802DF30). Which code sets and reads each bit is
+  known; what each one stands for is part of naming the Leon2M functions.
 - Whether the chip's dimming hardware changes the picture on this OLED panel, and which compiler built the
   Tensilica program.
