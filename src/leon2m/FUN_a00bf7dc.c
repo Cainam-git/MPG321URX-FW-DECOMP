@@ -13,7 +13,7 @@ extern unsigned char DAT_a802b09a, DAT_a802b098, DAT_a802b09c;
 extern unsigned char DAT_a802d040[], DAT_a802d098[], DAT_a802d0d0[];
 extern unsigned char FUN_a015463c(unsigned short, unsigned short);
 extern int FUN_a0145660(int, int);
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 
 void FUN_a00bf7dc(unsigned char port)
 {
