@@ -162,7 +162,18 @@ command 0x2A through mailbox portal 2 (0xB7091000 + 0x20) with a zone grid of 32
 0x2A001020) or 64 x 32 (word 0x2A002040), chosen by bits 18-19 of the word at 0xA802D290 + 0xAC. The Tensilica
 program reads the command at 0xE0091020 (`fn_40003814`) and looks it up in its table of 46 commands (0x4000D288);
 command 0x2A runs `DRV_LDC_SetLDCSegment` (`fn_4000660c`). What the program does with the grid in an OLED monitor
-has not been traced further.
+has not been traced further beyond this:
+
+- The main processor sends only 4 of the 46 commands: 0x21 with the active panel size (`FUN_a0139a30`, from
+  `System_Initialize` and the output set-up `FUN_a015373c`), 0x2A with the zone grid, 0x40 (a check message,
+  "MAILBOX_DPLL INIT DONE") and 0x97 (one register write at 0xE0080388).
+- The LED driver chips (AS3824) are only set up by command 0x22 (`fn_400013a0` -> `fn_400079b8`, "LED_AS3824_Init
+  Done"). The main processor's sender for 0x22 (`FUN_a0139d38`) has no caller and its address is stored nowhere.
+- The main processor's routines that read results back (mailbox offset 0x4C: `FUN_a013a824`, `FUN_a013a85c`,
+  `FUN_a013a884`) and its senders for the other 10 commands also have no caller and no stored address.
+
+So the program is started and given a zone grid, but it never switches on LED drivers and nothing reads its
+results.
 
 The program prints a banner with "NVT_Formal_RG20189" and "NT68500 FW Version", and its messages mention LED driver
 chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised; it is not the output of GCC (see
@@ -174,4 +185,4 @@ chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised
 - The meaning of the pointer table at 0x12FFF0 and the table set at 0x0E0000–0x0FFFFF.
 - Which processor reads the region 0x210000–0x27FFFF.
 - The meaning of most flag bits in the input channel records (0xA802DF30) and of saved setting 2.
-- What the Tensilica program does with its zone grid in this OLED monitor, and which compiler built it.
+- Which compiler built the Tensilica program.
