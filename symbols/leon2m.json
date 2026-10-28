@@ -22476,8 +22476,8 @@
       "status": "matched"
     },
     "ram:a014a388": {
-      "by": "autoc",
-      "comment": "k = p1 & 0xff. Calls FUN_a011acac(k, 0), FUN_a011adc8(0xff, 0) and, for b = 0 .. 7, func_0x4008e6e4(b, 0) and FUN_a011a848(k, 0); then the same sequence with 1 in place of 0",
+      "by": "hand",
+      "comment": "For blk 0 then 1: FUN_a011acac(k, blk), FUN_a011adc8(0xff, blk) and for b = 0..7 func_0x4008e6e4(b, blk) and FUN_a011a848(k, blk)",
       "name": "FUN_a014a388",
       "status": "matched"
     },
