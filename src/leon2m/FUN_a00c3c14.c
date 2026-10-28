@@ -16,7 +16,7 @@ extern struct R290 DAT_a802d290;
 extern int FUN_a00d7d48(void);
 extern void FUN_a00d8c1c(void);
 extern void FUN_a00d4998(void);
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 extern void FUN_a00b88cc(void);
 
 void FUN_a00baa6c(unsigned char port)
