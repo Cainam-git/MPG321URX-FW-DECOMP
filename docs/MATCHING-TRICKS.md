@@ -327,6 +327,11 @@ Keil C51:
   (FUN_CODE_a8a3; also the `Jcc +2; SJMP` shape in FUN_CODE_960f and FUN_CODE_8512).
 - **A local loop guard after `ACC = 1;`:** `if (ACC == 1) f(...);` emits no test (Keil knows A) but keeps the shift
   count locals of the call in registers (FUN_CODE_b881).
+- **A conditional expression with two identical arms** (`t == t ? t >> c : t >> c`, `n == K ? f() : f()`,
+  `m = m == m ? m : m;`) emits no code, but changes which variables Keil keeps in registers and the order of loads and
+  register copies (FUN_CODE_c89e, FUN_CODE_9975). Document it in the header as a no-code aid.
+- **A 16-bit value loaded into R2:R3 instead of R4:R5:** convert through `unsigned long` and back,
+  `(unsigned int)(unsigned long)n >> 8` (FUN_CODE_6f26).
 - **Low byte first:** `(x & 0xffffff00) | ((unsigned long)r & 0xff)` evaluates the low-byte value first
   (FUN_CODE_c103). A repeated index expression instead of a local copy avoids an extra `MOV R7,AR5` (FUN_CODE_42f6).
 - **A call and return, or `Jcc +2; SJMP`, at the end of both arms** of an if/else: write the shared statement in both
