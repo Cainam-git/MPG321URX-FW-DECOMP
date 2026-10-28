@@ -1,4 +1,5 @@
-/* 8051_bank1 FUN_CODE_b802 @ 0xb802 (127 B)  Byte-exact with OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC).
+/* 8051_bank1 FUN_CODE_b802 @ 0xb802 (127 B)  Byte-exact with OPTIMIZE(8,SPEED); the LARGE and REGFILE(R.ORC) option
+ * sets give the same bytes.
  * m = byte 0 of entry [XDATA 0xA64D] of the 3-byte table at XDATA 0xA62F, low five bits. For m = 0..12 a 13-way
  * switch (jump table) sets m to the same value and FUN_CODE_9bde(m) is called; other values return.
  * Callers: FUN_CODE_a57e (twice). Table layout as in FUN_CODE_a57e and FUN_CODE_ccc2.
