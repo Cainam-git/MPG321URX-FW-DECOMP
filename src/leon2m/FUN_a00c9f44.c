@@ -14,7 +14,7 @@ extern unsigned char DAT_a802d078[], DAT_a802d108[], DAT_a802d128[];
 struct R290 { unsigned char p000[0x1a4]; unsigned char b1a4; unsigned char p1a5[0x1f4 - 0x1a5]; unsigned int b31 : 1, rest : 31; };
 extern struct R290 DAT_a802d290;
 extern void FUN_a00d9fdc(int);
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 extern void FUN_a00b88cc(void);
 
 void FUN_a00baa6c(unsigned char port)
