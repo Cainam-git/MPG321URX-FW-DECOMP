@@ -6,7 +6,7 @@
  * Source form: one exit returning r & 0xf; byte 4 is read into an unsigned int inside each arm of the t == 2
  * test (GCC hoists the load above that test only).
  */
-unsigned int FUN_a0087364(unsigned int t, unsigned char *p)
+unsigned char FUN_a0087364(unsigned int t, unsigned char *p)
 {
     unsigned char r = 6;
     unsigned char a;
