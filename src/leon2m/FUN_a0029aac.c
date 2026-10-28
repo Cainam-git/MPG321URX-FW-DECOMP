@@ -11,16 +11,16 @@
  */
 extern unsigned int FUN_a002c250(unsigned int addr);
 extern void FUN_a002c25c(unsigned int addr, unsigned int value);
-extern unsigned int FUN_a002c268(unsigned int addr, unsigned int value, unsigned int count);
+extern void FUN_a002c268(volatile unsigned int *p, unsigned int v, unsigned int mask);
 
-unsigned int FUN_a0029aac(void)
+void FUN_a0029aac(void)
 {
     unsigned int t1, t2, l0, l2;
     unsigned int *table;
     unsigned int i1;
 
-    FUN_a002c268(0x9f000090, 0, 4);
-    FUN_a002c268(0x9f020028, 4, 4);
+    FUN_a002c268((volatile unsigned int *)0x9f000090, 0, 4);
+    FUN_a002c268((volatile unsigned int *)0x9f020028, 4, 4);
 
     t1 = FUN_a002c250(0x9f020074);
     t2 = FUN_a002c250(0x9f02003c);
@@ -48,6 +48,6 @@ unsigned int FUN_a0029aac(void)
 
     FUN_a002c25c(0x9f020034, 4);
     FUN_a002c25c(0x9f00009c, 4);
-    FUN_a002c268(0x9f020028, 0, 4);
-    return FUN_a002c268(0x9f000090, 4, 4);
+    FUN_a002c268((volatile unsigned int *)0x9f020028, 0, 4);
+    FUN_a002c268((volatile unsigned int *)0x9f000090, 4, 4);
 }
