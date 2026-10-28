@@ -17742,6 +17742,13 @@
       "name": "FUN_a012b22c",
       "status": "matched"
     },
+    "ram:a012b260": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets bit 4i+n of byte 0xa802e1a0+0x33 to v, stores v in byte +6 of row DAT_a802d8ae[i] and passes a copy of the row to FUN_a013797c",
+      "name": "FUN_a012b260",
+      "status": "matched"
+    },
     "ram:a012b328": {
       "by": "hand",
       "comment": "byte +3 of the 22-byte entry p at 0xA802D8AE = v, then FUN_a0137aec(p, v)",
