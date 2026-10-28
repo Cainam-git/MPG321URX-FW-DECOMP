@@ -4744,6 +4744,12 @@
       "name": "FUN_a00945f0",
       "status": "matched"
     },
+    "ram:a0094798": {
+      "by": "hand",
+      "comment": "Picks the link source code from a record byte and writes it into a nibble of register 0xcf011634",
+      "name": "FUN_a0094798",
+      "status": "matched"
+    },
     "ram:a009498c": {
       "by": "autoc",
       "comment": "record k of the 7-word table 0xA807D580: word 0 bit 2 set -> FUN_a00a80cc(k, 3, 0xf1, 1, 1) and (bit 4 clear) (k, 3, 0xf2, 1, 1); else both with 0",
