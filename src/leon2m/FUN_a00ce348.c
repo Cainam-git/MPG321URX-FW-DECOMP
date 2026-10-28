@@ -28,7 +28,7 @@
  *   constant integer address differs in one word (ldub operand order) and is not relocatable, so it is not used.
  */
 extern unsigned char FUN_a00baef8(unsigned char);
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 extern unsigned char FUN_a015463c(unsigned short, unsigned short);
 extern void FUN_a00bfcc4(unsigned char, unsigned char);
 extern unsigned char FUN_a00bb260(unsigned char);
