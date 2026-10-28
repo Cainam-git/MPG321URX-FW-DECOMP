@@ -7281,6 +7281,13 @@
       "name": "FUN_a00b9c68",
       "status": "matched"
     },
+    "ram:a00b9f30": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Sums three byte tables over the cells of a 16x16 index range into three words and divides each by the cell count",
+      "name": "FUN_a00b9f30",
+      "status": "matched"
+    },
     "ram:a00ba068": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
