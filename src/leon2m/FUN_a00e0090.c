@@ -14,7 +14,7 @@ typedef int code();
 #define true 1
 #define false 0
 #define CONCAT44(a, b) (((unsigned long long)(a) << 32) | (unsigned int)(b))
-extern void FUN_a00dffa4();
+extern void FUN_a00dffa4(unsigned int);
 extern void FUN_a00e05d8();
 
 void FUN_a00e0090(undefined4 param_1)
