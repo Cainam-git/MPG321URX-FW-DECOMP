@@ -1693,6 +1693,12 @@
       "name": "FUN_a00617f0",
       "status": "matched"
     },
+    "ram:a006182c": {
+      "by": "hand",
+      "comment": "Rounds a up to a multiple of b (a unchanged when b is 0)",
+      "name": "FUN_a006182c",
+      "status": "matched"
+    },
     "ram:a0061864": {
       "by": "hand",
       "comment": "Loop over count (%i1) elements: tests count with cmp %i1, 0; be before the loop, loads the loop-invariant constants in that branch's delay slot and directly after it, then runs the body with the counter decremented by addcc and a bne back-branch carrying the pointer increment in its delay slot. Source form: while (count != 0) { ...; count--; } with distinct temporaries.",
