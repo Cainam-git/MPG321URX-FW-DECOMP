@@ -16,7 +16,7 @@ struct rec {
 };
 
 extern struct rec DAT_a807cd04[];
-extern unsigned int FUN_a00a78b4(unsigned char, unsigned short);
+extern unsigned char FUN_a00a78b4(unsigned int, unsigned short);
 extern void FUN_a00a78fc(unsigned char, unsigned short, unsigned char);
 extern unsigned int FUN_a00b2064(void);
 
