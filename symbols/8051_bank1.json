@@ -1013,6 +1013,13 @@
       "name": "FUN_CODE_6db5",
       "status": "matched"
     },
+    "CODE:6f26": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "SPI flash: programs len bytes from XDATA src to flash address addr in pages of up to 0x100 bytes (Page Program sequence per page), status bytes saved by FUN_CODE_7765 and restored by FUN_CODE_b456",
+      "name": "FUN_CODE_6f26",
+      "status": "matched"
+    },
     "CODE:71f0": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED)",
