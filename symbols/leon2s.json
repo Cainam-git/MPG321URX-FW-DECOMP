@@ -4873,7 +4873,7 @@
     },
     "ram:a00977e8": {
       "by": "hand",
-      "comment": "Mode-detect standby step: compares the new timing with the stored record, counts stable passes, applies the guess-scramble fallback and checks the pixel clock",
+      "comment": "Reads the H/V total and DE values of the port register block, prints and compares them with the stored record, updates the sync stable count and the state entry, returns 1 when the count exceeds the limit",
       "name": "FSM_MODE_DETECT_STANDBY",
       "status": "matched"
     },

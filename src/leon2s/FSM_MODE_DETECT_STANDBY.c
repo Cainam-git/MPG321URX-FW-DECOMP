@@ -1,6 +1,6 @@
 /* leon2s FSM_MODE_DETECT_STANDBY @ 0xa00977e8-0xa0097ed0, flags -mcpu=v8 -Os -g.
- * One step for input port 'port' (the name FSM_MODE_DETECT_STANDBY comes from the firmware string s_a0069b78).
- * Data: register block pointer DAT_a807db00[p].r0 (0x34-byte entries); stored timing record DAT_a807d7e0[p]
+ * One call for port index 'port' (the name FSM_MODE_DETECT_STANDBY comes from the firmware string s_a0069b78).
+ * Data: register block pointer DAT_a807db00[p].r0 (0x34-byte entries); stored record DAT_a807d7e0[p]
  * (400-byte entries: b6 at +6, b19 at +0x19, htot/vtot/de/deline halfwords at +0x1a..+0x20); state entry
  * DAT_a807d650[port] (24 bytes: state word +0, counter byte +5, bytes +6 and +9); shift byte DAT_a80790a8[p];
  * limit byte DAT_a8078648[p]; retry byte DAT_a80790e0[p]; DAT_a807cc64[sel] (24 bytes: b1 at +1, h8 at +8).
