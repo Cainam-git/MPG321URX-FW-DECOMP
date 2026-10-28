@@ -1258,6 +1258,14 @@
       "name": "FUN_CODE_96eb",
       "status": "matched"
     },
+    "CODE:97c4": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "set *0xA6FE, bd1b, *0xA706 |= 0xA704; up to 9 rounds of clear *0xA701 / delay / bd1b while *0xA6FE & 0xA704 is 0; then clear sequence",
+      "module": "FUN_CODE_bd1b",
+      "name": "FUN_CODE_97c4",
+      "status": "matched"
+    },
     "CODE:9a43": {
       "by": "hand",
       "comment": "writes a and b to one of 13 XDATA register pairs selected by sel (switch with jump table)",
