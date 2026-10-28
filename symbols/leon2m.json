@@ -11755,6 +11755,13 @@
       "name": "FUN_a00f3194",
       "status": "matched"
     },
+    "ram:a00f31bc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "read-modify-writes 0xcf020080 / 0xcf02006c / 0xcf02003c for sel 2, sel 0 and the other values",
+      "name": "FUN_a00f31bc",
+      "status": "matched"
+    },
     "ram:a00f328c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
