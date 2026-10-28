@@ -9521,6 +9521,12 @@
       "name": "FUN_a00d87fc",
       "status": "matched"
     },
+    "ram:a00d8b90": {
+      "by": "hand",
+      "comment": "Reads a 0x10c-byte record through FUN_a00d73b4, passes its data in 16-byte pieces to func_0xa0f963d4 or writes one byte to a register table, then calls FUN_a00d791c(&m, 2, 1, 8, 2)",
+      "name": "FUN_a00d8b90",
+      "status": "matched"
+    },
     "ram:a00d8d20": {
       "by": "hand",
       "comment": "Fetch a 30-byte response, build a type-0x22 command with copied table bytes and send it",
