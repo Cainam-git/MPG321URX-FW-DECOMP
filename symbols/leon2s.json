@@ -8809,6 +8809,12 @@
       "name": "FUN_a00cd2f0",
       "status": "matched"
     },
+    "ram:a00cd31c": {
+      "by": "hand",
+      "comment": "Sets the record field st of DAT_a8078bb0[port] from two func_0xa0f96400 read sequences and a comparison with 0xcf018d38/0xcf018d3c",
+      "name": "FUN_a00cd31c",
+      "status": "matched"
+    },
     "ram:a00cd4fc": {
       "by": "hand",
       "comment": "ch (u8); f = bits 16..17 of word 0 of the 24-byte record DAT_a8078bb0[ch] (lduh, and 3). If f != 2: r = func_0xa0f9639c(0, 0x90, 0x68029, buf) (buf = 24 bytes at %fp-32); r != 0: f = 3, buf[0] = 0, return; else if bit 0 of buf[0] is clear: f = 3, return. Then (f was 2, or buf[0] bit 0 set): f = ...",
