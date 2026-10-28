@@ -2518,6 +2518,12 @@
       "name": "FUN_a007a79c",
       "status": "matched"
     },
+    "ram:a007a9c0": {
+      "by": "hand",
+      "comment": "For each set mask bit i <= 3 below the ARR_a807d680[p != 2] count writes DAT_a00b3b70[i] through FUN_a00a7424 and DAT_a00b3b18[i] with (a[i] & 0xf) | (b[i] << 8) through FUN_a00a7488, then calls FUN_a007a050, FUN_a007a79c, FUN_a007a0a0, FUN_a007a648, FUN_a00b1794(1), FUN_a0079a20",
+      "name": "FUN_a007a9c0",
+      "status": "matched"
+    },
     "ram:a007aac4": {
       "by": "hand",
       "comment": "Calls FUN_a00a7488(port, n, 0xffff00ff, x << 8) for all four bytes a..d (idx > 3) or for byte idx with n from DAT_a00b3afc",
