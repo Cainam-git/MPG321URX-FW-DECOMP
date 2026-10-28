@@ -1,26 +1,14 @@
-/* leon2m FUN_a002992c @ 0xa002992c (-mcpu=v8 -O3 -g)
- * Calls FUN_a002c25c(0x9f000090, 0x10) when p1 != 0, otherwise FUN_a002c25c(0x9f000090, 0).
- * Source form: Ghidra's type and symbol names are kept.
+/* leon2m FUN_a002992c @ 0xa002992c-0xa0029964 (14 words).
+ * FUN_a002992c(on): writes 0x10 to the register 0x9f000090 through FUN_a002c25c when on is not 0, otherwise 0
+ * (tail calls). Each arm has its own call.
  */
-typedef unsigned char undefined, undefined1, byte, uchar, bool;
-typedef unsigned short undefined2, ushort, word;
-typedef unsigned int undefined4, uint, ulong, dword, undefined3;
-typedef unsigned long long undefined8, ulonglong;
-typedef long long longlong;
-typedef signed char sbyte;
-typedef int code();
-#define true 1
-#define false 0
-#define CONCAT44(a, b) (((unsigned long long)(a) << 32) | (unsigned int)(b))
-extern int FUN_a002c25c();
+extern void FUN_a002c25c(unsigned int addr, unsigned int value);
 
-void FUN_a002992c(unsigned char param_1)
-
+void FUN_a002992c(unsigned char on)
 {
-  if (param_1 != '\0') {
-    FUN_a002c25c(0x9f000090,0x10);
-    return;
-  }
-  FUN_a002c25c(0x9f000090,0);
-  return;
+    if (on != 0) {
+        FUN_a002c25c(0x9f000090, 0x10);
+        return;
+    }
+    FUN_a002c25c(0x9f000090, 0);
 }
