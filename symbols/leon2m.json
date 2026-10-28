@@ -15970,6 +15970,13 @@
       "of": "FUN_a011e8fc",
       "status": "matched"
     },
+    "ram:a011d670": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Limits a and b to 3 and writes (a << 2) | b into the low bits of the register selected by c (1..6, 16..19), keeping bits 4..7",
+      "name": "FUN_a011d670",
+      "status": "matched"
+    },
     "ram:a011d740": {
       "by": "hand",
       "comment": "empty routine",
