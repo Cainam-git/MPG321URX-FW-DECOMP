@@ -22071,8 +22071,8 @@
       "status": "matched"
     },
     "ram:a01486a8": {
-      "by": "autoc",
-      "comment": "FUN_a0133b54(p1, p2)",
+      "by": "hand",
+      "comment": "Forwards cmd, len and buffer to FUN_a0133b54 as a tail call",
       "name": "FUN_a01486a8",
       "status": "matched"
     },
