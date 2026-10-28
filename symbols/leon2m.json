@@ -20853,6 +20853,13 @@
       "name": "FUN_a0144768",
       "status": "matched"
     },
+    "ram:a01447bc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "maps channel k (0..3) to a record index via the 0xA802DF30 / 0xA802E224 tables and FUN_a0142168, returns byte +5 of that 0xA802E116 record",
+      "name": "FUN_a01447bc",
+      "status": "matched"
+    },
     "ram:a014489c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
