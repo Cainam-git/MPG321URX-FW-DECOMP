@@ -187,5 +187,5 @@ chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised
 - The meaning of the pointer table at 0x12FFF0 and the table set at 0x0E0000–0x0FFFFF.
 - Which processor reads the region 0x210000–0x27FFFF.
 - The meaning of most flag bits in the input channel records (0xA802DF30) and of saved setting 2.
-- Whether the Tensilica program writes its zone results straight to the picture hardware, and which compiler
-  built it.
+- Whether the chip's dimming hardware changes the picture on this OLED panel, and which compiler built the
+  Tensilica program.
