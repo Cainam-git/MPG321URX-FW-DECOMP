@@ -3,6 +3,8 @@
  * FUN_a00ab690(port) selects k = 0x10e (1), 0x21c (2), 0x32a (3) or 0xa2 (any other value); returns
  * v * k / 64 * 1250 / d * 100 (unsigned).
  * Source form: one complete formula per case (as in FUN_a0089898 and FUN_a00aceec), default case first.
+ * FUN_a008b838 is declared returning unsigned int here; src/leon2s/FUN_a008b838.c defines it as void; the firmware
+ * uses the value it leaves in %o0 (its tail call to FUN_a00a6f08).
  */
 extern unsigned int FUN_a008b838(unsigned char);
 extern unsigned int FUN_a008b850(unsigned int param_1);
