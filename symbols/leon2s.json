@@ -3567,6 +3567,14 @@
       "name": "FUN_a008b2bc",
       "status": "matched"
     },
+    "ram:a008b308": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a008b32c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a008b308",
+      "of": "FUN_a008b32c",
+      "status": "matched"
+    },
     "ram:a008b32c": {
       "by": "hand",
       "comment": "Stores val to DAT_a8076690[sel] and writes val into a register nibble selected by sel (0..8), with extra bit updates and a FUN_a0091ebc call for some sel values",
