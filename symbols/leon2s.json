@@ -6178,6 +6178,12 @@
       "name": "FUN_a00a6c00",
       "status": "matched"
     },
+    "ram:a00a6c98": {
+      "by": "hand",
+      "comment": "read-modify-write of the low byte of register reg of block port (table DAT_a00b4d94, port 2 = blocks 0 and 1): mode 1 sets mask bits, else clears them",
+      "name": "FUN_a00a6c98",
+      "status": "matched"
+    },
     "ram:a00a6da8": {
       "by": "hand",
       "comment": "unit <= 1: return u16 from the two reg words at 0xcf000000 | ((table a00b4d94[unit] + p2 [+1]) << 2) (high << 8 | low byte); else 0",
