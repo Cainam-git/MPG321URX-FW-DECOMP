@@ -288,6 +288,11 @@ LEON (GCC 3.4.4):
 - **A K&R byte parameter that needs a second definition:** `p = port; ... port = p;` (FSM_MODE_DETECT_STANDBY).
 - **The barrier as the very first statement** of the function fixed FUN_a0087a14, which otherwise only matched with
   a flag the firmware does not use.
+- **Floating-point limits one unit above a round decimal:** the author wrote a product that the compiler folded,
+  such as `602.6 * 0.1` instead of `60.26`; the folded value has the firmware's exact bits (FUN_a0120de4).
+- **A `const` local table** can change the scheduling of the constant loads around it (FUN_a012e004).
+- **Different spellings of the same mask in copied calls** (`p & 0xff`, `(unsigned short)p & 0xff`,
+  `(unsigned char)p`): equal spellings are merged into one register, distinct ones are not (FUN_a007a9c0).
 - **A test written as `flag == 1`** instead of `flag` fixed the block order of FUN_a009cd74.
 - **Judge with `tools/diff.py` or `tools/exact.py`.** A raw comparison that skips address fields can report a match
   where one `sethi` names a different global.
