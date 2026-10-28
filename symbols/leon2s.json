@@ -4859,6 +4859,12 @@
       "name": "FUN_a009645c",
       "status": "matched"
     },
+    "ram:a00964d0": {
+      "by": "hand",
+      "comment": "writes (b << 4) | a and the two bytes of w to registers 0xcf0146c0/c8/cc (p == 0) or 0xcf014700/08/0c",
+      "name": "FUN_a00964d0",
+      "status": "matched"
+    },
     "ram:a0096538": {
       "by": "hand",
       "comment": "Sets the FRL PLL of port for rate: rate-range flags, PLL steps, prints the target and programs the r18 register block",
