@@ -172,8 +172,9 @@ has not been traced further beyond this:
 - The main processor's routines that read results back (mailbox offset 0x4C: `FUN_a013a824`, `FUN_a013a85c`,
   `FUN_a013a884`) and its senders for the other 10 commands also have no caller and no stored address.
 
-So the program is started and given a zone grid, but it never switches on LED drivers and nothing reads its
-results.
+So the program is started and given a zone grid, but it never switches on LED drivers and the main processor
+never reads results back through the mailbox. Whether it writes its zone results straight to the picture hardware
+(for example as an OLED brightness limiter) has not been traced.
 
 The program prints a banner with "NVT_Formal_RG20189" and "NT68500 FW Version", and its messages mention LED driver
 chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised; it is not the output of GCC (see
@@ -185,4 +186,5 @@ chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised
 - The meaning of the pointer table at 0x12FFF0 and the table set at 0x0E0000–0x0FFFFF.
 - Which processor reads the region 0x210000–0x27FFFF.
 - The meaning of most flag bits in the input channel records (0xA802DF30) and of saved setting 2.
-- Which compiler built the Tensilica program.
+- Whether the Tensilica program writes its zone results straight to the picture hardware, and which compiler
+  built it.

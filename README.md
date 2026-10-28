@@ -17,7 +17,7 @@ The monitor is driven by a Novatek NT68500 scaler chip. The firmware holds progr
 | **Main processor** (LEON2, "Leon2M") | Picture pipeline, panel control and on-screen menu logic. |
 | **Input processor** (LEON2, "Leon2S") | Receiving and decoding the HDMI and DisplayPort signals. |
 | **Helper processor** (8051) | Booting the system, loading the programs of the other processors, supervising the main processor, power and firmware updates. |
-| **Tensilica processor** (Xtensa) | LED backlight dimming. Started, but unused in this OLED monitor. |
+| **Tensilica processor** (Xtensa) | Zone-based dimming logic, started at every power-on. Its LED backlight drivers are never used here; whether it limits the OLED's brightness instead is not yet proven. |
 
 ## Progress
 
