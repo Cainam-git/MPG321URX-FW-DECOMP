@@ -9341,6 +9341,12 @@
       "name": "FUN_a00d6e94",
       "status": "matched"
     },
+    "ram:a00d6f70": {
+      "by": "hand",
+      "comment": "Copies bit-fields and data bytes from s[off + i] (off from the high nibble of s[0]) into the 0x1e-byte record o",
+      "name": "FUN_a00d6f70",
+      "status": "matched"
+    },
     "ram:a00d714c": {
       "by": "hand",
       "comment": "copies three bit-fields, a count and that many bytes from a byte record at an offset taken from its first byte",
