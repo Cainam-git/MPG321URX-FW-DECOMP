@@ -2608,8 +2608,8 @@
       "status": "matched"
     },
     "ram:a00874c8": {
-      "by": "autoc",
-      "comment": "For each bit i (0 .. 7) set in p1, in ascending order, calls FUN_a014bac4(4 + i, p2 & 0xff)",
+      "by": "hand",
+      "comment": "For each bit i (0 .. 7) set in bits, in ascending order, calls FUN_a014bac4(4 + i, v)",
       "name": "FUN_a00874c8",
       "status": "matched"
     },
