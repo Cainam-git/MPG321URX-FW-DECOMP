@@ -156,8 +156,13 @@ Its messages and command names describe local dimming of an LED backlight, which
 - **Debug:** a command line on the serial port ("Welcome to User's Command Line Debug") with memory read and write, GPIO
   and UART tests, and a printf self-test.
 
-This monitor has a QD-OLED panel, which lights every pixel itself and has no backlight. Whether the main processor sets
-the Tensilica program up and sends it work in this monitor has not been checked.
+This monitor has a QD-OLED panel, which lights every pixel itself and has no backlight. The main processor still
+sets the program up at every start: its start-up path (`FUN_a0087020` -> `FUN_a00db054` -> `FUN_a014e050`) sends
+command 0x2A through mailbox portal 2 (0xB7091000 + 0x20) with a zone grid of 32 x 16 (`FUN_a0139b90`, word
+0x2A001020) or 64 x 32 (word 0x2A002040), chosen by bits 18-19 of the word at 0xA802D290 + 0xAC. The Tensilica
+program reads the command at 0xE0091020 (`fn_40003814`) and looks it up in its table of 46 commands (0x4000D288);
+command 0x2A runs `DRV_LDC_SetLDCSegment` (`fn_4000660c`). What the program does with the grid in an OLED monitor
+has not been traced further.
 
 The program prints a banner with "NVT_Formal_RG20189" and "NT68500 FW Version", and its messages mention LED driver
 chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised; it is not the output of GCC (see
@@ -169,4 +174,4 @@ chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised
 - The meaning of the pointer table at 0x12FFF0 and the table set at 0x0E0000–0x0FFFFF.
 - Which processor reads the region 0x210000–0x27FFFF.
 - The meaning of most flag bits in the input channel records (0xA802DF30) and of saved setting 2.
-- Whether the Tensilica program does any work in this OLED monitor, and which compiler built it.
+- What the Tensilica program does with its zone grid in this OLED monitor, and which compiler built it.
