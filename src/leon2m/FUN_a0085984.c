@@ -151,7 +151,7 @@ extern void FUN_a0148268(int, int);
 extern void FUN_a0090fd8(void);
 extern void FUN_a00da254(void);
 extern void FUN_a0081ea8(int);
-extern void FUN_a0145360(int);
+extern void FUN_a0145360(unsigned char);
 extern void FUN_a0083ff0(int);
 extern void FUN_a014d474(int, int);
 extern void FUN_a0125bbc(int);
