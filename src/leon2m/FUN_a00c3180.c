@@ -15,7 +15,7 @@ struct Scff8 { unsigned short b15 : 1; unsigned short f13 : 2; unsigned short re
 extern struct Scff8 DAT_a802cff8;
 extern void FUN_a0090fd8(void);
 extern void FUN_a0090fac(void);
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 
 void FUN_a00baa6c(unsigned char port)
 {
