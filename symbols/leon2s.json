@@ -9467,6 +9467,12 @@
       "name": "FUN_a00d78d8",
       "status": "matched"
     },
+    "ram:a00d791c": {
+      "by": "hand",
+      "comment": "Clears a stack buffer, fills it through one of 14 routines selected by type, and for a == 2, b == 1 copies it into row DAT_a8078832 of DAT_a8079f98 and updates the index tables",
+      "name": "FUN_a00d791c",
+      "status": "matched"
+    },
     "ram:a00d7bf8": {
       "by": "hand",
       "comment": "Repeats setting bit 3 of register word 0xf7 while it reads back set, then sets bit 7 of word 0x30",
