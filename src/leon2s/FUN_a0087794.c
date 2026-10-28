@@ -6,7 +6,7 @@
  */
 struct Rec6 { unsigned char b0; unsigned char _1[5]; };
 extern struct Rec6 ARR_a807cd2e[];
-extern unsigned int FUN_a00a78b4(unsigned char, unsigned short);
+extern unsigned char FUN_a00a78b4(unsigned int, unsigned short);
 extern void FUN_a00a78fc(unsigned char, unsigned short, unsigned char);
 extern void FUN_a00a7940(unsigned int, short, unsigned int, unsigned int);
 
