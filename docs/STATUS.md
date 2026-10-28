@@ -60,7 +60,8 @@ compares it with the firmware. The entries below are not confirmed by that scrip
   which has no store to it before the loop. The loop shifts all eight initial bits out, so the returned value does
   not depend on the initial contents. Initialising it would add two instructions the firmware does not have.
 - `leon2s FUN_a0089898`, `FUN_a008c538`, `FUN_a00aceec`: a called function is declared with another return type than
-  its definition (`int` where it is defined as returning `unsigned int`, `unsigned short` or `void`), as when a
+  its definition (`int` or `unsigned int` where it is defined as returning `unsigned int`, `unsigned short` or
+  `void`), as when a
   function is called without a prototype. The firmware compares the result as a signed value, or uses the value left
   in the result register by the callee's own tail call. Each file header names the declaration and the definition.
 
