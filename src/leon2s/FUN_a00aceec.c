@@ -3,8 +3,7 @@
  * 0x68 (high), 0x67, 0x66 (FUN_a00a6bb8). Returns 0 when a or b is 0. Otherwise k = 0xa2, 0x10e, 0x21c or
  * 0x32a for bits 0..1 of register 0x80 = 0..3, and the result is ((a * k / b) * 10000) >> 9 (unsigned),
  * truncated to 16 bits.
- * Source form: FUN_a00a6f08 is declared returning int here; src/leon2s/FUN_a00a6f08.c defines it as returning
- * unsigned short; the firmware uses its full register without a zero-extension. One complete formula per case.
+ * Source form: one complete formula per case.
  */
 extern int FUN_a00a6f08(unsigned char, unsigned short);
 extern int FUN_a00a6bb8(unsigned char, unsigned short);
