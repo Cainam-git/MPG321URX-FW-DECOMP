@@ -4951,6 +4951,12 @@
       "name": "FRL_PLL",
       "status": "matched"
     },
+    "ram:a00967ec": {
+      "by": "hand",
+      "comment": "Pulses register bits of the record DAT_a807db00[port], polls a status bit up to 11 times, then scales r18[0x1a] by a table value and sets or clears bit 0x19 by the result",
+      "name": "u32payload_delay",
+      "status": "matched"
+    },
     "ram:a0096a6c": {
       "by": "hand",
       "comment": "Clears the first word of the two 24-byte (0x18) records at 0xa807d650 and 0xa807d668: loop i = 0..1 with i & 0xff, offset i*24 computed as (i+i+i) << 3, clr [%o3 + %o5].",
