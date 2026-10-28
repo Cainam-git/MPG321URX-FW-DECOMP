@@ -12962,6 +12962,13 @@
       "name": "FUN_a00fd9a0",
       "status": "matched"
     },
+    "ram:a00fde94": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "When register 0xcf02010c holds (c << 4) | c, writes (i << 4) | i for the first other block i 0..7 whose FUN_a00f1a90 bits 0..1 of reg 4 and bit 5 of reg 3 are clear",
+      "name": "FUN_a00fde94",
+      "status": "matched"
+    },
     "ram:a00fdf44": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
