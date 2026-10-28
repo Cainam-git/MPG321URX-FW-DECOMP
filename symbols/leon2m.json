@@ -21669,6 +21669,13 @@
       "name": "FUN_a0146c14",
       "status": "matched"
     },
+    "ram:a0146c40": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "switch ch 0..7: on ? FUN_a011a1b0(ch, blk) : FUN_a011a378(ch, blk); other ch: FUN_a011a1b0(0..7, blk) or FUN_a011a378(8, blk)",
+      "name": "FUN_a0146c40",
+      "status": "matched"
+    },
     "ram:a0146dc0": {
       "by": "autoc",
       "comment": "When p1 != 0 calls FUN_a011cd10(p2, 1) and FUN_a011cca0(p2, 1, p3, p4, p5, p6); otherwise FUN_a011cca0(p2, 0, p3, p4, p5, p6)",
