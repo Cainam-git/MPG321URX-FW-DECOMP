@@ -16692,6 +16692,13 @@
       "name": "FUN_a0124b40",
       "status": "matched"
     },
+    "ram:a0124bf4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns 1 for n 0xfc..0xfe; for n <= 7 a record test through func_0x4008cd38 (the +0x12 sub-record when byte +1 is 1 and DAT_a802c9f9 is 0, else bytes +0x0b..+0x0d); else 0",
+      "name": "FUN_a0124bf4",
+      "status": "matched"
+    },
     "ram:a0124d24": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
