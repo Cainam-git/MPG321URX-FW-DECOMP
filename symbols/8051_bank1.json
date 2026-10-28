@@ -1289,6 +1289,13 @@
       "name": "FUN_CODE_97c4",
       "status": "matched"
     },
+    "CODE:9975": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "When bit 0 of a is set, TH1 = TL1 = -(unsigned char)(FUN_CODE_d7d2() * 2 / 384 / b + 0.5) (float); m = 12000000.0 / b - 1 written high/low to XDATA 0xF0F7/F0F8, 0xF033/F034, 0xF06F/F070 for bits 2, 3, 4 of a",
+      "name": "FUN_CODE_9975",
+      "status": "matched"
+    },
     "CODE:9a43": {
       "by": "hand",
       "comment": "writes a and b to one of 13 XDATA register pairs selected by sel (switch with jump table)",
