@@ -21367,6 +21367,13 @@
       "name": "FUN_a01461dc",
       "status": "matched"
     },
+    "ram:a0146298": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Calls FUN_a0119698(k, v) where a switch on n (cases 0..4, jump table 0xa01432c8) sets k to n",
+      "name": "FUN_a0146298",
+      "status": "matched"
+    },
     "ram:a0146324": {
       "by": "autoc",
       "comment": "p1 = p1 & 0xff; returns FUN_a01198b4(p1)",
