@@ -2543,9 +2543,20 @@
       "name": "FUN_CODE_dae3",
       "status": "matched"
     },
+    "CODE:dafe": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_db05, in FUN_CODE_db05's code segment; emitted by compiling src/8051_bank1/FUN_CODE_5a39.c, bytes judged with FUN_CODE_db05 over 0xdafe..0xdb18",
+      "kind": "common_entry",
+      "module": "FUN_CODE_5a39",
+      "name": "FUN_CODE_dafe",
+      "of": "FUN_CODE_db05",
+      "status": "matched"
+    },
     "CODE:db05": {
       "by": "hand",
-      "comment": "if i < 0x10: f230[i] = v",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "if i < 0x10: f230[i] = v; with the common-entry block 0xDAFE (set-up of the db05(e[0], 1) calls of module FUN_CODE_5a39)",
+      "module": "FUN_CODE_5a39",
       "name": "FUN_CODE_db05",
       "status": "matched"
     },
