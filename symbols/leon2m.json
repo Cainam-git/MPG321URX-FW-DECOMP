@@ -7391,7 +7391,7 @@
     },
     "ram:a00babe4": {
       "by": "autoc",
-      "comment": "FUN_a01487e8(p1, p2, &(byte 0xA802D078))",
+      "comment": "FUN_a01487e8(port, len, DAT_a802d078)",
       "name": "FUN_a00babe4",
       "status": "matched"
     },

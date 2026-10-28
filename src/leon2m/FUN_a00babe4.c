@@ -1,20 +1,12 @@
-/* leon2m FUN_a00babe4 @ 0xa00babe4 (-mcpu=v8 -Os -g)
- * Code: FUN_a01487e8(p1, p2, &(byte 0xA802D078)).
- * Source form: Ghidra's type and symbol names are kept.
+/* leon2m FUN_a00babe4 @ 0xa00babe4 (-mcpu=v8 -O2 -g)
+ * Calls FUN_a01487e8(port, len, DAT_a802d078) as a tail call: the same three-argument call with the buffer fixed to
+ * the byte array at 0xa802d078. Both parameters are bytes (masked with 0xff before the call); FUN_a01487e8 takes
+ * len as an unsigned short. Callers: the handlers from FUN_a00bc86c to FUN_a00be7d4 and FUN_a00bfcc4.
  */
-typedef unsigned char undefined, undefined1, byte, uchar, bool;
-typedef unsigned short undefined2, ushort, word;
-typedef unsigned int undefined4, uint, ulong, dword, undefined3;
-typedef unsigned long long undefined8, ulonglong;
-typedef long long longlong;
-typedef signed char sbyte;
-typedef int code();
 extern unsigned char DAT_a802d078[];
-extern int FUN_a01487e8();
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 
-void FUN_a00babe4(undefined1 param_1,undefined1 param_2)
-
+void FUN_a00babe4(unsigned char port, unsigned char len)
 {
-  FUN_a01487e8(param_1,param_2,&DAT_a802d078);
-  return;
+    FUN_a01487e8(port, len, DAT_a802d078);
 }
