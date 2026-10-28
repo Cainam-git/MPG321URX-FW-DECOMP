@@ -280,6 +280,14 @@ LEON (GCC 3.4.4):
   it in the header as a compiler aid (FUN_a00f6fe4, FUN_a0135ae8, FUN_a013358c).
 - **Reads through a pointer parameter that must not lose stores they might overlap:** keep the address as an
   `unsigned int` copy and cast at each read; the reads then have no known memory base (FUN_a0136a10).
+- **The firmware keeps a branch that your build turns into flag arithmetic (or the reverse):** a second, dead
+  statement in the if-arm (`if (w & 0x80) { r -= 1; v = 0; }` with `v` not read again) emits no code but changes
+  when GCC if-converts the arm (FUN_a00ada24, FSM_MODE_DETECT_STANDBY). Document it as a compiler aid.
+- **A division constant hoisted out of a sampling loop:** keep the averaging inside the loop,
+  `if (--n == 0) { average }`, with `n != 0 &&` in the do-while condition (FUN_a00f4e60, FUN_a00f51b4).
+- **A K&R byte parameter that needs a second definition:** `p = port; ... port = p;` (FSM_MODE_DETECT_STANDBY).
+- **The barrier as the very first statement** of the function fixed FUN_a0087a14, which otherwise only matched with
+  a flag the firmware does not use.
 - **A test written as `flag == 1`** instead of `flag` fixed the block order of FUN_a009cd74.
 - **Judge with `tools/diff.py` or `tools/exact.py`.** A raw comparison that skips address fields can report a match
   where one `sethi` names a different global.
