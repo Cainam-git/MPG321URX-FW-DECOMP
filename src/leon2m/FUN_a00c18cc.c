@@ -16,7 +16,7 @@ extern unsigned short DAT_a802cff4;
 extern unsigned char FUN_a01445fc(unsigned char);
 extern unsigned char FUN_a014459c(unsigned char);
 extern void FUN_a00d9238(void);
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 extern void FUN_a00b88cc(void);
 
 void FUN_a00baa6c(unsigned char port)
