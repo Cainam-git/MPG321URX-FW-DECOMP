@@ -6,7 +6,7 @@
  */
 extern unsigned char DAT_a802d268[11];
 extern int FUN_a00df170(const char *fmt, ...);
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 extern void FUN_a01350dc(void);
 
 void FUN_a00da754(unsigned char level)
