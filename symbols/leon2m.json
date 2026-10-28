@@ -15004,6 +15004,13 @@
       "name": "FUN_a01111f4",
       "status": "matched"
     },
+    "ram:a01112c0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes t[k] of a local 13-byte table to one of four six-register groups selected by c (all four for c 4)",
+      "name": "FUN_a01112c0",
+      "status": "matched"
+    },
     "ram:a011149c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
