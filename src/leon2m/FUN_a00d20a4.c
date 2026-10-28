@@ -9,7 +9,7 @@ struct St {
 };
 extern struct St DAT_a802d290;
 extern int FUN_a014aed0(int, void *, int, int);
-extern void FUN_a0145360(int);
+extern void FUN_a0145360(unsigned char);
 
 unsigned char FUN_a00d20a4(unsigned char *p)
 {
