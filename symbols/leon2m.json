@@ -13486,6 +13486,13 @@
       "name": "FUN_a0104eb0",
       "status": "matched"
     },
+    "ram:a0104f48": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "a == 0 clears bit 0 of 0xcf012890/0xcf012990; else mode != 0 runs FUN_a0104d18(a, b) and mode 0 FUN_a0104eb0(a)",
+      "name": "FUN_a0104f48",
+      "status": "matched"
+    },
     "ram:a0105150": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
