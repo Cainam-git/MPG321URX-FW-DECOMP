@@ -173,8 +173,24 @@ has not been traced further beyond this:
   `FUN_a013a884`) and its senders for the other 10 commands also have no caller and no stored address.
 
 So the program is started and given a zone grid, but it never switches on LED drivers and the main processor
-never reads results back through the mailbox. Whether it writes its zone results straight to the picture hardware
-(for example as an OLED brightness limiter) has not been traced.
+never reads results back through the mailbox (its readers for slots 0x10 and 0x4C have no caller; only the
+power-down handshake on slot 0x34, `FUN_a01396d8`, is used).
+
+What the program does by itself after start-up:
+
+- `fn_40008f58` installs `fn_40008ef0` as the handler of interrupt 7. The handler reads the status register of the
+  chip's dimming hardware block (0xE0080404), sets a flag and clears the status.
+- The main loop (`fn_4000a3cc`) polls that flag and then runs one processing pass (`fn_40003764` ->
+  `fn_400035d0`). The pass reads zone values and writes results back into the same hardware block (0xE0080310,
+  0xE0080370, 0xE0080378, 0xE0080400, 0xE0080514, 0xE0080700-0xE0080708 and the table at 0xE0082000) and into
+  mailbox slots that the main processor does not read. It never touches the LED driver interface.
+- Start-up also sends commands 0x2B (zone counts 5 and 6, as powers of two: 32 x 64) and 0x84 (written to
+  0xE0080168) from `System_Initialize`.
+
+So the program runs a processing pass on every interrupt of the dimming hardware and writes its results into that
+hardware. Whether that hardware block changes the picture on this OLED panel (for example as a brightness limiter)
+is decided by how the block is wired inside the chip, which the firmware does not show; it would take a
+measurement on the monitor.
 
 The program prints a banner with "NVT_Formal_RG20189" and "NT68500 FW Version", and its messages mention LED driver
 chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised; it is not the output of GCC (see
