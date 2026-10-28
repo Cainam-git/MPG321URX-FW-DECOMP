@@ -1,5 +1,5 @@
-/* 8051_bank1 module FUN_CODE_bd1b: FUN_CODE_d086, FUN_CODE_bd1b, FUN_CODE_97c4, FUN_CODE_c6ec, FUN_CODE_8c5d,
- * FUN_CODE_6781 in this order. Options: OPTIMIZE(8,SPEED) LARGE.
+/* 8051_bank1 module FUN_CODE_bd1b: FUN_CODE_d086, FUN_CODE_bd1b, FUN_CODE_97c4, FUN_CODE_c6ec, FUN_CODE_6781,
+ * FUN_CODE_8c5d in this order. Options: OPTIMIZE(8,SPEED) LARGE.
  * Byte data through the generic pointers at XDATA 0xA6FE (target) / 0xA706 (source) with mask XDATA 0xA704, and
  * 0xA701 (target) / 0xA709 (source) with mask XDATA 0xA705; each update is '*target = (*target | *source) | mask'
  * or '& ~mask'; below, 'set T' / 'clear T' name these two updates of target T.
@@ -16,8 +16,15 @@
  *   *0xA6FE & 0xA704 value reads 0 and XDATA 0xA77B < 9: clear *0xA701, delay, FUN_CODE_bd1b(), 0xA77B += 1; then
  *   *0xA706 &= ~0xA704 value, clear *0xA6FE, delay, clear *0xA701.
  * FUN_CODE_c6ec @ 0xc6ec (82 B): clear *0xA6FE, delay, FUN_CODE_bd1b(), delay, set *0xA6FE.
- * FUN_CODE_8c5d (last) and FUN_CODE_6781 (x): written from the firmware logic; they do not yet compile to the
- *   firmware's bytes (not recorded as matched); their calls give the common-entry blocks.
+ * FUN_CODE_6781 @ 0x6781 (406 B), x: for i = 0..7: delay, clear *0xA701, delay; set *0xA6FE when x & CODE 0xDED4[i],
+ *   else clear it; delay, FUN_CODE_bd1b(). Then delay, clear *0xA701, delay, clear *0xA6FE, *0xA706 |= 0xA704 value,
+ *   set *0xA6FE, delay, FUN_CODE_bd1b(), delay; r = 0 when *0xA6FE & 0xA704 value reads 0, else up to 7 rounds of
+ *   delay while it stays non-zero, r = 1 when all 7 ran out. Then clear *0xA701, *0xA706 &= ~0xA704 value, clear
+ *   *0xA6FE, delay; returns r. i and r are IDATA (0x62, 0x63).
+ * FUN_CODE_8c5d @ 0x8c5d (259 B), last: last &= 1; *0xA706 |= 0xA704 value, set *0xA6FE; for 8 rounds: b <<= 1,
+ *   FUN_CODE_bd1b(), delay, bit 0 of b = (*0xA6FE & 0xA704 value) != 0, clear *0xA701, delay. Then
+ *   *0xA706 &= ~0xA704 value, clear *0xA6FE when last is 0 else set it, delay, FUN_CODE_bd1b(), delay, clear *0xA701,
+ *   delay; returns b. LARGE locals last 0xA76A, i 0xA76B, b 0xA76C.
  * Source forms:
  *  - The 0xA705 updates followed by FUN_CODE_d086() are written in place as one statement,
  *    '*DAT_EXTMEM_a701 = (*DAT_EXTMEM_a701 | *DAT_EXTMEM_a709) & ~DAT_EXTMEM_a705;', at five call sites; Keil
@@ -26,7 +33,10 @@
  *    one local per site keeps each in R7 (a local reused across the calls is placed in XDATA). FUN_CODE_97c4's
  *    second 0xA704 clear is one statement ('t2 = *source; *target = (*target | t2) & ~mask;').
  *  - The function order above decides which call sites Keil merges into the blocks.
- *  - FUN_CODE_8c5d: the firmware does not initialise b (its 8 bits are all shifted in by the loop); here b = 0.
+ *  - FUN_CODE_6781: 'if (!(...)) r = 0; else { ... }' gives the firmware's 'JNZ +2; SJMP' (the r = 0 store is
+ *    shared with the inner one). FUN_CODE_8c5d: 'if (!(...)) b &= 0xFE; else b |= 1;'.
+ *  - FUN_CODE_8c5d: b is not initialised, as in the firmware (no store before the loop); all eight initial bits are
+ *    shifted out, so the returned value does not depend on it.
  */
 extern unsigned char * xdata DAT_EXTMEM_a6fe;
 extern unsigned char * xdata DAT_EXTMEM_a701;
@@ -89,10 +99,52 @@ void FUN_CODE_c6ec(void)
     t2 = *DAT_EXTMEM_a706; t2 = *DAT_EXTMEM_a6fe | t2; *DAT_EXTMEM_a6fe = t2 | DAT_EXTMEM_a704;
 }
 
+unsigned char FUN_CODE_6781(unsigned char x)
+{
+    unsigned char t1, t2, t3, t4, t5;
+    unsigned char idata i;
+    unsigned char idata r;
+    for (i = 0; i < 8; i++) {
+        FUN_CODE_d086();
+        *DAT_EXTMEM_a701 = (*DAT_EXTMEM_a701 | *DAT_EXTMEM_a709) & ~DAT_EXTMEM_a705;
+        FUN_CODE_d086();
+        if (x & DAT_CODE_ded4[i]) {
+            t1 = *DAT_EXTMEM_a706; t1 = *DAT_EXTMEM_a6fe | t1; *DAT_EXTMEM_a6fe = t1 | DAT_EXTMEM_a704;
+        } else {
+            t2 = *DAT_EXTMEM_a706; t2 = *DAT_EXTMEM_a6fe | t2; *DAT_EXTMEM_a6fe = t2 & ~DAT_EXTMEM_a704;
+        }
+        FUN_CODE_d086();
+        FUN_CODE_bd1b();
+    }
+    FUN_CODE_d086();
+    *DAT_EXTMEM_a701 = (*DAT_EXTMEM_a701 | *DAT_EXTMEM_a709) & ~DAT_EXTMEM_a705;
+    FUN_CODE_d086();
+    t3 = *DAT_EXTMEM_a706; t3 = *DAT_EXTMEM_a6fe | t3; *DAT_EXTMEM_a6fe = t3 & ~DAT_EXTMEM_a704;
+    *DAT_EXTMEM_a706 |= DAT_EXTMEM_a704;
+    t4 = *DAT_EXTMEM_a706; t4 = *DAT_EXTMEM_a6fe | t4; *DAT_EXTMEM_a6fe = t4 | DAT_EXTMEM_a704;
+    FUN_CODE_d086();
+    FUN_CODE_bd1b();
+    FUN_CODE_d086();
+    if (!(*DAT_EXTMEM_a6fe & DAT_EXTMEM_a704)) r = 0;
+    else {
+        i = 7;
+        while ((*DAT_EXTMEM_a6fe & DAT_EXTMEM_a704) && i) {
+            FUN_CODE_d086();
+            i--;
+        }
+        if (i == 0) r = 1;
+        else r = 0;
+    }
+    *DAT_EXTMEM_a701 = (*DAT_EXTMEM_a701 | *DAT_EXTMEM_a709) & ~DAT_EXTMEM_a705;
+    *DAT_EXTMEM_a706 &= ~DAT_EXTMEM_a704;
+    t5 = *DAT_EXTMEM_a706; t5 = *DAT_EXTMEM_a6fe | t5; *DAT_EXTMEM_a6fe = t5 & ~DAT_EXTMEM_a704;
+    FUN_CODE_d086();
+    return r;
+}
 unsigned char FUN_CODE_8c5d(unsigned char last)
 {
     unsigned char i;
-    unsigned char b = 0;
+    unsigned char b;
     unsigned char t1, t2, t3;
     last &= 1;
     *DAT_EXTMEM_a706 |= DAT_EXTMEM_a704;
@@ -116,49 +168,7 @@ unsigned char FUN_CODE_8c5d(unsigned char last)
     FUN_CODE_bd1b();
     FUN_CODE_d086();
     *DAT_EXTMEM_a701 = (*DAT_EXTMEM_a701 | *DAT_EXTMEM_a709) & ~DAT_EXTMEM_a705;
-        FUN_CODE_d086();
+    FUN_CODE_d086();
     return b;
 }
 
-unsigned char FUN_CODE_6781(unsigned char x)
-{
-    unsigned char t1, t2, t3, t4, t5;
-    unsigned char idata i;
-    unsigned char idata r;
-    for (i = 0; i < 8; i++) {
-        FUN_CODE_d086();
-        *DAT_EXTMEM_a701 = (*DAT_EXTMEM_a701 | *DAT_EXTMEM_a709) & ~DAT_EXTMEM_a705;
-        FUN_CODE_d086();
-        if (x & DAT_CODE_ded4[i]) {
-            t1 = *DAT_EXTMEM_a706; t1 = *DAT_EXTMEM_a6fe | t1; *DAT_EXTMEM_a6fe = t1 | DAT_EXTMEM_a704;
-        } else {
-            t2 = *DAT_EXTMEM_a706; t2 = *DAT_EXTMEM_a6fe | t2; *DAT_EXTMEM_a6fe = t2 & ~DAT_EXTMEM_a704;
-        }
-        FUN_CODE_d086();
-        FUN_CODE_bd1b();
-    }
-    FUN_CODE_d086();
-    *DAT_EXTMEM_a701 = (*DAT_EXTMEM_a701 | *DAT_EXTMEM_a709) & ~DAT_EXTMEM_a705;
-        FUN_CODE_d086();
-    t3 = *DAT_EXTMEM_a706; t3 = *DAT_EXTMEM_a6fe | t3; *DAT_EXTMEM_a6fe = t3 & ~DAT_EXTMEM_a704;
-    *DAT_EXTMEM_a706 |= DAT_EXTMEM_a704;
-    t4 = *DAT_EXTMEM_a706; t4 = *DAT_EXTMEM_a6fe | t4; *DAT_EXTMEM_a6fe = t4 | DAT_EXTMEM_a704;
-    FUN_CODE_d086();
-    FUN_CODE_bd1b();
-    FUN_CODE_d086();
-    if (!(*DAT_EXTMEM_a6fe & DAT_EXTMEM_a704)) r = 0;
-    else {
-        i = 7;
-        while ((*DAT_EXTMEM_a6fe & DAT_EXTMEM_a704) && i) {
-            FUN_CODE_d086();
-            i--;
-        }
-        if (i == 0) r = 1;
-        else r = 0;
-    }
-    *DAT_EXTMEM_a701 = (*DAT_EXTMEM_a701 | *DAT_EXTMEM_a709) & ~DAT_EXTMEM_a705;
-    *DAT_EXTMEM_a706 &= ~DAT_EXTMEM_a704;
-    t5 = *DAT_EXTMEM_a706; t5 = *DAT_EXTMEM_a6fe | t5; *DAT_EXTMEM_a6fe = t5 & ~DAT_EXTMEM_a704;
-    FUN_CODE_d086();
-    return r;
-}
