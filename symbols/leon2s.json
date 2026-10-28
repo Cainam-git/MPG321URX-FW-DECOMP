@@ -2441,6 +2441,12 @@
       "name": "DRV_HDMI_EQScan_FSM_PHY_RunAEQ",
       "status": "matched"
     },
+    "ram:a007769c": {
+      "by": "hand",
+      "comment": "Prints the CCT/RCT values of three channels and calls FUN_a00a7424 for each channel whose RCT is below 8",
+      "name": "DRV_HDMI_EQScan_FSM_PHY_R_Turning",
+      "status": "matched"
+    },
     "ram:a007796c": {
       "by": "hand",
       "comment": "Prints PHY channel fields, steps the 0x1168 bits 8..11 value when 0x1018 is above 0xdf, sets the per-port records",
