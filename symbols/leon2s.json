@@ -4568,6 +4568,12 @@
       "name": "FUN_a00927a0",
       "status": "matched"
     },
+    "ram:a0092890": {
+      "by": "hand",
+      "comment": "on: writes the ARR_a807d580 halfword +0x18 to group-3 registers 1/2 and sets bits of registers 0xbd/0xbe; off: sets bit of 0xbe; then FUN_a00927a0(p, on, 0)",
+      "name": "FUN_a0092890",
+      "status": "matched"
+    },
     "ram:a0092944": {
       "by": "hand",
       "comment": "writes p[0..0xa0] to page-2 regs 3..0xa3 via a8054 in runs; reg-0x63 run in the integer address form (u32)i + (u32)p + 0x60",
