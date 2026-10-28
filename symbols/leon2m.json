@@ -3029,6 +3029,54 @@
       "of": "FUN_a00a14bc",
       "status": "matched"
     },
+    "ram:a008f4e8": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00a15d0; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a008f4e8",
+      "of": "FUN_a00a15d0",
+      "status": "matched"
+    },
+    "ram:a008f5d0": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00a15d0; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a008f5d0",
+      "of": "FUN_a00a15d0",
+      "status": "matched"
+    },
+    "ram:a008f6b8": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00a15d0; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a008f6b8",
+      "of": "FUN_a00a15d0",
+      "status": "matched"
+    },
+    "ram:a008f7a0": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00a177c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a008f7a0",
+      "of": "FUN_a00a177c",
+      "status": "matched"
+    },
+    "ram:a008f888": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00a177c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a008f888",
+      "of": "FUN_a00a177c",
+      "status": "matched"
+    },
+    "ram:a008f970": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00a177c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a008f970",
+      "of": "FUN_a00a177c",
+      "status": "matched"
+    },
     "ram:a008fc28": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a00a1a68; proven entry for entry by its exact check",
