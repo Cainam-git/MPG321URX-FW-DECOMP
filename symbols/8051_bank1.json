@@ -1085,6 +1085,14 @@
       "name": "FUN_CODE_83f3",
       "status": "matched"
     },
+    "CODE:8512": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "ORs into 0xA3E3 the bits of 8051->Big slots with header type 3, returns the next slot from 0xA3E2 with header bits 3..0 = 0; 0xFF when none",
+      "module": "FUN_CODE_9243",
+      "name": "FUN_CODE_8512",
+      "status": "matched"
+    },
     "CODE:8622": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
