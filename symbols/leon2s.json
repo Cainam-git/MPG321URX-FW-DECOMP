@@ -2962,7 +2962,7 @@
     },
     "ram:a0085914": {
       "by": "hand",
-      "comment": "Sets the low 3 bits of a port register from link state values and helper results",
+      "comment": "Sets bit 4, then writes the low 3 bits of 0xcf010c00 (parameter nonzero) or 0xcf0116dc (parameter 0) from global bytes and helper results; ends with two FUN_a00a7940 calls",
       "name": "FUN_a0085914",
       "status": "matched"
     },
