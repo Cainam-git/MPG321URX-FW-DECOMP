@@ -26,7 +26,7 @@ static unsigned char rx(unsigned char port, int i)
         c = DAT_a802d0d0[i];
     return c;
 }
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 extern void FUN_a00b88cc(void);
 
 void FUN_a00baa6c(unsigned char port)
