@@ -1,5 +1,5 @@
 /* RCT_Value (leon2s 0xa0075858-0xa0075ffc, 1956 bytes), flags -mcpu=v8 -Os -g.
- * u8 port, u8 ch; returns 0 or 1; called by DRV_HDMI_EQScan_FSM_PHY_PreRVGA. Every print is under bit 1 of
+ * u8 port, u8 ch; returns (u8) 0 or 1; called by DRV_HDMI_EQScan_FSM_PHY_PreRVGA. Every print is under bit 1 of
  * _DAT_a8078634. Data: ARR_a807a9f0 = 0x898-byte records (b34[3] at 0x34, two u32 tables [6][7][3] at 0x470
  * and 0x668, halfwords h860[6][3], per-channel {rct byte, halfword v} at 0x884, index bytes b890[3]);
  * ARR_a807ccc4 = 12-byte records {w0, w4, b8}; DAT_a8078988[port] byte flags; DAT_a00b3b80 / DAT_a00b3b88 =
@@ -42,7 +42,7 @@ extern const unsigned char DAT_a00b3b80[];
 extern const unsigned char DAT_a00b3b88[];
 extern int FUN_a0073044(const char *, ...);
 
-int RCT_Value(port, ch)
+unsigned char RCT_Value(port, ch)
     unsigned char port, ch;
 {
     unsigned int (*base)[3];
