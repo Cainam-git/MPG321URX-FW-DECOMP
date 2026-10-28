@@ -19495,6 +19495,13 @@
       "name": "FUN_a013adf4",
       "status": "matched"
     },
+    "ram:a013ae00": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "builds three rows of Q12 coefficients from bytes 0xa802a461/a462/cbbd and the tables at 0x1a566c-0x1a57b8, scaled by p, and passes them to FUN_a00f6fe4",
+      "name": "FUN_a013ae00",
+      "status": "matched"
+    },
     "ram:a013b42c": {
       "by": "autoc",
       "comment": "(halfword 0xA802A46C) = p1; FUN_a013ae00((byte 0xA802A460))",
