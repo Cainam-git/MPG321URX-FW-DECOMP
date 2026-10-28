@@ -14146,6 +14146,13 @@
       "name": "FUN_a010ace4",
       "status": "matched"
     },
+    "ram:a010ad28": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes (old & 0x80) | (v & 0x3f) to one of the registers 0xcf011dcc..0xcf011dd8 selected by c",
+      "name": "FUN_a010ad28",
+      "status": "matched"
+    },
     "ram:a010adb8": {
       "by": "hand",
       "comment": "empty routine",
