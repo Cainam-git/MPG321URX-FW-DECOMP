@@ -297,6 +297,16 @@ Keil C51:
 - **Shift counts in large functions:** give every shift site its own count local; one local reused at several sites
   lives across the function and goes to XDATA. In LARGE loops a count stays in a register only when the call that
   uses it sits inside an `if` condition or an `if` block without `else` (FUN_CODE_5a39, FUN_CODE_a085).
+- **A store to a LARGE local followed at once by a read of it** (`MOVX @DPTR,A; MOVX A,@DPTR`): the stored value came
+  from a `volatile` object, typically a hardware register at 0xF0xx/0xF1xx or memory written outside the 8051 program
+  (FUN_CODE_7df1, FUN_CODE_a142, FUN_CODE_42f6). Keil does not keep A equal to the local for volatile sources.
+- **Two identical call sequences that Keil merges but the firmware keeps:** end the inner block with `ACC = ACC;`.
+  It emits no code and keeps the block from being folded until after jump layout; document it as a compiler aid
+  (FUN_CODE_a8a3; also the `Jcc +2; SJMP` shape in FUN_CODE_960f and FUN_CODE_8512).
+- **A local loop guard after `ACC = 1;`:** `if (ACC == 1) f(...);` emits no test (Keil knows A) but keeps the shift
+  count locals of the call in registers (FUN_CODE_b881).
+- **Low byte first:** `(x & 0xffffff00) | ((unsigned long)r & 0xff)` evaluates the low-byte value first
+  (FUN_CODE_c103). A repeated index expression instead of a local copy avoids an extra `MOV R7,AR5` (FUN_CODE_42f6).
 - **A call and return, or `Jcc +2; SJMP`, at the end of both arms** of an if/else: write the shared statement in both
   arms (FUN_CODE_8622, FUN_CODE_db96, FUN_CODE_dbaf, FUN_CODE_18ab).
 - **`& 0xff` on a char operand** changes which operand is loaded first and stops the merging of a repeated array read
