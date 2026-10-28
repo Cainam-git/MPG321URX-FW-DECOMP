@@ -11426,6 +11426,13 @@
       "name": "FUN_a00ea1f0",
       "status": "matched"
     },
+    "ram:a00ea25c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "byte_idx > 3 / dq_idx > 7 -> error message, -1; else FUN_a00e05d8(a, byte_idx * 3 + 0x1b5, 1 << dq_idx, on == 1 ? mask : 0), 0",
+      "name": "FUN_a00ea25c",
+      "status": "matched"
+    },
     "ram:a00eb708": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
