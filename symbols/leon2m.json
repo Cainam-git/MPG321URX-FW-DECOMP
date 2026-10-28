@@ -11459,6 +11459,13 @@
       "name": "FUN_a00f176c",
       "status": "matched"
     },
+    "ram:a00f18d4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes the low and high byte of val to registers reg and reg + 1 of block blk (blk 2: blocks 0 and 1) via the DAT_a8026a7a base table",
+      "name": "FUN_a00f18d4",
+      "status": "matched"
+    },
     "ram:a00f19a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
