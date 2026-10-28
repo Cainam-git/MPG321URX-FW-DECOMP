@@ -298,6 +298,8 @@ def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False, placed=None):
                 # (n = -1: a mergeable string section, each string checked on its own)
                 pools.append((sec, -1 if split_pools and merge else 0, b.read_bytes()))
                 place.append((sec, [len(img) + 0x10000 + 0x1000 * len(pools)])); continue
+            if not hits and merge and not split_pools:   # merged pool not found in one piece: check it per reference
+                return exact(cpu, fn, obj, sym, solve, True, placed)
             if not hits: return f"its constant data/strings ({len(data)} bytes) are not in the firmware in this order"
             place.append((sec, hits))
 
