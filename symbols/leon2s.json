@@ -9593,6 +9593,12 @@
       "name": "FUN_a00d9edc",
       "status": "matched"
     },
+    "ram:a00da030": {
+      "by": "hand",
+      "comment": "Copies 0x30 ring bytes, writes up to cnt of them plus a FUN_a00d9988 result into register block DAT_a807609c[DAT_a8078832], and advances the ring index",
+      "name": "FUN_a00da030",
+      "status": "matched"
+    },
     "ram:a00da388": {
       "by": "hand",
       "comment": "steps a 4-bit table index, updates per-index counters and clears bit 4 or 5 of register word 0xccc",
