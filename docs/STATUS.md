@@ -4,13 +4,13 @@
 
 | Processor | Section | Matched bytes | Total bytes | Matched | Matched functions | Functions |
 |---|---|---:|---:|---:|---:|---:|
-| Main processor | `leon2m` | 771,233 | 935,449 | 82.4 % | 3,669 | 3,859 |
-| Input processor | `leon2s` | 352,349 | 411,733 | 85.6 % | 1,622 | 1,686 |
+| Main processor | `leon2m` | 771,913 | 935,449 | 82.5 % | 3,674 | 3,859 |
+| Input processor | `leon2s` | 352,561 | 411,733 | 85.6 % | 1,624 | 1,686 |
 | Helper processor | `8051_bank0` (boot loader) | 6,182 | 6,182 | 100.0 % | 52 | 52 |
 | Helper processor | `8051_bank1` (main application) | 52,673 | 53,226 | 99.0 % | 428 | 430 |
 | Helper processor | `8051_bank2` (update agent) | 52,590 | 52,590 | 100.0 % | 283 | 283 |
 | Tensilica processor | `8051_bank3` (Xtensa program image) | 65,536 | 65,536 | 100.0 % | 307 | 307 |
-| **Total** | | **1,300,563** | **1,524,716** | **85.3 %** | **6,361** | **6,617** |
+| **Total** | | **1,301,455** | **1,524,716** | **85.4 %** | **6,368** | **6,617** |
 
 To recount and update this table and the progress bars in the README, run `python3 -I tools/stats.py`. Byte counts
 come from the function sizes in `symbols/<section>.functions.json`.
