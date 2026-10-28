@@ -22695,6 +22695,13 @@
       "name": "FUN_a014b3fc",
       "status": "matched"
     },
+    "ram:a014b4b4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Loop i over 0..6 (p 0xfe) or an empty range from FUN_a014af84(p): FUN_a01340b0(1 << i, on) or func_0x4008c86c with FUN_a01254f8/5530/5568(i)",
+      "name": "FUN_a014b4b4",
+      "status": "matched"
+    },
     "ram:a014b65c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
