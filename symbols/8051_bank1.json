@@ -1561,6 +1561,13 @@
       "name": "FUN_CODE_b781",
       "status": "matched"
     },
+    "CODE:b802": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "comment": "calls FUN_CODE_9bde with the low five bits of 0xA62F entry [0xA64D] byte 0 when they are 0..12",
+      "name": "FUN_CODE_b802",
+      "status": "matched"
+    },
     "CODE:b881": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
