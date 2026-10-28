@@ -8749,6 +8749,12 @@
       "name": "FUN_a00ccad4",
       "status": "matched"
     },
+    "ram:a00ccb04": {
+      "by": "hand",
+      "comment": "Sets the 2-bit field of DAT_a8078bb0[port] word 0 to 1, checks a counter and the owner byte DAT_a807d636, then issues FUN_a00c7654/FUN_a00c87e8 writes from two byte tables",
+      "name": "FUN_a00ccb04",
+      "status": "matched"
+    },
     "ram:a00ccd20": {
       "by": "hand",
       "comment": "port record st bit-field = 1, then 3 or 2 by c966c(port)",
