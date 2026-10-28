@@ -6941,6 +6941,14 @@
       "name": "FUN_a00ad828",
       "status": "matched"
     },
+    "ram:a00ad8f0": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00ada24; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00ad8f0",
+      "of": "FUN_a00ada24",
+      "status": "matched"
+    },
     "ram:a00ada24": {
       "by": "hand",
       "comment": "Returns a code byte for a port from register 0xbd/0x8d readings with table lookups and adjustments",
