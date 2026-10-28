@@ -774,6 +774,13 @@
       "name": "FUN_CODE_3091",
       "status": "matched"
     },
+    "CODE:34c8": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "by type and p[1..4]: copies p[i + 4] into the 0xA6EF / 0xA6F6 table, writes bytes through FUN_CODE_d884 and sets or clears bits of XDATA 0xA6FD",
+      "name": "FUN_CODE_34c8",
+      "status": "matched"
+    },
     "CODE:38a7": {
       "by": "hand",
       "c51opts": "OPTIMIZE(8,SPEED) LARGE",
