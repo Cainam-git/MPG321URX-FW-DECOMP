@@ -5,7 +5,7 @@
  */
 extern unsigned char FUN_a00863d4(unsigned int param_1, unsigned int param_2, unsigned int param_3, char param_4, unsigned int param_5);
 
-unsigned char FUN_a0086540(unsigned int param_1, unsigned int param_2, char param_3, unsigned char param_4)
+unsigned char FUN_a0086540(unsigned int param_1, unsigned int param_2, unsigned char param_3, unsigned char param_4)
 {
     unsigned char buffer[4];
     unsigned char local_10;
