@@ -1783,6 +1783,13 @@
       "name": "FUN_a002c11c",
       "status": "matched"
     },
+    "ram:a002c194": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns the low byte of hardware register 0xcf03c800 + 4 * (ch - 1) for ch 1..4, else 0",
+      "name": "FUN_a002c194",
+      "status": "matched"
+    },
     "ram:a002c204": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
