@@ -13978,6 +13978,13 @@
       "name": "FUN_a010a2cc",
       "status": "matched"
     },
+    "ram:a010a3a8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets or clears bit 4 of 0xcf01e684 / 0xcf01e688 / 0xcf01e68c by c (1, 2, other) and on",
+      "name": "FUN_a010a3a8",
+      "status": "matched"
+    },
     "ram:a010a494": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
