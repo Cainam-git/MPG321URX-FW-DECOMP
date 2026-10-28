@@ -31,7 +31,7 @@ typedef int code();
 #define SEXT24(x) ((int)(short)(x))
 #define SEXT12(x) ((short)(signed char)(x))
 extern unsigned char DAT_a802e403;
-extern int FUN_a002992c();
+extern void FUN_a002992c(unsigned char on);
 extern int func_0x0007e65c();
 extern int func_0x0007f170();
 extern int func_0x000bd194();
