@@ -2406,7 +2406,7 @@
     "ram:a0082dc4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "computes order, cnt and res from the 0xa802d290 bytes and two FUN_a0145660 values, prints num and order",
+      "comment": "computes order, cnt and res from the 0xa802d290 bytes and two FUN_a0145660 values, prints h and order",
       "name": "FUN_a0082dc4",
       "status": "matched"
     },
