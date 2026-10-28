@@ -6,10 +6,18 @@
  * 0xB222 used by 9243's two calls. Keil builds such a block only from calls inside the same module, so these
  * functions were one module; without 8512 in the unit the bytes of 9243 differ.
  * Other members of this unit: FUN_CODE_a4e9 and FUN_CODE_b228 are the bodies of src/8051_bank1/FUN_CODE_a4e9.c and
- *   FUN_CODE_b228.c. FUN_CODE_8512 and FUN_CODE_960f are written from the firmware logic and are not byte-exact
- *   (not matched in symbols); their call sites give the a4e9 block, but two shapes of their own bytes differ: (1) the slot test 'ULCMP / JZ +2 / SJMP
- *   break' (fw 0x9649, 0x96A6, 0x859E, 0x85EA; every 'if (..) break' form tried gives a direct JNZ/JZ), (2) in 8512
- *   the bit mask '1 << n' is fw 'CLR A / INC A / MOV R0,R7' (this source gives 'CLR A / MOV R0,R7 / INC A').
+ *   FUN_CODE_b228.c.
+ * FUN_CODE_960f: returns the next Big->8051 slot (0..3) whose header (word +0x10 + 20*i) has bits 3..0 != 0, searched
+ *   from the index in XDATA 0xA358 with wrap-around (a second pass from the start index when the first stopped
+ *   part-way), and advances 0xA358 past it; returns 0xFE when none is found.
+ * FUN_CODE_8512: clears 0xA3E3 and ORs into it the bit (header >> 8) of every 8051->Big slot whose header bits 3..0
+ *   are 3; then returns the next slot from the index in 0xA3E2 whose header bits 3..0 are 0 (same two-pass search),
+ *   0xFF when none is found.
+ * Compiler aid (960f, 8512): each slot-test 'break' is written as '{ ACC = ACC; break; }' (sfr ACC). 'ACC = ACC;'
+ *   emits no instructions; the then-arm keeps a statement until after the jumps are laid out, which leaves the
+ *   firmware's 'JZ / JNZ +2; SJMP exit' pair after ?C?ULCMP (a bare 'break' gives one inverted jump).
+ * Source form (8512): the mask is '(c = (head >> 8) & 0xff, ACC = 1, ACC << c)' (ACC from reg51.h); Keil knows A = 0
+ *   from the '& 0xff' of the high bytes and emits 'CLR A; INC A' before 'MOV R0,AR7' as in the firmware.
  * Key for 9243: the d5a1 argument is '(unsigned int)(idx * 20 + 0x10)' (fw zero-extends R4/R5 with CLR A).
  * Mailbox layout (code facts; AHB 0x9F0A0100 + offset = the Main <-> helper portal, FUN_CODE_a4e9 = read n words,
  *   FUN_CODE_b228 = write n words):
@@ -36,6 +44,7 @@
  *   happens when the Big chip writes a command word here.
  * volatile only on 0xF00A (hardware register); everything else is RAM or goes through the AHB bridge functions.
  */
+#include <reg51.h>
 typedef union { unsigned long l; unsigned char b[4]; } DW;
 extern unsigned char volatile xdata DAT_EXTMEM_f00a;
 extern unsigned char xdata DAT_EXTMEM_a770;
@@ -64,17 +73,18 @@ unsigned char FUN_CODE_8512(void)
     unsigned long head;
     unsigned char r;
     unsigned char start;
+    unsigned char c;
 
     r = 0xff;
     DAT_EXTMEM_a3e3 = 0;
     for (r = 0; r < 4; r++) {
         FUN_CODE_a4e9(r * 20 + 0x60, &head, 1);
-        if ((head & 0x0f) == 3) DAT_EXTMEM_a3e3 |= 1 << ((head >> 8) & 0xff);
+        if ((head & 0x0f) == 3) DAT_EXTMEM_a3e3 |= (c = (head >> 8) & 0xff, ACC = 1, ACC << c);
     }
     start = DAT_EXTMEM_a3e2;
     for (r = 0; r < 4; r++) {
         FUN_CODE_a4e9(DAT_EXTMEM_a3e2 * 20 + 0x60, &head, 1);
-        if ((head & 0x0f) == 0) break;
+        if ((head & 0x0f) == 0) { ACC = ACC; break; }
         DAT_EXTMEM_a3e2++;
         if (DAT_EXTMEM_a3e2 >= 4) DAT_EXTMEM_a3e2 = 0;
     }
@@ -82,7 +92,7 @@ unsigned char FUN_CODE_8512(void)
         DAT_EXTMEM_a3e2 = start;
         for (r = 0; r < 4; r++) {
             FUN_CODE_a4e9(DAT_EXTMEM_a3e2 * 20 + 0x60, &head, 1);
-            if ((head & 0x0f) == 0) break;
+            if ((head & 0x0f) == 0) { ACC = ACC; break; }
             DAT_EXTMEM_a3e2++;
             if (DAT_EXTMEM_a3e2 >= 4) DAT_EXTMEM_a3e2 = 0;
         }
@@ -102,7 +112,7 @@ unsigned char FUN_CODE_960f(void)
     start = DAT_EXTMEM_a358;
     for (r = 0; r < 4; r++) {
         FUN_CODE_a4e9(DAT_EXTMEM_a358 * 20 + 0x10, &hdr, 1);
-        if ((hdr & 0x0f) != 0) break;
+        if ((hdr & 0x0f) != 0) { ACC = ACC; break; }
         DAT_EXTMEM_a358++;
         if (DAT_EXTMEM_a358 >= 4) DAT_EXTMEM_a358 = 0;
     }
@@ -110,7 +120,7 @@ unsigned char FUN_CODE_960f(void)
         DAT_EXTMEM_a358 = start;
         for (r = 0; r < 4; r++) {
             FUN_CODE_a4e9(DAT_EXTMEM_a358 * 20 + 0x10, &hdr, 1);
-            if ((hdr & 0x0f) != 0) break;
+            if ((hdr & 0x0f) != 0) { ACC = ACC; break; }
             DAT_EXTMEM_a358++;
             if (DAT_EXTMEM_a358 >= 4) DAT_EXTMEM_a358 = 0;
         }
