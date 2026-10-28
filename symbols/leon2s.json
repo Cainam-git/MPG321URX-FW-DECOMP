@@ -2502,6 +2502,12 @@
       "name": "DRV_HDMI21_Print_SCDC_Error",
       "status": "matched"
     },
+    "ram:a0079778": {
+      "by": "hand",
+      "comment": "Calls FUN_a00a7424 for a mode-dependent register list in forward or reverse order",
+      "name": "FUN_a0079778",
+      "status": "matched"
+    },
     "ram:a00798fc": {
       "by": "autoc",
       "comment": "Calls FUN_a00a7488(p1, a, 0xffffff, 0x38000000) for a = 0x217c, 0x257c, 0x297c, 0x317c, then FUN_a00a7424(1, 7, p1, a) for a = 0x2178, 0x2578, 0x2978, 0x3178",
