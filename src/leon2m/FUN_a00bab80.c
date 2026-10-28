@@ -4,7 +4,7 @@
  * are tail calls.
  */
 extern unsigned char DAT_a802d078[], DAT_a802d108[], DAT_a802d128[];
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 
 void FUN_a00bab80(unsigned char port, unsigned char len)
 {
