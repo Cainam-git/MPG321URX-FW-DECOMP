@@ -16,8 +16,8 @@
  * one of twelve 17-wide windows. v is written to 0x105, 0x104, 0x103. 4/6 write 0x101, read two 24-bit pairs
  * from regs 0x82..0x87 with bit 5 of reg 0x81 clear and set (restored afterwards), return 1 when a divisor is 0,
  * scale them by bits 0..1 of reg 0x80, pick row k / 6 (quotient f in 436..446: 0, 475..485: 2, else 1) and
- * column k % 6 (five limits on the second quotient) and write the words DAT_a00b41a0[k] and DAT_a00b41e8[k] to 0x103..0x105 and 0x106..0x108. Other modes write 0x101 and
- * 0, 0x18, 0 to 0x103..0x105.
+ * column k % 6 (five limits on the second quotient) and write the words DAT_a00b41a0[k] and DAT_a00b41e8[k]
+ * to 0x103..0x105 and 0x106..0x108. Other modes write 0x101 and 0, 0x18, 0 to 0x103..0x105.
  * Source form: old-style parameter declarations; both mode dispatches are switches with grouped cases; the
  * row selections are switches with the default case first; each scaling arm computes both quotients itself;
  * the 24-bit values of the 4/6 path are built in three statements.
