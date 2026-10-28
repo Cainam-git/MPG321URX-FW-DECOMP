@@ -1999,6 +1999,12 @@
       "name": "FUN_a006e990",
       "status": "matched"
     },
+    "ram:a006ed54": {
+      "by": "hand",
+      "comment": "Link status step of a port record: stream checks, per-status register sequences and change prints",
+      "name": "DP_GetClrSpace",
+      "status": "matched"
+    },
     "ram:a006fa28": {
       "by": "hand",
       "comment": "calls FUN_a006d4e0, LINK_STANDBY, LINK_STANDBY_2 and DP_GetClrSpace for records 0..5 of DAT_a807a824, then FUN_a008c8b0",
