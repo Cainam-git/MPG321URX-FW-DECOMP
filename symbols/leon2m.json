@@ -21746,6 +21746,13 @@
       "name": "FUN_a0147d70",
       "status": "matched"
     },
+    "ram:a0147fb4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Scans s for its length (at most 0x2c), then retries FUN_a0123c80(s, n) while register 2*ch+0xf190 reads 0x96; 0x46 handshake on 2*ch+0xf191, returns 3, FUN_a0147d70() or 4",
+      "name": "FUN_a0147fb4",
+      "status": "matched"
+    },
     "ram:a0148120": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
