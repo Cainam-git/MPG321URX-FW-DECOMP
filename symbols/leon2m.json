@@ -12382,6 +12382,13 @@
       "name": "FUN_a00f8938",
       "status": "matched"
     },
+    "ram:a00f896c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes register 0 of block p from FUN_a00fd820(p) (0, 1 or 2), then w/8 and h/8 rounded up and x to 0x10/0x12/0x14 and 0x4a to 0x16",
+      "name": "FUN_a00f896c",
+      "status": "matched"
+    },
     "ram:a00f8a98": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
