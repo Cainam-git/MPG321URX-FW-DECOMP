@@ -16692,6 +16692,13 @@
       "name": "FUN_a0124b40",
       "status": "matched"
     },
+    "ram:a0124d24": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns 1 for n 0xfc..0xfe; for n <= 7 with record byte +0x0b != 0xff, 1 when func_0x4008cd38(+0x0b, +0x0c) & 0xff equals byte +0x0d; else 0",
+      "name": "FUN_a0124d24",
+      "status": "matched"
+    },
     "ram:a0124da4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
