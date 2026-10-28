@@ -23000,6 +23000,13 @@
       "name": "FUN_a0150b08",
       "status": "matched"
     },
+    "ram:a0150b8c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Builds five 12-halfword tables on the stack and passes table sel (or 0 when sel > 4) to FUN_a00f6fe4(1, 2, ..., 0xff)",
+      "name": "FUN_a0150b8c",
+      "status": "matched"
+    },
     "ram:a0150da4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
