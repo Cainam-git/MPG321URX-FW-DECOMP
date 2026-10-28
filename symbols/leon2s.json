@@ -1657,6 +1657,12 @@
       "name": "FUN_a006155c",
       "status": "matched"
     },
+    "ram:a0061578": {
+      "by": "hand",
+      "comment": "Replaces byte (addr & 3) of the aligned word at addr & ~3 with the low byte of v",
+      "name": "FUN_a0061578",
+      "status": "matched"
+    },
     "ram:a00615ac": {
       "by": "hand",
       "comment": "returns FUN_a0061528(p)",
