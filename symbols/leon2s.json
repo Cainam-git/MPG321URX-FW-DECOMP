@@ -3415,6 +3415,12 @@
       "name": "FUN_a0089e74",
       "status": "matched"
     },
+    "ram:a0089f00": {
+      "by": "hand",
+      "comment": "Calls FUN_a00a78fc(i, 0x11, 0x1b or 0) for i = 1..4 by bit 2 of 0xcf03c940 and prints the EDP post pattern message with the final i",
+      "name": "FUN_a0089f00",
+      "status": "matched"
+    },
     "ram:a0089f84": {
       "by": "autoc",
       "comment": "returns byte 0xA8076690[(p1 & 0xff)]",
