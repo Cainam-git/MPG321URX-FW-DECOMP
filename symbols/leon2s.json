@@ -3343,6 +3343,12 @@
       "name": "FUN_a008983c",
       "status": "matched"
     },
+    "ram:a0089898": {
+      "by": "hand",
+      "comment": "Returns FUN_a00a7a5c(port, 0x50) times a factor selected by register 2, divided by the 24-bit value of registers 0x53..0x55",
+      "name": "FUN_a0089898",
+      "status": "matched"
+    },
     "ram:a008996c": {
       "by": "hand",
       "comment": "When bit 0 of FUN_a00a78b4(port, 0x7b) is set, compares FUN_a00b2064() with the halfwords of record port of DAT_a807cd04 and updates its bytes and halfword",
