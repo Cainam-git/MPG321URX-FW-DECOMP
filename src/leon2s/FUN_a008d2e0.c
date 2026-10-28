@@ -4,9 +4,9 @@
  * 0x35 / 0x80 to them, clears 0xcf012228 / 0xcf012240 / 0xcf012244, writes 2 to 0xcf01224c and the sequence
  * 0x61, 0x60, 0x40, 0x60, 0x70 to 0xcf012248 with FUN_a00b160c(5) / (1) / (1) / (1) between the writes.
  * ok = 1 when the low byte of FUN_a008d0b8(start) is 1. For k < len, with a = start + k (u16): when ok and the
- * low byte of FUN_a008d1d8(a) is 1, ((unsigned char *)out)[k] = FUN_a008d280(a); otherwise the low byte of a goes to
- * 0xcf012240, a >> 8 to 0xcf012244 and ((unsigned char *)out)[k] = the value read from 0xcf012200. Finally restores the two
- * saved bytes.
+ * low byte of FUN_a008d1d8(a) is 1, byte k of out = FUN_a008d280(a); otherwise the low byte of a goes to
+ * 0xcf012240, a >> 8 to 0xcf012244 and byte k of out = the value read from 0xcf012200. Finally restores the
+ * two saved bytes.
  * Source form: the register read is written twice (in the else arm of the FUN_a008d1d8 test and in the else
  * arm of the ok test); the low byte is '(unsigned char)a'.
  */
