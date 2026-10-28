@@ -20120,6 +20120,13 @@
       "name": "FUN_a0140500",
       "status": "matched"
     },
+    "ram:a01405d0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Advance the index byte of device dev's RAM area row and issue the FUN_a013588c / FUN_a0134428 / FUN_a0134394 sequence for the old and new row addresses",
+      "name": "FUN_a01405d0",
+      "status": "matched"
+    },
     "ram:a0140a0c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
