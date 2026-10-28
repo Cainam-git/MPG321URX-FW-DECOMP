@@ -9485,6 +9485,12 @@
       "name": "FUN_a00d8300",
       "status": "matched"
     },
+    "ram:a00d84f4": {
+      "by": "hand",
+      "comment": "Builds a record with FUN_a00d73b4, passes a derived record to FUN_a00d791c and writes register block DAT_a807609c[DAT_a8078832] by bits 20..23 of the record",
+      "name": "FUN_a00d84f4",
+      "status": "matched"
+    },
     "ram:a00d8714": {
       "by": "hand",
       "comment": "7-bit command field (bit-field); register-block writes through DAT_a807609c[] incl. the +0x2b0 bit 4 pulse and the +0x2ac save / write / restore (volatile = register blocks)",
