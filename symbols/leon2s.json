@@ -5473,6 +5473,12 @@
       "name": "FUN_a00a03c8",
       "status": "matched"
     },
+    "ram:a00a0478": {
+      "by": "hand",
+      "comment": "Fills two bytes from word 2 of the register block of ARR_a807db00[port], or clears five bytes when FUN_a00a03c8(port) is 0",
+      "name": "FUN_a00a0478",
+      "status": "matched"
+    },
     "ram:a00a0514": {
       "by": "hand",
       "comment": "FUN_a00a73ac(9, word 0 + 0x78) for both 0x34-byte records at 0xA807DB00",
