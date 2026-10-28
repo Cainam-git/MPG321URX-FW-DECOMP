@@ -6243,6 +6243,13 @@
       "name": "FUN_a00a7d70",
       "status": "matched"
     },
+    "ram:a00a7e00": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Draws nothing itself: issues the FUN_a0146a80 / FUN_a00b32e4 / FUN_a0146b20 calls for row m * 2 + 5 (m > 6: m * 2 - 9) selected by m",
+      "name": "FUN_a00a7e00",
+      "status": "matched"
+    },
     "ram:a00a813c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
