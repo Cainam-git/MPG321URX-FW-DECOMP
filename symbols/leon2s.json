@@ -9399,6 +9399,12 @@
       "name": "FUN_a00d78d8",
       "status": "matched"
     },
+    "ram:a00d7bf8": {
+      "by": "hand",
+      "comment": "Repeats setting bit 3 of register word 0xf7 while it reads back set, then sets bit 7 of word 0x30",
+      "name": "FUN_a00d7bf8",
+      "status": "matched"
+    },
     "ram:a00d7ca4": {
       "by": "autoc",
       "comment": "Clears bit 7 of the word at p + 0xC0, where p is word (byte 0xA8078832) of the word table at 0xA80760A4",
