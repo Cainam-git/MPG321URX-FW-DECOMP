@@ -442,7 +442,14 @@ def judge(bank, fn, cfile, opts=None):
         else: marks.append("*")
     match = len(b) == len(target) and same == n
     filled = {}
+    lib = ROOT / "symbols" / f"{bank}.libs.json"; before = set(_libs_load(lib)) if match and fx else set()
     reason = exact8051(tmp / "u.LST", fn, start, b, target, bank, eb[0] if eb else None, fstart - start, filled) if match and fx else None
+    if match and fx and (reason or why):   # addresses learned by a draft that is not exact must not stay recorded
+        cur = _libs_load(lib); new = set(cur) - before
+        if new:
+            for k in new: del cur[k]
+            tmpf = lib.with_name(f".{lib.name}.{os.getpid()}.{threading.get_ident()}.tmp")
+            tmpf.write_text(json.dumps(cur, indent=2, sort_keys=True)); os.replace(tmpf, lib)
     reason = why or reason
     if reason: match = False; same = min(same, n - 1)
     return {"ok": True, "match": match, "score": 100.0 * same / n, "len_target": len(target), "len_compiled": len(b),
