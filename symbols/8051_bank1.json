@@ -1198,6 +1198,14 @@
       "name": "FUN_CODE_9522",
       "status": "matched"
     },
+    "CODE:960f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "comment": "returns the next Big->8051 mailbox slot whose header bits 3..0 are set, round robin from 0xA358; 0xFE when none",
+      "module": "FUN_CODE_9243",
+      "name": "FUN_CODE_960f",
+      "status": "matched"
+    },
     "CODE:96eb": {
       "by": "hand",
       "comment": "STBC start-up before the Big chip runs: loads the bank-2 image block, USB key",
