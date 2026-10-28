@@ -20084,6 +20084,13 @@
       "name": "FUN_a013fbe8",
       "status": "matched"
     },
+    "ram:a013fe2c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Copy the DAT_001a5a16 row whose halfword +0x22 equals v into the record FUN_a013cd4c(port) and call FUN_a01542c4 unless FUN_a01541ec is set",
+      "name": "FUN_a013fe2c",
+      "status": "matched"
+    },
     "ram:a013ffb0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
