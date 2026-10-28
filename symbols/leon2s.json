@@ -6941,6 +6941,12 @@
       "name": "FUN_a00ad828",
       "status": "matched"
     },
+    "ram:a00ada24": {
+      "by": "hand",
+      "comment": "Returns a code byte for a port from register 0xbd/0x8d readings with table lookups and adjustments",
+      "name": "FUN_a00ada24",
+      "status": "matched"
+    },
     "ram:a00add0c": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
