@@ -3146,6 +3146,12 @@
       "name": "FUN_a0087364",
       "status": "matched"
     },
+    "ram:a008743c": {
+      "by": "hand",
+      "comment": "Two passes over the selected ports: FUN_a00aa930/FUN_a0086fb0/FUN_a008642c, then a FUN_a0087364 status loop with FUN_a0086540 retries; clears mask bits of failing ports",
+      "name": "FUN_a008743c",
+      "status": "matched"
+    },
     "ram:a00876ec": {
       "by": "hand",
       "comment": "Returns the byte at table + x * 40 + 0x15 for a byte index x; the multiply is emitted as ((x << 2) + x) << 3. Same form as FUN_a00858f0 and FUN_a0091c38.",
