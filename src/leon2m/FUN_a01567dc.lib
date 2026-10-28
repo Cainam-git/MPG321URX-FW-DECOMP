@@ -1,0 +1,3 @@
+libgcc.a _ge_df.o __gedf2
+# leon2m FUN_a01567dc: toolchain library function __gedf2 (libgcc.a:_ge_df.o, 100 bytes; the same code as the other
+# double compares); its callers branch on a greater-or-equal result. The archive member is the source.

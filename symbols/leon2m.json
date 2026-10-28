@@ -23414,30 +23414,36 @@
       "symbol": "__divdf3"
     },
     "ram:a01566b0": {
-      "by": "twin",
-      "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "Unpacks the doubles a and b with FUN_a015734c into two 6-word local buffers; returns 1 when word 0 of either buffer is <= 1, otherwise FUN_a0157480(buf1, buf2)",
+      "by": "lib",
+      "comment": "toolchain library function __eqdf2 from libgcc.a:_eq_df.o (identical code to the other double compares; link order: it precedes __nedf2, __gtdf2 and __gedf2 as in libgcc.a (eq, ne, gt, ge)); byte-exact, no C needed",
+      "lib": "libgcc.a:_eq_df.o",
       "name": "FUN_a01566b0",
-      "status": "matched"
+      "status": "matched",
+      "symbol": "__eqdf2"
     },
     "ram:a0156714": {
-      "by": "hand",
-      "comment": "Double-precision comparison helper: stores the two double arguments to the stack (std %i0, [%fp-64]; std %i2, [%fp-72]), unpacks them with __unpack_d(double *src, unsigned int *dst) into buffers at %fp-32 and %fp-56, and returns 1 if the first (class) word of either buffer is <= 1 (unsigned, bleu with mov 1, %i0 in the delay slot); otherwise returns the result of __fpcmp_parts_d. Source: if (buf1[0] <= 1 || buf2[0] <= 1) return 1;",
+      "by": "lib",
+      "comment": "toolchain library function __nedf2 from libgcc.a:_ne_df.o (identical code to the other double compares; link order: between __eqdf2 and __gtdf2 as in libgcc.a); byte-exact, no C needed",
+      "lib": "libgcc.a:_ne_df.o",
       "name": "FUN_a0156714",
-      "status": "matched"
+      "status": "matched",
+      "symbol": "__nedf2"
     },
     "ram:a0156778": {
-      "by": "twin",
-      "cflags": "-mcpu=v8 -O2 -g",
-      "comment": "Unpacks the doubles a and b with FUN_a015734c into two 6-word local buffers; returns -1 when word 0 of either buffer is <= 1, otherwise FUN_a0157480(buf1, buf2)",
+      "by": "lib",
+      "comment": "toolchain library function __gtdf2 from libgcc.a:_gt_df.o (identical code to the other double compares; its callers branch on a greater-than result); byte-exact, no C needed",
+      "lib": "libgcc.a:_gt_df.o",
       "name": "FUN_a0156778",
-      "status": "matched"
+      "status": "matched",
+      "symbol": "__gtdf2"
     },
     "ram:a01567dc": {
-      "by": "hand",
-      "comment": "Double-precision comparison helper: unpacks both double arguments with __unpack_d and returns -1 if the class word of either is <= 1 (bleu with mov -1, %i0 in the delay slot); otherwise returns the result of __fpcmp_parts_d. Same structure as FUN_a015e774 and FUN_a0156714, which return 1 in that case.",
+      "by": "lib",
+      "comment": "toolchain library function __gedf2 from libgcc.a:_ge_df.o (identical code to the other double compares; its callers branch on a greater-or-equal result); byte-exact, no C needed",
+      "lib": "libgcc.a:_ge_df.o",
       "name": "FUN_a01567dc",
-      "status": "matched"
+      "status": "matched",
+      "symbol": "__gedf2"
     },
     "ram:a0156840": {
       "by": "lib",
