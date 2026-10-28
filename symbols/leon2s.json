@@ -1999,6 +1999,14 @@
       "name": "FUN_a006e990",
       "status": "matched"
     },
+    "ram:a006ed40": {
+      "by": "table",
+      "comment": "jump table of the switch in DP_GetClrSpace; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a006ed40",
+      "of": "DP_GetClrSpace",
+      "status": "matched"
+    },
     "ram:a006ed54": {
       "by": "hand",
       "comment": "Link status step of a port record: stream checks, per-status register sequences and change prints",
