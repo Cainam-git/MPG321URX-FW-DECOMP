@@ -3,7 +3,8 @@
 ## Rules
 
 1. **Matched means byte-exact at the real address.** Use `tools/diff.py` and `tools/exact.py` for the LEON
-   processors, and `tools/diff8051.py` for the 8051. Drafts do not belong in `src/`.
+   processors, `tools/diff8051.py` for the 8051, and `tools/xtensa_check.py` for the Tensilica program. Drafts do not belong in
+   `src/`.
 2. **One file per function** in `src/<section>/`. Each file starts with a comment that explains:
    - What the function does, and who calls it.
    - The data layouts it relies on.

@@ -4,13 +4,13 @@
 
 | Processor | Section | Matched bytes | Total bytes | Matched | Matched functions | Functions |
 |---|---|---:|---:|---:|---:|---:|
-| Main processor | `leon2m` | 776,105 | 935,481 | 83.0 % | 3,686 | 3,860 |
+| Main processor | `leon2m` | 776,857 | 935,481 | 83.0 % | 3,687 | 3,860 |
 | Input processor | `leon2s` | 359,833 | 411,733 | 87.4 % | 1,632 | 1,686 |
 | Helper processor | `8051_bank0` (boot loader) | 6,182 | 6,182 | 100.0 % | 52 | 52 |
 | Helper processor | `8051_bank1` (main application) | 52,673 | 53,226 | 99.0 % | 428 | 430 |
 | Helper processor | `8051_bank2` (update agent) | 52,590 | 52,590 | 100.0 % | 283 | 283 |
 | Tensilica processor | `8051_bank3` (Xtensa program image) | 65,536 | 65,536 | 100.0 % | 307 | 307 |
-| **Total** | | **1,312,919** | **1,524,748** | **86.1 %** | **6,388** | **6,618** |
+| **Total** | | **1,313,671** | **1,524,748** | **86.2 %** | **6,389** | **6,618** |
 
 To recount and update this table and the progress bars in the README, run `python3 -I tools/stats.py`. Byte counts
 come from the function sizes in `symbols/<section>.functions.json`.
@@ -69,10 +69,11 @@ compares it with the firmware. The entries below are not confirmed by that scrip
   the original file, with every matched function built from source.
 - Code that was in no function range: the gaps between the listed functions of all sections have been checked and
   the missing routines and jump tables added. Further additions make the totals in the table grow.
-- 8051 functions that differ only in the order of the loads before a shift loop. Where the shifted value is a
-  constant or a register, writing it to `ACC` first gives the firmware's order (see the matching notes); the
-  functions with a computed shift count, and 16-bit shifts next to register parameters, are still open.
-- The Tensilica program as C: it is matched as assembly source; C source would need its original compiler (Cadence
-  XCC), which is not available.
+- The last two 8051 functions (`8051_bank1 FUN_CODE_50c9` and `FUN_CODE_d351`), which differ only in the order of
+  a few register loads.
 - The unmatched LEON functions, most of them large. Functions that were tried but not matched yet have notes on
   what still differs.
+- The Tensilica program as C: it is matched as assembly source; C source would need its original compiler, which is
+  not available.
+- After matching: replacing Ghidra's labels (`FUN_…`, `DAT_…`) with descriptive names, shared data structures and
+  comments, and grouping the functions into source files by topic.

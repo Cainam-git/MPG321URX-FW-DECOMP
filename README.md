@@ -6,6 +6,8 @@ The goal is readable source code for every function in the firmware. Compiled wi
 source reproduces the original firmware file byte for byte. A function only counts as done when it matches exactly,
 so every file in `src/` is a proven reconstruction, not an approximation.
 
+The project is a reference and documentation of how this monitor's firmware works. It is not meant to be flashed.
+
 ## Inside the monitor
 
 The monitor is driven by a Novatek NT68500 scaler chip. The firmware holds programs for four processors:
@@ -20,15 +22,15 @@ The monitor is driven by a Novatek NT68500 scaler chip. The firmware holds progr
 ## Progress
 
 ```
-Main processor      [################----]   82 %
+Main processor      [################----]   83 %
 Input processor     [#################---]   87 %
 Helper processor    [###################-]   99 %
 Tensilica processor [####################]  100 %
 Overall             [#################---]   86 %
 ```
 
-Percentages are by code size. More than 6,300 of roughly 6,600 functions are done, and the helper processor's boot
-loader is complete. `tools/rebuild.py` builds the complete firmware image from the matched functions plus the
+Percentages are by code size. More than 6,300 of roughly 6,600 functions are done, the helper processor's boot
+loader and update agent are complete, and the Tensilica program is rebuilt completely from assembly source. `tools/rebuild.py` builds the complete firmware image from the matched functions plus the
 original bytes for everything else, and the result is identical to the original file. Detailed numbers are in the
 [status report](docs/STATUS.md).
 
@@ -60,7 +62,7 @@ Most source files begin with a short description of what the function does. The 
 
 | Folder | Contents |
 |---|---|
-| `src/` | The reconstructed source code, one file per function (a few 8051 files hold a Keil module of several functions). |
+| `src/` | The reconstructed source code, one file per function (a few 8051 files hold a Keil module of several functions; `src/tensilica/` holds the Tensilica program as assembly). |
 | `firmware/` | The original FW.021 file, older versions for comparison, and two custom versions. |
 | `asm/` | The original machine code of each function, as a reference. |
 | `symbols/` | Names and status of every function. |
