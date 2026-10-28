@@ -2585,6 +2585,13 @@
       "name": "FUN_a008796c",
       "status": "matched"
     },
+    "ram:a0087a14": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Prints the theme mode and passes the bytes and pointers of its DAT_000ff710 entry to the FUN_a01471a0 / FUN_a0147560 setters for one or two channels",
+      "name": "FUN_a0087a14",
+      "status": "matched"
+    },
     "ram:a0087d5c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
