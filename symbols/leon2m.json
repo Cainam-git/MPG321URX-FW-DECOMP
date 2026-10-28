@@ -18889,6 +18889,13 @@
       "name": "FUN_a0134684",
       "status": "matched"
     },
+    "ram:a01346ac": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Scans the 4 portal-0 slots at 0x60 + 20 * slot from index DAT_a802cb8c (twice when it skipped some) for a word with a non-zero low nibble; returns the slot or 0xfe",
+      "name": "FUN_a01346ac",
+      "status": "matched"
+    },
     "ram:a013480c": {
       "by": "hand",
       "comment": "func_0x4008c5f8(0, p, &w, 1) with w = 0 (one zero word to portal 0 offset p)",
