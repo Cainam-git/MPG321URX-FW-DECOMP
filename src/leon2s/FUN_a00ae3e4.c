@@ -7,7 +7,7 @@
  * Source form: the take step is one static inline helper used twice (same loop as FUN_a00a4ec4).
  */
 extern void FUN_a00a78fc(unsigned char, unsigned short, unsigned char);
-extern unsigned char FUN_a00a78b4(unsigned char, unsigned short);
+extern unsigned char FUN_a00a78b4(unsigned int, unsigned short);
 extern void FUN_a00a6c00(unsigned char, unsigned short, unsigned char);
 
 #define R780C (*(volatile unsigned int *)0xcf00780c)
