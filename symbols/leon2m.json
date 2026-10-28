@@ -15998,6 +15998,13 @@
       "name": "FUN_a0120c90",
       "status": "matched"
     },
+    "ram:a0120de4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Returns a code 1..5 for mode and block from block register 0x11 bits, record DAT_a8027aac[blk] and register range checks",
+      "name": "FUN_a0120de4",
+      "status": "matched"
+    },
     "ram:a01211ac": {
       "by": "autoc",
       "comment": "k = p1 & 0xff; returns FUN_a0120de4(FUN_a00fd820(k) & 0xff, k) as a byte",
