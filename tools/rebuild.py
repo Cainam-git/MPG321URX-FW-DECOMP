@@ -17,7 +17,7 @@ usage: rebuild.py [out.bin] [--jobs 4] [--sections leon2m leon2s 8051_bank0 ...]
   default out: build/MSI_MPG321URX_V021_rebuilt.bin; the full report goes next to it (.txt). Exits 1 unless the
   image is byte-identical and every matched function was built and judged exact.
 """
-import argparse, json, pathlib, subprocess, sys, threading, time
+import argparse, json, pathlib, subprocess, sys, tempfile, threading, time
 from concurrent.futures import ThreadPoolExecutor
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
@@ -137,6 +137,15 @@ def startup(bank):
     return res(bank, "start-up", not miss, f"{len(miss)} bytes not produced" if miss else None, place, "startup")
 
 
+def tensilica():   # the whole Tensilica program from src/tensilica in one build (tools/xtensa_check.py)
+    with tempfile.TemporaryDirectory() as td:
+        b = pathlib.Path(td) / "t.bin"
+        r = subprocess.run([sys.executable, "-I", str(ROOT / "tools" / "xtensa_check.py"), "--out", str(b), "--max", "0"],
+                           capture_output=True, text=True)
+        if r.returncode or not b.exists(): return res("8051_bank3", "src/tensilica", False, "xtensa_check differs or failed")
+        return res("8051_bank3", "src/tensilica", True, place=[(0, b.read_bytes(), [])])
+
+
 def common_blocks(bank, fn, start, lsts):
     """a common-entry block that a compiled module places in front of its callee and that covers start"""
     import re
@@ -168,6 +177,11 @@ def main():
         ents = [v for v in json.loads((ROOT / "symbols" / f"{sec}.json").read_text())["functions"].values()
                 if v.get("status") == "matched"]
         if sec in startup8051.STARTUPS: jobs.append((startup, (sec,)))
+        if sec == "8051_bank3":   # assembly source, one build for every entry; the 0xFF fill stays data
+            jobs.append((tensilica, ()))
+            data += [(sec, f["name"], f["start"], f["end"]) for f in diff8051.funclist(sec)
+                     for e in ents if e["name"] == f["name"] and e.get("by") == "data"]
+            continue
         st = (0, startup8051.STARTUPS[sec][0]) if sec in startup8051.STARTUPS else ()
         fl = {f["name"]: f for f in diff8051.funclist(sec)} if sec in BANKS else {}
         for e in ents:

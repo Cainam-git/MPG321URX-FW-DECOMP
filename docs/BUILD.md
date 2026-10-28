@@ -10,6 +10,7 @@ The toolchains are not stored in git. They live in a `toolchains/` folder inside
 | Compiling for the LEON processors | Gaisler BCC 1.0.52 with GCC 3.4.4 | `toolchains/sparc-elf-3.4.4/` |
 | Disassembly for `tools/fwdiff.py` | Gaisler BCC 1.0.52 with GCC 4.4.2 | `toolchains/sparc-elf-4.4.2/` |
 | Compiling for the 8051 | Keil C51 9.60 evaluation edition, running under Wine | `toolchains/keil-prefix/` (a Wine prefix) |
+| Assembling the Tensilica program | Espressif xtensa-esp32-elf GCC 8.4.0 esp-2020r3 (binutils 2.31.1) | `toolchains/xtensa-esp32-elf/` |
 | Permutation search | decomp-permuter | `toolchains/decomp-permuter/` |
 | Compiler internals (optional) | GCC 3.4.4 source code | `toolchains/gcc-3.4.4-src/` |
 | Decompiler | Ghidra 12 | `/opt/ghidra`, or set `GHIDRA_HOME` |
@@ -25,6 +26,12 @@ tested with Python 3.14, Wine 11.20 and Ghidra 12.1.2. Run all scripts from the 
    ```
    tar -xjf sparc-elf-3.4.4-1.0.52.tar.bz2 -C toolchains/
    tar -xjf sparc-elf-4.4.2-1.0.52.tar.bz2 -C toolchains/
+   ```
+
+   Unpack the Xtensa toolchain the same way:
+
+   ```
+   tar -xzf xtensa-esp32-elf-gcc8_4_0-esp-2020r3-linux-amd64.tar.gz -C toolchains/
    ```
 
 3. **Install Keil C51 into its own Wine prefix.** The installer runs silently and installs to
@@ -62,6 +69,7 @@ tested with Python 3.14, Wine 11.20 and Ghidra 12.1.2. Run all scripts from the 
 | `sparc-elf-3.4.4-1.0.52.tar.bz2` | [download.gaisler.com/anonftp/bcc/bin/linux](https://download.gaisler.com/anonftp/bcc/bin/linux/) | 62,204,306 | `0e864c0e1f4cf0b3816f56132635dbcc6e78a68db80d664be1a87bfe93d210a5` |
 | `sparc-elf-4.4.2-1.0.52.tar.bz2` | [download.gaisler.com/anonftp/bcc/bin/linux](https://download.gaisler.com/anonftp/bcc/bin/linux/) | 52,473,470 | `9e2cbb787d3cc4cf30c8aa730ed50eace70caae7d784a4e66b22b001ff4d5765` |
 | `C51V961.exe` | [Keil C51 evaluation](https://www.keil.com/demo/eval/c51.htm) (free, after a registration form; direct file: [c51v961.exe](https://www.keil.com/files/eval/c51v961.exe)) | 109,869,064 | `f23f2f5a5eda77d710ed8cf50ff44a04f35260afefe082b352ac08c059b63379` |
+| `xtensa-esp32-elf-gcc8_4_0-esp-2020r3-linux-amd64.tar.gz` | [github.com/espressif/crosstool-NG, release esp-2020r3](https://github.com/espressif/crosstool-NG/releases/tag/esp-2020r3) | 85,731,226 | `674080a12f9c5ebe5a3a5ce51c6deaeffe6dfb06d6416233df86f25b574e9279` |
 | `gcc-3.4.4.tar.bz2` | [ftp.gnu.org/gnu/gcc/gcc-3.4.4](https://ftp.gnu.org/gnu/gcc/gcc-3.4.4/) | 27,565,872 | `3444179840638cb8664e8e53604900c4521d29d57785a5091202ee4937d8d0fd` |
 
 Keil may offer a newer installer than `C51V961.exe`. A different compiler version can produce different code, so
@@ -89,10 +97,24 @@ tools/check/acc2s.sh hand FUN_a0060000 src.c "One-line description" [flags]  # I
 
 `handaccept.py` and `accept8051.py` refuse any source that is not byte-exact or has no descriptive comment.
 
+## Checking the Tensilica program
+
+The Tensilica program (flash bank 3) is kept as assembly source in `src/tensilica/`. To build it and compare it with
+the firmware:
+
+```
+python3 -I tools/xtensa_check.py
+```
+
+It assembles `src/tensilica/tensilica.S` (which includes the other files in address order), links it at 0x40000000
+and compares the result with file offset 0x30000-0x3D8DB. It prints every differing byte with its address and
+symbol and exits with status 0 only when the build is identical. `tools/xtensa_gen.py` can regenerate the source
+files from the firmware, but it overwrites them; the files in `src/tensilica/` are the master copy.
+
 ## Verifying everything
 
 ```
-python3 -I tools/verify.py leon2m leon2s 8051_bank0 8051_bank1 8051_bank2
+python3 -I tools/verify.py leon2m leon2s 8051_bank0 8051_bank1 8051_bank2 8051_bank3
 python3 -I tools/relink.py leon2m leon2s --jobs 8
 python3 -I tools/progress.py
 python3 -I tools/rebuild.py                    # The complete image, compared with the original file

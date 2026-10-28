@@ -37,7 +37,8 @@ original bytes for everything else, and the result is identical to the original 
 1. A function is rewritten in C, or in assembly where the original was written in assembly. Routines from the
    toolchains' own libraries are taken unchanged from those libraries.
 2. It is compiled with the original toolchains: GCC 3.4.4 for the two LEON processors and Keil C51 for the 8051.
-   The compiler of the Tensilica program has not been identified, so that program is not decompiled yet.
+   The compiler of the Tensilica program is not available, so that program is kept as assembly source that the
+   free Xtensa assembler builds to the original bytes.
 3. The result is compared with the original bytes at the exact address the function occupies.
 4. Only an identical result is accepted.
 

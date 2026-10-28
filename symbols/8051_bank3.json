@@ -1,6 +1,1842 @@
 {
   "functions": {
-    "CODE:d8dc": {
+    "XT:0000": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/vectors.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "vectors",
+      "status": "matched"
+    },
+    "XT:0400": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/reset.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "reset_40000400",
+      "status": "matched"
+    },
+    "XT:0800": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40000800.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40000800",
+      "status": "matched"
+    },
+    "XT:082a": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000082c.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000082c",
+      "status": "matched"
+    },
+    "XT:087a": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000087c.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000087c",
+      "status": "matched"
+    },
+    "XT:08c0": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400008c0.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_400008c0",
+      "status": "matched"
+    },
+    "XT:099f": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400009a0.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400009a0",
+      "status": "matched"
+    },
+    "XT:0a05": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40000a08.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40000a08",
+      "status": "matched"
+    },
+    "XT:0afb": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40000afc.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40000afc",
+      "status": "matched"
+    },
+    "XT:0c69": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40000c6c.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40000c6c",
+      "status": "matched"
+    },
+    "XT:0de5": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40000de8.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40000de8",
+      "status": "matched"
+    },
+    "XT:0e1d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40000e20.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40000e20",
+      "status": "matched"
+    },
+    "XT:0fb4": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40000fb4.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40000fb4",
+      "status": "matched"
+    },
+    "XT:1187": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001188.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001188",
+      "status": "matched"
+    },
+    "XT:11e3": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400011e4.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400011e4",
+      "status": "matched"
+    },
+    "XT:1344": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001344.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40001344",
+      "status": "matched"
+    },
+    "XT:139d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400013a0.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400013a0",
+      "status": "matched"
+    },
+    "XT:13b4": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400013b4.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_400013b4",
+      "status": "matched"
+    },
+    "XT:13de": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400013e0.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400013e0",
+      "status": "matched"
+    },
+    "XT:1404": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001404.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40001404",
+      "status": "matched"
+    },
+    "XT:1425": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001428.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001428",
+      "status": "matched"
+    },
+    "XT:14bd": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400014c0.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400014c0",
+      "status": "matched"
+    },
+    "XT:150f": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001510.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001510",
+      "status": "matched"
+    },
+    "XT:153a": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000153c.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000153c",
+      "status": "matched"
+    },
+    "XT:15d3": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400015d4.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400015d4",
+      "status": "matched"
+    },
+    "XT:15e4": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400015e4.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_400015e4",
+      "status": "matched"
+    },
+    "XT:15fc": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400015fc.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_400015fc",
+      "status": "matched"
+    },
+    "XT:160c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000160c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000160c",
+      "status": "matched"
+    },
+    "XT:161c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000161c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000161c",
+      "status": "matched"
+    },
+    "XT:162c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000162c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000162c",
+      "status": "matched"
+    },
+    "XT:163c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000163c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000163c",
+      "status": "matched"
+    },
+    "XT:164c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000164c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000164c",
+      "status": "matched"
+    },
+    "XT:165c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000165c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000165c",
+      "status": "matched"
+    },
+    "XT:16a3": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400016a4.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400016a4",
+      "status": "matched"
+    },
+    "XT:16d1": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400016d4.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400016d4",
+      "status": "matched"
+    },
+    "XT:1733": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001734.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001734",
+      "status": "matched"
+    },
+    "XT:1745": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001748.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001748",
+      "status": "matched"
+    },
+    "XT:1756": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001758.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001758",
+      "status": "matched"
+    },
+    "XT:1769": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000176c.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000176c",
+      "status": "matched"
+    },
+    "XT:177d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001780.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001780",
+      "status": "matched"
+    },
+    "XT:179d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400017a0.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400017a0",
+      "status": "matched"
+    },
+    "XT:17bd": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400017c0.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400017c0",
+      "status": "matched"
+    },
+    "XT:182f": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001830.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001830",
+      "status": "matched"
+    },
+    "XT:1858": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001858.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40001858",
+      "status": "matched"
+    },
+    "XT:1880": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001880.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40001880",
+      "status": "matched"
+    },
+    "XT:1891": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001894.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001894",
+      "status": "matched"
+    },
+    "XT:18ee": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400018f0.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400018f0",
+      "status": "matched"
+    },
+    "XT:1905": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001908.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001908",
+      "status": "matched"
+    },
+    "XT:191d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001920.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001920",
+      "status": "matched"
+    },
+    "XT:1935": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001938.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001938",
+      "status": "matched"
+    },
+    "XT:1991": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001994.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001994",
+      "status": "matched"
+    },
+    "XT:19c2": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400019c4.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400019c4",
+      "status": "matched"
+    },
+    "XT:19e2": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400019e4.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400019e4",
+      "status": "matched"
+    },
+    "XT:19ed": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400019f0.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400019f0",
+      "status": "matched"
+    },
+    "XT:19f9": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400019fc.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400019fc",
+      "status": "matched"
+    },
+    "XT:1a05": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001a08.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001a08",
+      "status": "matched"
+    },
+    "XT:1a4c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001a4c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40001a4c",
+      "status": "matched"
+    },
+    "XT:1aa5": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001aa8.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001aa8",
+      "status": "matched"
+    },
+    "XT:1ab6": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001ab8.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001ab8",
+      "status": "matched"
+    },
+    "XT:1ac8": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001ac8.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40001ac8",
+      "status": "matched"
+    },
+    "XT:1b07": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001b08.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001b08",
+      "status": "matched"
+    },
+    "XT:1cb4": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001cb4.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40001cb4",
+      "status": "matched"
+    },
+    "XT:1dd8": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001dd8.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40001dd8",
+      "status": "matched"
+    },
+    "XT:1e53": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001e54.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001e54",
+      "status": "matched"
+    },
+    "XT:1f93": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40001f94.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40001f94",
+      "status": "matched"
+    },
+    "XT:20ce": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400020d0.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400020d0",
+      "status": "matched"
+    },
+    "XT:21cd": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400021d0.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400021d0",
+      "status": "matched"
+    },
+    "XT:2226": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40002228.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40002228",
+      "status": "matched"
+    },
+    "XT:233c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000233c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000233c",
+      "status": "matched"
+    },
+    "XT:2417": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40002418.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40002418",
+      "status": "matched"
+    },
+    "XT:24e3": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400024e4.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400024e4",
+      "status": "matched"
+    },
+    "XT:265d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40002660.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40002660",
+      "status": "matched"
+    },
+    "XT:2687": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40002688.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40002688",
+      "status": "matched"
+    },
+    "XT:2892": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40002894.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40002894",
+      "status": "matched"
+    },
+    "XT:2a00": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40002a00.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40002a00",
+      "status": "matched"
+    },
+    "XT:2bee": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40002bf0.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40002bf0",
+      "status": "matched"
+    },
+    "XT:2c9d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40002ca0.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40002ca0",
+      "status": "matched"
+    },
+    "XT:2d0c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40002d0c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40002d0c",
+      "status": "matched"
+    },
+    "XT:2d79": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40002d7c.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40002d7c",
+      "status": "matched"
+    },
+    "XT:2dde": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40002de0.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40002de0",
+      "status": "matched"
+    },
+    "XT:2e75": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40002e78.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40002e78",
+      "status": "matched"
+    },
+    "XT:30b2": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400030b4.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400030b4",
+      "status": "matched"
+    },
+    "XT:30c5": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400030c8.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400030c8",
+      "status": "matched"
+    },
+    "XT:3140": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003140.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40003140",
+      "status": "matched"
+    },
+    "XT:3173": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003174.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003174",
+      "status": "matched"
+    },
+    "XT:318f": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003190.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003190",
+      "status": "matched"
+    },
+    "XT:3557": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003558.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003558",
+      "status": "matched"
+    },
+    "XT:35ce": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400035d0.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400035d0",
+      "status": "matched"
+    },
+    "XT:3763": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003764.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003764",
+      "status": "matched"
+    },
+    "XT:37ca": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400037cc.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400037cc",
+      "status": "matched"
+    },
+    "XT:37d5": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400037d8.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400037d8",
+      "status": "matched"
+    },
+    "XT:3811": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003814.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003814",
+      "status": "matched"
+    },
+    "XT:38e7": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400038e8.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400038e8",
+      "status": "matched"
+    },
+    "XT:3904": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003904.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40003904",
+      "status": "matched"
+    },
+    "XT:3a6f": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003a70.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003a70",
+      "status": "matched"
+    },
+    "XT:3b67": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003b68.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003b68",
+      "status": "matched"
+    },
+    "XT:3b96": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003b98.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003b98",
+      "status": "matched"
+    },
+    "XT:3c93": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003c94.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003c94",
+      "status": "matched"
+    },
+    "XT:3cce": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003cd0.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003cd0",
+      "status": "matched"
+    },
+    "XT:3f0e": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003f10.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003f10",
+      "status": "matched"
+    },
+    "XT:3f22": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003f24.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003f24",
+      "status": "matched"
+    },
+    "XT:3f36": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003f38.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003f38",
+      "status": "matched"
+    },
+    "XT:3f71": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003f74.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003f74",
+      "status": "matched"
+    },
+    "XT:3f9f": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003fa0.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003fa0",
+      "status": "matched"
+    },
+    "XT:3ff7": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40003ff8.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40003ff8",
+      "status": "matched"
+    },
+    "XT:414a": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000414c.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000414c",
+      "status": "matched"
+    },
+    "XT:415a": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000415c.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000415c",
+      "status": "matched"
+    },
+    "XT:416c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000416c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000416c",
+      "status": "matched"
+    },
+    "XT:4180": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004180.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40004180",
+      "status": "matched"
+    },
+    "XT:418e": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004190.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40004190",
+      "status": "matched"
+    },
+    "XT:41a5": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400041a8.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400041a8",
+      "status": "matched"
+    },
+    "XT:420e": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004210.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40004210",
+      "status": "matched"
+    },
+    "XT:42a7": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400042a8.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400042a8",
+      "status": "matched"
+    },
+    "XT:4361": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004364.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40004364",
+      "status": "matched"
+    },
+    "XT:45f2": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400045f4.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400045f4",
+      "status": "matched"
+    },
+    "XT:4629": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000462c.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000462c",
+      "status": "matched"
+    },
+    "XT:4661": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004664.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40004664",
+      "status": "matched"
+    },
+    "XT:4692": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004694.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40004694",
+      "status": "matched"
+    },
+    "XT:46c7": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400046c8.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400046c8",
+      "status": "matched"
+    },
+    "XT:470d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004710.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40004710",
+      "status": "matched"
+    },
+    "XT:4755": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004758.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40004758",
+      "status": "matched"
+    },
+    "XT:4785": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004788.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40004788",
+      "status": "matched"
+    },
+    "XT:47c4": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400047c4.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_400047c4",
+      "status": "matched"
+    },
+    "XT:4803": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004804.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40004804",
+      "status": "matched"
+    },
+    "XT:4843": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004844.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40004844",
+      "status": "matched"
+    },
+    "XT:4884": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004884.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40004884",
+      "status": "matched"
+    },
+    "XT:48fc": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400048fc.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_400048fc",
+      "status": "matched"
+    },
+    "XT:496b": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000496c.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000496c",
+      "status": "matched"
+    },
+    "XT:497b": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000497c.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000497c",
+      "status": "matched"
+    },
+    "XT:498b": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000498c.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000498c",
+      "status": "matched"
+    },
+    "XT:4b06": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004b08.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40004b08",
+      "status": "matched"
+    },
+    "XT:4bca": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004bcc.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40004bcc",
+      "status": "matched"
+    },
+    "XT:4c14": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004c14.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40004c14",
+      "status": "matched"
+    },
+    "XT:4df9": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004dfc.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40004dfc",
+      "status": "matched"
+    },
+    "XT:4ea0": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004ea0.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40004ea0",
+      "status": "matched"
+    },
+    "XT:4fbf": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40004fc0.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40004fc0",
+      "status": "matched"
+    },
+    "XT:504f": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005050.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40005050",
+      "status": "matched"
+    },
+    "XT:53ce": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400053d0.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400053d0",
+      "status": "matched"
+    },
+    "XT:5421": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005424.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40005424",
+      "status": "matched"
+    },
+    "XT:5460": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005460.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40005460",
+      "status": "matched"
+    },
+    "XT:54a2": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400054a4.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400054a4",
+      "status": "matched"
+    },
+    "XT:5517": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005518.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40005518",
+      "status": "matched"
+    },
+    "XT:5574": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005574.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40005574",
+      "status": "matched"
+    },
+    "XT:574c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000574c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000574c",
+      "status": "matched"
+    },
+    "XT:58da": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400058dc.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400058dc",
+      "status": "matched"
+    },
+    "XT:5ba8": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005ba8.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40005ba8",
+      "status": "matched"
+    },
+    "XT:5c24": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005c24.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40005c24",
+      "status": "matched"
+    },
+    "XT:5c3c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005c3c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40005c3c",
+      "status": "matched"
+    },
+    "XT:5c77": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005c78.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40005c78",
+      "status": "matched"
+    },
+    "XT:5c8c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005c8c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40005c8c",
+      "status": "matched"
+    },
+    "XT:5c9b": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005c9c.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40005c9c",
+      "status": "matched"
+    },
+    "XT:5cab": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005cac.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40005cac",
+      "status": "matched"
+    },
+    "XT:5cf6": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005cf8.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40005cf8",
+      "status": "matched"
+    },
+    "XT:5d68": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005d68.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40005d68",
+      "status": "matched"
+    },
+    "XT:5dd8": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005dd8.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40005dd8",
+      "status": "matched"
+    },
+    "XT:5de8": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005de8.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40005de8",
+      "status": "matched"
+    },
+    "XT:5e41": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005e44.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40005e44",
+      "status": "matched"
+    },
+    "XT:5e72": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005e74.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40005e74",
+      "status": "matched"
+    },
+    "XT:5ea2": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005ea4.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40005ea4",
+      "status": "matched"
+    },
+    "XT:5f2c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005f2c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40005f2c",
+      "status": "matched"
+    },
+    "XT:5f4d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005f50.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40005f50",
+      "status": "matched"
+    },
+    "XT:5f69": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005f6c.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40005f6c",
+      "status": "matched"
+    },
+    "XT:5f8d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005f90.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40005f90",
+      "status": "matched"
+    },
+    "XT:5fa9": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40005fac.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40005fac",
+      "status": "matched"
+    },
+    "XT:6141": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006144.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006144",
+      "status": "matched"
+    },
+    "XT:617e": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006180.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006180",
+      "status": "matched"
+    },
+    "XT:61ad": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400061b0.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400061b0",
+      "status": "matched"
+    },
+    "XT:6373": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006374.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006374",
+      "status": "matched"
+    },
+    "XT:63d9": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400063dc.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400063dc",
+      "status": "matched"
+    },
+    "XT:640f": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006410.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006410",
+      "status": "matched"
+    },
+    "XT:6432": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006434.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006434",
+      "status": "matched"
+    },
+    "XT:660b": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000660c.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000660c",
+      "status": "matched"
+    },
+    "XT:66d3": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400066d4.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400066d4",
+      "status": "matched"
+    },
+    "XT:670a": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000670c.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000670c",
+      "status": "matched"
+    },
+    "XT:6723": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006724.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006724",
+      "status": "matched"
+    },
+    "XT:674d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006750.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006750",
+      "status": "matched"
+    },
+    "XT:6761": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006764.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006764",
+      "status": "matched"
+    },
+    "XT:679b": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000679c.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000679c",
+      "status": "matched"
+    },
+    "XT:6803": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006804.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006804",
+      "status": "matched"
+    },
+    "XT:6851": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006854.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006854",
+      "status": "matched"
+    },
+    "XT:686c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000686c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000686c",
+      "status": "matched"
+    },
+    "XT:6884": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006884.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40006884",
+      "status": "matched"
+    },
+    "XT:68bf": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400068c0.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400068c0",
+      "status": "matched"
+    },
+    "XT:6903": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006904.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006904",
+      "status": "matched"
+    },
+    "XT:69dc": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400069dc.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_400069dc",
+      "status": "matched"
+    },
+    "XT:69ee": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400069f0.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400069f0",
+      "status": "matched"
+    },
+    "XT:6a05": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006a08.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006a08",
+      "status": "matched"
+    },
+    "XT:6a58": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006a58.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40006a58",
+      "status": "matched"
+    },
+    "XT:6afb": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006afc.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006afc",
+      "status": "matched"
+    },
+    "XT:6be6": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006be8.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006be8",
+      "status": "matched"
+    },
+    "XT:6c9a": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006c9c.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006c9c",
+      "status": "matched"
+    },
+    "XT:6de6": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006de8.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006de8",
+      "status": "matched"
+    },
+    "XT:6e92": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006e94.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40006e94",
+      "status": "matched"
+    },
+    "XT:6f00": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40006f00.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40006f00",
+      "status": "matched"
+    },
+    "XT:7139": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000713c.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000713c",
+      "status": "matched"
+    },
+    "XT:7347": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40007348.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40007348",
+      "status": "matched"
+    },
+    "XT:74b3": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400074b4.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400074b4",
+      "status": "matched"
+    },
+    "XT:74ea": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400074ec.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400074ec",
+      "status": "matched"
+    },
+    "XT:7530": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40007530.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40007530",
+      "status": "matched"
+    },
+    "XT:756a": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000756c.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000756c",
+      "status": "matched"
+    },
+    "XT:75ac": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400075ac.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_400075ac",
+      "status": "matched"
+    },
+    "XT:75fa": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400075fc.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400075fc",
+      "status": "matched"
+    },
+    "XT:770a": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000770c.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000770c",
+      "status": "matched"
+    },
+    "XT:775d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40007760.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40007760",
+      "status": "matched"
+    },
+    "XT:77a4": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400077a4.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_400077a4",
+      "status": "matched"
+    },
+    "XT:77d2": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400077d4.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400077d4",
+      "status": "matched"
+    },
+    "XT:77fc": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400077fc.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_400077fc",
+      "status": "matched"
+    },
+    "XT:781f": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40007820.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40007820",
+      "status": "matched"
+    },
+    "XT:784a": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000784c.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000784c",
+      "status": "matched"
+    },
+    "XT:7875": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40007878.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40007878",
+      "status": "matched"
+    },
+    "XT:789e": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400078a0.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400078a0",
+      "status": "matched"
+    },
+    "XT:78e5": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400078e8.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400078e8",
+      "status": "matched"
+    },
+    "XT:7911": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40007914.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40007914",
+      "status": "matched"
+    },
+    "XT:7956": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40007958.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40007958",
+      "status": "matched"
+    },
+    "XT:7998": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40007998.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40007998",
+      "status": "matched"
+    },
+    "XT:79b8": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400079b8.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_400079b8",
+      "status": "matched"
+    },
+    "XT:7ab8": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40007ab8.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40007ab8",
+      "status": "matched"
+    },
+    "XT:7c4d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40007c50.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40007c50",
+      "status": "matched"
+    },
+    "XT:7d3f": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40007d40.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40007d40",
+      "status": "matched"
+    },
+    "XT:7e65": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40007e68.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40007e68",
+      "status": "matched"
+    },
+    "XT:8010": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008010.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40008010",
+      "status": "matched"
+    },
+    "XT:802c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000802c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000802c",
+      "status": "matched"
+    },
+    "XT:82cb": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400082cc.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400082cc",
+      "status": "matched"
+    },
+    "XT:82ff": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008300.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40008300",
+      "status": "matched"
+    },
+    "XT:86a2": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400086a4.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400086a4",
+      "status": "matched"
+    },
+    "XT:89e7": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400089e8.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400089e8",
+      "status": "matched"
+    },
+    "XT:8ad5": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008ad8.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40008ad8",
+      "status": "matched"
+    },
+    "XT:8af6": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008af8.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40008af8",
+      "status": "matched"
+    },
+    "XT:8be5": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008be8.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40008be8",
+      "status": "matched"
+    },
+    "XT:8c0e": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008c10.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40008c10",
+      "status": "matched"
+    },
+    "XT:8c38": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008c38.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40008c38",
+      "status": "matched"
+    },
+    "XT:8c57": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008c58.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40008c58",
+      "status": "matched"
+    },
+    "XT:8c60": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008c60.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40008c60",
+      "status": "matched"
+    },
+    "XT:8ce0": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008ce0.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40008ce0",
+      "status": "matched"
+    },
+    "XT:8de1": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008de4.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40008de4",
+      "status": "matched"
+    },
+    "XT:8e88": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008e88.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40008e88",
+      "status": "matched"
+    },
+    "XT:8e9b": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008e9c.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40008e9c",
+      "status": "matched"
+    },
+    "XT:8ec4": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008ec4.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40008ec4",
+      "status": "matched"
+    },
+    "XT:8eee": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008ef0.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40008ef0",
+      "status": "matched"
+    },
+    "XT:8f57": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008f58.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40008f58",
+      "status": "matched"
+    },
+    "XT:8f82": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008f84.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40008f84",
+      "status": "matched"
+    },
+    "XT:8fd7": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40008fd8.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40008fd8",
+      "status": "matched"
+    },
+    "XT:902c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000902c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000902c",
+      "status": "matched"
+    },
+    "XT:908a": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000908c.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000908c",
+      "status": "matched"
+    },
+    "XT:90c7": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400090c8.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400090c8",
+      "status": "matched"
+    },
+    "XT:9104": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009104.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40009104",
+      "status": "matched"
+    },
+    "XT:9129": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000912c.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000912c",
+      "status": "matched"
+    },
+    "XT:91a1": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400091a4.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400091a4",
+      "status": "matched"
+    },
+    "XT:91cf": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400091d0.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400091d0",
+      "status": "matched"
+    },
+    "XT:91f1": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400091f4.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400091f4",
+      "status": "matched"
+    },
+    "XT:9215": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009218.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40009218",
+      "status": "matched"
+    },
+    "XT:99bb": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_400099bc.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_400099bc",
+      "status": "matched"
+    },
+    "XT:9a32": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009a34.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40009a34",
+      "status": "matched"
+    },
+    "XT:9a4b": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009a4c.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40009a4c",
+      "status": "matched"
+    },
+    "XT:9a8e": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009a90.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40009a90",
+      "status": "matched"
+    },
+    "XT:9b4e": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009b50.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40009b50",
+      "status": "matched"
+    },
+    "XT:9bc7": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009bc8.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40009bc8",
+      "status": "matched"
+    },
+    "XT:9ca6": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009ca8.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40009ca8",
+      "status": "matched"
+    },
+    "XT:9de5": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009de8.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40009de8",
+      "status": "matched"
+    },
+    "XT:9e86": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009e88.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40009e88",
+      "status": "matched"
+    },
+    "XT:9ebe": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009ec0.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_40009ec0",
+      "status": "matched"
+    },
+    "XT:9ee8": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009ee8.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40009ee8",
+      "status": "matched"
+    },
+    "XT:9f10": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009f10.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40009f10",
+      "status": "matched"
+    },
+    "XT:9f70": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009f70.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40009f70",
+      "status": "matched"
+    },
+    "XT:9fc8": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_40009fc8.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_40009fc8",
+      "status": "matched"
+    },
+    "XT:a00d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a010.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a010",
+      "status": "matched"
+    },
+    "XT:a089": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a08c.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a08c",
+      "status": "matched"
+    },
+    "XT:a10a": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a10c.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a10c",
+      "status": "matched"
+    },
+    "XT:a11e": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a120.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a120",
+      "status": "matched"
+    },
+    "XT:a1f3": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a1f4.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a1f4",
+      "status": "matched"
+    },
+    "XT:a2cb": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a2cc.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a2cc",
+      "status": "matched"
+    },
+    "XT:a372": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a374.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a374",
+      "status": "matched"
+    },
+    "XT:a39c": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a39c.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000a39c",
+      "status": "matched"
+    },
+    "XT:a3c4": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a3c4.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000a3c4",
+      "status": "matched"
+    },
+    "XT:a3c9": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a3cc.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a3cc",
+      "status": "matched"
+    },
+    "XT:a458": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a458.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000a458",
+      "status": "matched"
+    },
+    "XT:a4b8": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a4b8.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000a4b8",
+      "status": "matched"
+    },
+    "XT:a4c7": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a4c8.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a4c8",
+      "status": "matched"
+    },
+    "XT:a514": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a514.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000a514",
+      "status": "matched"
+    },
+    "XT:a524": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a524.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000a524",
+      "status": "matched"
+    },
+    "XT:a546": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a548.S (Xtensa assembly; the original compiler is not available), including 2 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a548",
+      "status": "matched"
+    },
+    "XT:a56d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a570.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a570",
+      "status": "matched"
+    },
+    "XT:a680": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a680.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000a680",
+      "status": "matched"
+    },
+    "XT:a74b": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a74c.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a74c",
+      "status": "matched"
+    },
+    "XT:a88f": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a890.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a890",
+      "status": "matched"
+    },
+    "XT:a991": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a994.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a994",
+      "status": "matched"
+    },
+    "XT:a9b4": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000a9c0.S (Xtensa assembly; the original compiler is not available), including 12 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000a9c0",
+      "status": "matched"
+    },
+    "XT:aa61": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000aa64.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000aa64",
+      "status": "matched"
+    },
+    "XT:ab59": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000ab5c.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000ab5c",
+      "status": "matched"
+    },
+    "XT:ab64": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000ab64.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000ab64",
+      "status": "matched"
+    },
+    "XT:ab69": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000ab6c.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000ab6c",
+      "status": "matched"
+    },
+    "XT:ab71": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000ab74.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000ab74",
+      "status": "matched"
+    },
+    "XT:ab79": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000ab7c.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000ab7c",
+      "status": "matched"
+    },
+    "XT:ab84": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000ab84.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000ab84",
+      "status": "matched"
+    },
+    "XT:ab91": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000ab94.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000ab94",
+      "status": "matched"
+    },
+    "XT:aba1": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000aba4.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000aba4",
+      "status": "matched"
+    },
+    "XT:abcc": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000abcc.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000abcc",
+      "status": "matched"
+    },
+    "XT:abd9": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000abdc.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000abdc",
+      "status": "matched"
+    },
+    "XT:abe4": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000abe4.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000abe4",
+      "status": "matched"
+    },
+    "XT:ac07": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000ac08.S (Xtensa assembly; the original compiler is not available), including 1 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000ac08",
+      "status": "matched"
+    },
+    "XT:ac28": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000ac28.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "fn_4000ac28",
+      "status": "matched"
+    },
+    "XT:ac2d": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/fn_4000ac30.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "fn_4000ac30",
+      "status": "matched"
+    },
+    "XT:ac35": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/section_table.S (Xtensa assembly; the original compiler is not available), including 3 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "section_table",
+      "status": "matched"
+    },
+    "XT:acf8": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/rodata.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "rodata",
+      "status": "matched"
+    },
+    "XT:c768": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/literals.S (Xtensa assembly; the original compiler is not available); checked by tools/xtensa_check.py",
+      "name": "literals",
+      "status": "matched"
+    },
+    "XT:d084": {
+      "by": "asm",
+      "comment": "assembled from src/tensilica/data.S (Xtensa assembly; the original compiler is not available), including 4 bytes of zero fill before it; checked by tools/xtensa_check.py",
+      "name": "data",
+      "status": "matched"
+    },
+    "XT:d8dc": {
       "by": "data",
       "comment": "NOT CODE: 0xFF fill after the Xtensa program image; the partition-table record at file 0x6038 gives the image as flash 0x30000, length 0xD8DC, and no code in banks 0-2 reads or jumps into this range",
       "name": "FILL_CODE_d8dc",

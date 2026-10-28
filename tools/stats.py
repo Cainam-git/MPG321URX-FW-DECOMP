@@ -31,8 +31,8 @@ def main():
     for label, s, _ in ROWS:
         g = groups.setdefault(label, [0, 0]); g[0] += data[s][0]; g[1] += data[s][1]
     tot = [sum(d[i] for d in data.values()) for i in range(4)]
-    lines = [f"{label:<19} {bar(m / t)} {round(100 * m / t):4d} %" for label, (m, t) in groups.items()]
-    lines.append(f"{'Overall':<19} {bar(tot[0] / tot[1])} {round(100 * tot[0] / tot[1]):4d} %")
+    lines = [f"{label:<19} {bar(m / t)} {int(100 * m / t + 1e-9):4d} %" for label, (m, t) in groups.items()]
+    lines.append(f"{'Overall':<19} {bar(tot[0] / tot[1])} {int(100 * tot[0] / tot[1] + 1e-9):4d} %")
     print("\n".join(lines))
     if "--check" in sys.argv: return
 

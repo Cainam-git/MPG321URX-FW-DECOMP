@@ -23,7 +23,7 @@ How `MSI_MPG321URX_V021_7F69.bin` is laid out, and how its four processors start
 | **8051** | 8-bit, Keil C51 | Boot loader, power sequencing, loading the other processors' programs, supervising Leon2M, update channel, OSD resources. |
 | **Leon2M** (main) | LEON2, SPARC V8 | Picture pipeline, panel and OLED control, frame-rate conversion, on-screen menu logic, update service, USB mode selection. |
 | **Leon2S** (input) | LEON2, SPARC V8 | HDMI 2.1 and DisplayPort receiver, link training, mode detection. |
-| **Tensilica core** | Xtensa (windowed calls), compiler not identified | Not worked out yet. Its strings name it "NT68500 Tensilica S/W" and mention LED driver chips (AS3824, "LDC"). See [the Tensilica program](#the-tensilica-program). |
+| **Tensilica core** | Xtensa (windowed calls); kept as assembly source, its compiler is not available | Not worked out yet. Its strings name it "NT68500 Tensilica S/W" and mention LED driver chips (AS3824, "LDC"). See [the Tensilica program](#the-tensilica-program). |
 
 ## Regions
 
@@ -142,7 +142,8 @@ chip's Tensilica Xtensa core, 0xD8DC bytes long, followed by empty space (0xFF).
 | 0x03D088–0x03D8DB | Initialised variables |
 
 The program prints a banner with "NVT_Formal_RG20189" and "NT68500 FW Version", and its messages mention LED driver
-chips (AS3824, "LDC"). The compiler that built it has not been identified; no compiler name is stored in it.
+chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised; it is not the output of GCC (see
+[toolchains](TOOLCHAINS.md)). The source in `src/tensilica/` is assembly that rebuilds it byte for byte.
 
 ## Open questions
 

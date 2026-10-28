@@ -34,13 +34,22 @@ How the compilers that built the original firmware were identified, and which op
 - **Libraries:** Library code (libc, libm, libgcc, libnosys and the BCC runtime) is taken directly from the
   toolchain's own archives (`tools/libmatch.py`).
 
-## Tensilica program: not identified yet
+## Tensilica program: assembly source, Espressif Xtensa binutils
 
-- The program stores no compiler name.
-- Its code is unoptimised and uses the Xtensa windowed calling convention.
+- The program stores no compiler name. Its code is unoptimised and uses the Xtensa windowed calling convention.
 - Its banner contains "NVT_Formal_RG20189". That has the form of a release name of Cadence's own Xtensa tools
   (RG-2018.9), but this is not proven.
-- No suitable compiler is installed, so this program is not decompiled yet.
+- The free GCC for Xtensa (Espressif GCC 8.4.0) is not the compiler that built it: at `-O0` GCC sets up a frame
+  pointer (`mov.n a7, a1`) in every function, and none of the program's functions has one.
+- The original compiler is not available to this project, so the program is kept as assembly source in
+  `src/tensilica/`. The free GNU binutils for Xtensa assemble it to the same bytes as the firmware (see
+  [src/tensilica/README.md](../src/tensilica/README.md)).
+- The binutils come from Espressif's `xtensa-esp32-elf` toolchain, GCC 8.4.0 release esp-2020r3 (binutils 2.31.1).
+  Only `as`, `ld`, `objcopy` and `nm` are used. They are built for the ESP32's core configuration; every
+  instruction of the program assembles to its original bytes with it, but a few configuration-specific mnemonics
+  (`read_impwire`) are the ESP32 configuration's names.
+- Options: `as --no-transform` (keeps every instruction exactly as written), `ld -Ttext=0x40000000 --no-relax`,
+  `objcopy -O binary -j .text`.
 
 ## Comparison tools
 

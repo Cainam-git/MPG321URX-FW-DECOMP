@@ -10,7 +10,20 @@ import diff, diff8051
 CFG = json.loads((ROOT / "tools" / "config.json").read_text())
 GCC = str(ROOT / "toolchains/sparc-elf-3.4.4/bin/sparc-elf-gcc"); AS = str(ROOT / "toolchains/sparc-elf-3.4.4/bin/sparc-elf-as")
 
+XT = {}
+
+def xtensa(entry):   # Tensilica program: one build of src/tensilica checks every entry (tools/xtensa_check.py)
+    if entry.get("by") == "data":   # 0xFF fill after the program image
+        fw = (ROOT / "firmware" / "MSI_MPG321URX_V021_7F69.bin").read_bytes()[0x3D8DC:0x40000]
+        return None if fw == b"\xff" * len(fw) else "fill differs"
+    if "ok" not in XT:
+        XT["ok"] = subprocess.run([sys.executable, "-I", str(ROOT / "tools" / "xtensa_check.py")],
+                                  capture_output=True).returncode == 0
+    return None if XT["ok"] else "xtensa_check differs"
+
 def check(cpu, fn, entry):
+    if cpu == "8051_bank3":
+        return fn, xtensa(entry)
     if cpu.startswith("8051"):
         if entry.get("kind") == "vector":   # LJMP placed by C51 for 'interrupt n' of the matched function in "of"
             return fn, diff8051.vector(cpu, fn, entry)[0]

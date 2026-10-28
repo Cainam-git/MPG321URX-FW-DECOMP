@@ -4,13 +4,13 @@
 
 | Processor | Section | Matched bytes | Total bytes | Matched | Matched functions | Functions |
 |---|---|---:|---:|---:|---:|---:|
-| Main processor | `leon2m` | 764,437 | 933,993 | 81.8 % | 3,644 | 3,849 |
+| Main processor | `leon2m` | 764,829 | 933,993 | 81.9 % | 3,645 | 3,849 |
 | Input processor | `leon2s` | 348,897 | 411,733 | 84.7 % | 1,617 | 1,686 |
 | Helper processor | `8051_bank0` (boot loader) | 6,182 | 6,182 | 100.0 % | 52 | 52 |
 | Helper processor | `8051_bank1` (main application) | 52,673 | 53,226 | 99.0 % | 428 | 430 |
 | Helper processor | `8051_bank2` (update agent) | 52,590 | 52,590 | 100.0 % | 283 | 283 |
 | Tensilica processor | `8051_bank3` (Xtensa program image) | 65,536 | 65,536 | 100.0 % | 307 | 307 |
-| **Total** | | **1,290,315** | **1,523,260** | **84.7 %** | **6,331** | **6,607** |
+| **Total** | | **1,290,707** | **1,523,260** | **84.7 %** | **6,332** | **6,607** |
 
 To recount and update this table and the progress bars in the README, run `python3 -I tools/stats.py`. Byte counts
 come from the function sizes in `symbols/<section>.functions.json`.
@@ -32,13 +32,16 @@ come from the function sizes in `symbols/<section>.functions.json`.
   a second routine lay outside or inside its listed range.
 - **The Tensilica program:** Flash bank 3 (section `8051_bank3`) holds no 8051 code. It holds the program of the
   chip's Tensilica Xtensa core, followed by empty space (see the [firmware map](MAP.md#the-tensilica-program)).
-  Ghidra had marked 1,205 pieces of it as 8051 functions; these were all false and are replaced by one entry for the
-  program, which counts as not yet matched, and one entry for the empty space, recorded as data.
+  Ghidra had marked 1,205 pieces of it as 8051 functions; these were all false. The program's compiler is not
+  available, so it is kept as assembly source in `src/tensilica/` (one file per function), which the free Xtensa
+  assembler builds to the original bytes (`tools/xtensa_check.py`, see [toolchains](TOOLCHAINS.md)). Each function
+  and data region has its own entry, counted as matched (`"by": "asm"`); the zero fill between functions belongs to
+  the following entry. The empty space after the program is recorded as data.
 - **Byte counts** are the address ranges of the entries in `symbols/<section>.functions.json`.
 
 ## Verification
 
-`python3 -I tools/verify.py leon2m leon2s 8051_bank0 8051_bank1 8051_bank2` rebuilds every matched function and
+`python3 -I tools/verify.py leon2m leon2s 8051_bank0 8051_bank1 8051_bank2 8051_bank3` rebuilds every matched function and
 compares it with the firmware. The entries below are not confirmed by that script; each is checked another way.
 
 | Entry | How it is checked |
@@ -51,7 +54,6 @@ compares it with the firmware. The entries below are not confirmed by that scrip
 | `8051_bank2 FUN_CODE_c395`, `FUN_CODE_c433`, `FUN_CODE_c441` | Not code: bytes inside Keil's `?C_INITSEG` initialisation records (0xC36D..0xC44E), recorded as data. |
 | `8051_bank1` interrupt vectors at 0x0003, 0x000B, 0x0013, 0x0023 | The `LJMP` that C51 places for `interrupt n` of a matched interrupt function; `tools/diff8051.py` (`vector`) checks the interrupt number in that function's source and the jump target. |
 | `8051_bank2 FUN_CODE_f080` | Not code: 0xFF fill; the apparent jumps to it are the bytes of `MOVX @DPTR,A; SJMP` inside matched functions. Recorded as data. |
-| `8051_bank3 FILL_CODE_d8dc` | Not code: 0xFF fill after the Xtensa image (partition-table length 0xD8DC), recorded as data. |
 | `8051_bank2 FUN_CODE_cee9` | Built with the LX51 linker's code packing and checked with `tools/lx51judge.py`. |
 
 ## Known deviations from strict C
@@ -75,6 +77,7 @@ compares it with the firmware. The entries below are not confirmed by that scrip
 - 8051 functions that differ only in the order of the loads before a shift loop. Where the shifted value is a
   constant or a register, writing it to `ACC` first gives the firmware's order (see the matching notes); the
   functions with a computed shift count, and 16-bit shifts next to register parameters, are still open.
-- The Tensilica program (about 300 functions); its compiler has not been identified and none is installed.
+- The Tensilica program as C: it is matched as assembly source; C source would need its original compiler (Cadence
+  XCC), which is not available.
 - The unmatched LEON functions, most of them large. Functions that were tried but not matched yet have notes on
   what still differs.
