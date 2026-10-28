@@ -9240,6 +9240,12 @@
       "name": "FUN_a00d2e9c",
       "status": "matched"
     },
+    "ram:a00d2f20": {
+      "by": "hand",
+      "comment": "Selects a byte table by mode, then writes running sums of its entries to the 0xd0013fd0 register block for i = 0..0x400",
+      "name": "FUN_a00d2f20",
+      "status": "matched"
+    },
     "ram:a00d3114": {
       "by": "hand",
       "comment": "table loop indexed by i (ROM read with the reg address), != 0x100 arm first, returns 1 (see header)",
