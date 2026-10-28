@@ -12702,6 +12702,13 @@
       "name": "FUN_a00fcbec",
       "status": "matched"
     },
+    "ram:a00fccbc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes 0x32 and the three bytes of entry i of a 16 x 3 byte constant table to registers 0xcf012084..0xcf012090, then issues command (0xf, 4) and polls 0xcf012034",
+      "name": "FUN_a00fccbc",
+      "status": "matched"
+    },
     "ram:a00fcdd8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
