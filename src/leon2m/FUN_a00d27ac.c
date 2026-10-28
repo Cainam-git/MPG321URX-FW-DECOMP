@@ -14,7 +14,7 @@ extern unsigned char DAT_a802e1ab;
 extern void FUN_a00d8cd4(void);
 extern void FUN_a00dbcf0(void);
 extern int FUN_a014aed0(int, void *, int, int);
-extern void FUN_a0145360(int);
+extern void FUN_a0145360(unsigned char);
 
 int FUN_a00d27ac(unsigned char *p)
 {
