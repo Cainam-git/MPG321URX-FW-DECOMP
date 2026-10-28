@@ -23,7 +23,7 @@ How `MSI_MPG321URX_V021_7F69.bin` is laid out, and how its four processors start
 | **8051** | 8-bit, Keil C51 | Boot loader, power sequencing, loading the other processors' programs, supervising Leon2M, update channel, OSD resources. |
 | **Leon2M** (main) | LEON2, SPARC V8 | Picture pipeline, panel and OLED control, frame-rate conversion, on-screen menu logic, update service, USB mode selection. |
 | **Leon2S** (input) | LEON2, SPARC V8 | HDMI 2.1 and DisplayPort receiver, link training, mode detection. |
-| **Tensilica core** | Xtensa (windowed calls); kept as assembly source, its compiler is not available | Local dimming of an LED backlight ("LDC"): LED zone layout from Leon2M, brightness per zone, LED driver chips (AS3824). See [the Tensilica program](#the-tensilica-program). |
+| **Tensilica core** | Xtensa (windowed calls); kept as assembly source, its compiler is not available | Zone dimming ("LDC"): processes the chip's per-zone picture measurements every frame. Made for LED backlights; in this OLED monitor its LED drivers are never switched on. See [the Tensilica program](#the-tensilica-program). |
 
 ## Regions
 
@@ -143,54 +143,39 @@ chip's Tensilica Xtensa core, 0xD8DC bytes long, followed by empty space (0xFF).
 
 ### What it does
 
-Its messages and command names describe local dimming of an LED backlight, which the firmware calls "LDC":
+The program is Novatek's local-dimming controller ("LDC") for LED-backlit screens. Its messages name the parts:
+zone segments and how they are merged (maximum, average, average without black, blend), gain tables and limits
+("LDC_GainTable", "ZonePeakingPercent", "UserGlobalGain"), LED pulse width and current ("PDIM", "ADIM"), and AS3824
+LED driver chips. It also has a debug command line on its serial port ("Welcome to User's Command Line Debug").
 
-- **Panel set-up:** it receives the LED layout from Leon2M ("Leon2M conf LED_col = %d, LED_row = %d") and the panel
-  data (resolution, LED rows and columns, driver duty limits, driver type).
-- **Zone brightness:** it divides the picture into segments and merges each into one value ("Segment Merge Mode":
-  maximum, average, average without black, blend), applies gain tables and limits ("LDC_GainTable", "ZonePeakingPercent",
-  "UserGlobalGain"), and drives each LED by pulse width and current ("PDIM", "ADIM").
-- **LED drivers:** it sets up AS3824 LED driver chips (current, PWM period, HDR mode, per-channel PWM).
-- **Communication:** commands from the other processors arrive through a mailbox ("MailBox Cmd"), including power up and
-  power down.
-- **Debug:** a command line on the serial port ("Welcome to User's Command Line Debug") with memory read and write, GPIO
-  and UART tests, and a printf self-test.
+In this monitor, traced from both sides:
 
-This monitor has a QD-OLED panel, which lights every pixel itself and has no backlight. The main processor still
-sets the program up at every start: its start-up path (`FUN_a0087020` -> `FUN_a00db054` -> `FUN_a014e050`) sends
-command 0x2A through mailbox portal 2 (0xB7091000 + 0x20) with a zone grid of 32 x 16 (`FUN_a0139b90`, word
-0x2A001020) or 64 x 32 (word 0x2A002040), chosen by bits 18-19 of the word at 0xA802D290 + 0xAC. The Tensilica
-program reads the command at 0xE0091020 (`fn_40003814`) and looks it up in its table of 46 commands (0x4000D288);
-command 0x2A runs `DRV_LDC_SetLDCSegment` (`fn_4000660c`). What the program does with the grid in an OLED monitor
-has not been traced further beyond this:
+- **Start-up:** the main processor starts it and sends six of its 46 commands, through mailbox portal 2 (0xB7091000,
+  command slot +0x20; the Tensilica program reads it at 0xE0091020 in `fn_40003814` and looks it up in its table at
+  0x4000D288):
 
-- The main processor sends only 4 of the 46 commands: 0x21 with the active panel size (`FUN_a0139a30`, from
-  `System_Initialize` and the output set-up `FUN_a015373c`), 0x2A with the zone grid, 0x40 (a check message,
-  "MAILBOX_DPLL INIT DONE") and 0x97 (one register write at 0xE0080388).
-- The LED driver chips (AS3824) are only set up by command 0x22 (`fn_400013a0` -> `fn_400079b8`, "LED_AS3824_Init
-  Done"). The main processor's sender for 0x22 (`FUN_a0139d38`) has no caller and its address is stored nowhere.
-- The main processor's routines that read results back (mailbox offset 0x4C: `FUN_a013a824`, `FUN_a013a85c`,
-  `FUN_a013a884`) and its senders for the other 10 commands also have no caller and no stored address.
+  | Command | Sent by | Content |
+  |---|---|---|
+  | 0x21 | `FUN_a0139a30` (`System_Initialize`, output set-up `FUN_a015373c`) | Active panel size; starts the program |
+  | 0x2B | `FUN_a0139c3c` (`System_Initialize`) | Zone counts as powers of two (5 and 6) |
+  | 0x2A | `FUN_a0139b90`, `FUN_a014e050` (start-up path via `FUN_a00db054`) | Zone grid 32 x 16 or 64 x 32, chosen by bits 18-19 of the word at 0xA802D290 + 0xAC |
+  | 0x84 | `FUN_a013a8d4` (`System_Initialize`) | One value, written to 0xE0080168 |
+  | 0x97 | `FUN_a014e050` | One value, written to 0xE0080388 |
+  | 0x40 | `FUN_a013a750` | Check message ("MAILBOX_DPLL INIT DONE") |
 
-So the program is started and given a zone grid, but it never switches on LED drivers and the main processor
-never reads results back through the mailbox (its readers for slots 0x10 and 0x4C have no caller; only the
-power-down handshake on slot 0x34, `FUN_a01396d8`, is used).
+  After that it only sends the power-down handshake (slot 0x34, `FUN_a01396d8`).
+- **Every frame:** the chip's dimming hardware block raises interrupt 7 (`fn_40008ef0`, installed by `fn_40008f58`,
+  status register 0xE0080404). The main loop (`fn_4000a3cc`) then runs one processing pass (`fn_40003764` ->
+  `fn_400035d0`), which reads the zone values and writes its results back into the same block (0xE0080310 to
+  0xE0080708 and the table at 0xE0082000).
+- **Not used:** the LED driver chips are only set up by command 0x22 (`fn_400013a0` -> `fn_400079b8`), and the main
+  processor's sender for it (`FUN_a0139d38`) has no caller. Its routines that read results back (slots 0x10 and
+  0x4C) and its senders for the other commands have no caller either, and none of their addresses is stored.
 
-What the program does by itself after start-up:
-
-- `fn_40008f58` installs `fn_40008ef0` as the handler of interrupt 7. The handler reads the status register of the
-  chip's dimming hardware block (0xE0080404), sets a flag and clears the status.
-- The main loop (`fn_4000a3cc`) polls that flag and then runs one processing pass (`fn_40003764` ->
-  `fn_400035d0`). The pass reads zone values and writes results back into the same hardware block (0xE0080310,
-  0xE0080370, 0xE0080378, 0xE0080400, 0xE0080514, 0xE0080700-0xE0080708 and the table at 0xE0082000) and into
-  mailbox slots that the main processor does not read. It never touches the LED driver interface.
-- Start-up also sends commands 0x2B (zone counts 5 and 6, as powers of two: 32 x 64) and 0x84 (written to
-  0xE0080168) from `System_Initialize`.
-
-So the program runs a processing pass on every interrupt of the dimming hardware and writes its results into that
-hardware. Whether that hardware block changes the picture on this OLED panel (for example as a brightness limiter)
-is decided by how the block is wired inside the chip, which the firmware does not show; it would take a
-measurement on the monitor.
+So the program processes every frame of the chip's dimming hardware, but it never drives LEDs and the main processor
+never reads its results. Whether the dimming hardware itself uses the results to change the picture on this OLED
+panel (for example to limit brightness) depends on how the block is wired inside the chip; the firmware does not
+show it.
 
 The program prints a banner with "NVT_Formal_RG20189" and "NT68500 FW Version", and its messages mention LED driver
 chips (AS3824, "LDC"). No compiler name is stored in it. The code is unoptimised; it is not the output of GCC (see

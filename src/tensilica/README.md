@@ -4,8 +4,8 @@ This folder holds the source of the program for the chip's Tensilica Xtensa core
 `firmware/MSI_MPG321URX_V021_7F69.bin`, file offset 0x30000-0x3D8DB (0xD8DC bytes), which runs at address
 0x40000000. Built with the free GNU assembler, the source gives the same 55,516 bytes as the firmware.
 
-Its messages describe local dimming of an LED backlight; this OLED monitor has no backlight (see the
-[firmware map](../../docs/MAP.md#what-it-does)).
+It is Novatek's zone-dimming controller for LED-backlit screens; what it does in this OLED monitor is described in
+the [firmware map](../../docs/MAP.md#what-it-does).
 
 ## Why assembly
 
