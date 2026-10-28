@@ -271,8 +271,8 @@ LEON (GCC 3.4.4):
   in the firmware as one copy of the call per case: the block-reorder pass duplicates it (FUN_a0146298, FUN_a0149064).
 - **A small stuck function that does the same thing as a block inside a matched function** often matches when that
   block's source is copied with its types unchanged, or when matched neighbours that nothing calls are pasted in and
-  called (FUN_a00c0adc, FUN_a014f3d8, FUN_a0104f48). The scripts `work/h117/sub.py` and `work/h117/inl3.py` find
-  such pairs.
+  called (FUN_a00c0adc, FUN_a014f3d8, FUN_a0104f48). Comparing the instruction sequences of unmatched and matched
+  functions, ignoring registers, finds such pairs.
 - **A local table that is first cleared and then has every element stored:** GCC 3.4 does this for a union (or a
   struct with an uninitialised member) initialised through one member, for example
   `const union { unsigned short h[12]; unsigned int w[6]; } m = { { ... } };`. A plain array is only cleared first when
