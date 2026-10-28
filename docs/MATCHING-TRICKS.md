@@ -262,6 +262,17 @@ LEON (GCC 3.4.4):
   function sit back to back. GCC copies the initialiser with an implicit `memcpy` call; declare
   `extern void *memcpy(void *, const void *, unsigned int) __asm__("FUN_a013c910");` (a link name only, no code).
   `const` also lets the reads be scheduled independently of volatile register stores (FUN_a0118be4, FUN_a0118e04).
+- **A block placed oddly, or a set the compiler could drop but the firmware keeps:** write that block after a label
+  at the place the firmware shows and reach it with `goto`. A label resets what the compiler knows about register
+  values, so the set survives, and the block keeps its source position (FUN_a00cd31c, FUN_a0095e08).
+- **`x = d; if (c) x = v;` and `if (c) x = v; else x = d;`** compile differently around loops and calls; try both
+  (DRV_HDMI_EQScan_FSM_PHY_R_Turning).
+- **One call after a switch that only sets a variable** (`switch (n) { case 0: k = 0; break; ... } f(k, v);`) appears
+  in the firmware as one copy of the call per case: the block-reorder pass duplicates it (FUN_a0146298, FUN_a0149064).
+- **A small stuck function that does the same thing as a block inside a matched function** often matches when that
+  block's source is copied with its types unchanged, or when matched neighbours that nothing calls are pasted in and
+  called (FUN_a00c0adc, FUN_a014f3d8, FUN_a0104f48). The scripts `work/h117/sub.py` and `work/h117/inl3.py` find
+  such pairs.
 - **A local table that is first cleared and then has every element stored:** GCC 3.4 does this for a union (or a
   struct with an uninitialised member) initialised through one member, for example
   `const union { unsigned short h[12]; unsigned int w[6]; } m = { { ... } };`. A plain array is only cleared first when
