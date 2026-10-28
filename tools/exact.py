@@ -289,7 +289,10 @@ def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False, placed=None):
                 # objects' constants, so its entries need not be adjacent: place it outside the image and check every
                 # literal reference against the firmware's own address bits (verify_pool below)
                 pools.append((sec, int(mc[1]), b.read_bytes())); place.append((sec, [len(img) + 0x10000 + 0x1000 * len(pools)])); continue   # own slot per pool, so two pools never overlap
-            if not hits and cpu == "leon2m":   # a unit's .rodata/.rodata.str* in the Big chip DATA area (file =
+            if not hits and (cpu == "leon2m" or (split_pools and merge)):   # leon2s: only on the per-reference retry,
+                # for a string or constant pool whose entries the original link merged with another file's identical
+                # literals (the same text written in two source files, one copy in the firmware)
+                # leon2m: a unit's .rodata/.rodata.str* in the Big chip DATA area (file =
                 # address + 0x108000, outside parts/leon2m.bin): place it outside the image and check every literal reference
                 # against the firmware bytes at its own address bits (verify_pool, n = 0 = rest of the section)
                 # (n = -1: a mergeable string section, each string checked on its own)
