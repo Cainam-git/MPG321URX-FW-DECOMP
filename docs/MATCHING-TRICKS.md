@@ -257,6 +257,11 @@ LEON (GCC 3.4.4):
   alias set (FUN_a0136384). A data pointer kept as `unsigned int p` and cast at each use keeps per-byte stores that a
   pointer type lets GCC drop (FUN_a0136a10).
 - **A constant that must not be folded** into a sum: pass it through an inline helper parameter (FUN_a0135ae8).
+- **A stack buffer filled from ROM by FUN_a013c910 (memcpy) right before it is read:** the buffer is an initialised
+  `const` local array (`const unsigned char t[30] = {...};`); the ROM bytes are its initialiser, and the tables of one
+  function sit back to back. GCC copies the initialiser with an implicit `memcpy` call; declare
+  `extern void *memcpy(void *, const void *, unsigned int) __asm__("FUN_a013c910");` (a link name only, no code).
+  `const` also lets the reads be scheduled independently of volatile register stores (FUN_a0118be4, FUN_a0118e04).
 - **`x >= K` as `cmp; subx`** after a loop whose own test is `cmp K-1; bleu`: the final compare uses a local holding K
   (`unsigned char n = 4; ... return i >= n;`). A literal K is folded to `x > K-1` and branches (FUN_a014f32c).
 - **Five case labels whose delay slots differ** give the case order of the source; trying all orders found
