@@ -9240,6 +9240,14 @@
       "name": "FUN_a00d2e9c",
       "status": "matched"
     },
+    "ram:a00d2f00": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00d2f20; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00d2f00",
+      "of": "FUN_a00d2f20",
+      "status": "matched"
+    },
     "ram:a00d2f20": {
       "by": "hand",
       "comment": "Selects a byte table by mode, then writes running sums of its entries to the 0xd0013fd0 register block for i = 0..0x400",
