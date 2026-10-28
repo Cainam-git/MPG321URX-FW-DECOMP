@@ -10,7 +10,7 @@
 extern unsigned char DAT_a802d290[];
 extern void FUN_a00cea18(void);
 extern void FUN_a00cea44(void);
-extern void FUN_a0145360(int);
+extern void FUN_a0145360(unsigned char);
 extern int FUN_a014aed0(unsigned char, void *, unsigned short, unsigned short); /* its asm: and 0xff on %i0, sll 16 on %i2/%i3, returns l0 & 1 */
 
 int FUN_a00d1ad4(unsigned char *param_1)
