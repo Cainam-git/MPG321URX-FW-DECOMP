@@ -4871,6 +4871,12 @@
       "name": "FUN_a00977cc",
       "status": "matched"
     },
+    "ram:a00977e8": {
+      "by": "hand",
+      "comment": "Mode-detect standby step: compares the new timing with the stored record, counts stable passes, applies the guess-scramble fallback and checks the pixel clock",
+      "name": "FSM_MODE_DETECT_STANDBY",
+      "status": "matched"
+    },
     "ram:a0097ed0": {
       "by": "autoc",
       "comment": "p = word 0 of record p1 of the 0x34-byte table 0xA807DB00: returns FUN_a00a7408(4, p + 0x30) != 0",
