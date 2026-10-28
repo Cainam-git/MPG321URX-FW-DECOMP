@@ -25,13 +25,13 @@ extern unsigned char DAT_a80761c0;
 extern unsigned char ARR_a807cd2e[][6];
 extern void FUN_a00aa930(unsigned char, unsigned char);
 extern void FUN_a00aaf94(unsigned char, unsigned char, unsigned char);
-extern unsigned char FUN_a008642c(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char);
+extern unsigned char FUN_a008642c(unsigned int, unsigned int, unsigned int, unsigned char, unsigned char);
 extern void FUN_a00b1794(int);
 extern void FUN_a0086e58(unsigned char, struct Lane *);
 
 extern void FUN_a0086fb0(struct Lane *, unsigned char, unsigned char *, unsigned char *);
-extern unsigned char FUN_a0086540(unsigned char, unsigned char, unsigned char, unsigned char);
-extern unsigned char FUN_a0087364(unsigned char, struct Lane *);
+extern unsigned char FUN_a0086540(unsigned int, unsigned int, unsigned char, unsigned char);
+extern unsigned char FUN_a0087364(unsigned int, unsigned char *);
 extern int FUN_a00734c4(const char *);
 extern unsigned char FUN_a0087074(unsigned int);
 
@@ -88,7 +88,7 @@ unsigned char FUN_a008743c(unsigned char all, unsigned char *rate, struct Lane *
                     goto next;
                 }
                 t = *rate;
-                ret = FUN_a0087364(t, buf);
+                ret = FUN_a0087364(t, (unsigned char *)buf);
                 r = ret;
                 if (r == 5)
                     goto next;
