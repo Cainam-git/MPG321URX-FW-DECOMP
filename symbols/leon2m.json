@@ -19503,6 +19503,13 @@
       "name": "FUN_a013aa38",
       "status": "matched"
     },
+    "ram:a013aae4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "polls word 0x20 of portal 2 up to 100 times until it reads 0, then writes 0x61000000 | a << 16 | b to it",
+      "name": "FUN_a013aae4",
+      "status": "matched"
+    },
     "ram:a013ab9c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
