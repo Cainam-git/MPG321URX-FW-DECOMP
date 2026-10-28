@@ -39,7 +39,7 @@ extern void FUN_a00aa5e8(unsigned char, unsigned char, unsigned char, unsigned c
 extern void FUN_a00a7b64(unsigned char, short, unsigned char);
 extern void FUN_a00aa930(unsigned char, unsigned char);
 extern void FUN_a00a78fc(unsigned int, unsigned short, unsigned int);
-extern unsigned int FUN_a00a78b4(unsigned int, unsigned short);
+extern unsigned char FUN_a00a78b4(unsigned int, unsigned short);
 
 unsigned char FUN_a00883d0(unsigned char port, unsigned char *rec)
 {
