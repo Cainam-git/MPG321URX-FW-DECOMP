@@ -23215,16 +23215,20 @@
       "symbol": "__divsf3"
     },
     "ram:a0155b78": {
-      "by": "hand",
-      "comment": "unpacks two floats with FUN_a0156f34; returns -1 when either class word is <= 1, else FUN_a015700c(buf1, buf2)",
+      "by": "lib",
+      "comment": "toolchain library function __gtsf2 from libgcc.a:_gt_sf.o (the code is identical to __gesf2; FUN_a0109bbc calls it as __gtsf2); byte-exact, no C needed",
+      "lib": "libgcc.a:_gt_sf.o",
       "name": "FUN_a0155b78",
-      "status": "matched"
+      "status": "matched",
+      "symbol": "__gtsf2"
     },
     "ram:a0155bdc": {
-      "by": "hand",
-      "comment": "unpacks two floats with FUN_a0156f34; returns -1 when either class word is <= 1, else FUN_a015700c(buf1, buf2)",
+      "by": "lib",
+      "comment": "toolchain library function __gesf2 from libgcc.a:_ge_sf.o (the code is identical to __gtsf2; __fixunssfsi, FUN_a01551bc, calls it as __gesf2); byte-exact, no C needed",
+      "lib": "libgcc.a:_ge_sf.o",
       "name": "FUN_a0155bdc",
-      "status": "matched"
+      "status": "matched",
+      "symbol": "__gesf2"
     },
     "ram:a0155c40": {
       "by": "lib",
