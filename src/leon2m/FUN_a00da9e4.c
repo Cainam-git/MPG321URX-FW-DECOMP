@@ -10,7 +10,7 @@ struct Rcff4 {
 };
 extern struct Rcff4 DAT_a802cff4;
 extern unsigned char DAT_a802d268[11];
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 
 void FUN_a00da9e4(unsigned char n)
 {
