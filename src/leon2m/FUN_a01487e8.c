@@ -1,19 +1,10 @@
 /* leon2m FUN_a01487e8 @ 0xa01487e8 (-mcpu=v8 -Os -g)
- * Code: FUN_a01337e8(p1, p2).
- * Source form: Ghidra's type and symbol names are kept.
+ * Forwards its three arguments (port, len, buffer) to FUN_a01337e8(port, len, buffer) as a tail call; len is
+ * passed on as an unsigned short. Callers: FUN_a00ca878, FUN_a00c573c, FUN_a00bf110 and other handlers.
  */
-typedef unsigned char undefined, undefined1, byte, uchar, bool;
-typedef unsigned short undefined2, ushort, word;
-typedef unsigned int undefined4, uint, ulong, dword, undefined3;
-typedef unsigned long long undefined8, ulonglong;
-typedef long long longlong;
-typedef signed char sbyte;
-typedef int code();
-extern int FUN_a01337e8();
+extern void FUN_a01337e8(unsigned char cmd, unsigned short len, unsigned char *p);
 
-void FUN_a01487e8(undefined1 param_1,undefined2 param_2)
-
+void FUN_a01487e8(unsigned char port, unsigned short len, unsigned char *buf)
 {
-  FUN_a01337e8(param_1,param_2);
-  return;
+    FUN_a01337e8(port, len, buf);
 }
