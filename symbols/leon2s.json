@@ -2428,6 +2428,12 @@
       "name": "DRV_HDMI_EQScan_FSM_Search_Process",
       "status": "matched"
     },
+    "ram:a0078dc8": {
+      "by": "hand",
+      "comment": "prints the port state, steps idx[ch] through FUN_a0074ef4 for channels not done, sets the ARR_a807ccc4 state word",
+      "name": "DRV_HDMI_EQScan_FSM_Search_EQTable",
+      "status": "matched"
+    },
     "ram:a0078fe8": {
       "by": "hand",
       "comment": "returns 1 when FUN_a00a7468(0x1c, p, 0x1c04) is set and FUN_a0074f60(p) is in 11..0x257",
