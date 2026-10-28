@@ -29,7 +29,7 @@ Tensilica processor [####################]  100 %
 Overall             [#################---]   86 %
 ```
 
-Percentages are by code size. More than 6,300 of roughly 6,600 functions are done, the helper processor's boot
+Percentages are by code size. More than 6,400 of roughly 6,600 functions are done, the helper processor's boot
 loader and update agent are complete, and the Tensilica program is rebuilt completely from assembly source. `tools/rebuild.py` builds the complete firmware image from the matched functions plus the
 original bytes for everything else, and the result is identical to the original file. Detailed numbers are in the
 [status report](docs/STATUS.md).
