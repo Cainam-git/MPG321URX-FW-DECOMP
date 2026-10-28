@@ -67,7 +67,7 @@ int FUN_a00c0b8c(unsigned char port)
     return diff & 0xff;
 }
 
-extern void FUN_a01487e8(unsigned char, int, unsigned char *);
+extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
 extern void FUN_a00b88cc(void);
 
 void FUN_a00baa6c(unsigned char port)
