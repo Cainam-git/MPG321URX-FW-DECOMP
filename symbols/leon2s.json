@@ -2577,7 +2577,7 @@
     },
     "ram:a0079f80": {
       "by": "hand",
-      "comment": "Programs the HDMI LMS equalizer tables: writes halfword values from two tables through the register-write routine FUN_a00a7488, with a debug call at the start gated by bit 0x800 of _DAT_a8078634. In the target the be comes before the call set-up, with clr %l0 in its delay slot, and branches past the call. Source form: p1 = param_1 saved first (mov %i0, %l1); i = 0 before the condition (clr %l0); if ((_DAT_a8078634 & 0x800) == 0) goto skip; which gives btst; be skip with mov and clr in the delay slot. Whether param_1 needs a separate local to produce mov %i0, %l1 in the delay slot is not established.",
+      "comment": "Debug call gated by bit 0x800 of _DAT_a8078634, FUN_a00a7488 writes from DAT_a00b3b0a / b10 / b18, then FUN_a0079e00(port)",
       "name": "DRV_HDMI21_LMS_To_EQ",
       "status": "matched"
     },

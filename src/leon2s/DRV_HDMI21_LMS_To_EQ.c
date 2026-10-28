@@ -7,7 +7,7 @@ extern unsigned short DAT_a00b3b10[4];
 extern unsigned short DAT_a00b3b18[4];
 extern void FUN_a0073044(unsigned int, const char *);
 extern void FUN_a00a7488(unsigned int, unsigned short, unsigned int, unsigned int);
-extern void FUN_a0079e00(unsigned int, unsigned int);
+extern void FUN_a0079e00(unsigned char);
 
 void DRV_HDMI21_LMS_To_EQ(unsigned int param_1, unsigned int param_2)
 {
@@ -36,5 +36,5 @@ skip:
         i++;
     } while (i <= 3);
 
-    FUN_a0079e00(u, param_2);
+    FUN_a0079e00(u);
 }
