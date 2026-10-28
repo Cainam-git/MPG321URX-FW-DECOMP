@@ -17,7 +17,7 @@ typedef int code();
 #define CONCAT44(a, b) (((unsigned long long)(a) << 32) | (unsigned int)(b))
 extern unsigned char DAT_a00b4d7a;
 
-uint FUN_a00a78b4(uint param_1, unsigned short param_2)
+unsigned char FUN_a00a78b4(uint param_1, unsigned short param_2)
 
 {
   uint uVar1;

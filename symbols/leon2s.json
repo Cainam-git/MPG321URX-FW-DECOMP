@@ -6442,7 +6442,7 @@
       "status": "matched"
     },
     "ram:a00a78b4": {
-      "by": "autoc",
+      "by": "hand",
       "comment": "Register read helper for one hardware block: returns the low byte of register param_2 of port param_1 (0 or 1; other ports read 0). Address = 0xcf000000 | ((base[port] + reg) * 4), with the per-port 16-bit base table at 0xa00b4d7a. One of seven identical helpers, one per block (tables 0xa00b4d40/4d6c/4d7a/4d90/4d94/4d98/4d9c). Ghidra had added a stray byte cast to the base.",
       "name": "FUN_a00a78b4",
       "status": "matched"
