@@ -3630,8 +3630,8 @@
       "status": "matched"
     },
     "ram:a008b838": {
-      "by": "autoc",
-      "comment": "FUN_a00a6f08(p1, 99)",
+      "by": "hand",
+      "comment": "Returns FUN_a00a6f08(p1, 99)",
       "name": "FUN_a008b838",
       "status": "matched"
     },
