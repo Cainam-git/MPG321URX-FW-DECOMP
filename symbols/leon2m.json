@@ -22239,6 +22239,13 @@
       "name": "FUN_a0148854",
       "status": "matched"
     },
+    "ram:a0148868": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3",
+      "comment": "Prints and maps FUN_a0152f70() with a 2..19 switch (other values: 4, or 0 when bit 31 of word 0xa802e1a0 is set) and returns the result",
+      "name": "FUN_a0148868",
+      "status": "matched"
+    },
     "ram:a0148974": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
