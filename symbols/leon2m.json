@@ -11432,6 +11432,13 @@
       "of": "FUN_a00ef048",
       "status": "matched"
     },
+    "ram:a00eef7c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Stores p to DAT_a8026a79 and, for p 0..3, 6, 7, sets DAT_a8026a78 (0..3) and bit 0 or 2 of register 0xcf014750 (switch of FUN_a00ef048)",
+      "name": "FUN_a00eef7c",
+      "status": "matched"
+    },
     "ram:a00ef034": {
       "by": "hand",
       "comment": "stores its two arguments to DAT_a802b74e and DAT_a802b74c",
