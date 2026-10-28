@@ -12,7 +12,7 @@
  * register choices.
  */
 struct win { int a; int b; };
-extern void FUN_a00dffa4();
+extern void FUN_a00dffa4(unsigned int);
 extern void FUN_a00e406c(unsigned int, unsigned int, unsigned int, unsigned int);
 extern unsigned int FUN_a00e0754(unsigned int, unsigned int, unsigned int, unsigned int);
 extern void FUN_a00e0774(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
