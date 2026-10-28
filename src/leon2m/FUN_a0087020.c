@@ -88,7 +88,7 @@ extern void FUN_a0081e0c(void);
 extern void FUN_a00db174(void);
 extern void FUN_a00dc3dc(void);
 extern void FUN_a0145c5c(int, int);
-extern void FUN_a0145360(int);
+extern void FUN_a0145360(unsigned char);
 extern int FUN_a014aed0(int, void *, int, int);
 extern int FUN_a0148a24(void);
 extern void FUN_a0086ae8(int);
