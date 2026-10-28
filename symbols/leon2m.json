@@ -1590,6 +1590,13 @@
       "name": "FUN_a0029820",
       "status": "matched"
     },
+    "ram:a0029858": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "fixed register write sequence via FUN_a002c25c / FUN_a002c268, then the inlined FUN_a0029820(1, 0x10) and (4, 0x25)",
+      "name": "FUN_a0029858",
+      "status": "matched"
+    },
     "ram:a002992c": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
