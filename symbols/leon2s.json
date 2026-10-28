@@ -3826,6 +3826,12 @@
       "name": "FUN_a008e484",
       "status": "matched"
     },
+    "ram:a008e514": {
+      "by": "hand",
+      "comment": "a/b/e = 0/c/c (en == 0) or 2/8/c; FUN_a0095f20(port, en, a, b, 0, e) when FUN_a008d800() > 0x81, else FUN_a008d980/d920/da34/d9d4 with a, b, 0, e",
+      "name": "FUN_a008e514",
+      "status": "matched"
+    },
     "ram:a008e5ac": {
       "by": "hand",
       "comment": "void (u8 p1, p2, p3, p4). p2 == 0: dbd4(p1,0,p4), db4c(p1,1), db90(p1,0). p3 == 1: db4c(p1,0), dbd4(p1,1,p4), db90(p1,1). Else: dbd4(p1,0,p4), db4c(p1,1), db90(p1,1). Then tail call FUN_a00b1794(10). Fixes vs draft: BEHAVIOUR the 3rd arg of FUN_a008dbd4 is p4 in all arms (fw loads 'and ...",
