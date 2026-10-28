@@ -10703,6 +10703,13 @@
       "name": "FUN_a00df51c",
       "status": "matched"
     },
+    "ram:a00df540": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns bits min(a,b)..max(a,b) of the word FUN_a00e021c(addr), shifted down to bit 0",
+      "name": "FUN_a00df540",
+      "status": "matched"
+    },
     "ram:a00df588": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
