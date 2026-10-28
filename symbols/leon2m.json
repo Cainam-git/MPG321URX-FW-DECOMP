@@ -22900,6 +22900,13 @@
       "name": "FUN_a014f374",
       "status": "matched"
     },
+    "ram:a014f3d8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "When no field of DAT_a802cc80 equals c: FUN_a014eb14() > 3 runs FUN_a014f208, then FUN_a014ebf8(c); then FUN_a013863c(c, p2, field index of c, 1)",
+      "name": "FUN_a014f3d8",
+      "status": "matched"
+    },
     "ram:a014f620": {
       "by": "autoc",
       "comment": "When p1 == 0 calls FUN_a00fe880(0x11, m, 0xb) for m = 1, 2, 4, 8, 0x10; when p1 == 1 calls FUN_a00fe880(10, m, 0xb) for m = 8, 0x10, 0x20, 0x40, 0x80; other p1 return without a call",
