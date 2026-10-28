@@ -8623,6 +8623,13 @@
       "name": "FUN_a00c5478",
       "status": "matched"
     },
+    "ram:a00c573c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Stores 3 and the digits at bytes 7..9 of the port's receive record (FUN_a00c0adc/b34/b8c) to 0xa802d290+0x11..0x14, then sends the 6-byte reply; 0xff on a bad digit",
+      "name": "FUN_a00c573c",
+      "status": "matched"
+    },
     "ram:a00c5a00": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
