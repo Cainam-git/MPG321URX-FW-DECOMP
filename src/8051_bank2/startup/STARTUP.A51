@@ -1,7 +1,7 @@
 ;------------------------------------------------------------------------------
 ; 8051_bank2 (update agent, "AUX") FUN_CODE_d426 @ 0xd426 and the reset vector thunk @ 0x0000 (
 ; byte-exact: tools/startup8051.py 8051_bank2 D426 62 B5B4 C36D D4B2 -> CODE 0x0000..0x0002 and 0xD426..0xD4B1).
-; Keil C51 9.60's STARTUP.A51 completely unmodified (IDATALEN 80H, no XDATA clear), followed by the unmodified
+; Keil C51's STARTUP.A51 (identical in 9.57 and 9.60) completely unmodified (IDATALEN 80H, no XDATA clear), followed by the unmodified
 ; INIT.A51 (?C_INIT): clear IDATA 0x01..0x7F, SP = 0x61 (?STACK linked at IDATA 0x62), run the C initialisation table at
 ; CODE 0xC36D, LJMP main = the update agent's main loop FUN_CODE_b5b4.
 ;------------------------------------------------------------------------------

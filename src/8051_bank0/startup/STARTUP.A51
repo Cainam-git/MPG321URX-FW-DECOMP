@@ -1,7 +1,7 @@
 ;------------------------------------------------------------------------------
 ; 8051_bank0 FUN_CODE_13f7 @ 0x13f7 and the reset vector thunk @ 0x0000 (byte-exact: rebuilt with
 ; Keil A51 + BL51 + OH51 by tools/startup8051.py, CODE 0x0000..0x0002 and 0x13F7..0x1490 identical).
-; This is Keil C51 9.60's own STARTUP.A51 with exactly two settings changed (XDATASTART = 3000H, XDATALEN = 1000H),
+; This is Keil C51's own STARTUP.A51 (identical in 9.57 and 9.60) with exactly two settings changed (XDATASTART = 3000H, XDATALEN = 1000H),
 ; followed by Keil's unmodified INIT.A51 (?C_INIT, from 0x1411). After reset: clear IDATA 0x01..0x7F, clear XDATA
 ; 0x3000..0x3FFF (the share structure the boot loader then fills, see FUN_CODE_1346), SP = 0x5A (stack from IDATA
 ; 0x5B), run the C initialisation table at CODE 0x185F (?C_INITSEG), then LJMP main FUN_CODE_151c.

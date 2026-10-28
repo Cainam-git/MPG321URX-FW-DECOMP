@@ -29,8 +29,8 @@ Tensilica processor [####################]  100 %
 Overall             [#################---]   86 %
 ```
 
-Percentages are by code size. More than 6,400 of roughly 6,600 functions are done, the helper processor's boot
-loader and update agent are complete, and the Tensilica program is rebuilt completely from assembly source. `tools/rebuild.py` builds the complete firmware image from the matched functions plus the
+Percentages are by code size. More than 6,400 of roughly 6,600 functions are done, the helper processor is complete,
+and the Tensilica program is rebuilt completely from assembly source. `tools/rebuild.py` builds the complete firmware image from the matched functions plus the
 original bytes for everything else, and the result is identical to the original file. Detailed numbers are in the
 [status report](docs/STATUS.md).
 
@@ -38,7 +38,7 @@ original bytes for everything else, and the result is identical to the original 
 
 1. A function is rewritten in C, or in assembly where the original was written in assembly. Routines from the
    toolchains' own libraries are taken unchanged from those libraries.
-2. It is compiled with the original toolchains: GCC 3.4.4 for the two LEON processors and Keil C51 for the 8051.
+2. It is compiled with the original toolchains: GCC 3.4.4 for the two LEON processors and Keil C51 9.57 for the 8051.
    The compiler of the Tensilica program is not available, so that program is kept as assembly source that the
    free Xtensa assembler builds to the original bytes.
 3. The result is compared with the original bytes at the exact address the function occupies.

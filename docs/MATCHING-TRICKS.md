@@ -233,8 +233,8 @@ changing the code, and test all pairs.
   matches only with 9.57 or older. Comparing 14 matched functions under every downloadable Keil release first put it
   at C51 9.05 to 9.57, or 9.60.7. 9.02a and 9.03 drop a `MOV DPTR` reload between consecutive XDATA stores;
   9.59 to 9.60a compile `(x & 0xf0) == 0x50` as `XRL`/`JNZ` instead of `MOV R7,A` / `CJNE R7,#50`.
-- **Dead copies.** Keil 9.60.7 removes a register copy whose only reader is gone, in a late pass. Releases 9.05 to
-  9.56 can leave such a reader behind as an extra instruction.
+- **Dead copies.** Keil 9.57 and later remove a register copy whose only reader is gone, in a late pass. Releases
+  9.05 to 9.56 can leave such a reader behind as an extra instruction.
 - **A dead `MOV R7,ARn` that the firmware keeps.** A comparison through a char cast, `(char)x == C`, copies the value
   into a temporary register and compares that register (`MOV R7,AR6; CJNE R7,#C`). If both outcomes of a `?:` on that
   comparison are identical and non-empty, Keil merges them after the clean-up pass, and the copy stays without a

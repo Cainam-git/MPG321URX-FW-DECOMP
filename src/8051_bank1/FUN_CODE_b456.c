@@ -1,6 +1,6 @@
 /* 8051_bank1 FUN_CODE_b456 @ 0xb456..0xb4e0 (138 B)  SPI flash: write the saved status register bytes p[0..1] back
  * with a Write Status Register command. Byte-exact: 138 of 138 bytes, OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC),
- * Keil C51 9.60.7.
+ * Keil C51 9.57.
  *
  * Input: p (R1..R3, generic pointer). Callers: FUN_CODE_8b58 passes its status buffer at XDATA 0xA4BA,
  * FUN_CODE_6c34 passes XDATA 0xA776; both call it as 'LCALL b456; LJMP dc67' (no return value).

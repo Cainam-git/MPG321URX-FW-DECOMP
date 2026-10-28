@@ -1,7 +1,7 @@
 ;------------------------------------------------------------------------------
 ; 8051_bank1 FUN_CODE_a627 @ 0xa627 and the reset vector thunk @ 0x0000 (tools/startup8051.py
 ; 8051_bank1 A627 68 3FE7 708C A6CF -> CODE 0x0000..0x0002 and 0xA627..0xA6CE).
-; Keil C51 9.60's STARTUP.A51 with XDATASTART = 0A000H, XDATALEN = 1000H and one added block that clears a second
+; Keil C51's STARTUP.A51 (identical in 9.57 and 9.60) with XDATASTART = 0A000H, XDATALEN = 1000H and one added block that clears a second
 ; XDATA range (XDATA2START = 0F800H, XDATA2LEN = 800H, the same loop as the XDATA block), followed by Keil's
 ; unmodified INIT.A51 (?C_INIT, from 0xA64F). After reset: clear IDATA 0x01..0x7F, clear XDATA 0xA000..0xAFFF and
 ; 0xF800..0xFFFF, SP = 0x67 (?STACK linked at IDATA 0x68), run the C initialisation table at CODE 0x708C
