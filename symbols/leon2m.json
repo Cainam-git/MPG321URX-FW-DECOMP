@@ -12637,6 +12637,13 @@
       "name": "FUN_a00fbc80",
       "status": "matched"
     },
+    "ram:a00fbdcc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Switch on sel: 1 runs FUN_a00fb9ec, 2 FUN_a00fbaa4(DAT_a802b7ef), 3 FUN_a00fbaf8(p, DAT_a802b7ec), 4 FUN_a00fbc80(p, DAT_a802b7eb); returns the result as a byte",
+      "name": "FUN_a00fbdcc",
+      "status": "matched"
+    },
     "ram:a00fbf54": {
       "by": "hand",
       "comment": "returns 0",
