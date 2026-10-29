@@ -1,0 +1,21 @@
+# leon2m switchdataD_a0143450 0xa0143450-0xa01434a0 (80 bytes)
+a0143450:  00 0e 88 ac  unimp  0xe88ac
+a0143454:  00 0e 88 ac  unimp  0xe88ac
+a0143458:  00 0e 89 54  unimp  0xe8954
+a014345c:  00 0e 89 4c  unimp  0xe894c
+a0143460:  00 0e 89 44  unimp  0xe8944
+a0143464:  00 0e 89 3c  unimp  0xe893c
+a0143468:  00 0e 89 34  unimp  0xe8934
+a014346c:  00 0e 89 2c  unimp  0xe892c
+a0143470:  00 0e 89 24  unimp  0xe8924
+a0143474:  00 0e 89 1c  unimp  0xe891c
+a0143478:  00 0e 89 14  unimp  0xe8914
+a014347c:  00 0e 89 0c  unimp  0xe890c
+a0143480:  00 0e 89 04  unimp  0xe8904
+a0143484:  00 0e 88 fc  unimp  0xe88fc
+a0143488:  00 0e 88 f4  unimp  0xe88f4
+a014348c:  00 0e 88 ec  unimp  0xe88ec
+a0143490:  00 0e 88 e4  unimp  0xe88e4
+a0143494:  00 0e 88 dc  unimp  0xe88dc
+a0143498:  00 0e 88 d4  unimp  0xe88d4
+a014349c:  00 0e 88 cc  unimp  0xe88cc
