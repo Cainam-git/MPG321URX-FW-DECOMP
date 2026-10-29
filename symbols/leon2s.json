@@ -1760,6 +1760,12 @@
       "name": "FUN_a00624b4",
       "status": "matched"
     },
+    "ram:a006250c": {
+      "by": "hand",
+      "comment": "looks up keys 0x32 and 0x63 in the halfword pairs of DAT_a8078aa0 and stores the value or the linear interpolation between the neighbouring pairs in DAT_a8078a64 and DAT_a8078a6c",
+      "name": "FUN_a006250c",
+      "status": "matched"
+    },
     "ram:a0062718": {
       "by": "hand",
       "comment": "Unsigned interpolation between a and b by x within lo and hi",
