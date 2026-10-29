@@ -5279,6 +5279,12 @@
       "name": "DRV_HDMI21_RXDetect_FSM_Init",
       "status": "matched"
     },
+    "ram:a009c09c": {
+      "by": "hand",
+      "comment": "Returns a 16-bit value from port registers (ratio of two scaled fields or a direct field), 1 for zero",
+      "name": "FUN_a009c09c",
+      "status": "matched"
+    },
     "ram:a009c188": {
       "by": "hand",
       "comment": "Fills the timer descriptors for type 1, 0x14 or 0x15 and passes them to CONV2HDMITX_UpdateInterface_3",
