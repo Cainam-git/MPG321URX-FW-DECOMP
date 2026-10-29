@@ -1641,6 +1641,13 @@
       "name": "FUN_a0029710",
       "status": "matched"
     },
+    "ram:a002973c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns FUN_a0029638((unsigned char)(c + 0x33)) as an unsigned char (byte routine chain)",
+      "name": "FUN_a002973c",
+      "status": "matched"
+    },
     "ram:a0029818": {
       "by": "hand",
       "comment": "empty routine",
