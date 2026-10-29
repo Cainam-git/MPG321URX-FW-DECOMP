@@ -22426,6 +22426,13 @@
       "name": "FUN_a0148254",
       "status": "matched"
     },
+    "ram:a0148268": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "maps channel 0..3 through remap (else prints s_001a6dd8 and uses 0), then calls FUN_a012f1ec(channel, mode) for mode 0..3",
+      "name": "FUN_a0148268",
+      "status": "matched"
+    },
     "ram:a0148350": {
       "by": "hand",
       "comment": "empty routine",
