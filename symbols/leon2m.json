@@ -12335,6 +12335,13 @@
       "name": "FUN_a00f40e4",
       "status": "matched"
     },
+    "ram:a00f42b8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Steps a 16-bit value from FUN_a00f3528() to target in steps of 4, calling FUN_a00f36b8 and FUN_a011ff28 per step",
+      "name": "FUN_a00f42b8",
+      "status": "matched"
+    },
     "ram:a00f4434": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
