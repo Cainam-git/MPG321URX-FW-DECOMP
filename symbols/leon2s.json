@@ -2690,7 +2690,7 @@
       "status": "matched"
     },
     "ram:a007b394": {
-      "by": "lead",
+      "by": "hand",
       "comment": "final store in both arms of the b8 test",
       "name": "DRV_HDMI_EQScan_FSM_PHY_EQ",
       "status": "matched"
@@ -5238,7 +5238,7 @@
       "status": "matched"
     },
     "ram:a009ae98": {
-      "by": "lead",
+      "by": "hand",
       "comment": "pointer form of the state-6 store",
       "name": "DRV_HDMI21_RXDetect_FSM_LTS_P",
       "status": "matched"
@@ -9107,7 +9107,7 @@
       "status": "matched"
     },
     "ram:a00d0d78": {
-      "by": "lead",
+      "by": "hand",
       "comment": "void, unsigned char port; final call result tested",
       "name": "FUN_a00d0d78",
       "status": "matched"
@@ -9309,7 +9309,7 @@
       "status": "matched"
     },
     "ram:a00d378c": {
-      "by": "lead",
+      "by": "hand",
       "comment": "unsigned long alias set for the _DAT_a8078c3c store",
       "name": "FUN_a00d378c",
       "status": "matched"

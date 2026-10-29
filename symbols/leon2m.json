@@ -6772,7 +6772,7 @@
       "status": "matched"
     },
     "ram:a00af44c": {
-      "by": "lead",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
       "comment": "table named ARR_00190cec (GCSE bucket order)",
       "name": "FUN_a00af44c",
@@ -12606,7 +12606,7 @@
       "status": "matched"
     },
     "ram:a00f8f78": {
-      "by": "lead",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "always-true test around the default block value",
       "name": "FUN_a00f8f78",
@@ -15098,7 +15098,7 @@
       "status": "matched"
     },
     "ram:a01129e4": {
-      "by": "h41",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "switch on sel: writes a, b, c to register groups through FUN_a00f3134",
       "name": "FUN_a01129e4",
