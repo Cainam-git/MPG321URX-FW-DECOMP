@@ -2276,6 +2276,13 @@
       "name": "FUN_a002e764",
       "status": "matched"
     },
+    "ram:a002e960": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "transforms (x0, y0, x1, y1) by bits of DAT_a802c9b0 and writes registers 3..10 of block blk",
+      "name": "FUN_a002e960",
+      "status": "matched"
+    },
     "ram:a002ed14": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
