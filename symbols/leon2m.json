@@ -6646,6 +6646,13 @@
       "name": "FUN_a00ab080",
       "status": "matched"
     },
+    "ram:a00ab0e0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets y/x/start from mode and byte 0xa802d290+0x190, calls FUN_a00a31a4 with FUN_a00a3844(DAT_0018f984, byte +8), then FUN_a00b32e4 for i = start..12",
+      "name": "FUN_a00ab0e0",
+      "status": "matched"
+    },
     "ram:a00ab2a8": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O3 -g",
