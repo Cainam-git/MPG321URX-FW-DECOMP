@@ -8741,6 +8741,13 @@
       "name": "FUN_a00c46d4",
       "status": "matched"
     },
+    "ram:a00c49b8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reads four digit pairs and a selector digit from the port record into 0xa802d290+0x198..0x1a2, then writes and sends 5600+",
+      "name": "FUN_a00c49b8",
+      "status": "matched"
+    },
     "ram:a00c5478": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
