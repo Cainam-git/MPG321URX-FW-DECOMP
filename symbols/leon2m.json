@@ -6799,6 +6799,13 @@
       "name": "FUN_a00ad460",
       "status": "matched"
     },
+    "ram:a00ad5a4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets width/attribute/colour words by t/f/DAT_a802d033 and issues the FUN_a00b3ed0/FUN_a00b32e4/FUN_a0146a80 calls for x/y",
+      "name": "FUN_a00ad5a4",
+      "status": "matched"
+    },
     "ram:a00ad86c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
