@@ -6606,6 +6606,12 @@
       "name": "FUN_a00a7614",
       "status": "matched"
     },
+    "ram:a00a7718": {
+      "by": "hand",
+      "comment": "saves 0xcf03d014..020 and 0xcf01142c/030; for port 0/1 sets the reg-high-byte bit, page 0x85/0x86 and index, writes (v | mask) or (v & ~mask) by mode to the DAT_a00b4d84 register word, restores the saved bytes",
+      "name": "FUN_a00a7718",
+      "status": "matched"
+    },
     "ram:a00a78b4": {
       "by": "hand",
       "comment": "Register read helper for one hardware block: returns the low byte of register param_2 of port param_1 (0 or 1; other ports read 0). Address = 0xcf000000 | ((base[port] + reg) * 4), with the per-port 16-bit base table at 0xa00b4d7a. One of seven identical helpers, one per block (tables 0xa00b4d40/4d6c/4d7a/4d90/4d94/4d98/4d9c). Ghidra had added a stray byte cast to the base.",
