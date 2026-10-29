@@ -7293,6 +7293,13 @@
       "name": "FUN_a00b7188",
       "status": "matched"
     },
+    "ram:a00b72cc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "three rows of FUN_a00a31a4 text from table 0x197d08 with optional FUN_a0146b6c wrapping, then fixed FUN_a0146a80/FUN_a0146b20 calls per row",
+      "name": "FUN_a00b72cc",
+      "status": "matched"
+    },
     "ram:a00b7474": {
       "by": "hand",
       "comment": "fixed call sequence (FUN_a00a8c88 .. FUN_a0146a80), FUN_a00a31a4 with FUN_a00a3844(0x1928b0, byte 0xA802D298), then tail-calls FUN_a00b34d4(3, 5, p3..p6)",
