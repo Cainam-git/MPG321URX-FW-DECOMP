@@ -16671,6 +16671,13 @@
       "name": "FUN_a012082c",
       "status": "matched"
     },
+    "ram:a0120848": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "when word 4 of record 0 at 0xa8027aac is 1 shifts b left by 3; calls FUN_a00f1fe0(blk, 0x29, ...) and FUN_a00f1fe0(blk, 0x1b, (a << 5) | (b & 0x1e)) for block blk or, when blk is 8, for blocks 0..7",
+      "name": "FUN_a0120848",
+      "status": "matched"
+    },
     "ram:a0120998": {
       "by": "autoc",
       "comment": "When p2 != 0 calls FUN_a00f2298(p1, 0x88, 0x11), FUN_a00f2068(p1, 0x1c, 0x20, 0) and FUN_a00f2068(p1, 1, 2, 1); otherwise FUN_a00f2298(p1, 0x88, 0x10), FUN_a00f2068(p1, 0x1c, 0x20, 1) and FUN_a00f2068(p1, 1, 2, 0)",
