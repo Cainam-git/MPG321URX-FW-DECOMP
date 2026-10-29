@@ -19,13 +19,15 @@ def ranges(cpu):
 
 
 def covered(lo, hi, tabs):
-    """True when the proven tables tile [lo, hi) exactly"""
+    """True when the proven tables cover every word of [lo, hi) (one proven table may span several entries)"""
     at = lo
     for a, vals in sorted(tabs):
-        if a + 4 * len(vals) <= lo or a >= hi: continue
-        if a != at: return False
-        at = a + 4 * len(vals)
-    return at == hi
+        e = a + 4 * len(vals)
+        if e <= at or a >= hi: continue
+        if a > at: return False
+        at = e
+        if at >= hi: return True
+    return at >= hi
 
 
 def proven(cpu, fn, entry):
