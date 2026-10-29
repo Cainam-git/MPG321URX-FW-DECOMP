@@ -21,6 +21,15 @@ src_nolabels = _re.sub(r'\b(?:__asm__|asm)\s*\(\s*"[A-Za-z_][A-Za-z0-9_]*"\s*\)'
 # exact.py already proves the reference addresses, so also accept literals present in the full FW.021 image
 fwimg = (ROOT / "firmware" / "MSI_MPG321URX_V021_7F69.bin").read_bytes()
 bad = [x for x in strcheck.literals(src_nolabels) if x + b"\0" not in img and x + b"\0" not in fwimg]
+if bad:   # a short literal GCC expands into instruction immediates (strcpy of a constant) is not in the object's data:
+    import subprocess, tempfile   # its text is then part of the code that the exact check has just proven
+    tc = json.loads((ROOT / "tools/config.json").read_text())[cpu]
+    cc = str(ROOT / tc["toolchain"]) + "/" + tc["prefix"] + "gcc"
+    with tempfile.TemporaryDirectory() as td:
+        o = pathlib.Path(td) / "x.o"
+        subprocess.run([cc, *flags.split(), "-w", "-c", path, "-o", str(o)], check=True)
+        obj = o.read_bytes()
+    bad = [x for x in bad if x in obj]
 if bad: sys.exit(f"refused: string not in firmware: {bad[0][:60]}")
 (ROOT / "src" / cpu / f"{fn}.c").write_text(src)
 f = {g["name"]: g for g in json.loads((ROOT / "symbols" / f"{cpu}.functions.json").read_text())["functions"]}[fn]
