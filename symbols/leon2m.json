@@ -15154,6 +15154,13 @@
       "name": "FUN_a010dbc4",
       "status": "matched"
     },
+    "ram:a010dc8c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Stores addr/a/b into the ch record and block table words 1/6/8, computes the rounded-up size and writes it with the base word to the 0xd003xxxx registers",
+      "name": "FUN_a010dc8c",
+      "status": "matched"
+    },
     "ram:a010de54": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
