@@ -6544,6 +6544,13 @@
       "name": "FUN_a00a9f30",
       "status": "matched"
     },
+    "ram:a00aa01c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Selector 4: FUN_a00b32e4 with 0x742/0x792 (or 0x200 less by bit 9 of 0xa802d290) and row sel*2+6, then FUN_a00b34d4(0, 2); other selectors FUN_a00b34d4(0, 4)",
+      "name": "FUN_a00aa01c",
+      "status": "matched"
+    },
     "ram:a00aa0e8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
