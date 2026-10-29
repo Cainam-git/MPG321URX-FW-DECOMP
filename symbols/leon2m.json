@@ -6551,6 +6551,13 @@
       "name": "FUN_a00aa0e8",
       "status": "matched"
     },
+    "ram:a00aa258": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "selector 1: flag from bit 4 of _DAT_a802d3ac, FUN_a00b32e4(1, 1, v, 0x22, sel * 2 + 6, 3, k) and two calls; other selectors FUN_a00a9468(1, 2), FUN_a00b34d4(0, 1)",
+      "name": "FUN_a00aa258",
+      "status": "matched"
+    },
     "ram:a00aa4c0": {
       "by": "autoc",
       "comment": "FUN_a00a9468(1, 2); FUN_a00b34d4(0, 1, p3, p4, p5, p6)",
