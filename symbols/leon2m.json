@@ -14993,6 +14993,13 @@
       "name": "FUN_a010baac",
       "status": "matched"
     },
+    "ram:a010baf4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "stores a/b/m into the ch record and words 7..10 of the DAT_0019aed8/DAT_0019aecc block, writes the clamped a*220/320+1 to 0xd003009x/0xd003809x",
+      "name": "FUN_a010baf4",
+      "status": "matched"
+    },
     "ram:a010bdcc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
