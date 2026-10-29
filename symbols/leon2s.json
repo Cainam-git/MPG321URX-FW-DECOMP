@@ -6301,6 +6301,12 @@
       "name": "FUN_a00a6428",
       "status": "matched"
     },
+    "ram:a00a6440": {
+      "by": "hand",
+      "comment": "Masked byte write to one or all registers of an offset list, print on a bad index",
+      "name": "SC_MaskSetByte",
+      "status": "matched"
+    },
     "ram:a00a6544": {
       "by": "hand",
       "comment": "return reg word at 0xce000000 | (u16 base from table a00b4da0[p1] + p3)",
