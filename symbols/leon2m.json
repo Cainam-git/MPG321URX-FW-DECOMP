@@ -23864,6 +23864,13 @@
       "name": "FUN_a0150df8",
       "status": "matched"
     },
+    "ram:a0150e80": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "offsets k by the signed byte DAT_a802e3e2/e3/e4 selected by c (0x80 = no change), limited to 0..0xff",
+      "name": "FUN_a0150e80",
+      "status": "matched"
+    },
     "ram:a0150f44": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
