@@ -18422,6 +18422,13 @@
       "name": "FUN_a012a228",
       "status": "matched"
     },
+    "ram:a012a2f0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "rescales the DAT_a802ca1a table from DAT_a802ca5c, steps DAT_a802ca3a towards it by at most 4 and passes a 0x10-entry record to FUN_a00f7434",
+      "name": "FUN_a012a2f0",
+      "status": "matched"
+    },
     "ram:a012a700": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
