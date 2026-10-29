@@ -1810,7 +1810,7 @@
     },
     "ram:a0062fc8": {
       "by": "hand",
-      "comment": "copies the calibration record, derives the clock values and builds and writes out the 257-word table DAT_a8076278",
+      "comment": "copies a record, derives the values and builds and writes out the 257-word table DAT_a8076278",
       "name": "FUN_a0062fc8",
       "status": "matched"
     },
@@ -3348,7 +3348,7 @@
     },
     "ram:a0088c5c": {
       "by": "hand",
-      "comment": "checks the ports DAT_a80761c0..DAT_a80761bf (or port 0) with FUN_a0086e58/FUN_a0087364 and the FUN_a00a78b4 rate test and returns 1 on the first failing port",
+      "comment": "checks the ports DAT_a80761c0..DAT_a80761bf (or port 0) with FUN_a0086e58/FUN_a0087364 and FUN_a00a78b4 and returns 1 on the first failing port",
       "name": "FUN_a0088c5c",
       "status": "matched"
     },
