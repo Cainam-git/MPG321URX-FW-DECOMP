@@ -2272,14 +2272,14 @@
     "ram:a002e764": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "writes x/y products with block scale bytes to window registers 3..10 of block blk, then calls FUN_a002e2a4",
+      "comment": "writes x/y products with block scale bytes to registers 3..10 of block blk, then calls FUN_a002e2a4",
       "name": "FUN_a002e764",
       "status": "matched"
     },
     "ram:a002ed14": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "writes x/y products with block scale bytes to window registers 3..10 of block blk",
+      "comment": "writes x/y products with block scale bytes to registers 3..10 of block blk",
       "name": "FUN_a002ed14",
       "status": "matched"
     },
