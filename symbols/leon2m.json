@@ -16768,6 +16768,13 @@
       "name": "FUN_a0121388",
       "status": "matched"
     },
+    "ram:a01213a4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "r = FUN_a0120de4(FUN_a00fd820(c), c) or 1 after clearing set bit c of DAT_a802c9e4; for r 2..5 and r != prev four FUN_a00f1fe0 writes (0x1e, 0x1f, 0x1c, 0x1d) with values chosen by FUN_a00fd820(c); returns r",
+      "name": "FUN_a01213a4",
+      "status": "matched"
+    },
     "ram:a01215c8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
