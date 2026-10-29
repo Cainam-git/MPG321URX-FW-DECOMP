@@ -3308,6 +3308,12 @@
       "name": "FUN_a0088b60",
       "status": "matched"
     },
+    "ram:a0088c5c": {
+      "by": "hand",
+      "comment": "checks the ports DAT_a80761c0..DAT_a80761bf (or port 0) with FUN_a0086e58/FUN_a0087364 and the FUN_a00a78b4 rate test and returns 1 on the first failing port",
+      "name": "FUN_a0088c5c",
+      "status": "matched"
+    },
     "ram:a0088ea0": {
       "by": "autoc",
       "comment": "For port param_1: if FUN_a0088af0(port) reports something (non-zero low byte), returns 1 when FUN_a00aa7cc(port) gives 4, else 0; returns 0 when nothing is reported. Ghidra had passed an extra argument to both calls.",
