@@ -13164,6 +13164,14 @@
       "of": "FUN_a01006e4",
       "status": "matched"
     },
+    "ram:a0100584": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0100990; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0100584",
+      "of": "FUN_a0100990",
+      "status": "matched"
+    },
     "ram:a010062c": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a0100a40; proven entry for entry by its exact check",
