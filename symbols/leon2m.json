@@ -11005,6 +11005,13 @@
       "name": "FUN_a00deffc",
       "status": "matched"
     },
+    "ram:a00df074": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Writes a 16-bit value as 4 hex digits to register 0xC00B0000",
+      "name": "FUN_a00df074",
+      "status": "matched"
+    },
     "ram:a00df170": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
