@@ -13178,6 +13178,13 @@
       "name": "FUN_a01006e4",
       "status": "matched"
     },
+    "ram:a0100990": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns 0x28 for x != 4, else maps byte DAT_a8027a7c through a 42-entry case table",
+      "name": "FUN_a0100990",
+      "status": "matched"
+    },
     "ram:a0100a40": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
