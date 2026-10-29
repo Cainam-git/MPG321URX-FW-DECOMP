@@ -18443,6 +18443,13 @@
       "name": "FUN_a012a700",
       "status": "matched"
     },
+    "ram:a012a774": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "steps halfword 0xa802caf2 towards a level computed from the 16 words at 0xa802ca5c and passes it to FUN_a0143804",
+      "name": "FUN_a012a774",
+      "status": "matched"
+    },
     "ram:a012ad64": {
       "by": "autoc",
       "comment": "empty function (returns at once)",
