@@ -16077,6 +16077,13 @@
       "name": "FUN_a01198c8",
       "status": "matched"
     },
+    "ram:a0119910": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "low byte of v to register DAT_a8027aa8[blk] + 0x83, bits 8..15 to + 0xd3 (0xcf000000 + 4 * n; blk > 1 as 0) through a clamped byte-write helper called twice",
+      "name": "FUN_a0119910",
+      "status": "matched"
+    },
     "ram:a011996c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
