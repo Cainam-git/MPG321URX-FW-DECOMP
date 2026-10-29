@@ -9472,6 +9472,13 @@
       "name": "FUN_a00d2a28",
       "status": "matched"
     },
+    "ram:a00d2a98": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "selects on record bytes 3 and 5 ('c' functions / 's' values), fills a 40-byte record, passes it to FUN_a00d1220 and FUN_a01486a8",
+      "name": "FUN_a00d2a98",
+      "status": "matched"
+    },
     "ram:a00d3a30": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a00d4998; proven entry for entry by its exact check",
