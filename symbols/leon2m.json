@@ -14899,6 +14899,13 @@
       "name": "FUN_a010e0f4",
       "status": "matched"
     },
+    "ram:a010e448": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets or clears bit 24 of word 9 in the DAT_0019aec4/DAT_0019aebc channel register blocks",
+      "name": "FUN_a010e448",
+      "status": "matched"
+    },
     "ram:a010e624": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
