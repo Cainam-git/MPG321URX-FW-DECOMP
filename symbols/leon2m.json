@@ -15041,6 +15041,13 @@
       "name": "FUN_a010f864",
       "status": "matched"
     },
+    "ram:a010fc74": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "for ch 0..2 sets bit 8+ch and clears bit 1+ch of 0xd0030004, then of 0xd0038004",
+      "name": "FUN_a010fc74",
+      "status": "matched"
+    },
     "ram:a0110084": {
       "by": "hand",
       "comment": "returns bit 0 of register 0xd0032000",
