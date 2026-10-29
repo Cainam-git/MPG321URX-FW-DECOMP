@@ -21969,6 +21969,13 @@
       "name": "FUN_a01478a8",
       "status": "matched"
     },
+    "ram:a01478b0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "looks up p in the 3-byte table at 0x1a6da3 and calls FUN_a014f3d8 with the result and a value chosen by m",
+      "name": "FUN_a01478b0",
+      "status": "matched"
+    },
     "ram:a01479ec": {
       "by": "autoc",
       "comment": "Calls FUN_a0124f44() when p1 != 0, otherwise FUN_a0124f24()",
