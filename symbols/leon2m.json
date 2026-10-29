@@ -18401,6 +18401,13 @@
       "name": "FUN_a012a164",
       "status": "matched"
     },
+    "ram:a012a1a0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "fills DAT_a802cae0[0..15] from p (0x3a when p is null) and sums the bytes into DAT_a802ca12",
+      "name": "FUN_a012a1a0",
+      "status": "matched"
+    },
     "ram:a012a228": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
