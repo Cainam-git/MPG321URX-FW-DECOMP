@@ -6,8 +6,8 @@
  *   writes blocks 0 and 1 of that table. Same family as FUN_a010d068 (3-entry tables).
  * Source form: ch is an unsigned int holding (unsigned char)c, computed once before the 'on' test; the T1 channel
  *   parameter of the static helper set2(ch, k, v) is unsigned int (k stays unsigned char and is masked again from
- *   c); the SET macro is the FUN_a010d914 form with one 'unsigned int i' for the loop and the single-entry arm
- *   ('i = n; tab[i]'), which leaves the 2-iteration loop without a known iteration count for branch prediction.
+ *   c); the SET macro is the FUN_a010d914 form: one 'unsigned int i' serves the loop and the single-entry arm
+ *   ('i = n; tab[i]'); with a loop-local counter the end of the T2 loop is laid out differently.
  */
 struct Regs { unsigned int w[10]; };
 extern volatile struct Regs *const DAT_0019aec4[2];
