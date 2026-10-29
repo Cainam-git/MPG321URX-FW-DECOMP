@@ -6736,6 +6736,13 @@
       "name": "FUN_a00ac0c4",
       "status": "matched"
     },
+    "ram:a00ac138": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns FUN_a00a3844(table, i * 29 + byte DAT_a802d290+8) for the table selected by id",
+      "name": "FUN_a00ac138",
+      "status": "matched"
+    },
     "ram:a00ac388": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
