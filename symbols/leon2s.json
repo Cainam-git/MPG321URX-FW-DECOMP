@@ -2193,6 +2193,38 @@
       "name": "FUN_a0070704",
       "status": "matched"
     },
+    "ram:a0070728": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0070b7c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0070728",
+      "of": "FUN_a0070b7c",
+      "status": "matched"
+    },
+    "ram:a0070740": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0070b7c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0070740",
+      "of": "FUN_a0070b7c",
+      "status": "matched"
+    },
+    "ram:a0070758": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0070b7c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0070758",
+      "of": "FUN_a0070b7c",
+      "status": "matched"
+    },
+    "ram:a007077c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0070b7c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a007077c",
+      "of": "FUN_a0070b7c",
+      "status": "matched"
+    },
     "ram:a0070b7c": {
       "by": "hand",
       "comment": "dispatches on byte 2 of a 32-byte record over 109 case blocks: passes its bytes, halfwords and bit fields to callees, stores them into ARR_a807dc18, ARR_a807a8fc and ARR_a807a928 or reads values into a 28-byte buffer sent with FUN_a006fd78, then writes back the saved bytes of 0xcf03d004..0xcf03d010",
