@@ -1802,6 +1802,12 @@
       "name": "FUN_a0062f3c",
       "status": "matched"
     },
+    "ram:a0062fc8": {
+      "by": "hand",
+      "comment": "copies the calibration record, derives the clock values and builds and writes out the 257-word table DAT_a8076278",
+      "name": "FUN_a0062fc8",
+      "status": "matched"
+    },
     "ram:a006370c": {
       "by": "hand",
       "comment": "checks the signature bytes read through DAT_a807cd74 and, when the stored block differs, reloads it with FUN_a0061d60 and writes the FUN_a0062fc8 result to 0xd0013ffc",
