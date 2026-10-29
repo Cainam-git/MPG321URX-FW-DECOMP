@@ -21693,6 +21693,13 @@
       "name": "FUN_a0146648",
       "status": "matched"
     },
+    "ram:a014667c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Fills a 5-byte record (flag bits, two packed fields, three bytes), optionally calls func_0x4008e6e4(n, blk) for n 0..7, and passes it to FUN_a011a574",
+      "name": "FUN_a014667c",
+      "status": "matched"
+    },
     "ram:a0146870": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
