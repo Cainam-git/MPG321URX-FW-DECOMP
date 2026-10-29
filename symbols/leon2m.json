@@ -16289,6 +16289,13 @@
       "name": "FUN_a011cd80",
       "status": "matched"
     },
+    "ram:a011cdb8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "en 0: clears bit 6 of register base+0xa0 of block blk; else writes (r & 0xe0) | a << 2 | b | 0x40 to it",
+      "name": "FUN_a011cdb8",
+      "status": "matched"
+    },
     "ram:a011ce6c": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a011ce80; proven entry for entry by its exact check",
