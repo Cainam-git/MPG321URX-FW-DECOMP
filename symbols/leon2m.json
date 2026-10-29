@@ -6667,6 +6667,13 @@
       "name": "FUN_a00ab4bc",
       "status": "matched"
     },
+    "ram:a00ab5f0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes full, partial and rest positions with FUN_a0146a80/FUN_a0146b20 from val, then the sel 6 calls",
+      "name": "FUN_a00ab5f0",
+      "status": "matched"
+    },
     "ram:a00ab96c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
