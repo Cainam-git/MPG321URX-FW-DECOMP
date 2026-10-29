@@ -9217,6 +9217,22 @@
       "of": "FUN_a00d20a4",
       "status": "matched"
     },
+    "ram:a00ced30": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00d2a98; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00ced30",
+      "of": "FUN_a00d2a98",
+      "status": "matched"
+    },
+    "ram:a00cedb0": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00d2a98; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00cedb0",
+      "of": "FUN_a00d2a98",
+      "status": "matched"
+    },
     "ram:a00cf194": {
       "by": "hand",
       "comment": "maps 5, 6, 8, 0xb to 1, 4, 7, 0x17 (else 0)",
