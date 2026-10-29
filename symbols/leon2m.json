@@ -8776,6 +8776,13 @@
       "name": "FUN_a00c29d8",
       "status": "matched"
     },
+    "ram:a00c2bd8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "checks two ASCII digits from the port record and stores them in the slot given by byte 0xa802cffd, then sends the reply",
+      "name": "FUN_a00c2bd8",
+      "status": "matched"
+    },
     "ram:a00c2f08": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
