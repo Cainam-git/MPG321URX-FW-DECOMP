@@ -15896,6 +15896,13 @@
       "name": "FUN_a0119684",
       "status": "matched"
     },
+    "ram:a0119698": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reads 6 bits of a block register, stores two per-block bytes and updates registers 0xa2/0xa3 by mode",
+      "name": "FUN_a0119698",
+      "status": "matched"
+    },
     "ram:a01198a0": {
       "by": "autoc",
       "comment": "returns byte 0xA802C9C0[(p1 & 0xff)]",
