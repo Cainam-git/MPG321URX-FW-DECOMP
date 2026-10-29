@@ -16184,6 +16184,13 @@
       "name": "FUN_a011b4f0",
       "status": "matched"
     },
+    "ram:a011b648": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "writes off zero bytes, the bytes start + i and trailing zeros through the serial register port of side sel after command 0x90/0x40 and a 16-bit address",
+      "name": "FUN_a011b648",
+      "status": "matched"
+    },
     "ram:a011bd60": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
