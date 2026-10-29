@@ -11725,6 +11725,13 @@
       "name": "FUN_a00e52e8",
       "status": "matched"
     },
+    "ram:a00e55ec": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "applies a signed step to a register field in parts of at most 8, calling FUN_a00e5428 at the 5..12 range limits",
+      "name": "FUN_a00e55ec",
+      "status": "matched"
+    },
     "ram:a00e724c": {
       "by": "hand",
       "comment": "empty routine",
