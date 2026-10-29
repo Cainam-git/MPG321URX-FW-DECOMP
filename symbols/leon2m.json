@@ -15063,6 +15063,13 @@
       "name": "FUN_a010fc74",
       "status": "matched"
     },
+    "ram:a010fda4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "by c == 1 clears bit 2 or 1 of 0xd0032000/0xd003a000 and sets bit 1 or 0 of their +0x270 registers",
+      "name": "FUN_a010fda4",
+      "status": "matched"
+    },
     "ram:a010fe50": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
