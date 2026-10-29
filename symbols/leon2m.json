@@ -12398,6 +12398,13 @@
       "name": "FUN_a00f3a04",
       "status": "matched"
     },
+    "ram:a00f3a30": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Computes two limited offsets from six FUN_a00f1ce4 register reads and the size/position calls, passes them to FUN_a00f8e0c / FUN_a00f8e44 and stores four halfwords of s",
+      "name": "FUN_a00f3a30",
+      "status": "matched"
+    },
     "ram:a00f3f64": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
