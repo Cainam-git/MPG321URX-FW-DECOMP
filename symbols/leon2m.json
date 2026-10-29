@@ -23204,6 +23204,13 @@
       "name": "FUN_a014bd70",
       "status": "matched"
     },
+    "ram:a014be10": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Returns (byte 0xa802e3d8 * K + 50) / 100 + 126 with K chosen by the bit-6 / FUN_a014ba68 / FUN_a0140058 tests and word 0xa802e3d0+0x38",
+      "name": "FUN_a014be10",
+      "status": "matched"
+    },
     "ram:a014c118": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
