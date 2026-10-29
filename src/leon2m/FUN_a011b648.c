@@ -1,10 +1,12 @@
 /* leon2m FUN_a011b648 @ 0xa011b648-0xa011bac0 (286 words), flags -mcpu=v8 -O3 -g. Caller: FUN_a0146c14.
- * FUN_a011b648(mode, a, b, n, sel) uses the serial register port of side sel (0 or other) as FUN_a011bed8 does:
- * a += b * ARR_a802c9ca[sel]; start = DAT_a802c9a2[sel] - DAT_a802c9a0[sel] (16 bits); command 0x90 when mode == 1,
- * else 0x40; the 16-bit address a; then with c = DAT_a802c9a0[sel] and k = low byte of ARR_a802c9a8[sel]:
- * off = 0, n - c (k == 1) or (n - c) >> 1 (k == 2); off zero bytes, the c bytes start + i, and zero bytes for
- * i = c + off up to n, each through FUN_a011b3e8. Every port step is followed by a 160-nop delay loop.
- * Source form: the port helpers are static (FUN_a011b3e8 is defined here) and inlined; the body is written twice,
+ * FUN_a011b648(mode, a, b, n, sel) writes the register set of side sel (0: 0xcf011780.., other: 0xcf011794..) in
+ * the same sequence as FUN_a011bed8: a += b * ARR_a802c9ca[sel]; start = DAT_a802c9a2[sel] - DAT_a802c9a0[sel]
+ * (16 bits); 0x90 (mode == 1) or 0x40 to 0xcf011780 / 0xcf011794; the low and high byte of a to 0xcf011784 and
+ * 0xcf011788 / 0xcf011798 and 0xcf01179c and 0 to 0xcf00bfcc / 0xcf00c3cc; then with c = DAT_a802c9a0[sel] and
+ * k = low byte of ARR_a802c9a8[sel]: off = 0, n - c (k == 1) or (n - c) >> 1 (k == 2); off zero bytes, the c bytes
+ * start + i, and zero bytes for i = c + off up to n, each through FUN_a011b3e8. Every register step is followed by
+ * a 160-nop delay loop.
+ * Source form: the step helpers are static (FUN_a011b3e8 is defined here) and inlined; the body is written twice,
  * once for sel == 0 and once for the other side; start is computed before the address sum.
  * Compiler aid: the address writes sit under 'if (!(a & 0x10000))', which is always true for the 16-bit a; the
  * test emits no instructions, but it keeps the 16-bit zero extension of a apart from its two uses until combine,
