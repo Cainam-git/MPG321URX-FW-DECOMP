@@ -8912,7 +8912,7 @@
     "ram:a00c4ec4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Single-digit mode command: maps byte 9 of the receive record to the 0xa802d290+0x1a4 mode, runs the mode update calls and sends the 5600+ reply",
+      "comment": "maps digit byte 9 of the receive record (0..8) to byte 0xa802d290+0x1a4, runs the dependent calls and sends the 5600+ reply",
       "name": "FUN_a00c4ec4",
       "status": "matched"
     },
