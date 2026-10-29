@@ -11103,6 +11103,13 @@
       "name": "FUN_a00e0788",
       "status": "matched"
     },
+    "ram:a00e0888": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Polls a PHY register up to 10 rounds for (value & mask) == expect with checkphy trace prints; on failure calls FUN_a00df80c/FUN_a00e0bc0 and prints the error with a fresh read",
+      "name": "FUN_a00e0888",
+      "status": "matched"
+    },
     "ram:a00e09b8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
