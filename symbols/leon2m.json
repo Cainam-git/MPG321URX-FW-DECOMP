@@ -16091,6 +16091,13 @@
       "name": "FUN_a011996c",
       "status": "matched"
     },
+    "ram:a011a060": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "block blk registers: a to base + 0x81/0x82, ARR_a802c9ca[blk] - 1 to + 0x83/0xd3, b to + 0x84/0x85, ARR_a802c9c8[blk] - 1 to + 0x86 (inlined FUN_a011919c / FUN_a0119910), then func_0x4008e2a4",
+      "name": "FUN_a011a060",
+      "status": "matched"
+    },
     "ram:a011a1b0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
