@@ -5104,6 +5104,12 @@
       "name": "DRV_HDMI_ModeDetect_FSM_FRL_Init",
       "status": "matched"
     },
+    "ram:a0096f60": {
+      "by": "hand",
+      "comment": "prints the port line, checks the RS error count and the FUN_a00967ec value of the port, calls FRL_PLL and sets DAT_a807d650[port].st (0, 2 or 3)",
+      "name": "DRV_HDMI_ModeDetect_FSM_FRL_Payload",
+      "status": "matched"
+    },
     "ram:a009723c": {
       "by": "hand",
       "comment": "FRL lock check step of the HDMI mode-detect state machine (retry, timeout, restart)",
