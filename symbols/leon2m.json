@@ -8797,6 +8797,13 @@
       "name": "FUN_a00c6690",
       "status": "matched"
     },
+    "ram:a00c68d8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "reads the port record bytes 0x6..0x18 as digits into fields of 0xa802d290 with range checks and follow-up calls, then writes and sends 5600+",
+      "name": "FUN_a00c68d8",
+      "status": "matched"
+    },
     "ram:a00c762c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
