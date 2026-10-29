@@ -5176,6 +5176,12 @@
       "name": "DRV_HDMI21_RXDetect_FSM_LTS_4",
       "status": "matched"
     },
+    "ram:a0098468": {
+      "by": "hand",
+      "comment": "Updates the per-port record from register word 0x90 and sets byte 0 from byte 1",
+      "name": "TxFFE_Max_L",
+      "status": "matched"
+    },
     "ram:a009860c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -Os -g -msoft-float",
