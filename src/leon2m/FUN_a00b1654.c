@@ -3,7 +3,7 @@
  * When FUN_a0145af8(0x10) returns 0: returns b when a equals FUN_a0127a08(0xff) - 1 and b is 0x1e, 0x32 or 0x37,
  * else 0. Otherwise: returns 0x1e, 0x32 or 0x37 for a == 1 and b 0x11, 0x12 or 0x13, else 0.
  * Source form: the zero-result branch is written first. Register renaming then visits its blocks before the
- * a == 1 test, which gives the a and b values of the other branch %o7 and %g1.
+ * a == 1 test, so the masked a of that test is renamed to %o7, the one call-clobbered register they leave unused.
  */
 extern unsigned short FUN_a0145af8(unsigned int id);
 extern int FUN_a0127a08(unsigned char i);
