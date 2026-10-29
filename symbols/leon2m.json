@@ -23857,6 +23857,13 @@
       "name": "FUN_a0150df8",
       "status": "matched"
     },
+    "ram:a0150f44": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "adds the signed offset byte DAT_a802e3e5/e6/e7 (0x80 = zero) chosen by c to k, clamped to 0..0xff",
+      "name": "FUN_a0150f44",
+      "status": "matched"
+    },
     "ram:a0151008": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a0151c84; proven entry for entry by its exact check",
