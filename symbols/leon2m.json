@@ -15048,6 +15048,13 @@
       "name": "FUN_a010fc74",
       "status": "matched"
     },
+    "ram:a010fe50": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "per row split of record 0xa802d704/0xa802d804, sets or clears the ch bits of 0xd0032000/0xd003a000 and their +0x270 registers",
+      "name": "FUN_a010fe50",
+      "status": "matched"
+    },
     "ram:a0110084": {
       "by": "hand",
       "comment": "returns bit 0 of register 0xd0032000",
