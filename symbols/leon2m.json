@@ -12370,6 +12370,13 @@
       "name": "FUN_a00f557c",
       "status": "matched"
     },
+    "ram:a00f62ac": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Reads block registers 0x36, 0x9d and 0x04 and writes 0x2e or 0x6e to register 0x36",
+      "name": "FUN_a00f62ac",
+      "status": "matched"
+    },
     "ram:a00f6340": {
       "by": "hand",
       "comment": "Returns FUN_a00f1a90(blk, 0x43)",
