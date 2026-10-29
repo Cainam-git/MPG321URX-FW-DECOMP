@@ -2731,6 +2731,12 @@
       "name": "FUN_a007d054",
       "status": "matched"
     },
+    "ram:a007d140": {
+      "by": "hand",
+      "comment": "Checks three register reads up to three times, prints and returns 0 on a bad value",
+      "name": "FUN_a007d140",
+      "status": "matched"
+    },
     "ram:a007d21c": {
       "by": "hand",
       "comment": "assembles the three channel values from 0x1ea0/0x1ea4, checks skew and CED state, sets the ARR_a807ccc4 state word",
