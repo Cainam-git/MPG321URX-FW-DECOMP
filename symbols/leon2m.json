@@ -8510,6 +8510,13 @@
       "name": "FUN_a00c0db4",
       "status": "matched"
     },
+    "ram:a00c0de0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "byte 9 of the port record '0'/'1': checks FUN_a0143c14(0) or bit 31 of 0xa802e1a0, sets byte 0xa802b09b, writes and sends 5600+",
+      "name": "FUN_a00c0de0",
+      "status": "matched"
+    },
     "ram:a00c0ff4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
