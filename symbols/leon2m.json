@@ -6937,6 +6937,13 @@
       "name": "FUN_a00b1004",
       "status": "matched"
     },
+    "ram:a00b1654": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "returns a code from a and b chosen by the result of FUN_a0145af8(0x10)",
+      "name": "FUN_a00b1654",
+      "status": "matched"
+    },
     "ram:a00b1700": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
