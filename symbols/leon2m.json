@@ -9565,6 +9565,14 @@
       "of": "FUN_a00d99f8",
       "status": "matched"
     },
+    "ram:a00d3b7c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00da254; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00d3b7c",
+      "of": "FUN_a00da254",
+      "status": "matched"
+    },
     "ram:a00d3b9c": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a00dbcf0; proven entry for entry by its exact check",
@@ -15039,6 +15047,13 @@
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "clears bit 0 of channel record byte +0x3e and bit 20 or 21 of 0xd0032000/0xd003a000",
       "name": "FUN_a010f864",
+      "status": "matched"
+    },
+    "ram:a010f8fc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "picks record 0xa802d7c4/d784/d744 by ch, sets or clears the ch bits of 0xd0030004/0xd0038004 by the row half +0x08",
+      "name": "FUN_a010f8fc",
       "status": "matched"
     },
     "ram:a010fc74": {
@@ -21104,6 +21119,14 @@
       "of": "FUN_a0146298",
       "status": "matched"
     },
+    "ram:a01432dc": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a014667c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a01432dc",
+      "of": "FUN_a014667c",
+      "status": "matched"
+    },
     "ram:a0143300": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a0146870; proven entry for entry by its exact check",
@@ -21168,12 +21191,28 @@
       "of": "FUN_a014782c",
       "status": "matched"
     },
+    "ram:a0143418": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a01478b0; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0143418",
+      "of": "FUN_a01478b0",
+      "status": "matched"
+    },
     "ram:a0143438": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a0147bb0; proven entry for entry by its exact check",
       "kind": "jump_table",
       "name": "switchdataD_a0143438",
       "of": "FUN_a0147bb0",
+      "status": "matched"
+    },
+    "ram:a0143450": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0148868; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0143450",
+      "of": "FUN_a0148868",
       "status": "matched"
     },
     "ram:a01434a0": {
