@@ -14801,6 +14801,13 @@
       "name": "FUN_a010c61c",
       "status": "matched"
     },
+    "ram:a010d068": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets or clears bit 24 of word 0x3d in the DAT_0019aed8/DAT_0019aecc channel register blocks",
+      "name": "FUN_a010d068",
+      "status": "matched"
+    },
     "ram:a010d244": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
