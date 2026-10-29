@@ -9752,6 +9752,12 @@
       "name": "FUN_a00d97bc",
       "status": "matched"
     },
+    "ram:a00d985c": {
+      "by": "hand",
+      "comment": "copies n = rec[off + 1] & 0x3f bytes of the selected ARR_a807963d record to ARR_a807a520 row (DAT_a80787ff & 0xf) * 3 and advances DAT_a80787ff",
+      "name": "FUN_a00d985c",
+      "status": "matched"
+    },
     "ram:a00d9a78": {
       "by": "hand",
       "comment": "builds a message with FUN_a00d6a54, appends a FUN_a00d9988 result pair to the current ARR_a807a520 row and steps the row index",
