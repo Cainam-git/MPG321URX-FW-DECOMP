@@ -7574,6 +7574,13 @@
       "name": "FUN_a00b8e7c",
       "status": "matched"
     },
+    "ram:a00b9750": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "seven FUN_a00a3844(DAT_00191b30) rows and five length-prefixed rows (FUN_a01577f4 formats, table entries from bytes 0xa802d290+0x181/0x182, nHDR/nSDR, n6..n16 Bit) through FUN_a00a31a4 at (x + 3/4, y + k)",
+      "name": "FUN_a00b9750",
+      "status": "matched"
+    },
     "ram:a00b9c68": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
