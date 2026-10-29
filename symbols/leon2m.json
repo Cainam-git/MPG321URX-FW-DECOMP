@@ -14070,6 +14070,13 @@
       "name": "FUN_a0105d58",
       "status": "matched"
     },
+    "ram:a0105e60": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "finds the matching 0x19a640 timing row for w/h/f (fallback row 2) and writes block 5 registers through FUN_a00f2298/FUN_a00f2488",
+      "name": "FUN_a0105e60",
+      "status": "matched"
+    },
     "ram:a01061c0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
