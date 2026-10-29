@@ -6802,7 +6802,7 @@
     "ram:a00ad5a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "sets width/attribute/colour words by t/f/DAT_a802d033 and issues the FUN_a00b3ed0/FUN_a00b32e4/FUN_a0146a80 calls for x/y",
+      "comment": "sets w, a, c0..c2 from t, f and DAT_a802d033 and calls FUN_a00b3ed0/FUN_a00b32e4/FUN_a0146a80 at x/y",
       "name": "FUN_a00ad5a4",
       "status": "matched"
     },
