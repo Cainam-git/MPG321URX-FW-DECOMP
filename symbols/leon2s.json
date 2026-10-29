@@ -2193,6 +2193,12 @@
       "name": "FUN_a0070704",
       "status": "matched"
     },
+    "ram:a0070b7c": {
+      "by": "hand",
+      "comment": "dispatches on byte 2 of a 32-byte record over 109 case blocks: passes its bytes, halfwords and bit fields to callees, stores them into ARR_a807dc18, ARR_a807a8fc and ARR_a807a928 or reads values into a 28-byte buffer sent with FUN_a006fd78, then writes back the saved bytes of 0xcf03d004..0xcf03d010",
+      "name": "FUN_a0070b7c",
+      "status": "matched"
+    },
     "ram:a0072900": {
       "by": "autoc",
       "comment": "Calls FUN_a00b15ac(buf, 0, 0x20) on a 32-byte local buffer and FUN_a006faa8(8, 0, buf, 8); when the low byte of FUN_a006fd04(buf, 8) is nonzero, calls FUN_a0070b7c(buf). Returns p1",
