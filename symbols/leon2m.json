@@ -13004,6 +13004,13 @@
       "name": "FUN_a00fa560",
       "status": "matched"
     },
+    "ram:a00fa5b4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "when 0xa802b7fe is set, fills three halfword arrays from 0xa802bec0 and writes 0xa802b800 entries to registers 0xd00400a4/0xd00400a0",
+      "name": "FUN_a00fa5b4",
+      "status": "matched"
+    },
     "ram:a00fa6b4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
