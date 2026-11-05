@@ -2625,6 +2625,12 @@
       "name": "FUN_a0079ac4",
       "status": "matched"
     },
+    "ram:a0079b84": {
+      "by": "hand",
+      "comment": "FUN_a0079b84: field distances of two FUN_a00a7314 register words per channel and three result formulas",
+      "name": "FUN_a0079b84",
+      "status": "matched"
+    },
     "ram:a0079e00": {
       "by": "hand",
       "comment": "Twelve FUN_a00a7488 writes per entry 0..3 of the halfword tables DAT_a00b3b28..DAT_a00b3b50, each with its own i < 4 check",
