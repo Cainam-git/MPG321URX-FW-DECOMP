@@ -11,8 +11,8 @@
  * (jump table at 0xa011d294; port 0x10 is listed last).
  * volatile: hardware registers only.
  * Source form: K&R definition (id and port are masked at each use); scale is an unsigned short (the 'and 0x510'
- * of the three scale values); bits is an unsigned char; the error flag err is reused for the low byte of div after the read switch; the case
- * order of both id switches (as listed) sets the register names in the case blocks.
+ * of the three scale values); bits is an unsigned char; the error flag err is reused for the low byte of div after
+ * the read switch; the case order of both id switches (as listed) sets the register names in the case blocks.
  */
 #define REG(a) (*(volatile unsigned int *)(a))
 
