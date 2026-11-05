@@ -20413,6 +20413,13 @@
       "name": "FUN_a013a028",
       "status": "matched"
     },
+    "ram:a013a0d4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "y = p2 | (p1 & 3) << 14; polls func_0x4008c4d0(2, 0x20, &w, 1) until w = 0 (at most 100 reads, func_0x4008d1a0(1) between), then writes ((u16)p1 >> 2 & 0xff) << 16 | 0x39000000 | (u16)y with func_0x4008c5f8",
+      "name": "FUN_a013a0d4",
+      "status": "matched"
+    },
     "ram:a013a1a4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
