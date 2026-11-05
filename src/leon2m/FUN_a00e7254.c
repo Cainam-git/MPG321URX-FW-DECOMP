@@ -27,11 +27,9 @@
  * Source form: each table access is its own if (b == -1)/else statement; the reads compared in a condition are
  * conditional expressions of two calls ('(b == -1 ? FUN_a00e0754(..) : FUN_a00e0754(..)) != 0'); the count update is
  * 'if (..) cnt++; else cnt = 0;'; FUN_a00e05d8 is declared void; the table at 0xa8026468 is declared as
- * ARR_a8026468 (the symbol name sets the order of the loop-invariant address pseudos).
- * Compiler aid: the 0xa8026488 read in the count update is passed through the inline function nonzero(), and the
- * first argument of the b == -1 call of the 0xa80266f8 read in the loop-end test through the inline function
- * addr_a80266f8(); neither emits code of its own; without both, the build differs only in the registers of the three
- * loop-hoisted 0xa8026698/0xa8026688/0xa8026678 table addresses.
+ * ARR_a8026468 (the symbol name sets the order of the loop-invariant address pseudos); the loop counter idx is
+ * also the variable of the final 'return idx;' (idx = 0 before the p8 test), which sets the register choice of the
+ * three loop-invariant 0xa8026698/0xa8026688/0xa8026678 table addresses.
  */
 extern int FUN_a00e02ec(unsigned int, unsigned int);
 extern void FUN_a00e03b0();
@@ -54,16 +52,6 @@ extern unsigned int DAT_a80265d8[], DAT_a80265c8[], DAT_a80265b8[], DAT_a80265a8
 extern unsigned int DAT_a8026578[], DAT_a8026568[], DAT_a8026558[], DAT_a8026548[], DAT_a8026538[], DAT_a8026528[];
 extern unsigned int DAT_a80266f8[], DAT_a80266e8[], DAT_a80266d8[], DAT_a80266c8[], DAT_a80266b8[], DAT_a80266a8[];
 extern unsigned int DAT_a8026698[], DAT_a8026688[], DAT_a8026678[], DAT_a8026488[], DAT_a8026478[], ARR_a8026468[];
-
-static inline unsigned int addr_a80266f8(void)
-{
-    return (unsigned int)DAT_a80266f8;
-}
-
-static inline int nonzero(unsigned int v)
-{
-    return v != 0;
-}
 
 int FUN_a00e7254(unsigned int unit, unsigned int p1, unsigned int gen, unsigned int b, unsigned int p5,
                  unsigned int p6, int p7, int p8)
@@ -129,7 +117,7 @@ int FUN_a00e7254(unsigned int unit, unsigned int p1, unsigned int gen, unsigned 
         do {
             FUN_a00e406c(unit, 5, 0, 0x1000);
             idx++;
-            if (nonzero(b == -1 ? FUN_a00e0754(unit, (unsigned int)DAT_a8026488, (unsigned int)DAT_a8026478, (unsigned int)ARR_a8026468) : FUN_a00e0754(unit, DAT_a8026488[b], DAT_a8026478[b], ARR_a8026468[b])))
+            if ((b == -1 ? FUN_a00e0754(unit, (unsigned int)DAT_a8026488, (unsigned int)DAT_a8026478, (unsigned int)ARR_a8026468) : FUN_a00e0754(unit, DAT_a8026488[b], DAT_a8026478[b], ARR_a8026468[b])) != 0)
                 cnt++;
             else
                 cnt = 0;
@@ -176,7 +164,7 @@ int FUN_a00e7254(unsigned int unit, unsigned int p1, unsigned int gen, unsigned 
                     gen = 0;
                 }
             }
-            if ((b == -1 ? FUN_a00e0754(unit, (unsigned int)DAT_a8026698, (unsigned int)DAT_a8026688, (unsigned int)DAT_a8026678) : FUN_a00e0754(unit, DAT_a8026698[b], DAT_a8026688[b], DAT_a8026678[b])) == 0xc && (b == -1 ? FUN_a00e0754(unit, (unsigned int)DAT_a80266c8, (unsigned int)DAT_a80266b8, (unsigned int)DAT_a80266a8) : FUN_a00e0754(unit, DAT_a80266c8[b], DAT_a80266b8[b], DAT_a80266a8[b])) == 3 && (b == -1 ? FUN_a00e0754(unit, addr_a80266f8(), (unsigned int)DAT_a80266e8, (unsigned int)DAT_a80266d8) : FUN_a00e0754(unit, DAT_a80266f8[b], DAT_a80266e8[b], DAT_a80266d8[b])) == 0xf) {
+            if ((b == -1 ? FUN_a00e0754(unit, (unsigned int)DAT_a8026698, (unsigned int)DAT_a8026688, (unsigned int)DAT_a8026678) : FUN_a00e0754(unit, DAT_a8026698[b], DAT_a8026688[b], DAT_a8026678[b])) == 0xc && (b == -1 ? FUN_a00e0754(unit, (unsigned int)DAT_a80266c8, (unsigned int)DAT_a80266b8, (unsigned int)DAT_a80266a8) : FUN_a00e0754(unit, DAT_a80266c8[b], DAT_a80266b8[b], DAT_a80266a8[b])) == 3 && (b == -1 ? FUN_a00e0754(unit, (unsigned int)DAT_a80266f8, (unsigned int)DAT_a80266e8, (unsigned int)DAT_a80266d8) : FUN_a00e0754(unit, DAT_a80266f8[b], DAT_a80266e8[b], DAT_a80266d8[b])) == 0xf) {
 finish:
                 FUN_a00e05d8(unit, 0x149, 0xff, 0xff);
                 FUN_a00e05d8(unit, 0x14a, 0xff, 0xff);
@@ -239,6 +227,7 @@ restore:
     FUN_a00e03b0(unit, 0x11a, s11a);
     FUN_a00e03b0(unit, 0x121, s121);
     FUN_a00e03b0(unit, 0x102, s102);
+    idx = 0;
     if (p8 != 0) {
         if (p7 != 0)
             p8 = -p8;
@@ -246,5 +235,5 @@ restore:
         if (r != 0)
             return r;
     }
-    return 0;
+    return idx;
 }

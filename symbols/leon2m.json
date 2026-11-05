@@ -11791,7 +11791,7 @@
     "ram:a00e7254": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "saves nine registers, runs the b == -1 table field loop or the FUN_a00e5fc8 path by gen, restores the registers",
+      "comment": "saves nine registers, runs the b == -1 table field loop or the FUN_a00e5fc8 path by gen, restores the registers (no aids)",
       "name": "FUN_a00e7254",
       "status": "matched"
     },
