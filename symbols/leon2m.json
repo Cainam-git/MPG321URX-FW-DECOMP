@@ -11829,6 +11829,13 @@
       "name": "FUN_a00ea25c",
       "status": "matched"
     },
+    "ram:a00ea308": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "deskew raise passes and lowering loop; low bits kept in v ('v &= 7') before the q test",
+      "name": "FUN_a00ea308",
+      "status": "matched"
+    },
     "ram:a00ea638": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
