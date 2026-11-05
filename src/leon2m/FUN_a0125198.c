@@ -1,4 +1,4 @@
-/* leon2m FUN_a0125198 @ 0xa0125198-0xa0125230 (38 words, leaf), flags -mcpu=v8 -O3 -g.
+/* leon2m FUN_a0125198 @ 0xa0125198-0xa0125230 (38 words, leaf), flags -mcpu=v8 -O2 -g (the default; -O3 -g gives the same code).
  * Searches the 8 records of 0x16 bytes at DAT_001a42a8 for byte +0 == id and returns the record index. When no
  * record matches it returns 0xfc for id 0x12, 0xfd for id 0x13, 0xfe for id 0x14 and 0xff otherwise (r is a
  * signed char -1 / -4 / -3 / -2 returned as unsigned char).
