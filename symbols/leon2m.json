@@ -13230,6 +13230,13 @@
       "name": "FUN_a00fbaa4",
       "status": "matched"
     },
+    "ram:a00fbaf8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Stores m and a 0x100/0x80 halfword, writes 1000 - t and an optional second value through FUN_a00fb434, sets register bits from byte 0xa802b7fc",
+      "name": "FUN_a00fbaf8",
+      "status": "matched"
+    },
     "ram:a00fbc80": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
