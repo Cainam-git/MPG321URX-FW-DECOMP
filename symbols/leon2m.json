@@ -18553,6 +18553,13 @@
       "name": "FUN_a012adac",
       "status": "matched"
     },
+    "ram:a012add8": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "nibble i of byte DAT_a802e1a0+0x2c = n; row i of DAT_a802d8ae: byte 2 = n, byte 0 = 2-bit field n of byte i of halfword +0x2f (n <= 2) or nibble i of +0x31, byte 1 = 2-bit field n of byte i of halfword +0x2d, bytes 7/6 = bit n of nibble i of +0x32/+0x33; FUN_a0137a68(i, row copy)",
+      "name": "FUN_a012add8",
+      "status": "matched"
+    },
     "ram:a012af40": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
