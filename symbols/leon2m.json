@@ -11580,6 +11580,13 @@
       "name": "FUN_a00e0e28",
       "status": "matched"
     },
+    "ram:a00e0e44": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "command loop over the s_a802d654 byte stream (62-way switch, per-unit callees, address pokes)",
+      "name": "FUN_a00e0e44",
+      "status": "matched"
+    },
     "ram:a00e1f50": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
