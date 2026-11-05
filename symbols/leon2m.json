@@ -6593,6 +6593,13 @@
       "name": "FUN_a00aa258",
       "status": "matched"
     },
+    "ram:a00aa33c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "For sel 5..8 calls FUN_a00b32e4 with v and k from a flag bit and mode, then FUN_a00a9468 and FUN_a00b34d4",
+      "name": "FUN_a00aa33c",
+      "status": "matched"
+    },
     "ram:a00aa4c0": {
       "by": "autoc",
       "comment": "FUN_a00a9468(1, 2); FUN_a00b34d4(0, 1, p3, p4, p5, p6)",
