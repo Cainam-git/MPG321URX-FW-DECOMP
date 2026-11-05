@@ -17668,6 +17668,12 @@
       "name": "FUN_a0125140",
       "status": "matched"
     },
+    "ram:a0125198": {
+      "by": "hand",
+      "comment": "returns the index of the DAT_001a42a8 record whose byte 0 equals id, else 0xfc/0xfd/0xfe for ids 0x12/0x13/0x14 or 0xff",
+      "name": "FUN_a0125198",
+      "status": "matched"
+    },
     "ram:a0125230": {
       "by": "permuter",
       "cflags": "-mcpu=v8 -O3 -g",
