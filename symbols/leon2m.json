@@ -9389,6 +9389,13 @@
       "name": "FUN_a00ccef4",
       "status": "matched"
     },
+    "ram:a00ccf34": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "port command dispatcher with 30 inlined digit handlers (154-way switch)",
+      "name": "FUN_a00ccf34",
+      "status": "matched"
+    },
     "ram:a00ce348": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
