@@ -6,9 +6,9 @@
  * k = 0x37 for v 0x742 and 0x792, else 0x34; then FUN_a00a9468(1, 3) and FUN_a00b34d4(0, 2).
  * Callers: FUN_a00919b4, FUN_a0091a68, FUN_a0091b94, FUN_a0095acc, FUN_a0095dd8, FUN_a0099440.
  * Source form: the bit 15 and bit 7 flags are set to 1 first and cleared when the bit is clear (the two tests
- * stay branches); the bit 31 mask is held in a local variable (and + addx instead of a sign shift); k is an int.
- * Compiler aid: __builtin_expect(..., 0) on the test of v emits no instructions; it places the k = 0x34
- * block in line after the branch.
+ * stay branches); the bit 31 mask is held in a local variable (and + addx instead of a sign shift); the
+ * FUN_a00b32e4 call written once per k value in an if/else on the v test (the two calls are merged by
+ * cross-jumping into one call after a branch that selects k).
  */
 extern unsigned int _DAT_a802d404;
 extern unsigned int _DAT_a802d338;
@@ -22,7 +22,6 @@ void FUN_a00aa0e8(unsigned char sel, unsigned char mode)
     unsigned char row;
     unsigned char on = 0xff;
     unsigned short v;
-    int attr;
     unsigned int m;
 
     if (sel > 6)
@@ -46,10 +45,10 @@ void FUN_a00aa0e8(unsigned char sel, unsigned char mode)
             v = on == 1 ? 0x742 : 0x542;
         else
             v = on == 1 ? 0x792 : 0x592;
-        attr = 0x37;
-        if (!__builtin_expect(v == 0x742 || v == 0x792, 0))
-            attr = 0x34;
-        FUN_a00b32e4(1, 1, v, 0x22, row, 3, attr);
+        if (v == 0x742 || v == 0x792)
+            FUN_a00b32e4(1, 1, v, 0x22, row, 3, 0x37);
+        else
+            FUN_a00b32e4(1, 1, v, 0x22, row, 3, 0x34);
         FUN_a00a9468(1, 3);
         FUN_a00b34d4(0, 2);
     } else {
