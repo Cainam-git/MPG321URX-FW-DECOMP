@@ -11,7 +11,7 @@
  * (jump table at 0xa011d294; port 0x10 is listed last).
  * volatile: hardware registers only.
  * Source form: K&R definition (id and port are masked at each use); scale is an unsigned short (the 'and 0x510'
- * of the three scale values); the error flag err is reused for the low byte of div after the read switch; the case
+ * of the three scale values); bits is an unsigned char; the error flag err is reused for the low byte of div after the read switch; the case
  * order of both id switches (as listed) sets the register names in the case blocks.
  */
 #define REG(a) (*(volatile unsigned int *)(a))
@@ -149,45 +149,45 @@ unsigned int clksel;
   {
 
     case 5:
-      *((volatile unsigned int *) 0xcf016180) &= 0xfc;
-      *((volatile unsigned int *) 0xcf016180) |= clksel;
-      *((volatile unsigned int *) 0xcf016184) = bits & 0xff;
-      *((volatile unsigned int *) 0xcf016188) = err & 0xff;
+      REG(0xcf016180) &= 0xfc;
+      REG(0xcf016180) |= clksel;
+      REG(0xcf016184) = bits & 0xff;
+      REG(0xcf016188) = err & 0xff;
       break;
 
     case 4:
-      *((volatile unsigned int *) 0xcf016168) &= 0xfc;
-      *((volatile unsigned int *) 0xcf016168) |= clksel;
-      *((volatile unsigned int *) 0xcf01616c) = bits & 0xff;
-      *((volatile unsigned int *) 0xcf016170) = err & 0xff;
+      REG(0xcf016168) &= 0xfc;
+      REG(0xcf016168) |= clksel;
+      REG(0xcf01616c) = bits & 0xff;
+      REG(0xcf016170) = err & 0xff;
       break;
 
     case 1:
-      *((volatile unsigned int *) 0xcf016120) &= 0xfc;
-      *((volatile unsigned int *) 0xcf016120) |= clksel;
-      *((volatile unsigned int *) 0xcf016124) = bits & 0xff;
-      *((volatile unsigned int *) 0xcf016128) = err & 0xff;
+      REG(0xcf016120) &= 0xfc;
+      REG(0xcf016120) |= clksel;
+      REG(0xcf016124) = bits & 0xff;
+      REG(0xcf016128) = err & 0xff;
       break;
 
     case 6:
-      *((volatile unsigned int *) 0xcf016198) &= 0xfc;
-      *((volatile unsigned int *) 0xcf016198) |= clksel;
-      *((volatile unsigned int *) 0xcf01619c) = bits & 0xff;
-      *((volatile unsigned int *) 0xcf0161a0) = err & 0xff;
+      REG(0xcf016198) &= 0xfc;
+      REG(0xcf016198) |= clksel;
+      REG(0xcf01619c) = bits & 0xff;
+      REG(0xcf0161a0) = err & 0xff;
       break;
 
     case 3:
-      *((volatile unsigned int *) 0xcf016150) &= 0xfc;
-      *((volatile unsigned int *) 0xcf016150) |= clksel;
-      *((volatile unsigned int *) 0xcf016154) = bits & 0xff;
-      *((volatile unsigned int *) 0xcf016158) = err & 0xff;
+      REG(0xcf016150) &= 0xfc;
+      REG(0xcf016150) |= clksel;
+      REG(0xcf016154) = bits & 0xff;
+      REG(0xcf016158) = err & 0xff;
       break;
 
     case 2:
-      *((volatile unsigned int *) 0xcf016138) &= 0xfc;
-      *((volatile unsigned int *) 0xcf016138) |= clksel;
-      *((volatile unsigned int *) 0xcf01613c) = bits & 0xff;
-      *((volatile unsigned int *) 0xcf016140) = err & 0xff;
+      REG(0xcf016138) &= 0xfc;
+      REG(0xcf016138) |= clksel;
+      REG(0xcf01613c) = bits & 0xff;
+      REG(0xcf016140) = err & 0xff;
       break;
     case 0x10:
 
@@ -208,23 +208,23 @@ unsigned int clksel;
     case 0x18:
 
     case 0x1f:
-      *((volatile unsigned int *) 0xcf016400) &= 0xfc;
-      *((volatile unsigned int *) 0xcf016404) = bits & 0xff;
-      *((volatile unsigned int *) 0xcf016408) = err & 0xff;
+      REG(0xcf016400) &= 0xfc;
+      REG(0xcf016404) = bits & 0xff;
+      REG(0xcf016408) = err & 0xff;
       break;
 
     case 0x19:
-      *((volatile unsigned int *) 0xcf016494) &= 0xfc;
-      *((volatile unsigned int *) 0xcf016494) |= clksel;
-      *((volatile unsigned int *) 0xcf016498) = bits & 0xff;
-      *((volatile unsigned int *) 0xcf01649c) = err & 0xff;
+      REG(0xcf016494) &= 0xfc;
+      REG(0xcf016494) |= clksel;
+      REG(0xcf016498) = bits & 0xff;
+      REG(0xcf01649c) = err & 0xff;
       break;
 
     case 0x1a:
-      *((volatile unsigned int *) 0xcf0164c0) &= 0xfc;
-      *((volatile unsigned int *) 0xcf0164c0) |= clksel;
-      *((volatile unsigned int *) 0xcf0164c4) = bits & 0xff;
-      *((volatile unsigned int *) 0xcf0164c8) = err & 0xff;
+      REG(0xcf0164c0) &= 0xfc;
+      REG(0xcf0164c0) |= clksel;
+      REG(0xcf0164c4) = bits & 0xff;
+      REG(0xcf0164c8) = err & 0xff;
       break;
 
   }
