@@ -16584,6 +16584,13 @@
       "name": "FUN_a011d740",
       "status": "matched"
     },
+    "ram:a011d748": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets the PWM clock select, prescaler and divider registers of a block by id, then calls FUN_a00fe880 by port",
+      "name": "FUN_a011d748",
+      "status": "matched"
+    },
     "ram:a011dd9c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
