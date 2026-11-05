@@ -9899,6 +9899,12 @@
       "name": "FUN_a00da030",
       "status": "matched"
     },
+    "ram:a00da288": {
+      "by": "hand",
+      "comment": "returns 1 when the ring byte at the read index differs from ARR_a8079c3d[bit] and the row entry tests hold",
+      "name": "FUN_a00da288",
+      "status": "matched"
+    },
     "ram:a00da388": {
       "by": "hand",
       "comment": "steps a 4-bit table index, updates per-index counters and clears bit 4 or 5 of register word 0xccc",
