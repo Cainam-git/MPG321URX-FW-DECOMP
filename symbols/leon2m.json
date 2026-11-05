@@ -11898,6 +11898,13 @@
       "name": "FUN_a00ee1e8",
       "status": "matched"
     },
+    "ram:a00ee964": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3",
+      "comment": "speed chain in place with v as temporary ('t = v;'), step * 65 in each up arm, built without -g",
+      "name": "FUN_a00ee964",
+      "status": "matched"
+    },
     "ram:a00eec44": {
       "by": "hand",
       "comment": "Calls FUN_a00ee1e8 with eight arguments; param_5 and param_6 are the 7th and 8th arguments, passed on the stack (param_6 via st %i5, [%sp+0x60]). Returns 0 if the first call succeeded and either param_4 is not 3 or the second call returns 0; otherwise returns -1.",
