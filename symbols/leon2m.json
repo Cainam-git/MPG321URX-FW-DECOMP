@@ -11469,6 +11469,13 @@
       "name": "FUN_a00e02ec",
       "status": "matched"
     },
+    "ram:a00e0514": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3",
+      "comment": "reads a PHY block register with page select and returns it masked; base table filled by phy_tab",
+      "name": "FUN_a00e0514",
+      "status": "matched"
+    },
     "ram:a00e0740": {
       "by": "autoc",
       "comment": "FUN_a00e05d8(p1, p2, p3, p3)",
