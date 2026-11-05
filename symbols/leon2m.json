@@ -6358,6 +6358,13 @@
       "name": "FUN_a00a5908",
       "status": "matched"
     },
+    "ram:a00a5e68": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Position selections from D+0x13e/0x13f, FUN_a00b32e4/FUN_a0146a80/FUN_a0146b20 call sequences for D+0x190/0x1a0/0xa8 bits, FUN_a00b88e0 overlap test",
+      "name": "FUN_a00a5e68",
+      "status": "matched"
+    },
     "ram:a00a788c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
