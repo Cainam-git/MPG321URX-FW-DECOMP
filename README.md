@@ -26,7 +26,7 @@ Main processor      [#################---]   87 %
 Input processor     [##################--]   91 %
 Helper processor    [####################]  100 %
 Tensilica processor [####################]  100 %
-Overall             [#################---]   89 %
+Overall             [##################--]   90 %
 ```
 
 Percentages are by code size. More than 6,500 of roughly 6,600 functions are done, the helper processor is complete,
