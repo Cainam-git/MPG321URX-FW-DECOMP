@@ -10061,6 +10061,12 @@
       "name": "FUN_a00dd37c",
       "status": "matched"
     },
+    "ram:a00dd398": {
+      "by": "hand",
+      "comment": "Unpacks the bytes of p[1]..p[4] and p[5] into halfwords and bytes of DAT_a8079538, then calls func_0xa0f83044",
+      "name": "FUN_a00dd398",
+      "status": "matched"
+    },
     "ram:a00de8ac": {
       "by": "hand",
       "comment": "Fills the DSC timer record DAT_a8079538 from the input record, prints DSC_ENC_TIMER_CONFIG twice and calls FUN_a00dcc80, FUN_a00dccd8 and FUN_a00dd488",
