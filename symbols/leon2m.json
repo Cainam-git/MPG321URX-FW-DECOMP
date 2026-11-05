@@ -7042,6 +7042,13 @@
       "name": "FUN_a00b1700",
       "status": "matched"
     },
+    "ram:a00b1ba4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Calls FUN_a00b32e4 and FUN_a00a31a4 sequences selected by p, mode and DAT_a802d290 bytes over 9 or 13 iterations",
+      "name": "FUN_a00b1ba4",
+      "status": "matched"
+    },
     "ram:a00b27fc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
