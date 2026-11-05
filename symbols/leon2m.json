@@ -11829,6 +11829,13 @@
       "name": "FUN_a00ea25c",
       "status": "matched"
     },
+    "ram:a00ea638": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "fail-mask pass loop; table addresses of 0xa8026248/0xa8026238 in pointer locals t248/t238",
+      "name": "FUN_a00ea638",
+      "status": "matched"
+    },
     "ram:a00eb708": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
