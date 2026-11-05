@@ -8179,6 +8179,13 @@
       "name": "FUN_a00b288c",
       "status": "matched"
     },
+    "ram:a00b28d0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -Os -g -msoft-float",
+      "comment": "line input handler: hex word read/write lines, word split and ARR_a00b4e3c table call, *qt/*RD/*WD/*CB records",
+      "name": "FUN_a00b28d0",
+      "status": "matched"
+    },
     "ram:a00b34a8": {
       "by": "near",
       "cflags": "-mcpu=v8 -Os",
