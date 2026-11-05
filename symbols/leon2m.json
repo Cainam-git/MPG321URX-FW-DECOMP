@@ -20105,6 +20105,13 @@
       "name": "FUN_a0137de0",
       "status": "matched"
     },
+    "ram:a0137e10": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "builds a 32-byte message from record fields and bit fields and sends it with FUN_a01370dc(0x42, 0x20, buf, 0)",
+      "name": "FUN_a0137e10",
+      "status": "matched"
+    },
     "ram:a0137fa0": {
       "by": "twin",
       "cflags": "-mcpu=v8 -O2 -g",
