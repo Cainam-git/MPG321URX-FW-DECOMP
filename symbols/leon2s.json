@@ -2907,6 +2907,12 @@
       "name": "FUN_a00802cc",
       "status": "matched"
     },
+    "ram:a0080494": {
+      "by": "hand",
+      "comment": "port 2/3 record ARR_a807d680[k]; rate-dependent PHY register writes with FUN_a00a7424 / FUN_a00a7488, per-lane RCT/CFT start values and readback, optical / Triangle search flows for record byte +0x34; for rates 7..15 the lane write uses unset rct/cft stack bytes as the firmware does",
+      "name": "DRV_HDMI21_Set_PHY",
+      "status": "matched"
+    },
     "ram:a0083324": {
       "by": "hand",
       "comment": "Per-port EQ detect pass over ports 0..3: reset flags, FRL rate update, EQ_handler_3 / EQ_handler / FUN_a0079460",
