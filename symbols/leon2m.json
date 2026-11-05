@@ -7196,6 +7196,13 @@
       "name": "FUN_a00b3ed0",
       "status": "matched"
     },
+    "ram:a00b4144": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Writes rows y..y+2 of FUN_a0146a80 blocks and put_str character runs selected by row and mode",
+      "name": "FUN_a00b4144",
+      "status": "matched"
+    },
     "ram:a00b5014": {
       "by": "hand",
       "comment": "Read-and-clear accessor on DAT_a802b08e: loads the byte, stores it back ANDed with 0xFD, and returns (original >> 1) & 1 as int. Same source form as FUN_a00b5064.",
