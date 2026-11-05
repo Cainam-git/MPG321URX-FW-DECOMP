@@ -15675,6 +15675,13 @@
       "name": "FUN_a0113810",
       "status": "matched"
     },
+    "ram:a01138fc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "writes n 32-byte blocks from a word array to the indirect register port 0xcf011f88 with the block address in 0xcf011fa0..fac",
+      "name": "FUN_a01138fc",
+      "status": "matched"
+    },
     "ram:a0113cd8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
