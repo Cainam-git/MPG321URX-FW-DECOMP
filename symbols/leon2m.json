@@ -4507,7 +4507,7 @@
       "status": "matched"
     },
     "ram:a009811c": {
-      "by": "lead",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "prints s_00108130, reads FUN_a014837c(0)/(1), sets bit 10 of halfword 0xa802cff4+4 when bit 15 is set, word 0xa802afec = 0 then 0x109 around FUN_a00b5080/func_0x4008e2a4 x2/FUN_a00a5e68(1), bytes DAT_a802d290+0x2f and 0xa802cff4+0x34 = 2, halfwords +0x36/+0x38 from +0x1f0/+0x1f2 or w / 2 and h, FUN_a0146870, prints s_00108140",
       "name": "FUN_a009811c",
