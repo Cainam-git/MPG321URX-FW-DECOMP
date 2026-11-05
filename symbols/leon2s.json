@@ -5493,6 +5493,12 @@
       "name": "MODEDET_handler_2",
       "status": "matched"
     },
+    "ram:a009dd40": {
+      "by": "hand",
+      "comment": "MODEDET_handler_3: PLL count step, halfword +0x20 stability test and record update for a port",
+      "name": "MODEDET_handler_3",
+      "status": "matched"
+    },
     "ram:a009dfa8": {
       "by": "hand",
       "comment": "Returns the shifted ratio of words +0x50 and +0x54 of the record pointed to by entry param of 0xA807DB00, 0 when the divisor is 0",
