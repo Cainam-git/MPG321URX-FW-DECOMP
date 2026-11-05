@@ -18926,6 +18926,13 @@
       "name": "FUN_a012d4f8",
       "status": "matched"
     },
+    "ram:a012d554": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "selects the action by record byte 4 through a jump table: FGA EEPROM writes, key-table lookups and fixed call sequences",
+      "name": "FUN_a012d554",
+      "status": "matched"
+    },
     "ram:a012e004": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
