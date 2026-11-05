@@ -10272,6 +10272,13 @@
       "name": "FUN_a00d80d8",
       "status": "matched"
     },
+    "ram:a00d8100": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "selects settings bytes, words and bits of DAT_a802d290 by index byte and mode byte",
+      "name": "FUN_a00d8100",
+      "status": "matched"
+    },
     "ram:a00d8b30": {
       "by": "autoc",
       "comment": "empty function (returns at once)",
