@@ -10,6 +10,7 @@ function become <extern>, and address fields the linker fills in (sethi %hi /
 is identical after that. Prints a side-by-side diff and a percentage.
 """
 import difflib, json, os, pathlib, re, subprocess, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # sibling modules (exact) also under python3 -I
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 def toolchain(cpu):
