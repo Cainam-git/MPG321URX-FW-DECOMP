@@ -7833,6 +7833,12 @@
       "name": "FUN_a00b0724",
       "status": "matched"
     },
+    "ram:a00b0738": {
+      "by": "hand",
+      "comment": "Port state update: tick words from FUN_a00b2064, DPCD 0x256 phy test register list, 0x2b8 copy",
+      "name": "FUN_a00b0738",
+      "status": "matched"
+    },
     "ram:a00b0e54": {
       "by": "hand",
       "comment": "builds two nibble tables from DAT_a8078768 and FUN_a0083ec4 and writes them to registers 0xcf0117c0-0xcf0117ec",
