@@ -16193,7 +16193,7 @@
     "ram:a01199ac": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Per-mode percentage values and block counts written to registers 0x81..0x86 / 0xd3 of register block blk",
+      "comment": "Per-mode percentage values and block counts written to registers 0x81..0x86 / 0xd3 of register block blk (header wrap)",
       "name": "FUN_a01199ac",
       "status": "matched"
     },

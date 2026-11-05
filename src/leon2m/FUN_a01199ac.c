@@ -2,10 +2,10 @@
  * FUN_a01199ac(a, b, c, d, blk) writes registers of block blk of the second register family (register n at
  * 0xcf000000 + 4 * n, block base = halfword table DAT_a8027aa8[blk]; the write helpers treat blk > 1 as 0).
  * First writes register base + 0 back as its low byte with bit 7 cleared (FUN_a01191fc(blk, 0, 0x80, 0)), then
- * reads w = DAT_a802c9ca[blk],
- * x = DAT_a802c9c0[blk], y = DAT_a802c9b8[blk], z = DAT_a802c9c8[blk]; mode = bits 2..3 (blk 0) or bits 4..5
- * (other blk) of DAT_a802c9b0. Per mode two 16-bit values are formed from (c or d) minus (y * z or x * w), times
- * (a, b, 100 - a or 100 - b), divided by 100 (0 when the difference is negative):
+ * reads w = DAT_a802c9ca[blk], x = DAT_a802c9c0[blk], y = DAT_a802c9b8[blk], z = DAT_a802c9c8[blk];
+ * mode = bits 2..3 (blk 0) or bits 4..5 (other blk) of DAT_a802c9b0. Per mode two 16-bit values are formed from
+ * (c or d) minus (y * z or x * w), times (a, b, 100 - a or 100 - b), divided by 100 (0 when the difference is
+ * negative):
  *   mode 1: (c - y*z) * b,         (d - x*w) * a;        mode 2: (c - x*w) * (100 - a), (d - y*z) * b;
  *   mode 3: (c - y*z) * (100 - b), (d - x*w) * (100 - a); other: (c - x*w) * a,         (d - y*z) * (100 - b).
  * The first goes to registers base + 0x81 / 0x82 (low / high byte, FUN_a011919c), w - 1 to base + 0x83 / 0xd3
