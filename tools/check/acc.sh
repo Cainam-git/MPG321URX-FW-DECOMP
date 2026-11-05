@@ -3,6 +3,7 @@
 set -e
 cd "$(dirname "$0")/../.."
 by=$1; f=$2; c=$3; sum=$4; fl=${5:--mcpu=v8 -O3 -g}
+case $by in h[0-9]*|lead) by=hand;; esac   # worker ids are not recorded
 r=$(grep -m1 -o '0x[0-9a-f]*-0x[0-9a-f]*' asm/leon2m/$f.s); lo=${r%-*}; hi=${r#*-}
 j=$(nice -n 19 python3 -I tools/check/jf.py leon2m $f $c "$fl" 0); echo "jf: $j"
 rc=$(nice -n 19 python3 -I tools/check/rawcmp.py $f $c "$fl" ${lo#0x} ${hi#0x} | tail -1); echo "raw: $rc"
