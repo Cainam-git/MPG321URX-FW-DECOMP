@@ -5560,6 +5560,12 @@
       "name": "FUN_a009f66c",
       "status": "matched"
     },
+    "ram:a009f738": {
+      "by": "hand",
+      "comment": "fills the 0x58-byte block from register words 0x40..0x50 of ARR_a807db00[port] with table lookups for the 0x44 fields",
+      "name": "FUN_a009f738",
+      "status": "matched"
+    },
     "ram:a009facc": {
       "by": "hand",
       "comment": "return low byte of port register +0x40 (register block at record a807db00[port] +4, MMIO as in a00a211c)",
