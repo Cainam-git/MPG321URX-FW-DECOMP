@@ -6738,6 +6738,12 @@
       "name": "FUN_a00a80cc",
       "status": "matched"
     },
+    "ram:a00a8184": {
+      "by": "hand",
+      "comment": "register byte read-modify-write: bits of mask p4 set from p5 in register (table[p1 * 6 + p2] + p3) * 4 | 0xcf000000, p1 <= 1 and p2 <= 5",
+      "name": "FUN_a00a8184",
+      "status": "matched"
+    },
     "ram:a00a8210": {
       "by": "autoc",
       "comment": "For p1 (low byte) < 2: with t = halfword p1 of the table at 0xA00B4D40, sets the register R = 0xCF000000 | ((t + p2) * 4) to ((R & ~p3) | p4) & 0xff. Other p1 return without an access",
