@@ -6365,6 +6365,13 @@
       "name": "FUN_a00a5e68",
       "status": "matched"
     },
+    "ram:a00a6b98": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "position pairs from D+0x13e/0x13f, mode/sel call blocks, two digit parts by flag; ends with FUN_a0146dc0(1, 0)",
+      "name": "FUN_a00a6b98",
+      "status": "matched"
+    },
     "ram:a00a788c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
