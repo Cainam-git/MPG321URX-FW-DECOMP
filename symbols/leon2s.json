@@ -1687,6 +1687,12 @@
       "name": "FUN_a00615dc",
       "status": "matched"
     },
+    "ram:a0061608": {
+      "by": "hand",
+      "comment": "aligned-word byte copy of n bytes from s to d: byte read-modify-write until d is aligned, word loops per source alignment, byte tail",
+      "name": "FUN_a0061608",
+      "status": "matched"
+    },
     "ram:a00617f0": {
       "by": "hand",
       "comment": "returns a / b rounded up (a when b is 0)",
