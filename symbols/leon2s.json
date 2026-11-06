@@ -1862,6 +1862,13 @@
       "name": "FUN_a0063950",
       "status": "matched"
     },
+    "ram:a006c788": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -Os -g -msoft-float",
+      "comment": "writes n blocks of 8 words from buf byte-swapped to 0x20000000 + addr * 32 under the 0xcf03c840 lock, or byte by byte through the 0xcf011f88 port",
+      "name": "FUN_a006c788",
+      "status": "matched"
+    },
     "ram:a006c9c0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -Os -g -msoft-float",
