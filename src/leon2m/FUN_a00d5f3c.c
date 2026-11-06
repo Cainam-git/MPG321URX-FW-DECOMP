@@ -2,8 +2,8 @@
  * Code facts: record DAT_a802d290: when byte +0x4a != 0 and word +0xb0 != 0: byte +0x4a = 0 (the clrb sits in the
  * delay slot of the +0x1f test, so it runs on both paths), then if byte +0x1f == 0: FUN_a014d474(1, 0) and
  * FUN_a014dd98(1, 0). The function ends with a real 'nop' at the join label before ret/restore. void(void).
- * Source form: the record base DAT_a802d290.
- * Compiler aid: one asm nop at the end (the fw nop is not a delay slot: it is the branch target before 'ret').
+ * Source form: the record base DAT_a802d290; the final nop is a real firmware instruction (not a delay slot: it is
+ * the branch target before ret), written as inline asm.
  */
 struct R290 {
   unsigned char pad[0x1f]; unsigned char b1f; unsigned char pad2[0x4a - 0x20]; unsigned char b4a;
