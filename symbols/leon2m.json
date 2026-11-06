@@ -24324,6 +24324,13 @@
       "of": "FUN_a015373c",
       "status": "matched"
     },
+    "ram:a0151358": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "sets the default values of the DAT_a802e3d0 record (word bits, nibble fields, bytes); field assignment order gives the store order",
+      "name": "FUN_a0151358",
+      "status": "matched"
+    },
     "ram:a0151494": {
       "by": "autoc",
       "comment": "empty function (returns at once)",
