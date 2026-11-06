@@ -1,14 +1,13 @@
 /* leon2m FUN_a00a5908 @ 0xa00a5908-0xa00a5e68 (344 words), flags -mcpu=v8 -O3 -g.
  * Callers: FUN_a00a5e68, FUN_a00a6b98, FUN_a00b5d10, FUN_a00b8e7c.
- * FUN_a00a5908(x, y, mode): c = 0x11; for mode != 2, c = 0x16 and FUN_a0146a80(x, y + i, c, 0x796, 0) runs for
- * i = 0..c-1. Then 27 calls of FUN_a00b32e4(a, b, c3, p, q, n, id) (u8, u8, u16, u16, u8, u8, u8; the 7th
- * argument on the stack) with p relative to x and q relative to y or to c + y (third arguments 0x592, 0x9aaa, 0x9aae,
- * 0x9faa, 0xa29a, 0x3092, 0x8a2, ids 9..0x28 and 1..8, n = c - 7 and c - 6 in two calls). For mode 1 it then
- * calls FUN_a0146b50(0x101, 0), FUN_a0146b6c(2, 0) and FUN_a00b9750(x, y).
- * Source form: the loop limit and FUN_a0146a80's third argument are the variable c (cmp 0x16; bcs). x, y, c and mode
- * are spilled by the register allocator and reloaded from their stack slots.
- * Compiler aid: the dead store 'i = 0;' after the loop emits no instructions; it changes the register allocation
- * at the start (x is truncated from %i0 directly instead of being reloaded from its stack slot).
+ * FUN_a00a5908(x, y, mode): for mode != 2, c = 0x16 and FUN_a0146a80(x, y + i, c, 0x796, 0) runs for
+ * i = 0..c-1; otherwise c = 0x11. Then 27 calls of FUN_a00b32e4(a, b, c3, p, q, n, id) (u8, u8, u16, u16, u8, u8,
+ * u8; the 7th argument on the stack) with p relative to x and q relative to y or to c + y (third arguments 0x592,
+ * 0x9aaa, 0x9aae, 0x9faa, 0xa29a, 0x3092, 0x8a2, ids 9..0x28 and 1..8, n = c - 7 and c - 6 in two calls). For
+ * mode 1 it then calls FUN_a0146b50(0x101, 0), FUN_a0146b6c(2, 0) and FUN_a00b9750(x, y).
+ * Source form: c is set in both arms of 'if (mode != 2) { c = 0x16; loop } else c = 0x11;'; the loop limit and
+ * FUN_a0146a80's third argument are the variable c (cmp 0x16; bcs). x, y, c and mode are spilled by the register
+ * allocator and reloaded from their stack slots.
  */
 extern void FUN_a00b32e4(unsigned char, unsigned char, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char);
 extern void FUN_a0146a80(unsigned short, unsigned short, unsigned char, unsigned short, unsigned char);
@@ -20,13 +19,12 @@ void FUN_a00a5908(unsigned short x, unsigned short y, unsigned char mode)
 {
     unsigned char c, i;
 
-    c = 0x11;
     if (mode != 2) {
         c = 0x16;
         for (i = 0; i < c; i++)
             FUN_a0146a80(x, i + y, c, 0x796, 0);
-        i = 0;
-    }
+    } else
+        c = 0x11;
     FUN_a00b32e4(1, 1, 0x592, x + 2, y + 2, 2, 9);
     FUN_a00b32e4(1, 0, 0x592, x + 1, c + y - 5, 1, 0xb);
     FUN_a00b32e4(1, 0, 0x592, x + 4, c + y - 4, 1, 0xc);
