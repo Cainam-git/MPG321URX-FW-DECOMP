@@ -5,7 +5,6 @@
  * to 0xD00400A0; finally writes 0 to 0xD00400A4, the last value without bit 9 to 0xD00400A0 and stores it in the
  * word 0xA802C860. The same block is the second half of FUN_a00fa6b4.
  * Source form: as in FUN_a00fa6b4 (fset helper, pointer local for the second loop, same statement order).
- * Compiler aids: none.
  */
 #define R(a) (*(volatile unsigned int *)(a))
 static unsigned int fset(unsigned int x, unsigned int hi, unsigned int lo, unsigned int v)
