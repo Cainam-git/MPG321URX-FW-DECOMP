@@ -5,14 +5,12 @@
  * byte DAT_a802cb97, back to 0 after 0x24): word 0 = (hi << 24) + (2 << 16) + ((cmd | 0x80) << 8) + 2 + (1 << 4), words
  * 1..4 = w[0..3]. Then calls FUN_a01350dc() and FUN_a0134de0() until the body of FUN_a0132b8c(p) returns non-zero
  * (when byte 0xa802cb93 is 1: copies byte 0xa802cb92 bytes of 0xa802de40 to p, clears 0xa802cb93, returns 1).
- * Source form: FUN_a013358c (as send(), with its packing helper) and FUN_a0132b8c are static copies inlined at -O3;
- * the sender is called with 'cmd | 0x80'; w is unsigned long.
- * Compiler aid: 'for (;;) break;' after 'c = cnt << 16;' emits no instructions; its loop notes end the scheduling
- * region there, so the shift is placed before the ring index load of the entry stores.
+ * Source form: FUN_a013358c (as send(), with its packing helper pack(d, q, nw)) and FUN_a0132b8c are static copies
+ * inlined at -O3; the sender is called with 'cmd | 0x80'; w is unsigned long; the ring is a 2-D word array
+ * DAT_a802da6c[][5] (as FUN_a0135ae8).
  */
-struct Msg { unsigned int w[5]; };
 extern unsigned char DAT_a802cb97;
-extern struct Msg DAT_a802da6c[];
+extern unsigned int DAT_a802da6c[][5];
 extern void FUN_a01350dc(void);
 extern void FUN_a0134de0(void);
 extern unsigned char DAT_a802cb92, DAT_a802cb93;
@@ -32,9 +30,9 @@ static unsigned char FUN_a0132b8c(unsigned char *dst)
     return r & 1;
 }
 
-static void pack(unsigned long *d, unsigned char *q)
+static void pack(unsigned long *d, unsigned char *q, unsigned char nw)
 {
-    unsigned char j, nw = 4;
+    unsigned char j;
 
     for (j = 0; j < nw; j++) {
         d[j] = q[j * 4];
@@ -66,17 +64,15 @@ static void send(unsigned char cmd, unsigned char b1, unsigned char b2, unsigned
             tmp[1] = b2;
             for (k = 0; k < cnt - 2; k++)
                 tmp[k + 2] = p[k];
-            pack(w, tmp);
+            pack(w, tmp, 4);
         } else
-            pack(w, p + off - 2);
+            pack(w, p + off - 2, 4);
         c = cnt << 16;
-        for (;;)
-            break;
-        DAT_a802da6c[DAT_a802cb97].w[0] = (hi << 24) + c + (cmd << 8) + type + (last << 4);
-        DAT_a802da6c[DAT_a802cb97].w[1] = w[0];
-        DAT_a802da6c[DAT_a802cb97].w[2] = w[1];
-        DAT_a802da6c[DAT_a802cb97].w[3] = w[2];
-        DAT_a802da6c[DAT_a802cb97].w[4] = w[3];
+        DAT_a802da6c[DAT_a802cb97][0] = (hi << 24) + c + (cmd << 8) + type + (last << 4);
+        DAT_a802da6c[DAT_a802cb97][1] = w[0];
+        DAT_a802da6c[DAT_a802cb97][2] = w[1];
+        DAT_a802da6c[DAT_a802cb97][3] = w[2];
+        DAT_a802da6c[DAT_a802cb97][4] = w[3];
         if (++DAT_a802cb97 > 0x24)
             DAT_a802cb97 = 0;
         hi++;
