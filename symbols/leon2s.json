@@ -1796,6 +1796,12 @@
       "name": "FUN_a0062718",
       "status": "matched"
     },
+    "ram:a00627a8": {
+      "by": "hand",
+      "comment": "loop 2 as an if/else with one anchor store per arm, default ((k + 1) << 10) / (num + 1)",
+      "name": "FUN_a00627a8",
+      "status": "matched"
+    },
     "ram:a00629fc": {
       "by": "autoc",
       "comment": "For i from byte p1 + 0x58 up to 14, stores 0x3FF in halfword i of the halfword array at p1 + 0x5A",
