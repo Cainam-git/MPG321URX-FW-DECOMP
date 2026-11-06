@@ -6,11 +6,10 @@
  * k = low byte of ARR_a802c9a8[sel]: off = 0, n - c (k == 1) or (n - c) >> 1 (k == 2); off zero bytes, the c bytes
  * start + i, and zero bytes for i = c + off up to n, each through FUN_a011b3e8. Every register step is followed by
  * a 160-nop delay loop.
- * Source form: the step helpers are static (FUN_a011b3e8 is defined here) and inlined; the body is written twice,
- * once for sel == 0 and once for the other side; start is computed before the address sum.
- * Compiler aid: the address writes sit under 'if (!(a & 0x10000))', which is always true for the 16-bit a; the
- * test emits no instructions, but it keeps the 16-bit zero extension of a apart from its two uses until combine,
- * which gives the firmware's 'sll 16; srl 16; and 0xff' sequence.
+ * Source form: the step helpers are the firmware's own FUN_a011b4b0 (command byte) and FUN_a011b428 (address bytes
+ * v & 0xff, (v >> 8) & 0xff, (v >> 16) & 0xff), defined here with FUN_a011b3e8 and inlined at -O3; the address is
+ * the unsigned short addr = a, so the third register gets 0 (sll/srl 16 at 0xa011b6bc / 0xa011b83c); the body is
+ * written twice, once for sel == 0 and once for the other side; start is computed before the address sum.
  */
 #define R(a) (*(volatile unsigned int *)(a))
 
@@ -19,33 +18,31 @@ extern unsigned short DAT_a802c9a2[];
 extern unsigned int ARR_a802c9a8[];
 extern unsigned short ARR_a802c9ca[];
 
-static void cmd(unsigned char sel, unsigned char c)
+void FUN_a011b428(unsigned char c, unsigned int v)
 {
     int i;
 
-    if (sel == 0)
-        R(0xcf011780) = c;
-    else
-        R(0xcf011794) = c;
+    if (c == 0) {
+        *(volatile unsigned int *)0xcf011784 = v & 0xff;
+        *(volatile unsigned int *)0xcf011788 = (v >> 8) & 0xff;
+        *(volatile unsigned int *)0xcf00bfcc = (v >> 16) & 0xff;
+    } else {
+        *(volatile unsigned int *)0xcf011798 = v & 0xff;
+        *(volatile unsigned int *)0xcf01179c = (v >> 8) & 0xff;
+        *(volatile unsigned int *)0xcf00c3cc = (v >> 16) & 0xff;
+    }
     for (i = 0; i < 0xa0; i++)
         __asm__("nop");
 }
 
-static void addr16(unsigned char sel, unsigned short a)
+void FUN_a011b4b0(unsigned char c, unsigned char v)
 {
     int i;
 
-    if (!(a & 0x10000)) {
-        if (sel == 0) {
-            R(0xcf011784) = a & 0xff;
-            R(0xcf011788) = a >> 8;
-            R(0xcf00bfcc) = 0;
-        } else {
-            R(0xcf011798) = a & 0xff;
-            R(0xcf01179c) = a >> 8;
-            R(0xcf00c3cc) = 0;
-        }
-    }
+    if (c == 0)
+        R(0xcf011780) = v;
+    else
+        R(0xcf011794) = v;
     for (i = 0; i < 0xa0; i++)
         __asm__("nop");
 }
@@ -67,16 +64,18 @@ void FUN_a011b648(unsigned char mode, unsigned int a, unsigned int b, unsigned c
     unsigned char i, off;
     unsigned int k;
     unsigned short start;
+    unsigned short addr;
 
     start = DAT_a802c9a2[sel] - DAT_a802c9a0[sel];
     b *= ARR_a802c9ca[sel];
     a += b;
+    addr = a;
     if (sel == 0) {
         if (mode == 1)
-            cmd(0, 0x90);
+            FUN_a011b4b0(0, 0x90);
         else
-            cmd(0, 0x40);
-        addr16(0, a);
+            FUN_a011b4b0(0, 0x40);
+        FUN_a011b428(0, addr);
         off = 0;
         k = (unsigned char)ARR_a802c9a8[0];
         if ((unsigned char)k != 0) {
@@ -93,10 +92,10 @@ void FUN_a011b648(unsigned char mode, unsigned int a, unsigned int b, unsigned c
             FUN_a011b3e8(0, 0);
     } else {
         if (mode == 1)
-            cmd(sel, 0x90);
+            FUN_a011b4b0(sel, 0x90);
         else
-            cmd(sel, 0x40);
-        addr16(sel, a);
+            FUN_a011b4b0(sel, 0x40);
+        FUN_a011b428(sel, addr);
         off = 0;
         k = (unsigned char)ARR_a802c9a8[sel];
         if ((unsigned char)k != 0) {
