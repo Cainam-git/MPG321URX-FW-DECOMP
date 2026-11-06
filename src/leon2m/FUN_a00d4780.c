@@ -5,7 +5,6 @@
  * Source form: the record base DAT_a802d290 as a struct; the clamp variable is an unsigned short (u8 gives an
  * extra and/branch shape; unsigned int gives no re-extension; the short's conversion to the u8 parameter is the
  * 'and 0xff').
- * Compiler aids: none.
  */
 struct R290 { unsigned char pad[0xf]; unsigned char b0f; };
 extern struct R290 DAT_a802d290;
@@ -13,11 +12,10 @@ extern void FUN_a014a388(unsigned char);
 
 void FUN_a00d4780(void)
 {
-  struct R290 *p = &DAT_a802d290;
-  unsigned short v = p->b0f;
+  unsigned short v = DAT_a802d290.b0f;
 
   if (v > 5)
     v = 5;
-  p->b0f = v;
+  DAT_a802d290.b0f = v;
   FUN_a014a388(v);
 }

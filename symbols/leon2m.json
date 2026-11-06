@@ -10135,7 +10135,7 @@
     },
     "ram:a00d4780": {
       "by": "hand",
-      "comment": "v = byte 0xa802d290+0xf; if v > 5 then v = 5 (bgu,a); byte rec+0xf = v; tail call FUN_a014a388(v & 0xff) (the fw re-extends after the store).",
+      "comment": "clamp written on the record directly, no local pointer",
       "name": "FUN_a00d4780",
       "status": "matched"
     },
