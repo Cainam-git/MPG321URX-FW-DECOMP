@@ -32,19 +32,11 @@
  *   tails into the join -> join = 'lduh h28, sll %l0 -> %o1, sra' as fw.
  *   Locals declared vt1 h0a h30 h32 h26 hx h28 h2e ht (declaration order = allocno index = tie-break: h28 and hx
  *   both int 29, hx must win). Loads h0a, h30, h32, h2e (h2e last = delay slot).
- *   Without the hints below h0a and h32 get each other's registers (%l6/%l7): allocation priority h0a 497/227 ->
- *   43.79 < h32 464/210 -> 44.19.
- * Compiler aid: three branch-weight hints, behaviour-neutral:
- *   'do continue; while (0);' x4 + 'goto lN; lN: ;' emits no code (each continue jumps to its own do-while(0) exit,
- *   the goto to the next statement). It only leaves NOTE_INSN_PREDICTION notes (stmt.c PRED_CONTINUE 56 % taken,
- *   c-semantics.c PRED_GOTO 70 % not taken) on the enclosing branch: odds x 1.2727^4 / 2.333 = x1.124 (DS combine in
- *   predict.c).
- *   cls == 1 arm 29 % -> 31.5 % (freq 338 -> 367): h0a REG_FREQ 497 -> 500 -> priority int 44 = h32 44, allocno 5
- *   first -> %l6/%l7 as fw. Window: arm freq >= 360 (h0a) and < 388 (else arm must stay >= exec_th 776 of bb-reorder
- *   round 2).
- *   The same hint in the sh_v > 0x3fff arm (349 -> 378) and the 0x2000 arm (236 -> 255) keeps the bb-reorder round-3
- *   trace order (keys = -freq: 0x3fff arm > cls arm > 0x2000 arm > float fixup block 245), and their children stay <
- *   exec_th 194.
+ *   The three shift arms are written alike: a range test of s, then 'if (FUN_a011cf88() < code)' with the shift 0
+ *   write (clear bits 1-3, shift = 0) in its then-arm and the arm's own write in the else-arm; GCC cross-jumps the
+ *   three shift 0 writes and the final else into the one block at 0xa0107ff8, and the code tests sit out of line
+ *   at 0xa0108308 / 0xa0108358 / 0xa01083b4. The 0x2000 and 0x1000 ranges are 's >= lo && s <= hi' (folded to the
+ *   subtract-and-compare at 0xa0107fc4 / 0xa0107fe0).
  */
 
 struct PanelParam
@@ -100,7 +92,7 @@ void FUN_a0107e44(unsigned char cls, unsigned short rate, unsigned char force)
   unsigned short e;
   unsigned int clk;
   unsigned char shift;
-  if ((DAT_a802c986 == rate) & (force == 0))
+  if (DAT_a802c986 == rate && force == 0)
   {
     return;
   }
@@ -115,7 +107,6 @@ void FUN_a0107e44(unsigned char cls, unsigned short rate, unsigned char force)
   if (cls == 1)
   {
     ht = p->h20; hx = h0a; h28 = p->h28; h26 = p->h26;
-    /* branch-weight hint, no code: */ do continue; while (0); do continue; while (0); do continue; while (0); do continue; while (0); goto l1; l1: ;
   }
   else { ht = p->h20; hx = p->h08; h28 = p->h28; h26 = p->h26; }
   clk = (float) ht * vt1 * rate / 10.0f;
@@ -137,7 +128,6 @@ void FUN_a0107e44(unsigned char cls, unsigned short rate, unsigned char force)
   }
   if (sh_v > 0x3fff)
   {
-    /* branch-weight hint, no code: */ do continue; while (0); do continue; while (0); do continue; while (0); do continue; while (0); goto l3; l3: ;
     if (FUN_a011cf88() < 0x84)
     {
       *((volatile unsigned int *) 0xcf011e40) = (*((volatile unsigned int *) 0xcf011e40)) & (~0xe);
@@ -150,9 +140,8 @@ void FUN_a0107e44(unsigned char cls, unsigned short rate, unsigned char force)
       shift = 3;
     }
   }
-  else if (((unsigned short) (sh_v - 0x2000)) <= 0x1fff)
+  else if (sh_v >= 0x2000 && sh_v <= 0x3fff)
   {
-    /* branch-weight hint, no code: */ do continue; while (0); do continue; while (0); do continue; while (0); do continue; while (0); goto l4; l4: ;
     if (FUN_a011cf88() < 0x84)
     {
       *((volatile unsigned int *) 0xcf011e40) = (*((volatile unsigned int *) 0xcf011e40)) & (~0xe);
@@ -165,11 +154,19 @@ void FUN_a0107e44(unsigned char cls, unsigned short rate, unsigned char force)
       shift = 2;
     }
   }
-  else if ((((unsigned short) (sh_v - 0x1000)) <= 0xfff) && (FUN_a011cf88() > 0x82))
+  else if (sh_v >= 0x1000 && sh_v <= 0x1fff)
   {
-    *((volatile unsigned int *) 0xcf011e40) = (*((volatile unsigned int *) 0xcf011e40)) & (~0x6);
-    *((volatile unsigned int *) 0xcf011e40) = (*((volatile unsigned int *) 0xcf011e40)) | 8;
-    shift = 1;
+    if (FUN_a011cf88() < 0x83)
+    {
+      *((volatile unsigned int *) 0xcf011e40) = (*((volatile unsigned int *) 0xcf011e40)) & (~0xe);
+      shift = 0;
+    }
+    else
+    {
+      *((volatile unsigned int *) 0xcf011e40) = (*((volatile unsigned int *) 0xcf011e40)) & (~0x6);
+      *((volatile unsigned int *) 0xcf011e40) = (*((volatile unsigned int *) 0xcf011e40)) | 8;
+      shift = 1;
+    }
   }
   else
   {

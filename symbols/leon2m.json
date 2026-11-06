@@ -14697,7 +14697,7 @@
     "ram:a0107e44": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "FRCConfigPostFRC (output clock/timing); documented branch-weight hints",
+      "comment": "FRCConfigPostFRC (output clock/timing)",
       "name": "FUN_a0107e44",
       "status": "matched"
     },
