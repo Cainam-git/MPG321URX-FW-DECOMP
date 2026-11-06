@@ -11145,7 +11145,7 @@
     },
     "ram:a00de9d8": {
       "by": "hand",
-      "comment": "returns the stack pointer (leaf retl; mov %sp,%o0); aid: GNU register variable bound to sp",
+      "comment": "header: the register variable is the source form",
       "name": "FUN_a00de9d8",
       "status": "matched"
     },
