@@ -10439,6 +10439,13 @@
       "name": "FUN_a00d8c1c",
       "status": "matched"
     },
+    "ram:a00d8cd4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "static copies of FUN_a00d7d48 / FUN_a00d8bd8 / FUN_a00d3e28 inlined, FUN_a00d3f80 conversion as a one-tail static helper, FUN_a00d8bd8 result compared == 1, v and r unsigned short",
+      "name": "FUN_a00d8cd4",
+      "status": "matched"
+    },
     "ram:a00d8ffc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
