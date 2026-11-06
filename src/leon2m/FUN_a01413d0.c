@@ -1,12 +1,8 @@
 /* FUN_a01413d0 (panel power sequencer). Flags: -mcpu=v8 -O3 -g.
- * Compiler aids (no code, no inline asm, no effect on behaviour):
- * - 'for (;;) break;' at the start of off_req's last else arm and of case 9's else arm. Emits no code. Its
- *   NOTE_INSN_LOOP_BEG/END notes end cse1's extended basic block (cse_end_of_basic_block stops at LOOP_END), so the
- *   following DAT_a802e110 store gets its own HIGH pseudo, which gcse PRE + local cprop map to the function-level
- *   %l1. Effect 1: the chain's state load stays the only use of case 5's HIGH, so local-alloc update_equiv_regs moves
- *   that sethi next to the load (firmware a01416a0 'sethi' in the cc09-test delay slot). Effect 2: in case 9 both arm
- *   stores use %l1 and crossjump merges the tails ('mov 1' fall-through, 'b join; mov 2' arm, 'be,a ; clrb').
- * Source form: case 9 stores DAT_a802e110.state directly in each arm.
+ * Source form: the panel power request FUN_a01412b8 (the function just before this one) is defined here as a static
+ * copy of its body and inlined: case 5 (power-on done) calls it with 0 when a request is pending (DAT_a802cc09 == 1),
+ * case 9 (power-off done) sets state 1 and calls it with 1 when a request is pending (the firmware's 'be,a ; clrb'
+ * at 0xa01414b8 and the 'mov 2' arm at 0xa01417ac).
  */
 
 struct PwrSeq
@@ -55,20 +51,23 @@ extern void FUN_a0106bfc(int, int, int, int);
 extern int FUN_a00df170();
 extern char s_001a6a90[];
 extern char s_001a6ab0[];
-static void off_req(struct PwrSeq *s)
+static void FUN_a01412b8(unsigned char on)
 {
-  if (((unsigned char) (s->state - 7)) <= 2)
     DAT_a802cc09 = 0;
-  else if (s->state == 1)
-    DAT_a802cc09 = 0;
-  else if (((unsigned char) (s->state - 2)) <= 3)
-    DAT_a802cc09 = 1;
-  else
-  {
-    for (;;) break;
-    s->state = 7;
-    DAT_a802cc09 = 0;
-  }
+    if ((on == 1 && (unsigned char)(DAT_a802e110.state - 2) <= 3) || (on == 0 && (unsigned char)(DAT_a802e110.state - 7) <= 2))
+        ;
+    else if ((on == 1 && DAT_a802e110.state == 6) || (on == 0 && DAT_a802e110.state == 1))
+        ;
+    else if ((on == 0 && (unsigned char)(DAT_a802e110.state - 2) <= 3) || (on == 1 && (unsigned char)(DAT_a802e110.state - 7) <= 2)) {
+        DAT_a802cc09 = 1;
+        if (on == 1)
+            DAT_a802e110.req = 1;
+    } else {
+        if (on == 1)
+            DAT_a802e110.state = 2;
+        else
+            DAT_a802e110.state = 7;
+    }
 }
 void FUN_a01413d0(void)
 {
@@ -150,7 +149,7 @@ void FUN_a01413d0(void)
       }
       if (DAT_a802cc09 == 1)
       {
-        off_req(&DAT_a802e110);
+        FUN_a01412b8(0);
       }
       else
       {
@@ -210,17 +209,11 @@ void FUN_a01413d0(void)
       if (func_0x4008d594(DAT_a802e110.t) > DAT_a802e378.t3c)
     {
       FUN_a0124874();
+      DAT_a802e110.state = 1;
       if (DAT_a802cc09 == 1)
       {
-        DAT_a802cc09 = 0;
-        DAT_a802e110.state = 2;
+        FUN_a01412b8(1);
       }
-      else
-      {
-        for (;;) break;
-        DAT_a802e110.state = 1;
-      }
-
       DAT_a802e110.t = func_0x4008d588();
     }
       break;

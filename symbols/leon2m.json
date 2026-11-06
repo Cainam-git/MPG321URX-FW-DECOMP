@@ -21524,7 +21524,7 @@
     "ram:a01413d0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "panel power sequencer; no-code aid 'for (;;) break;' x2 documented",
+      "comment": "panel power sequencer",
       "name": "FUN_a01413d0",
       "status": "matched"
     },
