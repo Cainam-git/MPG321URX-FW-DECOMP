@@ -8273,7 +8273,7 @@
     "ram:a00bdc14": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "text a802d078[7..] stores (ascending, before bac3c), ba950 / babe4 calls (bdb48 family)",
+      "comment": "header: drop the empty compiler-aid line",
       "name": "FUN_a00bdc14",
       "status": "matched"
     },
