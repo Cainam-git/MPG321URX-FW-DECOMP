@@ -2771,7 +2771,7 @@
       "status": "matched"
     },
     "ram:a007af6c": {
-      "by": "twin",
+      "by": "hand",
       "comment": "Same code as FUN_a007ae94 with other constants: tests record bit 9 or register 0x2e1 bit 1",
       "name": "FUN_a007af6c",
       "status": "matched"
