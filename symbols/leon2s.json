@@ -5093,6 +5093,13 @@
       "name": "FUN_a00961e8",
       "status": "matched"
     },
+    "ram:a0096204": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -Os -g -msoft-float",
+      "comment": "stores (i << 12) + 0xce009000 + k * 0x100 into word k of DAT_a807db00[i] for i < 2; 13 named word members, -msoft-float",
+      "name": "FUN_a0096204",
+      "status": "matched"
+    },
     "ram:a00962ec": {
       "by": "autoc",
       "comment": "byte array 0xA8079110[(p1 & 0xff)] = p2",
