@@ -8,10 +8,11 @@
  * written to the word at b + a * 4. When DAT_a802b550 is non-zero, that word is read again (cache byte read
  * first, table filled, page written when the cache byte differs) and string 0x199410 is printed with
  * (phy, addr, value).
- * Source form: the table re-fill after the page-register write is the one the firmware executes at
- * 0xa00e0418-0xa00e0420; in the DAT_a802b550 path the same re-fill sits before the page-register write and its
- * stores are removed by the compiler as repeats of the stored values (as in FUN_a00e02ec / FUN_a00e0514).
- * Compiler aid: __builtin_expect on the page test of the write path (no code).
+ * Source form: in the write path a cache byte equal to page skips the page switch with 'goto write' (the
+ * firmware's 'be 0xa00e0428' over the page-register write, table re-fill and cache store); the table re-fill
+ * after the page-register write is the one the firmware executes at 0xa00e0418-0xa00e0420; in the DAT_a802b550
+ * path the same re-fill sits before the page-register write and its stores are removed by the compiler as
+ * repeats of the stored values (as in FUN_a00e02ec / FUN_a00e0514).
  * The register accesses are 'volatile unsigned long'. Built without -g.
  */
 extern int FUN_a00df170(const char *fmt, ...);
@@ -52,11 +53,12 @@ void FUN_a00e03b0(int phy, unsigned int addr, unsigned int val)
             DAT_a8025d10[phy] = val;
         }
     } else {
-        if (__builtin_expect(DAT_a8025d10[phy] != page, 1)) {
-            *(volatile unsigned long *)(b + 0x3f8) = page;
-            phy_tab(base);
-            DAT_a8025d10[phy] = page;
-        }
+        if (DAT_a8025d10[phy] == page)
+            goto write;
+        *(volatile unsigned long *)(b + 0x3f8) = page;
+        phy_tab(base);
+        DAT_a8025d10[phy] = page;
+    write:
         *(volatile unsigned long *)(b + off) = val;
     }
     if (DAT_a802b550 != 0) {
