@@ -22,11 +22,11 @@ The monitor is driven by a Novatek NT68500 scaler chip. The firmware holds progr
 ## Progress
 
 ```
-Main processor      [##################--]   92 %
-Input processor     [####################]  100 %
+Main processor      [##################--]   91 %
+Input processor     [###################-]   98 %
 Helper processor    [####################]  100 %
 Tensilica processor [####################]  100 %
-Overall             [###################-]   95 %
+Overall             [##################--]   94 %
 ```
 
 Percentages are by code size. More than 6,500 of roughly 6,600 functions are done. The input processor and the
