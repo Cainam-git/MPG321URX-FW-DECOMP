@@ -9521,6 +9521,38 @@
       "of": "FUN_a00d2a98",
       "status": "matched"
     },
+    "ram:a00cf0f4": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00d3650; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00cf0f4",
+      "of": "FUN_a00d3650",
+      "status": "matched"
+    },
+    "ram:a00cf110": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00d3650; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00cf110",
+      "of": "FUN_a00d3650",
+      "status": "matched"
+    },
+    "ram:a00cf144": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00d3650; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00cf144",
+      "of": "FUN_a00d3650",
+      "status": "matched"
+    },
+    "ram:a00cf178": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00d3650; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00cf178",
+      "of": "FUN_a00d3650",
+      "status": "matched"
+    },
     "ram:a00cf194": {
       "by": "hand",
       "comment": "maps 5, 6, 8, 0xb to 1, 4, 7, 0x17 (else 0)",
