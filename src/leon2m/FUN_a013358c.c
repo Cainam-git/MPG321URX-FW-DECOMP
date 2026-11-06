@@ -6,17 +6,15 @@
  * words w[0..3] (static helper inlined twice) and the entry gets word 0 = (hi << 24) + (cnt << 16) + (cmd << 8) + 2 +
  * (last << 4) (cnt = 16, or the remaining length with last = 1 instead of 2 for the final short chunk), words 1..4 =
  * w[0..3]; hi increments per chunk. FUN_a0135ae8 is the same body followed by a wait for the ring.
- * Source form: w is unsigned long.
- * Compiler aid: 'for (;;) break;' after 'c = cnt << 16;' emits no instructions; its loop notes end the scheduling
- * region there, so the shift is placed before the ring index load of the entry stores.
+ * Source form: the ring is an array of 5-word entries, DAT_a802da6c[][5]; w is
+ * unsigned long; the packing helper takes the word count as an argument (pack(w, q, 4)).
  */
-struct Msg { unsigned int w[5]; };
 extern unsigned char DAT_a802cb97;
-extern struct Msg DAT_a802da6c[];
+extern unsigned int DAT_a802da6c[][5];
 
-static void pack(unsigned long *d, unsigned char *q)
+static void pack(unsigned long *d, unsigned char *q, unsigned char nw)
 {
-    unsigned char j, nw = 4;
+    unsigned char j;
 
     for (j = 0; j < nw; j++) {
         d[j] = q[j * 4];
@@ -31,7 +29,6 @@ void FUN_a013358c(unsigned char cmd, unsigned char b1, unsigned char b2, unsigne
     unsigned long w[4] = { 0, 0, 0, 0 };
     unsigned char tmp[16] = { 0 };
     unsigned short off;
-    unsigned int c;
     unsigned char type = 2, last = 2, cnt = 16, hi = 0, k;
 
     if (cmd & 0x80) {
@@ -48,17 +45,14 @@ void FUN_a013358c(unsigned char cmd, unsigned char b1, unsigned char b2, unsigne
             tmp[1] = b2;
             for (k = 0; k < cnt - 2; k++)
                 tmp[k + 2] = p[k];
-            pack(w, tmp);
+            pack(w, tmp, 4);
         } else
-            pack(w, p + off - 2);
-        c = cnt << 16;
-        for (;;)
-            break;
-        DAT_a802da6c[DAT_a802cb97].w[0] = (hi << 24) + c + (cmd << 8) + type + (last << 4);
-        DAT_a802da6c[DAT_a802cb97].w[1] = w[0];
-        DAT_a802da6c[DAT_a802cb97].w[2] = w[1];
-        DAT_a802da6c[DAT_a802cb97].w[3] = w[2];
-        DAT_a802da6c[DAT_a802cb97].w[4] = w[3];
+            pack(w, p + off - 2, 4);
+        DAT_a802da6c[DAT_a802cb97][0] = (hi << 24) + (cnt << 16) + (cmd << 8) + type + (last << 4);
+        DAT_a802da6c[DAT_a802cb97][1] = w[0];
+        DAT_a802da6c[DAT_a802cb97][2] = w[1];
+        DAT_a802da6c[DAT_a802cb97][3] = w[2];
+        DAT_a802da6c[DAT_a802cb97][4] = w[3];
         if (++DAT_a802cb97 > 0x24)
             DAT_a802cb97 = 0;
         hi++;
