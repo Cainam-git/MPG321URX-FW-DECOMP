@@ -31,7 +31,7 @@ static struct Rec *rec(unsigned char ch)
 }
 
 /* Word n of the register block of entry ch in table t, or of entries 0..2 when ch > 2 (uses ch and j of the caller). */
-#define PUT(t, n, val) do { if (ch > 2) { for (j = 0; j <= 2; j++) t[j][n] = val; } else t[ch][n] = val; } while (0)
+#define PUT(t, n, val) if (ch > 2) { for (j = 0; j <= 2; j++) t[j][n] = val; } else t[ch][n] = val
 
 void FUN_a010c61c(unsigned char ch, unsigned int sel, unsigned int a, unsigned int b)
 {

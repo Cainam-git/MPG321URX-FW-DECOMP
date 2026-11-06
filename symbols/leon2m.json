@@ -15411,7 +15411,7 @@
     "ram:a010c61c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "stores sel/a/b in record 0xa802d744/784/7c4 and writes control word and value pairs to register blocks of tables 0x19aed8/0x19aecc",
+      "comment": "FUN_a010c61c: PUT macro is a plain if/else statement",
       "name": "FUN_a010c61c",
       "status": "matched"
     },
