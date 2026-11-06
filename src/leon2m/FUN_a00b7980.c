@@ -4,7 +4,6 @@
  * tail FUN_a00a9f30(6, 0) (both leaf sibcalls 'mov %o7, %g1; call; mov %g1, %o7').
  * Source form: one record DAT_a802d290 via a struct pointer (fw sethi|or into %o4, both reads off it); void
  * callee.
- * Compiler aids: none.
  */
 struct G290 { unsigned char pad[0x1f]; unsigned char b1f; unsigned char pad2[0x8c]; unsigned int wac; };
 extern struct G290 DAT_a802d290;

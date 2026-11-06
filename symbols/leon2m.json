@@ -7513,7 +7513,7 @@
     "ram:a00b7980": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "a9f30(6, 1) if bit 20 of a802d290 word ac and byte 1f == 0, else a9f30(6, 0)",
+      "comment": "header: source form, no aid line",
       "name": "FUN_a00b7980",
       "status": "matched"
     },
