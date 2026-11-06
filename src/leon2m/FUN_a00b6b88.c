@@ -3,7 +3,6 @@
  * else v; other dir (up): v == 7 -> 0 (wrap), v > 6 -> v unchanged, else v + 1.
  * Source form: early returns (the fw writes each result straight into %o0 before retl; a result variable gives a
  * shared 'mov %o5, %o0' tail and reordered tests); u8 return.
- * Compiler aids: none.
  */
 unsigned char FUN_a00b6b88(unsigned char v, unsigned char dir)
 {
