@@ -19000,6 +19000,13 @@
       "name": "FUN_a012b418",
       "status": "matched"
     },
+    "ram:a012b458": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "bit-field position and bit tables per index, tail of FUN_a012b418 inlined",
+      "name": "FUN_a012b458",
+      "status": "matched"
+    },
     "ram:a012b7b8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
