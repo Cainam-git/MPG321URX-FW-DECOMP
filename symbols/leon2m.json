@@ -7241,8 +7241,8 @@
     },
     "ram:a00b3c80": {
       "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "calls a0146b50(0x92,0), a0146b6c(0,0), then 3x a00a31a4(0,0x16,2i+6,1, a00a3844(table 0x196678, i*29 + a802d290.b08), 0); goto loop (fw hoists only the sethi)",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "clean source form, plain for loop instead of the goto loop",
       "name": "FUN_a00b3c80",
       "status": "matched"
     },
