@@ -22,11 +22,9 @@
  * The same computation from 0xa802e3dc..de replaces the values when FUN_a0140058(bits 12..15 of word 0xa802df30) is
  * 1 or bit 6 is set in the first halfword of entry (bits 12..15) of the 42-byte records at 0xa802e224.
  * Source form: K&R definition (the unsigned char p is extended at each use); each 0xff case written on its own;
- * case blocks in the order 12, 14, 2, 9, 0, 1, 4, 5, 6, 7, 3, 13, 8, 10, 11, 15..22, default (this order gives the
- * register choices); the T stores in the order written.
- * Compiler aids: __builtin_expect(FUN_a012f134(..) != 0, 0) in cases 1, 4 and 7 and 'do continue; while (0);' in
- * the branch that keeps the values emit no instructions; they set branch predictions that place the blocks as in
- * the firmware.
+ * case blocks in the order 12, 14, 2, 9, 0, 1, 4, 5, 6, 7, 3, 13, 8, 10, 11, 15..22, default; the T stores in the
+ * order written; case 9 clears the call flag after its two calls; the final test reads bit 6 as
+ * '((h0 & 0x40) >> 6) == 1', as FUN_a014be10 and FUN_a014bf64 do.
  */
 struct S3d0 {
     unsigned char pad0[0xc];
@@ -105,8 +103,8 @@ void FUN_a014c118(p)
         break;
     case 9:
         FUN_a010afac();
-        set = 0;
         FUN_a010b17c();
+        set = 0;
         break;
     case 0:
         v0 = 0xff;
@@ -114,7 +112,7 @@ void FUN_a014c118(p)
         v2 = 0xff;
         break;
     case 1:
-        if (__builtin_expect(FUN_a012f134(DAT_a802e3d0.b18) != 0, 0) && FUN_a012e550(1 << (DAT_a802e3d0.b18 & 0xf), 2, buf)) {
+        if (FUN_a012f134(DAT_a802e3d0.b18) && FUN_a012e550(1 << (DAT_a802e3d0.b18 & 0xf), 2, buf)) {
             v0 = buf[0];
             v1 = buf[1];
             v2 = buf[2];
@@ -130,7 +128,7 @@ void FUN_a014c118(p)
         }
         break;
     case 4:
-        if (__builtin_expect(FUN_a012f134(DAT_a802e3d0.b18) != 0, 0) && FUN_a012e550(1 << (DAT_a802e3d0.b18 & 0xf), 0x10, buf)) {
+        if (FUN_a012f134(DAT_a802e3d0.b18) && FUN_a012e550(1 << (DAT_a802e3d0.b18 & 0xf), 0x10, buf)) {
             v0 = buf[0];
             v1 = buf[1];
             v2 = buf[2];
@@ -166,7 +164,7 @@ void FUN_a014c118(p)
         v2 = DAT_a802e1f0[0x11];
         break;
     case 7:
-        if (__builtin_expect(FUN_a012f134(DAT_a802e3d0.b18) != 0, 0) && FUN_a012e550(1 << (DAT_a802e3d0.b18 & 0xf), 0x80, buf)) {
+        if (FUN_a012f134(DAT_a802e3d0.b18) && FUN_a012e550(1 << (DAT_a802e3d0.b18 & 0xf), 0x80, buf)) {
             v0 = buf[0];
             v1 = buf[1];
             v2 = buf[2];
@@ -239,9 +237,7 @@ void FUN_a014c118(p)
         v2 = (DAT_a802e3d0.e * 200u + 50) / 100 + 0x37;
         break;
     }
-    if (FUN_a0140058((DAT_a802df30 >> 12) & 0xf) != 1 && !(DAT_a802e224[(DAT_a802df30 >> 12) & 0xf].h0 & 0x40))
-        do continue; while (0);
-    else {
+    if (FUN_a0140058((DAT_a802df30 >> 12) & 0xf) == 1 || ((DAT_a802e224[(DAT_a802df30 >> 12) & 0xf].h0 & 0x40) >> 6) == 1) {
         v0 = (DAT_a802e3d0.c * 200u + 50) / 100 + 0x37;
         v1 = (DAT_a802e3d0.d * 200u + 50) / 100 + 0x37;
         v2 = (DAT_a802e3d0.e * 200u + 50) / 100 + 0x37;
