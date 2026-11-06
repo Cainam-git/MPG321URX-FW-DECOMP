@@ -5497,7 +5497,7 @@
     "ram:a009e480": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "afec % 3 step loop, a9650, d46d = afec + 0xf, tail a813c(1, 5c55, changed)",
+      "comment": "header: source form, no aid line",
       "name": "FUN_a009e480",
       "status": "matched"
     },

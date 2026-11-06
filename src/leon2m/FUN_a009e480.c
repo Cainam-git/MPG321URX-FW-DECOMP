@@ -7,7 +7,6 @@
  * FUN_a00aad30 takes one argument; the store to 0xa802d46d comes after the FUN_a00a9650 call.
  * Source form: the halfword is read as (unsigned short)_DAT_a802afec; RAM globals are not volatile; the callee
  * prototypes use u8 and void types.
- * Compiler aids: none.
  */
 extern unsigned char DAT_a8025c55;
 extern unsigned int _DAT_a802afec;
