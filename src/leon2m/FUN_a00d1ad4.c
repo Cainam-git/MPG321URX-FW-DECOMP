@@ -5,7 +5,6 @@
  * Source form: in arm 1 the u16 is addressed through a local base pointer p = DAT_a802d290 (fw: sth [base + 0x1f6]
  * shares the call argument's base register; a plain DAT_a802d290 + 0x1f6 gives add -502); arm 0 keeps the sym +
  * 0x1f6 form. FUN_a014aed0 returns int (its value is 1 bit; a void declaration puts 'mov 0x30, %o0' first).
- * Compiler aids: none.
  */
 extern unsigned char DAT_a802d290[];
 extern void FUN_a00cea18(void);
