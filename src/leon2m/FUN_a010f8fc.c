@@ -6,53 +6,48 @@
  *   off(base): sets bit 1 + ch, then clears bit 8 + ch of register base + 4.
  * p->h14 >= w: on(0xD0030000), off(0xD0038000); p->h14 + p->h16 > w (signed): off on both; otherwise
  * off(0xD0030000), on(0xD0038000).
- * Source form: on and off are static helpers with a switch on ch, inlined per call, with the base as a const
- * parameter (every case builds its own address).
- * Compiler aid: the block '{ struct Aid s = { ch }; }' between the two helper calls of each arm emits no
- * instructions. Its initialisation puts a CLOBBER of the unused structure in front of the second switch's first
- * compare; GCSE jump bypassing only redirects a block holding a single set before its jump, so the second switch's
- * tests are kept after each case of the first (the firmware re-tests ch there), and the dead CLOBBER is deleted
- * later.
+ * Source form: on and off are static helpers with a switch on ch, inlined per call; the side 0 / 1 parameter picks
+ * the register block (macro R: 0xD0030004 or 0xD0038004), so every case builds its own register address and the
+ * second switch tests ch again (as FUN_a010fc74).
  */
-struct Aid { unsigned int v; };
-#define R(b) (*(volatile unsigned int *)((b) | 4))
+#define R(s) (*(volatile unsigned int *)((s) ? 0xd0038004 : 0xd0030004))
 struct ChBlk { unsigned char pad[0x14]; unsigned short h14, h16; };
 struct PanelParam { unsigned int w0; unsigned short h4; unsigned char b6, b7; unsigned short h08; };
 extern struct ChBlk DAT_a802d744, DAT_a802d784, DAT_a802d7c4;
 extern struct PanelParam *DAT_a802d6a4;
 
-static void blk_on(const unsigned int b, unsigned char c)
+static void blk_on(int side, unsigned char c)
 {
     switch (c) {
     case 0:
-        R(b) |= 0x100;
-        R(b) &= ~2u;
+        R(side) |= 0x100;
+        R(side) &= ~2u;
         break;
     case 1:
-        R(b) |= 0x200;
-        R(b) &= ~4u;
+        R(side) |= 0x200;
+        R(side) &= ~4u;
         break;
     case 2:
-        R(b) |= 0x400;
-        R(b) &= ~8u;
+        R(side) |= 0x400;
+        R(side) &= ~8u;
         break;
     }
 }
 
-static void blk_off(const unsigned int b, unsigned char c)
+static void blk_off(int side, unsigned char c)
 {
     switch (c) {
     case 0:
-        R(b) |= 2;
-        R(b) &= ~0x100u;
+        R(side) |= 2;
+        R(side) &= ~0x100u;
         break;
     case 1:
-        R(b) |= 4;
-        R(b) &= ~0x200u;
+        R(side) |= 4;
+        R(side) &= ~0x200u;
         break;
     case 2:
-        R(b) |= 8;
-        R(b) &= ~0x400u;
+        R(side) |= 8;
+        R(side) &= ~0x400u;
         break;
     }
 }
@@ -69,22 +64,13 @@ void FUN_a010f8fc(unsigned char ch)
     }
     w = DAT_a802d6a4->h08 >> 1;
     if (p->h14 >= w) {
-        blk_on(0xd0030000, ch);
-        {
-            struct Aid s = { ch };
-        }
-        blk_off(0xd0038000, ch);
+        blk_on(0, ch);
+        blk_off(1, ch);
     } else if (p->h14 + p->h16 > w) {
-        blk_off(0xd0030000, ch);
-        {
-            struct Aid s = { ch };
-        }
-        blk_off(0xd0038000, ch);
+        blk_off(0, ch);
+        blk_off(1, ch);
     } else {
-        blk_off(0xd0030000, ch);
-        {
-            struct Aid s = { ch };
-        }
-        blk_on(0xd0038000, ch);
+        blk_off(0, ch);
+        blk_on(1, ch);
     }
 }
