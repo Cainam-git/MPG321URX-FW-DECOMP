@@ -17566,7 +17566,7 @@
     },
     "ram:a0124220": {
       "by": "hand",
-      "comment": "returns r without the extra mask",
+      "comment": "return 2 if a0125b94() != 0, else 0",
       "name": "FUN_a0124220",
       "status": "matched"
     },
