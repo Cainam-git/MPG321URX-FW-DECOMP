@@ -1,13 +1,12 @@
 /* leon2m FUN_a00aba34 @ 0xa00aba34-0xa00abad0 (39 words), flags -mcpu=v8 -O3 -g.
  * Twin of FUN_a00abc64 (channel 10, rec byte 0x14).
- * Code facts: v = (param_1 != 0 ? 0 : 0x50) + 0x742 (cmp/addx, and 0x50, add 0x742); FUN_a00ab5f0(0x2c, 10,
+ * Code facts: v = param_1 != 0 ? 0x742 : 0x792 (cmp/addx, and 0x50, add 0x742); FUN_a00ab5f0(0x2c, 10,
  * rec[0x14], 7, param_1) with rec = DAT_a802d290 (byte at a802d290 + 0x14), FUN_a0146a80(0x28 / 0x2b / 0x32, 10, 3
  * / 1 / 1, v, 0), FUN_a0146b50(0xea, 0), tail call FUN_a00b6ec8(0x29, 10, rec[0x14]) (byte re-read after the
  * calls). void.
  * Source form: the record base DAT_a802d290 as a byte array (ldub [base + 0x14]; a mid-record volatile uint gives
  * ld + and 0xff); callee prototypes FUN_a00ab5f0 u8 x5, FUN_a00b6ec8 void u8 x3, FUN_a0146a80 (u16, u16, u8, u16,
- * u8); v is an unsigned short.
- * Compiler aids: none.
+ * u8); v is an unsigned short chosen with a conditional expression.
  */
 extern unsigned char DAT_a802d290[];
 extern void FUN_a00ab5f0(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char);
@@ -17,7 +16,7 @@ extern void FUN_a00b6ec8(unsigned char, unsigned char, unsigned char);
 
 void FUN_a00aba34(unsigned char param_1)
 {
-  unsigned short v = ((param_1 != 0) - 1 & 0x50) + 0x742;
+  unsigned short v = param_1 ? 0x742 : 0x792;
 
   FUN_a00ab5f0(0x2c, 10, DAT_a802d290[0x14], 7, param_1);
   FUN_a0146a80(0x28, 10, 3, v, 0);
