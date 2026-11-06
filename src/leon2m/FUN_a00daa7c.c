@@ -3,7 +3,6 @@
  * leaf-sibcalls FUN_a01487e8(2, 8, DAT_a802d268). The buffer address is the third argument (fw 'or %o4,0x268,%o2'
  * stays live into the call; a01487e8 forwards %o2 to a01337e8).
  * Source form: the stores in ascending index order in the source (sched gives the fw order 0,1,4,5,6,7,2,3).
- * Compiler aids: none.
  */
 extern unsigned char DAT_a802d268[8];
 extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
