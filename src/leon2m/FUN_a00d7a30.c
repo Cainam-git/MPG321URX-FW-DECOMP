@@ -4,7 +4,6 @@
  * pairs) into a second record c; FUN_a0149b8c(2, &c); FUN_a0149e8c(2). void(void).
  * Source form: a struct of two u64 copied by one struct assignment (separate u64 locals give another frame
  * layout); void prototypes.
- * Compiler aids: none.
  */
 struct Timing { unsigned long long q0, q1; };
 extern void FUN_a00d6054(int, void *);
