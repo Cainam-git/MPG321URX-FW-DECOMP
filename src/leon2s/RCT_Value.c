@@ -18,8 +18,8 @@
  * are zero-extended at each use, port copied out of %i0); the RCT byte is computed into a local before the
  * two stores, written rct first, then v; the t668 base for the second scan is a separate pointer taken
  * before the first scan.
- * Compiler aid: __builtin_expect(all_err == 1, 1) emits no instructions; it places the flag store of that
- * arm at the shared store after the second scan, as in the firmware.
+ * Source form: in the error-handling test the 'ok = 1' start value is set inside the 'all_err != 1' arm, right
+ * before the t668 scan.
  */
 struct RctRes { unsigned char rct; unsigned char _1; unsigned short v; };
 struct EqRec {
@@ -87,10 +87,10 @@ unsigned char RCT_Value(port, ch)
         }
     }
     if (ARR_a807ccc4[port].b8 == 0 && DAT_a8078988[port] == 0) {
-        ok = 1;
-        if (__builtin_expect(all_err == 1, 1)) {
+        if (all_err == 1) {
             DAT_a8078988[port] = 1;
         } else {
+            ok = 1;
             for (i = 0; i <= (ARR_a807ccc4[port].b8 ? 4u : 6u); i++)
                 if (alt[i][ch] == 0)
                     ok = 0;
