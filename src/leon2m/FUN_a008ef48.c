@@ -19,10 +19,10 @@
  * (Ghidra's C of FUN_a014512c) until panel state byte 0xA802E110 == 6 and 0xA802CC08 != 1; each round calls
  * FUN_a002ced8 (8051 F204 -> F208 copy), so the ring-1 test of FUN_CODE_7b5a keeps passing while it waits. Printing (FUN_a00df170) polls
  * bit 5 of register 0xC00B0014 at most 0xFFFFF times per byte.
- * Compiler aids (no code): the loop bound sits in a local 'n = 0xBE8' (a literal bound is folded to 'i <= 0xBE7',
- * the firmware compares LTU/GEU 0xBE8, the same as FUN_a01539b8 'rem = 20'); the i > 0x673 arm reads the byte
- * table into a local 'h' first (orders the two hoisted ROM table bases as in the firmware); 0xA802CFF8 bits 14..13
- * are a 2-bit bitfield (the same field as FUN_a0085984's Scff4 +4 f13).
+ * Source form: the 0xBE8 logo upload is a static inline helper load_logo(count) called with 0xBE8 (the firmware
+ * compares LTU/GEU 0xBE8 against the count), each arm reads the ROM byte 0x104D00[i] into its own local first; the
+ * panel-on call sits in both arms of the bits 14..13 test of 0xA802CFF8, a 2-bit bitfield (the same field as
+ * FUN_a0085984's Scff4 +4 f13).
  */
 extern unsigned char DAT_a802d290[];
 struct Scff8 { unsigned short b15 : 1; unsigned short f13 : 2; unsigned short rest : 13; };
@@ -59,10 +59,25 @@ extern void FUN_a014512c(int, int);
 extern void FUN_a0122d0c(void);
 extern void FUN_a00a45a8(void);
 
+static inline void load_logo(unsigned short count)
+{
+    unsigned short i;
+
+    for (i = 0; i < count; i++) {
+        if (i > 0x673) {
+            unsigned char h = DAT_00104d00[i];
+            FUN_a014648c(1, DAT_00101e52[i], h << 8, 0);
+        } else {
+            unsigned char h = DAT_00104d00[i];
+            FUN_a014648c(1, DAT_00101e52[i], h << 8 | 8, 0);
+        }
+    }
+}
+
 void FUN_a008ef48(void)
 {
     unsigned char save, x, y;
-    unsigned short i, u, v, n;
+    unsigned short u, v;
 
     save = DAT_a802d290[9];
     FUN_a00df170(s_001080a8);
@@ -83,15 +98,7 @@ void FUN_a008ef48(void)
     FUN_a01461dc(1, DAT_a802408c, 0);
     FUN_a014654c(0x10f, 0xcf, 0);
     FUN_a01463f8(1, 0, 0);
-    n = 0xbe8;
-    for (i = 0; i < n; i++) {
-        if (i > 0x673) {
-            unsigned char h = DAT_00104d00[i];
-            FUN_a014648c(1, DAT_00101e52[i], h << 8, 0);
-        }
-        else
-            FUN_a014648c(1, DAT_00101e52[i], DAT_00104d00[i] << 8 | 8, 0);
-    }
+    load_logo(0xbe8);
     FUN_a0146648(0x1f, 0x56, 6, 0x4a, 0);
     FUN_a0146298(3, 1);
     FUN_a01461a8(DAT_a802404c, 1);
