@@ -5960,7 +5960,7 @@
     },
     "ram:a00a211c": {
       "by": "hand",
-      "comment": "from port register block (record a807db00[p] word +4, MMIO): two 24-bit counts; if both != 0: rate by a20a8(p) mode (a20c4(p) / 10, 0xa6, 0x14d, 0x1bc, ...)",
+      "comment": "from port register block (record a807db00[p] word +4, MMIO): two 24-bit counts; if both != 0: rate by a20a8(p) mode (0: a20c4(p) / 10, 1: 0xa6, 2/3: 0x14d, 4: 0x1bc, 5: 0x22b, 6: 0x29a; jump table switchdataD_a00a2100)",
       "name": "FUN_a00a211c",
       "status": "matched"
     },
