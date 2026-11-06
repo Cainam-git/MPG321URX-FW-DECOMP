@@ -33,16 +33,15 @@
  * merged into the tail of "AVI 422 \n\r". The firmware builds that address again at the call (sethi/or into
  * %o0) because its high part is not shared with the earlier prints; with one symbol GCSE shares it and %l4 is
  * no longer free for the function pointer. The word loop stores through 'char (*args)[32]' as args[*pn][j];
- * the clearing loop addresses the rows through the constant 0xa807dff0; the table search compares k with a
- * local n8 = 8 (cmp 8; bl).
- * Compiler aid: '{ struct Aid a_ = { err }; }' before 'if (err == 0)' and '{ struct Aid a_ = { quit }; }'
- * before 'if (quit)' are dead local initialisations that emit no instructions; they keep an extra insn in
- * those test blocks until after GCSE, so its jump bypass does not thread the err and quit tests (the
- * firmware tests them on every path).
- * Compiler aid: __builtin_expect(_DAT_a807deac < 2, 1) on the short-line test places that block as the
- * firmware does (annulled 'ble,a' with the clear in the delay slot).
+ * the clearing loop addresses the rows through the constant 0xa807dff0.
+ * Source forms: the '\r' handler of the hex mode parses only 'if (_DAT_a807deac >= 2)' and shares the
+ * clear/return tail with the short line; found is set to 0 before the 'if (err == 0)' test (0xa00b2f74);
+ * the command table loop runs to ncmd = sizeof table / sizeof entry, kept in a local (cmp 8; bl at
+ * 0xa00b302c); the '*' command result keeps its quit request as bit ST_QUIT of the status word st (tested
+ * at 0xa00b348c).
  */
-struct Aid { int v; };
+#define ST_QUIT 0x01
+
 struct CmdEnt {
     char name[32];
     void (*fn)(int, int, int, int);
@@ -53,7 +52,7 @@ struct Req {
     unsigned int val;
     char sum;
 };
-extern struct CmdEnt ARR_a00b4e3c[];
+extern struct CmdEnt ARR_a00b4e3c[8];
 extern struct Req DAT_a807deb4;
 extern unsigned char DAT_a807dec4;
 extern unsigned char DAT_a807dea8;
@@ -106,11 +105,7 @@ void FUN_a00b28d0(void)
             _DAT_a807deac = 0;
             return;
         case '\r':
-            if (__builtin_expect(_DAT_a807deac < 2, 1)) {
-                _DAT_a807deac = 0;
-                DAT_a807dec4 = 0;
-                return;
-            }
+            if (_DAT_a807deac >= 2) {
             n = _DAT_a807deac;
             cmd = DAT_a807def0[0];
             half = 0;
@@ -215,6 +210,7 @@ void FUN_a00b28d0(void)
                 DAT_a807ded0[2] = 0;
                 FUN_a0061280((const char *)DAT_a807ded0);
             }
+            }
             _DAT_a807deac = 0;
             DAT_a807dec4 = 0;
             return;
@@ -265,7 +261,7 @@ void FUN_a00b28d0(void)
             DAT_a807def0[0] = 0;
 
         if (DAT_a807dea8 == 0) {
-            int len, i, j, err, k, found, n8;
+            int len, i, j, err, k, found, ncmd;
             char (*argv)[32];
             unsigned char *q;
             unsigned char *pn;
@@ -321,12 +317,11 @@ void FUN_a00b28d0(void)
                 if (err == 1) {
                     err = 0;
                 }
-                { struct Aid a_ = { err }; }
+                found = 0;
                 if (err == 0) {
                     argv = DAT_a807dff0;
-                    found = 0;
-                    n8 = 8;
-                    for (k = 0; k < n8; k++) {
+                    ncmd = sizeof(ARR_a00b4e3c) / sizeof(ARR_a00b4e3c[0]);
+                    for (k = 0; k < ncmd; k++) {
                         if (FUN_a00b1568(ARR_a00b4e3c[k].name, argv[0]) == 0) {
                             FUN_a0061280(s_a0068f00);
                             fn = ARR_a00b4e3c[k].fn;
@@ -362,7 +357,7 @@ void FUN_a00b28d0(void)
             unsigned int a;
             unsigned int w;
             char *s;
-            int quit;
+            unsigned int st;
 
             s = DAT_a807def0;
             a = FUN_a00b2790((unsigned char *)s + 3, 4);
@@ -398,10 +393,10 @@ void FUN_a00b28d0(void)
             } else
                 goto out;
 
-            quit = 0;
+            st = 0;
             switch (DAT_a807deb4.cmd) {
             case 0xffff:
-                quit = 1;
+                st |= ST_QUIT;
                 break;
             case 1: {
                 unsigned int w = FUN_a00b22fc((unsigned int *)(_DAT_a807dec8 + (DAT_a807deb4.addr & ~3)));
@@ -451,8 +446,7 @@ void FUN_a00b28d0(void)
                 FUN_a0061280((const char *)DAT_a807e090);
                 break;
             }
-            { struct Aid a_ = { quit }; }
-            if (quit)
+            if (st & ST_QUIT)
                 DAT_a807dea8 = 0;
         }
     }
