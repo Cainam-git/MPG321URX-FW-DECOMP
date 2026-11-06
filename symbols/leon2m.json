@@ -12447,7 +12447,7 @@
     "ram:a00f2b8c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "writes val to the register 0xCF000000 | ((halfword i of the table at 0x19A2E4 + reg) << 2) for i = 0 .. 3 when blk == 8, for i = blk when blk <= 3; other blk no write",
+      "comment": "header: drop the empty compiler-aid line",
       "name": "FUN_a00f2b8c",
       "status": "matched"
     },

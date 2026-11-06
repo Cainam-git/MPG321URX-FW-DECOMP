@@ -4,7 +4,7 @@
  * 0xcf000000 | ((DAT_0019a2e4[blk] + reg) << 2); else nothing. void. Twin of src/leon2m/FUN_a00f2c20.c (2-entry
  * table 0x19a2e0, 'blk > 1' = all).
  * Source form: written like the twin FUN_a00f2c20 (u16 table array, u8 params, do/while over i); volatile only on
- * the 0xcf... hw register store. Compiler aids: none.
+ * the 0xcf... hw register store.
  */
 extern unsigned short DAT_0019a2e4[4];
 
