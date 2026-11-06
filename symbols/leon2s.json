@@ -5483,7 +5483,7 @@
     },
     "ram:a009c558": {
       "by": "hand",
-      "comment": "port record +4 register block: (r[2] & 0xff) << 16 | r[1] >> 16 (MMIO volatile)",
+      "comment": "FUN_a009c558: header names the hardware-register volatile as source form",
       "name": "FUN_a009c558",
       "status": "matched"
     },
