@@ -6,8 +6,7 @@
  *   a == 1 and b == 0: v06 > v04: *p3 = v06 + 8, *p1 = v0a, *p4 = rec.x6, *p2 = 0;
  *                      else *p3 = v06, *p1 = v0a, *p4 = v04, *p2 = u16 0xa8024008.
  * Source form: the distances are kept in a variable d (a direct abs(..) <= 10 test is folded into a range test);
- * compiler aid: __builtin_expect(.., 1) on the a == 1 && b == 0 test emits no instructions; it places the a == 0
- * block after the other blocks, as in the firmware.
+ * the found flag is tested as 'found == 1' (a plain 'if (found)' places the a == 0 block before the other blocks).
  */
 struct Rec { unsigned short h, w, x4, x6, r[5]; };
 
@@ -45,12 +44,12 @@ void FUN_a0082ec4(unsigned short *p1, unsigned short *p2, unsigned short *p3, un
     found = 1;
     break;
   }
-  if (found) {
+  if (found == 1) {
     if (a == 0) {
       *p3 = DAT_a8024006 + 8;
       *p1 = DAT_a802400a - 8;
       *p4 = DAT_000feb30[i].x6;
-    } else if (__builtin_expect(a == 1 && b == 0, 1)) {
+    } else if (a == 1 && b == 0) {
       if (DAT_a8024006 > DAT_a8024004) {
         *p3 = DAT_a8024006 + 8;
         *p1 = DAT_a802400a;
