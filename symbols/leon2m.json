@@ -2500,7 +2500,7 @@
     "ram:a0080c10": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "APP event generator: per-port state -> events, timers, pending events, documented code-free aids (row 1e)",
+      "comment": "APP event generator: per-port state -> events, timers, pending events (row 1e)",
       "name": "FUN_a0080c10",
       "status": "matched"
     },

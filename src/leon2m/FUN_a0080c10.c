@@ -19,23 +19,14 @@
  *   loop; 0x20..0x23 -> 0x24 (all <= 8); 0x38.. -> 0x3C, 0x33.. -> 0x37 (all <= 4 or FUN_a0143e70/FUN_a0143f0c);
  *   0x25.. -> 0x29; 0x2E.. -> 0x32.
  * Inlined helpers (standalone copies exist in the firmware): FUN_a0080320 (port used), FUN_a00808ac(p, 0)
- * (state reset), FUN_a00803a4 (all used ports <= 4); all_le3() is the same loop with limit 3 (port rule inline).
- * Source form: the post-event chain is ONE block 'if (ev != 0x3f) { FUN_a008a184(ev); ... }' (not
- * 'if (ev == 0x3f) continue;'): that is what lifts the 'ev - 56' test to the frequency the fw layout needs
- * (bgu,a + 'add -51' in the delay slot at 0xA0081720); the 0x20 / 4..7 / 0x38 / 0x33 range tests
- * carry no hints (all 50/50 as in the fw). Case orders: timer_id 3, 1, 2; delayed-event
- * add switch 1, 3, 2; state switch 0, 3, 1, 2, 4, 5, 6, 8, 9, 10; port-event add switch 2, 3, 1; af42 clear
- * default, 1, 2, 3. The switch blocks all end in break/return, so their order does not change behaviour.
- * port_used_m() / port_used() are the same function body.
- * Compiler aid: the code-free kinds PRED_CONTINUE 'do continue; while (0);' and PRED_GOTO 'goto L; L: ;'
- * (tools/lessons.txt); they emit no instructions and only set gcc 3.4 branch predictions for bb-reorder /
- * global-alloc. Every hint line in the code below is one of these; none is in the 'ev - K' range tests.
- * port_used_m() and port_used_f() are inline copies of the FUN_a0080320 rule (identical code) used only by
- * the main loop / by all_le4_f0c, so that their arms can carry hints without touching the other inlined copies:
- * port_used_m i == 3 arm PRED_CONTINUE (main-loop port-3 stub above the 0x20 test trace, fw 0xA0081400);
- * port_used_f i == 1 and i == 3 arms PRED_GOTO + 3x PRED_CONTINUE each (net branch odds x0.88: the f0c port-1 /
- * port-3 stubs land between the head 0x3D call / af42 case-1 stub and after the LED-pair block, fw 0xA0081D3C /
- * 0xA0081DBC). The all_le3 port-1/2/3 stubs land at fw 0xA0081318 / 0xA00813C8 / 0xA00814D0 with no hints.
+ * (state reset), FUN_a00803a4 (all used ports <= lim; also used with limits 3 and 8).
+ * Source form: the helper results are tested as '== 1' (changed flag 0xA0080E48, all_le(3) in the ev 0 arm,
+ * all_le(4) in the 0xF and 4..7 arms, all_le(8), the 0x38 / 0x33 port loops); every port loop skips unused
+ * ports with 'if (!port_used(i)) continue;' before its test; the 4..7 arm's other-ports loop is
+ * 'continue' for an unused port and for i == p, then 'if (timer running && pending(i) != 1) ok = 0;'; the
+ * post-event chain is one block 'if (ev != 0x3f) { FUN_a008a184(ev); ... }'. Case orders: timer_id 3, 1, 2;
+ * delayed-event add switch 1, 3, 2; state switch 0, 3, 1, 2, 4, 5, 6, 8, 9, 10; port-event add switch 2, 3, 1;
+ * af42 clear default, 1, 2, 3 (all groups end in break/return).
  */
 struct Scff4 { unsigned short h000, h002; unsigned short b15 : 1, susp : 2, rest : 13;
                unsigned char pad06[0x16]; unsigned char b1c; };
@@ -65,28 +56,6 @@ extern unsigned char FUN_a01279c4(void);
 extern void FUN_a0124b40(void);
 extern void FUN_a0124a68(void);
 
-/* main-loop copy of FUN_a0080320 (same code; hint only) */
-static unsigned char port_used_m(unsigned char i)
-{
-    unsigned char sel = 0;
-    if (i == 0) sel = 1;
-    else if (i == 1) { if (DAT_a802d290.b01f != 0) sel = 1; }
-    else if (i == 2) { if ((unsigned char)(DAT_a802d290.b01f - 4) <= 3) sel = 1; }
-    else if (i == 3) { do continue; while (0); if (DAT_a802d290.b01f == 7) sel = 1; }
-    return sel & 1;
-}
-
-/* all_le4_f0c copy of FUN_a0080320 (same code; hint only) */
-static unsigned char port_used_f(unsigned char i)
-{
-    unsigned char sel = 0;
-    if (i == 0) sel = 1;
-    else if (i == 1) { goto f1; f1: ; do continue; while (0); do continue; while (0); do continue; while (0); if (DAT_a802d290.b01f != 0) sel = 1; }
-    else if (i == 2) { if ((unsigned char)(DAT_a802d290.b01f - 4) <= 3) sel = 1; }
-    else if (i == 3) { goto f3; f3: ; do continue; while (0); do continue; while (0); do continue; while (0); if (DAT_a802d290.b01f == 7) sel = 1; }
-    return sel & 1;
-}
-
 /* = FUN_a0080320 */
 static unsigned char port_used(unsigned char i)
 {
@@ -112,10 +81,8 @@ static unsigned char pending(unsigned char p)
 {
     if (p == 0) { if (DAT_a802af45 & 1) return 1; }
     else if (p == 1) { if (DAT_a802af45 & 2) return 1; }
-    else {
-        if (p == 2) { if (DAT_a802af45 & 4) return 1; }
-        else if (p == 3) { if (DAT_a802af45 & 8) return 1; }
-    }
+    else if (p == 2) { if (DAT_a802af45 & 4) return 1; }
+    else if (p == 3) { if (DAT_a802af45 & 8) return 1; }
     return 0;
 }
 
@@ -123,39 +90,43 @@ static void clear_pending(unsigned char p)
 {
     if (p == 0) DAT_a802af45 &= ~1;
     else if (p == 1) DAT_a802af45 &= ~2;
-    else {
-        if (p == 2) DAT_a802af45 &= ~4;
-        else {
-            if (p == 3) DAT_a802af45 &= ~8;
-            else if (p == 4) DAT_a802af45 = 0;
-        }
-    }
+    else if (p == 2) DAT_a802af45 &= ~4;
+    else if (p == 3) DAT_a802af45 &= ~8;
+    else if (p == 4) DAT_a802af45 = 0;
 }
 
-/* = FUN_a00808ac(p, 0) */
-static void reset_state(unsigned char p)
+/* = FUN_a00808ac */
+static void reset_state(unsigned char n, unsigned char f)
 {
-    if (p == 4) {
-        do continue; while (0); goto h121; h121: ;
-        do continue; while (0);
-        do continue; while (0);
+    if (n == 4) {
         DAT_a802af60[0] = 0xff;
         DAT_a802af60[1] = 0xff;
         DAT_a802af60[2] = 0xff;
         DAT_a802af60[3] = 0xff;
-    } else
-        DAT_a802af60[p] = 0xff;
+        if (f == 1)
+            DAT_a802af45 |= 0xf;
+    } else {
+        DAT_a802af60[n] = 0xff;
+        if (f == 1) {
+            if (n == 0)
+                DAT_a802af45 |= 1;
+            else if (n == 1)
+                DAT_a802af45 |= 2;
+            else if (n == 2)
+                DAT_a802af45 |= 4;
+            else if (n == 3)
+                DAT_a802af45 |= 8;
+        }
+    }
 }
 
 static unsigned char active(unsigned char p)
 {
     unsigned char r = FUN_a014412c();
     if ((DAT_a802d290.w000 & 0x200) && p == 0) {
-        do continue; while (0);
         if (r) return 1;
-    } else {
-        do continue; while (0);
-        return FUN_a0143ff0(p); }
+    } else
+        return FUN_a0143ff0(p);
     return 0;
 }
 
@@ -165,22 +136,9 @@ static unsigned char all_le(unsigned char lim)
     unsigned char ok = 1;
     unsigned char i;
     for (i = 0; i <= 3; i++) {
-        if (port_used(i) && FUN_a0143c14(i) > lim) { ok = 0; break; }
-    }
-    return ok & 1;
-}
-
-static unsigned char all_le3(void)
-{
-    unsigned char ok = 1;
-    unsigned char i;
-    for (i = 0; i <= 3; i++) {
-        unsigned char sel = 0;
-        if (i == 0) { sel = 1; }
-        else { if (i == 1) { if (DAT_a802d290.b01f != 0) { sel = 1; } }
-        else if (i == 2) { if ((unsigned char)(DAT_a802d290.b01f - 4) <= 3) sel = 1; }
-        else if (i == 3) { if (DAT_a802d290.b01f == 7) sel = 1; } }
-        if (sel && FUN_a0143c14(i) > 3) { ok = 0; break; }
+        if (!port_used(i))
+            continue;
+        if (FUN_a0143c14(i) > lim) { ok = 0; break; }
     }
     return ok & 1;
 }
@@ -190,7 +148,9 @@ static unsigned char all_le4_e70(void)
     unsigned char ok = 1;
     unsigned char i;
     for (i = 0; i <= 3; i++) {
-        if (port_used(i) && FUN_a0143c14(i) > 4 && !FUN_a0143e70(i)) { ok = 0; break; }
+        if (!port_used(i))
+            continue;
+        if (FUN_a0143c14(i) > 4 && !FUN_a0143e70(i)) { ok = 0; break; }
     }
     return ok & 1;
 }
@@ -200,7 +160,9 @@ static unsigned char all_le4_f0c(void)
     unsigned char ok = 1;
     unsigned char i;
     for (i = 0; i <= 3; i++) {
-        if (port_used_f(i) && FUN_a0143c14(i) > 4 && !FUN_a0143f0c(i)) { ok = 0; break; }
+        if (!port_used(i))
+            continue;
+        if (FUN_a0143c14(i) > 4 && !FUN_a0143f0c(i)) { ok = 0; break; }
     }
     return ok & 1;
 }
@@ -220,14 +182,8 @@ static unsigned char port_step(unsigned char p)
         }
         return ev;
     } else {
-        do continue; while (0);
-        do continue; while (0);
-        goto st_path; st_path: ;
-        do continue; while (0);
         unsigned char st = FUN_a0143c14(p);
         unsigned char changed;
-
-        do continue; while (0);
 
         if (DAT_a802cff4.susp == 1)
             st = 0;
@@ -241,15 +197,14 @@ static unsigned char port_step(unsigned char p)
             DAT_a802af64 |= 1 << p;
         else
             DAT_a802af64 &= ~(1 << p);
-        if (changed) {
-            goto cold; cold: ;
+        if (changed == 1) {
             if (DAT_a802cff4.susp == 2 && (!(DAT_a802d290.w000 & 0x200) || (DAT_a802d290.w0a8 & 0x8000)))
                 FUN_a0080978();
             else if (FUN_a01279dc() == 1 && FUN_a01279c4() != 2) {
                 FUN_a0124b40();
                 FUN_a0124a68();
             }
-            reset_state(p);
+            reset_state(p, 0);
         }
         DAT_a802cff4.b1c &= ~(1 << p);
         if (DAT_a802af60[p] != st) {
@@ -329,12 +284,10 @@ void FUN_a0080c10(void)
     for (p = 0; p < 4; p++) {
         unsigned char ev;
 
-        if (!port_used_m(p))
+        if (!port_used(p))
             continue;
         if (DAT_a802af4a == 0) {
-        do continue; while (0);
             for (i = 0; i < 4; i++) {
-        do continue; while (0);
                 DAT_a802af50[i] = 0x3f;
                 DAT_a802af60[i] = 0xff;
             }
@@ -343,63 +296,50 @@ void FUN_a0080c10(void)
         }
         ev = port_step(p);
         if (ev != 0x3f) {
-        FUN_a008a184(ev);
-        if (ev == 0 && all_le3()) {
-        do continue; while (0);
-        goto ev0_arm; ev0_arm: ;
-            goto cold0; cold0: ;
-            FUN_a008a184(3);
-        }
-        else if ((unsigned char)(ev - 15) <= 3) {
-            FUN_a008a184(0x13);
-            if (all_le(4) && !(DAT_a802af41 & 8)) {
-        goto h330; h330: ;
-        goto ev13_arm; ev13_arm: ;
-                if (!flag) {
-                    DAT_a802af41 |= 8;
-                    FUN_a008a184(0x14);
+            FUN_a008a184(ev);
+            if (ev == 0 && all_le(3) == 1) {
+                FUN_a008a184(3);
+            } else if ((unsigned char)(ev - 15) <= 3) {
+                FUN_a008a184(0x13);
+                if (all_le(4) == 1 && !(DAT_a802af41 & 8)) {
+                    if (!flag) {
+                        DAT_a802af41 |= 8;
+                        FUN_a008a184(0x14);
+                    }
                 }
-            }
-        } else if ((unsigned char)(ev - 4) < 4 || (unsigned char)(ev - 10) < 4) {
-            if (all_le(4)) {
-        do continue; while (0);
-        do continue; while (0); do continue; while (0);
-        goto h338; h338: ;
-        goto cold4; cold4: ;
-                unsigned char ok = 1;
-                for (i = 0; i <= 3; i++) {
-                    if (!port_used(i))
-                        continue;
-        do continue; while (0); goto h353; h353: ;
-        do continue; while (0); do continue; while (0);
-                    if (i != p && FUN_a0086a3c(timer_id(i)) != 0) {
-                        if (!pending(i))
+            } else if ((unsigned char)(ev - 4) < 4 || (unsigned char)(ev - 10) < 4) {
+                if (all_le(4) == 1) {
+                    unsigned char ok = 1;
+                    for (i = 0; i <= 3; i++) {
+                        if (!port_used(i))
+                            continue;
+                        if (i == p)
+                            continue;
+                        if (FUN_a0086a3c(timer_id(i)) != 0 && pending(i) != 1)
                             ok = 0;
                     }
-                }
-                if (ok == 1) {
-        goto ok_arm; ok_arm: ;
-                    flag = 1;
-                    if (DAT_a802d290.b01f == 0) {
-                        if (ev == 10) final = 0xe; else final = 8;
-                    } else {
-                        if (FUN_a0144114() == 0) final = 0xe; else final = 8;
+                    if (ok == 1) {
+                        flag = 1;
+                        if (DAT_a802d290.b01f == 0) {
+                            if (ev == 10) final = 0xe; else final = 8;
+                        } else {
+                            if (FUN_a0144114() == 0) final = 0xe; else final = 8;
+                        }
                     }
                 }
-            }
-        } else if ((unsigned char)(ev - 32) <= 3) {
-            if (all_le(8))
-                FUN_a008a184(0x24);
-        } else if ((unsigned char)(ev - 56) <= 3) {
-            if (all_le4_e70())
-                FUN_a008a184(0x3c);
-        } else if ((unsigned char)(ev - 51) <= 3) {
-            if (all_le4_f0c())
-                FUN_a008a184(0x37);
-        } else if ((unsigned char)(ev - 37) <= 3)
-            FUN_a008a184(0x29);
-        else if ((unsigned char)(ev - 46) <= 3)
-            FUN_a008a184(0x32);
+            } else if ((unsigned char)(ev - 32) <= 3) {
+                if (all_le(8) == 1)
+                    FUN_a008a184(0x24);
+            } else if ((unsigned char)(ev - 56) <= 3) {
+                if (all_le4_e70() == 1)
+                    FUN_a008a184(0x3c);
+            } else if ((unsigned char)(ev - 51) <= 3) {
+                if (all_le4_f0c() == 1)
+                    FUN_a008a184(0x37);
+            } else if ((unsigned char)(ev - 37) <= 3)
+                FUN_a008a184(0x29);
+            else if ((unsigned char)(ev - 46) <= 3)
+                FUN_a008a184(0x32);
         }
     }
     DAT_a802af41 &= ~8;
