@@ -3107,6 +3107,13 @@
       "name": "FUN_a008e7a8",
       "status": "matched"
     },
+    "ram:a008e7b0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "u8 key and u8 saved key i assigned from the masked idx ('key = idx; i = idx;'), u8 for-loop searches",
+      "name": "FUN_a008e7b0",
+      "status": "matched"
+    },
     "ram:a008ec48": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
