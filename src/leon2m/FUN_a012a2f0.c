@@ -9,12 +9,11 @@
  * = 1 if any entry changed (else 0); otherwise DAT_a802ca3a is copied from DAT_a802ca1a and DAT_a802ca10 = 0.
  * Finally a local record { n = 0x10, v[0] = 0, v[1..15] = DAT_a802ca3a[0..14], v[16] = 0x400 } is passed to
  * FUN_a00f7434.
- * Source form: FUN_a012a228 and FUN_a012a164 are static copies (inlined); loop.c hoists the table addresses in the
- * order the loop bodies use them, so the first loop stores DAT_a802ca3a before DAT_a802ca1a and the scaling loop
- * stores its quotient into DAT_a802ca1a[i] first; chg is an int set in both arms; nested ifs for the three tests.
- * Compiler aid: the first 'f = 0;' (before the chg test) is overwritten before any use and emits no instructions;
- * it keeps the chg test block from holding only the compare and jump, so GCSE jump bypassing does not thread chg
- * (the firmware keeps 'mov 1' and the compare).
+ * Source form: FUN_a012a1a0 (with a NULL table), FUN_a012a228 and FUN_a012a164 are static copies (inlined); the
+ * update test, the step loop and the record send are a static helper step_send(m, chg, n) called with the record
+ * count n = 0x10; loop.c hoists the table addresses in the order the loop bodies use them, so the first loop stores
+ * DAT_a802ca3a before DAT_a802ca1a and the scaling loop stores its quotient into DAT_a802ca1a[i] first; chg is an
+ * int set in both arms; nested ifs for the three tests.
  */
 struct coef {
     unsigned char n;
@@ -31,6 +30,26 @@ extern int DAT_a802ca08;
 extern unsigned char DAT_a802ca10;
 extern int abs(int);
 extern void FUN_a00f7434(struct coef *);
+
+static void FUN_a012a1a0(const unsigned char *p)
+{
+    unsigned char i;
+
+    DAT_a802ca12 = 0;
+    if (!p) {
+        for (i = 0; i < 16; i++) {
+            DAT_a802cae0[i] = 0x3a;
+            DAT_a802ca12 += 0x3a;
+        }
+    } else {
+        for (i = 0; i < 16; i++) {
+            unsigned char v = p[i];
+
+            DAT_a802cae0[i] = v;
+            DAT_a802ca12 += v;
+        }
+    }
+}
 
 static void FUN_a012a164(void)
 {
@@ -71,47 +90,11 @@ static unsigned char FUN_a012a228(void)
     return 0;
 }
 
-void FUN_a012a2f0(unsigned char m)
+static void step_send(unsigned char m, int chg, unsigned char n)
 {
-    unsigned char i, big, f;
-    int chg;
-    unsigned short v;
+    unsigned char i, f;
     struct coef c;
 
-    if (m != 0) {
-        for (i = 0; i < 16; i++) {
-            DAT_a802ca3a[i] = i * 0x40 + 0x40;
-            DAT_a802ca1a[i] = i * 0x40 + 0x40;
-        }
-    }
-    if (DAT_a802ca12 == 0) {
-        DAT_a802ca12 = 0;
-        for (i = 0; i < 16; i++) {
-            DAT_a802cae0[i] = 0x3a;
-            DAT_a802ca12 += 0x3a;
-        }
-    }
-    if (FUN_a012a228()) {
-        FUN_a012a164();
-        big = 0;
-        for (i = 0; i < 16; i++) {
-            DAT_a802ca1a[i] = (0x400 - DAT_a802ca12) * DAT_a802ca5c[i] / DAT_a802ca0c;
-            if (DAT_a802ca5c[i] * 10 / DAT_a802ca0c > 7) {
-                big = 1;
-                break;
-            }
-            DAT_a802ca1a[i] += DAT_a802cae0[i];
-            if (i != 0)
-                DAT_a802ca1a[i] += DAT_a802ca1a[i - 1];
-        }
-        if (big) {
-            for (i = 0; i < 16; i++)
-                DAT_a802ca1a[i] = i * 0x40 + 0x40;
-        }
-        chg = 1;
-    } else
-        chg = 0;
-    f = 0;
     if (chg == 0)
         if (m == 0)
             if (DAT_a802ca10 == 0)
@@ -140,11 +123,47 @@ void FUN_a012a2f0(unsigned char m)
             for (i = 0; i < 16; i++)
                 DAT_a802ca3a[i] = DAT_a802ca1a[i];
         }
-        c.n = 0x10;
+        c.n = n;
         c.v[0] = 0;
         for (i = 1; i < 16; i++)
             c.v[i] = DAT_a802ca3a[i - 1];
         c.v[16] = 0x400;
         FUN_a00f7434(&c);
     }
+}
+
+void FUN_a012a2f0(unsigned char m)
+{
+    unsigned char i, big;
+    int chg;
+
+    if (m != 0) {
+        for (i = 0; i < 16; i++) {
+            DAT_a802ca3a[i] = i * 0x40 + 0x40;
+            DAT_a802ca1a[i] = i * 0x40 + 0x40;
+        }
+    }
+    if (DAT_a802ca12 == 0)
+        FUN_a012a1a0(0);
+    if (FUN_a012a228()) {
+        FUN_a012a164();
+        big = 0;
+        for (i = 0; i < 16; i++) {
+            DAT_a802ca1a[i] = (0x400 - DAT_a802ca12) * DAT_a802ca5c[i] / DAT_a802ca0c;
+            if (DAT_a802ca5c[i] * 10 / DAT_a802ca0c > 7) {
+                big = 1;
+                break;
+            }
+            DAT_a802ca1a[i] += DAT_a802cae0[i];
+            if (i != 0)
+                DAT_a802ca1a[i] += DAT_a802ca1a[i - 1];
+        }
+        if (big) {
+            for (i = 0; i < 16; i++)
+                DAT_a802ca1a[i] = i * 0x40 + 0x40;
+        }
+        chg = 1;
+    } else
+        chg = 0;
+    step_send(m, chg, 0x10);
 }
