@@ -8,6 +8,51 @@ Some techniques are *no-code aids*: statements that generate no instructions but
 allowed when the function's comment documents them. Inline assembly, fake `volatile` on ordinary memory and invented
 symbol names are not allowed.
 
+## First 15 minutes on a SPARC function
+
+Run every step, in this order, before blind variants or permutation searches. Most functions written by this team
+matched once a sibling's way of writing the same thing was copied.
+
+1. **Read what is known.** The function's claim note and its best draft: which instructions still differ, and where.
+2. **Find the siblings.** Matched functions that use the same globals, register addresses, constants or callees
+   (`grep -l DAT_a8079538 src/leon2s/*.c src/leon2m/*.c`), and the matched functions at neighbouring addresses (same
+   source file, same flags, same habits). Read their `Source form` header lines; `grep -h -A3 'Source form'
+   src/<cpu>/*.c` lists them all. A function with the same instruction shape is found by `tools/sibling.py`.
+3. **Copy the siblings' idioms at the differing spot:** variable types, in-place updates, reused counters and
+   temporaries, declaration initialisers, if/else polarity, statement order, helper functions (see "LEON levers
+   by symptom" below).
+4. **Trace types through the call chain.** Callers and callees in `src/` give the parameter and return types, and
+   also qualifiers: a buffer that a matched caller declares `volatile` is `volatile` here too (FUN_a0086154 gets its
+   output buffer from FUN_a00883d0 through FUN_a0086400 and FUN_a00862e4). A caller passing `&rec[port] + 0x18` means
+   a nested struct member at +0x18 (H_Total).
+5. **Flags.** Try `-msoft-float` on top of the neighbours' flags (it changes loop-invariant hoisting in integer code)
+   and check whether the firmware has the `-g` nop after a final call (`tools/show.py` tries every recorded set).
+6. **Records.** Named members instead of an array of words when the firmware orders the stores freely
+   (FUN_a0096204); an array when it does not; one struct for one record (not separate symbols per field).
+7. **One local per firmware register.** Two registers for one source value mean two variables (FUN_a00dae90,
+   FUN_a0079b84); one register for two values means one reused variable (FUN_a00dd398, FUN_a0061608, FUN_a00ca130).
+8. **Declaration initialisers.** `T x = 0;` in the declaration list and the same value assigned again in an arm give
+   the firmware's register copies of another variable's zero (FUN_a006cc24, FUN_a008743c, FUN_a00c2488).
+9. **A chain scheduled too early (above a branch):** compute the value inside the arm that uses it. The first
+   scheduler moves instructions into an earlier block only when their block is reached at least 40 % of the times
+   the earlier block is (FUN_a00614b8).
+10. **A mask or extension the firmware keeps and yours drops (or the reverse):** the width of the locals decides it.
+    Try an `unsigned char` local, then an `unsigned short` for the shifted value (FUN_a00d7cd0); define the value in
+    the loop's test block (FUN_a008d490); pass it through an inline helper parameter of the narrow type.
+11. **Operand order of a sum or an `or`:** write the terms in the firmware's order, put one term in its own local
+    first (FUN_a00a4ec4), keep a constant behind a local (FUN_a013aae4, FUN_a00ab5f0), or use an assignment
+    expression to stop reassociation (FUN_a00ee1e8).
+12. **Three spellings of a choice:** `if (c) x = a; else x = b;`, `x = b; if (c) x = a;` and `x = c ? a : b;` compile
+    differently; try all three (FUN_a00ab0e0, FUN_a012add8, DRV_HDMI_EQScan_FSM_PHY_R_Turning).
+13. **Loop shapes:** separate loop variables or one shared counter, `while (cond)` versus `for (;;) { if (!cond)
+    break; }`, `for (; i < n; i++)` continuing an earlier counter, the counter's type (FUN_a006c788, FUN_a0126dcc,
+    FUN_a0062bac).
+14. **Standard reference code.** Code that implements a published algorithm (VESA DSC rate control, HDR10+ tone
+    mapping, CRCs) follows the reference implementation's tables, names and loop structure: look it up and copy the
+    shape.
+15. **Then search.** `tools/permuter2.py` with a budget of a few minutes on the draft that already has the idioms;
+    rewrite what it finds into natural C and check again.
+
 ## Before you start
 
 - **Use the real prototypes.** Declare every callee with its true parameter and return types, taken from its own
@@ -133,7 +178,7 @@ symbol names are not allowed.
   (FUN_a00c2758, FUN_a010f064).
 - **A byte mask re-done before each call** (`and %lN,0xff,%o0` after every call, where GCC reuses one masked value):
   give each call its own guard, e.g. `if (ch < 3) f(ch);` per call. Each join is a CSE boundary
-  (DRV_HDMI_EQScan_FSM_Search_Process; also seen by h52 in leon2s).
+  (DRV_HDMI_EQScan_FSM_Search_Process; also in leon2s).
 
 ## GCC 3.4.4: same instructions, different order
 
@@ -208,6 +253,120 @@ changing the code, and test all pairs.
   `__builtin_expect(cond, 0)` on that test.
 - **Case blocks past the function's listed end:** the function table needs them merged in first; then the switch
   matches.
+
+## LEON levers by symptom
+
+Each entry: what the firmware shows, the source form that gives it, a matched function that uses it.
+
+**House style of the authors** (leon2s and leon2m share it):
+
+| Habit | Matched examples |
+|---|---|
+| `unsigned char` loop counters and flags; `unsigned short` counters in the 0xa00c.... files | FUN_a00b0e54, FUN_a00c0a88, FUN_a00cec18 |
+| Defaults in the declaration list, re-set in the arms: `unsigned char cf, div, mul = 0, mul2 = 1;` then `mul = 2; mul2 = 1;` | FUN_a00dd154, FUN_a006cc24 |
+| Accumulators updated in place in a narrow type: `crc <<= 1; crc \|= bit; if (crc & 0x100) crc ^= 0xd5;` | FUN_a00d9988, FUN_a00d68cc |
+| A loop counter reused for the next loop or a later value | FUN_a00d68cc, FUN_a00ca130, FUN_a00c850c |
+| One temporary reused across statements: `t = (w >> 8) & 0xff; h = (t << 8) + (w & 0xff); t = w >> 24; ...` | FUN_a00dd398, FUN_a00dd154 |
+| Parameters masked or updated in place (`mode &= 0xff;`, `v &= m;`, `a += ...; return a;`) | FUN_a0086030, FUN_a0061540, FUN_a0062718 |
+| A counter continued by a second loop: `for (i = 0; i < n; i++) ...; for (; i < 20; i++) ...;` | FUN_a0062bac |
+| Ceil division as `(16 % w == 0) ? 16 / w : 16 / w + 1`, `q = a / b; if (a == q * b) return q; return q + 1;` | FUN_a00dd154, FUN_a00617f0 |
+| Odd halving as `h = k / 2; off = h; if (k & 1) off = h + 1;` | FUN_a00d985c, FUN_a00da838 |
+| Hardware blocks as `#define R(a) (*(volatile unsigned int *)(a))` or a base-plus-offset macro, one statement per register | FUN_a00dd154, FUN_a00b0e54 |
+| Register block pointers held in records and named in every statement | VBP_tmp, FUN_a00a2b98 |
+| Small `static inline` helpers for repeated steps (semaphore lock, interpolation, record updates) | FUN_a006c788, FUN_a0062bac, FUN_a00dac08 |
+
+**Extensions, masks and constants:**
+
+| The firmware shows | Write |
+|---|---|
+| The port re-masked or `port * K` recomputed in every block | An `unsigned char` parameter in the prototype, as the matched siblings declare it, or a K&R definition (DRV_HDMI_EQScan_FSM_Search_EQTable, DP_GetClrSpace, FUN_a00934c0, FUN_a0120848). |
+| A 16-bit parameter extended only at its last use | An `unsigned short` parameter updated in place; one extended at entry is a wider parameter copied into an `unsigned short` local (FUN_a013a0d4). |
+| An `unsigned int` parameter that loses a register it should keep | Its entry copy has a stack equivalence that halves its allocation priority; an `unsigned char` parameter makes the copy a conversion without one (FUN_a00a7718). |
+| `sll 4; and 0x3f0` on an index whose range is known | An `unsigned char` local for the index and an `unsigned short` for the shifted offset: the byte's zero-extension narrows to the known bits instead of vanishing (FUN_a00d7cd0). |
+| An extension kept at a call but not at the compare in the loop | The variable is set in the loop's test block (`for (id = b & 0x1f; id <= 0x17; id = c & 0x1f)`): combine only links a definition and a use in the same block (FUN_a008d490). |
+| The mask of a byte at the compare, not at the load | `v = p[i]; ... if (x != (v & 0x7f))` (FUN_a00da288). |
+| A read-modify-write of a byte with `mask` / `val` parameters and no extensions | `unsigned char` parameters and each store as `(unsigned char)(whole expression)` (SC_MaskSetByte). |
+| A field merge with the shifted value computed inside the read-modify-write | `*p = (*p & ~m) \| ((v << lo) & m);` inside the arm that writes (FUN_a00614b8, FUN_a0061a6c). |
+| `and x,0x80000000; cmp; subx` for a sign test | The masked word through a local: `w = x & 0x80000000; r = w ? 0 : 4;` (FUN_a0148868). |
+| Two copies of a high byte that GCC would share | `(w & 0xff000000) >> 24` for one use and `w >> 24` for the other (FUN_a009f738, FUN_a009faf0). |
+| An `and 0xff` before shifting a one-bit field | `(unsigned char)p->bit << 5` (FUN_a0137e10). |
+| The same constant loaded into two registers | One of the stores goes through an `int t = 2;` local (FUN_a009811c). |
+| A constant kept in an `or` or compare that fold would move or canonicalise | Keep the constant in a local: `unsigned int k = 0x61000000;` (FUN_a013aae4), `cells = 6; if (full < cells - 2)` (FUN_a00ab5f0). |
+| A masked default that PRE deletes | Give the default a different expression: `int r = v; ... default: r = (unsigned char)v;` (FUN_a0100990). |
+| Table bytes loaded once at the top and multiplied without masks | Read them into `unsigned int` locals at the top (FUN_a002e960). |
+
+**Register allocation:**
+
+| The firmware shows | Write |
+|---|---|
+| Register names that differ from some block on, same instructions | The renaming pass ticks registers in source block order: put the arm the firmware renames first first, e.g. `if (!(w & 0x800)) {...} else {...}` (FUN_a00b1654, FUN_a00b9750, FUN_a0150f44). |
+| A jump-table switch with only register differences | The case source order decides only names: climb over case orders (FUN_a00d8100, FUN_a012d554, FUN_a00ccf34); inlined handlers take their case order from their definition order (FUN_a00d2a98). |
+| A block with three block-local temporaries in unexpected registers | Local allocation with exactly three block-local pseudos takes them in creation order; a fourth local makes it sort by priority (FUN_a00c68d8, FUN_a010baf4). |
+| Two values swapped between two registers | Equal truncated priorities are ordered by pseudo number, i.e. declaration order: declare in the firmware's order, in an inner block if needed (FUN_a012a774); hoisted table addresses in pointer locals declared and assigned in order (FUN_a00ea638); GCSE pseudos follow the hash of the symbol name (FUN_a00e55ec). |
+| Lifetimes that differ by one test | Compute after the test: `q = v >> 3; v &= 7; if (q == 0xf) {...} w = ((q + 1) << 3) + v;` (FUN_a00ea308). |
+| A value set on both paths and kept in a parameter register | The parameter variable itself is reused (`ch = f(t, c);`); a value assigned before a call lands in a call-saved register (FUN_a01213a4). |
+| `mov %lN,%i0` before a block | The parameter copy of an inlined helper holding the rest of the function, `rest(unsigned char port, int sel)` (DRV_HDMI21_LTS_STS_InitialSettings). |
+| A leaf allocation where the firmware has a normal frame, or the reverse | The return type: an `int` (or implicit `int`) result keeps `%i0` live (FUN_a00a8184); a `short` result variable (FUN_a0079b84). |
+| Priorities that depend on how the tests nest | Nested ifs with one `return 0` at the end instead of several returns (MODEDET_handler_3). |
+| Spilled locals in another stack-slot order (-O3) | `-fweb` splits a variable into webs and gives later webs new, higher pseudos, which moves their spill slots: computing a step in the variable itself instead of a separate local changes the webs (FUN_a00a31a4). |
+
+**Scheduling and order:**
+
+| The firmware shows | Write |
+|---|---|
+| Loads one at a time with one register for every upper byte | One reused temporary (FUN_a00dd398). |
+| The first store of a repeated value kept in place | The value must die at that store: chained assignment `a = b = f;` (FUN_a0061f5c). |
+| A chain moved above a conditional branch | Compute it inside the arm that uses it; the scheduler speculates only into blocks reached at least 40 % as often (FUN_a00614b8). A loop-free function with at most 10 blocks and 100 instructions is one scheduling region (FUN_a00aa258). |
+| Call arguments moved above a compare | Nest the ifs so the call block falls through instead of ending in a jump (FUN_a00f62ac). |
+| Stores in a particular order | Climb the statement order (FUN_a0151358, FUN_a00dae90). |
+| Sums with the structure word as first operand, function stays leaf | Each sum in its own `int` local first (FUN_a010eca8). |
+| A load or store that one alias set too few orders | Named struct members are disambiguated from each other, array elements of one member are not (FUN_a0096204); two refs to one struct type with different fields do not conflict (H_Total); an `unsigned short [][2]` pair instead of a struct makes two stores may-alias (FUN_a012043c); a flat array for a halfword pair (DRV_HDMI21_LTS_STS_InitialSettings); a bit-field byte against store motion (FUN_a00d2a98). |
+| Loop-invariant addresses hoisted in a given order | Hoisting follows the body's first use; `T[i] = expr` expands T's address before expr (FUN_a012a2f0). A dead declaration initialiser of the inner index changes the order (FUN_a01138fc). |
+| An invariant moved last, or kept in the loop | Hoisting threshold: `-msoft-float` lowers it, the second loop pass appends (FUN_a00df074, FUN_a00a5e68, FUN_a006c788). |
+| `r = i` in a non-annulled delay slot before a test | The store sits inside the loop: `if (t[i].id == id) { r = i; break; }` (FUN_a0125198). |
+
+**Blocks, branches and loops:**
+
+| The firmware shows | Write |
+|---|---|
+| Plain calls for some values and a sibling call for the last | Separate `if (mode == k) f(..);` statements, not an else-if chain (FUN_a0148268). |
+| A diamond that your build if-converts or folds into one test | Write the shared body in each arm, or a full if-chain inside each arm (FUN_a00b72cc, FUN_a00b1ba4, FUN_a00aa33c). |
+| A flag test predicted not taken | Write it as an equality with 1: `((h & 0x40) >> 6) == 1` (FUN_a014be10, FUN_a014bf64). |
+| A constant assignment hoisted out of two arms | Merge the conditions into one `&&` with one else (FUN_a009c09c). |
+| A high part kept but the low part rebuilt per block | The arm is off the compare block's CSE path: assign in both arms (FUN_a00c2bd8), make the join a block of its own with an if/else (FUN_a00dac08), name the global directly as an index (FUN_a00d791c). |
+| A test layout after jump threading | Two separate statements: `if (a) { if (b) break; } if (b) continue;` (FUN_a008d490). |
+| Loop tests renamed after the body | `while (cond)` puts the condition at the loop end; `for (;;)` with a `break` keeps it first (FUN_a0126dcc). Wait loops with their own `break` instead of one `&&` (FUN_a002e2a4). |
+| Two copies of a loop chosen by a flag (-O3) | One loop with the flag test inside; loop unswitching makes the copies (FUN_a00b3614, FUN_a0137344). |
+| A counter running down where the source counts up | `loop.c` reverses a pure counter with a negative bound: `for (k = 1, m = -4; m < -1; m++, k++)` (FUN_a0062fc8). |
+| A latch `add 8` the compiler would replace by a value from the inner test | Three loop variables, so the inner index outlives the outer step (FUN_a006c788). |
+| Products before one shared division in a switch | One complete formula per case (FUN_a008c538). |
+| A bit-test switch `1 << mode & 0x5500` | A switch with grouped case labels (FUN_a00934c0). |
+
+**Prototypes, helpers and data:**
+
+| The firmware shows | Write |
+|---|---|
+| A store scheduled one slot early around a ROM call | Declare the ROM routine without a parameter list, `extern void func_0x4008c4d0();` (FUN_a0139ddc). |
+| Argument set-up for an unused result | Declare the callee `void` as the matched callers do (FUN_a00a6b98, targeted_system_display_maximum_luminance). |
+| Extensions inside a helper | The helper's parameter types: `bitpos(unsigned short f, ...)` (FUN_a012d554); a one-exit helper with an `unsigned short` result variable (FUN_a01405d0, FUN_a0140b78); a check helper returning `unsigned char` with early returns (FUN_a0120de4). |
+| An inlined block equal to a matched neighbour | Call the neighbour itself (FUN_a01199ac, FUN_a0104f48). |
+| Re-stores of a table after a page write | Call the table-initialisation helper again (FUN_a00e02ec). |
+| A stack table copied from ROM | An initialised `const` local array, character constants per entry (FUN_a00fccbc). |
+| A table address kept whole in a register inside a helper | A constant pointer `unsigned char (*tab)[0xb0] = (...)0xa807d680;` (TxFFE_Max_L). |
+| `(pn * 32 + j) + base` address order | A pointer to rows, `char (*args)[32]`, indexed `args[*pn][j]` (FUN_a00b28d0). |
+
+**Search methods:**
+
+- `tools/permuter2.py` keeps only the target function and `static inline` helpers; every other helper body becomes a
+  call. Mark all helper bodies `static inline` in the copy you search, and check that its start score equals the
+  judge's (FUN_a002f118).
+- When a pass decides the difference, read that pass in the GCC 3.4.4 source (sched-rgn.c, haifa-sched.c, loop.c,
+  local-alloc.c, global.c, cse.c, combine.c, reorg.c) and derive the source property from it; then search for a
+  natural spelling that has the property.
+- `-fno-sched-interblock`, `-fno-schedule-insns` and similar flags are diagnostics only: they show which pass
+  moves an instruction, but they are not the firmware's flags.
+- `sparc-elf-readelf --debug-dump=info` prints each local's frame offset (DW_OP_fbreg); named locals that stay in
+  memory get their slots in declaration order, nearest `%fp` first.
 
 ## Keil C51 (8051)
 
@@ -427,4 +586,6 @@ Keil C51:
 | Rewriting states or steps as separate static functions | GCC 3.4's inliner turns returns into plain jumps; the result is identical to writing the code in place. |
 | A single prediction hint per attempt, for block-order problems | Not enough when two ties must break together; test pairs. |
 | Other Keil releases for the 8051 | C51 9.57 is the release that reproduces every function. 9.59 and later load the shift count before the value (FUN_CODE_d351 cannot match); 9.02a and 9.03 differ in other functions. |
+| Do-nothing loops as statement carriers (`do { } while (0)`, `while (0)`) | Removed when the tree is expanded; no effect on scheduling. A carrier must be code the firmware has. |
+| `-fno-strict-aliasing` against loads hoisted above constant-address register stores | No change: those are separated by base address, not by type. |
 | Fake `volatile`, inline assembly, invented names | Not allowed; they produce code the original did not have. |
