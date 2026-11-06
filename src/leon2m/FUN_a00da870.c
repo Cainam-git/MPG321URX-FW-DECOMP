@@ -8,7 +8,6 @@
  * Source form: v is read before the +0x1E4 / +0x1E5 test; the 'v <= 2' tests come first (the smaller code is the
  *   fall-through); v is decremented only when non-zero. The firmware has the 'ldub v' in the branch delay slot,
  *   before 'sethi &cff4', the same pattern as in FUN_a0106d64 / FUN_a0105150.
- * Compiler aids: none.
  */
 struct G290 { unsigned char p000[0x1e2]; unsigned char b1e2, b1e3, b1e4, b1e5, b1e6, b1e7; };
 struct Scff4 { unsigned char p00[0x10]; unsigned short h010, h012; unsigned char p14[5]; unsigned char b19; };
