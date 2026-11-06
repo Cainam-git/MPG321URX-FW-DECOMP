@@ -4,7 +4,6 @@
  * FUN_a0146870(0, col*24, row*36 + 0x1a, col*24 + 0x17, row*36 + 0x51, 0); tail call FUN_a0146c40(0, 1, 0). The +9
  * belongs to the row before the *36 (fw 'add %g1, 9' then 'and 0xff' then *36).
  * Source form: row and col are u8 locals.
- * Compiler aids: none.
  */
 extern unsigned char DAT_a802d433;
 extern void FUN_a014667c(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
