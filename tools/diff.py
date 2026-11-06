@@ -7,7 +7,8 @@ Both sides are objdump'ed and normalised the way asm-differ does: addresses
 dropped, branch targets turned into relative labels, calls outside the
 function become <extern>, and address fields the linker fills in (sethi %hi /
 %lo pairs, relocations) become placeholders. "MATCH" means every instruction
-is identical after that. Prints a side-by-side diff and a percentage.
+is identical after that. Jump-table cases (rows only a computed jmp reaches) start
+with the address registers as they are after that jmp's delay slot. Prints a side-by-side diff and a percentage.
 """
 import difflib, json, os, pathlib, re, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # sibling modules (exact) also under python3 -I
@@ -57,7 +58,8 @@ def normalise(rows, relocs, lo0_copies=()):
     pending = None           # (target, delay-slot index) of the branch just seen
     dead = False             # the previous row ended the straight-line flow (unconditional jump done)
     uncond_next = -1         # index of the delay slot of the last unconditional jump
-    jmp_state = None         # address-register state at the last computed jump (switch dispatch)
+    jmp_state = None         # address-register state at the last computed jump (switch dispatch), after its delay slot
+    jmp_slot = -1            # index of the delay slot of the last computed jump
     for i, (a, _, ins) in enumerate(rows):
         if a in at_target:   # a branch lands here: registers set up before it (e.g. a sethi in its delay slot) still hold
             regs, comp = at_target[a]
@@ -67,7 +69,8 @@ def normalise(rows, relocs, lo0_copies=()):
                 for r, j in regs.items(): sethi_regs.setdefault(r, j)
                 completed |= {r for r in comp if sethi_regs.get(r) == regs.get(r)}
         elif dead and jmp_state is not None:   # unreachable by straight-line flow and no recorded branch: a jump-table
-            sethi_regs = dict(jmp_state[0]); completed = set(jmp_state[1])   # case, entered with the state at the "jmp"
+            sethi_regs = dict(jmp_state[0]); completed = set(jmp_state[1])   # case, entered with the state after the
+            # "jmp" and its delay slot (a sethi in that slot, e.g. FUN_a0083648's %hi of the byte every case reads)
         dead = False
         ins = re.sub(r'\s+', ' ', ins.split("!")[0].strip())
         ins = re.sub(r'\s*<[^>]*>', '', ins)
@@ -128,7 +131,8 @@ def normalise(rows, relocs, lo0_copies=()):
         if re.match(r'^ba?,a ', ins): dead = True
         elif uncond_next == i: dead = True
         if re.match(r'^(ba? |ret|retl|jmp )', ins) or ins in ('ret', 'retl'): uncond_next = i + 1
-        if ins.startswith('jmp ') and not re.match(r'^jmp %[io]7', ins): jmp_state = (dict(sethi_regs), set(completed))
+        if ins.startswith('jmp ') and not re.match(r'^jmp %[io]7', ins): jmp_slot = i + 1
+        if i == jmp_slot: jmp_state = (dict(sethi_regs), set(completed))
     return out
 
 last_reason = None   # why the last shape match was not byte-exact (for feedback)
