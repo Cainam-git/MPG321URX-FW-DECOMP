@@ -3,8 +3,9 @@
  * returns 0xc and the 0x2a-byte entry at 0xa802e224 selected by bits 12..15 of word 0 of record i (0x78-byte records
  * at 0xa802df30, through the channel check that reports "SYS remapping channel OOR") does not hold 5 in byte 9, record
  * i gets byte 0x26 = 0x20 and the halfwords at 0x28, 0x2a and 0x2c are copied to 0x0e, 0x1e and 0x20. Other modes do
- * nothing. The __builtin_expect hint (copy is the unlikely case) gives the firmware's annulled loop increment in
- * the delay slot of the kind test.
+ * nothing.
+ * Source form: switch (mode) as in FUN_a0145360; the kind test is the static helper is_kind5(ch), the body of
+ * FUN_a0144298 (remap, OOR print, byte 9 == 5), inlined into 'if (FUN_a013ce6c(i) == 0xc && !is_kind5(i))'.
  */
 struct Rec {
     unsigned int top : 16;
@@ -40,26 +41,30 @@ static int remap(int ch)
     return -1;
 }
 
+static unsigned char is_kind5(unsigned char ch)
+{
+    unsigned char i = remap(ch);
+    if (i > 3) { FUN_a00df170(s_001a6dd8); i = 0; }
+    return DAT_a802e224[DAT_a802df30[i].f12].kind == 5;
+}
+
 void FUN_a0145508(unsigned char mode)
 {
-    unsigned char i, k;
+    unsigned char i;
 
-    if (mode == 0) {
+    switch (mode) {
+    case 0:
         FUN_a01544cc();
-        return;
-    }
-    if (mode != 1)
-        return;
-    for (i = 0; i < 4; i++) {
-        if (FUN_a013ce6c(i) != 0xc)
-            continue;
-        k = remap(i);
-        if (k > 3) { FUN_a00df170(s_001a6dd8); k = 0; }
-        if (__builtin_expect(DAT_a802e224[DAT_a802df30[k].f12].kind != 5, 0)) {
-            DAT_a802df30[i].h0e = DAT_a802df30[i].h28;
-            DAT_a802df30[i].h1e = DAT_a802df30[i].h2a;
-            DAT_a802df30[i].h20 = DAT_a802df30[i].h2c;
-            DAT_a802df30[i].b26 = 0x20;
+        break;
+    case 1:
+        for (i = 0; i < 4; i++) {
+            if (FUN_a013ce6c(i) == 0xc && !is_kind5(i)) {
+                DAT_a802df30[i].h0e = DAT_a802df30[i].h28;
+                DAT_a802df30[i].h1e = DAT_a802df30[i].h2a;
+                DAT_a802df30[i].h20 = DAT_a802df30[i].h2c;
+                DAT_a802df30[i].b26 = 0x20;
+            }
         }
+        break;
     }
 }
