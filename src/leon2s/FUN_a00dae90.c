@@ -14,11 +14,10 @@
  * 0. Then the 3-byte record rec = {0, 0, 0x3f} (mode != 0), {DAT_a8079c61, DAT_a807963c, 0} (flag set), or one
  * record per entry whose id equals port ({id, start, count}), is passed to func_0xa0f963d4(0, 0x80, 0x1c0, 2,
  * rec); a zero result prints "Write 0x1C0h --> FALSE!\r" and returns 0; otherwise returns 1.
- * Source forms the exact build depends on: the scan loop uses its own byte x; the table clear stores id, start,
- * count; in the flag loop 'c += count; DAT_a8079c61 = v; DAT_a807963c = start;' and 'id, start - c, count';
- * the first record write jumps to the 'return 1' after the entry loop (one shared exit block).
- * Compiler aid: __builtin_expect(flag != 0, 0) on the flag test emits no instructions; it sets the branch
- * prediction that places the firmware's instruction in that branch's delay slot.
+ * Source form: the scan loop uses its own byte x; the table clear stores id, start, count; in the flag loop
+ * 'c += count; DAT_a8079c61 = v; DAT_a807963c = start;' and 'id, start - c, count'; each of the three record
+ * writes (mode != 0, flag, per-entry loop) has its own 'print "Write 0x1C0h --> FALSE!"; return 0;' arm, and all
+ * arms end at one 'return 1'.
  */
 extern unsigned char DAT_a8078832;
 extern unsigned char DAT_a80760ac;
@@ -168,32 +167,33 @@ unsigned char FUN_a00dae90(unsigned char port, unsigned char flag, unsigned char
         rec[2] = 0x3f;
         rec[0] = 0;
         rec[1] = 0;
-    } else if (__builtin_expect(flag != 0, 0)) {
+        if ((unsigned char)func_0xa0f963d4(0, 0x80, 0x1c0, 2, rec) == 0) {
+            func_0xa0f834c4(DAT_9f1ccac8);
+            return 0;
+        }
+    } else if (flag) {
         rec[0] = DAT_a8079c61;
         rec[1] = DAT_a807963c;
         rec[2] = 0;
+        if ((unsigned char)func_0xa0f963d4(0, 0x80, 0x1c0, 2, rec) == 0) {
+            func_0xa0f834c4(DAT_9f1ccac8);
+            return 0;
+        }
     } else {
-        i = 0;
-        goto search;
-    }
-    if ((unsigned char)func_0xa0f963d4(0, 0x80, 0x1c0, 2, rec) != 0)
-        goto done;
-fail:
-    func_0xa0f834c4(DAT_9f1ccac8);
-    return 0;
-search:
-    for (; i < 4; i++) {
-        w = DAT_a80795d8[i];
-        if (w == 0)
-            break;
-        if (w == port) {
-            rec[0] = w;
-            rec[1] = DAT_a807a820[i];
-            rec[2] = DAT_a80795d0[i];
-            if ((unsigned char)func_0xa0f963d4(0, 0x80, 0x1c0, 2, rec) == 0)
-                goto fail;
+        for (i = 0; i < 4; i++) {
+            w = DAT_a80795d8[i];
+            if (w == 0)
+                break;
+            if (w == port) {
+                rec[0] = w;
+                rec[1] = DAT_a807a820[i];
+                rec[2] = DAT_a80795d0[i];
+                if ((unsigned char)func_0xa0f963d4(0, 0x80, 0x1c0, 2, rec) == 0) {
+                    func_0xa0f834c4(DAT_9f1ccac8);
+                    return 0;
+                }
+            }
         }
     }
-done:
     return 1;
 }
