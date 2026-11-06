@@ -90,9 +90,9 @@ void FUN_a00dcdb8(unsigned int port)
     R(0xc0120920) &= 0;
     R(0xc0120920) = (q << 16) | h14;
     R(0xc0120924) &= 0;
-    R(0xc0120924) = v | (((unsigned short)(DAT_a8079538.h16 + h14) + r) << 16);
+    R(0xc0120924) = v | ((unsigned int)((unsigned short)(DAT_a8079538.h16 + h14) + r) << 16);
     R(0xc0120928) &= 0;
-    R(0xc0120928) = q3 | (q3 << 16);
+    R(0xc0120928) = q3 | ((unsigned int)q3 << 16);
     R(0xc012092c) &= 0;
     R(0xc012092c) = lo3;
     t >>= 2;

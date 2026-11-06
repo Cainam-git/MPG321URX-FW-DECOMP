@@ -10238,7 +10238,7 @@
     },
     "ram:a00dcdb8": {
       "by": "hand",
-      "comment": "values read first in the order h8, 0x920/0x91c/0x928 quotients, 0x924 low quotient, h14, h12; each register written as R &= keep then its value",
+      "comment": "16-bit values shifted into the high half as unsigned int",
       "name": "FUN_a00dcdb8",
       "status": "matched"
     },
