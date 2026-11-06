@@ -9829,6 +9829,12 @@
       "name": "FUN_a00d7ca4",
       "status": "matched"
     },
+    "ram:a00d7cd0": {
+      "by": "hand",
+      "comment": "scans the DAT_a8078832 packet ring from DAT_a8078828 for flag bits 0x40 / 0x80 and returns the entry index with 0x40, the index, or 0x80",
+      "name": "FUN_a00d7cd0",
+      "status": "matched"
+    },
     "ram:a00d7e6c": {
       "by": "hand",
       "comment": "builds a 120-byte record message from register values and func_0xa0f96400 reads and sends it with FUN_a00d791c",
