@@ -4,7 +4,6 @@
  * param (fw 'and %i0,0xff' after the first call). FUN_a00bacc4 takes one argument.
  * Source form: the record bases DAT_a802d290 / DAT_a802d078; the stores in ascending order 7, 8, 9 in the source
  * (sched emits them 9, 7, 8 like the fw).
- * Compiler aids: none.
  */
 extern unsigned char DAT_a802d290[];
 extern unsigned char DAT_a802d078[];

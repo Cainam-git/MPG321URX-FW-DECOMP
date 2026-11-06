@@ -8023,7 +8023,7 @@
     "ram:a00bc86c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "three ASCII digits d078[7..9] = d290[0x12..0x14] + '0', bacc4(10), ba950(port), sibcall babe4(port, 0xb)",
+      "comment": "header: source form, no aid line",
       "name": "FUN_a00bc86c",
       "status": "matched"
     },
