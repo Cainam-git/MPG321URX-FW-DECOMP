@@ -3,8 +3,8 @@
  * nonzero, else 0.
  *   Saves block register 0x2a (FUN_a00f2254) and 0x4a (FUN_a00f1a90), sets 0x2a = 0 and clears bit 0x20 of 0x4a
  *   (FUN_a00f1b5c), FUN_a0121714(port, 1); saves the three values of FUN_a00f3960/3974/3988 (s0).
- *   Register 0xcf02010c = (port << 4 | port) & 0xff for port <= 7, else 0.
- *   calib (inlined static helper): saves the three values again (s1), FUN_a00f31bc(2), block registers
+ *   calib (inlined static helper, int port): register 0xcf02010c = (port << 4 | port) & 0xff for port <= 7,
+ *   else 0; saves the three values again (s1), FUN_a00f31bc(2), block registers
  *   0x5e/0x5f/0x60 = 0x71/0xff/0, the three values written as 0xff (FUN_a00f38d4/38ec/3904), registers
  *   0x65/0x66/0x67 = 0xf5/0xf4/0xf0, 0x63 = 0x80, 0x64 = 3. Sampling loop (timer start func_0x4008d588,
  *   func_0x4008d1a0(2) per pass): FUN_a0121374(blk) == 1 ends it with n = 3; a new value that differs from the
@@ -14,12 +14,10 @@
  *   Then FUN_a00f31bc(0); FUN_a00f51b4(port), and when nonzero FUN_a00f31bc(2) and FUN_a00f4e60(port); result 1
  *   when both are nonzero, otherwise s0 is written back. FUN_a00f31bc(3), FUN_a0121714(port, 0), registers 0x2a
  *   and 0x4a restored (FUN_a00f2298, FUN_a00f1ad4). Returns the result as 'ok & 1'.
- * Source form: int parameter passed to the unsigned char callee parameters; an unsigned char copy 'b = port'
- *   taken before the 0xcf02010c value and passed to calib (the firmware keeps it as a raw register copy and
- *   zero-extends it at calib's entry); the averaging inside the loop ('if (--n == 0) { ... }' with 'n != 0' in
- *   the loop condition, as in FUN_a00f4e60).
- * Compiler aid: 'for (;;) break;' before the calib call emits no instructions; it ends the common-subexpression
- *   region there, so b stays a separate copy instead of being replaced by port.
+ * Source form: int parameter passed to the unsigned char callee parameters; calib takes the int port, starts with
+ *   the 0xcf02010c write (as FUN_a00f51b4 does) and passes 'unsigned char blk = port' to its callees (fw copy of
+ *   %i0 before the <= 7 test, zero-extended after the 0xcf02010c store); the averaging inside the loop
+ *   ('if (--n == 0) { ... }' with 'n != 0' in the loop condition, as in FUN_a00f4e60).
  */
 extern int abs(int);
 #define R(a) (*(volatile unsigned int *)(a))
@@ -43,12 +41,21 @@ extern unsigned short func_0x4008d588(void);
 extern unsigned short func_0x4008d594(unsigned short start);
 extern void func_0x4008d1a0(int ms);
 
-static void calib(unsigned char blk)
+static void calib(int port)
 {
+    unsigned char blk = port;
     unsigned short acc[3];
     unsigned char cur[3], s1[3];
     unsigned char n, c;
+    unsigned char x;
     unsigned short t0;
+
+    x = 0;
+    if ((unsigned char)port <= 7) {
+        x = port << 4;
+        x |= port;
+    }
+    R(0xcf02010c) = x;
 
     s1[0] = FUN_a00f3960();
     s1[1] = FUN_a00f3974();
@@ -127,9 +134,8 @@ static void calib(unsigned char blk)
 int FUN_a00f557c(int port)
 {
     unsigned char s0[3];
-    unsigned char old1, old2, v;
+    unsigned char old1, old2;
     unsigned char ok;
-    unsigned char b;
 
     old1 = FUN_a00f2254(port, 0x2a);
     old2 = FUN_a00f1a90(port, 0x4a);
@@ -140,15 +146,7 @@ int FUN_a00f557c(int port)
     s0[0] = FUN_a00f3960();
     s0[1] = FUN_a00f3974();
     s0[2] = FUN_a00f3988();
-    b = port;
-    v = 0;
-    if ((unsigned char)port <= 7) {
-        v = port << 4;
-        v |= port;
-    }
-    R(0xcf02010c) = v;
-    for (;;) break;
-    calib(b);
+    calib(port);
     FUN_a00f31bc(0);
     if (FUN_a00f51b4(port) && (FUN_a00f31bc(2), FUN_a00f4e60(port))) {
         ok = 1;
