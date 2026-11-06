@@ -22,18 +22,11 @@
  * Row fields read: RAW active row 0xA802E378 only: +0x08 and +0x0A (scaling, port 0 with 0xA802E3D3 set)
  *   and +0x26, +0x28, +0x30, +0x32 (port-0 offsets X/Y in the bit-0/bit-30/bit-26 case). No transformed row, no
  *   row index.
- * Source form: union for 0xA802E3D0; 1-bit bitfield for record +0x40 bit 30; nested 'else if (w4 & 0xF0000000)
- *   { if (port != 0)'; flag materialised then the record pointer assigned before its test; branch-free G/H clamps.
- * Constructs with no effect on behaviour (needed for the firmware's block layout; visible in the -da dumps
- * 12.bp / 31.bbro):
- *   (a) 'else if (w->b >> 16) w0 &= ~bit27; else w0 &= ~bit27;' in the hook-0xA802CC40 else arm: both arms
- *       identical and the test is always false (u16 >> 16); gcc folds it only in 20.combine (nonzero_bits), i.e.
- *       after 12.bp, so the clear block keeps half its frequency (1750 instead of 3500) and bb-reorder starts a new
- *       trace after it, exactly the firmware's layout of the port-0 paths.
- *   (b) '__builtin_expect(q->h54 < rom, 0)': makes the "h54 below the ROM threshold" path unlikely. The signed form
- *       '(int)h54 - rom < 0' gives the same layout but emits bneg.
- *   (c) final stores written as DAT_a802df30[port].field (not through a pointer local): gives the
- *       address-computation order of the firmware.
+ * Source form: the same-file functions FUN_a013d0ec (hooks 0xA802CC44 / 0xA802CC40 for port 0), FUN_a013d178
+ *   (class 0xA802E1A7 > 4) and FUN_a013d198 (port-0 record +0x54 < ROM halfword 0x1A30DA) written as static
+ *   functions and inlined; their unsigned char results tested with '== 1', the FUN_a013d178 result in a local;
+ *   union for 0xA802E3D0; 1-bit bitfield for record +0x40 bit 30; nested 'else if (w4 & 0xF0000000)
+ *   { if (port != 0)'; final stores written as DAT_a802df30[port].field.
  */
 struct Win
 {
@@ -107,6 +100,30 @@ extern union SysFlags DAT_a802e3d0;
 extern struct Hooks DAT_a802cc1c;
 extern unsigned char DAT_a802e1a7;
 extern const unsigned short DAT_001a30da;
+static void FUN_a013d0ec(unsigned char c)
+{
+  if (c == 0)
+  {
+    if (DAT_a802cc1c.f28 != 0)
+      DAT_a802cc1c.f28();
+    else
+      DAT_a802e3d0.w0 &= ~0x4000000;
+    if (DAT_a802cc1c.f24 != 0)
+      DAT_a802cc1c.f24();
+    else
+      DAT_a802e3d0.w0 &= ~0x8000000;
+  }
+}
+static unsigned char FUN_a013d178(void)
+{
+  if (DAT_a802e1a7 <= 4)
+    return 0;
+  return 1;
+}
+static unsigned char FUN_a013d198(void)
+{
+  return DAT_a802df30[0].h54 < DAT_001a30da;
+}
 void FUN_a013d1b4(unsigned char port, struct Win *w)
 {
   unsigned short a6;
@@ -121,7 +138,7 @@ void FUN_a013d1b4(unsigned char port, struct Win *w)
   unsigned short Y;
   unsigned short H;
   short G;
-  int flag;
+  unsigned char flag;
   struct Chan *q;
   if ((port == 0) && (DAT_a802e3d0.s.b3 != 0))
   {
@@ -146,34 +163,10 @@ void FUN_a013d1b4(unsigned char port, struct Win *w)
   DAT_a802df30[port].h54 = w->b;
   if (port == 0)
   {
-    if (DAT_a802cc1c.f28 != 0)
-    {
-      DAT_a802cc1c.f28();
-    }
-    else
-    {
-      DAT_a802e3d0.w0 &= ~0x4000000;
-    }
-    if (DAT_a802cc1c.f24 != 0)
-    {
-      DAT_a802cc1c.f24();
-    }
-    else
-      if (w->b >> 16)
-    {
-      DAT_a802e3d0.w0 &= ~0x8000000;
-    }
-    else
-    {
-      DAT_a802e3d0.w0 &= ~0x8000000;
-    }
-    flag = 0;
-    if (DAT_a802e1a7 > 4)
-    {
-      flag = 1;
-    }
+    FUN_a013d0ec(port);
+    flag = FUN_a013d178();
     q = &DAT_a802df30[port];
-    if ((flag != 0) || __builtin_expect(q->h54 < DAT_001a30da, 0))
+    if (flag == 1 || FUN_a013d198() == 1)
     {
       if ((w->c >= w->a) || (w->d >= w->b))
       {
