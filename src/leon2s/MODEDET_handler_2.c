@@ -14,10 +14,11 @@
  * Otherwise: FUN_a00a73d4(0xd, r0 + 0x10), FUN_a00a7488(sel, 0x1f08, 0xfffffff8, mode 5..7 or 4), print
  * "Use Internal PLL".
  * End: byte +0x19 of the 400-byte record ARR_a807d7e0[p] = bits[mode - 4] for mode 4..7, else 8.
- * Source forms: the two port tests on 0xcf011640 are switches; the defaults of the mode switches come first;
- * the final record index is a second unsigned char copy of the parameter (the firmware re-extends it there).
- * Compiler aid: the repeated 'sel2 = sel;' emits no instructions; with a single copy GCC replaces the copy
- * with the constant 2, the firmware keeps 'mov %l3, %l0'.
+ * Source forms: sel, sel2 and k are declared with the port 0 values and then set per port in an
+ * 'if (p == 0) / else if (p == 1) / else return' chain (the chain of DRV_HDMI21_PHY_Freq_Detection), each arm
+ * with 'sel2 = sel;' (fw 'mov %l3, %l0' in the delay slot of the port 0 branch at 0xa009d8a8); the two port tests
+ * on 0xcf011640 are switches; the defaults of the mode switches come first; the final record index is a second
+ * unsigned char copy of the parameter (the firmware re-extends it there).
  */
 #define R1640 (*(volatile unsigned int *)0xcf011640)
 
@@ -46,18 +47,20 @@ void MODEDET_handler_2(unsigned int arg, unsigned int mode)
     unsigned int bits[4] = {8, 10, 12, 16};
     unsigned char p = arg;
     unsigned char sel = 2;
-    unsigned char sel2;
+    unsigned char sel2 = 2;
     unsigned char k = 0;
     unsigned char q;
 
-    sel2 = sel;
-    sel2 = sel; /* compiler aid, see the header */
-    if (p != 0) {
-        if (p != 1)
-            return;
+    if (p == 0) {
+        sel = 2;
+        k = 0;
+        sel2 = sel;
+    } else if (p == 1) {
         sel = 3;
         k = 1;
         sel2 = sel;
+    } else {
+        return;
     }
     if ((DAT_a807db00[p].r4[0x11] & 0x60) == 0x60) {
         switch (p) {
