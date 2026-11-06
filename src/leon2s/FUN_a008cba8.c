@@ -10,8 +10,9 @@
  * byte 1 (1, 2, other) give FUN_a00b1224(2, 2 / 1 / 0), FUN_a00a2374(0 and 1, same), FUN_a0090e6c(2, same).
  * Then FUN_a008a7bc() and register 0xcf014770 = (value & 0xf) | 0x40 in two writes.
  * Source form: byte 0 read once into an unsigned int local for the first two tests; case 2 written before
- * case 1 in the first switch; the second switch lists case 0 with its own copy of the default body (it changes
- * the compare tree; the copy is merged with the default later).
+ * case 1 in the first switch; the second switch lists case 0 with the same calls as the default (value 3): the
+ * compare tree at 0xa008ce00 has root 1 (a case 0 node, 'ble' to the block at 0xa008ce78) and the case 2 test
+ * at 0xa008ce10 also branches to that default block.
  */
 extern unsigned char DAT_a8076688[];
 extern void *memcpy(void *, const void *, unsigned int) __asm__("FUN_a00b15d8");
