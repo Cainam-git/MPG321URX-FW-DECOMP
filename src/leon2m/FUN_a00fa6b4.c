@@ -9,7 +9,7 @@
  * Source form: bit updates through the inlined field-set helper fset (as in FUN_a00fb434); the second loop reads
  * 0xA802B800 through a pointer local assigned right before it (it then shares the first loop's base register);
  * statement order 0xA802BEC2 before 0xA8026A94, array stores 0xA802BC80, 0xA802B800, 0xA802BA40, and the 0xA802C860
- * store before the last register write. Compiler aids: none.
+ * store before the last register write.
  */
 #define R(a) (*(volatile unsigned int *)(a))
 static unsigned int fset(unsigned int x, unsigned int hi, unsigned int lo, unsigned int v)
