@@ -3537,7 +3537,7 @@
     },
     "ram:a0089e24": {
       "by": "hand",
-      "comment": "Mark an 8-byte record entry (byte 0 = 1, clear bytes 1 and 4)",
+      "comment": "stores in field order, no scheduling barrier",
       "name": "FUN_a0089e24",
       "status": "matched"
     },
