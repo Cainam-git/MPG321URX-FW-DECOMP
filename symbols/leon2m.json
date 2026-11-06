@@ -11471,7 +11471,7 @@
     },
     "ram:a00e03b0": {
       "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
+      "cflags": "-mcpu=v8 -O3",
       "comment": "Writes a value to a PHY block register through a local 3-entry base table with page-byte cache; optional read-back print",
       "name": "FUN_a00e03b0",
       "status": "matched"
