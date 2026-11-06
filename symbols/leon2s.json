@@ -5525,7 +5525,7 @@
     },
     "ram:a009c87c": {
       "by": "hand",
-      "comment": "Clears bytes +4, +1 and +0x2d of ARR_a807d7e0[port] and calls DRV_HDMI_Set_AudStatus(port, 0)",
+      "comment": "clears in source order +1, +0x2d, +4, no scheduling barrier",
       "name": "FUN_a009c87c",
       "status": "matched"
     },
