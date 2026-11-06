@@ -6617,7 +6617,7 @@
       "status": "matched"
     },
     "ram:a00a9f30": {
-      "by": "permuter",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "v = 2 * p1 - 8 (p1 > 6) or + 6; three rounds of FUN_a0146a80(0x22, v, 3, 0x792 / 0x592, 0) and FUN_a0146b20(0, j + 0x22, v, 1, j + 0x37 / 0x34, 0) by p2",
       "name": "FUN_a00a9f30",
