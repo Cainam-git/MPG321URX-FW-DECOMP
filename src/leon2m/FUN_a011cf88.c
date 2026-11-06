@@ -11,7 +11,7 @@
  * by this code alone, not by the input timing.
  * Source form: the 8-byte copy is an inlined static helper rd8(dst, src, n) with a u8 counter (the same loop is in
  * FUN_a011d0a8): it keeps the fw [idx + base] addressing and the 'cmp 8; bcs,a' loop test; an open-coded loop gives
- * a strength-reduced giv. Compiler aids: none.
+ * a strength-reduced giv.
  */
 #define ID_REG  (*(volatile unsigned int *)0xcf011444)
 #define ID_OK   (*(volatile unsigned int *)0xcf011440)

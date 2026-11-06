@@ -16708,7 +16708,7 @@
     "ram:a011cf88": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "code from register 0xcf011444 / flag 0xcf011440: 0x80/0x81, 0x82, 0x83, else 0x84; FUN_a013dc6c applies the transformed row's +0x50 limit only for codes <= 0x82",
+      "comment": "header: drop the empty compiler-aid note",
       "name": "FUN_a011cf88",
       "status": "matched"
     },
