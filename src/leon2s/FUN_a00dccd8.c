@@ -30,7 +30,7 @@ void FUN_a00dccd8(void)
     h14 = DAT_a8079538.h14;
     hi = DAT_a8079538.h16 + h14;
     REG(0x20) = ((DAT_a8079538.hc >> 3) << 16) | h14;
-    REG(0x24) = lo | (hi << 16);
+    REG(0x24) = lo | ((unsigned int)hi << 16);
     REG(0x28) = ha3 | (ha3 << 16);
     REG(0x2c) = h12;
     REG(0x48) = x10 | 0x80000000;

@@ -10232,7 +10232,7 @@
     },
     "ram:a00dccd8": {
       "by": "hand",
-      "comment": "programs the 0xc0120800 register block from DAT_a8079538; source form with the computed values read before the preceding stores",
+      "comment": "0x24 high half shifted as unsigned int",
       "name": "FUN_a00dccd8",
       "status": "matched"
     },
