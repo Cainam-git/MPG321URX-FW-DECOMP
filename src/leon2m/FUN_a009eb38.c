@@ -25,12 +25,10 @@
  *      FUN_a0080bd8(1), FUN_a008ee6c(0xff, 0), FUN_a00869b0(4, 8000), FUN_a00869b0(0xb, 10000), state 0xfe,
  *      FUN_a00b5d10(), FUN_a00a45a8(), aff2 = 0x14, bits 14 and 15 of S+0x3e set. Otherwise the
  *      DAT_a802422c[state][t] call as above, with FUN_a00d47b0() skipped when bit 15 of S+0x3e is set.
- * Source form: the two ev bits 6..7 cases are tests of (ev & 0xc0) with the 0x40 case first; the state 0x114 arm
- * jumps into the state 0x113 arm (goto); the redundant 't != 6' test and the four separate FUN_a014459c calls
- * are written as in the firmware.
- * Compiler aid: __builtin_expect on the S+4 bits 13..14 test (emits no instructions; it changes the predicted
- * probability of that early return, which places the ev bits 6..7 = 0 call path and the 0x55aa block in front of the
- * 0x40 path as in the firmware).
+ * Source form: the port flag of step 1 is tested as 'ok == 1'; the two ev bits 6..7 cases are tests of (ev & 0xc0)
+ * with the 0x40 case first; the state 0x114 and 0x113 arms each carry the full d03c / FUN_a00d47b0 / FUN_a008ad20 /
+ * FUN_a008b2bc / afe8 sequence (GCC merges the common tail); the redundant 't != 6' test and the four separate
+ * FUN_a014459c calls are written as in the firmware.
  */
 struct Sys {
     unsigned short h0;
@@ -104,9 +102,9 @@ void FUN_a009eb38(unsigned int ev)
             break;
         }
     }
-    if (ok)
+    if (ok == 1)
         return;
-    if (__builtin_expect(SYS.h4.m == 1, 0))
+    if (SYS.h4.m == 1)
         return;
     if ((ev & 0xc0) == 0x40) {
         if ((AFEC == 0x113 || AFEC == 0x114) && SET.b1d5 != 0 && SYS.b6 == 1) {
@@ -151,10 +149,15 @@ void FUN_a009eb38(unsigned int ev)
             if (t != 6) {
                 if (AFEC == 0x114) {
                     FUN_a008d2e0();
-                    goto l113;
+                    DAT_a802d03c = func_0x4008d588();
+                    FUN_a00d47b0();
+                    FUN_a008ad20();
+                    if (DAT_a802d284 == 0x3f)
+                        FUN_a008b2bc();
+                    DAT_a802afe8 = FUN_a0147724();
+                    return;
                 }
                 if (AFEC == 0x113) {
-                l113:
                     DAT_a802d03c = func_0x4008d588();
                     FUN_a00d47b0();
                     FUN_a008ad20();
