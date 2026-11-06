@@ -14226,7 +14226,7 @@
     },
     "ram:a01042c8": {
       "by": "hand",
-      "comment": "stable read of register 0x89 of block blk: a = FUN_a00f29d4(blk, 0x89); FUN_a0121bcc(1, rate) (wait); b = FUN_a00f29d4(blk, 0x89); up to 3 more rounds while -15 <= (int)(a - b) <= 15 (n = 0..2, u8); returns (a + b) >> 1 (unsigned). Callee prototypes as in src/leon2m (blk/reg u8, frames u8, rate ...",
+      "comment": "header: drop the empty compiler-aid note",
       "name": "FUN_a01042c8",
       "status": "matched"
     },

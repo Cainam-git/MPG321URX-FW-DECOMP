@@ -3,7 +3,7 @@
  * b = FUN_a00f29d4(blk, 0x89); up to 3 more rounds while -15 <= (int)(a - b) <= 15 (n = 0..2, u8); returns (a + b)
  * >> 1 (unsigned). Callee prototypes as in src/leon2m (blk/reg u8, frames u8, rate u16).
  * The retry runs while the difference is inside +-15 (fw 'cmp d, -15; bge' then 'cmp d, 15; bg,a' with the n < 3
- * term as subx/btst). Plain for loop. Compiler aids: none.
+ * term as subx/btst). Plain for loop.
  */
 extern unsigned int FUN_a00f29d4(unsigned char blk, unsigned char reg);
 extern void FUN_a0121bcc(unsigned char frames, unsigned short rate);
