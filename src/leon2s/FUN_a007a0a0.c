@@ -5,12 +5,11 @@
  * DAT_a00b3b48[i], 0xffff00ff, 0xc800). Then, for each recorded lane l, fourteen FUN_a00a7488(port, table[l],
  * mask, value) writes on the halfword register tables DAT_a00b3b28 .. DAT_a00b3b50; then, for each lane, four
  * more writes (b40 / b38 mask 0xffffff value 0x8000000, b50 / b48 mask 0xffffff00 value 8) and, with base 0x2000,
- * 0x2400, 0x2800 for lanes 0, 1, 2 and 0x3000 otherwise, FUN_a00a7424(1, 0xc, port, base | 0x310) and
- * FUN_a00a7424(0, 0xc, port, base | 0x330) (static helper set_base, inlined).
- * Source form: every table write has its own 'lane < 4' bound check (macro WR, as in FUN_a0079e00).
- * Compiler aid: 'if (port) {}' in the lane 0 and lane 1 arms emits no instructions; it puts the port conversion
- * before the base constant in those arms, so each of them keeps its own 'and %i0,0xff' (cross-jumping does not
- * merge it into the shared call sequence).
+ * 0x2400, 0x2800 for lanes 0, 1, 2 and 0x3000 otherwise, FUN_a00a7424(1, 0xc, port, base + 0x310) and
+ * FUN_a00a7424(0, 0xc, port, base + 0x330).
+ * Source form: every table write has its own 'lane < 4' bound check (macro WR, as in FUN_a0079e00); each lane arm
+ * of the last loop writes its two FUN_a00a7424 calls with literal register addresses (0x2310 / 0x2330 .. 0x3310 /
+ * 0x3330), as DRV_HDMI21_PHY_INV_PICDR_Reset writes its per-lane registers.
  */
 extern void FUN_a00a7424(int mode, unsigned int bit, unsigned char reg, unsigned short val);
 extern void FUN_a00a7488(unsigned int param_1, unsigned short param_2, unsigned int param_3, unsigned int param_4);
@@ -22,12 +21,6 @@ extern const unsigned short DAT_a00b3b48[4];
 extern const unsigned short DAT_a00b3b50[4];
 extern const unsigned short DAT_a00b3b58[4];
 extern const unsigned short DAT_a00b3b60[4];
-
-static inline void set_base(unsigned char port, unsigned short base)
-{
-    FUN_a00a7424(1, 0xc, port, base | 0x310);
-    FUN_a00a7424(0, 0xc, port, base | 0x330);
-}
 
 #define WR(tab, m, v) if (lane[j] < 4) FUN_a00a7488(port, tab[lane[j]], m, v)
 
@@ -73,14 +66,17 @@ void FUN_a007a0a0(unsigned char port, int mask)
         WR(DAT_a00b3b38, 0xffffff, 0x8000000);
         WR(DAT_a00b3b48, 0xffffff00, 8);
         if (lane[j] == 0) {
-            if (port) {}
-            set_base(port, 0x2000);
+            FUN_a00a7424(1, 0xc, port, 0x2310);
+            FUN_a00a7424(0, 0xc, port, 0x2330);
         } else if (lane[j] == 1) {
-            if (port) {}
-            set_base(port, 0x2400);
-        } else if (lane[j] == 2)
-            set_base(port, 0x2800);
-        else
-            set_base(port, 0x3000);
+            FUN_a00a7424(1, 0xc, port, 0x2710);
+            FUN_a00a7424(0, 0xc, port, 0x2730);
+        } else if (lane[j] == 2) {
+            FUN_a00a7424(1, 0xc, port, 0x2b10);
+            FUN_a00a7424(0, 0xc, port, 0x2b30);
+        } else {
+            FUN_a00a7424(1, 0xc, port, 0x3310);
+            FUN_a00a7424(0, 0xc, port, 0x3330);
+        }
     }
 }
