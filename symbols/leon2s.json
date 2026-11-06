@@ -2182,6 +2182,12 @@
       "name": "FUN_a0070000",
       "status": "matched"
     },
+    "ram:a00700cc": {
+      "by": "hand",
+      "comment": "publish the input port records + status words to the Big chip",
+      "name": "FUN_a00700cc",
+      "status": "matched"
+    },
     "ram:a00703b8": {
       "by": "hand",
       "comment": "returns the byte (DAT_a80788d8 & (1 << n))",
