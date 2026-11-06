@@ -7602,7 +7602,7 @@
     "ram:a00b8774": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "u16 0xa802b092 = 0x72c; u16 0xa802b094 = 0 (clrh, before the call); FUN_a0103808(0, 0, 0, 0) (return unused); FUN_a00b7f9c(0x1b); FUN_a014512c(1, 0); u16 at 0xa802cff4+0x18 |= 0x1000. void(void).",
+      "comment": "header: drop the empty compiler-aid note",
       "name": "FUN_a00b8774",
       "status": "matched"
     },

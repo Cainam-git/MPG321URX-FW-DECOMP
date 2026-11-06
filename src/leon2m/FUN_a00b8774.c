@@ -2,7 +2,6 @@
  * Code facts: u16 0xa802b092 = 0x72c; u16 0xa802b094 = 0 (clrh, before the call); FUN_a0103808(0, 0, 0, 0) (return
  * unused); FUN_a00b7f9c(0x1b); FUN_a014512c(1, 0); u16 at 0xa802cff4+0x18 |= 0x1000. void(void).
  * Source form: the record base DAT_a802cff4 for the +0x18 field.
- * Compiler aids: none.
  */
 struct Rcff4 { unsigned char pad[0x18]; unsigned short h18; };
 extern struct Rcff4 DAT_a802cff4;
