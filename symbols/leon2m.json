@@ -12062,6 +12062,13 @@
       "name": "FUN_a00eb708",
       "status": "matched"
     },
+    "ram:a00eba64": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "two-phase table write with backward-goto retry loop A, symbol names chosen for the address order",
+      "name": "FUN_a00eba64",
+      "status": "matched"
+    },
     "ram:a00ec340": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
