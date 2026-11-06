@@ -12,7 +12,7 @@
  * The value is either the scaled ratio cnt * 256 (or 2048) / h, or reg pair
  * 0x26 + 1; nothing here clamps to 60 Hz.
  * Source form: float source built with -msoft-float; h is an int and cnt a short (an unsigned short cnt re-extends,
- * an int cnt gives 'and o0,l0' instead of the fw 'and l0,o0'); u8 port, u16 return. Compiler aids: none.
+ * an int cnt gives 'and o0,l0' instead of the fw 'and l0,o0'); u8 port, u16 return.
  */
 struct VMode { unsigned int a; unsigned int div32; unsigned int c; };
 extern struct VMode DAT_a8027aac[];
