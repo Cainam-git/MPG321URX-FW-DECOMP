@@ -321,6 +321,7 @@ Each entry: what the firmware shows, the source form that gives it, a matched fu
 | The firmware shows | Write |
 |---|---|
 | Loads one at a time with one register for every upper byte | One reused temporary (FUN_a00dd398). |
+| Record loads placed between volatile register stores in a fixed pattern | Read those values into locals in the source at the firmware's position, ahead of the earlier register writes (`ha3 = ha >> 3;` before the first write, a sum before the second), with the local types the extensions need (FUN_a00dccd8). |
 | The first store of a repeated value kept in place | The value must die at that store: chained assignment `a = b = f;` (FUN_a0061f5c). |
 | A chain moved above a conditional branch | Compute it inside the arm that uses it; the scheduler speculates only into blocks reached at least 40 % as often (FUN_a00614b8). A loop-free function with at most 10 blocks and 100 instructions is one scheduling region (FUN_a00aa258). |
 | Call arguments moved above a compare | Nest the ifs so the call block falls through instead of ending in a jump (FUN_a00f62ac). |
