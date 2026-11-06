@@ -4,7 +4,7 @@
  * (FUN_a010a9e8: 0xcf011ae0/ae8/af0), so p points at MMIO and the two reads are volatile hardware reads in fw order
  * [0] then [4].
  * Source form: volatile u32 register pointer (with a plain pointer gcc schedules the loads freely), int return, low
- * word read first in its own statement. Compiler aids: none.
+ * word read first in its own statement.
  */
 unsigned int FUN_a00f3078(volatile unsigned int *p)
 {

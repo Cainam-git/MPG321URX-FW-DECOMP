@@ -12494,7 +12494,7 @@
     },
     "ram:a00f3078": {
       "by": "hand",
-      "comment": "16-bit value from two MMIO words: (p[1] << 8) | p[0]; volatile = real 0xcf01xxxx registers (callers)",
+      "comment": "header: drop the empty compiler-aid note",
       "name": "FUN_a00f3078",
       "status": "matched"
     },
