@@ -22,14 +22,12 @@
  *   other_above loops a0131e78...) = accesses through a pointer '= &D[x]' (ADDR_EXPR expands offset-first; D[x].f is
  *   base-first): first loop r = &D[i], src-check block v0 = &D[p], u before x, s->on in the p != 0 arm,
  *   e = &D[q] in other_above/none_above.
- * Behaviour-neutral constructs / compiler aids (no code emitted):
- *  - no 'do continue; while (0);' hint in the p != 0 arm (with the source forms below such a hint moves the
- *    'w70 &= ~0x80000' arm away from fw a0131df8).
+ * Source forms with no code of their own:
  *  - identical-arm diamonds 'if (s->on) { s->mode = 0; s->on = 0; } else s->on = 0;' (and the on = 1 twin):
  *    fw single RMW store with the and/or in the annulled slot (a01326bc..a01326e4, a0131a50..a0131a78).
  *  - 'unsigned short th = DAT_001a30da;' read once for the print and the compare: DAT_001a30da is ROM (0x001a30da),
  *    fw keeps it in %l3 across the printf (a0132620 / a013268c).
- *  - pick() writes sel through a 'volatile unsigned char *' (reproduces the [fp-9] slot, frame -120).
+ *  - pick() writes sel through an 'unsigned char *' (sel lives in the [fp-9] slot, frame -120).
  * Further source forms (no behaviour change):
  *  - link check arms in this order: 'if ((*FUN_a01241fc() & 0x700000) != 0x200000) {print arm} else {...}'
  *    (rnreg gives the print arm a0131888 the fresher registers = it comes first in source).
@@ -174,7 +172,7 @@ static void port_step(unsigned char p, unsigned char prev)
     if ((s->u.w & 0xf0000000) == 0x50000000 && none_above(p, 5)) FUN_a01519b4();
 }
 
-static unsigned int pick(unsigned char v, volatile unsigned char *psel)
+static unsigned int pick(unsigned char v, unsigned char *psel)
 {
     unsigned int m = 0;
     if (v == 0xff) return 0;

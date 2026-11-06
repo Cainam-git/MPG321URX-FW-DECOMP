@@ -5303,7 +5303,7 @@
     "ram:a009cb8c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: source form, no aid line",
+      "comment": "as a009cb0c with step - 121 (other direction)",
       "name": "FUN_a009cb8c",
       "status": "matched"
     },
@@ -5497,7 +5497,7 @@
     "ram:a009e480": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: source form, no aid line",
+      "comment": "afec % 3 step loop, a9650, d46d = afec + 0xf, tail a813c(1, 5c55, changed)",
       "name": "FUN_a009e480",
       "status": "matched"
     },
@@ -6301,7 +6301,7 @@
     "ram:a00a454c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: source form, no aid line",
+      "comment": "v = (u8)(byte 0xa802d290+0xc - 5); if v is outside 5..0x1e the record byte = 5 (clamp), else the record byte = v, FUN_a00b7674(1), FUN_a00d47b0(). Then byte 0xa802b08e |= 2. void(void). gcc folds the range test into '(u8)(b - 10) <= 0x19' (fw add -10 / and 0xff / cmp 0x19 / bleu).",
       "name": "FUN_a00a454c",
       "status": "matched"
     },
@@ -6577,7 +6577,7 @@
     "ram:a00a93bc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "plain arithmetic, no masks or casts",
+      "comment": "base = 2p + 5; 4008e2a4() x2, 146c40(3,0,0), b3ed0(0,0,0,0), 4008e2a4(); for i 0..2: 146b20(0, 0x27 / 0x34, base + i, 1, 0, 0)",
       "name": "FUN_a00a93bc",
       "status": "matched"
     },
@@ -6804,7 +6804,7 @@
     "ram:a00abd00": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: source form, no aid line",
+      "comment": "byte a802d290[0x13] - 1, clamp to 0 on wrap; else store and redraw (row 8, 146b50(0xe8), d462c); then a802b08e |= 2 (twin of a00abff8)",
       "name": "FUN_a00abd00",
       "status": "matched"
     },
@@ -7328,7 +7328,7 @@
     },
     "ram:a00b60cc": {
       "by": "hand",
-      "comment": "header: source form, no aid line",
+      "comment": "v set in both arms by (p1 & 0xff) test, then calls with v (a00b7e68 family)",
       "name": "FUN_a00b60cc",
       "status": "matched"
     },
@@ -7513,7 +7513,7 @@
     "ram:a00b7980": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: source form, no aid line",
+      "comment": "a9f30(6, 1) if bit 20 of a802d290 word ac and byte 1f == 0, else a9f30(6, 0)",
       "name": "FUN_a00b7980",
       "status": "matched"
     },
@@ -8023,7 +8023,7 @@
     "ram:a00bc86c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: source form, no aid line",
+      "comment": "three ASCII digits d078[7..9] = d290[0x12..0x14] + '0', bacc4(10), ba950(port), sibcall babe4(port, 0xb)",
       "name": "FUN_a00bc86c",
       "status": "matched"
     },
@@ -9623,7 +9623,7 @@
     "ram:a00cfa68": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: source form, no aid line",
+      "comment": "crc = cea70 over p1[4..7] (start 0); p2 = 6e 83 02 crc_hi crc_lo; 89f60(0x50)",
       "name": "FUN_a00cfa68",
       "status": "matched"
     },
@@ -15586,7 +15586,7 @@
     "ram:a010f064": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "SET macro as a plain braced block",
+      "comment": "writes two packed halfword pairs, a flag-or of word 0 and 0x50005 into the channel register blocks of tables 0x19aef0 and 0x19aee4",
       "name": "FUN_a010f064",
       "status": "matched"
     },
