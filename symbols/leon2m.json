@@ -19026,7 +19026,7 @@
     "ram:a012b458": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "bit-field position and bit tables per index, tail of FUN_a012b418 inlined",
+      "comment": "b00 choice written with a likely() macro",
       "name": "FUN_a012b458",
       "status": "matched"
     },

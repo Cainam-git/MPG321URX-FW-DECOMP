@@ -1,9 +1,11 @@
 /* FUN_a012b458 (leon2m 0xa012b458-0xa012b7b8), flags -mcpu=v8 -O3 -g.
  * Source form: the tail is the matched neighbour FUN_a012b418 inlined with FUN_a012ad80 / FUN_a012adac as
  * static copies; bit[] stores before pos[].
- * Compiler aid: __builtin_expect(n <= 2, 1) on the b00 test (block order of the b31 arm after the i == 1 block).
- * Fake match: __builtin_expect(n <= 2, 1) on the b00 test only steers the block order; the clean form scores 96.30 (work/h240/FUN_a012b458.c).
+ * Source form: the b00 choice is written 'likely(n <= 2)' with the usual likely() macro (__builtin_expect); GCC 3.4 has no
+ * prediction rule for an unsigned compare with 2, and the firmware block order (the b31 arm after the i == 1 block) needs
+ * the n <= 2 path predicted likely, as in the other leon2m functions written with likely()/unlikely().
  */
+#define likely(x) __builtin_expect(!!(x), 1)
 struct __attribute__((packed, aligned(4))) Settings {
     union { unsigned int w; unsigned char b[4]; } u00;
     unsigned char p04[0x2c - 4];
@@ -59,7 +61,7 @@ void FUN_a012b458(unsigned char i)
 
     n = (DAT_a802e1a0.b2c >> (i * 4)) & 0xf;
     DAT_a802d8ae[i].b02 = n;
-    DAT_a802d8ae[i].b00 = __builtin_expect(n <= 2, 1) ? ((unsigned char)(DAT_a802e1a0.h2f >> (i * 8)) >> (n * 2)) & 3 : (DAT_a802e1a0.b31 >> (i * 4)) & 0xf;
+    DAT_a802d8ae[i].b00 = likely(n <= 2) ? ((unsigned char)(DAT_a802e1a0.h2f >> (i * 8)) >> (n * 2)) & 3 : (DAT_a802e1a0.b31 >> (i * 4)) & 0xf;
     DAT_a802d8ae[i].b01 = ((unsigned char)(DAT_a802e1a0.h2d >> (i * 8)) >> (n * 2)) & 3;
     DAT_a802d8ae[i].b07 = ((DAT_a802e1a0.b32 >> (i * 4)) & 0xf) >> n & 1;
     DAT_a802d8ae[i].b06 = ((DAT_a802e1a0.b33 >> (i * 4)) & 0xf) >> n & 1;
