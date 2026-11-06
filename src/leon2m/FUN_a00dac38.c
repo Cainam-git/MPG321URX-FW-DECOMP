@@ -24,7 +24,6 @@
  *   an unsigned int), so gcc reuses the zero-extended active from its print; the callees' signatures (FUN_a01295c4
  *   unsigned char, FUN_a0126878 unsigned short, FUN_a0145af8 unsigned short), but FUN_a0145660 declared
  *   int-returning (the firmware extends its results at the uses).
- * Compiler aids: none.
  */
 struct PanelRow { unsigned long long q[11]; };
 extern struct PanelRow DAT_00198380[];
