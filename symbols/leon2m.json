@@ -13457,6 +13457,13 @@
       "name": "FUN_a00fc318",
       "status": "matched"
     },
+    "ram:a00fc334": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "CEC-style receive and reply dispatch: inlined receive/send helpers, data bytes before the flag bit, case order of both switches",
+      "name": "FUN_a00fc334",
+      "status": "matched"
+    },
     "ram:a00fca34": {
       "by": "near",
       "comment": "returns the byte at 0xA802C97E",
