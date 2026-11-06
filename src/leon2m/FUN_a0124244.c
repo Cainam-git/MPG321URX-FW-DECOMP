@@ -8,7 +8,7 @@
  *   : (src == 2 ? 0x9c : 0xc9); a/b = src == 2 ? 0xf / 1 : 0 / 0; FUN_a012b418(f & 1, level, a & 0xf, b & 1, 1);
  *   FUN_a0137864(lim, 2); remember src and v.
  * No timing value is read here; the inputs are the three callee results and mode.
- * Source form: u8 f/a/b with explicit '& 1 / & 0xf / & 1' at the call (fw keeps the masks); one FUN_a0125b44 call.
+ * Source form: u8 f/a/b passed as they are; one FUN_a0125b44 call.
  *   src goes through an INT temp 'x = 0; if (...) x = 2; src = x;' set BEFORE the FUN_a0125b44 call (fw
  *   'clr/mov 2 %g1' in the branch delay, 'mov %g1, %l3' in the call delay, 'and %l3, 0xff, %l0' after: the copy
  *   from a register hides src's 0/2 range from combine). Level and a/b selects written with 'src != 2' FIRST in
@@ -69,7 +69,7 @@ void FUN_a0124244(unsigned char mode)
         b = 1;
         a = 0xf;
     }
-    FUN_a012b418(f & 1, lvl, a & 0xf, b & 1, 1);
+    FUN_a012b418(f, lvl, a, b, 1);
     FUN_a0137864(lim, 2);
     DAT_a802a420 = src;
     DAT_a802a421 = v;
