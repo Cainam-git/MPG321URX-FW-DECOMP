@@ -24,7 +24,7 @@ void FUN_a00aabf0(void)
   FUN_a0146b6c(0, 0);
   for (i = 0; i < 6; i++) {
     if (FUN_a00aa520(i) == 0)
-        FUN_a0146a80(0x14, i * 2 + 6, 0xd, 0x292, 0);
-      FUN_a00a31a4(0, 0x14, i * 2 + 6, 1, FUN_a00a3844(DAT_0018ca88, i * 29 + DAT_a802d290.b08), 0);
+      FUN_a0146a80(0x14, i * 2 + 6, 0xd, 0x292, 0);
+    FUN_a00a31a4(0, 0x14, i * 2 + 6, 1, FUN_a00a3844(DAT_0018ca88, i * 29 + DAT_a802d290.b08), 0);
   }
 }

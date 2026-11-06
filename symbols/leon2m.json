@@ -6694,7 +6694,7 @@
     "ram:a00aabf0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "clean source form, plain for loop instead of the goto loop",
+      "comment": "loop body indentation",
       "name": "FUN_a00aabf0",
       "status": "matched"
     },
