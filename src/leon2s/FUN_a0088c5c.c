@@ -10,10 +10,9 @@
  * as a port sets fail, 0 after the range.
  * Source form: bit 7 of buf[0] is a 1-bit bit-field; the v & 3 checks are one '||' condition of four
  * '(m == k && FUN_a00a78b4(port, 2) != X)' terms; the clear-bit path is 'if (port != 0) continue; fail = 1;'.
- * Compiler aid: '__builtin_expect(fail, 1)' on the per-port exit test emits no instructions (block order).
- * Compiler aid: the second 'lo = hi;' repeats the value lo already holds and emits no instruction; GCC keeps it
- * as a register copy (of fail's register after copy propagation) instead of a clear, as the firmware's
- * 'mov %l2,%o0' for the all == 0 path.
+ * The port range is set up as in FUN_a0087110 and FUN_a008743c: lo = 0 at its declaration and
+ * 'if (!all) { hi = 0; lo = 0; } else { ... }' (the firmware's 'mov %l2,%o0' copy of fail's zero register at
+ * 0xa0088c70 and its block order).
  */
 extern unsigned char DAT_a80761bf;
 extern unsigned char DAT_a80761c0;
@@ -33,8 +32,8 @@ struct b0 { unsigned char ok : 1; unsigned char rest : 7; };
 
 unsigned char FUN_a0088c5c(unsigned char all, unsigned char *buf, unsigned char *mask)
 {
-    unsigned char fail;
-    unsigned char lo;
+    unsigned char fail = 0;
+    unsigned char lo = 0;
     unsigned char hi;
     unsigned char port;
     unsigned char lanes;
@@ -42,9 +41,10 @@ unsigned char FUN_a0088c5c(unsigned char all, unsigned char *buf, unsigned char 
     unsigned char v;
     unsigned int m;
 
-    lo = hi = fail = 0;
-    lo = hi;
-    if (all) {
+    if (!all) {
+        hi = 0;
+        lo = 0;
+    } else {
         lo = DAT_a80761c0;
         hi = DAT_a80761bf;
     }
@@ -85,7 +85,7 @@ unsigned char FUN_a0088c5c(unsigned char all, unsigned char *buf, unsigned char 
                 }
             }
         }
-        if (__builtin_expect(fail, 1))
+        if (fail)
             return 1;
     }
     return 0;
