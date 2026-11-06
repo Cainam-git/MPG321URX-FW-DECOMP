@@ -6250,6 +6250,12 @@
       "name": "FUN_a00a2c94",
       "status": "matched"
     },
+    "ram:a00a2cf4": {
+      "by": "hand",
+      "comment": "PHY clock 0x1f1c to Hz, divided by repetition, x4 for record byte 4, stored in DAT_a807cc64[ch]+0xc; line rate = clock / htotal, frame rate x100 = line rate * 100 / vtotal",
+      "name": "FUN_a00a2cf4",
+      "status": "matched"
+    },
     "ram:a00a2e48": {
       "by": "autoc",
       "comment": "p = word 0 of record p1 of the 0x34-byte table 0xA807DB00: ANDs the words p + 0x74, 0x78, 0x7C, 0x90, 0xAC, 0xC4, 0xC8 with byte masks; returns 0",
