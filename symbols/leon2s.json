@@ -2360,7 +2360,7 @@
     },
     "ram:a0073540": {
       "by": "hand",
-      "comment": "when p1 == 0: copies word 0xA8076190 into word +4 of the record at 0xA80789D4 and calls FUN_a00b2194 with the record address",
+      "comment": "header: the asm nop is the source form of the firmware nop",
       "name": "FUN_a0073540",
       "status": "matched"
     },

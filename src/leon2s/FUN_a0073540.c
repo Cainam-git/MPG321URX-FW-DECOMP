@@ -4,7 +4,7 @@
  * FUN_a00b2194(&DAT_a80789d4) ('mov %o7,%g1; call; mov %g1,%o7'). Other modes return through a real 'nop'
  * (the bne target) before retl. void.
  * The record is one {w0, w4} struct; the callee is named by its address FUN_a00b2194 (no symbol entry).
- * Compiler aid: one asm nop on the mode != 0 path (a real nop in the firmware, not a delay slot).
+ * Source form: one asm nop on the mode != 0 path (a real nop in the firmware, not a delay slot).
  */
 struct R { unsigned int w0; unsigned int w4; };
 extern struct R DAT_a80789d4;
