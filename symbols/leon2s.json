@@ -10260,6 +10260,12 @@
       "name": "FUN_a00dd398",
       "status": "matched"
     },
+    "ram:a00dd488": {
+      "by": "hand",
+      "comment": "DSC rate-control and PPS words from the DAT_a8079538 timing record in VESA DSC C model order",
+      "name": "FUN_a00dd488",
+      "status": "matched"
+    },
     "ram:a00de8ac": {
       "by": "hand",
       "comment": "Fills the DSC timer record DAT_a8079538 from the input record, prints DSC_ENC_TIMER_CONFIG twice and calls FUN_a00dcc80, FUN_a00dccd8 and FUN_a00dd488",
