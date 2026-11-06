@@ -71,7 +71,7 @@
  *      2 of the SET pointer, so the two swap %o1/%o2); reading afea into 'unsigned char a' before the t load ('if
  *      (t != a)') keeps t's life at 15 insns, so t is allocated first (%o2) and the SET pointer gets %o1, as in
  *      the fw.
- * Compiler aids: none. No volatile (all RAM globals).
+ * No volatile (all RAM globals).
  */
 struct Sys {
     struct { unsigned short b15 : 1, b14 : 1, x10 : 4, b9 : 1, b8 : 1, lo : 8; } s0;
