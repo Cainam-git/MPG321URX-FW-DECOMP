@@ -2349,6 +2349,13 @@
       "name": "FUN_a002f10c",
       "status": "matched"
     },
+    "ram:a002f118": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Size read, register setup and percent loop with hook call on change",
+      "name": "FUN_a002f118",
+      "status": "matched"
+    },
     "ram:a002f388": {
       "by": "autoc",
       "cflags": "-mcpu=v8 -O3 -g",
