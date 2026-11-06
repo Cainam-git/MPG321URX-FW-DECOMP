@@ -4,7 +4,6 @@
  * DAT_a8026a7a[blk] (firmware base 0xa8026a7a via sethi/or) plus reg (u16) is the register index; the function reads
  * the word at 0xcf000000 | (index << 2) and returns its low byte.
  * The clamp limit is 2. Table declared with 2 entries.
- * Compiler aids: none.
  */
 extern unsigned short DAT_a8026a7a[2];     /* block bases */
 
