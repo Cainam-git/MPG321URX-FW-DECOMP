@@ -11897,6 +11897,13 @@
       "name": "FUN_a00e52e8",
       "status": "matched"
     },
+    "ram:a00e5428": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "both arms test d == 1 first with the field write in each branch",
+      "name": "FUN_a00e5428",
+      "status": "matched"
+    },
     "ram:a00e55ec": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
