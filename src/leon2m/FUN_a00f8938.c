@@ -3,7 +3,7 @@
  * Source form: the & ~1 is a separate statement 'x &= ~1;' on the unsigned int param: in one expression fold-const
  * turns (u16)(x & ~1) into x & 0xfffe (sethi|or + and); as a statement the RTL keeps 'and -2' + the u16
  * zero-extension (sll/srl), and combine cannot fold them (0xfffe is not a simm13).
- * u16 / u8 parameters from the callee's prototype (its code masks %i0). Compiler aids: none.
+ * u16 / u8 parameters from the callee's prototype (its code masks %i0).
  */
 extern void FUN_a00f1d48(unsigned char, unsigned char, unsigned short);
 

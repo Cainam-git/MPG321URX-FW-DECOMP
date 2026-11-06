@@ -13125,7 +13125,7 @@
     "ram:a00f8938": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "f1d48(a, 0x14, x & ~1); f1d48(a, 0x10, y)",
+      "comment": "header: drop the empty compiler-aid line",
       "name": "FUN_a00f8938",
       "status": "matched"
     },
