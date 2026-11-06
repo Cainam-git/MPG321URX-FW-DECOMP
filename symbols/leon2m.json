@@ -2514,7 +2514,7 @@
     "ram:a0081ea8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "power-saving entry (6 power states), documented no-code aid: dead u16>>16 test (row 1e)",
+      "comment": "power-saving entry (6 power states)",
       "name": "FUN_a0081ea8",
       "status": "matched"
     },

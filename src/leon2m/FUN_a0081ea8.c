@@ -18,17 +18,9 @@
  * if/else FUN_a014a820(1)/(0), the store orders of the b1a1/b1a2 tails and the 0xFF byte groups.
  * Source form (case 5):
  * - C->h006 bit-6 clear as a BIT-FIELD (s006.b6 = 0): gives the and/sth/or schedule at 0xA0082210..18.
- * - Compiler aid (no code), dead test: 'm' is the unsigned short result of FUN_a0090fcc(); 'm >> 16' is always 0
- *   (a 0..0xFFFF value shifted right by 16), so '!(m >> 16)' is always 1 and the added '&&' operand never jumps:
- *   behaviour is unchanged and combine deletes the test (nonzero bits of the zero-extended u16), so it emits NO
- *   instruction. __builtin_expect(.., 1) only states that it is always true (a branch-probability note, no code).
- *   Why it is needed: without it cse1 follows the 'w000 bit 9 set' jump around the then-block (cse skip-blocks, the
- *   join label had one use) and reuses the &DAT_a802d290 register of the w000 test for the b0ac read (fw: a fresh
- *   'or %l0,0x290,%i0' in the FUN_a00d9978 delay slot). The second jump to the join label stops that; with plain
- *   '!(m >> 16)' the bb-reorder cold-trace order moves, the __builtin_expect form keeps the firmware layout.
- * - An asm-label alias (extern struct G290 G_alias __asm__("DAT_a802d290") for the b0ac read) also breaks the CSE
- *   link, but combine folds the alias' own single-use HIGH into 'sethi %hi(DAT_a802d290+0xac)' instead of reusing
- *   %l0 (one word differs at 0xA00827C8). Not used.
+ * - The two four-byte 0xFF groups of case 5 are calls FUN_a00808ac(4, 0); FUN_a00808ac (0xA00808AC, same file) is
+ *   defined in this file and inlined by GCC at -O3 (the inlined body ends the then-blocks, so the b0ac read forms
+ *   &DAT_a802d290 again in the FUN_a00d9978 delay slot at 0xA00827C8 as in the firmware).
  */
 struct G290 {
   union { unsigned int w000; struct { unsigned int hi : 17, b14 : 1, x13 : 1, b12 : 1, x : 2, b9 : 1, lo : 9; } s000; };
@@ -134,11 +126,35 @@ extern int FUN_a014aed0();
 extern void FUN_a00869b0(int, int);
 extern unsigned char FUN_a0143c14(unsigned char);
 
+extern unsigned char DAT_a802af45;
+void FUN_a00808ac(unsigned char n, unsigned char f)
+{
+    if (n == 4) {
+        DAT_a802af60[0] = 0xff;
+        DAT_a802af60[1] = 0xff;
+        DAT_a802af60[2] = 0xff;
+        DAT_a802af60[3] = 0xff;
+        if (f == 1)
+            DAT_a802af45 |= 0xf;
+    } else {
+        DAT_a802af60[n] = 0xff;
+        if (f == 1) {
+            if (n == 0)
+                DAT_a802af45 |= 1;
+            else if (n == 1)
+                DAT_a802af45 |= 2;
+            else if (n == 2)
+                DAT_a802af45 |= 4;
+            else if (n == 3)
+                DAT_a802af45 |= 8;
+        }
+    }
+}
+
 void FUN_a0081ea8(unsigned int state)
 {
   unsigned char saved = DAT_a802d290.b01e;
   unsigned char i, none;
-  unsigned short m;
 
   switch (state) {
   case 0:
@@ -379,19 +395,13 @@ void FUN_a0081ea8(unsigned int state)
   case 5:
     if (DAT_a802cff4.s004.susp == 2 && !(DAT_a802d290.w000 & 0x200)) {
       FUN_a0080978();
-      DAT_a802af60[0] = 0xff;
-      DAT_a802af60[1] = 0xff;
-      DAT_a802af60[2] = 0xff;
-      DAT_a802af60[3] = 0xff;
+      FUN_a00808ac(4, 0);
     }
-    if (FUN_a01279dc() == 1 && (m = FUN_a0090fcc()) != 0xfe) {
-      if (__builtin_expect(!(m >> 16), 1) && !(DAT_a802d290.w000 & 0x200)) {
+    if (FUN_a01279dc() == 1 && FUN_a0090fcc() != 0xfe) {
+      if (!(DAT_a802d290.w000 & 0x200)) {
         FUN_a0124b40();
         FUN_a0124a68();
-        DAT_a802af60[0] = 0xff;
-        DAT_a802af60[1] = 0xff;
-        DAT_a802af60[2] = 0xff;
-        DAT_a802af60[3] = 0xff;
+        FUN_a00808ac(4, 0);
       }
       FUN_a00d9978();
       FUN_a00d99a8();
