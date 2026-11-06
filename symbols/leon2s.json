@@ -10236,6 +10236,12 @@
       "name": "FUN_a00dccd8",
       "status": "matched"
     },
+    "ram:a00dcdb8": {
+      "by": "hand",
+      "comment": "values read first in the order h8, 0x920/0x91c/0x928 quotients, 0x924 low quotient, h14, h12; each register written as R &= keep then its value",
+      "name": "FUN_a00dcdb8",
+      "status": "matched"
+    },
     "ram:a00dd154": {
       "by": "hand",
       "comment": "Computes a value from the word at DAT_a8079538 + 0x20, a divisor from 0xc0110004 and two factors, and writes its bytes to 0xcf014104-0xcf01410c",
