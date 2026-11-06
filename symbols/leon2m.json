@@ -17437,7 +17437,7 @@
     "ram:a0123384": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Vx1RxPowerOff: paged register writes through 0xcf03d024 with a nop delay, then the print",
+      "comment": "header: delay loop nop described as source form",
       "name": "FUN_a0123384",
       "status": "matched"
     },

@@ -5,8 +5,8 @@
  * (0, 0x03, 0xfb), (0xc, 0x11, 1); a 0x400-pass nop delay; (0xc, 0x11, 0); finally prints s_001a3090
  * "Vx1RxPowerOff\r\n" with FUN_a00df170 (tail call). Called by FUN_a00fd558 and FUN_a011d194.
  * Source form: the paged write is an inlined static helper with a local base 0x7600 (the firmware builds the
- * window address at run time, as in FUN_a0122e80). Compiler aid: the delay loop body is the documented
- * __asm__("nop"). volatile: hardware registers only.
+ * window address at run time, as in FUN_a0122e80); the delay loop body is a single __asm__("nop"), the nop the
+ * firmware executes on each pass. volatile: hardware registers only.
  */
 #define R(a) (*(volatile unsigned int *)(a))
 
