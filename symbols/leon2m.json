@@ -5359,7 +5359,7 @@
     "ram:a009d848": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "afec % 3 step loop until aad30(t) == 1, a9650(afec + K, 1), then a813c(1, 5c56, afec - base != 5c56) (one of four constant variants)",
+      "comment": "header: drop the empty compiler-aid line",
       "name": "FUN_a009d848",
       "status": "matched"
     },

@@ -7,7 +7,6 @@
  * FUN_a00aad30 takes one argument.
  * Source form: the halfword read is (unsigned short)_DAT_a802afec (no separate afee symbol); DAT_a8025c56 is plain
  * RAM (not volatile); the callee prototypes use u8 and void types.
- * Compiler aids: none.
  */
 extern unsigned char DAT_a8025c56;
 extern unsigned int _DAT_a802afec;
