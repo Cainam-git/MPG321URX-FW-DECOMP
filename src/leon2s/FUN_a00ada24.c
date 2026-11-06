@@ -10,11 +10,9 @@
  *   0x1a -> 8 or 10 (FUN_a00ad7c8(port) != 0 or 0), 0xc -> 2, 0x1c -> 8, 2 -> 0x10, 0x12 -> 0x16, 4 -> 0xe,
  *   0x14 -> 0x14; 8 -> 8 when FUN_a00ad6ec(port) != 0, flag != 0 and byte +0x11f of the 0x12c-byte entry
  *   ARR_a807dc18[port] != 0, else 0; other values -> 1, or 8 under the same three conditions.
- * Source form: r is one unsigned int variable for the whole function (the 0xa / 0x1a ?: results go straight
+ * Source form: one exit: the two halves are the arms of one if/else and the function ends in a single
+ *   'return r;'; r is one unsigned int variable for the whole function (the 0xa / 0x1a ?: results go straight
  *   into the return register); grouped case labels for the shared codes.
- * Compiler aid: 'v = 0;' after 'r -= 1;' in the bit-7 arm is a dead store (v is not read again) and emits
- *   no instructions; with two statements in the arm the decrement is not if-converted into a sign-shift
- *   subtraction, so it stays the firmware's 'btst 0x80; bne,a; add -1' branch.
  */
 struct Rec12c {
     unsigned char _0[0x11f];
@@ -112,56 +110,54 @@ unsigned char FUN_a00ada24(unsigned char port, unsigned char flag)
             if (FUN_a00ad7c8(port))
                 r -= 2;
         }
-        if (w & 0x80) {
+        if (w & 0x80)
             r -= 1;
-            v = 0;
-        }
-        return r;
-    }
-    v = FUN_a00a6bb8(port, 0x8d) & 0x1e;
-    if (FUN_a00a6bb8(port, 0x8e) & 0x80)
-        r = 1;
-    else switch (v) {
-    case 0xa:
-        r = FUN_a00ad7c8(port) ? 2 : 4;
-        break;
-    case 0x1a:
-        r = FUN_a00ad7c8(port) ? 8 : 10;
-        break;
-    case 0xc:
-        r = 2;
-        break;
-    case 0x1c:
-        r = 8;
-        break;
-    case 2:
-        r = 0x10;
-        break;
-    case 0x12:
-        r = 0x16;
-        break;
-    case 4:
-        r = 0xe;
-        break;
-    case 0x14:
-        r = 0x14;
-        break;
-    case 8:
-        if (FUN_a00ad6ec(port) && flag) {
+    } else {
+        v = FUN_a00a6bb8(port, 0x8d) & 0x1e;
+        if (FUN_a00a6bb8(port, 0x8e) & 0x80)
+            r = 1;
+        else switch (v) {
+        case 0xa:
+            r = FUN_a00ad7c8(port) ? 2 : 4;
+            break;
+        case 0x1a:
+            r = FUN_a00ad7c8(port) ? 8 : 10;
+            break;
+        case 0xc:
+            r = 2;
+            break;
+        case 0x1c:
             r = 8;
-            if (!ARR_a807dc18[port].b11f)
+            break;
+        case 2:
+            r = 0x10;
+            break;
+        case 0x12:
+            r = 0x16;
+            break;
+        case 4:
+            r = 0xe;
+            break;
+        case 0x14:
+            r = 0x14;
+            break;
+        case 8:
+            if (FUN_a00ad6ec(port) && flag) {
+                r = 8;
+                if (!ARR_a807dc18[port].b11f)
+                    r = 0;
+            } else
                 r = 0;
-        } else
-            r = 0;
-        break;
-    default:
-        r = 1;
-        if (FUN_a00ad6ec(port) && flag) {
-            r = 8;
-            if (!ARR_a807dc18[port].b11f)
-                r = 1;
+            break;
+        default:
+            r = 1;
+            if (FUN_a00ad6ec(port) && flag) {
+                r = 8;
+                if (!ARR_a807dc18[port].b11f)
+                    r = 1;
+            }
+            break;
         }
-        break;
     }
     return r;
 }
