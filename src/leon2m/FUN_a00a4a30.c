@@ -6,7 +6,6 @@
  * Source form: the param_1 test is inside one loop (if/else around the call). -O3 loop unswitching makes the two
  * loop copies, and both copies jump back to a common exit that re-tests param_1 ('b; cmp %i0,0' in the fw); two
  * hand-written loops let jump threading skip that re-test. The '== 0' arms come first in both ifs.
- * Compiler aids: none.
  */
 extern void FUN_a0146a80(unsigned short param_1, unsigned short param_2, unsigned char param_3, unsigned short param_4, unsigned char param_5);
 extern void FUN_a0146b20(unsigned char param_1, unsigned short param_2, unsigned short param_3, unsigned char param_4, unsigned char param_5, unsigned char param_6);

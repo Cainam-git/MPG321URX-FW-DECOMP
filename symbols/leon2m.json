@@ -6335,7 +6335,7 @@
     "ram:a00a4a30": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "146a80(5, 8, 4, 0x792, 0); 4 x 146b20 with byte i + 0x22 (p == 0) or i + 0x1e; two 146a80 calls with 0x792 / 0x992 swapped by p (one loop, unswitched by -O3)",
+      "comment": "header: drop the empty compiler-aid line",
       "name": "FUN_a00a4a30",
       "status": "matched"
     },
