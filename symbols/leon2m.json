@@ -1602,7 +1602,7 @@
     "ram:a0029638": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "returns FUN_a002961c(c) * 3 as an unsigned char (byte routine chain)",
+      "comment": "unsigned char locals for the +0x21 and +0xe steps",
       "name": "FUN_a0029638",
       "status": "matched"
     },
