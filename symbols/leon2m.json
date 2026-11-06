@@ -7726,6 +7726,13 @@
       "of": "FUN_a00ccf34",
       "status": "matched"
     },
+    "ram:a00ba8bc": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "clear a802d0d0[0..0x31], a802b09c, a802d078[0..0x18]; 148794(1, 0x10, 4, 0x1c200), 148794(1, 4, 2, 0x1c200) via an inlined per-port init helper (port_rx / port_tx lookups)",
+      "name": "FUN_a00ba8bc",
+      "status": "matched"
+    },
     "ram:a00ba950": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
