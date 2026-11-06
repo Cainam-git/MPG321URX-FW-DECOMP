@@ -8391,7 +8391,7 @@
     "ram:a00be250": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "digits d078[7..9] = '0','0', bits 18..19 of d290+0xac; bac3c(0x6a), ba950(port), sibcall babe4(port, 0xb)",
+      "comment": "header: drop the empty compiler-aid note",
       "name": "FUN_a00be250",
       "status": "matched"
     },

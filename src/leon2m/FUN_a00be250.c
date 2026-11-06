@@ -4,7 +4,6 @@
  * u8 param. Same shape as FUN_a00bc86c. FUN_a00bac3c takes one argument.
  * Source form: the record bases (d290 record word +0xac, d078 buffer); the stores in ascending index order in the
  * source (sched gives the fw 9, 8, 7).
- * Compiler aids: none.
  */
 struct Rec290 { unsigned char pad[0xac]; unsigned int wac; };
 extern struct Rec290 DAT_a802d290;
