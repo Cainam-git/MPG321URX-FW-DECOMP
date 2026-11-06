@@ -7150,8 +7150,8 @@
     },
     "ram:a00b31a0": {
       "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "a89e4 family: setup calls, goto loop of a00a31a4 rows from table 0x18f550 (i*29 + a802d290[8])",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "clean source form, plain for loop instead of the goto loop",
       "name": "FUN_a00b31a0",
       "status": "matched"
     },
