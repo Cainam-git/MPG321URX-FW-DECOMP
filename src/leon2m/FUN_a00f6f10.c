@@ -5,7 +5,7 @@
  * with %o0 = 5 and %o1 = v); otherwise the word register 0xcf00ef18 = v. void.
  * The hook takes two arguments (selector and v).
  * Source form: the u8 parameter is used directly (a separate 'unsigned int v' copy puts the and in %i0 instead of
- * %o1). Compiler aids: none.
+ * %o1).
  */
 extern void (*_DAT_a802b7b8)(int, unsigned int);
 
