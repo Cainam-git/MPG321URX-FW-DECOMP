@@ -1,19 +1,16 @@
 /* FUN_a00dc0a8 (leon2s, 0xa00dc0a8-0xa00dc214, 364 bytes, 91 words).
  * Flags: -mcpu=v8 -Os -g.
- * Prints DAT_9f1ccc30 with DAT_a8078832. If the byte DAT_a8078840 == 1: x = DAT_a8078832 (u16): clears the
+ * Prints DAT_9f1ccc30 with DAT_a8078832. If the byte DAT_a8078840 == 1: x = DAT_a8078832: clears the
  * bytes DAT_a8078830/828/808/800[x] and the u16 ARR_a807880a/880e[x]; clears DAT_a80787fc..ff; for i = 0..3
  * clears ARR_a8079c3d[2i] and [2i+1]; x reloaded: clears DAT_a8078850/848[x] and bits 4..5 of the word at
  * ARR_a80760a4[x] + 0xccc; x reloaded: DAT_a80760b0[x] = 1, clears the u16 _DAT_a80787fa/_DAT_a80787f8 and
- * the byte at 0xa8078838 + x, clears DAT_a8078847; FUN_a00d9a78() when (u8)func_0xa0f966a4() != 0;
+ * DAT_a8078838[x], clears DAT_a8078847; FUN_a00d9a78() when (u8)func_0xa0f966a4() != 0;
  * FUN_a00d6560(DAT_a8078832). Always clears DAT_a8078840 at the end (firmware: in the bne,a delay slot and
  * before ret).
- * x is u16 (the firmware doubles it with add for the u16 arrays); string symbol DAT_9f1ccc30; void.
- * Source form: the first six clears are in the order 830, 828, 80e, 80a, 808, 800 (2 of the 720 orders
- * give the firmware order).
- * Compiler aid: the 0xa8078838 byte is written through a local constant pointer 'p = (u8 *)0xa8078838;
- * p[x] = 0' (same instruction bytes as the symbol DAT_a8078838: sethi/or). With the symbol, alias analysis
- * lets sched move that store before the 7fa/7f8 clears (for all 24 orders of that block); the constant base
- * keeps the firmware order and the [%g1+%o4] operands.
+ * x is u8, the type of DAT_a8078832; string symbol DAT_9f1ccc30; void.
+ * Source forms: the first six clears are in the order 830, 828, 80e, 80a, 808, 800; in the last block the u16
+ * clears of 7fa / 7f8 come first, then x is reloaded and the 838 and 760b0 bytes are written (fw order 760b0, 7fa,
+ * 7f8, 838).
  */
 extern unsigned char DAT_a80787fc;
 extern unsigned char DAT_a80787fd;
@@ -44,7 +41,7 @@ extern const char DAT_9f1ccc30[];
 
 void FUN_a00dc0a8(void)
 {
-    unsigned short x;
+    unsigned char x;
     unsigned char i;
 
     func_0xa0f83044(DAT_9f1ccc30, DAT_a8078832);
@@ -70,11 +67,11 @@ void FUN_a00dc0a8(void)
         DAT_a8078850[x] = 0;
         DAT_a8078848[x] = 0;
         *(unsigned int *)(ARR_a80760a4[x] + 0xccc) &= ~0x30;
-        x = DAT_a8078832;
-        DAT_a80760b0[x] = 1;
         _DAT_a80787fa = 0;
         _DAT_a80787f8 = 0;
-        { unsigned char *p = (unsigned char *)0xa8078838; p[x] = 0; }
+        x = DAT_a8078832;
+        DAT_a8078838[x] = 0;
+        DAT_a80760b0[x] = 1;
         DAT_a8078847 = 0;
         if (func_0xa0f966a4() & 0xff)
             FUN_a00d9a78();
