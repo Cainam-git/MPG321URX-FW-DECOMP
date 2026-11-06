@@ -1644,7 +1644,7 @@
     "ram:a002973c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "returns FUN_a0029638((unsigned char)(c + 0x33)) as an unsigned char (byte routine chain)",
+      "comment": "inline copies as in FUN_a00295f4 / FUN_a0029604",
       "name": "FUN_a002973c",
       "status": "matched"
     },
