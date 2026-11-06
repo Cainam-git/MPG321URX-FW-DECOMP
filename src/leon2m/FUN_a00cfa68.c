@@ -3,7 +3,6 @@
  * callee ends with sll/srl 16 of %i1); then param_2[0..4] = 0x6e, 0x83, 2, crc >> 8, crc (low byte); tail
  * FUN_a0089f60(0x50) (1 u8 arg: it only stores %o0 to byte 0xa802af9e). void. The loop reads bytes of param_1.
  * Source form: the stores in ascending offset order.
- * Compiler aids: none.
  */
 extern void FUN_a0089f60(unsigned char);
 extern unsigned short FUN_a00cea70(unsigned char, unsigned short);

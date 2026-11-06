@@ -9623,7 +9623,7 @@
     "ram:a00cfa68": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "crc = cea70 over p1[4..7] (start 0); p2 = 6e 83 02 crc_hi crc_lo; 89f60(0x50)",
+      "comment": "header: source form, no aid line",
       "name": "FUN_a00cfa68",
       "status": "matched"
     },
