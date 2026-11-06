@@ -16194,7 +16194,7 @@
     "ram:a0118994": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "if reg cf012e00 bit 0, cf0115c0 bit 0 clear and f2254(p, 0x50) bit 0: count a802c99c; past 0x32 reset it and set reg cf012f00 = 0x40 (cf012f24 != 0) or 0",
+      "comment": "FUN_a0118994: u8 parameter, no mask",
       "name": "FUN_a0118994",
       "status": "matched"
     },

@@ -5,7 +5,7 @@
  * the real 0xcf... hw registers only.
  * Source form: the 0xcf012f24 test is written '!= 0' with the 0x40 arm first (the firmware falls through into the
  * 0x40 store). FUN_a00f2254 is u8 (u8, u8) (it returns the low byte of a 0xcf... register read: and %o0,0xff before
- * retl). Compiler aids: none.
+ * retl). The parameter is u8.
  */
 extern unsigned char DAT_a802c99c;
 extern unsigned char FUN_a00f2254(unsigned char port, unsigned char reg);
@@ -15,11 +15,11 @@ extern unsigned char FUN_a00f2254(unsigned char port, unsigned char reg);
 #define REG_cf012f00 (*(volatile unsigned int *)0xcf012f00)
 #define REG_cf012f24 (*(volatile unsigned int *)0xcf012f24)
 
-void FUN_a0118994(unsigned int param_1)
+void FUN_a0118994(unsigned char param_1)
 {
     if (((REG_cf012e00 & 1) != 0) &&
         ((REG_cf0115c0 & 1) == 0) &&
-        (FUN_a00f2254(param_1 & 0xff, 0x50) & 1)) {
+        (FUN_a00f2254(param_1, 0x50) & 1)) {
         if ((unsigned char)(DAT_a802c99c + 1) > 0x32) {
             DAT_a802c99c = 0;
             if (REG_cf012f24 != 0) {
