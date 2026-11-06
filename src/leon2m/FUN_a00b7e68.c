@@ -6,7 +6,7 @@
  * 0x1981d0, p3 & 0xff); buf[0] = 3; FUN_a0146b6c(2, 0); FUN_a00a31a4(0, 0x28, 6, 2, buf, 0).
  * Source form: v is assigned in both arms ('v = 0x742' in the != 0 arm) instead of a default before the if (a
  * default changes where 'mov 0x742' is scheduled).
- * Compiler aids: none.
+ * The first parameter is u8.
  */
 // FUN_a00b7e68 at 0xa00b7e68
 extern void FUN_a0146b50(unsigned int, unsigned char);
@@ -18,15 +18,15 @@ extern void FUN_a01577f4(unsigned char *, unsigned int, unsigned char);
 extern void FUN_a0146b6c(unsigned int, unsigned int);
 extern void FUN_a00a31a4(unsigned int, unsigned int, unsigned int, unsigned int, unsigned char *, unsigned int);
 
-void FUN_a00b7e68(unsigned int param_1, unsigned char param_2, unsigned char param_3)
+void FUN_a00b7e68(unsigned char param_1, unsigned char param_2, unsigned char param_3)
 {
     unsigned short uVar1;
     unsigned char local_10[8];
 
     FUN_a0146b50(0x111, 0);
-    FUN_a00ab5f0(0x2c, 6, param_2, 6, param_1 & 0xff);
+    FUN_a00ab5f0(0x2c, 6, param_2, 6, param_1);
 
-    if ((param_1 & 0xff) != 0) {
+    if (param_1 != 0) {
         uVar1 = 0x742;
         FUN_a00a9468(1, 3);
     } else {
