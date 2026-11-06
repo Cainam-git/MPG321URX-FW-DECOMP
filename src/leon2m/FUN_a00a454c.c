@@ -5,7 +5,6 @@
  * test into '(u8)(b - 10) <= 0x19' (fw add -10 / and 0xff / cmp 0x19 / bleu).
  * Source form: the record base DAT_a802d290 with a byte offset; the clamp arm comes first ('v < 5 || v > 0x1e' ->
  * 5; the in-range arm first gives other registers).
- * Compiler aids: none.
  */
 struct R290 { unsigned char pad[0xc]; unsigned char b0c; };
 extern struct R290 DAT_a802d290;
