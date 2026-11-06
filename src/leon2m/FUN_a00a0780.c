@@ -1,5 +1,4 @@
 /* leon2m FUN_a00a0780 @ 0xa00a0780-0xa00a09f8 (158 words), flags -mcpu=v8 -O3 -g.
- * Uses a compiler aid (2 stacked 'do continue; while (0);' hints, see Aids).
  * One of 4 twins (a00a0508 / a00a0780 / a00a09f8 / a00a0c70 = port state byte DAT_a802d290 +0x18d / +0x18c /
  * +0x18b / +0x18a; FUN_a014459c arg 0 / 2 / 3 / 1; FUN_a00b8e7c arg 3 / 2 / 1 / 0). This one: st[2] (+0x18c),
  * FUN_a014459c(2), FUN_a00b8e7c(2). void, no parameters (the fw never reads %i0/%i1). Pointer-called per-port
@@ -16,16 +15,11 @@
  *   finally FUN_a00b8e7c(n), DAT_a802afec = st + 0xf9, tail call FUN_a00a45a8().
  * This function itself reads no timing or rate value; what it does for an input is the per-port step above,
  *   chosen by the port state byte st and the d290 / cff4 flags.
- * Matching form: bit 15 of the u16 written '(short)(x & 0x8000)' (fw: sethi 0xffff8000; and; sll 16; cmp; the
- *   plain mask gives ldsh/bl); a pointer p = &DAT_a802d290 taken right before the first st == 6 test and used for
- *   the rest (the fw keeps ONE base register from there, so gcse PRE merges the st loads); FUN_a00d8bd8 takes no
- *   arguments; the 6-arm written 'if (+0x1f4 >= 0) goto ten; return;'.
- * Aids: two 'do continue; while (0);' lines before that 'return' (documented no-code PRED_CONTINUE hint, the
- *   c7bc class; no instructions). Why (cfglayout.c fixup_reorder_chain, -da dumps): neither successor of the
- *   +0x1f4 test is next, so the jump is inverted when its REG_BR_PROB < 50 %. Opcode-positive (x < 0: 21 %) and
- *   the goto (70 % not taken) give 38 % -> 'bge T10; b,a ret'; the two hints (56 % each) give 59 % -> the fw
- *   'bl ret; b T10'. Same result with 6 hints and no goto. Plain forms (switch, if/else orders, goto forms, test
- *   spellings, else-if nesting) do not give this layout; the early-return heuristic cannot fire: ret is the last bb.
+ * Source form: bit 15 of the u16 written '(short)(x & 0x8000)' (fw: sethi 0xffff8000; and; sll 16; cmp); a
+ *   pointer p = &DAT_a802d290 taken right before the first st == 6 test and used for the rest (the fw keeps one
+ *   base register from there); FUN_a00d8bd8 takes no arguments; bit 31 of the word +0x1f4 is a 1-bit bit-field
+ *   (b31), and the st == 6 tests are 'if (st == 6) { if (FUN_a00d7d48() != 0) return; }' then
+ *   'if (st == 6 && b31) return;' then 'if (st == 9) ...' (fw 0xa00a090c: ld; cmp; bl ret; b to the st == 10 test).
  */
 struct D290 {
     unsigned char p000[0x1e];
@@ -44,7 +38,7 @@ struct D290 {
     unsigned char p1ab[0x1d4 - 0x1ab];
     unsigned int w1d4;
     unsigned char p1d8[0x1f4 - 0x1d8];
-    union { int w; struct { unsigned short hi, lo; } h; } u1f4;
+    union { struct { unsigned short hi, lo; } h; struct { unsigned int b31 : 1, rest : 31; } f; } u1f4;
 };
 struct CFF4 {
     unsigned short h0;
@@ -118,19 +112,14 @@ void FUN_a00a0780(void)
         if (FUN_a00d7d48() != 0)
             return;
     }
-    if (p->st[2] == 6) {
-        if (p->u1f4.w >= 0)
-            goto ten;
-        do continue; while (0);
-        do continue; while (0);
+    if (p->st[2] == 6 && p->u1f4.f.b31)
         return;
-    } else if (p->st[2] == 9) {
+    if (p->st[2] == 9) {
         if (FUN_a00d7d48() != 0)
             return;
         if (p->w174 & 0x8000)
             return;
     }
-ten:
     if (p->st[2] == 10) {
         if (FUN_a00d7d48() != 0)
             return;
