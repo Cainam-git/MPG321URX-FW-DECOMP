@@ -6,7 +6,6 @@
  * args, as at its other call sites). One parameter, void.
  * Source form: the record base DAT_a802b0ec with the +0x80/+0x81 bytes; source store order 0x81 then 0x80 (the fw
  * emits 0x80, 0x81).
- * Compiler aids: none.
  */
 extern struct { unsigned char pad[0x80]; unsigned char b80; unsigned char b81; } DAT_a802b0ec;
 extern int FUN_a002e238();
