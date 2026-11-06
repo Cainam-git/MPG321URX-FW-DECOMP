@@ -29,6 +29,7 @@ toolchains themselves are described in the [build guide](../docs/BUILD.md).
 | `show.py`, `judge2.py` | Reading aids for a LEON draft: `show.py` compiles it with every flag set of the section (`config.json`) and prints only the differing lines of the best one; `judge2.py` prints the shape score and a register-blind score for one given flag set. |
 | `regions.py` | Per-region comparison of a LEON draft with the firmware: firmware, aligned, register-exact and compiled instruction counts per address range (given, or cut at basic-block starts), plus the stack-slot map from the debug information. |
 | `stseq.py` | Store sequence of a LEON function, compiled code against the firmware (resolved addresses, optionally one symbol and the calls): SAME or DIFF with the differing rows. |
+| `lsim.py` | Model of GCC's local register allocation for one basic block of a `-dl` dump: quantity priorities, lives and simulated against chosen hard registers, with what-if options (insn order, ties, global pseudos, overrides). |
 | `verify.py`, `relink.py` | Re-check or rebuild every matched function. |
 | `xtensa_check.py`, `xtensa_gen.py` | Build the Tensilica program from `src/tensilica/` and compare it with the firmware; regenerate those files from the firmware (this overwrites them). |
 | `acctable.py` | Records a LEON jump table (`switchdataD_*`) as matched when the exact check of a matched function proves it entry for entry; with `--gaps` it also adds tables that had no entry in the function table yet. |
