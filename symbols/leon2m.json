@@ -6693,8 +6693,8 @@
     },
     "ram:a00aabf0": {
       "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "a00b3c80 family: goto loop of rows from table 0x18ca88 (i*29 + a802d290.b08), mark 146a80(.., 0x292) when aa520(i) == 0",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "clean source form, plain for loop instead of the goto loop",
       "name": "FUN_a00aabf0",
       "status": "matched"
     },
