@@ -25,7 +25,7 @@ it) is parsed into statement lists; --only REGEX makes statements whose text mat
   neg   swap the arms of an if/else whose arms are both blocks, with the condition inverted
 Def/use: locals by name; globals by name and member/constant-index path (a variable index covers the whole
 object); a call is a barrier for every global and memory access and for locals whose address is taken; volatile
-accesses (macros or declarations containing 'volatile', '*(volatile ...)' casts) keep their order among themselves
+accesses (macros or declarations containing 'volatile', '*(volatile ...)' casts, volatile locals and pointer locals) keep their order among themselves
 and with calls and pointer accesses; statements with return/break/continue/goto, labels and declarations are not
 crossed. Reads of ordinary globals may move past volatile accesses.
 
@@ -266,6 +266,7 @@ class Func:
                 else: f["call"] = True
                 continue
             if t in self.volnames: f["vol"] = True; continue
+            if t in self.locals and "volatile" in self.locals[t]["type"]: f["vol"] = True   # volatile local / pointer
             # postfix chain
             j, path, idx_var = k + 1, [], False
             while j < len(T):
