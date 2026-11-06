@@ -1,5 +1,4 @@
 /* leon2m FUN_a01107b8 @ 0xa01107b8-0xa0110d64 (1452 bytes, 363 words), flags -mcpu=v8 -O3 -g.
- * Compiler aids: none.
  *
  * What it does: void(u8 ch). Picks the window record for ch (1: 0xA802D7C4, 2: 0xA802D784,
  * else 0xA802D744; idx 1/2/0); returns if its width (+0x16) is 0. Splits the window at the column
@@ -14,14 +13,12 @@
  * standalone FUN_a010c194 (src/leon2m) needs u32 fmt/val + u8 casts, and neither form matches in both places, so the
  * two are separate bodies.
  * Source form (plain C, same calculations):
- *  - the split block, the 'w > first' test and the mirror block each read the record into their OWN unsigned short
- *    locals (x1/w1, w2, x3/w3), so each keeps its own zero-extension; 'w > first' is an inlined static int helper.
- *  - a2 fully defined in each arm ('a1 = c->w0; if (wider) a2 = c->w0 + k; else a2 = c->w0;'): with 'a2 = a1 = ...;
+ *  - a2 fully defined in each arm ('a1 = c->w0; if (c->w > first) a2 = c->w0 + k; else a2 = c->w0;'): with 'a2 = a1 = ...;
  *    a2 += k' the a2 hard reg stays in bb->global_live_at_start after post-reload copy-prop and regrename skips it.
  *  - the table bases are 'volatile unsigned int *const TAB[3]' (const pointer tables, as the sister FUN_a0110318).
  *  - record fields +0x18/+0x1a/+0x20/+0x22 are plain unsigned short (with const tables this gives the fw store
  *    order).
- *  - mirror arm computes l3 before l5.
+ *  - mirror arm computes l3 before l5; its 'x < half' test is an unsigned compare.
  */
 struct Ctx {
     unsigned int w0;             /* +0x00 base address */
@@ -49,13 +46,6 @@ extern unsigned short func_0x4008d588(void);
 static unsigned int scale(unsigned short a, unsigned int b, unsigned short d)
 {
     return a * b / d;
-}
-
-static int wider(unsigned short w, unsigned int first)
-{
-    if (w > first)
-        return 1;
-    return 0;
 }
 
 static struct Ctx *ctx(unsigned char ch)
@@ -156,7 +146,6 @@ void FUN_a01107b8(unsigned char ch)
 {
     struct Ctx *c;
     unsigned char idx;
-    unsigned short x, w;
     int half;
     unsigned int uhalf;
     unsigned int l3, l5, first, second, h1, h2, a1, a2;
@@ -175,7 +164,6 @@ void FUN_a01107b8(unsigned char ch)
         idx = 0;
         break;
     }
-    w = c->w;
     if (c->w == 0)
         return;
     uhalf = DAT_a802d6a4->h08 >> 1;
@@ -198,30 +186,25 @@ void FUN_a01107b8(unsigned char ch)
             }
         }
     }
-    x = c->x;
     half = DAT_a802d6a4->h08 >> 1;
-    {
-        unsigned short x1 = c->x, w1 = c->w;
-        if (x1 + w1 > half) {
-            first = half - l3;
-            second = w1 - first;
-        } else {
-            first = w1;
-            second = 0;
-        }
+    if (c->x + c->w > half) {
+        first = half - l3;
+        second = c->w - first;
+    } else {
+        first = c->w;
+        second = 0;
     }
     h1 = scale(c->wc, first, c->w);
     h2 = scale(c->wc, second, c->w);
     set_fmt(ch, 7, c->b26);
     a1 = c->w0;
-    if (wider(c->w, first))
+    if (c->w > first)
         a2 = c->w0 + (c->bpp >> 3) * h1;
     else
         a2 = c->w0;
     if (c->b3e & 1) {
-        unsigned short x3 = c->x, w3 = c->w;
-        if (x3 + w3 > (half = DAT_a802d6a4->h08 >> 1)) {
-            if ((unsigned int)x3 < (unsigned int)half) {
+        if (c->x + c->w > (half = DAT_a802d6a4->h08 >> 1)) {
+            if (c->x < (unsigned int)half) {
                 l3 = (half - first) - l3;
                 l5 = (half - second) - l5;
                 a1 += (c->bpp >> 3) * h2;
