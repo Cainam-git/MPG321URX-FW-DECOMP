@@ -6121,6 +6121,13 @@
       "name": "FUN_a00a3198",
       "status": "matched"
     },
+    "ram:a00a31a4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "Draws a length-prefixed byte string with font codes into the column buffer and flushes it",
+      "name": "FUN_a00a31a4",
+      "status": "matched"
+    },
     "ram:a00a3838": {
       "by": "near",
       "comment": "returns the halfword at 0xA802B088",
