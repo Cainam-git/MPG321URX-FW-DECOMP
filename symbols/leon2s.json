@@ -1632,6 +1632,12 @@
       "name": "FUN_a0061450",
       "status": "matched"
     },
+    "ram:a00614b8": {
+      "by": "hand",
+      "comment": "bit-field write, mask computed inside the write arm",
+      "name": "FUN_a00614b8",
+      "status": "matched"
+    },
     "ram:a0061528": {
       "by": "twin",
       "cflags": "-mcpu=v8 -Os -g",
