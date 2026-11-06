@@ -8260,7 +8260,7 @@
     "ram:a00bdb88": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "text a802d078[7..9] = 'V', '2', '3'; bac3c(0x30); ba950(p); babe4(p, 11)",
+      "comment": "FUN_a00bdb88: u8 parameter, no mask",
       "name": "FUN_a00bdb88",
       "status": "matched"
     },
