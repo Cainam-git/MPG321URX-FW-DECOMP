@@ -1581,7 +1581,7 @@
     "ram:a00295f4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "returns FUN_a00295ec(c) + 0x21 as an unsigned char (byte routine chain)",
+      "comment": "clean source form, plain r += 0x21 step",
       "name": "FUN_a00295f4",
       "status": "matched"
     },
