@@ -1658,7 +1658,7 @@
     "ram:a0029794": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "returns FUN_a0029638((unsigned char)(c + 0x3c)) as an unsigned char (byte routine chain)",
+      "comment": "byte chain routine, local r per step, no aid",
       "name": "FUN_a0029794",
       "status": "matched"
     },
