@@ -7,7 +7,6 @@
  * '|= 0x4400'); void(void).
  * Caller: the output rate set-up FUN_a0106b08, only for block 0 (param == 0), after FUN_a0106920.
  * Nothing depends on the input; the same pulse is sent for every rate set-up on block 0.
- * Compiler aids: none.
  */
 #define R(a) (*(volatile unsigned int *)(a))
 extern void func_0x4008e2a4(void);
