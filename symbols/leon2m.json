@@ -6832,7 +6832,7 @@
     "ram:a00abff8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "byte a802d290[0x12] + 1, clamp at 100; else store and redraw via ab5f0 / 146a80 x3 / 146b50(0xe6) / b6ec8 / d45f8; then a802b08e |= 2",
+      "comment": "header: drop the empty compiler-aid line",
       "name": "FUN_a00abff8",
       "status": "matched"
     },

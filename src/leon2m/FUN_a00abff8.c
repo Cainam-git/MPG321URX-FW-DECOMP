@@ -5,7 +5,7 @@
  * FUN_a0146b50(0xe6, 0), FUN_a00b6ec8(0x29, 6, DAT_a802d290[0x12]) and FUN_a00d45f8(). Always sets bit 1 of
  * DAT_a802b08e.
  * Callers: no direct 'call 0xa00abff8' in asm/leon2m (reached via a pointer/table).
- * Compiler aids: none. Source form, two points:
+ * Source form, two points:
  *  - Arm order: the clamp arm first ('if (v > 100) clamp; else { calls }'). With the calls arm first it ends in a
  *    jump to the join, the jump depends on the last %o3/%o4 sets, and sched1 ranks the third FUN_a0146a80 call's
  *    argument sets o3, o4 (more dependents) before o2 (fw: o2, o3, o4).
