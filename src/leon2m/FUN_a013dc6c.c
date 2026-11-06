@@ -1,5 +1,5 @@
 /* leon2m FUN_a013dc6c @ 0xa013dc6c-0xa013f1e4  input channel bring-up state machine
- * Flags -mcpu=v8 -O3 -g -msoft-float. 1374 words.
+ * Flags -mcpu=v8 -O3 -g. 1374 words.
  *
  * One step per call for the channel DAT_a802cbd2 (0..3, 0xff = none): record c = DAT_a802df30[ch] (0x78 bytes).
  * Word +0: state (bits 28-31), step (20-23), port (12-15), f8 (8-11), f4 (4-7), bit 0. Word +0x70: flags,
@@ -63,27 +63,12 @@
  *    int return the call RTL sets %o0 and the scheduler moves the %o0 argument set-up at fw 0x600 and 0x890);
  *    FUN_a01085f8(int, uchar, uchar); FUN_a0104a34(uchar port, int f8, ushort h, int f4); FUN_a0107e44 / FUN_a0109bbc
  *    with their signatures from src/leon2m.
- * Compiler aids (no code):
- *  - CASE ORDER (every moved case ends in 'break'): main switch 0/3, 1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 2; the state 10
- *    and state 11 step switches in natural order.
- *  - 'do continue; while (0);' (continue binds to the do-while(0), PRED_CONTINUE hint) after 'if (F(c, 17)) {' in
- *    state 8 step 5.
- *  - 'for (;;) break;' (break binds to the empty for; ends cse1's extended block) after FUN_a0118a28 in state 11
- *    step 0.
- *  - Two __builtin_expect branch hints (no instructions; they only set the edge probability, PRED_BUILTIN_EXPECT
- *    99 %, first-match, so it replaces the guessed heuristics on that one branch). Each alone gives a different
- *    layout; together they give the firmware's block order with the same instructions:
- *    - state 8 step 1: 'if (__builtin_expect(!!((int)c->w40 < 0), 1)) CLR(c, 22);'. The edge into the CLR(c, 22)
- *      arm goes from 21 % to 99 %. Block frequencies: the CLR(22) arm 0 -> 2 and the shared CLR(22)/CLR(28) andn
- *      tail 0 -> 2. bb-reorder then extends the step 1 trace through the arm and places the andn tail as its own
- *      round-4 trace right after it (it was one of the last round-4 traces).
- *    - state 11 step 1: 'if (__builtin_expect(!!(F(c, 26)), 0)) {'. The edge into the 'step 0, state 12' arm goes
- *      from 50 % to 1 %, so that arm's frequency goes 3 -> 0 and its round-4 trace moves behind the other
- *      low-frequency traces.
- *    Net effect in round 4: the frequency-0 single-block traces are taken in the firmware's order: the state 8 step 5
- *    srl stub (0x82 test else arm) with its following blocks, then the step 0 fn0c stub, the state 10 stub, the
- *    FUN_a01062e0 stub and last the state 8 step 2 printf stub (without the hints: step 2 printf stub first, srl
- *    stub last), which is the cold-stub order at fw 0x1274 / 0x13ac.
+ *  - the case blocks of the main switch are in the fw block order 0/3, 1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 2 (each
+ *    ends in 'break'); the state 10 and state 11 step switches in natural order.
+ *  - bits 31 and 30 of word +0x40 are 1-bit bit-fields (struct u40): state 6 step 0 clears them with 'b31 = 0; b30 = 0;'
+ *    and state 8 step 1 tests 'if (c->u40.b31) CLR(c, 22);' (fw 'ld [+0x40]; cmp 0; bge').
+ *  - 'void func_0x4008e2a4(void)' as in the other src/leon2m callers (the three calls after FUN_a0118a28 in state
+ *    11 step 0; with an int return the scheduler puts the %o1 set-up of FUN_a0118a28 before the call).
  */
 struct InT { unsigned short h00, h02; unsigned char p04[8]; unsigned short h0c, h0e, h10, h12, h14, h16; unsigned char rest[0x24]; };
 struct OutT { unsigned short h00, h02, h04, h06, h08, h0a, h0c, h0e; unsigned char p10[8]; unsigned long long pclk; unsigned int w20; };
@@ -97,7 +82,7 @@ struct Chan {
     unsigned short h0e, h10;
     unsigned char p12[0x3e - 0x12];
     unsigned char b3e, b3f;                 /* +0x3e */
-    unsigned int w40;                       /* +0x40 */
+    struct { unsigned int b31:1, b30:1, rest:30; } u40; /* +0x40 */
     unsigned char p44[4];
     struct OutT out;                        /* +0x48 */
     unsigned int w70;                       /* +0x70 flags, bit 22 = run again */
@@ -147,7 +132,7 @@ extern unsigned char FUN_a00dd614(unsigned char);
 extern int FUN_a00df170(const char *fmt, ...);
 extern unsigned short func_0x4008d594(unsigned short);
 extern unsigned short func_0x4008d588(void);
-extern int func_0x4008e2a4();
+extern void func_0x4008e2a4(void);
 extern int func_0x4008e3c4();
 extern int FUN_a014226c();
 extern unsigned char FUN_a0132964();
@@ -294,8 +279,8 @@ void FUN_a013dc6c(void)
                     } else
                         c->h10 = DAT_a802e224[PORT(c)].h26;
                     c2->b3f = DAT_a802e224[PORT(c)].b09;
-                    c->w40 &= ~0x80000000;
-                    c->w40 &= ~0x40000000;
+                    c->u40.b31 = 0;
+                    c->u40.b30 = 0;
                     INC_STEP(c);
                 } else if (STEP(c) == 1) {
                     DBG(s_001a58d0);
@@ -350,7 +335,7 @@ void FUN_a013dc6c(void)
                     FUN_a010325c(PORT(c), c->u.b.b0, F(c, 20), (struct InT *)&c->h06, &c->out);
                     INC_STEP(c);
                     c->h04 = func_0x4008d588();
-                    if (__builtin_expect(!!((int)c->w40 < 0), 1)) CLR(c, 22);
+                    if (c->u40.b31) CLR(c, 22);
                     break;
                 case 2:
                     if (func_0x4008d594(c->h04) > 80) {
@@ -377,7 +362,6 @@ void FUN_a013dc6c(void)
                     DBG(s_001a5840);
                     if (func_0x4008d594(c->h04) > 40) {
                         if (F(c, 17)) {
-                            do continue; while (0);
                             FUN_a00eef7c(PORT(c));
                             FUN_a013c910(buf2, &c->h06, 0x3c);
                             FUN_a013dbcc(PORT(c), buf2, &s2);
@@ -515,7 +499,6 @@ void FUN_a013dc6c(void)
                             if (!(c->w70 & 0x30000000)) {
                                 if (DAT_a802cc1c.fn38) DAT_a802cc1c.fn38(FUN_a013b86c(PORT(c)));
                                 FUN_a0118a28(PORT(c), 0);
-                                for (;;) break;
                                 func_0x4008e2a4();
                                 func_0x4008e2a4();
                                 func_0x4008e2a4();
@@ -526,7 +509,7 @@ void FUN_a013dc6c(void)
                     }
                     break;
                 case 1:
-                    if (__builtin_expect(!!(F(c, 26)), 0)) {
+                    if (F(c, 26)) {
                         SET_STEP(c, 0);
                         SET_ST(c, 12);
                     }
