@@ -3,7 +3,6 @@
  *   v > 70: (v - 70) * 22 / 30 + 128, else v * 100 / 70 + 28 (truncated to unsigned char).
  * Real neighbour in the same source unit as FUN_a00d6054 (APP_ConfigDispSize); its six float
  * constants are the first .rodata.cst4 entries at 0x198748. Flags: -mcpu=v8 -O3 -g -msoft-float.
- * No compiler aids.
  */
 extern unsigned char DAT_a802d29a;
 unsigned char FUN_a00d3d30(void)

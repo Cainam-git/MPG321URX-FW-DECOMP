@@ -9963,7 +9963,7 @@
     "ram:a00d3d30": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "byte setting -> output value float map; real neighbour of APP_ConfigDispSize, soft-float unit",
+      "comment": "header: drop the empty compiler-aid note",
       "name": "FUN_a00d3d30",
       "status": "matched"
     },
