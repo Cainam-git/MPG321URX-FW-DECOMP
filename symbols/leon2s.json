@@ -5234,7 +5234,7 @@
     },
     "ram:a009723c": {
       "by": "hand",
-      "comment": "FRL lock check step of the HDMI mode-detect state machine (retry, timeout, restart)",
+      "comment": "restart-path clears in source order, no empty loop",
       "name": "DRV_HDMI_ModeDetect_FSM_FRL_Chk",
       "status": "matched"
     },

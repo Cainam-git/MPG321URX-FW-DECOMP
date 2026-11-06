@@ -9,8 +9,7 @@
  * DAT_a807cc64[sel] byte +1 and record bytes +2 and +0x3c.
  * Data: DAT_a807db00 = 0x34-byte port records (word +0x18 = register block r18); DAT_a807d650 = 0x18-byte
  * records {word st, byte cnt}.
- * Compiler aid: 'for (;;) break;' before the record byte clears emits no instructions; it ends a scheduling
- * region so that the clears of bytes +2 and +0x3c come out in the firmware's order.
+ * Source form: on the restart path the record byte +0x3c is cleared before byte +2.
  */
 struct port_rec {
     unsigned int _00[6];
@@ -76,10 +75,8 @@ int DRV_HDMI_ModeDetect_FSM_FRL_Chk(unsigned int param_1)
             FUN_a00734c4("Restart 21_RX\n");
             DAT_a807d648[port] = 3;
             DAT_a807cc64[sel].b1 = 0;
-            for (;;)
-                break;
-            rec[2] = 0;
             rec[0x3c] = 0;
+            rec[2] = 0;
         }
     }
     return 0;
