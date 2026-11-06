@@ -43,8 +43,9 @@
  *  - state 5 ready arm writes the w70 bits first: 'c->w70 &= ~0xc000; CLR(c, 31); CLR(c, 27); SET_ST(c, 6);
  *    SET_STEP(c, 0); h00 &= ~0x1000;'. Then the fw 0x70c tail keeps its own loop-test copy (sethi; st w70; st word;
  *    b; btst) and does not share the 'st w70' tail.
- *  - state 6 step 0 stores b3f through a second Chan pointer ('struct Chan *c2 = c;' at the head of STEP 0,
- *    'c2->b3f = ...', plain INC_STEP).
+ *  - state 6 step 0 copies the port timing (h1e, h20, b22..b24, h1a/h1c or h26, b09) into the record in a static
+ *    helper get_timing(struct Chan *c); the u40 clears and INC_STEP stay in the caller, which reads word +0 again
+ *    for INC_STEP after the inlined copy (fw 'ld [%i2]' after the h10 store).
  *  - state 6 step 1: 'if (FUN_a013bb50(PORT(c))) SET(c, 28); else CLR(c, 28);' (fw falls into the SET arm, 0xca4).
  *  - state 7: FUN_a01016a4 takes 5 args (inp, PORT(c), (w70 >> 12) & 3, 1, b28) (fw: PORT in %o1, b28 in %o4).
  *  - the state 8 STEP switch is in natural case order 0..7.
@@ -194,6 +195,26 @@ extern int FUN_a013d1b4(unsigned char, struct S16 *);
 #define DBG(s) do { if (FUN_a00dd614(4)) FUN_a00df170(s, DAT_a802cbd2); } while (0)
 #define PORT_OK(c) (DAT_a802e224[PORT(c)].status == 4 && !BUSY(PORT(c)))
 
+static void get_timing(struct Chan *c)
+{
+    struct Port *p;
+
+    p = &DAT_a802e224[PORT(c)];
+    c->h06 = p->h1e;
+    c->h08 = p->h20;
+    c->b0b = p->b22;
+    c->b0c = p->b23;
+    c->b0a = p->b24;
+    if (FUN_a0142e8c(PORT(c)) == 5) {
+        p = &DAT_a802e224[PORT(c)];
+        c->h0e = p->h1a;
+        c->h08 = (c->h06 * 1000u + p->h1c / 2) / p->h1c;
+        c->h10 = p->h1c;
+    } else
+        c->h10 = DAT_a802e224[PORT(c)].h26;
+    c->b3f = DAT_a802e224[PORT(c)].b09;
+}
+
 static unsigned int port_code(unsigned char ch)
 {
     unsigned char v = 0;
@@ -262,23 +283,8 @@ void FUN_a013dc6c(void)
                     CLR(c, 22);
                 }
                 if (STEP(c) == 0) {
-                    struct Port *p;
-                    struct Chan *c2 = c;
                     DBG(s_001a57c8);
-                    p = &DAT_a802e224[PORT(c)];
-                    c->h06 = p->h1e;
-                    c->h08 = p->h20;
-                    c->b0b = p->b22;
-                    c->b0c = p->b23;
-                    c->b0a = p->b24;
-                    if (FUN_a0142e8c(PORT(c)) == 5) {
-                        p = &DAT_a802e224[PORT(c)];
-                        c->h0e = p->h1a;
-                        c->h08 = (c->h06 * 1000u + p->h1c / 2) / p->h1c;
-                        c->h10 = p->h1c;
-                    } else
-                        c->h10 = DAT_a802e224[PORT(c)].h26;
-                    c2->b3f = DAT_a802e224[PORT(c)].b09;
+                    get_timing(c);
                     c->u40.b31 = 0;
                     c->u40.b30 = 0;
                     INC_STEP(c);
