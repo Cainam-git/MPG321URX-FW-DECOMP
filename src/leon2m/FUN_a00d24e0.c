@@ -3,7 +3,6 @@
  * it and FUN_a0125aac(); then FUN_a014aed0(0x30, &DAT_a802d290, 0, 0x1fc) (return unused); returns 0xe0. The 2nd
  * argument of FUN_a014aed0 is the record address.
  * Source form: the record base DAT_a802d290 as a struct.
- * Compiler aids: none.
  */
 struct R290 { unsigned char pad[0xa8]; unsigned int wa8; };
 extern struct R290 DAT_a802d290;
