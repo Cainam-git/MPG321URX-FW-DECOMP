@@ -5,7 +5,6 @@
  * FUN_a00b7188.
  * Source form: v is set in both arms (as in FUN_a00b7e68); the param is tested as (p1 & 0xff) (fw btst 0xff, %i0
  * with no entry mask); u8/void prototypes.
- * Compiler aids: none.
  */
 extern void FUN_a00a9468(unsigned int, unsigned int);
 extern void FUN_a0146a80(unsigned int, unsigned int, unsigned char, unsigned int, unsigned char);

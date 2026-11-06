@@ -7328,7 +7328,7 @@
     },
     "ram:a00b60cc": {
       "by": "hand",
-      "comment": "v set in both arms by (p1 & 0xff) test, then calls with v (a00b7e68 family)",
+      "comment": "header: source form, no aid line",
       "name": "FUN_a00b60cc",
       "status": "matched"
     },
