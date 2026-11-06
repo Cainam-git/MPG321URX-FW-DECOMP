@@ -7623,7 +7623,7 @@
     "ram:a00b8848": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "146b6c(0,0), 90fd8(), dc3dc(), a802b08e |= 6; if 142e8c(0) != 5 and 145660(0, 0x16) != 0: a802b08e |= 1",
+      "comment": "plain tests on the call results, u16 FUN_a0145660",
       "name": "FUN_a00b8848",
       "status": "matched"
     },
