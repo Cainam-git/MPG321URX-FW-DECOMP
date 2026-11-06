@@ -15593,7 +15593,7 @@
     "ram:a010f50c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "writes T1/T2 block word w0 = (T1[ch]->w0 with bit 0 or bit 4 cleared) for channel ch or channels 0..2",
+      "comment": "FUN_a010f50c: SET macro is a plain if/else statement",
       "name": "FUN_a010f50c",
       "status": "matched"
     },

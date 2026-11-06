@@ -14,8 +14,8 @@ extern volatile struct Regs *const DAT_0019aef0[3];
 extern volatile struct Regs *const DAT_0019aee4[3];
 
 /* Field f of block n of table tab, or of blocks 0..2 when n > 2. */
-#define SET(tab, n, f, val) do { if ((n) > 2) { unsigned int i; for (i = 0; i <= 2; i++) tab[i]->f = val; } \
-                                 else tab[n]->f = val; } while (0)
+#define SET(tab, n, f, val) if ((n) > 2) { unsigned int i; for (i = 0; i <= 2; i++) tab[i]->f = val; } \
+                            else tab[n]->f = val
 
 static void set2(unsigned char ch, unsigned char k, unsigned int v)
 {
