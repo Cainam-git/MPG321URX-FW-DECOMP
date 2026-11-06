@@ -1,12 +1,11 @@
 /* FUN_a00a8654 (leon2m, 0xa00a8654-0xa00a86e8, 148 bytes, 37 words).
- * Flags: -mcpu=v8 -O3 -g.
+ * Flags: -mcpu=v8 -O3 -g -msoft-float.
  * Code facts: FUN_a0146b50(0x111, 0); FUN_a0146b6c(0, 0); for i = 0..2 (u8): FUN_a00a31a4(0, 0x2a, i*2 + 6, 1,
  * FUN_a00a3844(DAT_00190cec, (u16)(i*29 + byte +8 of the record DAT_a802d290)), 0). Twin of FUN_a00b3c80, same
- * source shape. The record field is the byte at +8 (fw ldub [base+8]); FUN_a0146b50 is (u16, u8) and returns
- * nothing.
- * Source form: the loop is a label + 'if (i <= 2) goto top' (a do/while lets loop.c hoist the full record address;
- * the fw keeps only the HIGH part outside).
- * Compiler aids: none.
+ * source shape and flags. The record field is the byte at +8 (fw ldub [base+8]); FUN_a0146b50 is (u16, u8) and
+ * returns nothing.
+ * Source form: a plain for loop over i = 0..2, built with -msoft-float as FUN_a00b3c80 (at plain -O3 -g loop.c
+ * hoists the full &DAT_a802d290 out of the loop; the fw keeps only the sethi outside).
  */
 struct St { unsigned char pad[8]; unsigned char b08; };
 extern struct St DAT_a802d290;
@@ -22,10 +21,6 @@ void FUN_a00a8654(void)
 
   FUN_a0146b50(0x111, 0);
   FUN_a0146b6c(0, 0);
-  i = 0;
-top:
-  FUN_a00a31a4(0, 0x2a, i * 2 + 6, 1, FUN_a00a3844(DAT_00190cec, i * 29 + DAT_a802d290.b08), 0);
-  i++;
-  if (i <= 2)
-    goto top;
+  for (i = 0; i <= 2; i++)
+    FUN_a00a31a4(0, 0x2a, i * 2 + 6, 1, FUN_a00a3844(DAT_00190cec, i * 29 + DAT_a802d290.b08), 0);
 }
