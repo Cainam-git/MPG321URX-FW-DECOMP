@@ -6,8 +6,8 @@
  * x->addr, then the n bytes x->data[0..n-1] through FUN_a011b3e8. Caller: FUN_a01461a8.
  * The command and address steps are static helpers and FUN_a01191fc / FUN_a011b3e8 are defined here; GCC inlines
  * all of them at -O3. x->n is read before the command step.
- * Compiler aid: the empty statement 'if (a) { }' in the address helper emits no instructions; as in FUN_a011c6c8
- * it keeps the firmware's 16-bit narrowing of the address before the register writes.
+ * Source form: the address helper copies a into the unsigned int local w right before the sel test; that copy
+ * gives the firmware's 16-bit narrowing of the address (sll/srl) ahead of the register writes.
  */
 #define R(a) (*(volatile unsigned int *)(a))
 #define RB(a) (*(volatile unsigned int *)(0xcf000000 | ((a) << 2)))
@@ -37,16 +37,16 @@ static void cmd(unsigned char sel, unsigned char c)
 static void addr16(unsigned char sel, unsigned short a)
 {
     int i;
+    unsigned int w;
 
-    if (a) {
-    }
+    w = a;
     if (sel == 0) {
-        R(0xcf011784) = a & 0xff;
-        R(0xcf011788) = a >> 8;
+        R(0xcf011784) = w & 0xff;
+        R(0xcf011788) = w >> 8;
         R(0xcf00bfcc) = 0;
     } else {
-        R(0xcf011798) = a & 0xff;
-        R(0xcf01179c) = a >> 8;
+        R(0xcf011798) = w & 0xff;
+        R(0xcf01179c) = w >> 8;
         R(0xcf00c3cc) = 0;
     }
     for (i = 0; i < 0xa0; i++)
