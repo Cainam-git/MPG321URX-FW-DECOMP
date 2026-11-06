@@ -4,7 +4,7 @@
  * FUN_a0146a80 calls (0x37,l0,1,0x992,0), (0x38,l0,2,0x349e,0), (0x3a,l0,1,0x992,0), then four FUN_a0146b20 calls
  * (0, 0x37/0x38/0x39/0x3a, l0, 1, byte, 0) with byte = 2i+0x2a, 2i+0x17, 2i+0x18, 2i+0x2b (the last one fw: add
  * %l1,0x2b with %l1 = 2i).
- * Compiler aids: none.
+ * Source form: two nested u8 do/while loops, plain arithmetic on the u8 and u16 locals.
  */
 
 extern void FUN_a0146a80(unsigned short param_1, unsigned short param_2, unsigned char param_3, unsigned short param_4, unsigned char param_5);
@@ -18,18 +18,18 @@ void FUN_a00ab4bc(void)
   j = 0;
   do
   {
-    l1 = (unsigned char) ((j * 5) & 0xff);
+    l1 = j * 5;
     i = 0;
     do
     {
-      l0 = (unsigned short) ((i + l1) + 6);
+      l0 = i + l1 + 6;
       FUN_a0146a80(0x37, l0, 1, 0x992, 0);
       FUN_a0146a80(0x38, l0, 2, 0x349e, 0);
       FUN_a0146a80(0x3a, l0, 1, 0x992, 0);
-      FUN_a0146b20(0, 0x37, l0, 1, (unsigned char) ((i * 2) + 0x2a), 0);
-      FUN_a0146b20(0, 0x38, l0, 1, (unsigned char) ((i * 2) + 0x17), 0);
-      FUN_a0146b20(0, 0x39, l0, 1, (unsigned char) ((i * 2) + 0x18), 0);
-      FUN_a0146b20(0, 0x3a, l0, 1, (unsigned char) ((i * 2) + 0x2b), 0);
+      FUN_a0146b20(0, 0x37, l0, 1, i * 2 + 0x2a, 0);
+      FUN_a0146b20(0, 0x38, l0, 1, i * 2 + 0x17, 0);
+      FUN_a0146b20(0, 0x39, l0, 1, i * 2 + 0x18, 0);
+      FUN_a0146b20(0, 0x3a, l0, 1, i * 2 + 0x2b, 0);
       i++;
     }
     while (i <= 2);
