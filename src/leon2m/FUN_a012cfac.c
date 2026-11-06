@@ -35,9 +35,9 @@
  * Write errors are not seen (FUN_a0140e74 ignores them). The marker is written LAST, so an interrupted default load
  * is redone at the next boot.
  * FW.012 has the same function; it differs only in the %lo parts of moved string and RAM addresses.
- * Source forms and compiler aids (no code emitted): (1) the column stride is a local 'int n = 9' and the store is
- * col[pos + k * n + j], which gives the fw's 'smul k, 9' (a literal 9 is always synthesized as sll 3 + add), and
- * 'pos + ...' first lets the loop pass hoist fp-8 + pos as in the fw.
+ * Source form: (1) the row offset in col[] (3 rows of 9) is the static helper row_off(row, width) ('row * width',
+ * inlined), the store is col[pos + row_off(k, 9) + j]; this gives the fw's 'smul k, 9' (a literal 9 is synthesized
+ * as sll 3 + add), and 'pos + ...' first lets the loop pass hoist fp-8 + pos as in the fw.
  * (2) loop-2 switch arms for every bit 0x01..0x80 (5 of them = 0x1A4F70, same as default) give the fw's compare
  * tree (root 8, 'cmp 2; ble', right root 0x20); fewer arms drop the tree nodes, 7 arms below 0x80 give a jump table.
  * (3) -msoft-float: in the -dL loop dump the 0x1A4F58 / 0x1A4F40 sethi are then 'not desirable' and only the
@@ -75,6 +75,11 @@ static unsigned short fga_off(unsigned short sub)
     return (o & 0x360) + sub;
 }
 
+static int row_off(int row, int width)
+{
+    return row * width;
+}
+
 void FUN_a012cfac(void)
 {
     unsigned char rgb[3];
@@ -86,7 +91,6 @@ void FUN_a012cfac(void)
     unsigned char k;
     unsigned short saved, base, bits, bit, off;
     unsigned char bits8, bit8;
-    int n = 9;
     const unsigned char *p;
 
     saved = FUN_a00fe47c();
@@ -112,9 +116,9 @@ void FUN_a012cfac(void)
         default: rgb[0] = 0xff; rgb[1] = 0xff; rgb[2] = 0xff; break;
         }
         for (k = 0; k < 3; k++) {
-            col[pos + k * n + 0] = rgb[0];
-            col[pos + k * n + 1] = rgb[1];
-            col[pos + k * n + 2] = rgb[2];
+            col[pos + row_off(k, 9) + 0] = rgb[0];
+            col[pos + row_off(k, 9) + 1] = rgb[1];
+            col[pos + row_off(k, 9) + 2] = rgb[2];
         }
         pos += 3;
     }
