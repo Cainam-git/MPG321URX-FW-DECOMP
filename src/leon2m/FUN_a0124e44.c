@@ -3,7 +3,7 @@
  * r->b0e != 0xff, in which case it returns 1 when the low byte of func_0x4008cd38(r->b0e, r->b0f) equals
  * r->b10, else 0 (scc, then 'and 1').
  * The ROM routine's result is an unsigned int masked with 0xff before the compare (fw 'and 0xff' ahead of the
- * xor). Compiler aids: none.
+ * xor).
  */
 struct rec { unsigned char b00[0xe]; unsigned char b0e, b0f, b10; unsigned char b11[5]; };
 extern const struct rec DAT_001a42a8[];
@@ -19,5 +19,5 @@ unsigned char FUN_a0124e44(unsigned char n)
         c = func_0x4008cd38(r->b0e, r->b0f);
         res = (c & 0xff) == r->b10;
     }
-    return res & 1;
+    return res;
 }
