@@ -5,8 +5,8 @@
  * nibble is mapped by a switch (jump table, 15 entries): 0, 8, 12, 10, 14 and 3 map to themselves, anything
  * else to 2. The cases set a u8 result that is returned at the end (firmware 'mov 2' in the bgu delay slot
  * plus the final 'and 0xf' = u8 nonzero-bits narrowing).
- * Compiler aid (MMIO class): that pointer target is volatile, because the firmware does a full-word ld and
- * then extracts the field.
+ * Source form: the register pointer target is volatile (a hardware register; the firmware does a full-word ld
+ * and then extracts the field).
  * Note: the firmware jump table is the 60 bytes 0xa009c468-0xa009c4a4, between the end of FUN_a009c434
  * (0xa009c468) and this function. Ours references a .rodata table by relocation.
  */

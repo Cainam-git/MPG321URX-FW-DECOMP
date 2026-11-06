@@ -5477,7 +5477,7 @@
     },
     "ram:a009c4a4": {
       "by": "hand",
-      "comment": "switch to a u8 result from the db00 +4 register block (MMIO volatile); c434 takes 1 arg",
+      "comment": "header: volatile register pointer is the source form",
       "name": "FUN_a009c4a4",
       "status": "matched"
     },
