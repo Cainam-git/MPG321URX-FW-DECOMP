@@ -8,7 +8,8 @@
  * Same SET form as FUN_a010edbc. No direct callers in asm/leon2m. FUN_a010d244 writes the low 10 bits of the same
  * words from bytes +0x38..+0x3A.
  * Source form: 'unsigned int idx = ch > 2 ? 0 : c;' then '(unsigned char)idx' for each read (selects on the wide
- *   parameter); record bytes stored in ascending order.
+ *   parameter); record bytes stored in ascending order; SET is a plain if/else statement macro (all three entries
+ *   when ch > 2, else entry ch).
  */
 struct ChBlk { unsigned char pad[0x3b]; unsigned char b3b, b3c, b3d; };
 struct Regs { unsigned int w[0x40]; };
@@ -16,7 +17,7 @@ extern struct ChBlk DAT_a802d744, DAT_a802d784, DAT_a802d7c4;
 extern volatile struct Regs *const DAT_0019aed8[3];
 extern volatile struct Regs *const DAT_0019aecc[3];
 
-#define SET(tab, f, val) do { if (ch > 2) { unsigned int i; for (i = 0; i <= 2; i++) tab[i]->f = val; } else tab[ch]->f = val; } while (0)
+#define SET(tab, f, val) if (ch > 2) { unsigned int i; for (i = 0; i <= 2; i++) tab[i]->f = val; } else tab[ch]->f = val
 
 void FUN_a010d530(unsigned int c, unsigned char a, unsigned char b, unsigned char d)
 {
