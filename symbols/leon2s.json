@@ -7046,7 +7046,7 @@
     },
     "ram:a00aa88c": {
       "by": "hand",
-      "comment": "p1 0..4 -> a7d04(unit, reg, mask, p2): 0/1 = (1, 0x67, 0x0f/0xf0), 2/3 = (1, 0x8a, 0x0f/0xf0), 4 = (4, 0x49, 0xf0)",
+      "comment": "p1 0..4 -> a7d04(unit, reg, mask, p2): 0 = (0, 0x49, 0xf0), 1/2 = (1, 0x67, 0x0f/0xf0), 3/4 = (1, 0x8a, 0x0f/0xf0) (jump table switchdataD_a00aa878)",
       "name": "FUN_a00aa88c",
       "status": "matched"
     },
