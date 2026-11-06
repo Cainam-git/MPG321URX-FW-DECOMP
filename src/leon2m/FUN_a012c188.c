@@ -13,7 +13,7 @@
  *    7).
  * Two places block: the queue wait in FUN_a01356fc(1, len), which has no timeout, and the endless loop when the EDID
  * selected by the stored settings byte k is longer than the DDC buffer of its port.
- * Compiler aid: the hang loop is written as for (;;) with two asm nops (the fw loop body is two nop instructions).
+ * Source form: the hang loop is a for (;;) whose body is two asm nops (the fw loop body is two nop instructions).
  * Source form: data read BEFORE len, both indexed by DAT_a802e1a0[0x1b + i] written out; the nibble update as two
  * statements 'w &= ~(0xf << s); w |= (x >> 7) << s;' (the one-expression form swaps two temp registers).
  */

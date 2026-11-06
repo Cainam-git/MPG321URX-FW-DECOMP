@@ -19165,7 +19165,7 @@
     "ram:a012c188": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "EDID load into the 8051 DDC slaves (hangs if an EDID is longer than its buffer)",
+      "comment": "header: hang loop described as source form",
       "name": "FUN_a012c188",
       "status": "matched"
     },
