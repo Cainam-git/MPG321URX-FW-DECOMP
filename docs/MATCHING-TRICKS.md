@@ -40,8 +40,9 @@ matched once a sibling's way of writing the same thing was copied.
     Try an `unsigned char` local, then an `unsigned short` for the shifted value (FUN_a00d7cd0); define the value in
     the loop's test block (FUN_a008d490); pass it through an inline helper parameter of the narrow type.
 11. **Operand order of a sum or an `or`:** write the terms in the firmware's order, put one term in its own local
-    first (FUN_a00a4ec4), keep a constant behind a local (FUN_a013aae4, FUN_a00ab5f0), or use an assignment
-    expression to stop reassociation (FUN_a00ee1e8).
+    first (FUN_a00a4ec4), write a product as a shift (`row + (j * 3 << 4)`, FUN_a00d7cd0), keep a constant behind
+    a local (FUN_a013aae4, FUN_a00ab5f0), or use an assignment expression to stop reassociation (FUN_a00ee1e8). At
+    `-Os` the source operand order of `a + b` and `v | (s << 16)` survives into the code.
 12. **Three spellings of a choice:** `if (c) x = a; else x = b;`, `x = b; if (c) x = a;` and `x = c ? a : b;` compile
     differently; try all three (FUN_a00ab0e0, FUN_a012add8, DRV_HDMI_EQScan_FSM_PHY_R_Turning).
 13. **Loop shapes:** separate loop variables or one shared counter, `while (cond)` versus `for (;;) { if (!cond)
@@ -51,7 +52,12 @@ matched once a sibling's way of writing the same thing was copied.
     mapping, CRCs) follows the reference implementation's tables, names and loop structure: look it up and copy the
     shape.
 15. **Then search.** `tools/permuter2.py` with a budget of a few minutes on the draft that already has the idioms;
-    rewrite what it finds into natural C and check again.
+    rewrite what it finds into natural C and check again. Reject results that change the meaning, store a variable
+    to itself, truncate a value or read one unset.
+
+Two checks before an accept: a switch with a jump table must give the firmware's table entries, not only its code
+bytes (the case-to-arm mapping); and the judge hides the values of `sethi` high parts, so compare the immediates of
+both builds when a draft uses constant tables or addresses.
 
 ## Before you start
 
