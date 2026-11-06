@@ -2956,6 +2956,14 @@
       "name": "FUN_a0083618",
       "status": "matched"
     },
+    "ram:a008362c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0083648; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a008362c",
+      "of": "FUN_a0083648",
+      "status": "matched"
+    },
     "ram:a0083648": {
       "by": "hand",
       "comment": "Tests one bit of the status byte 0xa80789e0 selected by index (indexes 1..4 remapped through 2-bit fields of 0xa80761a8)",
@@ -4413,6 +4421,14 @@
       "name": "FUN_a0090d7c",
       "status": "matched"
     },
+    "ram:a0090dcc": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a0090dec; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a0090dcc",
+      "of": "FUN_a0090dec",
+      "status": "matched"
+    },
     "ram:a0090dec": {
       "by": "hand",
       "comment": "v = FUN_a00a657c(p1, 0x45) & 7. Returns 10 for v = 5, 0xC for v = 6, 0x10 for v = 7 and 8 for v = 0..4 (jump table switchdataD_a0090dcc)",
@@ -5585,6 +5601,14 @@
       "name": "FUN_a009e9fc",
       "status": "matched"
     },
+    "ram:a009ea1c": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a009ea34; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a009ea1c",
+      "of": "FUN_a009ea34",
+      "status": "matched"
+    },
     "ram:a009ea34": {
       "by": "hand",
       "comment": "mode m 1..6: prints its string (modes 2 and 3 share one), then sets the low (p1 0) or high (p1 1) nibble of register 0xCF01474C to 0, 1, 1, 2, 3, 4 (jump table switchdataD_a009ea1c)",
@@ -5956,6 +5980,14 @@
       "by": "autoc",
       "comment": "record idx of the 400-byte table 0xA807D7E0: returns ((halfword +0x32 * byte +0x19) >> 3) * (byte +0x2E + 1), 16 bits",
       "name": "FUN_a00a20c4",
+      "status": "matched"
+    },
+    "ram:a00a2100": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00a211c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00a2100",
+      "of": "FUN_a00a211c",
       "status": "matched"
     },
     "ram:a00a211c": {
@@ -7042,6 +7074,14 @@
       "by": "autoc",
       "comment": "For p1 == 0 maps v = FUN_a00a7acc(0, 10) & 0xff as 0x11 -> 0, 0x22 -> 1, 0x66 -> 2, 0x44 -> 4, 0x33 -> 5; for other p1 maps v = FUN_a00a7acc(p1, 99) & 0x70 as 0x10 -> 0, 0x20 -> 1, 0x60 -> 2, 0x40 -> 4, 0x30 -> 5. Any other v returns 7",
       "name": "FUN_a00aa7cc",
+      "status": "matched"
+    },
+    "ram:a00aa878": {
+      "by": "table",
+      "comment": "jump table of the switch in FUN_a00aa88c; proven entry for entry by its exact check",
+      "kind": "jump_table",
+      "name": "switchdataD_a00aa878",
+      "of": "FUN_a00aa88c",
       "status": "matched"
     },
     "ram:a00aa88c": {
