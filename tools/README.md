@@ -45,5 +45,6 @@ toolchains themselves are described in the [build guide](../docs/BUILD.md).
 | `libmatch.py`, `libimport.py`, `keillib.py`, `keil_helpers.py` | Find toolchain library functions in the firmware and import them unchanged. |
 | `asmgen.py`, `asm8051.py`, `startup8051.py` | Assembly routines and the 8051 start-up code. |
 | `permute.py`, `permuter.py`, `permuter2.py`, `permute8051.py`, `basefix.py`, `nearfix.py` | Automatic searches that close near-misses. |
+| `mutsearch.py` | Random search over 1-3 meaning-preserving mutations of a LEON draft (statement and run moves within def/use limits, declaration order, types, value-first and read-position locals, case order, if/else polarity), scored by the diff score or register-exact rows per region, with an optional store-order gate. |
 | `near.py`, `piles.py`, `splits.py`, `mergetails.py`, `inlined.py`, `sigs.py` | Sorting near-misses and repairing the function table. |
 | `regfile8051.py` | Rebuilds the Keil register files (`symbols/8051_bank*.orc`). |
