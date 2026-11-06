@@ -3,14 +3,14 @@
  * Prints DAT_9f1ccc30 with DAT_a8078832. If the byte DAT_a8078840 == 1: x = DAT_a8078832: clears the
  * bytes DAT_a8078830/828/808/800[x] and the u16 ARR_a807880a/880e[x]; clears DAT_a80787fc..ff; for i = 0..3
  * clears ARR_a8079c3d[2i] and [2i+1]; x reloaded: clears DAT_a8078850/848[x] and bits 4..5 of the word at
- * ARR_a80760a4[x] + 0xccc; x reloaded: DAT_a80760b0[x] = 1, clears the u16 _DAT_a80787fa/_DAT_a80787f8 and
+ * DAT_a80760a4[x] + 0xccc; x reloaded: DAT_a80760b0[x] = 1, clears the u16 _DAT_a80787fa/_DAT_a80787f8 and
  * DAT_a8078838[x], clears DAT_a8078847; FUN_a00d9a78() when (u8)func_0xa0f966a4() != 0;
  * FUN_a00d6560(DAT_a8078832). Always clears DAT_a8078840 at the end (firmware: in the bne,a delay slot and
  * before ret).
  * x is u8, the type of DAT_a8078832; string symbol DAT_9f1ccc30; void.
  * Source forms: the first six clears are in the order 830, 828, 80e, 80a, 808, 800; in the last block the u16
  * clears of 7fa / 7f8 come first, then x is reloaded and the 838 and 760b0 bytes are written (fw order 760b0, 7fa,
- * 7f8, 838).
+ * 7f8, 838); the register block pointer table DAT_a80760a4 as in FUN_a00daa98.
  */
 extern unsigned char DAT_a80787fc;
 extern unsigned char DAT_a80787fd;
@@ -25,7 +25,7 @@ extern void FUN_a00d6560(unsigned char param_1);
 extern void FUN_a00d9a78(void);
 extern int func_0xa0f83044();
 extern int func_0xa0f966a4();
-extern unsigned int ARR_a80760a4[];
+extern volatile unsigned int *DAT_a80760a4[];
 extern unsigned short ARR_a807880a[];
 extern unsigned short ARR_a807880e[];
 extern unsigned char ARR_a8079c3d[];
@@ -66,7 +66,7 @@ void FUN_a00dc0a8(void)
         x = DAT_a8078832;
         DAT_a8078850[x] = 0;
         DAT_a8078848[x] = 0;
-        *(unsigned int *)(ARR_a80760a4[x] + 0xccc) &= ~0x30;
+        DAT_a80760a4[x][0xccc / 4] &= ~0x30;
         _DAT_a80787fa = 0;
         _DAT_a80787f8 = 0;
         x = DAT_a8078832;
