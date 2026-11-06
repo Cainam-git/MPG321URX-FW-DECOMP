@@ -9598,13 +9598,6 @@
       "name": "FUN_a00cfa68",
       "status": "matched"
     },
-    "ram:a00cfacc": {
-      "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Handles the DDC/CI set command record (19 command bytes in ascending case order, jump tables 0xa00ceb74 and 0xa00cec0c)",
-      "name": "FUN_a00cfacc",
-      "status": "matched"
-    },
     "ram:a00d0e48": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
