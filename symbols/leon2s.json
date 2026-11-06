@@ -5586,8 +5586,8 @@
       "status": "matched"
     },
     "ram:a009ea34": {
-      "by": "permuter",
-      "comment": "mode m 1..5: prints its string, then sets the low (p1 0) or high (p1 1) nibble of register 0xCF01474C to m - 1",
+      "by": "hand",
+      "comment": "mode m 1..6: prints its string (modes 2 and 3 share one), then sets the low (p1 0) or high (p1 1) nibble of register 0xCF01474C to 0, 1, 1, 2, 3, 4 (jump table switchdataD_a009ea1c)",
       "name": "FUN_a009ea34",
       "status": "matched"
     },
