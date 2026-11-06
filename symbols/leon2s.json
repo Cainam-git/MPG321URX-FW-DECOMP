@@ -3126,6 +3126,12 @@
       "name": "FUN_a0086030",
       "status": "matched"
     },
+    "ram:a0086154": {
+      "by": "hand",
+      "comment": "copies the received bytes DAT_a807cd50[1..n-1] to the volatile out buffer of the FUN_a00883d0 chain",
+      "name": "FUN_a0086154",
+      "status": "matched"
+    },
     "ram:a00862e4": {
       "by": "hand",
       "comment": "Loop of at most 10 iterations calling FUN_a0086030 (five arguments) and FUN_a0086154 (four arguments), breaking on the result of the second call. Returns a boolean via addx %g0,0,%i0: 1 if the loop ran to completion without breaking, 0 otherwise.",
