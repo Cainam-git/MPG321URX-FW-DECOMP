@@ -6,7 +6,6 @@
  * Source form: a switch with cases 1, 2 and an explicit 'case 3: r = 5' (same value as the default; it makes 2 the
  * tree root, and its block is crossjumped into the default). Plain if chains and two-case switches are
  * if-converted to store-flag code (xor/addx).
- * Compiler aids: none (case 3 has the default's behaviour).
  */
 unsigned char FUN_a00d493c(unsigned char param_1)
 {
