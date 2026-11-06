@@ -7220,8 +7220,8 @@
     },
     "ram:a00b3ac8": {
       "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "b31a0 family: setup calls, goto loop of a00a31a4 rows from table 0x18e54c (i*29 + a802d290[8])",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "b31a0 family: setup calls, for loop of a00a31a4 rows from table 0x18e54c (i*29 + a802d290[8])",
       "name": "FUN_a00b3ac8",
       "status": "matched"
     },
