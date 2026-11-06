@@ -4,6 +4,9 @@ set -e
 cd "$(dirname "$0")/../.."
 by=$1; f=$2; c=$3; sum=$4; fl=${5:--mcpu=v8 -O3 -g}
 case $by in h[0-9]*|lead) by=hand;; esac   # worker ids are not recorded
+# an already matched function is only re-accepted on purpose (REACCEPT=1, e.g. a source correction)
+if [ -z "$REACCEPT" ] && python3 -I -c "import json,sys; d=json.load(open('symbols/leon2m.json'))['functions']; sys.exit(0 if any(v.get('name')==sys.argv[1] and v.get('status')=='matched' for v in d.values()) else 1)" "$f"; then
+  echo "ALREADY MATCHED: $f (set REACCEPT=1 only for a deliberate source correction)"; exit 1; fi
 r=$(grep -m1 -o '0x[0-9a-f]*-0x[0-9a-f]*' asm/leon2m/$f.s); lo=${r%-*}; hi=${r#*-}
 j=$(nice -n 19 python3 -I tools/check/jf.py leon2m $f $c "$fl" 0); echo "jf: $j"
 rc=$(nice -n 19 python3 -I tools/check/rawcmp.py $f $c "$fl" ${lo#0x} ${hi#0x} | tail -1); echo "raw: $rc"
