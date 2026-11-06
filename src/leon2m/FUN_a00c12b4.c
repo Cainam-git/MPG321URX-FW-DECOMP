@@ -16,10 +16,14 @@ extern void FUN_a00baa6c(unsigned char);
 extern void FUN_a00ba950(unsigned char);
 extern void FUN_a00bab80(unsigned char, int);
 
+static int ascii_digit(unsigned char c)
+{
+  return c - '0';
+}
+
 int FUN_a00c12b4(unsigned char param_1)
 {
   unsigned char value;
-  int diff;
   unsigned char d;
 
   if (param_1 == 2)
@@ -28,8 +32,7 @@ int FUN_a00c12b4(unsigned char param_1)
     value = DAT_a802d0a1;
   else
     value = DAT_a802d0d9;
-  diff = value - 0x30;
-  d = diff;
+  d = ascii_digit(value);
   if (d > 1)
     return 0xff;
   DAT_a802d290.w174 = (DAT_a802d290.w174 & ~0x400000) | ((d & 1) << 22);
