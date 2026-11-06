@@ -10,9 +10,8 @@
  * Each entry is two output bytes: value << 2, then value >> 6. Called by FUN_a012e3ec.
  * Source form: the key is a const local array (its initialising stores keep their place before the load of the
  * 0.5 literal); the scaled value is stored in an unsigned short array element (the firmware's halfword store at
- * fp-536); the second loop reads the block through p = in + (unsigned char)off as in FUN_a012e2ac.
- * Compiler aid (no instructions): p is assigned in + off again at the end of the second loop body, so the address
- * is formed inside the loop as in the firmware (same form as FUN_a012e2ac).
+ * fp-536); the second loop reads the block byte in[(unsigned char)off + j] and XORs the key byte into x in a
+ * second statement (address in + off formed inside the loop, ldub of the block byte before the key byte).
  */
 extern const unsigned char DAT_001a31a8[32];
 extern void FUN_a010ae8c(int, int, int, unsigned char *);
@@ -23,7 +22,6 @@ void FUN_a012e004(unsigned char *in, unsigned char flag)
     const unsigned char key[4] = { 0x0f, 0xf0, 0x10, 0x01 };
     unsigned char out[0x200];
     unsigned short q[2];
-    unsigned char *p;
     int ch, j, k;
     unsigned char x;
     int off;
@@ -50,8 +48,8 @@ void FUN_a012e004(unsigned char *in, unsigned char flag)
         for (j = 0; j < 32; j++) {
             if (j == 0 && flag)
                 j = 4;
-            p = in + (unsigned char)off;
-            x = p[j] ^ key[j % 4];
+            x = in[(unsigned char)off + j];
+            x ^= key[j % 4];
             if (flag) {
                 for (k = 0; k < 8; k++) {
                     v = (acc << 4) + (k * (x << 4) + 4) / 8;
@@ -66,7 +64,6 @@ void FUN_a012e004(unsigned char *in, unsigned char flag)
                 out[n++] = q[0] >> 6;
             }
             acc += x;
-            p = in + (unsigned char)off;
         }
         if (flag)
             FUN_a010ae8c(ch, 0, 0x200, out);
