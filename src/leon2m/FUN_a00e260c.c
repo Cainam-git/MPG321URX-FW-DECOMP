@@ -6,7 +6,6 @@
  * The first FUN_a00e0774 call has a fifth argument (x: the firmware sets %o4 = %i1 at entry) and the second is (a,
  * reg, mask, shift, y); each print takes one value; FUN_a00df80c and FUN_a00e0bc0 take no arguments (their code
  * never reads %o0); 3 parameters.
- * Compiler aids: none.
  */
 extern const char s_00199788[], s_00199768[];
 extern int FUN_a00df170();
