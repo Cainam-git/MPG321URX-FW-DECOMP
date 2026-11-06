@@ -12752,7 +12752,7 @@
     },
     "ram:a00f446c": {
       "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
       "comment": "link-training / EQ calibration (3 stages); only rate input: hfreq (FUN_a0120a18) x sweep value <= 2050000",
       "name": "FUN_a00f446c",
       "status": "matched"

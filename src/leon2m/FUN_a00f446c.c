@@ -1,4 +1,4 @@
-/* leon2m FUN_a00f446c @ 0xa00f446c-0xa00f4e60 (637 words), flags -mcpu=v8 -O3 -g.
+/* leon2m FUN_a00f446c @ 0xa00f446c-0xa00f4e60 (637 words), flags -mcpu=v8 -O3 -g -msoft-float.
  *
  * What it does: pointer-called link-training / equaliser calibration of input block blk; p = training record,
  *   u16 p->h0c = lower bound of the sweep value. Returns 1 = trained, 0 = failed.
@@ -26,25 +26,23 @@
  *   2160p with 2250 total lines is about 135.0 kHz at 60.000 Hz (rate 1350), so the stage-0 sweep value must stay
  *   <= 2050000 / 1350 = 1518; at rate 1352 (135.2 kHz) the bound is 2050000 / 1352 = 1516.
  *
- * Source facts (plain C, no compiler aids):
- *   - window code t is an UNSIGNED CHAR and the DAT_a802b7ae store is written inside each arm. With the store
- *     in the arms each arm has 5 insns, so ifcvt (find_if_case_1, BRANCH_COST 3 on v8) does not hoist an arm
- *     before reload; after reload crossjump merges the identical arm tails 'and x,0x3f,t; sethi; stb' into the
- *     join and ce3 hoists the 2-insn af arm above the branch. The u8 t keeps the call's own 'and 0x3f'. This
- *     gives the firmware's 'double and' shape and the register renaming of the later blocks.
- *   - stage-2 wait: the input-lost test is the first statement of a for (;;) loop with its arm in place
- *     '{ DAT_a802b7ac = 1; return 0; }' (fw: the input-lost exit enters the abort block at its stb with
- *     %g1 = 1 from the compare; cse uses the compare register for the constant, crossjump merges it with the
- *     'ok == 0' abort block). This also gives the fw cold-block order. Stage 0's wait helper uses the same
- *     for (;;) form with 'break'.
+ * Source form (plain C):
+ *   - built with -msoft-float like its file neighbours; stages 0 / 1 are plain for loops (k < 0x20, n <= 3).
+ *   - stage 0 has one exit test: the three range / hfreq failures set k = 0xff and break, and after the loop
+ *     'if (k == 0xff)' restores orig and sets DAT_a802b7ad (fw: the break edges jump straight to that block, the
+ *     k == 0xff compare is left only on the exhausted-loop path). The hfreq test is a static helper with the body
+ *     of the fw's own FUN_a00f4434 (port, n): FUN_a0120a18(port) * n > 2050000.
+ *   - window code t is an UNSIGNED CHAR and the DAT_a802b7ae store is written inside each arm (fw 'double and'
+ *     shape: the arm tails 'and x,0x3f,t; sethi; stb' are merged into the join).
+ *   - stage-2 wait: the input-lost test is the first statement of the for (;;) poll loop with its own arm
+ *     '{ DAT_a802b7ac = 1; return 0; }'; the timeout exit 'if (ok == 0)' has the same arm. Stage 0's wait helper
+ *     is the same poll loop with 'break'.
  *   - the main tick before stage 1 is 'if (DAT_a802b7b1 <= 99 && DAT_a802b79c != 0) tick'.
- *   - stage 1: loads af before b0, 'af = 0' before 'b0 = 0' (fw af %l7, b0 %l6), n++ at the end of the probe
- *     body, |max - min| via abs() (fw 'xor sign, x' order).
+ *   - stage 1: loads af before b0, 'af = 0' before 'b0 = 0' (fw af %l7, b0 %l6), |max - min| via abs()
+ *     (fw 'xor sign, x' order).
  *   - stage 2: init order best, p1, p2, last, bestd; 'pos = (pos - 1) & 0x3f' before s.
- *   - also: goto loops in stages 0 / 1 (no loop-invariant motion in the fw), FUN_a00f3528
- *     returns unsigned short, u16 stage-1 positions, 'h2 = h + h' before the 'cur <= h' test, the hfreq
- *     limit as a local 'lim = 2050000; pr = rate * cur; if (lim < pr)', history 'p3 = p2; p2 = p1; p1 = val',
- *     e read before FUN_a00f3580, af / b0 unsigned int, 'goto abort2' for the ok == 0 abort.
+ *   - also: FUN_a00f3528 returns unsigned short, u16 stage-1 positions, 'h2 = h + h' before the 'cur <= h'
+ *     test, history 'p3 = p2; p2 = p1; p1 = val', e read before FUN_a00f3580, af / b0 unsigned int.
  * volatile only on the hardware register 0xcf020114.
  */
 #define R(a) (*(volatile unsigned int *)(a))
@@ -115,12 +113,15 @@ static unsigned char wait36(unsigned char blk, unsigned char mask)
   return ok;
 }
 
+static int hfreq_over(unsigned char port, unsigned short n)
+{
+    return (unsigned int)(FUN_a0120a18(port) * n) > 2050000;
+}
+
 static unsigned char stage0(unsigned char blk, struct Lt *p)
 {
   unsigned short h, cur, orig, h2;
-  unsigned char k, ok, r, cls, v;
-  unsigned short t0;
-  unsigned int lim, pr;
+  unsigned char k, r, cls, v;
 
   h = p->h0c;
   FUN_a00f1d48(blk, 0x47, h);
@@ -130,8 +131,7 @@ static unsigned char stage0(unsigned char blk, struct Lt *p)
     cur = h + 0x10;
     FUN_a00f42b8(blk, cur);
   }
-  k = 0;
-next:
+  for (k = 0; k < 0x20; k++) {
     FUN_a0121e3c(blk);
     FUN_a00f1ad4(blk, 0x36, 0x41);
     if (!wait36(blk, 1)) {
@@ -143,32 +143,32 @@ next:
     cls = (r & 0xc0) >> 6;
     v = r & 0x3f;
     if (cls == 0)
-      goto done;
+      break;
     if (cls == 1) {
       cur = cur + v;
-      if (cur > h2)
-        goto bad;
+      if (cur > h2) {
+        k = 0xff;
+        break;
+      }
     } else if (cls > 1) {
       cur = cur - v;
-      if (cur < h)
-        goto bad;
+      if (cur < h) {
+        k = 0xff;
+        break;
+      }
     }
-    lim = 2050000;
-    pr = FUN_a0120a18(blk) * cur;
-    if (lim < pr)
-      goto bad;
+    if (hfreq_over(blk, cur)) {
+      k = 0xff;
+      break;
+    }
     FUN_a00f42b8(blk, cur);
-    k++;
-    if (k < 0x20)
-      goto next;
-done:
-  if (k == 0xff)
-    goto bad;
+  }
+  if (k == 0xff) {
+    FUN_a00f42b8(blk, orig);
+    DAT_a802b7ad = 1;
+    return 0;
+  }
   return 1;
-bad:
-  FUN_a00f42b8(blk, orig);
-  DAT_a802b7ad = 1;
-  return 0;
 }
 
 static unsigned char stage1(unsigned char blk)
@@ -187,26 +187,23 @@ static unsigned char stage1(unsigned char blk)
   maxv = 0;
   minv = 0xffffffff;
   pos = base - 2;
-  n = 0;
-again:
-    FUN_a00f42b8(blk, pos);
-    v = FUN_a00f3f64(blk);
-    if (DAT_a802b7ac == 1)
-      return 0;
-    if (maxv < v) {
-      af = DAT_a802b7af;
-      b0 = DAT_a802b7b0;
-      maxv = v;
-      maxpos = pos;
-    }
-    if (minv > v) {
-      minv = v;
-      minpos = pos;
-    }
+  for (n = 0; n <= 3; n++) {
+      FUN_a00f42b8(blk, pos);
+      v = FUN_a00f3f64(blk);
+      if (DAT_a802b7ac == 1)
+        return 0;
+      if (maxv < v) {
+        af = DAT_a802b7af;
+        b0 = DAT_a802b7b0;
+        maxv = v;
+        maxpos = pos;
+      }
+      if (minv > v) {
+        minv = v;
+        minpos = pos;
+      }
     pos++;
-    n++;
-  if (n <= 3)
-    goto again;
+  }
   sel = maxpos;
   {
     int d = abs(maxpos - minpos);
@@ -265,8 +262,10 @@ static unsigned char stage2(unsigned char blk)
       if (func_0x4008d594(t0) > 0x63)
         break;
     }
-    if (ok == 0)
-      goto abort2;
+    if (ok == 0) {
+      DAT_a802b7ac = 1;
+      return 0;
+    }
     pos = (start + j) & 0x3f;
     FUN_a00f37d0(pos);
     FUN_a00f1ad4(blk, 0x36, 0x42);
@@ -290,9 +289,6 @@ static unsigned char stage2(unsigned char blk)
   }
   FUN_a00f37d0((best - 1) & 0x3f);
   return 1;
-abort2:
-  DAT_a802b7ac = 1;
-  return 0;
 }
 
 unsigned char FUN_a00f446c(unsigned char blk, struct Lt *p)
