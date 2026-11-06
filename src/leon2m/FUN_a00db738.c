@@ -14,8 +14,8 @@
  * the standalone FUN_a00d8c1c is not matched with this source) and FUN_a00d8ffc.
  * Source forms: the halfword +0x34 nibble is a bit-field (a mask narrows the load to a byte); the limited byte
  * +0x49 is an unsigned short passed as (unsigned char)v * 3; the switch lists default first; the byte copies
- * are written high byte first. Compiler aid: __builtin_expect(FUN_a00d8bd8(0, 1), 0) emits no instructions; it
- * places the nonzero-result path of that test as in the firmware.
+ * are written high byte first. FUN_a00d8c1c tests the 0/1 result of FUN_a00d8bd8
+ * as '== 1', the authors' usual flag test.
  */
 struct W11c {
     unsigned int top : 1;
@@ -104,7 +104,7 @@ void FUN_a00d8c1c(void)
 {
     unsigned char m = DAT_a802d290.b19;
 
-    if (DAT_a802d290.wb0 != 0 && __builtin_expect(FUN_a00d8bd8(0, 1), 0))
+    if (DAT_a802d290.wb0 && FUN_a00d8bd8(0, 1) == 1)
         return;
     if (m > 3)
         m = 3;
