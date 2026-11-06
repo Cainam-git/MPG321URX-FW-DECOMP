@@ -8830,7 +8830,7 @@
     "ram:a00c1100": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "Computes diff = value - 0x30 (add %o2,-48,%o4) and a separate masked copy (unsigned char)diff (and %o4,0xff,%o5) for the comparison > 2; the unmasked %o4 is stored to DAT_a802d40c. The source keeps diff in a local and casts it in the comparison.",
+      "comment": "Computes value - 0x30 (add %o2,-48,%o4) and its 8-bit copy (and %o4,0xff,%o5) for the comparison > 2; the unmasked %o4 is stored to DAT_a802d40c",
       "name": "FUN_a00c1100",
       "status": "matched"
     },
