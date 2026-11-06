@@ -4,12 +4,9 @@
  * for items 0..13 and 15; when bit 31 of word +0x11c of DAT_a802d290 is clear, FUN_a014737c(0, 2, 0, 0) and
  * FUN_a01474b0(0, entry pointer +0x14); then FUN_a0147560(0, pointer +0x18) and FUN_a0147610(0, pointer +0x1c).
  * When FUN_a0080320(1) == 1 the same calls follow with first argument 1 and the same bytes.
- * Source form: both bit-31 tests are 'w11c & m' with a local m = 0x80000000; the first byte is read as
- *   t[mode].b[0], the others through r = t + mode; each round is 'if (!(w & m)) { 737c; 74b0; }' followed by the
- *   two common calls; the format string is the symbol s_000ffd40.
- * Compiler aid: 'for (;;) break;' as the first statement emits no instructions; its loop notes change how cse
- *   treats the following code, so the round-1 test loads the word into %o5 and the 0x80000000 constant into %g1
- *   as in the firmware.
+ * Source form: both bit-31 tests go through the static helper bit_set(w, mask) ('(w & mask) != 0'), inlined; the
+ *   first byte is read as t[mode].b[0], the others through r = t + mode; each round is 'if (!bit_set(..))
+ *   { 737c; 74b0; }' followed by the two common calls; the format string is the symbol s_000ffd40.
  */
 struct Theme {
     unsigned char b[0x14];
@@ -32,13 +29,15 @@ extern struct R290 DAT_a802d290;
 
 extern char s_000ffd40[];
 
+static int bit_set(unsigned int w, unsigned int mask)
+{
+    return (w & mask) != 0;
+}
+
 void FUN_a0087a14(unsigned char mode)
 {
     const struct Theme *t, *r;
-    unsigned int m = 0x80000000;
     unsigned char v0, v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v15;
-
-    for (;;) break;
 
     FUN_a00df170(s_000ffd40, mode, FUN_a00d7d48());
     t = DAT_000ff710;
@@ -73,7 +72,7 @@ void FUN_a0087a14(unsigned char mode)
     FUN_a01471a0(0, 13, v13);
     v15 = r->b[0x10];
     FUN_a01471a0(0, 15, v15);
-    if (!(DAT_a802d290.w11c & m)) {
+    if (!bit_set(DAT_a802d290.w11c, 0x80000000)) {
         FUN_a014737c(0, 2, 0, 0);
         FUN_a01474b0(0, r->p14);
     }
@@ -96,7 +95,7 @@ void FUN_a0087a14(unsigned char mode)
     FUN_a01471a0(1, 12, v12);
     FUN_a01471a0(1, 13, v13);
     FUN_a01471a0(1, 15, v15);
-    if (!(DAT_a802d290.w11c & m)) {
+    if (!bit_set(DAT_a802d290.w11c, 0x80000000)) {
         FUN_a014737c(1, 2, 0, 0);
         FUN_a01474b0(1, r->p14);
     }
