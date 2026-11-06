@@ -10411,7 +10411,7 @@
     "ram:a00d8034": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "flag: 448c(0) in 0xb..0xf",
+      "comment": "clean source form, no result mask",
       "name": "FUN_a00d8034",
       "status": "matched"
     },

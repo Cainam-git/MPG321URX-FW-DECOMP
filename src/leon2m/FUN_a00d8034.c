@@ -3,7 +3,7 @@
  * per path and then 'and %i0,1,%i0' at the join, i.e. a 0/1 flag masked with 1. FUN_a014448c takes one argument
  * (clr %o0, u8 param) and returns u8.
  * Source form: the result is a u8 flag with 'return r & 1'; void params.
- * Compiler aids: none.
+ * Source form: r = 0, set to 1 when the state byte minus 0xb is below 5.
  */
 extern unsigned char FUN_a014448c(unsigned char);
 
@@ -14,5 +14,5 @@ unsigned char FUN_a00d8034(void)
     r = 0;
     if ((unsigned char)(FUN_a014448c(0) - 0xb) < 5)
         r = 1;
-    return r & 1;
+    return r;
 }
