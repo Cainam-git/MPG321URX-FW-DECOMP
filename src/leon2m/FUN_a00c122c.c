@@ -13,10 +13,15 @@ extern int FUN_a00baa6c();
 extern int FUN_a00ba950();
 extern int FUN_a00bab80();
 
+static int ascii_digit(unsigned char c)
+{
+  return c - '0';
+}
+
 int FUN_a00c122c(int param_1)
 {
     unsigned char value;
-    int diff;
+    unsigned char d;
     
     param_1 = param_1 & 0xff;
     if (param_1 == 2) {
@@ -27,12 +32,12 @@ int FUN_a00c122c(int param_1)
         value = DAT_a802d0d9;
     }
     
-    diff = value - 0x30;
-    if ((unsigned char)diff > 1) {
+    d = ascii_digit(value);
+    if (d > 1) {
         return 0xff;
     }
     
-    DAT_a802d407 = (unsigned char)diff;
+    DAT_a802d407 = d;
     FUN_a00b88cc();
     FUN_a00baa6c(param_1);
     FUN_a00ba950(param_1);
