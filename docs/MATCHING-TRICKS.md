@@ -223,8 +223,7 @@ both builds when a draft uses constant tables or addresses.
 - **Read-modify-write through inlined helpers:** nest the read inside the write call, `wr(p, r, rd(p, r) & m)`; the
   helper's parameter copy keeps the firmware's second `and 0xff`.
 - **Case order of large switches:** a hill-climb over the order of the `case` blocks, judged by the score, settles
-  register names and block order where a full permutation search is too big (`work/h42/climb.py` does the same for
-  single statements).
+  register names and block order where a full permutation search is too big; the same works for single statements.
 
 ## GCC 3.4.4: blocks in a different order
 
@@ -438,7 +437,7 @@ LEON (GCC 3.4.4):
   (DRV_HDMI_EQScan_FSM_PHY_R_Turning).
 - **One call after a switch that only sets a variable** (`switch (n) { case 0: k = 0; break; ... } f(k, v);`) appears
   in the firmware as one copy of the call per case: the block-reorder pass duplicates it (FUN_a0146298, FUN_a0149064).
-- **A small stuck function that does the same thing as a block inside a matched function** often matches when that
+- **A small unmatched function that does the same thing as a block inside a matched function** often matches when that
   block's source is copied with its types unchanged, or when matched neighbours that nothing calls are pasted in and
   called (FUN_a00c0adc, FUN_a014f3d8, FUN_a0104f48). Comparing the instruction sequences of unmatched and matched
   functions, ignoring registers, finds such pairs.

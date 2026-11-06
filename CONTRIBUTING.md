@@ -17,5 +17,6 @@
 4. **Keep Ghidra's names for external symbols** (`FUN_…`, `DAT_…`), because the checking tools link by those
    names. Descriptive names go into `symbols/<section>.json` and into the file's comment.
 5. **Name the section and the function in commit messages**, for example
-   `leon2m FUN_a00dac38: byte-exact (-O3 -g)`.
+   `leon2m FUN_a00dac38 byte-exact (hand): selects and applies a row of the panel mode table`. `tools/check/acc.sh` and
+   `tools/check/acc2s.sh` write messages in this form.
 6. **Never commit** `toolchains/`, `parts/`, `ghidra_proj/`, `build/` or `work/`.

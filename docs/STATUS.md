@@ -67,10 +67,10 @@ compares it with the firmware. The entries below are not confirmed by that scrip
 - Replacing the remaining original bytes of the rebuilt image (`tools/rebuild.py`) with source: unmatched
   functions, data, tables and resources. `tools/rebuild.py` already produces the complete image byte-identical to
   the original file, with every matched function built from source.
-- Code that was in no function range: the gaps between the listed functions of all sections have been checked and
-  the missing routines and jump tables added. Further additions make the totals in the table grow.
-- The unmatched LEON functions, most of them large. Functions that were tried but not matched yet have notes on
-  what still differs.
+- Code outside the listed function ranges: the gaps between the listed functions of all sections have been checked
+  and the missing routines and jump tables added. Anything found later is added to the table, so the totals can still
+  grow.
+- The unmatched functions of the main processor (`leon2m`), most of them large.
 - The Tensilica program as C: it is matched as assembly source; C source would need its original compiler, which is
   not available.
 - After matching: replacing Ghidra's labels (`FUN_…`, `DAT_…`) with descriptive names, shared data structures and

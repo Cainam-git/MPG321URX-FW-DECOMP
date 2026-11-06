@@ -7,7 +7,7 @@
 | **8051** | A small 8-bit processor inside the scaler. Here it boots the system, loads the programs of the other processors, supervises the main LEON processor, and handles power sequencing and firmware updates. A second 8051 core, in the chip's USB controller, runs the update agent. Programmed in C with the Keil C51 compiler. |
 | **LEON2 / SPARC** | A 32-bit processor design based on the SPARC V8 architecture. The scaler contains two: "Leon2M" handles the picture pipeline, panel control and on-screen menu logic; "Leon2S" handles the HDMI 2.1 and DisplayPort inputs. Programmed in C with a GCC-based compiler. |
 | **Tensilica / Xtensa** | A configurable 32-bit processor design. The scaler contains one Xtensa core with its own program, which the 8051 copies out of the firmware at start-up. The program runs the chip's zone-dimming loop, made for LED-backlit screens. |
-| **Bank** | The 8051 can only address 64 KB of program code at a time, so its code is split into banks that it switches between. |
+| **Bank** | A 64 KB block of the firmware file holding one 8051 program. The 8051 addresses 64 KB of program code; here each of banks 0 to 2 is a complete program (boot loader, main application, update agent) that the chip's hardware copies into place, and bank 3 holds the Tensilica program. |
 | **DRAM** | The scaler's working memory. Code and data are copied there from the firmware at start-up. |
 | **OSD** | On-screen display: the menu that appears when the monitor's button is pressed. |
 | **EDID** | A small data block the monitor sends to the computer to describe itself (name, supported resolutions). |
@@ -16,4 +16,6 @@
 | **Decompiler** | A tool, here Ghidra, that turns machine code back into rough, unnamed C. |
 | **Matching decompilation** | Writing source code that compiles back to exactly the original bytes, which proves that it is correct. |
 | **Target assembly** | The original machine code of a function, written out as text. The source must reproduce it. |
+| **Section** | The part of the firmware that one processor runs, as named in the tools: `leon2m`, `leon2s`, `8051_bank0` to `8051_bank3`. |
+| **Byte-exact** | Compiled source that gives exactly the original bytes at the function's real address. Only byte-exact functions count as matched. |
 | **Symbols** | Names, status and descriptions of functions and variables, kept in `symbols/`. |

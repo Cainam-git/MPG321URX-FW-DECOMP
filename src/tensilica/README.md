@@ -24,8 +24,8 @@ This builds `tensilica.S` and compares the result with the firmware. It prints e
 and the symbol it belongs to, and exits with status 0 only when the build is byte-identical. `--out FILE` also
 writes the built program to a file.
 
-The toolchain is Espressif's `xtensa-esp32-elf` GCC 8.4 release esp-2020r3 (binutils 2.31.1), unpacked into
-`toolchains/xtensa-esp32-elf/` (see `docs/TOOLCHAINS.md`). The check runs these commands:
+The toolchain is Espressif's `xtensa-esp32-elf` GCC 8.4.0 release esp-2020r3 (binutils 2.31.1), unpacked into
+`toolchains/xtensa-esp32-elf/` (see [toolchains](../../docs/TOOLCHAINS.md) and the [build guide](../../docs/BUILD.md)). The check runs these commands:
 
 ```
 as --no-transform -I src/tensilica -o tensilica.o src/tensilica/tensilica.S
@@ -84,7 +84,7 @@ The code uses the RAM copies of the data regions. A name such as `ro_3ffe0064` i
 RAM outside the three copies (variables without initial values, the stack and hardware registers) are written as
 plain numbers.
 
-The functions have no other names yet. Names taken from the strings a function prints can be added later.
+The functions are named only by their addresses.
 
 ## How the code and the data were told apart
 

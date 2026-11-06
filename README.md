@@ -29,9 +29,10 @@ Tensilica processor [####################]  100 %
 Overall             [###################-]   95 %
 ```
 
-Percentages are by code size. More than 6,500 of roughly 6,600 functions are done, the helper processor is complete,
-and the Tensilica program is rebuilt completely from assembly source. `tools/rebuild.py` builds the complete firmware image from the matched functions plus the
-original bytes for everything else, and the result is identical to the original file. Detailed numbers are in the
+Percentages are by code size. More than 6,500 of roughly 6,600 functions are done. The input processor and the
+helper processor are complete, and the Tensilica program is rebuilt completely from assembly source.
+`tools/rebuild.py` builds the complete firmware image from the matched functions plus the original bytes for
+everything else, and the result is identical to the original file. Detailed numbers are in the
 [status report](docs/STATUS.md).
 
 ## How it works
@@ -57,6 +58,8 @@ Most source files begin with a short description of what the function does. The 
 | Learn the source tricks that make GCC and Keil produce identical code | [Matching tricks](docs/MATCHING-TRICKS.md) |
 | Change the firmware safely | [Modifying the firmware](docs/MODIFYING.md) |
 | Contribute a function | [Contributing](CONTRIBUTING.md) |
+| Look up a term | [Glossary](docs/GLOSSARY.md) |
+| Find a script | [Tools](tools/README.md) |
 
 ## Repository layout
 

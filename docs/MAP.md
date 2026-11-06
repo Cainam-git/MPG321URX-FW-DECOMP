@@ -9,7 +9,7 @@ How `MSI_MPG321URX_V021_7F69.bin` is laid out, and how its four processors start
 | Size | 2,820,096 bytes (0x2B0800) |
 | SHA-256 | `4934abd71dff21492dda3b2dd630f3539ba1d6639de88f2f3684fd03d59f019e` |
 | MD5 | `ed43f709aa67b8bc624b799f219e30c8` |
-| Scaler chip | Novatek NT68500 ("NT68500 Leon2M/Leon2S system compiled under Linux"; the string "SCALER=NT68550" appears at 0x207D68) |
+| Scaler chip | Novatek NT68500 (start-up messages "NT68500 Leon2M system compiled under Linux" and "NT68500 Leon2S system compiled under Linux"; a record at 0x207D68 holds "SCALER" and "NT68550") |
 | Version string | "FW.021 20260112", at 0x2082E9 |
 | Panel | Samsung Display "SDC QMC315AA01_D01", 31.5" QD-OLED |
 | EDID | "MPG321UX OLED", product 0x3DD2, 48 variants at 0x118000–0x11EE00, 0x200 apart |
@@ -182,7 +182,7 @@ chip's Tensilica Xtensa core, 0xD8DC bytes long, followed by empty space (0xFF).
 |---|---|
 | 0x030000–0x0303FF | Exception and interrupt vectors |
 | 0x030400–0x03053F | Reset code |
-| 0x030800–0x03AC37 | Program code: about 300 functions |
+| 0x030800–0x03AC37 | Program code: 300 functions |
 | 0x03AC38–0x03ACF7 | Table of the sections that the reset code copies to the core's RAM |
 | 0x03ACF8–0x03C767 | Read-only data: text messages, switch tables |
 | 0x03C768–0x03D083 | Constants used by the code |
