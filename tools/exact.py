@@ -4,6 +4,7 @@ diff.py compares instruction shapes with addresses masked; that let through wron
 reg+%g0 vs +0 encodings and invented outside names. diff.compare() calls exact() on every shape match, so every
 tool (permute, permuter, verify, relink, ...) only calls a function matched when its bytes are the firmware's.
 exact(cpu, fn, obj) -> None if exact, else a short reason (also usable as feedback for hand work).
+A .rodata section found by content is also tried at hit - LINK_SHIFTS[cpu] (leon2s code reads its data at the link view).
 """
 import functools, pathlib, re, subprocess, tempfile, threading
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -301,7 +302,7 @@ def exact(cpu, fn, obj, sym=None, solve=False, split_pools=False, placed=None):
             if not hits and merge and not split_pools:   # merged pool not found in one piece: check it per reference
                 return exact(cpu, fn, obj, sym, solve, True, placed)
             if not hits: return f"its constant data/strings ({len(data)} bytes) are not in the firmware in this order"
-            place.append((sec, hits))
+            place.append((sec, hits + [h - sh_ for h in hits for sh_ in LINK_SHIFTS.get(cpu, [])]))
 
         def tries(i=0, cur=()):
             if i == len(place): yield cur; return
