@@ -6577,7 +6577,7 @@
     "ram:a00a93bc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "base = 2p + 5; 4008e2a4() x2, 146c40(3,0,0), b3ed0(0,0,0,0), 4008e2a4(); for i 0..2: 146b20(0, 0x27 / 0x34, base + i, 1, 0, 0)",
+      "comment": "plain arithmetic, no masks or casts",
       "name": "FUN_a00a93bc",
       "status": "matched"
     },
