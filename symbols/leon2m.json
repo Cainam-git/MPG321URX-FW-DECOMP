@@ -6804,7 +6804,7 @@
     "ram:a00abd00": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "byte a802d290[0x13] - 1, clamp to 0 on wrap; else store and redraw (row 8, 146b50(0xe8), d462c); then a802b08e |= 2 (twin of a00abff8)",
+      "comment": "header: source form, no aid line",
       "name": "FUN_a00abd00",
       "status": "matched"
     },

@@ -4,7 +4,7 @@
  * (wrapped below 0) stores 0, else stores v and redraws with row 8 and FUN_a0146b50(0xe8, 0), then FUN_a00d462c().
  * Always sets bit 1 of DAT_a802b08e.
  * Callers: no direct 'call 0xa00abd00' in asm/leon2m (reached via a pointer/table).
- * Compiler aids: none. Source form, two points:
+ * Source form, two points:
  *  - Arm order: the clamp arm first ('if (v > 100) clamp; else { calls }'). With the calls arm first it ends in a
  *    jump to the join, the jump depends on the last %o3/%o4 sets, and sched1 ranks the third FUN_a0146a80 call's
  *    argument sets o3, o4 (more dependents) before o2 (fw: o2, o3, o4).
