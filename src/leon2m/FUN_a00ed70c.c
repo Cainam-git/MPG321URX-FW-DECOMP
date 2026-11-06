@@ -17,9 +17,9 @@
  * 0xfff7f), FUN_a00e03b0(unit, 0x149, 0), FUN_a00e0774(unit, 0x8e, 2, 1, 0), FUN_a00e0090(unit),
  * FUN_a00e03b0(unit, 0x149, saved); returns 0.
  * Source form: each read/write is its own if (b == -1)/else statement (as in FUN_a00e9c80); two zero-initialised
- * int[2][2] arrays (store order of the clears). Compiler aid: 'goto next; next:;' at the end of the v != 0 block
- * emits no instructions; it marks that path as not taken, which keeps the shared FUN_a00ed530 call block in the
- * firmware's layout.
+ * int[2][2] arrays (store order of the clears); in the counter-1 arm the v != 0 block ends with 'goto check' over
+ * the FUN_a00ed530 call to the found test (no else; delay slot of the v == 0 branch at 0xa00ed924 filled from the
+ * shared call block).
  */
 extern int FUN_a00e02ec(unsigned int, unsigned int);
 extern void FUN_a00dffb4(unsigned int, unsigned int, unsigned int);
@@ -98,12 +98,11 @@ int FUN_a00ed70c(unsigned int unit, unsigned int p1, unsigned int type, int b, i
                 found++;
                 if (i > p4)
                     flg[0][b] = 1;
-                goto next;
-            next:;
-            } else {
-                FUN_a00ed530(unit, b, i + 7);
+                goto check;
             }
+            FUN_a00ed530(unit, b, i + 7);
         }
+    check:
         if (found == 1)
             goto done;
     }
