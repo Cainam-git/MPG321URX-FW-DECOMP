@@ -3,7 +3,7 @@
  * with the byte pairs at ROM 0x1a4298..0x1a429f; FUN_a0133e7c(0x80, 0xa8); func_0x4008c86c(7, 0x10, 0); four more
  * with the pairs at 0x1a42a0..0x1a42a7 (the last a tail call). void.
  * Source form: the table base DAT_001a4288 is taken AFTER the first two calls (fw sethi|or into %l1 at 0xa0124ff0;
- * set at the top it is built before the first call). Compiler aids: none.
+ * set at the top it is built before the first call).
  */
 extern const unsigned char DAT_001a4288[];
 extern void FUN_a0133e7c(unsigned char, unsigned char);
