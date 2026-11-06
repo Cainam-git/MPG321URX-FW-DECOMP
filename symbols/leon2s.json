@@ -9985,7 +9985,7 @@
     },
     "ram:a00d97bc": {
       "by": "hand",
-      "comment": "stack msg: ROM copy, 4-bit count = (src[0]&0xf)-1, byte copy loop, d6a54(&m,3,1); aid asm nop = fw real nop",
+      "comment": "no inline asm, compiler emits the trailing nop",
       "name": "FUN_a00d97bc",
       "status": "matched"
     },
