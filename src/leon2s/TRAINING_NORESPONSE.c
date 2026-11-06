@@ -23,9 +23,8 @@
  *    "... is skipped" for each channel, returns 1; else FUN_a0085914(ch), FUN_a00aa930(ch, 7) and
  *    "Channel[%02x] is Training fail", returns 0.
  * Source forms: cfg is zero-initialised and its two bytes are stored after the range setup; the halving
- * steps copy lv into an unsigned int (lv is address-taken) and both FUN_a00870a4 results are tested with !=.
- * Compiler aid: __builtin_expect(..., 1) on the first FUN_a00870a4 test emits no instructions; it fills the
- * branch delay slot from the fall-through path instead of the success block.
+ * steps copy lv into an unsigned int (lv is address-taken); the two FUN_a00870a4 tries are a search with
+ * 'goto found' on the first success and 'goto fail' after the second.
  */
 #define R8D00 (*(volatile unsigned int *)0xcf018d00)
 
@@ -165,11 +164,12 @@ unsigned char TRAINING_NORESPONSE(unsigned char mode, unsigned char *caps)
                 c = lv;
                 if (c > cfg[3]) {
                     t = c >> 1;
-                    if (__builtin_expect(FUN_a00870a4(t, buf) != 4, 1)) {
-                        t = c >> 2;
-                        if (FUN_a00870a4(t, buf) != 4)
-                            goto fail;
-                    }
+                    if (FUN_a00870a4(t, buf) == 4)
+                        goto found;
+                    t = c >> 2;
+                    if (FUN_a00870a4(t, buf) != 4)
+                        goto fail;
+                found:
                     lv = t;
                     lim = cfg[0];
                     continue;
