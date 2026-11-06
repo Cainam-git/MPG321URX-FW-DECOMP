@@ -7982,7 +7982,7 @@
     "ram:a00bc214": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "text a802d078[7..9] (... 0x31), tail 1487e8(p, 11, &a802d078) (bdb48 family)",
+      "comment": "FUN_a00bc214: unsigned char parameter, no explicit mask",
       "name": "FUN_a00bc214",
       "status": "matched"
     },
