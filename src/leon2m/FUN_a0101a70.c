@@ -2,7 +2,7 @@
  * Code facts: leaf. hw reg 0xcf0160f4 &= 0xf1 (clears bits 1..3 and 8..31); then 0xcf0160f4 |= (p & 0xff) << 1 (fw:
  * and 0xff, add x,x). Two read-modify-write cycles on the same hw register, so volatile (real 0xcf... register). u8
  * param, void.
- * The mask is 0xf1 and the shift is 1. Compiler aids: none.
+ * The mask is 0xf1 and the shift is 1.
  */
 #define REG_cf0160f4 (*(volatile unsigned int *)0xcf0160f4)
 
