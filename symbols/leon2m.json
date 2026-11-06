@@ -7575,7 +7575,7 @@
     "ram:a00b83e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "if 142e8c(0) != 5: b7f9c(0x15), 14771c(0), a802b08e |= 1 when 145660(0, 0x16); 146dc0(0,0), 146c40(8,0,0), a802b08f = 0x24, 146dc0(0,1); clear bit 15 of a802cff4.h03e",
+      "comment": "header: drop the empty compiler-aid line",
       "name": "FUN_a00b83e4",
       "status": "matched"
     },

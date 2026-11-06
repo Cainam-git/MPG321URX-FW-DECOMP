@@ -4,7 +4,6 @@
  * FUN_a0146dc0(0, 1), u16 0xa802cff4+0x3e &= 0x7fff (fw andn 0xffff8000). The b08f store comes before
  * FUN_a0146dc0(0, 1); FUN_a014771c takes one argument (0, fw clr %o0 in the delay slot).
  * Source form: the u16 is field +0x3e of the record DAT_a802cff4 (fw sethi|or of the base).
- * Compiler aids: none.
  */
 struct Scff4 { unsigned char pad[0x3e]; unsigned short h03e; };
 extern struct Scff4 DAT_a802cff4;
