@@ -5,8 +5,7 @@
  * otherwise writes 1 << i first and then calls the function. Ends by writing 0x1000 to 0x9f120034 and
  * 0x9f10009c, clearing bit 12 of 0x9f120028 and setting bit 12 of 0x9f100090. volatile only on the hardware
  * registers.
- * Compiler aid: __builtin_expect(fn != 0, 0) on the pointer test emits no instructions; it changes the branch
- * prediction so that the loop increment is placed in the annulled delay slot of that test.
+ * Source form: the table entry DAT_a8079378[i] is tested and called directly (no function-pointer local).
  */
 #define R(a) (*(volatile unsigned int *)(a))
 extern void (*DAT_a8079378[])(void);
@@ -17,7 +16,6 @@ void FUN_a006102c(void)
     unsigned int edge;
     unsigned int i;
     unsigned int bit;
-    void (*fn)(void);
 
     R(0x9f100090) &= ~0x1000;
     R(0x9f120028) |= 0x1000;
@@ -27,14 +25,13 @@ void FUN_a006102c(void)
     for (i = 0; i < 2; i++) {
         bit = 1 << i;
         if (pend & bit) {
-            fn = DAT_a8079378[i];
-            if (__builtin_expect(fn != 0, 0)) {
+            if (DAT_a8079378[i]) {
                 if (edge & bit) {
-                    fn();
+                    DAT_a8079378[i]();
                     R(0x9f12009c) = bit;
                 } else {
                     R(0x9f12009c) = bit;
-                    fn();
+                    DAT_a8079378[i]();
                 }
             }
         }
