@@ -9605,6 +9605,12 @@
       "name": "FUN_a00d6890",
       "status": "matched"
     },
+    "ram:a00d68cc": {
+      "by": "hand",
+      "comment": "leon2s FUN_a00d68cc byte-exact: crc updated in place, bit counter reused for the trailing bits",
+      "name": "FUN_a00d68cc",
+      "status": "matched"
+    },
     "ram:a00d6a54": {
       "by": "hand",
       "comment": "Copies the n bytes produced by FUN_a00d68cc into one of two table entries selected by type 1 or 3",
