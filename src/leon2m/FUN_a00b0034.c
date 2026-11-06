@@ -20,8 +20,9 @@
  * A row i: when FUN_a00aa520(i) returns 0, FUN_a0146a80(0x14, i * 2 + 6, third argument, 0x292, 0); then FUN_a00a31a4(0, 0x14,
  * i * 2 + 6, 1, FUN_a00a3844(table, i * 29 + byte 0xa802d290+8), 0) (as in FUN_a00ad02c).
  * Source form: seq_a() is a static helper inlined twice. The id-0 rows use their own block-local counter (with the
- * shared counter the loop pre-header orders 'clr' before the address 'sethi'); the id-6 loop limit is held in a
- * variable (cmp 4; bcs). The tables are extern array symbols.
+ * shared counter the loop pre-header orders 'clr' before the address 'sethi'); the id-6 rows are the static helper
+ * load_rows(tab, reg, n) with the row count as its parameter (cmp 4; bcs), as in FUN_a00a8230. The tables are extern
+ * array symbols.
  */
 struct R290 { unsigned char p000[8]; unsigned char b008; unsigned char p009[0x1e - 9]; unsigned char b01e;
               unsigned char b01f; };
@@ -47,6 +48,14 @@ extern void FUN_a00b3ba0(void);
 extern void FUN_a00b6d58(void);
 extern unsigned char FUN_a01445fc(unsigned char);
 
+static void load_rows(unsigned int *const tab, int reg, unsigned char n)
+{
+    unsigned char i;
+
+    for (i = 0; i < n; i++)
+        FUN_a00a31a4(0, reg, i * 2 + 6, 1, FUN_a00a3844(tab, i * 29 + DAT_a802d290.b008), 0);
+}
+
 static void seq_a(void)
 {
     unsigned char i;
@@ -62,7 +71,7 @@ static void seq_a(void)
 
 void FUN_a00b0034(unsigned char id)
 {
-    unsigned char i, n, sel, y;
+    unsigned char i, sel, y;
 
     seq_a();
     FUN_a00a8c88();
@@ -134,9 +143,7 @@ void FUN_a00b0034(unsigned char id)
     case 6:
         FUN_a0146b50(0x92, 0);
         FUN_a0146b6c(0, 0);
-        n = 4;
-        for (i = 0; i < n; i++)
-            FUN_a00a31a4(0, 0x14, i * 2 + 6, 1, FUN_a00a3844(DAT_0019158c, i * 29 + DAT_a802d290.b008), 0);
+        load_rows(DAT_0019158c, 0x14, 4);
         FUN_a00a900c(0, 0);
         FUN_a00af44c(0x26, 0);
         break;
