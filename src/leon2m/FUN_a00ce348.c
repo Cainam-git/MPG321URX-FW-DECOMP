@@ -21,11 +21,11 @@
  *   arguments (its asm: save; and %i1,0xff; cmp %i1,0x99) and case 4 passes the FUN_a00bb260 result (the fw keeps
  *   it in %o1 up to the call).
  * Source form: switch case order 0x20, 0x10, 0x40/0x80, 2, 4, default; the clear after the switch (cases 2/4/0x40
- *   break to it, 0x10/0x20 return); c is reused for the FUN_a00bb260 value.
- * Compiler aid (no code, no data): the inlined FUN_a00bb1c4 reads the buffer through a second declaration with an
- *   asm label, extern unsigned char DAT_rx[] __asm__("DAT_a802d0d0") - same link symbol and bytes. With one
- *   declaration gcse PRE shares HIGH(DAT_a802d0d0) between the loop and the clear (the fw recomputes it). A
- *   constant integer address differs in one word (ldub operand order) and is not relocatable, so it is not used.
+ *   break to it, 0x10/0x20 return); c is reused for the FUN_a00bb260 value. The inlined FUN_a00bb1c4 reads the
+ *   receive record through a pointer constant, (struct rx_rec *)0xa802d0d0 (RAM pointer constants as in
+ *   FUN_a0029aac and FUN_a009a37c; the same form matches the standalone FUN_a00bb1c4); the clear uses the
+ *   symbol DAT_a802d0d0, so the loop address and the clear address are separate expressions and the clear
+ *   recomputes its sethi as in the firmware.
  */
 extern unsigned char FUN_a00baef8(unsigned char);
 extern void FUN_a01487e8(unsigned char, unsigned short, unsigned char *);
@@ -37,7 +37,6 @@ extern unsigned char FUN_a00ccf34(unsigned char, unsigned char);
 extern unsigned char DAT_a802d078[];
 extern unsigned char DAT_a802d0d0[];
 extern unsigned char DAT_a802b09c;
-extern unsigned char DAT_rx[] __asm__("DAT_a802d0d0");
 
 static void rx_clear(void)
 {
@@ -60,13 +59,18 @@ static void reply(unsigned char c)
     FUN_a01487e8(4, 6, DAT_a802d078);
 }
 
+struct rx_rec {
+    unsigned char b[0x32];
+};
+
 static unsigned char find_cmd(void)
 {
+    struct rx_rec *rec = (struct rx_rec *)0xa802d0d0;
     unsigned char idx, j;
 
     for (idx = 0; idx <= 0x82; idx++) {
         for (j = 2; j <= 6; j++) {
-            if (FUN_a015463c(idx, j) != 0xff && FUN_a015463c(idx, j) != DAT_rx[j])
+            if (FUN_a015463c(idx, j) != 0xff && FUN_a015463c(idx, j) != rec->b[j])
                 break;
         }
         if (j == 7)

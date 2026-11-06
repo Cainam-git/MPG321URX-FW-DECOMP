@@ -9457,7 +9457,7 @@
     "ram:a00ce348": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "port-4 frame task: FUN_a00baef8(4), command-table lookup, then FUN_a00bfcc4 or a reply; documented asm-label aid",
+      "comment": "port-4 frame task: FUN_a00baef8(4), command-table lookup, then FUN_a00bfcc4 or a reply",
       "name": "FUN_a00ce348",
       "status": "matched"
     },
