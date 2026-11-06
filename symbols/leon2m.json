@@ -6659,8 +6659,7 @@
     },
     "ram:a00aa4e0": {
       "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "id != 5 -> 1; id == 5 -> 1 only if d7d48() == 0 and the signed byte a802d484 >= 0, else 0",
+      "comment": "header: drop the empty compiler-aid line",
       "name": "FUN_a00aa4e0",
       "status": "matched"
     },

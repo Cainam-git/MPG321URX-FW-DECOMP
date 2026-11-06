@@ -2,7 +2,6 @@
  * Code facts: one u8 param id (and %i0,0xff). id != 5 -> returns 1. id == 5 -> calls FUN_a00d7d48() (no argument:
  * %o0 is not set before the call) and returns 1 only when that call returned 0 AND the word DAT_a802d484 is >= 0
  * (ld + cmp + bge,a), else 0.
- * Compiler aids: none.
  */
 extern int DAT_a802d484;
 extern int FUN_a00d7d48(void);
