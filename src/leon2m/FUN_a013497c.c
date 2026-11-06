@@ -24,8 +24,8 @@
  *   (if/else arm order sets the rename ticks; the early-break form leaves the error string HIGH in %l0, fw %l5).
  * Further forms: off = idx * 16 is unsigned short ('and 0xff0'); the unpack loop is an inlined static
  *   function with an unsigned short count; case 3 'next' is unsigned int.
- * Compiler aids (no code): case 3 compares '(int)next == rd' - fold puts a bare variable second, the cast keeps the
- *   firmware operand order 'cmp next, rd'; the value is <= 0x1f, an equality test, so the cast changes nothing.
+ * Source form: case 3 takes 'next = wr + 1' and masks it with 0x1f at the compare with rd (0xa0134c78,
+ *   'cmp next, rd') and at the wr store.
  * Callees: FUN_a00dd614(level) level test returning unsigned char; FUN_a00df170 = printf-style output (int, K&R).
  */
 struct UartRing { unsigned char wr, rd, data[32], ovf; };
@@ -107,9 +107,9 @@ void FUN_a013497c(unsigned int *msg)
         }
         for (i = 0; i < len; i++) {
             DAT_a802dd90[port].data[DAT_a802dd90[port].wr] = data[i];
-            next = (DAT_a802dd90[port].wr + 1) & 0x1f;
-            if ((int)next == DAT_a802dd90[port].rd) DAT_a802dd90[port].ovf = 1;
-            DAT_a802dd90[port].wr = next;
+            next = DAT_a802dd90[port].wr + 1;
+            if ((next & 0x1f) == DAT_a802dd90[port].rd) DAT_a802dd90[port].ovf = 1;
+            DAT_a802dd90[port].wr = next & 0x1f;
         }
         break;
     case 4:
