@@ -5702,7 +5702,7 @@
     "ram:a00a09f8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "per-port handler (twin of 4): port status byte d290+0x18d/c/b/a and raw port state decide the port's next step; aid: 2x do continue; while (0) branch hint (same kind as accepted a0080c10/a008454c/a00d6054)",
+      "comment": "per-port handler (twin of 4): port status byte d290+0x18d/c/b/a and raw port state decide the port's next step",
       "name": "FUN_a00a09f8",
       "status": "matched"
     },
