@@ -7,11 +7,11 @@
  * AND of the register with 0xffff or 0, 0xc012091c..0xc012092c from the halfwords +8..+0x16 of DAT_a8079538 divided
  * by div and mul and multiplied by mul2 (high half) and the low halfword values; 0xc0120948 = h8 >> 2,
  * 0xc0120978 = 0, 0xc0122010 = h8 >> 3.
- * Source form: every value read or computed into a local before the register writes, in the order h8 (t),
- * the 0x920 high quotient (unsigned int q), the 0x91c quotient (unsigned int q0), the 0x928 quotient (unsigned
- * short q3), the 0x924 low quotient (unsigned short v, reused for the 0xc0122010 value), h14 and h12 (unsigned
- * short); h14 is read once and used in 0x920 and in the 0x924 sum; each register is written as 'R &= keep' then
- * the value composed at its write.
+ * Source form: every value is computed first, in record field order ('t = h8; qt = t / div / mul * mul2; qa, qc,
+ * qe likewise from +0xa, +0xc and +0xe + +0xc; h12 and h14 read into unsigned short locals'), then the registers
+ * are written in address order, each value composed at its write ('(qc << 16) | h14', 'qe | (s << 16)',
+ * 'qa | (qa << 16)'); the sums are written 'he + hc' and 'h16 + h14'; the 0x948 / 0x2010 tail reuses v
+ * ('t >>= 2; v = t >> 1;' before the 0x948 store).
  */
 struct Rec538 {
     unsigned char _0[7];
@@ -34,10 +34,9 @@ extern unsigned int func_0xa0f99e4c(unsigned int);
 void FUN_a00dcdb8(unsigned int port)
 {
     unsigned char cf, div, mul = 0, mul2 = 1, x, s, r;
-    unsigned short w, t, v, lo3, h14;
-    unsigned int q;
-    unsigned int q0;
-    unsigned short q3;
+    unsigned short w, t, v, h12, h14;
+    unsigned int qt, qc;
+    unsigned short qe, qa;
 
     cf = DAT_a8079538.b7;
     w = (R(0xc0110004) >> 16) & 0x3ff;
@@ -77,24 +76,24 @@ void FUN_a00dcdb8(unsigned int port)
         R(0xc0118000) = (x << 4) | s | 0x100;
     }
     t = DAT_a8079538.h8;
-    q = DAT_a8079538.hc / div / mul * mul2;
-    q0 = t / div / mul * mul2;
-    q3 = DAT_a8079538.ha / div / mul * mul2;
-    v = (DAT_a8079538.he + DAT_a8079538.hc) / div / mul * mul2;
+    qt = t / div / mul * mul2;
+    qa = DAT_a8079538.ha / div / mul * mul2;
+    qc = DAT_a8079538.hc / div / mul * mul2;
+    qe = (DAT_a8079538.he + DAT_a8079538.hc) / div / mul * mul2;
+    h12 = DAT_a8079538.h12;
     h14 = DAT_a8079538.h14;
-    lo3 = DAT_a8079538.h12;
     R(0xc0120914) = 0x12000210;
     R(0xc0120918) = 0xffff0000;
     R(0xc012091c) &= 0xffff;
-    R(0xc012091c) = (q0 << 16) | 0xffff;
+    R(0xc012091c) = (qt << 16) | 0xffff;
     R(0xc0120920) &= 0;
-    R(0xc0120920) = (q << 16) | h14;
+    R(0xc0120920) = (qc << 16) | h14;
     R(0xc0120924) &= 0;
-    R(0xc0120924) = v | ((unsigned int)((unsigned short)(DAT_a8079538.h16 + h14) + r) << 16);
+    R(0xc0120924) = qe | (((unsigned short)(DAT_a8079538.h16 + h14) + r) << 16);
     R(0xc0120928) &= 0;
-    R(0xc0120928) = q3 | ((unsigned int)q3 << 16);
+    R(0xc0120928) = qa | (qa << 16);
     R(0xc012092c) &= 0;
-    R(0xc012092c) = lo3;
+    R(0xc012092c) = h12;
     t >>= 2;
     v = t >> 1;
     R(0xc0120948) = t;
