@@ -3,21 +3,21 @@
  * 42 entries): 0, 1, 27 -> 2; 2, 14, 16, 17, 18 -> 15; 4, 5, 6 -> 3; 8, 10, 11, 12 -> 9; 20, 22, 23, 24 -> 21;
  * 26, 36 -> 34; 28, 30-33 -> 29; 34, 37, 38, 39 -> 35; every other value (including 41 and values above 41)
  * is returned unchanged. The result is held in an int and returned as unsigned char.
- * Source form: one case body per value (case 38 and 39 share one), case 36 written before case 26; the value is
- * read into an unsigned short and the values returned unchanged are written '(unsigned char)v'; case 41 keeps
- * r = v without an assignment.
- * Compiler aid: __builtin_expect(x != 4, 1) emits no instructions; it changes the branch prediction so that
- * block reordering copies the final 'and 0xff' into every case.
+ * Source form: the result is an int r initialised to 0x28 and returned as 'if (x != 4) return r;' (fw
+ * 0xa0100998: bne to the shared exit with mov 0x28 in the delay slot); one case body per value, cases 38 and 39
+ * included, case 36 written before case 26; the value is read into an unsigned short and the values returned
+ * unchanged are written '(unsigned char)v' (the fw 'and 0xff' of the default block); case 41 keeps r = v
+ * without an assignment (its own jump table entry, fw 0xa01009d4).
  */
 extern unsigned char DAT_a8027a7c;
 
 unsigned char FUN_a0100990(unsigned char x)
 {
     unsigned short v;
-    int r;
+    int r = 0x28;
 
-    if (__builtin_expect(x != 4, 1))
-        return 0x28;
+    if (x != 4)
+        return r;
     v = DAT_a8027a7c;
     r = v;
     switch (r) {
@@ -136,6 +136,8 @@ unsigned char FUN_a0100990(unsigned char x)
         r = 35;
         break;
     case 38:
+        r = 35;
+        break;
     case 39:
         r = 35;
         break;
