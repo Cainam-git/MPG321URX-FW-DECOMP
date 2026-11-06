@@ -15,8 +15,8 @@
  * unsigned char with early returns and unsigned short locals; the record test is one '||' condition; the limits
  * are written as 602.6 * 0.1, 503 * 0.1 and 303.8 * 0.1, whose folded products are the firmware's constants at
  * 0x1a2fe0/0x1a2fe8/0x1a2ff0 (the literals 60.26, 50.3 and 30.38 round one unit lower).
- * Compiler aid (no instructions): 'goto g2; g2:' at the start of the 0x13/0x21 case changes the predicted branch
- * probabilities so that block reordering places the 0x51 compare block before the 0xa1 compare block.
+ * Case 0x21 is its own label after the 0x13 case and jumps to the 0x13 code with 'goto c13' (block order of the
+ * 0x51 and 0xa1 compare blocks as in the firmware).
  */
 struct VMode { unsigned int a; unsigned int div32; unsigned int c; };
 extern struct VMode DAT_a8027aac[];
@@ -75,12 +75,12 @@ unsigned char FUN_a0120de4(unsigned char mode, unsigned char blk)
             r = 3;
         break;
     case 0x13:
-    case 0x21:
-        goto g2;
-    g2:
+    c13:
         if ((FUN_a00f1f9c(blk, 0x11) & 0xe0) == 0x20)
             r = check_regs(blk) ? 4 : 1;
         break;
+    case 0x21:
+        goto c13;
     case 0x31:
     case 0x41:
     case 0x51:
