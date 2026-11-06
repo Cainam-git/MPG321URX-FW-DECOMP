@@ -21773,7 +21773,7 @@
     "ram:a0142910": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "per-port sync state machine; copies port-entry flags incl. entry bit 4 -> status bit 0x400 into the port status",
+      "comment": "CLEAR macro as a braced block",
       "name": "FUN_a0142910",
       "status": "matched"
     },

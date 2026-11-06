@@ -64,9 +64,9 @@ extern unsigned short func_0x4008d594(unsigned short);
 extern unsigned char FUN_a00dd614(unsigned int);
 extern int FUN_a00df170();
 
-/* field reset used 5 times */
-#define CLEAR(p) do { (p)->w4 = 0; (p)->w16 = 0; (p)->w18 = 0; (p)->w1a = 0; (p)->w1c = 0; (p)->w1e = 0; \
-    (p)->w20 = 0; (p)->b22 = 0; (p)->b23 = 0; (p)->b24 = 0; (p)->w26 = 0; } while (0)
+/* field reset used 5 times (a braced block of stores) */
+#define CLEAR(p) { (p)->w4 = 0; (p)->w16 = 0; (p)->w18 = 0; (p)->w1a = 0; (p)->w1c = 0; (p)->w1e = 0; \
+    (p)->w20 = 0; (p)->b22 = 0; (p)->b23 = 0; (p)->b24 = 0; (p)->w26 = 0; }
 
 void FUN_a0142910(void)
 {
