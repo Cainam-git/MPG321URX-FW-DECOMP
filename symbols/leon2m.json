@@ -10358,7 +10358,7 @@
     },
     "ram:a00d79f0": {
       "by": "hand",
-      "comment": "d6054(2, &t), 16-byte copy, 9b8c(2, &copy), 9f44(2) (twin of d7a30)",
+      "comment": "header: drop the empty compiler-aid note",
       "name": "FUN_a00d79f0",
       "status": "matched"
     },
