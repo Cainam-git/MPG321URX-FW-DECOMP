@@ -4,7 +4,7 @@
  * DAT_0019aec4[] and DAT_0019aebc[] = val (both entries when ch > 1); switch(fmt) -> q->b24 (0x10/0x20) and m;
  * 0xD0032004/0xD003A004 (ch 0) or ...008 = m << 16 | m | 1. Inlined in FUN_a0110318 as set_fmt(ch, 7, 0xff).
  * Facts: the SET else arm reuses the loop counter ('i = ch; tab[i]') -> register order of fw; 't = m << 16; v = m | t | 1'
- * -> fw 'or m, t' operand order. Static helpers set_pos/wider/scale in this file are unused here. No compiler aids.
+ * -> fw 'or m, t' operand order. The SET macro writes the table word of one or both channels.
  */
 #define R(a) (*(volatile unsigned int *)(a))
 struct OutCh { unsigned int w0; unsigned char p04[8]; unsigned short h0c, h0e; unsigned char p10[4];
@@ -54,33 +54,3 @@ void FUN_a010d914(unsigned char ch, unsigned char fmt, unsigned char val)
     if (ch == 0) { t = m << 16; v = m | t | 1; R(0xd0032004) = v; R(0xd003a004) = v; }
     else { t = m << 16; v = m | t | 1; R(0xd0032008) = v; R(0xd003a008) = v; }
 }
-
-static void set_pos(unsigned char ch, unsigned char which, unsigned short p, unsigned short w20)
-{
-    struct OutCh *q;
-    unsigned int v;
-
-    q = ctx(ch);
-    if (which == 0) { q->h18 = p; v = p; }
-    else
-    {
-        q->h1a = p;
-        if (q->b3e & 1) v = p - DAT_a802d700; else v = p + DAT_a802d700;
-    }
-    q->h20 = w20;
-    v = v << 16 | w20;
-    if (which == 0) DAT_0019aec4[ch]->w0 = v; else DAT_0019aebc[ch]->w0 = v;
-}
-
-static int wider(unsigned short w, unsigned int first)
-{
-    if (w > first)
-        return 1;
-    return 0;
-}
-
-static unsigned int scale(unsigned short a, unsigned int b, unsigned short d)
-{
-    return a * b / d;
-}
-
