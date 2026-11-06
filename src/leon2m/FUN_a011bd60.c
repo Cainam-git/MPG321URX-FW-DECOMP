@@ -6,8 +6,8 @@
  * Caller: FUN_a0146ab0. The command/address helper is the same sequence as FUN_a011c6c8 (static, inlined);
  * FUN_a011b3e8 is defined here because GCC inlines it at -O3.
  * Exact form: b *= ARR_a802c9ca[sel] as its own statement (keeps the product in b's register); the helper takes
- * sel as unsigned int. Compiler aid: the empty statement 'if (a) { }' in the helper emits no instructions; as in
- * FUN_a011c6c8 it keeps the firmware's 16-bit narrowing of the address before the second register block.
+ * sel as unsigned int; the helper copies a into the unsigned int local w right before the second sel test, which
+ * gives the firmware's 16-bit narrowing of the address (sll/srl) before the second register block.
  */
 #define R(a) (*(volatile unsigned int *)(a))
 
@@ -16,6 +16,7 @@ extern unsigned short ARR_a802c9ca[];
 static void cmdaddr(unsigned int sel, unsigned char c, unsigned short a)
 {
     int i;
+    unsigned int w;
 
     if (sel == 0)
         R(0xcf011780) = c;
@@ -23,15 +24,14 @@ static void cmdaddr(unsigned int sel, unsigned char c, unsigned short a)
         R(0xcf011794) = c;
     for (i = 0; i < 0xa0; i++)
         __asm__("nop");
-    if (a) {
-    }
+    w = a;
     if (sel == 0) {
-        R(0xcf011784) = a & 0xff;
-        R(0xcf011788) = a >> 8;
+        R(0xcf011784) = w & 0xff;
+        R(0xcf011788) = w >> 8;
         R(0xcf00bfcc) = 0;
     } else {
-        R(0xcf011798) = a & 0xff;
-        R(0xcf01179c) = a >> 8;
+        R(0xcf011798) = w & 0xff;
+        R(0xcf01179c) = w >> 8;
         R(0xcf00c3cc) = 0;
     }
     for (i = 0; i < 0xa0; i++)
