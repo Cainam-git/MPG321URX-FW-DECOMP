@@ -22,7 +22,7 @@ The monitor is driven by a Novatek NT68500 scaler chip. The firmware holds progr
 ## Progress
 
 ```
-Main processor      [##################--]   91 %
+Main processor      [##################--]   92 %
 Input processor     [###################-]   97 %
 Helper processor    [####################]  100 %
 Tensilica processor [####################]  100 %
