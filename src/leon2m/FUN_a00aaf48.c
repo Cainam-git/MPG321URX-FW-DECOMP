@@ -7,7 +7,7 @@
  * Source form: the record base DAT_a802d290; arm order 'v <= 6' first. The loop bound is a u8 local 'n = 7': the
  * fw test is 'cmp 7; bcc' (GEU 7), which only survives when the constant reaches the compare at RTL level (a
  * literal 7 is folded to 'i <= 6' -> cmp 6).
- * Compiler aids: none (the local n generates no code).
+ * Source form: the loop bound is a local n = 7.
  */
 extern unsigned char DAT_a802b08f;
 extern unsigned char DAT_a802d290[];

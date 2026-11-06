@@ -6714,7 +6714,7 @@
     "ram:a00aaf48": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "save a802b08f, set 0xe; 7 rows: 146a80 when aad30(i) == 0, a00a31a4 from table 0x1910b0 (i*29 + a802d290[8]); 146b20 x2 at row from a802d290[0x1a4]; restore a802b08f",
+      "comment": "header: drop the empty compiler-aid note",
       "name": "FUN_a00aaf48",
       "status": "matched"
     },
