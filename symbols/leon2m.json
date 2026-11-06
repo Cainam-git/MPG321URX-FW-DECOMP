@@ -11836,7 +11836,7 @@
       "status": "matched"
     },
     "ram:a00e29a4": {
-      "by": "twin",
+      "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Same code as FUN_a00e2714 with other tables (listed in the source header)",
       "name": "FUN_a00e29a4",
