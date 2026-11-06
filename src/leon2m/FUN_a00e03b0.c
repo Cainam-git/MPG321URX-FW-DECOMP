@@ -12,7 +12,7 @@
  * 0xa00e0418-0xa00e0420; in the DAT_a802b550 path the same re-fill sits before the page-register write and its
  * stores are removed by the compiler as repeats of the stored values (as in FUN_a00e02ec / FUN_a00e0514).
  * Compiler aid: __builtin_expect on the page test of the write path (no code).
- * The register accesses are 'volatile unsigned long'. Built without -g (no nop after the last call).
+ * The register accesses are 'volatile unsigned long'. Built without -g.
  */
 extern int FUN_a00df170(const char *fmt, ...);
 extern void FUN_a00df80c(void);
