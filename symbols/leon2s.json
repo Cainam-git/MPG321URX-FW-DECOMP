@@ -4414,8 +4414,8 @@
       "status": "matched"
     },
     "ram:a0090dec": {
-      "by": "autoc",
-      "comment": "v = FUN_a00a657c(p1, 0x45) & 7. Returns 10 for v = 0, 1, 2, 3 or 5, 0xC for v = 6, 0x10 for v = 7 and 8 for v = 4",
+      "by": "hand",
+      "comment": "v = FUN_a00a657c(p1, 0x45) & 7. Returns 10 for v = 5, 0xC for v = 6, 0x10 for v = 7 and 8 for v = 0..4 (jump table switchdataD_a0090dcc)",
       "name": "FUN_a0090dec",
       "status": "matched"
     },
