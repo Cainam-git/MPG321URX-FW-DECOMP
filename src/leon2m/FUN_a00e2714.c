@@ -5,8 +5,9 @@
  * entry a of 10-word tables: (0xa80261f0, 0xa80261c8, 0xa80261a0) with value z, (0xa8026178, 0xa8026150, 0xa8026128)
  * with x, and (0xa8026100, 0xa80260d8, 0xa802b5d0) with y. b is only range-checked. The code also has a branch for a
  * == 0xffffffff that passes the table addresses themselves instead of entries; after the range check it is never
- * taken. Same checks as FUN_a00e2690. Compiler aid: 'x++; x--;' after the first check emits no instructions; it
- * changes the order in which GCC assigns the registers that hold the table addresses, which then match the firmware.
+ * taken. Same checks as FUN_a00e2690.
+ * Source form: each FUN_a00e0774 call has its own 'if (a == 0xffffffff) call(table addresses); else
+ * call(table entries);' (as FUN_a00e52e8); GCC merges the three tests into one.
  */
 extern int FUN_a00df170(const char *fmt, ...);
 extern void FUN_a00df80c(void);
@@ -26,21 +27,22 @@ void FUN_a00e2714(unsigned int unit, unsigned int a, unsigned int b, unsigned in
         FUN_a00df170(s_00199788, a);
         return;
     }
-    x++;
-    x--;
     if (b > 9) {
         FUN_a00df80c();
         FUN_a00e0bc0();
         FUN_a00df170(s_00199768, b);
         return;
     }
-    if (a == 0xffffffff) {
+    if (a == 0xffffffff)
         FUN_a00e0774(unit, (unsigned int)DAT_a80261f0, (unsigned int)DAT_a80261c8, (unsigned int)DAT_a80261a0, z);
+    else
+        FUN_a00e0774(unit, DAT_a80261f0[a], DAT_a80261c8[a], DAT_a80261a0[a], z);
+    if (a == 0xffffffff)
         FUN_a00e0774(unit, (unsigned int)DAT_a8026178, (unsigned int)DAT_a8026150, (unsigned int)DAT_a8026128, x);
+    else
+        FUN_a00e0774(unit, DAT_a8026178[a], DAT_a8026150[a], DAT_a8026128[a], x);
+    if (a == 0xffffffff)
         FUN_a00e0774(unit, (unsigned int)DAT_a8026100, (unsigned int)DAT_a80260d8, (unsigned int)DAT_a802b5d0, y);
-        return;
-    }
-    FUN_a00e0774(unit, DAT_a80261f0[a], DAT_a80261c8[a], DAT_a80261a0[a], z);
-    FUN_a00e0774(unit, DAT_a8026178[a], DAT_a8026150[a], DAT_a8026128[a], x);
-    FUN_a00e0774(unit, DAT_a8026100[a], DAT_a80260d8[a], DAT_a802b5d0[a], y);
+    else
+        FUN_a00e0774(unit, DAT_a8026100[a], DAT_a80260d8[a], DAT_a802b5d0[a], y);
 }
