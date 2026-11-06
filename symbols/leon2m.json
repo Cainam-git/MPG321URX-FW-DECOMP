@@ -17735,7 +17735,7 @@
     "ram:a0124da4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "n <= 7 and ROM record 0x1a42a8[n] byte +0xe != 0xff: ROM 0x4008c86c(b0e, b0f, ~b10)",
+      "comment": "header: drop the empty compiler-aid line",
       "name": "FUN_a0124da4",
       "status": "matched"
     },
