@@ -6,8 +6,8 @@
  * FUN_a01486a8 takes 3 arguments (it forwards %o2 to FUN_a0133b54); FUN_a014e478 takes d290[0x1e]; the base is
  * the symbol DAT_a802d290.
  * Source form: the f == 0 arm first, and a local buffer pointer p (fw keeps &buf in %l0 across the calls).
- * Compiler aid: u8 local bound n = 10 (code-free; tree fold turns 'i < 10' into 'cmp 9; bleu', the fw has
- * 'cmp 0xa; bcs'; same class as FUN_a00aaf48 'n = 7').
+ * Source form: n = 10 is the length of the message body in an unsigned char local; the checksum loop runs to n and
+ * the send passes n + 1 bytes (body plus checksum).
  */
 struct Rec290 {
     unsigned char pad[0x1e];
@@ -48,5 +48,5 @@ void FUN_a0089f6c(void)
     for (i = 0; i < n; i++)
         DAT_a802af9e = p[i] ^ DAT_a802af9e;
     p[i] = DAT_a802af9e;
-    FUN_a01486a8(FUN_a014e478(DAT_a802d290.b1e), 0xb, p);
+    FUN_a01486a8(FUN_a014e478(DAT_a802d290.b1e), n + 1, p);
 }

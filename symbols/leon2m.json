@@ -2865,7 +2865,7 @@
     "ram:a0089f6c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "10-byte message (flag bit 7 of d290+0xa8), XOR checksum via af9e, a01486a8(e478(d290[0x1e]), 0xb, buf); aid u8 bound n = 10",
+      "comment": "clean source form, message length local used for the send",
       "name": "FUN_a0089f6c",
       "status": "matched"
     },
