@@ -2360,7 +2360,7 @@
     },
     "ram:a0073540": {
       "by": "hand",
-      "comment": "header: the asm nop is the source form of the firmware nop",
+      "comment": "when p1 == 0: copies word 0xA8076190 into word +4 of the record at 0xA80789D4 and calls FUN_a00b2194 with the record address",
       "name": "FUN_a0073540",
       "status": "matched"
     },
@@ -3537,7 +3537,7 @@
     },
     "ram:a0089e24": {
       "by": "hand",
-      "comment": "stores in field order, no scheduling barrier",
+      "comment": "Mark an 8-byte record entry (byte 0 = 1, clear bytes 1 and 4)",
       "name": "FUN_a0089e24",
       "status": "matched"
     },
@@ -5234,7 +5234,7 @@
     },
     "ram:a009723c": {
       "by": "hand",
-      "comment": "restart-path clears in source order, no empty loop",
+      "comment": "FRL lock check step of the HDMI mode-detect state machine (retry, timeout, restart)",
       "name": "DRV_HDMI_ModeDetect_FSM_FRL_Chk",
       "status": "matched"
     },
@@ -5483,7 +5483,7 @@
     },
     "ram:a009c558": {
       "by": "hand",
-      "comment": "FUN_a009c558: header names the hardware-register volatile as source form",
+      "comment": "port record +4 register block: (r[2] & 0xff) << 16 | r[1] >> 16 (MMIO volatile)",
       "name": "FUN_a009c558",
       "status": "matched"
     },
@@ -5525,7 +5525,7 @@
     },
     "ram:a009c87c": {
       "by": "hand",
-      "comment": "clears in source order +1, +0x2d, +4, no scheduling barrier",
+      "comment": "Clears bytes +4, +1 and +0x2d of ARR_a807d7e0[port] and calls DRV_HDMI_Set_AudStatus(port, 0)",
       "name": "FUN_a009c87c",
       "status": "matched"
     },
@@ -6366,7 +6366,7 @@
     },
     "ram:a00a45d8": {
       "by": "hand",
-      "comment": "header: asm nop is the source form",
+      "comment": "record {w0, w4} a8079218, tail b2194; asm nop = fw standalone nop before retl",
       "name": "FUN_a00a45d8",
       "status": "matched"
     },
@@ -9985,7 +9985,7 @@
     },
     "ram:a00d97bc": {
       "by": "hand",
-      "comment": "stack msg: ROM copy, 4-bit count = (src[0]&0xf)-1, byte copy loop, d6a54(&m,3,1)",
+      "comment": "stack msg: ROM copy, 4-bit count = (src[0]&0xf)-1, byte copy loop, d6a54(&m,3,1); aid asm nop = fw real nop",
       "name": "FUN_a00d97bc",
       "status": "matched"
     },

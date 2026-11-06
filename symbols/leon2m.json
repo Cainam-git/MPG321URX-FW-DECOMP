@@ -1581,35 +1581,35 @@
     "ram:a00295f4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "clean source form, plain r += 0x21 step",
+      "comment": "returns FUN_a00295ec(c) + 0x21 as an unsigned char (byte routine chain)",
       "name": "FUN_a00295f4",
       "status": "matched"
     },
     "ram:a0029604": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "byte chain routine, local r per step, no aid",
+      "comment": "returns FUN_a00295f4(c) + 0x0e as an unsigned char (byte routine chain)",
       "name": "FUN_a0029604",
       "status": "matched"
     },
     "ram:a002961c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "unsigned char locals for the +0x21 and +0xe steps",
+      "comment": "returns FUN_a0029604(c) >> 1 as an unsigned char (byte routine chain)",
       "name": "FUN_a002961c",
       "status": "matched"
     },
     "ram:a0029638": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "unsigned char locals for the +0x21 and +0xe steps",
+      "comment": "returns FUN_a002961c(c) * 3 as an unsigned char (byte routine chain)",
       "name": "FUN_a0029638",
       "status": "matched"
     },
     "ram:a0029660": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "unsigned char locals for the +0x21 and +0xe steps",
+      "comment": "returns FUN_a0029638((unsigned char)(c + 0x0b)) as an unsigned char (byte routine chain)",
       "name": "FUN_a0029660",
       "status": "matched"
     },
@@ -1623,56 +1623,56 @@
     "ram:a00296b8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "unsigned char locals for the +0x21 and +0xe steps",
+      "comment": "returns FUN_a0029638((unsigned char)(c + 0x1e)) as an unsigned char (byte routine chain)",
       "name": "FUN_a00296b8",
       "status": "matched"
     },
     "ram:a00296e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "unsigned char locals for the +0x21 and +0xe steps",
+      "comment": "returns FUN_a0029638((unsigned char)(c + 0x26)) as an unsigned char (byte routine chain)",
       "name": "FUN_a00296e4",
       "status": "matched"
     },
     "ram:a0029710": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "clean source form, unsigned char locals for the +0x21 and +0xe steps",
+      "comment": "returns FUN_a0029638((unsigned char)(c + 0x2d)) as an unsigned char (byte routine chain)",
       "name": "FUN_a0029710",
       "status": "matched"
     },
     "ram:a002973c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "inline copies as in FUN_a00295f4 / FUN_a0029604",
+      "comment": "returns FUN_a0029638((unsigned char)(c + 0x33)) as an unsigned char (byte routine chain)",
       "name": "FUN_a002973c",
       "status": "matched"
     },
     "ram:a0029768": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "clean source form, plain step statements",
+      "comment": "returns FUN_a0029638((unsigned char)(c + 0x38)) as an unsigned char (byte routine chain)",
       "name": "FUN_a0029768",
       "status": "matched"
     },
     "ram:a0029794": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "byte chain routine, local r per step, no aid",
+      "comment": "returns FUN_a0029638((unsigned char)(c + 0x3c)) as an unsigned char (byte routine chain)",
       "name": "FUN_a0029794",
       "status": "matched"
     },
     "ram:a00297c0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "unsigned char locals for the +0x21 and +0xe steps",
+      "comment": "returns FUN_a0029638((unsigned char)(c + 0x3f)) as an unsigned char (byte routine chain)",
       "name": "FUN_a00297c0",
       "status": "matched"
     },
     "ram:a00297ec": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "unsigned char locals for the +0x21 and +0xe steps",
+      "comment": "returns FUN_a0029638((unsigned char)(c + 0x41)) as an unsigned char (byte routine chain)",
       "name": "FUN_a00297ec",
       "status": "matched"
     },
@@ -2865,7 +2865,7 @@
     "ram:a0089f6c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "clean source form, message length local used for the send",
+      "comment": "10-byte message (flag bit 7 of d290+0xa8), XOR checksum via af9e, a01486a8(e478(d290[0x1e]), 0xb, buf); aid u8 bound n = 10",
       "name": "FUN_a0089f6c",
       "status": "matched"
     },
@@ -5352,14 +5352,14 @@
     "ram:a009d79c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "FUN_a009d79c: tail call reads DAT_a8025c56 directly, no block-scope local",
+      "comment": "afec % 3 step loop until aad30(t) == 1, a9650(afec + K, 1), then a813c(1, 5c56, afec - base != 5c56) (one of four constant variants)",
       "name": "FUN_a009d79c",
       "status": "matched"
     },
     "ram:a009d848": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid line",
+      "comment": "afec % 3 step loop until aad30(t) == 1, a9650(afec + K, 1), then a813c(1, 5c56, afec - base != 5c56) (one of four constant variants)",
       "name": "FUN_a009d848",
       "status": "matched"
     },
@@ -5380,7 +5380,7 @@
     "ram:a009da6c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "step a802afec ((u16) halfword) until aad30 / aa520 accepts; tail a813c(1, a8025c56, (w - 60) != a8025c56) written as two calls",
       "name": "FUN_a009da6c",
       "status": "matched"
     },
@@ -5401,7 +5401,7 @@
     "ram:a009dc84": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "FUN_a00a93bc(word 0xa802afec - 0x44, as u8); loop: t = (lduh 0xa802afee = low half of word 0xa802afec) - 0x43; t = t % 4 (signed); word 0xa802afec = t + 0x44; repeat until FUN_a00aad30(t) == 1. FUN_a00a9650(afec - 0x44, 1); v = byte 0xa8025c56; tail FUN_a00a813c(1, (u8)(v + 2), 0) when afec - ...",
       "name": "FUN_a009dc84",
       "status": "matched"
     },
@@ -5654,7 +5654,7 @@
     "ram:a009f42c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "APP event/timer handler: APP state machine on ms timers and port states, timer and 1000 ms countdowns; reads no refresh rate; no aids",
       "name": "FUN_a009f42c",
       "status": "matched"
     },
@@ -5667,7 +5667,7 @@
     "ram:a00a01b8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "FUN_a00b0f48(); word 0xa802afec = 0x116; byte 0xa802b08e |= 2; byte 0xa802d43a = 0 (clrb in the call delay slot); u16 0xa802d03c = func_0x4008d588() (ROM ms tick, u16, no argument). void(void).",
       "name": "FUN_a00a01b8",
       "status": "matched"
     },
@@ -6335,7 +6335,7 @@
     "ram:a00a4a30": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid line",
+      "comment": "146a80(5, 8, 4, 0x792, 0); 4 x 146b20 with byte i + 0x22 (p == 0) or i + 0x1e; two 146a80 calls with 0x792 / 0x992 swapped by p (one loop, unswitched by -O3)",
       "name": "FUN_a00a4a30",
       "status": "matched"
     },
@@ -6528,7 +6528,7 @@
     "ram:a00a89e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "clean source form, plain for loop instead of the goto loop",
+      "comment": "FUN_a0146b50(0x111, 0), FUN_a0146b6c(0, 0), then for i = 0, 1 FUN_a00a31a4(0, 0x2a, i * 2 + 6, 1, FUN_a00a3844(0x190748, i * 29 + byte 0xA802D298), 0)",
       "name": "FUN_a00a89e4",
       "status": "matched"
     },
@@ -6659,7 +6659,7 @@
     },
     "ram:a00aa4e0": {
       "by": "hand",
-      "comment": "header: drop the empty compiler-aid line",
+      "comment": "id != 5 -> 1; id == 5 -> 1 only if d7d48() == 0 and the signed byte a802d484 >= 0, else 0",
       "name": "FUN_a00aa4e0",
       "status": "matched"
     },
@@ -6694,7 +6694,7 @@
     "ram:a00aabf0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "loop body indentation",
+      "comment": "a00b3c80 family: goto loop of rows from table 0x18ca88 (i*29 + a802d290.b08), mark 146a80(.., 0x292) when aa520(i) == 0",
       "name": "FUN_a00aabf0",
       "status": "matched"
     },
@@ -6714,7 +6714,7 @@
     "ram:a00aaf48": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "save a802b08f, set 0xe; 7 rows: 146a80 when aad30(i) == 0, a00a31a4 from table 0x1910b0 (i*29 + a802d290[8]); 146b20 x2 at row from a802d290[0x1a4]; restore a802b08f",
       "name": "FUN_a00aaf48",
       "status": "matched"
     },
@@ -6755,7 +6755,7 @@
     "ram:a00ab4bc": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "clean source form, no casts or masks",
+      "comment": "two nested loops j, i = 0..2: l0 = i + 5j + 6; 146a80 x3 and 146b20 x4 per cell (bytes 2i + 0x2a / 0x17 / 0x18 / 0x2b)",
       "name": "FUN_a00ab4bc",
       "status": "matched"
     },
@@ -6776,7 +6776,7 @@
     "ram:a00aba34": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "v as a conditional expression",
+      "comment": "v = 0x742 + (0x50 when p1 == 0); FUN_a00ab5f0(0x2c, 10, byte 0xA802D2A4, 7, p1), FUN_a0146a80(0x28 / 0x2b / 0x32, 10, 3 / 1 / 1, v, 0), FUN_a0146b50(0xea, 0), FUN_a00b6ec8(0x29, 10, byte 0xA802D2A4)",
       "name": "FUN_a00aba34",
       "status": "matched"
     },
@@ -6797,7 +6797,7 @@
     "ram:a00abc64": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "FUN_a00abc64: v as a plain conditional",
+      "comment": "v = p ? 0x742 : 0x792; ab5f0(0x2c, 8, a802d290[0x13], 7, p); 146a80 x3 with v; 146b50(0xe8, 0); b6ec8(0x29, 8, a802d290[0x13])",
       "name": "FUN_a00abc64",
       "status": "matched"
     },
@@ -6832,7 +6832,7 @@
     "ram:a00abff8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid line",
+      "comment": "byte a802d290[0x12] + 1, clamp at 100; else store and redraw via ab5f0 / 146a80 x3 / 146b50(0xe6) / b6ec8 / d45f8; then a802b08e |= 2",
       "name": "FUN_a00abff8",
       "status": "matched"
     },
@@ -7151,7 +7151,7 @@
     "ram:a00b31a0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "clean source form, plain for loop instead of the goto loop",
+      "comment": "a89e4 family: setup calls, goto loop of a00a31a4 rows from table 0x18f550 (i*29 + a802d290[8])",
       "name": "FUN_a00b31a0",
       "status": "matched"
     },
@@ -7242,7 +7242,7 @@
     "ram:a00b3c80": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "clean source form, plain for loop instead of the goto loop",
+      "comment": "calls a0146b50(0x92,0), a0146b6c(0,0), then 3x a00a31a4(0,0x16,2i+6,1, a00a3844(table 0x196678, i*29 + a802d290.b08), 0); goto loop (fw hoists only the sethi)",
       "name": "FUN_a00b3c80",
       "status": "matched"
     },
@@ -7355,7 +7355,7 @@
     "ram:a00b6514": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid line",
+      "comment": "row = u8(a802d433 * 2 + 9), col 0x2a/0x2b/0x2d/0x2e by p; 146c40(0,0,0), 14667c(..), 146870(0, col*24, row*36 + 0x1a, col*24 + 0x17, row*36 + 0x51, 0), 146c40(0,1,0)",
       "name": "FUN_a00b6514",
       "status": "matched"
     },
@@ -7396,7 +7396,7 @@
     "ram:a00b6b88": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "step v through 0..7 with wrap: dir 1 = down (0 -> 7), else up (7 -> 0); values > 7 unchanged",
       "name": "FUN_a00b6b88",
       "status": "matched"
     },
@@ -7561,7 +7561,7 @@
     "ram:a00b7e68": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "FUN_a00b7e68: u8 first parameter, no masks",
+      "comment": "146b50(0x111), ab5f0(0x2c,6,p2,6,p1); v = p1 ? 0x742 : 0x792 with a9468(1, 3 or 2); 146a80/146b20 calls with v; 1577f4(buf, 0x1981d0, p3), buf[0] = 3, a00a31a4 draw of buf",
       "name": "FUN_a00b7e68",
       "status": "matched"
     },
@@ -7575,7 +7575,7 @@
     "ram:a00b83e4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid line",
+      "comment": "if 142e8c(0) != 5: b7f9c(0x15), 14771c(0), a802b08e |= 1 when 145660(0, 0x16); 146dc0(0,0), 146c40(8,0,0), a802b08f = 0x24, 146dc0(0,1); clear bit 15 of a802cff4.h03e",
       "name": "FUN_a00b83e4",
       "status": "matched"
     },
@@ -7602,7 +7602,7 @@
     "ram:a00b8774": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "u16 0xa802b092 = 0x72c; u16 0xa802b094 = 0 (clrh, before the call); FUN_a0103808(0, 0, 0, 0) (return unused); FUN_a00b7f9c(0x1b); FUN_a014512c(1, 0); u16 at 0xa802cff4+0x18 |= 0x1000. void(void).",
       "name": "FUN_a00b8774",
       "status": "matched"
     },
@@ -7622,7 +7622,7 @@
     "ram:a00b8848": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "plain tests on the call results, u16 FUN_a0145660",
+      "comment": "146b6c(0,0), 90fd8(), dc3dc(), a802b08e |= 6; if 142e8c(0) != 5 and 145660(0, 0x16) != 0: a802b08e |= 1",
       "name": "FUN_a00b8848",
       "status": "matched"
     },
@@ -7662,7 +7662,7 @@
     "ram:a00b8e7c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "clean source form, flag test as == 1, no branch hints",
+      "comment": "set-up calls, then by byte 0xa802d41a[page] (1..11) rows / FUN_a00ad86c / FUN_a0146b20 calls with byte 0xa8025c56, then the DAT_001928b0 rows",
       "name": "FUN_a00b8e7c",
       "status": "matched"
     },
@@ -7981,7 +7981,7 @@
     "ram:a00bc214": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "FUN_a00bc214: unsigned char parameter, no explicit mask",
+      "comment": "text a802d078[7..9] (... 0x31), tail 1487e8(p, 11, &a802d078) (bdb48 family)",
       "name": "FUN_a00bc214",
       "status": "matched"
     },
@@ -8259,7 +8259,7 @@
     "ram:a00bdb88": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "FUN_a00bdb88: u8 parameter, no mask",
+      "comment": "text a802d078[7..9] = 'V', '2', '3'; bac3c(0x30); ba950(p); babe4(p, 11)",
       "name": "FUN_a00bdb88",
       "status": "matched"
     },
@@ -8273,14 +8273,14 @@
     "ram:a00bdc14": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid line",
+      "comment": "text a802d078[7..] stores (ascending, before bac3c), ba950 / babe4 calls (bdb48 family)",
       "name": "FUN_a00bdc14",
       "status": "matched"
     },
     "ram:a00bdc60": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "text a802d078[7..9] = '0', '0', '0' + bits 4..7 of a802d2c0; bac3c(0x39); ba950(p); babe4(p, 11)",
       "name": "FUN_a00bdc60",
       "status": "matched"
     },
@@ -8391,7 +8391,7 @@
     "ram:a00be250": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "digits d078[7..9] = '0','0', bits 18..19 of d290+0xac; bac3c(0x6a), ba950(port), sibcall babe4(port, 0xb)",
       "name": "FUN_a00be250",
       "status": "matched"
     },
@@ -9692,7 +9692,7 @@
     "ram:a00d1ad4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid line",
+      "comment": "p[7] == 1: cea18(), u16 a802d290 + 0x1f6 = 0x55aa, 14aed0(0x30, rec, 0, 0x1fc); p[7] == 0: cea44(), same u16 = 0xbb99; 145360(1); return 0xe0",
       "name": "FUN_a00d1ad4",
       "status": "matched"
     },
@@ -9787,7 +9787,7 @@
     "ram:a00d24e0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "bit 6 of word a802d290 + 0xa8 if/else; 14aed0(0x30, &a802d290, 0, 0x1fc)",
       "name": "FUN_a00d24e0",
       "status": "matched"
     },
@@ -9963,7 +9963,7 @@
     "ram:a00d3d30": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "byte setting -> output value float map; real neighbour of APP_ConfigDispSize, soft-float unit",
       "name": "FUN_a00d3d30",
       "status": "matched"
     },
@@ -10135,7 +10135,7 @@
     },
     "ram:a00d4780": {
       "by": "hand",
-      "comment": "clamp written on the record directly, no local pointer",
+      "comment": "v = byte 0xa802d290+0xf; if v > 5 then v = 5 (bgu,a); byte rec+0xf = v; tail call FUN_a014a388(v & 0xff) (the fw re-extends after the store).",
       "name": "FUN_a00d4780",
       "status": "matched"
     },
@@ -10296,7 +10296,7 @@
     "ram:a00d5f3c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "FUN_a00d5f3c: header describes the final nop as a firmware instruction",
+      "comment": "if a802d290 b4a and wb0: b4a = 0, and if b1f == 0: 14d474(1, 0), 14dd98(1, 0); trailing asm nop = the fw's standalone nop before ret",
       "name": "FUN_a00d5f3c",
       "status": "matched"
     },
@@ -10358,13 +10358,13 @@
     },
     "ram:a00d79f0": {
       "by": "hand",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "d6054(2, &t), 16-byte copy, 9b8c(2, &copy), 9f44(2) (twin of d7a30)",
       "name": "FUN_a00d79f0",
       "status": "matched"
     },
     "ram:a00d7a30": {
       "by": "hand",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "d6054(2, &t), 16-byte copy, 9b8c(2, &copy), 9e8c(2)",
       "name": "FUN_a00d7a30",
       "status": "matched"
     },
@@ -10410,7 +10410,7 @@
     "ram:a00d8034": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop stale source form line",
+      "comment": "flag: 448c(0) in 0xb..0xf",
       "name": "FUN_a00d8034",
       "status": "matched"
     },
@@ -10643,7 +10643,7 @@
     "ram:a00da870": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid line",
+      "comment": "port status code 1..10 from the 0xA802D290 / 0xA802CFF4 records, stored in 0xA802D00D",
       "name": "FUN_a00da870",
       "status": "matched"
     },
@@ -10657,7 +10657,7 @@
     "ram:a00daa7c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "fills d268 with the 8-byte command \"5800;40\\r\" and sends it via a01487e8(2, 8, buf)",
       "name": "FUN_a00daa7c",
       "status": "matched"
     },
@@ -10719,7 +10719,7 @@
     "ram:a00dac38": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "prints \"SYSAPI_GetPanelParamStruct %x,%x\": selects and applies row 0/1/2 of the 0x58-byte rows at 0x198380 by vfreq, or by hfreq * 2160 / active when FUN_a0148540(0) is set",
       "name": "FUN_a00dac38",
       "status": "matched"
     },
@@ -10761,7 +10761,7 @@
     "ram:a00db738": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "clean source form, flag test as == 1, no branch hint",
+      "comment": "UserSetProMode: FUN_a00d8100(0..8) calls, mode print, the inlined FUN_a00d8c1c / FUN_a00d8ffc steps and the copy of bit 11 of word 0xa802d290+0xa8",
       "name": "FUN_a00db738",
       "status": "matched"
     },
@@ -11145,7 +11145,7 @@
     },
     "ram:a00de9d8": {
       "by": "hand",
-      "comment": "header: the register variable is the source form",
+      "comment": "returns the stack pointer (leaf retl; mov %sp,%o0); aid: GNU register variable bound to sp",
       "name": "FUN_a00de9d8",
       "status": "matched"
     },
@@ -11228,7 +11228,7 @@
     "ram:a00dedc8": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "clear a802b0ec bytes +0x81, +0x80; write regs c00b000c/0000/0004/0008 via ROM 0x4008c25c (divisor p / 0x1c2000 into c00b0000); ROM 0x4008a880(4, 0x20, a002e238)",
       "name": "FUN_a00dedc8",
       "status": "matched"
     },
@@ -11895,7 +11895,7 @@
     "ram:a00e3880": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "hook stores as a static helper",
+      "comment": "when p2 == 0 and p3 == 3 three FUN_a00e0774 field writes to registers 0x216 / 0x237; a fixed FUN_a00e05d8 / FUN_a00e0740 sequence and FUN_a00dff94(1); six FUN_a00e2d8c(p1, a, a, 0) runs (a = 4, 5, 7, 6, 1, 0), each after storing 0x82BCC, 0x82D1C, 0x82690, 0x829A4 in words 0xA802D664 / 65C / 660 / 668; FUN_a00e02ec results to registers 0x21a / 0x21b / 0x223 / 0x224; last FUN_a00e0774(p1, 0x215, 0xf0, 4, 0)",
       "name": "FUN_a00e3880",
       "status": "matched"
     },
@@ -12447,7 +12447,7 @@
     "ram:a00f2b8c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid line",
+      "comment": "writes val to the register 0xCF000000 | ((halfword i of the table at 0x19A2E4 + reg) << 2) for i = 0 .. 3 when blk == 8, for i = blk when blk <= 3; other blk no write",
       "name": "FUN_a00f2b8c",
       "status": "matched"
     },
@@ -12494,7 +12494,7 @@
     },
     "ram:a00f3078": {
       "by": "hand",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "16-bit value from two MMIO words: (p[1] << 8) | p[0]; volatile = real 0xcf01xxxx registers (callers)",
       "name": "FUN_a00f3078",
       "status": "matched"
     },
@@ -13125,7 +13125,7 @@
     "ram:a00f8938": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid line",
+      "comment": "f1d48(a, 0x14, x & ~1); f1d48(a, 0x10, y)",
       "name": "FUN_a00f8938",
       "status": "matched"
     },
@@ -13373,14 +13373,14 @@
     "ram:a00fa5b4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "when 0xa802b7fe is set, fills three halfword arrays from 0xa802bec0 and writes 0xa802b800 entries to registers 0xd00400a4/0xd00400a0",
       "name": "FUN_a00fa5b4",
       "status": "matched"
     },
     "ram:a00fa6b4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "copies bits 25..16 of 0xd0040014 into three halfword arrays and writes 0xa802b800 entries to registers 0xd00400a4/0xd00400a0 when bits 31..30 change",
       "name": "FUN_a00fa6b4",
       "status": "matched"
     },
@@ -13996,7 +13996,7 @@
     "ram:a0101a70": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "reg cf0160f4 &= 0xf1; |= p << 1",
       "name": "FUN_a0101a70",
       "status": "matched"
     },
@@ -14226,7 +14226,7 @@
     },
     "ram:a01042c8": {
       "by": "hand",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "stable read of register 0x89 of block blk: a = FUN_a00f29d4(blk, 0x89); FUN_a0121bcc(1, rate) (wait); b = FUN_a00f29d4(blk, 0x89); up to 3 more rounds while -15 <= (int)(a - b) <= 15 (n = 0..2, u8); returns (a + b) >> 1 (unsigned). Callee prototypes as in src/leon2m (blk/reg u8, frames u8, rate ...",
       "name": "FUN_a01042c8",
       "status": "matched"
     },
@@ -15411,7 +15411,7 @@
     "ram:a010c61c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "FUN_a010c61c: PUT macro is a plain if/else statement",
+      "comment": "stores sel/a/b in record 0xa802d744/784/7c4 and writes control word and value pairs to register blocks of tables 0x19aed8/0x19aecc",
       "name": "FUN_a010c61c",
       "status": "matched"
     },
@@ -15432,7 +15432,7 @@
     "ram:a010d530": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "SET macro as a plain if/else statement",
+      "comment": "stores three bytes in channel record 0xa802d744/784/7c4 +0x3b..+0x3d and writes (x*255+50)/100-0x80 into bits 16..23 of block words 0x3d..0x3f in tables 0x19aed8 and 0x19aecc",
       "name": "FUN_a010d530",
       "status": "matched"
     },
@@ -15467,7 +15467,7 @@
     "ram:a010d914": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "drop unused static helpers",
+      "comment": "set_fmt for FUN_a0110318's channels (inlined there), standalone",
       "name": "FUN_a010d914",
       "status": "matched"
     },
@@ -15593,7 +15593,7 @@
     "ram:a010f50c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "FUN_a010f50c: SET macro is a plain if/else statement",
+      "comment": "writes T1/T2 block word w0 = (T1[ch]->w0 with bit 0 or bit 4 cleared) for channel ch or channels 0..2",
       "name": "FUN_a010f50c",
       "status": "matched"
     },
@@ -16194,7 +16194,7 @@
     "ram:a0118994": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "FUN_a0118994: u8 parameter, no mask",
+      "comment": "if reg cf012e00 bit 0, cf0115c0 bit 0 clear and f2254(p, 0x50) bit 0: count a802c99c; past 0x32 reset it and set reg cf012f00 = 0x40 (cf012f24 != 0) or 0",
       "name": "FUN_a0118994",
       "status": "matched"
     },
@@ -16708,7 +16708,7 @@
     "ram:a011cf88": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "code from register 0xcf011444 / flag 0xcf011440: 0x80/0x81, 0x82, 0x83, else 0x84; FUN_a013dc6c applies the transformed row's +0x50 limit only for codes <= 0x82",
       "name": "FUN_a011cf88",
       "status": "matched"
     },
@@ -17096,7 +17096,7 @@
     "ram:a0120c90": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "input timing value for the output clock sum a010325c / a014285c (float source); exact once the judge kept the 0.5 constant intact",
       "name": "FUN_a0120c90",
       "status": "matched"
     },
@@ -17436,7 +17436,7 @@
     "ram:a0123384": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: delay loop nop described as source form",
+      "comment": "Vx1RxPowerOff: paged register writes through 0xcf03d024 with a nop delay, then the print",
       "name": "FUN_a0123384",
       "status": "matched"
     },
@@ -17566,14 +17566,14 @@
     },
     "ram:a0124220": {
       "by": "hand",
-      "comment": "return 2 if a0125b94() != 0, else 0",
+      "comment": "return 2 if a0125b94() != 0, else 0 (r & 2)",
       "name": "FUN_a0124220",
       "status": "matched"
     },
     "ram:a0124244": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "FUN_a0124244: call arguments without masks",
+      "comment": "colour-cycling watcher step: on a source/level change re-sets the cycle level (0x36/0x63/0x9c/0xc9)",
       "name": "FUN_a0124244",
       "status": "matched"
     },
@@ -17735,7 +17735,7 @@
     "ram:a0124da4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid line",
+      "comment": "n <= 7 and ROM record 0x1a42a8[n] byte +0xe != 0xff: ROM 0x4008c86c(b0e, b0f, ~b10)",
       "name": "FUN_a0124da4",
       "status": "matched"
     },
@@ -17749,7 +17749,7 @@
     "ram:a0124e44": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "clean source form, plain return of the result flag",
+      "comment": "for n <= 7 and record byte +0xe != 0xff returns whether the low byte of func_0x4008cd38(+0xe, +0xf) equals byte +0x10, else 1",
       "name": "FUN_a0124e44",
       "status": "matched"
     },
@@ -17828,7 +17828,7 @@
     "ram:a0124fd0": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid note",
+      "comment": "FUN_a0133e7c(0x20, 0xa8); ROM func_0x4008c86c(7, 0x20, 0); four ROM func_0x4008cb30(a, b, 1) writes with the byte pairs at ROM 0x1a4298..0x1a429f; FUN_a0133e7c(0x80, 0xa8); func_0x4008c86c(7, 0x10, 0); four more with the pairs at 0x1a42a0..0x1a42a7 (the last a tail call). void.",
       "name": "FUN_a0124fd0",
       "status": "matched"
     },
@@ -18459,7 +18459,7 @@
     "ram:a0126c58": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "FUN_a01248c8 declared with its unsigned char return, no mask",
+      "comment": "a0126ae4 family (float source, -msoft-float): own register and strings",
       "name": "FUN_a0126c58",
       "status": "matched"
     },
@@ -18494,7 +18494,7 @@
     "ram:a012743c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "FUN_a012743c: FUN_a01248c8 returns unsigned char, no explicit mask",
+      "comment": "a0126ae4 family (float source, -msoft-float): own register and strings",
       "name": "FUN_a012743c",
       "status": "matched"
     },
@@ -18856,7 +18856,7 @@
     "ram:a012a700": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: drop the empty compiler-aid line",
+      "comment": "v = v * 0x381 / 0x3ff + 0x7e; hook a802cc50(&v) if set; 143804(v)",
       "name": "FUN_a012a700",
       "status": "matched"
     },
@@ -19158,7 +19158,7 @@
     "ram:a012c188": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "header: hang loop described as source form",
+      "comment": "EDID load into the 8051 DDC slaves (hangs if an EDID is longer than its buffer)",
       "name": "FUN_a012c188",
       "status": "matched"
     },
@@ -21766,7 +21766,7 @@
     "ram:a0142910": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "CLEAR macro as a braced block",
+      "comment": "per-port sync state machine; copies port-entry flags incl. entry bit 4 -> status bit 0x400 into the port status",
       "name": "FUN_a0142910",
       "status": "matched"
     },
