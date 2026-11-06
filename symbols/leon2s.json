@@ -6366,7 +6366,7 @@
     },
     "ram:a00a45d8": {
       "by": "hand",
-      "comment": "record {w0, w4} a8079218, tail b2194; asm nop = fw standalone nop before retl",
+      "comment": "header: asm nop is the source form",
       "name": "FUN_a00a45d8",
       "status": "matched"
     },
