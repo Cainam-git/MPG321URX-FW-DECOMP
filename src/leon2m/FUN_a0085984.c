@@ -3,9 +3,9 @@
  * fake-sleep counter / escape, timers 0x13 / 1 / 0x14 / 0x15 / 0x16, PIP source / CEC dispatch (jump table at
  * 0xA0085CAC, all targets in range), the two power-saving chains (DAT_a802af42 bit 0x10 / bit 0x4000) and the
  * display / PIP tail. It calls FUN_a00ce348 (the port-4 frame task) twice.
- * Compiler aid: an asm label on DAT_a802cff4 (no code, link name = the firmware symbol); it only changes the gcse
- * hash bucket of the symbol name ("*DAT_a802cff4"), which breaks a register-priority tie as in the firmware (all
- * allocno priorities are 0 here because of the hang loop).
+ * Source form: no goto; both power-saving else arms (prints 0xFF4D8 / 0xFF470) end with their own FUN_a0081ea8(3)
+ * and bit 0x10 clear of 0xA802AF42, and the bit 0x10 chain calls FUN_a00869b0(0xb, 1000) in both arms of the
+ * 2-bit field test (bits 13..14 of 0xA802CFF8); GCC cross-jumps the copies into the firmware's shared code.
  * FUN_a014aed0 is declared int-returning as in FUN_a00d2334 / FUN_a0087020 (gives the firmware's delay-slot fill).
  */
 
@@ -67,7 +67,7 @@ struct Log274
   unsigned short h16;
 };
 extern struct G290 DAT_a802d290;
-extern struct Scff4 DAT_a802cff4 asm("DAT_a802cff4");
+extern struct Scff4 DAT_a802cff4;
 extern struct Log274 DAT_a802d274;
 extern unsigned char DAT_a802af41;
 extern unsigned char DAT_a802af44;
@@ -519,13 +519,16 @@ void FUN_a0085984(void)
             FUN_a0127914(1);
           }
           FUN_a0127c78();
+          FUN_a00869b0(0xb, 1000);
         }
-        FUN_a00869b0(0xb, 1000);
+        else
+          FUN_a00869b0(0xb, 1000);
       }
       else
       {
         FUN_a00df170(s_000ff4d8);
-        goto power_saving;
+        FUN_a0081ea8(3);
+        DAT_a802af42 &= ~0x10;
       }
     }
   }
@@ -622,7 +625,6 @@ void FUN_a0085984(void)
         else
         {
           FUN_a00df170(s_000ff470);
-          power_saving:
           FUN_a0081ea8(3);
 
           DAT_a802af42 &= ~0x10;
