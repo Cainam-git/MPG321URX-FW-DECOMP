@@ -5760,6 +5760,13 @@
       "name": "FUN_a00a177c",
       "status": "matched"
     },
+    "ram:a00a192c": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "FUN_a00a192c: static FUN_a00a14bc copy in FUN_a00a23a4's form (ascending record-offset cases)",
+      "name": "FUN_a00a192c",
+      "status": "matched"
+    },
     "ram:a00a1a68": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
