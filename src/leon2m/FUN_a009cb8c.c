@@ -4,7 +4,6 @@
  * FUN_a00a9650((word - 122) & 0xff, 1). Twin of FUN_a009cb0c (only the 121 differs).
  * Source form: the halfword is '(unsigned short)_DAT_a802afec' (fw lduh [%i1+0x3ee] on the word's own sethi:
  * combine narrows the word load; see FUN_a00920f4). The callees take u8 arguments.
- * Compiler aids: none.
  */
 extern unsigned int _DAT_a802afec;
 extern void FUN_a00a93bc(unsigned char);
