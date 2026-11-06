@@ -2,7 +2,7 @@
  * Code facts: hardware registers by constant address (sethi/or into a register, plain [reg] ld/st): 0xcf011800 |=
  * 0x20, 0xcf011a00 |= 0x20, 0xcf012e00 |= 1, ROM delay func_0x4008d1a0(0x32), then 0xcf012e80 = 1. void(void).
  * 0xcf012e80 gets the constant 1 after the delay (not the delay call's return value); the registers are constant
- * hardware addresses. volatile only on the 0xcf... registers. Compiler aids: none.
+ * hardware addresses. volatile only on the 0xcf... registers.
  */
 #define REG(a) (*(volatile unsigned int *)(a))
 extern void func_0x4008d1a0(int);
