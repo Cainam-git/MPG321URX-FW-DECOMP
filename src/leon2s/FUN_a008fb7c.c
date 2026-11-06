@@ -4,10 +4,10 @@
  * FUN_a008fb5c(port) is 3, sets bit 4 / 5 of 0xcf011640, else clears bits 4 and 0 / 5 and 1. Then by bits 0..2
  * of FUN_a00a657c(port, 0x45): 4 / 5 / 6 / 7 write that value (other values: 4) through FUN_a00a7488(k, 0x1f08,
  * 0xfffffff8, v) and give the result 8 / 10 / 12 / 16 (others 8). Ends with FUN_a00a67b8(port, 0xd9, 2, 0).
- * Source forms: the port tests are switches (as in MODEDET_handler_2); FUN_a00a657c is declared with an int
- * result (signed case compare).
- * Compiler aid: 'k++; k--;' in the port-0 arm of the 0xcf00f224 clear emits no instructions; it keeps combine
- * from knowing that k is 0 or 1, so the 'and 0xff' of the firmware stays on each FUN_a00a7488 argument.
+ * Source forms: k is declared with the port value and then set per port in the port switch (as k in
+ *   MODEDET_handler_2, declared with its port 0 value); the firmware re-extends k with 'and 0xff' at each
+ *   FUN_a00a7488 call. The port tests are switches (as in MODEDET_handler_2); FUN_a00a657c is declared with an
+ *   int result (signed case compare).
  */
 extern int FUN_a00a657c(unsigned char, unsigned short);
 extern unsigned char FUN_a008fb5c(unsigned char);
@@ -19,7 +19,7 @@ extern void FUN_a00a67b8(unsigned char, unsigned short, unsigned char, unsigned 
 
 unsigned char FUN_a008fb7c(unsigned char port)
 {
-    unsigned char k;
+    unsigned char k = port;
     unsigned char r = 8;
 
     switch (port) {
@@ -45,8 +45,6 @@ unsigned char FUN_a008fb7c(unsigned char port)
         switch (port) {
         case 0:
             R224 &= ~1;
-            k++; /* compiler aid, see the header */
-            k--;
             break;
         case 1:
             R224 &= ~2;
