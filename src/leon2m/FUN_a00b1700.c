@@ -9,9 +9,8 @@
  * 5/0x11/0x1d/0x29, plus FUN_a0146a80(x, 8, 8, 0x2c2, 0) at the second x when m == 3. Finally
  * FUN_a014654c((FUN_a014837c(0) - 1320) / 2, FUN_a014837c(1) - rows * 36 - 144, 0) and FUN_a0146dc0(1, 0).
  * Source form: k from the comparison value (cmp 3; subx), the width w = 0x37 in a variable (smul by 0x37, cmp 0x37;
- * bcc), the column test with continue; GCC unswitches the column loop on i > 2.
- * Compiler aid: the empty 'if (c) { }' in the k == 3 or 4 block emits no instructions; that block is reached only
- * with rows = 11, after the row loop has set c. It keeps c live there, which gives c %g1 in the second column loop.
+ * bcc), the column test with continue, '+ 0x3f' in each arm of the row choice (ldub to %g1 at 0xa00b1a60 and
+ * 0xa00b1a68); GCC unswitches the column loop on i > 2.
  */
 struct R290 { unsigned char p000[8]; unsigned char b008; };
 extern struct R290 DAT_a802d290;
@@ -60,10 +59,9 @@ void FUN_a00b1700(unsigned char id, unsigned char m)
     for (i = 0; i < rows; i++) {
         for (j = 0; j < w; j++) {
             if (i > 2 && rows == 8)
-                c = DAT_00197f50[(i + 3) * w + j];
+                c = DAT_00197f50[(i + 3) * w + j] + 0x3f;
             else
-                c = DAT_00197f50[i * w + j];
-            c += 0x3f;
+                c = DAT_00197f50[i * w + j] + 0x3f;
             if (c == 0x54)
                 continue;
             FUN_a0146b20(1, j, i, 1, c, 0);
@@ -90,8 +88,6 @@ void FUN_a00b1700(unsigned char id, unsigned char m)
             FUN_a00a31a4(0, 0x29, 8, 8, FUN_a00a3844(DAT_00190184, DAT_a802d290.b008 + 0x57), 0);
             if (m == 3)
                 FUN_a0146a80(0x11, 8, 8, 0x2c2, 0);
-        }
-        if (c) {
         }
     }
     FUN_a014654c((unsigned short)((FUN_a014837c(0) - 1320) / 2), (unsigned short)(FUN_a014837c(1) - rows * 36 - 144), 0);
