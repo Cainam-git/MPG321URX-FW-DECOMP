@@ -8,8 +8,8 @@
  * The hook values are link-time symbol addresses (the firmware has a separate sethi %hi(0x82800) for 0x82bcc and
  * 0x829a4); _DAT_a802d668 is a word (st, not sth); FUN_a00dff94 takes one argument (1); FUN_a00e0774 takes 5
  * arguments; the callees return nothing.
- * Source form: HOOKS() source order 660/668/664/65c gives the firmware store order 664/65c/660/668 (same as
- * FUN_a00e321c). HOOKS() is a do/while(0) macro for the four repeated stores. Compiler aids: none.
+ * Source form: the four repeated hook stores are a static helper set_hooks() (inlined); its source order
+ * 660/668/664/65c gives the firmware store order 664/65c/660/668 (same as FUN_a00e321c).
  */
 extern unsigned int _DAT_a802d65c;
 extern unsigned int _DAT_a802d660;
@@ -24,11 +24,13 @@ extern void FUN_a00e2d8c(unsigned int, unsigned int, unsigned int, unsigned int)
 
 extern char DAT_00082bcc, DAT_00082d1c, DAT_00082690, DAT_000829a4;
 
-#define HOOKS() do { \
-  _DAT_a802d660 = (unsigned int)&DAT_00082690; \
-  _DAT_a802d668 = (unsigned int)&DAT_000829a4; \
-  _DAT_a802d664 = (unsigned int)&DAT_00082bcc; \
-  _DAT_a802d65c = (unsigned int)&DAT_00082d1c; } while (0)
+static void set_hooks(void)
+{
+  _DAT_a802d660 = (unsigned int)&DAT_00082690;
+  _DAT_a802d668 = (unsigned int)&DAT_000829a4;
+  _DAT_a802d664 = (unsigned int)&DAT_00082bcc;
+  _DAT_a802d65c = (unsigned int)&DAT_00082d1c;
+}
 
 void FUN_a00e3880(unsigned int param_1, int param_2, unsigned int param_3)
 {
@@ -50,13 +52,13 @@ void FUN_a00e3880(unsigned int param_1, int param_2, unsigned int param_3)
   FUN_a00e05d8(param_1, 0x215, 8, 0);
   FUN_a00e0740(param_1, 0x23a, 0x20);
   FUN_a00e0740(param_1, 0x23a, 0x10);
-  HOOKS();
+  set_hooks();
   FUN_a00e2d8c(param_1, 4, 4, 0);
-  HOOKS();
+  set_hooks();
   FUN_a00e2d8c(param_1, 5, 5, 0);
-  HOOKS();
+  set_hooks();
   FUN_a00e2d8c(param_1, 7, 7, 0);
-  HOOKS();
+  set_hooks();
   FUN_a00e2d8c(param_1, 6, 6, 0);
   v = FUN_a00e02ec(param_1, 0x231);
   FUN_a00e05d8(param_1, 0x215, 0xf0, 0x20);
@@ -65,9 +67,9 @@ void FUN_a00e3880(unsigned int param_1, int param_2, unsigned int param_3)
   FUN_a00e05d8(param_1, 0x215, 0xf0, 0x30);
   FUN_a00e05d8(param_1, 0x21b, 0xff, v);
   FUN_a00e05d8(param_1, 0x1f1, 0x40, 0x40);
-  HOOKS();
+  set_hooks();
   FUN_a00e2d8c(param_1, 1, 1, 0);
-  HOOKS();
+  set_hooks();
   FUN_a00e2d8c(param_1, 0, 0, 0);
   FUN_a00e05d8(param_1, 0x1f1, 0x40, 0);
   v = FUN_a00e02ec(param_1, 0x228);

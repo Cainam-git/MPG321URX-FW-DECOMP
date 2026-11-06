@@ -11895,7 +11895,7 @@
     "ram:a00e3880": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "when p2 == 0 and p3 == 3 three FUN_a00e0774 field writes to registers 0x216 / 0x237; a fixed FUN_a00e05d8 / FUN_a00e0740 sequence and FUN_a00dff94(1); six FUN_a00e2d8c(p1, a, a, 0) runs (a = 4, 5, 7, 6, 1, 0), each after storing 0x82BCC, 0x82D1C, 0x82690, 0x829A4 in words 0xA802D664 / 65C / 660 / 668; FUN_a00e02ec results to registers 0x21a / 0x21b / 0x223 / 0x224; last FUN_a00e0774(p1, 0x215, 0xf0, 4, 0)",
+      "comment": "hook stores as a static helper",
       "name": "FUN_a00e3880",
       "status": "matched"
     },
