@@ -21073,7 +21073,7 @@
     "ram:a013bb50": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "cd4c record h08: id 0 and 140098(...) and h08 > 3000 -> 1, else h08 >= 0x993; aid kind 6: constant in a local (lim = 0x993)",
+      "comment": "cd4c record h08: id 0 and 140098(...) and h08 > 3000 -> 1, else h08 >= 0x993",
       "name": "FUN_a013bb50",
       "status": "matched"
     },

@@ -4,11 +4,8 @@
  * the u16 at p+8 > 3000 (cmp 0xbb8; bleu): return 1. Otherwise return (u16 at p+8) >= 0x993 (fw cmp 0x993;
  * subx %g0,-1 = branch-free GEU store-flag).
  * Source form: record struct with h08 at +8, the && chain, u8 prototypes (callers test the result with
- * btst 0xff).
- * Compiler aid (code-free local constant, same kind as FUN_a00aaf48 'n = 7' / FUN_a00ad7c8 'm = 8'):
- * 'unsigned int lim = 0x993; return p->h08 >= lim;'. A literal is folded at tree level to '> 0x992' (GTU),
- * which has no SPARC store-flag pattern, so expand emits branches; the local reaches the compare only at
- * RTL level as GEU, giving the fw subx. Same final code, no volatile.
+ * btst 0xff), and the last test as 'if (p->h08 >= 0x993) return 1; return 0;' (the same statement as the
+ * h08 test of FUN_a013ba14; if-converted to the subx at 0xa013bb80).
  */
 struct Port { unsigned int w00; unsigned int w04; unsigned short h08; };
 extern struct Port *FUN_a013cd4c(unsigned char);
@@ -20,8 +17,7 @@ unsigned char FUN_a013bb50(unsigned char id)
 
   if (id == 0 && FUN_a0140098((p->w00 >> 12) & 0xf) && p->h08 > 3000)
     return 1;
-  {
-    unsigned int lim = 0x993;
-    return p->h08 >= lim;
-  }
+  if (p->h08 >= 0x993)
+    return 1;
+  return 0;
 }
