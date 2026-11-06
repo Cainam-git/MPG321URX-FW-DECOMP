@@ -20052,6 +20052,13 @@
       "name": "FUN_a013730c",
       "status": "matched"
     },
+    "ram:a0137344": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
+      "comment": "one loop for both wait values (unswitched by GCC), check helper returning unsigned char",
+      "name": "FUN_a0137344",
+      "status": "matched"
+    },
     "ram:a0137644": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
