@@ -7,12 +7,13 @@
  * 9: log FUN_a00df170(0x1a46d0, d890[0], d890[1], d888[0], d888[1]), write, func_0x4008d1a0(5), read back, retry
  * byte++.
  * The in-loop delay is func_0x4008d1a0(5) (fw mov 5,%o0). Source form: as FUN_a0126ae4, with this function's
- * register 0x72 and format strings s_001a4670 / s_001a46a0 / s_001a46d0 (fw sethi|or). Compiler aids: none.
+ * register 0x72 and format strings s_001a4670 / s_001a46a0 / s_001a46d0 (fw sethi|or); FUN_a01248c8 returns an
+ * unsigned char (the GPIO test result; the 'and 0xff' is the caller's re-extension).
  */
 extern unsigned char DAT_a802d888[2];
 extern unsigned char DAT_a802d890[2];
 extern unsigned char DAT_a802c9fd;
-extern int FUN_a01248c8(void);
+extern unsigned char FUN_a01248c8(void);
 extern unsigned short FUN_a0147aa0(unsigned char, unsigned int, unsigned short, unsigned short, unsigned char, unsigned int, unsigned short, unsigned char);
 extern unsigned short FUN_a0147ae8(unsigned int, unsigned int, unsigned short, unsigned short, unsigned char, unsigned int, unsigned short);
 extern int func_0x4008d1a0(int);
@@ -25,7 +26,8 @@ void FUN_a0126c58(unsigned char val)
 {
     DAT_a802d890[1] = val;
     DAT_a802d890[0] = 0;
-    if (!(FUN_a01248c8() & 0xff)) return;
+    if (FUN_a01248c8() == 0)
+        return;
     FUN_a00df170(s_001a4670, val);
     FUN_a0147aa0(0x60, 2, 0x72, 5, 0, (unsigned int)&DAT_a802d890, 2, 1);
     func_0x4008d1a0(0x32);
