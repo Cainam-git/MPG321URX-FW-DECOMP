@@ -6798,7 +6798,7 @@
     "ram:a00abc64": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "v = p ? 0x742 : 0x792; ab5f0(0x2c, 8, a802d290[0x13], 7, p); 146a80 x3 with v; 146b50(0xe8, 0); b6ec8(0x29, 8, a802d290[0x13])",
+      "comment": "FUN_a00abc64: v as a plain conditional",
       "name": "FUN_a00abc64",
       "status": "matched"
     },

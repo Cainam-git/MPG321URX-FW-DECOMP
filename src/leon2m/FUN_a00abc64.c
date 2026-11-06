@@ -6,8 +6,7 @@
  * calls). void.
  * Source form: the record base DAT_a802d290 as a byte array (ldub [base + 0x13]; a mid-record volatile uint gives
  * ld + and 0xff); the twin's prototypes (FUN_a00ab5f0 u8 x5, FUN_a00b6ec8 void u8 x3, FUN_a0146a80
- * u16,u16,u8,u16,u8); v is an unsigned short.
- * Compiler aids: none.
+ * u16,u16,u8,u16,u8); v is an unsigned short set by 'param_1 ? 0x742 : 0x792'.
  */
 extern unsigned char DAT_a802d290[];
 extern void FUN_a00ab5f0(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char);
@@ -17,7 +16,7 @@ extern void FUN_a00b6ec8(unsigned char, unsigned char, unsigned char);
 
 void FUN_a00abc64(unsigned char param_1)
 {
-  unsigned short v = ((param_1 != 0) - 1 & 0x50) + 0x742;
+  unsigned short v = param_1 ? 0x742 : 0x792;
 
   FUN_a00ab5f0(0x2c, 8, DAT_a802d290[0x13], 7, param_1);
   FUN_a0146a80(0x28, 8, 3, v, 0);
