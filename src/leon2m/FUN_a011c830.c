@@ -10,6 +10,7 @@
 void FUN_a011c830(unsigned short v, unsigned char sel)
 {
     int i;
+    unsigned int w;
 
     if (sel == 0)
         REG(0xcf011780) = 0x70;
@@ -17,15 +18,14 @@ void FUN_a011c830(unsigned short v, unsigned char sel)
         REG(0xcf011794) = 0x70;
     for (i = 0; i < 0xa0; i++)
         __asm__("nop");
-    if (v) {
-    }
+    w = v;
     if (sel == 0) {
-        REG(0xcf011784) = v & 0xff;
-        REG(0xcf011788) = v >> 8;
+        REG(0xcf011784) = w & 0xff;
+        REG(0xcf011788) = w >> 8;
         REG(0xcf00bfcc) = 0;
     } else {
-        REG(0xcf011798) = v & 0xff;
-        REG(0xcf01179c) = v >> 8;
+        REG(0xcf011798) = w & 0xff;
+        REG(0xcf01179c) = w >> 8;
         REG(0xcf00c3cc) = 0;
     }
     for (i = 0; i < 0xa0; i++)
