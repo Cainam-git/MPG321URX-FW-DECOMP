@@ -2226,6 +2226,13 @@
       "name": "FUN_a002e238",
       "status": "matched"
     },
+    "ram:a002e2a4": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "Wait on bit 7 of 0xcf00ee1c with FUN_a002d594 time limits 50/100, polarity by bit 4 of 0xcf00ed58",
+      "name": "FUN_a002e2a4",
+      "status": "matched"
+    },
     "ram:a002e3c4": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
