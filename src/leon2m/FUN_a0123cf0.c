@@ -3,6 +3,7 @@
  * stays in the caller after cmd(0x13).
  * Compiler aid: the helper has an arm for c == 0x47 that is dead for the commands used here (cmd(0) / cmd(0x13));
  * its folded test ends the cse1 path at both mailbox stores as in the firmware.
+ * Fake match: the c == 0x47 arm of cmd() is dead in this function and only ends the cse1 path; the clean form with the live while arm of FUN_a01238e8 scores 86.36.
  */
 #define REG(a) (*(volatile unsigned int *)(a))
 #define RB(a) (*(volatile unsigned int *)(0xcf000000 | ((a) << 2)))

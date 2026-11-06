@@ -2,6 +2,7 @@
  * Source form: the tail is the matched neighbour FUN_a012b418 inlined with FUN_a012ad80 / FUN_a012adac as
  * static copies; bit[] stores before pos[].
  * Compiler aid: __builtin_expect(n <= 2, 1) on the b00 test (block order of the b31 arm after the i == 1 block).
+ * Fake match: __builtin_expect(n <= 2, 1) on the b00 test only steers the block order; the clean form scores 96.30 (work/h240/FUN_a012b458.c).
  */
 struct __attribute__((packed, aligned(4))) Settings {
     union { unsigned int w; unsigned char b[4]; } u00;

@@ -20,6 +20,7 @@
  * conditional expressions of two calls; the tables at 0xa8026778 / 0xa8026748 / 0xa8026718 are declared as
  * s_a8026778 / ARR_a8026748 / ARR_a8026718 (the symbol names set the order of the address pseudos and so the register
  * choices).
+ * Fake match: s_a8026778 and ARR_a8026748 are names chosen only for their gcse hash order; with the attested names the same source scores 89.77.
  */
 extern unsigned int FUN_a00e0754(unsigned int, unsigned int, unsigned int, unsigned int);
 extern void FUN_a00e0774(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);

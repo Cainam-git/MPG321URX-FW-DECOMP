@@ -39,6 +39,7 @@
  * with the plain copy loop as else, and the end test is 'b + 0x20 < h2' (fw 0xa00d016c). The byte at 0xa802b0a3
  * is declared as PTR_a802b0a3 (the symbol names set the order of the gcse address pseudos and so the register
  * choices: fw %l1 / %l3 / %l4 for the high parts of 0xa802b0a3 / 0xa802d250 / 0xa802b0a4).
+ * Fake match: DAT_a802b0a3 is named PTR_a802b0a3 only for its gcse hash order; with DAT_ names the same source scores 98.08 (register-blind identical).
  */
 struct D290 {
     unsigned int w0;
