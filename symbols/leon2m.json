@@ -9519,22 +9519,6 @@
       "of": "FUN_a00cf2d4",
       "status": "matched"
     },
-    "ram:a00ceb74": {
-      "by": "table",
-      "comment": "jump table of the switch in FUN_a00cfacc; proven entry for entry by its exact check",
-      "kind": "jump_table",
-      "name": "switchdataD_a00ceb74",
-      "of": "FUN_a00cfacc",
-      "status": "matched"
-    },
-    "ram:a00cec0c": {
-      "by": "table",
-      "comment": "jump table of the switch in FUN_a00cfacc; proven entry for entry by its exact check",
-      "kind": "jump_table",
-      "name": "switchdataD_a00cec0c",
-      "of": "FUN_a00cfacc",
-      "status": "matched"
-    },
     "ram:a00cec3c": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a00d1220; proven entry for entry by its exact check",
@@ -9642,13 +9626,6 @@
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "crc = cea70 over p1[4..7] (start 0); p2 = 6e 83 02 crc_hi crc_lo; 89f60(0x50)",
       "name": "FUN_a00cfa68",
-      "status": "matched"
-    },
-    "ram:a00cfacc": {
-      "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "command record handler: 19 command bytes in ascending case order, jump tables 0xa00ceb74 and 0xa00cec0c",
-      "name": "FUN_a00cfacc",
       "status": "matched"
     },
     "ram:a00d0e48": {
@@ -12083,13 +12060,6 @@
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "Writes register fields from DAT_a802d66c and d, using entry b of the field tables",
       "name": "FUN_a00eb708",
-      "status": "matched"
-    },
-    "ram:a00eba64": {
-      "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "two-phase table write with backward-goto retry loop A, symbol names chosen for the address order",
-      "name": "FUN_a00eba64",
       "status": "matched"
     },
     "ram:a00ec340": {
@@ -17556,13 +17526,6 @@
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "compares n bytes of buf with 0xa802d850; prints File match and returns 1 when all match, else 0",
       "name": "FUN_a0123c80",
-      "status": "matched"
-    },
-    "ram:a0123cf0": {
-      "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "mailbox command sequence on port 0xf191 through one cmd() helper",
-      "name": "FUN_a0123cf0",
       "status": "matched"
     },
     "ram:a0124168": {
