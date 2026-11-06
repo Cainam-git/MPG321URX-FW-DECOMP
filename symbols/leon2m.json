@@ -17542,6 +17542,13 @@
       "name": "FUN_a0123c80",
       "status": "matched"
     },
+    "ram:a0123cf0": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "mailbox command sequence on port 0xf191 through one cmd() helper",
+      "name": "FUN_a0123cf0",
+      "status": "matched"
+    },
     "ram:a0124168": {
       "by": "near",
       "comment": "returns the byte at 0xA802D87E",
