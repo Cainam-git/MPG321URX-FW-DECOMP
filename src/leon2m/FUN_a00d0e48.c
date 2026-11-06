@@ -1,7 +1,6 @@
 /* FUN_a00d0e48 (leon2m 0xa00d0e48-0xa00d0f68, 288 bytes), flags -mcpu=v8 -O3 -g.
  * Stores p[0] = 0x6e; for mode 0 p[1] = 0x86, p[2] = 0xc0; for mode 1 p[1] = 0x86, 0x93, 0xc5 or 0x95 chosen from
- * req[3] (and req[6] == 0x40) and p[2] = 0xd0; then copies req[3..6] to p[3..6]. Source form: an else-if chain with
- * one compare per value (only the first pair, 0x63 || 0x31 and 0x34 || 0x30, is one condition).
+ * req[3] (and req[6] == 0x40) and p[2] = 0xd0; then copies req[3..6] to p[3..6].
  * Source form: each p[1] value group is one || condition on req[3] (the same form as its inlined copy in
  * FUN_a00d3650).
  */
