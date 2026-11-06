@@ -4,7 +4,6 @@
  * FUN_a00a813c(1, byte 0xa8025c56, 0) if w - 60 == that byte, else (.., 1) (two calls, cross-jumped).
  * Source form: '(unsigned short)_DAT_a802afec' for the halfword (fw lduh [%i2+0x3ee] on the word's sethi; see
  * FUN_a00920f4).
- * Compiler aids: none.
  */
 extern unsigned int _DAT_a802afec;
 extern unsigned char DAT_a802d40c;

@@ -5380,7 +5380,7 @@
     "ram:a009da6c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "step a802afec ((u16) halfword) until aad30 / aa520 accepts; tail a813c(1, a8025c56, (w - 60) != a8025c56) written as two calls",
+      "comment": "header: drop the empty compiler-aid note",
       "name": "FUN_a009da6c",
       "status": "matched"
     },
