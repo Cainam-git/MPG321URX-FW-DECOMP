@@ -10232,7 +10232,7 @@
     },
     "ram:a00dccd8": {
       "by": "hand",
-      "comment": "u16 locals for hc/h14/h12/ha>>3/h10>>3 and an unsigned int (he + hc) >> 3 read before the preceding stores; 0x24 high half as the unsigned short sum h16 + h14 with h16 read last of the record fields; 0x24 value built before the 0x20 store",
+      "comment": "programs the 0xc0120800 register block from DAT_a8079538; source form with the computed values read before the preceding stores",
       "name": "FUN_a00dccd8",
       "status": "matched"
     },
