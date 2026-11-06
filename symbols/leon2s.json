@@ -2182,12 +2182,6 @@
       "name": "FUN_a0070000",
       "status": "matched"
     },
-    "ram:a00700cc": {
-      "by": "hand",
-      "comment": "publish the input port records + status words to the Big chip , documented no-code aid x>>8",
-      "name": "FUN_a00700cc",
-      "status": "matched"
-    },
     "ram:a00703b8": {
       "by": "hand",
       "comment": "returns the byte (DAT_a80788d8 & (1 << n))",
@@ -4258,12 +4252,6 @@
       "name": "FUN_a008fb5c",
       "status": "matched"
     },
-    "ram:a008fb7c": {
-      "by": "hand",
-      "comment": "Sets the port bits in 0xcf00f224/0xcf011640 from FUN_a00a657c/FUN_a008fb5c, writes bits 0..2 of register 0x45 through FUN_a00a7488 and returns 8/10/12/16",
-      "name": "FUN_a008fb7c",
-      "status": "matched"
-    },
     "ram:a008fdc8": {
       "by": "hand",
       "comment": "Masks param_1 to a byte, calls FUN_a008fb5c with it, then calls FUN_a00a67b8 with the same first three arguments and a fourth argument of 1 if (result & 0xff) == 1, else 0. The condition is evaluated before the branch and each branch has its own call sequence.",
@@ -5260,12 +5248,6 @@
       "by": "hand",
       "comment": "u16 at +0x32 of the 400-byte record a807d7e0[p1] = p2",
       "name": "FUN_a00977cc",
-      "status": "matched"
-    },
-    "ram:a00977e8": {
-      "by": "hand",
-      "comment": "Reads the H/V total and DE values of the port register block, prints and compares them with the stored record, updates the sync stable count and the state entry, returns 1 when the count exceeds the limit",
-      "name": "FSM_MODE_DETECT_STANDBY",
       "status": "matched"
     },
     "ram:a0097ed0": {
@@ -6328,12 +6310,6 @@
       "name": "FUN_a00a3788",
       "status": "matched"
     },
-    "ram:a00a3810": {
-      "by": "hand",
-      "comment": "copies ARR_a807db6c[p] to DAT_a807873c[p] when they differ, writes DAT_a80791fc and ARR_a807d580 from DAT_a80791d8, sets ARR_a807db6c[p] to 2 or 6; returns 0",
-      "name": "FUN_a00a3810",
-      "status": "matched"
-    },
     "ram:a00a3a10": {
       "by": "hand",
       "comment": "u8 port. If ARR_a807db6c[port] != ARR_a807873c[port]: print DAT_a006bb50 (port), copy it. DAT_a80791aa = 1. If bit 6 of FUN_a0091d64(port, 0x40): 1cf4(port, 0x31, (f4[port] << 4 | fc[port]) & 0xff), 4ac4(port, 1), ARR_a80791f0[port] = 0, then a8054(port,4,0xe2, low byte) and a8054(port,4,0xe3, ...",
@@ -7114,12 +7090,6 @@
       "by": "hand",
       "comment": "writes bank registers 9/10/0x63/0x2c-0x2d by mode 0..10",
       "name": "FUN_a00aa930",
-      "status": "matched"
-    },
-    "ram:a00aaf94": {
-      "by": "hand",
-      "comment": "updates the v/w bytes of the DAT_a80792b4 record from a DAT_a00b4dcc table entry and writes them with FUN_a00a7cc0 per port",
-      "name": "FUN_a00aaf94",
       "status": "matched"
     },
     "ram:a00ab4a8": {
@@ -10264,12 +10234,6 @@
       "by": "hand",
       "comment": "DSC rate-control and PPS words from the DAT_a8079538 timing record in VESA DSC C model order",
       "name": "FUN_a00dd488",
-      "status": "matched"
-    },
-    "ram:a00de8ac": {
-      "by": "hand",
-      "comment": "Fills the DSC timer record DAT_a8079538 from the input record, prints DSC_ENC_TIMER_CONFIG twice and calls FUN_a00dcc80, FUN_a00dccd8 and FUN_a00dd488",
-      "name": "FUN_a00de8ac",
       "status": "matched"
     }
   }

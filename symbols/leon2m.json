@@ -2425,14 +2425,6 @@
       "of": "FUN_a0081ea8",
       "status": "matched"
     },
-    "ram:a0080204": {
-      "by": "table",
-      "comment": "jump table of the switch in FUN_a008454c; proven entry for entry by its exact check",
-      "kind": "jump_table",
-      "name": "switchdataD_a0080204",
-      "of": "FUN_a008454c",
-      "status": "matched"
-    },
     "ram:a0080300": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a0085984; proven entry for entry by its exact check",
@@ -2676,13 +2668,6 @@
       "by": "hand",
       "comment": "returns bit 0 of DAT_a802af41",
       "name": "FUN_a008453c",
-      "status": "matched"
-    },
-    "ram:a008454c": {
-      "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "switch on the action code from FUN_a008a210 (calls FUN_a00dac38(1,1,0) and FUN_a01295d0); case-7 single delay call, case-17 store order, goto+continue no-code hints documented",
-      "name": "FUN_a008454c",
       "status": "matched"
     },
     "ram:a0085984": {
@@ -6898,13 +6883,6 @@
       "name": "FUN_a00ad460",
       "status": "matched"
     },
-    "ram:a00ad5a4": {
-      "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "sets w, a, c0..c2 from t, f and DAT_a802d033 and calls FUN_a00b3ed0/FUN_a00b32e4/FUN_a0146a80 at x/y",
-      "name": "FUN_a00ad5a4",
-      "status": "matched"
-    },
     "ram:a00ad86c": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
@@ -7739,13 +7717,6 @@
       "kind": "jump_table",
       "name": "switchdataD_a00ba654",
       "of": "FUN_a00ccf34",
-      "status": "matched"
-    },
-    "ram:a00ba8bc": {
-      "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "clear a802d0d0[0..0x31], a802b09c, a802d078[0..0x18]; 148794(1, 0x10, 4, 0x1c200), 148794(1, 4, 2, 0x1c200) via an inlined pointer-arg helper (documented no-code aid: blocks the sibcall like the fw)",
-      "name": "FUN_a00ba8bc",
       "status": "matched"
     },
     "ram:a00ba950": {
@@ -9873,30 +9844,6 @@
       "of": "FUN_a00d4998",
       "status": "matched"
     },
-    "ram:a00d3a64": {
-      "by": "table",
-      "comment": "jump table of the switch in FUN_a00d6054; proven entry for entry by its exact check",
-      "kind": "jump_table",
-      "name": "switchdataD_a00d3a64",
-      "of": "FUN_a00d6054",
-      "status": "matched"
-    },
-    "ram:a00d3a78": {
-      "by": "table",
-      "comment": "jump table of the switch in FUN_a00d6054; proven entry for entry by its exact check",
-      "kind": "jump_table",
-      "name": "switchdataD_a00d3a78",
-      "of": "FUN_a00d6054",
-      "status": "matched"
-    },
-    "ram:a00d3a98": {
-      "by": "table",
-      "comment": "jump table of the switch in FUN_a00d6054; proven entry for entry by its exact check",
-      "kind": "jump_table",
-      "name": "switchdataD_a00d3a98",
-      "of": "FUN_a00d6054",
-      "status": "matched"
-    },
     "ram:a00d3ac0": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a00d7bc0; proven entry for entry by its exact check",
@@ -10340,13 +10287,6 @@
       "by": "hand",
       "comment": "tail call FUN_a014931c(3, DAT_a802d2e2)",
       "name": "FUN_a00d6038",
-      "status": "matched"
-    },
-    "ram:a00d6054": {
-      "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "APP_ConfigDispSize: display window of a channel, documented no-code aids (row 1d)",
-      "name": "FUN_a00d6054",
       "status": "matched"
     },
     "ram:a00d79b0": {
@@ -17100,13 +17040,6 @@
       "name": "FUN_a0120c90",
       "status": "matched"
     },
-    "ram:a0120de4": {
-      "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g -msoft-float",
-      "comment": "Returns a code 1..5 for mode and block from block register 0x11 bits, record DAT_a8027aac[blk] and register range checks",
-      "name": "FUN_a0120de4",
-      "status": "matched"
-    },
     "ram:a01211ac": {
       "by": "autoc",
       "comment": "k = p1 & 0xff; returns FUN_a0120de4(FUN_a00fd820(k) & 0xff, k) as a byte",
@@ -18858,13 +18791,6 @@
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "v = v * 0x381 / 0x3ff + 0x7e; hook a802cc50(&v) if set; 143804(v)",
       "name": "FUN_a012a700",
-      "status": "matched"
-    },
-    "ram:a012a774": {
-      "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "steps halfword 0xa802caf2 towards a level computed from the 16 words at 0xa802ca5c and passes it to FUN_a0143804",
-      "name": "FUN_a012a774",
       "status": "matched"
     },
     "ram:a012ad64": {
@@ -22024,22 +21950,6 @@
       "of": "FUN_a014c118",
       "status": "matched"
     },
-    "ram:a0143590": {
-      "by": "table",
-      "comment": "jump table of the switch in FUN_a014c7bc; proven entry for entry by its exact check",
-      "kind": "jump_table",
-      "name": "switchdataD_a0143590",
-      "of": "FUN_a014c7bc",
-      "status": "matched"
-    },
-    "ram:a01435a4": {
-      "by": "table",
-      "comment": "jump table of the switch in FUN_a014c7bc; proven entry for entry by its exact check",
-      "kind": "jump_table",
-      "name": "switchdataD_a01435a4",
-      "of": "FUN_a014c7bc",
-      "status": "matched"
-    },
     "ram:a0143628": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a014ce84; proven entry for entry by its exact check",
@@ -23794,13 +23704,6 @@
       "cflags": "-mcpu=v8 -O3 -g",
       "comment": "byte 0xa802e3d0+0x18 = u8 param; FUN_a012eeb0(param & 0xff); tail FUN_a014c118(byte rec+0xb) (1 arg, restore in the delay slot). void.",
       "name": "FUN_a014c794",
-      "status": "matched"
-    },
-    "ram:a014c7bc": {
-      "by": "hand",
-      "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "SYSAPI command switch (varargs) for the 0xA802E3D0 object; FUN_a0142418 has 2 args; 2 no-code continue hints documented",
-      "name": "FUN_a014c7bc",
       "status": "matched"
     },
     "ram:a014ce84": {
