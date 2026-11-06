@@ -5,9 +5,9 @@
  * changes nothing. Then FUN_a00baa6c(port) writes "5600+\r" into the port's 6-byte buffer, FUN_a00ba950(port)
  * clears the port's state bytes, FUN_a00bab80(port, 6) passes the buffer to FUN_a01487e8, and the function
  * returns 0.
- * Source form: the three port helpers are defined in this file and inlined by GCC at -O3; the byte is copied into
- * an unsigned int before the FUN_a0143c14 call and '0' is subtracted after it; bit 31 of 0xa802e1a0 is read as a
- * 1-bit bit-field (a 'w < 0' test places the blocks differently).
+ * Source form: the three port helpers are defined in this file and inlined by GCC at -O3; the byte comes from a
+ * fourth inlined port helper rx_char(port, 9) (u8) into 'int c' before the FUN_a0143c14 call (and 0xff at
+ * 0xa00c0e00), and d = c - '0' (u8) is taken after it; bit 31 of 0xa802e1a0 is read as a 1-bit bit-field.
  */
 extern unsigned char DAT_a802b09a, DAT_a802b098, DAT_a802b09c;
 extern unsigned char DAT_a802d040[], DAT_a802d098[], DAT_a802d0d0[];
@@ -79,23 +79,26 @@ void FUN_a00bab80(unsigned char port, unsigned char len)
     else
         FUN_a01487e8(port, len, DAT_a802d078);
 }
+static unsigned char rx_char(unsigned char port, int i)
+{
+    if (port == 2)
+        return DAT_a802d040[i];
+    else if (port == 3)
+        return DAT_a802d098[i];
+    else
+        return DAT_a802d0d0[i];
+}
+
 int FUN_a00c0de0(unsigned char port)
 {
-    unsigned char value;
-    unsigned int diff;
+    int c;
     unsigned char d;
     unsigned char r;
 
-    if (port == 2)
-        value = DAT_a802d040[9];
-    else if (port == 3)
-        value = DAT_a802d098[9];
-    else
-        value = DAT_a802d0d0[9];
-    diff = value;
+    c = rx_char(port, 9);
     r = FUN_a0143c14(0);
-    diff -= 0x30;
-    switch ((unsigned char)diff) {
+    d = c - '0';
+    switch (d) {
     case 0:
         if (r == 0)
             return 0xff;
