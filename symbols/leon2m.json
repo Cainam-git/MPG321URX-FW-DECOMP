@@ -11599,7 +11599,7 @@
     "ram:a00e0b00": {
       "by": "hand",
       "cflags": "-mcpu=v8 -O3 -g",
-      "comment": "FUN_a00e0b00: p = base[phy] + reg * 4 computed before b = base[phy]; unsigned long table re-filled before the page write",
+      "comment": "FUN_a00e0b00: source form as siblings (phy_tab called again after the page write)",
       "name": "FUN_a00e0b00",
       "status": "matched"
     },
