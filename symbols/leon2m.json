@@ -9797,6 +9797,13 @@
       "name": "FUN_a00d2a98",
       "status": "matched"
     },
+    "ram:a00d3650": {
+      "by": "hand",
+      "cflags": "-mcpu=v8 -O3 -g",
+      "comment": "answers a request with the FUN_a00d0e48 r[0..6] fill (inlined copy) and the DAT_a802b09e table read",
+      "name": "FUN_a00d3650",
+      "status": "matched"
+    },
     "ram:a00d3a30": {
       "by": "table",
       "comment": "jump table of the switch in FUN_a00d4998; proven entry for entry by its exact check",
