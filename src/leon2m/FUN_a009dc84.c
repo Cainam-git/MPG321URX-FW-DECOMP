@@ -6,7 +6,6 @@
  * else FUN_a00a813c(1, (u8)(v + 2), 1) (two tail calls). void(void).
  * Source form: (unsigned short)_DAT_a802afec for the halfword; u8/void prototypes; the test is 'afec - 0x46 == v'
  * with a u8 local v (an unsigned int temporary for the left side swaps %g1/%i2).
- * Compiler aids: none.
  */
 extern unsigned char DAT_a8025c56;
 extern unsigned int _DAT_a802afec;
