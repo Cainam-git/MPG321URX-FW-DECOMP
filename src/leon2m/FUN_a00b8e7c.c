@@ -26,8 +26,7 @@
  * Source form: every chain test reads T.a18a[page] (CSE reuses the load for ten tests and reloads it for the
  * eleventh, as in the firmware); bit 11 of T+0xa8 is a bit-field; the sprintf argument is read before the
  * FUN_a0146b50 / FUN_a0146b6c calls.
- * Compiler aids: __builtin_expect(.., 0) on the byte 0xa8025c55 test and on the e == 9 test (no instructions; they
- * change the predicted probabilities that decide the block order).
+ * Source form: the byte 0xa8025c55 holds the copied 1-bit flag and is tested as '== 1'.
  */
 struct Sys {
     unsigned char p00[0x3e];
@@ -149,7 +148,7 @@ void FUN_a00b8e7c(unsigned char page)
         DAT_a8025c56 = T.b182;
         DAT_a8025c55 = T.a8u.f.b11;
         T.a8u.f.b11 = 0;
-        if (__builtin_expect(DAT_a8025c55, 0))
+        if (DAT_a8025c55 == 1)
             FUN_a00dbcf0();
         FUN_a00b8ca8(T.b182 >> 2);
         FUN_a00ad86c(T.b182 & 3, 1);
@@ -202,7 +201,7 @@ void FUN_a00b8e7c(unsigned char page)
             k -= 4;
         for (i = 0; i <= 1; i++)
             FUN_a0146b20(0, i + 4, k * 2 + 5, 1, i + 0x1c, 0);
-    } else if (__builtin_expect(T.a18a[page] == 9, 0)) {
+    } else if (T.a18a[page] == 9) {
         DAT_a8025c56 = T.b15b;
         FUN_a00ad970(T.b15b >> 2);
         FUN_a00ad86c(T.b15b & 3, 1);
