@@ -4,11 +4,9 @@
  * 0x30); d > 1 -> return 0xff; else bit 15 of the word at 0xa802d290+0x174 = d & 1 (andn 0x8000 / or (d&1)<<15,
  * the shifted value is computed before the test), FUN_a00db690(), FUN_a00b88cc(), FUN_a00baa6c(p),
  * FUN_a00ba950(p), FUN_a00bab80(p, 6) with p = the u8 parameter; return 0.
- * Source form: the record base DAT_a802d290; 'int diff = value - 0x30;' then a separate u8 copy 'd = diff' used
- * for the test and the bit (the fw keeps the 'and 0xff' re-extension of the 3-arm u8 value before the add, then
- * 'and 0xff' for d; a u8 diff folds the first one, a u16 diff gives sll/srl, a signed char value gives sll/sra);
- * u8/void prototypes.
- * Compiler aids: none.
+ * Source form: the ASCII digit goes through a static helper 'int ascii_digit(unsigned char c)' returning c - '0'
+ * (inlined; its int result kept in the u8 d gives the 'and 0xff' of the loaded byte at 0xa00c9ebc and the
+ * 'and 0xff' of d at 0xa00c9ec4); the record base DAT_a802d290; u8/void prototypes.
  */
 struct R290 { unsigned char pad[0x174]; unsigned int w174; };
 extern struct R290 DAT_a802d290;
@@ -21,10 +19,14 @@ extern void FUN_a00baa6c(unsigned char);
 extern void FUN_a00ba950(unsigned char);
 extern void FUN_a00bab80(unsigned char, int);
 
+static int ascii_digit(unsigned char c)
+{
+  return c - '0';
+}
+
 int FUN_a00c9e9c(unsigned char param_1)
 {
   unsigned char value;
-  int diff;
   unsigned char d;
 
   if (param_1 == 2)
@@ -33,8 +35,7 @@ int FUN_a00c9e9c(unsigned char param_1)
     value = DAT_a802d0a1;
   else
     value = DAT_a802d0d9;
-  diff = value - 0x30;
-  d = diff;
+  d = ascii_digit(value);
   if (d > 1)
     return 0xff;
   DAT_a802d290.w174 = (DAT_a802d290.w174 & ~0x8000) | ((d & 1) << 15);
