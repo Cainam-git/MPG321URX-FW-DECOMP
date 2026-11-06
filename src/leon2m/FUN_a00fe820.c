@@ -4,7 +4,7 @@
  * : (r & ~8) | 1; tail call FUN_a00f1ad4(p, 5, (u8)v) (register write). void. FUN_a00f1a90 takes 2 arguments and its
  * value is used unmasked (int-style return); FUN_a00f1ad4 = src/leon2m/FUN_a00f1ad4.c (u8, u8, u8).
  * Source form: the arm test is '!on' with the (r & ~8) | 1 arm FIRST (if/else; the 'default then override' form and
- * the 'if (on)' order give other block layouts); void, 2 params. Compiler aids: none.
+ * the 'if (on)' order give other block layouts); void, 2 params.
  */
 extern unsigned int FUN_a00f1a90(unsigned char, unsigned char);
 extern void FUN_a00f1ad4(unsigned char blk, unsigned char reg, unsigned char val);
