@@ -3,7 +3,6 @@
  * delay slot); u16 0xa802d03c = func_0x4008d588() (ROM ms tick, u16, no argument). void(void).
  * func_0x4008d588 takes no argument: the 'sethi %hi(0xa802d400), %o0' before the call is only the HIGH of
  * DAT_a802d43a for the clrb. Its prototype is 'unsigned short func_0x4008d588(void)' as elsewhere in src/.
- * Compiler aids: none.
  */
 extern unsigned char DAT_a802b08e;
 extern unsigned char DAT_a802d43a;
