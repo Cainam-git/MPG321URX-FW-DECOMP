@@ -1,0 +1,8 @@
+# leon2m FUN_a01216f8 0xa01216f8-0xa0121714 (28 bytes)
+a01216f8:  03 2a 00 b2  sethi  %hi(0xa802c800), %g1
+a01216fc:  9a 10 20 01  mov  1, %o5
+a0121700:  d8 00 61 e4  ld  [ %g1 + 0x1e4 ], %o4
+a0121704:  9b 2b 40 08  sll  %o5, %o0, %o5
+a0121708:  9a 13 40 0c  or  %o5, %o4, %o5
+a012170c:  81 c3 e0 08  retl
+a0121710:  da 20 61 e4  st  %o5, [ %g1 + 0x1e4 ]

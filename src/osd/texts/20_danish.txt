@@ -1,0 +1,633 @@
+# Texts of language 20, named "dansk" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[49] (item 1, danish)
+16e0d0.49 "{F7}3{F0}Udfør{F7}3{F0}, for at udføre skærmbeskyttelsesfunktionen (lang tid)."
+
+# osd_protect_long_execute_texts[20] (item 0, danish)
+16e0d0.20 "{F0}For at bevare skærmens billedkvalitet, skal du trykke på knappen "
+
+# osd_protect_long_auto_texts[20] (item 0, danish)
+16f25c.20 "{F0}For at bevare skærmens billedkvalitet, slås skærmbeskyttelsesfunktionen (lang tid) "
+
+# osd_protect_long_title_texts[78] (item 2, danish)
+16f670.78 "{F0}automatisk til, når skærmen har været brugt i . 1,500 timer."
+
+# osd_protect_long_title_texts[49] (item 1, danish)
+16f670.49 "{F0}For at opretholde skærmens billedkvalitet, slås skærmbeskyttelsesfunktionen (lang tid) "
+
+# osd_protect_long_title_texts[20] (item 0, danish)
+16f670.20 "{F0}Pleje MSI OLED-skærm - Skærmbeskyttelse (Lang tid)"
+
+# osd_protect_long_incomplete_texts[49] (item 1, danish)
+172590.49 "{F0}på dette punkt, hvis denne proces skal udføres senere."
+
+# osd_protect_long_incomplete_texts[20] (item 0, danish)
+172590.20 "{F0}Skærmbeskyttelsen (lang tid) blev ikke fuldført. Klik "
+
+# osd_protect_incomplete_texts[49] (item 1, danish)
+173998.49 "{F0}hvis denne proces skal udføres senere."
+
+# osd_protect_incomplete_texts[20] (item 0, danish)
+173998.20 "{F0}Skærmbeskyttelsen blev ikke fuldført. Klik på dette punkt, "
+
+# osd_protect_long_incomplete_texts[78] (item 2, danish)
+# osd_protect_incomplete_texts[78] (item 2, danish)
+# osd_protect_execute_texts[78] (item 2, danish)
+172590.78 "{F0}Bemærkning:"
+
+# osd_protect_execute_texts[49] (item 1, danish)
+174bd0.49 "{F0}for at slås skærmbeskyttelsesfunktionen til."
+
+# osd_protect_execute_texts[20] (item 0, danish)
+174bd0.20 "{F0}For at bevare skærmens billedkvalitet, skal du trykke på knappen \"Udfør\","
+
+# osd_protect_long_retry_texts[49] (item 1, danish)
+175de4.49 "{F7}3{F0}Udfør{F7}3{F0}, for at udføre skærmbeskyttelsesfunktionen (lang tid)."
+
+# osd_protect_long_retry_texts[20] (item 0, danish)
+175de4.20 "{F0}Skærmbeskyttelsen (lang tid) blev ikke fuldført. Tryk venligst på knappen"
+
+# osd_protect_retry_texts[49] (item 1, danish)
+177270.49 "{F0}for at udføre skærmbeskyttelsesfunktionen.  "
+
+# osd_protect_retry_texts[20] (item 0, danish)
+177270.20 "{F0}Skærmbeskyttelsen blev ikke fuldført. Tryk på knappen \"Udfør\",  "
+
+# osd_protect_auto_texts[20] (item 0, danish)
+1785c0.20 "{F0}For at bevare skærmens billedkvalitet, slås skærmbeskyttelsesfunktionen "
+
+# osd_protect_long_auto_texts[49] (item 1, danish)
+16f25c.49 "automatisk til."
+
+# osd_protect_auto_texts[49] (item 1, danish)
+1785c0.49 "automatisk til."
+
+# osd_protect_long_execute_texts[136] (item 4, danish)
+# osd_protect_long_auto_texts[136] (item 4, danish)
+# osd_protect_long_title_texts[165] (item 5, danish)
+# osd_protect_long_incomplete_texts[136] (item 4, danish)
+# osd_protect_long_retry_texts[136] (item 4, danish)
+16e0d0.136 "{F0}Strømindikatoren blinker hvid, indtil processen er færdig."
+
+# osd_protect_long_execute_texts[107] (item 3, danish)
+# osd_protect_long_auto_texts[107] (item 3, danish)
+# osd_protect_long_title_texts[136] (item 4, danish)
+# osd_protect_long_incomplete_texts[107] (item 3, danish)
+# osd_protect_long_retry_texts[107] (item 3, danish)
+16e0d0.107 "{F0}Det kan tage op til en time, at udføre denne beskyttelsesfunktion."
+
+# osd_protect_long_title_texts[339] (item 11, danish)
+# osd_protect_long_retry_texts[310] (item 10, danish)
+# osd_protect_retry_texts[310] (item 10, danish)
+16f670.339 "{F0}slukker eller går på energisparefunk."
+
+# osd_protect_long_title_texts[310] (item 10, danish)
+# osd_protect_long_retry_texts[281] (item 9, danish)
+# osd_protect_retry_texts[281] (item 9, danish)
+16f670.310 "{F0}Klikkes der på \"Annuller\",  starter processen automatisk når skærmen" hidden 20
+
+# osd_protect_long_execute_texts[252] (item 8, danish)
+# osd_protect_long_auto_texts[252] (item 8, danish)
+# osd_protect_long_title_texts[281] (item 9, danish)
+# osd_protect_long_incomplete_texts[252] (item 8, danish)
+# osd_protect_incomplete_texts[252] (item 8, danish)
+# osd_protect_execute_texts[252] (item 8, danish)
+# ... and 4 more entries
+16e0d0.252 "{F0}skal du trykke på tænd/sluk-knappen igen."
+
+# osd_protect_long_execute_texts[223] (item 7, danish)
+# osd_protect_long_auto_texts[223] (item 7, danish)
+# osd_protect_long_title_texts[252] (item 8, danish)
+# osd_protect_long_incomplete_texts[223] (item 7, danish)
+# osd_protect_incomplete_texts[223] (item 7, danish)
+# osd_protect_execute_texts[223] (item 7, danish)
+# ... and 4 more entries
+16e0d0.223 "{F0}For at annullere funktionen under forløbet,"
+
+# osd_protect_long_execute_texts[194] (item 6, danish)
+# osd_protect_long_auto_texts[194] (item 6, danish)
+# osd_protect_long_title_texts[223] (item 7, danish)
+# osd_protect_long_incomplete_texts[194] (item 6, danish)
+# osd_protect_incomplete_texts[194] (item 6, danish)
+# osd_protect_execute_texts[194] (item 6, danish)
+# ... and 4 more entries
+16e0d0.194 "{F0} "
+
+# osd_protect_long_execute_texts[165] (item 5, danish)
+# osd_protect_long_auto_texts[165] (item 5, danish)
+# osd_protect_long_title_texts[194] (item 6, danish)
+# osd_protect_long_incomplete_texts[165] (item 5, danish)
+# osd_protect_incomplete_texts[165] (item 5, danish)
+# osd_protect_execute_texts[165] (item 5, danish)
+# ... and 4 more entries
+16e0d0.165 "{F0}Ledningen må ikke afbrydes fra skærmen under forløbet."
+
+# osd_protect_incomplete_texts[136] (item 4, danish)
+# osd_protect_execute_texts[136] (item 4, danish)
+# osd_protect_retry_texts[136] (item 4, danish)
+# osd_protect_auto_texts[136] (item 4, danish)
+# osd_protect_title_texts[165] (item 5, danish)
+173998.136 "{F0}Strømindikatoren blinker orange, indtil processen er fuldført."
+
+# osd_protect_incomplete_texts[107] (item 3, danish)
+# osd_protect_execute_texts[107] (item 3, danish)
+# osd_protect_retry_texts[107] (item 3, danish)
+# osd_protect_auto_texts[107] (item 3, danish)
+# osd_protect_title_texts[136] (item 4, danish)
+173998.107 "{F0}Det tager nogle minutter at genneføre denne beskyttelsesfunktion."
+
+# osd_protect_long_execute_texts[78] (item 2, danish)
+# osd_protect_long_auto_texts[78] (item 2, danish)
+# osd_protect_long_title_texts[107] (item 3, danish)
+# osd_protect_long_retry_texts[78] (item 2, danish)
+# osd_protect_retry_texts[78] (item 2, danish)
+# osd_protect_auto_texts[78] (item 2, danish)
+# ... and 1 more entries
+16e0d0.78 "{F0}Bemærkning:"
+
+# osd_protect_title_texts[78] (item 2, danish)
+179a14.78 "{F0}automatisk til, når skærmen har været brugt i 4 timer."
+
+# osd_protect_title_texts[49] (item 1, danish)
+179a14.49 "For at bevare skærmens billedkvalitet, slås skærmbeskyttelsesfunktionen "
+
+# osd_protect_title_texts[20] (item 0, danish)
+179a14.20 "MSI OLED Care - Skærmbeskyttelse"
+
+# osd_protect_retry_texts[426] (item 14, danish)
+# osd_protect_title_texts[397] (item 13, danish)
+177270.426 "{F0}igen, når du har brugt skærmen i samlet 24 timer."
+
+# osd_protect_retry_texts[397] (item 13, danish)
+# osd_protect_title_texts[368] (item 12, danish)
+177270.397 "{F0}Hvis du klikker på knappen \"Senere\", vises notifikationen først"
+
+# osd_protect_retry_texts[368] (item 12, danish)
+# osd_protect_title_texts[339] (item 11, danish)
+177270.368 "{F0}når skærmen slukkes eller går på energisparefunktionen."
+
+# osd_protect_retry_texts[339] (item 11, danish)
+# osd_protect_title_texts[310] (item 10, danish)
+177270.339 "{F0}Klik på \"Annuller\" eller \"Senere\", hvorefter dette forløb starter,"
+
+# osd_change_notice_line3_texts[20] (item 0, danish)
+180b60.20 "Vælg en af følgende indstillinger:"
+
+# osd_change_notice_line2_texts[20] (item 0, danish)
+181058.20 "forøges skærmens strømforbrug muligvis."
+
+# osd_change_notice_line1_texts[20] (item 0, danish)
+1814d8.20 "Når den valgte funktion ændres,"
+
+# osd_change_notice_title_texts[20] (item 0, danish)
+1819cc.20 "Bekræft ændring!"
+
+# table_1821d4[49] (item 1, danish)
+1821d4.49 "Digital"
+
+# table_1821d4[20] (item 0, danish)
+1821d4.20 "Analog"
+
+# osd_pbp_source_texts[49] (item 1, danish)
+182534.49 "Kilde 2"
+
+# osd_pbp_source_texts[20] (item 0, danish)
+182534.20 "Kilde 1"
+
+# osd_pip_item_texts[78] (item 2, danish)
+1828c0.78 "Placering"
+
+# osd_pip_item_texts[49] (item 1, danish)
+1828c0.49 "PIP-størrelse"
+
+# osd_pip_item_texts[20] (item 0, danish)
+1828c0.20 "Kilde"
+
+# osd_pip_item_texts[136] (item 4, danish)
+1828c0.136 "Lydskift"
+
+# osd_pip_item_texts[107] (item 3, danish)
+1828c0.107 "Skærmskift"
+
+# osd_choice_note_function_texts[136] (item 4, danish)
+1832e4.136 "Skærmstørrelse"
+
+# osd_choice_note_reducing_texts[165] (item 5, danish)
+183cb4.165 "{F0}VRR-indhold."
+
+# osd_choice_note_reducing_texts[136] (item 4, danish)
+183cb4.136 "{F0}når skærmen modtager"
+
+# osd_choice_note_reducing_texts[107] (item 3, danish)
+183cb4.107 "{F0}Denne funk. virker ikke,"
+
+# osd_choice_note_reducing_texts[78] (item 2, danish)
+183cb4.78 "{F0}og \"DisplayHDR\"."
+
+# osd_choice_note_reducing_texts[49] (item 1, danish)
+183cb4.49 "{F0}af indst. i \"Lysstyrke\" "
+
+# osd_choice_note_reducing_texts[20] (item 0, danish)
+183cb4.20 "{F0}Reduktionen afhænger "
+
+# osd_choice_note_texts[136] (item 4, danish)
+183a70.136 " "
+
+# osd_choice_note_texts[107] (item 3, danish)
+183a70.107 "Færdig på ca.  1 time"
+
+# osd_choice_note_texts[78] (item 2, danish)
+183a70.78 "{F0}15 minutter"
+
+# osd_choice_note_texts[49] (item 1, danish)
+183a70.49 "{F0}Gennemføres på ca."
+
+# osd_choice_note_texts[20] (item 0, danish)
+183a70.20 "{F0}Bemærkning:"
+
+# osd_oled_care_item_texts[78] (item 2, danish)
+185e78.78 "{F0}Bsked om beskyt."
+
+# osd_oled_care_function_texts[165] (item 5, danish)
+# osd_oled_care_item_texts[194] (item 6, danish)
+185bc0.165 "{F0}Reg. af kant"
+
+# osd_oled_care_function_texts[136] (item 4, danish)
+# osd_oled_care_item_texts[165] (item 5, danish)
+185bc0.136 "{F0}Reg. af proceslinje"
+
+# osd_oled_care_function_texts[107] (item 3, danish)
+# osd_oled_care_item_texts[136] (item 4, danish)
+185bc0.107 "{F0}Reg. af multi-logo"
+
+# osd_oled_care_item_texts[223] (item 7, danish)
+185e78.223 "{F0}Oplys. OLED-skærmen"
+
+# osd_oled_care_function_texts[78] (item 2, danish)
+# osd_oled_care_item_texts[107] (item 3, danish)
+185bc0.78 "{F0}Reg. statisk skærm"
+
+# osd_oled_care_function_texts[20] (item 0, danish)
+# osd_oled_care_item_texts[49] (item 1, danish)
+185bc0.20 "{F0}Skærmbeskyttelse"
+
+# osd_oled_care_function_texts[49] (item 1, danish)
+# osd_oled_care_item_texts[20] (item 0, danish)
+185bc0.49 "{F0}Pixelforskydning"
+
+# osd_choice_note_function_texts[310] (item 10, danish)
+# osd_settings_item_texts[223] (item 7, danish)
+1832e4.310 "{F0}Opladning via Type C (PD)"
+
+# osd_settings_item_texts[136] (item 4, danish)
+1874f8.136 "{F0}Tænd/sluk-knap"
+
+# osd_settings_item_texts[281] (item 9, danish)
+1874f8.281 "Nulstil"
+
+# osd_settings_item_texts[78] (item 2, danish)
+1874f8.78 "Menuens tidsudløb"
+
+# osd_settings_item_texts[49] (item 1, danish)
+1874f8.49 "Gennemsigtighed"
+
+# osd_settings_item_texts[20] (item 0, danish)
+1874f8.20 "Sprog"
+
+# osd_professional_item_texts[78] (item 2, danish)
+188634.78 "Billedforbedring"
+
+# osd_professional_item_texts[49] (item 1, danish)
+188634.49 "Lavt blåt lys"
+
+# osd_professional_item_texts[20] (item 0, danish)
+188634.20 "Pro-funktion"
+
+# osd_night_vision_texts[107] (item 3, danish)
+1890d4.107 "Stærkest"
+
+# osd_night_vision_texts[78] (item 2, danish)
+1890d4.78 "Stærk"
+
+# osd_night_vision_texts[49] (item 1, danish)
+1890d4.49 "Normal"
+
+# osd_choice_note_function_texts[281] (item 9, danish)
+# osd_gaming_item_texts[49] (item 1, danish)
+1832e4.281 "Nattesyn"
+
+# osd_gaming_item_texts[136] (item 4, danish)
+188da0.136 "Vækkeur"
+
+# osd_gaming_item_texts[107] (item 3, danish)
+188da0.107 "Refresh Rate"
+
+# osd_choice_note_function_texts[165] (item 5, danish)
+1832e4.165 "Responstid"
+
+# osd_gaming_item_texts[20] (item 0, danish)
+188da0.20 "Spilfunktion"
+
+# osd_choice_note_function_texts[194] (item 6, danish)
+# osd_gi_item_texts[78] (item 2, danish)
+1832e4.194 "Optisk område"
+
+# osd_oled_care_seconds_texts[107] (item 3, danish)
+18a7ec.107 "{F0}240 Sek."
+
+# osd_oled_care_seconds_texts[78] (item 2, danish)
+18a7ec.78 "{F0}120 Sek."
+
+# osd_oled_care_seconds_texts[49] (item 1, danish)
+18a7ec.49 "{F0}100 Sek."
+
+# osd_oled_care_seconds_texts[20] (item 0, danish)
+18a7ec.20 "{F0}50 Sek."
+
+# table_18af08[49] (item 1, danish)
+# table_18b008[49] (item 1, danish)
+18af08.49 "{F0}Manuelt"
+
+# osd_oled_care_usage_texts[49] (item 1, danish)
+18b29c.49 "{F0}Brug over 24 t."
+
+# osd_oled_care_speed_texts[78] (item 2, danish)
+18b5e0.78 "{F0}Hurtig"
+
+# osd_oled_care_speed_texts[20] (item 0, danish)
+18b5e0.20 "{F0}Langsom"
+
+# osd_oled_care_choice_texts[78] (item 2, danish)
+# osd_oled_care_status_texts[78] (item 2, danish)
+16df60.78 "{F0}Reduceringsniveau"
+
+# osd_oled_care_status_texts[49] (item 1, danish)
+18b94c.49 "{F0}Påkrævet tid"
+
+# osd_oled_care_status_texts[20] (item 0, danish)
+18b94c.20 "{F0}Starter kl"
+
+# table_18c070[49] (item 1, danish)
+18c070.49 "{F0}Lang tid"
+
+# table_18c070[20] (item 0, danish)
+18c070.20 "{F0}Kort tid"
+
+# table_18c4a8[20] (item 0, danish)
+18c4a8.20 "{F0}Bevægelseshastighed (pixelforskyding)"
+
+# osd_image_item_texts[136] (item 4, danish)
+18ca88.136 "Skærmstørrelse"
+
+# osd_image_item_texts[107] (item 3, danish)
+18ca88.107 "Farvetemperatur"
+
+# osd_image_item_texts[78] (item 2, danish)
+18ca88.78 "Skarphed"
+
+# osd_image_item_texts[49] (item 1, danish)
+18ca88.49 "Kontrast"
+
+# osd_language_texts[20] (item 0, danish)
+18d3d4.20 "dansk"
+
+# osd_optix_scope_item_texts[49] (item 1, danish)
+18d578.49 "Områdeforhold"
+
+# osd_optix_scope_item_texts[20] (item 0, danish)
+18d578.20 "Områdestørrelse"
+
+# osd_color_temp_texts[107] (item 3, danish)
+18db28.107 "Brugerdefineret"
+
+# osd_color_temp_texts[78] (item 2, danish)
+18db28.78 "Varm"
+
+# osd_color_temp_texts[20] (item 0, danish)
+18db28.20 "Kold"
+
+# osd_response_time_texts[78] (item 2, danish)
+18e08c.78 "Hurtigst"
+
+# osd_response_time_texts[49] (item 1, danish)
+18e08c.49 "Hurtig"
+
+# osd_oled_care_speed_texts[49] (item 1, danish)
+# osd_color_temp_texts[49] (item 1, danish)
+# osd_response_time_texts[20] (item 0, danish)
+18b5e0.49 "Normal"
+
+# osd_crosshair_color_texts[49] (item 1, danish)
+18e54c.49 "Rød"
+
+# osd_crosshair_color_texts[20] (item 0, danish)
+18e54c.20 "Hvid"
+
+# table_18c8b8[78] (item 2, danish)
+# osd_pbp_mode_texts[78] (item 2, danish)
+# osd_location_texts[136] (item 4, danish)
+18c8b8.78 "Tilpas"
+
+# osd_location_texts[107] (item 3, danish)
+18e9f8.107 "Nederst til højre"
+
+# osd_location_texts[78] (item 2, danish)
+18e9f8.78 "Nederst til venstre"
+
+# osd_location_texts[49] (item 1, danish)
+18e9f8.49 "Øverst til højre"
+
+# osd_location_texts[20] (item 0, danish)
+18e9f8.20 "Øverst til venstre"
+
+# osd_size_texts[78] (item 2, danish)
+18f550.78 "Stor"
+
+# osd_size_texts[49] (item 1, danish)
+18f550.49 "Medium"
+
+# osd_size_texts[20] (item 0, danish)
+18f550.20 "Lille"
+
+# osd_crosshair_item_texts[136] (item 4, danish)
+18f984.136 "Nulstil"
+
+# osd_crosshair_item_texts[107] (item 3, danish)
+18f984.107 "Position"
+
+# osd_crosshair_item_texts[78] (item 2, danish)
+18f984.78 "{F0}Farve"
+
+# osd_crosshair_item_texts[49] (item 1, danish)
+18f984.49 "Ikon"
+
+# osd_crosshair_item_texts[20] (item 0, danish)
+18f984.20 "Ingen"
+
+# osd_protect_button_texts[78] (item 2, danish)
+190184.78 "{F0}Senere"
+
+# osd_protect_button_texts[49] (item 1, danish)
+190184.49 "{F0}Annuller"
+
+# osd_protect_button_texts[20] (item 0, danish)
+190184.20 "{F0}Udfør"
+
+# osd_yes_no_texts[49] (item 1, danish)
+190748.49 "Nej"
+
+# osd_yes_no_texts[20] (item 0, danish)
+190748.20 "Ja"
+
+# osd_kvm_texts[49] (item 1, danish)
+1909ec.49 "Upstream"
+
+# table_190cec[49] (item 1, danish)
+190cec.49 "Top 1000 nits"
+
+# osd_navi_key_item_texts[107] (item 3, danish)
+19158c.107 "Højre"
+
+# osd_navi_key_item_texts[78] (item 2, danish)
+19158c.78 "Venstre"
+
+# osd_navi_key_item_texts[49] (item 1, danish)
+19158c.49 "Ned"
+
+# osd_navi_key_item_texts[20] (item 0, danish)
+19158c.20 "Op"
+
+# osd_info_box_texts[194] (item 6, danish)
+191b30.194 "Bitdybde"
+
+# osd_info_box_texts[165] (item 5, danish)
+191b30.165 "Indholdstype"
+
+# osd_info_box_texts[136] (item 4, danish)
+191b30.136 "Vælg funktion"
+
+# osd_info_box_texts[78] (item 2, danish)
+191b30.78 "Fysisk opløsning"
+
+# osd_info_box_texts[49] (item 1, danish)
+191b30.49 "Original opløsning"
+
+# osd_out_of_range_texts[20] (item 0, danish)
+192d8c.20 "Uden for rækkevidde!"
+
+# osd_no_signal_texts[20] (item 0, danish)
+193008.20 "Intet signal"
+
+# osd_power_button_texts[49] (item 1, danish)
+19336c.49 "Standby"
+
+# osd_navi_function_texts[310] (item 10, danish)
+1935bc.310 "Optisk område"
+
+# osd_navi_function_texts[281] (item 9, danish)
+1935bc.281 "Nattesyn"
+
+# osd_info_box_texts[107] (item 3, danish)
+# osd_navi_function_texts[223] (item 7, danish)
+191b30.107 "Refresh Rate"
+
+# osd_gi_item_texts[49] (item 1, danish)
+# osd_navi_function_texts[107] (item 3, danish)
+18a360.49 "Smart kryds"
+
+# osd_navi_function_texts[136] (item 4, danish)
+1935bc.136 "Vækkeur"
+
+# osd_navi_function_texts[78] (item 2, danish)
+1935bc.78 "Spilfunktion"
+
+# osd_choice_note_function_texts[49] (item 1, danish)
+# osd_image_item_texts[20] (item 0, danish)
+# osd_navi_function_texts[49] (item 1, danish)
+1832e4.49 "Lysstyrke"
+
+# osd_settings_item_texts[165] (item 5, danish)
+# table_18c8b8[107] (item 3, danish)
+# osd_navi_function_texts[252] (item 8, danish)
+1874f8.165 "Info på skærmen"
+
+# osd_navi_function_texts[194] (item 6, danish)
+1935bc.194 "PIP/PBP-funktion"
+
+# osd_image_enhancement_texts[136] (item 4, danish)
+194b34.136 "Stærkest"
+
+# osd_image_enhancement_texts[107] (item 3, danish)
+194b34.107 "Stærk"
+
+# osd_image_enhancement_texts[78] (item 2, danish)
+194b34.78 "Mellem"
+
+# osd_image_enhancement_texts[49] (item 1, danish)
+194b34.49 "Svag"
+
+# osd_pro_mode_texts[107] (item 3, danish)
+1951dc.107 "Film"
+
+# osd_pro_mode_texts[78] (item 2, danish)
+1951dc.78 "Anti-Blå"
+
+# osd_pro_mode_texts[136] (item 4, danish)
+1951dc.136 "Kontor"
+
+# osd_oled_care_choice_texts[49] (item 1, danish)
+# osd_optix_scope_item_texts[107] (item 3, danish)
+# osd_off_on_texts[49] (item 1, danish)
+# table_195a38[78] (item 2, danish)
+16df60.49 "TIL"
+
+# osd_location_texts[165] (item 5, danish)
+# table_195a38[20] (item 0, danish)
+# table_195c7c[20] (item 0, danish)
+18e9f8.165 "Placering"
+
+# osd_game_mode_texts[20] (item 0, danish)
+195f24.20 "{F0}Kvalitetsfarve"
+
+# osd_pro_mode_texts[49] (item 1, danish)
+# osd_game_mode_texts[49] (item 1, danish)
+1951dc.49 "Bruger"
+
+# osd_game_mode_texts[107] (item 3, danish)
+195f24.107 "Racerløb"
+
+# osd_pbp_mode_texts[49] (item 1, danish)
+18e89c.49 "Funktion 2"
+
+# osd_pbp_mode_texts[20] (item 0, danish)
+18e89c.20 "Funktion 1"
+
+# osd_oled_care_choice_texts[20] (item 0, danish)
+# osd_night_vision_texts[20] (item 0, danish)
+# table_18c8b8[20] (item 0, danish)
+# osd_optix_scope_item_texts[78] (item 2, danish)
+# osd_off_on_texts[20] (item 0, danish)
+# osd_power_button_texts[20] (item 0, danish)
+# ... and 5 more entries
+16df60.20 "FRA"
+
+# osd_tab_name_texts[194] (item 6, danish)
+196dc0.194 "Navigationstast"
+
+# osd_tab_name_texts[223] (item 7, danish)
+196dc0.223 "Indstillinger"
+
+# osd_info_box_texts[20] (item 0, danish)
+# osd_navi_function_texts[165] (item 5, danish)
+# osd_tab_name_texts[136] (item 4, danish)
+191b30.20 "Indgangskilde"
+
+# osd_tab_name_texts[107] (item 3, danish)
+196dc0.107 "Billede"
+
+# osd_tab_name_texts[78] (item 2, danish)
+196dc0.78 "Professionel"
+
+# osd_tab_name_texts[49] (item 1, danish)
+196dc0.49 "Gaminng"

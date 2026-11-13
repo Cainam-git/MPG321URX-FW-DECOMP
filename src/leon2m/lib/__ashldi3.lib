@@ -1,0 +1,3 @@
+libgcc.a _ashldi3.o __ashldi3
+# leon2m FUN_a0155104: toolchain library function __ashldi3 (libgcc.a:_ashldi3.o, 92 bytes),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

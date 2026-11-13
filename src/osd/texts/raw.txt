@@ -1,0 +1,1 @@
+# Bytes of the text area that are neither table nor text. Written by tools/osd_gen.py.

@@ -1,0 +1,42 @@
+{
+  "leon2s": {
+    "toolchain": "toolchains/sparc-elf-3.4.4/bin",
+    "prefix": "sparc-elf-",
+    "cflags": "-mcpu=v8 -Os -g",
+    "note": "gcc 3.4.4 -Os -g (debug info changes the epilogue nop); -O2 is clearly worse here",
+    "alt_cflags": [
+      "-mcpu=v8 -Os",
+      "-mcpu=v8 -Os -g -msoft-float", "-mcpu=v8 -g"
+    ]
+  },
+  "leon2m": {
+    "toolchain": "toolchains/sparc-elf-3.4.4/bin",
+    "prefix": "sparc-elf-",
+    "cflags": "-mcpu=v8 -O2 -g",
+    "note": "a function without recorded flags is tried with -O2 -g first; about 60 % of the C functions are recorded with -O3 -g, some with -Os: per-function 'cflags' in symbols/leon2m.json; some files without -g (FUN_a00e3bdc); some files -O3 -g (FUN_a00f913c); the image has no FPU instructions and calls the soft-float libgcc routines, so float code needs -msoft-float (FUN_a0107e44 FRCConfigPostFRC); '-O3' WITHOUT -g (FUN_a0151c84: the trailing nop after a final call disappears without -g); some files UNOPTIMISED ('-mcpu=v8 -g', params spilled to the stack: FUN_a015463c); a few files without -mcpu=v8 ('-g' alone: unoptimised SPARC v7 code, multiplications by a constant expanded into shifts and adds, FUN_a01546ec)",
+    "alt_cflags": [
+      "-mcpu=v8 -O3 -g",
+      "-mcpu=v8 -Os -g",
+      "-mcpu=v8 -O2",
+      "-mcpu=v8 -O3 -g -msoft-float",
+      "-mcpu=v8 -O3",
+      "-mcpu=v8 -O3 -msoft-float",
+      "-mcpu=v8 -g",
+      "-g"
+    ]
+  },
+  "8051": {
+    "keil_bin": "toolchains/keil-prefix/drive_c/K956/C51/BIN",
+    "wineprefix": "toolchains/keil-prefix",
+    "c51opts": "OPTIMIZE(7,SPEED)",
+    "note": "Keil C51 9.56 eval under Wine (c51v956.exe, unpacked into the Wine prefix as C:\\K956 with a TOOLS.INI [C51] PATH entry; later releases generate different code, see docs/MATCHING-TRICKS.md). Level 7 matches more sampled functions than level 8, but FUN_CODE_dee8 needs 8 (tail LJMP): mixed per file, judge tries both; banks 0/1 use Keil whole-program register optimisation -> REGFILE(R.ORC) option sets (symbols/<bank>.orc from tools/regfile8051.py)",
+    "alt_c51opts": [
+      "OPTIMIZE(8,SPEED)",
+      "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "OPTIMIZE(7,SPEED) REGFILE(R.ORC)",
+      "OPTIMIZE(8,SPEED) LARGE",
+      "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "OPTIMIZE(7,SPEED) LARGE"
+    ]
+  }
+}

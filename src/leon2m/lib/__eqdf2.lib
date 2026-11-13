@@ -1,0 +1,3 @@
+libgcc.a _eq_df.o __eqdf2
+# leon2m FUN_a01566b0: toolchain library function __eqdf2 (libgcc.a:_eq_df.o, 100 bytes; the same code as the other
+# double compares); link order: it precedes __nedf2, __gtdf2 and __gedf2 as in libgcc.a (eq, ne, gt, ge). The archive member is the source.

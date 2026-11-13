@@ -1,0 +1,38 @@
+{
+  "06a4": {
+    "meaning": "load a char through a generic pointer in R3:R2:R1 (`*p` where p has no memory-space keyword)",
+    "name": "?C?CLDPTR"
+  },
+  "06bd": {
+    "meaning": "load a char through a generic pointer plus offset in A (`p[i]`)",
+    "name": "?C?CLDOPTR"
+  },
+  "06ea": {
+    "meaning": "store a char through a generic pointer (`*p = c`)",
+    "name": "?C?CSTPTR"
+  },
+  "06fc": {
+    "meaning": "store a char through a generic pointer plus offset (`p[i] = c`)",
+    "name": "?C?CSTOPTR"
+  },
+  "0900": {
+    "meaning": "shift the unsigned long in R4..R7 left by R0 bits (`v << n`); bytes e8 60 0f ef c3 33 ...",
+    "name": "?C?LSHL"
+  },
+  "09b1": {
+    "meaning": "store the unsigned long in R4..R7 to xdata at DPTR (`*(unsigned long xdata *)DPTR = v`)",
+    "name": "?C?LSTXDATA"
+  },
+  "0aab": {
+    "meaning": "load an unsigned long from xdata at DPTR into R4..R7 (`v = *(unsigned long xdata *)DPTR`)",
+    "name": "?C?LLDXDATA"
+  },
+  "b7f6": {
+    "meaning": "load an unsigned long from xdata at DPTR into R4..R7 (`v = *(unsigned long xdata *)DPTR`)",
+    "name": "?C?LLDXDATA"
+  },
+  "dde8": {
+    "meaning": "load an unsigned long from xdata at DPTR into R4..R7 (`v = *(unsigned long xdata *)DPTR`)",
+    "name": "?C?LLDXDATA"
+  }
+}

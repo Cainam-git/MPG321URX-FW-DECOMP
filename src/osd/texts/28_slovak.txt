@@ -1,0 +1,633 @@
+# Texts of language 28, named "slovenčina" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[57] (item 1, slovak)
+16e0d0.57 "{F0}funkcia ochrany panela (dlhú dobu)."
+
+# osd_protect_long_execute_texts[28] (item 0, slovak)
+16e0d0.28 "Na zachovanie kvality obrazu panela stlačte tlačidlo {F7}{76}{F0}Vykonať{F7}Ş{F0}, aby sa vykonala "
+
+# osd_protect_long_auto_texts[28] (item 0, slovak)
+16f25c.28 "Na zachovanie kvality obrazu panela sa "
+
+# osd_protect_long_title_texts[86] (item 2, slovak)
+16f670.86 "automaticky aktivuje funkcia (dlhodobej) ochrany panela."
+
+# osd_protect_long_title_texts[57] (item 1, slovak)
+16f670.57 "{F0}Aby sa zachovala kvalita obrazu panela, po používaní monitora dlhšie ako 1 500  hodí" hidden 6e 20 73 61 20
+
+# osd_protect_long_title_texts[28] (item 0, slovak)
+16f670.28 "{F0}Údržba MSI OLED - Ochrana panela (Dlhá doba)"
+
+# osd_protect_long_incomplete_texts[57] (item 1, slovak)
+172590.57 "{F0}vykonania tohto procesu neskÔr znova zvoľte a kliknite na túto položku."
+
+# osd_protect_long_incomplete_texts[28] (item 0, slovak)
+172590.28 "{F0}Proces ochrany panela (dlhú dobu) sa nedokončil. V prípade potreby "
+
+# osd_protect_incomplete_texts[57] (item 1, slovak)
+173998.57 "{F0}tohto procesu nesk{F7}ô{F0}r znova zvoľte a kliknite na túto položku."
+
+# osd_protect_incomplete_texts[28] (item 0, slovak)
+173998.28 "{F0}Proces ochrany panela sa nedokončil. V prípade potreby vykonania "
+
+# osd_protect_long_incomplete_texts[86] (item 2, slovak)
+# osd_protect_incomplete_texts[86] (item 2, slovak)
+# osd_protect_execute_texts[86] (item 2, slovak)
+172590.86 "{F0}Poznámka:"
+
+# osd_protect_execute_texts[57] (item 1, slovak)
+174bd0.57 "{F0}uve{F7}ď{F0}te do činnosti funkciu ochrany panela."
+
+# osd_protect_execute_texts[28] (item 0, slovak)
+174bd0.28 "{F0}Aby sa zachovala kvalita obrazu panela, stlačením tlačidla {F7}„{F0}Vykonať{F7}”"
+
+# osd_protect_long_retry_texts[57] (item 1, slovak)
+175de4.57 "Stlačením tlačidla {F7}{76}{F0}vykonať{F7}Ş{F0} vykonajte funkciu ochrany panela (dlhú dobu)."
+
+# osd_protect_long_retry_texts[28] (item 0, slovak)
+175de4.28 "{F0}Proces ochrany panela (dlhú dobu) sa nedokončil. "
+
+# osd_protect_retry_texts[57] (item 1, slovak)
+177270.57 "{F0}vykonajte funkciu ochrany panela.  "
+
+# osd_protect_retry_texts[28] (item 0, slovak)
+177270.28 "{F0}Proces ochrany panela sa nedokončil. Stlačením tlačidla {F7}„{F0}vykonať{F7}”{F0}  "
+
+# osd_protect_auto_texts[28] (item 0, slovak)
+1785c0.28 "{F0}Na zachovanie kvality obrazu panela sa automaticky aktivuje"
+
+# osd_protect_long_auto_texts[57] (item 1, slovak)
+16f25c.57 "{F0}automaticky aktivuje funkcia ochrany panela (dlhú dobu)."
+
+# osd_protect_auto_texts[57] (item 1, slovak)
+1785c0.57 "{F0}funkcia ochrany panela."
+
+# osd_protect_long_execute_texts[144] (item 4, slovak)
+# osd_protect_long_auto_texts[144] (item 4, slovak)
+# osd_protect_long_title_texts[173] (item 5, slovak)
+# osd_protect_long_incomplete_texts[144] (item 4, slovak)
+# osd_protect_long_retry_texts[144] (item 4, slovak)
+16e0d0.144 "{F0}Indikátor napájania bude blikať bielou farbou, kým sa proces nevykoná."
+
+# osd_protect_long_execute_texts[115] (item 3, slovak)
+# osd_protect_long_auto_texts[115] (item 3, slovak)
+# osd_protect_long_title_texts[144] (item 4, slovak)
+# osd_protect_long_incomplete_texts[115] (item 3, slovak)
+# osd_protect_long_retry_texts[115] (item 3, slovak)
+16e0d0.115 "{F0}Dokončenie tejto funkcie ochrany mÔže trvať hodinu."
+
+# osd_protect_long_title_texts[347] (item 11, slovak)
+# osd_protect_long_retry_texts[318] (item 10, slovak)
+# osd_protect_retry_texts[318] (item 10, slovak)
+16f670.347 "{F0}alebo v úspornom režime."
+
+# osd_protect_long_title_texts[318] (item 10, slovak)
+# osd_protect_long_retry_texts[289] (item 9, slovak)
+# osd_protect_retry_texts[289] (item 9, slovak)
+16f670.318 "{F0}Po kliknutí na tlačidlo {F7}„{F0}Zrušiť{F7}”{F0} sa tento proces automaticky aktivuje pri vypnutí monitora "
+
+# osd_protect_long_execute_texts[260] (item 8, slovak)
+# osd_protect_long_auto_texts[260] (item 8, slovak)
+# osd_protect_long_title_texts[289] (item 9, slovak)
+# osd_protect_long_incomplete_texts[260] (item 8, slovak)
+# osd_protect_incomplete_texts[260] (item 8, slovak)
+# osd_protect_execute_texts[260] (item 8, slovak)
+# ... and 4 more entries
+16e0d0.260 "{F0}vypínača zrušíte túto funkciu."
+
+# osd_protect_long_execute_texts[231] (item 7, slovak)
+# osd_protect_long_auto_texts[231] (item 7, slovak)
+# osd_protect_long_title_texts[260] (item 8, slovak)
+# osd_protect_long_incomplete_texts[231] (item 7, slovak)
+# osd_protect_incomplete_texts[231] (item 7, slovak)
+# osd_protect_execute_texts[231] (item 7, slovak)
+# ... and 4 more entries
+16e0d0.231 "{F0}Počas vykonávania procesu opätovným stlačením hlavného"
+
+# osd_protect_long_execute_texts[202] (item 6, slovak)
+# osd_protect_long_auto_texts[202] (item 6, slovak)
+# osd_protect_long_title_texts[231] (item 7, slovak)
+# osd_protect_long_incomplete_texts[202] (item 6, slovak)
+# osd_protect_incomplete_texts[202] (item 6, slovak)
+# osd_protect_execute_texts[202] (item 6, slovak)
+# ... and 4 more entries
+16e0d0.202 "{F0} "
+
+# osd_protect_long_execute_texts[173] (item 5, slovak)
+# osd_protect_long_auto_texts[173] (item 5, slovak)
+# osd_protect_long_title_texts[202] (item 6, slovak)
+# osd_protect_long_incomplete_texts[173] (item 5, slovak)
+# osd_protect_incomplete_texts[173] (item 5, slovak)
+# osd_protect_execute_texts[173] (item 5, slovak)
+# ... and 4 more entries
+16e0d0.173 "{F0}Počas vykonávania procesu neodpájajte napájací kábel od monitora."
+
+# osd_protect_incomplete_texts[144] (item 4, slovak)
+# osd_protect_execute_texts[144] (item 4, slovak)
+# osd_protect_retry_texts[144] (item 4, slovak)
+# osd_protect_auto_texts[144] (item 4, slovak)
+# osd_protect_title_texts[173] (item 5, slovak)
+173998.144 "{F0}Kým sa proces nevykoná, bude blikať indikátor napájania oranžovou farbou."
+
+# osd_protect_incomplete_texts[115] (item 3, slovak)
+# osd_protect_execute_texts[115] (item 3, slovak)
+# osd_protect_retry_texts[115] (item 3, slovak)
+# osd_protect_auto_texts[115] (item 3, slovak)
+# osd_protect_title_texts[144] (item 4, slovak)
+173998.115 "{F0}Tejto funkcii ochrany m{F7}ô{F0}že trvať niekoľko minút, kým sa dokončí."
+
+# osd_protect_long_execute_texts[86] (item 2, slovak)
+# osd_protect_long_auto_texts[86] (item 2, slovak)
+# osd_protect_long_title_texts[115] (item 3, slovak)
+# osd_protect_long_retry_texts[86] (item 2, slovak)
+# osd_protect_retry_texts[86] (item 2, slovak)
+# osd_protect_auto_texts[86] (item 2, slovak)
+# ... and 1 more entries
+16e0d0.86 "{F0}Poznámka:"
+
+# osd_protect_title_texts[86] (item 2, slovak)
+179a14.86 "{F0} automaticky aktivuje funkcia ochrany panela"
+
+# osd_protect_title_texts[57] (item 1, slovak)
+179a14.57 "Aby sa zachovala kvalita obrazu panela, po používaní monitora dlhšie ako 4 hodín sa"
+
+# osd_protect_title_texts[28] (item 0, slovak)
+179a14.28 "MSI OLED Care - Ochrana panela"
+
+# osd_protect_retry_texts[434] (item 14, slovak)
+# osd_protect_title_texts[405] (item 13, slovak)
+177270.434 "{F0}kumulatívnom používaní panela viac ako 24 hodín."
+
+# osd_protect_retry_texts[405] (item 13, slovak)
+# osd_protect_title_texts[376] (item 12, slovak)
+177270.405 "{F0}Ak kliknete na tlačidlo {F7}„{F0}Nesk{F7}ô{F0}r{F7}”{F0}, oznámenie sa zobrazí len pri"
+
+# osd_protect_retry_texts[376] (item 12, slovak)
+# osd_protect_title_texts[347] (item 11, slovak)
+177270.376 "{F0}aktivuje po vypnutí monitora alebo v úspornom režime. "
+
+# osd_protect_retry_texts[347] (item 11, slovak)
+# osd_protect_title_texts[318] (item 10, slovak)
+177270.347 "{F0}Ak kliknete na {F7}„{F0}Zrušiť{F7}”{F0} alebo {F7}„{F0}Nesk{F7}ô{F0}r{F7}”{F0}, proces sa automaticky"
+
+# osd_change_notice_line3_texts[28] (item 0, slovak)
+180b60.28 "Zvol'te jednu z nasleduj{F7}ú{F0}cich možností:"
+
+# osd_change_notice_line2_texts[28] (item 0, slovak)
+181058.28 "spotrebu energie tohto monitora."
+
+# osd_change_notice_line1_texts[28] (item 0, slovak)
+1814d8.28 "Zmena zvolenej funkcie môže zvýšit'"
+
+# osd_change_notice_title_texts[28] (item 0, slovak)
+1819cc.28 "Potvrd'te zmenu!"
+
+# table_1821d4[57] (item 1, slovak)
+1821d4.57 "Digitálny"
+
+# table_1821d4[28] (item 0, slovak)
+1821d4.28 "Analógový"
+
+# osd_pbp_source_texts[57] (item 1, slovak)
+182534.57 "Zdroj 2"
+
+# osd_pbp_source_texts[28] (item 0, slovak)
+182534.28 "Zdroj 1"
+
+# osd_pip_item_texts[86] (item 2, slovak)
+1828c0.86 "Umiestnenie"
+
+# osd_pip_item_texts[57] (item 1, slovak)
+1828c0.57 "Rozmer PIP"
+
+# osd_pip_item_texts[28] (item 0, slovak)
+1828c0.28 "Zdroj"
+
+# osd_pip_item_texts[144] (item 4, slovak)
+1828c0.144 "Prepínanie zvuku"
+
+# osd_pip_item_texts[115] (item 3, slovak)
+1828c0.115 "Prepnutí obrazu"
+
+# osd_choice_note_function_texts[144] (item 4, slovak)
+1832e4.144 "Rozmer obrazovky"
+
+# osd_choice_note_reducing_texts[173] (item 5, slovak)
+183cb4.173 "{F0}VRR."
+
+# osd_choice_note_reducing_texts[144] (item 4, slovak)
+183cb4.144 "{F0}ke{F7}{7D}{F0} monitor prijíma obsah"
+
+# osd_choice_note_reducing_texts[115] (item 3, slovak)
+183cb4.115 "{F0}Táto funkcia nebude pracovať,"
+
+# osd_choice_note_reducing_texts[86] (item 2, slovak)
+183cb4.86 "{F0}alebo {F7}„{F0}DisplayHDR{F7}”{F0}."
+
+# osd_choice_note_reducing_texts[57] (item 1, slovak)
+183cb4.57 "{F0}nastavenia položky {F7}„{F0}Jas{F7}”"
+
+# osd_choice_note_reducing_texts[28] (item 0, slovak)
+183cb4.28 "{F0}Účinok redukcie závisí od"
+
+# osd_choice_note_texts[144] (item 4, slovak)
+183a70.144 "{F0}dokončenie"
+
+# osd_choice_note_texts[115] (item 3, slovak)
+183a70.115 "{F0}Pribl. hodina na"
+
+# osd_choice_note_texts[86] (item 2, slovak)
+183a70.86 "{F0}dokončenie"
+
+# osd_choice_note_texts[57] (item 1, slovak)
+183a70.57 "{F0}Približne 15 minút na"
+
+# osd_choice_note_texts[28] (item 0, slovak)
+183a70.28 "{F0}Poznámka:"
+
+# osd_oled_care_item_texts[86] (item 2, slovak)
+185e78.86 "{F0}Oznam o ochrane"
+
+# osd_oled_care_function_texts[173] (item 5, slovak)
+# osd_oled_care_item_texts[202] (item 6, slovak)
+185bc0.173 "{F0}Detekcia hranice"
+
+# osd_oled_care_function_texts[144] (item 4, slovak)
+# osd_oled_care_item_texts[173] (item 5, slovak)
+185bc0.144 "{F0}Detekcia panela úloh"
+
+# osd_oled_care_function_texts[115] (item 3, slovak)
+# osd_oled_care_item_texts[144] (item 4, slovak)
+185bc0.115 "{F0}Detekcia viacerých logo"
+
+# osd_oled_care_item_texts[231] (item 7, slovak)
+185e78.231 "{F0}Info. o paneli OLED"
+
+# osd_oled_care_function_texts[86] (item 2, slovak)
+# osd_oled_care_item_texts[115] (item 3, slovak)
+185bc0.86 "{F0}Detekcia stat. obr."
+
+# osd_oled_care_function_texts[28] (item 0, slovak)
+# osd_oled_care_item_texts[57] (item 1, slovak)
+185bc0.28 "{F0}Ochrana panela"
+
+# osd_oled_care_function_texts[57] (item 1, slovak)
+# osd_oled_care_item_texts[28] (item 0, slovak)
+185bc0.57 "{F0}Posun pixelov"
+
+# osd_choice_note_function_texts[318] (item 10, slovak)
+# osd_settings_item_texts[231] (item 7, slovak)
+1832e4.318 "{F0}Nabíjanie PD typu C"
+
+# osd_settings_item_texts[144] (item 4, slovak)
+1874f8.144 "Nap. tl."
+
+# osd_settings_item_texts[289] (item 9, slovak)
+1874f8.289 "Resetovanie"
+
+# osd_settings_item_texts[86] (item 2, slovak)
+1874f8.86 "Trvanie zobrazenia OSD"
+
+# osd_settings_item_texts[57] (item 1, slovak)
+1874f8.57 "Priehľadnosť"
+
+# osd_settings_item_texts[28] (item 0, slovak)
+1874f8.28 "Jazyk"
+
+# osd_professional_item_texts[86] (item 2, slovak)
+188634.86 "Vylepšenie obrazu"
+
+# osd_professional_item_texts[57] (item 1, slovak)
+188634.57 "Slabé modré svetlo"
+
+# osd_professional_item_texts[28] (item 0, slovak)
+188634.28 "Pro Mode"
+
+# osd_night_vision_texts[115] (item 3, slovak)
+1890d4.115 "Najlepšie"
+
+# osd_night_vision_texts[86] (item 2, slovak)
+1890d4.86 "Vysoké"
+
+# osd_night_vision_texts[57] (item 1, slovak)
+1890d4.57 "Štandardný"
+
+# osd_choice_note_function_texts[289] (item 9, slovak)
+# osd_gaming_item_texts[57] (item 1, slovak)
+1832e4.289 "Nočné videnie"
+
+# osd_gaming_item_texts[144] (item 4, slovak)
+188da0.144 "Hodiny s budíkom"
+
+# osd_gaming_item_texts[115] (item 3, slovak)
+188da0.115 "Refresh Rate"
+
+# osd_choice_note_function_texts[173] (item 5, slovak)
+1832e4.173 "Čas odozvy"
+
+# osd_gaming_item_texts[28] (item 0, slovak)
+188da0.28 "Herný režim"
+
+# osd_choice_note_function_texts[202] (item 6, slovak)
+# osd_gi_item_texts[86] (item 2, slovak)
+1832e4.202 "Rozsah Optix"
+
+# osd_oled_care_seconds_texts[115] (item 3, slovak)
+18a7ec.115 "{F0}240 Sekúnd"
+
+# osd_oled_care_seconds_texts[86] (item 2, slovak)
+18a7ec.86 "{F0}120 Sekúnd"
+
+# osd_oled_care_seconds_texts[57] (item 1, slovak)
+18a7ec.57 "{F0}100 Sekúnd"
+
+# osd_oled_care_seconds_texts[28] (item 0, slovak)
+18a7ec.28 "{F0}50 Sekúnd"
+
+# table_18af08[57] (item 1, slovak)
+# table_18b008[57] (item 1, slovak)
+18af08.57 "{F0}Manuálne"
+
+# osd_oled_care_usage_texts[57] (item 1, slovak)
+18b29c.57 "{F0}Používanie > 24 h"
+
+# osd_oled_care_speed_texts[86] (item 2, slovak)
+18b5e0.86 "{F0}Rýchlo"
+
+# osd_oled_care_speed_texts[28] (item 0, slovak)
+18b5e0.28 "{F0}Pomaly"
+
+# osd_oled_care_choice_texts[86] (item 2, slovak)
+# osd_oled_care_status_texts[86] (item 2, slovak)
+16df60.86 "Úrove{F7}ň{F0} zníženia"
+
+# osd_oled_care_status_texts[57] (item 1, slovak)
+18b94c.57 "{F0}Požadovaná doba"
+
+# osd_oled_care_status_texts[28] (item 0, slovak)
+18b94c.28 "{F0}Začiatok o"
+
+# table_18c070[57] (item 1, slovak)
+18c070.57 "{F0}Dlhá doba"
+
+# table_18c070[28] (item 0, slovak)
+18c070.28 "{F0}Krátka doba"
+
+# table_18c4a8[28] (item 0, slovak)
+18c4a8.28 "{F0}Rýchlosť pohybu (posun pixelov)"
+
+# osd_image_item_texts[144] (item 4, slovak)
+18ca88.144 "Rozmer obrazovky"
+
+# osd_image_item_texts[115] (item 3, slovak)
+18ca88.115 "Teplota farieb"
+
+# osd_image_item_texts[86] (item 2, slovak)
+18ca88.86 "Ostrosť"
+
+# osd_image_item_texts[57] (item 1, slovak)
+18ca88.57 "Kontrast"
+
+# osd_language_texts[28] (item 0, slovak)
+18d3d4.28 "slovenčina"
+
+# osd_optix_scope_item_texts[57] (item 1, slovak)
+18d578.57 "Pomer rozsahu"
+
+# osd_optix_scope_item_texts[28] (item 0, slovak)
+18d578.28 "Veľkosť rozsahu"
+
+# osd_color_temp_texts[115] (item 3, slovak)
+18db28.115 "Prisp{F7}ô{F0}sobenie"
+
+# osd_color_temp_texts[86] (item 2, slovak)
+18db28.86 "Teplé"
+
+# osd_color_temp_texts[28] (item 0, slovak)
+18db28.28 "Studené"
+
+# osd_response_time_texts[86] (item 2, slovak)
+18e08c.86 "Najrýchlejší"
+
+# osd_response_time_texts[57] (item 1, slovak)
+18e08c.57 "Rýchly"
+
+# osd_oled_care_speed_texts[57] (item 1, slovak)
+# osd_color_temp_texts[57] (item 1, slovak)
+# osd_response_time_texts[28] (item 0, slovak)
+18b5e0.57 "Štandardný"
+
+# osd_crosshair_color_texts[57] (item 1, slovak)
+18e54c.57 "Červená"
+
+# osd_crosshair_color_texts[28] (item 0, slovak)
+18e54c.28 "Biela"
+
+# table_18c8b8[86] (item 2, slovak)
+# osd_pbp_mode_texts[86] (item 2, slovak)
+# osd_location_texts[144] (item 4, slovak)
+18c8b8.86 "Prisp{F7}ô{F0}sobenie"
+
+# osd_location_texts[115] (item 3, slovak)
+18e9f8.115 "Vpravo dolu"
+
+# osd_location_texts[86] (item 2, slovak)
+18e9f8.86 "Vľavo dolu"
+
+# osd_location_texts[57] (item 1, slovak)
+18e9f8.57 "Vpravo hore"
+
+# osd_location_texts[28] (item 0, slovak)
+18e9f8.28 "Vľavo hore"
+
+# osd_size_texts[86] (item 2, slovak)
+18f550.86 "Veľký"
+
+# osd_size_texts[57] (item 1, slovak)
+18f550.57 "Stredný"
+
+# osd_size_texts[28] (item 0, slovak)
+18f550.28 "Malý"
+
+# osd_crosshair_item_texts[144] (item 4, slovak)
+18f984.144 "Resetovanie"
+
+# osd_crosshair_item_texts[115] (item 3, slovak)
+18f984.115 "{F0}Pozícia"
+
+# osd_crosshair_item_texts[86] (item 2, slovak)
+18f984.86 "{F0}Farba"
+
+# osd_crosshair_item_texts[57] (item 1, slovak)
+18f984.57 "Ikona"
+
+# osd_crosshair_item_texts[28] (item 0, slovak)
+18f984.28 "Žiadne"
+
+# osd_protect_button_texts[86] (item 2, slovak)
+190184.86 "{F0}Nesk{F7}ô{F0}r"
+
+# osd_protect_button_texts[57] (item 1, slovak)
+190184.57 "{F0}Zrušiť"
+
+# osd_protect_button_texts[28] (item 0, slovak)
+190184.28 "{F0}Vykonať"
+
+# osd_yes_no_texts[57] (item 1, slovak)
+190748.57 "Nie"
+
+# osd_yes_no_texts[28] (item 0, slovak)
+190748.28 "Áno"
+
+# osd_kvm_texts[57] (item 1, slovak)
+1909ec.57 "Upstream"
+
+# table_190cec[57] (item 1, slovak)
+190cec.57 "{F0}Špič. 1000 nitov"
+
+# osd_navi_key_item_texts[115] (item 3, slovak)
+19158c.115 "Doprava"
+
+# osd_navi_key_item_texts[86] (item 2, slovak)
+19158c.86 "Doľava"
+
+# osd_navi_key_item_texts[57] (item 1, slovak)
+19158c.57 "Nadol"
+
+# osd_navi_key_item_texts[28] (item 0, slovak)
+19158c.28 "Nahor"
+
+# osd_info_box_texts[202] (item 6, slovak)
+191b30.202 "Bitová hĺbka"
+
+# osd_info_box_texts[173] (item 5, slovak)
+191b30.173 "Typ obsahu"
+
+# osd_info_box_texts[144] (item 4, slovak)
+191b30.144 "Režim výberu"
+
+# osd_info_box_texts[86] (item 2, slovak)
+191b30.86 "Fyzické rozlíšenie"
+
+# osd_info_box_texts[57] (item 1, slovak)
+191b30.57 "Prirodzené rozlíšenie"
+
+# osd_out_of_range_texts[28] (item 0, slovak)
+192d8c.28 "Mimo rozsahu!"
+
+# osd_no_signal_texts[28] (item 0, slovak)
+193008.28 "Žiadny signál"
+
+# osd_power_button_texts[57] (item 1, slovak)
+19336c.57 "{F0}Poh. rež."
+
+# osd_navi_function_texts[318] (item 10, slovak)
+1935bc.318 "Rozsah Optix"
+
+# osd_navi_function_texts[289] (item 9, slovak)
+1935bc.289 "Nočné videnie"
+
+# osd_info_box_texts[115] (item 3, slovak)
+# osd_navi_function_texts[231] (item 7, slovak)
+191b30.115 "Refresh Rate"
+
+# osd_gi_item_texts[57] (item 1, slovak)
+# osd_navi_function_texts[115] (item 3, slovak)
+18a360.57 "Smart Crosshair"
+
+# osd_navi_function_texts[144] (item 4, slovak)
+1935bc.144 "Hodiny s budíkom"
+
+# osd_navi_function_texts[86] (item 2, slovak)
+1935bc.86 "Herný režim"
+
+# osd_choice_note_function_texts[57] (item 1, slovak)
+# osd_image_item_texts[28] (item 0, slovak)
+# osd_navi_function_texts[57] (item 1, slovak)
+1832e4.57 "Jas"
+
+# osd_settings_item_texts[173] (item 5, slovak)
+# table_18c8b8[115] (item 3, slovak)
+# osd_navi_function_texts[260] (item 8, slovak)
+1874f8.173 "Info. na obrazovke"
+
+# osd_navi_function_texts[202] (item 6, slovak)
+1935bc.202 "Režim PIP/PBP"
+
+# osd_image_enhancement_texts[144] (item 4, slovak)
+194b34.144 "Najlepšie"
+
+# osd_image_enhancement_texts[115] (item 3, slovak)
+194b34.115 "Vysoké"
+
+# osd_image_enhancement_texts[86] (item 2, slovak)
+194b34.86 "Stredné"
+
+# osd_image_enhancement_texts[57] (item 1, slovak)
+194b34.57 "Slabé"
+
+# osd_pro_mode_texts[115] (item 3, slovak)
+1951dc.115 "Film"
+
+# osd_pro_mode_texts[86] (item 2, slovak)
+1951dc.86 "Proti Modrej"
+
+# osd_pro_mode_texts[144] (item 4, slovak)
+1951dc.144 "Kancelária"
+
+# osd_oled_care_choice_texts[57] (item 1, slovak)
+# osd_optix_scope_item_texts[115] (item 3, slovak)
+# osd_off_on_texts[57] (item 1, slovak)
+# table_195a38[86] (item 2, slovak)
+16df60.57 "ZAP."
+
+# osd_location_texts[173] (item 5, slovak)
+# table_195a38[28] (item 0, slovak)
+# table_195c7c[28] (item 0, slovak)
+18e9f8.173 "Umiestnenie"
+
+# osd_game_mode_texts[28] (item 0, slovak)
+195f24.28 "{F0}Prémiové farby"
+
+# osd_pro_mode_texts[57] (item 1, slovak)
+# osd_game_mode_texts[57] (item 1, slovak)
+1951dc.57 "Používateľ"
+
+# osd_game_mode_texts[115] (item 3, slovak)
+195f24.115 "Preteky"
+
+# osd_pbp_mode_texts[57] (item 1, slovak)
+18e89c.57 "Režim 2"
+
+# osd_pbp_mode_texts[28] (item 0, slovak)
+18e89c.28 "Režim 1"
+
+# osd_oled_care_choice_texts[28] (item 0, slovak)
+# osd_night_vision_texts[28] (item 0, slovak)
+# table_18c8b8[28] (item 0, slovak)
+# osd_optix_scope_item_texts[86] (item 2, slovak)
+# osd_off_on_texts[28] (item 0, slovak)
+# osd_power_button_texts[28] (item 0, slovak)
+# ... and 5 more entries
+16df60.28 "VYP."
+
+# osd_tab_name_texts[202] (item 6, slovak)
+196dc0.202 "Navigačné tlačidlo"
+
+# osd_tab_name_texts[231] (item 7, slovak)
+196dc0.231 "Nastavenie"
+
+# osd_info_box_texts[28] (item 0, slovak)
+# osd_navi_function_texts[173] (item 5, slovak)
+# osd_tab_name_texts[144] (item 4, slovak)
+191b30.28 "Vstupný zdroj"
+
+# osd_tab_name_texts[115] (item 3, slovak)
+196dc0.115 "Obraz"
+
+# osd_tab_name_texts[86] (item 2, slovak)
+196dc0.86 "Profesionálny"
+
+# osd_tab_name_texts[57] (item 1, slovak)
+196dc0.57 "Hranie hier"

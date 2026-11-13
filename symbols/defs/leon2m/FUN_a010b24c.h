@@ -1,0 +1,8 @@
+/* Names used in the source of FUN_a010b24c; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define memcpy                             FUN_a013c910
+#define pq_gamma_load_second_curve_preset1 FUN_a010b24c
+#define reg_table_port_write               FUN_a00f2e98
+/* Stored data. */
+#define pq_gamma_second_curve_preset1      DAT_0019ae5c
+/* End of names. */

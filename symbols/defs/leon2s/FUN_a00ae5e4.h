@@ -1,0 +1,10 @@
+/* Names used in the source of FUN_a00ae5e4; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define dp_read_status_block  FUN_a00ae5e4
+#define dp_reg_read8          FUN_a00a6bb8
+#define dp_reg_update_bits    FUN_a00a6c98
+#define dp_reg_write8         FUN_a00a6c00
+#define timer_delay_units     FUN_a00b160c
+/* Stored data. */
+#define dp_status_block_bytes DAT_a807de78
+/* End of names. */

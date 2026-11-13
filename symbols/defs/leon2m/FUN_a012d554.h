@@ -1,0 +1,55 @@
+/* Names used in the source of FUN_a012d554; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define SetBrightness                       FUN_a0143804
+#define dbg_printf                          FUN_a00df170
+#define ipc_api_get_status_field            FUN_a014ba68
+#define ldc_api_send_cmd_0x31_sub1          FUN_a0143848
+#define ldc_api_set_mode_byte               FUN_a01438c8
+#define nvram_erase_area                    FUN_a0140500
+#define nvram_write                         FUN_a0140e74
+#define oled_flag_registers_read            FUN_a00fe47c
+#define oled_flag_registers_write           FUN_a00fe44c
+#define oled_get_lum_gain                   FUN_a01264e8
+#define oled_get_lum_mode                   FUN_a01266b0
+#define oled_set_lum_gain                   FUN_a0126360
+#define oled_set_lum_mode                   FUN_a012653c
+#define pq_ace_write_reg_d8                 FUN_a00f6cdc
+#define pq_block0_set_blank_mode            FUN_a0105d04
+#define pq_block_set_blank_color            FUN_a0103808
+#define pq_color_matrix_clear_bit0          FUN_a00f6c6c
+#define pq_color_matrix_clear_option_bit    FUN_a00f6ca4
+#define pq_fga_handle_command               FUN_a012d554
+#define pq_gamma_disable_first_curve_stage  FUN_a010afc8
+#define pq_gamma_disable_primary_lut        FUN_a010ae70
+#define pq_gamma_disable_second_curve_stage FUN_a010b198
+#define pq_gamma_disable_secondary_lut      FUN_a010af50
+#define pq_select_window                    FUN_a00f63bc
+#define pq_window_disable                   FUN_a00f67d0
+#define pq_window_disable_stages            FUN_a00f66a4
+#define pq_window_enable                    FUN_a00f6898
+#define pq_window_enable_stages             FUN_a00f6b34
+#define pq_window_set_item3                 FUN_a00f6e88
+#define pq_window_set_item4                 FUN_a00f6ecc
+#define pq_window_set_item5                 FUN_a00f6f10
+#define pq_window_set_rect                  FUN_a00f6d00
+#define sys_api_get_channel_port_flag6      FUN_a01438dc
+#define sys_api_get_channel_port_flag9      FUN_a014bd70
+/* Stored data. */
+#define device_settings                     DAT_a802e1a0
+#define part_record                         DAT_a802e1f0
+#define pq_fga_color_block                  DAT_a802cb20
+#define pq_fga_color_offset                 DAT_a802cb16
+#define pq_fga_color_rows                   DAT_a802cb40
+#define pq_fga_key_index_first              DAT_a802cb1a
+#define pq_fga_key_index_second             DAT_a802cb18
+#define pq_fga_key_table_first              DAT_001a5198
+#define pq_fga_key_table_second             DAT_001a5168
+#define pq_fga_lum_gain                     DAT_a802cb12
+#define pq_fga_lum_mode                     DAT_a802cb14
+#define pq_fga_lum_mode_low_byte            DAT_a802cb15
+#define pq_fga_row_offset                   DAT_a802cb7a
+#define pq_fga_saved_flag_registers         DAT_a802cb1c
+#define pq_fga_state_bits                   DAT_a802e220
+#define pq_fga_status                       DAT_a802cb10
+#define pq_fga_write_offset                 DAT_a802cb78
+/* End of names. */

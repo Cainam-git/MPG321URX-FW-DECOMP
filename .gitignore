@@ -1,0 +1,12 @@
+# Generated or third-party, regenerate locally (see docs/BUILD.md)
+/parts
+/ghidra_proj
+/decomp
+/build
+/toolchains
+/work
+src/**/*.o
+__pycache__/
+*.log
+# MSI's update tool (452 MB, above GitHub's file limit; download it from MSI)
+*.exe

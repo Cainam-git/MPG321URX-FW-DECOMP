@@ -1,0 +1,3 @@
+libc.a stdio.o __swrite
+# leon2m FUN_a015df90: toolchain library function __swrite (libc.a:stdio.o, 120 bytes),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

@@ -1,0 +1,3 @@
+libgcc.a _fpcmp_parts_df.o __fpcmp_parts_d
+# leon2m FUN_a0157480: toolchain library function __fpcmp_parts_d (libgcc.a:_fpcmp_parts_df.o, 372 bytes),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

@@ -1,0 +1,3 @@
+libgcc.a _mul_sf.o __mulsf3
+# leon2m FUN_a0155830: toolchain library function __mulsf3 (libgcc.a:_mul_sf.o, 488 bytes),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

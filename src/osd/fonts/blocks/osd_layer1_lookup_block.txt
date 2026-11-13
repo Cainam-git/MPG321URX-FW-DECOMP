@@ -1,0 +1,11 @@
+# Lookup block osd_layer1_lookup_block, written by tools/osd_gen.py; see docs/OSD-TEXT.md.
+# Its record (RAM 0xA80241A0, flash 0xEC1A0 in the start values) holds the size, the destination address
+# 0x0 and the data address; osd_load_layer_lookup_tables sends the bytes unpacked with command 0xD0.
+# The record lies outside the menu area: the data keeps its address and its size.
+block osd_layer1_lookup_block
+data 0x125738
+record 0xA80241A0
+size 52
+format bytes
+00 f8 00 fa 00 fc 00 fe e0 ff e0 c7 e0 87 e0 47 e0 07 e8 07 f0 07 f8 07 ff 07 1f
+06 1f 04 1f 02 1f 00 1f 40 1f 80 1f c0 1f f8 18 f8 10 f8 08 f8 00 f8 ff ff

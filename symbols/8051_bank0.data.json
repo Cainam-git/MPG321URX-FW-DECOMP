@@ -1,0 +1,263 @@
+{
+ "section": "8051_bank0",
+ "data": {
+  "DAT_0014": {
+   "name": "flash_chip_flags",
+   "brief": "Flags byte of the identified chip; bit 1 = status registers written one by one.",
+   "basis": "derived",
+   "evidence": "flash_identify, flash_setup_bus_mode"
+  },
+  "DAT_0022": {
+   "name": "flash_jedec_command",
+   "brief": "The command byte 0x9F (Read JEDEC ID) sent by the ID read.",
+   "basis": "derived",
+   "evidence": "flash_read_jedec_id"
+  },
+  "DAT_0023": {
+   "name": "flash_jedec_answer",
+   "brief": "The four answer bytes of the JEDEC ID read.",
+   "basis": "derived",
+   "evidence": "flash_read_jedec_id"
+  },
+  "DAT_002f": {
+   "name": "flash_quad_capable_flag",
+   "brief": "Set when the identified chip can read in quad mode (chip flags bit 0).",
+   "basis": "proven",
+   "evidence": "flash_identify"
+  },
+  "DAT_0030": {
+   "name": "flash_chip_index",
+   "brief": "Index of the identified chip from the chip table (maker only: low nibble 0xF).",
+   "basis": "proven",
+   "evidence": "flash_identify"
+  },
+  "DAT_0031": {
+   "name": "flash_erase_opcode",
+   "brief": "Sector erase opcode of the chip: 0xD7 for maker 0x7F, else 0x20.",
+   "basis": "proven",
+   "evidence": "flash_identify"
+  },
+  "DAT_0032": {
+   "name": "flash_size_code",
+   "brief": "The 16-bit size code of the identified chip.",
+   "basis": "proven",
+   "evidence": "flash_identify"
+  },
+  "DAT_08": {
+   "name": "startup_marker_bytes",
+   "brief": "IDATA bytes 0x08.. searched for the marker 0x60 when the clock variant is not 0x20.",
+   "basis": "descriptive",
+   "evidence": "startup_find_marker_index"
+  },
+  "DAT_0e": {
+   "name": "startup_marker_bytes_slow_clock",
+   "brief": "IDATA bytes 0x0E.. searched for the marker 0x30 when the clock variant is 0x20 (the slower clock).",
+   "basis": "descriptive",
+   "evidence": "startup_find_marker_index; startup_is_slow_clock"
+  },
+  "DAT_CODE_4000": {
+   "name": "flash_chip_table",
+   "brief": "The 57 known flash chips: index, maker, memory type, capacity, size code, flags.",
+   "basis": "proven",
+   "evidence": "flash_identify"
+  },
+  "DAT_CODE_6000": {
+   "name": "startup_partition_table",
+   "brief": "The partition table at CODE 0x6000 (0x7000 for slot 1).",
+   "basis": "proven",
+   "evidence": "startup_load_partition_table; shared word list"
+  },
+  "DAT_EXTMEM_3000": {
+   "name": "startup_share_block",
+   "brief": "The share block that the boot loader fills for the next program.",
+   "basis": "proven",
+   "evidence": "startup_share_block_write; shared word list"
+  },
+  "DAT_EXTMEM_a000": {
+   "name": "startup_partition_entries",
+   "brief": "The 12-byte descriptors built from the partition table for the share block.",
+   "basis": "derived",
+   "evidence": "startup_load_partition_table"
+  },
+  "DAT_EXTMEM_f050": {
+   "name": "reg_flash_read_mode",
+   "brief": "Flash mode bits: bit 2 quad read (0x6B), bit 5 dual read (0x3B).",
+   "basis": "proven",
+   "evidence": "flash_setup_bus_mode; same name in bank 1"
+  },
+  "DAT_EXTMEM_f064": {
+   "name": "reg_flash_jedec_maker",
+   "brief": "JEDEC ID byte 0: the maker of the flash chip.",
+   "basis": "derived",
+   "evidence": "flash_identify"
+  },
+  "DAT_EXTMEM_f065": {
+   "name": "reg_flash_jedec_mem_type",
+   "brief": "JEDEC ID byte 1: the memory type.",
+   "basis": "derived",
+   "evidence": "flash_identify"
+  },
+  "DAT_EXTMEM_f066": {
+   "name": "reg_flash_jedec_capacity",
+   "brief": "JEDEC ID byte 2: the capacity code.",
+   "basis": "derived",
+   "evidence": "flash_identify"
+  },
+  "DAT_EXTMEM_f0e5": {
+   "name": "reg_flash_spi_start",
+   "brief": "SPI start register: bit 0 starts a transfer, bit 1 a read; each clears when done.",
+   "basis": "proven",
+   "evidence": "flash_spi_transfer, flash_read_command_byte"
+  },
+  "DAT_EXTMEM_f0e6": {
+   "name": "reg_flash_spi_mode",
+   "brief": "SPI mode register: bits 2-3 = bus mode, low bits = transfer kind (0x41, 1).",
+   "basis": "derived",
+   "evidence": "flash_spi_transfer, flash_read_stream"
+  },
+  "DAT_EXTMEM_f0ea": {
+   "name": "reg_flash_read_opcode",
+   "brief": "The read opcode of the flash controller (0x6B, 0x3B, 0x0B or a command).",
+   "basis": "proven",
+   "evidence": "flash_read_stream, flash_read_command_byte"
+  },
+  "DAT_EXTMEM_f0eb": {
+   "name": "reg_flash_length_high",
+   "brief": "Transfer length bits 16-23.",
+   "basis": "proven",
+   "evidence": "flash_spi_transfer"
+  },
+  "DAT_EXTMEM_f0ec": {
+   "name": "reg_flash_length_mid",
+   "brief": "Transfer length bits 8-15.",
+   "basis": "proven",
+   "evidence": "flash_spi_transfer"
+  },
+  "DAT_EXTMEM_f0ed": {
+   "name": "reg_flash_length_low",
+   "brief": "Transfer length bits 0-7.",
+   "basis": "proven",
+   "evidence": "flash_spi_transfer"
+  },
+  "DAT_EXTMEM_f0ee": {
+   "name": "reg_flash_command",
+   "brief": "The first byte (opcode) of a flash command.",
+   "basis": "proven",
+   "evidence": "flash_spi_transfer"
+  },
+  "DAT_EXTMEM_f0ef": {
+   "name": "reg_flash_read_byte",
+   "brief": "The byte that a one-byte read command returns.",
+   "basis": "proven",
+   "evidence": "flash_read_command_byte"
+  },
+  "DAT_EXTMEM_f0f0": {
+   "name": "reg_flash_addr_f0f0",
+   "brief": "Address register written with address bits 24-31 by the stream read.",
+   "basis": "derived",
+   "evidence": "flash_read_stream"
+  },
+  "DAT_EXTMEM_f0f1": {
+   "name": "reg_flash_addr_f0f1",
+   "brief": "Address register written with address bits 16-23 by the stream read.",
+   "basis": "derived",
+   "evidence": "flash_read_stream"
+  },
+  "DAT_EXTMEM_f0f2": {
+   "name": "reg_flash_addr_f0f2",
+   "brief": "Address register written with address bits 0-7 by the stream read.",
+   "basis": "derived",
+   "evidence": "flash_read_stream"
+  },
+  "DAT_EXTMEM_f0f4": {
+   "name": "reg_flash_transfer_type",
+   "brief": "Transfer type: (command length << 5) | 0x13, 0x0B stream read, 0x07 one-byte read.",
+   "basis": "proven",
+   "evidence": "flash_spi_transfer, flash_read_stream"
+  },
+  "DAT_EXTMEM_f11c": {
+   "name": "reg_gpio_port12",
+   "brief": "Output register of GPIO port 12.",
+   "basis": "derived",
+   "evidence": "XDATA 0xF11C, the register the 8051 application drives through gpio_set_port_bits / gpio_write_port as port 12; set here by flash_setup_bus_mode"
+  },
+  "DAT_EXTMEM_f11d": {
+   "name": "reg_gpio_port12_partner",
+   "brief": "Partner register of GPIO port 12.",
+   "basis": "derived",
+   "evidence": "XDATA 0xF11D, the register the 8051 application writes through gpio_write_port_partner as port 12; changed here by flash_setup_bus_mode"
+  },
+  "DAT_EXTMEM_f1c0": {
+   "name": "reg_flash_fifo_f1c0",
+   "brief": "FIFO register: write mode 0x82 / 0x84, stream mode 0x81, read data of the stream.",
+   "basis": "derived",
+   "evidence": "flash_spi_transfer, flash_read_stream"
+  },
+  "DAT_EXTMEM_f1c3": {
+   "name": "reg_flash_fifo_write",
+   "brief": "FIFO data register for the command bytes after the opcode.",
+   "basis": "proven",
+   "evidence": "flash_spi_transfer"
+  },
+  "DAT_EXTMEM_f1c8": {
+   "name": "reg_flash_fifo_f1c8",
+   "brief": "FIFO register: mode 0x81 / 0x82, then the answer bytes of a transfer.",
+   "basis": "derived",
+   "evidence": "flash_spi_transfer"
+  },
+  "DAT_EXTMEM_f1d0": {
+   "name": "reg_copy_start",
+   "brief": "Copy register: 0x87 starts the hardware copy of the next program.",
+   "basis": "derived",
+   "evidence": "startup_boot_main; docs/MAP.md copy registers"
+  },
+  "DAT_EXTMEM_f1d3": {
+   "name": "reg_copy_addr_f1d3",
+   "brief": "Copy register: partition table byte 3 (flash address of the next program).",
+   "basis": "derived",
+   "evidence": "startup_load_partition_table"
+  },
+  "DAT_EXTMEM_f1d4": {
+   "name": "reg_copy_addr_f1d4",
+   "brief": "Copy register: partition table byte 2 (flash address of the next program).",
+   "basis": "derived",
+   "evidence": "startup_load_partition_table"
+  },
+  "DAT_EXTMEM_f1d5": {
+   "name": "reg_copy_addr_f1d5",
+   "brief": "Copy register: partition table byte 1 (flash address of the next program).",
+   "basis": "derived",
+   "evidence": "startup_load_partition_table"
+  },
+  "DAT_EXTMEM_f1d6": {
+   "name": "reg_copy_size_f1d6",
+   "brief": "Copy register: partition table byte 7 (size of the next program).",
+   "basis": "derived",
+   "evidence": "startup_load_partition_table"
+  },
+  "DAT_EXTMEM_f1d7": {
+   "name": "reg_copy_size_f1d7",
+   "brief": "Copy register: partition table byte 6 (size of the next program).",
+   "basis": "derived",
+   "evidence": "startup_load_partition_table"
+  },
+  "DAT_EXTMEM_f1d8": {
+   "name": "reg_copy_size_f1d8",
+   "brief": "Copy register: partition table byte 5 (size of the next program).",
+   "basis": "derived",
+   "evidence": "startup_load_partition_table"
+  },
+  "DAT_d511": {
+   "name": "reg_sys_clock_variant",
+   "brief": "Chip register read as the clock variant: 0x20 selects the 48 MHz UART clock, any other value 96 MHz.",
+   "basis": "derived",
+   "evidence": "startup_is_slow_clock compares it with 0x20; uart_init picks 48 or 96 MHz by the answer"
+  },
+  "DAT_f064": {
+   "name": "reg_flash_jedec_id",
+   "brief": "The three JEDEC ID bytes of the flash chip (maker, memory type, capacity).",
+   "basis": "derived",
+   "evidence": "flash_read_jedec_id"
+  }
+ }
+}

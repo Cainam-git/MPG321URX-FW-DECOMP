@@ -1,0 +1,2088 @@
+{
+  "functions": {
+    "CODE:0000": {
+      "by": "hand",
+      "name": "thunk_FUN_CODE_d426",
+      "status": "matched"
+    },
+    "CODE:0003": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_0003",
+      "status": "matched"
+    },
+    "CODE:00fc": {
+      "by": "hand",
+      "name": "FUN_CODE_00fc",
+      "status": "matched"
+    },
+    "CODE:1000": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_1000",
+      "status": "matched"
+    },
+    "CODE:1234": {
+      "by": "hand",
+      "comment": "part of the C function FUN_CODE_1000 (one function 0x1000..0x1e55, diff8051.SPAN_END); emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_1000 over 0x1000..0x1e55",
+      "kind": "part",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_1234",
+      "of": "FUN_CODE_1000",
+      "status": "matched"
+    },
+    "CODE:13c8": {
+      "by": "hand",
+      "comment": "part of the C function FUN_CODE_1000 (one function 0x1000..0x1e55, diff8051.SPAN_END); emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_1000 over 0x1000..0x1e55",
+      "kind": "part",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_13c8",
+      "of": "FUN_CODE_1000",
+      "status": "matched"
+    },
+    "CODE:13eb": {
+      "by": "hand",
+      "comment": "part of the C function FUN_CODE_1000 (one function 0x1000..0x1e55, diff8051.SPAN_END); emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_1000 over 0x1000..0x1e55",
+      "kind": "part",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_13eb",
+      "of": "FUN_CODE_1000",
+      "status": "matched"
+    },
+    "CODE:140a": {
+      "by": "twin",
+      "c51opts": "OPTIMIZE(7,SPEED)",
+      "name": "FUN_CODE_140a",
+      "status": "matched"
+    },
+    "CODE:140d": {
+      "by": "hand",
+      "comment": "part of the C function FUN_CODE_1000 (one function 0x1000..0x1e55, diff8051.SPAN_END); emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_1000 over 0x1000..0x1e55",
+      "kind": "part",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_140d",
+      "of": "FUN_CODE_1000",
+      "status": "matched"
+    },
+    "CODE:1e55": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_1e55",
+      "status": "matched"
+    },
+    "CODE:2342": {
+      "by": "hand",
+      "comment": "part of the C function FUN_CODE_1e55 (one function 0x1e55..0x2b74, diff8051.SPAN_END); emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_1e55 over 0x1e55..0x2b74",
+      "kind": "part",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_2342",
+      "of": "FUN_CODE_1e55",
+      "status": "matched"
+    },
+    "CODE:272d": {
+      "by": "hand",
+      "comment": "part of the C function FUN_CODE_1e55 (one function 0x1e55..0x2b74, diff8051.SPAN_END); emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_1e55 over 0x1e55..0x2b74",
+      "kind": "part",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_272d",
+      "of": "FUN_CODE_1e55",
+      "status": "matched"
+    },
+    "CODE:2b74": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPMUL (C51BFPC.LIB:?C?FPMUL)",
+      "lib": "C51BFPC.LIB:?C?FPMUL",
+      "name": "FUN_CODE_2b74",
+      "status": "matched",
+      "symbol": "?C?FPMUL"
+    },
+    "CODE:2c7a": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FPDIV (internal entry point, segment 0+0) (C51BFPC.LIB:?C?FPDIV)",
+      "lib": "C51BFPC.LIB:?C?FPDIV",
+      "name": "FUN_CODE_2c7a",
+      "status": "matched",
+      "symbol": "@0+0"
+    },
+    "CODE:2c7d": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPDIV (C51BFPC.LIB:?C?FPDIV)",
+      "lib": "C51BFPC.LIB:?C?FPDIV",
+      "name": "FUN_CODE_2c7d",
+      "status": "matched",
+      "symbol": "?C?FPDIV"
+    },
+    "CODE:2d1a": {
+      "by": "keil-lib",
+      "comment": "Keil C51 run-time library routine ?C?FCASTL (C51BFPC.LIB:?C?FCAST)",
+      "lib": "C51BFPC.LIB:?C?FCAST",
+      "name": "FUN_CODE_2d1a",
+      "status": "matched",
+      "symbol": "?C?FCASTL"
+    },
+    "CODE:2d24": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FCASTC (C51BFPC.LIB:?C?FCAST)",
+      "lib": "C51BFPC.LIB:?C?FCAST",
+      "name": "FUN_CODE_2d24",
+      "status": "matched",
+      "symbol": "?C?FCASTC"
+    },
+    "CODE:2d58": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CASTF (C51BFPC.LIB:?C?CASTF)",
+      "lib": "C51BFPC.LIB:?C?CASTF",
+      "name": "FUN_CODE_2d58",
+      "status": "matched",
+      "symbol": "?C?CASTF"
+    },
+    "CODE:2d8f": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPGETOPN2 (C51BFPC.LIB:?C?FPGETOPN)",
+      "lib": "C51BFPC.LIB:?C?FPGETOPN",
+      "name": "FUN_CODE_2d8f",
+      "status": "matched",
+      "symbol": "?C?FPGETOPN2"
+    },
+    "CODE:2da6": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPRESULT (C51BFPC.LIB:?C?FPGETOPN)",
+      "lib": "C51BFPC.LIB:?C?FPGETOPN",
+      "name": "FUN_CODE_2da6",
+      "status": "matched",
+      "symbol": "?C?FPRESULT"
+    },
+    "CODE:2dc4": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPNANRESULT (C51BFPC.LIB:?C?FPGETOPN)",
+      "lib": "C51BFPC.LIB:?C?FPGETOPN",
+      "name": "FUN_CODE_2dc4",
+      "status": "matched",
+      "symbol": "?C?FPNANRESULT"
+    },
+    "CODE:2dcb": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPUNDERFLOW (C51BFPC.LIB:?C?FPGETOPN)",
+      "lib": "C51BFPC.LIB:?C?FPGETOPN",
+      "name": "FUN_CODE_2dcb",
+      "status": "matched",
+      "symbol": "?C?FPUNDERFLOW"
+    },
+    "CODE:2dce": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPOVERFLOW (C51BFPC.LIB:?C?FPGETOPN)",
+      "lib": "C51BFPC.LIB:?C?FPGETOPN",
+      "name": "FUN_CODE_2dce",
+      "status": "matched",
+      "symbol": "?C?FPOVERFLOW"
+    },
+    "CODE:2dd9": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPROUND (C51BFPL.LIB:?C?FPROUND)",
+      "lib": "C51BFPL.LIB:?C?FPROUND",
+      "name": "FUN_CODE_2dd9",
+      "status": "matched",
+      "symbol": "?C?FPROUND"
+    },
+    "CODE:2e16": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FPCONVERT (C51BFPL.LIB:?C?FPCONVERT)",
+      "lib": "C51BFPL.LIB:?C?FPCONVERT",
+      "name": "FUN_CODE_2e16",
+      "status": "matched",
+      "symbol": "?C?FPCONVERT"
+    },
+    "CODE:2f1b": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FPADD (internal entry point, segment 0+0) (C51BFPC.LIB:?C?FPADD)",
+      "lib": "C51BFPC.LIB:?C?FPADD",
+      "name": "FUN_CODE_2f1b",
+      "status": "matched",
+      "symbol": "@0+0"
+    },
+    "CODE:3013": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FTNPWR (internal entry point, segment 0+0) (C51BFPC.LIB:?C?FTNPWR)",
+      "lib": "C51BFPC.LIB:?C?FTNPWR",
+      "name": "FUN_CODE_3013",
+      "status": "matched",
+      "symbol": "@0+0"
+    },
+    "CODE:3043": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?FTNPWR (C51BFPC.LIB:?C?FTNPWR)",
+      "lib": "C51BFPC.LIB:?C?FTNPWR",
+      "name": "FUN_CODE_3043",
+      "status": "matched",
+      "symbol": "?C?FTNPWR"
+    },
+    "CODE:305d": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FTNPWR (internal entry point, segment 0+74) (C51BFPC.LIB:?C?FTNPWR)",
+      "lib": "C51BFPC.LIB:?C?FTNPWR",
+      "name": "FUN_CODE_305d",
+      "status": "matched",
+      "symbol": "@0+74"
+    },
+    "CODE:306c": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FTNPWR (internal entry point, segment 0+89) (C51BFPC.LIB:?C?FTNPWR)",
+      "lib": "C51BFPC.LIB:?C?FTNPWR",
+      "name": "FUN_CODE_306c",
+      "status": "matched",
+      "symbol": "@0+89"
+    },
+    "CODE:3071": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?FTNPWR (internal entry point, segment 0+94) (C51BFPC.LIB:?C?FTNPWR)",
+      "lib": "C51BFPC.LIB:?C?FTNPWR",
+      "name": "FUN_CODE_3071",
+      "status": "matched",
+      "symbol": "@0+94"
+    },
+    "CODE:3083": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?COPY (internal entry point, segment 0+0) (C51C.LIB:?C?COPY)",
+      "lib": "C51C.LIB:?C?COPY",
+      "name": "FUN_CODE_3083",
+      "status": "matched",
+      "symbol": "@0+0"
+    },
+    "CODE:3153": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?COPY (C51C.LIB:?C?COPY)",
+      "lib": "C51C.LIB:?C?COPY",
+      "name": "FUN_CODE_3153",
+      "status": "matched",
+      "symbol": "?C?COPY"
+    },
+    "CODE:3179": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CLDPTR (C51C.LIB:?C?CLDPTR)",
+      "lib": "C51C.LIB:?C?CLDPTR",
+      "name": "FUN_CODE_3179",
+      "status": "matched",
+      "symbol": "?C?CLDPTR"
+    },
+    "CODE:3192": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CLDOPTR (C51C.LIB:?C?CLDOPTR)",
+      "lib": "C51C.LIB:?C?CLDOPTR",
+      "name": "FUN_CODE_3192",
+      "status": "matched",
+      "symbol": "?C?CLDOPTR"
+    },
+    "CODE:31bf": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CILDPTR (C51C.LIB:?C?CILDPTR)",
+      "lib": "C51C.LIB:?C?CILDPTR",
+      "name": "FUN_CODE_31bf",
+      "status": "matched",
+      "symbol": "?C?CILDPTR"
+    },
+    "CODE:31e1": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CSTPTR (C51C.LIB:?C?CSTPTR)",
+      "lib": "C51C.LIB:?C?CSTPTR",
+      "name": "FUN_CODE_31e1",
+      "status": "matched",
+      "symbol": "?C?CSTPTR"
+    },
+    "CODE:31f3": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CSTOPTR (C51C.LIB:?C?CSTOPTR)",
+      "lib": "C51C.LIB:?C?CSTOPTR",
+      "name": "FUN_CODE_31f3",
+      "status": "matched",
+      "symbol": "?C?CSTOPTR"
+    },
+    "CODE:3215": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?IMUL (C51BC.LIB:?C?IMUL)",
+      "lib": "C51BC.LIB:?C?IMUL",
+      "name": "FUN_CODE_3215",
+      "status": "matched",
+      "symbol": "?C?IMUL"
+    },
+    "CODE:3227": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?UIDIV (C51BC.LIB:?C?UIDIV)",
+      "lib": "C51BC.LIB:?C?UIDIV",
+      "name": "FUN_CODE_3227",
+      "status": "matched",
+      "symbol": "?C?UIDIV"
+    },
+    "CODE:327c": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?ILDIX (C51BC.LIB:?C?ILDIX)",
+      "lib": "C51BC.LIB:?C?ILDIX",
+      "name": "FUN_CODE_327c",
+      "status": "matched",
+      "symbol": "?C?ILDIX"
+    },
+    "CODE:3292": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?ILDPTR (C51C.LIB:?C?ILDPTR)",
+      "lib": "C51C.LIB:?C?ILDPTR",
+      "name": "FUN_CODE_3292",
+      "status": "matched",
+      "symbol": "?C?ILDPTR"
+    },
+    "CODE:32bd": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?ILDOPTR (C51C.LIB:?C?ILDOPTR)",
+      "lib": "C51C.LIB:?C?ILDOPTR",
+      "name": "FUN_CODE_32bd",
+      "status": "matched",
+      "symbol": "?C?ILDOPTR"
+    },
+    "CODE:32f5": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LMUL (C51BC.LIB:?C?LMUL)",
+      "lib": "C51BC.LIB:?C?LMUL",
+      "name": "FUN_CODE_32f5",
+      "status": "matched",
+      "symbol": "?C?LMUL"
+    },
+    "CODE:3344": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?ULDIV (internal entry point, segment 0+0) (C51BC.LIB:?C?ULDIV)",
+      "lib": "C51BC.LIB:?C?ULDIV",
+      "name": "FUN_CODE_3344",
+      "status": "matched",
+      "symbol": "@0+0"
+    },
+    "CODE:3380": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?ULDIV (C51BC.LIB:?C?ULDIV)",
+      "lib": "C51BC.LIB:?C?ULDIV",
+      "name": "FUN_CODE_3380",
+      "status": "matched",
+      "symbol": "?C?ULDIV"
+    },
+    "CODE:3412": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LNOT (C51BC.LIB:?C?LNOT)",
+      "lib": "C51BC.LIB:?C?LNOT",
+      "name": "FUN_CODE_3412",
+      "status": "matched",
+      "symbol": "?C?LNOT"
+    },
+    "CODE:341f": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LNEG (C51BC.LIB:?C?LNEG)",
+      "lib": "C51BC.LIB:?C?LNEG",
+      "name": "FUN_CODE_341f",
+      "status": "matched",
+      "symbol": "?C?LNEG"
+    },
+    "CODE:342d": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?ULCMP (C51BC.LIB:?C?ULCMP)",
+      "lib": "C51BC.LIB:?C?ULCMP",
+      "name": "FUN_CODE_342d",
+      "status": "matched",
+      "symbol": "?C?ULCMP"
+    },
+    "CODE:343e": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?ULSHR (C51BC.LIB:?C?ULSHR)",
+      "lib": "C51BC.LIB:?C?ULSHR",
+      "name": "FUN_CODE_343e",
+      "status": "matched",
+      "symbol": "?C?ULSHR"
+    },
+    "CODE:3451": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSHL (C51BC.LIB:?C?LSHL)",
+      "lib": "C51BC.LIB:?C?LSHL",
+      "name": "FUN_CODE_3451",
+      "status": "matched",
+      "symbol": "?C?LSHL"
+    },
+    "CODE:3464": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LLDPTR (C51C.LIB:?C?LLDPTR)",
+      "lib": "C51C.LIB:?C?LLDPTR",
+      "name": "FUN_CODE_3464",
+      "status": "matched",
+      "symbol": "?C?LLDPTR"
+    },
+    "CODE:3484": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LLDIDATA (C51BC.LIB:?C?LLDIDATA)",
+      "lib": "C51BC.LIB:?C?LLDIDATA",
+      "name": "FUN_CODE_3484",
+      "status": "matched",
+      "symbol": "?C?LLDIDATA"
+    },
+    "CODE:3490": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LLDCODE (C51BC.LIB:?C?LLDCODE)",
+      "lib": "C51BC.LIB:?C?LLDCODE",
+      "name": "FUN_CODE_3490",
+      "status": "matched",
+      "symbol": "?C?LLDCODE"
+    },
+    "CODE:34a0": {
+      "by": "keil-lib",
+      "comment": "Keil C51 run-time library routine ?C?LILDXDATA1 (C51BC.LIB:?C?LILDXDATA)",
+      "lib": "C51BC.LIB:?C?LILDXDATA",
+      "name": "FUN_CODE_34a0",
+      "status": "matched",
+      "symbol": "?C?LILDXDATA1"
+    },
+    "CODE:34a2": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LILDXDATA8 (C51BC.LIB:?C?LILDXDATA)",
+      "lib": "C51BC.LIB:?C?LILDXDATA",
+      "name": "FUN_CODE_34a2",
+      "status": "matched",
+      "symbol": "?C?LILDXDATA8"
+    },
+    "CODE:34d5": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSTIDATA (C51BC.LIB:?C?LSTIDATA)",
+      "lib": "C51BC.LIB:?C?LSTIDATA",
+      "name": "FUN_CODE_34d5",
+      "status": "matched",
+      "symbol": "?C?LSTIDATA"
+    },
+    "CODE:34e1": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSTXDATA (C51BC.LIB:?C?LSTXDATA)",
+      "lib": "C51BC.LIB:?C?LSTXDATA",
+      "name": "FUN_CODE_34e1",
+      "status": "matched",
+      "symbol": "?C?LSTXDATA"
+    },
+    "CODE:34ed": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LSTKXDATA (C51BC.LIB:?C?LSTKXDATA)",
+      "lib": "C51BC.LIB:?C?LSTKXDATA",
+      "name": "FUN_CODE_34ed",
+      "status": "matched",
+      "symbol": "?C?LSTKXDATA"
+    },
+    "CODE:3504": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?LSTKXDATA (internal entry point, segment 0+23) (C51BC.LIB:?C?LSTKXDATA)",
+      "lib": "C51BC.LIB:?C?LSTKXDATA",
+      "name": "FUN_CODE_3504",
+      "status": "matched",
+      "symbol": "@0+23"
+    },
+    "CODE:351e": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?PLDIXDATA (C51BC.LIB:?C?PLDIXDATA)",
+      "lib": "C51BC.LIB:?C?PLDIXDATA",
+      "name": "FUN_CODE_351e",
+      "status": "matched",
+      "symbol": "?C?PLDIXDATA"
+    },
+    "CODE:3535": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?PSTXDATA (C51BC.LIB:?C?PSTXDATA)",
+      "lib": "C51BC.LIB:?C?PSTXDATA",
+      "name": "FUN_CODE_3535",
+      "status": "matched",
+      "symbol": "?C?PSTXDATA"
+    },
+    "CODE:353e": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CCASE (C51BC.LIB:?C?CCASE)",
+      "lib": "C51BC.LIB:?C?CCASE",
+      "name": "FUN_CODE_353e",
+      "status": "matched",
+      "symbol": "?C?CCASE"
+    },
+    "CODE:3564": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LIMUL (C51BC.LIB:?C?LIMUL)",
+      "lib": "C51BC.LIB:?C?LIMUL",
+      "name": "FUN_CODE_3564",
+      "status": "matched",
+      "symbol": "?C?LIMUL"
+    },
+    "CODE:3591": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LLDXDATA (C51BC.LIB:?C?LLDXDATA)",
+      "lib": "C51BC.LIB:?C?LLDXDATA",
+      "name": "FUN_CODE_3591",
+      "status": "matched",
+      "symbol": "?C?LLDXDATA"
+    },
+    "CODE:359d": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LLDPDATA (C51BC.LIB:?C?LLDPDATA)",
+      "lib": "C51BC.LIB:?C?LLDPDATA",
+      "name": "FUN_CODE_359d",
+      "status": "matched",
+      "symbol": "?C?LLDPDATA"
+    },
+    "CODE:35a9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_35a9",
+      "status": "matched"
+    },
+    "CODE:3e68": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_3e68",
+      "status": "matched"
+    },
+    "CODE:467e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_467e",
+      "status": "matched"
+    },
+    "CODE:4e8e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_4e8e",
+      "status": "matched"
+    },
+    "CODE:5200": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_5219, in FUN_CODE_5219's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_5219 over 0x5200..0x573b",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_5200",
+      "of": "FUN_CODE_5219",
+      "status": "matched"
+    },
+    "CODE:5203": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_5219, in FUN_CODE_5219's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_5219 over 0x5200..0x573b",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_5203",
+      "of": "FUN_CODE_5219",
+      "status": "matched"
+    },
+    "CODE:520b": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_5219, in FUN_CODE_5219's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_5219 over 0x5200..0x573b",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_520b",
+      "of": "FUN_CODE_5219",
+      "status": "matched"
+    },
+    "CODE:520d": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_5219, in FUN_CODE_5219's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_5219 over 0x5200..0x573b",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_520d",
+      "of": "FUN_CODE_5219",
+      "status": "matched"
+    },
+    "CODE:5219": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_5219",
+      "status": "matched"
+    },
+    "CODE:573b": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_573b",
+      "status": "matched"
+    },
+    "CODE:5c20": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_5c20",
+      "status": "matched"
+    },
+    "CODE:60b9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_60b9",
+      "status": "matched"
+    },
+    "CODE:6540": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?_PRINTF517?BYTE (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_6540",
+      "status": "matched",
+      "symbol": "?_PRINTF517?BYTE"
+    },
+    "CODE:654f": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+15) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_654f",
+      "status": "matched",
+      "symbol": "@0+15"
+    },
+    "CODE:6562": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+34) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_6562",
+      "status": "matched",
+      "symbol": "@0+34"
+    },
+    "CODE:656b": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+43) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_656b",
+      "status": "matched",
+      "symbol": "@0+43"
+    },
+    "CODE:6583": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+67) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_6583",
+      "status": "matched",
+      "symbol": "@0+67"
+    },
+    "CODE:6594": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+84) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_6594",
+      "status": "matched",
+      "symbol": "@0+84"
+    },
+    "CODE:65a5": {
+      "by": "keil-lib",
+      "comment": "Keil C51 run-time library routine _SPRINTF517 (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_65a5",
+      "status": "matched",
+      "symbol": "_SPRINTF517"
+    },
+    "CODE:65ab": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine _PRINTF517 (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_65ab",
+      "status": "matched",
+      "symbol": "_PRINTF517"
+    },
+    "CODE:68c9": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+905) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_68c9",
+      "status": "matched",
+      "symbol": "@0+905"
+    },
+    "CODE:68e7": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+935) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_68e7",
+      "status": "matched",
+      "symbol": "@0+935"
+    },
+    "CODE:6971": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+1073) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_6971",
+      "status": "matched",
+      "symbol": "@0+1073"
+    },
+    "CODE:6984": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF517 (internal entry point, segment 0+1092) (C51BFPL.LIB:PRINTF517)",
+      "lib": "C51BFPL.LIB:PRINTF517",
+      "name": "FUN_CODE_6984",
+      "status": "matched",
+      "symbol": "@0+1092"
+    },
+    "CODE:69c3": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_69e5, in FUN_CODE_69e5's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_69e5 over 0x69c3..0x6e16",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_69c3",
+      "of": "FUN_CODE_69e5",
+      "status": "matched"
+    },
+    "CODE:69da": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_69e5, in FUN_CODE_69e5's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_69e5 over 0x69c3..0x6e16",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_69da",
+      "of": "FUN_CODE_69e5",
+      "status": "matched"
+    },
+    "CODE:69e5": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_69e5",
+      "status": "matched"
+    },
+    "CODE:6e16": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_6e16",
+      "status": "matched"
+    },
+    "CODE:7262": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_72b0, in FUN_CODE_72b0's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_72b0 over 0x7262..0x7677",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_7262",
+      "of": "FUN_CODE_72b0",
+      "status": "matched"
+    },
+    "CODE:7263": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_72b0, in FUN_CODE_72b0's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_72b0 over 0x7262..0x7677",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_7263",
+      "of": "FUN_CODE_72b0",
+      "status": "matched"
+    },
+    "CODE:72a5": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_72b0, in FUN_CODE_72b0's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_72b0 over 0x7262..0x7677",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_72a5",
+      "of": "FUN_CODE_72b0",
+      "status": "matched"
+    },
+    "CODE:72b0": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_72b0",
+      "status": "matched"
+    },
+    "CODE:7677": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_76b4, in FUN_CODE_76b4's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_76b4 over 0x7677..0x7a46",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_7677",
+      "of": "FUN_CODE_76b4",
+      "status": "matched"
+    },
+    "CODE:768a": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_76b4, in FUN_CODE_76b4's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_76b4 over 0x7677..0x7a46",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_768a",
+      "of": "FUN_CODE_76b4",
+      "status": "matched"
+    },
+    "CODE:76b4": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_76b4",
+      "status": "matched"
+    },
+    "CODE:7a46": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_7a60, in FUN_CODE_7a60's code segment; emitted by compiling src/8051_bank2/usb/usb_device_answer_setup.c, bytes judged with FUN_CODE_7a60 over 0x7a46..0x7ddb",
+      "kind": "common_entry",
+      "module": "FUN_CODE_573b",
+      "name": "FUN_CODE_7a46",
+      "of": "FUN_CODE_7a60",
+      "status": "matched"
+    },
+    "CODE:7a60": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_573b",
+      "name": "FUN_CODE_7a60",
+      "status": "matched"
+    },
+    "CODE:813c": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_813c",
+      "status": "matched"
+    },
+    "CODE:8437": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_8437",
+      "status": "matched"
+    },
+    "CODE:872e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_872e",
+      "status": "matched"
+    },
+    "CODE:8a08": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_8a0e, in FUN_CODE_8a0e's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_8a0e over 0x8a08..0x8cdc",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_8a08",
+      "of": "FUN_CODE_8a0e",
+      "status": "matched"
+    },
+    "CODE:8a0e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_8a0e",
+      "status": "matched"
+    },
+    "CODE:8cdc": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_8cdc",
+      "status": "matched"
+    },
+    "CODE:8f95": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_8f9b, in FUN_CODE_8f9b's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_8f9b over 0x8f95..0x9235",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_8f95",
+      "of": "FUN_CODE_8f9b",
+      "status": "matched"
+    },
+    "CODE:8f9b": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_8f9b",
+      "status": "matched"
+    },
+    "CODE:9235": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_9235",
+      "status": "matched"
+    },
+    "CODE:94d3": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_94d3",
+      "status": "matched"
+    },
+    "CODE:9734": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_9734",
+      "status": "matched"
+    },
+    "CODE:9981": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_999f, in FUN_CODE_999f's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_999f over 0x9981..0x9b8d",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_9981",
+      "of": "FUN_CODE_999f",
+      "status": "matched"
+    },
+    "CODE:9982": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_999f, in FUN_CODE_999f's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_999f over 0x9981..0x9b8d",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_9982",
+      "of": "FUN_CODE_999f",
+      "status": "matched"
+    },
+    "CODE:999f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_999f",
+      "status": "matched"
+    },
+    "CODE:9b8d": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_9b91, in FUN_CODE_9b91's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_9b91 over 0x9b8d..0x9d97",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_9b8d",
+      "of": "FUN_CODE_9b91",
+      "status": "matched"
+    },
+    "CODE:9b91": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_9b91",
+      "status": "matched"
+    },
+    "CODE:9d97": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_9d97",
+      "status": "matched"
+    },
+    "CODE:9f8f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_9f8f",
+      "status": "matched"
+    },
+    "CODE:a17e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_a17e",
+      "status": "matched"
+    },
+    "CODE:a36c": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_a36c",
+      "status": "matched"
+    },
+    "CODE:a547": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_a547",
+      "status": "matched"
+    },
+    "CODE:a6fa": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_a6fa",
+      "status": "matched"
+    },
+    "CODE:a8a3": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_a8a3",
+      "status": "matched"
+    },
+    "CODE:aa43": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_aa43",
+      "status": "matched"
+    },
+    "CODE:abce": {
+      "by": "hand",
+      "name": "FUN_CODE_abce",
+      "status": "matched"
+    },
+    "CODE:ad56": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_ad56",
+      "status": "matched"
+    },
+    "CODE:aed9": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_af07, in FUN_CODE_af07's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_af07 over 0xaed9..0xb044",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_aed9",
+      "of": "FUN_CODE_af07",
+      "status": "matched"
+    },
+    "CODE:aeea": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_af07, in FUN_CODE_af07's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_af07 over 0xaed9..0xb044",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_aeea",
+      "of": "FUN_CODE_af07",
+      "status": "matched"
+    },
+    "CODE:aefa": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_af07, in FUN_CODE_af07's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_af07 over 0xaed9..0xb044",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_aefa",
+      "of": "FUN_CODE_af07",
+      "status": "matched"
+    },
+    "CODE:aefb": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_af07, in FUN_CODE_af07's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_af07 over 0xaed9..0xb044",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_aefb",
+      "of": "FUN_CODE_af07",
+      "status": "matched"
+    },
+    "CODE:af00": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_af07, in FUN_CODE_af07's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_af07 over 0xaed9..0xb044",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_af00",
+      "of": "FUN_CODE_af07",
+      "status": "matched"
+    },
+    "CODE:af03": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_af07, in FUN_CODE_af07's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_af07 over 0xaed9..0xb044",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_af03",
+      "of": "FUN_CODE_af07",
+      "status": "matched"
+    },
+    "CODE:af07": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_af07",
+      "status": "matched"
+    },
+    "CODE:b044": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_b044",
+      "status": "matched"
+    },
+    "CODE:b1a9": {
+      "by": "hand",
+      "name": "FUN_CODE_b1a9",
+      "status": "matched"
+    },
+    "CODE:b308": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_b317, in FUN_CODE_b317's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_b317 over 0xb308..0xb45f",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_b308",
+      "of": "FUN_CODE_b317",
+      "status": "matched"
+    },
+    "CODE:b317": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_b317",
+      "status": "matched"
+    },
+    "CODE:b45f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_b45f",
+      "status": "matched"
+    },
+    "CODE:b5b4": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_b5b4",
+      "status": "matched"
+    },
+    "CODE:b706": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_b706",
+      "status": "matched"
+    },
+    "CODE:b84b": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_b84b",
+      "status": "matched"
+    },
+    "CODE:b97a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_b97a",
+      "status": "matched"
+    },
+    "CODE:ba96": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_ba96",
+      "status": "matched"
+    },
+    "CODE:bba9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "module": "FUN_CODE_c52f",
+      "name": "FUN_CODE_bba9",
+      "status": "matched"
+    },
+    "CODE:bcb3": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(7,SPEED) LARGE",
+      "name": "FUN_CODE_bcb3",
+      "status": "matched"
+    },
+    "CODE:bdbd": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_bdbd",
+      "status": "matched"
+    },
+    "CODE:bec7": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_bf1b, in FUN_CODE_bf1b's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_bf1b over 0xbec7..0xbfcf",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_bec7",
+      "of": "FUN_CODE_bf1b",
+      "status": "matched"
+    },
+    "CODE:bf0c": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_bf1b, in FUN_CODE_bf1b's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_bf1b over 0xbec7..0xbfcf",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_bf0c",
+      "of": "FUN_CODE_bf1b",
+      "status": "matched"
+    },
+    "CODE:bf10": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_bf1b, in FUN_CODE_bf1b's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_bf1b over 0xbec7..0xbfcf",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_bf10",
+      "of": "FUN_CODE_bf1b",
+      "status": "matched"
+    },
+    "CODE:bf15": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_bf1b, in FUN_CODE_bf1b's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_bf1b over 0xbec7..0xbfcf",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_bf15",
+      "of": "FUN_CODE_bf1b",
+      "status": "matched"
+    },
+    "CODE:bf1b": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_bf1b",
+      "status": "matched"
+    },
+    "CODE:bfcf": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "name": "FUN_CODE_bfcf",
+      "status": "matched"
+    },
+    "CODE:c0be": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_c0be",
+      "status": "matched"
+    },
+    "CODE:c1a6": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_c1a6",
+      "status": "matched"
+    },
+    "CODE:c395": {
+      "by": "data",
+      "comment": "NOT CODE: bytes inside the Keil ?C_INITSEG initialisation records 0xC36D..0xC44E (22 records, 0x00 terminator at 0xC44D); Ghidra decoded record bytes as instructions",
+      "name": "FUN_CODE_c395",
+      "status": "matched"
+    },
+    "CODE:c433": {
+      "by": "data",
+      "comment": "NOT CODE: bytes inside the Keil ?C_INITSEG initialisation records 0xC36D..0xC44E (22 records, 0x00 terminator at 0xC44D); Ghidra decoded record bytes as instructions",
+      "name": "FUN_CODE_c433",
+      "status": "matched"
+    },
+    "CODE:c441": {
+      "by": "data",
+      "comment": "NOT CODE: bytes inside the Keil ?C_INITSEG initialisation records 0xC36D..0xC44E (22 records, 0x00 terminator at 0xC44D); Ghidra decoded record bytes as instructions",
+      "name": "FUN_CODE_c441",
+      "status": "matched"
+    },
+    "CODE:c44e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_c44e",
+      "status": "matched"
+    },
+    "CODE:c52f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "name": "FUN_CODE_c52f",
+      "status": "matched"
+    },
+    "CODE:c60e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_c60e",
+      "status": "matched"
+    },
+    "CODE:c6ea": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "module": "FUN_CODE_d275",
+      "name": "FUN_CODE_c6ea",
+      "status": "matched"
+    },
+    "CODE:c7c5": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_c7c5",
+      "status": "matched"
+    },
+    "CODE:c89e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_c89e",
+      "status": "matched"
+    },
+    "CODE:ca42": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_ca42",
+      "status": "matched"
+    },
+    "CODE:cbd9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_cbd9",
+      "status": "matched"
+    },
+    "CODE:cca2": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_cca2",
+      "status": "matched"
+    },
+    "CODE:cd68": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "name": "FUN_CODE_cd68",
+      "status": "matched"
+    },
+    "CODE:ce2a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_ce2a",
+      "status": "matched"
+    },
+    "CODE:cee9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_cee9",
+      "status": "matched"
+    },
+    "CODE:ceee": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_ceee",
+      "status": "matched"
+    },
+    "CODE:cfa5": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_cfa5",
+      "status": "matched"
+    },
+    "CODE:d059": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_d059",
+      "status": "matched"
+    },
+    "CODE:d10a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_d10a",
+      "status": "matched"
+    },
+    "CODE:d1bb": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_d1bb",
+      "status": "matched"
+    },
+    "CODE:d261": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_d275, in FUN_CODE_d275's code segment; emitted by compiling src/8051_bank2/i2c/i2c_write_byte.c, bytes judged with FUN_CODE_d275 over 0xd261..0xd2fb",
+      "kind": "common_entry",
+      "module": "FUN_CODE_d275",
+      "name": "FUN_CODE_d261",
+      "of": "FUN_CODE_d275",
+      "status": "matched"
+    },
+    "CODE:d275": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "name": "FUN_CODE_d275",
+      "status": "matched"
+    },
+    "CODE:d2fb": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_d2fb",
+      "status": "matched"
+    },
+    "CODE:d393": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_d393",
+      "status": "matched"
+    },
+    "CODE:d426": {
+      "by": "hand",
+      "name": "FUN_CODE_d426",
+      "status": "matched"
+    },
+    "CODE:d4b2": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_d4b2",
+      "status": "matched"
+    },
+    "CODE:d53d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "name": "FUN_CODE_d53d",
+      "status": "matched"
+    },
+    "CODE:d5c5": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "name": "FUN_CODE_d5c5",
+      "status": "matched"
+    },
+    "CODE:d64c": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_d64c",
+      "status": "matched"
+    },
+    "CODE:d6d1": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_d6d1",
+      "status": "matched"
+    },
+    "CODE:d751": {
+      "by": "hand",
+      "name": "FUN_CODE_d751",
+      "status": "matched"
+    },
+    "CODE:d7d0": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_d7d0",
+      "status": "matched"
+    },
+    "CODE:d84c": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_d866, in FUN_CODE_d866's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_refresh_flash_records.c, bytes judged with FUN_CODE_d866 over 0xd84c..0xd8c4",
+      "kind": "common_entry",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_d84c",
+      "of": "FUN_CODE_d866",
+      "status": "matched"
+    },
+    "CODE:d859": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_d866, in FUN_CODE_d866's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_refresh_flash_records.c, bytes judged with FUN_CODE_d866 over 0xd84c..0xd8c4",
+      "kind": "common_entry",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_d859",
+      "of": "FUN_CODE_d866",
+      "status": "matched"
+    },
+    "CODE:d85b": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_d866, in FUN_CODE_d866's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_refresh_flash_records.c, bytes judged with FUN_CODE_d866 over 0xd84c..0xd8c4",
+      "kind": "common_entry",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_d85b",
+      "of": "FUN_CODE_d866",
+      "status": "matched"
+    },
+    "CODE:d866": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_d866",
+      "status": "matched"
+    },
+    "CODE:d8c4": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_d8c4",
+      "status": "matched"
+    },
+    "CODE:d938": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_d938",
+      "status": "matched"
+    },
+    "CODE:d99e": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_d99e",
+      "status": "matched"
+    },
+    "CODE:da02": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "name": "FUN_CODE_da02",
+      "status": "matched"
+    },
+    "CODE:da66": {
+      "by": "hand",
+      "comment": "Keil common entry code of FUN_CODE_da8a (flash_info = table_CB8C[A]; da8a(0xF067, flash_info[2])), emitted by compiling src/8051_bank2/flash/flash_identify_chip.c; bytes checked by diff8051 common_entry()",
+      "kind": "common_entry",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_da66",
+      "of": "FUN_CODE_da8a",
+      "status": "matched"
+    },
+    "CODE:da86": {
+      "by": "hand",
+      "comment": "Keil common entry code of FUN_CODE_da8a (da8a(0xF000 | R7, XDATA[DPTR])), emitted by compiling src/8051_bank2/flash/flash_identify_chip.c; bytes checked by diff8051 common_entry()",
+      "kind": "common_entry",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_da86",
+      "of": "FUN_CODE_da8a",
+      "status": "matched"
+    },
+    "CODE:da8a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_da8a",
+      "status": "matched"
+    },
+    "CODE:dac1": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_dac5, in FUN_CODE_dac5's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_dac5 over 0xdac1..0xdb1c",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_dac1",
+      "of": "FUN_CODE_dac5",
+      "status": "matched"
+    },
+    "CODE:dac5": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_dac5",
+      "status": "matched"
+    },
+    "CODE:db1c": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "name": "FUN_CODE_db1c",
+      "status": "matched"
+    },
+    "CODE:db76": {
+      "by": "hand",
+      "name": "FUN_CODE_db76",
+      "status": "matched"
+    },
+    "CODE:dbd0": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "name": "FUN_CODE_dbd0",
+      "status": "matched"
+    },
+    "CODE:dc24": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "name": "FUN_CODE_dc24",
+      "status": "matched"
+    },
+    "CODE:dc78": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_dc80, in FUN_CODE_dc80's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_refresh_flash_records.c, bytes judged with FUN_CODE_dc80 over 0xdc78..0xdcc9",
+      "kind": "common_entry",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_dc78",
+      "of": "FUN_CODE_dc80",
+      "status": "matched"
+    },
+    "CODE:dc7c": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_dc80, in FUN_CODE_dc80's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_refresh_flash_records.c, bytes judged with FUN_CODE_dc80 over 0xdc78..0xdcc9",
+      "kind": "common_entry",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_dc7c",
+      "of": "FUN_CODE_dc80",
+      "status": "matched"
+    },
+    "CODE:dc80": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_dc80",
+      "status": "matched"
+    },
+    "CODE:dcc9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_dcc9",
+      "status": "matched"
+    },
+    "CODE:dd1a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "name": "FUN_CODE_dd1a",
+      "status": "matched"
+    },
+    "CODE:dd6a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_dd6a",
+      "status": "matched"
+    },
+    "CODE:ddb7": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_ddbb, in FUN_CODE_ddbb's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_ddbb over 0xddb7..0xde04",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_ddb7",
+      "of": "FUN_CODE_ddbb",
+      "status": "matched"
+    },
+    "CODE:ddbb": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_ddbb",
+      "status": "matched"
+    },
+    "CODE:de04": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_de20, in FUN_CODE_de20's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_refresh_flash_records.c, bytes judged with FUN_CODE_de20 over 0xde04..0xde50",
+      "kind": "common_entry",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_de04",
+      "of": "FUN_CODE_de20",
+      "status": "matched"
+    },
+    "CODE:de13": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_de20, in FUN_CODE_de20's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_refresh_flash_records.c, bytes judged with FUN_CODE_de20 over 0xde04..0xde50",
+      "kind": "common_entry",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_de13",
+      "of": "FUN_CODE_de20",
+      "status": "matched"
+    },
+    "CODE:de15": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_de20, in FUN_CODE_de20's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_refresh_flash_records.c, bytes judged with FUN_CODE_de20 over 0xde04..0xde50",
+      "kind": "common_entry",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_de15",
+      "of": "FUN_CODE_de20",
+      "status": "matched"
+    },
+    "CODE:de20": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_de20",
+      "status": "matched"
+    },
+    "CODE:de50": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "name": "FUN_CODE_de50",
+      "status": "matched"
+    },
+    "CODE:de9a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "name": "FUN_CODE_de9a",
+      "status": "matched"
+    },
+    "CODE:dee4": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_defd, in FUN_CODE_defd's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_refresh_flash_records.c, bytes judged with FUN_CODE_defd over 0xdee4..0xdf2d",
+      "kind": "common_entry",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_dee4",
+      "of": "FUN_CODE_defd",
+      "status": "matched"
+    },
+    "CODE:def0": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_defd, in FUN_CODE_defd's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_refresh_flash_records.c, bytes judged with FUN_CODE_defd over 0xdee4..0xdf2d",
+      "kind": "common_entry",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_def0",
+      "of": "FUN_CODE_defd",
+      "status": "matched"
+    },
+    "CODE:def2": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_defd, in FUN_CODE_defd's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_refresh_flash_records.c, bytes judged with FUN_CODE_defd over 0xdee4..0xdf2d",
+      "kind": "common_entry",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_def2",
+      "of": "FUN_CODE_defd",
+      "status": "matched"
+    },
+    "CODE:defd": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_8437",
+      "name": "FUN_CODE_defd",
+      "status": "matched"
+    },
+    "CODE:df2d": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_df50, in FUN_CODE_df50's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_df50 over 0xdf2d..0xdf76",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_df2d",
+      "of": "FUN_CODE_df50",
+      "status": "matched"
+    },
+    "CODE:df44": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_df50, in FUN_CODE_df50's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_set_target_file.c, bytes judged with FUN_CODE_df50 over 0xdf2d..0xdf76",
+      "kind": "common_entry",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_df44",
+      "of": "FUN_CODE_df50",
+      "status": "matched"
+    },
+    "CODE:df50": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_a17e",
+      "name": "FUN_CODE_df50",
+      "status": "matched"
+    },
+    "CODE:df76": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_df7f, in FUN_CODE_df7f's code segment; emitted by compiling src/8051_bank2/flash/flash_identify_chip.c, bytes judged with FUN_CODE_df7f over 0xdf76..0xdfbe",
+      "kind": "common_entry",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_df76",
+      "of": "FUN_CODE_df7f",
+      "status": "matched"
+    },
+    "CODE:df7f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_df7f",
+      "status": "matched"
+    },
+    "CODE:dfbe": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_dfbe",
+      "status": "matched"
+    },
+    "CODE:e004": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_e004",
+      "status": "matched"
+    },
+    "CODE:e04a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_e04a",
+      "status": "matched"
+    },
+    "CODE:e0c9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_e0c9",
+      "status": "matched"
+    },
+    "CODE:e105": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_e105",
+      "status": "matched"
+    },
+    "CODE:e141": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_e141",
+      "status": "matched"
+    },
+    "CODE:e17c": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e1a4, in FUN_CODE_e1a4's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_e1a4 over 0xe17c..0xe1b5",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e17c",
+      "of": "FUN_CODE_e1a4",
+      "status": "matched"
+    },
+    "CODE:e190": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e1a4, in FUN_CODE_e1a4's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_e1a4 over 0xe17c..0xe1b5",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e190",
+      "of": "FUN_CODE_e1a4",
+      "status": "matched"
+    },
+    "CODE:e193": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e1a4, in FUN_CODE_e1a4's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_e1a4 over 0xe17c..0xe1b5",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e193",
+      "of": "FUN_CODE_e1a4",
+      "status": "matched"
+    },
+    "CODE:e19e": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e1a4, in FUN_CODE_e1a4's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_e1a4 over 0xe17c..0xe1b5",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e19e",
+      "of": "FUN_CODE_e1a4",
+      "status": "matched"
+    },
+    "CODE:e1a0": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e1a4, in FUN_CODE_e1a4's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_e1a4 over 0xe17c..0xe1b5",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e1a0",
+      "of": "FUN_CODE_e1a4",
+      "status": "matched"
+    },
+    "CODE:e1a4": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e1a4",
+      "status": "matched"
+    },
+    "CODE:e1b5": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e1c1, in FUN_CODE_e1c1's code segment; emitted by compiling src/8051_bank2/flash/flash_identify_chip.c, bytes judged with FUN_CODE_e1c1 over 0xe1b5..0xe1eb",
+      "kind": "common_entry",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_e1b5",
+      "of": "FUN_CODE_e1c1",
+      "status": "matched"
+    },
+    "CODE:e1c1": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_e1c1",
+      "status": "matched"
+    },
+    "CODE:e1eb": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e1f3, in FUN_CODE_e1f3's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_e1f3 over 0xe1eb..0xe21d",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e1eb",
+      "of": "FUN_CODE_e1f3",
+      "status": "matched"
+    },
+    "CODE:e1f3": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e1f3",
+      "status": "matched"
+    },
+    "CODE:e21d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_e21d",
+      "status": "matched"
+    },
+    "CODE:e24d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_e24d",
+      "status": "matched"
+    },
+    "CODE:e27c": {
+      "by": "twin",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_e27c",
+      "status": "matched"
+    },
+    "CODE:e2ab": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_e2ab",
+      "status": "matched"
+    },
+    "CODE:e2da": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_e2da",
+      "status": "matched"
+    },
+    "CODE:e306": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_e306",
+      "status": "matched"
+    },
+    "CODE:e331": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "name": "FUN_CODE_e331",
+      "status": "matched"
+    },
+    "CODE:e35b": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e373, in FUN_CODE_e373's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_e373 over 0xe35b..0xe384",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e35b",
+      "of": "FUN_CODE_e373",
+      "status": "matched"
+    },
+    "CODE:e35f": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e373, in FUN_CODE_e373's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_e373 over 0xe35b..0xe384",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e35f",
+      "of": "FUN_CODE_e373",
+      "status": "matched"
+    },
+    "CODE:e362": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e373, in FUN_CODE_e373's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_e373 over 0xe35b..0xe384",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e362",
+      "of": "FUN_CODE_e373",
+      "status": "matched"
+    },
+    "CODE:e36d": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e373, in FUN_CODE_e373's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_e373 over 0xe35b..0xe384",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e36d",
+      "of": "FUN_CODE_e373",
+      "status": "matched"
+    },
+    "CODE:e36f": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e373, in FUN_CODE_e373's code segment; emitted by compiling src/8051_bank2/usb/usb_host_enumerate_device.c, bytes judged with FUN_CODE_e373 over 0xe35b..0xe384",
+      "kind": "common_entry",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e36f",
+      "of": "FUN_CODE_e373",
+      "status": "matched"
+    },
+    "CODE:e373": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_467e",
+      "name": "FUN_CODE_e373",
+      "status": "matched"
+    },
+    "CODE:e384": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "name": "FUN_CODE_e384",
+      "status": "matched"
+    },
+    "CODE:e3ab": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "name": "FUN_CODE_e3ab",
+      "status": "matched"
+    },
+    "CODE:e3d2": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine _PUTCHAR (C51BC.LIB:PUTCHAR)",
+      "lib": "C51BC.LIB:PUTCHAR",
+      "name": "FUN_CODE_e3d2",
+      "status": "matched",
+      "symbol": "_PUTCHAR"
+    },
+    "CODE:e3dd": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PUTCHAR (internal entry point, segment 0+11) (C51BC.LIB:PUTCHAR)",
+      "lib": "C51BC.LIB:PUTCHAR",
+      "name": "FUN_CODE_e3dd",
+      "status": "matched",
+      "symbol": "@0+11"
+    },
+    "CODE:e3f9": {
+      "by": "hand",
+      "name": "FUN_CODE_e3f9",
+      "status": "matched"
+    },
+    "CODE:e419": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e423, in FUN_CODE_e423's code segment; emitted by compiling src/8051_bank2/fwupd/fwupd_svc_write_block.c, bytes judged with FUN_CODE_e423 over 0xe419..0xe432",
+      "kind": "common_entry",
+      "module": "FUN_CODE_c52f",
+      "name": "FUN_CODE_e419",
+      "of": "FUN_CODE_e423",
+      "status": "matched"
+    },
+    "CODE:e423": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE REGFILE(R.ORC)",
+      "module": "FUN_CODE_c52f",
+      "name": "FUN_CODE_e423",
+      "status": "matched"
+    },
+    "CODE:e432": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "name": "FUN_CODE_e432",
+      "status": "matched"
+    },
+    "CODE:e44b": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "name": "FUN_CODE_e44b",
+      "status": "matched"
+    },
+    "CODE:e462": {
+      "by": "hand",
+      "name": "FUN_CODE_e462",
+      "status": "matched"
+    },
+    "CODE:e478": {
+      "by": "hand",
+      "name": "FUN_CODE_e478",
+      "status": "matched"
+    },
+    "CODE:e4a4": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "name": "FUN_CODE_e4a4",
+      "status": "matched"
+    },
+    "CODE:e4b9": {
+      "by": "hand",
+      "comment": "Keil common-entry (L?) code in front of FUN_CODE_e4bf, in FUN_CODE_e4bf's code segment; emitted by compiling src/8051_bank2/flash/flash_identify_chip.c, bytes judged with FUN_CODE_e4bf over 0xe4b9..0xe4c9",
+      "kind": "common_entry",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_e4b9",
+      "of": "FUN_CODE_e4bf",
+      "status": "matched"
+    },
+    "CODE:e4bf": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) LARGE",
+      "module": "FUN_CODE_0003",
+      "name": "FUN_CODE_e4bf",
+      "status": "matched"
+    },
+    "CODE:e4c9": {
+      "by": "hand",
+      "name": "FUN_CODE_e4c9",
+      "status": "matched"
+    },
+    "CODE:e4d9": {
+      "by": "hand",
+      "name": "FUN_CODE_e4d9",
+      "status": "matched"
+    },
+    "CODE:e4f8": {
+      "by": "twin",
+      "c51opts": "OPTIMIZE(7,SPEED)",
+      "name": "FUN_CODE_e4f8",
+      "status": "matched"
+    },
+    "CODE:e507": {
+      "by": "twin",
+      "c51opts": "OPTIMIZE(7,SPEED)",
+      "name": "FUN_CODE_e507",
+      "status": "matched"
+    },
+    "CODE:e525": {
+      "by": "hand",
+      "name": "FUN_CODE_e525",
+      "status": "matched"
+    },
+    "CODE:e532": {
+      "by": "hand",
+      "name": "FUN_CODE_e532",
+      "status": "matched"
+    },
+    "CODE:e53b": {
+      "by": "hand",
+      "name": "FUN_CODE_e53b",
+      "status": "matched"
+    },
+    "CODE:e54b": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "name": "FUN_CODE_e54b",
+      "status": "matched"
+    },
+    "CODE:e551": {
+      "by": "template",
+      "c51opts": "OPTIMIZE(7,SPEED)",
+      "comment": "empty function (RET)",
+      "name": "FUN_CODE_e551",
+      "status": "matched"
+    },
+    "CODE:f080": {
+      "by": "data",
+      "comment": "NOT CODE: 0xFF fill (erased flash); the three apparent LJMP 0xF080 at 0x0053, 0x00E9 and 0xB10E are the bytes F0 80 xx of MOVX @DPTR,A; SJMP inside matched functions",
+      "name": "FUN_CODE_f080",
+      "status": "matched"
+    },
+    "ram:4ffa": {
+      "by": "hand",
+      "name": "FUN_CODE_4ffa",
+      "status": "matched"
+    },
+    "ram:e4e9": {
+      "by": "hand",
+      "name": "FUN_CODE_e4e9",
+      "status": "matched"
+    },
+    "ram:e516": {
+      "by": "hand",
+      "name": "FUN_CODE_e516",
+      "status": "matched"
+    }
+  }
+}

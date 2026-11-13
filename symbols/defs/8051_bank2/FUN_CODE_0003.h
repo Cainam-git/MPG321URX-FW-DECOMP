@@ -1,0 +1,52 @@
+/* Names used in the source of FUN_CODE_0003; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define flash_identify_chip            FUN_CODE_0003
+#define flash_lookup_chip_id           FUN_CODE_b044
+#define flash_lookup_jedec_id          FUN_CODE_c44e
+#define fwupd_pick_valid_region        FUN_CODE_ce2a
+#define fwupd_refresh_flash_records    FUN_CODE_8437
+#define fwupd_run_isp_write            FUN_CODE_a8a3
+#define fwupd_svc_bus_handshake        FUN_CODE_de50
+#define fwupd_svc_claim_link           FUN_CODE_d1bb
+#define fwupd_svc_erase_flash          FUN_CODE_c1a6
+#define fwupd_svc_erase_second_half    FUN_CODE_dd1a
+#define fwupd_svc_query_cmd_0x11       FUN_CODE_e2da
+#define fwupd_svc_query_cmd_0x25       FUN_CODE_e3ab
+#define fwupd_svc_query_cmd_0x36       FUN_CODE_e2ab
+#define fwupd_svc_read_register        FUN_CODE_e105
+#define fwupd_svc_read_reply           FUN_CODE_e4bf
+#define fwupd_svc_send_0x99_and_record FUN_CODE_e4a4
+#define fwupd_svc_send_cmd_0x0f        FUN_CODE_e1c1
+#define fwupd_svc_send_cmd_0x99        FUN_CODE_e331
+#define fwupd_svc_send_cmd_0xa3        FUN_CODE_e24d
+#define fwupd_svc_send_rec_cbc4        FUN_CODE_e384
+#define fwupd_svc_send_rec_cbcc        FUN_CODE_df7f
+#define fwupd_svc_send_region_thunk    FUN_CODE_00fc
+#define fwupd_svc_set_control_bit      FUN_CODE_dd6a
+#define fwupd_svc_set_isp_mode         FUN_CODE_e21d
+#define fwupd_svc_set_write_protect    FUN_CODE_ceee
+#define fwupd_svc_spi_transfer         FUN_CODE_c0be
+#define fwupd_svc_write_protect_off    FUN_CODE_cee9
+#define fwupd_svc_write_register       FUN_CODE_da8a
+#define fwupd_wait_ready_line          FUN_CODE_d059
+#define fwupd_write_dualfw_tag         FUN_CODE_ca42
+#define fwupd_write_flash_blocks       FUN_CODE_9f8f
+#define i2c_read_packet                FUN_CODE_bba9
+#define i2c_set_bit_delay              FUN_CODE_e53b
+#define i2c_write_packet               FUN_CODE_bfcf
+#define lib_printf517                  FUN_CODE_65ab
+#define timer_delay_base               FUN_CODE_e478
+#define timer_delay_units              FUN_CODE_e44b
+/* Stored data. */
+#define flash_chip_table               DAT_CODE_cb8c
+#define flash_id_try_values            DAT_CODE_cbd6
+#define fwupd_dualfw_region            DAT_EXTMEM_0434
+#define fwupd_flash_chip_row           DAT_EXTMEM_0640
+#define fwupd_flash_size_code          DAT_EXTMEM_0644
+#define fwupd_state_reg_on_flag        DAT_EXTMEM_06f2
+#define fwupd_svc_claim_reply_byte1    DAT_EXTMEM_0648
+#define fwupd_svc_claim_reply_byte2    DAT_EXTMEM_0649
+#define fwupd_svc_packet               DAT_EXTMEM_0436
+#define fwupd_svc_record10_copy        DAT_EXTMEM_08f5
+#define fwupd_svc_record10_template    DAT_CODE_cbcc
+/* End of names. */

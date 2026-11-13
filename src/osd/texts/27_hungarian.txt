@@ -1,0 +1,633 @@
+# Texts of language 27, named "magyar" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[56] (item 1, hungarian)
+16e0d0.56 "{F7}{76}{F0}Végrehajt{F7}3{F0} gombot a panelvédelem (hosszú idő) indításához."
+
+# osd_protect_long_execute_texts[27] (item 0, hungarian)
+16e0d0.27 "{F0}A képminőség megőrzése érdekében nyomja meg a "
+
+# osd_protect_long_auto_texts[27] (item 0, hungarian)
+16f25c.27 "{F0}A képminőség megőrzése érdekében a panelvédelem (hosszú idő)"
+
+# osd_protect_long_title_texts[85] (item 2, hungarian)
+16f670.85 "{F0}automatikusan aktiválódik, ha a monitor több mint 1500 órát van használatban."
+
+# osd_protect_long_title_texts[56] (item 1, hungarian)
+16f670.56 "{F0}A panel képminőségének megőrzése érdekében a panelvédelem (hosszú idő) funkció "
+
+# osd_protect_long_title_texts[27] (item 0, hungarian)
+16f670.27 "{F0}MSI OLED Care - Panelvédelem (Hosszú idő)"
+
+# osd_protect_long_incomplete_texts[56] (item 1, hungarian)
+172590.56 "{F0}kattintson erre az elemre, hogy később is elvégezze, ha szükséges."
+
+# osd_protect_long_incomplete_texts[27] (item 0, hungarian)
+172590.27 "{F0}A panelvédelem (hosszú idő) nem fejeződött be. Jelölje ki és "
+
+# osd_protect_incomplete_texts[56] (item 1, hungarian)
+173998.56 "{F0}erre az elemre, hogy később is elvégezze, ha szükséges."
+
+# osd_protect_incomplete_texts[27] (item 0, hungarian)
+173998.27 "{F0}A panelvédelem nem fejeződött be. Jelölje ki és kattintson "
+
+# osd_protect_long_incomplete_texts[85] (item 2, hungarian)
+# osd_protect_incomplete_texts[85] (item 2, hungarian)
+# osd_protect_execute_texts[85] (item 2, hungarian)
+172590.85 "{F0}Értesítés:"
+
+# osd_protect_execute_texts[56] (item 1, hungarian)
+174bd0.56 "{F0}gombot a panelvédelem funkcióhoz."
+
+# osd_protect_execute_texts[27] (item 0, hungarian)
+174bd0.27 "{F0}A panelkép minőségének megőrzése érdekében nyomja meg az {F7}„{F0}Végrehajtás{F7}”"
+
+# osd_protect_long_retry_texts[56] (item 1, hungarian)
+175de4.56 "Nyomja meg a {F7}{76}{F0}végrehajt\" gombot a panelvédelem (hosszú idő) indításához."
+
+# osd_protect_long_retry_texts[27] (item 0, hungarian)
+175de4.27 "{F0}A panelvédelem (hosszú idő) folyamat nem fejeződött be. "
+
+# osd_protect_retry_texts[56] (item 1, hungarian)
+177270.56 "{F0}gombot a panelvédelem indításához.  "
+
+# osd_protect_retry_texts[27] (item 0, hungarian)
+177270.27 "{F0}A panelvédelem folyamat nem fejeződött be. Nyomja meg a {F7}„{F0}végrehajt\"  "
+
+# osd_protect_auto_texts[27] (item 0, hungarian)
+1785c0.27 "{F0}A képminőség megőrzése érdekében a panelvédelem aktiválódik."
+
+# osd_protect_long_auto_texts[56] (item 1, hungarian)
+16f25c.56 "{F0}aktiválódik."
+
+# osd_protect_auto_texts[56] (item 1, hungarian)
+1785c0.56 "{F0} "
+
+# osd_protect_long_execute_texts[143] (item 4, hungarian)
+# osd_protect_long_auto_texts[143] (item 4, hungarian)
+# osd_protect_long_title_texts[172] (item 5, hungarian)
+# osd_protect_long_incomplete_texts[143] (item 4, hungarian)
+# osd_protect_long_retry_texts[143] (item 4, hungarian)
+16e0d0.143 "{F0}A mködésjelző fehér színnel villog, amíg a folyamat be nem fejeződik."
+
+# osd_protect_long_execute_texts[114] (item 3, hungarian)
+# osd_protect_long_auto_texts[114] (item 3, hungarian)
+# osd_protect_long_title_texts[143] (item 4, hungarian)
+# osd_protect_long_incomplete_texts[114] (item 3, hungarian)
+# osd_protect_long_retry_texts[114] (item 3, hungarian)
+16e0d0.114 "{F0}Ez a védelmi funkció egy órát is igénybe vehet."
+
+# osd_protect_long_title_texts[346] (item 11, hungarian)
+# osd_protect_long_retry_texts[317] (item 10, hungarian)
+# osd_protect_retry_texts[317] (item 10, hungarian)
+16f670.346 "{F0}ill. energiatakarékos módba lép."
+
+# osd_protect_long_title_texts[317] (item 10, hungarian)
+# osd_protect_long_retry_texts[288] (item 9, hungarian)
+# osd_protect_retry_texts[288] (item 9, hungarian)
+16f670.317 "{F0}Ha a {F7}„{F0}Mégse\" gombra kattint, a folyamat aktiválódik, amikor a monitor kikapcsolt,"
+
+# osd_protect_long_execute_texts[259] (item 8, hungarian)
+# osd_protect_long_auto_texts[259] (item 8, hungarian)
+# osd_protect_long_title_texts[288] (item 9, hungarian)
+# osd_protect_long_incomplete_texts[259] (item 8, hungarian)
+# osd_protect_incomplete_texts[259] (item 8, hungarian)
+# osd_protect_execute_texts[259] (item 8, hungarian)
+# ... and 4 more entries
+16e0d0.259 "{F0}főkapcsoló gombot a funkció törléséhez."
+
+# osd_protect_long_execute_texts[230] (item 7, hungarian)
+# osd_protect_long_auto_texts[230] (item 7, hungarian)
+# osd_protect_long_title_texts[259] (item 8, hungarian)
+# osd_protect_long_incomplete_texts[230] (item 7, hungarian)
+# osd_protect_incomplete_texts[230] (item 7, hungarian)
+# osd_protect_execute_texts[230] (item 7, hungarian)
+# ... and 4 more entries
+16e0d0.230 "{F0}A folyamat végrehajtása közben nyomja meg újra a"
+
+# osd_protect_long_execute_texts[201] (item 6, hungarian)
+# osd_protect_long_auto_texts[201] (item 6, hungarian)
+# osd_protect_long_title_texts[230] (item 7, hungarian)
+# osd_protect_long_incomplete_texts[201] (item 6, hungarian)
+# osd_protect_incomplete_texts[201] (item 6, hungarian)
+# osd_protect_execute_texts[201] (item 6, hungarian)
+# ... and 4 more entries
+16e0d0.201 "{F0} "
+
+# osd_protect_long_execute_texts[172] (item 5, hungarian)
+# osd_protect_long_auto_texts[172] (item 5, hungarian)
+# osd_protect_long_title_texts[201] (item 6, hungarian)
+# osd_protect_long_incomplete_texts[172] (item 5, hungarian)
+# osd_protect_incomplete_texts[172] (item 5, hungarian)
+# osd_protect_execute_texts[172] (item 5, hungarian)
+# ... and 4 more entries
+16e0d0.172 "{F0}A folyamat végrehajtása közben ne húzza ki a tápkábelt a monitorból."
+
+# osd_protect_incomplete_texts[143] (item 4, hungarian)
+# osd_protect_execute_texts[143] (item 4, hungarian)
+# osd_protect_retry_texts[143] (item 4, hungarian)
+# osd_protect_auto_texts[143] (item 4, hungarian)
+# osd_protect_title_texts[172] (item 5, hungarian)
+173998.143 "{F0}A m{F7}ű{F0}ködésjelző narancssárga színnel villog, amíg a folyamat be nem fejeződik."
+
+# osd_protect_incomplete_texts[114] (item 3, hungarian)
+# osd_protect_execute_texts[114] (item 3, hungarian)
+# osd_protect_retry_texts[114] (item 3, hungarian)
+# osd_protect_auto_texts[114] (item 3, hungarian)
+# osd_protect_title_texts[143] (item 4, hungarian)
+173998.114 "{F0}E védelmi funkció végrehajtása több percet vehet igénybe."
+
+# osd_protect_long_execute_texts[85] (item 2, hungarian)
+# osd_protect_long_auto_texts[85] (item 2, hungarian)
+# osd_protect_long_title_texts[114] (item 3, hungarian)
+# osd_protect_long_retry_texts[85] (item 2, hungarian)
+# osd_protect_retry_texts[85] (item 2, hungarian)
+# osd_protect_auto_texts[85] (item 2, hungarian)
+# ... and 1 more entries
+16e0d0.85 "{F0}Értesítés:"
+
+# osd_protect_title_texts[85] (item 2, hungarian)
+179a14.85 "{F0} automatikusan aktiválódik, ha a monitor több mitn 4 órát van használatban."
+
+# osd_protect_title_texts[56] (item 1, hungarian)
+179a14.56 "A panel képminőségének megőrzése érdekében a panelvédelem funkció"
+
+# osd_protect_title_texts[27] (item 0, hungarian)
+179a14.27 "{F0}MSI OLED Care - Panelvédelem "
+
+# osd_protect_retry_texts[433] (item 14, hungarian)
+# osd_protect_title_texts[404] (item 13, hungarian)
+177270.433 "{F0}ha a panel összesített használata meghaladja a 24 órát."
+
+# osd_protect_retry_texts[404] (item 13, hungarian)
+# osd_protect_title_texts[375] (item 12, hungarian)
+177270.404 "{F0}Ha a {F7}„{F0}Később\" gombra kattint, az értesítés csak akkor jelenik meg, "
+
+# osd_protect_retry_texts[375] (item 12, hungarian)
+# osd_protect_title_texts[346] (item 11, hungarian)
+177270.375 "{F0}monitor kikapcsolódik v. takarékos üzemmódba lép."
+
+# osd_protect_retry_texts[346] (item 11, hungarian)
+# osd_protect_title_texts[317] (item 10, hungarian)
+177270.346 "{F7}„{F0}Mégse\" vagy {F7}„{F0}Később\" esetén a folyamat aktiválódik, amikor a "
+
+# osd_change_notice_line3_texts[27] (item 0, hungarian)
+180b60.27 "Kérjük, válasszon a következő lehetőségekből:"
+
+# osd_change_notice_line2_texts[27] (item 0, hungarian)
+181058.27 "a monitor energiafogyasztását."
+
+# osd_change_notice_line1_texts[27] (item 0, hungarian)
+1814d8.27 "A kijelölt funkció módosítása növelheti"
+
+# osd_change_notice_title_texts[27] (item 0, hungarian)
+1819cc.27 "Változások megerősĺtése!"
+
+# table_1821d4[56] (item 1, hungarian)
+1821d4.56 "Digitális"
+
+# table_1821d4[27] (item 0, hungarian)
+1821d4.27 "Analóg"
+
+# osd_pbp_source_texts[56] (item 1, hungarian)
+182534.56 "Forrás 2"
+
+# osd_pbp_source_texts[27] (item 0, hungarian)
+182534.27 "Forrás 1"
+
+# osd_pip_item_texts[85] (item 2, hungarian)
+1828c0.85 "Helyzet"
+
+# osd_pip_item_texts[56] (item 1, hungarian)
+1828c0.56 "PIP méret"
+
+# osd_pip_item_texts[27] (item 0, hungarian)
+1828c0.27 "Forrás"
+
+# osd_pip_item_texts[143] (item 4, hungarian)
+1828c0.143 "Hangváltás"
+
+# osd_pip_item_texts[114] (item 3, hungarian)
+1828c0.114 "Kijelzőváltás"
+
+# osd_choice_note_function_texts[143] (item 4, hungarian)
+1832e4.143 "Kijelzőméret"
+
+# osd_choice_note_reducing_texts[172] (item 5, hungarian)
+183cb4.172 "{F0}fogad."
+
+# osd_choice_note_reducing_texts[143] (item 4, hungarian)
+183cb4.143 "{F0}ha a monitor VRR-tartalmat"
+
+# osd_choice_note_reducing_texts[114] (item 3, hungarian)
+183cb4.114 "{F0}Ez a funkció nem m{F7}{7C}{F0}ködik,"
+
+# osd_choice_note_reducing_texts[85] (item 2, hungarian)
+183cb4.85 "{F0}beállításától függ."
+
+# osd_choice_note_reducing_texts[56] (item 1, hungarian)
+183cb4.56 "{F7}”{F0} v. a {F7}„{F0}DisplayHDR\" "
+
+# osd_choice_note_reducing_texts[27] (item 0, hungarian)
+183cb4.27 "{F0}A csökkentés a {F7}„{F0}Fényerő"
+
+# osd_choice_note_texts[143] (item 4, hungarian)
+183a70.143 " "
+
+# osd_choice_note_texts[114] (item 3, hungarian)
+183a70.114 "{F0}Kb. egy óra a befejezésig"
+
+# osd_choice_note_texts[85] (item 2, hungarian)
+183a70.85 "{F0}végrehajtáshoz"
+
+# osd_choice_note_texts[56] (item 1, hungarian)
+183a70.56 "{F0}Kb. 15 perc a"
+
+# osd_choice_note_texts[27] (item 0, hungarian)
+183a70.27 "{F0}Értesítés:"
+
+# osd_oled_care_item_texts[85] (item 2, hungarian)
+185e78.85 "{F0}Védelmi értesítés"
+
+# osd_oled_care_function_texts[172] (item 5, hungarian)
+# osd_oled_care_item_texts[201] (item 6, hungarian)
+185bc0.172 "{F0}Határvonal érztékelése"
+
+# osd_oled_care_function_texts[143] (item 4, hungarian)
+# osd_oled_care_item_texts[172] (item 5, hungarian)
+185bc0.143 "{F0}Feladatsor érzékelése"
+
+# osd_oled_care_function_texts[114] (item 3, hungarian)
+# osd_oled_care_item_texts[143] (item 4, hungarian)
+185bc0.114 "{F0}Több logó érzékelése"
+
+# osd_oled_care_item_texts[230] (item 7, hungarian)
+185e78.230 "{F0}OLED-panel információ"
+
+# osd_oled_care_function_texts[85] (item 2, hungarian)
+# osd_oled_care_item_texts[114] (item 3, hungarian)
+185bc0.85 "{F0}Statikus kép észlelése"
+
+# osd_oled_care_function_texts[27] (item 0, hungarian)
+# osd_oled_care_item_texts[56] (item 1, hungarian)
+185bc0.27 "{F0}Panelvédelem"
+
+# osd_oled_care_function_texts[56] (item 1, hungarian)
+# osd_oled_care_item_texts[27] (item 0, hungarian)
+185bc0.56 "{F0}Pixel eltolás"
+
+# osd_choice_note_function_texts[317] (item 10, hungarian)
+# osd_settings_item_texts[230] (item 7, hungarian)
+1832e4.317 "{F0}Type C PD-töltés"
+
+# osd_settings_item_texts[143] (item 4, hungarian)
+1874f8.143 "{F0}Főkapcsoló"
+
+# osd_settings_item_texts[288] (item 9, hungarian)
+1874f8.288 "Alaphelyzet"
+
+# osd_settings_item_texts[85] (item 2, hungarian)
+1874f8.85 "OSD időtúllépés"
+
+# osd_settings_item_texts[56] (item 1, hungarian)
+1874f8.56 "Átlátszóság"
+
+# osd_settings_item_texts[27] (item 0, hungarian)
+1874f8.27 "Nyelv"
+
+# osd_professional_item_texts[85] (item 2, hungarian)
+188634.85 "Képjavítás"
+
+# osd_professional_item_texts[56] (item 1, hungarian)
+188634.56 "Alacsony szint{F7}ű{F0} kékfény"
+
+# osd_professional_item_texts[27] (item 0, hungarian)
+188634.27 "Pro mód"
+
+# osd_night_vision_texts[114] (item 3, hungarian)
+1890d4.114 "Legerősebb"
+
+# osd_night_vision_texts[85] (item 2, hungarian)
+1890d4.85 "Erős"
+
+# osd_night_vision_texts[56] (item 1, hungarian)
+1890d4.56 "Normál"
+
+# osd_choice_note_function_texts[288] (item 9, hungarian)
+# osd_gaming_item_texts[56] (item 1, hungarian)
+1832e4.288 "Éjszakai látás"
+
+# osd_gaming_item_texts[143] (item 4, hungarian)
+188da0.143 "Ébresztőóra"
+
+# osd_gaming_item_texts[114] (item 3, hungarian)
+188da0.114 "Refresh Rate"
+
+# osd_choice_note_function_texts[172] (item 5, hungarian)
+1832e4.172 "Válaszidő"
+
+# osd_gaming_item_texts[27] (item 0, hungarian)
+188da0.27 "Játékmód"
+
+# osd_choice_note_function_texts[201] (item 6, hungarian)
+# osd_gi_item_texts[85] (item 2, hungarian)
+1832e4.201 "Optix teleszkóp"
+
+# osd_oled_care_seconds_texts[114] (item 3, hungarian)
+18a7ec.114 "{F0}240 Mp"
+
+# osd_oled_care_seconds_texts[85] (item 2, hungarian)
+18a7ec.85 "{F0}120 Mp"
+
+# osd_oled_care_seconds_texts[56] (item 1, hungarian)
+18a7ec.56 "{F0}100 Mp"
+
+# osd_oled_care_seconds_texts[27] (item 0, hungarian)
+18a7ec.27 "{F0}50 Mp"
+
+# table_18af08[56] (item 1, hungarian)
+# table_18b008[56] (item 1, hungarian)
+18af08.56 "{F0}Kézi"
+
+# osd_oled_care_usage_texts[56] (item 1, hungarian)
+18b29c.56 "{F0}>24 ó. használat"
+
+# osd_oled_care_speed_texts[85] (item 2, hungarian)
+18b5e0.85 "{F0}Gyors"
+
+# osd_oled_care_speed_texts[27] (item 0, hungarian)
+18b5e0.27 "{F0}Lassú"
+
+# osd_oled_care_choice_texts[85] (item 2, hungarian)
+# osd_oled_care_status_texts[85] (item 2, hungarian)
+16df60.85 "{F0}Csökkentés szintje"
+
+# osd_oled_care_status_texts[56] (item 1, hungarian)
+18b94c.56 "{F0}Szükséges idő"
+
+# osd_oled_care_status_texts[27] (item 0, hungarian)
+18b94c.27 "{F0}Kezdőpont"
+
+# table_18c070[56] (item 1, hungarian)
+18c070.56 "{F0}Hosszú idő"
+
+# table_18c070[27] (item 0, hungarian)
+18c070.27 "{F0}Rövid idő"
+
+# table_18c4a8[27] (item 0, hungarian)
+18c4a8.27 "{F0}Mozgási sebesség (Pixel eltolás)"
+
+# osd_image_item_texts[143] (item 4, hungarian)
+18ca88.143 "Kijelzőméret"
+
+# osd_image_item_texts[114] (item 3, hungarian)
+18ca88.114 "Színhőmérséklet"
+
+# osd_image_item_texts[85] (item 2, hungarian)
+18ca88.85 "Élesség"
+
+# osd_image_item_texts[56] (item 1, hungarian)
+18ca88.56 "Kontraszt"
+
+# osd_language_texts[27] (item 0, hungarian)
+18d3d4.27 "magyar"
+
+# osd_optix_scope_item_texts[56] (item 1, hungarian)
+18d578.56 "Célkereszt nagyítása"
+
+# osd_optix_scope_item_texts[27] (item 0, hungarian)
+18d578.27 "Célkereszt mérete"
+
+# osd_color_temp_texts[114] (item 3, hungarian)
+18db28.114 "Testreszabás"
+
+# osd_color_temp_texts[85] (item 2, hungarian)
+18db28.85 "Meleg"
+
+# osd_color_temp_texts[27] (item 0, hungarian)
+18db28.27 "Hideg"
+
+# osd_response_time_texts[85] (item 2, hungarian)
+18e08c.85 "Leggyorsabb"
+
+# osd_response_time_texts[56] (item 1, hungarian)
+18e08c.56 "Gyors"
+
+# osd_oled_care_speed_texts[56] (item 1, hungarian)
+# osd_color_temp_texts[56] (item 1, hungarian)
+# osd_response_time_texts[27] (item 0, hungarian)
+18b5e0.56 "Normál"
+
+# osd_crosshair_color_texts[56] (item 1, hungarian)
+18e54c.56 "Vörös"
+
+# osd_crosshair_color_texts[27] (item 0, hungarian)
+18e54c.27 "Fehér"
+
+# table_18c8b8[85] (item 2, hungarian)
+# osd_pbp_mode_texts[85] (item 2, hungarian)
+# osd_location_texts[143] (item 4, hungarian)
+18c8b8.85 "{F0}Testreszabás"
+
+# osd_location_texts[114] (item 3, hungarian)
+18e9f8.114 "Jobb alsó sarok"
+
+# osd_location_texts[85] (item 2, hungarian)
+18e9f8.85 "Bal alsó sarok"
+
+# osd_location_texts[56] (item 1, hungarian)
+18e9f8.56 "Jobb felső sarok"
+
+# osd_location_texts[27] (item 0, hungarian)
+18e9f8.27 "Bal felső sarok"
+
+# osd_size_texts[85] (item 2, hungarian)
+18f550.85 "Nagy"
+
+# osd_size_texts[56] (item 1, hungarian)
+18f550.56 "Közepes"
+
+# osd_size_texts[27] (item 0, hungarian)
+18f550.27 "Kicsi"
+
+# osd_crosshair_item_texts[143] (item 4, hungarian)
+18f984.143 "Alaphelyzet"
+
+# osd_crosshair_item_texts[114] (item 3, hungarian)
+18f984.114 "{F0}Pozíció"
+
+# osd_crosshair_item_texts[85] (item 2, hungarian)
+18f984.85 "{F0}Szín"
+
+# osd_crosshair_item_texts[56] (item 1, hungarian)
+18f984.56 "Icon"
+
+# osd_crosshair_item_texts[27] (item 0, hungarian)
+18f984.27 "Nincs"
+
+# osd_protect_button_texts[85] (item 2, hungarian)
+190184.85 "{F0}Később"
+
+# osd_protect_button_texts[56] (item 1, hungarian)
+190184.56 "{F0}Mégsem"
+
+# osd_protect_button_texts[27] (item 0, hungarian)
+190184.27 "{F0}Végrehajtás"
+
+# osd_yes_no_texts[56] (item 1, hungarian)
+190748.56 "Nem"
+
+# osd_yes_no_texts[27] (item 0, hungarian)
+190748.27 "Igen"
+
+# osd_kvm_texts[56] (item 1, hungarian)
+1909ec.56 "{F0}Felfelé irányuló"
+
+# table_190cec[56] (item 1, hungarian)
+190cec.56 "{F0}Csúcs 1000 nit"
+
+# osd_navi_key_item_texts[114] (item 3, hungarian)
+19158c.114 "Jobbra"
+
+# osd_navi_key_item_texts[85] (item 2, hungarian)
+19158c.85 "Balra"
+
+# osd_navi_key_item_texts[56] (item 1, hungarian)
+19158c.56 "Le"
+
+# osd_navi_key_item_texts[27] (item 0, hungarian)
+19158c.27 "Fel"
+
+# osd_info_box_texts[201] (item 6, hungarian)
+191b30.201 "Bitmélység"
+
+# osd_info_box_texts[172] (item 5, hungarian)
+191b30.172 "Tartalomtípus"
+
+# osd_info_box_texts[143] (item 4, hungarian)
+191b30.143 "Üzemmód-választás"
+
+# osd_info_box_texts[85] (item 2, hungarian)
+191b30.85 "Fizikai felbontás"
+
+# osd_info_box_texts[56] (item 1, hungarian)
+191b30.56 "Saját felbontás"
+
+# osd_out_of_range_texts[27] (item 0, hungarian)
+192d8c.27 "Tartományon kívül!"
+
+# osd_no_signal_texts[27] (item 0, hungarian)
+193008.27 "Nincs jel"
+
+# osd_power_button_texts[56] (item 1, hungarian)
+19336c.56 "{F0}Készenlét"
+
+# osd_navi_function_texts[317] (item 10, hungarian)
+1935bc.317 "Optix teleszkóp"
+
+# osd_navi_function_texts[288] (item 9, hungarian)
+1935bc.288 "Éjszakai látás"
+
+# osd_info_box_texts[114] (item 3, hungarian)
+# osd_navi_function_texts[230] (item 7, hungarian)
+191b30.114 "Refresh Rate"
+
+# osd_gi_item_texts[56] (item 1, hungarian)
+# osd_navi_function_texts[114] (item 3, hungarian)
+18a360.56 "Smart Crosshair"
+
+# osd_navi_function_texts[143] (item 4, hungarian)
+1935bc.143 "Ébresztőóra"
+
+# osd_navi_function_texts[85] (item 2, hungarian)
+1935bc.85 "Játékmód"
+
+# osd_choice_note_function_texts[56] (item 1, hungarian)
+# osd_image_item_texts[27] (item 0, hungarian)
+# osd_navi_function_texts[56] (item 1, hungarian)
+1832e4.56 "Fényerő"
+
+# osd_settings_item_texts[172] (item 5, hungarian)
+# table_18c8b8[114] (item 3, hungarian)
+# osd_navi_function_texts[259] (item 8, hungarian)
+1874f8.172 "Info. A képernyőn"
+
+# osd_navi_function_texts[201] (item 6, hungarian)
+1935bc.201 "PIP/PBP mód"
+
+# osd_image_enhancement_texts[143] (item 4, hungarian)
+194b34.143 "Legerősebb"
+
+# osd_image_enhancement_texts[114] (item 3, hungarian)
+194b34.114 "Erős"
+
+# osd_image_enhancement_texts[85] (item 2, hungarian)
+194b34.85 "Közepes"
+
+# osd_image_enhancement_texts[56] (item 1, hungarian)
+194b34.56 "Gyenge"
+
+# osd_pro_mode_texts[114] (item 3, hungarian)
+1951dc.114 "Mozgókép"
+
+# osd_pro_mode_texts[85] (item 2, hungarian)
+1951dc.85 "Kékellenes"
+
+# osd_pro_mode_texts[143] (item 4, hungarian)
+1951dc.143 "Iroda"
+
+# osd_oled_care_choice_texts[56] (item 1, hungarian)
+# osd_optix_scope_item_texts[114] (item 3, hungarian)
+# osd_off_on_texts[56] (item 1, hungarian)
+# table_195a38[85] (item 2, hungarian)
+16df60.56 "BE"
+
+# osd_location_texts[172] (item 5, hungarian)
+# table_195a38[27] (item 0, hungarian)
+# table_195c7c[27] (item 0, hungarian)
+18e9f8.172 "Helyzet"
+
+# osd_game_mode_texts[27] (item 0, hungarian)
+195f24.27 "{F0}Prémium szín"
+
+# osd_pro_mode_texts[56] (item 1, hungarian)
+# osd_game_mode_texts[56] (item 1, hungarian)
+1951dc.56 "Felhasználói"
+
+# osd_game_mode_texts[114] (item 3, hungarian)
+195f24.114 "Verseny"
+
+# osd_pbp_mode_texts[56] (item 1, hungarian)
+18e89c.56 "Mód 2"
+
+# osd_pbp_mode_texts[27] (item 0, hungarian)
+18e89c.27 "Mód 1"
+
+# osd_oled_care_choice_texts[27] (item 0, hungarian)
+# osd_night_vision_texts[27] (item 0, hungarian)
+# table_18c8b8[27] (item 0, hungarian)
+# osd_optix_scope_item_texts[85] (item 2, hungarian)
+# osd_off_on_texts[27] (item 0, hungarian)
+# osd_power_button_texts[27] (item 0, hungarian)
+# ... and 5 more entries
+16df60.27 "KI"
+
+# osd_tab_name_texts[201] (item 6, hungarian)
+196dc0.201 "Navi gomb"
+
+# osd_tab_name_texts[230] (item 7, hungarian)
+196dc0.230 "Beállítás"
+
+# osd_info_box_texts[27] (item 0, hungarian)
+# osd_navi_function_texts[172] (item 5, hungarian)
+# osd_tab_name_texts[143] (item 4, hungarian)
+191b30.27 "Bemeneti forrás"
+
+# osd_tab_name_texts[114] (item 3, hungarian)
+196dc0.114 "Kép"
+
+# osd_tab_name_texts[85] (item 2, hungarian)
+196dc0.85 "Professzionális"
+
+# osd_tab_name_texts[56] (item 1, hungarian)
+196dc0.56 "Játék"

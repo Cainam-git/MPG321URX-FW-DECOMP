@@ -1,0 +1,3 @@
+libc.a fflush.o fflush
+# leon2m FUN_a015b300: toolchain library function fflush (libc.a:fflush.o, 360 bytes),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

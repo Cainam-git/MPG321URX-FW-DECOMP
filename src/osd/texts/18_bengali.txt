@@ -1,0 +1,633 @@
+# Texts of language 18, named "{F9}{00}{02}{03}{01}{02}" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[47] (item 1, bengali)
+16e0d0.47 "{F0}(long time)function."
+
+# osd_protect_long_execute_texts[18] (item 0, bengali)
+16e0d0.18 "{F0}To maintain panel image quality,press\"Execute\"button to do panel protect"
+
+# osd_protect_long_auto_texts[18] (item 0, bengali)
+16f25c.18 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+# osd_protect_long_title_texts[76] (item 2, bengali)
+16f670.76 "{F0}automatically activate when monitor using over 1,500 hours."
+
+# osd_protect_long_title_texts[47] (item 1, bengali)
+16f670.47 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+# osd_protect_long_title_texts[18] (item 0, bengali)
+16f670.18 "{F0}MSI OLED {F9}{06}{1B}{88}{02}{98}{F0} - {F9}{08}{96}{02}{91}{9A}{01} {26}{98}{63}{02}{F0} ({F9}{A9}{AA} {15}{17}{88}{F0})"
+
+# osd_protect_long_incomplete_texts[47] (item 1, bengali)
+172590.47 "Please select and click this item further to do this process if needs later" hidden 2e
+
+# osd_protect_long_incomplete_texts[18] (item 0, bengali)
+172590.18 "The panel protect(long time)process did not complete."
+
+# osd_protect_incomplete_texts[47] (item 1, bengali)
+173998.47 "{F9}{AC}{9D}{18} {23}{BE}{7E}{AA} {99}{92}{9B} {B2}{0E} {23}{02}{0E}{92}{11}{17}{16} {AD}{4E}{02}{3C}{9D} {99}{92}{9B} {C7}{99} {99}{9B}{60}{9D}{89}"
+
+# osd_protect_incomplete_texts[18] (item 0, bengali)
+173998.18 "{F9}{9C}{18}{02}{92}{9D}{0F} {9E}{9B}{9F}{02} {BC}{B0}{9A}{02}{16} {15}{3D}{A9} {AA}{9A}{AD}I {9C}{92}{9B} {99}{52}{9D}{A9} {BC}{92}{9A}{02}{AC}{9D} {AA}{92}{0F}{F0},{F9}{B2}{0E} {BC}{B0}{9A}{02}{16} {99}{9B}{02}{9B}"
+
+# osd_protect_long_incomplete_texts[76] (item 2, bengali)
+# osd_protect_incomplete_texts[76] (item 2, bengali)
+# osd_protect_execute_texts[76] (item 2, bengali)
+172590.76 "{F9}{0D}{A0}{B1}{F0}:"
+
+# osd_protect_execute_texts[47] (item 1, bengali)
+174bd0.47 "{F9}{99}{02}{AC} {99}{9B}{92}{30} {F0}\"{F9}{15}{3D}{02}{0A}{9D} {99}{60}{9D}{F0}\"{F9} {00}{02}{11}{9D}{16} {3C}{02}{C0}{9D}{89}"
+
+# osd_protect_execute_texts[18] (item 0, bengali)
+174bd0.18 "{F9}{9C}{18}{02}{92}{9D}{92}{01}{9B} {AA}{98}{9B} {17}{02}{9D} {00}{AC}{02}{9A} {9B}{02}{4B}{92}{97}{F0},{F9}{9C}{18}{02}{92}{9D}{01} {9E}{9B}{9F}{02} {AF}{02}{80}{A4}{9D}{16}"
+
+# osd_protect_long_retry_texts[47] (item 1, bengali)
+175de4.47 "Please press \"execute\"button to do panel protect (long time) function."
+
+# osd_protect_long_retry_texts[18] (item 0, bengali)
+175de4.18 "The panel protect(long time)process did not complete."
+
+# osd_protect_retry_texts[47] (item 1, bengali)
+177270.47 "{F0}\"{F9}{15}{3D}{02}{0A}{9D} {99}{A8}{9D}{F0}\"{F9} {00}{02}{11}{9D}{16} {3C}{02}{C0}{9D}{89}"
+
+# osd_protect_retry_texts[18] (item 0, bengali)
+177270.18 "{F9}{9C}{18}{02}{92}{9D}{0F} {9E}{9B}{9F} {7E}{B0}{9A}{02}{16} {15}{3D}{B3} {AA}{9A}{AD} {08}{18}{02}{92}{9D}{0F} {26}{9B}{9F}{02} {AF}{02}{03}{A4}{9D}{16} {99}{02}{AC} {99}{9B}{92}{97}"
+
+# osd_protect_auto_texts[18] (item 0, bengali)
+1785c0.18 "{F9}{9C}{18}{02}{92}{9D}{92}{01}{9B} {AA}{98}{9B} {17}{02}{9D} {00}{AC}{02}{9A} {9B}{02}{4B}{92}{97}{F0},{F9}{9C} {18}{02}{92}{9D}{01} {9E}{9B}{9F}{02} {AF}{02}{80}{A4}{9D}{16}"
+
+# osd_protect_long_auto_texts[47] (item 1, bengali)
+16f25c.47 "atomatically activate."
+
+# osd_protect_auto_texts[47] (item 1, bengali)
+1785c0.47 "{F9}{43}{9A}{03}{B0}{9A}{95}{02}{92}{00} {15}{B0}{9A} {AA}{92}{00}{89}"
+
+# osd_protect_long_execute_texts[134] (item 4, bengali)
+# osd_protect_long_auto_texts[134] (item 4, bengali)
+# osd_protect_long_title_texts[163] (item 5, bengali)
+# osd_protect_long_incomplete_texts[134] (item 4, bengali)
+# osd_protect_long_retry_texts[134] (item 4, bengali)
+16e0d0.134 "The power indicator will blink white color until process done."
+
+# osd_protect_long_execute_texts[105] (item 3, bengali)
+# osd_protect_long_auto_texts[105] (item 3, bengali)
+# osd_protect_long_title_texts[134] (item 4, bengali)
+# osd_protect_long_incomplete_texts[105] (item 3, bengali)
+# osd_protect_long_retry_texts[105] (item 3, bengali)
+16e0d0.105 "This protect function may take an hour to complete."
+
+# osd_protect_long_title_texts[337] (item 11, bengali)
+# osd_protect_long_retry_texts[308] (item 10, bengali)
+# osd_protect_retry_texts[308] (item 10, bengali)
+16f670.337 "{F9}{99}{9B}{92}{01} {B2}{0E} {BC}{B0}{9A}{02}{16} {94}{9A}{80}{B0}{9A}{95}{02}{92}{00} {15}{B0}{9A} {AA}{92}{00}{89}"
+
+# osd_protect_long_title_texts[308] (item 10, bengali)
+# osd_protect_long_retry_texts[279] (item 9, bengali)
+# osd_protect_retry_texts[279] (item 9, bengali)
+16f670.308 "{F9}{C3}{C4} {F0}\"{F9}{00}{02}{C1}{01} {99}{A8}{9D}{F0}\"{F9} {00}{02}{11}{9D} {3C}{02}{92}{9C}{9D}{F0},{F9} {97}{92}{00} {17}{AD}{11}{9B} {00}{C2} {99}{9B}{92}{01} {00}{02} {9C}{02}{A9}{9A}{02}{9B} {06}{15}{8D}{80} {06}{17}{02}{95} {3C}{02}{85}"
+
+# osd_protect_long_execute_texts[250] (item 8, bengali)
+# osd_protect_long_auto_texts[250] (item 8, bengali)
+# osd_protect_long_title_texts[279] (item 9, bengali)
+# osd_protect_long_incomplete_texts[250] (item 8, bengali)
+# osd_protect_incomplete_texts[250] (item 8, bengali)
+# osd_protect_execute_texts[250] (item 8, bengali)
+# ... and 4 more entries
+16e0d0.250 "{F9}{BD}{02}{00}{02}{9B} {3C}{02}{C0}{9D}{89}"
+
+# osd_protect_long_execute_texts[221] (item 7, bengali)
+# osd_protect_long_auto_texts[221] (item 7, bengali)
+# osd_protect_long_title_texts[250] (item 8, bengali)
+# osd_protect_long_incomplete_texts[221] (item 7, bengali)
+# osd_protect_incomplete_texts[221] (item 7, bengali)
+# osd_protect_execute_texts[221] (item 7, bengali)
+# ... and 4 more entries
+16e0d0.221 "{F9}{BC}{B0}{9A}{02}{16} {15}{B6}{02}{0A}{9D} {AA}{A9}{9A}{02}{9B} {15}{17}{9A}{F0},{F9}{B2}{0E} {AF}{02}{03}{A4}{9D}{16} {00}{02}{C1}{01} {99}{9B}{92}{97} {9C}{02}{A9}{9A}{02}{9B} {00}{02}{11}{9D}{16}"
+
+# osd_protect_long_execute_texts[192] (item 6, bengali)
+# osd_protect_long_auto_texts[192] (item 6, bengali)
+# osd_protect_long_title_texts[221] (item 7, bengali)
+# osd_protect_long_incomplete_texts[192] (item 6, bengali)
+# osd_protect_incomplete_texts[192] (item 6, bengali)
+# osd_protect_execute_texts[192] (item 6, bengali)
+# ... and 4 more entries
+16e0d0.192 "{F9}{53}{01}{92}{00}{9D} {9D}{02}{89}"
+
+# osd_protect_long_execute_texts[163] (item 5, bengali)
+# osd_protect_long_auto_texts[163] (item 5, bengali)
+# osd_protect_long_title_texts[192] (item 6, bengali)
+# osd_protect_long_incomplete_texts[163] (item 5, bengali)
+# osd_protect_incomplete_texts[163] (item 5, bengali)
+# osd_protect_execute_texts[163] (item 5, bengali)
+# ... and 4 more entries
+16e0d0.163 "{F9}{BC}{B0}{9A}{02}{16} {15}{B6}{02}{0A}{9D} {AA}{A9}{9A}{02}{9B} {15}{17}{9A}{F0},{F9}{BD}{BE}{7E}{AA} {99}{92}{9B} {17}{AD}{11}{9B} {06}{4B}{92}{99}{9C}{02}{A9}{9A}{02}{9B} {99}{BF}{16}"
+
+# osd_protect_incomplete_texts[134] (item 4, bengali)
+# osd_protect_execute_texts[134] (item 4, bengali)
+# osd_protect_retry_texts[134] (item 4, bengali)
+# osd_protect_auto_texts[134] (item 4, bengali)
+# osd_protect_title_texts[163] (item 5, bengali)
+173998.134 "{F9}{9E}{9B}{9F}{02} {AF}{02}{80}{A4}{9D} {15}{B6}{B8} {9D}{02} {AA}{A9}{9A}{02} {9C}{BA}{B9} {9C}{02}{A9}{9A}{02}{9B} {0E}{BB}{92}{99}{0E}{9B} {01}{02}{0E}{11} {99}{17}{01}{02} {AF}{18}{02}{A4}{99}{9B}{92}{97} {4B}{02}{99}{92}{00}{89}"
+
+# osd_protect_incomplete_texts[105] (item 3, bengali)
+# osd_protect_execute_texts[105] (item 3, bengali)
+# osd_protect_retry_texts[105] (item 3, bengali)
+# osd_protect_auto_texts[105] (item 3, bengali)
+# osd_protect_title_texts[134] (item 4, bengali)
+173998.105 "{F9}{B2}{0E} {9E}{00}{9F}{02} {AF}{02}{80}{A4}{9D}{16} {15}{9C}{B3} {AA}{92}{97} {99}{92}{9A}{99} {B4}{AD}{11} {15}{17}{9A} {01}{02}{B5}{92}{97} {9C}{02}{92}{9B}{89}"
+
+# osd_protect_long_execute_texts[76] (item 2, bengali)
+# osd_protect_long_auto_texts[76] (item 2, bengali)
+# osd_protect_long_title_texts[105] (item 3, bengali)
+# osd_protect_long_retry_texts[76] (item 2, bengali)
+# osd_protect_retry_texts[76] (item 2, bengali)
+# osd_protect_auto_texts[76] (item 2, bengali)
+# ... and 1 more entries
+16e0d0.76 "{F9}{0D}{A0}{B1}{F0}:"
+
+# osd_protect_title_texts[76] (item 2, bengali)
+179a14.76 "{F9}{9C}{18}{02}{92}{9D}{01} {9E}{9B}{9F}{02} {AF}{02}{80}{A4}{9D}{16} {15}{B0}{9A}{95}{02}{92}{00} {15}{B0}{9A} {AA}{92}{00}"
+
+# osd_protect_title_texts[47] (item 1, bengali)
+179a14.47 "{F9}{9C}{18}{02}{92}{9D}{92}{01}{9B} {AA}{98}{9B} {17}{02}{9D} {00}{AC}{02}{9A} {9B}{02}{4B}{92}{97}{F0},{F9} {17}{AD}{11}{9B}{F0} 4 {F9}{2D}{AE}{02}{9B} {06}{00}{91} {00}{18}{00}{AA}{02}{9B} {99}{9B}{02} {AA}{92}{01}"
+
+# osd_protect_title_texts[18] (item 0, bengali)
+179a14.18 "MSI OLED Care - {F9}{9C}{18}{92}{9D}{01} {9E}{9B}{9F}{02}"
+
+# osd_protect_retry_texts[424] (item 14, bengali)
+# osd_protect_title_texts[395] (item 13, bengali)
+177270.424 "{F0}24{F9}{2D}{AE}{02}{9B} {06}{00}{91} {AA}{92}{01}{0E} {06}{99}{00}{01} {0D}{A0}{B1} {06}{0A}{4B}{02} {C3}{02}{92}{00}{89}"
+
+# osd_protect_retry_texts[395] (item 13, bengali)
+# osd_protect_title_texts[366] (item 12, bengali)
+177270.395 "{F9}{BD}{02}{9C}{AD} {C3}{C4} {F0}\"{F9}{9C}{92}{9B}{F0}\"{F9} {00}{02}{11}{9D} {3C}{02}{92}{9C}{9D}{F0},{F9} {97}{92}{00} {9C}{18}{02}{92}{9D}{92}{01}{9B} {C5}{17}{C0}{AB}{C6}{97} {00}{18}{00}{AA}{02}{9B} {F0}16"
+
+# osd_protect_retry_texts[366] (item 12, bengali)
+# osd_protect_title_texts[337] (item 11, bengali)
+177270.366 "{F9}{99}{9B}{92}{01} {BC}{B0}{9A}{02}{16} {BD}{92}{11}{02} {3C}{02}{7D}{AA}{92}{00}{89}"
+
+# osd_protect_retry_texts[337] (item 11, bengali)
+# osd_protect_title_texts[308] (item 10, bengali)
+177270.337 "{F0}\"{F9}{00}{02}{C1}{01}{F0}\"{F9} {00}{02} {F0}\"{F9}{08}{92}{9B}{F0}\"{F9} {3C}{02}{08}{92}{01}{F0},{F9} {17}{AD}{11}{9B} {00}{C2} {99}{9B}{92}{01} {00}{02} {9C}{02}{A9}{9A}{02}{9B} {06}{15}{8D}{80} {06}{17}{02}{1E} {3C}{02}{7D}"
+
+# osd_change_notice_line3_texts[18] (item 0, bengali)
+180b60.18 "{F9}{23}{7D}{7E}{2A} {1B}{06}{0B} {7F}{06}{3C}{0B} {06}{17}{06}{1B}{02}{06}{0F}{02} {5D}{1B}{16} {48}{4E}{02}{3C}{0F} {1B}{60}{0F}{F0}:"
+
+# osd_change_notice_line2_texts[18] (item 0, bengali)
+181058.18 "{F9}{0D}{4D}{18}{14} {71}{00}{2A}{02}{0B} {7B}{7C} {06}{08}{06}{30} {08}{02}{06}{0B}{02}"
+
+# osd_change_notice_line1_texts[18] (item 0, bengali)
+1814d8.18 "{F9}{48}{79}{7A}{30} {29}{02}{80}{09}{0F} {08}{2B}{00}{61}{0F} {1B}{0B}{06}{01} {30}{02} {05}{48}{11}{06}{0B}{0B}"
+
+# osd_change_notice_title_texts[18] (item 0, bengali)
+1819cc.18 "{F9}{08}{2B}{00}{61}{0F} {48}{78}{30} {1B}{60}{0F}{F0}!"
+
+# table_1821d4[47] (item 1, bengali)
+1821d4.47 "{F9}{3F}{40}{11}{02}{01}"
+
+# table_1821d4[18] (item 0, bengali)
+1821d4.18 "{F9}{C9}{18}{02}{0F}{02}{01}{04}"
+
+# osd_pbp_source_texts[47] (item 1, bengali)
+182534.47 "{F9}{13}{14}{15} 2"
+
+# osd_pbp_source_texts[18] (item 0, bengali)
+182534.18 "{F9}{13}{14}{15} 1"
+
+# osd_pip_item_texts[76] (item 2, bengali)
+1828c0.76 "{F9}{23}{00}{4C}{02}{9D}"
+
+# osd_pip_item_texts[47] (item 1, bengali)
+1828c0.47 "{F9}PIP-{5D}{0B} {33}{1B}{02}{0B}"
+
+# osd_pip_item_texts[18] (item 0, bengali)
+1828c0.18 "{F9}{13}{14}{15}"
+
+# osd_pip_item_texts[134] (item 4, bengali)
+1828c0.134 "{F9}{23}{3F}{21} {26}{0E}{3C}"
+
+# osd_pip_item_texts[105] (item 3, bengali)
+1828c0.105 "{F9}{3F}{15}{06}{41} {26}{0E}{3C}"
+
+# osd_choice_note_function_texts[134] (item 4, bengali)
+1832e4.134 "{F9}{3E}{06}{0F}{0B} {33}{1B}{02}{0B}"
+
+# osd_choice_note_reducing_texts[163] (item 5, bengali)
+183cb4.163 " "
+
+# osd_choice_note_reducing_texts[134] (item 4, bengali)
+183cb4.134 "{F9}{15}{05}{88}{B8}{0E} {D8}{02}{8A}{9E}{9A}{16} {A0}{02}{37} {A0}{98}{91}{89} {9A}{02}I"
+
+# osd_choice_note_reducing_texts[105] (item 3, bengali)
+183cb4.105 "{F9}{05}{BA}{11}{0B}{F0} VRR {F9}{A0}{91}{DE}{DE} {BF}{B5}{A1} {A0}{98}{02}{98} "
+
+# osd_choice_note_reducing_texts[76] (item 2, bengali)
+183cb4.76 "{F0}HDR\"{F9} {06}{15}{16}{03}{F0}-{F9}{B2}{9B} {C9}{9B}{89}"
+
+# osd_choice_note_reducing_texts[47] (item 1, bengali)
+183cb4.47 "{F0}\"{F9}{AF}{C9}{1E}{CA}{01}{30}{02}{F0}\"{F9} {00}{02} {F0}\"{F9}{3F}{15}{92}{CB}"
+
+# osd_choice_note_reducing_texts[18] (item 0, bengali)
+183cb4.18 "{F9}{0E}{92}{AF}{C8} {99}{17}{02} {AD}{61}{9B} {99}{92}{9B}"
+
+# osd_choice_note_texts[134] (item 4, bengali)
+183a70.134 "{F9}{B8}{A0} {C8}{CE} {93}{02}{04}{91}{89}"
+
+# osd_choice_note_texts[105] (item 3, bengali)
+183a70.105 "{F9}{15}{3D}{B9} {2A}{91}{B3} {C9}{02}{AB}{05}{02}{BA}{A0}"
+
+# osd_choice_note_texts[76] (item 2, bengali)
+183a70.76 "{F0}15 {F9}{87}{BA}{11}"
+
+# osd_choice_note_texts[47] (item 1, bengali)
+183a70.47 "{F9}{15}{3D}{B9} {2A}{91}{B3} {C9}{02}{AB}{17}{02}{BA}{A0}"
+
+# osd_choice_note_texts[18] (item 0, bengali)
+183a70.18 "{F9}{0D}{A0}{B1}{F0}:"
+
+# osd_oled_care_item_texts[76] (item 2, bengali)
+185e78.76 "{F9}{9E}{9B}{9F}{02}{9B} {98}{A0}{A1}"
+
+# osd_oled_care_function_texts[163] (item 5, bengali)
+# osd_oled_care_item_texts[192] (item 6, bengali)
+185bc0.163 "{F9}{5C}{17}{02}{0F}{02} {A4}{0F}{02}{A5}{99}{9B}{A6}"
+
+# osd_oled_care_function_texts[134] (item 4, bengali)
+# osd_oled_care_item_texts[163] (item 5, bengali)
+185bc0.134 "{F9}{11}{02}{CF}{00}{02}{9B} {A4}{0F}{02}{A5}{99}{9B}{A6}"
+
+# osd_oled_care_function_texts[105] (item 3, bengali)
+# osd_oled_care_item_texts[134] (item 4, bengali)
+185bc0.105 "{F9}{06}{01}{02}{92}{B5}{02} {A4}{0F}{02}{A5}{99}{9B}{A6}"
+
+# osd_oled_care_item_texts[221] (item 7, bengali)
+185e78.221 "{F0}OLED {F9}{9C}{18}{02}{92}{9D}{92}{01}{9B} {97}{52}{18}{89}"
+
+# osd_oled_care_function_texts[76] (item 2, bengali)
+# osd_oled_care_item_texts[105] (item 3, bengali)
+185bc0.76 "{F9}{A2}{9B} {A3}{9D} {A4}{9D}{02}{A5}{99}{9B}{A6}"
+
+# osd_oled_care_function_texts[18] (item 0, bengali)
+# osd_oled_care_item_texts[47] (item 1, bengali)
+185bc0.18 "{F9}{9C}{18}{02}{92}{9D}{01} {9E}{9B}{9F}{02}"
+
+# osd_oled_care_function_texts[47] (item 1, bengali)
+# osd_oled_care_item_texts[18] (item 0, bengali)
+185bc0.47 "{F9}{90}{92}{86}{01} {91}{29}{11}"
+
+# osd_choice_note_function_texts[308] (item 10, bengali)
+# osd_settings_item_texts[221] (item 7, bengali)
+1832e4.308 "{F9}{11}{02}{0E}{08}{F0}-C PD {F9}{3C}{02}{8B}"
+
+# osd_settings_item_texts[134] (item 4, bengali)
+1874f8.134 "{F9}{75}{21}{77}{0B} {74}{11}{0F}"
+
+# osd_settings_item_texts[279] (item 9, bengali)
+1874f8.279 "{F9}{2B}{06}{15}{11}"
+
+# osd_settings_item_texts[76] (item 2, bengali)
+1874f8.76 "{F9}OSD {11}{02}{0E}{17} {33}{13}{11}"
+
+# osd_settings_item_texts[47] (item 1, bengali)
+1874f8.47 "{F9}{43}{44}{30}{02}"
+
+# osd_settings_item_texts[18] (item 0, bengali)
+1874f8.18 "{F9}{19}{02}{42}{02}"
+
+# osd_professional_item_texts[76] (item 2, bengali)
+188634.76 "{F9}{0C}{0D} {00}{36}{30}{1B}{0B}{35}"
+
+# osd_professional_item_texts[47] (item 1, bengali)
+188634.47 "{F9}{2A}{02}{01}{1B}{02} {7F}{01} {33}{06}{01}{02}"
+
+# osd_professional_item_texts[18] (item 0, bengali)
+188634.18 "{F9}{32} {1D}{1E}"
+
+# osd_night_vision_texts[105] (item 3, bengali)
+1890d4.105 "{F9}{53}{00} {09}{50}{09}{02}{51}"
+
+# osd_night_vision_texts[76] (item 2, bengali)
+1890d4.76 "{F9}{09}{50}{09}{02}{51}"
+
+# osd_night_vision_texts[47] (item 1, bengali)
+1890d4.47 "{F9}{43}{02}{19}{02}{0D}{1B}"
+
+# osd_choice_note_function_texts[279] (item 9, bengali)
+# osd_gaming_item_texts[47] (item 1, bengali)
+1832e4.279 "{F9}{66}{0E}{11} {1A}{09}{0F}"
+
+# osd_gaming_item_texts[134] (item 4, bengali)
+188da0.134 "{F9}{23}{18}{02}{01}{02}{2E} {2D}{2F}"
+
+# osd_gaming_item_texts[105] (item 3, bengali)
+188da0.105 "{F9}{2B}{2C}{06}{09}{0B} {2A}{02}{0B}"
+
+# osd_choice_note_function_texts[163] (item 5, bengali)
+1832e4.163 "{F9}{15}{02}{20}{02} {06}{0A}{21}{22}{02}{0B} {15}{05}{22}"
+
+# osd_gaming_item_texts[18] (item 0, bengali)
+188da0.18 "{F9}{06}{04}{0E}{05} {1D}{1E}"
+
+# osd_choice_note_function_texts[192] (item 6, bengali)
+# osd_gi_item_texts[76] (item 2, bengali)
+1832e4.192 "{F9}{23}{08}{16}{86} {87}{88}{08}"
+
+# osd_oled_care_seconds_texts[105] (item 3, bengali)
+18a7ec.105 "{F0}240 {F9}{06}{15}{F0}."
+
+# osd_oled_care_seconds_texts[76] (item 2, bengali)
+18a7ec.76 "{F0}120 {F9}{06}{15}{F0}."
+
+# osd_oled_care_seconds_texts[47] (item 1, bengali)
+18a7ec.47 "{F0}100 {F9}{06}{15}{F0}."
+
+# osd_oled_care_seconds_texts[18] (item 0, bengali)
+18a7ec.18 "{F0}50 {F9}{06}{15}{F0}."
+
+# table_18af08[47] (item 1, bengali)
+# table_18b008[47] (item 1, bengali)
+18af08.47 "{F9}{17}{96}{02}{AB}{91}{88}{AC}"
+
+# osd_oled_care_usage_texts[47] (item 1, bengali)
+18b29c.47 "{F0}>24 hrs {F9}{00}{18}{00}{0C}{02}{0B}"
+
+# osd_oled_care_speed_texts[76] (item 2, bengali)
+18b5e0.76 "{F9}{96}{97}"
+
+# osd_oled_care_speed_texts[18] (item 0, bengali)
+18b5e0.18 "{F9}{93}{0B}"
+
+# osd_oled_care_choice_texts[76] (item 2, bengali)
+# osd_oled_care_status_texts[76] (item 2, bengali)
+16df60.76 "{F9}{06}{01}{92}{95}{01} {99}{17}{02}{92}{9D}{02}{9B}"
+
+# osd_oled_care_status_texts[47] (item 1, bengali)
+18b94c.47 "{F9}{BC}{92}{9A}{02}{AC}{AB}{9A} {15}{17}{9A}"
+
+# osd_oled_care_status_texts[18] (item 0, bengali)
+18b94c.18 "{F9}{A7}{A8} {AA}{A9}{9A}{02}{9B} {15}{17}{9A}"
+
+# table_18c070[47] (item 1, bengali)
+18c070.47 "{F9}{A9}{AA} {A8}{17}{88}"
+
+# table_18c070[18] (item 0, bengali)
+18c070.18 "{F9}{A6}{A7} {A8}{17}{88}"
+
+# table_18c4a8[18] (item 0, bengali)
+18c4a8.18 "Moving speed"
+
+# osd_image_item_texts[134] (item 4, bengali)
+18ca88.134 "{F9}{3E}{06}{0F}{0B} {33}{1B}{02}{0B}"
+
+# osd_image_item_texts[105] (item 3, bengali)
+18ca88.105 "{F9}{1B}{02}{01}{02}{0B} {06}{11}{3D}{02}{06}{0B}{3C}{02}{0B}"
+
+# osd_image_item_texts[76] (item 2, bengali)
+18ca88.76 "{F9}{09}{02}{3B}{06}{0F}{15}"
+
+# osd_image_item_texts[47] (item 1, bengali)
+18ca88.47 "{F9}{1B}{39}{02}{3A}"
+
+# osd_language_texts[18] (item 0, bengali)
+18d3d4.18 "{F9}{00}{02}{03}{01}{02}"
+
+# osd_optix_scope_item_texts[47] (item 1, bengali)
+18d578.47 "{F9}{87}{88}{06}{08}{0B} {23}{85}{08}{02}{30}"
+
+# osd_optix_scope_item_texts[18] (item 0, bengali)
+18d578.18 "{F9}{87}{88}{06}{08}{0B} {33}{1B}{02}{0B}"
+
+# osd_color_temp_texts[105] (item 3, bengali)
+18db28.105 "{F9}{1B}{02}{06}{3A}{02}{05}{02}{0E}{06}{37}{09}{0F}"
+
+# osd_color_temp_texts[76] (item 2, bengali)
+18db28.76 "{F9}{13}{55}"
+
+# osd_color_temp_texts[18] (item 0, bengali)
+18db28.18 "{F9}{26}{54}{0B}"
+
+# osd_response_time_texts[76] (item 2, bengali)
+18e08c.76 "{F9}{4A}{30}{30}{05}"
+
+# osd_response_time_texts[47] (item 1, bengali)
+18e08c.47 "{F9}{4A}{30}"
+
+# osd_oled_care_speed_texts[47] (item 1, bengali)
+# osd_color_temp_texts[47] (item 1, bengali)
+# osd_response_time_texts[18] (item 0, bengali)
+18b5e0.47 "{F9}{94}{02}{95}{02}{98}{99}"
+
+# osd_crosshair_color_texts[47] (item 1, bengali)
+18e54c.47 "{F9}{01}{02}{01}"
+
+# osd_crosshair_color_texts[18] (item 0, bengali)
+18e54c.18 "{F9}{15}{02}{0A}{02}"
+
+# table_18c8b8[76] (item 2, bengali)
+# osd_pbp_mode_texts[76] (item 2, bengali)
+# osd_location_texts[134] (item 4, bengali)
+18c8b8.76 "{F9}{1B}{02}{06}{3A}{02}{05}{02}{0E}{37}"
+
+# osd_location_texts[105] (item 3, bengali)
+18e9f8.105 "{F9}{1E}{02}{06}{0F} {48}{06}{3C}"
+
+# osd_location_texts[76] (item 2, bengali)
+18e9f8.76 "{F9}{00}{02}{06}{05} {48}{06}{3C}"
+
+# osd_location_texts[47] (item 1, bengali)
+18e9f8.47 "{F9}{1E}{02}{06}{0F} {13}{08}{06}{0B}"
+
+# osd_location_texts[18] (item 0, bengali)
+18e9f8.18 "{F9}{00}{02}{06}{05} {13}{08}{06}{0B}"
+
+# osd_size_texts[76] (item 2, bengali)
+18f550.76 "{F9}{00}{20}"
+
+# osd_size_texts[47] (item 1, bengali)
+18f550.47 "{F9}{05}{02}{4F}{02}{2B}"
+
+# osd_size_texts[18] (item 0, bengali)
+18f550.18 "{F9}{06}{0C}{02}{11}"
+
+# osd_crosshair_item_texts[134] (item 4, bengali)
+18f984.134 "{F9}{2B}{06}{15}{11}"
+
+# osd_crosshair_item_texts[105] (item 3, bengali)
+18f984.105 "{F9}{23}{00}{4C}{02}{0F}"
+
+# osd_crosshair_item_texts[76] (item 2, bengali)
+18f984.76 "Color"
+
+# osd_crosshair_item_texts[47] (item 1, bengali)
+18f984.47 "{F9}{33}{0E}{1B}{0F}"
+
+# osd_crosshair_item_texts[18] (item 0, bengali)
+18f984.18 "{F9}{06}{1B}{02}{0F}{11}{02}{0E} {0F}{02}"
+
+# osd_protect_button_texts[76] (item 2, bengali)
+190184.76 "{F9}{9C}{92}{9B}"
+
+# osd_protect_button_texts[47] (item 1, bengali)
+190184.47 "{F9}{00}{02}{C1}{01} {99}{60}{9D}"
+
+# osd_protect_button_texts[18] (item 0, bengali)
+190184.18 "{F9}{15}{B6}{02}{0A}{9D} {99}{60}{9D}"
+
+# osd_yes_no_texts[47] (item 1, bengali)
+190748.47 "{F9}{0F}{02}"
+
+# osd_yes_no_texts[18] (item 0, bengali)
+190748.18 "{F9}{2A}{18}{5A}"
+
+# osd_kvm_texts[47] (item 1, bengali)
+1909ec.47 "Upstream"
+
+# table_190cec[47] (item 1, bengali)
+190cec.47 "{F9}{90}{99} {F0}1000 nits"
+
+# osd_navi_key_item_texts[105] (item 3, bengali)
+19158c.105 "{F9}{1E}{02}{06}{0F}"
+
+# osd_navi_key_item_texts[76] (item 2, bengali)
+19158c.76 "{F9}{00}{02}{06}{05}"
+
+# osd_navi_key_item_texts[47] (item 1, bengali)
+19158c.47 "{F9}{48}{06}{3C}"
+
+# osd_navi_key_item_texts[18] (item 0, bengali)
+19158c.18 "{F9}{13}{08}{06}{0B}"
+
+# osd_info_box_texts[192] (item 6, bengali)
+191b30.192 "{F9}{0D}{06}{11}{0B} {04}{8A}{0B}{30}{02}"
+
+# osd_info_box_texts[163] (item 5, bengali)
+191b30.163 "{F9}{0D}{42}{22}{00}{8F}{0B} {5F}{1B}{02}{0B}"
+
+# osd_info_box_texts[134] (item 4, bengali)
+191b30.134 "{F9}{48}{4E}{02}{3C}{0F} {1D}{1E}"
+
+# osd_info_box_texts[76] (item 2, bengali)
+191b30.76 "{F9}{64}{40}{6E}{01} {06}{0B}{6C}{6D}{13}{09}{0F}"
+
+# osd_info_box_texts[47] (item 1, bengali)
+191b30.47 "{F9}{5F}{6B}{30} {06}{0B}{6C}{6D}{13}{09}{0F}"
+
+# osd_out_of_range_texts[18] (item 0, bengali)
+192d8c.18 "{F9}{5C}{05}{02}{0B} {00}{02}{0E}{06}{0B}!"
+
+# osd_no_signal_texts[18] (item 0, bengali)
+193008.18 "{F9}{06}{1B}{02}{06}{0F}{02} {49}{04}{0F}{18}{02}{01} {06}{0F}{0E}"
+
+# osd_power_button_texts[47] (item 1, bengali)
+19336c.47 "{F9}{72}{73}{74}{0E}"
+
+# osd_navi_function_texts[308] (item 10, bengali)
+1935bc.308 "{F9}{23}{08}{16}{86} {87}{88}{08}"
+
+# osd_navi_function_texts[279] (item 9, bengali)
+1935bc.279 "{F9}{66}{0E}{11} {1A}{09}{0F}"
+
+# osd_info_box_texts[105] (item 3, bengali)
+# osd_navi_function_texts[221] (item 7, bengali)
+191b30.105 "{F9}{2B}{2C}{06}{09}{0B} {2A}{02}{0B}"
+
+# osd_gi_item_texts[47] (item 1, bengali)
+# osd_navi_function_texts[105] (item 3, bengali)
+18a360.47 "Smart Crosshair"
+
+# osd_navi_function_texts[134] (item 4, bengali)
+1935bc.134 "{F9}{23}{18}{02}{01}{02}{2E} {2D}{2F}"
+
+# osd_navi_function_texts[76] (item 2, bengali)
+1935bc.76 "{F9}{06}{04}{0E}{05} {1D}{1E}"
+
+# osd_choice_note_function_texts[47] (item 1, bengali)
+# osd_image_item_texts[18] (item 0, bengali)
+# osd_navi_function_texts[47] (item 1, bengali)
+1832e4.47 "{F9}{13}{38}{01}{30}{02}"
+
+# osd_settings_item_texts[163] (item 5, bengali)
+# table_18c8b8[105] (item 3, bengali)
+# osd_navi_function_texts[250] (item 8, bengali)
+1874f8.163 "{F9}{30}{4B}{18}{F0} {F9}{48}{6F}"
+
+# osd_navi_function_texts[192] (item 6, bengali)
+1935bc.192 "{F9}PIP/PBP {1D}{1E}"
+
+# osd_image_enhancement_texts[134] (item 4, bengali)
+194b34.134 "{F9}{53}{00} {09}{50}{09}{02}{51}"
+
+# osd_image_enhancement_texts[105] (item 3, bengali)
+194b34.105 "{F9}{09}{50}{09}{02}{51}"
+
+# osd_image_enhancement_texts[76] (item 2, bengali)
+194b34.76 "{F9}{05}{02}{4F}{02}{2B}"
+
+# osd_image_enhancement_texts[47] (item 1, bengali)
+194b34.47 "{F9}{4D}{4E}{01}"
+
+# osd_pro_mode_texts[105] (item 3, bengali)
+1951dc.105 "{F9}{82}{8D}"
+
+# osd_pro_mode_texts[76] (item 2, bengali)
+1951dc.76 "{F9}{23}{18}{02}{24}-{81}{85}"
+
+# osd_pro_mode_texts[134] (item 4, bengali)
+1951dc.134 "{F9}{23}{64}{15}"
+
+# osd_oled_care_choice_texts[47] (item 1, bengali)
+# osd_optix_scope_item_texts[105] (item 3, bengali)
+# osd_off_on_texts[47] (item 1, bengali)
+# table_195a38[76] (item 2, bengali)
+16df60.47 "{F9}{23}{9D}"
+
+# osd_location_texts[163] (item 5, bengali)
+# table_195a38[18] (item 0, bengali)
+# table_195c7c[18] (item 0, bengali)
+18e9f8.163 "{F9}{23}{00}{4C}{02}{9D}"
+
+# osd_game_mode_texts[18] (item 0, bengali)
+195f24.18 "{F9}{CC}{CD}{CE}{02}{17} {0B}{80}"
+
+# osd_pro_mode_texts[47] (item 1, bengali)
+# osd_game_mode_texts[47] (item 1, bengali)
+1951dc.47 "{F9}{0E}{13}{37}{02}{0B}"
+
+# osd_game_mode_texts[105] (item 3, bengali)
+195f24.105 "{F9}{06}{0B}{49}{03}"
+
+# osd_pbp_mode_texts[47] (item 1, bengali)
+18e89c.47 "{F9}{1D}{1E} 2"
+
+# osd_pbp_mode_texts[18] (item 0, bengali)
+18e89c.18 "{F9}{1D}{1E} 1"
+
+# osd_oled_care_choice_texts[18] (item 0, bengali)
+# osd_night_vision_texts[18] (item 0, bengali)
+# table_18c8b8[18] (item 0, bengali)
+# osd_optix_scope_item_texts[76] (item 2, bengali)
+# osd_off_on_texts[18] (item 0, bengali)
+# osd_power_button_texts[18] (item 0, bengali)
+# ... and 5 more entries
+16df60.18 "{F9}{23}{29}"
+
+# osd_tab_name_texts[192] (item 6, bengali)
+196dc0.192 "{F9}{0F}{18}{02}{1A} {1C}"
+
+# osd_tab_name_texts[221] (item 7, bengali)
+196dc0.221 "{F9}{06}{15}{16}{03}"
+
+# osd_info_box_texts[18] (item 0, bengali)
+# osd_navi_function_texts[163] (item 5, bengali)
+# osd_tab_name_texts[134] (item 4, bengali)
+191b30.18 "{F9}{0E}{0F}{10}{06}{11}{0B} {13}{14}{15}"
+
+# osd_tab_name_texts[105] (item 3, bengali)
+196dc0.105 "{F9}{0C}{0D}"
+
+# osd_tab_name_texts[76] (item 2, bengali)
+196dc0.76 "{F9}{06}{08}{09}{02}{0A}{02}{0B}"
+
+# osd_tab_name_texts[47] (item 1, bengali)
+196dc0.47 "{F9}{06}{04}{07}{03}"

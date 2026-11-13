@@ -1,0 +1,19 @@
+# leon2m switchdataD_a0143280 0xa0143280-0xa01432c8 (72 bytes)
+a0143280:  00 0e 5e 90  unimp  0xe5e90
+a0143284:  00 0e 5e 6c  unimp  0xe5e6c
+a0143288:  00 0e 5e 48  unimp  0xe5e48
+a014328c:  00 0e 5e 24  unimp  0xe5e24
+a0143290:  00 0e 5e b0  unimp  0xe5eb0
+a0143294:  00 0e 5e b0  unimp  0xe5eb0
+a0143298:  00 0e 5e 18  unimp  0xe5e18
+a014329c:  00 0e 5d ec  unimp  0xe5dec
+a01432a0:  00 0e 5d e0  unimp  0xe5de0
+a01432a4:  00 0e 5d b4  unimp  0xe5db4
+a01432a8:  00 0e 5d a8  unimp  0xe5da8
+a01432ac:  00 0e 5d 9c  unimp  0xe5d9c
+a01432b0:  00 0e 5d 70  unimp  0xe5d70
+a01432b4:  00 0e 5d 34  unimp  0xe5d34
+a01432b8:  00 0e 5d 08  unimp  0xe5d08
+a01432bc:  00 0e 5c 7c  unimp  0xe5c7c
+a01432c0:  00 0e 5c e0  unimp  0xe5ce0
+a01432c4:  00 0e 5c b8  unimp  0xe5cb8

@@ -1,0 +1,17 @@
+/* uart_cmd_return_zero_copy36  (FUN_a014881c)
+ *
+ * Return 0.
+ * Note: No caller found. Identical copy of uart_cmd_return_zero.
+ * Name basis: descriptive - body is 'return 0'; lies among the set handlers
+ *
+ * Matching notes
+ * --------------
+ * FUN_a014881c (leon2m 0xa014881c-0xa0148824, 8 bytes, leaf), flags -mcpu=v8 -O2 -g.
+ * Returns 0. Nothing in the image refers to it: no call, branch, sethi/or constant or address word. It lies between
+ * sys_return_one_copy5 and uart_cmd_return_zero_copy37. Source form: a constant return; the value is set in the retl delay slot.
+ */
+/* Does nothing and returns 0. Nothing refers to this copy; the same body exists as uart_cmd_return_zero. */
+int uart_cmd_return_zero_copy36(void)
+{
+    return 0;
+}

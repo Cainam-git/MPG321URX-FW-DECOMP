@@ -1,0 +1,636 @@
+# Texts of language 14, named "Türkçe" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[43] (item 1, turkish)
+16e0d0.43 "{F7}Ş{F0}Yürüt{F7}3{F0} düğmesine bas{F7}{7F}{F0}n."
+
+# osd_protect_long_execute_texts[14] (item 0, turkish)
+16e0d0.14 "{F0}Panel gör. kalitesini korumak amac{F7}{7F}{F0}yla, panel koruma (uzun süre) işlevi için "
+
+# osd_protect_long_auto_texts[14] (item 0, turkish)
+16f25c.14 "{F0}Panel gör. kalitesini korumak için, panel koruma (uzun süre) işlevi oto."
+
+# osd_protect_long_title_texts[72] (item 2, turkish)
+16f670.72 "{F0}saatten daha uzun bir süre kullan{F7}{7F}{F0}ld{F7}{7F}{F0}ğ{F7}{7F}{F0}nda otomatik olarak harekete geçecektir"
+
+# osd_protect_long_title_texts[43] (item 1, turkish)
+16f670.43 "{F0}Panel görüntü kalitesini korumak için, panel koruma (uzun süre) işlevi monitör 1500"
+
+# osd_protect_long_title_texts[14] (item 0, turkish)
+16f670.14 "{F0}MSI OLED Care - Panel Koruma (Uzun Süre)"
+
+# osd_protect_long_incomplete_texts[43] (item 1, turkish)
+172590.43 "{F0}olduğunda işlemi yapmak için bu öğeyi seçin ve t{F7}{7F}{F0}klay{F7}{7F}{F0}n."
+
+# osd_protect_long_incomplete_texts[14] (item 0, turkish)
+172590.14 "{F0}Panel koruma (uzun süre) işlemi tamamlanmad{F7}{7F}{F0}. Lütf. daha sonra gerekli "
+
+# osd_protect_incomplete_texts[43] (item 1, turkish)
+173998.43 "{F0}işlemi yapmak için bu öğeyi seçin ve t{F7}ı{F0}klay{F7}ı{F0}n. "
+
+# osd_protect_incomplete_texts[14] (item 0, turkish)
+173998.14 "{F0}Panel koruma işlemi tamamlanmad{F7}ı{F0}. Lütf. daha sonra gerekli olduğunda "
+
+# osd_protect_long_incomplete_texts[72] (item 2, turkish)
+# osd_protect_incomplete_texts[72] (item 2, turkish)
+# osd_protect_execute_texts[72] (item 2, turkish)
+172590.72 "{F0}Not :"
+
+# osd_protect_execute_texts[43] (item 1, turkish)
+174bd0.43 "{F0}amac{F7}ı{F0}yla \"Yürüt\" düğmesine bas{F7}ı{F0}n."
+
+# osd_protect_execute_texts[14] (item 0, turkish)
+174bd0.14 "{F0}Panel görüntü kalitesini korumak için panel koruma işlevini yapmak "
+
+# osd_protect_long_retry_texts[43] (item 1, turkish)
+175de4.43 "{F0}işlevi için {F7}Ş{F0}yürüt{F7}3{F0} düğmesine bas{F7}{7F}{F0}n."
+
+# osd_protect_long_retry_texts[14] (item 0, turkish)
+175de4.14 "{F0}Panel koruma (uzun süre) işlemi tamamlanmad{F7}{7F}{F0}. Lütf. panel koruma (uzun süre) "
+
+# osd_protect_retry_texts[43] (item 1, turkish)
+177270.43 "{F0}düğmesine bas{F7}ı{F0}n. "
+
+# osd_protect_retry_texts[14] (item 0, turkish)
+177270.14 "{F0}Panel koruma işlemi tamamlanmad{F7}ı{F0}. Lütf. panel koruma işlevi{F7}”{F0} için \"yürüt\""
+
+# osd_protect_auto_texts[14] (item 0, turkish)
+1785c0.14 "{F0}Panel gör. kalitesini korumak için, panel koruma işlevi oto."
+
+# osd_protect_long_auto_texts[43] (item 1, turkish)
+16f25c.43 "{F0}etkinleştirilecek."
+
+# osd_protect_auto_texts[43] (item 1, turkish)
+1785c0.43 "{F0}etkinleştirilecek."
+
+# osd_protect_long_execute_texts[130] (item 4, turkish)
+# osd_protect_long_auto_texts[130] (item 4, turkish)
+# osd_protect_long_title_texts[159] (item 5, turkish)
+# osd_protect_long_incomplete_texts[130] (item 4, turkish)
+# osd_protect_long_retry_texts[130] (item 4, turkish)
+16e0d0.130 "{F0}Güç göstergesi işlem tamamlanana kadar beyaz yan{F7}{7F}{F0}p sönecektir."
+
+# osd_protect_long_execute_texts[101] (item 3, turkish)
+# osd_protect_long_auto_texts[101] (item 3, turkish)
+# osd_protect_long_title_texts[130] (item 4, turkish)
+# osd_protect_long_incomplete_texts[101] (item 3, turkish)
+# osd_protect_long_retry_texts[101] (item 3, turkish)
+16e0d0.101 "{F0}Bu koruma işlevinin tamamlanmas{F7}{7F}{F0} bir saat sürebilir."
+
+# osd_protect_long_title_texts[333] (item 11, turkish)
+# osd_protect_long_retry_texts[304] (item 10, turkish)
+# osd_protect_retry_texts[304] (item 10, turkish)
+16f670.333 "{F0}güç tasarruf modundayken oto. etkinleştirilecektir."
+
+# osd_protect_long_title_texts[304] (item 10, turkish)
+# osd_protect_long_retry_texts[275] (item 9, turkish)
+# osd_protect_retry_texts[275] (item 9, turkish)
+16f670.304 "{F0}\"{F7}İ{F0}ptal\" düğmesi t{F7}ı{F0}klan{F7}ı{F0}rsa, bu işlem monitör KAPALI olduğunda veya"
+
+# osd_protect_long_execute_texts[246] (item 8, turkish)
+# osd_protect_long_auto_texts[246] (item 8, turkish)
+# osd_protect_long_title_texts[275] (item 9, turkish)
+# osd_protect_long_incomplete_texts[246] (item 8, turkish)
+# osd_protect_incomplete_texts[246] (item 8, turkish)
+# osd_protect_execute_texts[246] (item 8, turkish)
+# ... and 4 more entries
+16e0d0.246 "{F0} "
+
+# osd_protect_long_execute_texts[217] (item 7, turkish)
+# osd_protect_long_auto_texts[217] (item 7, turkish)
+# osd_protect_long_title_texts[246] (item 8, turkish)
+# osd_protect_long_incomplete_texts[217] (item 7, turkish)
+# osd_protect_incomplete_texts[217] (item 7, turkish)
+# osd_protect_execute_texts[217] (item 7, turkish)
+# ... and 4 more entries
+16e0d0.217 "{F7}İ{F0}şlem yürütülürken bu işlevi iptal etmek için güç düğmesine tekrar bas{F7}ı{F0}n."
+
+# osd_protect_long_execute_texts[188] (item 6, turkish)
+# osd_protect_long_auto_texts[188] (item 6, turkish)
+# osd_protect_long_title_texts[217] (item 7, turkish)
+# osd_protect_long_incomplete_texts[188] (item 6, turkish)
+# osd_protect_incomplete_texts[188] (item 6, turkish)
+# osd_protect_execute_texts[188] (item 6, turkish)
+# ... and 4 more entries
+16e0d0.188 "{F0} "
+
+# osd_protect_long_execute_texts[159] (item 5, turkish)
+# osd_protect_long_auto_texts[159] (item 5, turkish)
+# osd_protect_long_title_texts[188] (item 6, turkish)
+# osd_protect_long_incomplete_texts[159] (item 5, turkish)
+# osd_protect_incomplete_texts[159] (item 5, turkish)
+# osd_protect_execute_texts[159] (item 5, turkish)
+# ... and 4 more entries
+16e0d0.159 "{F7}İ{F0}şlem yürütülürken lütfen monitörün güç kablosunu prizden çekmeyin."
+
+# osd_protect_incomplete_texts[130] (item 4, turkish)
+# osd_protect_execute_texts[130] (item 4, turkish)
+# osd_protect_retry_texts[130] (item 4, turkish)
+# osd_protect_auto_texts[130] (item 4, turkish)
+# osd_protect_title_texts[159] (item 5, turkish)
+173998.130 "{F0}Güç göstergesi işlem tamamlanana kadar turuncu yan{F7}ı{F0}p sönecektir."
+
+# osd_protect_incomplete_texts[101] (item 3, turkish)
+# osd_protect_execute_texts[101] (item 3, turkish)
+# osd_protect_retry_texts[101] (item 3, turkish)
+# osd_protect_auto_texts[101] (item 3, turkish)
+# osd_protect_title_texts[130] (item 4, turkish)
+173998.101 "{F0}Bu koruma işlevinin tamamlanmas{F7}ı{F0} birkaç dakika sürebilir."
+
+# osd_protect_long_execute_texts[72] (item 2, turkish)
+# osd_protect_long_auto_texts[72] (item 2, turkish)
+# osd_protect_long_title_texts[101] (item 3, turkish)
+# osd_protect_long_retry_texts[72] (item 2, turkish)
+# osd_protect_retry_texts[72] (item 2, turkish)
+# osd_protect_auto_texts[72] (item 2, turkish)
+# ... and 1 more entries
+16e0d0.72 "{F0}Not :"
+
+# osd_protect_title_texts[72] (item 2, turkish)
+179a14.72 "{F0}4 saatten daha uzun bir süre kullan{F7}ı{F0}ld{F7}ı{F0}ğ{F7}ı{F0}nda otomatik olarak harekete geçecektir."
+
+# osd_protect_title_texts[43] (item 1, turkish)
+179a14.43 "{F0}Panel görüntü kalitesini korumak için, panel koruma işlevi monitör "
+
+# osd_protect_title_texts[14] (item 0, turkish)
+179a14.14 "{F0}MSI OLED Care - Panel Koruma "
+
+# osd_protect_retry_texts[420] (item 14, turkish)
+# osd_protect_title_texts[391] (item 13, turkish)
+177270.420 "{F0}panel kullan{F7}ı{F0}m{F7}ı{F0}nda ekrana gelecektir."
+
+# osd_protect_retry_texts[391] (item 13, turkish)
+# osd_protect_title_texts[362] (item 12, turkish)
+177270.391 "{F0}\"Daha sonra\" düğmesine t{F7}ı{F0}klarsan{F7}ı{F0}z, bildirim yaln{F7}ı{F0}zca 24 saati aşan toplam"
+
+# osd_protect_retry_texts[362] (item 12, turkish)
+# osd_protect_title_texts[333] (item 11, turkish)
+177270.362 "{F0}olduğunda veya güç tasarruf modundayken oto. etkinleştirilecektir."
+
+# osd_protect_retry_texts[333] (item 11, turkish)
+# osd_protect_title_texts[304] (item 10, turkish)
+177270.333 "{F0}\"{F7}İ{F0}ptal {F0}\"veya \"Daha sonra\" düğmesi t{F7}ı{F0}klan{F7}ı{F0}rsa, bu işlem monitör KAPALI"
+
+# osd_change_notice_line3_texts[14] (item 0, turkish)
+180b60.14 "Lütfen aşağıdaki seçeneklerden birini belirleyin:"
+
+# osd_change_notice_line2_texts[14] (item 0, turkish)
+181058.14 "güç tüketimini artırabilir."
+
+# osd_change_notice_line1_texts[14] (item 0, turkish)
+1814d8.14 "Seçilen işlevin değiştirilmesi bu monitörün"
+
+# osd_change_notice_title_texts[14] (item 0, turkish)
+1819cc.14 "Değişikliği Onayla!"
+
+# table_1821d4[43] (item 1, turkish)
+1821d4.43 "Dijital"
+
+# table_1821d4[14] (item 0, turkish)
+1821d4.14 "Analog"
+
+# osd_pbp_source_texts[43] (item 1, turkish)
+182534.43 "Kaynak 2"
+
+# osd_pbp_source_texts[14] (item 0, turkish)
+182534.14 "Kaynak 1"
+
+# osd_pip_item_texts[72] (item 2, turkish)
+1828c0.72 "Konum"
+
+# osd_pip_item_texts[43] (item 1, turkish)
+1828c0.43 "PIP Boyutu"
+
+# osd_pip_item_texts[14] (item 0, turkish)
+1828c0.14 "Kaynak"
+
+# osd_pip_item_texts[130] (item 4, turkish)
+1828c0.130 "Ses geçişi"
+
+# osd_pip_item_texts[101] (item 3, turkish)
+1828c0.101 "Görüntü geçişi"
+
+# osd_choice_note_function_texts[130] (item 4, turkish)
+1832e4.130 "Ekran Boyutu"
+
+# osd_choice_note_reducing_texts[159] (item 5, turkish)
+183cb4.159 "{F0}çal{F7}{7F}{F0}şmayacakt{F7}{7F}{F0}r."
+
+# osd_choice_note_reducing_texts[130] (item 4, turkish)
+183cb4.130 "{F0}al{F7}{7F}{F0}rken bu işlev"
+
+# osd_choice_note_reducing_texts[101] (item 3, turkish)
+183cb4.101 "{F0}Monitör VRR içeriğin"
+
+# osd_choice_note_reducing_texts[72] (item 2, turkish)
+183cb4.72 "{F0}ayar{F7}ı{F0}na bağl{F7}ı{F0}d{F7}ı{F0}r."
+
+# osd_choice_note_reducing_texts[43] (item 1, turkish)
+183cb4.43 "{F0}l{F7}ı{F0}k\" veya \"DisplayHDR\""
+
+# osd_choice_note_reducing_texts[14] (item 0, turkish)
+183cb4.14 "{F0}Efektin azalt{F7}ı{F0}lmas{F7}ı{F0} \"Parlak"
+
+# osd_choice_note_texts[130] (item 4, turkish)
+183a70.130 "{F0}bir sa."
+
+# osd_choice_note_texts[101] (item 3, turkish)
+183a70.101 "{F0}Tamamlama yakl."
+
+# osd_choice_note_texts[72] (item 2, turkish)
+183a70.72 "{F0}15 dak."
+
+# osd_choice_note_texts[43] (item 1, turkish)
+183a70.43 "{F0}Tamamlamak içi yakl."
+
+# osd_choice_note_texts[14] (item 0, turkish)
+183a70.14 "{F0}Not :"
+
+# osd_oled_care_item_texts[72] (item 2, turkish)
+185e78.72 "{F0}Koruma Bildirimi"
+
+# osd_oled_care_function_texts[159] (item 5, turkish)
+# osd_oled_care_item_texts[188] (item 6, turkish)
+185bc0.159 "{F0}S{F7}ı{F0}n{F7}ı{F0}r Tespiti"
+
+# osd_oled_care_function_texts[130] (item 4, turkish)
+# osd_oled_care_item_texts[159] (item 5, turkish)
+185bc0.130 "{F0}Görev Çub. Alg."
+
+# osd_oled_care_function_texts[101] (item 3, turkish)
+# osd_oled_care_item_texts[130] (item 4, turkish)
+185bc0.101 "{F0}Çoklu Logo Alg{F7}ı{F0}lama"
+
+# osd_oled_care_item_texts[217] (item 7, turkish)
+185e78.217 "{F0}OLED Panel Bilgileri"
+
+# osd_oled_care_function_texts[72] (item 2, turkish)
+# osd_oled_care_item_texts[101] (item 3, turkish)
+185bc0.72 "{F0}Statik Ekran Alg{F7}ı{F0}lama"
+
+# osd_oled_care_function_texts[14] (item 0, turkish)
+# osd_oled_care_item_texts[43] (item 1, turkish)
+185bc0.14 "{F0}Panel Koruma"
+
+# osd_oled_care_function_texts[43] (item 1, turkish)
+# osd_oled_care_item_texts[14] (item 0, turkish)
+185bc0.43 "{F0}Piksel Geçişi"
+
+# osd_choice_note_function_texts[304] (item 10, turkish)
+# osd_settings_item_texts[217] (item 7, turkish)
+1832e4.304 "{F0}Tip C PD {F7}Ş{F0}arj"
+
+# osd_settings_item_texts[130] (item 4, turkish)
+1874f8.130 "{F0}Güç Düğmesi"
+
+# osd_settings_item_texts[275] (item 9, turkish)
+1874f8.275 "Sıfırla"
+
+# osd_settings_item_texts[72] (item 2, turkish)
+1874f8.72 "OSD Time out"
+
+# osd_settings_item_texts[43] (item 1, turkish)
+1874f8.43 "Saydamlık"
+
+# osd_settings_item_texts[14] (item 0, turkish)
+1874f8.14 "Dil"
+
+# osd_professional_item_texts[72] (item 2, turkish)
+188634.72 "Görüntü İyileştirme"
+
+# osd_professional_item_texts[43] (item 1, turkish)
+188634.43 "Düşük Mavi Işık"
+
+# osd_professional_item_texts[14] (item 0, turkish)
+188634.14 "Profesyonel Mod"
+
+# osd_night_vision_texts[101] (item 3, turkish)
+1890d4.101 "En Güçlü"
+
+# osd_night_vision_texts[72] (item 2, turkish)
+1890d4.72 "Güçlü"
+
+# osd_night_vision_texts[43] (item 1, turkish)
+1890d4.43 "Normal"
+
+# osd_choice_note_function_texts[275] (item 9, turkish)
+# osd_gaming_item_texts[43] (item 1, turkish)
+1832e4.275 "Gece Görüşü"
+
+# osd_gaming_item_texts[130] (item 4, turkish)
+188da0.130 "Alarm Saati"
+
+# osd_gaming_item_texts[101] (item 3, turkish)
+188da0.101 "Yenileme Hızı"
+
+# osd_choice_note_function_texts[159] (item 5, turkish)
+1832e4.159 "Tepki Süresi"
+
+# osd_gaming_item_texts[14] (item 0, turkish)
+188da0.14 "Oyun Modu"
+
+# osd_choice_note_function_texts[188] (item 6, turkish)
+# osd_gi_item_texts[72] (item 2, turkish)
+1832e4.188 "Optix Kapsamı"
+
+# osd_oled_care_seconds_texts[101] (item 3, turkish)
+18a7ec.101 "{F0}240 Sn."
+
+# osd_oled_care_seconds_texts[72] (item 2, turkish)
+18a7ec.72 "{F0}120 Sn."
+
+# osd_oled_care_seconds_texts[43] (item 1, turkish)
+18a7ec.43 "{F0}100 Sn."
+
+# osd_oled_care_seconds_texts[14] (item 0, turkish)
+18a7ec.14 "{F0}50 Sn."
+
+# table_18af08[43] (item 1, turkish)
+# table_18b008[43] (item 1, turkish)
+18af08.43 "{F0}Manuel olarak"
+
+# osd_oled_care_usage_texts[43] (item 1, turkish)
+18b29c.43 "{F0}>24 sa. kullan{F7}ı{F0}m "
+
+# osd_oled_care_speed_texts[72] (item 2, turkish)
+18b5e0.72 "{F0}H{F7}ı{F0}zl{F7}ı"
+
+# osd_oled_care_speed_texts[14] (item 0, turkish)
+18b5e0.14 "{F0}Yavaş"
+
+# osd_oled_care_choice_texts[72] (item 2, turkish)
+# osd_oled_care_status_texts[72] (item 2, turkish)
+16df60.72 "{F0}Düşürme Seviye"
+
+# osd_oled_care_status_texts[43] (item 1, turkish)
+18b94c.43 "{F0}Gereken süre"
+
+# osd_oled_care_status_texts[14] (item 0, turkish)
+18b94c.14 "{F0}Başlang{F7}ı{F0}ç:"
+
+# table_18c070[43] (item 1, turkish)
+18c070.43 "{F0}Uzun Süre"
+
+# table_18c070[14] (item 0, turkish)
+18c070.14 "{F0}K{F7}{7F}{F0}sa Süre"
+
+# table_18c4a8[14] (item 0, turkish)
+18c4a8.14 "{F0}Hareket h{F7}{7F}{F0}z{F7}{7F}{F0} (Piksel Geçi" hidden ce 29
+
+# osd_image_item_texts[130] (item 4, turkish)
+18ca88.130 "Ekran Boyutu"
+
+# osd_image_item_texts[101] (item 3, turkish)
+18ca88.101 "Renk Sıcaklığı"
+
+# osd_image_item_texts[72] (item 2, turkish)
+18ca88.72 "Netlik"
+
+# osd_image_item_texts[43] (item 1, turkish)
+18ca88.43 "Karşıtlık"
+
+# osd_language_texts[14] (item 0, turkish)
+18d3d4.14 "Türkçe"
+
+# osd_optix_scope_item_texts[43] (item 1, turkish)
+18d578.43 "Kapsam Oranı"
+
+# osd_optix_scope_item_texts[14] (item 0, turkish)
+18d578.14 "Kapsam Boyutu"
+
+# osd_color_temp_texts[101] (item 3, turkish)
+18db28.101 "Özelleştirme"
+
+# osd_color_temp_texts[72] (item 2, turkish)
+18db28.72 "Sıcak"
+
+# osd_color_temp_texts[14] (item 0, turkish)
+18db28.14 "Soğuk"
+
+# osd_response_time_texts[72] (item 2, turkish)
+18e08c.72 "En Hızlı"
+
+# osd_response_time_texts[43] (item 1, turkish)
+18e08c.43 "{F0}Hızlı"
+
+# osd_oled_care_speed_texts[43] (item 1, turkish)
+# osd_color_temp_texts[43] (item 1, turkish)
+# osd_response_time_texts[14] (item 0, turkish)
+18b5e0.43 "Normal"
+
+# osd_crosshair_color_texts[43] (item 1, turkish)
+18e54c.43 "Kırmızı"
+
+# osd_crosshair_color_texts[14] (item 0, turkish)
+18e54c.14 "Beyaz"
+
+# table_18c8b8[72] (item 2, turkish)
+# osd_pbp_mode_texts[72] (item 2, turkish)
+# osd_location_texts[130] (item 4, turkish)
+18c8b8.72 "{F0}Özelleştir"
+
+# osd_location_texts[101] (item 3, turkish)
+18e9f8.101 "Sağ Alt"
+
+# osd_location_texts[72] (item 2, turkish)
+18e9f8.72 "Sol Alt"
+
+# osd_location_texts[43] (item 1, turkish)
+18e9f8.43 "Sağ Üst"
+
+# osd_location_texts[14] (item 0, turkish)
+18e9f8.14 "Sol Üst"
+
+# osd_size_texts[72] (item 2, turkish)
+18f550.72 "Büyük"
+
+# osd_size_texts[43] (item 1, turkish)
+18f550.43 "Orta"
+
+# osd_size_texts[14] (item 0, turkish)
+18f550.14 "Küçük"
+
+# osd_crosshair_item_texts[130] (item 4, turkish)
+18f984.130 "Sıfırla"
+
+# osd_crosshair_item_texts[101] (item 3, turkish)
+18f984.101 "Pozisyon"
+
+# osd_crosshair_item_texts[72] (item 2, turkish)
+18f984.72 "{F0}Renk"
+
+# osd_crosshair_item_texts[43] (item 1, turkish)
+18f984.43 "Simge"
+
+# osd_crosshair_item_texts[14] (item 0, turkish)
+18f984.14 "Yok"
+
+# osd_protect_button_texts[72] (item 2, turkish)
+190184.72 "{F0}Daha sonra"
+
+# osd_protect_button_texts[43] (item 1, turkish)
+190184.43 "{F7}İ{F0}ptal"
+
+# osd_protect_button_texts[14] (item 0, turkish)
+190184.14 "{F0}Yürüt"
+
+# osd_yes_no_texts[43] (item 1, turkish)
+190748.43 "Hayır"
+
+# osd_yes_no_texts[14] (item 0, turkish)
+190748.14 "Evet"
+
+# osd_kvm_texts[43] (item 1, turkish)
+1909ec.43 "{F0}Yukarı yönde"
+
+# table_190cec[43] (item 1, turkish)
+190cec.43 "{F0}Pik 1000 nit"
+
+# osd_navi_key_item_texts[101] (item 3, turkish)
+19158c.101 "Sağ"
+
+# osd_navi_key_item_texts[72] (item 2, turkish)
+19158c.72 "Sol"
+
+# osd_navi_key_item_texts[43] (item 1, turkish)
+19158c.43 "Aşağı"
+
+# osd_navi_key_item_texts[14] (item 0, turkish)
+19158c.14 "Yukarı"
+
+# osd_info_box_texts[188] (item 6, turkish)
+191b30.188 "Bit Derinliği"
+
+# osd_info_box_texts[159] (item 5, turkish)
+191b30.159 "İçerik Türü"
+
+# osd_info_box_texts[130] (item 4, turkish)
+191b30.130 "Mod Seç"
+
+# osd_info_box_texts[72] (item 2, turkish)
+191b30.72 "Fiziksel Çözünürlük"
+
+# osd_info_box_texts[43] (item 1, turkish)
+191b30.43 "Doğal Çözünürlük"
+
+# osd_out_of_range_texts[14] (item 0, turkish)
+192d8c.14 "Kapsam Dışında!"
+
+# osd_no_signal_texts[14] (item 0, turkish)
+193008.14 "Sinyal Yok"
+
+# osd_power_button_texts[43] (item 1, turkish)
+19336c.43 "Beklemede"
+
+# osd_navi_function_texts[304] (item 10, turkish)
+1935bc.304 "Optix Kapsamı"
+
+# osd_navi_function_texts[275] (item 9, turkish)
+1935bc.275 "Gece Görüşü"
+
+# osd_info_box_texts[101] (item 3, turkish)
+# osd_navi_function_texts[217] (item 7, turkish)
+191b30.101 "Yenileme Hızı"
+
+# osd_gi_item_texts[43] (item 1, turkish)
+# osd_navi_function_texts[101] (item 3, turkish)
+18a360.43 "{F0}Akıllı Artı {F7}İŞ{F0}areti"
+
+# osd_navi_function_texts[130] (item 4, turkish)
+1935bc.130 "Alarm Saati"
+
+# osd_navi_function_texts[72] (item 2, turkish)
+1935bc.72 "Oyun Modu"
+
+# osd_choice_note_function_texts[43] (item 1, turkish)
+# osd_image_item_texts[14] (item 0, turkish)
+# osd_navi_function_texts[43] (item 1, turkish)
+1832e4.43 "Parlaklık"
+
+# osd_settings_item_texts[159] (item 5, turkish)
+# table_18c8b8[101] (item 3, turkish)
+# osd_navi_function_texts[246] (item 8, turkish)
+1874f8.159 "Ekrandaki Bilgi"
+
+# osd_navi_function_texts[188] (item 6, turkish)
+1935bc.188 "PIP/PBP Modu"
+
+# osd_image_enhancement_texts[130] (item 4, turkish)
+194b34.130 "En Güçlü"
+
+# osd_image_enhancement_texts[101] (item 3, turkish)
+194b34.101 "Güçlü"
+
+# osd_image_enhancement_texts[72] (item 2, turkish)
+194b34.72 "Orta"
+
+# osd_image_enhancement_texts[43] (item 1, turkish)
+194b34.43 "Zayıf"
+
+# osd_pro_mode_texts[14] (item 0, turkish)
+1951dc.14 "Eko"
+
+# osd_pro_mode_texts[101] (item 3, turkish)
+1951dc.101 "Film"
+
+# osd_pro_mode_texts[72] (item 2, turkish)
+1951dc.72 "Mavi Karşıtı"
+
+# osd_pro_mode_texts[130] (item 4, turkish)
+1951dc.130 "Ofis"
+
+# osd_oled_care_choice_texts[43] (item 1, turkish)
+# osd_optix_scope_item_texts[101] (item 3, turkish)
+# osd_off_on_texts[43] (item 1, turkish)
+# table_195a38[72] (item 2, turkish)
+16df60.43 "AÇIK"
+
+# osd_location_texts[159] (item 5, turkish)
+# table_195a38[14] (item 0, turkish)
+# table_195c7c[14] (item 0, turkish)
+18e9f8.159 "Konum"
+
+# osd_game_mode_texts[14] (item 0, turkish)
+195f24.14 "{F0}Premium Renk"
+
+# osd_pro_mode_texts[43] (item 1, turkish)
+# osd_game_mode_texts[43] (item 1, turkish)
+1951dc.43 "Kullanıcı"
+
+# osd_game_mode_texts[101] (item 3, turkish)
+195f24.101 "Yarış"
+
+# osd_pbp_mode_texts[43] (item 1, turkish)
+18e89c.43 "Mod 2"
+
+# osd_pbp_mode_texts[14] (item 0, turkish)
+18e89c.14 "Mod 1"
+
+# osd_oled_care_choice_texts[14] (item 0, turkish)
+# osd_night_vision_texts[14] (item 0, turkish)
+# table_18c8b8[14] (item 0, turkish)
+# osd_optix_scope_item_texts[72] (item 2, turkish)
+# osd_off_on_texts[14] (item 0, turkish)
+# osd_power_button_texts[14] (item 0, turkish)
+# ... and 5 more entries
+16df60.14 "KAPALI"
+
+# osd_tab_name_texts[188] (item 6, turkish)
+196dc0.188 "Gezinme Tuşu"
+
+# osd_tab_name_texts[217] (item 7, turkish)
+196dc0.217 "Ayar"
+
+# osd_info_box_texts[14] (item 0, turkish)
+# osd_navi_function_texts[159] (item 5, turkish)
+# osd_tab_name_texts[130] (item 4, turkish)
+191b30.14 "Giriş Kaynağı"
+
+# osd_tab_name_texts[101] (item 3, turkish)
+196dc0.101 "Görüntü"
+
+# osd_tab_name_texts[72] (item 2, turkish)
+196dc0.72 "Profesyonel"
+
+# osd_tab_name_texts[43] (item 1, turkish)
+196dc0.43 "Oyun"

@@ -1,0 +1,3 @@
+libgcc.a _ge_sf.o __gesf2
+# leon2m FUN_a0155bdc: toolchain library function __gesf2 (libgcc.a:_ge_sf.o, 100 bytes; same code as __gtsf2),
+# called by __fixunssfsi (FUN_a01551bc); the archive member is the source, nothing to decompile.

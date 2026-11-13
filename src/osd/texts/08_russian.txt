@@ -1,0 +1,645 @@
+# Texts of language 8, named "Русский" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[37] (item 1, russian)
+16e0d0.37 "{F0}для вып. функц. защиты панели (долговр.)."
+
+# osd_protect_long_execute_texts[8] (item 0, russian)
+16e0d0.8 "{F0}Для стабильн. кач. изобр. на панели нажм. кноп. \"Выполн.\" "
+
+# osd_protect_long_auto_texts[8] (item 0, russian)
+16f25c.8 "{F0}Для стабильн. кач. изобр. на панели функц. Защиты"
+
+# osd_protect_long_title_texts[66] (item 2, russian)
+16f670.66 "{F0}) защиты панели автоматически активируется после использования монитора более 1500 часов."
+
+# osd_protect_long_title_texts[37] (item 1, russian)
+16f670.37 "{F0}Для поддержания качества изображения панели на высоком уровне функция (долговременной"
+
+# osd_protect_long_title_texts[8] (item 0, russian)
+16f670.8 "{F0}Уход за OLED пан. MSI  - Защита панели (Долговременная)"
+
+# osd_protect_long_incomplete_texts[37] (item 1, russian)
+172590.37 "{F0}на этот пункт, чтобы выполн. позже."
+
+# osd_protect_long_incomplete_texts[8] (item 0, russian)
+172590.8 "{F0}Защита панели (долговр.) не выполн. Выбер. и нажм."
+
+# osd_protect_incomplete_texts[37] (item 1, russian)
+173998.37 "{F0}чтобы выполн. позже."
+
+# osd_protect_incomplete_texts[8] (item 0, russian)
+173998.8 "{F0}Защита панели не выполн. Выбер. и нажм. на этот пункт,"
+
+# osd_protect_long_incomplete_texts[66] (item 2, russian)
+# osd_protect_incomplete_texts[66] (item 2, russian)
+# osd_protect_execute_texts[66] (item 2, russian)
+172590.66 "{F0}Примечание:"
+
+# osd_protect_execute_texts[37] (item 1, russian)
+174bd0.37 "{F0}кнопку \"Выполнить\", чтобы активировать функцию защиты панели."
+
+# osd_protect_execute_texts[8] (item 0, russian)
+174bd0.8 "{F0}Для поддержания качества изображения панели на высоком уровне нажмите на"
+
+# osd_protect_long_retry_texts[37] (item 1, russian)
+175de4.37 "{F0}\"Выполн.\" для вып. функц. защиты панели (долговр.)."
+
+# osd_protect_long_retry_texts[8] (item 0, russian)
+175de4.8 "{F0}Защита панели (долговр.) не выполн. Нажм. на кноп. "
+
+# osd_protect_retry_texts[37] (item 1, russian)
+177270.37 "{F0}функц. защиты панели."
+
+# osd_protect_retry_texts[8] (item 0, russian)
+177270.8 "{F0}Защита панели не выполн. Нажм. на кноп. \"Выполн.\" для вып. "
+
+# osd_protect_auto_texts[8] (item 0, russian)
+1785c0.8 "{F0}Для стабильн. кач. изобр. на панели функц. "
+
+# osd_protect_long_auto_texts[37] (item 1, russian)
+16f25c.37 "{F0}панели (долговр.) актив. автоматич."
+
+# osd_protect_auto_texts[37] (item 1, russian)
+1785c0.37 "{F0}защиты панели актив. автоматич."
+
+# osd_protect_long_execute_texts[124] (item 4, russian)
+# osd_protect_long_auto_texts[124] (item 4, russian)
+# osd_protect_long_title_texts[153] (item 5, russian)
+# osd_protect_long_incomplete_texts[124] (item 4, russian)
+# osd_protect_long_retry_texts[124] (item 4, russian)
+16e0d0.124 "{F0}Во время выполн. индик. пит. мигает белым цвет."
+
+# osd_protect_long_execute_texts[95] (item 3, russian)
+# osd_protect_long_auto_texts[95] (item 3, russian)
+# osd_protect_long_title_texts[124] (item 4, russian)
+# osd_protect_long_incomplete_texts[95] (item 3, russian)
+# osd_protect_long_retry_texts[95] (item 3, russian)
+16e0d0.95 "{F0}Выполн. защит. функц. может занять 1 час."
+
+# osd_protect_long_title_texts[327] (item 11, russian)
+# osd_protect_long_retry_texts[298] (item 10, russian)
+# osd_protect_retry_texts[298] (item 10, russian)
+16f670.327 "{F0}выкл. монитора или перех. в реж. энергосбереж."
+
+# osd_protect_long_title_texts[298] (item 10, russian)
+# osd_protect_long_retry_texts[269] (item 9, russian)
+# osd_protect_retry_texts[269] (item 9, russian)
+16f670.298 "{F0}Если наж. на кноп. \"Отмена\", процесс актив. автомат. при"
+
+# osd_protect_long_execute_texts[240] (item 8, russian)
+# osd_protect_long_auto_texts[240] (item 8, russian)
+# osd_protect_long_title_texts[269] (item 9, russian)
+# osd_protect_long_incomplete_texts[240] (item 8, russian)
+# osd_protect_incomplete_texts[240] (item 8, russian)
+# osd_protect_execute_texts[240] (item 8, russian)
+# ... and 4 more entries
+16e0d0.240 "{F0}повторно, чтобы отменить эту функцию."
+
+# osd_protect_long_execute_texts[211] (item 7, russian)
+# osd_protect_long_auto_texts[211] (item 7, russian)
+# osd_protect_long_title_texts[240] (item 8, russian)
+# osd_protect_long_incomplete_texts[211] (item 7, russian)
+# osd_protect_incomplete_texts[211] (item 7, russian)
+# osd_protect_execute_texts[211] (item 7, russian)
+# ... and 4 more entries
+16e0d0.211 "{F0}В процессе выполнения нажмите на кнопку питания"
+
+# osd_protect_long_execute_texts[182] (item 6, russian)
+# osd_protect_long_auto_texts[182] (item 6, russian)
+# osd_protect_long_title_texts[211] (item 7, russian)
+# osd_protect_long_incomplete_texts[182] (item 6, russian)
+# osd_protect_incomplete_texts[182] (item 6, russian)
+# osd_protect_execute_texts[182] (item 6, russian)
+# ... and 4 more entries
+16e0d0.182 "{F0}питания от монитора."
+
+# osd_protect_long_execute_texts[153] (item 5, russian)
+# osd_protect_long_auto_texts[153] (item 5, russian)
+# osd_protect_long_title_texts[182] (item 6, russian)
+# osd_protect_long_incomplete_texts[153] (item 5, russian)
+# osd_protect_incomplete_texts[153] (item 5, russian)
+# osd_protect_execute_texts[153] (item 5, russian)
+# ... and 4 more entries
+16e0d0.153 "{F0}В процессе выполнения не отключайте шнур "
+
+# osd_protect_incomplete_texts[124] (item 4, russian)
+# osd_protect_execute_texts[124] (item 4, russian)
+# osd_protect_retry_texts[124] (item 4, russian)
+# osd_protect_auto_texts[124] (item 4, russian)
+# osd_protect_title_texts[153] (item 5, russian)
+173998.124 "{F0}Индикатор питания будет мигать оранжевым до завершения."
+
+# osd_protect_incomplete_texts[95] (item 3, russian)
+# osd_protect_execute_texts[95] (item 3, russian)
+# osd_protect_retry_texts[95] (item 3, russian)
+# osd_protect_auto_texts[95] (item 3, russian)
+# osd_protect_title_texts[124] (item 4, russian)
+173998.95 "{F0}Выполнение этой защитной функции занимает несколько минут."
+
+# osd_protect_long_execute_texts[66] (item 2, russian)
+# osd_protect_long_auto_texts[66] (item 2, russian)
+# osd_protect_long_title_texts[95] (item 3, russian)
+# osd_protect_long_retry_texts[66] (item 2, russian)
+# osd_protect_retry_texts[66] (item 2, russian)
+# osd_protect_auto_texts[66] (item 2, russian)
+# ... and 1 more entries
+16e0d0.66 "{F0}Примечание:"
+
+# osd_protect_title_texts[66] (item 2, russian)
+179a14.66 "{F0}защиты панели  автоматически активируется после использования монитора более 4 часов."
+
+# osd_protect_title_texts[37] (item 1, russian)
+179a14.37 "{F0}Для поддержания качества изображения панели на высоком уровне функция"
+
+# osd_protect_title_texts[8] (item 0, russian)
+179a14.8 "{F0}MSI OLED Care - Защита панели"
+
+# osd_protect_retry_texts[414] (item 14, russian)
+# osd_protect_title_texts[385] (item 13, russian)
+177270.414 "{F0}накопленного использования."
+
+# osd_protect_retry_texts[385] (item 13, russian)
+# osd_protect_title_texts[356] (item 12, russian)
+177270.385 "{F0}Если нажать \"Позже\", уведомление появится после 24 часов"
+
+# osd_protect_retry_texts[356] (item 12, russian)
+# osd_protect_title_texts[327] (item 11, russian)
+177270.356 "{F0}когда монитор выкл. или в реж. Eco."
+
+# osd_protect_retry_texts[327] (item 11, russian)
+# osd_protect_title_texts[298] (item 10, russian)
+177270.327 "{F0}Если нажать \"Отмена\" или \"Позже\", функ. автом. вкл.,"
+
+# osd_change_notice_line3_texts[8] (item 0, russian)
+180b60.8 "Выберите один из следующих параметров:"
+
+# osd_change_notice_line2_texts[8] (item 0, russian)
+181058.8 "увеличиться энергопотребление данного монитора."
+
+# osd_change_notice_line1_texts[8] (item 0, russian)
+1814d8.8 "При изменении выбранной функции может"
+
+# osd_change_notice_title_texts[8] (item 0, russian)
+1819cc.8 "Подтвердить изменение!"
+
+# table_1821d4[37] (item 1, russian)
+1821d4.37 "цифровой"
+
+# table_1821d4[8] (item 0, russian)
+1821d4.8 "Аналоговый"
+
+# osd_pbp_source_texts[37] (item 1, russian)
+182534.37 "Источник 2"
+
+# osd_pbp_source_texts[8] (item 0, russian)
+182534.8 "Источник 1"
+
+# osd_pip_item_texts[66] (item 2, russian)
+1828c0.66 "Положение"
+
+# osd_pip_item_texts[37] (item 1, russian)
+1828c0.37 "Размер PIP"
+
+# osd_pip_item_texts[8] (item 0, russian)
+1828c0.8 "Источник"
+
+# osd_pip_item_texts[124] (item 4, russian)
+1828c0.124 "Переключ. звука"
+
+# osd_pip_item_texts[95] (item 3, russian)
+1828c0.95 "Переключ. монит."
+
+# osd_choice_note_function_texts[124] (item 4, russian)
+1832e4.124 "Размер экрана"
+
+# osd_choice_note_reducing_texts[153] (item 5, russian)
+183cb4.153 "{F0}VRR-сигнала."
+
+# osd_choice_note_reducing_texts[124] (item 4, russian)
+183cb4.124 "{F0}при поступлении"
+
+# osd_choice_note_reducing_texts[95] (item 3, russian)
+183cb4.95 "{F0}Функция недоступна"
+
+# osd_choice_note_reducing_texts[66] (item 2, russian)
+183cb4.66 "{F0}\"DisplayHDR\"."
+
+# osd_choice_note_reducing_texts[37] (item 1, russian)
+183cb4.37 "{F0} от \"Яркость\" или"
+
+# osd_choice_note_reducing_texts[8] (item 0, russian)
+183cb4.8 "{F0}Эфф. уменьш. завис."
+
+# osd_choice_note_texts[124] (item 4, russian)
+183a70.124 " "
+
+# osd_choice_note_texts[95] (item 3, russian)
+183a70.95 "Выполн. примерно  1 час"
+
+# osd_choice_note_texts[66] (item 2, russian)
+183a70.66 "{F0}примерно 15 мин."
+
+# osd_choice_note_texts[37] (item 1, russian)
+183a70.37 "{F0}Выполнение занимает"
+
+# osd_choice_note_texts[8] (item 0, russian)
+183a70.8 "{F0}Примечание: "
+
+# osd_oled_care_item_texts[66] (item 2, russian)
+185e78.66 "{F0}Защит. уведомл."
+
+# osd_oled_care_function_texts[153] (item 5, russian)
+# osd_oled_care_item_texts[182] (item 6, russian)
+185bc0.153 "{F0}Опр. Границ"
+
+# osd_oled_care_function_texts[124] (item 4, russian)
+# osd_oled_care_item_texts[153] (item 5, russian)
+185bc0.124 "{F0}Опр. пан. Задачи"
+
+# osd_oled_care_function_texts[95] (item 3, russian)
+# osd_oled_care_item_texts[124] (item 4, russian)
+185bc0.95 "{F0}Опр. бег. Строк"
+
+# osd_oled_care_item_texts[211] (item 7, russian)
+185e78.211 "{F0}Свед. об OLED пан."
+
+# osd_oled_care_function_texts[66] (item 2, russian)
+# osd_oled_care_item_texts[95] (item 3, russian)
+185bc0.66 "{F0}Опр. стат. экр."
+
+# osd_oled_care_function_texts[8] (item 0, russian)
+# osd_oled_care_item_texts[37] (item 1, russian)
+185bc0.8 "{F0}Защита панели "
+
+# osd_oled_care_function_texts[37] (item 1, russian)
+# osd_oled_care_item_texts[8] (item 0, russian)
+185bc0.37 "{F0}Сдвиг пикселей"
+
+# osd_choice_note_function_texts[298] (item 10, russian)
+# osd_settings_item_texts[211] (item 7, russian)
+1832e4.298 "{F0}Зар.уст.PD Type C"
+
+# osd_settings_item_texts[124] (item 4, russian)
+1874f8.124 "{F0}Кноп. пит."
+
+# osd_settings_item_texts[269] (item 9, russian)
+1874f8.269 "Сброс"
+
+# osd_settings_item_texts[66] (item 2, russian)
+1874f8.66 "Таймер меню"
+
+# osd_settings_item_texts[37] (item 1, russian)
+1874f8.37 "Прозрачность"
+
+# osd_settings_item_texts[8] (item 0, russian)
+1874f8.8 "Язык"
+
+# osd_professional_item_texts[66] (item 2, russian)
+188634.66 "Image Enhancement"
+
+# osd_professional_item_texts[37] (item 1, russian)
+188634.37 "ФилЬтр синего света"
+
+# osd_professional_item_texts[8] (item 0, russian)
+188634.8 "Про. pежим"
+
+# osd_night_vision_texts[95] (item 3, russian)
+1890d4.95 "Максимальная"
+
+# osd_night_vision_texts[66] (item 2, russian)
+1890d4.66 "Высокая"
+
+# osd_night_vision_texts[37] (item 1, russian)
+1890d4.37 "Обычное"
+
+# osd_choice_note_function_texts[269] (item 9, russian)
+# osd_gaming_item_texts[37] (item 1, russian)
+1832e4.269 "ночного видения"
+
+# osd_gaming_item_texts[124] (item 4, russian)
+188da0.124 "Таймер"
+
+# osd_gaming_item_texts[95] (item 3, russian)
+188da0.95 "Частота обнов."
+
+# osd_choice_note_function_texts[153] (item 5, russian)
+1832e4.153 "Время отклика"
+
+# osd_gaming_item_texts[8] (item 0, russian)
+188da0.8 "Игровой режим"
+
+# osd_choice_note_function_texts[182] (item 6, russian)
+# osd_gi_item_texts[66] (item 2, russian)
+1832e4.182 "Сфера Optix"
+
+# osd_oled_care_seconds_texts[95] (item 3, russian)
+18a7ec.95 "240 c"
+
+# osd_oled_care_seconds_texts[66] (item 2, russian)
+18a7ec.66 "120 c"
+
+# osd_oled_care_seconds_texts[37] (item 1, russian)
+18a7ec.37 "100 c"
+
+# osd_oled_care_seconds_texts[8] (item 0, russian)
+18a7ec.8 "50 c"
+
+# table_18af08[37] (item 1, russian)
+# table_18b008[37] (item 1, russian)
+18af08.37 "{F0}Вручную"
+
+# osd_oled_care_usage_texts[37] (item 1, russian)
+18b29c.37 "{F0}Более 24 час."
+
+# osd_oled_care_speed_texts[66] (item 2, russian)
+18b5e0.66 "{F0}Быстрый"
+
+# osd_oled_care_speed_texts[8] (item 0, russian)
+18b5e0.8 "{F0}Медленный"
+
+# osd_oled_care_choice_texts[66] (item 2, russian)
+# osd_oled_care_status_texts[66] (item 2, russian)
+16df60.66 "Уменьш. Уровня"
+
+# osd_oled_care_status_texts[37] (item 1, russian)
+18b94c.37 "{F0}Требуемое время"
+
+# osd_oled_care_status_texts[8] (item 0, russian)
+18b94c.8 "{F0}Начало в"
+
+# table_18c070[37] (item 1, russian)
+18c070.37 "{F0}Долговременная"
+
+# table_18c070[8] (item 0, russian)
+18c070.8 "{F0}Кратковременная"
+
+# table_18c4a8[8] (item 0, russian)
+18c4a8.8 "{F0}Скорость перемещения (сдвиг пикселей)"
+
+# osd_image_item_texts[124] (item 4, russian)
+18ca88.124 "Размер экрана"
+
+# osd_image_item_texts[95] (item 3, russian)
+18ca88.95 "Цветовая температура"
+
+# osd_image_item_texts[66] (item 2, russian)
+18ca88.66 "Резкость"
+
+# osd_image_item_texts[37] (item 1, russian)
+18ca88.37 "Контрастность"
+
+# osd_language_texts[8] (item 0, russian)
+18d3d4.8 "Русский"
+
+# osd_optix_scope_item_texts[37] (item 1, russian)
+18d578.37 "Scope Ratio"
+
+# osd_optix_scope_item_texts[8] (item 0, russian)
+18d578.8 "Размер сферы"
+
+# osd_color_temp_texts[95] (item 3, russian)
+18db28.95 "Настройка"
+
+# osd_color_temp_texts[66] (item 2, russian)
+18db28.66 "Теплый цвет"
+
+# osd_color_temp_texts[8] (item 0, russian)
+18db28.8 "Холодный цвет"
+
+# osd_response_time_texts[66] (item 2, russian)
+18e08c.66 "Минимальное"
+
+# osd_response_time_texts[37] (item 1, russian)
+18e08c.37 "Короткое"
+
+# osd_oled_care_speed_texts[37] (item 1, russian)
+# osd_color_temp_texts[37] (item 1, russian)
+# osd_response_time_texts[8] (item 0, russian)
+18b5e0.37 "Обычное"
+
+# osd_crosshair_color_texts[37] (item 1, russian)
+18e54c.37 "Красный"
+
+# osd_crosshair_color_texts[8] (item 0, russian)
+18e54c.8 "Белый"
+
+# table_18c8b8[66] (item 2, russian)
+# osd_pbp_mode_texts[66] (item 2, russian)
+# osd_location_texts[124] (item 4, russian)
+18c8b8.66 "{F0}Настройка"
+
+# osd_location_texts[95] (item 3, russian)
+18e9f8.95 "Справа снизу"
+
+# osd_location_texts[66] (item 2, russian)
+18e9f8.66 "Слева снизу"
+
+# osd_location_texts[37] (item 1, russian)
+18e9f8.37 "Справа сверху"
+
+# osd_location_texts[8] (item 0, russian)
+18e9f8.8 "Слева сверху"
+
+# osd_size_texts[66] (item 2, russian)
+18f550.66 "Большой"
+
+# osd_size_texts[37] (item 1, russian)
+18f550.37 "Средний"
+
+# osd_size_texts[8] (item 0, russian)
+18f550.8 "Небольшой"
+
+# osd_crosshair_item_texts[124] (item 4, russian)
+18f984.124 "Сброс"
+
+# osd_crosshair_item_texts[95] (item 3, russian)
+18f984.95 "{F0}Разместить"
+
+# osd_crosshair_item_texts[66] (item 2, russian)
+18f984.66 "Цвет"
+
+# osd_crosshair_item_texts[37] (item 1, russian)
+18f984.37 "{F0}Значок"
+
+# osd_crosshair_item_texts[8] (item 0, russian)
+18f984.8 "Нет"
+
+# osd_protect_button_texts[66] (item 2, russian)
+190184.66 "{F0}Позже"
+
+# osd_protect_button_texts[37] (item 1, russian)
+190184.37 "{F0}Отмена"
+
+# osd_protect_button_texts[8] (item 0, russian)
+190184.8 "{F0}Выполнить"
+
+# osd_yes_no_texts[37] (item 1, russian)
+190748.37 "Нет"
+
+# osd_yes_no_texts[8] (item 0, russian)
+190748.8 "Да"
+
+# osd_kvm_texts[37] (item 1, russian)
+1909ec.37 "{F0}Восход. передача"
+
+# table_190cec[37] (item 1, russian)
+190cec.37 "{F0}До 1000 нит "
+
+# osd_navi_key_item_texts[95] (item 3, russian)
+19158c.95 "Вправо"
+
+# osd_navi_key_item_texts[66] (item 2, russian)
+19158c.66 "Влево"
+
+# osd_navi_key_item_texts[37] (item 1, russian)
+19158c.37 "Вниз"
+
+# osd_navi_key_item_texts[8] (item 0, russian)
+19158c.8 "Вверх"
+
+# osd_info_box_texts[182] (item 6, russian)
+191b30.182 "Глубина цвета"
+
+# osd_info_box_texts[153] (item 5, russian)
+191b30.153 "Тип контента"
+
+# osd_info_box_texts[124] (item 4, russian)
+191b30.124 "Выбранный режим"
+
+# osd_info_box_texts[66] (item 2, russian)
+191b30.66 "Физическое разрешение"
+
+# osd_info_box_texts[37] (item 1, russian)
+191b30.37 "Собственное разрешение"
+
+# osd_out_of_range_texts[8] (item 0, russian)
+192d8c.8 "Недопустимо!"
+
+# osd_no_signal_texts[8] (item 0, russian)
+193008.8 "Нет сигнала"
+
+# osd_power_button_texts[37] (item 1, russian)
+19336c.37 "{F0}Oжид."
+
+# osd_navi_function_texts[298] (item 10, russian)
+1935bc.298 "Сфера Optix"
+
+# osd_navi_function_texts[269] (item 9, russian)
+1935bc.269 "ночного видения"
+
+# osd_info_box_texts[95] (item 3, russian)
+# osd_navi_function_texts[211] (item 7, russian)
+191b30.95 "Частота обнов."
+
+# osd_gi_item_texts[37] (item 1, russian)
+# osd_navi_function_texts[95] (item 3, russian)
+18a360.37 "{F0}Умный прицел"
+
+# osd_navi_function_texts[124] (item 4, russian)
+1935bc.124 "Таймер"
+
+# osd_navi_function_texts[66] (item 2, russian)
+1935bc.66 "Игровой режим"
+
+# osd_choice_note_function_texts[37] (item 1, russian)
+# osd_image_item_texts[8] (item 0, russian)
+# osd_navi_function_texts[37] (item 1, russian)
+1832e4.37 "Яркость"
+
+# osd_settings_item_texts[153] (item 5, russian)
+# table_18c8b8[95] (item 3, russian)
+# osd_navi_function_texts[240] (item 8, russian)
+1874f8.153 "Информ. на экране"
+
+# osd_navi_function_texts[182] (item 6, russian)
+1935bc.182 "Режим PIP/PBP"
+
+# osd_image_enhancement_texts[124] (item 4, russian)
+194b34.124 "Максимальная"
+
+# osd_image_enhancement_texts[95] (item 3, russian)
+194b34.95 "Высокая"
+
+# osd_image_enhancement_texts[66] (item 2, russian)
+194b34.66 "Средняя"
+
+# osd_image_enhancement_texts[37] (item 1, russian)
+194b34.37 "Минимальная"
+
+# osd_pro_mode_texts[8] (item 0, russian)
+1951dc.8 "Эко"
+
+# osd_pro_mode_texts[95] (item 3, russian)
+1951dc.95 "Фильм"
+
+# osd_pro_mode_texts[66] (item 2, russian)
+1951dc.66 "Анти-синий"
+
+# osd_pro_mode_texts[124] (item 4, russian)
+1951dc.124 "Офис"
+
+# osd_oled_care_choice_texts[37] (item 1, russian)
+# osd_optix_scope_item_texts[95] (item 3, russian)
+# osd_off_on_texts[37] (item 1, russian)
+# table_195a38[66] (item 2, russian)
+16df60.37 "Вкл."
+
+# osd_location_texts[153] (item 5, russian)
+# table_195a38[8] (item 0, russian)
+# table_195c7c[8] (item 0, russian)
+18e9f8.153 "Положение"
+
+# osd_game_mode_texts[8] (item 0, russian)
+195f24.8 "{F0}Премиум цвет"
+
+# osd_pro_mode_texts[37] (item 1, russian)
+# osd_game_mode_texts[37] (item 1, russian)
+1951dc.37 "Пользовательская"
+
+# osd_game_mode_texts[66] (item 2, russian)
+195f24.66 "Шутеры"
+
+# osd_game_mode_texts[153] (item 5, russian)
+195f24.153 "Ролевые игры"
+
+# osd_game_mode_texts[124] (item 4, russian)
+195f24.124 "Стратегии"
+
+# osd_game_mode_texts[95] (item 3, russian)
+195f24.95 "Гонки"
+
+# osd_pbp_mode_texts[37] (item 1, russian)
+18e89c.37 "Режим 2"
+
+# osd_pbp_mode_texts[8] (item 0, russian)
+18e89c.8 "Режим 1"
+
+# osd_oled_care_choice_texts[8] (item 0, russian)
+# osd_night_vision_texts[8] (item 0, russian)
+# table_18c8b8[8] (item 0, russian)
+# osd_optix_scope_item_texts[66] (item 2, russian)
+# osd_off_on_texts[8] (item 0, russian)
+# osd_power_button_texts[8] (item 0, russian)
+# ... and 5 more entries
+16df60.8 "Откл."
+
+# osd_tab_name_texts[182] (item 6, russian)
+196dc0.182 "Кнопка навигации"
+
+# osd_tab_name_texts[211] (item 7, russian)
+196dc0.211 "Настройка"
+
+# osd_info_box_texts[8] (item 0, russian)
+# osd_navi_function_texts[153] (item 5, russian)
+# osd_tab_name_texts[124] (item 4, russian)
+191b30.8 "Источник сигнала"
+
+# osd_tab_name_texts[95] (item 3, russian)
+196dc0.95 "Изображение"
+
+# osd_tab_name_texts[66] (item 2, russian)
+196dc0.66 "Профессиональный"
+
+# osd_tab_name_texts[37] (item 1, russian)
+196dc0.37 "Игры"

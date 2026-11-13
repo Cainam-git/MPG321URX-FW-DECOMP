@@ -1,0 +1,21 @@
+/* Names used in the source of FUN_a0099658; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define UserSetPIPMode                        FUN_a00da254
+#define audio_mute_outputs                    FUN_a0124f44
+#define input_rearm_port_event                FUN_a00808ac
+#define osd_apply_optix_scope                 FUN_a0099658
+#define osd_hide_menu                         FUN_a00b5080
+#define panel_user_set_output_on              FUN_a00d91fc
+#define pq_update_input_window                FUN_a00830f4
+#define sys_api_restart_channel_at_level      FUN_a0148268
+#define sys_is_mode_4_to_6                    FUN_a00837e4
+#define sys_user_apply_adaptive_sync_setting  FUN_a00da184
+#define sys_user_apply_second_picture_enable  FUN_a00d5eac
+#define sys_user_clear_second_picture_request FUN_a00d5f3c
+#define sys_user_save_mode_slot               FUN_a00d4998
+/* Stored data. */
+#define app_state_record                      DAT_a802cff4
+#define osd_menu_state                        _DAT_a802afec
+#define osd_request_bits                      DAT_a802b08e
+#define user_settings                         DAT_a802d290
+/* End of names. */

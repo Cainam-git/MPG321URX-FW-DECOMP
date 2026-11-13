@@ -1,0 +1,146 @@
+{
+ "0xec164": [
+  "number",
+  "M-halfword-record: first word of the 8-byte record DAT_a8024164 {u16 2, u16 0, u32}; FUN_a01461a8 reads it as two halfwords"
+ ],
+ "0xefab4": [
+  "number",
+  "M-flag-bytes: third word (00 01 00 00) of a 12-byte record of DAT_a8027aac[]; FUN_a01213a4 reads its bytes +8 and +9 as flags, every other source view declares the word unsigned int and none dereferences it"
+ ],
+ "0xefac0": [
+  "number",
+  "M-plain-field: as 0xefab4"
+ ],
+ "0xefacc": [
+  "number",
+  "M-plain-field: as 0xefab4"
+ ],
+ "0xefad8": [
+  "number",
+  "M-plain-field: as 0xefab4"
+ ],
+ "0xefae4": [
+  "number",
+  "M-plain-field: as 0xefab4"
+ ],
+ "0xefaf0": [
+  "number",
+  "M-plain-field: as 0xefab4"
+ ],
+ "0xefafc": [
+  "number",
+  "M-plain-field: as 0xefab4"
+ ],
+ "0xefb08": [
+  "number",
+  "M-plain-field: as 0xefab4"
+ ],
+ "0xf2ab4": [
+  "number",
+  "M-library-variable: the C library allocator's trim threshold 0x20000 (128 KB), the word between its base marker 0xffffffff and the bin table (R10)"
+ ],
+ "0x1281a8": [
+  "number",
+  "M-empty-target: value 0x17690 would point at file 0x11f690, in the zero-filled stretch 0x11EF80..0x120000 between the last EDID block and the program; a field of the factory defaults record DAT_00020000"
+ ],
+ "0x208db4": [
+  "number",
+  "M-stream-end: the last two bytes of the logo byte stream 0x208d88 (+46, rule R4b) and two alignment bytes before the next stream at 0x208db8"
+ ],
+ "0x28170c": [
+  "number",
+  "M-text-bytes: bytes 00 01 0f 09 inside a menu text (font-coded characters between 0x281708 and 0x281740), not at a table position"
+ ],
+ "0x2a03b0": [
+  "number",
+  "M-panel-row: half of a 64-bit field of the panel mode table row (struct PanelRow { unsigned long long q[11]; }, docs/MAP.md panel modes)"
+ ],
+ "0x2a0408": [
+  "number",
+  "M-panel-row: as 0x2a03b0"
+ ],
+ "0x2a0460": [
+  "number",
+  "M-panel-row: as 0x2a03b0"
+ ],
+ "0x2a201c": [
+  "number",
+  "M-power-table: entry of DAT_0019a004[17], the powers of two 2^10..2^26 (used as numbers by FUN_a00ef1b0)"
+ ],
+ "0x2a2020": [
+  "number",
+  "M-power-table: as 0x2a201c"
+ ],
+ "0x2ad320": [
+  "number",
+  "M-byte-run: DAT_001a5320[8] holds the bytes 00 01 02 .. 1f; passed as an 8-entry table to func_0x4008c5f8"
+ ],
+ "0x2ad348": [
+  "number",
+  "M-byte-run: DAT_001a5340[8], byte-order table next to DAT_001a5320"
+ ],
+ "0x2ae9f0": [
+  "number",
+  "M-struct-bytes: bytes a0 02 80 00 = fields dev 0xA0, alen 2, flags 0x8000 of the second 10-byte I2C bus record of DAT_001a69e0[] (struct Bus)"
+ ],
+ "0xefbc0-0xf0ff0": [
+  "number",
+  "M-command-script: the start-up script DAT_a8027bc0 (0x1430 bytes): FUN_a00e0e44 reads it byte by byte as commands with argument bytes; the addresses its store commands use are hardware addresses, and no 4-byte pattern of the processor's own memory occurs in it at any byte position"
+ ],
+ "0xf0ff0-0xf2420": [
+  "number",
+  "M-command-script: the start-up script DAT_a8028ff0, as 0xefbc0"
+ ],
+ "0xec004": [
+  "number",
+  "M-halfword-variables: the halfword variables DAT_a8024004_vactive and DAT_a8024006 (both 1)"
+ ],
+ "0xec008": [
+  "number",
+  "M-halfword-variables: the halfword variables DAT_a8024008 (1) and DAT_a802400a (1)"
+ ],
+ "0xec04c": [
+  "number",
+  "M-record-header: {length 4, kind 0, pad} of the 12-byte record DAT_a802404c (struct Req in FUN_a01461dc: a halfword and a byte)"
+ ],
+ "0xec060": [
+  "number",
+  "M-record-header: {length 0x18, kind 1, pad} of a 12-byte record (struct Req in FUN_a01461dc)"
+ ],
+ "0xec078": [
+  "number",
+  "M-record-header: {halfword 0x000a, halfword 0} of the 8-byte record DAT_a8024078 (struct Msg in FUN_a01461a8)"
+ ],
+ "0x2a020c": [
+  "undecided",
+  "M-unproven: lies in the default-settings data of the data image, in an object that is handed on to other code; the value would point into the EDID area or the first bytes of the code window, which sit at the same place in all four firmware versions, so the version comparison cannot decide; treated as a plain number"
+ ],
+ "0x2a053c": [
+  "undecided",
+  "M-unproven: lies in the default-settings data of the data image, in an object that is handed on to other code; the value would point into the EDID area or the first bytes of the code window, which sit at the same place in all four firmware versions, so the version comparison cannot decide; treated as a plain number"
+ ],
+ "0x2a0554": [
+  "undecided",
+  "M-unproven: lies in the default-settings data of the data image, in an object that is handed on to other code; the value would point into the EDID area or the first bytes of the code window, which sit at the same place in all four firmware versions, so the version comparison cannot decide; treated as a plain number"
+ ],
+ "0x2a0648": [
+  "undecided",
+  "M-unproven: lies in the default-settings data of the data image, in an object that is handed on to other code; the value would point into the EDID area or the first bytes of the code window, which sit at the same place in all four firmware versions, so the version comparison cannot decide; treated as a plain number"
+ ],
+ "0x2a06cc": [
+  "undecided",
+  "M-unproven: lies in the default-settings data of the data image, in an object that is handed on to other code; the value would point into the EDID area or the first bytes of the code window, which sit at the same place in all four firmware versions, so the version comparison cannot decide; treated as a plain number"
+ ],
+ "0x2a2d60": [
+  "undecided",
+  "M-unproven: lies in the default-settings data of the data image, in an object that is handed on to other code; the value would point into the EDID area or the first bytes of the code window, which sit at the same place in all four firmware versions, so the version comparison cannot decide; treated as a plain number"
+ ],
+ "0x2ab100": [
+  "undecided",
+  "M-unproven: lies in the default-settings data of the data image, in an object that is handed on to other code; the value would point into the EDID area or the first bytes of the code window, which sit at the same place in all four firmware versions, so the version comparison cannot decide; treated as a plain number"
+ ],
+ "0x2acf58": [
+  "undecided",
+  "M-unproven: lies in the default-settings data of the data image, in an object that is handed on to other code; the value would point into the EDID area or the first bytes of the code window, which sit at the same place in all four firmware versions, so the version comparison cannot decide; treated as a plain number"
+ ]
+}

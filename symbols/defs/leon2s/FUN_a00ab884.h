@@ -1,0 +1,6 @@
+/* Names used in the source of FUN_a00ab884; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define dp_set_port_flag_bit FUN_a00ab884
+/* Stored data. */
+#define dp_port_flag_bits    DAT_a8079314
+/* End of names. */

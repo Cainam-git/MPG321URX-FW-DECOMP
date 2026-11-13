@@ -1,0 +1,633 @@
+# Texts of language 21, named "Dutch" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[50] (item 1, dutch)
+16e0d0.50 "(lang) voor onderhouden beeldkwaliteit scherm."
+
+# osd_protect_long_execute_texts[21] (item 0, dutch)
+16e0d0.21 "Druk op {F7}Ş{F0}Uitvoeren{F7}3{F0} voor functie paneelbescherming "
+
+# osd_protect_long_auto_texts[21] (item 0, dutch)
+16f25c.21 "Voor onderhouden beeldkwaliteit scherm, wordt functie Paneelbescherming (lang)"
+
+# osd_protect_long_title_texts[79] (item 2, dutch)
+16f670.79 "{F0}(lange tijd) automatisch geactiveerd wanneer de monitor meer dan 1500 uur is gebruikt"
+
+# osd_protect_long_title_texts[50] (item 1, dutch)
+16f670.50 "{F0}Voor het onderhouden van de beeldkwaliteit van het paneel, wordt de functie Paneelbescherming"
+
+# osd_protect_long_title_texts[21] (item 0, dutch)
+16f670.21 "{F0}MSI OLED-zorg - Paneelbescherming (Lange tijd)"
+
+# osd_protect_long_incomplete_texts[50] (item 1, dutch)
+172590.50 "{F0}Selecteer en klik op dit item om dit proces als nodig later te doen."
+
+# osd_protect_long_incomplete_texts[21] (item 0, dutch)
+172590.21 "{F0}Proces van paneelbescherming (lang) werd niet voltooid. "
+
+# osd_protect_incomplete_texts[50] (item 1, dutch)
+173998.50 "{F0}klik op dit item om dit proces als nodig later te doen."
+
+# osd_protect_incomplete_texts[21] (item 0, dutch)
+173998.21 "{F0}Proces van paneelbescherming werd niet voltooid. Selecteer en"
+
+# osd_protect_long_incomplete_texts[79] (item 2, dutch)
+# osd_protect_incomplete_texts[79] (item 2, dutch)
+# osd_protect_execute_texts[79] (item 2, dutch)
+172590.79 "{F0}Mededeling:"
+
+# osd_protect_execute_texts[50] (item 1, dutch)
+174bd0.50 "{F0}\"Uitvoeren\" voor het activeren van de functie Paneelbescherming."
+
+# osd_protect_execute_texts[21] (item 0, dutch)
+174bd0.21 "{F0}Voor het onderhouden van de beeldkwaliteit van het paneel, drukt u op de knop"
+
+# osd_protect_long_retry_texts[50] (item 1, dutch)
+175de4.50 "Druk op {F7}Ş{F0}Uitvoeren{F7}3{F0} voor functie paneelbescherming (lang)."
+
+# osd_protect_long_retry_texts[21] (item 0, dutch)
+175de4.21 "Proces van paneelbescherming (lang) werd niet voltooid."
+
+# osd_protect_retry_texts[50] (item 1, dutch)
+177270.50 "{F0}voor functie paneelbescherming. "
+
+# osd_protect_retry_texts[21] (item 0, dutch)
+177270.21 "{F0}Proces van paneelbescherming werd niet voltooid. Druk op \"{F0}Uitvoeren\" "
+
+# osd_protect_auto_texts[21] (item 0, dutch)
+1785c0.21 "{F0}Voor onderhouden beeldkwaliteit scherm, wordt functie Paneelbescherming"
+
+# osd_protect_long_auto_texts[50] (item 1, dutch)
+16f25c.50 "auto geactiveerd."
+
+# osd_protect_auto_texts[50] (item 1, dutch)
+1785c0.50 "auto geactiveerd."
+
+# osd_protect_long_execute_texts[137] (item 4, dutch)
+# osd_protect_long_auto_texts[137] (item 4, dutch)
+# osd_protect_long_title_texts[166] (item 5, dutch)
+# osd_protect_long_incomplete_texts[137] (item 4, dutch)
+# osd_protect_long_retry_texts[137] (item 4, dutch)
+16e0d0.137 "De voedingsindicator knippert wit tot gereed."
+
+# osd_protect_long_execute_texts[108] (item 3, dutch)
+# osd_protect_long_auto_texts[108] (item 3, dutch)
+# osd_protect_long_title_texts[137] (item 4, dutch)
+# osd_protect_long_incomplete_texts[108] (item 3, dutch)
+# osd_protect_long_retry_texts[108] (item 3, dutch)
+16e0d0.108 "Voltooien beschermingsfunctie kan een uur duren."
+
+# osd_protect_long_title_texts[340] (item 11, dutch)
+# osd_protect_long_retry_texts[311] (item 10, dutch)
+# osd_protect_retry_texts[311] (item 10, dutch)
+16f670.340 "UIT of in energiebesparingsmodus."
+
+# osd_protect_long_title_texts[311] (item 10, dutch)
+# osd_protect_long_retry_texts[282] (item 9, dutch)
+# osd_protect_retry_texts[282] (item 9, dutch)
+16f670.311 "Bij klikken op \"Annuleren\", wordt dit proces auto geactiveerd bij monitor"
+
+# osd_protect_long_execute_texts[253] (item 8, dutch)
+# osd_protect_long_auto_texts[253] (item 8, dutch)
+# osd_protect_long_title_texts[282] (item 9, dutch)
+# osd_protect_long_incomplete_texts[253] (item 8, dutch)
+# osd_protect_incomplete_texts[253] (item 8, dutch)
+# osd_protect_execute_texts[253] (item 8, dutch)
+# ... and 4 more entries
+16e0d0.253 "{F0}de aan/uit-knop om deze functie te annuleren."
+
+# osd_protect_long_execute_texts[224] (item 7, dutch)
+# osd_protect_long_auto_texts[224] (item 7, dutch)
+# osd_protect_long_title_texts[253] (item 8, dutch)
+# osd_protect_long_incomplete_texts[224] (item 7, dutch)
+# osd_protect_incomplete_texts[224] (item 7, dutch)
+# osd_protect_execute_texts[224] (item 7, dutch)
+# ... and 4 more entries
+16e0d0.224 "{F0}Tijdens uitvoering van het proces drukt u nogmaals op"
+
+# osd_protect_long_execute_texts[195] (item 6, dutch)
+# osd_protect_long_auto_texts[195] (item 6, dutch)
+# osd_protect_long_title_texts[224] (item 7, dutch)
+# osd_protect_long_incomplete_texts[195] (item 6, dutch)
+# osd_protect_incomplete_texts[195] (item 6, dutch)
+# osd_protect_execute_texts[195] (item 6, dutch)
+# ... and 4 more entries
+16e0d0.195 "{F0}niet loskoppelen van de monitor."
+
+# osd_protect_long_execute_texts[166] (item 5, dutch)
+# osd_protect_long_auto_texts[166] (item 5, dutch)
+# osd_protect_long_title_texts[195] (item 6, dutch)
+# osd_protect_long_incomplete_texts[166] (item 5, dutch)
+# osd_protect_incomplete_texts[166] (item 5, dutch)
+# osd_protect_execute_texts[166] (item 5, dutch)
+# ... and 4 more entries
+16e0d0.166 "{F0}Tijdens uitvoering van het proces moet u het stroomsnoer"
+
+# osd_protect_incomplete_texts[137] (item 4, dutch)
+# osd_protect_execute_texts[137] (item 4, dutch)
+# osd_protect_retry_texts[137] (item 4, dutch)
+# osd_protect_auto_texts[137] (item 4, dutch)
+# osd_protect_title_texts[166] (item 5, dutch)
+173998.137 "{F0}De voedingsindicator knippert oranje tot het proces voltooid is."
+
+# osd_protect_incomplete_texts[108] (item 3, dutch)
+# osd_protect_execute_texts[108] (item 3, dutch)
+# osd_protect_retry_texts[108] (item 3, dutch)
+# osd_protect_auto_texts[108] (item 3, dutch)
+# osd_protect_title_texts[137] (item 4, dutch)
+173998.108 "{F0}Het uitvoeren van deze beschermingsfunctie kan meerdere minuten duren."
+
+# osd_protect_long_execute_texts[79] (item 2, dutch)
+# osd_protect_long_auto_texts[79] (item 2, dutch)
+# osd_protect_long_title_texts[108] (item 3, dutch)
+# osd_protect_long_retry_texts[79] (item 2, dutch)
+# osd_protect_retry_texts[79] (item 2, dutch)
+# osd_protect_auto_texts[79] (item 2, dutch)
+# ... and 1 more entries
+16e0d0.79 "{F0}Mededeling:"
+
+# osd_protect_title_texts[79] (item 2, dutch)
+179a14.79 "{F0}automatisch geactiveerd wanneer de monitor meer dan 4 uur is gebruikt."
+
+# osd_protect_title_texts[50] (item 1, dutch)
+179a14.50 "{F0}Voor het onderhouden van de beeldkwaliteit van het paneel, wordt de functie Paneelbescherming"
+
+# osd_protect_title_texts[21] (item 0, dutch)
+179a14.21 "MSI OLED Care - Paneelbescherming"
+
+# osd_protect_retry_texts[427] (item 14, dutch)
+# osd_protect_title_texts[398] (item 13, dutch)
+177270.427 "{F0}schermgebruik meer dan 24 uur is."
+
+# osd_protect_retry_texts[398] (item 13, dutch)
+# osd_protect_title_texts[369] (item 12, dutch)
+177270.398 "{F0}Bij klikken op \"Later\" wordt de melding alleen weergegeven wanneer het cumulatieve "
+
+# osd_protect_retry_texts[369] (item 12, dutch)
+# osd_protect_title_texts[340] (item 11, dutch)
+177270.369 "{F0}monitor UIT of in energiebesparingsmodus."
+
+# osd_protect_retry_texts[340] (item 11, dutch)
+# osd_protect_title_texts[311] (item 10, dutch)
+177270.340 "{F0}Bij klikken op \"Annuleren\" of \"Later\" wordt dit proces automatisch geactiveerd bij"
+
+# osd_change_notice_line3_texts[21] (item 0, dutch)
+180b60.21 "Selecteer een van de volgende opties:"
+
+# osd_change_notice_line2_texts[21] (item 0, dutch)
+181058.21 "het stroomverbruik van deze monitor toenemen."
+
+# osd_change_notice_line1_texts[21] (item 0, dutch)
+1814d8.21 "Door het wijzigen van de geselecteerde functie kan"
+
+# osd_change_notice_title_texts[21] (item 0, dutch)
+1819cc.21 "Bevestig de wijziging!"
+
+# table_1821d4[50] (item 1, dutch)
+1821d4.50 "Digitaal"
+
+# table_1821d4[21] (item 0, dutch)
+1821d4.21 "Analoog"
+
+# osd_pbp_source_texts[50] (item 1, dutch)
+182534.50 "Bron 2"
+
+# osd_pbp_source_texts[21] (item 0, dutch)
+182534.21 "Bron 1"
+
+# osd_pip_item_texts[79] (item 2, dutch)
+1828c0.79 "Locatie"
+
+# osd_pip_item_texts[50] (item 1, dutch)
+1828c0.50 "PIP-formaat"
+
+# osd_pip_item_texts[21] (item 0, dutch)
+1828c0.21 "Bron"
+
+# osd_pip_item_texts[137] (item 4, dutch)
+1828c0.137 "Audioschakelaar"
+
+# osd_pip_item_texts[108] (item 3, dutch)
+1828c0.108 "Weergaveschakelaar"
+
+# osd_choice_note_function_texts[137] (item 4, dutch)
+1832e4.137 "Schermformaat"
+
+# osd_choice_note_reducing_texts[166] (item 5, dutch)
+183cb4.166 "{F0} VRR-inhoud ontvangt."
+
+# osd_choice_note_reducing_texts[137] (item 4, dutch)
+183cb4.137 "{F0}wanneer de monitor"
+
+# osd_choice_note_reducing_texts[108] (item 3, dutch)
+183cb4.108 "{F0}Deze functie werkt niet"
+
+# osd_choice_note_reducing_texts[79] (item 2, dutch)
+183cb4.79 "{F0}of \"DisplayHDR\"."
+
+# osd_choice_note_reducing_texts[50] (item 1, dutch)
+183cb4.50 "{F0}instelling \"Helderheid\""
+
+# osd_choice_note_reducing_texts[21] (item 0, dutch)
+183cb4.21 "{F0}Red. effect afhankelijk "
+
+# osd_choice_note_texts[137] (item 4, dutch)
+183a70.137 " "
+
+# osd_choice_note_texts[108] (item 3, dutch)
+183a70.108 "Ca. een uur voor voltooien"
+
+# osd_choice_note_texts[79] (item 2, dutch)
+183a70.79 "{F0}te voltooien"
+
+# osd_choice_note_texts[50] (item 1, dutch)
+183a70.50 "{F0}Ong. 15 minuten om"
+
+# osd_choice_note_texts[21] (item 0, dutch)
+183a70.21 "{F0}Mededeling:"
+
+# osd_oled_care_item_texts[79] (item 2, dutch)
+185e78.79 "{F0}Beschermmeld."
+
+# osd_oled_care_function_texts[166] (item 5, dutch)
+# osd_oled_care_item_texts[195] (item 6, dutch)
+185bc0.166 "{F0}Detectie grens"
+
+# osd_oled_care_function_texts[137] (item 4, dutch)
+# osd_oled_care_item_texts[166] (item 5, dutch)
+185bc0.137 "{F0}Detectie taakbalk"
+
+# osd_oled_care_function_texts[108] (item 3, dutch)
+# osd_oled_care_item_texts[137] (item 4, dutch)
+185bc0.108 "{F0}Detect. meer logo's"
+
+# osd_oled_care_item_texts[224] (item 7, dutch)
+185e78.224 "{F0}OLED-paneelinformatie"
+
+# osd_oled_care_function_texts[79] (item 2, dutch)
+# osd_oled_care_item_texts[108] (item 3, dutch)
+185bc0.79 "{F0}Stat.schermdet."
+
+# osd_oled_care_function_texts[21] (item 0, dutch)
+# osd_oled_care_item_texts[50] (item 1, dutch)
+185bc0.21 "{F0}Paneelbescherming"
+
+# osd_oled_care_function_texts[50] (item 1, dutch)
+# osd_oled_care_item_texts[21] (item 0, dutch)
+185bc0.50 "{F0}Pixelverschuiving"
+
+# osd_choice_note_function_texts[311] (item 10, dutch)
+# osd_settings_item_texts[224] (item 7, dutch)
+1832e4.311 "{F0}Type C PD laden"
+
+# osd_settings_item_texts[137] (item 4, dutch)
+1874f8.137 "{F0}Aan/uit-knop"
+
+# osd_settings_item_texts[282] (item 9, dutch)
+1874f8.282 "Opnieuw instellen"
+
+# osd_settings_item_texts[79] (item 2, dutch)
+1874f8.79 "OSD-onderbreking"
+
+# osd_settings_item_texts[50] (item 1, dutch)
+1874f8.50 "Transparantie"
+
+# osd_settings_item_texts[21] (item 0, dutch)
+1874f8.21 "Taal"
+
+# osd_professional_item_texts[79] (item 2, dutch)
+188634.79 "Beeldverbetering"
+
+# osd_professional_item_texts[50] (item 1, dutch)
+188634.50 "Weinig blauw licht"
+
+# osd_professional_item_texts[21] (item 0, dutch)
+188634.21 "Pro-modus"
+
+# osd_night_vision_texts[108] (item 3, dutch)
+1890d4.108 "Sterkst"
+
+# osd_night_vision_texts[79] (item 2, dutch)
+1890d4.79 "Sterk"
+
+# osd_night_vision_texts[50] (item 1, dutch)
+1890d4.50 "Normaal"
+
+# osd_choice_note_function_texts[282] (item 9, dutch)
+# osd_gaming_item_texts[50] (item 1, dutch)
+1832e4.282 "Nachtzicht"
+
+# osd_gaming_item_texts[137] (item 4, dutch)
+188da0.137 "Alarmklok"
+
+# osd_gaming_item_texts[108] (item 3, dutch)
+188da0.108 "Update frequentie"
+
+# osd_choice_note_function_texts[166] (item 5, dutch)
+1832e4.166 "Responstijd"
+
+# osd_gaming_item_texts[21] (item 0, dutch)
+188da0.21 "Spelmodus"
+
+# osd_choice_note_function_texts[195] (item 6, dutch)
+# osd_gi_item_texts[79] (item 2, dutch)
+1832e4.195 "Optix-bereik"
+
+# osd_oled_care_seconds_texts[108] (item 3, dutch)
+18a7ec.108 "{F0}240 Sec"
+
+# osd_oled_care_seconds_texts[79] (item 2, dutch)
+18a7ec.79 "{F0}120 Sec"
+
+# osd_oled_care_seconds_texts[50] (item 1, dutch)
+18a7ec.50 "{F0}100 Sec"
+
+# osd_oled_care_seconds_texts[21] (item 0, dutch)
+18a7ec.21 "{F0}50 Sec"
+
+# table_18af08[50] (item 1, dutch)
+# table_18b008[50] (item 1, dutch)
+18af08.50 "{F0}Handmatig"
+
+# osd_oled_care_usage_texts[50] (item 1, dutch)
+18b29c.50 "{F0}24 uur gebruik"
+
+# osd_oled_care_speed_texts[79] (item 2, dutch)
+18b5e0.79 "{F0}Snel"
+
+# osd_oled_care_speed_texts[21] (item 0, dutch)
+18b5e0.21 "{F0}Traag"
+
+# osd_oled_care_choice_texts[79] (item 2, dutch)
+# osd_oled_care_status_texts[79] (item 2, dutch)
+16df60.79 "{F0}Niveau reduceren"
+
+# osd_oled_care_status_texts[50] (item 1, dutch)
+18b94c.50 "{F0}Vereiste tijd"
+
+# osd_oled_care_status_texts[21] (item 0, dutch)
+18b94c.21 "{F0}Beginnend om"
+
+# table_18c070[50] (item 1, dutch)
+18c070.50 "{F0}Lange tijd"
+
+# table_18c070[21] (item 0, dutch)
+18c070.21 "{F0}Korte tijd"
+
+# table_18c4a8[21] (item 0, dutch)
+18c4a8.21 "{F0}Verplaatsingssnelheid (Pixelverschuiving)"
+
+# osd_image_item_texts[137] (item 4, dutch)
+18ca88.137 "Schermformaat"
+
+# osd_image_item_texts[108] (item 3, dutch)
+18ca88.108 "Kleurtemperatuur"
+
+# osd_image_item_texts[79] (item 2, dutch)
+18ca88.79 "Scherpte"
+
+# osd_image_item_texts[50] (item 1, dutch)
+18ca88.50 "Contrast"
+
+# osd_language_texts[21] (item 0, dutch)
+18d3d4.21 "Dutch"
+
+# osd_optix_scope_item_texts[50] (item 1, dutch)
+18d578.50 "Scope Ratio"
+
+# osd_optix_scope_item_texts[21] (item 0, dutch)
+18d578.21 "Omvang"
+
+# osd_color_temp_texts[108] (item 3, dutch)
+18db28.108 "Aanpassing"
+
+# osd_color_temp_texts[79] (item 2, dutch)
+18db28.79 "Warm"
+
+# osd_color_temp_texts[21] (item 0, dutch)
+18db28.21 "Koel"
+
+# osd_response_time_texts[79] (item 2, dutch)
+18e08c.79 "Snelst"
+
+# osd_response_time_texts[50] (item 1, dutch)
+18e08c.50 "Snel"
+
+# osd_oled_care_speed_texts[50] (item 1, dutch)
+# osd_color_temp_texts[50] (item 1, dutch)
+# osd_response_time_texts[21] (item 0, dutch)
+18b5e0.50 "Normaal"
+
+# osd_crosshair_color_texts[50] (item 1, dutch)
+18e54c.50 "Rood"
+
+# osd_crosshair_color_texts[21] (item 0, dutch)
+18e54c.21 "Wit"
+
+# table_18c8b8[79] (item 2, dutch)
+# osd_pbp_mode_texts[79] (item 2, dutch)
+# osd_location_texts[137] (item 4, dutch)
+18c8b8.79 "Aanpassen"
+
+# osd_location_texts[108] (item 3, dutch)
+18e9f8.108 "Rechtsonder"
+
+# osd_location_texts[79] (item 2, dutch)
+18e9f8.79 "Linksonder"
+
+# osd_location_texts[50] (item 1, dutch)
+18e9f8.50 "Rechtsboven"
+
+# osd_location_texts[21] (item 0, dutch)
+18e9f8.21 "Linksboven"
+
+# osd_size_texts[79] (item 2, dutch)
+18f550.79 "Groot"
+
+# osd_size_texts[50] (item 1, dutch)
+18f550.50 "Gemiddeld"
+
+# osd_size_texts[21] (item 0, dutch)
+18f550.21 "Klein"
+
+# osd_crosshair_item_texts[137] (item 4, dutch)
+18f984.137 "Opnieuw instellen"
+
+# osd_crosshair_item_texts[108] (item 3, dutch)
+18f984.108 "Positie"
+
+# osd_crosshair_item_texts[79] (item 2, dutch)
+18f984.79 "{F0}Kleur"
+
+# osd_crosshair_item_texts[50] (item 1, dutch)
+18f984.50 "Pictogram"
+
+# osd_crosshair_item_texts[21] (item 0, dutch)
+18f984.21 "Geen"
+
+# osd_protect_button_texts[79] (item 2, dutch)
+190184.79 "Later"
+
+# osd_protect_button_texts[50] (item 1, dutch)
+190184.50 "{F0}Annuleren"
+
+# osd_protect_button_texts[21] (item 0, dutch)
+190184.21 "{F0}Uitvoeren"
+
+# osd_yes_no_texts[50] (item 1, dutch)
+190748.50 "Nee"
+
+# osd_yes_no_texts[21] (item 0, dutch)
+190748.21 "Ja"
+
+# osd_kvm_texts[50] (item 1, dutch)
+1909ec.50 "Upstream"
+
+# table_190cec[50] (item 1, dutch)
+190cec.50 "Piek 1000 nits"
+
+# osd_navi_key_item_texts[108] (item 3, dutch)
+19158c.108 "Rechts"
+
+# osd_navi_key_item_texts[79] (item 2, dutch)
+19158c.79 "Links"
+
+# osd_navi_key_item_texts[50] (item 1, dutch)
+19158c.50 "Omlaag"
+
+# osd_navi_key_item_texts[21] (item 0, dutch)
+19158c.21 "Omhoog"
+
+# osd_info_box_texts[195] (item 6, dutch)
+191b30.195 "Bitdiepte"
+
+# osd_info_box_texts[166] (item 5, dutch)
+191b30.166 "Inhoudstype"
+
+# osd_info_box_texts[137] (item 4, dutch)
+191b30.137 "Selectiemodus"
+
+# osd_info_box_texts[79] (item 2, dutch)
+191b30.79 "Fysieke resolutie"
+
+# osd_info_box_texts[50] (item 1, dutch)
+191b30.50 "Eigen resolutie"
+
+# osd_out_of_range_texts[21] (item 0, dutch)
+192d8c.21 "Buiten bereik!"
+
+# osd_no_signal_texts[21] (item 0, dutch)
+193008.21 "Geen signaal"
+
+# osd_power_button_texts[50] (item 1, dutch)
+19336c.50 "Stand-by"
+
+# osd_navi_function_texts[311] (item 10, dutch)
+1935bc.311 "Optix-bereik"
+
+# osd_navi_function_texts[282] (item 9, dutch)
+1935bc.282 "Nachtzicht"
+
+# osd_info_box_texts[108] (item 3, dutch)
+# osd_navi_function_texts[224] (item 7, dutch)
+191b30.108 "Update frequentie"
+
+# osd_gi_item_texts[50] (item 1, dutch)
+# osd_navi_function_texts[108] (item 3, dutch)
+18a360.50 "{F0}Slim vizier"
+
+# osd_navi_function_texts[137] (item 4, dutch)
+1935bc.137 "Alarmklok"
+
+# osd_navi_function_texts[79] (item 2, dutch)
+1935bc.79 "Spelmodus"
+
+# osd_choice_note_function_texts[50] (item 1, dutch)
+# osd_image_item_texts[21] (item 0, dutch)
+# osd_navi_function_texts[50] (item 1, dutch)
+1832e4.50 "Helderheid"
+
+# osd_settings_item_texts[166] (item 5, dutch)
+# table_18c8b8[108] (item 3, dutch)
+# osd_navi_function_texts[253] (item 8, dutch)
+1874f8.166 "Info. On Screen"
+
+# osd_navi_function_texts[195] (item 6, dutch)
+1935bc.195 "PIP/PBP-modus"
+
+# osd_image_enhancement_texts[137] (item 4, dutch)
+194b34.137 "Sterkst"
+
+# osd_image_enhancement_texts[108] (item 3, dutch)
+194b34.108 "Sterk"
+
+# osd_image_enhancement_texts[79] (item 2, dutch)
+194b34.79 "Gemiddeld"
+
+# osd_image_enhancement_texts[50] (item 1, dutch)
+194b34.50 "Zwak"
+
+# osd_pro_mode_texts[108] (item 3, dutch)
+1951dc.108 "Film"
+
+# osd_pro_mode_texts[79] (item 2, dutch)
+1951dc.79 "Anti-blauw"
+
+# osd_pro_mode_texts[137] (item 4, dutch)
+1951dc.137 "Office"
+
+# osd_oled_care_choice_texts[50] (item 1, dutch)
+# osd_optix_scope_item_texts[108] (item 3, dutch)
+# osd_off_on_texts[50] (item 1, dutch)
+# table_195a38[79] (item 2, dutch)
+16df60.50 "AAN"
+
+# osd_location_texts[166] (item 5, dutch)
+# table_195a38[21] (item 0, dutch)
+# table_195c7c[21] (item 0, dutch)
+18e9f8.166 "Locatie"
+
+# osd_game_mode_texts[21] (item 0, dutch)
+195f24.21 "{F0}Premium kleur"
+
+# osd_pro_mode_texts[50] (item 1, dutch)
+# osd_game_mode_texts[50] (item 1, dutch)
+1951dc.50 "Gebruiker"
+
+# osd_game_mode_texts[108] (item 3, dutch)
+195f24.108 "Racen"
+
+# osd_pbp_mode_texts[50] (item 1, dutch)
+18e89c.50 "Modus 2"
+
+# osd_pbp_mode_texts[21] (item 0, dutch)
+18e89c.21 "Modus 1"
+
+# osd_oled_care_choice_texts[21] (item 0, dutch)
+# osd_night_vision_texts[21] (item 0, dutch)
+# table_18c8b8[21] (item 0, dutch)
+# osd_optix_scope_item_texts[79] (item 2, dutch)
+# osd_off_on_texts[21] (item 0, dutch)
+# osd_power_button_texts[21] (item 0, dutch)
+# ... and 5 more entries
+16df60.21 "UIT"
+
+# osd_tab_name_texts[195] (item 6, dutch)
+196dc0.195 "Navigatietoets"
+
+# osd_tab_name_texts[224] (item 7, dutch)
+196dc0.224 "Instelling"
+
+# osd_info_box_texts[21] (item 0, dutch)
+# osd_navi_function_texts[166] (item 5, dutch)
+# osd_tab_name_texts[137] (item 4, dutch)
+191b30.21 "Ingangsbron"
+
+# osd_tab_name_texts[108] (item 3, dutch)
+196dc0.108 "Beeld"
+
+# osd_tab_name_texts[79] (item 2, dutch)
+196dc0.79 "Professioneel"
+
+# osd_tab_name_texts[50] (item 1, dutch)
+196dc0.50 "Gaming"

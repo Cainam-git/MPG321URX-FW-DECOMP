@@ -1,0 +1,3 @@
+libgcc.a _addsub_sf.o _fpadd_parts
+# leon2m FUN_a015555c: toolchain library function _fpadd_parts (libgcc.a:_addsub_sf.o, 560 bytes),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

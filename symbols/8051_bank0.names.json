@@ -1,0 +1,426 @@
+{
+ "thunk_FUN_CODE_13f7": {
+  "name": "startup_reset_vector",
+  "brief": "Reset vector: jump to the start-up code.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "LJMP 0x13F7 at address 0; part of the compiler's start-up file",
+  "plain": "Part of the boot loader, the first program that runs when the monitor gets power."
+ },
+ "FUN_CODE_0003": {
+  "name": "startup_load_partition_table",
+  "brief": "Read the partition table and hand the address and size of the next program to the hardware.",
+  "notes": "Does not check the table in any way: no checksum, no range check. Prints only the three registers changed by a DUALFW block of slot 1.",
+  "topic": "startup",
+  "basis": "derived",
+  "evidence": "slot at 0x6000, or 0x7000 when the marker byte at 0x7FFF is 0xAA; copies the table bytes into the copy-address registers and the share block; prints '[0x%04X] = %02BX' for the DUALFW register changes",
+  "plain": "Part of the boot loader, the first program that runs when the monitor gets power."
+ },
+ "FUN_CODE_0927": {
+  "name": "lib_printf517_byte",
+  "brief": "Compiler library routine ?_PRINTF517?BYTE.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51S.LIB:PRINTF (original name ?_PRINTF517?BYTE)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0930": {
+  "name": "lib_printf_part",
+  "brief": "Internal entry point of the compiler library routine PRINTF.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51S.LIB:PRINTF",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0941": {
+  "name": "lib_printf_part_2",
+  "brief": "Internal entry point of the compiler library routine PRINTF.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51S.LIB:PRINTF",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_094b": {
+  "name": "lib_printf_part_3",
+  "brief": "Internal entry point of the compiler library routine PRINTF.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51S.LIB:PRINTF",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0962": {
+  "name": "lib_printf_part_4",
+  "brief": "Internal entry point of the compiler library routine PRINTF.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51S.LIB:PRINTF",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0973": {
+  "name": "lib_printf_part_5",
+  "brief": "Internal entry point of the compiler library routine PRINTF.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51S.LIB:PRINTF",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0980": {
+  "name": "lib_printf_part_6",
+  "brief": "Internal entry point of the compiler library routine PRINTF.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51S.LIB:PRINTF",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0989": {
+  "name": "lib_printf",
+  "brief": "Compiler library routine _PRINTF.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51S.LIB:PRINTF (original name _PRINTF)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0bab": {
+  "name": "lib_printf_part_7",
+  "brief": "Internal entry point of the compiler library routine PRINTF.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51S.LIB:PRINTF",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0bba": {
+  "name": "lib_printf_part_8",
+  "brief": "Internal entry point of the compiler library routine PRINTF.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51S.LIB:PRINTF",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0c44": {
+  "name": "lib_printf_part_9",
+  "brief": "Internal entry point of the compiler library routine PRINTF.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51S.LIB:PRINTF",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0c83": {
+  "name": "flash_setup_bus_mode",
+  "brief": "Switch the flash chip to the fastest read mode that works: quad, dual or single.",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "quad-enable set-up per chip maker; read commands 0x6B and 0x3B verified against the first bytes of the flash, else 0x0B",
+  "plain": "Part of the boot loader's access to the flash memory chip that holds the firmware."
+ },
+ "FUN_CODE_0f3f": {
+  "name": "lib_c_cldptr",
+  "brief": "Compiler library routine ?C?CLDPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?CLDPTR (original name ?C?CLDPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0f58": {
+  "name": "lib_c_cldoptr",
+  "brief": "Compiler library routine ?C?CLDOPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?CLDOPTR (original name ?C?CLDOPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0f85": {
+  "name": "lib_c_cstptr",
+  "brief": "Compiler library routine ?C?CSTPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?CSTPTR (original name ?C?CSTPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0f97": {
+  "name": "lib_c_cstoptr",
+  "brief": "Compiler library routine ?C?CSTOPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?CSTOPTR (original name ?C?CSTOPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0fb9": {
+  "name": "lib_c_lmul",
+  "brief": "Compiler library routine ?C?LMUL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LMUL (original name ?C?LMUL)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_1008": {
+  "name": "lib_c_uldiv_part",
+  "brief": "Internal entry point of the compiler library routine ?C?ULDIV.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?ULDIV",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_1044": {
+  "name": "lib_c_uldiv",
+  "brief": "Compiler library routine ?C?ULDIV.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?ULDIV (original name ?C?ULDIV)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_10d6": {
+  "name": "lib_c_ulshr",
+  "brief": "Compiler library routine ?C?ULSHR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?ULSHR (original name ?C?ULSHR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_10e9": {
+  "name": "lib_c_pldiidata",
+  "brief": "Compiler library routine ?C?PLDIIDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?PLDIIDATA (original name ?C?PLDIIDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_10f9": {
+  "name": "lib_c_ccase",
+  "brief": "Compiler library routine ?C?CCASE.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?CCASE (original name ?C?CCASE)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_111f": {
+  "name": "flash_identify",
+  "brief": "Look the flash chip up in the built-in table of known chips and set its bus mode.",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "JEDEC id against the 57 records at 0x4000; a 32 MiB chip with a non-zero extended address is reset to 0 and the loader halts",
+  "plain": "Part of the boot loader's access to the flash memory chip that holds the firmware."
+ },
+ "FUN_CODE_123a": {
+  "name": "flash_spi_transfer_entry1",
+  "brief": "Shared entry code of flash_spi_transfer for its first call form.",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "common entry block that the compiler placed in front of the routine",
+  "plain": "Part of the boot loader's access to the flash memory chip that holds the firmware."
+ },
+ "FUN_CODE_1249": {
+  "name": "flash_spi_transfer_entry2",
+  "brief": "Shared entry code of flash_spi_transfer for its second call form.",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "common entry block that the compiler placed in front of the routine",
+  "plain": "Part of the boot loader's access to the flash memory chip that holds the firmware."
+ },
+ "FUN_CODE_124f": {
+  "name": "flash_spi_transfer",
+  "brief": "Send a command to the flash chip and read the answer bytes.",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "generic SPI transfer: bytes out including the opcode, bytes in through the FIFO",
+  "plain": "Part of the boot loader's access to the flash memory chip that holds the firmware."
+ },
+ "FUN_CODE_1346": {
+  "name": "startup_share_block_write",
+  "brief": "Copy bytes into one entry of the share block for the next program.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "XDATA 0x3000 plus the offset of the entry kind",
+  "plain": "Part of the boot loader, the first program that runs when the monitor gets power."
+ },
+ "FUN_CODE_13f7": {
+  "name": "startup_entry",
+  "brief": "Compiler start-up code: clear the memory, set the stack and call the boot loader's main routine.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "Keil start-up and initialisation code, byte-exact",
+  "plain": "Part of the boot loader, the first program that runs when the monitor gets power."
+ },
+ "FUN_CODE_1491": {
+  "name": "flash_read_stream",
+  "brief": "Read n bytes from the flash chip through the FIFO with a given read opcode and address.",
+  "notes": "Drops bits 15..8 of the address (a latent bug of the original).",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "streaming read; always 512 bytes",
+  "plain": "Part of the boot loader's access to the flash memory chip that holds the firmware."
+ },
+ "FUN_CODE_151c": {
+  "name": "startup_boot_main",
+  "brief": "Boot loader main: identify the flash, load the partition table and start the next program.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "prints '------STBC Boot Loader -----' and 'Re-booting STBC code...'; then writes the start command to the copy hardware",
+  "plain": "The first program that runs at power-on: it finds the firmware in the memory chip and starts it."
+ },
+ "FUN_CODE_1616": {
+  "name": "uart_init",
+  "brief": "Set the serial port up for 4800 baud, 8 data bits, no parity.",
+  "topic": "uart",
+  "basis": "proven",
+  "evidence": "timer 1 reload chosen by the clock (48 or 96 MHz)",
+  "plain": "Prepares the boot loader's service messages."
+ },
+ "FUN_CODE_16db": {
+  "name": "flash_write_command_byte",
+  "brief": "Send a flash command with one data byte.",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "through the FIFO; used for the write-extended-address command 0xC5",
+  "plain": "Part of the boot loader's access to the flash memory chip that holds the firmware."
+ },
+ "FUN_CODE_172d": {
+  "name": "flash_read_command_byte",
+  "brief": "Send a flash command and return the one byte it answers.",
+  "returns": "answer byte",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "used for the read-status command 0x05 and the extended address read",
+  "plain": "Part of the boot loader's access to the flash memory chip that holds the firmware."
+ },
+ "FUN_CODE_1777": {
+  "name": "flash_read_jedec_id",
+  "brief": "Read the flash chip's three-byte identification.",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "SPI command 0x9F; the bytes are kept at XDATA 0xF064..0xF066",
+  "plain": "Part of the boot loader's access to the flash memory chip that holds the firmware."
+ },
+ "FUN_CODE_17af": {
+  "name": "flash_send_command",
+  "brief": "Send a flash command that has no data.",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "opcode register, start bit, then a wait for completion",
+  "plain": "Part of the boot loader's access to the flash memory chip that holds the firmware."
+ },
+ "FUN_CODE_17e2": {
+  "name": "startup_find_marker_index",
+  "brief": "Return the position of a marker byte in a small table, by clock variant.",
+  "topic": "startup",
+  "basis": "descriptive",
+  "evidence": "marker 0x30 or 0x60; the main routine stores the result plus 1 at XDATA 0xD929",
+  "plain": "Part of the boot loader, the first program that runs when the monitor gets power."
+ },
+ "FUN_CODE_180d": {
+  "name": "SetExtendedAddr",
+  "brief": "Set the flash chip's extended address register, which selects the upper or lower 16 MiB.",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "prints 'SetExtendedAddr' (original name); write enable, then command 0xC5",
+  "plain": "Part of the boot loader's access to the flash memory chip that holds the firmware."
+ },
+ "FUN_CODE_1838": {
+  "name": "lib_putchar",
+  "brief": "Compiler library routine _PUTCHAR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:PUTCHAR (original name _PUTCHAR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_1843": {
+  "name": "lib_putchar_part",
+  "brief": "Internal entry point of the compiler library routine PUTCHAR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:PUTCHAR",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_1873": {
+  "name": "timer_delay_nops",
+  "brief": "Wait in a loop of n times eight idle instructions.",
+  "topic": "timer",
+  "basis": "proven",
+  "evidence": "busy-wait used between flash command steps",
+  "plain": "Pauses for a very short time."
+ },
+ "FUN_CODE_1899": {
+  "name": "startup_run_partition_loader",
+  "brief": "Call startup_load_partition_table with a null pointer argument.",
+  "topic": "startup",
+  "basis": "derived",
+  "evidence": "the only caller of the table loader",
+  "plain": "Part of the boot loader, the first program that runs when the monitor gets power."
+ },
+ "FUN_CODE_18ab": {
+  "name": "startup_is_slow_clock_long",
+  "brief": "Test the clock variant and return 0 as a 32-bit value.",
+  "returns": "0",
+  "topic": "startup",
+  "basis": "descriptive",
+  "evidence": "calls startup_is_slow_clock and returns 0 for both answers; no routine calls it",
+  "plain": "Part of the boot loader, the first program that runs when the monitor gets power."
+ },
+ "FUN_CODE_18bb": {
+  "name": "startup_is_slow_clock",
+  "brief": "Test whether the clock variant register reads 0x20 (the slower clock: uart_init then uses 48 MHz).",
+  "returns": "1 when the register reads 0x20, else 0",
+  "topic": "startup",
+  "basis": "derived",
+  "evidence": "XDATA 0xD511 == 0x20; uart_init loads the baud timer for 48 MHz on 1 and for 96 MHz on 0",
+  "plain": "Part of the boot loader, the first program that runs when the monitor gets power."
+ },
+ "FUN_CODE_18c9": {
+  "name": "startup_get_clock_variant",
+  "brief": "Return 0 for the clock variant 0x20, else 1.",
+  "returns": "0 or 1",
+  "topic": "startup",
+  "basis": "derived",
+  "evidence": "the main routine writes the result times 4 to the SPI bus mode register",
+  "plain": "Part of the boot loader, the first program that runs when the monitor gets power."
+ },
+ "FUN_CODE_18e2": {
+  "name": "flash_read_extended_address",
+  "brief": "Read the flash chip's extended address register.",
+  "returns": "register value",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "SPI command 0xC8",
+  "plain": "Part of the boot loader's access to the flash memory chip that holds the firmware."
+ },
+ "FUN_CODE_18e8": {
+  "name": "flash_get_known_chip_count",
+  "brief": "Return 57, the number of chips in the built-in table.",
+  "returns": "57",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "constant",
+  "plain": "Part of the boot loader's access to the flash memory chip that holds the firmware."
+ },
+ "FUN_CODE_7400": {
+  "name": "data_at_7400",
+  "brief": "Not code: 17 zero bytes of padding inside the slot-1 partition area (0x7000..0x7FFF); no caller (a byte search for LCALL/LJMP to it finds only operand bytes of other instructions); Ghidra false positive.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "recorded as data in the function table",
+  "plain": "An entry of the function table that is data, not a routine."
+ },
+ "FUN_CODE_7527": {
+  "name": "data_at_7527",
+  "brief": "Not code: 17 zero bytes of padding inside the slot-1 partition area (0x7000..0x7FFF); no caller (a byte search for LCALL/LJMP to it finds only operand bytes of other instructions); Ghidra false positive.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "recorded as data in the function table",
+  "plain": "An entry of the function table that is data, not a routine."
+ },
+ "FUN_CODE_7f9d": {
+  "name": "data_at_7f9d",
+  "brief": "Not code: 17 zero bytes of padding inside the slot-1 partition area (0x7000..0x7FFF); no caller (a byte search for LCALL/LJMP to it finds only operand bytes of other instructions); Ghidra false positive.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "recorded as data in the function table",
+  "plain": "An entry of the function table that is data, not a routine."
+ },
+ "FUN_CODE_18d6": {
+  "name": "flash_reset_fifo",
+  "brief": "Pulse the reset bit of the SPI FIFO.",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "OR-store then AND-store on one register",
+  "plain": "Part of the boot loader's access to the flash memory chip that holds the firmware."
+ }
+}

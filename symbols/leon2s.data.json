@@ -1,0 +1,3653 @@
+{
+ "section": "leon2s",
+ "data": {
+  "ARR_a00b3b68": {
+   "name": "hdmi_rx21_lane_regs_0x060",
+   "brief": "PHY register 0x060 of each of the four HDMI 2.1 lanes: 0x2060, 0x2460, 0x2860, 0x3060.",
+   "basis": "descriptive",
+   "evidence": "halfword table indexed by the lane in hdmi_rx21_pulse_lane_bit4_masked; named like the neighbour table hdmi_rx21_lane_regs_0x17c"
+  },
+  "ARR_a00b4e3c": {
+   "name": "dbg_command_table",
+   "brief": "The 8-row command table of dbg_handle_input_line: 32-byte name and routine pointer per row.",
+   "basis": "derived",
+   "evidence": "rows mem, wmem, mdw, mww, hrx21, maild, rt and an empty last row"
+  },
+  "ARR_a80760f0": {
+   "name": "hdmi_rx_command_reg_list",
+   "brief": "Halfword list of HDMI receiver register numbers; a command of the main program picks one by index.",
+   "basis": "derived",
+   "evidence": "indexed by data byte 1 of the write-listed-register command in the command dispatcher; the value is the register written with data byte 2"
+  },
+  "ARR_a8078710": {
+   "name": "hdmi_tx_lts3_phy3c_bits_off",
+   "brief": "Per HDMI output: non-zero makes LTS3 clear bits 2..3 of PHY register 0x3C, zero sets them.",
+   "basis": "descriptive",
+   "evidence": "tested by DRV_HDMI21_TXDetect_FSM_LTS_3 in its per-lane request branch"
+  },
+  "ARR_a8078718": {
+   "name": "hdmi_tx_lts3_phy39_bit1_on",
+   "brief": "Per HDMI output: non-zero makes LTS3 set bit 1 of PHY register 0x39, zero clears it.",
+   "basis": "descriptive",
+   "evidence": "tested by DRV_HDMI21_TXDetect_FSM_LTS_3 in its per-lane request branch"
+  },
+  "ARR_a8078720": {
+   "name": "hdmi_tx_lts3_phy39_bit4_on",
+   "brief": "Per HDMI output: non-zero makes LTS3 set bit 4 of PHY register 0x39, zero clears it.",
+   "basis": "descriptive",
+   "evidence": "tested by DRV_HDMI21_TXDetect_FSM_LTS_3 before it reads the lane requests"
+  },
+  "ARR_a8078728": {
+   "name": "hdmi_tx_lts3_timeout_enables",
+   "brief": "Per HDMI output: 1 lets the LTS3 step limit send the training to LTS_L.",
+   "basis": "derived",
+   "evidence": "tested with the step count before the print 'LTS3 MAX timeout for 200ms go to LTS_L'"
+  },
+  "ARR_a807872a": {
+   "name": "hdmi_tx_ffe_de_emphasis_values",
+   "brief": "Two bytes per TxFFE level {registers 8/0x98 value, registers 0x0E/0x9B value} for the De-Emphasis mode.",
+   "basis": "derived",
+   "evidence": "indexed by hdmi_tx_ffe_levels in the 'TxFFE De-Emphasis' arm of hdmi_tx_set_txffe_mode"
+  },
+  "ARR_a8078732": {
+   "name": "hdmi_tx_ffe_normal_values",
+   "brief": "One 16-bit value per TxFFE level, written to FRL registers 0xE2 / 0xE3 in the normal TxFFE mode.",
+   "basis": "derived",
+   "evidence": "indexed by hdmi_tx_ffe_levels in the 'TxFFE_Normal(Exit Mode)' arm of hdmi_tx_set_txffe_mode and in the LTS:2 state routine"
+  },
+  "ARR_a807873c": {
+   "name": "hdmi_tx_frl_printed_states",
+   "brief": "Per HDMI output: the FRL training state whose name was printed last.",
+   "basis": "derived",
+   "evidence": "compared with hdmi_tx_frl_states and updated right after the state name is printed"
+  },
+  "ARR_a807880e": {
+   "name": "dp_mst_reply_body_write_offsets",
+   "brief": "Per port: write position (halfword, modulo the ring size) in the body ring of the down replies.",
+   "basis": "derived",
+   "evidence": "dp_mst_send_reply writes the body bytes at this offset and adds the length; dp_mst_reset_port clears it"
+  },
+  "ARR_a8078978": {
+   "name": "hdmi_only_scramble_guess_mode",
+   "brief": "Per HDMI PHY: the firmware's bHDMI_ONLYSCRAMBLE_GUESSMODE byte, behind the port mode byte routines.",
+   "basis": "proven",
+   "evidence": "printed as 'bHDMI_ONLYSCRAMBLE_GUESSMODE = %d' by DRV_HDMI_EQScan_FSM_PHY_Init; hdmi_get_port_mode_byte / hdmi_set_port_mode_byte read and write it"
+  },
+  "ARR_a8078a00": {
+   "name": "dp_tx_action_flags",
+   "brief": "One halfword of pending action flags per DP output.",
+   "basis": "derived",
+   "evidence": "filled by dp_tx_post_action_flags, read and cleared by dp_tx_take_action_flags"
+  },
+  "ARR_a8078b3c": {
+   "name": "audio_dp_last_mauds",
+   "brief": "One word per DP receiver: the Maud value kept when its audio was last found changed.",
+   "basis": "derived",
+   "evidence": "audio_check_dp_fifo_unmute compares audio_read_dp_maud with it (range 0x14) and stores the new value"
+  },
+  "ARR_a8078b60": {
+   "name": "hdcp_tx_timers",
+   "brief": "15 countdown timers (words, in ticks) of the output copy-protection state machines.",
+   "basis": "derived",
+   "evidence": "started by hdcp_tx_set_timer, read by hdcp_tx_get_timer, counted down by hdcp_tx_update_timers by the ticks passed"
+  },
+  "ARR_a807905a": {
+   "name": "hdmi_rx21_lane_freqs",
+   "brief": "Measured lane frequency values, four halfwords per HDMI 2.1 receiver.",
+   "basis": "proven",
+   "evidence": "written by DRV_HDMI21_PHY_Freq_Detection next to the print 'Lane%d, freq=%ld'; compared with the expected value by hdmi_rx21_check_sr_detect"
+  },
+  "ARR_a80790d0": {
+   "name": "hdmi_rx21_frl_rate_restart_requests",
+   "brief": "One byte per HDMI 2.1 receiver: 1 asks the link training runner to restart at LTS_3 after a rate change.",
+   "basis": "derived",
+   "evidence": "set by hdmi_rx21_flag_frl_rate_change; read and cleared by hdmi_rx21_run_rx_detect_fsm on chip revisions up to 0x82"
+  },
+  "ARR_a8079110": {
+   "name": "hdmi_rx21_port_started_flags",
+   "brief": "One byte per HDMI 2.1 receiver: 1 after hdmi_rx21_start_port, 0 after hdmi_rx21_stop_port; 0 = skipped.",
+   "basis": "derived",
+   "evidence": "written by hdmi_rx21_set_port_flag (callers start_port with 1, stop_port with 0); both state machine runners skip a receiver whose byte is 0"
+  },
+  "ARR_a80791a8": {
+   "name": "hdmi_tx_flt_no_timeout_flags",
+   "brief": "Per HDMI output: the FLT_no_timeout bit (bit 5) last read from the sink's SCDC register 0x35.",
+   "basis": "proven",
+   "evidence": "LTS_3 prints the bit as 'FLT_no_timeout' and stores 1 or 0 here"
+  },
+  "ARR_a80791f4": {
+   "name": "hdmi_tx_ffe_max_levels",
+   "brief": "Per HDMI output: the highest TxFFE level index the training may step to (the texts call it FFE_Max).",
+   "basis": "derived",
+   "evidence": "LTS_3 steps hdmi_tx_ffe_levels only up to this value ('u8HDMI21_TxFFE_Index+1 > FFE_Max'); LTS_2 packs it beside the FRL rate"
+  },
+  "ARR_a8079310": {
+   "name": "dp_block_event_handled_flags",
+   "brief": "Per DP port: 1 after dp_handle_block_event ran; cleared when the link goes stable or DSC goes on.",
+   "basis": "derived",
+   "evidence": "set by dp_handle_block_event; dp_port_task calls that only while it is 0; cleared by dp_run_link_state"
+  },
+  "ARR_a80795dc": {
+   "name": "dp_status_copy_rows",
+   "brief": "Rows of 0x30 bytes that the port 0 interrupt copies from registers 0xE60 and following.",
+   "basis": "descriptive",
+   "evidence": "written by dp_isr_port0 at row dp_mst_message_state_status_row"
+  },
+  "ARR_a807963d": {
+   "name": "dp_mst_chunk_rings",
+   "brief": "Per DP input: ring of 16 received chunks of 0x30 bytes, filled from registers 0xE00.. by the interrupt.",
+   "basis": "derived",
+   "evidence": "written by dp_isr_port0 at dp_mst_message_state_rx_write_indexes; read as [port][row] by dp_mst_append_chunk_to_message and dp_mst_get_request_number"
+  },
+  "ARR_a8079c3d": {
+   "name": "dp_mst_last_request_numbers",
+   "brief": "Request number of the last request, by low header nibble * 2 + sequence bit; replies are checked against it.",
+   "basis": "derived",
+   "evidence": "written by dp_mst_get_request_number; compared with the first body byte by dp_mst_is_reply_unmatched and dp_mst_is_record_changed; cleared by dp_mst_reset_port"
+  },
+  "ARR_a8079c98": {
+   "name": "dp_mst_up_message_rows",
+   "brief": "16 rows of 0x30 bytes: messages fetched from the output (down replies, up requests) for the source.",
+   "basis": "derived",
+   "evidence": "filled by dp_mst_fetch_downstream_message at the up write index; read by dp_mst_send_up_message_step and dp_mst_find_up_message_end"
+  },
+  "ARR_a807a398": {
+   "name": "dp_mst_reply_header_entries",
+   "brief": "Per port 16 entries of 11 bytes: the packed headers of the down replies waiting to be sent.",
+   "basis": "derived",
+   "evidence": "dp_mst_queue_chunk queue 1 writes entry [reply write index] of the port (0xB0 bytes per port); dp_mst_is_reply_unmatched reads the entry at the reply read index"
+  },
+  "ARR_a807a520": {
+   "name": "dp_mst_forward_rows",
+   "brief": "Forward ring: 16 rows of 0x30 bytes, packed header and body of the down requests waiting to go to the output.",
+   "basis": "derived",
+   "evidence": "dp_mst_queue_chunk queue 3 stores a header in row (forward write index & 0xF); dp_mst_queue_clear_payload_table_request writes the body behind it"
+  },
+  "ARR_a807a8fc": {
+   "name": "hdmi_tx_requests",
+   "brief": "20-byte request record per HDMI output, filled by commands of the main program and applied to the output.",
+   "basis": "derived",
+   "evidence": "written field by field by the command dispatcher (pixel clock, sync polarities, bank 1 register values at +0x10..+0x12); read by hdmi_tx_apply_request_regs with a row size of 0x14"
+  },
+  "ARR_a807a928": {
+   "name": "dp_tx_path_records",
+   "brief": "40-byte records, one per video path: mode bits in word 0, source code at +1, option word at +0x20.",
+   "basis": "descriptive",
+   "evidence": "indexed by path or port in dp_tx_set_video_timing, dp_tx_get_path_option, dp_tx_get_path_byte20 / 21 and input_get_port_source_code"
+  },
+  "ARR_a807a9f0": {
+   "name": "hdmi_eq_port_records",
+   "brief": "0x898-byte EQ work record per HDMI PHY (the firmware's port_EQ); byte +0x29 is the printed bch_en_flag.",
+   "basis": "derived",
+   "evidence": "cleared together with the scan record under the text 'clean port_EQ!'; byte +0x29 printed as 'bch_en_flag = %d' by hdmi_eq_reset_port_record"
+  },
+  "ARR_a807cc64": {
+   "name": "hdmi_phy_records",
+   "brief": "24-byte record per HDMI PHY: power flag, EQ done, EQ reset request, option byte (+7), PHY clock in MHz (+8).",
+   "basis": "derived",
+   "evidence": "indexed by PHY * 0x18; byte 0 hdmi_phy_set_power_flag, byte 1 hdmi_phy_is_eq_done, +8 printed as 'Phy Clk*1 %dMHz'; cleared per port by DRV_HDMI_InitialSettings"
+  },
+  "ARR_a807ccc4": {
+   "name": "hdmi_eq_scan_records",
+   "brief": "12-byte EQ scan record per HDMI PHY: word 0 = scan state, byte 7 = the printed 'Check Error Round'.",
+   "basis": "derived",
+   "evidence": "word 0 indexes hdmi_eq_scan_state_handlers in hdmi_eq_run_scan_fsm; byte 7 printed as 'Check Error Round = %d'; cleared with 'clean port_EQ!'"
+  },
+  "ARR_a807cd2e": {
+   "name": "dp_tx_sink_caps_records",
+   "brief": "6-byte record per DP output read from the sink: flags, revision, top rate code, top lane count, wait value.",
+   "basis": "derived",
+   "evidence": "filled by dp_tx_read_sink_caps and dp_tx_init_sink_caps; read by dp_tx_choose_link_config and the training routines"
+  },
+  "ARR_a807d3e4": {
+   "name": "hdmi_rx_records",
+   "brief": "0xB0-byte record per HDMI 2.0 receiver: copies of the received packets, restart hint, AVI capture time.",
+   "basis": "derived",
+   "evidence": "indexed with a row size of 0xB0 by 21 routines; packet copies with seen / update / hold bytes, +0xA6 read by hdmi_get_restart_hint, +0xA8 AVI capture time, +0xAC scramble abnormal flag"
+  },
+  "ARR_a807d580": {
+   "name": "hdmi_tx_output_records",
+   "brief": "28-byte record per HDMI output: flag word (bit 4 FRL mode, bit 7 hsync polarity), FRL rate at +0x15.",
+   "basis": "derived",
+   "evidence": "indexed by output * 28 in hdmi_tx_get_hsync_polarity, hdmi_tx_get_frl_rate, hdmi_tx_clear_frl_mode, hdmi_tx_send_avi_infoframe"
+  },
+  "ARR_a807d680": {
+   "name": "hdmi_rx21_lts_records",
+   "brief": "0xB0-byte link training record per HDMI 2.1 receiver: FRL rate, TxFFE_Max_L at +0x13, last printed state.",
+   "basis": "derived",
+   "evidence": "indexed by receiver * 0xB0 in the DRV_HDMI21_RXDetect_FSM_LTS_* routines and hdmi_rx21_update_frl_rate ('Upadte FRL_Rate = %d, TxFFE_Max_L = %d')"
+  },
+  "ARR_a807d7e0": {
+   "name": "hdmi_rx21_input_records",
+   "brief": "400-byte record per HDMI 2.1 receiver: mode information and packet data (colour format at +0x50).",
+   "basis": "derived",
+   "evidence": "indexed with a row size of 400 by 59 routines; fields at 0xA807D7E1 / 0xA807D80D already carry the names hdmi_rx21_input_record0_mode_detected / _dsc"
+  },
+  "ARR_a807db00": {
+   "name": "hdmi_rx21_reg_blocks",
+   "brief": "Per HDMI 2.1 receiver: the addresses of its 13 register blocks (0x34 bytes per receiver).",
+   "basis": "derived",
+   "evidence": "filled by hdmi_rx21_init_register_pointers (0xCE009000 + receiver * 0x1000 + k * 0x100); used by the DRV_HDMI21_* routines"
+  },
+  "ARR_a807db6c": {
+   "name": "hdmi_tx_frl_states",
+   "brief": "FRL link training state of each HDMI output (index of the DRV_HDMI21_TXDetect_FSM_* routines).",
+   "basis": "proven",
+   "evidence": "each DRV_HDMI21_TXDetect_FSM_* routine prints its name when this word changes and stores the next state here"
+  },
+  "ARR_a807dc10": {
+   "name": "sys_dsc_dec_state_records",
+   "brief": "8-byte state record per DSC decoder: state word 0..4, checksum tries at +4, a byte at +5.",
+   "basis": "derived",
+   "evidence": "sys_dsc_dec_run_state, sys_dsc_dec_reset_state, sys_dsc_dec_is_source_absent"
+  },
+  "ARR_a807dc18": {
+   "name": "dp_input_records",
+   "brief": "300-byte record per DisplayPort input: status bytes, setting bytes +0x110..+0x11F, halfword +0x120.",
+   "basis": "derived",
+   "evidence": "indexed by DP port in dp_init_port_settings, dp_apply_port_settings, dp_reset_port and the dp_get_port_record_byte_* routines"
+  },
+  "DAT_9f1b0000": {
+   "name": "dp_tx_sink_edid_buffer",
+   "brief": "Buffer that receives the EDID of the DisplayPort sink; MST remote I2C reads answer from it.",
+   "basis": "derived",
+   "evidence": "dp_tx_read_sink_edid reads into it; dp_mst_handle_remote_i2c_read copies from it"
+  },
+  "DAT_9f1b0200": {
+   "name": "hdmi_tx_sink_edid_buffers",
+   "brief": "EDID of the sink on each HDMI output port (0x200 bytes per port).",
+   "basis": "derived",
+   "evidence": "hdmi_tx_read_sink_edid, indexed by port"
+  },
+  "DAT_9f1b0700": {
+   "name": "hdr_static_curve_rows_override",
+   "brief": "Seven 22-byte rows that replace the static HDR curve rows when flag byte 0xA8078A5B is 1.",
+   "basis": "derived",
+   "evidence": "hdr_build_static_tone_curve copies 0x9A bytes to 0xA80761D0"
+  },
+  "DAT_9f1b0800": {
+   "name": "hdr_tone_curve_alternate",
+   "brief": "Second 257-entry tone curve, loaded instead of the received one when control bit 2 is set.",
+   "basis": "derived",
+   "evidence": "hdr_apply_tone_curve copies 0x101 halfwords from it into hdr_tone_curve"
+  },
+  "DAT_9f1b1ac0": {
+   "name": "hdcp_rx_hdmi_recheck_ports_entry",
+   "brief": "Entry of hdcp_rx_hdmi_recheck_ports, which InitHDCP stores as a tick hook.",
+   "basis": "proven",
+   "evidence": "address 0x9F1B1AC0 = hdcp_rx_hdmi_recheck_ports (part 3, +0xF10000); passed to sys_register_tick_hook"
+  },
+  "DAT_9f1b6ef8": {
+   "name": "hdcp_default_keys_second",
+   "brief": "Second built-in copy-protection key block (282 bytes).",
+   "basis": "derived",
+   "evidence": "hdcp_get_default_keys_second copies it"
+  },
+  "DAT_9f1b7018": {
+   "name": "hdcp_default_ksv_second",
+   "brief": "Second built-in 5-byte key-selection value.",
+   "basis": "derived",
+   "evidence": "hdcp_get_default_keys_second copies 5 bytes"
+  },
+  "DAT_9f1b7020": {
+   "name": "hdcp_default_keys_first",
+   "brief": "First built-in copy-protection key block (282 bytes).",
+   "basis": "derived",
+   "evidence": "hdcp_get_default_keys_first copies it"
+  },
+  "DAT_9f1b7140": {
+   "name": "hdcp_default_ksv_first",
+   "brief": "First built-in 5-byte key-selection value.",
+   "basis": "derived",
+   "evidence": "hdcp_get_default_keys_first copies 5 bytes"
+  },
+  "DAT_9f1b7148": {
+   "name": "hdcp_default_table_block",
+   "brief": "Built-in table block: a 16-byte value at +4 and a 0x20A-byte table at +0x28.",
+   "basis": "derived",
+   "evidence": "hdcp_get_default_tables; hdcp_tx_engine_load_three_tables sends +0x2D"
+  },
+  "DAT_9f1b7438": {
+   "name": "hdcp_tx_engine_table_mode4",
+   "brief": "Built-in 128-byte table sent to the protection engine in mode 4.",
+   "basis": "derived",
+   "evidence": "hdcp_tx_engine_load_three_tables"
+  },
+  "DAT_9f1b74b8": {
+   "name": "hdcp_tx_engine_table_mode5",
+   "brief": "Built-in 128-byte table sent to the protection engine in mode 5.",
+   "basis": "derived",
+   "evidence": "hdcp_tx_engine_load_three_tables, hdcp_get_default_tables"
+  },
+  "DAT_9f1c1ca8": {
+   "name": "hdcp_tx_engine_table_384",
+   "brief": "Built-in 384-byte table that is loaded into the protection engine of an output.",
+   "basis": "derived",
+   "evidence": "hdcp_tx_engine_load_table"
+  },
+  "DAT_9f1c1e38": {
+   "name": "hdcp_default_id_block",
+   "brief": "Built-in 16-byte value, handed out in reverse byte order.",
+   "basis": "derived",
+   "evidence": "hdcp_get_default_id_reversed"
+  },
+  "DAT_9f1c1e48": {
+   "name": "hdcp_tx_engine_fixed_block",
+   "brief": "ROM bytes: the SHA-256 digest of no data (32 bytes) and, at +0x4F, the 16 fixed bytes sent to the engine.",
+   "basis": "derived",
+   "evidence": "hdcp_tx_hdmi_run_fixed_block sends bytes +0x4F..+0x5E, hdcp_tx_engine_exchange_tables combines the first bytes; bytes e3b0c442..."
+  },
+  "DAT_9f1c1ea8": {
+   "name": "hdcp_tx_exchange_byte_table",
+   "brief": "Byte table 0, 1, 2, ... written to the engine and combined with the bytes read back.",
+   "basis": "descriptive",
+   "evidence": "hdcp_tx_engine_exchange_tables writes it to reg 0xD and XORs the read-back"
+  },
+  "DAT_9f1c1ec8": {
+   "name": "hdcp_tx_reg_bases",
+   "brief": "Register block base of each output protection block (0x6000, 0x6100, 0x6390).",
+   "basis": "derived",
+   "evidence": "hdcp_tx_reg_read / _write / _update_bits index it"
+  },
+  "DAT_9f1c3fa0": {
+   "name": "hdr_tmo_setup_steps_mode1",
+   "brief": "Step table summed into the 1025 values that mode 1 of the tone-mapping set-up writes.",
+   "basis": "derived",
+   "evidence": "hdr_tmo_setup_mode, sel 1"
+  },
+  "DAT_9f1c43a8": {
+   "name": "hdr_tmo_gain_steps_mode1",
+   "brief": "Step table of the tone-mapping gain table for mode 1 (written as running sums).",
+   "basis": "derived",
+   "evidence": "hdr_tmo_write_gain_table, mode 1"
+  },
+  "DAT_9f1c4d08": {
+   "name": "hdr_tmo_gain_steps_mode6",
+   "brief": "Step table of the tone-mapping gain table for mode 6 (written as running sums).",
+   "basis": "derived",
+   "evidence": "hdr_tmo_write_gain_table, mode 6"
+  },
+  "DAT_9f1c51a8": {
+   "name": "hdr_tmo_gain_steps_mode5",
+   "brief": "Step table of the tone-mapping gain table for mode 5 (written as running sums).",
+   "basis": "derived",
+   "evidence": "hdr_tmo_write_gain_table, mode 5"
+  },
+  "DAT_9f1c5600": {
+   "name": "hdr_tmo_gain_steps_mode4",
+   "brief": "Step table of the tone-mapping gain table for mode 4 (written as running sums).",
+   "basis": "derived",
+   "evidence": "hdr_tmo_write_gain_table, mode 4"
+  },
+  "DAT_9f1c5a38": {
+   "name": "hdr_tmo_gain_steps_default",
+   "brief": "Step table of the tone-mapping gain table for mode 3 and all other modes.",
+   "basis": "derived",
+   "evidence": "hdr_tmo_write_gain_table, default arm"
+  },
+  "DAT_9f1cc770": {
+   "name": "dp_mst_edid_3840x1080",
+   "brief": "Built-in EDID \"NT68580_EV\" with 3840x1080 as first timing, used when DP record byte 0x117 is 2.",
+   "basis": "proven",
+   "evidence": "EDID bytes; dp_mst_handle_remote_i2c_read"
+  },
+  "DAT_9f1cc8f0": {
+   "name": "dp_mst_edid_3840x2160",
+   "brief": "Built-in EDID \"NT68580_EV\" with 3840x2160 as first timing, used when DP record byte 0x117 is 1.",
+   "basis": "proven",
+   "evidence": "EDID bytes; dp_mst_handle_remote_i2c_read"
+  },
+  "DAT_9f1cea6f": {
+   "name": "dsc_enc_rc_offsets_422",
+   "brief": "Rate-control range offsets (15 per row) of the compression encoder for YUV 4:2:2.",
+   "basis": "derived",
+   "evidence": "sys_dsc_enc_compute_pps packs (min << 11) + (max << 6) + offset per range"
+  },
+  "DAT_9f1ceaaf": {
+   "name": "dsc_enc_max_qp_444",
+   "brief": "Rate-control range maximum quantiser (15 per row, row by bit depth) for RGB and YUV 4:4:4.",
+   "basis": "derived",
+   "evidence": "sys_dsc_enc_compute_pps packs (min << 11) + (max << 6) + offset per range"
+  },
+  "DAT_9f1ceadc": {
+   "name": "dsc_enc_max_qp_422",
+   "brief": "Rate-control range maximum quantiser (15 per row, 7 rows) for YUV 4:2:2.",
+   "basis": "derived",
+   "evidence": "sys_dsc_enc_compute_pps packs (min << 11) + (max << 6) + offset per range"
+  },
+  "DAT_9f1ceb45": {
+   "name": "dsc_enc_max_qp_420",
+   "brief": "Rate-control range maximum quantiser (15 per row, row by bit depth) for YUV 4:2:0.",
+   "basis": "derived",
+   "evidence": "sys_dsc_enc_compute_pps packs (min << 11) + (max << 6) + offset per range"
+  },
+  "DAT_9f1ceb72": {
+   "name": "dsc_enc_min_qp_444",
+   "brief": "Rate-control range minimum quantiser (15 per row, row by bit depth) for RGB and YUV 4:4:4.",
+   "basis": "derived",
+   "evidence": "sys_dsc_enc_compute_pps packs (min << 11) + (max << 6) + offset per range"
+  },
+  "DAT_9f1ceb9f": {
+   "name": "dsc_enc_min_qp_422",
+   "brief": "Rate-control range minimum quantiser (15 per row, 7 rows) for YUV 4:2:2.",
+   "basis": "derived",
+   "evidence": "sys_dsc_enc_compute_pps packs (min << 11) + (max << 6) + offset per range"
+  },
+  "DAT_9f1cec08": {
+   "name": "dsc_enc_min_qp_420",
+   "brief": "Rate-control range minimum quantiser (15 per row, row by bit depth) for YUV 4:2:0.",
+   "basis": "derived",
+   "evidence": "sys_dsc_enc_compute_pps packs (min << 11) + (max << 6) + offset per range"
+  },
+  "DAT_a0063960": {
+   "name": "hdr_bezier_weights_order10",
+   "brief": "Weights of a Bezier tone curve of order 10: 11 rows of 65 points.",
+   "basis": "proven",
+   "evidence": "values equal (1 - t)^N... Bernstein weights; table picked by metadata byte +0x58 + 1"
+  },
+  "DAT_a0063ef6": {
+   "name": "hdr_bezier_weights_order9",
+   "brief": "Weights of a Bezier tone curve of order 9: 10 rows of 65 points.",
+   "basis": "proven",
+   "evidence": "values equal (1 - t)^N... Bernstein weights; table picked by metadata byte +0x58 + 1"
+  },
+  "DAT_a006440a": {
+   "name": "hdr_bezier_weights_order8",
+   "brief": "Weights of a Bezier tone curve of order 8: 9 rows of 65 points.",
+   "basis": "proven",
+   "evidence": "values equal (1 - t)^N... Bernstein weights; table picked by metadata byte +0x58 + 1"
+  },
+  "DAT_a006489c": {
+   "name": "hdr_bezier_weights_order7",
+   "brief": "Weights of a Bezier tone curve of order 7: 8 rows of 65 points.",
+   "basis": "proven",
+   "evidence": "values equal (1 - t)^N... Bernstein weights; table picked by metadata byte +0x58 + 1"
+  },
+  "DAT_a0064cac": {
+   "name": "hdr_bezier_weights_order6",
+   "brief": "Weights of a Bezier tone curve of order 6: 7 rows of 65 points.",
+   "basis": "proven",
+   "evidence": "values equal (1 - t)^N... Bernstein weights; table picked by metadata byte +0x58 + 1"
+  },
+  "DAT_a006503a": {
+   "name": "hdr_bezier_weights_order5",
+   "brief": "Weights of a Bezier tone curve of order 5: 6 rows of 65 points.",
+   "basis": "proven",
+   "evidence": "values equal (1 - t)^N... Bernstein weights; table picked by metadata byte +0x58 + 1"
+  },
+  "DAT_a0065346": {
+   "name": "hdr_bezier_weights_order4",
+   "brief": "Weights of a Bezier tone curve of order 4: 5 rows of 65 points.",
+   "basis": "proven",
+   "evidence": "values equal (1 - t)^N... Bernstein weights; table picked by metadata byte +0x58 + 1"
+  },
+  "DAT_a00655d0": {
+   "name": "hdr_bezier_weights_order3",
+   "brief": "Weights of a Bezier tone curve of order 3: 4 rows of 65 points.",
+   "basis": "proven",
+   "evidence": "values equal (1 - t)^N... Bernstein weights; table picked by metadata byte +0x58 + 1"
+  },
+  "DAT_a00657d8": {
+   "name": "hdr_bezier_weights_order2",
+   "brief": "Weights of a Bezier tone curve of order 2: 3 rows of 65 points.",
+   "basis": "proven",
+   "evidence": "values equal (1 - t)^N... Bernstein weights; table picked by metadata byte +0x58 + 1"
+  },
+  "DAT_a00b383c": {
+   "name": "dp_mst_dpcd_addresses",
+   "brief": "Table of DPCD register numbers (0x200..0x20B, 0x261, 0x301, 0x340..) that the MST answers read.",
+   "basis": "derived",
+   "evidence": "table values; read by the MST request handlers"
+  },
+  "DAT_a00b3a20": {
+   "name": "hdmi_eq_scan_state_handlers",
+   "brief": "State routines of the HDMI equaliser scan, indexed by the scan state word.",
+   "basis": "proven",
+   "evidence": "pointers to DRV_HDMI_EQScan_FSM_*; called by hdmi_eq_run_scan_fsm"
+  },
+  "DAT_a00b3a64": {
+   "name": "hdmi_eq_aeq_entries",
+   "brief": "Equaliser entries {RCT byte, CFT halfword} that hdmi_phy_load_aeq_entry writes to a PHY.",
+   "basis": "derived",
+   "evidence": "hdmi_phy_load_aeq_entry"
+  },
+  "DAT_a00b3ac8": {
+   "name": "hdmi_eq_rvga_values",
+   "brief": "RVGA gain value of each RVGA index (3, 9, 15).",
+   "basis": "derived",
+   "evidence": "indexed by the channel RVGA index in the EQ scan prints"
+  },
+  "DAT_a00b3acc": {
+   "name": "hdmi_eq_initial_cft_values",
+   "brief": "Initial CFT values the EQ scan tries in turn when the first R/C setting fails.",
+   "basis": "derived",
+   "evidence": "'initial R/C fail, Change R/C value' print; index post-incremented"
+  },
+  "DAT_a00b3ad4": {
+   "name": "hdmi_eq_initial_rct_values",
+   "brief": "Initial RCT values the EQ scan tries in turn when the first R/C setting fails.",
+   "basis": "derived",
+   "evidence": "'initial R/C fail, Change R/C value' print; index post-incremented"
+  },
+  "DAT_a00b3adc": {
+   "name": "hdmi_rx21_initial_cft_values",
+   "brief": "Start CFT value of the HDMI 2.1 lanes.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI21_Set_PHY: cft[] = table[0]"
+  },
+  "DAT_a00b3ae4": {
+   "name": "hdmi_rx21_initial_rct_values",
+   "brief": "Start RCT value of the HDMI 2.1 lanes.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI21_Set_PHY: rct[] = table[0]"
+  },
+  "DAT_a00b3aec": {
+   "name": "hdmi_rx21_lane_regs_0x33c",
+   "brief": "PHY register 0x33C of each of the four HDMI 2.1 lanes, read for the lane eye-status score.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; hdmi_rx21_score_lane, hdmi_rx21_pick_eq_step"
+  },
+  "DAT_a00b3af4": {
+   "name": "hdmi_rx21_lane_regs_0x31c",
+   "brief": "PHY register 0x31C of each of the four HDMI 2.1 lanes, read for the lane eye-status score.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; hdmi_rx21_score_lane, hdmi_rx21_pick_eq_step"
+  },
+  "DAT_a00b3afc": {
+   "name": "hdmi_rx21_lane_regs_0x064",
+   "brief": "PHY register 0x064 of each of the four HDMI 2.1 lanes, that takes the per-lane byte setting.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; hdmi_rx21_write_lane_setting"
+  },
+  "DAT_a00b3b04": {
+   "name": "hdmi_phy_channel_regs_0x170",
+   "brief": "PHY register 0x170 of each of the three HDMI channels, set by the pre-AEQ step.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; DRV_HDMI_EQScan_FSM_PHY_PreAEQ, hdmi_phy_pulse_channel_regs"
+  },
+  "DAT_a00b3b0a": {
+   "name": "hdmi_phy_channel_regs_0x17c",
+   "brief": "PHY register 0x17C of each of the three HDMI channels, set by the pre-AEQ step.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; DRV_HDMI_EQScan_FSM_PHY_PreAEQ, hdmi_phy_pulse_channel_regs"
+  },
+  "DAT_a00b3b10": {
+   "name": "hdmi_rx21_lane_regs_0x17c",
+   "brief": "PHY register 0x17C of each of the four HDMI 2.1 lanes, set during PHY set-up and the LMS-to-EQ switch.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; DRV_HDMI21_Set_PHY, DRV_HDMI21_LMS_To_EQ"
+  },
+  "DAT_a00b3b18": {
+   "name": "hdmi_rx21_lane_eq_regs",
+   "brief": "PHY register 0x178 of each of the four HDMI 2.1 lanes, which holds the RCT and CFT values.",
+   "basis": "derived",
+   "evidence": "register numbers 0x2178..0x3178; DRV_HDMI21_Set_PHY writes rct | cft << 8"
+  },
+  "DAT_a00b3b20": {
+   "name": "hdmi_rx21_lane_regs_0x050",
+   "brief": "PHY register 0x050 of each of the four HDMI 2.1 lanes, written by the bit-7 lane routine.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; hdmi_rx21_set_lane_bit7_masked"
+  },
+  "DAT_a00b3b28": {
+   "name": "hdmi_rx21_lane_regs_0x328",
+   "brief": "PHY register 0x328 of each of the four HDMI 2.1 lanes, of the lane set-up and default EQ tables.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; hdmi_rx21_setup_lanes_masked, _reset_lane_eq_regs"
+  },
+  "DAT_a00b3b30": {
+   "name": "hdmi_rx21_lane_regs_0x308",
+   "brief": "PHY register 0x308 of each of the four HDMI 2.1 lanes, of the lane set-up and default EQ tables.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; hdmi_rx21_setup_lanes_masked, _reset_lane_eq_regs"
+  },
+  "DAT_a00b3b38": {
+   "name": "hdmi_rx21_lane_regs_0x330",
+   "brief": "PHY register 0x330 of each of the four HDMI 2.1 lanes, of the lane set-up and default EQ tables.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; hdmi_rx21_setup_lanes_masked, _reset_lane_eq_regs"
+  },
+  "DAT_a00b3b40": {
+   "name": "hdmi_rx21_lane_regs_0x310",
+   "brief": "PHY register 0x310 of each of the four HDMI 2.1 lanes, of the lane set-up and default EQ tables.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; hdmi_rx21_setup_lanes_masked, _reset_lane_eq_regs"
+  },
+  "DAT_a00b3b48": {
+   "name": "hdmi_rx21_lane_regs_0x334",
+   "brief": "PHY register 0x334 of each of the four HDMI 2.1 lanes, of the lane set-up and default EQ tables.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; hdmi_rx21_setup_lanes_masked, _reset_lane_eq_regs"
+  },
+  "DAT_a00b3b50": {
+   "name": "hdmi_rx21_lane_regs_0x314",
+   "brief": "PHY register 0x314 of each of the four HDMI 2.1 lanes, of the lane set-up and default EQ tables.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; hdmi_rx21_setup_lanes_masked, _reset_lane_eq_regs"
+  },
+  "DAT_a00b3b58": {
+   "name": "hdmi_rx21_lane_regs_0x034",
+   "brief": "PHY register 0x034 of each of the four HDMI 2.1 lanes, of the lane set-up tables.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; hdmi_rx21_setup_lanes_masked"
+  },
+  "DAT_a00b3b60": {
+   "name": "hdmi_rx21_lane_regs_0x014",
+   "brief": "PHY register 0x014 of each of the four HDMI 2.1 lanes, of the lane set-up tables.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; hdmi_rx21_setup_lanes_masked"
+  },
+  "DAT_a00b3b70": {
+   "name": "hdmi_rx21_lane_regs_0x170",
+   "brief": "PHY register 0x170 of each of the four HDMI 2.1 lanes, that takes the lane start values.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; hdmi_rx21_load_lane_values_masked, hdmi_rx21_apply_lane_eq"
+  },
+  "DAT_a00b3b78": {
+   "name": "hdmi_phy_channel_eq_regs",
+   "brief": "PHY register 0x178 of each of the three channels, which holds the RCT and CFT values.",
+   "basis": "derived",
+   "evidence": "register numbers 0x1178/0x1578/0x1978; RCT bits 0..3, CFT from bit 8"
+  },
+  "DAT_a00b3b80": {
+   "name": "hdmi_eq_rct_candidates_byte8_set",
+   "brief": "RCT values 6, 8, 10, 12, 15 that the best-RCT search uses with EQ record byte 8 set.",
+   "basis": "derived",
+   "evidence": "hdmi_eq_find_best_rct"
+  },
+  "DAT_a00b3b88": {
+   "name": "hdmi_eq_rct_candidates",
+   "brief": "RCT values 1, 3, 5, 7, 9, 12, 15 that the best-RCT search goes through.",
+   "basis": "derived",
+   "evidence": "hdmi_eq_find_best_rct"
+  },
+  "DAT_a00b3b90": {
+   "name": "hdmi_phy_channel_regs_0x128",
+   "brief": "PHY register 0x128 of each of the three HDMI channels, read by the RVGA steps.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; DRV_HDMI_EQScan_FSM_PHY_PreRVGA, _Search_Process"
+  },
+  "DAT_a00b3b96": {
+   "name": "hdmi_phy_channel_regs_0x134",
+   "brief": "PHY register 0x134 of each of the three HDMI channels, read by the RVGA steps.",
+   "basis": "derived",
+   "evidence": "register numbers in the table; DRV_HDMI_EQScan_FSM_PHY_PreRVGA, _Search_Process"
+  },
+  "DAT_a00b3b9c": {
+   "name": "hdmi_eq_pre_aeq_entries_rx21",
+   "brief": "Pre-AEQ {RCT, CFT} entries for HDMI 2.1 PHYs when flag 0xA8078988 of the port is 1.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_EQScan_FSM_PHY_PreAEQ table choice"
+  },
+  "DAT_a00b3bd4": {
+   "name": "hdmi_eq_pre_aeq_entries",
+   "brief": "Pre-AEQ {RCT, CFT} entries stepped through when EQ record byte 8 is clear.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_EQScan_FSM_PHY_PreAEQ table choice"
+  },
+  "DAT_a00b3c0c": {
+   "name": "hdmi_eq_pre_aeq_entries_byte8_set",
+   "brief": "Pre-AEQ {RCT, CFT} entries stepped through when EQ record byte 8 is set.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_EQScan_FSM_PHY_PreAEQ table choice"
+  },
+  "DAT_a00b407c": {
+   "name": "hdmi_tx_frl_clock_table",
+   "brief": "Link clock of each FRL rate index in 0.1 MHz (1666 = 166.6 MHz up to 6666).",
+   "basis": "derived",
+   "evidence": "table values; hdmi_tx_setup_audio scales the audio rate by it"
+  },
+  "DAT_a00b408a": {
+   "name": "hdmi_tx_audio_rate_table",
+   "brief": "The 18 audio sample rates in 100 Hz: 32k, 44.1k and 48k families, six multiples each.",
+   "basis": "derived",
+   "evidence": "table values; hdmi_tx_setup_audio matches the measured rate within 8"
+  },
+  "DAT_a00b40b0": {
+   "name": "hdmi_tx_audio_n_32k_rows",
+   "brief": "Audio N values for the 32 kHz family (4 rows by FRL rate, 6 multiples).",
+   "basis": "derived",
+   "evidence": "values 4224, 8448, ... = HDMI FRL N for 32 kHz; hdmi_tx_setup_audio"
+  },
+  "DAT_a00b4110": {
+   "name": "hdmi_tx_audio_n_44k_rows",
+   "brief": "Audio N values for the 44.1 kHz family (2 rows by FRL rate, 6 multiples).",
+   "basis": "derived",
+   "evidence": "values 5292, 10584, ...; hdmi_tx_setup_audio"
+  },
+  "DAT_a00b4140": {
+   "name": "hdmi_tx_audio_n_48k_rows",
+   "brief": "Audio N values for the 48 kHz family (4 rows by FRL rate, 6 multiples).",
+   "basis": "derived",
+   "evidence": "values 5760, 11520, ...; hdmi_tx_setup_audio"
+  },
+  "DAT_a00b41a0": {
+   "name": "hdmi_tx_audio_n_by_tmds_clock",
+   "brief": "Audio N value per sample rate row and TMDS clock column, for a DisplayPort audio source.",
+   "basis": "derived",
+   "evidence": "N 6272 / 6144 with the CTS table; written to regs 0x103..0x105 in modes 4/6"
+  },
+  "DAT_a00b41e8": {
+   "name": "hdmi_tx_audio_cts_by_tmds_clock",
+   "brief": "Audio CTS value per sample rate row and TMDS clock column (25.2 to 297 MHz).",
+   "basis": "derived",
+   "evidence": "CTS 28000, 30030, ... 247500; written to regs 0x106..0x108 in modes 4/6"
+  },
+  "DAT_a00b4230": {
+   "name": "hdmi_rx21_rx_detect_state_handlers",
+   "brief": "State routines of the HDMI 2.1 receiver link training (Init, LTS_1..4, error and stable checks).",
+   "basis": "proven",
+   "evidence": "pointers to DRV_HDMI21_RXDetect_FSM_*; hdmi_rx21_run_rx_detect_fsm"
+  },
+  "DAT_a00b4258": {
+   "name": "hdmi_rx21_mode_detect_state_handlers",
+   "brief": "State routines of the HDMI 2.1 receiver mode detection.",
+   "basis": "proven",
+   "evidence": "hdmi_rx21_run_mode_detect_fsm calls them by state"
+  },
+  "DAT_a00b427c": {
+   "name": "hdmi_rx21_frl_clocks_mhz",
+   "brief": "FRL link clock in MHz of each FRL rate (166, 333, 333, 444, 555, 666).",
+   "basis": "derived",
+   "evidence": "hdmi_rx21_measure_payload_delay copies the six words"
+  },
+  "DAT_a00b4558": {
+   "name": "hdmi_rx21_hdr_metadata_id_names",
+   "brief": "Names of the HDR InfoFrame metadata id values (EN_MD_ID_TYPE1, EN_MD_ID_RESERVED).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_hdr_infoframe"
+  },
+  "DAT_a00b4568": {
+   "name": "hdmi_rx21_hdr_eotf_names",
+   "brief": "Names of the HDR InfoFrame transfer function values (SDR, HDR, ST2084, HLG).",
+   "basis": "proven",
+   "evidence": "value/text pairs EN_EOTF_TYPE_*; hdmi_rx21_read_hdr_infoframe"
+  },
+  "DAT_a00b4680": {
+   "name": "hdmi_rx21_audio_permit_names",
+   "brief": "Texts Permitted / Prohibited / Unknown printed for a flag of the audio InfoFrame.",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_audio_infoframe"
+  },
+  "DAT_a00b4698": {
+   "name": "hdmi_rx21_audio_sample_size_names",
+   "brief": "Names of the audio InfoFrame sample sizes (16, 20, 24 bit).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_audio_infoframe"
+  },
+  "DAT_a00b46c0": {
+   "name": "hdmi_rx21_audio_sample_rate_names",
+   "brief": "Names of the audio InfoFrame sample rates (32K, 44.1K, 48K, ...).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_audio_infoframe"
+  },
+  "DAT_a00b4708": {
+   "name": "hdmi_rx21_audio_channel_names",
+   "brief": "Names of the audio InfoFrame channel counts (2 CH, 3 CH, ...).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_audio_infoframe"
+  },
+  "DAT_a00b4750": {
+   "name": "hdmi_rx21_audio_coding_names",
+   "brief": "Names of the audio InfoFrame coding types (PCM, AC3, MPEG1, ...).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_audio_infoframe"
+  },
+  "DAT_a00b47d0": {
+   "name": "hdmi_rx21_avi_ycc_range_names",
+   "brief": "Names of the AVI InfoFrame range values where 0 = Limited Range, 1 = Full Range.",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_avi_infoframe"
+  },
+  "DAT_a00b47f8": {
+   "name": "hdmi_rx21_avi_rgb_range_names",
+   "brief": "Names of the AVI InfoFrame range values Default, Limited Range, Full Range.",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_avi_infoframe"
+  },
+  "DAT_a00b4820": {
+   "name": "hdmi_rx21_avi_ext_colorimetry_names",
+   "brief": "Names of the AVI InfoFrame extended colorimetry values (xvYCC601, xvYCC709, ...).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_avi_infoframe"
+  },
+  "DAT_a00b4860": {
+   "name": "hdmi_rx21_avi_it_content_names",
+   "brief": "Names of the AVI InfoFrame IT content flag (No Data, IT Content).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_avi_infoframe"
+  },
+  "DAT_a00b4878": {
+   "name": "hdmi_rx21_avi_scaling_names",
+   "brief": "Names of the AVI InfoFrame scaling values (No, H, V, HV Scaling).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_avi_infoframe"
+  },
+  "DAT_a00b48a0": {
+   "name": "hdmi_rx21_avi_active_format_names",
+   "brief": "Names of the AVI InfoFrame active format values (16_by_9_top, 14_by_9_top, ...).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_avi_infoframe"
+  },
+  "DAT_a00b4920": {
+   "name": "hdmi_rx21_avi_aspect_names",
+   "brief": "Names of the AVI InfoFrame picture aspect values (No Data, 4:3, 16:9).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_avi_infoframe"
+  },
+  "DAT_a00b4948": {
+   "name": "hdmi_rx21_avi_colorimetry_names",
+   "brief": "Names of the AVI InfoFrame colorimetry values (ITU601, ITU709, EC Valid).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_avi_infoframe"
+  },
+  "DAT_a00b4970": {
+   "name": "hdmi_rx21_avi_scan_names",
+   "brief": "Names of the AVI InfoFrame scan values (Over Scan, Under Scan).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_avi_infoframe"
+  },
+  "DAT_a00b4998": {
+   "name": "hdmi_rx21_avi_bar_info_names",
+   "brief": "Names of the AVI InfoFrame bar information values (Not Valid, V, H, HV Valid).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_avi_infoframe"
+  },
+  "DAT_a00b49c0": {
+   "name": "hdmi_rx21_avi_format_info_names",
+   "brief": "Names of the AVI InfoFrame active format information flag (No Data, Valid).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_avi_infoframe"
+  },
+  "DAT_a00b49d8": {
+   "name": "hdmi_rx21_avi_color_format_names",
+   "brief": "Names of the AVI InfoFrame colour formats (RGB, YCbCr422, YCbCr444, YCbCr420).",
+   "basis": "proven",
+   "evidence": "value/text pairs; hdmi_rx21_read_avi_infoframe"
+  },
+  "DAT_a00b4a00": {
+   "name": "hdmi_rx21_event_table",
+   "brief": "One 8-byte entry per interrupt event id of the HDMI 2.1 receiver (register and bit of the event).",
+   "basis": "derived",
+   "evidence": "hdmi_rx21_is_event_pending / _ack_event / _enable_event index it by id < 0x40"
+  },
+  "DAT_a00b4cf8": {
+   "name": "hdmi_tx_frl_training_state_handlers",
+   "brief": "State routines of the HDMI TX FRL link training (Init, LTS_1..4, LTS_P, LTS_L).",
+   "basis": "proven",
+   "evidence": "pointers to DRV_HDMI21_TXDetect_FSM_*; hdmi_tx_run_frl_training"
+  },
+  "DAT_a00b4d14": {
+   "name": "hdmi_tx_lts3_byte_table",
+   "brief": "Eight bytes 00 00 11 11 22 22 33 33 that link training state 3 copies but never reads.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI21_TXDetect_FSM_LTS_3 copies it to the stack"
+  },
+  "DAT_a00b4d20": {
+   "name": "dp_unit_reg_bases",
+   "brief": "Register block base of each of the eight DP units.",
+   "basis": "derived",
+   "evidence": "dp_unit_reg_write8 / _update_bits; address 0xCF000000 | (base + reg) * 4"
+  },
+  "DAT_a00b4d30": {
+   "name": "hdmi_pll_reg_bases",
+   "brief": "Register block base of each pixel PLL unit.",
+   "basis": "derived",
+   "evidence": "hdmi_pll_reg_write8"
+  },
+  "DAT_a00b4d40": {
+   "name": "hdmi_tx_sys_reg_bases",
+   "brief": "Register block base of the two HDMI transmitter system blocks (0x6000, 0x6100).",
+   "basis": "derived",
+   "evidence": "hdmi_tx_sys_reg_read8 / _update_bits / _write_masked"
+  },
+  "DAT_a00b4d44": {
+   "name": "hdmi_tx_reg_bases",
+   "brief": "Register block base of each bank of the two HDMI transmitters (2 ports x 6 banks).",
+   "basis": "derived",
+   "evidence": "address 0xCF000000 | (base + reg) * 4; accessors hdmi_tx_reg_read8 / _write8"
+  },
+  "DAT_a00b4d5c": {
+   "name": "hdcp_tx_engine_reg_bases",
+   "brief": "Register block base of each copy-protection engine unit (0x4100..0x4130).",
+   "basis": "derived",
+   "evidence": "address 0xCF000000 | (base + reg) * 4; accessors hdcp_tx_engine_reg_*"
+  },
+  "DAT_a00b4d64": {
+   "name": "hdmi_port_reg_bases",
+   "brief": "Register block base of each of the four HDMI receivers (2.0 and 2.1).",
+   "basis": "derived",
+   "evidence": "address 0xCF000000 | (base + reg) * 4; accessors hdmi_port_reg_*"
+  },
+  "DAT_a00b4d6c": {
+   "name": "dp_tx_phy_reg_bases",
+   "brief": "Register block base of each DP transmitter PHY unit (0x7500 DPTX, 0x7300 eDP).",
+   "basis": "derived",
+   "evidence": "address 0xCF000000 | (base + reg) * 4; accessors dp_tx_phy_reg_*"
+  },
+  "DAT_a00b4d70": {
+   "name": "dp_tx_ctl_reg_bases",
+   "brief": "Register block base of each DP / eDP transmitter control bank.",
+   "basis": "derived",
+   "evidence": "address 0xCF000000 | (base + reg) * 4; accessors dp_tx_ctl_reg_*"
+  },
+  "DAT_a00b4d7a": {
+   "name": "dp_tx_reg_bases",
+   "brief": "Register block base of each of the five DP / eDP outputs.",
+   "basis": "derived",
+   "evidence": "address 0xCF000000 | (base + reg) * 4; accessors dp_tx_reg_*"
+  },
+  "DAT_a00b4d84": {
+   "name": "dp_paged_reg_bases",
+   "brief": "Register block base of the two paged DP receiver register pages (0x85, 0x86).",
+   "basis": "derived",
+   "evidence": "address 0xCF000000 | (base + reg) * 4; accessors dp_paged_reg_*"
+  },
+  "DAT_a00b4d88": {
+   "name": "audio_reg_bases",
+   "brief": "Register block base of each of the four audio units.",
+   "basis": "derived",
+   "evidence": "address 0xCF000000 | (base + reg) * 4; accessors audio_reg_*"
+  },
+  "DAT_a00b4d90": {
+   "name": "dp_status_reg_bases",
+   "brief": "Register block base of the two DP receiver status blocks.",
+   "basis": "derived",
+   "evidence": "address 0xCF000000 | (base + reg) * 4; accessors dp_status_reg_*"
+  },
+  "DAT_a00b4d94": {
+   "name": "dp_reg_bases",
+   "brief": "Register block base of the two DP receivers.",
+   "basis": "derived",
+   "evidence": "address 0xCF000000 | (base + reg) * 4; accessors dp_reg_*"
+  },
+  "DAT_a00b4d98": {
+   "name": "hdmi_rx21_reg_bases",
+   "brief": "Register block base of the two HDMI 2.1 receivers.",
+   "basis": "derived",
+   "evidence": "address 0xCF000000 | (base + reg) * 4; accessors hdmi_rx21_reg_*"
+  },
+  "DAT_a00b4d9c": {
+   "name": "hdmi_reg_bases",
+   "brief": "Register block base of the two HDMI 2.0 receivers.",
+   "basis": "derived",
+   "evidence": "address 0xCF000000 | (base + reg) * 4; accessors hdmi_reg_*"
+  },
+  "DAT_a00b4da0": {
+   "name": "reg_block_lists",
+   "brief": "Pointers to the register base tables that SC_MaskSetByte can address as one list.",
+   "basis": "derived",
+   "evidence": "table of pointers to the base tables; SC_MaskSetByte, reg_read_list_word"
+  },
+  "DAT_a00b4dc0": {
+   "name": "reg_block_list_counts",
+   "brief": "Number of register blocks in each list of reg_block_lists.",
+   "basis": "derived",
+   "evidence": "SC_MaskSetByte"
+  },
+  "DAT_a00b4dc8": {
+   "name": "hdmi_packet_switch_defaults",
+   "brief": "Default packet-forwarding selection bytes loaded into an HDMI 2.0 or 2.1 receiver.",
+   "basis": "derived",
+   "evidence": "hdmi_init_packet_switch, hdmi_rx21_init_packet_switch"
+  },
+  "DAT_a00b4dcc": {
+   "name": "dp_tx_drive_level_table",
+   "brief": "Swing / pre-emphasis entries of the DP outputs: two rows (output 0, others) of 10 halfwords.",
+   "basis": "derived",
+   "evidence": "dp_tx_set_drive_levels: row port != 0"
+  },
+  "DAT_a00b4df8": {
+   "name": "dp_stream_reg485_values",
+   "brief": "Values written to DP receiver register 0x485 by the stream start, one per retry count.",
+   "basis": "descriptive",
+   "evidence": "dp_start_stream: reg 0x485 = table[counter]"
+  },
+  "DAT_a00b4e04": {
+   "name": "dp_lane_table_defaults",
+   "brief": "Two {u16, u16} pairs (0x2D0, 0x240, 0xFFFF, 0xFFFF) copied by the lane table compare.",
+   "basis": "descriptive",
+   "evidence": "dp_update_reg46_bit2 copies 8 bytes"
+  },
+  "DAT_a8076098": {
+   "name": "dp_mst_notify_select",
+   "brief": "Selection byte of the MST notification sequence (start value 2).",
+   "basis": "derived",
+   "evidence": "dp_mst_notify_task (sel)"
+  },
+  "DAT_a8076099": {
+   "name": "dp_mst_notify_state",
+   "brief": "State of the three-state MST notification sequence.",
+   "basis": "derived",
+   "evidence": "dp_mst_notify_task (st), dp_mst_set_flag_6099"
+  },
+  "DAT_a807609c": {
+   "name": "dp_mst_msg_reg_blocks",
+   "brief": "Register block address of each DP port for the MST message bytes (0xCF004400, 0xCF005800).",
+   "basis": "derived",
+   "evidence": "start values; chunk header/body writers, payload handlers"
+  },
+  "DAT_a80760a4": {
+   "name": "dp_mst_ctl_reg_blocks",
+   "brief": "Register block address of each DP port for the MST control and ready bits (0xCF004000, 0xCF005400).",
+   "basis": "derived",
+   "evidence": "start values; dp_mst_set_reply_ready, dp_mst_advance_tx_index"
+  },
+  "DAT_a80760ac": {
+   "name": "dp_mst_option_word",
+   "brief": "MST option value received from the main processor.",
+   "basis": "derived",
+   "evidence": "dp_mst_set_option_word"
+  },
+  "DAT_a80760b0": {
+   "name": "dp_mst_port_reply_flags",
+   "brief": "Per-port flag byte of the MST down-reply sender, set to 1 by the port reset.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_send_down_reply_step, dp_mst_reset_port"
+  },
+  "DAT_a80760b8": {
+   "name": "dp_mst_remote_dpcd_bytes",
+   "brief": "Fixed bytes that the MST REMOTE_DPCD_READ answer returns for one address range.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_handle_remote_dpcd_read"
+  },
+  "DAT_a80760c8": {
+   "name": "dp_mst_path_pbn_table",
+   "brief": "Halfword bandwidth values that the MST ENUM_PATH_RESOURCES answer reports.",
+   "basis": "derived",
+   "evidence": "dp_mst_handle_enum_path_resources"
+  },
+  "DAT_a8076104": {
+   "name": "trap_name_table",
+   "brief": "The 17 {trap type, name} pairs with the standard LEON2 trap names.",
+   "basis": "proven",
+   "evidence": "trap_dump_crash_and_halt prints them; texts \"Power-on reset\", ..."
+  },
+  "DAT_a8076198": {
+   "name": "hdmi_eq_tmds_bit_ratio_guess",
+   "brief": "Per HDMI PHY: the firmware's bTMDS_BIT_RATIO_GUESS, the guessed TMDS bit ratio (0 or 1).",
+   "basis": "proven",
+   "evidence": "printed as 'bTMDS_BIT_RATIO_GUESS[phyidx] = %d' by DRV_HDMI_EQScan_FSM_PHY_Init, which inverts it; returned by hdmi_eq_get_clock_ratio_mode and hdmi_eq_get_scramble_mode"
+  },
+  "DAT_a807619c": {
+   "name": "hdmi_eq_fixed_cft",
+   "brief": "Fixed CFT value written to the PHY channels by the EQ step.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_EQScan_FSM_PHY_EQ: reg 0x1178 = rct | cft << 8"
+  },
+  "DAT_a807619e": {
+   "name": "hdmi_eq_fixed_rct",
+   "brief": "Fixed RCT value written to the PHY channels by the EQ step.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_EQScan_FSM_PHY_EQ: reg 0x1178 = rct | cft << 8"
+  },
+  "DAT_a807619f": {
+   "name": "hdmi_eq_retry_enable",
+   "brief": "Switch (start value 1) that lets the EQ checks retry with other values.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI_EQScan_FSM_PHY_ChkError / _Check_MEQ_Done"
+  },
+  "DAT_a80761a0": {
+   "name": "hdmi_eq_wait_passes",
+   "brief": "Per HDMI PHY: number of passes DRV_HDMI_EQScan_FSM_PHY_R_ChkError waits before it reads the error counts.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_EQScan_FSM_PHY_R_ChkError returns 0 until its wait count reaches this value; set to 1 by PreAEQ, 6 by PreChkError / Search_Process, 6 or 50 by RunAEQ"
+  },
+  "DAT_a80761a8": {
+   "name": "dp_tx_output_map",
+   "brief": "Mapping of the link outputs 1..4 to status bits in 2-bit fields, set by command 0x5E.",
+   "basis": "derived",
+   "evidence": "ipc_dispatch_command 0x5E; dp_tx_hpd_is_low"
+  },
+  "DAT_a80761b0": {
+   "name": "dp_tx_status_byte",
+   "brief": "DP output status byte published to the main processor.",
+   "basis": "derived",
+   "evidence": "dp_tx_get_status_byte"
+  },
+  "DAT_a80761b8": {
+   "name": "dp_tx_forced_hpd_flags",
+   "brief": "One byte per DP output: 1 makes the next HPD pass treat the output as freshly plugged.",
+   "basis": "derived",
+   "evidence": "dp_tx_force_hpd_check; cleared by the HPD handlers"
+  },
+  "DAT_a80761bf": {
+   "name": "dp_tx_edp_last_output",
+   "brief": "Number of the last eDP output that the HPD and training passes handle.",
+   "basis": "derived",
+   "evidence": "ipc_dispatch_command 0x5E; dp_tx_edp_run_hpd_actions range lo..hi"
+  },
+  "DAT_a80761c0": {
+   "name": "dp_tx_edp_first_output",
+   "brief": "Number of the first eDP output that the HPD and training passes handle.",
+   "basis": "derived",
+   "evidence": "ipc_dispatch_command 0x5E; dp_tx_edp_run_hpd_actions range lo..hi"
+  },
+  "DAT_a80761c8": {
+   "name": "dp_tx_pacing_lane_counts",
+   "brief": "Lane count of each DP output used for the last pacing computation.",
+   "basis": "derived",
+   "evidence": "DPTX_SetBrilliantMode compares and stores it"
+  },
+  "DAT_a80761d0": {
+   "name": "hdr_static_curve_rows",
+   "brief": "Seven 22-byte rows {x, y, f[9]} from which the static HDR curve is interpolated.",
+   "basis": "derived",
+   "evidence": "hdr_build_static_tone_curve"
+  },
+  "DAT_a807626a": {
+   "name": "hdr_meta_reg_byte3",
+   "brief": "Receiver register of the fourth HDR10+ packet byte (0x266 HDMI 2.0, 0x407 HDMI 2.1).",
+   "basis": "derived",
+   "evidence": "hdr_select_metadata_receiver: 0x263..0x266 / 0x404..0x407"
+  },
+  "DAT_a807626c": {
+   "name": "hdr_meta_reg_byte2",
+   "brief": "Receiver register of the third HDR10+ packet byte (0x265 HDMI 2.0, 0x406 HDMI 2.1).",
+   "basis": "derived",
+   "evidence": "hdr_select_metadata_receiver"
+  },
+  "DAT_a807626e": {
+   "name": "hdr_meta_reg_byte1",
+   "brief": "Receiver register of the second HDR10+ packet byte (0x264 HDMI 2.0, 0x405 HDMI 2.1).",
+   "basis": "derived",
+   "evidence": "hdr_select_metadata_receiver"
+  },
+  "DAT_a8076270": {
+   "name": "hdr_meta_reg_byte0",
+   "brief": "Receiver register of the first HDR10+ packet byte (0x263 HDMI 2.0, 0x404 HDMI 2.1).",
+   "basis": "derived",
+   "evidence": "hdr_select_metadata_receiver; hdr_read_hdr10plus_metadata"
+  },
+  "DAT_a8076272": {
+   "name": "hdr_meta_ready_mask",
+   "brief": "Bit mask of the new-packet test for HDR10+ metadata (0x80, 1 or 0x20 by receiver).",
+   "basis": "descriptive",
+   "evidence": "hdr_select_metadata_receiver"
+  },
+  "DAT_a8076274": {
+   "name": "hdr_meta_status_reg",
+   "brief": "Receiver register tested for a new HDR10+ packet (0x7C, 0x9C8 or 5 by receiver).",
+   "basis": "descriptive",
+   "evidence": "hdr_select_metadata_receiver"
+  },
+  "DAT_a8076278": {
+   "name": "hdr_tmo_lut",
+   "brief": "The 257-entry tone-mapping table TMO_LUT built from the HDR10+ metadata.",
+   "basis": "proven",
+   "evidence": "'TMO_LUT' in the dump print; hdr_build_hdr10plus_tone_curve"
+  },
+  "DAT_a807667c": {
+   "name": "hdr10plus_target_luminance",
+   "brief": "The larger of the scene luminance (x10) and the panel peak; divisor of the curve scale.",
+   "basis": "derived",
+   "evidence": "hdr_build_hdr10plus_tone_curve: d = 25600000 / value"
+  },
+  "DAT_a8076680": {
+   "name": "hdr10plus_scene_luminance",
+   "brief": "Scene maximum luminance x 10 from the metadata or from the percentile value.",
+   "basis": "derived",
+   "evidence": "hdr_build_hdr10plus_tone_curve"
+  },
+  "DAT_a8076684": {
+   "name": "hdr10plus_scene_max",
+   "brief": "The largest of the three maxscl values of the HDR10+ metadata.",
+   "basis": "derived",
+   "evidence": "hdr_build_hdr10plus_tone_curve: max of record +0x82, +0x84, +0x86"
+  },
+  "DAT_a8076688": {
+   "name": "audio_config",
+   "brief": "The 3-byte audio configuration received from the main processor.",
+   "basis": "derived",
+   "evidence": "audio_configure stores it; audio_set_mute, audio_init_main_registers read it"
+  },
+  "DAT_a8076689": {
+   "name": "audio_config_byte_1",
+   "brief": "Second byte of the audio configuration; its top two bits pick the unit set-up.",
+   "basis": "descriptive",
+   "evidence": "audio_setup_unit switch on value >> 6"
+  },
+  "DAT_a8076690": {
+   "name": "audio_output_sources",
+   "brief": "The source id routed to each of the nine audio outputs.",
+   "basis": "proven",
+   "evidence": "audio_set_output_source / audio_get_output_source"
+  },
+  "DAT_a80766a0": {
+   "name": "audio_dp_status",
+   "brief": "Audio status bit of each of the two DP receivers.",
+   "basis": "derived",
+   "evidence": "audio_poll_dp_status"
+  },
+  "DAT_a80766ac": {
+   "name": "hdr_last_peak_luminance",
+   "brief": "Copy of the peak luminance kept to detect a change.",
+   "basis": "derived",
+   "evidence": "hdr_has_metadata_changed compares with the stored peak"
+  },
+  "DAT_a80766b0": {
+   "name": "hdr_level_ratio_table",
+   "brief": "Word table indexed by the level index; entry 0 / entry n gives the level scale in percent.",
+   "basis": "descriptive",
+   "evidence": "hdr_update_smoothed_level"
+  },
+  "DAT_a8076844": {
+   "name": "hdr_level_scale_table",
+   "brief": "Word table (start values 5000) multiplied with hdr_level_base_table in the level update.",
+   "basis": "descriptive",
+   "evidence": "hdr_update_smoothed_level"
+  },
+  "DAT_a80769d8": {
+   "name": "hdr_level_base_table",
+   "brief": "Word table read in the level update and scaled by hdr_level_scale_table.",
+   "basis": "descriptive",
+   "evidence": "hdr_update_smoothed_level"
+  },
+  "DAT_a80779dc": {
+   "name": "hdr_peak_luminance",
+   "brief": "The panel's peak luminance, limited to 10000 (1000 when 0 is given).",
+   "basis": "derived",
+   "evidence": "hdr_set_peak_luminance / hdr_get_peak_luminance"
+  },
+  "DAT_a80779e0": {
+   "name": "hdr_tmo_coefficients",
+   "brief": "Coefficient values written into the coefficient fields of the tone-mapping block.",
+   "basis": "derived",
+   "evidence": "hdr_tmo_write_coefficients, hdr_init"
+  },
+  "DAT_a8077a08": {
+   "name": "hdr_tone_curve",
+   "brief": "The HDR tone curve that is loaded into the hardware (257 entries, 0x400 = neutral).",
+   "basis": "proven",
+   "evidence": "documented in docs/DATA.md from the routines that use it"
+  },
+  "DAT_a8077c0c": {
+   "name": "hdr_tmo_gain_sums",
+   "brief": "Copy of 500 running sums of the gain table that was last written.",
+   "basis": "derived",
+   "evidence": "hdr_tmo_write_gain_table"
+  },
+  "DAT_a80783dc": {
+   "name": "hdr_gain",
+   "brief": "The HDR gain (at most 0xFFF) set by hdr_update_tone_curve; hdr_smooth_level uses it as its lower limit.",
+   "basis": "proven",
+   "evidence": "hdr_print_static_state prints it as \"u16HDRGain\""
+  },
+  "DAT_a80785e8": {
+   "name": "hdmi_tx_bank4_value",
+   "brief": "The value (11..492) from which the HDMI TX bank 4 offsets are derived.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_set_bank4_offsets, hdmi_tx_run_step"
+  },
+  "DAT_a80785f0": {
+   "name": "hdmi_tx_stored_audio_settings",
+   "brief": "Stored audio settings loaded into an HDMI TX port.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_load_stored_audio_info"
+  },
+  "DAT_a8078600": {
+   "name": "hdmi_tx_stored_audio_infoframe",
+   "brief": "Stored audio InfoFrame bytes loaded into an HDMI TX port.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_load_stored_audio_info"
+  },
+  "DAT_a8078620": {
+   "name": "hdcp_rx_hdmi_hdcp2_bytes",
+   "brief": "Byte table (start 10 20 .. 80) loaded into the HDMI input protection blocks.",
+   "basis": "descriptive",
+   "evidence": "hdcp_rx_hdmi_load_hdcp2_tables, hdcp_rx_hdmi21_load_hdcp2_tables"
+  },
+  "DAT_a8078630": {
+   "name": "hdmi_rx21_rx_detect_period",
+   "brief": "Period of the HDMI 2.1 link-training timer (start value 10).",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_Start_Timer: hdmi_rx21_rx_detect_timer.period"
+  },
+  "DAT_a8078631": {
+   "name": "hdmi_rx21_mode_detect_period",
+   "brief": "Period of the HDMI 2.1 mode-detect timer (start value 50).",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_Start_Timer: hdmi_rx21_mode_detect_timer.period"
+  },
+  "DAT_a8078640": {
+   "name": "hdmi_rx21_lts_lane_start",
+   "brief": "Start value (4) of the per-lane bytes of the HDMI 2.1 link training record.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI21_LTS_STS_InitialSettings"
+  },
+  "DAT_a8078648": {
+   "name": "hdmi_rx21_stable_count_limits",
+   "brief": "Per receiver: the value the standby state's stable count must pass; capped at 10 by the complete state.",
+   "basis": "derived",
+   "evidence": "FSM_MODE_DETECT_STANDBY takes it as the limit of 'Sync Stable Count'; DRV_HDMI_ModeDetect_FSM_Complete caps it at 10"
+  },
+  "DAT_a8078650": {
+   "name": "hdmi_rx21_event_callbacks_0",
+   "brief": "Callback table of one packet-event group of the HDMI 2.1 receivers.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_service_packet_events -> hdmi_rx21_run_event_callbacks"
+  },
+  "DAT_a8078670": {
+   "name": "hdmi_rx21_event_callbacks_1",
+   "brief": "Callback table of one packet-event group of the HDMI 2.1 receivers.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_service_packet_events"
+  },
+  "DAT_a8078690": {
+   "name": "hdmi_rx21_event_callbacks_2",
+   "brief": "Callback table of one packet-event group of the HDMI 2.1 receivers.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_service_packet_events"
+  },
+  "DAT_a80786b0": {
+   "name": "hdmi_rx21_event_callbacks_3",
+   "brief": "Callback table of one packet-event group of the HDMI 2.1 receivers.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_service_packet_events"
+  },
+  "DAT_a80786d0": {
+   "name": "hdmi_rx21_event_callbacks_4",
+   "brief": "Callback table of one packet-event group of the HDMI 2.1 receivers.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_service_packet_events"
+  },
+  "DAT_a80786f0": {
+   "name": "hdmi_rx21_event_callbacks_5",
+   "brief": "Callback table of one packet-event group of the HDMI 2.1 receivers.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_service_packet_events"
+  },
+  "DAT_a8078748": {
+   "name": "sys_dsc_dec_restart_flag",
+   "brief": "Flag set by command 0x74 and by the DSC decoder state machine.",
+   "basis": "descriptive",
+   "evidence": "ipc_dispatch_command 0x74, sys_dsc_dec_run_state"
+  },
+  "DAT_a807874c": {
+   "name": "hdmi_tx_packet_source_regs_first",
+   "brief": "Addresses of the first packet source selection registers (0xCF011410, 0xCF011464, 0xCF011470), per group.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_select_packet_source writes bits 2..0 of the packet group's register here when its third argument is 0"
+  },
+  "DAT_a8078758": {
+   "name": "hdmi_tx_packet_source_regs_second",
+   "brief": "Addresses of the second packet source selection registers (0xCF011414, 0xCF011468, 0xCF011474), per group.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_select_packet_source writes bits 2..0 (third argument 1) or 6..4 (third argument 2) of the packet group's register here"
+  },
+  "DAT_a8078768": {
+   "name": "dp_port_lane_units",
+   "brief": "Receiver unit of each port and lane pair (4-byte rows).",
+   "basis": "derived",
+   "evidence": "dp_map_port_lane_unit, dp_init_port, dp_write_lane_tables"
+  },
+  "DAT_a80787dc": {
+   "name": "sys_clock_hz",
+   "brief": "System clock in Hz (96,000,000) from which the tick and UART dividers are computed.",
+   "basis": "derived",
+   "evidence": "start value 0x05B8D800; sys_task_init, uart_init"
+  },
+  "DAT_a80787e0": {
+   "name": "osd_unzip_mode",
+   "brief": "Mode of the queued OSD unpack request: 1 = direct write to OSD memory, else through the register port.",
+   "basis": "derived",
+   "evidence": "osd_request_unzip stores it; osd_read_memory_blocks and osd_write_memory_blocks test it for 1; printed with 'unzip osd GO!! %d'"
+  },
+  "DAT_a80787e4": {
+   "name": "osd_unzip_request",
+   "brief": "The queued OSD unpack request {a, b, c, d}.",
+   "basis": "derived",
+   "evidence": "osd_request_unzip / osd_run_pending_unzip"
+  },
+  "DAT_a80787f4": {
+   "name": "osd_unzip_busy_flag",
+   "brief": "Set while an OSD unpack request is queued; published to the main processor.",
+   "basis": "derived",
+   "evidence": "osd_request_unzip, osd_run_pending_unzip, ipc_publish_status_flags"
+  },
+  "DAT_a80787fc": {
+   "name": "dp_mst_message_state_up_read_index",
+   "brief": "Read index of the ring of messages fetched from the output and sent on towards the source.",
+   "basis": "derived",
+   "evidence": "ring pair 7fc/7fd in dp_mst_get_ring_distance; dp_mst_send_up_message_step"
+  },
+  "DAT_a80787fd": {
+   "name": "dp_mst_message_state_up_write_index",
+   "brief": "Write index of the ring of messages fetched from the output.",
+   "basis": "derived",
+   "evidence": "dp_mst_fetch_downstream_message writes it"
+  },
+  "DAT_a80787fe": {
+   "name": "dp_mst_message_state_fwd_read_index",
+   "brief": "Read index of the ring of down requests forwarded to the output.",
+   "basis": "derived",
+   "evidence": "dp_mst_forward_down_request writes it; dp_mst_count_pending_chunks"
+  },
+  "DAT_a80787ff": {
+   "name": "dp_mst_message_state_fwd_write_index",
+   "brief": "Write index of the ring of down requests forwarded to the output.",
+   "basis": "derived",
+   "evidence": "dp_mst_append_chunk_to_message, dp_mst_queue_clear_payload_table_request"
+  },
+  "DAT_a8078800": {
+   "name": "dp_mst_message_state_reply_read_indexes",
+   "brief": "Per-port read index of the down-reply chunk ring.",
+   "basis": "derived",
+   "evidence": "dp_mst_advance_tx_index; ring pair 800/808"
+  },
+  "DAT_a8078808": {
+   "name": "dp_mst_message_state_reply_write_indexes",
+   "brief": "Per-port write index of the down-reply chunk ring.",
+   "basis": "derived",
+   "evidence": "dp_mst_send_reply; ring pair 800/808"
+  },
+  "DAT_a807880a": {
+   "name": "dp_mst_message_state_reply_offsets",
+   "brief": "Per-port halfword position in the outgoing message body.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_write_chunk_body, dp_mst_advance_tx_index"
+  },
+  "DAT_a8078820": {
+   "name": "dp_mst_message_state_status_row",
+   "brief": "Row of the status copy table that the port 0 interrupt work fills.",
+   "basis": "descriptive",
+   "evidence": "dp_isr_port0"
+  },
+  "DAT_a8078828": {
+   "name": "dp_mst_message_state_rx_read_indexes",
+   "brief": "Per-port read index of the received chunk ring.",
+   "basis": "derived",
+   "evidence": "dp_mst_receive_task; ring pair 830/828"
+  },
+  "DAT_a8078830": {
+   "name": "dp_mst_message_state_rx_write_indexes",
+   "brief": "Per-port write index of the received chunk ring.",
+   "basis": "derived",
+   "evidence": "dp_isr_port0 writes it"
+  },
+  "DAT_a8078832": {
+   "name": "dp_mst_message_state_port",
+   "brief": "The DP port the MST message service is currently working on.",
+   "basis": "proven",
+   "evidence": "docs/DATA.md (current port); index of all per-port MST arrays"
+  },
+  "DAT_a8078838": {
+   "name": "dp_mst_message_state_tx_states",
+   "brief": "Per-port transmit state of the MST service.",
+   "basis": "derived",
+   "evidence": "dp_mst_get_port_tx_state"
+  },
+  "DAT_a807883a": {
+   "name": "dp_mst_message_state_enable",
+   "brief": "Enable byte of the MST service; 0 also clears the up and forward ring indexes.",
+   "basis": "derived",
+   "evidence": "dp_mst_set_enable"
+  },
+  "DAT_a807883b": {
+   "name": "dp_mst_message_state_up_sent_flag",
+   "brief": "Set when the last record of a message from the output (down reply or up request) has been sent on.",
+   "basis": "derived",
+   "evidence": "dp_mst_send_up_message_step, dp_mst_clear_ready_bit"
+  },
+  "DAT_a807883c": {
+   "name": "dp_mst_message_state_up_pending_flag",
+   "brief": "Set by dp_mst_clear_ready_bit when no message from the output was sent; holds back the records that follow.",
+   "basis": "derived",
+   "evidence": "dp_mst_clear_ready_bit, dp_mst_send_up_message_step"
+  },
+  "DAT_a807883d": {
+   "name": "dp_mst_message_state_notify_action",
+   "brief": "Action byte of the MST notification sequence.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_notify_task (act), dp_mst_advance_tx_index"
+  },
+  "DAT_a807883e": {
+   "name": "dp_mst_message_state_pending_chunks",
+   "brief": "Sum of the fill levels of the four chunk rings.",
+   "basis": "derived",
+   "evidence": "dp_mst_count_pending_chunks"
+  },
+  "DAT_a807883f": {
+   "name": "dp_mst_message_state_notify_flag",
+   "brief": "Flag of the MST notification sequence, also tested by the LINK_ADDRESS answer.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_notify_task (f), dp_mst_handle_link_address"
+  },
+  "DAT_a8078840": {
+   "name": "dp_mst_message_state_addressed_flag",
+   "brief": "Set after the LINK_ADDRESS answer; the port reset clears the MST records only while it is 1.",
+   "basis": "derived",
+   "evidence": "dp_mst_handle_link_address, dp_mst_reset_port"
+  },
+  "DAT_a8078841": {
+   "name": "dp_mst_message_state_option_byte",
+   "brief": "MST option byte from the main processor, also written by the downstream fetch.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_set_option_byte, dp_mst_fetch_downstream_message"
+  },
+  "DAT_a8078843": {
+   "name": "dp_mst_message_state_byte_0x4b",
+   "brief": "Byte +0x4B of the MST message state, written by the LINK_ADDRESS answer and status messages.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_handle_link_address, dp_mst_send_status_message"
+  },
+  "DAT_a8078846": {
+   "name": "dp_mst_message_state_byte_0x4e",
+   "brief": "Byte +0x4E of the MST message state, written by the LINK_ADDRESS answer and status messages.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_handle_link_address, dp_mst_send_status_message"
+  },
+  "DAT_a8078847": {
+   "name": "dp_mst_message_state_byte_0x4f",
+   "brief": "State byte +0x4F of the MST service, set by the payload and message handlers.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_get_state_byte_47, dp_mst_handle_allocate_payload"
+  },
+  "DAT_a8078848": {
+   "name": "dp_mst_message_state_up_wait_flags",
+   "brief": "Per-port flag set while the transmit side waits after sending a record of a message from the output.",
+   "basis": "derived",
+   "evidence": "dp_mst_transmit_task: set with the up-request time stamp"
+  },
+  "DAT_a8078850": {
+   "name": "dp_mst_message_state_reply_wait_flags",
+   "brief": "Per-port flag set while the transmit side waits after a down reply.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_transmit_task: set with the reply time stamp"
+  },
+  "DAT_a8078852": {
+   "name": "dp_mst_message_state_byte_0x5a",
+   "brief": "State byte +0x5A of the MST service.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_get_state_byte_52"
+  },
+  "DAT_a8078853": {
+   "name": "dp_mst_message_state_byte_0x5b",
+   "brief": "State byte +0x5B of the MST service.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_get_state_byte_53"
+  },
+  "DAT_a8078854": {
+   "name": "dp_mst_message_state_fwd_queued_flag",
+   "brief": "Set when a message is added to the forward ring.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_queue_clear_payload_table_request, dp_mst_forward_down_request"
+  },
+  "DAT_a8078858": {
+   "name": "dp_mst_message_state_reply_ticks",
+   "brief": "Per-port time stamp of the last down reply, for the reply time-out.",
+   "basis": "derived",
+   "evidence": "dp_mst_transmit_task: ticks - value > limit"
+  },
+  "DAT_a8078860": {
+   "name": "dp_mst_message_state_up_ticks",
+   "brief": "Per-port time stamp of the last record sent from the output's message ring, for its time-out.",
+   "basis": "derived",
+   "evidence": "dp_mst_transmit_task: ticks - value > limit"
+  },
+  "DAT_a8078868": {
+   "name": "dp_mst_message_state_max_body_bytes",
+   "brief": "Largest number of body bytes written per outgoing chunk.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_write_chunk_body limits the count to it"
+  },
+  "DAT_a8078870": {
+   "name": "hdmi_tmds_link_ticks",
+   "brief": "Per-port time stamp of the HDMI 2.0 link state machine (200-tick waits).",
+   "basis": "derived",
+   "evidence": "hdmi_tmds_run_link_state (LINK_STANDBY)"
+  },
+  "DAT_a8078878": {
+   "name": "hdmi_tmds_link_flags",
+   "brief": "Per-port flag byte of the HDMI 2.0 link state machine, cleared once handled.",
+   "basis": "descriptive",
+   "evidence": "hdmi_tmds_run_link_state"
+  },
+  "DAT_a8078880": {
+   "name": "hdmi_tmds_link_retry_counts",
+   "brief": "Per-port retry count of the HDMI 2.0 link state machine.",
+   "basis": "descriptive",
+   "evidence": "hdmi_tmds_run_link_state"
+  },
+  "DAT_a8078884": {
+   "name": "hdmi_rx21_link_ticks",
+   "brief": "Per-port time stamp of the HDMI 2.1 link state machine.",
+   "basis": "derived",
+   "evidence": "hdmi_rx21_run_link_state (LINK_STANDBY_2)"
+  },
+  "DAT_a8078890": {
+   "name": "hdmi_rx21_power_flags",
+   "brief": "Power flags of the two HDMI 2.1 inputs.",
+   "basis": "derived",
+   "evidence": "hdmi_rx21_run_link_state: set to 1 when the init flag is 0"
+  },
+  "DAT_a8078892": {
+   "name": "hdmi_rx21_power_init_flag",
+   "brief": "Set once the HDMI 2.1 power flags have been set.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_run_link_state"
+  },
+  "DAT_a8078898": {
+   "name": "dp_saved_slice_values",
+   "brief": "Per-port value saved by the DP timing check and compared on the next pass.",
+   "basis": "descriptive",
+   "evidence": "dp_check_timing_change"
+  },
+  "DAT_a807889c": {
+   "name": "dp_link_ticks",
+   "brief": "Per-stream time stamp of the DP link state machine.",
+   "basis": "derived",
+   "evidence": "dp_run_link_state (DP_GetClrSpace)"
+  },
+  "DAT_a80788b0": {
+   "name": "dp_link_counters",
+   "brief": "Per-stream counter of the DP link state machine, cleared on the move to status 5.",
+   "basis": "descriptive",
+   "evidence": "dp_run_link_state"
+  },
+  "DAT_a80788b8": {
+   "name": "dp_link_mst_flags",
+   "brief": "Per DP port: bit 0 of register 0xC1 as last read; a change prints SST2MST or MST2SST.",
+   "basis": "proven",
+   "evidence": "dp_run_link_state compares it with dp_get_regc1_bit0 and prints 'SST2MST' / 'MST2SST' on a change"
+  },
+  "DAT_a80788c0": {
+   "name": "dp_link_flags",
+   "brief": "Per-port flag byte read by the DP link state machine.",
+   "basis": "descriptive",
+   "evidence": "dp_run_link_state"
+  },
+  "DAT_a80788c8": {
+   "name": "dp_link_slice_states",
+   "brief": "Per DP port: 0 none, 1 slice count seen while settling, 2 seen at the set-up (DSC switched on).",
+   "basis": "derived",
+   "evidence": "dp_run_link_state stores 1 or 2 when the slice count test is non-zero and switches DSC on for 2"
+  },
+  "DAT_a80788d2": {
+   "name": "input_port_event_flags",
+   "brief": "Event bits of the inputs (bit per port) waiting to be published to the main processor.",
+   "basis": "derived",
+   "evidence": "Deskew_HotPlug, input_port_raise_event set; ipc_publish_port_status clears"
+  },
+  "DAT_a80788d3": {
+   "name": "input_port_flag_bits",
+   "brief": "Per-port flag bits received in a command byte and copied into the port records.",
+   "basis": "derived",
+   "evidence": "input_load_port_flag_bits, ipc_publish_port_status"
+  },
+  "DAT_a80788d4": {
+   "name": "input_command_flags",
+   "brief": "The port action flag byte sent by the main processor.",
+   "basis": "derived",
+   "evidence": "input_set_command_flags; dp_tx_mode_requested_1..4"
+  },
+  "DAT_a80788d8": {
+   "name": "input_port_option_mask",
+   "brief": "Per-port option bit mask built from three command bytes.",
+   "basis": "derived",
+   "evidence": "input_set_port_option_mask, input_get_port_option"
+  },
+  "DAT_a80788dc": {
+   "name": "ipc_status_flag_6",
+   "brief": "Flag set by a command and published as bit 6 of the status flags.",
+   "basis": "descriptive",
+   "evidence": "ipc_dispatch_command, ipc_publish_status_flags"
+  },
+  "DAT_a80788dd": {
+   "name": "input_event_clear_mask",
+   "brief": "Event bits cleared from input_port_event_flags after they are published.",
+   "basis": "derived",
+   "evidence": "ipc_publish_port_status; set by ipc_dispatch_command"
+  },
+  "DAT_a80788e0": {
+   "name": "ipc_slot0_status_word",
+   "brief": "Word 0 of mailbox slot 0: ready bit and the port type nibbles published to the main processor.",
+   "basis": "derived",
+   "evidence": "ipc_publish_port_status, ipc_post_ready_flag"
+  },
+  "DAT_a80788e4": {
+   "name": "ipc_ready_posted_flag",
+   "brief": "Set once the ready bit has been posted to the main processor.",
+   "basis": "derived",
+   "evidence": "ipc_post_ready_flag"
+  },
+  "DAT_a80788e8": {
+   "name": "uart_rx_buffer",
+   "brief": "Receive ring buffer of the debug console.",
+   "basis": "derived",
+   "evidence": "uart_rx_isr stores, uart_read_rx_byte takes, uart_init resets"
+  },
+  "DAT_a8078980": {
+   "name": "hdmi_eq_mode_override_flags",
+   "brief": "Per-port flag: 1 makes the EQ steps use the stored clock-ratio and scrambling modes.",
+   "basis": "descriptive",
+   "evidence": "hdmi_eq_get_clock_ratio_mode / _get_scramble_mode"
+  },
+  "DAT_a8078988": {
+   "name": "hdmi_eq_error_mode_flags",
+   "brief": "Per-port flag set by the best-RCT search; picks the pre-AEQ table of HDMI 2.1 PHYs.",
+   "basis": "descriptive",
+   "evidence": "hdmi_eq_find_best_rct, DRV_HDMI_EQScan_FSM_PHY_PreAEQ"
+  },
+  "DAT_a807898c": {
+   "name": "hdmi_eq_zero_rct_flag",
+   "brief": "Set when a channel shows a zero RCT value in the EQ error check; the EQ step then forces MEQ and clears it.",
+   "basis": "derived",
+   "evidence": "set by DRV_HDMI_EQScan_FSM_PHY_ChkError; read and cleared by DRV_HDMI_EQScan_FSM_PHY_EQ (print 'Force MEQ'); cleared by DRV_HDMI_EQScan_FSM_PHY_Init"
+  },
+  "DAT_a8078990": {
+   "name": "hdmi_eq_skew_fail_counts",
+   "brief": "Per-port count of skew failures of the EQ error check; above 10 a deskew hot-plug follows.",
+   "basis": "proven",
+   "evidence": "counted next to the print 'Yung TMDS Skew Fail retrain' in DRV_HDMI_EQScan_FSM_PHY_ChkError and _Check_MEQ_Done; cleared by DRV_HDMI_EQScan_FSM_Done"
+  },
+  "DAT_a8078998": {
+   "name": "hdmi_eq_keep_results_flags",
+   "brief": "Per-port flag set when the EQ error check passed; while set the next scan keeps its work records.",
+   "basis": "derived",
+   "evidence": "set to 1 on the pass path of DRV_HDMI_EQScan_FSM_PHY_ChkError / _Check_MEQ_Done (with hdmi_eq_retry_enable), cleared on a skew failure and by the EQ detect timer; read by _PHY_Init, _PHY_EQ, _PHY_BA_Turning"
+  },
+  "DAT_a807899c": {
+   "name": "hdmi_eq_pre_aeq_fails_lower",
+   "brief": "Per PHY and channel: bad pre-AEQ error results counted in search steps 0 and 1 (lower half of the indexes).",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_EQScan_FSM_PHY_R_ChkError: cleared at index 0, incremented on a bad result in steps 0 / 1, compared with the upper-half count"
+  },
+  "DAT_a80789a8": {
+   "name": "hdmi_eq_pre_aeq_fails_upper",
+   "brief": "Per PHY and channel: bad pre-AEQ error results counted in search steps 2 and 3 (upper half of the indexes).",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_EQScan_FSM_PHY_R_ChkError: incremented on a bad result in steps 2 / 3; the search ends when it exceeds the lower-half count"
+  },
+  "DAT_a80789b4": {
+   "name": "hdmi_eq_monitor_ticks",
+   "brief": "Per-port time stamp of the last EQ error monitor run (runs every 100 ticks).",
+   "basis": "derived",
+   "evidence": "hdmi_eq_monitor_errors"
+  },
+  "DAT_a80789c0": {
+   "name": "hdmi_eq_monitor_flags",
+   "brief": "Per-port flag set by a forced EQ error monitor run.",
+   "basis": "descriptive",
+   "evidence": "hdmi_eq_monitor_errors"
+  },
+  "DAT_a80789c8": {
+   "name": "hdmi_eq_saved_bit_ratio",
+   "brief": "Per-port SCDC bit-clock ratio seen at the last clock-detect check.",
+   "basis": "derived",
+   "evidence": "hdmi_eq_check_clock_detect compares with hdmi_scdc_bit_ratio_40"
+  },
+  "DAT_a80789d0": {
+   "name": "hdmi_eq_timer_frl_rates",
+   "brief": "Per receiver: the FRL rate the EQ detect timer saw last and passed to DRV_HDMI21_Set_PHY.",
+   "basis": "proven",
+   "evidence": "DRV_HDMI_EQDetect_Timer compares it with the frl_rate of the link training record, stores the new rate and prints it as 'EQDetect Timer u8FRL_Rate = %d'"
+  },
+  "DAT_a80789d4": {
+   "name": "hdmi_eq_detect_task",
+   "brief": "Timer task record of the periodic HDMI equaliser check.",
+   "basis": "derived",
+   "evidence": "hdmi_create_eq_detect_task, _start_, _stop_"
+  },
+  "DAT_a80789e0": {
+   "name": "dp_tx_hpd_status",
+   "brief": "Hot-plug status byte of the link outputs.",
+   "basis": "derived",
+   "evidence": "dp_tx_update_hpd_status, dp_tx_get_hpd_status"
+  },
+  "DAT_a80789e4": {
+   "name": "dp_tx_hpd_event_bits",
+   "brief": "Hot-plug event bits recorded for the link outputs.",
+   "basis": "derived",
+   "evidence": "dp_tx_update_hpd_status, dp_tx_get_hpd_event_bits"
+  },
+  "DAT_a80789e8": {
+   "name": "dp_tx_hpd_prev_bit0",
+   "brief": "Previous value of hot-plug status bit 0, for edge detection.",
+   "basis": "derived",
+   "evidence": "dp_tx_update_hpd_status"
+  },
+  "DAT_a80789e9": {
+   "name": "dp_tx_hpd_prev_bit1",
+   "brief": "Previous value of hot-plug status bit 1, for edge detection.",
+   "basis": "derived",
+   "evidence": "dp_tx_update_hpd_status"
+  },
+  "DAT_a80789ec": {
+   "name": "dp_port_swap_flag",
+   "brief": "Set when the two DP receiver ports are swapped.",
+   "basis": "derived",
+   "evidence": "dp_set_port_swap / dp_get_port_swap"
+  },
+  "DAT_a80789f0": {
+   "name": "dp_tx_aux_data_byte",
+   "brief": "Byte buffer of the DP output's AUX transfers: the byte that is sent, or the byte that was read.",
+   "basis": "derived",
+   "evidence": "dp_tx_read_sink_edid, dp_tx_init_sink_caps, dp_tx_handle_test_request"
+  },
+  "DAT_a8078a0a": {
+   "name": "dp_tx_hpd_flag",
+   "brief": "Flag of the DP output HPD handling, published to the main processor as a status flag.",
+   "basis": "descriptive",
+   "evidence": "dp_tx_run_hpd_actions clears it; ipc_publish_status_flags"
+  },
+  "DAT_a8078a0c": {
+   "name": "dp_tx_edp_hpd_enable",
+   "brief": "Enable byte of the eDP output HPD handling, set by a command.",
+   "basis": "descriptive",
+   "evidence": "dp_tx_edp_run_hpd_actions runs while it is non-zero"
+  },
+  "DAT_a8078a0e": {
+   "name": "dp_tx_aux_reply_count",
+   "brief": "Number of AUX reply bytes collected so far.",
+   "basis": "derived",
+   "evidence": "dp_tx_aux_read_reply"
+  },
+  "DAT_a8078a0f": {
+   "name": "dp_tx_level_low_flag",
+   "brief": "Set while the measured level is below 40.",
+   "basis": "derived",
+   "evidence": "dp_tx_check_level_crossing"
+  },
+  "DAT_a8078a10": {
+   "name": "dp_tx_pacing_clocks",
+   "brief": "Pixel clock of each DP output used for the last pacing computation.",
+   "basis": "derived",
+   "evidence": "DPTX_SetBrilliantMode"
+  },
+  "DAT_a8078a28": {
+   "name": "dp_tx_pacing_depths",
+   "brief": "Bits per pixel of each DP output used for the last pacing computation.",
+   "basis": "derived",
+   "evidence": "DPTX_SetBrilliantMode"
+  },
+  "DAT_a8078a30": {
+   "name": "dp_tx_measured_level",
+   "brief": "Measured level that the crossing check compares with 40.",
+   "basis": "derived",
+   "evidence": "dp_tx_check_level_crossing"
+  },
+  "DAT_a8078a38": {
+   "name": "hdr_meta_receiver_index",
+   "brief": "Index of the receiver within its kind (0 or 1) that HDR10+ metadata is read from.",
+   "basis": "derived",
+   "evidence": "hdr_select_metadata_receiver: mode, mode - 2 or mode - 4"
+  },
+  "DAT_a8078a39": {
+   "name": "hdr_meta_source_mode",
+   "brief": "Selected HDR10+ metadata source: 0/1 HDMI 2.0, 2/3 HDMI 2.1, 4/5 other receivers.",
+   "basis": "derived",
+   "evidence": "hdr_select_metadata_receiver; hdr_update_hdr10plus_*_port*"
+  },
+  "DAT_a8078a3a": {
+   "name": "hdr10plus_present_flag",
+   "brief": "Set while HDR10+ metadata packets keep arriving; cleared after 200 ticks without one.",
+   "basis": "derived",
+   "evidence": "hdr_check_metadata_timeout, hdr_update_hdr10plus_metadata"
+  },
+  "DAT_a8078a3c": {
+   "name": "hdr10plus_last_ticks",
+   "brief": "Time stamp of the last HDR10+ metadata packet.",
+   "basis": "derived",
+   "evidence": "hdr_update_hdr10plus_metadata, hdr_check_metadata_timeout"
+  },
+  "DAT_a8078a40": {
+   "name": "hdr10plus_packet_bytes",
+   "brief": "The 27 HDR10+ InfoFrame bytes last read from the receiver.",
+   "basis": "derived",
+   "evidence": "hdr_read_hdr10plus_metadata"
+  },
+  "DAT_a8078a5b": {
+   "name": "hdr_curve_rows_reload_flag",
+   "brief": "Set to 1 to copy the override rows into the static curve table before the next build.",
+   "basis": "derived",
+   "evidence": "hdr_request_curve_table_reload, hdr_build_static_tone_curve"
+  },
+  "DAT_a8078a5c": {
+   "name": "hdr_curve_knee_slope",
+   "brief": "Slope of the linear part below the knee: (knee y << 10) / knee x.",
+   "basis": "derived",
+   "evidence": "hdr_build_*_tone_curve: (h4 << 10) / h2"
+  },
+  "DAT_a8078a60": {
+   "name": "hdr_curve_bezier_scale",
+   "brief": "Scale of the Bezier part above the knee: 0x10000000 / (0x1000 - knee x).",
+   "basis": "derived",
+   "evidence": "hdr_build_*_tone_curve; hdr_evaluate_bezier"
+  },
+  "DAT_a8078a64": {
+   "name": "hdr10plus_percentile_50",
+   "brief": "The 50th percentile brightness found in the HDR10+ percentile list.",
+   "basis": "derived",
+   "evidence": "hdr_find_percentile_luminance"
+  },
+  "DAT_a8078a68": {
+   "name": "hdr10plus_guided_curve_flag",
+   "brief": "When set, the tone curve parameters are computed again from the luminance values.",
+   "basis": "descriptive",
+   "evidence": "hdr_build_hdr10plus_tone_curve calls hdr_build_guided_curve when set"
+  },
+  "DAT_a8078a69": {
+   "name": "hdr10plus_use_scene_max_flag",
+   "brief": "When set (with a scene maximum), the scene luminance comes from maxscl instead of the 99th percentile.",
+   "basis": "descriptive",
+   "evidence": "hdr_build_hdr10plus_tone_curve"
+  },
+  "DAT_a8078a6c": {
+   "name": "hdr10plus_percentile_99",
+   "brief": "The 99th percentile brightness found in the HDR10+ percentile list.",
+   "basis": "derived",
+   "evidence": "hdr_find_percentile_luminance"
+  },
+  "DAT_a8078a70": {
+   "name": "hdr10plus_default_record",
+   "brief": "Default HDR10+ metadata loaded when the HDR10+ service starts.",
+   "basis": "derived",
+   "evidence": "hdr_init_hdr10plus"
+  },
+  "DAT_a8078a90": {
+   "name": "hdr10plus_panel_peak_x10",
+   "brief": "Panel peak luminance x 10, the brightness limit passed to the HDR10+ curve build.",
+   "basis": "derived",
+   "evidence": "hdr_init_hdr10plus: hdr_get_peak_luminance() * 10; hdr_update_hdr10plus_metadata"
+  },
+  "DAT_a8078aa0": {
+   "name": "hdr10plus_metadata",
+   "brief": "The HDR10+ dynamic metadata of the incoming signal.",
+   "basis": "proven",
+   "evidence": "documented in docs/DATA.md from the routines that use it"
+  },
+  "DAT_a8078aa4": {
+   "name": "hdr10plus_metadata_knee_y",
+   "brief": "Knee point y of the HDR10+ metadata (field +4).",
+   "basis": "derived",
+   "evidence": "hdr10plus_metadata + 4; knee slope = (y << 10) / x"
+  },
+  "DAT_a8078b30": {
+   "name": "audio_dp_32k_mode",
+   "brief": "Byte kept by the DP 32 kHz switch and the audio routing.",
+   "basis": "descriptive",
+   "evidence": "audio_update_dp_32k_mode, audio_route_source"
+  },
+  "DAT_a8078b31": {
+   "name": "audio_dp_resync_flag",
+   "brief": "Set to request a fresh FIFO set-up of a DP audio source.",
+   "basis": "derived",
+   "evidence": "audio_flag_dp_resync, audio_check_dp_fifo_unmute"
+  },
+  "DAT_a8078b38": {
+   "name": "audio_dp_stable_counts",
+   "brief": "Per-source count used to wait until DP audio is stable before unmuting.",
+   "basis": "descriptive",
+   "evidence": "audio_check_dp_fifo_unmute"
+  },
+  "DAT_a8078b48": {
+   "name": "audio_dp_unmute_flags",
+   "brief": "Per-source flag bytes of the DP audio unmute check.",
+   "basis": "descriptive",
+   "evidence": "audio_check_dp_fifo_unmute"
+  },
+  "DAT_a8078b4c": {
+   "name": "audio_dp_status_ticks",
+   "brief": "Per-receiver time stamps of the DP audio status sampling.",
+   "basis": "descriptive",
+   "evidence": "audio_poll_dp_status"
+  },
+  "DAT_a8078b54": {
+   "name": "audio_dp_fifo_muted_flag",
+   "brief": "Set while the DP audio FIFO is muted.",
+   "basis": "derived",
+   "evidence": "audio_mute_dp_fifo, audio_check_dp_fifo_unmute"
+  },
+  "DAT_a8078b58": {
+   "name": "dsc_enc_configured_flag",
+   "brief": "Byte set by the encoder configuration.",
+   "basis": "descriptive",
+   "evidence": "sys_dsc_enc_configure"
+  },
+  "DAT_a8078ba0": {
+   "name": "hdcp_tx_task_flags",
+   "brief": "Per-output bytes of the copy-protection service.",
+   "basis": "descriptive",
+   "evidence": "hdcp_tx_task"
+  },
+  "DAT_a8078ba4": {
+   "name": "hdcp_tx_task_ticks",
+   "brief": "Per-output words of the copy-protection service.",
+   "basis": "descriptive",
+   "evidence": "hdcp_tx_task"
+  },
+  "DAT_a8078bb0": {
+   "name": "hdcp_tx_records",
+   "brief": "State of the copy-protection handshake on each video output (3 x 24 bytes).",
+   "basis": "proven",
+   "evidence": "documented in docs/DATA.md from the routines that use it"
+  },
+  "DAT_a8078c00": {
+   "name": "sys_otp_shared_loaded_flag",
+   "brief": "Set once factory data records 12..16 are in shared memory; published as a status flag.",
+   "basis": "derived",
+   "evidence": "sys_otp_load_shared_data, ipc_publish_status_flags"
+  },
+  "DAT_a8078c01": {
+   "name": "sys_otp_patch_found_index",
+   "brief": "Index of the patch entry found last.",
+   "basis": "derived",
+   "evidence": "sys_otp_find_patch, sys_otp_read_patch_byte"
+  },
+  "DAT_a8078c02": {
+   "name": "sys_otp_patch_count",
+   "brief": "Number of entries in the address patch table.",
+   "basis": "derived",
+   "evidence": "sys_otp_load_patch_table, sys_otp_find_patch"
+  },
+  "DAT_a8078c08": {
+   "name": "hdmi_port1_double_flag",
+   "brief": "Horizontal doubling flag of HDMI receiver 1.",
+   "basis": "derived",
+   "evidence": "hdmi_get_port1_double_flag / hdmi_clear_port1_double_flag"
+  },
+  "DAT_a8078c0c": {
+   "name": "audio_hdmi_rate_check_ticks",
+   "brief": "Per-receiver time stamp of the 40-tick audio rate check.",
+   "basis": "derived",
+   "evidence": "audio_check_hdmi_rate_valid"
+  },
+  "DAT_a8078c18": {
+   "name": "audio_hdmi_rate_valid_flags",
+   "brief": "Per-receiver result of the audio rate range check.",
+   "basis": "derived",
+   "evidence": "audio_check_hdmi_rate_valid"
+  },
+  "DAT_a8078c24": {
+   "name": "hdr_task_byte",
+   "brief": "Byte written by the HDR curve service.",
+   "basis": "descriptive",
+   "evidence": "hdr_task"
+  },
+  "DAT_a8078c25": {
+   "name": "hdr_tmo_enabled_flag",
+   "brief": "Set while the tone-mapping stages are switched on.",
+   "basis": "derived",
+   "evidence": "hdr_tmo_enable / hdr_tmo_disable"
+  },
+  "DAT_a8078c26": {
+   "name": "hdr_tmo_second_enabled_flag",
+   "brief": "Set while the second tone-mapping set is switched on.",
+   "basis": "derived",
+   "evidence": "hdr_tmo_enable_second, hdr_tmo_disable_and_print"
+  },
+  "DAT_a8078c28": {
+   "name": "hdr_last_meta_half",
+   "brief": "Halfword metadata value stored for change detection.",
+   "basis": "descriptive",
+   "evidence": "hdr_has_metadata_changed"
+  },
+  "DAT_a8078c2c": {
+   "name": "hdr_last_meta_word",
+   "brief": "Word metadata value stored for change detection.",
+   "basis": "descriptive",
+   "evidence": "hdr_has_metadata_changed"
+  },
+  "DAT_a8078c30": {
+   "name": "hdr_option_byte",
+   "brief": "HDR option byte: bit 3 = load the tone curve, bit 2 = use the alternate curve.",
+   "basis": "derived",
+   "evidence": "hdr_set_option_byte, hdr_apply_tone_curve"
+  },
+  "DAT_a8078c31": {
+   "name": "hdr_enable",
+   "brief": "On/off switch of the HDR curve service.",
+   "basis": "derived",
+   "evidence": "hdr_set_enable"
+  },
+  "DAT_a8078c33": {
+   "name": "hdr_mode_byte",
+   "brief": "HDR mode byte from the main processor.",
+   "basis": "derived",
+   "evidence": "hdr_set_mode_byte, hdr_task"
+  },
+  "DAT_a8078c34": {
+   "name": "hdr_settings_changed_flag",
+   "brief": "Set when an HDR setting or the metadata changed, so the curve is rebuilt.",
+   "basis": "derived",
+   "evidence": "hdr_set_option_byte, hdr_set_mode_byte, hdr_request_reload"
+  },
+  "DAT_a8078c35": {
+   "name": "hdr_source_active_flag",
+   "brief": "Set while the current source is HDR-active; shown in the port status flags.",
+   "basis": "derived",
+   "evidence": "hdr_mark_source_active; *_update_port_status_flags"
+  },
+  "DAT_a8078c36": {
+   "name": "hdr_source_disable_bits",
+   "brief": "One bit per source; a set bit switches HDR processing off for that source.",
+   "basis": "derived",
+   "evidence": "written by hdr_set_source_disable_bit; hdr_task and hdr_update_hdr10plus_metadata skip their work for the current source when its bit is set"
+  },
+  "DAT_a8078c37": {
+   "name": "hdr_source",
+   "brief": "The source that the HDR service follows.",
+   "basis": "derived",
+   "evidence": "hdr_select_source"
+  },
+  "DAT_a8078c38": {
+   "name": "hdr_status_code",
+   "brief": "HDR status code reported to the main processor.",
+   "basis": "derived",
+   "evidence": "hdr_get_status_code; hdr_task, hdr_select_source write it"
+  },
+  "DAT_a8078c39": {
+   "name": "hdr_eotf_mode",
+   "brief": "The EOTF mode 3..7 set by hdr_update_tone_curve from the mastering luminance range.",
+   "basis": "proven",
+   "evidence": "hdr_print_static_state prints it as \"u8EOTFMode\""
+  },
+  "DAT_a8078c44": {
+   "name": "hdr_tmo_gain_copy_start",
+   "brief": "First gain table index copied into hdr_tmo_gain_sums (0x10E, 0x13B, 0x15B or 0x1A9 by mode).",
+   "basis": "derived",
+   "evidence": "hdr_tmo_write_gain_table"
+  },
+  "DAT_a8078c48": {
+   "name": "hdmi_tx_sink_flags",
+   "brief": "Per HDMI output a flag set by the hot-plug check; published as status bits 3 and 4.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_check_hotplug, ipc_publish_status_flags"
+  },
+  "DAT_a8078c49": {
+   "name": "hdmi_tx_sink_flag_port1",
+   "brief": "Byte 1 of hdmi_tx_sink_flags: the flag of HDMI output 1, published as status bit 4.",
+   "basis": "derived",
+   "evidence": "second byte of hdmi_tx_sink_flags (0xA8078C48); cleared on its own by the clear-status-flags command of the main program"
+  },
+  "DAT_a8078c50": {
+   "name": "hdmi_tx_last_hotplug_states",
+   "brief": "Hot-plug state of each HDMI output seen at the last check.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_check_hotplug compares and stores"
+  },
+  "DAT_a8078c58": {
+   "name": "hdcp_rx_restart_bits",
+   "brief": "Bit per input set by an input event; the protection state machines then go back to state 9.",
+   "basis": "derived",
+   "evidence": "input_port_raise_event; hdcp_rx_*_task"
+  },
+  "DAT_a8078c5a": {
+   "name": "hdcp_tx_dp_bypass_flag",
+   "brief": "Set when the DisplayPort output protection runs in bypass (bit 6 of its control register).",
+   "basis": "derived",
+   "evidence": "hdcp_tx_dp_set_bypass, hdcp_tx_service_port"
+  },
+  "DAT_a8078c5b": {
+   "name": "hdcp_rx_status_mask",
+   "brief": "Bit per input for its protection status; shown as flag 0x20 in the port records.",
+   "basis": "derived",
+   "evidence": "hdcp_rx_update_port_status; *_update_port_status_flags"
+  },
+  "DAT_a8078c5c": {
+   "name": "hdcp_rx_init_flag",
+   "brief": "Flag set by the input protection set-up; published as status bit 1.",
+   "basis": "descriptive",
+   "evidence": "InitHDCP, ipc_publish_status_flags"
+  },
+  "DAT_a8078c60": {
+   "name": "hdcp_repeater_counters",
+   "brief": "Per-input counter written to the input registers by the repeater report and the event writer.",
+   "basis": "descriptive",
+   "evidence": "hdcp_repeater_report_downstream, input_port_write_event_byte"
+  },
+  "DAT_a8078c78": {
+   "name": "hdcp_repeater_device_sum",
+   "brief": "Sum of the downstream device counts reported by the repeater.",
+   "basis": "derived",
+   "evidence": "hdcp_repeater_report_downstream"
+  },
+  "DAT_a8078c80": {
+   "name": "hdcp_rx_hdmi_watch_bytes",
+   "brief": "Per-input bytes of the rate-limited counter check of the HDMI 2.0 inputs.",
+   "basis": "descriptive",
+   "evidence": "hdcp_rx_hdmi_watch_counters"
+  },
+  "DAT_a8078c88": {
+   "name": "hdcp_rx_hdmi21_watch_bytes",
+   "brief": "Per-input bytes of the rate-limited counter check of the HDMI 2.1 inputs.",
+   "basis": "descriptive",
+   "evidence": "hdcp_rx_hdmi21_watch_counters"
+  },
+  "DAT_a8078c90": {
+   "name": "hdcp_rx_port_state_bytes",
+   "brief": "Protection state byte of each input.",
+   "basis": "derived",
+   "evidence": "hdcp_rx_update_port_status"
+  },
+  "DAT_a8078c98": {
+   "name": "hdcp_rx_port_status_ticks",
+   "brief": "Time stamp of the last protection status change of each input, for the time-out.",
+   "basis": "derived",
+   "evidence": "hdcp_rx_update_port_status"
+  },
+  "DAT_a8078cb0": {
+   "name": "hdcp_rx_hdmi_task_byte",
+   "brief": "Byte cleared by the HDMI input protection state machines when they restart.",
+   "basis": "descriptive",
+   "evidence": "hdcp_rx_hdmi_task, hdcp_rx_hdmi21_task"
+  },
+  "DAT_a8078cb8": {
+   "name": "hdcp_rx_key_buffer",
+   "brief": "Buffer filled by the long table exchange and used by the key preparation steps.",
+   "basis": "descriptive",
+   "evidence": "hdcp_tx_engine_exchange_long_tables, hdcp_rx_key_load_step"
+  },
+  "DAT_a8078d38": {
+   "name": "hdcp_tx_engine_table_mode0",
+   "brief": "Table prepared by the key steps and sent to the protection engine in mode 0.",
+   "basis": "derived",
+   "evidence": "hdcp_rx_key_load_step, hdcp_tx_engine_load_three_tables"
+  },
+  "DAT_a8078eb8": {
+   "name": "hdcp_rx_engine_result_buffer",
+   "brief": "128-byte buffer for the engine result read in the key preparation sequence (64 pairs, last pair first).",
+   "basis": "derived",
+   "evidence": "hdcp_rx_key_load_step passes it to hdcp_tx_engine_read_result, which fills 128 bytes"
+  },
+  "DAT_a8078eb9": {
+   "name": "hdcp_rx_engine_result_tables",
+   "brief": "Bytes 1..127 of the engine result buffer: a 32-byte table followed by a 95-byte table.",
+   "basis": "derived",
+   "evidence": "hdcp_tx_engine_exchange_long_tables takes table a at this label and table b 0x20 bytes later; the label is byte 1 of the buffer filled by hdcp_tx_engine_read_result"
+  },
+  "DAT_a8079038": {
+   "name": "hdmi_task_period",
+   "brief": "Period given to the equaliser detect task and to the two HDMI 2.1 receiver timers.",
+   "basis": "derived",
+   "evidence": "copied into the period field by hdmi_create_eq_detect_task and DRV_HDMI_Init_Timer"
+  },
+  "DAT_a8079040": {
+   "name": "hdmi_rx21_frl_init_flags",
+   "brief": "Per-port bytes of the FRL start and payload states of mode detection.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI_ModeDetect_FSM_FRL_Init / _Payload"
+  },
+  "DAT_a8079048": {
+   "name": "hdmi_rx21_frl_lock_flags",
+   "brief": "Per-port bytes of the FRL start and lock check states of mode detection.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI_ModeDetect_FSM_FRL_Init / _Chk"
+  },
+  "DAT_a8079050": {
+   "name": "hdmi_rx21_modedet_stable_flags",
+   "brief": "Per-port bytes set at the end of mode detection and by the stable watch.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI_ModeDetect_FSM_Complete, hdmi_rx21_modedet_watch_stable"
+  },
+  "DAT_a8079052": {
+   "name": "hdmi_rx21_ltp_force_pass",
+   "brief": "Debug switch \"LTP force pass\": the link training error checks are skipped while set.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_DbgMenu; LTS_Chk_Err skips hdmi_rx21_check_sr_detect"
+  },
+  "DAT_a8079054": {
+   "name": "hdmi_rx21_error_counters",
+   "brief": "Error counter of each HDMI 2.1 receiver used by the LTS_L state.",
+   "basis": "derived",
+   "evidence": "hdmi_rx21_reset_error_counter, DRV_HDMI21_RXDetect_FSM_LTS_L"
+  },
+  "DAT_a807906c": {
+   "name": "hdmi_rx21_ltp_end_ticks",
+   "brief": "Per receiver: tick count taken when the link training pattern phase ends (printed as 'e:').",
+   "basis": "proven",
+   "evidence": "third value of the print 'LTP time = %ld, s:%ld, e:%ld' in DRV_HDMI21_RXDetect_FSM_LTS_P; the start value is hdmi_rx21_ltp_timer_ticks"
+  },
+  "DAT_a8079074": {
+   "name": "hdmi_rx21_ltp_timer_ticks",
+   "brief": "Per-port start time of the link training pattern timer.",
+   "basis": "derived",
+   "evidence": "hdmi_rx21_update_frl_rate restarts it; LTS_Chk_Err, LTS_P"
+  },
+  "DAT_a8079080": {
+   "name": "hdmi_rx21_ltsp_rs_fails",
+   "brief": "Per receiver: failed RS checks in a row in link training state LTS:P; more than 5 count as a pass.",
+   "basis": "proven",
+   "evidence": "DRV_HDMI21_RXDetect_FSM_LTS_P counts it up next to the print 'LTS:P RS Fail' and clears it on 'LTS:P RS Pass'"
+  },
+  "DAT_a8079082": {
+   "name": "hdmi_rx21_ltsp_wait_passes",
+   "brief": "Per receiver: passes of LTS:P with FLT_Update still set; 300 end the wait with a message.",
+   "basis": "proven",
+   "evidence": "DRV_HDMI21_RXDetect_FSM_LTS_P counts it while the FLT_Update bit is set (print 'LTS_P <W>') and prints 'no_retrain' or 'HPD Toggle(%d, %d)' at 300"
+  },
+  "DAT_a8079086": {
+   "name": "hdmi_rx21_lts3_halves",
+   "brief": "Per-port halfwords of link training state 3.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI21_RXDetect_FSM_LTS_3"
+  },
+  "DAT_a807908a": {
+   "name": "hdmi_rx21_lts_error_halves",
+   "brief": "Per-port halfwords of link training state 3 and the error check.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI21_RXDetect_FSM_LTS_3 / _Chk_Err"
+  },
+  "DAT_a8079090": {
+   "name": "hdmi_rx21_frl_payload_bytes",
+   "brief": "Per-port bytes of the FRL payload check of mode detection.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI_ModeDetect_FSM_FRL_Init / _Payload"
+  },
+  "DAT_a8079094": {
+   "name": "hdmi_rx21_frl_payload_words",
+   "brief": "Per-port words of the FRL payload check of mode detection.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI_ModeDetect_FSM_FRL_Init / _Payload"
+  },
+  "DAT_a807909c": {
+   "name": "hdmi_rx21_frl_payload_ticks",
+   "brief": "Per-port words set by the FRL start and payload states and read by the lock check.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI_ModeDetect_FSM_FRL_Init / _Payload, _Chk"
+  },
+  "DAT_a80790a8": {
+   "name": "hdmi_rx21_two_port_mode_flags",
+   "brief": "Per-receiver byte set by FRL_PLL (1 for a high target) and printed as '2PortMode'; shifts the timing values.",
+   "basis": "proven",
+   "evidence": "FRL_PLL writes it and prints it as '2PortMode=%d'; the mode detection routines shift horizontal values left by it"
+  },
+  "DAT_a80790b0": {
+   "name": "hdmi_rx21_vrr_was_on_flags",
+   "brief": "Per HDMI 2.1 receiver: 1 when the record's VRR flags byte was non-zero at the last look.",
+   "basis": "derived",
+   "evidence": "set to (vrr_flags != 0) by DRV_HDMI_ModeDetect_FSM_Complete and hdmi_rx21_detect_timing_change, which prints 'free sync to non free sync' on a change from 1 to 0"
+  },
+  "DAT_a80790b8": {
+   "name": "hdmi_rx21_stable_watch_bytes",
+   "brief": "Per-port bytes of the stable-input watch.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_modedet_watch_stable, DRV_HDMI_ModeDetect_FSM_Complete"
+  },
+  "DAT_a80790c8": {
+   "name": "hdmi_rx21_eq_wait_bytes",
+   "brief": "Per-port bytes of the wait for the end of EQ tuning.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_modedet_wait_eq_done"
+  },
+  "DAT_a80790d8": {
+   "name": "hdmi_rx21_frl_rate_change_flags",
+   "brief": "Per-port flag of an FRL rate change after link training.",
+   "basis": "derived",
+   "evidence": "hdmi_rx21_flag_frl_rate_change reads; LTS states write"
+  },
+  "DAT_a80790e0": {
+   "name": "hdmi_rx21_standby_fail_counts",
+   "brief": "Per receiver: unstable passes of the standby state; the second one switches the PHY to only-scramble guessing.",
+   "basis": "derived",
+   "evidence": "FSM_MODE_DETECT_STANDBY: incremented on an unstable pass, at 2 it sets the port mode byte ('start only guess scramble') and restarts; cleared when stable"
+  },
+  "DAT_a80790e4": {
+   "name": "hdmi_rx21_stable_watch_words",
+   "brief": "Per-port words of the stable-input watch.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_modedet_watch_stable"
+  },
+  "DAT_a80790ec": {
+   "name": "hdmi_rx21_stable_watch_ticks",
+   "brief": "Per-port words of the stable-input watch.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_modedet_watch_stable"
+  },
+  "DAT_a80790f4": {
+   "name": "hdmi_rx21_mode_detect_timer",
+   "brief": "Timer descriptor of the HDMI 2.1 mode-detect state machine.",
+   "basis": "proven",
+   "evidence": "DRV_HDMI_Init_Timer / _Start_Timer / _Del_Timer; hdmi_rx21_run_mode_detect_fsm"
+  },
+  "DAT_a8079100": {
+   "name": "hdmi_rx21_rx_detect_timer",
+   "brief": "Timer descriptor of the HDMI 2.1 link-training state machine.",
+   "basis": "proven",
+   "evidence": "DRV_HDMI_Init_Timer / _Start_Timer; hdmi_rx21_run_rx_detect_fsm"
+  },
+  "DAT_a8079118": {
+   "name": "hdmi_rx21_event_callbacks_6",
+   "brief": "Callback table of one packet-event group of the HDMI 2.1 receivers.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_service_packet_events"
+  },
+  "DAT_a8079138": {
+   "name": "hdmi_rx21_event_callbacks_7",
+   "brief": "Callback table of one packet-event group of the HDMI 2.1 receivers.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_service_packet_events"
+  },
+  "DAT_a8079158": {
+   "name": "hdmi_rx21_event_callbacks_8",
+   "brief": "Callback table of one packet-event group of the HDMI 2.1 receivers.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_service_packet_events"
+  },
+  "DAT_a8079178": {
+   "name": "hdmi_rx21_sync_event_bytes",
+   "brief": "Per-port bytes of the sync event handler.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_service_sync_events"
+  },
+  "DAT_a8079180": {
+   "name": "hdmi_rx21_sync_event_flags",
+   "brief": "Per-port bytes of the sync event handler.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_service_sync_events"
+  },
+  "DAT_a8079184": {
+   "name": "hdmi_rx21_sync_event_words",
+   "brief": "Per-port event word of the HDMI 2.1 sync event handler.",
+   "basis": "derived",
+   "evidence": "hdmi_rx21_service_sync_events, hdmi_rx21_clear_event_word"
+  },
+  "DAT_a807918e": {
+   "name": "hdmi_rx21_bit9_done_flag",
+   "brief": "Flag set after control bit 9 of an HDMI 2.1 receiver was pulsed.",
+   "basis": "descriptive",
+   "evidence": "hdmi_rx21_pulse_bit9_set_flag(_copy)"
+  },
+  "DAT_a8079192": {
+   "name": "hdmi_rx21_init_done_flag",
+   "brief": "Set once the HDMI 2.1 receiver driver has been initialised.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI21_RX_Init"
+  },
+  "DAT_a8079194": {
+   "name": "audio_hdmi21_rate_check_ticks",
+   "brief": "Per-receiver time stamp of the 40-tick HDMI 2.1 audio rate check.",
+   "basis": "derived",
+   "evidence": "audio_check_hdmi21_rate_valid"
+  },
+  "DAT_a80791a0": {
+   "name": "audio_hdmi21_rate_valid_flags",
+   "brief": "Per-receiver result of the HDMI 2.1 audio rate range check.",
+   "basis": "derived",
+   "evidence": "audio_check_hdmi21_rate_valid"
+  },
+  "DAT_a80791aa": {
+   "name": "hdmi_tx_frl_rate_byte",
+   "brief": "FRL rate byte of the HDMI TX training: cleared at the start and for TMDS, written in LTS:2.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI21_TXDetect_FSM_Init / _LTS_2 / _LTS_L"
+  },
+  "DAT_a80791b0": {
+   "name": "hdmi_tx_frl_video_flags",
+   "brief": "Per-port flag tested by LTS:P before FRL video is started.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI21_TXDetect_FSM_LTS_P"
+  },
+  "DAT_a80791b2": {
+   "name": "hdmi_tx_frl_sink_check_flag",
+   "brief": "0 = LTS:1 takes the FRL rate without the three sink checks (rate 5 for a sink rate of 0). Only read.",
+   "basis": "descriptive",
+   "evidence": "tested by DRV_HDMI21_TXDetect_FSM_LTS_1 before the sink's maximum rate, SCDC presence and LTS:1 result; written by no routine"
+  },
+  "DAT_a80791b8": {
+   "name": "hdmi_tx_sink_dsc_flags",
+   "brief": "DSC capability byte of the sink HF-VSDB of each HDMI output.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_parse_hf_vsdb: VSDB byte after the rate bytes"
+  },
+  "DAT_a80791c0": {
+   "name": "hdmi_tx_sink_dsc_max_slices",
+   "brief": "DSC_MaxSlices field (low nibble) of the sink HF-VSDB of each HDMI output.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_parse_hf_vsdb: e[j + 7] & 0xF"
+  },
+  "DAT_a80791c8": {
+   "name": "hdmi_tx_sink_dsc_max_frl",
+   "brief": "DSC_Max_FRL_Rate field (high nibble) of the sink HF-VSDB of each HDMI output.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_parse_hf_vsdb: e[j + 7] >> 4"
+  },
+  "DAT_a80791d0": {
+   "name": "hdmi_tx_lts1_results",
+   "brief": "Per-port result of the SCDC read in LTS:1 of the HDMI TX FRL training.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI21_TXDetect_FSM_LTS_1"
+  },
+  "DAT_a80791d8": {
+   "name": "hdmi_tx_sink_max_frl",
+   "brief": "Max_FRL_Rate field of the sink HF-VSDB of each HDMI output.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_parse_hf_vsdb: e[j + 2] >> 4; LTS:1 reads it"
+  },
+  "DAT_a80791e0": {
+   "name": "hdmi_tx_sink_scdc_present",
+   "brief": "SCDC_Present bit of the sink HF-VSDB of each HDMI output.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_parse_hf_vsdb: bit 7 of e[j + 1]"
+  },
+  "DAT_a80791e2": {
+   "name": "hdmi_tx_txffe_mode",
+   "brief": "The TxFFE mode chosen from the sink's SCDC register 0x35 and passed to hdmi_tx_set_txffe_mode.",
+   "basis": "derived",
+   "evidence": "LTS_3 sets it to the Preshoot, De-Emphasis, NO or Normal mode by the bits of SCDC register 0x35 and passes it to hdmi_tx_set_txffe_mode"
+  },
+  "DAT_a80791e8": {
+   "name": "hdmi_tx_frl_step_bytes",
+   "brief": "Per-port bytes cleared and set by the HDMI TX FRL training states.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI21_TXDetect_FSM_LTS_2/3/4/P"
+  },
+  "DAT_a80791f0": {
+   "name": "hdmi_tx_ffe_levels",
+   "brief": "TxFFE level index of each HDMI output.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_set_txffe_mode reads; LTS:2/3/4 write"
+  },
+  "DAT_a80791fc": {
+   "name": "hdmi_tx_frl_rates",
+   "brief": "FRL rate chosen for each HDMI output (at most 6).",
+   "basis": "derived",
+   "evidence": "LTS:1 stores the sink max rate; LTS:4 lowers it"
+  },
+  "DAT_a8079208": {
+   "name": "hdmi_tx_frl_done_flags",
+   "brief": "Per-port byte cleared at the training start and in LTS:P.",
+   "basis": "descriptive",
+   "evidence": "DRV_HDMI21_TXDetect_FSM_Init / _LTS_P, hdmi_tx_run_frl_training"
+  },
+  "DAT_a8079210": {
+   "name": "hdmi_tx_frl_link_flags",
+   "brief": "Per-port copy of bit 1 of HDMI TX register 9, read by the training runner.",
+   "basis": "descriptive",
+   "evidence": "hdmi_tx_run_frl_training"
+  },
+  "DAT_a8079218": {
+   "name": "hdmi_tx_frl_timer",
+   "brief": "Timer descriptor of the HDMI TX FRL training.",
+   "basis": "proven",
+   "evidence": "hdmi_tx_frl_init_timer / _start_timer, hdmi_tx_run_frl_training"
+  },
+  "DAT_a8079228": {
+   "name": "sys_dsc_dec_command_value",
+   "brief": "Value sent with command 0x74 for the DSC decoder state machine.",
+   "basis": "derived",
+   "evidence": "ipc_dispatch_command 0x74; sys_dsc_dec_run_state"
+  },
+  "DAT_a8079229": {
+   "name": "sys_dsc_dec_init_flag",
+   "brief": "Set once the DSC decoder has been initialised.",
+   "basis": "derived",
+   "evidence": "sys_dsc_dec_init"
+  },
+  "DAT_a807922c": {
+   "name": "sys_dsc_dec_dp_start_ticks",
+   "brief": "Tick count taken when the DSC decoder started a DisplayPort stream.",
+   "basis": "derived",
+   "evidence": "sys_dsc_dec_run_state stores timer_get_ticks after dp_start_stream and compares it in the active state"
+  },
+  "DAT_a8079230": {
+   "name": "sys_dsc_dec_dp_check_pending",
+   "brief": "1 from the start of a DisplayPort stream until the first check after the wait.",
+   "basis": "derived",
+   "evidence": "sys_dsc_dec_run_state sets it with dp_start_stream and clears it at the first check"
+  },
+  "DAT_a8079234": {
+   "name": "sys_dsc_dec_hdmi21_build_ticks",
+   "brief": "Per DSC decoder: tick count taken when the HDMI 2.1 set-up record was built.",
+   "basis": "derived",
+   "evidence": "sys_dsc_dec_run_state stores timer_get_ticks before sys_dsc_dec_build_hdmi21_config and waits on it"
+  },
+  "DAT_a8079238": {
+   "name": "sys_dsc_dec_hdmi21_configs",
+   "brief": "Per DSC decoder: the 0x50-byte set-up record built for an HDMI 2.1 source.",
+   "basis": "derived",
+   "evidence": "filled by sys_dsc_dec_build_hdmi21_config, written to the decoder by sys_dsc_dec_write_config"
+  },
+  "DAT_a8079288": {
+   "name": "sys_dsc_dec_reg_ratios",
+   "brief": "Per DSC decoder: the result byte of sys_dsc_dec_calc_reg_ratio.",
+   "basis": "derived",
+   "evidence": "sys_dsc_dec_run_state stores the result of sys_dsc_dec_calc_reg_ratio here"
+  },
+  "DAT_a8079290": {
+   "name": "hdmi_tx_packet_state",
+   "brief": "Packet forwarding state and per-output packet selections of the HDMI outputs.",
+   "basis": "derived",
+   "evidence": "CONV2HDMITX_UpdatePacket / _UpdateInterface, HDMITX_PacketSwitch_Bypass"
+  },
+  "DAT_a80792b4": {
+   "name": "dp_tx_drive_level_records",
+   "brief": "16-byte record per DP output with the base swing and pre-emphasis of its lanes.",
+   "basis": "derived",
+   "evidence": "dp_tx_set_drive_level_base, dp_tx_set_drive_levels"
+  },
+  "DAT_a8079304": {
+   "name": "dp_tx_ctl_init_byte",
+   "brief": "Byte written by the start-up of a DP / eDP transmitter control bank.",
+   "basis": "descriptive",
+   "evidence": "dp_tx_init_ctl_banks"
+  },
+  "DAT_a8079308": {
+   "name": "dp_dsc_4_slices_option",
+   "brief": "The 'DSC 3440 4 slices' option byte: 1 changes two values of the DP receiver register set-up.",
+   "basis": "proven",
+   "evidence": "printed as 'DSC 3440 4 slices = %d' by dp_set_dsc_4_slices_option; dp_program_port tests it for 1"
+  },
+  "DAT_a8079312": {
+   "name": "dp_port_pending_bits",
+   "brief": "Pending bit of each DP port.",
+   "basis": "derived",
+   "evidence": "dp_get_port_pending_bit, dp_clear_port_pending_bit, dp_update_pending_bits"
+  },
+  "DAT_a8079313": {
+   "name": "dp_service_flag",
+   "brief": "Service flag; the pending bits are refreshed while it is set.",
+   "basis": "derived",
+   "evidence": "dp_set_service_flag, dp_update_pending_bits"
+  },
+  "DAT_a8079314": {
+   "name": "dp_port_flag_bits",
+   "brief": "DP port flag byte, one bit per port; picks the way a receiver unit restarts.",
+   "basis": "derived",
+   "evidence": "dp_set_port_flag_bit, dp_unit_restart"
+  },
+  "DAT_a8079315": {
+   "name": "dp_service_block_byte",
+   "brief": "Byte updated by the service block set-up.",
+   "basis": "descriptive",
+   "evidence": "dp_setup_service_block"
+  },
+  "DAT_a8079316": {
+   "name": "dp_hpd_pulse_flag",
+   "brief": "Flag cleared by the HPD block pulse and tested by the service readiness check.",
+   "basis": "descriptive",
+   "evidence": "dp_pulse_hpd_block, dp_is_port_ready_for_service"
+  },
+  "DAT_a807931a": {
+   "name": "dp_rate_divider",
+   "brief": "Divisor of 48000 written to DP receiver registers 0x26..0x2C.",
+   "basis": "derived",
+   "evidence": "dp_write_rate_divider_regs"
+  },
+  "DAT_a807931c": {
+   "name": "dp_fec_ready_state",
+   "brief": "Last FEC-ready state of the DP receiver.",
+   "basis": "derived",
+   "evidence": "dp_update_fec_ready"
+  },
+  "DAT_a8079320": {
+   "name": "dp_pixel_clocks",
+   "brief": "Pixel clock value of each DP port.",
+   "basis": "derived",
+   "evidence": "dp_calc_pixel_clock"
+  },
+  "DAT_a807932c": {
+   "name": "dp_range_check_ticks",
+   "brief": "Per-port time stamp of the range flag update (at most once per 40 ticks).",
+   "basis": "derived",
+   "evidence": "dp_update_range_flag"
+  },
+  "DAT_a8079338": {
+   "name": "dp_range_flags",
+   "brief": "Range flag of each DP port.",
+   "basis": "derived",
+   "evidence": "dp_update_range_flag"
+  },
+  "DAT_a807933a": {
+   "name": "dp_stream_start_count",
+   "brief": "Counter of the stream start; selects the value written to register 0x485.",
+   "basis": "derived",
+   "evidence": "dp_start_stream"
+  },
+  "DAT_a807933c": {
+   "name": "dp_lcnt_check_start_ticks",
+   "brief": "Per DisplayPort receiver: time the LCnt check was started; the check ends after its time limit.",
+   "basis": "derived",
+   "evidence": "dp_port_task stores timer_get_ticks at the start of the check and clears the running flag when more than the check time has passed"
+  },
+  "DAT_a8079344": {
+   "name": "dp_lcnt_check_hold_ticks",
+   "brief": "Per DisplayPort receiver: time of the check start or the last pending bit; LCnt steps wait 1500 ticks.",
+   "basis": "derived",
+   "evidence": "dp_port_task stamps it at the start of the check and when dp_get_port_pending_bit is 1; LCnt steps need more than 1500 ticks since"
+  },
+  "DAT_a807934c": {
+   "name": "dp_lcnt_check_trained_ticks",
+   "brief": "Per DisplayPort receiver: time the link was last seen trained during the LCnt check (or LCnt last stepped).",
+   "basis": "derived",
+   "evidence": "dp_port_task stamps it while the link test routine returns 1 and after every LCnt step; an old stamp sets LCnt 1"
+  },
+  "DAT_a8079354": {
+   "name": "dp_lcnt_check_reg44_clear_ticks",
+   "brief": "Per DisplayPort receiver: time the link was last seen trained with register 0x44 bits 0..1 clear.",
+   "basis": "descriptive",
+   "evidence": "dp_port_task stamps it while the link is trained and dp_is_reg44_low_bits_set is 0, and after every LCnt step; an old stamp steps LCnt 1 -> 2 -> 4"
+  },
+  "DAT_a8079360": {
+   "name": "dp_lcnt_check_running_flags",
+   "brief": "Per DisplayPort receiver: 1 while the LCnt check of dp_port_task runs.",
+   "basis": "derived",
+   "evidence": "dp_port_task sets it when the port's setting byte becomes 1 and clears it on time-out or a pending bit; while 1 the task steps LCnt 1 -> 2 -> 4 ('NTL LCnt %d')"
+  },
+  "DAT_a8079368": {
+   "name": "dp_lcnt_check_settings",
+   "brief": "Per DisplayPort receiver: the setting byte (input record +0x125 or +0x129) dp_port_task saw last.",
+   "basis": "derived",
+   "evidence": "dp_port_task compares it with input record byte 0x129 (when byte 0x128 is set) or 0x125 and stores the new value"
+  },
+  "DAT_a8079370": {
+   "name": "dp_last_phy_test_requests",
+   "brief": "Per DisplayPort receiver: last value read from receiver register 0x256 (bit 7 = 'DPCD 270 start phy test').",
+   "basis": "derived",
+   "evidence": "dp_port_task compares it with register 0x256, stores the new value when bit 7 is set and the value changed, and switches on it"
+  },
+  "DAT_a8079372": {
+   "name": "dp_reset_byte",
+   "brief": "Byte written by the DP input reset.",
+   "basis": "descriptive",
+   "evidence": "dp_reset_port"
+  },
+  "DAT_a8079378": {
+   "name": "irq_level12_handlers",
+   "brief": "Handler routines of the two sources of interrupt level 12.",
+   "basis": "derived",
+   "evidence": "irq_service_level12 calls entry i when bit i is set"
+  },
+  "DAT_a807939c": {
+   "name": "timer_tick_isr_count",
+   "brief": "Count of tick interrupts.",
+   "basis": "derived",
+   "evidence": "timer_tick_isr increments it"
+  },
+  "DAT_a80793a0": {
+   "name": "timer_sleep_countdown",
+   "brief": "Down-counter that the tick interrupt counts towards 0.",
+   "basis": "derived",
+   "evidence": "timer_tick_isr"
+  },
+  "DAT_a80793a4": {
+   "name": "timer_tick_record",
+   "brief": "Tick record: words, the tick count, the tick hooks and the task timers.",
+   "basis": "derived",
+   "evidence": "timer_tick_isr, sys_task_init, sys_register_tick_hook"
+  },
+  "DAT_a80793b8": {
+   "name": "sys_task_table",
+   "brief": "The sixteen timed tasks.",
+   "basis": "proven",
+   "evidence": "documented in docs/DATA.md from the routines that use it"
+  },
+  "DAT_a8079538": {
+   "name": "dsc_encoder_record",
+   "brief": "The timing values from which the settings of the compression encoder are computed.",
+   "basis": "proven",
+   "evidence": "documented in docs/DATA.md from the routines that use it"
+  },
+  "DAT_a807953d": {
+   "name": "dsc_encoder_record_source",
+   "brief": "Source of the compression encoder: 0 DISP, 2 P2, 3 P3 (dsc_encoder_record + 5).",
+   "basis": "proven",
+   "evidence": "'DSC Source: DISP / P2 / P3' prints of sys_dsc_enc_select_route"
+  },
+  "DAT_a807954a": {
+   "name": "dsc_encoder_record_height",
+   "brief": "Picture height in the encoder timing record (dsc_encoder_record + 0x12).",
+   "basis": "derived",
+   "evidence": "printed as DSC_ENC_Timing_%dx%d; hdmi_tx_run_step reads it"
+  },
+  "DAT_a807955c": {
+   "name": "dsc_enc_pps_words",
+   "brief": "The 27 packed rate-control and parameter words of the encoder; words 0..23 also fill the PPS packet.",
+   "basis": "derived",
+   "evidence": "sys_dsc_enc_compute_pps fills and prints them"
+  },
+  "DAT_a80795d0": {
+   "name": "dp_mst_payload_counts",
+   "brief": "Number of time slots of each of the four streams found in the payload table.",
+   "basis": "proven",
+   "evidence": "third value of the print 'ID : %d, Start : %d, Count : %d' in dp_mst_update_payload_table"
+  },
+  "DAT_a80795d8": {
+   "name": "dp_mst_payload_ids",
+   "brief": "Payload id of each of the four streams found in the payload table.",
+   "basis": "proven",
+   "evidence": "first value of the print 'ID : %d, Start : %d, Count : %d' in dp_mst_update_payload_table"
+  },
+  "DAT_a807963c": {
+   "name": "dp_mst_payload_removed_start",
+   "brief": "First time slot of the stream taken out by the last removal, sent to the output with it.",
+   "basis": "derived",
+   "evidence": "dp_mst_update_payload_table stores the removed entry's start and writes it as byte 1 of the record to sink address 0x1C0"
+  },
+  "DAT_a8079c48": {
+   "name": "dp_mst_reply_step_bytes",
+   "brief": "Per-port bytes of the down-reply sender.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_send_down_reply_step, dp_mst_advance_tx_index"
+  },
+  "DAT_a8079c50": {
+   "name": "dp_mst_up_message_kinds",
+   "brief": "Kind of each of the 16 messages fetched from the output: 0 = down reply (0x1400), 1 = up request (0x1600).",
+   "basis": "derived",
+   "evidence": "written by dp_mst_fetch_downstream_message at the up write index; read at the up read index to choose ready bit 4 or 5"
+  },
+  "DAT_a8079c61": {
+   "name": "dp_mst_payload_removed_id",
+   "brief": "Payload id of the stream taken out by the last removal, sent to the output with slot count 0.",
+   "basis": "derived",
+   "evidence": "dp_mst_update_payload_table stores the removed entry's id and writes it as byte 0 of the record to sink address 0x1C0"
+  },
+  "DAT_a8079c62": {
+   "name": "dp_mst_reply_chunk_rows",
+   "brief": "Per-port ring of 16-byte down-reply chunk entries.",
+   "basis": "derived",
+   "evidence": "dp_mst_send_reply writes; chunk header/body writers read"
+  },
+  "DAT_a8079c88": {
+   "name": "dp_mst_forward_messages",
+   "brief": "Assembled down requests waiting to be forwarded to the output.",
+   "basis": "derived",
+   "evidence": "dp_mst_append_chunk_to_message, dp_mst_forward_down_request"
+  },
+  "DAT_a8079f98": {
+   "name": "dp_mst_reply_bodies",
+   "brief": "Body of the outgoing down reply of each port (0x200 bytes).",
+   "basis": "derived",
+   "evidence": "dp_mst_send_reply, dp_mst_write_chunk_body"
+  },
+  "DAT_a807a4f8": {
+   "name": "dp_mst_reply_headers",
+   "brief": "Per-port 16-byte rows read when a down reply is built and sent.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_send_reply, dp_mst_send_down_reply_step"
+  },
+  "DAT_a807a518": {
+   "name": "dp_mst_notify_ticks",
+   "brief": "Time stamp of the MST notification sequence, for its time-out.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_notify_task, dp_mst_advance_tx_index"
+  },
+  "DAT_a807a820": {
+   "name": "dp_mst_payload_starts",
+   "brief": "First time slot of each of the four streams found in the payload table.",
+   "basis": "proven",
+   "evidence": "second value of the print 'ID : %d, Start : %d, Count : %d' in dp_mst_update_payload_table"
+  },
+  "DAT_a807a824": {
+   "name": "input_port_records",
+   "brief": "One record per input stream: link state and the flags published to the main processor (9 x 20 bytes).",
+   "basis": "proven",
+   "evidence": "documented in docs/DATA.md from the routines that use it"
+  },
+  "DAT_a807a8f6": {
+   "name": "ipc_command_0x76_low",
+   "brief": "Low halfword of the value of command 0x76.",
+   "basis": "descriptive",
+   "evidence": "ipc_dispatch_command case 0x76"
+  },
+  "DAT_a807a8f8": {
+   "name": "ipc_command_0x76_high",
+   "brief": "High halfword of the value of command 0x76.",
+   "basis": "descriptive",
+   "evidence": "ipc_dispatch_command case 0x76"
+  },
+  "DAT_a807a924": {
+   "name": "dp_reg3d0_value",
+   "brief": "Value of DP receiver register 0x3D0 read for command 0x7C.",
+   "basis": "derived",
+   "evidence": "ipc_dispatch_command: dp_read_reg3d0_value(0)"
+  },
+  "DAT_a807cc50": {
+   "name": "hdmi_rx21_pre_aeq_r_indexes",
+   "brief": "Per lane: index into hdmi_rx21_initial_rct_values used by the pre-AEQ PHY set-up (printed 'PreAEQ_R_Idx').",
+   "basis": "proven",
+   "evidence": "printed as 'PreAEQ_R_Idx = %d' by DRV_HDMI21_RXDetect_FSM_LTS_Chk_SCDC_Err; DRV_HDMI21_Set_PHY_PreAEQ indexes hdmi_rx21_initial_rct_values with it"
+  },
+  "DAT_a807cc58": {
+   "name": "hdmi_eq_rct_try_indexes",
+   "brief": "Per-channel index into hdmi_eq_initial_rct_values.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_EQScan_FSM_PHY_ChkError: table[index++]"
+  },
+  "DAT_a807cc60": {
+   "name": "hdmi_rx21_pre_aeq_c_indexes",
+   "brief": "Per lane: index into hdmi_rx21_initial_cft_values used by the pre-AEQ PHY set-up (printed as 'AEQ_C').",
+   "basis": "derived",
+   "evidence": "DRV_HDMI21_Set_PHY_PreAEQ indexes hdmi_rx21_initial_cft_values with it and prints the value as 'Set AEQ_C'; stepped together with the R index"
+  },
+  "DAT_a807ccf8": {
+   "name": "hdmi_eq_cft_try_indexes",
+   "brief": "Per-channel index into hdmi_eq_initial_cft_values.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_EQScan_FSM_PHY_ChkError: table[index++]"
+  },
+  "DAT_a807cd00": {
+   "name": "dp_tx_limits_others",
+   "brief": "Limit pair shared by the DP outputs other than 0: byte 0 = highest link rate code, byte 1 = lane count.",
+   "basis": "derived",
+   "evidence": "dp_tx_set_max_link_rate writes byte 0, dp_tx_set_max_lane_count byte 1, for every output other than 0"
+  },
+  "DAT_a807cd02": {
+   "name": "dp_tx_link_option_port0",
+   "brief": "Link option byte of DP output 0.",
+   "basis": "derived",
+   "evidence": "dp_tx_set_link_option (port 0); dp_tx_set_link_rate"
+  },
+  "DAT_a807cd04": {
+   "name": "dp_tx_pacing_records",
+   "brief": "8-byte pacing record of each DP output (byte 0 = update enabled).",
+   "basis": "derived",
+   "evidence": "DPTX_SetBrilliantMode, dp_tx_request_pacing_update"
+  },
+  "DAT_a807cd2c": {
+   "name": "dp_tx_link_option_others",
+   "brief": "Link option byte of the DP outputs other than 0.",
+   "basis": "derived",
+   "evidence": "dp_tx_set_link_option (port != 0); dp_tx_set_link_rate"
+  },
+  "DAT_a807cd2d": {
+   "name": "dp_tx_lane_route_byte",
+   "brief": "Byte from command 0x5E used for the lane selection of a DP output path.",
+   "basis": "descriptive",
+   "evidence": "ipc_dispatch_command 0x5E; dp_tx_set_lane_routing"
+  },
+  "DAT_a807cd50": {
+   "name": "dp_tx_aux_reply_bytes",
+   "brief": "The AUX reply bytes collected by the reply reader.",
+   "basis": "derived",
+   "evidence": "dp_tx_aux_read_reply: buf[count++]"
+  },
+  "DAT_a807cd68": {
+   "name": "dp_tx_limits_port0",
+   "brief": "Limit pair of DP output 0: byte 0 = highest link rate code, byte 1 = highest lane count.",
+   "basis": "derived",
+   "evidence": "dp_tx_set_max_link_rate writes byte 0, dp_tx_set_max_lane_count byte 1, both for output 0"
+  },
+  "DAT_a807cd6c": {
+   "name": "hdr_bezier_weights_ptr",
+   "brief": "Points to the hdr_bezier_weights table of the current curve order.",
+   "basis": "derived",
+   "evidence": "hdr_build_*_tone_curve set it; hdr_evaluate_bezier reads"
+  },
+  "DAT_a807cd70": {
+   "name": "hdr_meta_reg_write_fn",
+   "brief": "Register write routine of the receiver selected for HDR10+ metadata.",
+   "basis": "derived",
+   "evidence": "hdr_select_metadata_receiver"
+  },
+  "DAT_a807cd74": {
+   "name": "hdr_meta_reg_read_fn",
+   "brief": "Register read routine of the receiver selected for HDR10+ metadata.",
+   "basis": "derived",
+   "evidence": "hdr_select_metadata_receiver; read by the HDR10+ routines"
+  },
+  "DAT_a807cd78": {
+   "name": "hdr_meta_reg_modify_fn",
+   "brief": "Register bit-update routine of the receiver selected for HDR10+ metadata.",
+   "basis": "derived",
+   "evidence": "hdr_select_metadata_receiver"
+  },
+  "DAT_a807cd7c": {
+   "name": "hdr_meta_reg_write_fn_copy",
+   "brief": "Second copy of the register write routine of the HDR10+ metadata receiver.",
+   "basis": "derived",
+   "evidence": "hdr_select_metadata_receiver: 'hdr_meta_reg_write_fn = DAT_a807cd7c = f'"
+  },
+  "DAT_a807cd80": {
+   "name": "audio_mute_value",
+   "brief": "Mute value of command 0x91 (audio mute).",
+   "basis": "derived",
+   "evidence": "ipc_dispatch_command 0x91 -> audio_set_mute"
+  },
+  "DAT_a807cd88": {
+   "name": "hdcp_tx_work_block",
+   "brief": "32-byte work block of the output protection handshake.",
+   "basis": "derived",
+   "evidence": "hdcp_tx_* state handlers read blocks into it"
+  },
+  "DAT_a807cda8": {
+   "name": "hdcp_tx_ksv_table",
+   "brief": "Stored 5-byte key-selection value of each of the three outputs.",
+   "basis": "derived",
+   "evidence": "hdcp_tx_clear_ksv_table"
+  },
+  "DAT_a807cdb8": {
+   "name": "hdcp_tx_exchange_buffer",
+   "brief": "Buffer of the two-round table exchange with the engine.",
+   "basis": "descriptive",
+   "evidence": "hdcp_tx_engine_exchange_tables, hdcp_tx_engine_load_key_blocks"
+  },
+  "DAT_a807ce38": {
+   "name": "hdcp_tx_receiver_ids",
+   "brief": "Receiver id (5 bytes) of each output.",
+   "basis": "derived",
+   "evidence": "hdcp_tx_hdmi_state_read_message copies message bytes 1..5"
+  },
+  "DAT_a807ce48": {
+   "name": "hdcp_tx_message_tail",
+   "brief": "Three bytes copied from the end of a received message.",
+   "basis": "descriptive",
+   "evidence": "hdcp_tx_hdmi_state_read_message, hdcp_tx_dp_state_read_hdcp2_messages"
+  },
+  "DAT_a807ce50": {
+   "name": "hdcp_tx_message_buffer",
+   "brief": "Buffer of the message read from or sent to the receiver.",
+   "basis": "derived",
+   "evidence": "used by 21 hdcp_tx routines"
+  },
+  "DAT_a807ce56": {
+   "name": "hdcp_tx_message_body",
+   "brief": "Message buffer from byte 6, handed to the engine by the DP result compare.",
+   "basis": "descriptive",
+   "evidence": "hdcp_tx_dp_state_compare_results"
+  },
+  "DAT_a807cf08": {
+   "name": "hdcp_tx_engine_buffer",
+   "brief": "The 0x180-byte buffer sent to the protection engine (last byte = mode).",
+   "basis": "derived",
+   "evidence": "hdcp_tx_engine_load_table"
+  },
+  "DAT_a807d088": {
+   "name": "hdcp_tx_result_block",
+   "brief": "The 32 result bytes read back from the protection engine.",
+   "basis": "derived",
+   "evidence": "hdcp_tx_* state handlers"
+  },
+  "DAT_a807d0a8": {
+   "name": "hdcp_tx_retry_ticks",
+   "brief": "Per-output time compared with the tick count before a handshake restart.",
+   "basis": "descriptive",
+   "evidence": "hdcp_tx_hdmi_state_start"
+  },
+  "DAT_a807d238": {
+   "name": "hdcp_tx_repeater_v",
+   "brief": "The repeater's 20-byte check value read from registers 0x20..0x21D.",
+   "basis": "derived",
+   "evidence": "hdcp_tx_hdmi_state_read_repeater_info, hdcp_tx_hdmi_state_check_v"
+  },
+  "DAT_a807d250": {
+   "name": "hdcp_tx_status_bytes",
+   "brief": "Status bytes of the output handshake read by the HDMI state handlers.",
+   "basis": "descriptive",
+   "evidence": "hdcp_tx_hdmi_state_* read"
+  },
+  "DAT_a807d252": {
+   "name": "sys_otp_patch_table",
+   "brief": "Address patch table loaded from the one-time-programmable store (rows of 10 halfwords).",
+   "basis": "derived",
+   "evidence": "sys_otp_load_patch_table, sys_otp_find_patch"
+  },
+  "DAT_a807d27a": {
+   "name": "sys_otp_local_group0",
+   "brief": "First group of factory data records loaded into local tables.",
+   "basis": "descriptive",
+   "evidence": "sys_otp_load_local_data"
+  },
+  "DAT_a807d289": {
+   "name": "sys_otp_dp_tx_phy_options",
+   "brief": "Stored PHY option byte of each DP output, from the factory data.",
+   "basis": "derived",
+   "evidence": "sys_otp_load_local_data, dp_tx_phy_apply_output_options"
+  },
+  "DAT_a807d299": {
+   "name": "hdmi_phy_trim_port0",
+   "brief": "Trim and calibration byte record of HDMI port 0.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_InitialSettings"
+  },
+  "DAT_a807d2a9": {
+   "name": "hdmi_phy_trim_port1",
+   "brief": "Trim and calibration byte record of HDMI port 1.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_InitialSettings"
+  },
+  "DAT_a807d2b9": {
+   "name": "hdmi_phy_trim_port2",
+   "brief": "Trim and calibration byte record of HDMI port 2.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_InitialSettings"
+  },
+  "DAT_a807d2e9": {
+   "name": "hdmi_phy_trim_port3",
+   "brief": "Trim and calibration byte record of HDMI port 3.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_InitialSettings"
+  },
+  "DAT_a807d319": {
+   "name": "dp_stored_settings_port0",
+   "brief": "Stored settings record applied to DP receiver 0.",
+   "basis": "descriptive",
+   "evidence": "dp_apply_port_record"
+  },
+  "DAT_a807d369": {
+   "name": "dp_stored_settings_port1",
+   "brief": "Stored settings record applied to DP receiver 1.",
+   "basis": "descriptive",
+   "evidence": "dp_apply_port_record"
+  },
+  "DAT_a807d3b9": {
+   "name": "dp_tx_phy_dptx_option",
+   "brief": "Stored option byte written to register 0x37 of the DPTX PHY unit.",
+   "basis": "derived",
+   "evidence": "dp_tx_phy_write_dptx_option"
+  },
+  "DAT_a807d3c1": {
+   "name": "hdmi_tx_reg0c_trims",
+   "brief": "Calibration values for HDMI TX register 0x0C (default 0x0C).",
+   "basis": "derived",
+   "evidence": "hdmi_tx_load_reg0c_trim"
+  },
+  "DAT_a807d3d1": {
+   "name": "dp_tx_phy_edp_options",
+   "brief": "Stored option bytes for registers 0x3D/0x60/0x83/0xA6 of the eDP PHY unit.",
+   "basis": "derived",
+   "evidence": "dp_tx_phy_write_edp_options, sys_otp_load_local_data"
+  },
+  "DAT_a807d544": {
+   "name": "hdr_mastering_luminance",
+   "brief": "Mastering luminance from which the static curve parameters were derived.",
+   "basis": "derived",
+   "evidence": "hdr_update_tone_curve: value = lum"
+  },
+  "DAT_a807d548": {
+   "name": "hdr_static_info",
+   "brief": "Static HDR information of the current source (three metadata values and status).",
+   "basis": "derived",
+   "evidence": "hdr_read_source_metadata, hdr_has_metadata_changed"
+  },
+  "DAT_a807d54f": {
+   "name": "hdr_static_status_byte",
+   "brief": "Byte +7 of the static HDR information, returned as the HDR status code.",
+   "basis": "descriptive",
+   "evidence": "hdr_get_status_code"
+  },
+  "DAT_a807d5c0": {
+   "name": "hdcp_rx_port_bytes",
+   "brief": "Per-input bytes cleared by the input protection reset.",
+   "basis": "descriptive",
+   "evidence": "hdcp_rx_reset_port"
+  },
+  "DAT_a807d5c6": {
+   "name": "hdcp_rx_hdmi_key_state",
+   "brief": "Key preparation state of the HDMI 2.0 inputs (0xFF after reset).",
+   "basis": "descriptive",
+   "evidence": "hdcp_rx_reset_port, hdcp_rx_key_load_step, hdcp_rx_hdmi_task"
+  },
+  "DAT_a807d5c8": {
+   "name": "hdcp_rx_record_hdmi20",
+   "brief": "State of the copy-protection handshake on the HDMI 2.0 inputs.",
+   "basis": "proven",
+   "evidence": "documented in docs/DATA.md from the routines that use it"
+  },
+  "DAT_a807d5e8": {
+   "name": "hdcp_rx_record_hdmi21",
+   "brief": "State of the copy-protection handshake on the HDMI 2.1 inputs.",
+   "basis": "proven",
+   "evidence": "documented in docs/DATA.md from the routines that use it"
+  },
+  "DAT_a807d608": {
+   "name": "hdcp_rx_record_dp",
+   "brief": "State of the copy-protection handshake on the DisplayPort inputs.",
+   "basis": "proven",
+   "evidence": "documented in docs/DATA.md from the routines that use it"
+  },
+  "DAT_a807d628": {
+   "name": "hdcp_use_builtin_tables_flag",
+   "brief": "Set when the built-in 128-byte tables are sent to the engine instead of stored ones.",
+   "basis": "derived",
+   "evidence": "InitHDCP; hdcp_tx_engine_load_three_tables"
+  },
+  "DAT_a807d629": {
+   "name": "hdcp_rx_hdmi21_key_state",
+   "brief": "Key preparation state of the HDMI 2.1 inputs (0xFF after reset).",
+   "basis": "descriptive",
+   "evidence": "hdcp_rx_reset_port, hdcp_rx_key_load_step, hdcp_rx_hdmi21_task"
+  },
+  "DAT_a807d62a": {
+   "name": "hdcp_repeater_report_flag",
+   "brief": "Flag set by the repeater status collection and report.",
+   "basis": "descriptive",
+   "evidence": "hdcp_repeater_collect_status, hdcp_repeater_report_downstream"
+  },
+  "DAT_a807d62b": {
+   "name": "hdcp_rx_dp_key_state",
+   "brief": "Key preparation state of the DisplayPort inputs (0xFF after reset).",
+   "basis": "descriptive",
+   "evidence": "hdcp_rx_reset_port, hdcp_rx_key_load_step, hdcp_rx_dp_task"
+  },
+  "DAT_a807d62c": {
+   "name": "hdcp_use_builtin_table384_flag",
+   "brief": "Set when the built-in 384-byte engine table is used instead of the stored one.",
+   "basis": "derived",
+   "evidence": "InitHDCP; hdcp_tx_engine_load_table"
+  },
+  "DAT_a807d630": {
+   "name": "hdcp_rx_port_flags",
+   "brief": "Per-input flags cleared by the input protection reset.",
+   "basis": "descriptive",
+   "evidence": "hdcp_rx_reset_port"
+  },
+  "DAT_a807d636": {
+   "name": "hdcp_owner_byte",
+   "brief": "Owner byte of the protection engine, checked before an output handshake starts.",
+   "basis": "descriptive",
+   "evidence": "hdcp_tx_hdmi_state_start: 'check the retry counter and the owner'"
+  },
+  "DAT_a807d638": {
+   "name": "hdcp_stored_key_header",
+   "brief": "The 0x24 bytes read from address 0x590 of the key store at start-up.",
+   "basis": "derived",
+   "evidence": "InitHDCP"
+  },
+  "DAT_a807d648": {
+   "name": "hdmi_rx21_rx_detect_states",
+   "brief": "Link-training state word of each HDMI 2.1 receiver.",
+   "basis": "proven",
+   "evidence": "index into hdmi_rx21_rx_detect_state_handlers; LTS states write it"
+  },
+  "DAT_a807d650": {
+   "name": "hdmi_rx21_mode_detect_states",
+   "brief": "Mode-detect state of each HDMI 2.1 receiver.",
+   "basis": "proven",
+   "evidence": "index into hdmi_rx21_mode_detect_state_handlers"
+  },
+  "DAT_a807d681": {
+   "name": "hdmi_rx21_lts_record0_byte1",
+   "brief": "Byte 1 of the link training record of HDMI 2.1 receiver 0, sent in a command reply.",
+   "basis": "descriptive",
+   "evidence": "ipc_dispatch_command reply buf[0]"
+  },
+  "DAT_a807d731": {
+   "name": "hdmi_rx21_lts_record1_byte1",
+   "brief": "Byte 1 of the link training record of HDMI 2.1 receiver 1, sent in a command reply.",
+   "basis": "descriptive",
+   "evidence": "ipc_dispatch_command reply buf[0]"
+  },
+  "DAT_a807d7e1": {
+   "name": "hdmi_rx21_input_record0_mode_detected",
+   "brief": "Mode-detected byte (+1) of the HDMI 2.1 input record of receiver 0.",
+   "basis": "derived",
+   "evidence": "HDMI 2.1 input records 0xA807D7E0, 400 bytes each; +1 mode detected"
+  },
+  "DAT_a807d80d": {
+   "name": "hdmi_rx21_input_record0_dsc",
+   "brief": "CVTEM / DSC byte (+0x2D) of the HDMI 2.1 input record of receiver 0.",
+   "basis": "derived",
+   "evidence": "sys_dsc_dec_is_hdmi21_source; record field +0x2D"
+  },
+  "DAT_a807d971": {
+   "name": "hdmi_rx21_input_record1_mode_detected",
+   "brief": "Mode-detected byte (+1) of the HDMI 2.1 input record of receiver 1.",
+   "basis": "derived",
+   "evidence": "record 1 = 0xA807D970; +1 mode detected"
+  },
+  "DAT_a807d99d": {
+   "name": "hdmi_rx21_input_record1_dsc",
+   "brief": "CVTEM / DSC byte (+0x2D) of the HDMI 2.1 input record of receiver 1.",
+   "basis": "derived",
+   "evidence": "sys_dsc_dec_is_hdmi21_source; record field +0x2D"
+  },
+  "DAT_a807db68": {
+   "name": "hdmi_rx_if_init_flag",
+   "brief": "Set once the HDMI receiver interface state has been initialised.",
+   "basis": "derived",
+   "evidence": "DRV_HDMI_IF_Init; hdmi_rx21_start_port / _stop_port"
+  },
+  "DAT_a807db74": {
+   "name": "sys_dsc_dec_default_config",
+   "brief": "The 0x90-byte default set-up of the DSC decoder.",
+   "basis": "derived",
+   "evidence": "sys_dsc_dec_load_default_config clears and fills it"
+  },
+  "DAT_a807dbb4": {
+   "name": "sys_dsc_dec_port_configs",
+   "brief": "The 0x90-byte DSC decoder set-up record of each port (checked by a checksum).",
+   "basis": "derived",
+   "evidence": "sys_dsc_dec_run_state; 'Port%c ChkSum' print"
+  },
+  "DAT_a807dc04": {
+   "name": "sys_dsc_dec_records",
+   "brief": "Records of the DSC decoders with their register block pointers.",
+   "basis": "derived",
+   "evidence": "sys_dsc_dec_init_register_pointers; 12 routines"
+  },
+  "DAT_a807dd2a": {
+   "name": "dp_input_record0_setting_0x112",
+   "brief": "Setting byte +0x112 of the DisplayPort input record of port 0.",
+   "basis": "descriptive",
+   "evidence": "DP input records 0xA807DC18, 300 bytes each; dp_set_port0_setting_112"
+  },
+  "DAT_a807dd37": {
+   "name": "dp_input_record0_byte_0x11f",
+   "brief": "Byte +0x11F of the DisplayPort input record of port 0, tested by the port interrupt work.",
+   "basis": "descriptive",
+   "evidence": "dp_isr_port0"
+  },
+  "DAT_a807de63": {
+   "name": "dp_input_record1_byte_0x11f",
+   "brief": "Byte +0x11F of the DisplayPort input record of port 1, tested by the port interrupt work.",
+   "basis": "descriptive",
+   "evidence": "record 1 = 0xA807DD44; dp_isr_port1"
+  },
+  "DAT_a807de70": {
+   "name": "dp_unit_route_bits",
+   "brief": "Route status bits of the DP receiver units, one per unit a port is mapped to.",
+   "basis": "derived",
+   "evidence": "dp_set_unit_route_field, dp_get_unit_route_bit"
+  },
+  "DAT_a807de71": {
+   "name": "dp_init_byte",
+   "brief": "Byte cleared by the DP input set-up sequence.",
+   "basis": "descriptive",
+   "evidence": "dp_init_port"
+  },
+  "DAT_a807de78": {
+   "name": "dp_status_block_bytes",
+   "brief": "The first 20 status bytes of a DP port read by the status block reader.",
+   "basis": "derived",
+   "evidence": "dp_read_status_block"
+  },
+  "DAT_a807de8c": {
+   "name": "timer_div5_count",
+   "brief": "Tick counter that raises timer_div5_flag every 5 ticks.",
+   "basis": "derived",
+   "evidence": "timer_tick_isr: ++count > 4"
+  },
+  "DAT_a807de90": {
+   "name": "timer_div50_flag",
+   "brief": "Flag raised every 50 ticks.",
+   "basis": "derived",
+   "evidence": "timer_tick_isr"
+  },
+  "DAT_a807de91": {
+   "name": "timer_div500_flag",
+   "brief": "Flag raised every 500 ticks.",
+   "basis": "derived",
+   "evidence": "timer_tick_isr"
+  },
+  "DAT_a807de92": {
+   "name": "timer_task_pending_flag",
+   "brief": "Set by each tick; the task runner clears it.",
+   "basis": "derived",
+   "evidence": "timer_tick_isr, sys_task_run_pending"
+  },
+  "DAT_a807de94": {
+   "name": "timer_div500_count",
+   "brief": "Tick counter that raises timer_div500_flag every 500 ticks.",
+   "basis": "derived",
+   "evidence": "timer_tick_isr: ++count > 499"
+  },
+  "DAT_a807de98": {
+   "name": "timer_tick_count_second",
+   "brief": "Second tick word advanced with the tick count.",
+   "basis": "descriptive",
+   "evidence": "timer_tick_isr, sys_task_init"
+  },
+  "DAT_a807de9c": {
+   "name": "timer_div5_flag",
+   "brief": "Flag raised every 5 ticks.",
+   "basis": "derived",
+   "evidence": "timer_tick_isr"
+  },
+  "DAT_a807dea0": {
+   "name": "timer_div50_count",
+   "brief": "Tick counter that raises timer_div50_flag every 50 ticks.",
+   "basis": "derived",
+   "evidence": "timer_tick_isr: ++count > 0x31"
+  },
+  "DAT_a807dea8": {
+   "name": "dbg_tool_mode_flag",
+   "brief": "Set by a \"*CB00000\" or \"{#UTIL#}\" line; while set, lines are tool commands (*RD, *WD, *RB, ...).",
+   "basis": "derived",
+   "evidence": "dbg_handle_input_line; cleared by *qt and dbg_command_line_init"
+  },
+  "DAT_a807deb0": {
+   "name": "dbg_word_count",
+   "brief": "Number of words split from the typed debug command line (at most five).",
+   "basis": "derived",
+   "evidence": "dbg_handle_input_line: count of the rows in dbg_line_words"
+  },
+  "DAT_a807deb4": {
+   "name": "dbg_tool_request",
+   "brief": "The decoded tool command (*qt, *RD, *WD, *RB, *WB, *CB): command, address, value and sum.",
+   "basis": "derived",
+   "evidence": "dbg_handle_input_line"
+  },
+  "DAT_a807dec4": {
+   "name": "dbg_hex_mode_flag",
+   "brief": "Set by '^' as the first character: the line is then read as hex byte pairs (R, W, U commands).",
+   "basis": "derived",
+   "evidence": "dbg_handle_input_line, dbg_command_line_init"
+  },
+  "DAT_a807ded0": {
+   "name": "dbg_hex_bytes",
+   "brief": "The hex byte pairs of a hex-mode line (at most 32); the first four form the address.",
+   "basis": "derived",
+   "evidence": "dbg_handle_input_line"
+  },
+  "DAT_a807def0": {
+   "name": "dbg_line_buffer",
+   "brief": "The line typed on the debug serial port.",
+   "basis": "derived",
+   "evidence": "dbg_handle_input_line; length in dbg_line_length"
+  },
+  "DAT_a807dff0": {
+   "name": "dbg_line_words",
+   "brief": "The words of the typed command line, five rows of up to 31 characters.",
+   "basis": "derived",
+   "evidence": "dbg_handle_input_line: word 0 is looked up in the command table"
+  },
+  "DAT_a807e090": {
+   "name": "dbg_tool_reply_buffer",
+   "brief": "Reply text of the tool read command (\"#\", the word bytes, \" OK!#\").",
+   "basis": "derived",
+   "evidence": "dbg_handle_input_line: cmd 1"
+  },
+  "DAT_a807e0b0": {
+   "name": "dbg_tool_cb_flag",
+   "brief": "Set by *CB when the address is 0x1000.",
+   "basis": "descriptive",
+   "evidence": "dbg_handle_input_line, dbg_command_line_init"
+  },
+  "PTR_a00b4c80": {
+   "name": "dbg_hdmi_message_group_names",
+   "brief": "Names of the HDMI debug message groups (dbg_set_hdmi_message_flags, EQ_FLOW, ...).",
+   "basis": "proven",
+   "evidence": "dbg_set_hdmi_message_flags lists them"
+  },
+  "_DAT_a8076190": {
+   "name": "hdmi_eq_detect_period",
+   "brief": "Period of the HDMI equaliser check task (start value 10).",
+   "basis": "derived",
+   "evidence": "stored in the task record by DRV_HDMI_EQDetect_Timer / hdmi_start_eq_detect_task"
+  },
+  "_DAT_a80785e0": {
+   "name": "hdr_blend_level",
+   "brief": "Level value blended step by step by hdr_smooth_level (start value 0x6400).",
+   "basis": "descriptive",
+   "evidence": "hdr_smooth_level: hdr_blend_values(.., value, 0x28)"
+  },
+  "_DAT_a80785e4": {
+   "name": "hdr_level_scale_percent",
+   "brief": "Level scale in percent: ratio table entry 0 * 100 / selected entry.",
+   "basis": "derived",
+   "evidence": "hdr_update_smoothed_level"
+  },
+  "_DAT_a8078610": {
+   "name": "hdcp_rx_dp_hdcp2_bytes",
+   "brief": "Byte table (start 11 22 33 .. 88) loaded into the DisplayPort input protection block.",
+   "basis": "descriptive",
+   "evidence": "hdcp_rx_dp_load_hdcp2_tables, hdcp_rx_dp_task"
+  },
+  "_DAT_a8078634": {
+   "name": "dbg_hdmi_message_flags",
+   "brief": "HDMI debug message groups: bit 0 INIT_INFO, 1 EQ_FLOW, 2 MODEDET_FLOW, 3 INT, 4 INFOFRAME, ...",
+   "basis": "proven",
+   "evidence": "dbg_set_hdmi_message_flags, names table; tested by 76 routines"
+  },
+  "_DAT_a8078744": {
+   "name": "hdmi_tx_frl_timer_period",
+   "brief": "Period of the HDMI TX FRL training timer.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_frl_start_timer, hdmi_tx_run_frl_training"
+  },
+  "_DAT_a80787f8": {
+   "name": "dp_mst_message_state",
+   "brief": "Indexes, flags and current port of the DisplayPort multi-stream message service.",
+   "basis": "proven",
+   "evidence": "documented in docs/DATA.md from the routines that use it"
+  },
+  "_DAT_a80787fa": {
+   "name": "dp_mst_message_state_half_2",
+   "brief": "Halfword +2 of the MST message state, cleared with the payload table and on port reset.",
+   "basis": "descriptive",
+   "evidence": "dp_mst_handle_clear_payload_table, dp_mst_reset_port"
+  },
+  "_DAT_a8078bf8": {
+   "name": "hdcp_tx_timer_last_ticks",
+   "brief": "Tick count at the last copy-protection timer update.",
+   "basis": "derived",
+   "evidence": "hdcp_tx_update_timers counts down by the ticks passed"
+  },
+  "_DAT_a8078c20": {
+   "name": "hdr_last_update_ticks",
+   "brief": "Tick count of the last HDR curve update (next one after 200 ticks).",
+   "basis": "derived",
+   "evidence": "hdr_task, hdr_is_update_due"
+  },
+  "_DAT_a8078c3c": {
+   "name": "hdr_level_index",
+   "brief": "Index into the level tables computed in the level update.",
+   "basis": "descriptive",
+   "evidence": "hdr_update_smoothed_level"
+  },
+  "_DAT_a8078c40": {
+   "name": "hdr_level_target",
+   "brief": "Target level: smoothed level times the scale percent / 100.",
+   "basis": "derived",
+   "evidence": "hdr_update_smoothed_level"
+  },
+  "_DAT_a8079214": {
+   "name": "hdmi_tx_frl_timer_init_period",
+   "brief": "Period that hdmi_tx_frl_init_timer copies into the FRL training timer descriptor.",
+   "basis": "derived",
+   "evidence": "read by hdmi_tx_frl_init_timer as the period of hdmi_tx_frl_timer, which lies right behind it"
+  },
+  "_DAT_a8079328": {
+   "name": "dp_stream_clock_check_word",
+   "brief": "Word written by the stream clock check.",
+   "basis": "descriptive",
+   "evidence": "dp_check_stream_clock"
+  },
+  "_DAT_a80793a8": {
+   "name": "timer_tick_count",
+   "brief": "The tick count of the input processor.",
+   "basis": "proven",
+   "evidence": "documented in docs/DATA.md from the routines that use it"
+  },
+  "_DAT_a807d54c": {
+   "name": "hdr_static_info_eotf_type",
+   "brief": "Word +4 of the static HDR information: the EOTF type 0..3 (printed as g_HDR_Info.enEOTF_Type).",
+   "basis": "proven",
+   "evidence": "printed as '[Static HDR]g_HDR_Info.enEOTF_Type=%d' by hdr_print_static_state; set from the low 2 bits of a receiver register by hdr_read_source_metadata; hdr_task updates the curve when it is above 1"
+  },
+  "_DAT_a807d5b8": {
+   "name": "hdmi_tx_audio_reg_reader",
+   "brief": "Register read routine of the HDMI input that feeds the audio of an HDMI output.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_setup_audio stores hdmi_reg_read8 or the 2.1 reader"
+  },
+  "_DAT_a807db0c": {
+   "name": "hdmi_rx21_reg_blocks_rx0_block3",
+   "brief": "Word 3 of row 0 of hdmi_rx21_reg_blocks: address of register block 3 (0xCE009300) of HDMI 2.1 receiver 0.",
+   "basis": "derived",
+   "evidence": "written by hdmi_rx21_init_register_pointers as word 3 of row 0; the EQ routines update word +0x74 of that block through it"
+  },
+  "_DAT_a807dc08": {
+   "name": "sys_dsc_dec_record0_block",
+   "brief": "Register block pointer in the first DSC decoder record, read by the clock set-up.",
+   "basis": "descriptive",
+   "evidence": "sys_dsc_dec_set_clock: bit at +0x58 of the block"
+  },
+  "_DAT_a807deac": {
+   "name": "dbg_line_length",
+   "brief": "Length of the line typed on the debug serial port.",
+   "basis": "derived",
+   "evidence": "dbg_handle_input_line: line at 0xA807DEF0"
+  },
+  "_DAT_a807dec8": {
+   "name": "dbg_tool_address_base",
+   "brief": "Base address of the tool read and write commands, set by *CB to address << 16.",
+   "basis": "derived",
+   "evidence": "dbg_handle_input_line: cmd 5"
+  },
+  "_DAT_cf011008": {
+   "name": "reg_audio_main_control",
+   "brief": "Main audio control register; bit 0 is the main enable.",
+   "basis": "derived",
+   "evidence": "audio_clear_main_enable, audio_init_main_registers"
+  },
+  "_DAT_cf011024": {
+   "name": "reg_audio_config",
+   "brief": "Audio configuration register (bit 6 set on request).",
+   "basis": "derived",
+   "evidence": "audio_set_config_bit6"
+  },
+  "_DAT_cf0110e4": {
+   "name": "reg_audio_level_high",
+   "brief": "Audio register that takes a level byte.",
+   "basis": "derived",
+   "evidence": "audio_write_level_high_byte"
+  },
+  "_DAT_cf011254": {
+   "name": "reg_audio_select_0x1254",
+   "brief": "First audio select register, read to see whether a source number is selected.",
+   "basis": "derived",
+   "evidence": "audio_is_source_selected"
+  },
+  "_DAT_cf011258": {
+   "name": "reg_audio_select_0x1258",
+   "brief": "Second audio select register, read to see whether a source number is selected.",
+   "basis": "derived",
+   "evidence": "audio_is_source_selected"
+  },
+  "_DAT_cf0116b4": {
+   "name": "reg_hdmi_tx_source_route",
+   "brief": "Routing bits that link an input port to an HDMI TX port.",
+   "basis": "derived",
+   "evidence": "hdmi_tx_set_source_route_bits"
+  },
+  "_DAT_cf0116dc": {
+   "name": "reg_dsc_enc_route",
+   "brief": "Route register whose bits 6-7 select the compression encoder route.",
+   "basis": "derived",
+   "evidence": "sys_dsc_enc_set_route_bits"
+  },
+  "_DAT_cf012448": {
+   "name": "reg_input_port_control",
+   "brief": "Receiver control register with one bit per DP port, also written when the receivers power off.",
+   "basis": "derived",
+   "evidence": "dp_set_port_control_bit, input_power_off_receivers_mode0/1"
+  },
+  "_DAT_cf018d00": {
+   "name": "reg_hdcp_tx_dp_control",
+   "brief": "DisplayPort output protection control register (bit 6 = bypass, encryption bit).",
+   "basis": "derived",
+   "evidence": "hdcp_tx_dp_set_bypass, hdcp_tx_set_encryption_bit"
+  },
+  "_DAT_cf03c808": {
+   "name": "reg_ipc_8051_shared_f202",
+   "brief": "Shared 8051 byte XDATA 0xF202; written to tell the 8051 that the shared table write is finished.",
+   "basis": "derived",
+   "evidence": "ipc_release_8051_access; 0xCF03C800 + 4n = XDATA 0xF200 + n"
+  },
+  "_DAT_cf03c890": {
+   "name": "reg_ipc_shared_hdmi_status",
+   "brief": "Shared status register with one bit per HDMI port (HDMI 2.1 mode-change signal).",
+   "basis": "derived",
+   "evidence": "hdmi_clear_shared_port_bit, hdmi_rx21_clear_mode_change_signal"
+  },
+  "_DAT_cf03c894": {
+   "name": "reg_ipc_shared_port_events",
+   "brief": "Shared event register with one bit per port.",
+   "basis": "derived",
+   "evidence": "dp_set_port_event_bit"
+  }
+ }
+}

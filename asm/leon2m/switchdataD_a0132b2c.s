@@ -1,0 +1,19 @@
+# leon2m switchdataD_a0132b2c 0xa0132b2c-0xa0132b74 (72 bytes)
+a0132b2c:  00 0d 42 0c  unimp  0xd420c
+a0132b30:  00 0d 43 8c  unimp  0xd438c
+a0132b34:  00 0d 43 80  unimp  0xd4380
+a0132b38:  00 0d 43 74  unimp  0xd4374
+a0132b3c:  00 0d 43 68  unimp  0xd4368
+a0132b40:  00 0d 43 5c  unimp  0xd435c
+a0132b44:  00 0d 43 50  unimp  0xd4350
+a0132b48:  00 0d 43 44  unimp  0xd4344
+a0132b4c:  00 0d 43 38  unimp  0xd4338
+a0132b50:  00 0d 43 2c  unimp  0xd432c
+a0132b54:  00 0d 43 20  unimp  0xd4320
+a0132b58:  00 0d 43 14  unimp  0xd4314
+a0132b5c:  00 0d 43 08  unimp  0xd4308
+a0132b60:  00 0d 42 fc  unimp  0xd42fc
+a0132b64:  00 0d 42 f4  unimp  0xd42f4
+a0132b68:  00 0d 42 e8  unimp  0xd42e8
+a0132b6c:  00 0d 42 dc  unimp  0xd42dc
+a0132b70:  00 0d 42 d0  unimp  0xd42d0

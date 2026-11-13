@@ -1,0 +1,3 @@
+libgcc.a _div_sf.o __divsf3
+# leon2m FUN_a0155a18: toolchain library function __divsf3 (libgcc.a:_div_sf.o, 352 bytes),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

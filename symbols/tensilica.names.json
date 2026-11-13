@@ -1,0 +1,2109 @@
+{
+ "fn_40000010": {
+  "name": "trap_alloca_handler",
+  "brief": "Exception cause 5: reload the caller's register window through the window underflow code",
+  "topic": "trap",
+  "basis": "derived",
+  "evidence": "entry 5 of trap_exception_cause_table; EXCCAUSE 5 is the alloca (MOVSP) cause of the Xtensa ISA; rotates the window back and jumps to the underflow 4/8/12 vectors"
+ },
+ "fn_40000800": {
+  "name": "startup_zero_bss_and_run_main",
+  "brief": "Set stack and PS, zero RAM 0x3FFE2BF0..0x3FFE6447, call the main routine; never returns.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "call0 from reset code; fill loop and call4 sys_init_and_run_main_loop"
+ },
+ "fn_4000082c": {
+  "name": "lib_pack_word_pairs",
+  "brief": "Pack pairs of words into one word as low and high 16-bit halves.",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "dst[i] = src[2i] | src[2i+1] << 16; used to fill 16-bit tables"
+ },
+ "fn_4000087c": {
+  "name": "lib_fill_halfwords",
+  "brief": "Fill count 16-bit entries with one value, a word at a time.",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "value | value << 16 into count/2 words; fills LED PDIM / LED ADIM tables"
+ },
+ "fn_400008c0": {
+  "name": "ldc_build_segment_channel_map",
+  "brief": "Map each segment of the segment grid to an LED channel and count segments per channel.",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "LED rows/cols (printed LED_row/LED_col) and segment grid from DRV_LDC_SetLDCSegment; tables read by the merge routines"
+ },
+ "fn_400009a0": {
+  "name": "ldc_merge_segments_maximum",
+  "brief": "Merge segments into LED channels by taking the largest segment value.",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "stored by ldc_cmd_set_segment_merge_mode with text 'Segment Merge Mode: Maximum'"
+ },
+ "fn_40000a08": {
+  "name": "ldc_merge_segments_average",
+  "brief": "Merge segments into LED channels by their average, minimum 10 when the sum is above 10.",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "stored by ldc_cmd_set_segment_merge_mode with text 'Segment Merge Mode: Average'"
+ },
+ "fn_40000afc": {
+  "name": "ldc_merge_segments_average_no_black",
+  "brief": "Merge segments into LED channels by the average of the non-zero segments.",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "stored by ldc_cmd_set_segment_merge_mode with text 'Segment Merge Mode: Average exclude black'"
+ },
+ "fn_40000c6c": {
+  "name": "ldc_merge_segments_blend",
+  "brief": "Merge segments into LED channels as half of maximum plus average.",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "stored by ldc_cmd_set_segment_merge_mode with text 'Segment Merge Mode: Blend'"
+ },
+ "fn_40000de8": {
+  "name": "ldc_select_led_driver",
+  "brief": "Store the LED driver routine for driver type 1, 2 or other in the panel record.",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "argument is panel +24, printed as 'DriverType: Type'; pointer +0x13C called by ldc_follow_mode_and_run_led_driver"
+ },
+ "fn_40000e20": {
+  "name": "ldc_init_panel_defaults",
+  "brief": "Set default panel record, tables, modes and mailbox panel words at start-up.",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "called once by main; 3840x2160, 4x8 LEDs, LED_Mode 3, LDC_Mode 0, Maximum merge"
+ },
+ "fn_40000fb4": {
+  "name": "LDC_LoadPanel",
+  "brief": "Read the panel description from the mailbox, check LED count, print PanelInfo.",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "original name in its own text 'LDC_LoadPanel Error!!'"
+ },
+ "fn_40001188": {
+  "name": "ldc_calc_percent_adim",
+  "brief": "Return ADIM_Min plus weight/1023 of the span up to min(ADIM_Max, usUserADIM).",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "both callers pass ADIM_Max, ADIM_Min, usUserADIM, ADIM_BrighPercent and store PercentADIM"
+ },
+ "fn_400011e4": {
+  "name": "ldc_post_brightness_status",
+  "brief": "Post average ADIM and PDIM percentages and their product in mailbox word +0x4C.",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "writes 0xE009104C, read by ldc_get_reply_byte0..2 / ldc_is_reply_byte_set on the main processor"
+ },
+ "fn_40001344": {
+  "name": "ldc_cmd_load_panel_and_start",
+  "brief": "Command 0x21: load the panel, set resolution and segments, select driver, rebuild map.",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "command table 0x4000D288; sender ldc_send_panel_size_and_start; docs/MAP.md"
+ },
+ "fn_400013a0": {
+  "name": "ldc_cmd_init_led_drivers",
+  "brief": "Command 0x22: with value 1 run the LED driver set-up (prints LED_AS3824_Init Done).",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "command table; docs/MAP.md: only set-up of the LED driver chips"
+ },
+ "fn_400013b4": {
+  "name": "ldc_cmd_set_segment_grid",
+  "brief": "Command 0x2A: set segment columns and rows from the value and rebuild the map.",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "command table; sender ldc_send_zone_grid_32x16 value 0x1020; DRV_LDC_SetLDCSegment"
+ },
+ "fn_400013e0": {
+  "name": "ldc_cmd_set_zone_counts",
+  "brief": "Command 0x2B: store two byte values and write them to register 0xE0080000.",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "command table; sender ldc_send_zone_counts (docs/MAP.md)"
+ },
+ "fn_40001404": {
+  "name": "ldc_cmd_set_reg280_bytes",
+  "brief": "Command 0x85: write two bytes of the value to bits 0..15 of register 0xE0080280.",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "command table; ldc_hw_set_reg280_low_bytes register writes"
+ },
+ "fn_40001428": {
+  "name": "ldc_cmd_set_ldc_mode",
+  "brief": "Command 0x20: set LDC_Mode, load its gain table and filter mode, refill PDIM/ADIM.",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "field +0x144 printed as 'LDC_Mode'; sender ldc_send_ldc_mode"
+ },
+ "fn_400014c0": {
+  "name": "ldc_cmd_set_user_pdim",
+  "brief": "Command 0x30: set usUserPDIM (max 0xFFF) for all channels and post status.",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "field printed as 'usUserPDIM'; table printed as 'LED PDIM'"
+ },
+ "fn_40001510": {
+  "name": "ldc_cmd_set_dark_pdim",
+  "brief": "Command 0x32: store the PDIM for channels with value 9 or less, capped at usUserPDIM.",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "panel +0x14C, read by ldc_pdim_select_user_or_dark for entries <= 9"
+ },
+ "fn_4000153c": {
+  "name": "ldc_cmd_set_user_adim",
+  "brief": "Command 0x31: set usUserADIM, compute PercentADIM, refill ADIM, post status.",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "fields printed as usUserADIM, ADIM_Max, PercentADIM; senders ldc_send_user_adim_sub0 / _sub1"
+ },
+ "fn_400015d4": {
+  "name": "ldc_cmd_set_user_global_gain",
+  "brief": "Command 0x5A: store UserGlobalGain.",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "field cfg +32 printed as 'UserGlobalGain'"
+ },
+ "fn_400015e4": {
+  "name": "ldc_cmd_set_gain_filter_mode",
+  "brief": "Command 0x5D: store GainFilterMode and apply it to register 0xE0080388.",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "field cfg +4 printed as 'GainFilterMode'"
+ },
+ "fn_400015fc": {
+  "name": "ldc_cmd_set_value_0x3c",
+  "brief": "Command 0x3C: store the value in word +36 of the dimming settings.",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "command table; one store only"
+ },
+ "fn_4000160c": {
+  "name": "ldc_cmd_set_value_0x3d",
+  "brief": "Command 0x3D: store the value in word +40 of the dimming settings.",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "command table; one store only"
+ },
+ "fn_4000161c": {
+  "name": "ldc_cmd_set_value_0x3e",
+  "brief": "Command 0x3E: store the value in word +44 of the dimming settings.",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "command table; one store only"
+ },
+ "fn_4000162c": {
+  "name": "ldc_cmd_set_value_0x3f",
+  "brief": "Command 0x3F: store the value in word +48 of the dimming settings.",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "command table; one store only"
+ },
+ "fn_4000163c": {
+  "name": "ldc_cmd_set_value_0x5b",
+  "brief": "Command 0x5B: store the value in word +52 of the dimming settings.",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "command table; one store only"
+ },
+ "fn_4000164c": {
+  "name": "ldc_cmd_set_value_0x5c",
+  "brief": "Command 0x5C: store the value in word +56 of the dimming settings.",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "command table; one store only"
+ },
+ "fn_4000165c": {
+  "name": "ldc_cmd_set_peaking",
+  "brief": "Command 0x82: switch peaking off (LED_Mode 3) or on (LED_Mode 6), print it, post brightness",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "prints 'Current Stress Staus = %d (Peaking OFF/ON)'; table entry 0x82"
+ },
+ "fn_400016a4": {
+  "name": "ldc_cmd_dpll_init_check",
+  "brief": "Command 0x40: set or clear the DPLL-init flag that gates the per-frame pass, print it",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "prints 'MAILBOX_DPLL INIT DONE!!' / 'NOT INIT!!'; docs/MAP.md command 0x40"
+ },
+ "fn_400016d4": {
+  "name": "ldc_cmd_set_segment_merge_mode",
+  "brief": "Command 0x41: select the segment merge routine (maximum, average, average no black, blend)",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "prints 'Segment Merge Mode: ...'; stores the merge routine at panel +0x148"
+ },
+ "fn_40001734": {
+  "name": "ldc_cmd_set_reg28c_bits4_6",
+  "brief": "Command 0x42: write value & 7 into bits 4..6 of register 0xE008028C",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code only, through ldc_hw_set_reg28c_bits4_6"
+ },
+ "fn_40001748": {
+  "name": "ldc_cmd_set_reg290_high",
+  "brief": "Command 0x44: write the value into bits 16..31 of register 0xE0080290",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code only, through ldc_hw_set_reg290_high_half"
+ },
+ "fn_40001758": {
+  "name": "ldc_cmd_set_ds_divider",
+  "brief": "Command 0x46: set the divider used by DRV_LDC_SetDSRegisters and rewrite those registers",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "ldc_set_ds_divider -> DRV_LDC_SetDSRegisters 'DRV_LDC_SetDSRegisters'"
+ },
+ "fn_4000176c": {
+  "name": "ldc_cmd_set_reg00c_bit7",
+  "brief": "Command 0x43: set or clear bit 7 of byte register 0xE008000C",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code only, through ldc_hw_set_reg00c_bit7"
+ },
+ "fn_40001780": {
+  "name": "ldc_cmd_set_adim_max",
+  "brief": "Command 0x33: set ADIM_Max (10 bits) when above ADIM_Min",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "cfg +12 printed as 'ADIM_Max' by ldc_print_debug_dump"
+ },
+ "fn_400017a0": {
+  "name": "ldc_cmd_set_adim_min",
+  "brief": "Command 0x34: set ADIM_Min (10 bits) when below ADIM_Max",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "cfg +8 printed as 'ADIM_Min' by ldc_print_debug_dump"
+ },
+ "fn_400017c0": {
+  "name": "ldc_cmd_set_adim_bright_percent",
+  "brief": "Command 0x35: set ADIM_BrighPercent, recompute PercentADIM, refresh LED ADIM and status",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "cfg +28 printed as 'ADIM_BrighPercent'; calls ldc_calc_percent_adim"
+ },
+ "fn_40001830": {
+  "name": "ldc_cmd_set_adim_level_and_percent",
+  "brief": "Command 0x39: set ADIM_BrighPercent and usUserADIM from one packed command",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "sub<<2|value>>14 to cfg +28, then ldc_cmd_set_user_adim(0, value & 0x3FF)"
+ },
+ "fn_40001858": {
+  "name": "ldc_cmd_set_limit_upper_bound",
+  "brief": "Command 0x37: set LimitUpperBound, at most 255",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "cfg +64 printed as 'LimitUpperBound'"
+ },
+ "fn_40001880": {
+  "name": "ldc_cmd_set_zone_peaking_percent",
+  "brief": "Command 0x3A: set ZonePeakingPercent",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "cfg +68 printed as 'ZonePeakingPercent'"
+ },
+ "fn_40001894": {
+  "name": "ldc_gain_table_set_point",
+  "brief": "Set the x (inner points only, <=254) or y of one point of a gain table",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "'Selected entry is out of range of table!'; tables printed as LDC_GainTable_ANVn"
+ },
+ "fn_400018f0": {
+  "name": "ldc_cmd_set_gain_table1_point",
+  "brief": "Command 0x51: change one point of gain table ANV1",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "table ldc_gain_table_anv1 printed as 'LDC_GainTable_ANV1'"
+ },
+ "fn_40001908": {
+  "name": "ldc_cmd_set_gain_table2_point",
+  "brief": "Command 0x52: change one point of gain table ANV2",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "table ldc_gain_table_anv2 printed as 'LDC_GainTable_ANV2'"
+ },
+ "fn_40001920": {
+  "name": "ldc_cmd_set_gain_table3_point",
+  "brief": "Command 0x53: change one point of gain table ANV3",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "table ldc_gain_table_anv3 printed as 'LDC_GainTable_ANV3'"
+ },
+ "fn_40001938": {
+  "name": "ldc_cmd_load_gain_table",
+  "brief": "Command 0x50: load gain table 1..3 (ANV1..3) or the flat table into the hardware",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "calls DRV_LDC_Intensity_Gain_Update 'DRV_LDC_Intensity_Gain_Update' with the selected table"
+ },
+ "fn_40001994": {
+  "name": "ldc_cmd_set_direct_pwm",
+  "brief": "Command 0x60: switch the LED drivers' direct PWM set-up on or off, by driver type",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "type 1 -> ldc_as3824_apply_direct_pwm ('LED AS3824 Direct PWM', 'CURR CTRL', 'Options'); type 0 -> ldc_set_direct_pwm_type0"
+ },
+ "fn_400019c4": {
+  "name": "ldc_cmd_write_as3824_register",
+  "brief": "Command 0x61: write one AS3824 register (number = sub-code) when the driver type is 1",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "ldc_as3824_write_byte is the register send of the 'LED AS3824 ...' writers (reg 7 = CURR CTRL)"
+ },
+ "fn_400019e4": {
+  "name": "ldc_cmd_ignore_0x94",
+  "brief": "Command 0x94: do nothing",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "empty body; table entry 0x94"
+ },
+ "fn_400019f0": {
+  "name": "ldc_cmd_ignore_0x95",
+  "brief": "Command 0x95: do nothing",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "empty body; table entry 0x95"
+ },
+ "fn_400019fc": {
+  "name": "ldc_cmd_ignore_0x96",
+  "brief": "Command 0x96: do nothing",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "empty body; table entry 0x96"
+ },
+ "fn_40001a08": {
+  "name": "ldc_cmd_set_led_current_on",
+  "brief": "Command 0x38: switch the AS3824 LED current on (0xFFFF, after a wait) or off (0)",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "calls ldc_as3824_set_current_on 'LED AS3824 Current On: 0x%04X'; driver type 1 only"
+ },
+ "fn_40001a4c": {
+  "name": "ldc_cmd_write_register_byte",
+  "brief": "Command 0x77: write the sub-code byte at byte offset 'value' in the 0xE0080000 block",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "read-modify-write of one byte lane"
+ },
+ "fn_40001aa8": {
+  "name": "ldc_cmd_set_reg5a4_bit2",
+  "brief": "Command 0x83: set bit 2 of register 0xE00805A4 for value 1, else clear it",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code only, through ldc_hw_set_reg5a4_bit2"
+ },
+ "fn_40001ab8": {
+  "name": "ldc_cmd_set_reg168",
+  "brief": "Command 0x84: keep value and sub and write (value << 8) + sub to register 0xE0080168",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "ldc_hw_set_reg168_fields; docs/MAP.md: 0x84 written to 0xE0080168"
+ },
+ "fn_40001ac8": {
+  "name": "ldc_cmd_enable_input_duty_check",
+  "brief": "Command 0x97: switch the per-frame input duty check on or off, update reg 0xE0080388",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "panel +0x154 gates ldc_check_pure_pattern -> ldc_check_input_duty_edges in ldc_run_frame_pass"
+ },
+ "fn_40001b08": {
+  "name": "ldc_check_duty_level_and_pair_sums",
+  "brief": "Return 1/0 from tests on a value array, mailbox word 0x40 and pair sums at 0xE0080700",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code only; no caller"
+ },
+ "fn_40001cb4": {
+  "name": "ldc_check_input_duty_edges",
+  "brief": "Update and return a flag: set when few Input Duty entries differ from the one 17 later",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "array 0x3FFE4490 printed as 'Input Duty:'; thresholds 31/40, hysteresis"
+ },
+ "fn_40001dd8": {
+  "name": "ldc_check_result_words_above_63",
+  "brief": "Count the 63 block words at 0xE0080700 above 63; post count and pass flag (<=8) to mailbox",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code only; mailbox +0x6C / +0x68; uncalled"
+ },
+ "fn_40001e54": {
+  "name": "ldc_check_curve_register_order",
+  "brief": "Count steps over 16 in the 12-bit pairs at 0xE00831C0/0xE00831E0; post pass flag (<5)",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code only; mailbox +0x74; uncalled"
+ },
+ "fn_40001f94": {
+  "name": "ldc_check_values_and_mailbox_ranges",
+  "brief": "Check values near 1400, mailbox +0x40 halves near 85/37 and block word 0xE0080700 range",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code only; uncalled"
+ },
+ "fn_400020d0": {
+  "name": "ldc_ramp_level_over_time",
+  "brief": "Ramp a level between min and max by elapsed ticks; flag the end in settings +60 and mailbox",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code only; panel +0x150/+0x158, settings +60 (cmd 0x82); uncalled"
+ },
+ "fn_400021d0": {
+  "name": "ldc_pdim_select_user_or_dark",
+  "brief": "Set each channel's PDIM to usUserPDIM when its merged value is above 9, else the dark PDIM",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "first step of PDIM path ldc_run_pdim_path; settings +16, panel +0x14C"
+ },
+ "fn_40002228": {
+  "name": "ldc_adim_map_through_curve",
+  "brief": "Map merged channel values to ADIM through the point table and scale by PercentADIM",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "first step of ADIM path ldc_run_adim_path; ldc_adim_curve_points; PercentADIM arg"
+ },
+ "fn_4000233c": {
+  "name": "ldc_adim_apply_limit_upper_bound",
+  "brief": "Scale all ADIM values down when their average is above LimitUpperBound * percent / 255",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "settings +64 = LimitUpperBound (printed name in ldc_print_debug_dump)"
+ },
+ "fn_40002418": {
+  "name": "ldc_adim_apply_zone_peaking",
+  "brief": "Raise ADIM values by ZonePeakingPercent, more when fewer channels are lit",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "settings +68 = ZonePeakingPercent (printed name in ldc_print_debug_dump)"
+ },
+ "fn_400024e4": {
+  "name": "ldc_adim_hold_on_sudden_rise",
+  "brief": "Hold all ADIM at PercentADIM for a time after a sudden rise from a dark average",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code only; state 0x3FFE3F38..40; result switches off ADIM smoothing"
+ },
+ "fn_40002660": {
+  "name": "lib_blend_by_weight_1024",
+  "brief": "Return the rounded mix (a*w + b*(1024-w) + 512) >> 10",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: whole routine is the formula"
+ },
+ "fn_40002688": {
+  "name": "ldc_filter_grid_3x3",
+  "brief": "Filter a rows x cols grid with one of two 3x3 weight tables, borders copied",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "code; tables ldc_filter_weights_16_32_64 / ldc_filter_weights_28_32 sum to 256; uncalled"
+ },
+ "fn_40002894": {
+  "name": "ldc_pdim_smooth_toward_target",
+  "brief": "Move each channel's kept PDIM toward the new value by weights +36/+40, cap at 0xFFF",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "last step of PDIM path; output packed into LED PDIM 0x3FFE3EB0"
+ },
+ "fn_40002a00": {
+  "name": "ldc_adim_smooth_toward_target",
+  "brief": "Move each channel's kept ADIM toward the new value by weights +44/+48, limit to ADIM_Min..Max",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "last step of ADIM path; output packed into LED ADIM 0x3FFE3EF0"
+ },
+ "fn_40002bf0": {
+  "name": "ldc_smooth_and_apply_global_gain",
+  "brief": "Set ApplyGlobalGain from the gain (optionally smoothed), limit to 16..0xD00, write it",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "settings +72 = ApplyGlobalGain (printed); calls ldc_hw_write_global_gain"
+ },
+ "fn_40002ca0": {
+  "name": "ldc_adim_raise_masked_channels",
+  "brief": "Give ADIM 32 to channels at most 31 whose bit is set in mailbox word +0x38",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code; mailbox +0x38 written by main processor ldc_write_status_word"
+ },
+ "fn_40002d0c": {
+  "name": "ldc_pdim_raise_masked_channels",
+  "brief": "Give PDIM 0xFFF to channels at most 15 whose bit is set in mailbox word +0x38",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code; mailbox +0x38 written by main processor ldc_write_status_word"
+ },
+ "fn_40002d7c": {
+  "name": "ldc_pdim_scale_to_4095",
+  "brief": "Scale each channel's PDIM by 4095/4092 and cap at 0xFFF",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code only"
+ },
+ "fn_40002de0": {
+  "name": "ldc_fill_segment_values",
+  "brief": "Fill per-segment values from their channel's value (mode 1) or from Input Duty",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code; channel_of_segment 0x3FFE2D70, Input Duty 0x3FFE4490; uncalled"
+ },
+ "fn_40002e78": {
+  "name": "ldc_post_segment_percent",
+  "brief": "Compute a 0..100 percentage from Input Duty or block words 0x700..0x708, post it at mailbox +0x90",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "code only; panel +0x15C, mailbox 0xE0091090/0xE0091094, widths 3440/5120"
+ },
+ "fn_400030b4": {
+  "name": "ldc_check_pure_pattern",
+  "brief": "Store the input-duty flag as the pass record's Pure Pattern word, then post the segment percent",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "rec word 0 printed as 'Pure Pattern: %d' by ldc_print_debug_dump"
+ },
+ "fn_400030c8": {
+  "name": "ldc_run_adim_path",
+  "brief": "Run the ADIM chain on the merged channel values and store the LED ADIM array",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "calls the ldc_adim_* steps; output 0x3FFE3EF0 printed as 'LED ADIM:'"
+ },
+ "fn_40003140": {
+  "name": "ldc_run_pdim_path",
+  "brief": "Run the PDIM chain on the merged channel values and store the LED PDIM array",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "calls the ldc_pdim_* steps; output 0x3FFE3EB0 printed as 'LED PDIM:'"
+ },
+ "fn_40003174": {
+  "name": "ldc_write_table_and_global_gain",
+  "brief": "Write a 16-bit table to the result table, then smooth and apply UserGlobalGain",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "calls ldc_hw_write_result_table and ldc_smooth_and_apply_global_gain"
+ },
+ "fn_40003190": {
+  "name": "ldc_print_debug_dump",
+  "brief": "Print Input Duty, gain tables, settings, LED ADIM/PDIM on mailbox request or every 180 passes",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "its own printed texts; mailbox +0x80 codes 0xAA/0xAB/0xAC, +0x84 enable"
+ },
+ "fn_40003558": {
+  "name": "ldc_follow_mode_and_run_led_driver",
+  "brief": "Apply a changed LDC_Mode, then call the panel's LED driver routine after 1 or 2 passes",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "panel +0x144 LDC_Mode, +0x13C led_driver_fn, ldc_hw_apply_ldc_mode"
+ },
+ "fn_400035d0": {
+  "name": "ldc_run_frame_pass",
+  "brief": "Run one processing pass: merge, ADIM/PDIM paths, result table, LED driver, debug print",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "docs/MAP.md 'every frame' (ldc_run_pass_on_new_frame -> ldc_run_frame_pass)"
+ },
+ "fn_40003764": {
+  "name": "ldc_run_pass_on_new_frame",
+  "brief": "Run a processing pass when the frame interrupt's bit-1 count has moved",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "counters panel +0x160/+0x168/+0x170 written by IRQ ldc_irq_handler"
+ },
+ "fn_400037cc": {
+  "name": "ldc_cmd_ignore",
+  "brief": "Do nothing: handler of commands 0x00 and 0x36",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "ldc_command_table entries 0 and 0x36"
+ },
+ "fn_400037d8": {
+  "name": "ldc_build_command_index",
+  "brief": "Fill the command-number to table-position index 0x3FFE3F60 for the 46 commands",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "code; used by ldc_poll_mailbox_command"
+ },
+ "fn_40003814": {
+  "name": "ldc_poll_mailbox_command",
+  "brief": "Read portal 2 power word and command slot, print and run the command handler",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "docs/MAP.md (reads 0xE0091020 in ldc_poll_mailbox_command); texts POWER_UP/DOWN, 'MailBox Cmd'"
+ },
+ "fn_400038e8": {
+  "name": "dbg_memcmd_echo_char",
+  "brief": "Send one character to the serial port while the console flag is set",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "uart_putc writes 0xE00A0000; gated by dbg_memcmd_verbose"
+ },
+ "fn_40003904": {
+  "name": "dbg_memcmd_mr",
+  "brief": "Console command 'mr': dump memory as 32/16/8-bit values, 16 bytes per row",
+  "topic": "dbg",
+  "basis": "proven",
+  "evidence": "name 'mr' in table dbg_memcmd_table; formats ' %08X' ' %04X' ' %02X'"
+ },
+ "fn_40003a70": {
+  "name": "dbg_memcmd_mw",
+  "brief": "Console command 'mw': write hex values of a given width to memory",
+  "topic": "dbg",
+  "basis": "proven",
+  "evidence": "name 'mw' in table dbg_memcmd_table; code"
+ },
+ "fn_40003b68": {
+  "name": "dbg_memcmd_md",
+  "brief": "Console command 'md': set the console's echo/verbose flag dbg_memcmd_verbose",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "name 'md' in table dbg_memcmd_table; code"
+ },
+ "fn_40003b98": {
+  "name": "dbg_memcmd_cfg",
+  "brief": "Console command 'cfg': parse item and value; all cases empty, prints 'val = 0x%08X'",
+  "topic": "dbg",
+  "basis": "proven",
+  "evidence": "name 'cfg' in table dbg_memcmd_table; code"
+ },
+ "fn_40003c94": {
+  "name": "dbg_init_uart_print_banner",
+  "brief": "Set up the serial port and print the version banner",
+  "topic": "dbg",
+  "basis": "proven",
+  "evidence": "texts 'NT68500 FW Version', 'Built time'; config 115200 in dbg_uart_config"
+ },
+ "fn_40003cd0": {
+  "name": "dbg_memcmd_poll_console",
+  "brief": "Read one console character, edit the line, run the matching mr/mw/md/cfg command",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "text 'Please enter the command: '; table dbg_memcmd_table; uncalled"
+ },
+ "fn_40003f10": {
+  "name": "reg_read32",
+  "brief": "Return the 32-bit word at an address (volatile read)",
+  "topic": "reg",
+  "basis": "proven",
+  "evidence": "code"
+ },
+ "fn_40003f24": {
+  "name": "reg_write32",
+  "brief": "Write a 32-bit word to an address (volatile write)",
+  "topic": "reg",
+  "basis": "proven",
+  "evidence": "code"
+ },
+ "fn_40003f38": {
+  "name": "reg_write32_masked",
+  "brief": "Replace the masked bits of a 32-bit word with the bits of a value",
+  "topic": "reg",
+  "basis": "proven",
+  "evidence": "code"
+ },
+ "fn_40003f74": {
+  "name": "reg_read8",
+  "brief": "Return a byte by reading its aligned 32-bit word and shifting",
+  "topic": "reg",
+  "basis": "proven",
+  "evidence": "code"
+ },
+ "fn_40003fa0": {
+  "name": "reg_write8",
+  "brief": "Write a byte by read-modify-write of its aligned 32-bit word",
+  "topic": "reg",
+  "basis": "proven",
+  "evidence": "code"
+ },
+ "fn_40003ff8": {
+  "name": "lib_write_bit_field",
+  "brief": "Write a value into a bit field at a byte address, using aligned volatile word accesses",
+  "topic": "lib",
+  "basis": "descriptive",
+  "evidence": "code: field may cross two words; no caller"
+ },
+ "fn_4000414c": {
+  "name": "reg_read32_wrap",
+  "brief": "Return the word at an address through reg_read32",
+  "topic": "reg",
+  "basis": "derived",
+  "evidence": "code: only calls reg_read32; no caller"
+ },
+ "fn_4000415c": {
+  "name": "reg_write32_wrap",
+  "brief": "Write a word to an address through reg_write32",
+  "topic": "reg",
+  "basis": "derived",
+  "evidence": "code: only calls reg_write32; no caller"
+ },
+ "fn_4000416c": {
+  "name": "reg_write32_masked_wrap",
+  "brief": "Change the masked bits of a word through reg_write32_masked",
+  "topic": "reg",
+  "basis": "derived",
+  "evidence": "code: only calls reg_write32_masked; no caller"
+ },
+ "fn_40004180": {
+  "name": "reg_read8_wrap",
+  "brief": "Return the byte at an address through reg_read8",
+  "topic": "reg",
+  "basis": "derived",
+  "evidence": "code: only calls reg_read8; no caller"
+ },
+ "fn_40004190": {
+  "name": "reg_write8_wrap",
+  "brief": "Write a byte to an address through reg_write8",
+  "topic": "reg",
+  "basis": "derived",
+  "evidence": "code: only calls reg_write8; no caller"
+ },
+ "fn_400041a8": {
+  "name": "lib_heap_init",
+  "brief": "Set up the memory pool and its free list (record 0x3ffe4220, list head 0x3ffe4230)",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "code: pool {next,size} headers shared with lib_heap_alloc/lib_heap_free; no caller"
+ },
+ "fn_40004210": {
+  "name": "lib_heap_alloc",
+  "brief": "Take a block of the pool, first fit, size rounded up to 8",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "code: free-list walk, split from block end; no caller"
+ },
+ "fn_400042a8": {
+  "name": "lib_heap_free",
+  "brief": "Return a block to the address-ordered free list, merging touching blocks",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "code: free-list insert and merge; no caller"
+ },
+ "fn_40004364": {
+  "name": "lib_copy_bytes_word_access",
+  "brief": "Copy bytes using only aligned word reads and writes",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "code: byte lanes by read-modify-write, middle as shifted words; no caller"
+ },
+ "fn_400045f4": {
+  "name": "lib_copy_words",
+  "brief": "Copy count 32-bit words",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: dst[i] = src[i] loop; no caller"
+ },
+ "fn_4000462c": {
+  "name": "lib_copy_bytes",
+  "brief": "Copy count bytes",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: byte copy loop; no caller"
+ },
+ "fn_40004664": {
+  "name": "lib_fill_words",
+  "brief": "Store one value into count 32-bit words",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: dst[i] = value loop; no caller"
+ },
+ "fn_40004694": {
+  "name": "lib_fill_bytes",
+  "brief": "Store one byte value into count bytes",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: byte fill loop; no caller"
+ },
+ "fn_400046c8": {
+  "name": "lib_compare_words",
+  "brief": "Compare count words; return 0 if equal, 1 at the first difference",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code; no caller"
+ },
+ "fn_40004710": {
+  "name": "lib_compare_bytes",
+  "brief": "Compare count bytes; return 0 if equal, 1 at the first difference",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code; no caller"
+ },
+ "fn_40004758": {
+  "name": "lib_string_length",
+  "brief": "Return the length of a zero-terminated text",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: counts bytes to the zero; callers dbg parsers"
+ },
+ "fn_40004788": {
+  "name": "lib_compare_strings",
+  "brief": "Compare two zero-terminated texts; return the difference of the first unequal bytes",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code; used for command-name lookup in dbg_find_and_run_command and dbg_console_poll"
+ },
+ "fn_400047c4": {
+  "name": "lib_divide_round_up",
+  "brief": "Divide two unsigned numbers, rounding the quotient up",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: quou/remu; no caller"
+ },
+ "fn_40004804": {
+  "name": "lib_round_up_to_multiple",
+  "brief": "Round an unsigned number up to a multiple of a step",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: quou/remu/mull; no caller"
+ },
+ "fn_40004844": {
+  "name": "lib_swap_byte_order",
+  "brief": "Return a 32-bit value with its bytes reversed",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: byte shuffle with mask 0xFF00; no caller"
+ },
+ "fn_40004884": {
+  "name": "lib_swap_byte_order_words",
+  "brief": "Reverse the byte order of each word of an array (length in bytes)",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code; no caller"
+ },
+ "fn_400048fc": {
+  "name": "lib_swap_byte_order_words_volatile",
+  "brief": "Reverse the byte order of size/4 words in place with volatile accesses",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: memw reads/writes; no caller"
+ },
+ "fn_4000496c": {
+  "name": "lib_read_word",
+  "brief": "Return the 32-bit word at an address",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: plain load; callers debug memory commands"
+ },
+ "fn_4000497c": {
+  "name": "lib_write_word",
+  "brief": "Write a 32-bit word to an address",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: plain store; callers debug memory commands"
+ },
+ "fn_4000498c": {
+  "name": "dbg_cmd_mem",
+  "brief": "Print words from an address as a hex and character byte dump (debug command mem)",
+  "topic": "dbg",
+  "basis": "proven",
+  "evidence": "command table dbg_command_table 'mem' + help text 'display memory data ( 8 bits format)'"
+ },
+ "fn_40004b08": {
+  "name": "dbg_cmd_mdw",
+  "brief": "Print words from an address as 8-digit hex values, 4 per line (debug command mdw)",
+  "topic": "dbg",
+  "basis": "proven",
+  "evidence": "command table 'mdw' + help text 'display memory data (32 bits format)'"
+ },
+ "fn_40004bcc": {
+  "name": "dbg_cmd_wmem",
+  "brief": "Write a word to an aligned address and echo it (debug commands wmem and mww)",
+  "topic": "dbg",
+  "basis": "proven",
+  "evidence": "command table 'wmem'/'mww' + help 'write data to memory', text 'Address Fail'"
+ },
+ "fn_40004c14": {
+  "name": "dbg_parse_word_number",
+  "brief": "Convert a debug command word to a number (0x.. hexadecimal, else decimal)",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "code; called for words 1..3 by dbg_find_and_run_command"
+ },
+ "fn_40004dfc": {
+  "name": "dbg_find_and_run_command",
+  "brief": "Look the first command word up in the debug command table and run its handler",
+  "topic": "dbg",
+  "basis": "proven",
+  "evidence": "table dbg_command_table {name[32],handler}; strcmp then callx8 with 3 parsed words"
+ },
+ "fn_40004ea0": {
+  "name": "dbg_split_command_words",
+  "brief": "Split a command line into up to four 32-byte word slots, counting the words",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "separators NUL/space/,/tab; called by dbg_run_text_command before the command table lookup"
+ },
+ "fn_40004fc0": {
+  "name": "dbg_run_text_command",
+  "brief": "Split a typed line, run its command from the table, print OK or 'Command Not Found!'",
+  "topic": "dbg",
+  "basis": "proven",
+  "evidence": "prints ' OK.', 'Command Not Found!', 'TDBG >>'; calls the table lookup dbg_find_and_run_command"
+ },
+ "fn_40005050": {
+  "name": "dbg_run_hex_packet",
+  "brief": "Run a '^' hex packet: read, write or masked-write a word, print a 0x83/0x82 reply",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "op chars R/U/W, hex byte parsing, reads/writes via lib_read_word/lib_write_word"
+ },
+ "fn_400053d0": {
+  "name": "lib_hex_digit_value",
+  "brief": "Return the value 0-15 of a hex digit character, 0 for any other character",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: '0'-'9','A'-'F','a'-'f' arithmetic"
+ },
+ "fn_40005424": {
+  "name": "lib_nibble_to_hex_char",
+  "brief": "Return the upper-case hex digit character of a value 0-15",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: +48 / +55"
+ },
+ "fn_40005460": {
+  "name": "lib_parse_hex_digits",
+  "brief": "Return the number formed by n hex digit characters",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: v = v*16 + digit for n characters"
+ },
+ "fn_400054a4": {
+  "name": "lib_format_hex_word",
+  "brief": "Write a 32-bit value as eight hex digits and a zero byte",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: 8 nibbles, most significant first"
+ },
+ "fn_40005518": {
+  "name": "dbg_request_check_char",
+  "brief": "Return '0' + low 4 bits of the byte sum of two words (check char of '*xx' requests)",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "compared with line[7]/line[15] of *RD/*CB/*WD requests"
+ },
+ "fn_40005574": {
+  "name": "dbg_run_star_request",
+  "brief": "Run the stored '*xx' request (read/write word, set base) and print its '#..OK!#' reply",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "request codes from dbg_parse_star_request; replies '#OK!#', ' OK!#'"
+ },
+ "fn_4000574c": {
+  "name": "dbg_parse_star_request",
+  "brief": "Recognise a '*qt/*RD/*WD/*RB/*WB/*CB' request line and store its code and operands",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "character compares in the code; used in request mode of dbg_console_poll"
+ },
+ "fn_400058dc": {
+  "name": "dbg_console_poll",
+  "brief": "Feed one received serial character to the debug command line and run the line on Enter",
+  "topic": "dbg",
+  "basis": "proven",
+  "evidence": "prompts 'DBG >>', '*CB00000', '{#UTIL#}'; main loop caller"
+ },
+ "fn_40005ba8": {
+  "name": "dbg_console_init",
+  "brief": "Reset the debug command line state and print the 'Command Line Debug' banner",
+  "topic": "dbg",
+  "basis": "proven",
+  "evidence": "prints 'Welcome to User's Command Line Debug'"
+ },
+ "fn_40005c24": {
+  "name": "dbg_print_sw_value",
+  "brief": "Print 'NT68500 Tensilica S/W : ', a value as 8 hex digits, and '#'",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "texts; no caller"
+ },
+ "fn_40005c3c": {
+  "name": "dbg_cmd_help",
+  "brief": "Print the help texts of the debug commands",
+  "topic": "dbg",
+  "basis": "proven",
+  "evidence": "command table entry 'help'; prints the help text list"
+ },
+ "fn_40005c78": {
+  "name": "dbg_cmd_rsa",
+  "brief": "Write 0x68500DEF to 0xB70910FC",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "command table entry 'rsa'; purpose of the value not shown"
+ },
+ "fn_40005c8c": {
+  "name": "dbg_cmd_msg1",
+  "brief": "Write 1 to mailbox register 0xE0091084",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "command table entry 'msg1'"
+ },
+ "fn_40005c9c": {
+  "name": "dbg_cmd_msg0",
+  "brief": "Write 0 to mailbox register 0xE0091084",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "command table entry 'msg0'"
+ },
+ "fn_40005cac": {
+  "name": "dbg_cmd_gpio_test",
+  "brief": "Toggle a GPIO 1000 times through the two gpio_set_output routines, print 'GPIOtest done!!'",
+  "topic": "dbg",
+  "basis": "proven",
+  "evidence": "command 'gpio', help 'gpio [port]: GPIO test', 'GPIOtest done!!'"
+ },
+ "fn_40005cf8": {
+  "name": "timer_toggle_expstate_bit9",
+  "brief": "Timer callback: flip EXPSTATE bit 9 on every call",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "installed by timer_start_expstate_toggle as timer 0 callback; setb/clrb_expstate 9"
+ },
+ "fn_40005d68": {
+  "name": "timer_toggle_expstate_bit19",
+  "brief": "Flip EXPSTATE bit 19 on every call (unused twin of the bit 9 toggler)",
+  "topic": "timer",
+  "basis": "descriptive",
+  "evidence": "code only; no caller"
+ },
+ "fn_40005dd8": {
+  "name": "timer_start_expstate_toggle",
+  "brief": "Start timer 0 with the EXPSTATE bit 9 toggle callback",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "timer_start_timer0(0, 0x454, timer_toggle_expstate_bit9)"
+ },
+ "fn_40005de8": {
+  "name": "uart_selftest",
+  "brief": "Run the UART TX/RX test, echo typed characters until 'q', then loop forever",
+  "topic": "uart",
+  "basis": "proven",
+  "evidence": "texts 'UART TX/RX Test', 'UART test done!'; no caller"
+ },
+ "fn_40005e44": {
+  "name": "timer_count_tick_timer0",
+  "brief": "Timer 0 callback: count one pending tick",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "installed by timer_start_counted_timer0; consumed by timer_run_pending_callbacks"
+ },
+ "fn_40005e74": {
+  "name": "timer_count_tick_timer1",
+  "brief": "Timer 1 callback: count one pending tick",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "installed by timer_start_counted_timer1; consumed by timer_run_pending_callbacks"
+ },
+ "fn_40005ea4": {
+  "name": "timer_run_pending_callbacks",
+  "brief": "Take one pending tick per timer and call that timer's stored callback",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "record 0x3ffe4438 shared with the tick counters; no caller"
+ },
+ "fn_40005f2c": {
+  "name": "timer_start_counted_timer0",
+  "brief": "Start timer 0 with the tick counter and store the callback for the dispatcher",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "timer_arm_timer0(.., timer_count_tick_timer0); no caller"
+ },
+ "fn_40005f50": {
+  "name": "timer_start_timer0",
+  "brief": "Start timer 0 (CCOMPARE0) with a callback",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "wrapper of timer_arm_timer0 (ccompare0)"
+ },
+ "fn_40005f6c": {
+  "name": "timer_start_counted_timer1",
+  "brief": "Start timer 1 with the tick counter and store the callback for the dispatcher",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "timer_arm_timer1(.., timer_count_tick_timer1); no caller"
+ },
+ "fn_40005f90": {
+  "name": "timer_start_timer1",
+  "brief": "Start timer 1 (CCOMPARE1) with a callback",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "wrapper of timer_arm_timer1 (ccompare1); no caller"
+ },
+ "fn_40005fac": {
+  "name": "ldc_hw_apply_ldc_mode",
+  "brief": "Set dimming-block control bits (0x310, 0x400, 0x00C, 0x514) for an LDC_Mode value",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "callers pass LDC_Mode (panel +0x144); per-mode register bit writes"
+ },
+ "fn_40006144": {
+  "name": "ldc_hw_load_default_registers",
+  "brief": "Write the 59 {register, value} pairs of ldc_hw_default_registers into the dimming block",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "loop over the address/value table, called first by the start-up set-up"
+ },
+ "fn_40006180": {
+  "name": "ldc_preset_segment_values",
+  "brief": "Fill the 2048 16-bit segment values at 0x3ffe4490 with 0xFFC",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "fill loop; the array is refilled from 0xE0083000 by the interrupt routine"
+ },
+ "fn_400061b0": {
+  "name": "ldc_hw_set_zone_area_factors",
+  "brief": "Compute zone pixel count and its reciprocal factor and shift, write registers 0x134..0x140",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "2^shift/area search over shift 20..30; zone size from panel size and zone-count exponents"
+ },
+ "fn_40006374": {
+  "name": "DRV_LDC_SetPanelResolution",
+  "brief": "Store panel width and height, write them to 0xE0080004, recompute zone area factors",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "original name printed 'DRV_LDC_SetPanelResolution,%u,%u'"
+ },
+ "fn_400063dc": {
+  "name": "ldc_set_zone_count_exponents",
+  "brief": "Store the two zone-count exponents and write them to bits 16..31 of 0xE0080000",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "used as 1<<n zone counts by ldc_hw_set_zone_area_factors; command 0x2B = zone counts as powers of two (MAP)"
+ },
+ "fn_40006410": {
+  "name": "ldc_hw_set_reg280_low_bytes",
+  "brief": "Write two bytes to bits 0..15 of register 0xE0080280",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "called by the command 0x85 handler; mechanics only"
+ },
+ "fn_40006434": {
+  "name": "DRV_LDC_UpdateSegmentBoundary",
+  "brief": "Write the column and row boundaries of the segment grid into the dimming block",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "original name printed 'DRV_LDC_UpdateSegmentBoundary'"
+ },
+ "fn_4000660c": {
+  "name": "DRV_LDC_SetLDCSegment",
+  "brief": "Set segment grid columns/rows (clamped 1..64 / 1..32), count, registers and boundaries",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "original name printed 'DRV_LDC_SetLDCSegment'"
+ },
+ "fn_400066d4": {
+  "name": "DRV_LDC_SetDSRegisters",
+  "brief": "Write width / DS divider to 0xE0080040 and the divider to 0xE0080370",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "original name printed 'DRV_LDC_SetDSRegisters'"
+ },
+ "fn_4000670c": {
+  "name": "ldc_set_ds_divider",
+  "brief": "Store the DS divider (grid +48) and write the DS registers",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "stores the value read by DRV_LDC_SetDSRegisters and calls it"
+ },
+ "fn_40006724": {
+  "name": "ldc_hw_set_reg168_fields",
+  "brief": "Store two fields and write (a << 8) + b to bits 0..23 of register 0xE0080168",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "command 0x84 handler; MAP: command 0x84 value written to 0xE0080168"
+ },
+ "fn_40006750": {
+  "name": "ldc_hw_write_reg160",
+  "brief": "Write a value to register 0xE0080160",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "single register write, start-up value 0x08802000"
+ },
+ "fn_40006764": {
+  "name": "ldc_hw_set_reg5a4_bit2",
+  "brief": "Set or clear bit 2 of register 0xE00805A4",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "command 0x83 handler; mechanics only"
+ },
+ "fn_4000679c": {
+  "name": "ldc_hw_apply_gain_filter_mode",
+  "brief": "Copy bits 1 and 2 of GainFilterMode into register 0xE0080388",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "all callers pass GainFilterMode (settings +4); MAP: command 0x97 written to 0xE0080388"
+ },
+ "fn_40006804": {
+  "name": "ldc_read_segment_values",
+  "brief": "Copy the segment values from the dimming block at 0xE0083000 into 0x3ffe4490",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "called by the interrupt 7 handler; (segment count + 1) / 2 words"
+ },
+ "fn_40006854": {
+  "name": "ldc_hw_set_reg28c_bits4_6",
+  "brief": "Write a 3-bit value to bits 4..6 of register 0xE008028C",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "command 0x42 handler and start-up value 3; mechanics only"
+ },
+ "fn_4000686c": {
+  "name": "ldc_hw_set_reg290_high_half",
+  "brief": "Write a 16-bit value to bits 16..31 of register 0xE0080290",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "command 0x44 handler; mechanics only"
+ },
+ "fn_40006884": {
+  "name": "ldc_hw_set_reg00c_bit7",
+  "brief": "Set or clear bit 7 of register 0xE008000C (byte access)",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "command 0x43 handler; the bit gates the table write of ldc_hw_write_result_table"
+ },
+ "fn_400068c0": {
+  "name": "ldc_hw_init",
+  "brief": "Preset segment values, load default registers and set each register group at start-up",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "called once by the main routine; calls every set-up routine with start values"
+ },
+ "fn_40006904": {
+  "name": "DRV_LDC_Intensity_Gain_Update",
+  "brief": "Fill register table 0xE0080C00 from a curve of {x, y} points by linear interpolation",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "original name printed 'DRV_LDC_Intensity_Gain_Update'"
+ },
+ "fn_400069dc": {
+  "name": "ldc_hw_write_global_gain_0x400",
+  "brief": "Write 0x400 to the global gain field (bits 16..27) of register 0xE0080378",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "same field as ldc_hw_write_global_gain; arguments unused; no caller"
+ },
+ "fn_400069f0": {
+  "name": "ldc_hw_write_global_gain",
+  "brief": "Write a 12-bit gain to bits 16..27 of register 0xE0080378",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "caller passes ApplyGlobalGain (settings +72) right after storing it"
+ },
+ "fn_40006a08": {
+  "name": "ldc_hw_write_result_table",
+  "brief": "Copy the result values into the table at 0xE0082000 while bit 7 of 0xE008000C is set",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "MAP: results written back to the table at 0xE0082000; count = segment count"
+ },
+ "fn_40006a58": {
+  "name": "ldc_hw_set_global_gain_by_maximum",
+  "brief": "Write a global gain to 0xE0080378 that depends on the largest of a list of words",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "maximum search then three-range formula; no caller"
+ },
+ "fn_40006afc": {
+  "name": "ldc_test_dump_grid_values",
+  "brief": "Step registers 0x5A0/0x5A4 over 32x64x9 positions and print the values read at 0x5D4",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "prints 'LDC test function' and 'i = %d, %lX ...'; no caller"
+ },
+ "fn_40006be8": {
+  "name": "ldc_units_copy_words_and_start",
+  "brief": "Copy words to buffer 0xC01A0004 and start each selected unit (0xC0197000 + k*0x1000)",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "called by the LED driver routines; register writes only"
+ },
+ "fn_40006c9c": {
+  "name": "ldc_unit_set_mode_bits",
+  "brief": "Set bits 30..31 of one unit's control register and bit 12 of its word at 0x3ffe5490",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "mechanics only; unit = lowest set bit of the mask"
+ },
+ "fn_40006de8": {
+  "name": "ldc_unit_set_length_and_flag",
+  "brief": "Write n - 1 to bits 4..13 and a flag to bit 3 of one unit's control register",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "mechanics only; unit = lowest set bit of the mask"
+ },
+ "fn_40006e94": {
+  "name": "ldc_unit_set_reg38_bit13",
+  "brief": "Write a flag to bit 13 of register +0x38 of one unit (0xC0192000 + k*0x100)",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "mechanics only; unit = lowest set bit of the mask"
+ },
+ "fn_40006f00": {
+  "name": "ldc_units_init",
+  "brief": "Write start-up values to the four units (0xC0192000/0xC0197000 + k) and the unit words",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "register writes only; called by command 0x22 and the main loop"
+ },
+ "fn_4000713c": {
+  "name": "ldc_as3824_write_pwm_ht",
+  "brief": "Send one AS3824 device's 16 PWM_HT values (reg 0x37, 16-bit each, channel order) via unit 0",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "called with AS3824Buf.PWM_HT (texts in ldc_as3824_print_state); frame bytes hdr,0x20,0x37"
+ },
+ "fn_40007348": {
+  "name": "ldc_as3824_write_bdac",
+  "brief": "Send one AS3824 device's 16 BDAC bytes (reg 0x70, channel order) via unit 0",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "called with AS3824Buf.BDAC (texts in ldc_as3824_print_state); frame bytes hdr,0x10,0x70"
+ },
+ "fn_400074b4": {
+  "name": "ldc_as3824_write_byte",
+  "brief": "Send AS3824 frame {0xC0, reg, value} via unit 0, wait 2 ticks",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "callers are the AS3824 register setters that print the register name"
+ },
+ "fn_400074ec": {
+  "name": "ldc_as3824_write_byte_to_device",
+  "brief": "Send AS3824 frame {device|0x40, reg, value} via unit 0, wait 2 ticks",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "same frame as ldc_as3824_write_byte with a device number; no caller"
+ },
+ "fn_40007530": {
+  "name": "ldc_as3824_send_dev1_reg_bit7",
+  "brief": "Send frame {0x41, reg|0x80, 0...} (2 words) via unit 0; no caller",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "mechanics only"
+ },
+ "fn_4000756c": {
+  "name": "ldc_as3824_write_word",
+  "brief": "Send AS3824 frame {0x80, 2, reg, lo, hi} via unit 0 (16-bit register value)",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "used for PWM_Period (reg 20) and CurrOnOff (reg 1) with their prints"
+ },
+ "fn_400075ac": {
+  "name": "ldc_as3824_write_word_to_device",
+  "brief": "Send AS3824 frame {header, 2, reg, lo, hi} via unit 0; no caller",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "same frame as ldc_as3824_write_word with a header argument"
+ },
+ "fn_400075fc": {
+  "name": "ldc_as3824_write_bytes",
+  "brief": "Send len bytes to one register: {hdr|0x40,reg,d0} for len 1, else {hdr,len,reg,data}",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "frame layout matches the other AS3824 senders; no caller"
+ },
+ "fn_4000770c": {
+  "name": "ldc_as3824_apply_ldc_mode",
+  "brief": "Set/clear HdrMode bit 4 for LDC_Mode 1 or 2, write reg 103, print it",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "prints 'AS3824Buf.HdrMode'; called with LDC_Mode on change"
+ },
+ "fn_40007760": {
+  "name": "ldc_as3824_set_dac",
+  "brief": "Store AS3824Buf.DAC and send it to register 0x0C (value >> 2, value & 3)",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "writes AS3824Buf +28 = DAC (ldc_as3824_print_state text)"
+ },
+ "fn_400077a4": {
+  "name": "LED_AS3824_SetPwmPeriod",
+  "brief": "Store AS3824Buf.PWM_Period and write it to AS3824 register 20",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "original name, printed in 'LED_AS3824_SetPwmPeriod = 0x%X'"
+ },
+ "fn_400077d4": {
+  "name": "ldc_as3824_set_hdr_bit0_and_init",
+  "brief": "Set HdrMode bit 0, write reg 103, then run LED_AS3824_Init; no caller",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "mechanics only"
+ },
+ "fn_400077fc": {
+  "name": "ldc_as3824_set_current_on",
+  "brief": "Store AS3824Buf.CurrOnOff and write it to AS3824 register 1",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "prints 'LED AS3824 Current On: 0x%04X'"
+ },
+ "fn_40007820": {
+  "name": "ldc_as3824_set_hdr_mode",
+  "brief": "Store AS3824Buf.HdrMode and write it to AS3824 register 103",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "prints 'LED AS3824 HDR Mode: 0x%04X'"
+ },
+ "fn_4000784c": {
+  "name": "ldc_as3824_set_pwm_ctrl",
+  "brief": "Store AS3824Buf.PWM_Ctrl and write it to AS3824 register 19; no caller",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "prints 'LED AS3824 PWM CTRL: 0x%04X'"
+ },
+ "fn_40007878": {
+  "name": "ldc_as3824_set_curr_ctrl",
+  "brief": "Store AS3824Buf.CurrCtrl and write it to AS3824 register 7",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "prints 'LED AS3824 CURR CTRL: 0x%04X'"
+ },
+ "fn_400078a0": {
+  "name": "ldc_as3824_set_dacref_bit",
+  "brief": "Set CurrCtrl bit 2 when LED_Mode is 4 or more, else clear it; write AS3824 register 7",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "prints 'LED AS3824 CURR CTRL(DACref): 0x%04X'"
+ },
+ "fn_400078e8": {
+  "name": "ldc_as3824_set_options",
+  "brief": "Store AS3824Buf.Options and write it to AS3824 register 89",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "prints 'LED AS3824 Options: 0x%04X'"
+ },
+ "fn_40007914": {
+  "name": "ldc_as3824_set_direct_pwm_bit",
+  "brief": "Set PWM_Ctrl bit 2 when the argument is 1, else clear it; write AS3824 register 19",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "prints 'LED AS3824 Direct PWM: 0x%04X'"
+ },
+ "fn_40007958": {
+  "name": "ldc_as3824_apply_direct_pwm",
+  "brief": "Switch direct PWM on (CurrCtrl 6, Options 96) or off (CurrCtrl 128 or 132, Options 0)",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "called by ldc_cmd_set_direct_pwm (command 0x60)"
+ },
+ "fn_40007998": {
+  "name": "LED_AS3824_Unlock",
+  "brief": "Write 0xCA (LockUnlock) to AS3824 register 54",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "original name, printed in 'LED_AS3824_Unlock'"
+ },
+ "fn_400079b8": {
+  "name": "LED_AS3824_Init",
+  "brief": "Set up the AS3824 registers and AS3824Buf, send BDAC and PWM_HT, mark init done",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "original name, printed in 'LED_AS3824_Init Done!!'"
+ },
+ "fn_40007ab8": {
+  "name": "ldc_as3824_update",
+  "brief": "Driver type 1 routine: send PDIM/ADIM as PWM_HT/BDAC to the AS3824 after init",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "stored in panel +0x13C for driver type 1 by ldc_select_led_driver; AS3824Buf fields"
+ },
+ "fn_40007c50": {
+  "name": "ldc_as3824_print_state",
+  "brief": "Print all AS3824Buf fields, BDAC/PWM_HT values, LED_Mode and LDC_Mode; no caller",
+  "topic": "ldc",
+  "basis": "proven",
+  "evidence": "the texts it prints"
+ },
+ "fn_40007d40": {
+  "name": "ldc_level_curve_value",
+  "brief": "Map reg 0xE00802FC bits 16-25 through an 8-point curve, scale, post to mailbox +0x44",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "mechanics only"
+ },
+ "fn_40007e68": {
+  "name": "ldc_led_driver_type2_update",
+  "brief": "Driver type 2 routine: 256 words of scaled segment value pairs + curve value via unit 0",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "stored in panel +0x13C for driver type 2 by ldc_select_led_driver"
+ },
+ "fn_40008010": {
+  "name": "ldc_units_setup_driver_type2",
+  "brief": "Unit 0: mode bits 2, length 12 flag 1, reg +0x38 bit 13 = 1 (driver type 2)",
+  "topic": "ldc",
+  "basis": "descriptive",
+  "evidence": "called by ldc_select_led_driver for driver type 2"
+ },
+ "fn_4000802c": {
+  "name": "ldc_led_driver_type0_update",
+  "brief": "Pack PDIM/ADIM of 8 or 10 channels into a 9-word frame and send it via unit 0",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "panel +0x13C default driver routine (ldc_select_led_driver); type 0 per ldc_cmd_set_direct_pwm"
+ },
+ "fn_400082cc": {
+  "name": "ldc_set_direct_pwm_type0",
+  "brief": "Send {0x238007AA,0x55} and set the direct PWM flag (1), or clear the flag",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "called by ldc_cmd_set_direct_pwm for driver type 0; flag stops ldc_led_driver_type0_update"
+ },
+ "fn_40008300": {
+  "name": "gpio_switch_mux",
+  "brief": "Hand a GPIO pin to the GPIO function: set its bit, clear its pin-specific mux bit",
+  "topic": "gpio",
+  "basis": "proven",
+  "evidence": "original name, in its own error text '[ERR] gpio_switch_mux: gpio index out of range'"
+ },
+ "fn_400086a4": {
+  "name": "gpio_set_input",
+  "brief": "Run gpio_switch_mux, then clear the pin's bit in the 0x14E0..0x14FC words",
+  "topic": "gpio",
+  "basis": "proven",
+  "evidence": "original name, in its own error text '[ERR] gpio_set_input: gpio index out of range'; no caller"
+ },
+ "fn_400089e8": {
+  "name": "gpio_output_clear",
+  "brief": "Clear EXPSTATE bit gpio (0..31)",
+  "topic": "gpio",
+  "basis": "derived",
+  "evidence": "clrb_expstate per case; error text 'gpio_set_output'; dbg_cmd_gpio_test"
+ },
+ "fn_40008ad8": {
+  "name": "gpio_output_clear_masked",
+  "brief": "Clear EXPSTATE bit n with one masked write",
+  "topic": "gpio",
+  "basis": "descriptive",
+  "evidence": "wrmsk_expstate(0, 1<<n); no caller"
+ },
+ "fn_40008af8": {
+  "name": "gpio_output_set",
+  "brief": "Set EXPSTATE bit gpio (0..31)",
+  "topic": "gpio",
+  "basis": "derived",
+  "evidence": "setb_expstate per case; error text 'gpio_set_output'; dbg_cmd_gpio_test"
+ },
+ "fn_40008be8": {
+  "name": "gpio_output_set_masked",
+  "brief": "Set EXPSTATE bit n with one masked write",
+  "topic": "gpio",
+  "basis": "descriptive",
+  "evidence": "wrmsk_expstate(1<<n, 1<<n); no caller"
+ },
+ "fn_40008c10": {
+  "name": "gpio_output_toggle",
+  "brief": "Invert EXPSTATE bit n",
+  "topic": "gpio",
+  "basis": "descriptive",
+  "evidence": "rur.expstate, xor, wrmsk_expstate; no caller"
+ },
+ "fn_40008c38": {
+  "name": "gpio_input_read",
+  "brief": "Return bit n of the IMPWIRE input",
+  "topic": "gpio",
+  "basis": "descriptive",
+  "evidence": "read_impwire; no caller"
+ },
+ "fn_40008c58": {
+  "name": "gpio_input_read_all",
+  "brief": "Return the whole IMPWIRE input word",
+  "topic": "gpio",
+  "basis": "descriptive",
+  "evidence": "read_impwire; no caller"
+ },
+ "fn_40008c60": {
+  "name": "irq_line_init",
+  "brief": "Set or clear line bit n in 0xE00A106C, write 0xE00A1070, clear bit in 0xE00A1068",
+  "topic": "irq",
+  "basis": "descriptive",
+  "evidence": "code only; called last by irq_sw_install and ldc_irq_install"
+ },
+ "fn_40008ce0": {
+  "name": "irq_line_config",
+  "brief": "Pulse a line's +0x30 bit and set/clear its bit+16 in the line's 0xE00A10xx word",
+  "topic": "irq",
+  "basis": "descriptive",
+  "evidence": "code only; called by irq_sw_install and ldc_irq_install"
+ },
+ "fn_40008de4": {
+  "name": "irq_line_ack",
+  "brief": "Pulse a line's +0x30 bit and write 1 << line to 0xE00A1070",
+  "topic": "irq",
+  "basis": "derived",
+  "evidence": "first call in both interrupt handlers (irq_sw_handler, ldc_irq_handler)"
+ },
+ "fn_40008e88": {
+  "name": "irq_sw_handler",
+  "brief": "Interrupt 0 handler: set the SW_IRQ flag and acknowledge line 0",
+  "topic": "irq",
+  "basis": "derived",
+  "evidence": "installed for interrupt 0; main loop prints 'SW_IRQ!!' on the flag"
+ },
+ "fn_40008e9c": {
+  "name": "irq_sw_install",
+  "brief": "Install irq_sw_handler for interrupt 0, enable it and set up line 0",
+  "topic": "irq",
+  "basis": "derived",
+  "evidence": "irq_set_handler(0, irq_sw_handler), INTCLEAR/INTENABLE mask 1"
+ },
+ "fn_40008ec4": {
+  "name": "irq_block_start_and_wait",
+  "brief": "Write 1 to 0xE00A1004 and wait until its bit 0 reads 0",
+  "topic": "irq",
+  "basis": "descriptive",
+  "evidence": "code only; no caller"
+ },
+ "fn_40008ef0": {
+  "name": "ldc_irq_handler",
+  "brief": "Interrupt 9 handler: flag, ack, read segment values, count status bits 0/1/4",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "installed for interrupt 9; status 0xE0080404; main loop runs ldc_run_pass_on_new_frame"
+ },
+ "fn_40008f58": {
+  "name": "ldc_irq_install",
+  "brief": "Install ldc_irq_handler for interrupt 9, enable it and set up line 7",
+  "topic": "ldc",
+  "basis": "derived",
+  "evidence": "irq_set_handler(9, ldc_irq_handler), INTCLEAR/INTENABLE mask 0x200"
+ },
+ "fn_40008f84": {
+  "name": "timer_service_timer0",
+  "brief": "Interrupt 6 handler: re-arm CCOMPARE0 or stop, call the timer 0 callback",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "installed by timer_arm_timer0; ccompare0, record 0x3ffe5598 +0..+8"
+ },
+ "fn_40008fd8": {
+  "name": "timer_service_timer1",
+  "brief": "Interrupt 10 handler: re-arm CCOMPARE1 or stop, call the timer 1 callback",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "installed by timer_arm_timer1; ccompare1, record 0x3ffe5598 +12..+20"
+ },
+ "fn_4000902c": {
+  "name": "timer_service_tick",
+  "brief": "Interrupt 13 handler: count a tick, call the tick callback, move CCOMPARE2 by 0x6C34",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "installed by timer_start_tick; ccompare2, tick count read by timer_wait_ticks"
+ },
+ "fn_4000908c": {
+  "name": "timer_arm_timer0",
+  "brief": "Store timer 0 mode, period and callback; arm CCOMPARE0 and enable interrupt 6",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "wrapped by timer_start_timer0 / timer_start_counted_timer0; ccompare0"
+ },
+ "fn_400090c8": {
+  "name": "timer_arm_timer1",
+  "brief": "Store timer 1 mode, period and callback; arm CCOMPARE1 and enable interrupt 10",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "wrapped by timer_start_timer1 / timer_start_counted_timer1; ccompare1"
+ },
+ "fn_40009104": {
+  "name": "timer_start_tick",
+  "brief": "Store the tick callback; arm CCOMPARE2 every 0x6C34 cycles and enable interrupt 13",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "called once at start-up; installs timer_service_tick"
+ },
+ "fn_4000912c": {
+  "name": "timer_wait_ticks",
+  "brief": "Wait until the tick count has moved on by n",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "busy loop on 0x3ffe5598 +24 (counted by timer_service_tick); 13 callers"
+ },
+ "fn_400091a4": {
+  "name": "timer_read_ticks",
+  "brief": "Return the tick count read with interrupts masked",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "rsil 15 around the read of 0x3ffe5598 +24"
+ },
+ "fn_400091d0": {
+  "name": "uart_puts",
+  "brief": "Send a text via uart_send_text; return 0, or -1 for a null text",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "only caller dbg_printf passes its formatted buffer; firmware texts 'UART TX Test'"
+ },
+ "fn_400091f4": {
+  "name": "uart_getchar",
+  "brief": "Wait for one received byte (uart_wait_read_byte); negative becomes -1",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "uart_selftest reads 'Please input a character' through it"
+ },
+ "fn_40009218": {
+  "name": "lib_vsprintf",
+  "brief": "Format text with %d %u %x %X %c %s %p %P %l*, width 1-9, '0' pad, into buf",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "conversion switch lib_vsprintf_conv_table, va_list args; called by dbg_printf and lib_sprintf"
+ },
+ "fn_400099bc": {
+  "name": "dbg_printf",
+  "brief": "Format a text like printf into a 1024-byte stack buffer and send it to the serial port",
+  "topic": "dbg",
+  "basis": "proven",
+  "evidence": "48 callers pass printf format texts; uart_print_tx_test_lines prints 'printf test' through it"
+ },
+ "fn_40009a34": {
+  "name": "lib_unused_return_zero",
+  "brief": "Store a2..a7 in stack slots and return 0; no caller",
+  "topic": "lib",
+  "basis": "descriptive",
+  "evidence": "code only"
+ },
+ "fn_40009a4c": {
+  "name": "lib_sprintf",
+  "brief": "Format a text like sprintf into the caller's buffer through lib_vsprintf; no caller",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "va_list built with offset 8 (after buf and format), same call as dbg_printf"
+ },
+ "fn_40009a90": {
+  "name": "uart_print_tx_test_lines",
+  "brief": "Print the printf test lines of the serial port test and the expected result",
+  "topic": "uart",
+  "basis": "proven",
+  "evidence": "texts 'printf test', 'TEST result should be'; called between UART TX Test Start/End"
+ },
+ "fn_40009b50": {
+  "name": "uart_set_baud_divisor",
+  "brief": "Write (48000000>>4)/baud to 0xE00A0000/04 (bit 7 of 0xE00A000C set) and 0xE009101C",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "baud word of dbg_uart_config (115200); called by uart_init"
+ },
+ "fn_40009bc8": {
+  "name": "uart_set_line_format",
+  "brief": "Build 0xE00A000C from settings words +4 (bits 0-1), +8 (bits 3-5), +12 (bit 2)",
+  "topic": "uart",
+  "basis": "descriptive",
+  "evidence": "code only; called by uart_init with dbg_uart_config"
+ },
+ "fn_40009ca8": {
+  "name": "uart_init",
+  "brief": "Set up serial block 0xE00A0000 from a settings record, install rx handler on int 2",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "called by dbg_init_uart_print_banner with dbg_uart_config before the banner prints"
+ },
+ "fn_40009de8": {
+  "name": "uart_send_text",
+  "brief": "Write a text's bytes to 0xE00A0000 while 0xE00A0014 bit 5 is set; CR before LF",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "sends dbg_printf's buffer (via uart_puts)"
+ },
+ "fn_40009e88": {
+  "name": "uart_putc",
+  "brief": "Wait for bit 5 of 0xE00A0014, write one byte to 0xE00A0000, return it",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "code; caller dbg_memcmd_echo_char"
+ },
+ "fn_40009ec0": {
+  "name": "uart_try_read_byte",
+  "brief": "Return 0xE00A0000 when bit 0 of 0xE00A0014 is set, else -1 (no wait)",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "code; caller dbg_memcmd_poll_console"
+ },
+ "fn_40009ee8": {
+  "name": "uart_wait_read_byte",
+  "brief": "Wait for bit 0 of 0xE00A0014 and return the word at 0xE00A0000",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "code; caller uart_getchar (UART RX test)"
+ },
+ "fn_40009f10": {
+  "name": "uart_rx_irq_handler",
+  "brief": "Interrupt 2 handler: put the received value into the 128-word ring, ack 0xE00A1070",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "installed by uart_init via irq_set_handler(2, ...); ring read by uart_rx_ring_get"
+ },
+ "fn_40009f70": {
+  "name": "uart_rx_ring_get",
+  "brief": "Take the oldest byte from the receive ring into *out; return 1, or 0 when empty",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "code; caller dbg_console_poll"
+ },
+ "fn_40009fc8": {
+  "name": "uart_putc_timeout",
+  "brief": "Wait for bit 5 of 0xE00A0014 at most 0xFFFFF polls, then write one byte",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "code; callers dbg_console_poll and the 'mem' dump handler dbg_cmd_mem"
+ },
+ "fn_4000a010": {
+  "name": "uart_put_hex_word",
+  "brief": "Send a 32-bit value as 8 upper-case hex digits with the bounded wait",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "code; table '0123456789ABCDEF'"
+ },
+ "fn_4000a08c": {
+  "name": "uart_put_hex_byte",
+  "brief": "Send a byte as 2 upper-case hex digits with the bounded wait",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "code; table '0123456789ABCDEF'"
+ },
+ "fn_4000a10c": {
+  "name": "sys_set_all_regions_attribute_2",
+  "brief": "Set the attribute of all eight 512 MB regions to 2; no caller",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "code only: calls sys_set_region_attributes(0, 0xFFFFFFFF, 2, 0); nothing calls it"
+ },
+ "fn_4000a120": {
+  "name": "lib_copy_next_word",
+  "brief": "Copy the next space-separated word of a text into dst; return the address after it",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "code; used by dbg_memcmd_mr/mw/md/cfg to split their command lines"
+ },
+ "fn_4000a1f4": {
+  "name": "lib_parse_hex_text",
+  "brief": "Read a hex number from a text, scanning backwards, skipping spaces",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "code; used by dbg_memcmd_mr/mw/cfg on command words"
+ },
+ "fn_4000a2cc": {
+  "name": "lib_parse_decimal_text",
+  "brief": "Read a text as a decimal number from its last character back; skip spaces, stop at other chars",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: '0'..'9' times place value 1,10,100..; operands of dbg_memcmd_* (mr/mw/md/cfg)"
+ },
+ "fn_4000a374": {
+  "name": "sys_write_78_and_set_bit7",
+  "brief": "Write 78 to word 0x15AC and keep bits 0..6 of word 0x14F8 with bit 7 set",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "code only; no caller"
+ },
+ "fn_4000a39c": {
+  "name": "sys_write_78_or_79",
+  "brief": "Write 79 (flag set) or 78 (flag 0) to word 0x15AC",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "code only; no caller"
+ },
+ "fn_4000a3c4": {
+  "name": "timer_tick_callback_empty",
+  "brief": "Do nothing: the tick callback the main routine gives timer_start_tick",
+  "topic": "timer",
+  "basis": "proven",
+  "evidence": "empty body; passed to timer_start_tick by sys_init_and_run_main_loop"
+ },
+ "fn_4000a3cc": {
+  "name": "sys_init_and_run_main_loop",
+  "brief": "Set up console, interrupts, timers, dimming block; poll mailbox and console until power-down word",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "called once by startup; texts 'Got power down command..', 'Enter to Idle loop', 'SW_IRQ!!'"
+ },
+ "fn_4000a458": {
+  "name": "trap_syscall_handler",
+  "brief": "Exception cause 1: resume 3 bytes on; code 0 runs a call12 window pass and returns 0, else -1",
+  "topic": "trap",
+  "basis": "derived",
+  "evidence": "entry 1 of cause table trap_exception_cause_table; EPC1+3 with loop fix; a2 code test"
+ },
+ "fn_4000a4b8": {
+  "name": "trap_syscall_touch_a15",
+  "brief": "Open a window, write a15 to itself and return; holds the -1 exit of trap_syscall_handler",
+  "topic": "trap",
+  "basis": "descriptive",
+  "evidence": "call12 target of trap_syscall_handler; .L4000a4bf rfe exit"
+ },
+ "fn_4000a4c8": {
+  "name": "irq_set_handler_and_arg",
+  "brief": "Store handler and argument for interrupt n (0..21, level < 7); return previous non-default handler",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "table irq_handler_table read by the level 1/3/5 dispatchers; level bytes irq_level_of_interrupt"
+ },
+ "fn_4000a514": {
+  "name": "irq_set_handler",
+  "brief": "Install a handler for interrupt n with n as its argument",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "irq_set_handler_and_arg(n, handler, n); used by every interrupt set-up routine"
+ },
+ "fn_4000a524": {
+  "name": "irq_enable",
+  "brief": "Add mask bits to the enabled word and write INTENABLE; return the old enabled word",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "code: irq_enable_state +0 |= mask, INTENABLE = enabled & allowed"
+ },
+ "fn_4000a548": {
+  "name": "irq_disable",
+  "brief": "Remove mask bits from the enabled word and write INTENABLE; return the old enabled word",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "code: irq_enable_state +0 &= ~mask, INTENABLE = enabled & allowed"
+ },
+ "fn_4000a570": {
+  "name": "irq_dispatch_level1",
+  "brief": "Exception cause 4: run handlers of pending enabled interrupts, highest bit first",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "entry 4 of cause table; INTERRUPT & INTENABLE, nsau, INTCLEAR, callx12 table entry"
+ },
+ "fn_4000a680": {
+  "name": "irq_dispatch_level3",
+  "brief": "Run handlers of pending interrupts 9, 10, 11, 21 (lowest bit first); return with rfi 3",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "EXCSAVE3 target from reset; mask 0x00200E00 = level-3 bytes in irq_level_of_interrupt"
+ },
+ "fn_4000a74c": {
+  "name": "irq_dispatch_level5",
+  "brief": "Save all registers to 0x3FFE62F0, run the interrupt-13 handler, restore, rfi 5",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "EXCSAVE5 target from reset; INTCLEAR 0x2000, table entry 8 = interrupt 13"
+ },
+ "fn_4000a890": {
+  "name": "sys_set_region_attributes",
+  "brief": "Set the 4-bit attribute of each 512 MB region a range touches; return 0, -1, -2 or -3",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "code: nibble per address>>29, read/write via RDTLB1/WITLB/WDTLB helpers; flags 0x100/0x200/0x400/0x1000"
+ },
+ "fn_4000a994": {
+  "name": "sys_read_region_attributes",
+  "brief": "Read RDTLB1 of the eight 512 MB regions and pack their low nibbles into one word",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "code: rdtlb1 loop over 0xE0000000..0"
+ },
+ "fn_4000a9c0": {
+  "name": "sys_write_region_attributes",
+  "brief": "Write eight attribute nibbles into the instruction and data TLB entries of the 512 MB regions",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "code: witlb then wdtlb loops; also holds pieces of lib_copy_memory"
+ },
+ "fn_4000aa64": {
+  "name": "lib_copy_memory",
+  "brief": "Copy n bytes from src to dst using word moves (SRC joins for unaligned source); return dst",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code; callers copy LED driver frames and buffers"
+ },
+ "fn_4000ab5c": {
+  "name": "irq_default_handler",
+  "brief": "Execute BREAK 1,15: the handler of every interrupt that has none installed",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "initial value of all 22 entries of irq_handler_table; put back for handler 0"
+ },
+ "fn_4000ab64": {
+  "name": "irq_install_step_empty",
+  "brief": "Do nothing; called after irq_set_handler for interrupts 0, 2, 6 and 9",
+  "topic": "irq",
+  "basis": "descriptive",
+  "evidence": "empty body; callers irq_sw_install, ldc_irq_install, timer_arm_timer0, uart_init"
+ },
+ "fn_4000ab6c": {
+  "name": "irq_install_step_empty_timer1",
+  "brief": "Do nothing; called after irq_set_handler for interrupt 10 (timer 1)",
+  "topic": "irq",
+  "basis": "descriptive",
+  "evidence": "empty body; caller timer_arm_timer1"
+ },
+ "fn_4000ab74": {
+  "name": "irq_install_step_empty_tick",
+  "brief": "Do nothing; called after irq_set_handler for interrupt 13 (tick)",
+  "topic": "irq",
+  "basis": "descriptive",
+  "evidence": "empty body; caller timer_start_tick"
+ },
+ "fn_4000ab7c": {
+  "name": "irq_clear",
+  "brief": "Write a mask to INTCLEAR to clear pending interrupts",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "code: wsr.intclear"
+ },
+ "fn_4000ab84": {
+  "name": "timer_set_compare0_from_now",
+  "brief": "Set CCOMPARE0 = CCOUNT + cycles",
+  "topic": "timer",
+  "basis": "proven",
+  "evidence": "code; used by timer_arm_timer0"
+ },
+ "fn_4000ab94": {
+  "name": "timer_set_compare1_from_now",
+  "brief": "Set CCOMPARE1 = CCOUNT + cycles",
+  "topic": "timer",
+  "basis": "proven",
+  "evidence": "code; used by timer_arm_timer1"
+ },
+ "fn_4000aba4": {
+  "name": "timer_set_compare2_from_now",
+  "brief": "Set CCOMPARE2 = CCOUNT + cycles; file also holds the level-1 dispatcher exit",
+  "topic": "timer",
+  "basis": "proven",
+  "evidence": "code; used by timer_start_tick; .L4000abb4 return address of irq_dispatch_level1"
+ },
+ "fn_4000abcc": {
+  "name": "trap_break_on_other_cause",
+  "brief": "Exception causes 0, 2, 3: restore a2/a3, execute BREAK 1,1 and return to EPC1",
+  "topic": "trap",
+  "basis": "derived",
+  "evidence": "entries 0, 2, 3 of cause table trap_exception_cause_table"
+ },
+ "fn_4000abdc": {
+  "name": "timer_read_cycle_count",
+  "brief": "Return CCOUNT",
+  "topic": "timer",
+  "basis": "proven",
+  "evidence": "code: rsr.ccount"
+ },
+ "fn_4000abe4": {
+  "name": "timer_write_compare",
+  "brief": "Write a value to CCOMPARE0, 1 or 2",
+  "topic": "timer",
+  "basis": "proven",
+  "evidence": "code; timer service routines re-arm with it"
+ },
+ "fn_4000ac08": {
+  "name": "timer_read_compare",
+  "brief": "Return CCOMPARE0, 1 or 2 (0 for other numbers)",
+  "topic": "timer",
+  "basis": "proven",
+  "evidence": "code"
+ },
+ "fn_4000ac28": {
+  "name": "sys_empty_after_tlb_write_a",
+  "brief": "Do nothing; the first of two empty calls at the end of sys_set_region_attributes",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "code only: entry + retw.n; sole caller sys_set_region_attributes calls it after sys_write_region_attributes (witlb/wdtlb) when a3 != 0 and arg4 bit 12 clear"
+ },
+ "fn_4000ac30": {
+  "name": "sys_empty_after_tlb_write_b",
+  "brief": "Do nothing; the second of two empty calls at the end of sys_set_region_attributes",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "code only: entry + retw.n; sole caller sys_set_region_attributes, called right after sys_empty_after_tlb_write_a under the same condition"
+ }
+}

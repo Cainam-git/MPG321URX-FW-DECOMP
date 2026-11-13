@@ -1,0 +1,3 @@
+libgcc.a _ne_df.o __nedf2
+# leon2m FUN_a0156714: toolchain library function __nedf2 (libgcc.a:_ne_df.o, 100 bytes; the same code as the other
+# double compares); link order: between __eqdf2 and __gtdf2 as in libgcc.a. The archive member is the source.

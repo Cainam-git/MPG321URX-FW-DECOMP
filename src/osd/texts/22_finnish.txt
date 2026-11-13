@@ -1,0 +1,636 @@
+# Texts of language 22, named "suomi" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[51] (item 1, finnish)
+16e0d0.51 "{F0}suorittaaksesi paneelin suojaustoiminnon (Pitkä aika). "
+
+# osd_protect_long_execute_texts[22] (item 0, finnish)
+16e0d0.22 "{F0}Paina paneelin kuvanlaadun ylläpitämiseksi {F7}3{F0}Suorita{F7}3{F0}-painiketta "
+
+# osd_protect_long_auto_texts[22] (item 0, finnish)
+16f25c.22 "{F0}Paneelin kuvanlaadun säilyttämiseksi paneelin suojaus (pitkä aika) -toiminto "
+
+# osd_protect_long_title_texts[80] (item 2, finnish)
+16f670.80 "{F0}automaattisesti, kun monitoria käytetään yli 1 500  tuntia."
+
+# osd_protect_long_title_texts[51] (item 1, finnish)
+16f670.51 "{F0}Paneelin kuvanlaadun säilyttämiseksi paneelin suojaus (pitkä aika) -toiminto aktivoituu "
+
+# osd_protect_long_title_texts[22] (item 0, finnish)
+16f670.22 "{F0}MSI OLED -hoito - Paneelin suojaus (Pitkä aika)"
+
+# osd_protect_long_incomplete_texts[51] (item 1, finnish)
+172590.51 "{F0}tätä kohdetta edelleen suorittaaksesi tämän prosessin, jos sitä tarvitaan myöhemmin"
+
+# osd_protect_long_incomplete_texts[22] (item 0, finnish)
+172590.22 "{F0}Paneelin suojaus (Pitkä aika) -prosessia ei suoritettu loppuun. Valitse ja napsauta"
+
+# osd_protect_incomplete_texts[51] (item 1, finnish)
+173998.51 "{F0}tätä kohdetta edelleen suorittaaksesi tämän prosessin, jos sitä tarvitaan myöhemmin"
+
+# osd_protect_incomplete_texts[22] (item 0, finnish)
+173998.22 "{F0}Paneelin suojaus -prosessia ei suoritettu loppuun. Valitse ja napsauta"
+
+# osd_protect_long_incomplete_texts[80] (item 2, finnish)
+# osd_protect_incomplete_texts[80] (item 2, finnish)
+# osd_protect_execute_texts[80] (item 2, finnish)
+172590.80 "{F0}Ilmoitus:"
+
+# osd_protect_execute_texts[51] (item 1, finnish)
+174bd0.51 "{F0}suorittaaksesi paneelin -toiminnon."
+
+# osd_protect_execute_texts[22] (item 0, finnish)
+174bd0.22 "{F0}Paina paneelin kuvanlaadun ylläpitämiseksi \"Suorita\"-painiketta"
+
+# osd_protect_long_retry_texts[51] (item 1, finnish)
+175de4.51 "Paina {F7}3{F0}Suorita{F7}3{F0}-painiketta suorittaaksesi paneelin suojaustoiminnon (Pitkä aika)."
+
+# osd_protect_long_retry_texts[22] (item 0, finnish)
+175de4.22 "{F0}Paneelin suojaus (Pitkä aika) -prosessia ei suoritettu loppuun. "
+
+# osd_protect_retry_texts[51] (item 1, finnish)
+177270.51 "{F0}painiketta suorittaaksesi paneelin suojaustoiminnon. "
+
+# osd_protect_retry_texts[22] (item 0, finnish)
+177270.22 "{F0}Paneelin suojaus -prosessia ei suoritettu loppuun. Paina \"Suorita\"- "
+
+# osd_protect_auto_texts[22] (item 0, finnish)
+1785c0.22 "{F0}Paneelin kuvanlaadun säilyttämiseksi paneelin suojaus -toiminto"
+
+# osd_protect_long_auto_texts[51] (item 1, finnish)
+16f25c.51 "aktivoituu automaattisesti."
+
+# osd_protect_auto_texts[51] (item 1, finnish)
+1785c0.51 "aktivoituu automaattisesti."
+
+# osd_protect_long_execute_texts[138] (item 4, finnish)
+# osd_protect_long_auto_texts[138] (item 4, finnish)
+# osd_protect_long_title_texts[167] (item 5, finnish)
+# osd_protect_long_incomplete_texts[138] (item 4, finnish)
+# osd_protect_long_retry_texts[138] (item 4, finnish)
+16e0d0.138 "Virran merkkivalo vilkkuu valkoisena), kunnes prosessi on valmis."
+
+# osd_protect_long_execute_texts[109] (item 3, finnish)
+# osd_protect_long_auto_texts[109] (item 3, finnish)
+# osd_protect_long_title_texts[138] (item 4, finnish)
+# osd_protect_long_incomplete_texts[109] (item 3, finnish)
+# osd_protect_long_retry_texts[109] (item 3, finnish)
+16e0d0.109 "{F0}Tämän suojaustoiminnon suorittaminen loppuun voi kestää tunnin."
+
+# osd_protect_long_title_texts[341] (item 11, finnish)
+# osd_protect_long_retry_texts[312] (item 10, finnish)
+# osd_protect_retry_texts[312] (item 10, finnish)
+16f670.341 "{F0}POIS PÄÄLTÄ tai virransäästötilaan."
+
+# osd_protect_long_title_texts[312] (item 10, finnish)
+# osd_protect_long_retry_texts[283] (item 9, finnish)
+# osd_protect_retry_texts[283] (item 9, finnish)
+16f670.312 "Jos napsautat \"Peruuta\",  prosessi aktivoituu automaattisesti, kun kytket monitorin"
+
+# osd_protect_long_execute_texts[254] (item 8, finnish)
+# osd_protect_long_auto_texts[254] (item 8, finnish)
+# osd_protect_long_title_texts[283] (item 9, finnish)
+# osd_protect_long_incomplete_texts[254] (item 8, finnish)
+# osd_protect_incomplete_texts[254] (item 8, finnish)
+# osd_protect_execute_texts[254] (item 8, finnish)
+# ... and 4 more entries
+16e0d0.254 "{F0}uudelleen peruaksesi tämän toiminnon."
+
+# osd_protect_long_execute_texts[225] (item 7, finnish)
+# osd_protect_long_auto_texts[225] (item 7, finnish)
+# osd_protect_long_title_texts[254] (item 8, finnish)
+# osd_protect_long_incomplete_texts[225] (item 7, finnish)
+# osd_protect_incomplete_texts[225] (item 7, finnish)
+# osd_protect_execute_texts[225] (item 7, finnish)
+# ... and 4 more entries
+16e0d0.225 "{F0}Paina prosessin suorituksen aikana virtapainiketta"
+
+# osd_protect_long_execute_texts[196] (item 6, finnish)
+# osd_protect_long_auto_texts[196] (item 6, finnish)
+# osd_protect_long_title_texts[225] (item 7, finnish)
+# osd_protect_long_incomplete_texts[196] (item 6, finnish)
+# osd_protect_incomplete_texts[196] (item 6, finnish)
+# osd_protect_execute_texts[196] (item 6, finnish)
+# ... and 4 more entries
+16e0d0.196 "{F0} "
+
+# osd_protect_long_execute_texts[167] (item 5, finnish)
+# osd_protect_long_auto_texts[167] (item 5, finnish)
+# osd_protect_long_title_texts[196] (item 6, finnish)
+# osd_protect_long_incomplete_texts[167] (item 5, finnish)
+# osd_protect_incomplete_texts[167] (item 5, finnish)
+# osd_protect_execute_texts[167] (item 5, finnish)
+# ... and 4 more entries
+16e0d0.167 "{F0}Älä irrota virtajohtoa monitorista prosessin suorituksen aikana."
+
+# osd_protect_incomplete_texts[138] (item 4, finnish)
+# osd_protect_execute_texts[138] (item 4, finnish)
+# osd_protect_retry_texts[138] (item 4, finnish)
+# osd_protect_auto_texts[138] (item 4, finnish)
+# osd_protect_title_texts[167] (item 5, finnish)
+173998.138 "{F0}Virran merkkivalo vilkkuu oranssina, kunnes prosessi on valmis."
+
+# osd_protect_incomplete_texts[109] (item 3, finnish)
+# osd_protect_execute_texts[109] (item 3, finnish)
+# osd_protect_retry_texts[109] (item 3, finnish)
+# osd_protect_auto_texts[109] (item 3, finnish)
+# osd_protect_title_texts[138] (item 4, finnish)
+173998.109 "{F0}Tämän suojaustoiminnon suorittaminen loppuun voi kestää useita minuutteja."
+
+# osd_protect_long_execute_texts[80] (item 2, finnish)
+# osd_protect_long_auto_texts[80] (item 2, finnish)
+# osd_protect_long_title_texts[109] (item 3, finnish)
+# osd_protect_long_retry_texts[80] (item 2, finnish)
+# osd_protect_retry_texts[80] (item 2, finnish)
+# osd_protect_auto_texts[80] (item 2, finnish)
+# ... and 1 more entries
+16e0d0.80 "{F0}Ilmoitus:"
+
+# osd_protect_title_texts[80] (item 2, finnish)
+179a14.80 "{F0}aktivoituu automaattisesti, kun monitoria käytetään yli 4 tuntia."
+
+# osd_protect_title_texts[51] (item 1, finnish)
+179a14.51 "{F0}Paneelin kuvanlaadun säilyttämiseksi paneelin suojaus -toiminto "
+
+# osd_protect_title_texts[22] (item 0, finnish)
+179a14.22 "MSI OLED Care - Paneelin suojaus"
+
+# osd_protect_retry_texts[428] (item 14, finnish)
+# osd_protect_title_texts[399] (item 13, finnish)
+177270.428 "{F0}paneelin kumulatiivinen käyttö on yli 24 tuntia."
+
+# osd_protect_retry_texts[399] (item 13, finnish)
+# osd_protect_title_texts[370] (item 12, finnish)
+177270.399 "{F0}Jos napsautat \"Myöhemmin\"-painiketta, ilmoitus tulee näkyviin vain, kun"
+
+# osd_protect_retry_texts[370] (item 12, finnish)
+# osd_protect_title_texts[341] (item 11, finnish)
+177270.370 "{F0}automaattisesti, kytkettäessä näyttö pois tai virransäästötilaan. "
+
+# osd_protect_retry_texts[341] (item 11, finnish)
+# osd_protect_title_texts[312] (item 10, finnish)
+177270.341 "{F0}Jos napsautat painiketta \"Peruuta\" tai \"Myöhemmin\", prosessi aktivoituu "
+
+# osd_change_notice_line3_texts[22] (item 0, finnish)
+180b60.22 "Valitse jokin seuraavista valinnoista:"
+
+# osd_change_notice_line2_texts[22] (item 0, finnish)
+181058.22 "tämän monitorin virrankulutusta."
+
+# osd_change_notice_line1_texts[22] (item 0, finnish)
+1814d8.22 "Valitun toiminnon vaihtaminen voi lisätä"
+
+# osd_change_notice_title_texts[22] (item 0, finnish)
+1819cc.22 "Vahvista muutos!"
+
+# table_1821d4[51] (item 1, finnish)
+1821d4.51 "Digitaalinen"
+
+# table_1821d4[22] (item 0, finnish)
+1821d4.22 "Analoginen"
+
+# osd_pbp_source_texts[51] (item 1, finnish)
+182534.51 "Lähde 2"
+
+# osd_pbp_source_texts[22] (item 0, finnish)
+182534.22 "Lähde 1"
+
+# osd_pip_item_texts[80] (item 2, finnish)
+1828c0.80 "Sijainti"
+
+# osd_pip_item_texts[51] (item 1, finnish)
+1828c0.51 "PIP-koko"
+
+# osd_pip_item_texts[22] (item 0, finnish)
+1828c0.22 "Lähde"
+
+# osd_pip_item_texts[138] (item 4, finnish)
+1828c0.138 "Audiokytkin"
+
+# osd_pip_item_texts[109] (item 3, finnish)
+1828c0.109 "Näyttökytkin"
+
+# osd_choice_note_function_texts[138] (item 4, finnish)
+1832e4.138 "Näytön koko"
+
+# osd_choice_note_reducing_texts[167] (item 5, finnish)
+183cb4.167 "{F0}VRR-sisältöä."
+
+# osd_choice_note_reducing_texts[138] (item 4, finnish)
+183cb4.138 "{F0}näytön vastaanottaessa"
+
+# osd_choice_note_reducing_texts[109] (item 3, finnish)
+183cb4.109 "{F0}Tämä toiminto ei toimi "
+
+# osd_choice_note_reducing_texts[80] (item 2, finnish)
+183cb4.80 "{F0}\"DisplayHDR\" -asetuksista."
+
+# osd_choice_note_reducing_texts[51] (item 1, finnish)
+183cb4.51 "{F0}\"Kirkkaus-\" tai"
+
+# osd_choice_note_reducing_texts[22] (item 0, finnish)
+183cb4.22 "{F0}Vähennysvaik. riippuu"
+
+# osd_choice_note_texts[138] (item 4, finnish)
+183a70.138 "{F0}suorittamiseen"
+
+# osd_choice_note_texts[109] (item 3, finnish)
+183a70.109 "Noin tunti loppuun"
+
+# osd_choice_note_texts[80] (item 2, finnish)
+183a70.80 "{F0}valmistumiseen"
+
+# osd_choice_note_texts[51] (item 1, finnish)
+183a70.51 "{F0}Noin 15 min"
+
+# osd_choice_note_texts[22] (item 0, finnish)
+183a70.22 "{F0}Ilmoitus:"
+
+# osd_oled_care_item_texts[80] (item 2, finnish)
+185e78.80 "{F0}Suojaa ilmoitus"
+
+# osd_oled_care_function_texts[167] (item 5, finnish)
+# osd_oled_care_item_texts[196] (item 6, finnish)
+185bc0.167 "{F0}Rajan tunnistus"
+
+# osd_oled_care_function_texts[138] (item 4, finnish)
+# osd_oled_care_item_texts[167] (item 5, finnish)
+185bc0.138 "{F0}Tehtäväpalkin tunnistus"
+
+# osd_oled_care_function_texts[109] (item 3, finnish)
+# osd_oled_care_item_texts[138] (item 4, finnish)
+185bc0.109 "{F0}Usean logon tunnistus"
+
+# osd_oled_care_item_texts[225] (item 7, finnish)
+185e78.225 "{F0}OLED-paneelitiedot."
+
+# osd_oled_care_function_texts[80] (item 2, finnish)
+# osd_oled_care_item_texts[109] (item 3, finnish)
+185bc0.80 "{F0}Staat. näytöntun."
+
+# osd_oled_care_function_texts[22] (item 0, finnish)
+# osd_oled_care_item_texts[51] (item 1, finnish)
+185bc0.22 "{F0}Paneelin suojaus"
+
+# osd_oled_care_function_texts[51] (item 1, finnish)
+# osd_oled_care_item_texts[22] (item 0, finnish)
+185bc0.51 "{F0}Pikselinsiirto"
+
+# osd_choice_note_function_texts[312] (item 10, finnish)
+# osd_settings_item_texts[225] (item 7, finnish)
+1832e4.312 "{F0}Type C -PD-lataus"
+
+# osd_settings_item_texts[138] (item 4, finnish)
+1874f8.138 "Virtapainike"
+
+# osd_settings_item_texts[283] (item 9, finnish)
+1874f8.283 "Nollaa"
+
+# osd_settings_item_texts[80] (item 2, finnish)
+1874f8.80 "OSD:n aikakatkaisu"
+
+# osd_settings_item_texts[51] (item 1, finnish)
+1874f8.51 "Läpinäkyvyys"
+
+# osd_settings_item_texts[22] (item 0, finnish)
+1874f8.22 "Kieli"
+
+# osd_professional_item_texts[80] (item 2, finnish)
+188634.80 "Kuvan parantaminen"
+
+# osd_professional_item_texts[51] (item 1, finnish)
+188634.51 "Matala Sininen valo"
+
+# osd_professional_item_texts[22] (item 0, finnish)
+188634.22 "Pro-tila"
+
+# osd_night_vision_texts[109] (item 3, finnish)
+1890d4.109 "Vahvin"
+
+# osd_night_vision_texts[80] (item 2, finnish)
+1890d4.80 "Vahva"
+
+# osd_night_vision_texts[51] (item 1, finnish)
+1890d4.51 "Normaali"
+
+# osd_choice_note_function_texts[283] (item 9, finnish)
+# osd_gaming_item_texts[51] (item 1, finnish)
+1832e4.283 "Pimeänäkö"
+
+# osd_gaming_item_texts[138] (item 4, finnish)
+188da0.138 "Herätyskello"
+
+# osd_gaming_item_texts[109] (item 3, finnish)
+188da0.109 "Virkistystaajuus"
+
+# osd_choice_note_function_texts[167] (item 5, finnish)
+1832e4.167 "Vasteaika"
+
+# osd_gaming_item_texts[22] (item 0, finnish)
+188da0.22 "Pelitila"
+
+# osd_choice_note_function_texts[196] (item 6, finnish)
+# osd_gi_item_texts[80] (item 2, finnish)
+1832e4.196 "Optix-kiikaritähtäin"
+
+# osd_oled_care_seconds_texts[109] (item 3, finnish)
+18a7ec.109 "{F0}240 s"
+
+# osd_oled_care_seconds_texts[80] (item 2, finnish)
+18a7ec.80 "{F0}120 s"
+
+# osd_oled_care_seconds_texts[51] (item 1, finnish)
+18a7ec.51 "{F0}100 s"
+
+# osd_oled_care_seconds_texts[22] (item 0, finnish)
+18a7ec.22 "{F0}50 s"
+
+# table_18af08[51] (item 1, finnish)
+# table_18b008[51] (item 1, finnish)
+18af08.51 "{F0}Manuaalisesti"
+
+# osd_oled_care_usage_texts[51] (item 1, finnish)
+18b29c.51 "{F0}Käyttö yli 24 tuntia"
+
+# osd_oled_care_speed_texts[80] (item 2, finnish)
+18b5e0.80 "{F0}Nopea"
+
+# osd_oled_care_speed_texts[22] (item 0, finnish)
+18b5e0.22 "{F0}Hidas"
+
+# osd_oled_care_choice_texts[80] (item 2, finnish)
+# osd_oled_care_status_texts[80] (item 2, finnish)
+16df60.80 "{F0}Vähennystaso"
+
+# osd_oled_care_status_texts[51] (item 1, finnish)
+18b94c.51 "{F0}Vaadittu aika"
+
+# osd_oled_care_status_texts[22] (item 0, finnish)
+18b94c.22 "{F0}Aloitusaika"
+
+# table_18c070[51] (item 1, finnish)
+18c070.51 "{F0}Pitkä aika"
+
+# table_18c070[22] (item 0, finnish)
+18c070.22 "{F0}Lyhyt aika"
+
+# table_18c4a8[22] (item 0, finnish)
+18c4a8.22 "{F0}Siirtymisnopeus (Pikselinsiirto)"
+
+# osd_image_item_texts[138] (item 4, finnish)
+18ca88.138 "Näytön koko"
+
+# osd_image_item_texts[109] (item 3, finnish)
+18ca88.109 "Värilämpötila"
+
+# osd_image_item_texts[80] (item 2, finnish)
+18ca88.80 "Terävyys"
+
+# osd_image_item_texts[51] (item 1, finnish)
+18ca88.51 "Kontrasti"
+
+# osd_language_texts[22] (item 0, finnish)
+18d3d4.22 "suomi"
+
+# osd_optix_scope_item_texts[51] (item 1, finnish)
+18d578.51 "Tähtäimen suhde"
+
+# osd_optix_scope_item_texts[22] (item 0, finnish)
+18d578.22 "Tähtäinkoko"
+
+# osd_color_temp_texts[109] (item 3, finnish)
+18db28.109 "Mukautus"
+
+# osd_color_temp_texts[80] (item 2, finnish)
+18db28.80 "Lämmin"
+
+# osd_color_temp_texts[22] (item 0, finnish)
+18db28.22 "Viileä"
+
+# osd_response_time_texts[80] (item 2, finnish)
+18e08c.80 "Nopein"
+
+# osd_response_time_texts[51] (item 1, finnish)
+18e08c.51 "Nopea"
+
+# osd_oled_care_speed_texts[51] (item 1, finnish)
+# osd_color_temp_texts[51] (item 1, finnish)
+# osd_response_time_texts[22] (item 0, finnish)
+18b5e0.51 "Normaali"
+
+# osd_crosshair_color_texts[51] (item 1, finnish)
+18e54c.51 "Punainen"
+
+# osd_crosshair_color_texts[22] (item 0, finnish)
+18e54c.22 "Valkoinen"
+
+# table_18c8b8[80] (item 2, finnish)
+# osd_pbp_mode_texts[80] (item 2, finnish)
+# osd_location_texts[138] (item 4, finnish)
+18c8b8.80 "Mukauta"
+
+# osd_location_texts[109] (item 3, finnish)
+18e9f8.109 "Oikea ala"
+
+# osd_location_texts[80] (item 2, finnish)
+18e9f8.80 "Vasen ala"
+
+# osd_location_texts[51] (item 1, finnish)
+18e9f8.51 "Oikea ylä"
+
+# osd_location_texts[22] (item 0, finnish)
+18e9f8.22 "Vasen ylä"
+
+# osd_size_texts[80] (item 2, finnish)
+18f550.80 "Suuri"
+
+# osd_size_texts[51] (item 1, finnish)
+18f550.51 "Keskikoko"
+
+# osd_size_texts[22] (item 0, finnish)
+18f550.22 "Pieni"
+
+# osd_crosshair_item_texts[138] (item 4, finnish)
+18f984.138 "Nollaa"
+
+# osd_crosshair_item_texts[109] (item 3, finnish)
+18f984.109 "Sijainti"
+
+# osd_crosshair_item_texts[80] (item 2, finnish)
+18f984.80 "{F0}Väri"
+
+# osd_crosshair_item_texts[51] (item 1, finnish)
+18f984.51 "Kuvake"
+
+# osd_crosshair_item_texts[22] (item 0, finnish)
+18f984.22 "Ei mitään"
+
+# osd_protect_button_texts[80] (item 2, finnish)
+190184.80 "{F0}Myöhemmin"
+
+# osd_protect_button_texts[51] (item 1, finnish)
+190184.51 "{F0}Peru"
+
+# osd_protect_button_texts[22] (item 0, finnish)
+190184.22 "{F0}Suorita"
+
+# osd_yes_no_texts[51] (item 1, finnish)
+190748.51 "Ei"
+
+# osd_yes_no_texts[22] (item 0, finnish)
+190748.22 "Kyllä"
+
+# osd_kvm_texts[51] (item 1, finnish)
+1909ec.51 "Paluusuunta"
+
+# table_190cec[51] (item 1, finnish)
+190cec.51 "{F0}Huippu 1 000 nitiä"
+
+# osd_navi_key_item_texts[109] (item 3, finnish)
+19158c.109 "Oikea"
+
+# osd_navi_key_item_texts[80] (item 2, finnish)
+19158c.80 "Vasen"
+
+# osd_navi_key_item_texts[51] (item 1, finnish)
+19158c.51 "Alas"
+
+# osd_navi_key_item_texts[22] (item 0, finnish)
+19158c.22 "Ylös"
+
+# osd_info_box_texts[196] (item 6, finnish)
+191b30.196 "Bittisyvyys"
+
+# osd_info_box_texts[167] (item 5, finnish)
+191b30.167 "Sisältötyyppi"
+
+# osd_info_box_texts[138] (item 4, finnish)
+191b30.138 "Valittu tila"
+
+# osd_info_box_texts[80] (item 2, finnish)
+191b30.80 "Fyysinen resoluutio"
+
+# osd_info_box_texts[51] (item 1, finnish)
+191b30.51 "Natiiviresoluutio"
+
+# osd_out_of_range_texts[22] (item 0, finnish)
+192d8c.22 "Pois alueelta!"
+
+# osd_no_signal_texts[22] (item 0, finnish)
+193008.22 "Ei signaalia"
+
+# osd_power_button_texts[51] (item 1, finnish)
+19336c.51 "Valmiustila"
+
+# osd_navi_function_texts[312] (item 10, finnish)
+1935bc.312 "Optix-kiikaritähtäin"
+
+# osd_navi_function_texts[283] (item 9, finnish)
+1935bc.283 "Pimeänäkö"
+
+# osd_info_box_texts[109] (item 3, finnish)
+# osd_navi_function_texts[225] (item 7, finnish)
+191b30.109 "Virkistystaajuus"
+
+# osd_gi_item_texts[51] (item 1, finnish)
+# osd_navi_function_texts[109] (item 3, finnish)
+18a360.51 "{F0}Älykäs tähtäin"
+
+# osd_navi_function_texts[138] (item 4, finnish)
+1935bc.138 "Herätyskello"
+
+# osd_navi_function_texts[80] (item 2, finnish)
+1935bc.80 "Pelitila"
+
+# osd_choice_note_function_texts[51] (item 1, finnish)
+# osd_image_item_texts[22] (item 0, finnish)
+# osd_navi_function_texts[51] (item 1, finnish)
+1832e4.51 "Kirkkaus"
+
+# osd_settings_item_texts[167] (item 5, finnish)
+# table_18c8b8[109] (item 3, finnish)
+# osd_navi_function_texts[254] (item 8, finnish)
+1874f8.167 "Tiedot näytöllä"
+
+# osd_navi_function_texts[196] (item 6, finnish)
+1935bc.196 "PIP/PBP-tila"
+
+# osd_image_enhancement_texts[138] (item 4, finnish)
+194b34.138 "Vahvin"
+
+# osd_image_enhancement_texts[109] (item 3, finnish)
+194b34.109 "Vahva"
+
+# osd_image_enhancement_texts[80] (item 2, finnish)
+194b34.80 "Keskitaso"
+
+# osd_image_enhancement_texts[51] (item 1, finnish)
+194b34.51 "Heikko"
+
+# osd_pro_mode_texts[109] (item 3, finnish)
+1951dc.109 "Elokuva"
+
+# osd_pro_mode_texts[80] (item 2, finnish)
+1951dc.80 "Sinisen esto"
+
+# osd_pro_mode_texts[138] (item 4, finnish)
+1951dc.138 "Toimisto"
+
+# osd_oled_care_choice_texts[51] (item 1, finnish)
+# osd_optix_scope_item_texts[109] (item 3, finnish)
+# osd_off_on_texts[51] (item 1, finnish)
+# table_195a38[80] (item 2, finnish)
+16df60.51 "PÄÄLLÄ"
+
+# osd_location_texts[167] (item 5, finnish)
+# table_195a38[22] (item 0, finnish)
+# table_195c7c[22] (item 0, finnish)
+18e9f8.167 "Sijainti"
+
+# osd_game_mode_texts[22] (item 0, finnish)
+195f24.22 "{F0}Premium väri"
+
+# osd_pro_mode_texts[51] (item 1, finnish)
+# osd_game_mode_texts[51] (item 1, finnish)
+1951dc.51 "Käyttäjä"
+
+# osd_game_mode_texts[109] (item 3, finnish)
+195f24.109 "Kilpa-ajo"
+
+# osd_pbp_mode_texts[51] (item 1, finnish)
+18e89c.51 "Tila 2"
+
+# osd_pbp_mode_texts[22] (item 0, finnish)
+18e89c.22 "Tila 1"
+
+# osd_pip_pbp_texts[51] (item 1, finnish)
+196678.51 "{F0}Kuva kuvassa"
+
+# osd_oled_care_choice_texts[22] (item 0, finnish)
+# osd_night_vision_texts[22] (item 0, finnish)
+# table_18c8b8[22] (item 0, finnish)
+# osd_optix_scope_item_texts[80] (item 2, finnish)
+# osd_off_on_texts[22] (item 0, finnish)
+# osd_power_button_texts[22] (item 0, finnish)
+# ... and 5 more entries
+16df60.22 "POIS"
+
+# osd_tab_name_texts[196] (item 6, finnish)
+196dc0.196 "Navigointinäppäin"
+
+# osd_tab_name_texts[225] (item 7, finnish)
+196dc0.225 "Asetus"
+
+# osd_info_box_texts[22] (item 0, finnish)
+# osd_navi_function_texts[167] (item 5, finnish)
+# osd_tab_name_texts[138] (item 4, finnish)
+191b30.22 "Tulolähde"
+
+# osd_tab_name_texts[109] (item 3, finnish)
+196dc0.109 "Kuva"
+
+# osd_tab_name_texts[80] (item 2, finnish)
+196dc0.80 "Professional"
+
+# osd_tab_name_texts[51] (item 1, finnish)
+196dc0.51 "Pelaaminen"

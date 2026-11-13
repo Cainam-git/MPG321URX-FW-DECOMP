@@ -1,0 +1,7 @@
+/* Names used in the source of FUN_a00d6038; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define input_api_set_channel_link_option     FUN_a014931c
+#define input_user_apply_channel3_link_option FUN_a00d6038
+/* Stored data. */
+#define user_settings_channel3_link_option    DAT_a802d2e2
+/* End of names. */

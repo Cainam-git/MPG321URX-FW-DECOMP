@@ -1,0 +1,3 @@
+# Bytes of the fonts area (flash 0x2101F0-0x275DE7) that belong to no font and no block.
+# Written by tools/osd_gen.py. Everything else between the tables is zero fill.
+

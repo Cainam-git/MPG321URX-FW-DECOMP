@@ -1,0 +1,7 @@
+/* Names used in the source of FUN_a00daae8; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define oled_set_pixel_shift_on_off   FUN_a0126ae4
+#define oled_user_apply_pixel_shift   FUN_a00daae8
+/* Stored data. */
+#define user_settings_oled_care_flags _DAT_a802d46c
+/* End of names. */

@@ -1,0 +1,663 @@
+# Texts of language 6, named "{F2}한국어" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[35] (item 1, korean)
+16e0d0.35 "{F0}({F2}장시간{F0}) {F2}기적감{F0} {F2}충클하누시오{F0}."
+
+# osd_protect_long_execute_texts[6] (item 0, korean)
+16e0d0.6 "{F2}업3{F0} {F2}화{F7}”{F2}감{F0} {F7}ď{F2}지하{F7}{8C}{F2}면{F0} '{F2}실클{F0}' {F2}버튼감{F0} {F7}{8D}{F2}러{F0} {F2}업3{F0} {F2}보호"
+
+# osd_protect_long_auto_texts[6] (item 0, korean)
+16f25c.6 "{F2}업3{F0} {F2}화{F7}”{F2}감{F0} {F7}ď{F2}지하기{F0} {F2}위해{F0} {F2}업3{F0} {F2}보호{F0}({F2}장시간{F0}) {F2}기적이{F0} {F2}자동확로"
+
+# osd_protect_long_title_texts[64] (item 2, korean)
+16f670.64 "{F2}보호{F0}({F2}장시간{F0}) {F2}기적이{F0} {F2}자동확로{F0} {F2}활성화만니다{F0}."
+
+# osd_protect_long_title_texts[35] (item 1, korean)
+16f670.35 "{F2}업3{F0} {F2}화{F7}”{F2}감{F0} {F7}ď{F2}지하기{F0} {F2}위해{F0} 1,500{F2}시간{F0} {F2}이상{F0} {F2}모니터{F0} {F2}사용{F0} {F2}시{F0} {F2}업3"
+
+# osd_protect_long_title_texts[6] (item 0, korean)
+16f670.6 "MSI OLED Care - {F2}업3{F0} {F2}보호{F0} ({F2}장시간{F0})"
+
+# osd_protect_long_incomplete_texts[35] (item 1, korean)
+172590.35 "{F2}이{F0} {F7}{94}후{F2}감{F0} {F2}선택{F0} {F7}필{F0} {F7}항목{F2}하{F7}및{F0} {F2}이{F0} {F2}프로{D6}스를{F0} {F2}실클하누시오{F0}."
+
+# osd_protect_long_incomplete_texts[6] (item 0, korean)
+172590.6 "{F2}업3{F0} {F2}보호{F0}({F2}장시간{F0}) {F2}프로{D6}스가{F0} {F2}{C4}료릭지{F0} {F7}«»{F2}달니다{F0}. {F2}향{F7}{91}{F0} {F7}{92}{F2}요거{F0} {F2}따{F7}{93}"
+
+# osd_protect_incomplete_texts[35] (item 1, korean)
+173998.35 "{F2}선택{F0} {F7}및{F0} {F2}클릭하{F7}여{F0} {F2}이{F0} {F2}프로{DC}스를{F0} {F2}실행하십시오{F0}."
+
+# osd_protect_incomplete_texts[6] (item 0, korean)
+173998.6 "{F2}패널{F0} {F2}보호프로{DC}스가{F0} {F2}완료되지{F0} {F2}않았{D2}니다{F0}. {F2}향{F7}후{F0} {F7}필{F2}요에{F0} {F2}따{CB}{F0} {F2}이{F0} {F7}항목{F2}{DA}"
+
+# osd_protect_long_incomplete_texts[64] (item 2, korean)
+# osd_protect_incomplete_texts[64] (item 2, korean)
+# osd_protect_execute_texts[64] (item 2, korean)
+172590.64 "{F2}알림{F0}:"
+
+# osd_protect_execute_texts[35] (item 1, korean)
+174bd0.35 "{F2}{C4}행합니다{F0}."
+
+# osd_protect_execute_texts[6] (item 0, korean)
+174bd0.6 "{F2}패널{F0} {F2}이미지{F0} {F2}품질{DA}{F0} {F2}유지하려면{F0} \"{F2}실행{F0}\" {F2}버튼{DA}{F0} {F2}눌러{F0} {F2}패널{F0} {F2}보호{F2}기{D0}{DA}"
+
+# osd_protect_long_retry_texts[35] (item 1, korean)
+175de4.35 "{F2}업3{F0} {F2}보호{F0}({F2}장시간{F0}) {F2}기적감{F0} {F2}충클하누시오{F0}."
+
+# osd_protect_long_retry_texts[6] (item 0, korean)
+175de4.6 "{F2}업3{F0} {F2}보호{F0}({F2}장시간{F0}) {F2}프로{D6}스가{F0} {F2}{C4}료릭지{F0} {F7}«»{F2}달니다{F0}. '{F2}실클{F0}' {F2}버튼감{F0} {F7}{8D}{F2}러"
+
+# osd_protect_retry_texts[35] (item 1, korean)
+177270.35 "{F2}패널{F0} {F2}보호기{D0}{DA}{F0} {F2}{C4}행하십시오{F0}. "
+
+# osd_protect_retry_texts[6] (item 0, korean)
+177270.6 "{F2}패널{F0} {F2}보호프로{DC}스가{F0} {F2}완료되지{F0} {F2}않았{D2}니다{F0}. '{F2}실행{F0}' {F2}버튼{DA}{F0} {F2}눌러{F0} "
+
+# osd_protect_auto_texts[6] (item 0, korean)
+1785c0.6 "{F2}패널{F0} {F2}화질{DA}{F0} {F2}유지하기{F0} {F2}위해{F0} {F2}패널{F0} {F2}보호기{D0}이{F0} {F2}자동으로{F0} {F2}활성화됩니다{F0}."
+
+# osd_protect_long_auto_texts[35] (item 1, korean)
+16f25c.35 "{F2}활성화만니다{F0}."
+
+# osd_protect_auto_texts[35] (item 1, korean)
+1785c0.35 "{F0} "
+
+# osd_protect_long_execute_texts[122] (item 4, korean)
+# osd_protect_long_auto_texts[122] (item 4, korean)
+# osd_protect_long_title_texts[151] (item 5, korean)
+# osd_protect_long_incomplete_texts[122] (item 4, korean)
+# osd_protect_long_retry_texts[122] (item 4, korean)
+16e0d0.122 "{F2}프로{D6}스{F0} {F2}{C4}료{F0} {F2}시{CE}지{F0} {F2}전원{F0} {F2}{CF}시{D0}은{F0} {F2}완색확로{F0} {F2}테바입니다{F0}."
+
+# osd_protect_long_execute_texts[93] (item 3, korean)
+# osd_protect_long_auto_texts[93] (item 3, korean)
+# osd_protect_long_title_texts[122] (item 4, korean)
+# osd_protect_long_incomplete_texts[93] (item 3, korean)
+# osd_protect_long_retry_texts[93] (item 3, korean)
+16e0d0.93 "{F2}이{F0} {F2}보호{F0} {F2}기적은{F0} {F2}{C4}료하준{F0} {F2}효{F0} 1{F2}시간이{F0} {F2}또에{F0} {F2}충{F0} {F2}있달니다{F0}."
+
+# osd_protect_long_title_texts[325] (item 11, korean)
+# osd_protect_long_retry_texts[296] (item 10, korean)
+# osd_protect_retry_texts[296] (item 10, korean)
+16f670.325 "{F2}{DC}스가{F0} {F2}자동으로{F0} {F2}활성화됩니다{F0}."
+
+# osd_protect_long_title_texts[296] (item 10, korean)
+# osd_protect_long_retry_texts[267] (item 9, korean)
+# osd_protect_retry_texts[267] (item 9, korean)
+16f670.296 "{F0}'{F2}취소{F0}' {F2}버튼{DA}{F0} {F2}누르면{F0} {F2}모니터가{F0} {F7}꺼{F2}지거{D6}{F0} {F2}절전{F0} {F2}모드로{F0} {F2}전{F7}환될{F0} {F2}때{F0} {F2}프로"
+
+# osd_protect_long_execute_texts[238] (item 8, korean)
+# osd_protect_long_auto_texts[238] (item 8, korean)
+# osd_protect_long_title_texts[267] (item 9, korean)
+# osd_protect_long_incomplete_texts[238] (item 8, korean)
+# osd_protect_incomplete_texts[238] (item 8, korean)
+# osd_protect_execute_texts[238] (item 8, korean)
+# ... and 4 more entries
+16e0d0.238 "{F0} "
+
+# osd_protect_long_execute_texts[209] (item 7, korean)
+# osd_protect_long_auto_texts[209] (item 7, korean)
+# osd_protect_long_title_texts[238] (item 8, korean)
+# osd_protect_long_incomplete_texts[209] (item 7, korean)
+# osd_protect_incomplete_texts[209] (item 7, korean)
+# osd_protect_execute_texts[209] (item 7, korean)
+# ... and 4 more entries
+16e0d0.209 "{F2}프로{DC}스{F0} {F2}실행{F0} {F2}중에{F0} {F2}전원{F0} {F2}버튼{DA}{F0} {F2}다시{F0} {F2}누르면{F0} {F2}이{F0} {F2}기{D0}이{F0} {F2}취소됩니다{F0}."
+
+# osd_protect_long_execute_texts[180] (item 6, korean)
+# osd_protect_long_auto_texts[180] (item 6, korean)
+# osd_protect_long_title_texts[209] (item 7, korean)
+# osd_protect_long_incomplete_texts[180] (item 6, korean)
+# osd_protect_incomplete_texts[180] (item 6, korean)
+# osd_protect_execute_texts[180] (item 6, korean)
+# ... and 4 more entries
+16e0d0.180 "{F0} "
+
+# osd_protect_long_execute_texts[151] (item 5, korean)
+# osd_protect_long_auto_texts[151] (item 5, korean)
+# osd_protect_long_title_texts[180] (item 6, korean)
+# osd_protect_long_incomplete_texts[151] (item 5, korean)
+# osd_protect_incomplete_texts[151] (item 5, korean)
+# osd_protect_execute_texts[151] (item 5, korean)
+# ... and 4 more entries
+16e0d0.151 "{F2}프로{DC}스가{F0} {F2}실행되는{F0} {F2}동안{F0} {F2}모니터에{F7}서{F0} {F2}전원{F0} {F7}코{F2}드를{F0} {F7}{B8}{F2}지{F0} {F7}마{F2}십시오{F0}."
+
+# osd_protect_incomplete_texts[122] (item 4, korean)
+# osd_protect_execute_texts[122] (item 4, korean)
+# osd_protect_retry_texts[122] (item 4, korean)
+# osd_protect_auto_texts[122] (item 4, korean)
+# osd_protect_title_texts[151] (item 5, korean)
+173998.122 "{F2}프로{DC}스가{F0} {F2}완료{F7}될{F0} {F2}때{F7}까{F2}지{F0} {F2}전원{F0} {F2}표시{F7}등{F2}이{F0} {F7}주황{F2}색으로{F0} {F7}깜박{F2}입니다{F0}."
+
+# osd_protect_incomplete_texts[93] (item 3, korean)
+# osd_protect_execute_texts[93] (item 3, korean)
+# osd_protect_retry_texts[93] (item 3, korean)
+# osd_protect_auto_texts[93] (item 3, korean)
+# osd_protect_title_texts[122] (item 4, korean)
+173998.93 "{F2}이{F0} {F2}보호{F0} {F2}기{D0}{DA}{F0} {F2}완료하는{F0} {F7}데{F0} {F7}몇{F0} {F7}분{F0} {F2}정도{F0} {F7}걸릴{F0} {F2}{C4}{F0} {F2}있{D2}니다{F0}."
+
+# osd_protect_long_execute_texts[64] (item 2, korean)
+# osd_protect_long_auto_texts[64] (item 2, korean)
+# osd_protect_long_title_texts[93] (item 3, korean)
+# osd_protect_long_retry_texts[64] (item 2, korean)
+# osd_protect_retry_texts[64] (item 2, korean)
+# osd_protect_auto_texts[64] (item 2, korean)
+# ... and 1 more entries
+16e0d0.64 "{F2}알림{F0}:"
+
+# osd_protect_title_texts[64] (item 2, korean)
+179a14.64 "{F2}으로{F0} {F2}활성화됩니다{F0}."
+
+# osd_protect_title_texts[35] (item 1, korean)
+179a14.35 "{F2}패널{F0} {F2}화질{DA}{F0} {F2}유지하기{F0} {F2}위해{F0} 4{F2}시간{F0} {F2}이상{F0} {F2}모니터{F0} {F2}사용{F0} {F2}시{F0} {F2}패널{F0} {F2}보호기{D0}이{F0} {F2}자동"
+
+# osd_protect_title_texts[6] (item 0, korean)
+179a14.6 "{F0}MSI OLED Care - {F2}패널{F0} {F2}보호"
+
+# osd_protect_retry_texts[412] (item 14, korean)
+# osd_protect_title_texts[383] (item 13, korean)
+177270.412 "{F2}알림이{F0} {F2}표시됩니다{F0}."
+
+# osd_protect_retry_texts[383] (item 13, korean)
+# osd_protect_title_texts[354] (item 12, korean)
+177270.383 "{F0}\"{F2}{D6}중에{F0}\" {F2}버튼{F0} {F2}클릭시{F0}, {F2}패널{F0} {F2}누적{F0} {F2}사용{DF}이{F0} 24{F2}시간{F0} {F2}이상인{F0} {F2}{CE}{CF}에만{F0} "
+
+# osd_protect_retry_texts[354] (item 12, korean)
+# osd_protect_title_texts[325] (item 11, korean)
+177270.354 "{F2}때{F0} {F2}이{F0} {F2}프로{DC}스가{F0} {F2}자동으로{F0} {F2}활성화"
+
+# osd_protect_retry_texts[325] (item 11, korean)
+# osd_protect_title_texts[296] (item 10, korean)
+177270.325 "{F0}\"{F2}취소{F0}\" {F2}또는{F0} \"{F2}{D6}중에{F0}\" {F2}버튼{F0} {F2}클릭시{F0}, {F2}모니터를{F0} {F2}끄거{D6}{F0} {F2}절전{F0} {F2}모드에{F0} {F2}있{DA}"
+
+# osd_change_notice_line3_texts[6] (item 0, korean)
+180b60.6 "{F2}다음{F0} {F2}옵션{F0} {F2}중{F0} {F2}하나를{F0} {F2}선택하세요{F0}:"
+
+# osd_change_notice_line2_texts[6] (item 0, korean)
+181058.6 "{F2}전력 소비량이 증가할 수 있습니다{F0}."
+
+# osd_change_notice_line1_texts[6] (item 0, korean)
+1814d8.6 "{F2}선택한 기능을 {9C}견하면 모니터의"
+
+# osd_change_notice_title_texts[6] (item 0, korean)
+1819cc.6 "{F2}변경확정{F0}!"
+
+# table_1821d4[35] (item 1, korean)
+1821d4.35 "{F2}디지털"
+
+# table_1821d4[6] (item 0, korean)
+1821d4.6 "{F2}아날로그"
+
+# osd_pbp_source_texts[35] (item 1, korean)
+182534.35 "{F2}소스 2"
+
+# osd_pbp_source_texts[6] (item 0, korean)
+182534.6 "{F2}소스 1"
+
+# osd_pip_item_texts[64] (item 2, korean)
+1828c0.64 "{F2}위치"
+
+# osd_pip_item_texts[35] (item 1, korean)
+1828c0.35 "{F2}{B5}{B6}{B5} 크기"
+
+# osd_pip_item_texts[6] (item 0, korean)
+1828c0.6 "{F2}소스"
+
+# osd_pip_item_texts[122] (item 4, korean)
+1828c0.122 "{F2}오디오 스위치"
+
+# osd_pip_item_texts[93] (item 3, korean)
+1828c0.93 "{F2}디스플레이 스위치"
+
+# osd_choice_note_function_texts[122] (item 4, korean)
+1832e4.122 "{F2}화면 크기"
+
+# osd_choice_note_reducing_texts[151] (item 5, korean)
+183cb4.151 "{F2}지{F0} {F2}않{D2}니다{F0}."
+
+# osd_choice_note_reducing_texts[122] (item 4, korean)
+183cb4.122 "{F2}{CE}{CF}{F0},{F2}이{F0} {F2}기{D0}이{F0} {F2}작동하"
+
+# osd_choice_note_reducing_texts[93] (item 3, korean)
+183cb4.93 "{F0}VRR {F2}콘텐츠를{F0} {F2}{C4}신하는"
+
+# osd_choice_note_reducing_texts[64] (item 2, korean)
+183cb4.64 "{F2}에{F0} {F2}따{CB}{F0} {F2}달{CB}집니다{F0}."
+
+# osd_choice_note_reducing_texts[35] (item 1, korean)
+183cb4.35 "{F2}는{F0} \"DisplayHDR\" {F2}설정"
+
+# osd_choice_note_reducing_texts[6] (item 0, korean)
+183cb4.6 "{F2}감소{F0} {F2}효과는{F0} \"{F2}밝기{F0}\" {F2}또"
+
+# osd_choice_note_texts[122] (item 4, korean)
+183a70.122 " "
+
+# osd_choice_note_texts[93] (item 3, korean)
+183a70.93 "{F2}{C4}료{CE}지{F0} {F2}약{F0} 1{F2}시간"
+
+# osd_choice_note_texts[64] (item 2, korean)
+183a70.64 " "
+
+# osd_choice_note_texts[35] (item 1, korean)
+183a70.35 "{F2}{C4}료{CE}지{F0} {F2}약{F0} 15{F2}는"
+
+# osd_choice_note_texts[6] (item 0, korean)
+183a70.6 "{F2}알림{F0}:"
+
+# osd_choice_note_enabling_texts[6] (item 0, korean)
+185af0.6 "{F2}이의{F0} {F2}활성화{F0} {F2}결과"
+
+# osd_oled_care_item_texts[64] (item 2, korean)
+185e78.64 "{F2}알림{F0} {F2}보호"
+
+# osd_oled_care_function_texts[151] (item 5, korean)
+# osd_oled_care_item_texts[180] (item 6, korean)
+185bc0.151 "{F2}{CE}계{F0} {F2}감지"
+
+# osd_oled_care_function_texts[122] (item 4, korean)
+# osd_oled_care_item_texts[151] (item 5, korean)
+185bc0.122 "{F2}테스크바{F0} {F2}감지"
+
+# osd_oled_care_function_texts[93] (item 3, korean)
+# osd_oled_care_item_texts[122] (item 4, korean)
+185bc0.93 "{F2}멀티{F0} {F2}로고{F0} {F2}감지"
+
+# osd_oled_care_item_texts[209] (item 7, korean)
+185e78.209 "{F0}OLED {F2}패널{F0} {F2}정보"
+
+# osd_oled_care_function_texts[64] (item 2, korean)
+# osd_oled_care_item_texts[93] (item 3, korean)
+185bc0.64 "{F2}정적{F0} {F2}화면{F0} {F2}감지"
+
+# osd_oled_care_function_texts[6] (item 0, korean)
+# osd_oled_care_item_texts[35] (item 1, korean)
+185bc0.6 "{F2}패널{F0} {F2}보호"
+
+# osd_oled_care_function_texts[35] (item 1, korean)
+# osd_oled_care_item_texts[6] (item 0, korean)
+185bc0.35 "{F2}픽셀{F0} {F2}시프트"
+
+# osd_choice_note_function_texts[296] (item 10, korean)
+# osd_settings_item_texts[209] (item 7, korean)
+1832e4.296 "{F0}Type C PD {F2}충전"
+
+# osd_settings_item_texts[122] (item 4, korean)
+1874f8.122 "{F2}전원 버튼"
+
+# osd_settings_item_texts[267] (item 9, korean)
+1874f8.267 "{F2}재설정"
+
+# osd_settings_item_texts[64] (item 2, korean)
+1874f8.64 "{F2}OSD 시간 제한"
+
+# osd_settings_item_texts[35] (item 1, korean)
+1874f8.35 "{F2}투명도"
+
+# osd_settings_item_texts[6] (item 0, korean)
+1874f8.6 "{F2}언어"
+
+# osd_professional_item_texts[64] (item 2, korean)
+188634.64 "{F2}이미지 향상"
+
+# osd_professional_item_texts[35] (item 1, korean)
+188634.35 "{F2}로우{F0} {F2}블루라이트"
+
+# osd_professional_item_texts[6] (item 0, korean)
+188634.6 "{F2}프로 모드"
+
+# osd_night_vision_texts[93] (item 3, korean)
+1890d4.93 "{F2}가장 강하게"
+
+# osd_night_vision_texts[64] (item 2, korean)
+1890d4.64 "{F2}강하게"
+
+# osd_night_vision_texts[35] (item 1, korean)
+1890d4.35 "{F2}보통"
+
+# osd_choice_note_function_texts[267] (item 9, korean)
+# osd_gaming_item_texts[35] (item 1, korean)
+1832e4.267 "{F2}야간 시력"
+
+# osd_gaming_item_texts[122] (item 4, korean)
+188da0.122 "{F2}알람 시계"
+
+# osd_gaming_item_texts[93] (item 3, korean)
+188da0.93 "{F2}새로 고침 빈도"
+
+# osd_choice_note_function_texts[151] (item 5, korean)
+1832e4.151 "{F2}응답 시간"
+
+# osd_gaming_item_texts[6] (item 0, korean)
+188da0.6 "{F2}게임 모드"
+
+# osd_choice_note_function_texts[180] (item 6, korean)
+# osd_gi_item_texts[64] (item 2, korean)
+1832e4.180 "Optix {F2}범위"
+
+# osd_oled_care_seconds_texts[93] (item 3, korean)
+18a7ec.93 "{F0}240 {F7}초"
+
+# osd_oled_care_seconds_texts[64] (item 2, korean)
+18a7ec.64 "{F0}120 {F7}초"
+
+# osd_oled_care_seconds_texts[35] (item 1, korean)
+18a7ec.35 "{F0}100 {F7}초"
+
+# osd_oled_care_seconds_texts[6] (item 0, korean)
+18a7ec.6 "{F0}50 {F7}초"
+
+# table_18af08[35] (item 1, korean)
+# table_18b008[35] (item 1, korean)
+18af08.35 "{F2}충동확로"
+
+# osd_oled_care_usage_texts[35] (item 1, korean)
+18b29c.35 "{F0}24{F2}시간{F0} {F2}이상{F0} {F2}사용"
+
+# osd_oled_care_speed_texts[64] (item 2, korean)
+18b5e0.64 "{F2}빠르게"
+
+# osd_oled_care_speed_texts[6] (item 0, korean)
+18b5e0.6 "{F2}천천히"
+
+# osd_oled_care_choice_texts[64] (item 2, korean)
+# osd_oled_care_status_texts[64] (item 2, korean)
+16df60.64 "{F2}감소{F0} {F2}{C4}준"
+
+# osd_oled_care_status_texts[35] (item 1, korean)
+18b94c.35 "{F2}소요시간"
+
+# osd_oled_care_status_texts[6] (item 0, korean)
+18b94c.6 "{F2}시작{F0} {F2}시간"
+
+# table_18c070[35] (item 1, korean)
+18c070.35 "{F2}장시간"
+
+# table_18c070[6] (item 0, korean)
+18c070.6 "{F2}단시간"
+
+# table_18c4a8[6] (item 0, korean)
+18c4a8.6 "{F2}이동{F0} {F2}{B7}도{F0}({F2}십림{F0} {F2}시프트{F0})"
+
+# osd_image_item_texts[122] (item 4, korean)
+18ca88.122 "{F2}화면 크기"
+
+# osd_image_item_texts[93] (item 3, korean)
+18ca88.93 "{F2}색온도"
+
+# osd_image_item_texts[64] (item 2, korean)
+18ca88.64 "{F2}선명도"
+
+# osd_image_item_texts[35] (item 1, korean)
+18ca88.35 "{F2}명암"
+
+# osd_language_texts[6] (item 0, korean)
+18d3d4.6 "{F2}한국어"
+
+# osd_optix_scope_item_texts[35] (item 1, korean)
+18d578.35 "{F2}범위{F0} {F2}비{B3}"
+
+# osd_optix_scope_item_texts[6] (item 0, korean)
+18d578.6 "{F2}범위 크기"
+
+# osd_color_temp_texts[93] (item 3, korean)
+18db28.93 "{F2}사용자 지정"
+
+# osd_color_temp_texts[64] (item 2, korean)
+18db28.64 "{F2}따뜻하게"
+
+# osd_color_temp_texts[6] (item 0, korean)
+18db28.6 "{F2}차갑게"
+
+# osd_response_time_texts[64] (item 2, korean)
+18e08c.64 "{F2}가장 빠르게 "
+
+# osd_response_time_texts[35] (item 1, korean)
+18e08c.35 "{F2}빠르게"
+
+# osd_oled_care_speed_texts[35] (item 1, korean)
+# osd_color_temp_texts[35] (item 1, korean)
+# osd_response_time_texts[6] (item 0, korean)
+18b5e0.35 "{F2}보통"
+
+# osd_crosshair_color_texts[35] (item 1, korean)
+18e54c.35 "{F2}레드"
+
+# osd_crosshair_color_texts[6] (item 0, korean)
+18e54c.6 "{F2}화이트"
+
+# table_18c8b8[64] (item 2, korean)
+# osd_pbp_mode_texts[64] (item 2, korean)
+# osd_location_texts[122] (item 4, korean)
+18c8b8.64 "{F2}사용자{F0} {F2}지정"
+
+# osd_location_texts[93] (item 3, korean)
+18e9f8.93 "{F2}오른쪽 하단"
+
+# osd_location_texts[64] (item 2, korean)
+18e9f8.64 "{F2}왼쪽 하단"
+
+# osd_location_texts[35] (item 1, korean)
+18e9f8.35 "{F2}오른쪽 상단"
+
+# osd_location_texts[6] (item 0, korean)
+18e9f8.6 "{F2}왼쪽 상단"
+
+# osd_size_texts[64] (item 2, korean)
+18f550.64 "{F2}크게"
+
+# osd_size_texts[35] (item 1, korean)
+18f550.35 "{F2}중간"
+
+# osd_size_texts[6] (item 0, korean)
+18f550.6 "{F2}작게"
+
+# osd_crosshair_item_texts[122] (item 4, korean)
+18f984.122 "{F2}재설정"
+
+# osd_crosshair_item_texts[93] (item 3, korean)
+18f984.93 "{F2}위치"
+
+# osd_crosshair_item_texts[64] (item 2, korean)
+18f984.64 "{F2}색상"
+
+# osd_crosshair_item_texts[35] (item 1, korean)
+18f984.35 "{F2}아이콘"
+
+# osd_crosshair_item_texts[6] (item 0, korean)
+18f984.6 "{F2}없음"
+
+# osd_protect_button_texts[64] (item 2, korean)
+190184.64 "{F2}{D6}중에"
+
+# osd_protect_button_texts[35] (item 1, korean)
+190184.35 "{F2}취소"
+
+# osd_protect_button_texts[6] (item 0, korean)
+190184.6 "{F2}실행"
+
+# osd_yes_no_texts[35] (item 1, korean)
+190748.35 "{F2}아니요"
+
+# osd_yes_no_texts[6] (item 0, korean)
+190748.6 "{F2}예"
+
+# osd_kvm_texts[35] (item 1, korean)
+1909ec.35 "{F2}업스트림"
+
+# table_190cec[35] (item 1, korean)
+190cec.35 "{F2}최대{F0} 1000{F2}니트"
+
+# osd_navi_key_item_texts[93] (item 3, korean)
+19158c.93 "{F2}오른쪽"
+
+# osd_navi_key_item_texts[64] (item 2, korean)
+19158c.64 "{F2}왼쪽"
+
+# osd_navi_key_item_texts[35] (item 1, korean)
+19158c.35 "{F2}아래"
+
+# osd_navi_key_item_texts[6] (item 0, korean)
+19158c.6 "{F2}위"
+
+# osd_info_box_texts[180] (item 6, korean)
+191b30.180 "{F2}비트{F0} {F2}깊이"
+
+# osd_info_box_texts[151] (item 5, korean)
+191b30.151 "{F2}콘텐츠{F0} {F2}형식"
+
+# osd_info_box_texts[122] (item 4, korean)
+191b30.122 "{F2}모드{F0} {F2}선택"
+
+# osd_info_box_texts[64] (item 2, korean)
+191b30.64 "{F2}실제{F0} {F2}해상도"
+
+# osd_info_box_texts[35] (item 1, korean)
+191b30.35 "{F2}기본{F0} {F2}해상도"
+
+# osd_key_guide_texts[209] (item 7, korean)
+1928b0.209 "{F2}뒤로"
+
+# osd_key_guide_texts[180] (item 6, korean)
+1928b0.180 "{F2}종료"
+
+# osd_key_guide_texts[151] (item 5, korean)
+1928b0.151 "{F2}저장"
+
+# osd_key_guide_texts[122] (item 4, korean)
+1928b0.122 "{F2}선택"
+
+# osd_key_guide_texts[93] (item 3, korean)
+1928b0.93 "{F2}조정"
+
+# osd_key_guide_texts[64] (item 2, korean)
+1928b0.64 "{F2}스위치"
+
+# osd_key_guide_texts[35] (item 1, korean)
+1928b0.35 "{F2}엔터"
+
+# osd_key_guide_texts[6] (item 0, korean)
+1928b0.6 "{F2}이동"
+
+# osd_out_of_range_texts[6] (item 0, korean)
+192d8c.6 "{F2}범위를 벗어남!"
+
+# osd_no_signal_texts[6] (item 0, korean)
+193008.6 "{F2}신호 없음"
+
+# osd_power_button_texts[35] (item 1, korean)
+19336c.35 "{F2}대기"
+
+# osd_navi_function_texts[296] (item 10, korean)
+1935bc.296 "Optix {F2}범위"
+
+# osd_navi_function_texts[267] (item 9, korean)
+1935bc.267 "{F2}야간 시력"
+
+# osd_info_box_texts[93] (item 3, korean)
+# osd_navi_function_texts[209] (item 7, korean)
+191b30.93 "{F2}새로 고침 빈도"
+
+# osd_gi_item_texts[35] (item 1, korean)
+# osd_navi_function_texts[93] (item 3, korean)
+18a360.35 "{F2}스마트 십자선"
+
+# osd_navi_function_texts[122] (item 4, korean)
+1935bc.122 "{F2}알람 시계"
+
+# osd_navi_function_texts[64] (item 2, korean)
+1935bc.64 "{F2}게임 모드"
+
+# osd_choice_note_function_texts[35] (item 1, korean)
+# osd_image_item_texts[6] (item 0, korean)
+# osd_navi_function_texts[35] (item 1, korean)
+1832e4.35 "{F2}밝기"
+
+# osd_settings_item_texts[151] (item 5, korean)
+# table_18c8b8[93] (item 3, korean)
+# osd_navi_function_texts[238] (item 8, korean)
+1874f8.151 "{F2}화면 정보"
+
+# osd_navi_function_texts[180] (item 6, korean)
+1935bc.180 "{F2}{B5}{B6}{B5}{B7}{B5}{B8}{B5} 모드"
+
+# osd_image_enhancement_texts[122] (item 4, korean)
+194b34.122 "{F2}가장{F0} {F2}강하게"
+
+# osd_image_enhancement_texts[93] (item 3, korean)
+194b34.93 "{F2}강하게"
+
+# osd_image_enhancement_texts[64] (item 2, korean)
+194b34.64 "{F2}중간"
+
+# osd_image_enhancement_texts[35] (item 1, korean)
+194b34.35 "{F2}약하게"
+
+# osd_pro_mode_texts[6] (item 0, korean)
+1951dc.6 "{F2}절약"
+
+# osd_pro_mode_texts[93] (item 3, korean)
+1951dc.93 "{F2}영화"
+
+# osd_pro_mode_texts[64] (item 2, korean)
+1951dc.64 "{F2}안티{F0}-{F2}블루"
+
+# osd_pro_mode_texts[122] (item 4, korean)
+1951dc.122 "{F2}사무실"
+
+# osd_oled_care_choice_texts[35] (item 1, korean)
+# osd_optix_scope_item_texts[93] (item 3, korean)
+# osd_off_on_texts[35] (item 1, korean)
+# table_195a38[64] (item 2, korean)
+16df60.35 "{F2}켜기"
+
+# osd_location_texts[151] (item 5, korean)
+# table_195a38[6] (item 0, korean)
+# table_195c7c[6] (item 0, korean)
+18e9f8.151 "{F2}위치"
+
+# osd_game_mode_texts[6] (item 0, korean)
+195f24.6 "{F2}프리미엄{F0} {F2}컬러"
+
+# osd_pro_mode_texts[35] (item 1, korean)
+# osd_game_mode_texts[35] (item 1, korean)
+1951dc.35 "{F2}사용자"
+
+# osd_game_mode_texts[93] (item 3, korean)
+195f24.93 "{F2}레이싱"
+
+# osd_pbp_mode_texts[35] (item 1, korean)
+18e89c.35 "{F2}모드 2"
+
+# osd_pbp_mode_texts[6] (item 0, korean)
+18e89c.6 "{F2}모드 1"
+
+# osd_oled_care_choice_texts[6] (item 0, korean)
+# osd_night_vision_texts[6] (item 0, korean)
+# table_18c8b8[6] (item 0, korean)
+# osd_optix_scope_item_texts[64] (item 2, korean)
+# osd_off_on_texts[6] (item 0, korean)
+# osd_power_button_texts[6] (item 0, korean)
+# ... and 5 more entries
+16df60.6 "{F2}끄기"
+
+# osd_tab_name_texts[180] (item 6, korean)
+196dc0.180 "{F2}탐색 키"
+
+# osd_tab_name_texts[209] (item 7, korean)
+196dc0.209 "{F2}설정"
+
+# osd_info_box_texts[6] (item 0, korean)
+# osd_navi_function_texts[151] (item 5, korean)
+# osd_tab_name_texts[122] (item 4, korean)
+191b30.6 "{F2}입력 소스"
+
+# osd_tab_name_texts[93] (item 3, korean)
+196dc0.93 "{F2}이미지"
+
+# osd_tab_name_texts[64] (item 2, korean)
+196dc0.64 "{F2}프로"
+
+# osd_tab_name_texts[35] (item 1, korean)
+196dc0.35 "{F2}게이밍"

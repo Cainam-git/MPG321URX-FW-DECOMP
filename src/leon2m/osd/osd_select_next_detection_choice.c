@@ -1,0 +1,138 @@
+/* osd_select_next_detection_choice  (FUN_a00a177c)
+ *
+ * Move to the next detection choice row (down key)
+ * Note: Rows OFF, ON, level; Multi Logo (0xC0), Taskbar (0xC1), Boundary (0xC2) Detection.
+ * Name basis: derived - handler table 0xA802422C: down on states 0xC0..0xC2
+ *
+ * Matching notes
+ * --------------
+ * leon2m FUN_a00a177c @ 0xa00a177c, flags -mcpu=v8 -O3 -g.
+ * Source form the exact build depends on: osd_get_detection_field is a static copy written with the cases in the
+ * order 0xF7, 0xC0, 0xC1 (into 0xF8), 0xC2, 0xF9 and the levels of 0xF7 / 0xF9 read through the named bytes
+ * user_settings_multi_logo_level / user_settings_boundary_level; the compiler inlines it three times.
+ */
+
+/* Menu states of the three detection settings of the OLED Care page. In a choices state the list has three rows:
+ * OFF, ON and the level; the level is set on a slider state. */
+enum {
+    MENU_STATE_MULTI_LOGO_CHOICES = 0xC0,
+    MENU_STATE_TASKBAR_CHOICES    = 0xC1,
+    MENU_STATE_BOUNDARY_CHOICES   = 0xC2,
+    MENU_STATE_MULTI_LOGO_LEVEL   = 0xF7,
+    MENU_STATE_TASKBAR_LEVEL      = 0xF8,
+    MENU_STATE_BOUNDARY_LEVEL     = 0xF9
+};
+
+/* The state of an item row of the OLED Care page is PAGE_OLED_CARE_ITEMS + the row. */
+#define PAGE_OLED_CARE_ITEMS            0x34
+#define OLED_CARE_ITEM_MULTI_LOGO       4
+#define OLED_CARE_ITEM_TASKBAR          5
+#define OLED_CARE_ITEM_BOUNDARY         6
+
+/* Bytes of the user settings record (docs/RECORDS.md). */
+#define SETTINGS_MULTI_LOGO_DETECTION   0x1e8
+#define SETTINGS_MULTI_LOGO_LEVEL       0x1e9
+#define SETTINGS_TASKBAR_DETECTION      0x1ea
+#define SETTINGS_TASKBAR_LEVEL          0x1eb
+#define SETTINGS_BOUNDARY_DETECTION     0x1ec
+#define SETTINGS_BOUNDARY_LEVEL         0x1ed
+
+/* What osd_get_detection_field returns. */
+enum {
+    DETECT_ENABLED   = 1,   /* the on/off byte (0 off, 1 on) */
+    DETECT_LEVEL     = 2,   /* the level byte */
+    DETECT_ITEM_ROW  = 3,   /* row of the setting in the OLED Care item list */
+    DETECT_LEVEL_MIN = 4,   /* lowest level */
+    DETECT_LEVEL_MAX = 5    /* highest level */
+};
+
+/* Arguments of the menu drawing routines. */
+#define CHOICE_MARK_LIST        1       /* osd_draw_choice_mark: the mark in a choice list (0 = in the item list) */
+#define CHOICE_MARK_ON          1
+#define CHOICE_MARK_OFF         0
+#define CHOICE_ROW_PLAIN        0       /* osd_highlight_choice_row: plain highlight */
+#define CHOICE_ROW_EDGED        1       /* highlight with edge glyphs */
+#define HIGHLIGHT_ITEM_ACTIVE   1       /* osd_highlight_item_row: the cursor is in the item list */
+extern unsigned int osd_menu_state;   // 0xa802afec
+extern unsigned char user_settings[]; // base 0xa802d290
+extern unsigned char user_settings_multi_logo_level;   // 0xa802d479
+extern unsigned char user_settings_boundary_level;   // 0xa802d47d
+extern unsigned char osd_choice_row;
+extern void osd_draw_choice_mark(int, unsigned char, int);
+extern void osd_clear_choice_highlight(unsigned char);
+extern void osd_highlight_choice_row(unsigned char, int);
+extern void osd_draw_key_guide(unsigned int, unsigned int);
+extern void osd_update_key_guide(unsigned int, unsigned int);
+
+/* Return one value of the detection setting that the menu state names.
+ * Multi Logo is state 0xC0 (choices) / 0xF7 (level slider), Taskbar 0xC1 / 0xF8, Boundary 0xC2 / 0xF9; any other
+ * state gives 0. A choices state fills the on/off byte and the item row; a slider state fills the level and its
+ * range (Multi Logo 1..2, the other two 1..3). Taskbar choices (0xC1) continue into the Taskbar slider case, so
+ * they give the level and range as well. `which` is one of the DETECT_ constants.
+ * The firmware has this routine once (osd_get_detection_field); each file that uses it carries its own copy of the
+ * source, because the compiler inlines it and the case order below is what builds to the firmware's bytes. */
+static unsigned char osd_get_detection_field(unsigned char which)
+{
+    unsigned int enabled = 0, level = 0, item_row = 0, level_min = 0, level_max = 0;
+
+    switch (osd_menu_state) {
+    case MENU_STATE_MULTI_LOGO_LEVEL:
+        level = user_settings_multi_logo_level;
+        level_min = 1;
+        level_max = 2;
+        break;
+    case MENU_STATE_MULTI_LOGO_CHOICES:
+        enabled = user_settings[SETTINGS_MULTI_LOGO_DETECTION];
+        item_row = OLED_CARE_ITEM_MULTI_LOGO;
+        break;
+    case MENU_STATE_TASKBAR_CHOICES:
+        enabled = user_settings[SETTINGS_TASKBAR_DETECTION];
+        item_row = OLED_CARE_ITEM_TASKBAR;
+        /* continues into the Taskbar slider case */
+    case MENU_STATE_TASKBAR_LEVEL:
+        level = user_settings[SETTINGS_TASKBAR_LEVEL];
+        level_min = 1;
+        level_max = 3;
+        break;
+    case MENU_STATE_BOUNDARY_CHOICES:
+        enabled = user_settings[SETTINGS_BOUNDARY_DETECTION];
+        item_row = OLED_CARE_ITEM_BOUNDARY;
+        break;
+    case MENU_STATE_BOUNDARY_LEVEL:
+        level = user_settings_boundary_level;
+        level_min = 1;
+        level_max = 3;
+        break;
+    default:
+        return 0;
+    }
+    switch (which) {
+    case DETECT_ENABLED:   return enabled;
+    case DETECT_LEVEL:     return level;
+    case DETECT_ITEM_ROW:  return item_row;
+    case DETECT_LEVEL_MIN: return level_min;
+    case DETECT_LEVEL_MAX: return level_max;
+    default: return 0;
+    }
+}
+
+/*
+ * Down key in a detection choice list: move the cursor one row down.
+ *
+ * Counterpart of osd_select_prev_detection_choice. The list has three rows: 0 OFF, 1 ON, 2 the level. The
+ * routine removes the highlight of the old row, moves osd_choice_row down (from row 2 it wraps to row 0),
+ * highlights the new row, and then draws the mark of the stored choice (osd_get_detection_field(DETECT_ENABLED)):
+ * CHOICE_MARK_OFF while the cursor stands on the stored row, CHOICE_MARK_ON otherwise. Nothing is stored here. Reached through the key table for the states 0xC0..0xC2.
+ */
+void osd_select_next_detection_choice(void)
+{
+    osd_clear_choice_highlight(osd_choice_row);
+    osd_choice_row = osd_choice_row + 1;
+    if (osd_choice_row > 2)
+        osd_choice_row = 0;
+    osd_highlight_choice_row(osd_choice_row, CHOICE_ROW_EDGED);
+    if (osd_choice_row == osd_get_detection_field(DETECT_ENABLED))
+        osd_draw_choice_mark(CHOICE_MARK_LIST, osd_get_detection_field(DETECT_ENABLED), CHOICE_MARK_OFF);
+    else
+        osd_draw_choice_mark(CHOICE_MARK_LIST, osd_get_detection_field(DETECT_ENABLED), CHOICE_MARK_ON);
+}

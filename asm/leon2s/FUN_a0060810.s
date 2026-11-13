@@ -1,0 +1,5 @@
+# leon2s FUN_a0060810 0xa0060810-0xa0060820 (16 bytes)
+a0060810:  9f c5 c0 00  call  %l7
+a0060814:  01 00 00 00  nop
+a0060818:  81 e8 00 00  restore
+a006081c:  81 e0 00 00  save

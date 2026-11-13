@@ -1,0 +1,57 @@
+/* Names used in the source of FUN_a0080490; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define APPSetPowerOff                     FUN_a0080490
+#define SYSAPI_GetPowerOnType              FUN_a0148868
+#define SYSAPI_PanelOnOffControl           FUN_a014512c
+#define SYSAPI_PowerOff                    func_0x4008f8d8
+#define SYSAPI_SetPowerStatus              FUN_a0148aa8
+#define SYSAPI_WriteEEPROM                 FUN_a014aed0
+#define audio_api_set_mute                 FUN_a01479ec
+#define dbg_printf                         FUN_a00df170
+#define gpio_set_aux_bit0_low              FUN_a0124a08
+#define gpio_set_aux_bit1_low              FUN_a0125c18
+#define gpio_set_aux_bit3_pattern          FUN_a0125cb4
+#define gpio_set_aux_bit5_low              FUN_a0125be0
+#define gpio_set_aux_bit6_low              FUN_a0125934
+#define gpio_set_port12_bit0_low           FUN_a0125de4
+#define gpio_set_port2_bit2_low            FUN_a0125ac8
+#define gpio_set_port4_bit4_low_if_allowed FUN_a0124b40
+#define gpio_set_port4_bit7_low_if_allowed FUN_a0124ab0
+#define gpio_set_port5_bit7_low            FUN_a01259a4
+#define gpio_set_port6_bit2_low            FUN_a01258b4
+#define gpio_set_port7_bit1_low            FUN_a01258ec
+#define gpio_set_port7_bit2_low            FUN_a012596c
+#define gpio_set_port7_bit7_inverted       FUN_a01259c0
+#define hdmi_cec_api_reset                 FUN_a0147760
+#define input_api_select_ports             FUN_a01439d8
+#define ldc_api_set_dimming_mode           FUN_a014bd0c
+#define oled_flag_registers_read           FUN_a00fe47c
+#define oled_flag_registers_write          FUN_a00fe44c
+#define oled_power_get_field_10            FUN_a01279ac
+#define oled_power_get_field_11            FUN_a01279c4
+#define oled_power_get_field_12            FUN_a01279dc
+#define oled_power_get_state               FUN_a012792c
+#define oled_power_get_step                FUN_a0127944
+#define oled_power_set_field_09            FUN_a01278e4
+#define oled_power_set_field_0d            FUN_a01278f0
+#define oled_power_set_field_0f            FUN_a0127914
+#define oled_power_set_field_12            FUN_a01279d0
+#define oled_power_task                    FUN_a0127c78
+#define osd_close_menu                     FUN_a0090fd8
+#define panel_api_set_blurfree_mode        FUN_a014bc58
+#define panel_blurfree_apply_user_mode     FUN_a008767c
+#define sys_api_set_all_channels_flag25    FUN_a0143d98
+#define sys_api_set_flag_e403              FUN_a014a820
+#define sys_poll_events_stub_copy7         FUN_a0125a24
+#define sys_restart_channel                FUN_a012f1ec
+#define sys_set_key_blocked                FUN_a008ee6c
+#define sys_set_mode_byte_c9f8             FUN_a01243bc
+#define sys_user_apply_mode_byte           FUN_a00db174
+#define timer_api_get_ticks16              FUN_a0147724
+#define timer_sleep_ticks                  func_0x4008d1a0
+/* Stored data. */
+#define app_state_record                   DAT_a802cff4
+#define factory_record                     DAT_a802d274
+#define hdmi_cec_vendor_id_bytes           DAT_a8024010
+#define user_settings                      DAT_a802d290
+/* End of names. */

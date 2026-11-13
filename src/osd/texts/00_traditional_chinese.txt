@@ -1,0 +1,663 @@
+# Texts of language 0, named "{F4}繁體中文" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[29] (item 1, traditional_chinese)
+16e0d0.29 "{F0} "
+
+# osd_protect_long_execute_texts[0] (item 0, traditional_chinese)
+16e0d0.0 "{FB}{18}直{F4}護面板{FB}勿拔{F0},{FB}再{F4}選{F0}\"{FB}持{F4}準{F0}\"{F4}按鈕將會{FB}運{F4}準面板標護{F0}({F4}工時間{F0}){F4}功能{F0}."
+
+# osd_protect_long_auto_texts[0] (item 0, traditional_chinese)
+16f25c.0 "{FB}{18}直{F4}護面板{FB}勿拔{F0},{F4}面板標護{F0}({F4}工時間{F0}){F4}功能將{F4}自緣{FB}如{F4}緣{F0}."
+
+# osd_protect_long_title_texts[58] (item 2, traditional_chinese)
+16f670.58 "{FB}消前{F4}使用超{FB}未{F0}1,500{F4}小時自緣{FB}如{F4}緣{F0}."
+
+# osd_protect_long_title_texts[29] (item 1, traditional_chinese)
+16f670.29 "{FB}{18}直{F4}護面板{FB}勿拔{F0},{F4}面板標護{F0}({F4}工時間{F0}){F4}功能將{FB}壓"
+
+# osd_protect_long_title_texts[0] (item 0, traditional_chinese)
+16f670.0 "{F0}MSI OLED {F4}標護{F0} - {F4}面板標護{F0} ({F4}工時間{F0})"
+
+# osd_protect_long_incomplete_texts[29] (item 1, traditional_chinese)
+172590.29 "{F0} "
+
+# osd_protect_long_incomplete_texts[0] (item 0, traditional_chinese)
+172590.0 "{F4}面板標護{F0}({F4}工時間{F0}){F4}功能{FB}高{F4}收，{F0},{FB}{40}{41}才{42}{F4}效果{F0},{F4}請{FB}{43}{44}再{F4}選{FB}次{F4}功能來{FB}持{F4}準{F0}."
+
+# osd_protect_incomplete_texts[29] (item 1, traditional_chinese)
+173998.29 "{F0} "
+
+# osd_protect_incomplete_texts[0] (item 0, traditional_chinese)
+173998.0 "{F4}面板保護{F0} {F4}功能{FB}未完成{F0}, {FB}如後續有{F4}需{FB}要{F4}，請{FB}再次點{F4}選{FB}該{F4}功能來{FB}執{F4}行{F0}."
+
+# osd_protect_long_incomplete_texts[58] (item 2, traditional_chinese)
+# osd_protect_incomplete_texts[58] (item 2, traditional_chinese)
+# osd_protect_execute_texts[58] (item 2, traditional_chinese)
+172590.58 "{F4}須知{F0} : "
+
+# osd_protect_execute_texts[29] (item 1, traditional_chinese)
+174bd0.29 "{F0} "
+
+# osd_protect_execute_texts[0] (item 0, traditional_chinese)
+174bd0.0 "{FB}為維{F4}護面板{FB}品質{F0}, {FB}點{F4}選{F0}\"{FB}執{F4}行{F0}\"{F4}按鈕將會{FB}進{F4}行面板保護功能{F0}."
+
+# osd_protect_long_retry_texts[29] (item 1, traditional_chinese)
+175de4.29 "{F0} "
+
+# osd_protect_long_retry_texts[0] (item 0, traditional_chinese)
+175de4.0 "{F4}面板標護{F0}({F4}工時間{F0}){F4}功能{FB}高{F4}收，{F0},{F4}請{FB}再{F4}選{F0} \"{FB}持{F4}準{F0}\"{F4}按鈕來{FB}持{F4}準面板標護{F0}({F4}工時間{F0}){F4}功能{F0}."
+
+# osd_protect_retry_texts[29] (item 1, traditional_chinese)
+177270.29 "{F0} "
+
+# osd_protect_retry_texts[0] (item 0, traditional_chinese)
+177270.0 "{F4}面板保護功能{FB}未完成{F0}, {F4}請{FB}點{F4}選{F0} {F7}”{FB}執{F4}行{FB}”{F4}按鈕來{FB}執{F4}行面板保護功能{F0}. "
+
+# osd_protect_auto_texts[0] (item 0, traditional_chinese)
+1785c0.0 "{FB}為維{F4}護面板{FB}品質{F0}, {F4}面板保護功能將自動{FB}啓{F4}動{F0}."
+
+# osd_protect_long_auto_texts[29] (item 1, traditional_chinese)
+16f25c.29 "{F0} "
+
+# osd_protect_auto_texts[29] (item 1, traditional_chinese)
+1785c0.29 "{F0} "
+
+# osd_protect_long_execute_texts[116] (item 4, traditional_chinese)
+# osd_protect_long_auto_texts[116] (item 4, traditional_chinese)
+# osd_protect_long_title_texts[145] (item 5, traditional_chinese)
+# osd_protect_long_incomplete_texts[116] (item 4, traditional_chinese)
+# osd_protect_long_retry_texts[116] (item 4, traditional_chinese)
+16e0d0.116 "{F4}行源此示法會{FB}後才完成{F4}白{FB}橙指燈{F4}標護功能收，{F0}."
+
+# osd_protect_long_execute_texts[87] (item 3, traditional_chinese)
+# osd_protect_long_auto_texts[87] (item 3, traditional_chinese)
+# osd_protect_long_title_texts[116] (item 4, traditional_chinese)
+# osd_protect_long_incomplete_texts[87] (item 3, traditional_chinese)
+# osd_protect_long_retry_texts[87] (item 3, traditional_chinese)
+16e0d0.87 "{F4}知標護功能{FB}閃{F4}效果取決一小時接會收，{F0},"
+
+# osd_protect_long_title_texts[319] (item 11, traditional_chinese)
+# osd_protect_long_retry_texts[290] (item 10, traditional_chinese)
+# osd_protect_retry_texts[290] (item 10, traditional_chinese)
+16f670.319 "{F0} "
+
+# osd_protect_long_title_texts[290] (item 10, traditional_chinese)
+# osd_protect_long_retry_texts[261] (item 9, traditional_chinese)
+# osd_protect_retry_texts[261] (item 9, traditional_chinese)
+16f670.290 "{FB}若點{F4}選{FB}”{F4}取{FB}消”{F4}按鈕{F0}, {FB}該{F4}功能{FB}則{F4}會{FB}在{F4}關{FB}閉{F4}{EA}幕或{FB}進{F4}入{FB}省{F4}電模式時自動啟動{F0}."
+
+# osd_protect_long_execute_texts[232] (item 8, traditional_chinese)
+# osd_protect_long_auto_texts[232] (item 8, traditional_chinese)
+# osd_protect_long_title_texts[261] (item 9, traditional_chinese)
+# osd_protect_long_incomplete_texts[232] (item 8, traditional_chinese)
+# osd_protect_incomplete_texts[232] (item 8, traditional_chinese)
+# osd_protect_execute_texts[232] (item 8, traditional_chinese)
+# ... and 4 more entries
+16e0d0.232 "{F0} "
+
+# osd_protect_long_execute_texts[203] (item 7, traditional_chinese)
+# osd_protect_long_auto_texts[203] (item 7, traditional_chinese)
+# osd_protect_long_title_texts[232] (item 8, traditional_chinese)
+# osd_protect_long_incomplete_texts[203] (item 7, traditional_chinese)
+# osd_protect_incomplete_texts[203] (item 7, traditional_chinese)
+# osd_protect_execute_texts[203] (item 7, traditional_chinese)
+# ... and 4 more entries
+16e0d0.203 "{F4}按{FB}壓{F4}電源鍵可取{FB}消{F4}當{FB}前進{F4}行的保護功能{F0}."
+
+# osd_protect_long_execute_texts[174] (item 6, traditional_chinese)
+# osd_protect_long_auto_texts[174] (item 6, traditional_chinese)
+# osd_protect_long_title_texts[203] (item 7, traditional_chinese)
+# osd_protect_long_incomplete_texts[174] (item 6, traditional_chinese)
+# osd_protect_incomplete_texts[174] (item 6, traditional_chinese)
+# osd_protect_execute_texts[174] (item 6, traditional_chinese)
+# ... and 4 more entries
+16e0d0.174 "{F0} "
+
+# osd_protect_long_execute_texts[145] (item 5, traditional_chinese)
+# osd_protect_long_auto_texts[145] (item 5, traditional_chinese)
+# osd_protect_long_title_texts[174] (item 6, traditional_chinese)
+# osd_protect_long_incomplete_texts[145] (item 5, traditional_chinese)
+# osd_protect_incomplete_texts[145] (item 5, traditional_chinese)
+# osd_protect_execute_texts[145] (item 5, traditional_chinese)
+# ... and 4 more entries
+16e0d0.145 "{FB}進{F4}行保護功能時{F0},{F4}請{FB}勿拔除{F4}{EA}幕電源{F0}."
+
+# osd_protect_incomplete_texts[116] (item 4, traditional_chinese)
+# osd_protect_execute_texts[116] (item 4, traditional_chinese)
+# osd_protect_retry_texts[116] (item 4, traditional_chinese)
+# osd_protect_auto_texts[116] (item 4, traditional_chinese)
+# osd_protect_title_texts[145] (item 5, traditional_chinese)
+173998.116 "{F4}電源{FB}指{F4}示{FB}燈{F4}會{FB}持續閃爍橙燈直到{F4}保護功能{FB}完成{F0}."
+
+# osd_protect_incomplete_texts[87] (item 3, traditional_chinese)
+# osd_protect_execute_texts[87] (item 3, traditional_chinese)
+# osd_protect_retry_texts[87] (item 3, traditional_chinese)
+# osd_protect_auto_texts[87] (item 3, traditional_chinese)
+# osd_protect_title_texts[116] (item 4, traditional_chinese)
+173998.87 "{F4}此保護功能需{FB}要花費幾分{F4}鐘{FB}後才{F4}會{FB}完成{F0}."
+
+# osd_protect_long_execute_texts[58] (item 2, traditional_chinese)
+# osd_protect_long_auto_texts[58] (item 2, traditional_chinese)
+# osd_protect_long_title_texts[87] (item 3, traditional_chinese)
+# osd_protect_long_retry_texts[58] (item 2, traditional_chinese)
+# osd_protect_retry_texts[58] (item 2, traditional_chinese)
+# osd_protect_auto_texts[58] (item 2, traditional_chinese)
+# ... and 1 more entries
+16e0d0.58 "{F4}須知{F0} : "
+
+# osd_protect_title_texts[58] (item 2, traditional_chinese)
+179a14.58 "{F0}4{F4}小時自動{FB}啓{F4}動{F0}."
+
+# osd_protect_title_texts[29] (item 1, traditional_chinese)
+179a14.29 "{FB}為維{F4}護面板{FB}品質{F0}, {F4}面板保護功能將於{EA}幕使用超{FB}過"
+
+# osd_protect_title_texts[0] (item 0, traditional_chinese)
+179a14.0 "MSI OLED Care - {F4}面板保護"
+
+# osd_protect_retry_texts[406] (item 14, traditional_chinese)
+# osd_protect_title_texts[377] (item 13, traditional_chinese)
+177270.406 "{F0}24{F4}小時{FB}才{F4}會顯示{FB}通{F4}知。"
+
+# osd_protect_retry_texts[377] (item 13, traditional_chinese)
+# osd_protect_title_texts[348] (item 12, traditional_chinese)
+177270.377 "{FB}若點{F4}選{F0} {FB}“稍後”{F0} {F4}按鈕，{FB}僅{F4}當面板{FB}累{F4}計使用時間超{FB}過"
+
+# osd_protect_retry_texts[348] (item 12, traditional_chinese)
+# osd_protect_title_texts[319] (item 11, traditional_chinese)
+177270.348 "{F4}自動{FB}啓{F4}動{F0}."
+
+# osd_protect_retry_texts[319] (item 11, traditional_chinese)
+# osd_protect_title_texts[290] (item 10, traditional_chinese)
+177270.319 "{FB}若點{F4}選{F0} {FB}“{F4}取{FB}消”{F0} {F4}或{F0} {FB}“稍後”{F0} {F4}按鈕{F0}, {FB}該{F4}功能{FB}則{F4}會{FB}在{F4}關{FB}閉{F4}{EA}幕或{FB}進{F4}入{FB}省{F4}電模式時"
+
+# osd_change_notice_line3_texts[0] (item 0, traditional_chinese)
+180b60.0 "{F4}請選擇下列其中一個選項{F0}:"
+
+# osd_change_notice_line2_texts[0] (item 0, traditional_chinese)
+181058.0 "{F4}增加本顯示器的耗電量。"
+
+# osd_change_notice_line1_texts[0] (item 0, traditional_chinese)
+1814d8.0 "{F4}變更所選功能可能會"
+
+# osd_change_notice_title_texts[0] (item 0, traditional_chinese)
+1819cc.0 "{F4}確認變更！"
+
+# table_1821d4[29] (item 1, traditional_chinese)
+1821d4.29 "{F4}數位"
+
+# table_1821d4[0] (item 0, traditional_chinese)
+1821d4.0 "{F4}類比"
+
+# osd_pbp_source_texts[29] (item 1, traditional_chinese)
+182534.29 "{F4}來源 2"
+
+# osd_pbp_source_texts[0] (item 0, traditional_chinese)
+182534.0 "{F4}來源 1"
+
+# osd_pip_item_texts[58] (item 2, traditional_chinese)
+1828c0.58 "{F4}位置"
+
+# osd_pip_item_texts[29] (item 1, traditional_chinese)
+1828c0.29 "{F4}PIP 尺寸"
+
+# osd_pip_item_texts[0] (item 0, traditional_chinese)
+1828c0.0 "{F4}來源"
+
+# osd_pip_item_texts[116] (item 4, traditional_chinese)
+1828c0.116 "{F4}音訊切換"
+
+# osd_pip_item_texts[87] (item 3, traditional_chinese)
+1828c0.87 "{F4}顯示切換"
+
+# osd_choice_note_function_texts[116] (item 4, traditional_chinese)
+1832e4.116 "{F4}螢幕尺寸"
+
+# osd_choice_note_reducing_texts[145] (item 5, traditional_chinese)
+183cb4.145 " "
+
+# osd_choice_note_reducing_texts[116] (item 4, traditional_chinese)
+183cb4.116 "{F4}此功能無法{FB}運{F4}作。"
+
+# osd_choice_note_reducing_texts[87] (item 3, traditional_chinese)
+183cb4.87 "{F4}當{EA}幕接收{F0} VRR {F4}內容時，"
+
+# osd_choice_note_reducing_texts[58] (item 2, traditional_chinese)
+183cb4.58 "{F4}的設定"
+
+# osd_choice_note_reducing_texts[29] (item 1, traditional_chinese)
+183cb4.29 "{F0}\"{F4}亮度{F0}\"{F4}或{F0}\"DisplayHDR\""
+
+# osd_choice_note_reducing_texts[0] (item 0, traditional_chinese)
+183cb4.0 "{F4}亮度降低效果取決於"
+
+# osd_choice_note_texts[116] (item 4, traditional_chinese)
+183a70.116 " "
+
+# osd_choice_note_texts[87] (item 3, traditional_chinese)
+183a70.87 "{F4}大{FB}閃{F0}1{F4}小時可收，"
+
+# osd_choice_note_texts[58] (item 2, traditional_chinese)
+183a70.58 " "
+
+# osd_choice_note_texts[29] (item 1, traditional_chinese)
+183a70.29 "{F4}大{FB}閃{F0}15{F4}當鐘可收，"
+
+# osd_choice_note_texts[0] (item 0, traditional_chinese)
+183a70.0 "{F4}須知{F0} : " hidden 0f f3 96 5c f0 50 49 50 2f 50 42 50 f3 98 64 1e 10 f0 50 49 50 2f 50 42 50 f1 98 99 8c 9c 9d f0 20
+
+# osd_choice_note_enabling_texts[0] (item 0, traditional_chinese)
+185af0.0 "{F4}開啟它將影響"
+
+# osd_oled_care_item_texts[58] (item 2, traditional_chinese)
+185e78.58 "{F4}保護{FB}通{F4}知"
+
+# osd_oled_care_function_texts[145] (item 5, traditional_chinese)
+# osd_oled_care_item_texts[174] (item 6, traditional_chinese)
+185bc0.145 "{F4}邊緣偵測"
+
+# osd_oled_care_function_texts[116] (item 4, traditional_chinese)
+# osd_oled_care_item_texts[145] (item 5, traditional_chinese)
+185bc0.116 "{F4}工作列偵測"
+
+# osd_oled_care_function_texts[87] (item 3, traditional_chinese)
+# osd_oled_care_item_texts[116] (item 4, traditional_chinese)
+185bc0.87 "{F4}多重標誌偵測" hidden 17 43 75 73 74 6f 6d 20 50 72 6f 74 65 63 74 20 53 63 68 65 64 75 6c 65
+
+# osd_oled_care_item_texts[203] (item 7, traditional_chinese)
+185e78.203 "{F0}OLED {F4}面板資訊"
+
+# osd_oled_care_function_texts[58] (item 2, traditional_chinese)
+# osd_oled_care_item_texts[87] (item 3, traditional_chinese)
+185bc0.58 "{F4}靜態畫面偵測"
+
+# osd_oled_care_function_texts[0] (item 0, traditional_chinese)
+# osd_oled_care_item_texts[29] (item 1, traditional_chinese)
+185bc0.0 "{F4}面板保護"
+
+# osd_oled_care_function_texts[29] (item 1, traditional_chinese)
+# osd_oled_care_item_texts[0] (item 0, traditional_chinese)
+185bc0.29 "{F4}像素偏移"
+
+# osd_choice_note_function_texts[290] (item 10, traditional_chinese)
+# osd_settings_item_texts[203] (item 7, traditional_chinese)
+1832e4.290 "{F0}Type C PD {F4}充電"
+
+# osd_settings_item_texts[116] (item 4, traditional_chinese)
+1874f8.116 "{F4}電源按鈕"
+
+# osd_settings_item_texts[261] (item 9, traditional_chinese)
+1874f8.261 "{F4}重設"
+
+# osd_settings_item_texts[58] (item 2, traditional_chinese)
+1874f8.58 "{F4}OSD 逾時"
+
+# osd_settings_item_texts[29] (item 1, traditional_chinese)
+1874f8.29 "{F4}透明度"
+
+# osd_settings_item_texts[0] (item 0, traditional_chinese)
+1874f8.0 "{F4}語言"
+
+# osd_professional_item_texts[58] (item 2, traditional_chinese)
+188634.58 "{F4}影像增強"
+
+# osd_professional_item_texts[29] (item 1, traditional_chinese)
+188634.29 "{F4}低藍光"
+
+# osd_professional_item_texts[0] (item 0, traditional_chinese)
+188634.0 "{F4}專業模式"
+
+# osd_night_vision_texts[87] (item 3, traditional_chinese)
+1890d4.87 "{F4}最強"
+
+# osd_night_vision_texts[58] (item 2, traditional_chinese)
+1890d4.58 "{F4}強"
+
+# osd_night_vision_texts[29] (item 1, traditional_chinese)
+1890d4.29 "{F4}正常"
+
+# osd_choice_note_function_texts[261] (item 9, traditional_chinese)
+# osd_gaming_item_texts[29] (item 1, traditional_chinese)
+1832e4.261 "{F4}夜視"
+
+# osd_gaming_item_texts[116] (item 4, traditional_chinese)
+188da0.116 "{F4}鬧鐘"
+
+# osd_gaming_item_texts[87] (item 3, traditional_chinese)
+188da0.87 "{F4}刷新率"
+
+# osd_choice_note_function_texts[145] (item 5, traditional_chinese)
+1832e4.145 "{F4}回應時間"
+
+# osd_gaming_item_texts[0] (item 0, traditional_chinese)
+188da0.0 "{F4}遊戲模式"
+
+# osd_choice_note_function_texts[174] (item 6, traditional_chinese)
+# osd_gi_item_texts[58] (item 2, traditional_chinese)
+1832e4.174 "Optix {F4}準心模式"
+
+# osd_oled_care_seconds_texts[87] (item 3, traditional_chinese)
+18a7ec.87 "{F0}240 {FB}秒"
+
+# osd_oled_care_seconds_texts[58] (item 2, traditional_chinese)
+18a7ec.58 "{F0}120 {FB}秒"
+
+# osd_oled_care_seconds_texts[29] (item 1, traditional_chinese)
+18a7ec.29 "{F0}100 {FB}秒"
+
+# osd_oled_care_seconds_texts[0] (item 0, traditional_chinese)
+18a7ec.0 "{F0}50 {FB}秒"
+
+# table_18af08[29] (item 1, traditional_chinese)
+# table_18b008[29] (item 1, traditional_chinese)
+18af08.29 "{F4}邊緣"
+
+# osd_oled_care_usage_texts[29] (item 1, traditional_chinese)
+18b29c.29 "{F4}使用超{FB}過{F0}24{F4}小時"
+
+# osd_oled_care_speed_texts[58] (item 2, traditional_chinese)
+18b5e0.58 "{F4}快"
+
+# osd_oled_care_speed_texts[0] (item 0, traditional_chinese)
+18b5e0.0 "{F4}慢"
+
+# osd_oled_care_choice_texts[58] (item 2, traditional_chinese)
+# osd_oled_care_status_texts[58] (item 2, traditional_chinese)
+16df60.58 "{F4}亮度降低等級"
+
+# osd_oled_care_status_texts[29] (item 1, traditional_chinese)
+18b94c.29 "{F4}所需時間"
+
+# osd_oled_care_status_texts[0] (item 0, traditional_chinese)
+18b94c.0 "{F4}開始於"
+
+# table_18c070[29] (item 1, traditional_chinese)
+18c070.29 "{F4}工時間"
+
+# table_18c070[0] (item 0, traditional_chinese)
+18c070.0 "{F4}作時間"
+
+# table_18c4a8[0] (item 0, traditional_chinese)
+18c4a8.0 "Moving speed"
+
+# osd_image_item_texts[116] (item 4, traditional_chinese)
+18ca88.116 "{F4}螢幕尺寸"
+
+# osd_image_item_texts[87] (item 3, traditional_chinese)
+18ca88.87 "{F4}色溫"
+
+# osd_image_item_texts[58] (item 2, traditional_chinese)
+18ca88.58 "{F4}清晰度"
+
+# osd_image_item_texts[29] (item 1, traditional_chinese)
+18ca88.29 "{F4}對比"
+
+# osd_language_texts[0] (item 0, traditional_chinese)
+18d3d4.0 "{F4}繁體中文"
+
+# osd_optix_scope_item_texts[29] (item 1, traditional_chinese)
+18d578.29 "{F4}準心比例"
+
+# osd_optix_scope_item_texts[0] (item 0, traditional_chinese)
+18d578.0 "{F4}準心尺寸"
+
+# osd_color_temp_texts[87] (item 3, traditional_chinese)
+18db28.87 "{F4}自訂"
+
+# osd_color_temp_texts[58] (item 2, traditional_chinese)
+18db28.58 "{F4}暖"
+
+# osd_color_temp_texts[0] (item 0, traditional_chinese)
+18db28.0 "{F4}冷"
+
+# osd_response_time_texts[58] (item 2, traditional_chinese)
+18e08c.58 "{F4}最快"
+
+# osd_response_time_texts[29] (item 1, traditional_chinese)
+18e08c.29 "{F4}快"
+
+# osd_oled_care_speed_texts[29] (item 1, traditional_chinese)
+# osd_color_temp_texts[29] (item 1, traditional_chinese)
+# osd_response_time_texts[0] (item 0, traditional_chinese)
+18b5e0.29 "{F4}正常"
+
+# osd_crosshair_color_texts[29] (item 1, traditional_chinese)
+18e54c.29 "{F4}紅色"
+
+# osd_crosshair_color_texts[0] (item 0, traditional_chinese)
+18e54c.0 "{F4}白色"
+
+# table_18c8b8[58] (item 2, traditional_chinese)
+# osd_pbp_mode_texts[58] (item 2, traditional_chinese)
+# osd_location_texts[116] (item 4, traditional_chinese)
+18c8b8.58 "{F4}自訂"
+
+# osd_location_texts[87] (item 3, traditional_chinese)
+18e9f8.87 "{F4}右下"
+
+# osd_location_texts[58] (item 2, traditional_chinese)
+18e9f8.58 "{F4}左下"
+
+# osd_location_texts[29] (item 1, traditional_chinese)
+18e9f8.29 "{F4}右上"
+
+# osd_location_texts[0] (item 0, traditional_chinese)
+18e9f8.0 "{F4}左上"
+
+# osd_size_texts[58] (item 2, traditional_chinese)
+18f550.58 "{F4}大"
+
+# osd_size_texts[29] (item 1, traditional_chinese)
+18f550.29 "{F4}中"
+
+# osd_size_texts[0] (item 0, traditional_chinese)
+18f550.0 "{F4}小"
+
+# osd_crosshair_item_texts[116] (item 4, traditional_chinese)
+18f984.116 "{F4}重設"
+
+# osd_crosshair_item_texts[87] (item 3, traditional_chinese)
+18f984.87 "{F4}位置"
+
+# osd_crosshair_item_texts[58] (item 2, traditional_chinese)
+18f984.58 "{F4}色彩{C6}{C7}"
+
+# osd_crosshair_item_texts[29] (item 1, traditional_chinese)
+18f984.29 "{F4}圖示"
+
+# osd_crosshair_item_texts[0] (item 0, traditional_chinese)
+18f984.0 "{F4}無"
+
+# osd_protect_button_texts[58] (item 2, traditional_chinese)
+190184.58 "{FB}稍後"
+
+# osd_protect_button_texts[29] (item 1, traditional_chinese)
+190184.29 "{F4}取{FB}消"
+
+# osd_protect_button_texts[0] (item 0, traditional_chinese)
+190184.0 "{FB}執{F4}行"
+
+# osd_yes_no_texts[29] (item 1, traditional_chinese)
+190748.29 "{F4}否"
+
+# osd_yes_no_texts[0] (item 0, traditional_chinese)
+190748.0 "{F4}是"
+
+# osd_kvm_texts[29] (item 1, traditional_chinese)
+1909ec.29 "{F4}上行"
+
+# table_190cec[29] (item 1, traditional_chinese)
+190cec.29 "{FC}峰值{F0}1000{FC}尼特"
+
+# osd_navi_key_item_texts[87] (item 3, traditional_chinese)
+19158c.87 "{F4}右"
+
+# osd_navi_key_item_texts[58] (item 2, traditional_chinese)
+19158c.58 "{F4}左"
+
+# osd_navi_key_item_texts[29] (item 1, traditional_chinese)
+19158c.29 "{F4}下"
+
+# osd_navi_key_item_texts[0] (item 0, traditional_chinese)
+19158c.0 "{F4}上"
+
+# osd_info_box_texts[174] (item 6, traditional_chinese)
+191b30.174 "{F4}位元深度"
+
+# osd_info_box_texts[145] (item 5, traditional_chinese)
+191b30.145 "{F4}內容類型"
+
+# osd_info_box_texts[116] (item 4, traditional_chinese)
+191b30.116 "{F4}選擇模式"
+
+# osd_info_box_texts[58] (item 2, traditional_chinese)
+191b30.58 "{F4}實際解析度"
+
+# osd_info_box_texts[29] (item 1, traditional_chinese)
+191b30.29 "{F4}原生解析度"
+
+# osd_key_guide_texts[203] (item 7, traditional_chinese)
+1928b0.203 "{F4}返回"
+
+# osd_key_guide_texts[174] (item 6, traditional_chinese)
+1928b0.174 "{F4}結束"
+
+# osd_key_guide_texts[145] (item 5, traditional_chinese)
+1928b0.145 "{F4}儲存"
+
+# osd_key_guide_texts[116] (item 4, traditional_chinese)
+1928b0.116 "{F4}選擇"
+
+# osd_key_guide_texts[87] (item 3, traditional_chinese)
+1928b0.87 "{F4}調整"
+
+# osd_key_guide_texts[58] (item 2, traditional_chinese)
+1928b0.58 "{F4}切換"
+
+# osd_key_guide_texts[29] (item 1, traditional_chinese)
+1928b0.29 "{F4}輸入"
+
+# osd_key_guide_texts[0] (item 0, traditional_chinese)
+1928b0.0 "{F4}移動"
+
+# osd_out_of_range_texts[0] (item 0, traditional_chinese)
+192d8c.0 "{F4}超出範圍！"
+
+# osd_no_signal_texts[0] (item 0, traditional_chinese)
+193008.0 "{F4}無訊號"
+
+# osd_power_button_texts[29] (item 1, traditional_chinese)
+19336c.29 "{F4}待機"
+
+# osd_navi_function_texts[290] (item 10, traditional_chinese)
+1935bc.290 "Optix {F4}準心模式"
+
+# osd_navi_function_texts[261] (item 9, traditional_chinese)
+1935bc.261 "{F4}夜視"
+
+# osd_info_box_texts[87] (item 3, traditional_chinese)
+# osd_navi_function_texts[203] (item 7, traditional_chinese)
+191b30.87 "{F4}刷新率"
+
+# osd_gi_item_texts[29] (item 1, traditional_chinese)
+# osd_navi_function_texts[87] (item 3, traditional_chinese)
+18a360.29 "{F4}智慧準心"
+
+# osd_navi_function_texts[116] (item 4, traditional_chinese)
+1935bc.116 "{F4}鬧鐘"
+
+# osd_navi_function_texts[58] (item 2, traditional_chinese)
+1935bc.58 "{F4}遊戲模式"
+
+# osd_choice_note_function_texts[29] (item 1, traditional_chinese)
+# osd_image_item_texts[0] (item 0, traditional_chinese)
+# osd_navi_function_texts[29] (item 1, traditional_chinese)
+1832e4.29 "{F4}亮度"
+
+# osd_settings_item_texts[145] (item 5, traditional_chinese)
+# table_18c8b8[87] (item 3, traditional_chinese)
+# osd_navi_function_texts[232] (item 8, traditional_chinese)
+1874f8.145 "{F4}螢幕上資訊"
+
+# osd_navi_function_texts[174] (item 6, traditional_chinese)
+1935bc.174 "{F4}PIP/PBP 模式"
+
+# osd_image_enhancement_texts[116] (item 4, traditional_chinese)
+194b34.116 "{F4}最強"
+
+# osd_image_enhancement_texts[87] (item 3, traditional_chinese)
+194b34.87 "{F4}強"
+
+# osd_image_enhancement_texts[58] (item 2, traditional_chinese)
+194b34.58 "{F4}中"
+
+# osd_image_enhancement_texts[29] (item 1, traditional_chinese)
+194b34.29 "{F4}弱"
+
+# osd_pro_mode_texts[0] (item 0, traditional_chinese)
+1951dc.0 "{F4}節能"
+
+# osd_pro_mode_texts[87] (item 3, traditional_chinese)
+1951dc.87 "{F4}電影"
+
+# osd_pro_mode_texts[58] (item 2, traditional_chinese)
+1951dc.58 "{F4}抗藍光"
+
+# osd_pro_mode_texts[116] (item 4, traditional_chinese)
+1951dc.116 "{F4}辦公室"
+
+# osd_oled_care_choice_texts[29] (item 1, traditional_chinese)
+# osd_optix_scope_item_texts[87] (item 3, traditional_chinese)
+# osd_off_on_texts[29] (item 1, traditional_chinese)
+# table_195a38[58] (item 2, traditional_chinese)
+16df60.29 "{F4}開"
+
+# osd_location_texts[145] (item 5, traditional_chinese)
+# table_195a38[0] (item 0, traditional_chinese)
+# table_195c7c[0] (item 0, traditional_chinese)
+18e9f8.145 "{F4}位置"
+
+# osd_game_mode_texts[0] (item 0, traditional_chinese)
+195f24.0 "{FB}高階{F4}色彩"
+
+# osd_pro_mode_texts[29] (item 1, traditional_chinese)
+# osd_game_mode_texts[29] (item 1, traditional_chinese)
+1951dc.29 "{F4}使用者"
+
+# osd_game_mode_texts[87] (item 3, traditional_chinese)
+195f24.87 "{F4}賽車"
+
+# osd_pbp_mode_texts[29] (item 1, traditional_chinese)
+18e89c.29 "{F4}模式 2"
+
+# osd_pbp_mode_texts[0] (item 0, traditional_chinese)
+18e89c.0 "{F4}模式 1"
+
+# osd_oled_care_choice_texts[0] (item 0, traditional_chinese)
+# osd_night_vision_texts[0] (item 0, traditional_chinese)
+# table_18c8b8[0] (item 0, traditional_chinese)
+# osd_optix_scope_item_texts[58] (item 2, traditional_chinese)
+# osd_off_on_texts[0] (item 0, traditional_chinese)
+# osd_power_button_texts[0] (item 0, traditional_chinese)
+# ... and 5 more entries
+16df60.0 "{F4}關"
+
+# osd_tab_name_texts[174] (item 6, traditional_chinese)
+196dc0.174 "{F4}導覽鍵"
+
+# osd_tab_name_texts[203] (item 7, traditional_chinese)
+196dc0.203 "{F4}設定"
+
+# osd_info_box_texts[0] (item 0, traditional_chinese)
+# osd_navi_function_texts[145] (item 5, traditional_chinese)
+# osd_tab_name_texts[116] (item 4, traditional_chinese)
+191b30.0 "{F4}輸入來源"
+
+# osd_tab_name_texts[87] (item 3, traditional_chinese)
+196dc0.87 "{F4}影像"
+
+# osd_tab_name_texts[58] (item 2, traditional_chinese)
+196dc0.58 "{F4}專業"
+
+# osd_tab_name_texts[29] (item 1, traditional_chinese)
+196dc0.29 "{F4}遊戲"

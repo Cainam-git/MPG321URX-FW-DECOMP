@@ -1,0 +1,663 @@
+# Texts of language 7, named "{F1}日本語" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[36] (item 1, japanese)
+16e0d0.36 "{F0} "
+
+# osd_protect_long_execute_texts[7] (item 0, japanese)
+16e0d0.7 "{F1}字ネルの画表を示めするた実に、{FB}秒{F1}「」{FB}{37}{F1}ボタンを超して字ネル保充{F0}({F1}出時間{F0}){F1}機能を「」します。"
+
+# osd_protect_long_auto_texts[7] (item 0, japanese)
+16f25c.7 "{F1}字ネルの画表を示めするた実、字ネル保充{F0}({F1}出時間{F0}){F1}機能が自動的に有効になります。"
+
+# osd_protect_long_title_texts[65] (item 2, japanese)
+16f670.65 "{F1}自動的に字ネル保充{F0}({F1}出時間{F0}){F1}機能が有効になります。"
+
+# osd_protect_long_title_texts[36] (item 1, japanese)
+16f670.36 "{F1}字ネルの画表を示めするた実、モ後ター質維時間が{F0}1,500{F1}時間を{FB}階{F1}えると、"
+
+# osd_protect_long_title_texts[7] (item 0, japanese)
+16f670.7 "{F0}MSI OLED{F1}の高ア{F0} - {F1}字ネル保充{F0} ({F1}出時間{F0})"
+
+# osd_protect_long_incomplete_texts[36] (item 1, japanese)
+172590.36 "{F1}この{FB}{48}{49}{F1}をさらに選択してクリックしてください。"
+
+# osd_protect_long_incomplete_texts[7] (item 0, japanese)
+172590.7 "{F1}字ネル保充{F0}({F1}出時間{F0}){FB}{3D}{F1}理が果了しま{FB}{3E}{3F}{F1}でした。{FB}{41}{F1}で{FB}{45}{46}{F1}に応{FB}{47}{F1}てこのプロセスを「」するには、"
+
+# osd_protect_incomplete_texts[36] (item 1, japanese)
+173998.36 "{F1}実{FE}行{F1}するには、この{FE}項目{F1}をさらに選択してクリックしてください。"
+
+# osd_protect_incomplete_texts[7] (item 0, japanese)
+173998.7 "{F1}パネル保護{FE}処{F1}理が{FE}完{F1}了しま{FE}せん{F1}でした。後で{FE}必{F1}要に応{FE}じ{F1}てこのプロセスを"
+
+# osd_protect_long_incomplete_texts[65] (item 2, japanese)
+# osd_protect_incomplete_texts[65] (item 2, japanese)
+# osd_protect_execute_texts[65] (item 2, japanese)
+172590.65 "{F1}通知{F0}:"
+
+# osd_protect_execute_texts[36] (item 1, japanese)
+174bd0.36 "{F1}保護{F1}機能を実{FE}行{F1}します。"
+
+# osd_protect_execute_texts[7] (item 0, japanese)
+174bd0.7 "{F1}パネルの画質を維{FE}持{F1}するために、「実{FE}行{F1}」ボタンを{FE}押{F1}してパネル"
+
+# osd_protect_long_retry_texts[36] (item 1, japanese)
+175de4.36 "{F0}({F1}出時間{F0}){F1}機能を「」してください。"
+
+# osd_protect_long_retry_texts[7] (item 0, japanese)
+175de4.7 "{F1}字ネル保充{F0}({F1}出時間{F0}){F1}{FB}{3D}{F1}理が果了しま{FB}{3E}{3F}{F1}でした。{FB}秒{F1}「」{FB}{37}{F1}ボタンを超して字ネル保充"
+
+# osd_protect_retry_texts[36] (item 1, japanese)
+177270.36 "{F1}保護機能を実{FE}行{F1}してください。{F0} "
+
+# osd_protect_retry_texts[7] (item 0, japanese)
+177270.7 "{F1}パネル保護{FE}処{F1}理が{FE}完{F1}了しま{FE}せん{F1}でした。「実{FE}行{F1}」ボタンを{FE}押{F1}してパネル{F0} "
+
+# osd_protect_auto_texts[7] (item 0, japanese)
+1785c0.7 "{F1}パネルの画質を維{FE}持{F1}するため、パネル保護機能が自動的に有効になります。"
+
+# osd_protect_long_auto_texts[36] (item 1, japanese)
+16f25c.36 "{F0} "
+
+# osd_protect_auto_texts[36] (item 1, japanese)
+1785c0.36 "{F0} "
+
+# osd_protect_long_execute_texts[123] (item 4, japanese)
+# osd_protect_long_auto_texts[123] (item 4, japanese)
+# osd_protect_long_title_texts[152] (item 5, japanese)
+# osd_protect_long_incomplete_texts[123] (item 4, japanese)
+# osd_protect_long_retry_texts[123] (item 4, japanese)
+16e0d0.123 "{F1}プロセスが果了するまで、電源インジ高ータが白色に使用します。"
+
+# osd_protect_long_execute_texts[94] (item 3, japanese)
+# osd_protect_long_auto_texts[94] (item 3, japanese)
+# osd_protect_long_title_texts[123] (item 4, japanese)
+# osd_protect_long_incomplete_texts[94] (item 3, japanese)
+# osd_protect_long_retry_texts[94] (item 3, japanese)
+16e0d0.94 "{F1}この保充機能が果了するまでに{F0}1{F1}時間かかる場合があります。"
+
+# osd_protect_long_title_texts[326] (item 11, japanese)
+# osd_protect_long_retry_texts[297] (item 10, japanese)
+# osd_protect_retry_texts[297] (item 10, japanese)
+16f670.326 "{F1}ドにな{FE}っ{F1}たときに、このプロセスが自動的に開始されます。"
+
+# osd_protect_long_title_texts[297] (item 10, japanese)
+# osd_protect_long_retry_texts[268] (item 9, japanese)
+# osd_protect_retry_texts[268] (item 9, japanese)
+16f670.297 "{F1}「キャンセル」ボタンをクリックすると、モ{E4}ターの電源がオフにな{FE}っ{F1}たとき{FE}や{F1}省電力モー"
+
+# osd_protect_long_execute_texts[239] (item 8, japanese)
+# osd_protect_long_auto_texts[239] (item 8, japanese)
+# osd_protect_long_title_texts[268] (item 9, japanese)
+# osd_protect_long_incomplete_texts[239] (item 8, japanese)
+# osd_protect_incomplete_texts[239] (item 8, japanese)
+# osd_protect_execute_texts[239] (item 8, japanese)
+# ... and 4 more entries
+16e0d0.239 "{F0} "
+
+# osd_protect_long_execute_texts[210] (item 7, japanese)
+# osd_protect_long_auto_texts[210] (item 7, japanese)
+# osd_protect_long_title_texts[239] (item 8, japanese)
+# osd_protect_long_incomplete_texts[210] (item 7, japanese)
+# osd_protect_incomplete_texts[210] (item 7, japanese)
+# osd_protect_execute_texts[210] (item 7, japanese)
+# ... and 4 more entries
+16e0d0.210 "{F1}プロセスの実{FE}行{F1}中に電源ボタンをも{FE}う一{F1}度{FE}押{F1}すと、この機能がキャンセルされます。"
+
+# osd_protect_long_execute_texts[181] (item 6, japanese)
+# osd_protect_long_auto_texts[181] (item 6, japanese)
+# osd_protect_long_title_texts[210] (item 7, japanese)
+# osd_protect_long_incomplete_texts[181] (item 6, japanese)
+# osd_protect_incomplete_texts[181] (item 6, japanese)
+# osd_protect_execute_texts[181] (item 6, japanese)
+# ... and 4 more entries
+16e0d0.181 "{F0} "
+
+# osd_protect_long_execute_texts[152] (item 5, japanese)
+# osd_protect_long_auto_texts[152] (item 5, japanese)
+# osd_protect_long_title_texts[181] (item 6, japanese)
+# osd_protect_long_incomplete_texts[152] (item 5, japanese)
+# osd_protect_incomplete_texts[152] (item 5, japanese)
+# osd_protect_execute_texts[152] (item 5, japanese)
+# ... and 4 more entries
+16e0d0.152 "{F1}プロセス実{FE}行{F1}中は、モ{E4}ターから電源コードを{FE}抜{F1}かないでください。"
+
+# osd_protect_incomplete_texts[123] (item 4, japanese)
+# osd_protect_execute_texts[123] (item 4, japanese)
+# osd_protect_retry_texts[123] (item 4, japanese)
+# osd_protect_auto_texts[123] (item 4, japanese)
+# osd_protect_title_texts[152] (item 5, japanese)
+173998.123 "{F1}プロセスが{FE}完{F1}了するまで、電源インジケーターがオレンジ色に{FE}点滅{F1}します。"
+
+# osd_protect_incomplete_texts[94] (item 3, japanese)
+# osd_protect_execute_texts[94] (item 3, japanese)
+# osd_protect_retry_texts[94] (item 3, japanese)
+# osd_protect_auto_texts[94] (item 3, japanese)
+# osd_protect_title_texts[123] (item 4, japanese)
+173998.94 "{F1}この保護機能が{FE}完{F1}了するまでに{FE}数分{F1}かかる場合があります。"
+
+# osd_protect_long_execute_texts[65] (item 2, japanese)
+# osd_protect_long_auto_texts[65] (item 2, japanese)
+# osd_protect_long_title_texts[94] (item 3, japanese)
+# osd_protect_long_retry_texts[65] (item 2, japanese)
+# osd_protect_retry_texts[65] (item 2, japanese)
+# osd_protect_auto_texts[65] (item 2, japanese)
+# ... and 1 more entries
+16e0d0.65 "{F1}通知{F0}:"
+
+# osd_protect_title_texts[65] (item 2, japanese)
+179a14.65 "{F1}ル保護機能が有効になります。"
+
+# osd_protect_title_texts[36] (item 1, japanese)
+179a14.36 "{F1}パネルの画{FB}質{F1}を{FB}維持{F1}するため、モ{E4}ター使用時間が{F0}4{F1}時間を超えると、自動的にパネ"
+
+# osd_protect_title_texts[7] (item 0, japanese)
+179a14.7 "{F0}MSI OLED Care{F0} - {F1}パネル保護{F0} "
+
+# osd_protect_retry_texts[413] (item 14, japanese)
+# osd_protect_title_texts[384] (item 13, japanese)
+177270.413 "{F1}えた場合のみ通知が表示されます。"
+
+# osd_protect_retry_texts[384] (item 13, japanese)
+# osd_protect_title_texts[355] (item 12, japanese)
+177270.384 "{F1}「後で」ボタンをクリックすると、パネルの累積使用時間が{F0}24{F1}時間を超"
+
+# osd_protect_retry_texts[355] (item 12, japanese)
+# osd_protect_title_texts[326] (item 11, japanese)
+177270.355 "{F1}省電力モードの場合、このプロセスが自動的に有効になります。"
+
+# osd_protect_retry_texts[326] (item 11, japanese)
+# osd_protect_title_texts[297] (item 10, japanese)
+177270.326 "{F1}「キャンセル」または「後で」ボタンをクリックすると、モ{E4}ターがオフまたは"
+
+# osd_change_notice_line3_texts[7] (item 0, japanese)
+180b60.7 "{F1}次のオプションのいずれかを選択してくだ{A9}い。"
+
+# osd_change_notice_line2_texts[7] (item 0, japanese)
+181058.7 "{F1}の消費電力が増加する場{B6}があ{B8}ます。"
+
+# osd_change_notice_line1_texts[7] (item 0, japanese)
+1814d8.7 "{F1}選択した機能を変更すると、このモニター"
+
+# osd_change_notice_title_texts[7] (item 0, japanese)
+1819cc.7 "{F1}変更を確認してくだ{A9}い{F4}。"
+
+# table_1821d4[36] (item 1, japanese)
+1821d4.36 "{F1}デジタル"
+
+# table_1821d4[7] (item 0, japanese)
+1821d4.7 "{F1}アナログ"
+
+# osd_pbp_source_texts[36] (item 1, japanese)
+182534.36 "{F1}ソース 2"
+
+# osd_pbp_source_texts[7] (item 0, japanese)
+182534.7 "{F1}ソース 1"
+
+# osd_pip_item_texts[65] (item 2, japanese)
+1828c0.65 "{F1}場所"
+
+# osd_pip_item_texts[36] (item 1, japanese)
+1828c0.36 "{F1}PIP サイズ"
+
+# osd_pip_item_texts[7] (item 0, japanese)
+1828c0.7 "{F1}ソース"
+
+# osd_pip_item_texts[123] (item 4, japanese)
+1828c0.123 "{F1}オーディオ切り替え"
+
+# osd_pip_item_texts[94] (item 3, japanese)
+1828c0.94 "{F1}ディスプレイ切り替え"
+
+# osd_choice_note_function_texts[123] (item 4, japanese)
+1832e4.123 "{F1}画面サイズ"
+
+# osd_choice_note_reducing_texts[152] (item 5, japanese)
+183cb4.152 "{F4}無{F1}効になります"
+
+# osd_choice_note_reducing_texts[123] (item 4, japanese)
+183cb4.123 "{F1}たとき、この{F4}機能{F1}は"
+
+# osd_choice_note_reducing_texts[94] (item 3, japanese)
+183cb4.94 "{F0}VRR{F1}の信号を検{F4}知{F1}し"
+
+# osd_choice_note_reducing_texts[65] (item 2, japanese)
+183cb4.65 "{F1}に依存します。"
+
+# osd_choice_note_reducing_texts[36] (item 1, japanese)
+183cb4.36 "{F1}は{F0}\"DisplayHDR\"{F1}の設定"
+
+# osd_choice_note_reducing_texts[7] (item 0, japanese)
+183cb4.7 "{F1}軽減効果は、{F0}\"{F1}輝度{F0}\"{F1}また"
+
+# osd_choice_note_texts[123] (item 4, japanese)
+183a70.123 " "
+
+# osd_choice_note_texts[94] (item 3, japanese)
+183a70.94 "{F1}み{F0}1{F1}時間で果{FE}行"
+
+# osd_choice_note_texts[65] (item 2, japanese)
+183a70.65 " "
+
+# osd_choice_note_texts[36] (item 1, japanese)
+183a70.36 "{F1}み{F0}15{F1}きで果了"
+
+# osd_choice_note_texts[7] (item 0, japanese)
+183a70.7 "{F1}通知："
+
+# osd_choice_note_enabling_texts[7] (item 0, japanese)
+185af0.7 "{F1}有効にした場合の影響{F0}"
+
+# osd_oled_care_item_texts[65] (item 2, japanese)
+185e78.65 "{F4}保護{FB}通{F4}知"
+
+# osd_oled_care_function_texts[152] (item 5, japanese)
+# osd_oled_care_item_texts[181] (item 6, japanese)
+185bc0.152 "{F1}エッジ検出"
+
+# osd_oled_care_function_texts[123] (item 4, japanese)
+# osd_oled_care_item_texts[152] (item 5, japanese)
+185bc0.123 "{F1}タスクバーの検出"
+
+# osd_oled_care_function_texts[94] (item 3, japanese)
+# osd_oled_care_item_texts[123] (item 4, japanese)
+185bc0.94 "{F1}マルチロゴ検出"
+
+# osd_oled_care_item_texts[210] (item 7, japanese)
+185e78.210 "{F0}OLED{F1}パネル情報"
+
+# osd_oled_care_function_texts[65] (item 2, japanese)
+# osd_oled_care_item_texts[94] (item 3, japanese)
+185bc0.65 "{F1}静止画面検出"
+
+# osd_oled_care_function_texts[7] (item 0, japanese)
+# osd_oled_care_item_texts[36] (item 1, japanese)
+185bc0.7 "{F1}パネル保護"
+
+# osd_oled_care_function_texts[36] (item 1, japanese)
+# osd_oled_care_item_texts[7] (item 0, japanese)
+185bc0.36 "{F1}ピクセルシフト"
+
+# osd_choice_note_function_texts[297] (item 10, japanese)
+# osd_settings_item_texts[210] (item 7, japanese)
+1832e4.297 "{F1}タイプ{F0}C PD{F1}充電"
+
+# osd_settings_item_texts[123] (item 4, japanese)
+1874f8.123 "{F1}電源ボタン"
+
+# osd_settings_item_texts[268] (item 9, japanese)
+1874f8.268 "{F1}リセット"
+
+# osd_settings_item_texts[65] (item 2, japanese)
+1874f8.65 "{F1}OSD タイムアウト"
+
+# osd_settings_item_texts[36] (item 1, japanese)
+1874f8.36 "{F1}透明性"
+
+# osd_settings_item_texts[7] (item 0, japanese)
+1874f8.7 "{F1}言語"
+
+# osd_professional_item_texts[65] (item 2, japanese)
+188634.65 "{F1}イメージ拡張"
+
+# osd_professional_item_texts[36] (item 1, japanese)
+188634.36 "{F1}低ブルーライト"
+
+# osd_professional_item_texts[7] (item 0, japanese)
+188634.7 "{F1}プロモード"
+
+# osd_night_vision_texts[94] (item 3, japanese)
+1890d4.94 "{F1}最も強い"
+
+# osd_night_vision_texts[65] (item 2, japanese)
+1890d4.65 "{F1}強い"
+
+# osd_night_vision_texts[36] (item 1, japanese)
+1890d4.36 "{F1}通常"
+
+# osd_choice_note_function_texts[268] (item 9, japanese)
+# osd_gaming_item_texts[36] (item 1, japanese)
+1832e4.268 "{F1}ナイトビジョン"
+
+# osd_gaming_item_texts[123] (item 4, japanese)
+188da0.123 "{F1}アラームクロック"
+
+# osd_gaming_item_texts[94] (item 3, japanese)
+188da0.94 "{F1}リフレッシュレート"
+
+# osd_choice_note_function_texts[152] (item 5, japanese)
+1832e4.152 "{F1}応答時間"
+
+# osd_gaming_item_texts[7] (item 0, japanese)
+188da0.7 "{F1}ゲームモード"
+
+# osd_choice_note_function_texts[181] (item 6, japanese)
+# osd_gi_item_texts[65] (item 2, japanese)
+1832e4.181 "Optix {F1}スコープ"
+
+# osd_oled_care_seconds_texts[94] (item 3, japanese)
+18a7ec.94 "{F0}240 {FB}秒"
+
+# osd_oled_care_seconds_texts[65] (item 2, japanese)
+18a7ec.65 "{F0}120 {FB}秒"
+
+# osd_oled_care_seconds_texts[36] (item 1, japanese)
+18a7ec.36 "{F0}100 {FB}秒"
+
+# osd_oled_care_seconds_texts[7] (item 0, japanese)
+18a7ec.7 "{F0}50 {FB}秒"
+
+# table_18af08[36] (item 1, japanese)
+# table_18b008[36] (item 1, japanese)
+18af08.36 "{F1}ゴ動"
+
+# osd_oled_care_usage_texts[36] (item 1, japanese)
+18b29c.36 "{F0}24{F1}時間以上の使用"
+
+# osd_oled_care_speed_texts[65] (item 2, japanese)
+18b5e0.65 "{F1}高速"
+
+# osd_oled_care_speed_texts[7] (item 0, japanese)
+18b5e0.7 "{F1}低速"
+
+# osd_oled_care_choice_texts[65] (item 2, japanese)
+# osd_oled_care_status_texts[65] (item 2, japanese)
+16df60.65 "{F1}輝度軽減レベル"
+
+# osd_oled_care_status_texts[36] (item 1, japanese)
+18b94c.36 "{F1}所要時間"
+
+# osd_oled_care_status_texts[7] (item 0, japanese)
+18b94c.7 "{F1}以下で開始"
+
+# table_18c070[36] (item 1, japanese)
+18c070.36 "{F1}出時間"
+
+# table_18c070[7] (item 0, japanese)
+18c070.7 "{F1}検時間"
+
+# table_18c4a8[7] (item 0, japanese)
+18c4a8.7 "Moving speed"
+
+# osd_image_item_texts[123] (item 4, japanese)
+18ca88.123 "{F1}画面サイズ"
+
+# osd_image_item_texts[94] (item 3, japanese)
+18ca88.94 "{F1}色温度"
+
+# osd_image_item_texts[65] (item 2, japanese)
+18ca88.65 "{F1}鮮明度"
+
+# osd_image_item_texts[36] (item 1, japanese)
+18ca88.36 "{F1}コントラスト"
+
+# osd_language_texts[7] (item 0, japanese)
+18d3d4.7 "{F1}日本語"
+
+# osd_optix_scope_item_texts[36] (item 1, japanese)
+18d578.36 "{F1}スコープ{F3}比率"
+
+# osd_optix_scope_item_texts[7] (item 0, japanese)
+18d578.7 "{F1}スコープサイズ"
+
+# osd_color_temp_texts[94] (item 3, japanese)
+18db28.94 "{F1}カスタマイズ"
+
+# osd_color_temp_texts[65] (item 2, japanese)
+18db28.65 "{F1}暖かい"
+
+# osd_color_temp_texts[7] (item 0, japanese)
+18db28.7 "{F1}冷たい"
+
+# osd_response_time_texts[65] (item 2, japanese)
+18e08c.65 "{F1}最も速い"
+
+# osd_response_time_texts[36] (item 1, japanese)
+18e08c.36 "{F1}速い"
+
+# osd_oled_care_speed_texts[36] (item 1, japanese)
+# osd_color_temp_texts[36] (item 1, japanese)
+# osd_response_time_texts[7] (item 0, japanese)
+18b5e0.36 "{F1}通常"
+
+# osd_crosshair_color_texts[36] (item 1, japanese)
+18e54c.36 "{F1}赤"
+
+# osd_crosshair_color_texts[7] (item 0, japanese)
+18e54c.7 "{F1}白"
+
+# table_18c8b8[65] (item 2, japanese)
+# osd_pbp_mode_texts[65] (item 2, japanese)
+# osd_location_texts[123] (item 4, japanese)
+18c8b8.65 "{F1}カスタマイズ"
+
+# osd_location_texts[94] (item 3, japanese)
+18e9f8.94 "{F1}右下"
+
+# osd_location_texts[65] (item 2, japanese)
+18e9f8.65 "{F1}左下"
+
+# osd_location_texts[36] (item 1, japanese)
+18e9f8.36 "{F1}右上"
+
+# osd_location_texts[7] (item 0, japanese)
+18e9f8.7 "{F1}左上"
+
+# osd_size_texts[65] (item 2, japanese)
+18f550.65 "{F1}大"
+
+# osd_size_texts[36] (item 1, japanese)
+18f550.36 "{F1}中"
+
+# osd_size_texts[7] (item 0, japanese)
+18f550.7 "{F1}小"
+
+# osd_crosshair_item_texts[123] (item 4, japanese)
+18f984.123 "{F1}リセット"
+
+# osd_crosshair_item_texts[94] (item 3, japanese)
+18f984.94 "{F1}位置"
+
+# osd_crosshair_item_texts[65] (item 2, japanese)
+18f984.65 "{F3}色"
+
+# osd_crosshair_item_texts[36] (item 1, japanese)
+18f984.36 "{F1}アイコン"
+
+# osd_crosshair_item_texts[7] (item 0, japanese)
+18f984.7 "{F1}なし"
+
+# osd_protect_button_texts[65] (item 2, japanese)
+190184.65 "{F1}後で"
+
+# osd_protect_button_texts[36] (item 1, japanese)
+190184.36 "{F1}キャンセル"
+
+# osd_protect_button_texts[7] (item 0, japanese)
+190184.7 "{F1}実{F4}行"
+
+# osd_yes_no_texts[36] (item 1, japanese)
+190748.36 "{F1}いいえ"
+
+# osd_yes_no_texts[7] (item 0, japanese)
+190748.7 "{F1}はい"
+
+# osd_kvm_texts[36] (item 1, japanese)
+1909ec.36 "{F1}アップストリーム"
+
+# table_190cec[36] (item 1, japanese)
+190cec.36 "{F1}ピーク{F0}1000{F1}{E4}ット"
+
+# osd_navi_key_item_texts[94] (item 3, japanese)
+19158c.94 "{F1}右"
+
+# osd_navi_key_item_texts[65] (item 2, japanese)
+19158c.65 "{F1}左"
+
+# osd_navi_key_item_texts[36] (item 1, japanese)
+19158c.36 "{F1}下"
+
+# osd_navi_key_item_texts[7] (item 0, japanese)
+19158c.7 "{F1}上"
+
+# osd_info_box_texts[181] (item 6, japanese)
+191b30.181 "{F1}ビット深さ"
+
+# osd_info_box_texts[152] (item 5, japanese)
+191b30.152 "{F1}コンテンツタイプ"
+
+# osd_info_box_texts[123] (item 4, japanese)
+191b30.123 "{F1}選択モード"
+
+# osd_info_box_texts[65] (item 2, japanese)
+191b30.65 "{F1}物理的な解像度"
+
+# osd_info_box_texts[36] (item 1, japanese)
+191b30.36 "{F1}ネイティブの解像度"
+
+# osd_key_guide_texts[210] (item 7, japanese)
+1928b0.210 "{F1}戻る"
+
+# osd_key_guide_texts[181] (item 6, japanese)
+1928b0.181 "{F1}終了"
+
+# osd_key_guide_texts[152] (item 5, japanese)
+1928b0.152 "{F1}保存"
+
+# osd_key_guide_texts[123] (item 4, japanese)
+1928b0.123 "{F1}選択"
+
+# osd_key_guide_texts[94] (item 3, japanese)
+1928b0.94 "{F1}調整"
+
+# osd_key_guide_texts[65] (item 2, japanese)
+1928b0.65 "{F1}切替"
+
+# osd_key_guide_texts[36] (item 1, japanese)
+1928b0.36 "{F1}入る"
+
+# osd_key_guide_texts[7] (item 0, japanese)
+1928b0.7 "{F1}移動"
+
+# osd_out_of_range_texts[7] (item 0, japanese)
+192d8c.7 "{F1}範囲外です！"
+
+# osd_no_signal_texts[7] (item 0, japanese)
+193008.7 "{F1}信号なし"
+
+# osd_power_button_texts[36] (item 1, japanese)
+19336c.36 "{F1}スタンバイ"
+
+# osd_navi_function_texts[297] (item 10, japanese)
+1935bc.297 "Optix {F1}スコープ"
+
+# osd_navi_function_texts[268] (item 9, japanese)
+1935bc.268 "{F1}ナイトビジョン"
+
+# osd_info_box_texts[94] (item 3, japanese)
+# osd_navi_function_texts[210] (item 7, japanese)
+191b30.94 "{F1}リフレッシュレート"
+
+# osd_gi_item_texts[36] (item 1, japanese)
+# osd_navi_function_texts[94] (item 3, japanese)
+18a360.36 "{F1}スマート十字"
+
+# osd_navi_function_texts[123] (item 4, japanese)
+1935bc.123 "{F1}アラームクロック"
+
+# osd_navi_function_texts[65] (item 2, japanese)
+1935bc.65 "{F1}ゲームモード"
+
+# osd_choice_note_function_texts[36] (item 1, japanese)
+# osd_image_item_texts[7] (item 0, japanese)
+# osd_navi_function_texts[36] (item 1, japanese)
+1832e4.36 "{F1}輝度"
+
+# osd_settings_item_texts[152] (item 5, japanese)
+# table_18c8b8[94] (item 3, japanese)
+# osd_navi_function_texts[239] (item 8, japanese)
+1874f8.152 "{F1}画面上の情報"
+
+# osd_navi_function_texts[181] (item 6, japanese)
+1935bc.181 "{F1}PIP/PBP モード"
+
+# osd_image_enhancement_texts[123] (item 4, japanese)
+194b34.123 "{F1}最も強い"
+
+# osd_image_enhancement_texts[94] (item 3, japanese)
+194b34.94 "{F1}強い"
+
+# osd_image_enhancement_texts[65] (item 2, japanese)
+194b34.65 "{F1}中くらい"
+
+# osd_image_enhancement_texts[36] (item 1, japanese)
+194b34.36 "{F1}弱い"
+
+# osd_pro_mode_texts[7] (item 0, japanese)
+1951dc.7 "{F1}エコ"
+
+# osd_pro_mode_texts[94] (item 3, japanese)
+1951dc.94 "{F1}ムービー"
+
+# osd_pro_mode_texts[65] (item 2, japanese)
+1951dc.65 "{F1}アンチブルー"
+
+# osd_pro_mode_texts[123] (item 4, japanese)
+1951dc.123 "{F1}オフィス"
+
+# osd_oled_care_choice_texts[36] (item 1, japanese)
+# osd_optix_scope_item_texts[94] (item 3, japanese)
+# osd_off_on_texts[36] (item 1, japanese)
+# table_195a38[65] (item 2, japanese)
+16df60.36 "{F1}オン"
+
+# osd_location_texts[152] (item 5, japanese)
+# table_195a38[7] (item 0, japanese)
+# table_195c7c[7] (item 0, japanese)
+18e9f8.152 "{F1}場所"
+
+# osd_game_mode_texts[7] (item 0, japanese)
+195f24.7 "{F1}プレ{FE}ミ{F1}アムカラー"
+
+# osd_pro_mode_texts[36] (item 1, japanese)
+# osd_game_mode_texts[36] (item 1, japanese)
+1951dc.36 "{F1}ユーザー"
+
+# osd_game_mode_texts[94] (item 3, japanese)
+195f24.94 "{F1}レーシング"
+
+# osd_pbp_mode_texts[36] (item 1, japanese)
+18e89c.36 "{F1}モード 2"
+
+# osd_pbp_mode_texts[7] (item 0, japanese)
+18e89c.7 "{F1}モード 1"
+
+# osd_oled_care_choice_texts[7] (item 0, japanese)
+# osd_night_vision_texts[7] (item 0, japanese)
+# table_18c8b8[7] (item 0, japanese)
+# osd_optix_scope_item_texts[65] (item 2, japanese)
+# osd_off_on_texts[7] (item 0, japanese)
+# osd_power_button_texts[7] (item 0, japanese)
+# ... and 5 more entries
+16df60.7 "{F1}オフ"
+
+# osd_tab_name_texts[181] (item 6, japanese)
+196dc0.181 "{F1}Navi キー"
+
+# osd_tab_name_texts[210] (item 7, japanese)
+196dc0.210 "{F1}設定"
+
+# osd_info_box_texts[7] (item 0, japanese)
+# osd_navi_function_texts[152] (item 5, japanese)
+# osd_tab_name_texts[123] (item 4, japanese)
+191b30.7 "{F1}入力源"
+
+# osd_tab_name_texts[94] (item 3, japanese)
+196dc0.94 "{F1}イメージ"
+
+# osd_tab_name_texts[65] (item 2, japanese)
+196dc0.65 "{F1}プロフェッショナル"
+
+# osd_tab_name_texts[36] (item 1, japanese)
+196dc0.36 "{F1}ゲーム"

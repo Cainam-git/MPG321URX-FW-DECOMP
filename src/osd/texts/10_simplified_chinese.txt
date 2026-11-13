@@ -1,0 +1,675 @@
+# Texts of language 10, named "{F3}简体中文" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[39] (item 1, simplified_chinese)
+16e0d0.39 "{F0} "
+
+# osd_protect_long_execute_texts[10] (item 0, simplified_chinese)
+16e0d0.10 "{F3}多保{FC}激{F3}面心图像{FC}累才{F3}接请按{F0}\"{F3}而测{F0}\"{F3}按钮而测面心保护{F0} ({F3}慢时间{F0}) {F3}功能。"
+
+# osd_protect_long_auto_texts[10] (item 0, simplified_chinese)
+16f25c.10 "{FC}闭进激活只{F3}图像{FC}累才{F0},{FC}活只{F3}保护{F0} ({F3}慢时间{F0}) {FC}高级感配秒处{35}"
+
+# osd_protect_long_title_texts[68] (item 2, simplified_chinese)
+16f670.68 "{FC}质量完成需"
+
+# osd_protect_long_title_texts[39] (item 1, simplified_chinese)
+16f670.39 "{FC}闭进激活只累才{F0},{FC}峰{F3}显示知{FC}值尼特为{F0}1500{F3}小时{FC}持{F0},{FC}活只{F3}保护{F0} ({F3}慢时间{F0}) {F3}功能"
+
+# osd_protect_long_title_texts[10] (item 0, simplified_chinese)
+16f670.10 "{F0}MSI OLED {F3}保护{F0} - {F3}面心保护{F0} ({F3}慢时间{F0})"
+
+# osd_protect_long_incomplete_texts[39] (item 1, simplified_chinese)
+172590.39 "{F0} "
+
+# osd_protect_long_incomplete_texts[10] (item 0, simplified_chinese)
+172590.10 "{F3}面心保护{F0} ({F3}慢时间{F0}) {F3}，不{FC}{36}{F3}注意。{FC}灯闪{F3}将来：多接请选择并{FC}烁后{F3}此项{FC}{37}{F3}以而测此，不。"
+
+# osd_protect_incomplete_texts[39] (item 1, simplified_chinese)
+173998.39 "{F0} "
+
+# osd_protect_incomplete_texts[10] (item 0, simplified_chinese)
+173998.10 "{F3}面板保护过{FC}程未完成{F3}。如果将来{FC}需{F3}要，请选择并{FC}单{F3}击此项{FE}目{F3}以{FC}执{F3}行此过{FC}程{F3}。"
+
+# osd_protect_long_incomplete_texts[68] (item 2, simplified_chinese)
+# osd_protect_incomplete_texts[68] (item 2, simplified_chinese)
+# osd_protect_execute_texts[68] (item 2, simplified_chinese)
+172590.68 "{F3}注意{F0}:"
+
+# osd_protect_execute_texts[39] (item 1, simplified_chinese)
+174bd0.39 "{F0} "
+
+# osd_protect_execute_texts[10] (item 0, simplified_chinese)
+174bd0.10 "{F3}要保{FC}持{F3}面板图像{FC}质量{F3}，请按“{FC}执{F3}行”按钮{FC}执{F3}行面板保护功能。"
+
+# osd_protect_long_retry_texts[39] (item 1, simplified_chinese)
+175de4.39 "{F0} "
+
+# osd_protect_long_retry_texts[10] (item 0, simplified_chinese)
+175de4.10 "{F3}面心保护{F0} ({F3}慢时间{F0}) {F3}，不{FC}{36}{F3}注意。请按{F0}\"{F3}而测{F0}\"{F3}按钮而测面心保护{F0} ({F3}慢时间{F0}) {F3}功能。"
+
+# osd_protect_retry_texts[39] (item 1, simplified_chinese)
+177270.39 "{F0} "
+
+# osd_protect_retry_texts[10] (item 0, simplified_chinese)
+177270.10 "{F3}面板保护过{FC}程未完成{F3}。请按“{FC}执{F3}行”按钮{FC}执{F3}行面板保护功能。{F0} "
+
+# osd_protect_auto_texts[10] (item 0, simplified_chinese)
+1785c0.10 "{FC}为{F3}保{FC}持{F3}面板图像{FC}质量{F3}，面板保护功能将自动启用。"
+
+# osd_protect_long_auto_texts[39] (item 1, simplified_chinese)
+16f25c.39 "{F0} "
+
+# osd_protect_auto_texts[39] (item 1, simplified_chinese)
+1785c0.39 "{F0} "
+
+# osd_protect_long_execute_texts[126] (item 4, simplified_chinese)
+# osd_protect_long_auto_texts[126] (item 4, simplified_chinese)
+# osd_protect_long_title_texts[155] (item 5, simplified_chinese)
+# osd_protect_long_incomplete_texts[126] (item 4, simplified_chinese)
+# osd_protect_long_retry_texts[126] (item 4, simplified_chinese)
+16e0d0.126 "{F3}电源栏示边界效果白色接”或，不注意在"
+
+# osd_protect_long_execute_texts[97] (item 3, simplified_chinese)
+# osd_protect_long_auto_texts[97] (item 3, simplified_chinese)
+# osd_protect_long_title_texts[126] (item 4, simplified_chinese)
+# osd_protect_long_incomplete_texts[97] (item 3, simplified_chinese)
+# osd_protect_long_retry_texts[97] (item 3, simplified_chinese)
+16e0d0.97 "{F3}注意平保护功能可能：多一小时在"
+
+# osd_protect_long_title_texts[329] (item 11, simplified_chinese)
+# osd_protect_long_retry_texts[300] (item 10, simplified_chinese)
+# osd_protect_retry_texts[300] (item 10, simplified_chinese)
+16f670.329 "{F3}此过{FC}程{F3}将自动启动。"
+
+# osd_protect_long_title_texts[300] (item 10, simplified_chinese)
+# osd_protect_long_retry_texts[271] (item 9, simplified_chinese)
+# osd_protect_retry_texts[271] (item 9, simplified_chinese)
+16f670.300 "{F3}如果{FC}单{F3}击“{FC}取消{F3}”按钮，{FC}则{F3}在关{FC}闭{F3}显示器或{FC}处{F3}于省电模式时，"
+
+# osd_protect_long_execute_texts[242] (item 8, simplified_chinese)
+# osd_protect_long_auto_texts[242] (item 8, simplified_chinese)
+# osd_protect_long_title_texts[271] (item 9, simplified_chinese)
+# osd_protect_long_incomplete_texts[242] (item 8, simplified_chinese)
+# osd_protect_incomplete_texts[242] (item 8, simplified_chinese)
+# osd_protect_execute_texts[242] (item 8, simplified_chinese)
+# ... and 4 more entries
+16e0d0.242 "{F0} "
+
+# osd_protect_long_execute_texts[213] (item 7, simplified_chinese)
+# osd_protect_long_auto_texts[213] (item 7, simplified_chinese)
+# osd_protect_long_title_texts[242] (item 8, simplified_chinese)
+# osd_protect_long_incomplete_texts[213] (item 7, simplified_chinese)
+# osd_protect_incomplete_texts[213] (item 7, simplified_chinese)
+# osd_protect_execute_texts[213] (item 7, simplified_chinese)
+# ... and 4 more entries
+16e0d0.213 "{F3}在{FC}执{F3}行过{FC}程{F3}中，{FC}再次{F3}按下电源按钮可{FC}取消{F3}此功能。"
+
+# osd_protect_long_execute_texts[184] (item 6, simplified_chinese)
+# osd_protect_long_auto_texts[184] (item 6, simplified_chinese)
+# osd_protect_long_title_texts[213] (item 7, simplified_chinese)
+# osd_protect_long_incomplete_texts[184] (item 6, simplified_chinese)
+# osd_protect_incomplete_texts[184] (item 6, simplified_chinese)
+# osd_protect_execute_texts[184] (item 6, simplified_chinese)
+# ... and 4 more entries
+16e0d0.184 "{F0} "
+
+# osd_protect_long_execute_texts[155] (item 5, simplified_chinese)
+# osd_protect_long_auto_texts[155] (item 5, simplified_chinese)
+# osd_protect_long_title_texts[184] (item 6, simplified_chinese)
+# osd_protect_long_incomplete_texts[155] (item 5, simplified_chinese)
+# osd_protect_incomplete_texts[155] (item 5, simplified_chinese)
+# osd_protect_execute_texts[155] (item 5, simplified_chinese)
+# ... and 4 more entries
+16e0d0.155 "{F3}在{FC}执{F3}行过{FC}程{F3}中，请{FC}勿从{F3}显示器上{FC}拔{F3}下电源{FC}插头{F3}。"
+
+# osd_protect_incomplete_texts[126] (item 4, simplified_chinese)
+# osd_protect_execute_texts[126] (item 4, simplified_chinese)
+# osd_protect_retry_texts[126] (item 4, simplified_chinese)
+# osd_protect_auto_texts[126] (item 4, simplified_chinese)
+# osd_protect_title_texts[155] (item 5, simplified_chinese)
+173998.126 "{F3}电源{FC}指{F3}示{FC}灯{F3}将{FC}闪烁橙{F3}色，{FC}直至执{F3}行{FC}完成{F3}。"
+
+# osd_protect_incomplete_texts[97] (item 3, simplified_chinese)
+# osd_protect_execute_texts[97] (item 3, simplified_chinese)
+# osd_protect_retry_texts[97] (item 3, simplified_chinese)
+# osd_protect_auto_texts[97] (item 3, simplified_chinese)
+# osd_protect_title_texts[126] (item 4, simplified_chinese)
+173998.97 "{F3}此保护功能{FC}完成{F3}可能{FC}需{F3}要{FC}几{F3}分钟。"
+
+# osd_protect_long_execute_texts[68] (item 2, simplified_chinese)
+# osd_protect_long_auto_texts[68] (item 2, simplified_chinese)
+# osd_protect_long_title_texts[97] (item 3, simplified_chinese)
+# osd_protect_long_retry_texts[68] (item 2, simplified_chinese)
+# osd_protect_retry_texts[68] (item 2, simplified_chinese)
+# osd_protect_auto_texts[68] (item 2, simplified_chinese)
+# ... and 1 more entries
+16e0d0.68 "{F3}注意{F0}:"
+
+# osd_protect_title_texts[68] (item 2, simplified_chinese)
+179a14.68 "{F0} "
+
+# osd_protect_title_texts[39] (item 1, simplified_chinese)
+179a14.39 "{FC}为{F3}保{FC}持{F3}面板图像{FC}质量{F3}，当显示器使用超过{F0}4{F3}小时{FC}后{F3}，面板保护功能将自动{FC}激活{F3}。"
+
+# osd_protect_title_texts[10] (item 0, simplified_chinese)
+179a14.10 "MSI OLED Care - {F3}面板保护"
+
+# osd_protect_retry_texts[416] (item 14, simplified_chinese)
+# osd_protect_title_texts[387] (item 13, simplified_chinese)
+177270.416 "{F0}24{F3}小时{FC}后才{F3}会显示。"
+
+# osd_protect_retry_texts[387] (item 13, simplified_chinese)
+# osd_protect_title_texts[358] (item 12, simplified_chinese)
+177270.387 "{FC}若单{F3}击“{FC}稍后{F3}”按钮，{FC}则该{F3}通知{FC}只{F3}在面板{FC}累{F3}计使用超过"
+
+# osd_protect_retry_texts[358] (item 12, simplified_chinese)
+# osd_protect_title_texts[329] (item 11, simplified_chinese)
+177270.358 "{F3}示器或{FC}进{F3}入省电模式时自动{FC}激活{F3}。"
+
+# osd_protect_retry_texts[329] (item 11, simplified_chinese)
+# osd_protect_title_texts[300] (item 10, simplified_chinese)
+177270.329 "{FC}若单{F3}击“{FC}取消{F3}”或“{FC}稍后{F3}”按钮，{FC}该{F3}功能{FC}则{F3}会在关{FC}闭{F3}显"
+
+# osd_change_notice_line3_texts[10] (item 0, simplified_chinese)
+180b60.10 "{F3}请选择以下选项之一{F0}:"
+
+# osd_change_notice_line2_texts[10] (item 0, simplified_chinese)
+181058.10 "{F3}此显示器的功耗。"
+
+# osd_change_notice_line1_texts[10] (item 0, simplified_chinese)
+1814d8.10 "{F3}更改所选功能可能会增加"
+
+# osd_change_notice_title_texts[10] (item 0, simplified_chinese)
+1819cc.10 "{F3}确认更改!"
+
+# table_1821d4[39] (item 1, simplified_chinese)
+1821d4.39 "{F3}数字"
+
+# table_1821d4[10] (item 0, simplified_chinese)
+1821d4.10 "{F3}模拟"
+
+# osd_pbp_source_texts[39] (item 1, simplified_chinese)
+182534.39 "{F3}来源2"
+
+# osd_pbp_source_texts[10] (item 0, simplified_chinese)
+182534.10 "{F3}来源1"
+
+# osd_pip_item_texts[68] (item 2, simplified_chinese)
+1828c0.68 "{F3}位置"
+
+# osd_pip_item_texts[39] (item 1, simplified_chinese)
+1828c0.39 "{F3}画中画尺寸"
+
+# osd_pip_item_texts[10] (item 0, simplified_chinese)
+1828c0.10 "{F3}来源"
+
+# osd_pip_item_texts[126] (item 4, simplified_chinese)
+1828c0.126 "{F3}音频切换"
+
+# osd_pip_item_texts[97] (item 3, simplified_chinese)
+1828c0.97 "{F3}显示切换"
+
+# osd_choice_note_function_texts[126] (item 4, simplified_chinese)
+1832e4.126 "{F3}屏幕尺寸"
+
+# osd_choice_note_function_texts[97] (item 3, simplified_chinese)
+1832e4.97 "{F3}画中画/并排画面"
+
+# osd_choice_note_reducing_texts[155] (item 5, simplified_chinese)
+183cb4.155 "{F3}不工作。"
+
+# osd_choice_note_reducing_texts[126] (item 4, simplified_chinese)
+183cb4.126 "{F3}内容时，此功能将"
+
+# osd_choice_note_reducing_texts[97] (item 3, simplified_chinese)
+183cb4.97 "{F3}当显示器正在接收{F0}VRR"
+
+# osd_choice_note_reducing_texts[68] (item 2, simplified_chinese)
+183cb4.68 "{F3}设置而定。"
+
+# osd_choice_note_reducing_texts[39] (item 1, simplified_chinese)
+183cb4.39 "{F3}或“显示{F0}HDR{F3}”"
+
+# osd_choice_note_reducing_texts[10] (item 0, simplified_chinese)
+183cb4.10 "{F3}降低效果视“亮度”"
+
+# osd_choice_note_texts[126] (item 4, simplified_chinese)
+183a70.126 " "
+
+# osd_choice_note_texts[97] (item 3, simplified_chinese)
+183a70.97 "{FC}{42}{F3}一小时注意"
+
+# osd_choice_note_texts[68] (item 2, simplified_chinese)
+183a70.68 " "
+
+# osd_choice_note_texts[39] (item 1, simplified_chinese)
+183a70.39 "{FC}则{F0}15{F3}分钟注意"
+
+# osd_choice_note_texts[10] (item 0, simplified_chinese)
+183a70.10 "{F3}注意："
+
+# osd_choice_note_enabling_texts[10] (item 0, simplified_chinese)
+185af0.10 "{F3}启用它将影响"
+
+# osd_oled_care_item_texts[68] (item 2, simplified_chinese)
+185e78.68 "{F3}保护通知"
+
+# osd_oled_care_function_texts[155] (item 5, simplified_chinese)
+# osd_oled_care_item_texts[184] (item 6, simplified_chinese)
+185bc0.155 "{F3}边界检测"
+
+# osd_oled_care_function_texts[126] (item 4, simplified_chinese)
+# osd_oled_care_item_texts[155] (item 5, simplified_chinese)
+185bc0.126 "{F3}任务栏检测"
+
+# osd_oled_care_function_texts[97] (item 3, simplified_chinese)
+# osd_oled_care_item_texts[126] (item 4, simplified_chinese)
+185bc0.97 "{F3}多重图标检测"
+
+# osd_oled_care_item_texts[213] (item 7, simplified_chinese)
+185e78.213 "{F0}OLED{F3}面板信息"
+
+# osd_oled_care_function_texts[68] (item 2, simplified_chinese)
+# osd_oled_care_item_texts[97] (item 3, simplified_chinese)
+185bc0.68 "{F3}静态屏幕检测"
+
+# osd_oled_care_function_texts[10] (item 0, simplified_chinese)
+# osd_oled_care_item_texts[39] (item 1, simplified_chinese)
+185bc0.10 "{F3}面板保护"
+
+# osd_oled_care_function_texts[39] (item 1, simplified_chinese)
+# osd_oled_care_item_texts[10] (item 0, simplified_chinese)
+185bc0.39 "{F3}像素位移"
+
+# osd_choice_note_function_texts[300] (item 10, simplified_chinese)
+# osd_settings_item_texts[213] (item 7, simplified_chinese)
+1832e4.300 "{F0}Type C PD{F3}充电"
+
+# osd_settings_item_texts[126] (item 4, simplified_chinese)
+1874f8.126 "{F3}电源按钮"
+
+# osd_settings_item_texts[271] (item 9, simplified_chinese)
+1874f8.271 "{F3}重置"
+
+# osd_settings_item_texts[68] (item 2, simplified_chinese)
+1874f8.68 "{F3}OSD超时"
+
+# osd_settings_item_texts[39] (item 1, simplified_chinese)
+1874f8.39 "{F3}透明度"
+
+# osd_settings_item_texts[10] (item 0, simplified_chinese)
+1874f8.10 "{F3}语言"
+
+# osd_professional_item_texts[68] (item 2, simplified_chinese)
+188634.68 "{F3}图像增强"
+
+# osd_professional_item_texts[39] (item 1, simplified_chinese)
+188634.39 "{F3}低蓝光"
+
+# osd_professional_item_texts[10] (item 0, simplified_chinese)
+188634.10 "{F3}专业模式"
+
+# osd_night_vision_texts[97] (item 3, simplified_chinese)
+1890d4.97 "{F3}最强"
+
+# osd_night_vision_texts[68] (item 2, simplified_chinese)
+1890d4.68 "{F3}强"
+
+# osd_night_vision_texts[39] (item 1, simplified_chinese)
+1890d4.39 "{F3}正常"
+
+# osd_choice_note_function_texts[271] (item 9, simplified_chinese)
+# osd_gaming_item_texts[39] (item 1, simplified_chinese)
+1832e4.271 "{F3}夜视"
+
+# osd_gaming_item_texts[126] (item 4, simplified_chinese)
+188da0.126 "{F3}闹钟"
+
+# osd_gaming_item_texts[97] (item 3, simplified_chinese)
+188da0.97 "{F3}刷新率"
+
+# osd_choice_note_function_texts[155] (item 5, simplified_chinese)
+1832e4.155 "{F3}响应时间"
+
+# osd_gaming_item_texts[10] (item 0, simplified_chinese)
+188da0.10 "{F3}游戏模式"
+
+# osd_choice_note_function_texts[184] (item 6, simplified_chinese)
+# osd_gi_item_texts[68] (item 2, simplified_chinese)
+1832e4.184 "Optix {F3}狙击镜"
+
+# osd_oled_care_seconds_texts[97] (item 3, simplified_chinese)
+18a7ec.97 "{F0}240 {FC}秒"
+
+# osd_oled_care_seconds_texts[68] (item 2, simplified_chinese)
+18a7ec.68 "{F0}120 {FC}秒"
+
+# osd_oled_care_seconds_texts[39] (item 1, simplified_chinese)
+18a7ec.39 "{F0}100 {FC}秒"
+
+# osd_oled_care_seconds_texts[10] (item 0, simplified_chinese)
+18a7ec.10 "{F0}50 {FC}秒"
+
+# table_18af08[39] (item 1, simplified_chinese)
+# table_18b008[39] (item 1, simplified_chinese)
+18af08.39 "{F3}板动"
+
+# osd_oled_care_usage_texts[39] (item 1, simplified_chinese)
+18b29c.39 "{F3}使用超过{F0}24{F3}小时"
+
+# osd_oled_care_speed_texts[68] (item 2, simplified_chinese)
+18b5e0.68 "{F3}快"
+
+# osd_oled_care_speed_texts[10] (item 0, simplified_chinese)
+18b5e0.10 "{F3}慢"
+
+# osd_oled_care_choice_texts[68] (item 2, simplified_chinese)
+# osd_oled_care_status_texts[68] (item 2, simplified_chinese)
+16df60.68 "{F3}降低水平"
+
+# osd_oled_care_status_texts[39] (item 1, simplified_chinese)
+18b94c.39 "{F3}时间要求"
+
+# osd_oled_care_status_texts[10] (item 0, simplified_chinese)
+18b94c.10 "{F3}开始于"
+
+# table_18c070[39] (item 1, simplified_chinese)
+18c070.39 "{F3}慢时间"
+
+# table_18c070[10] (item 0, simplified_chinese)
+18c070.10 "{F3}素时间"
+
+# table_18c4a8[10] (item 0, simplified_chinese)
+18c4a8.10 "Moving speed"
+
+# osd_image_item_texts[126] (item 4, simplified_chinese)
+18ca88.126 "{F3}屏幕尺寸"
+
+# osd_image_item_texts[97] (item 3, simplified_chinese)
+18ca88.97 "{F3}色温"
+
+# osd_image_item_texts[68] (item 2, simplified_chinese)
+18ca88.68 "{F3}清晰度"
+
+# osd_image_item_texts[39] (item 1, simplified_chinese)
+18ca88.39 "{F3}对比度"
+
+# osd_language_texts[10] (item 0, simplified_chinese)
+18d3d4.10 "{F3}简体中文"
+
+# osd_optix_scope_item_texts[39] (item 1, simplified_chinese)
+18d578.39 "{F3}狙击镜比{C2}"
+
+# osd_optix_scope_item_texts[10] (item 0, simplified_chinese)
+18d578.10 "{F3}狙击镜大小"
+
+# osd_color_temp_texts[97] (item 3, simplified_chinese)
+18db28.97 "{F3}自定义"
+
+# osd_color_temp_texts[68] (item 2, simplified_chinese)
+18db28.68 "{F3}暖色温"
+
+# osd_color_temp_texts[10] (item 0, simplified_chinese)
+18db28.10 "{F3}冷色温"
+
+# osd_response_time_texts[68] (item 2, simplified_chinese)
+18e08c.68 "{F3}最快"
+
+# osd_response_time_texts[39] (item 1, simplified_chinese)
+18e08c.39 "{F3}快速"
+
+# osd_oled_care_speed_texts[39] (item 1, simplified_chinese)
+# osd_color_temp_texts[39] (item 1, simplified_chinese)
+# osd_response_time_texts[10] (item 0, simplified_chinese)
+18b5e0.39 "{F3}正常"
+
+# osd_crosshair_color_texts[39] (item 1, simplified_chinese)
+18e54c.39 "{F3}红色"
+
+# osd_crosshair_color_texts[10] (item 0, simplified_chinese)
+18e54c.10 "{F3}白色"
+
+# table_18c8b8[68] (item 2, simplified_chinese)
+# osd_pbp_mode_texts[68] (item 2, simplified_chinese)
+# osd_location_texts[126] (item 4, simplified_chinese)
+18c8b8.68 "{F3}自定义"
+
+# osd_location_texts[97] (item 3, simplified_chinese)
+18e9f8.97 "{F3}右下"
+
+# osd_location_texts[68] (item 2, simplified_chinese)
+18e9f8.68 "{F3}左下"
+
+# osd_location_texts[39] (item 1, simplified_chinese)
+18e9f8.39 "{F3}右上"
+
+# osd_location_texts[10] (item 0, simplified_chinese)
+18e9f8.10 "{F3}左上"
+
+# osd_size_texts[68] (item 2, simplified_chinese)
+18f550.68 "{F3}大"
+
+# osd_size_texts[39] (item 1, simplified_chinese)
+18f550.39 "{F3}中"
+
+# osd_size_texts[10] (item 0, simplified_chinese)
+18f550.10 "{F3}小"
+
+# osd_crosshair_item_texts[126] (item 4, simplified_chinese)
+18f984.126 "{F3}重置"
+
+# osd_crosshair_item_texts[97] (item 3, simplified_chinese)
+18f984.97 "{F3}位置"
+
+# osd_crosshair_item_texts[68] (item 2, simplified_chinese)
+18f984.68 "{F3}色彩设定"
+
+# osd_crosshair_item_texts[39] (item 1, simplified_chinese)
+18f984.39 "{F3}图标"
+
+# osd_crosshair_item_texts[10] (item 0, simplified_chinese)
+18f984.10 "{F3}无"
+
+# osd_protect_button_texts[68] (item 2, simplified_chinese)
+190184.68 "{FC}稍后"
+
+# osd_protect_button_texts[39] (item 1, simplified_chinese)
+190184.39 "{FC}取消"
+
+# osd_protect_button_texts[10] (item 0, simplified_chinese)
+190184.10 "{FC}执{F3}行"
+
+# osd_yes_no_texts[39] (item 1, simplified_chinese)
+190748.39 "{F3}否"
+
+# osd_yes_no_texts[10] (item 0, simplified_chinese)
+190748.10 "{F3}是"
+
+# osd_kvm_texts[39] (item 1, simplified_chinese)
+1909ec.39 "{F3}上行"
+
+# table_190cec[39] (item 1, simplified_chinese)
+190cec.39 "{FC}峰值{F0}1000{FC}尼特"
+
+# osd_navi_key_item_texts[97] (item 3, simplified_chinese)
+19158c.97 "{F3}向右"
+
+# osd_navi_key_item_texts[68] (item 2, simplified_chinese)
+19158c.68 "{F3}向左"
+
+# osd_navi_key_item_texts[39] (item 1, simplified_chinese)
+19158c.39 "{F3}向下"
+
+# osd_navi_key_item_texts[10] (item 0, simplified_chinese)
+19158c.10 "{F3}向上"
+
+# osd_info_box_texts[184] (item 6, simplified_chinese)
+191b30.184 "{F3}位深度"
+
+# osd_info_box_texts[155] (item 5, simplified_chinese)
+191b30.155 "{F3}内容类型"
+
+# osd_info_box_texts[126] (item 4, simplified_chinese)
+191b30.126 "{F3}选择模式"
+
+# osd_info_box_texts[68] (item 2, simplified_chinese)
+191b30.68 "{F3}物理分辨率"
+
+# osd_info_box_texts[39] (item 1, simplified_chinese)
+191b30.39 "{F3}固有分辨率"
+
+# osd_key_guide_texts[213] (item 7, simplified_chinese)
+1928b0.213 "{F3}返回"
+
+# osd_key_guide_texts[184] (item 6, simplified_chinese)
+1928b0.184 "{F3}退出"
+
+# osd_key_guide_texts[155] (item 5, simplified_chinese)
+1928b0.155 "{F3}保存"
+
+# osd_key_guide_texts[126] (item 4, simplified_chinese)
+1928b0.126 "{F3}选择"
+
+# osd_key_guide_texts[97] (item 3, simplified_chinese)
+1928b0.97 "{F3}调整"
+
+# osd_key_guide_texts[68] (item 2, simplified_chinese)
+1928b0.68 "{F3}切换"
+
+# osd_key_guide_texts[39] (item 1, simplified_chinese)
+1928b0.39 "{F3}确认"
+
+# osd_key_guide_texts[10] (item 0, simplified_chinese)
+1928b0.10 "{F3}移动"
+
+# osd_out_of_range_texts[10] (item 0, simplified_chinese)
+192d8c.10 "{F3}超出范围!"
+
+# osd_no_signal_texts[10] (item 0, simplified_chinese)
+193008.10 "{F3}无信号"
+
+# osd_power_button_texts[39] (item 1, simplified_chinese)
+19336c.39 "{F3}待机"
+
+# osd_navi_function_texts[300] (item 10, simplified_chinese)
+1935bc.300 "Optix {F3}狙击镜"
+
+# osd_navi_function_texts[271] (item 9, simplified_chinese)
+1935bc.271 "{F3}夜视"
+
+# osd_info_box_texts[97] (item 3, simplified_chinese)
+# osd_navi_function_texts[213] (item 7, simplified_chinese)
+191b30.97 "{F3}刷新率"
+
+# osd_gi_item_texts[39] (item 1, simplified_chinese)
+# osd_navi_function_texts[97] (item 3, simplified_chinese)
+18a360.39 "{F3}智{BE}准心"
+
+# osd_navi_function_texts[126] (item 4, simplified_chinese)
+1935bc.126 "{F3}闹钟"
+
+# osd_navi_function_texts[68] (item 2, simplified_chinese)
+1935bc.68 "{F3}游戏模式"
+
+# osd_choice_note_function_texts[39] (item 1, simplified_chinese)
+# osd_image_item_texts[10] (item 0, simplified_chinese)
+# osd_navi_function_texts[39] (item 1, simplified_chinese)
+1832e4.39 "{F3}亮度"
+
+# osd_settings_item_texts[155] (item 5, simplified_chinese)
+# table_18c8b8[97] (item 3, simplified_chinese)
+# osd_navi_function_texts[242] (item 8, simplified_chinese)
+1874f8.155 "{F3}屏幕信息"
+
+# osd_navi_function_texts[184] (item 6, simplified_chinese)
+1935bc.184 "{F3}画中画{F0}/{F3}并排画面"
+
+# osd_image_enhancement_texts[126] (item 4, simplified_chinese)
+194b34.126 "{F3}最强"
+
+# osd_image_enhancement_texts[97] (item 3, simplified_chinese)
+194b34.97 "{F3}强"
+
+# osd_image_enhancement_texts[68] (item 2, simplified_chinese)
+194b34.68 "{F3}中"
+
+# osd_image_enhancement_texts[39] (item 1, simplified_chinese)
+194b34.39 "{F3}弱"
+
+# osd_pro_mode_texts[10] (item 0, simplified_chinese)
+1951dc.10 "{F3}省电"
+
+# osd_pro_mode_texts[97] (item 3, simplified_chinese)
+1951dc.97 "{F3}电影"
+
+# osd_pro_mode_texts[68] (item 2, simplified_chinese)
+1951dc.68 "{F3}防蓝光"
+
+# osd_pro_mode_texts[126] (item 4, simplified_chinese)
+1951dc.126 "{F3}办公"
+
+# osd_oled_care_choice_texts[39] (item 1, simplified_chinese)
+# osd_optix_scope_item_texts[97] (item 3, simplified_chinese)
+# osd_off_on_texts[39] (item 1, simplified_chinese)
+# table_195a38[68] (item 2, simplified_chinese)
+16df60.39 "{F3}开"
+
+# osd_location_texts[155] (item 5, simplified_chinese)
+# table_195a38[10] (item 0, simplified_chinese)
+# table_195c7c[10] (item 0, simplified_chinese)
+18e9f8.155 "{F3}位置"
+
+# osd_game_mode_texts[10] (item 0, simplified_chinese)
+195f24.10 "{FC}高级感配{F3}色"
+
+# osd_pro_mode_texts[39] (item 1, simplified_chinese)
+# osd_game_mode_texts[39] (item 1, simplified_chinese)
+1951dc.39 "{F3}用户"
+
+# osd_game_mode_texts[97] (item 3, simplified_chinese)
+195f24.97 "{F3}比赛"
+
+# osd_pbp_mode_texts[39] (item 1, simplified_chinese)
+18e89c.39 "{F3}模式2"
+
+# osd_pbp_mode_texts[10] (item 0, simplified_chinese)
+18e89c.10 "{F3}模式1"
+
+# osd_pip_pbp_texts[68] (item 2, simplified_chinese)
+196678.68 "{F3}并排画面"
+
+# osd_pip_pbp_texts[39] (item 1, simplified_chinese)
+196678.39 "{F3}画中画"
+
+# osd_oled_care_choice_texts[10] (item 0, simplified_chinese)
+# osd_night_vision_texts[10] (item 0, simplified_chinese)
+# table_18c8b8[10] (item 0, simplified_chinese)
+# osd_optix_scope_item_texts[68] (item 2, simplified_chinese)
+# osd_off_on_texts[10] (item 0, simplified_chinese)
+# osd_power_button_texts[10] (item 0, simplified_chinese)
+# ... and 5 more entries
+16df60.10 "{F3}关"
+
+# osd_tab_name_texts[184] (item 6, simplified_chinese)
+196dc0.184 "{F3}导航键"
+
+# osd_tab_name_texts[213] (item 7, simplified_chinese)
+196dc0.213 "{F3}设置"
+
+# osd_tab_name_texts[155] (item 5, simplified_chinese)
+196dc0.155 "{F3}画中画/并排画面"
+
+# osd_info_box_texts[10] (item 0, simplified_chinese)
+# osd_navi_function_texts[155] (item 5, simplified_chinese)
+# osd_tab_name_texts[126] (item 4, simplified_chinese)
+191b30.10 "{F3}输入源"
+
+# osd_tab_name_texts[97] (item 3, simplified_chinese)
+196dc0.97 "{F3}图像"
+
+# osd_tab_name_texts[68] (item 2, simplified_chinese)
+196dc0.68 "{F3}专业"
+
+# osd_tab_name_texts[39] (item 1, simplified_chinese)
+196dc0.39 "{F3}游戏"

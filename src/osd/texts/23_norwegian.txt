@@ -1,0 +1,633 @@
+# Texts of language 23, named "norsk" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[52] (item 1, norwegian)
+16e0d0.52 "som beskytter panelets bildekvalitet."
+
+# osd_protect_long_execute_texts[23] (item 0, norwegian)
+16e0d0.23 "Trykk {F7}ỷ{F0}Utfør{F7}ı{F0}-knappen for å kjøre panelbeskyttelse (lang tid), "
+
+# osd_protect_long_auto_texts[23] (item 0, norwegian)
+16f25c.23 "{F0}For å beskytte panelbildekvaliteten aktiveres "
+
+# osd_protect_long_title_texts[81] (item 2, norwegian)
+16f670.81 "{F0}automatisk når skjermen er i bruk over 1500 timer."
+
+# osd_protect_long_title_texts[52] (item 1, norwegian)
+16f670.52 "{F0}For å opprettholde bildekvaliteten til panelet vil panelbeskyttelsesfunksjonen (lang tid) aktiveres"
+
+# osd_protect_long_title_texts[23] (item 0, norwegian)
+16f670.23 "{F0}MSI OLED Care - Panelbeskyttelse (Lang tid)"
+
+# osd_protect_long_incomplete_texts[52] (item 1, norwegian)
+172590.52 "{F0}klikk elementet for å kjøre dette senere ved behov."
+
+# osd_protect_long_incomplete_texts[23] (item 0, norwegian)
+172590.23 "{F0}Panelbeskyttelse (lang tid) ble ikke fullført. Velg og "
+
+# osd_protect_incomplete_texts[52] (item 1, norwegian)
+173998.52 "{F0}klikk elementet for å kjøre dette senere ved behov."
+
+# osd_protect_incomplete_texts[23] (item 0, norwegian)
+173998.23 "{F0}Panelbeskyttelse ble ikke fullført. Velg og "
+
+# osd_protect_long_incomplete_texts[81] (item 2, norwegian)
+# osd_protect_incomplete_texts[81] (item 2, norwegian)
+# osd_protect_execute_texts[81] (item 2, norwegian)
+172590.81 "{F0}Merknad:"
+
+# osd_protect_execute_texts[52] (item 1, norwegian)
+174bd0.52 "{F0}noe som bevarer bildekvaliteten."
+
+# osd_protect_execute_texts[23] (item 0, norwegian)
+174bd0.23 "{F0}Trykk {F7}«{F0}Utfør{F7}»{F0}-knappen for å kjøre panelbeskyttelse,"
+
+# osd_protect_long_retry_texts[52] (item 1, norwegian)
+175de4.52 "Trykk {F7}ỷ{F0}Utfør{F7}ı{F0}-knappen for å kjøre panelbeskyttelse (lang tid)."
+
+# osd_protect_long_retry_texts[23] (item 0, norwegian)
+175de4.23 "{F0}Panelbeskyttelse (lang tid) ble ikke fullført. "
+
+# osd_protect_retry_texts[52] (item 1, norwegian)
+177270.52 "{F0}å kjøre panelbeskyttelse. "
+
+# osd_protect_retry_texts[23] (item 0, norwegian)
+177270.23 "{F0}Panelbeskyttelse ble ikke fullført. Trykk {F7}«{F0}Utfør{F7}»{F0}-knappen for "
+
+# osd_protect_auto_texts[23] (item 0, norwegian)
+1785c0.23 "{F0}For å beskytte panelbildekvaliteten aktiveres funksjonenen"
+
+# osd_protect_long_auto_texts[52] (item 1, norwegian)
+16f25c.52 "{F0}funksjonenen for panelbeskyttelse (lang tid)."
+
+# osd_protect_auto_texts[52] (item 1, norwegian)
+1785c0.52 "{F0}for panelbeskyttelse."
+
+# osd_protect_long_execute_texts[139] (item 4, norwegian)
+# osd_protect_long_auto_texts[139] (item 4, norwegian)
+# osd_protect_long_title_texts[168] (item 5, norwegian)
+# osd_protect_long_incomplete_texts[139] (item 4, norwegian)
+# osd_protect_long_retry_texts[139] (item 4, norwegian)
+16e0d0.139 "{F0}Strømindikatoren blinker hvitt til prosessen er fullført."
+
+# osd_protect_long_execute_texts[110] (item 3, norwegian)
+# osd_protect_long_auto_texts[110] (item 3, norwegian)
+# osd_protect_long_title_texts[139] (item 4, norwegian)
+# osd_protect_long_incomplete_texts[110] (item 3, norwegian)
+# osd_protect_long_retry_texts[110] (item 3, norwegian)
+16e0d0.110 "{F0}Beskyttelse kan ta en time å fullføre."
+
+# osd_protect_long_title_texts[342] (item 11, norwegian)
+# osd_protect_long_retry_texts[313] (item 10, norwegian)
+# osd_protect_retry_texts[313] (item 10, norwegian)
+16f670.342 "{F0}slås AV eller går i strømsparing."
+
+# osd_protect_long_title_texts[313] (item 10, norwegian)
+# osd_protect_long_retry_texts[284] (item 9, norwegian)
+# osd_protect_retry_texts[284] (item 9, norwegian)
+16f670.313 "{F0}Hvis du klikker {F7}«{F0}Avbryt{F7}»{F0}, aktiveres prosessen automatisk når skjermen"
+
+# osd_protect_long_execute_texts[255] (item 8, norwegian)
+# osd_protect_long_auto_texts[255] (item 8, norwegian)
+# osd_protect_long_title_texts[284] (item 9, norwegian)
+# osd_protect_long_incomplete_texts[255] (item 8, norwegian)
+# osd_protect_incomplete_texts[255] (item 8, norwegian)
+# osd_protect_execute_texts[255] (item 8, norwegian)
+# ... and 4 more entries
+16e0d0.255 "{F0}igjen for å avbryte."
+
+# osd_protect_long_execute_texts[226] (item 7, norwegian)
+# osd_protect_long_auto_texts[226] (item 7, norwegian)
+# osd_protect_long_title_texts[255] (item 8, norwegian)
+# osd_protect_long_incomplete_texts[226] (item 7, norwegian)
+# osd_protect_incomplete_texts[226] (item 7, norwegian)
+# osd_protect_execute_texts[226] (item 7, norwegian)
+# ... and 4 more entries
+16e0d0.226 "{F0}Mens dette pågår, kan du trykke strømknappen"
+
+# osd_protect_long_execute_texts[197] (item 6, norwegian)
+# osd_protect_long_auto_texts[197] (item 6, norwegian)
+# osd_protect_long_title_texts[226] (item 7, norwegian)
+# osd_protect_long_incomplete_texts[197] (item 6, norwegian)
+# osd_protect_incomplete_texts[197] (item 6, norwegian)
+# osd_protect_execute_texts[197] (item 6, norwegian)
+# ... and 4 more entries
+16e0d0.197 "{F0} "
+
+# osd_protect_long_execute_texts[168] (item 5, norwegian)
+# osd_protect_long_auto_texts[168] (item 5, norwegian)
+# osd_protect_long_title_texts[197] (item 6, norwegian)
+# osd_protect_long_incomplete_texts[168] (item 5, norwegian)
+# osd_protect_incomplete_texts[168] (item 5, norwegian)
+# osd_protect_execute_texts[168] (item 5, norwegian)
+# ... and 4 more entries
+16e0d0.168 "{F0}Mens dette pågår, må du ikke koble strømledningen fra skjermen."
+
+# osd_protect_incomplete_texts[139] (item 4, norwegian)
+# osd_protect_execute_texts[139] (item 4, norwegian)
+# osd_protect_retry_texts[139] (item 4, norwegian)
+# osd_protect_auto_texts[139] (item 4, norwegian)
+# osd_protect_title_texts[168] (item 5, norwegian)
+173998.139 "{F0}Strømindikatoren blinker oransje til prosessen er fullført."
+
+# osd_protect_incomplete_texts[110] (item 3, norwegian)
+# osd_protect_execute_texts[110] (item 3, norwegian)
+# osd_protect_retry_texts[110] (item 3, norwegian)
+# osd_protect_auto_texts[110] (item 3, norwegian)
+# osd_protect_title_texts[139] (item 4, norwegian)
+173998.110 "{F0}Beskyttelsesfunksjonen kan ta flere minutter å fullføre."
+
+# osd_protect_long_execute_texts[81] (item 2, norwegian)
+# osd_protect_long_auto_texts[81] (item 2, norwegian)
+# osd_protect_long_title_texts[110] (item 3, norwegian)
+# osd_protect_long_retry_texts[81] (item 2, norwegian)
+# osd_protect_retry_texts[81] (item 2, norwegian)
+# osd_protect_auto_texts[81] (item 2, norwegian)
+# ... and 1 more entries
+16e0d0.81 "{F0}Merknad:"
+
+# osd_protect_title_texts[81] (item 2, norwegian)
+179a14.81 "{F0}aktiveres automatisk når skjermen er i bruk over 4 timer."
+
+# osd_protect_title_texts[52] (item 1, norwegian)
+179a14.52 "{F0}For å opprettholde bildekvaliteten til panelet vil panelbeskyttelsesfunksjonen "
+
+# osd_protect_title_texts[23] (item 0, norwegian)
+179a14.23 "{F0}MSI OLED Care - Panelbeskyttelse "
+
+# osd_protect_retry_texts[429] (item 14, norwegian)
+# osd_protect_title_texts[400] (item 13, norwegian)
+177270.429 "{F0}panelet har vært brukt over 24 timer."
+
+# osd_protect_retry_texts[400] (item 13, norwegian)
+# osd_protect_title_texts[371] (item 12, norwegian)
+177270.400 "{F0}Hvis du klikker {F7}«{F0}Senere{F7}»{F0}-knappen, vises varselet bare når"
+
+# osd_protect_retry_texts[371] (item 12, norwegian)
+# osd_protect_title_texts[342] (item 11, norwegian)
+177270.371 "{F0}automatisk når skjermen slås AV eller går i strømsparing."
+
+# osd_protect_retry_texts[342] (item 11, norwegian)
+# osd_protect_title_texts[313] (item 10, norwegian)
+177270.342 "{F0}Hvis du klikker {F7}«{F0}Avbryt{F7}»{F0} eller {F7}«{F0}Senere{F7}»{F0}, aktiveres prosessen"
+
+# osd_change_notice_line3_texts[23] (item 0, norwegian)
+180b60.23 "Velg et av følgende alternativ."
+
+# osd_change_notice_line2_texts[23] (item 0, norwegian)
+181058.23 "kan strømforbruket til skjermen økes."
+
+# osd_change_notice_line1_texts[23] (item 0, norwegian)
+1814d8.23 "Hvis den valgte funksjonen endres,"
+
+# osd_change_notice_title_texts[23] (item 0, norwegian)
+1819cc.23 "Bekreft endring!"
+
+# table_1821d4[52] (item 1, norwegian)
+1821d4.52 "Digital"
+
+# table_1821d4[23] (item 0, norwegian)
+1821d4.23 "Analog"
+
+# osd_pbp_source_texts[52] (item 1, norwegian)
+182534.52 "Kilde 2"
+
+# osd_pbp_source_texts[23] (item 0, norwegian)
+182534.23 "Kilde 1"
+
+# osd_pip_item_texts[81] (item 2, norwegian)
+1828c0.81 "Plassering"
+
+# osd_pip_item_texts[52] (item 1, norwegian)
+1828c0.52 "PIP-størrelse"
+
+# osd_pip_item_texts[23] (item 0, norwegian)
+1828c0.23 "Kilde"
+
+# osd_pip_item_texts[139] (item 4, norwegian)
+1828c0.139 "Lydbryter"
+
+# osd_pip_item_texts[110] (item 3, norwegian)
+1828c0.110 "Visningsbryter"
+
+# osd_choice_note_function_texts[139] (item 4, norwegian)
+1832e4.139 "Skjermstørrelse"
+
+# osd_choice_note_reducing_texts[168] (item 5, norwegian)
+183cb4.168 " "
+
+# osd_choice_note_reducing_texts[139] (item 4, norwegian)
+183cb4.139 "{F0}skjermen mottar VRR-innhold."
+
+# osd_choice_note_reducing_texts[110] (item 3, norwegian)
+183cb4.110 "{F0}Funksjonen fungerer ikke når"
+
+# osd_choice_note_reducing_texts[81] (item 2, norwegian)
+183cb4.81 "{F7}«{F0}DisplayHDR{F7}»{F0}."
+
+# osd_choice_note_reducing_texts[52] (item 1, norwegian)
+183cb4.52 "{F0}for {F7}«{F0}Lysstyrke{F7}»{F0} eller "
+
+# osd_choice_note_reducing_texts[23] (item 0, norwegian)
+183cb4.23 "{F0}Red. avh. av innstillingen"
+
+# osd_choice_note_texts[139] (item 4, norwegian)
+183a70.139 " "
+
+# osd_choice_note_texts[110] (item 3, norwegian)
+183a70.110 "{F0}Ca. en time å fullføre"
+
+# osd_choice_note_texts[81] (item 2, norwegian)
+183a70.81 " "
+
+# osd_choice_note_texts[52] (item 1, norwegian)
+183a70.52 "{F0}Ca. 15 minutter å fullføre"
+
+# osd_choice_note_texts[23] (item 0, norwegian)
+183a70.23 "{F0}Merknad:"
+
+# osd_oled_care_item_texts[81] (item 2, norwegian)
+185e78.81 "{F0}Beskyttelsesvarsling"
+
+# osd_oled_care_function_texts[168] (item 5, norwegian)
+# osd_oled_care_item_texts[197] (item 6, norwegian)
+185bc0.168 "{F0}Kantpåvisning"
+
+# osd_oled_care_function_texts[139] (item 4, norwegian)
+# osd_oled_care_item_texts[168] (item 5, norwegian)
+185bc0.139 "{F0}Oppgavelinje-påvisning"
+
+# osd_oled_care_function_texts[110] (item 3, norwegian)
+# osd_oled_care_item_texts[139] (item 4, norwegian)
+185bc0.110 "{F0}Multi-logopåvisning"
+
+# osd_oled_care_item_texts[226] (item 7, norwegian)
+185e78.226 "{F0}OLED-panelinfo."
+
+# osd_oled_care_function_texts[81] (item 2, norwegian)
+# osd_oled_care_item_texts[110] (item 3, norwegian)
+185bc0.81 "{F0}Påvis statisk skjerm"
+
+# osd_oled_care_function_texts[23] (item 0, norwegian)
+# osd_oled_care_item_texts[52] (item 1, norwegian)
+185bc0.23 "{F0}Panelbeskyttelse"
+
+# osd_oled_care_function_texts[52] (item 1, norwegian)
+# osd_oled_care_item_texts[23] (item 0, norwegian)
+185bc0.52 "{F0}Pikselforskyvning"
+
+# osd_choice_note_function_texts[313] (item 10, norwegian)
+# osd_settings_item_texts[226] (item 7, norwegian)
+1832e4.313 "{F0}Type C PD-lading"
+
+# osd_settings_item_texts[139] (item 4, norwegian)
+1874f8.139 "{F0}Strømknapp"
+
+# osd_settings_item_texts[284] (item 9, norwegian)
+1874f8.284 "Tilbakestill"
+
+# osd_settings_item_texts[81] (item 2, norwegian)
+1874f8.81 "OSD Time out"
+
+# osd_settings_item_texts[52] (item 1, norwegian)
+1874f8.52 "Gjennomsiktighet"
+
+# osd_settings_item_texts[23] (item 0, norwegian)
+1874f8.23 "Språk"
+
+# osd_professional_item_texts[81] (item 2, norwegian)
+188634.81 "Bildeforbedring"
+
+# osd_professional_item_texts[52] (item 1, norwegian)
+188634.52 "Lavt blått lys"
+
+# osd_professional_item_texts[23] (item 0, norwegian)
+188634.23 "Pro-modus"
+
+# osd_night_vision_texts[110] (item 3, norwegian)
+1890d4.110 "Sterkest"
+
+# osd_night_vision_texts[81] (item 2, norwegian)
+1890d4.81 "Sterk"
+
+# osd_night_vision_texts[52] (item 1, norwegian)
+1890d4.52 "Normal"
+
+# osd_choice_note_function_texts[284] (item 9, norwegian)
+# osd_gaming_item_texts[52] (item 1, norwegian)
+1832e4.284 "Nattsyn"
+
+# osd_gaming_item_texts[139] (item 4, norwegian)
+188da0.139 "Alarmklokke"
+
+# osd_gaming_item_texts[110] (item 3, norwegian)
+188da0.110 "Refresh Rate"
+
+# osd_choice_note_function_texts[168] (item 5, norwegian)
+1832e4.168 "Responstid"
+
+# osd_gaming_item_texts[23] (item 0, norwegian)
+188da0.23 "Spillmodus"
+
+# osd_choice_note_function_texts[197] (item 6, norwegian)
+# osd_gi_item_texts[81] (item 2, norwegian)
+1832e4.197 "Optix Scope"
+
+# osd_oled_care_seconds_texts[110] (item 3, norwegian)
+18a7ec.110 "{F0}240 Sek."
+
+# osd_oled_care_seconds_texts[81] (item 2, norwegian)
+18a7ec.81 "{F0}120 Sek."
+
+# osd_oled_care_seconds_texts[52] (item 1, norwegian)
+18a7ec.52 "{F0}100 Sek."
+
+# osd_oled_care_seconds_texts[23] (item 0, norwegian)
+18a7ec.23 "{F0}50 Sek."
+
+# table_18af08[52] (item 1, norwegian)
+# table_18b008[52] (item 1, norwegian)
+18af08.52 "{F0}Manuelt"
+
+# osd_oled_care_usage_texts[52] (item 1, norwegian)
+18b29c.52 "{F0}Bruk 24 t"
+
+# osd_oled_care_speed_texts[81] (item 2, norwegian)
+18b5e0.81 "{F0}Rask"
+
+# osd_oled_care_speed_texts[23] (item 0, norwegian)
+18b5e0.23 "{F0}Treg"
+
+# osd_oled_care_choice_texts[81] (item 2, norwegian)
+# osd_oled_care_status_texts[81] (item 2, norwegian)
+16df60.81 "{F0}Reduksjonsnivå"
+
+# osd_oled_care_status_texts[52] (item 1, norwegian)
+18b94c.52 "{F0}Tid som kreves"
+
+# osd_oled_care_status_texts[23] (item 0, norwegian)
+18b94c.23 "{F0}Starter"
+
+# table_18c070[52] (item 1, norwegian)
+18c070.52 "{F0}Lang tid"
+
+# table_18c070[23] (item 0, norwegian)
+18c070.23 "{F0}Kort tid"
+
+# table_18c4a8[23] (item 0, norwegian)
+18c4a8.23 "{F0}Bevegelseshastighet (pikselforskyvning)"
+
+# osd_image_item_texts[139] (item 4, norwegian)
+18ca88.139 "Skjermstørrelse"
+
+# osd_image_item_texts[110] (item 3, norwegian)
+18ca88.110 "Fargetemperatur"
+
+# osd_image_item_texts[81] (item 2, norwegian)
+18ca88.81 "Skarphet"
+
+# osd_image_item_texts[52] (item 1, norwegian)
+18ca88.52 "Kontrast"
+
+# osd_language_texts[23] (item 0, norwegian)
+18d3d4.23 "norsk"
+
+# osd_optix_scope_item_texts[52] (item 1, norwegian)
+18d578.52 "Sikteforhold"
+
+# osd_optix_scope_item_texts[23] (item 0, norwegian)
+18d578.23 "Siktestørrelse"
+
+# osd_color_temp_texts[110] (item 3, norwegian)
+18db28.110 "Egendefinert"
+
+# osd_color_temp_texts[81] (item 2, norwegian)
+18db28.81 "Varm"
+
+# osd_color_temp_texts[23] (item 0, norwegian)
+18db28.23 "Kjølig"
+
+# osd_response_time_texts[81] (item 2, norwegian)
+18e08c.81 "Raskest"
+
+# osd_response_time_texts[52] (item 1, norwegian)
+18e08c.52 "Rask"
+
+# osd_oled_care_speed_texts[52] (item 1, norwegian)
+# osd_color_temp_texts[52] (item 1, norwegian)
+# osd_response_time_texts[23] (item 0, norwegian)
+18b5e0.52 "Normal"
+
+# osd_crosshair_color_texts[52] (item 1, norwegian)
+18e54c.52 "Rød"
+
+# osd_crosshair_color_texts[23] (item 0, norwegian)
+18e54c.23 "Hvit"
+
+# table_18c8b8[81] (item 2, norwegian)
+# osd_pbp_mode_texts[81] (item 2, norwegian)
+# osd_location_texts[139] (item 4, norwegian)
+18c8b8.81 "Tilpass"
+
+# osd_location_texts[110] (item 3, norwegian)
+18e9f8.110 "Høyre nederst"
+
+# osd_location_texts[81] (item 2, norwegian)
+18e9f8.81 "Venstre nederst"
+
+# osd_location_texts[52] (item 1, norwegian)
+18e9f8.52 "Høyre øverst"
+
+# osd_location_texts[23] (item 0, norwegian)
+18e9f8.23 "Venstre øverst"
+
+# osd_size_texts[81] (item 2, norwegian)
+18f550.81 "Stor"
+
+# osd_size_texts[52] (item 1, norwegian)
+18f550.52 "Middels"
+
+# osd_size_texts[23] (item 0, norwegian)
+18f550.23 "Liten"
+
+# osd_crosshair_item_texts[139] (item 4, norwegian)
+18f984.139 "Tilbakestill"
+
+# osd_crosshair_item_texts[110] (item 3, norwegian)
+18f984.110 "Posisjon"
+
+# osd_crosshair_item_texts[81] (item 2, norwegian)
+18f984.81 "{F0}Farge"
+
+# osd_crosshair_item_texts[52] (item 1, norwegian)
+18f984.52 "Ikon"
+
+# osd_crosshair_item_texts[23] (item 0, norwegian)
+18f984.23 "Ingen"
+
+# osd_protect_button_texts[81] (item 2, norwegian)
+190184.81 "{F0}Senere"
+
+# osd_protect_button_texts[52] (item 1, norwegian)
+190184.52 "{F0}Avbryt"
+
+# osd_protect_button_texts[23] (item 0, norwegian)
+190184.23 "{F0}Utfør"
+
+# osd_yes_no_texts[52] (item 1, norwegian)
+190748.52 "Nei"
+
+# osd_yes_no_texts[23] (item 0, norwegian)
+190748.23 "Ja"
+
+# osd_kvm_texts[52] (item 1, norwegian)
+1909ec.52 "{F0}Oppstrøms"
+
+# table_190cec[52] (item 1, norwegian)
+190cec.52 "Topp 1000 nits"
+
+# osd_navi_key_item_texts[110] (item 3, norwegian)
+19158c.110 "Høyre"
+
+# osd_navi_key_item_texts[81] (item 2, norwegian)
+19158c.81 "Venstre"
+
+# osd_navi_key_item_texts[52] (item 1, norwegian)
+19158c.52 "Ned"
+
+# osd_navi_key_item_texts[23] (item 0, norwegian)
+19158c.23 "Opp"
+
+# osd_info_box_texts[197] (item 6, norwegian)
+191b30.197 "Bitdybde"
+
+# osd_info_box_texts[168] (item 5, norwegian)
+191b30.168 "Innholdstype"
+
+# osd_info_box_texts[139] (item 4, norwegian)
+191b30.139 "Velg modus"
+
+# osd_info_box_texts[81] (item 2, norwegian)
+191b30.81 "Fysisk oppløsning"
+
+# osd_info_box_texts[52] (item 1, norwegian)
+191b30.52 "Original oppløsning"
+
+# osd_out_of_range_texts[23] (item 0, norwegian)
+192d8c.23 "Utenfor rekkevidde!"
+
+# osd_no_signal_texts[23] (item 0, norwegian)
+193008.23 "Ikke signal"
+
+# osd_power_button_texts[52] (item 1, norwegian)
+19336c.52 "Ventemodus"
+
+# osd_navi_function_texts[313] (item 10, norwegian)
+1935bc.313 "Optix Scope"
+
+# osd_navi_function_texts[284] (item 9, norwegian)
+1935bc.284 "Nattsyn"
+
+# osd_info_box_texts[110] (item 3, norwegian)
+# osd_navi_function_texts[226] (item 7, norwegian)
+191b30.110 "Refresh Rate"
+
+# osd_gi_item_texts[52] (item 1, norwegian)
+# osd_navi_function_texts[110] (item 3, norwegian)
+18a360.52 "{F0}Smart kryss"
+
+# osd_navi_function_texts[139] (item 4, norwegian)
+1935bc.139 "Alarmklokke"
+
+# osd_navi_function_texts[81] (item 2, norwegian)
+1935bc.81 "Spillmodus"
+
+# osd_choice_note_function_texts[52] (item 1, norwegian)
+# osd_image_item_texts[23] (item 0, norwegian)
+# osd_navi_function_texts[52] (item 1, norwegian)
+1832e4.52 "Lysstyrke"
+
+# osd_settings_item_texts[168] (item 5, norwegian)
+# table_18c8b8[110] (item 3, norwegian)
+# osd_navi_function_texts[255] (item 8, norwegian)
+1874f8.168 "Info. On Screen"
+
+# osd_navi_function_texts[197] (item 6, norwegian)
+1935bc.197 "PIP/PBP-modus"
+
+# osd_image_enhancement_texts[139] (item 4, norwegian)
+194b34.139 "Sterkest"
+
+# osd_image_enhancement_texts[110] (item 3, norwegian)
+194b34.110 "Sterk"
+
+# osd_image_enhancement_texts[81] (item 2, norwegian)
+194b34.81 "Middels"
+
+# osd_image_enhancement_texts[52] (item 1, norwegian)
+194b34.52 "Svak"
+
+# osd_pro_mode_texts[110] (item 3, norwegian)
+1951dc.110 "Film"
+
+# osd_pro_mode_texts[81] (item 2, norwegian)
+1951dc.81 "Antiblå"
+
+# osd_pro_mode_texts[139] (item 4, norwegian)
+1951dc.139 "Kontor"
+
+# osd_oled_care_choice_texts[52] (item 1, norwegian)
+# osd_optix_scope_item_texts[110] (item 3, norwegian)
+# osd_off_on_texts[52] (item 1, norwegian)
+# table_195a38[81] (item 2, norwegian)
+16df60.52 "PÅ"
+
+# osd_location_texts[168] (item 5, norwegian)
+# table_195a38[23] (item 0, norwegian)
+# table_195c7c[23] (item 0, norwegian)
+18e9f8.168 "Plassering"
+
+# osd_game_mode_texts[23] (item 0, norwegian)
+195f24.23 "{F0}Premium farge"
+
+# osd_pro_mode_texts[52] (item 1, norwegian)
+# osd_game_mode_texts[52] (item 1, norwegian)
+1951dc.52 "Bruker"
+
+# osd_game_mode_texts[110] (item 3, norwegian)
+195f24.110 "Racing"
+
+# osd_pbp_mode_texts[52] (item 1, norwegian)
+18e89c.52 "Modus 2"
+
+# osd_pbp_mode_texts[23] (item 0, norwegian)
+18e89c.23 "Modus 1"
+
+# osd_oled_care_choice_texts[23] (item 0, norwegian)
+# osd_night_vision_texts[23] (item 0, norwegian)
+# table_18c8b8[23] (item 0, norwegian)
+# osd_optix_scope_item_texts[81] (item 2, norwegian)
+# osd_off_on_texts[23] (item 0, norwegian)
+# osd_power_button_texts[23] (item 0, norwegian)
+# ... and 5 more entries
+16df60.23 "AV"
+
+# osd_tab_name_texts[197] (item 6, norwegian)
+196dc0.197 "Navi-tast"
+
+# osd_tab_name_texts[226] (item 7, norwegian)
+196dc0.226 "Innstilling"
+
+# osd_info_box_texts[23] (item 0, norwegian)
+# osd_navi_function_texts[168] (item 5, norwegian)
+# osd_tab_name_texts[139] (item 4, norwegian)
+191b30.23 "Inngangskilde"
+
+# osd_tab_name_texts[110] (item 3, norwegian)
+196dc0.110 "Bilde"
+
+# osd_tab_name_texts[81] (item 2, norwegian)
+196dc0.81 "Profesjonell"
+
+# osd_tab_name_texts[52] (item 1, norwegian)
+196dc0.52 "Gaming"

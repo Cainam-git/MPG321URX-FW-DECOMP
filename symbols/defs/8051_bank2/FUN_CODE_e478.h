@@ -1,0 +1,12 @@
+/* Names used in the source of FUN_CODE_e478; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define fwupd_svc_read_reply   FUN_CODE_e4bf
+#define fwupd_wait_ready_line  FUN_CODE_d059
+#define i2c_read_packet        FUN_CODE_bba9
+#define i2c_write_packet       FUN_CODE_bfcf
+#define timer_delay_base       FUN_CODE_e478
+#define timer_delay_units      FUN_CODE_e44b
+/* Stored data. */
+#define fwupd_svc_packet       DAT_EXTMEM_0436
+#define timer_delay_loop_count DAT_EXTMEM_09d0
+/* End of names. */

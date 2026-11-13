@@ -1,0 +1,7 @@
+/* Names used in the source of FUN_a00912ec; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define hdmi_is_ycbcr_input FUN_a008fea8
+#define hdmi_reg_read8      FUN_a00a657c
+#define hdmi_reg_write8     FUN_a00a65c4
+#define hdmi_set_ycbcr_regs FUN_a00912ec
+/* End of names. */

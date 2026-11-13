@@ -1,0 +1,636 @@
+# Texts of language 24, named "język polski" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[53] (item 1, polish)
+16e0d0.53 "{F0}funkcję ochrony panelu (długi czas)."
+
+# osd_protect_long_execute_texts[24] (item 0, polish)
+16e0d0.24 "Aby utrzymać wysoką jakość obrazu, naciśnij przycisk {F7}{76}{F0}Wykonaj{F7}3{F0}, który włączy "
+
+# osd_protect_long_auto_texts[24] (item 0, polish)
+16f25c.24 "{F0}Aby utrzymać wysoką jakość obrazu, automatycznie "
+
+# osd_protect_long_title_texts[82] (item 2, polish)
+16f670.82 "{F0}automatycznie włączona zostanie funkcja ochrony panelu (długi czas)."
+
+# osd_protect_long_title_texts[53] (item 1, polish)
+16f670.53 "{F0}W celu utrzymania wysokiej jakości obrazu panelu po upływie 1500 godzin użytkowania monitora "
+
+# osd_protect_long_title_texts[24] (item 0, polish)
+16f670.24 "{F0}MSI OLED Care - Ochrona panelu (Długi czas)"
+
+# osd_protect_long_incomplete_texts[53] (item 1, polish)
+172590.53 "{F0}pozycję później, aby w razie potrzeby wykonać ten proces w innym czasie."
+
+# osd_protect_long_incomplete_texts[24] (item 0, polish)
+172590.24 "{F0}Funkcja ochrony panelu (długi czas) nie została ukończona. Wybierz i kliknij tę "
+
+# osd_protect_incomplete_texts[53] (item 1, polish)
+173998.53 "{F0}pozycję później, aby w razie potrzeby wykonać ten proces w innym czasie."
+
+# osd_protect_incomplete_texts[24] (item 0, polish)
+173998.24 "{F0}Funkcja ochrony panelu nie została ukończona. Wybierz i kliknij tę"
+
+# osd_protect_long_incomplete_texts[82] (item 2, polish)
+# osd_protect_incomplete_texts[82] (item 2, polish)
+# osd_protect_execute_texts[82] (item 2, polish)
+172590.82 "{F0}Uwaga:"
+
+# osd_protect_execute_texts[53] (item 1, polish)
+174bd0.53 "{F0}aby włączyć funkcję ochrony panelu."
+
+# osd_protect_execute_texts[24] (item 0, polish)
+174bd0.24 "{F0}W celu utrzymania wysokiej jakości obrazu panelu naciśnij przycisk {F7}„{F0}Wykonaj{F7}”{F0}, "
+
+# osd_protect_long_retry_texts[53] (item 1, polish)
+175de4.53 "Naciśnij przycisk {F7}{76}{F0}Wykonaj{F7}3{F0}, który włączy funkcję ochrony panelu (długi czas)."
+
+# osd_protect_long_retry_texts[24] (item 0, polish)
+175de4.24 "{F0}Funkcja ochrony panelu (długi czas) nie została ukończona. "
+
+# osd_protect_retry_texts[53] (item 1, polish)
+177270.53 "{F0}który włączy funkcję ochrony panelu. "
+
+# osd_protect_retry_texts[24] (item 0, polish)
+177270.24 "{F0}Funkcja ochrony panelu nie została ukończona. Naciśnij przycisk \"{F0}Wykonaj\", "
+
+# osd_protect_auto_texts[24] (item 0, polish)
+1785c0.24 "{F0}Aby utrzymać wysoką jakość obrazu, automatycznie włączona zostanie"
+
+# osd_protect_long_auto_texts[53] (item 1, polish)
+16f25c.53 "{F0}włączona zostanie funkcja ochrony panelu (długi czas)."
+
+# osd_protect_auto_texts[53] (item 1, polish)
+1785c0.53 "{F0}funkcja ochrony panelu."
+
+# osd_protect_long_execute_texts[140] (item 4, polish)
+# osd_protect_long_auto_texts[140] (item 4, polish)
+# osd_protect_long_title_texts[169] (item 5, polish)
+# osd_protect_long_incomplete_texts[140] (item 4, polish)
+# osd_protect_long_retry_texts[140] (item 4, polish)
+16e0d0.140 "{F0}Do ukończenia procesu wskaźnik zasilania będzie migał na biało."
+
+# osd_protect_long_execute_texts[111] (item 3, polish)
+# osd_protect_long_auto_texts[111] (item 3, polish)
+# osd_protect_long_title_texts[140] (item 4, polish)
+# osd_protect_long_incomplete_texts[111] (item 3, polish)
+# osd_protect_long_retry_texts[111] (item 3, polish)
+16e0d0.111 "{F0}Wykonanie funkcji ochrony może zająć godzinę."
+
+# osd_protect_long_title_texts[343] (item 11, polish)
+# osd_protect_long_retry_texts[314] (item 10, polish)
+# osd_protect_retry_texts[314] (item 10, polish)
+16f670.343 "{F0}lub przełącz. do tr. oszcz. energii."
+
+# osd_protect_long_title_texts[314] (item 10, polish)
+# osd_protect_long_retry_texts[285] (item 9, polish)
+# osd_protect_retry_texts[285] (item 9, polish)
+16f670.314 "{F0}W razie kliknięcia przycisku {F7}„{F0}Anuluj{F7}”{F0} proces zost. wykonany autom. po wył. monitora"
+
+# osd_protect_long_execute_texts[256] (item 8, polish)
+# osd_protect_long_auto_texts[256] (item 8, polish)
+# osd_protect_long_title_texts[285] (item 9, polish)
+# osd_protect_long_incomplete_texts[256] (item 8, polish)
+# osd_protect_incomplete_texts[256] (item 8, polish)
+# osd_protect_execute_texts[256] (item 8, polish)
+# ... and 4 more entries
+16e0d0.256 "{F0}zasilania w celu anulowania tej funkcji."
+
+# osd_protect_long_execute_texts[227] (item 7, polish)
+# osd_protect_long_auto_texts[227] (item 7, polish)
+# osd_protect_long_title_texts[256] (item 8, polish)
+# osd_protect_long_incomplete_texts[227] (item 7, polish)
+# osd_protect_incomplete_texts[227] (item 7, polish)
+# osd_protect_execute_texts[227] (item 7, polish)
+# ... and 4 more entries
+16e0d0.227 "{F0}W trakcie procesu można ponownie nacisnąć przycisk"
+
+# osd_protect_long_execute_texts[198] (item 6, polish)
+# osd_protect_long_auto_texts[198] (item 6, polish)
+# osd_protect_long_title_texts[227] (item 7, polish)
+# osd_protect_long_incomplete_texts[198] (item 6, polish)
+# osd_protect_incomplete_texts[198] (item 6, polish)
+# osd_protect_execute_texts[198] (item 6, polish)
+# ... and 4 more entries
+16e0d0.198 "{F0}zasilającego od monitora."
+
+# osd_protect_long_execute_texts[169] (item 5, polish)
+# osd_protect_long_auto_texts[169] (item 5, polish)
+# osd_protect_long_title_texts[198] (item 6, polish)
+# osd_protect_long_incomplete_texts[169] (item 5, polish)
+# osd_protect_incomplete_texts[169] (item 5, polish)
+# osd_protect_execute_texts[169] (item 5, polish)
+# ... and 4 more entries
+16e0d0.169 "{F0}W trakcie procesu nie wolno odłączać przewodu"
+
+# osd_protect_incomplete_texts[140] (item 4, polish)
+# osd_protect_execute_texts[140] (item 4, polish)
+# osd_protect_retry_texts[140] (item 4, polish)
+# osd_protect_auto_texts[140] (item 4, polish)
+# osd_protect_title_texts[169] (item 5, polish)
+173998.140 "{F0}Do ukończenia procesu wskaźnik zasil. będzie migał na pomarańcz."
+
+# osd_protect_incomplete_texts[111] (item 3, polish)
+# osd_protect_execute_texts[111] (item 3, polish)
+# osd_protect_retry_texts[111] (item 3, polish)
+# osd_protect_auto_texts[111] (item 3, polish)
+# osd_protect_title_texts[140] (item 4, polish)
+173998.111 "{F0}Wykonanie funkcji ochrony może zająć kilka minut."
+
+# osd_protect_long_execute_texts[82] (item 2, polish)
+# osd_protect_long_auto_texts[82] (item 2, polish)
+# osd_protect_long_title_texts[111] (item 3, polish)
+# osd_protect_long_retry_texts[82] (item 2, polish)
+# osd_protect_retry_texts[82] (item 2, polish)
+# osd_protect_auto_texts[82] (item 2, polish)
+# ... and 1 more entries
+16e0d0.82 "{F0}Uwaga:"
+
+# osd_protect_title_texts[82] (item 2, polish)
+179a14.82 "{F0}monitora automatycznie włączona zostanie funkcja ochrony panelu."
+
+# osd_protect_title_texts[53] (item 1, polish)
+179a14.53 "{F0}W celu utrzymania wysokiej jakości obrazu panelu po upływie 4 godzin użytkowania "
+
+# osd_protect_title_texts[24] (item 0, polish)
+179a14.24 "{F0}MSI OLED Care - Ochrona panelu "
+
+# osd_protect_retry_texts[430] (item 14, polish)
+# osd_protect_title_texts[401] (item 13, polish)
+177270.430 "{F0}gdy łączny czas używania panelu przekroczy 24 godz."
+
+# osd_protect_retry_texts[401] (item 13, polish)
+# osd_protect_title_texts[372] (item 12, polish)
+177270.401 "{F0}Po kliknięciu przycisku {F7}„{F0}Później{F7}”{F0} powiadomienie pojawi się,"
+
+# osd_protect_retry_texts[372] (item 12, polish)
+# osd_protect_title_texts[343] (item 11, polish)
+177270.372 "{F0}po wył. monitora lub przełącz. do tr. oszcz. energii. "
+
+# osd_protect_retry_texts[343] (item 11, polish)
+# osd_protect_title_texts[314] (item 10, polish)
+177270.343 "{F0}W razie kliknięcia {F7}„{F0}Anuluj{F7}”{F0}/{F7}„{F0}Później{F7}”{F0} proces wykona się auto."
+
+# osd_change_notice_line3_texts[24] (item 0, polish)
+180b60.24 "Wybierz jedną z poniższych opcji:"
+
+# osd_change_notice_line2_texts[24] (item 0, polish)
+181058.24 "zwiększyć zużycie energii przez monitor."
+
+# osd_change_notice_line1_texts[24] (item 0, polish)
+1814d8.24 "Zmiana wybranej funkcji może"
+
+# osd_change_notice_title_texts[24] (item 0, polish)
+1819cc.24 "Potwierdź zmianę!"
+
+# table_1821d4[53] (item 1, polish)
+1821d4.53 "Cyfrowe"
+
+# table_1821d4[24] (item 0, polish)
+1821d4.24 "Analogowe"
+
+# osd_pbp_source_texts[53] (item 1, polish)
+182534.53 "Źródło 2"
+
+# osd_pbp_source_texts[24] (item 0, polish)
+182534.24 "Źródło 1"
+
+# osd_pip_item_texts[82] (item 2, polish)
+1828c0.82 "Pozycja"
+
+# osd_pip_item_texts[53] (item 1, polish)
+1828c0.53 "Rozmiar okna PIP"
+
+# osd_pip_item_texts[24] (item 0, polish)
+1828c0.24 "Źródło"
+
+# osd_pip_item_texts[140] (item 4, polish)
+1828c0.140 "Przełacznik audio"
+
+# osd_pip_item_texts[111] (item 3, polish)
+1828c0.111 "Display Switch"
+
+# osd_choice_note_function_texts[140] (item 4, polish)
+1832e4.140 "Wielkość ekranu"
+
+# osd_choice_note_reducing_texts[169] (item 5, polish)
+183cb4.169 " "
+
+# osd_choice_note_reducing_texts[140] (item 4, polish)
+183cb4.140 "{F0}monitor odbiera treści VRR."
+
+# osd_choice_note_reducing_texts[111] (item 3, polish)
+183cb4.111 "{F0}Ta funkcja nie działa, gdy"
+
+# osd_choice_note_reducing_texts[82] (item 2, polish)
+183cb4.82 "{F0}lub {F7}„{F0}DisplayHDR{F7}”{F0}."
+
+# osd_choice_note_reducing_texts[53] (item 1, polish)
+183cb4.53 "{F0}ustawienia {F7}„{F0}Jasność{F7}”{F0} "
+
+# osd_choice_note_reducing_texts[24] (item 0, polish)
+183cb4.24 "{F0}Efekt redukcji zależy od "
+
+# osd_choice_note_texts[140] (item 4, polish)
+183a70.140 " "
+
+# osd_choice_note_texts[111] (item 3, polish)
+183a70.111 "{F0}Ok. godziny do ukończenia"
+
+# osd_choice_note_texts[82] (item 2, polish)
+183a70.82 " "
+
+# osd_choice_note_texts[53] (item 1, polish)
+183a70.53 "{F0}Ok. 15 min do ukończenia"
+
+# osd_choice_note_texts[24] (item 0, polish)
+183a70.24 "{F0}Uwaga:"
+
+# osd_oled_care_item_texts[82] (item 2, polish)
+185e78.82 "{F0}Powiad. o ochronie"
+
+# osd_oled_care_function_texts[169] (item 5, polish)
+# osd_oled_care_item_texts[198] (item 6, polish)
+185bc0.169 "{F0}Wykryw. granicy"
+
+# osd_oled_care_function_texts[140] (item 4, polish)
+# osd_oled_care_item_texts[169] (item 5, polish)
+185bc0.140 "{F0}Wykryw. paska zad."
+
+# osd_oled_care_function_texts[111] (item 3, polish)
+# osd_oled_care_item_texts[140] (item 4, polish)
+185bc0.111 "{F0}Wykryw. wielu logo"
+
+# osd_oled_care_item_texts[227] (item 7, polish)
+185e78.227 "{F0}Inf. o panelu OLED"
+
+# osd_oled_care_function_texts[82] (item 2, polish)
+# osd_oled_care_item_texts[111] (item 3, polish)
+185bc0.82 "{F0}Wykryw.statycz. ekr."
+
+# osd_oled_care_function_texts[24] (item 0, polish)
+# osd_oled_care_item_texts[53] (item 1, polish)
+185bc0.24 "{F0}Ochrona panelu"
+
+# osd_oled_care_function_texts[53] (item 1, polish)
+# osd_oled_care_item_texts[24] (item 0, polish)
+185bc0.53 "{F0}Przesunięcie pikseli"
+
+# osd_choice_note_function_texts[314] (item 10, polish)
+# osd_settings_item_texts[227] (item 7, polish)
+1832e4.314 "{F7}ł{F0}adowanie PD typu C"
+
+# osd_settings_item_texts[140] (item 4, polish)
+1874f8.140 "Przycisk zasilania"
+
+# osd_settings_item_texts[285] (item 9, polish)
+1874f8.285 "Resetuj"
+
+# osd_settings_item_texts[111] (item 3, polish)
+1874f8.111 "LED RGB"
+
+# osd_settings_item_texts[82] (item 2, polish)
+1874f8.82 "OSD Time out"
+
+# osd_settings_item_texts[53] (item 1, polish)
+1874f8.53 "Przezroczystość"
+
+# osd_settings_item_texts[24] (item 0, polish)
+1874f8.24 "Język"
+
+# osd_professional_item_texts[82] (item 2, polish)
+188634.82 "Poprawianie obrazu"
+
+# osd_professional_item_texts[53] (item 1, polish)
+188634.53 "Niski światła niebieskiego"
+
+# osd_professional_item_texts[24] (item 0, polish)
+188634.24 "Tryb Pro"
+
+# osd_night_vision_texts[111] (item 3, polish)
+1890d4.111 "Najsilniejsze"
+
+# osd_night_vision_texts[82] (item 2, polish)
+1890d4.82 "Silne"
+
+# osd_night_vision_texts[53] (item 1, polish)
+1890d4.53 "Normalny"
+
+# osd_choice_note_function_texts[285] (item 9, polish)
+# osd_gaming_item_texts[53] (item 1, polish)
+1832e4.285 "Funkcja Night Vision"
+
+# osd_gaming_item_texts[140] (item 4, polish)
+188da0.140 "Budzik"
+
+# osd_gaming_item_texts[111] (item 3, polish)
+188da0.111 "Refresh Rate"
+
+# osd_choice_note_function_texts[169] (item 5, polish)
+1832e4.169 "Czas reakcji"
+
+# osd_gaming_item_texts[24] (item 0, polish)
+188da0.24 "Tryb Gra"
+
+# osd_choice_note_function_texts[198] (item 6, polish)
+# osd_gi_item_texts[82] (item 2, polish)
+1832e4.198 "Luneta Optix"
+
+# osd_oled_care_seconds_texts[111] (item 3, polish)
+18a7ec.111 "{F0}240 s"
+
+# osd_oled_care_seconds_texts[82] (item 2, polish)
+18a7ec.82 "{F0}120 s"
+
+# osd_oled_care_seconds_texts[53] (item 1, polish)
+18a7ec.53 "{F0}100 s"
+
+# osd_oled_care_seconds_texts[24] (item 0, polish)
+18a7ec.24 "{F0}50 s"
+
+# table_18af08[53] (item 1, polish)
+# table_18b008[53] (item 1, polish)
+18af08.53 "{F0}Ręcznie"
+
+# osd_oled_care_usage_texts[53] (item 1, polish)
+18b29c.53 "{F0}Używ. > 24 godz."
+
+# osd_oled_care_speed_texts[82] (item 2, polish)
+18b5e0.82 "{F0}Szybki"
+
+# osd_oled_care_speed_texts[24] (item 0, polish)
+18b5e0.24 "{F0}Wolna"
+
+# osd_oled_care_choice_texts[82] (item 2, polish)
+# osd_oled_care_status_texts[82] (item 2, polish)
+16df60.82 "{F0}Poziom redukcji"
+
+# osd_oled_care_status_texts[53] (item 1, polish)
+18b94c.53 "{F0}Wymagany czas"
+
+# osd_oled_care_status_texts[24] (item 0, polish)
+18b94c.24 "{F0}Rozpoczęcie o"
+
+# table_18c070[53] (item 1, polish)
+18c070.53 "{F0}Długi czas"
+
+# table_18c070[24] (item 0, polish)
+18c070.24 "{F0}Krótki czas"
+
+# table_18c4a8[24] (item 0, polish)
+18c4a8.24 "{F0}Prędkość przesuwania (Przesunięcie pikseli)"
+
+# osd_image_item_texts[140] (item 4, polish)
+18ca88.140 "Wielkość ekranu"
+
+# osd_image_item_texts[111] (item 3, polish)
+18ca88.111 "Temperatura barwowa"
+
+# osd_image_item_texts[82] (item 2, polish)
+18ca88.82 "Ostrość"
+
+# osd_image_item_texts[53] (item 1, polish)
+18ca88.53 "Kontrast"
+
+# osd_language_texts[24] (item 0, polish)
+18d3d4.24 "język polski"
+
+# osd_optix_scope_item_texts[53] (item 1, polish)
+18d578.53 "Współczynnik lunety"
+
+# osd_optix_scope_item_texts[24] (item 0, polish)
+18d578.24 "Rozmiar lunety"
+
+# osd_color_temp_texts[111] (item 3, polish)
+18db28.111 "Dostosowanie"
+
+# osd_color_temp_texts[82] (item 2, polish)
+18db28.82 "Ciepłe"
+
+# osd_color_temp_texts[24] (item 0, polish)
+18db28.24 "Zimne"
+
+# osd_response_time_texts[82] (item 2, polish)
+18e08c.82 "Njaszybszy"
+
+# osd_response_time_texts[53] (item 1, polish)
+18e08c.53 "Szybki"
+
+# osd_oled_care_speed_texts[53] (item 1, polish)
+# osd_color_temp_texts[53] (item 1, polish)
+# osd_response_time_texts[24] (item 0, polish)
+18b5e0.53 "Normalny"
+
+# osd_crosshair_color_texts[53] (item 1, polish)
+18e54c.53 "Czerwony"
+
+# osd_crosshair_color_texts[24] (item 0, polish)
+18e54c.24 "Biały"
+
+# table_18c8b8[82] (item 2, polish)
+# osd_pbp_mode_texts[82] (item 2, polish)
+# osd_location_texts[140] (item 4, polish)
+18c8b8.82 "Dostosuj"
+
+# osd_location_texts[111] (item 3, polish)
+18e9f8.111 "Dolna prawa"
+
+# osd_location_texts[82] (item 2, polish)
+18e9f8.82 "Dolna lewa"
+
+# osd_location_texts[53] (item 1, polish)
+18e9f8.53 "Górna prawa"
+
+# osd_location_texts[24] (item 0, polish)
+18e9f8.24 "Górna lewa"
+
+# osd_size_texts[82] (item 2, polish)
+18f550.82 "Duże"
+
+# osd_size_texts[53] (item 1, polish)
+18f550.53 "Średnie"
+
+# osd_size_texts[24] (item 0, polish)
+18f550.24 "Małe"
+
+# osd_crosshair_item_texts[140] (item 4, polish)
+18f984.140 "Resetuj"
+
+# osd_crosshair_item_texts[111] (item 3, polish)
+18f984.111 "Pozycja"
+
+# osd_crosshair_item_texts[82] (item 2, polish)
+18f984.82 "{F0}Kolor"
+
+# osd_crosshair_item_texts[53] (item 1, polish)
+18f984.53 "Ikona"
+
+# osd_crosshair_item_texts[24] (item 0, polish)
+18f984.24 "Brak"
+
+# osd_protect_button_texts[82] (item 2, polish)
+190184.82 "{F0}Później"
+
+# osd_protect_button_texts[53] (item 1, polish)
+190184.53 "{F0}Anuluj"
+
+# osd_protect_button_texts[24] (item 0, polish)
+190184.24 "{F0}Wykonaj"
+
+# osd_yes_no_texts[53] (item 1, polish)
+190748.53 "Nie"
+
+# osd_yes_no_texts[24] (item 0, polish)
+190748.24 "Tak"
+
+# osd_kvm_texts[53] (item 1, polish)
+1909ec.53 "{F0}Od klienta"
+
+# table_190cec[53] (item 1, polish)
+190cec.53 "{F0}Szczyt. 1000 nitów"
+
+# osd_navi_key_item_texts[111] (item 3, polish)
+19158c.111 "W prawo"
+
+# osd_navi_key_item_texts[82] (item 2, polish)
+19158c.82 "W lewo"
+
+# osd_navi_key_item_texts[53] (item 1, polish)
+19158c.53 "W dół"
+
+# osd_navi_key_item_texts[24] (item 0, polish)
+19158c.24 "W górę"
+
+# osd_info_box_texts[198] (item 6, polish)
+191b30.198 "Głębia bitowa"
+
+# osd_info_box_texts[169] (item 5, polish)
+191b30.169 "Typ treści"
+
+# osd_info_box_texts[140] (item 4, polish)
+191b30.140 "Wybierz tryb"
+
+# osd_info_box_texts[82] (item 2, polish)
+191b30.82 "Rozdzielczość fizyczna"
+
+# osd_info_box_texts[53] (item 1, polish)
+191b30.53 "Rozdzielczość oryginalna"
+
+# osd_out_of_range_texts[24] (item 0, polish)
+192d8c.24 "Poza zakresem!"
+
+# osd_no_signal_texts[24] (item 0, polish)
+193008.24 "Brak sygnału"
+
+# osd_power_button_texts[53] (item 1, polish)
+19336c.53 "{F0}Gotowość"
+
+# osd_navi_function_texts[314] (item 10, polish)
+1935bc.314 "Luneta Optix"
+
+# osd_navi_function_texts[285] (item 9, polish)
+1935bc.285 "Funkcja Night Vision"
+
+# osd_info_box_texts[111] (item 3, polish)
+# osd_navi_function_texts[227] (item 7, polish)
+191b30.111 "Refresh Rate"
+
+# osd_gi_item_texts[53] (item 1, polish)
+# osd_navi_function_texts[111] (item 3, polish)
+18a360.53 "Smart Crosshair"
+
+# osd_navi_function_texts[140] (item 4, polish)
+1935bc.140 "Budzik"
+
+# osd_navi_function_texts[82] (item 2, polish)
+1935bc.82 "Tryb Gra"
+
+# osd_choice_note_function_texts[53] (item 1, polish)
+# osd_image_item_texts[24] (item 0, polish)
+# osd_navi_function_texts[53] (item 1, polish)
+1832e4.53 "Jasność"
+
+# osd_settings_item_texts[169] (item 5, polish)
+# table_18c8b8[111] (item 3, polish)
+# osd_navi_function_texts[256] (item 8, polish)
+1874f8.169 "Info. On Screen"
+
+# osd_navi_function_texts[198] (item 6, polish)
+1935bc.198 "Tryb PIP/PBP"
+
+# osd_image_enhancement_texts[140] (item 4, polish)
+194b34.140 "Najsilniejsze"
+
+# osd_image_enhancement_texts[111] (item 3, polish)
+194b34.111 "Silne"
+
+# osd_image_enhancement_texts[82] (item 2, polish)
+194b34.82 "Średnie"
+
+# osd_image_enhancement_texts[53] (item 1, polish)
+194b34.53 "Słabe"
+
+# osd_pro_mode_texts[111] (item 3, polish)
+1951dc.111 "Film"
+
+# osd_pro_mode_texts[82] (item 2, polish)
+1951dc.82 "Anty niebieski"
+
+# osd_pro_mode_texts[140] (item 4, polish)
+1951dc.140 "Biuro"
+
+# osd_oled_care_choice_texts[53] (item 1, polish)
+# osd_optix_scope_item_texts[111] (item 3, polish)
+# osd_off_on_texts[53] (item 1, polish)
+# table_195a38[82] (item 2, polish)
+16df60.53 "WŁ."
+
+# osd_location_texts[169] (item 5, polish)
+# table_195a38[24] (item 0, polish)
+# table_195c7c[24] (item 0, polish)
+18e9f8.169 "Pozycja"
+
+# osd_game_mode_texts[24] (item 0, polish)
+195f24.24 "{F0}Kolor premium"
+
+# osd_pro_mode_texts[53] (item 1, polish)
+# osd_game_mode_texts[53] (item 1, polish)
+1951dc.53 "Użytkownika"
+
+# osd_game_mode_texts[111] (item 3, polish)
+195f24.111 "Wyścigi"
+
+# osd_pbp_mode_texts[53] (item 1, polish)
+18e89c.53 "Tryb 2"
+
+# osd_pbp_mode_texts[24] (item 0, polish)
+18e89c.24 "Tryb 1"
+
+# osd_oled_care_choice_texts[24] (item 0, polish)
+# osd_night_vision_texts[24] (item 0, polish)
+# table_18c8b8[24] (item 0, polish)
+# osd_optix_scope_item_texts[82] (item 2, polish)
+# osd_off_on_texts[24] (item 0, polish)
+# osd_power_button_texts[24] (item 0, polish)
+# ... and 5 more entries
+16df60.24 "WYŁ."
+
+# osd_tab_name_texts[198] (item 6, polish)
+196dc0.198 "Przycisk nawigacji"
+
+# osd_tab_name_texts[227] (item 7, polish)
+196dc0.227 "Ustawienie"
+
+# osd_info_box_texts[24] (item 0, polish)
+# osd_navi_function_texts[169] (item 5, polish)
+# osd_tab_name_texts[140] (item 4, polish)
+191b30.24 "Źródło wejścia"
+
+# osd_tab_name_texts[111] (item 3, polish)
+196dc0.111 "Obraz"
+
+# osd_tab_name_texts[82] (item 2, polish)
+196dc0.82 "Profesjonalny"
+
+# osd_tab_name_texts[53] (item 1, polish)
+196dc0.53 "Gry"

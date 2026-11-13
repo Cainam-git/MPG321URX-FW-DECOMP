@@ -1,0 +1,633 @@
+# Texts of language 25, named "Svenska" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[54] (item 1, swedish)
+16e0d0.54 "{F0}för att bevara panelens bildkvalitet."
+
+# osd_protect_long_execute_texts[25] (item 0, swedish)
+16e0d0.25 "Tryck på knappen {F7}3{F0}Utför{F7}3{F0} för att utföra panelskyddsfunktionen (lång tid) "
+
+# osd_protect_long_auto_texts[25] (item 0, swedish)
+16f25c.25 "{F0}För att bevara panelens bildkvalitet kommer panelskyddsfunktionen (lång tid) att "
+
+# osd_protect_long_title_texts[83] (item 2, swedish)
+16f670.83 "{F0}automatiskt när bildskärmen använts mer än 1 500 timmar."
+
+# osd_protect_long_title_texts[54] (item 1, swedish)
+16f670.54 "{F0}För att bibehålla panelens bildkvalitet aktiveras funktionen Panelskydd (lång tid) "
+
+# osd_protect_long_title_texts[25] (item 0, swedish)
+16f670.25 "{F0}Sköta MSI OLED - Panelskydd (Lång tid)"
+
+# osd_protect_long_incomplete_texts[54] (item 1, swedish)
+172590.54 "{F0}klicka på objektet för att vid behov utföra processen senare."
+
+# osd_protect_long_incomplete_texts[25] (item 0, swedish)
+172590.25 "{F0}Panelskyddsprocessen (lång tid) slutfördes inte. Välj och "
+
+# osd_protect_incomplete_texts[54] (item 1, swedish)
+173998.54 "{F0}objektet för att vid behov utföra processen senare."
+
+# osd_protect_incomplete_texts[25] (item 0, swedish)
+173998.25 "{F0}Panelskyddsprocessen slutfördes inte. Välj och klicka på "
+
+# osd_protect_long_incomplete_texts[83] (item 2, swedish)
+# osd_protect_incomplete_texts[83] (item 2, swedish)
+# osd_protect_execute_texts[83] (item 2, swedish)
+172590.83 "{F0}Meddelande:"
+
+# osd_protect_execute_texts[54] (item 1, swedish)
+174bd0.54 "{F0}för att utföra funktionen Panelskydd."
+
+# osd_protect_execute_texts[25] (item 0, swedish)
+174bd0.25 "{F0}För att bibehålla panelens bildkvalitet, tryck på knappen \"Utför\" "
+
+# osd_protect_long_retry_texts[54] (item 1, swedish)
+175de4.54 "Tryck på knappen \"Utför{F7}3{F0} för att utföra panelskyddsfunktionen (lång tid)."
+
+# osd_protect_long_retry_texts[25] (item 0, swedish)
+175de4.25 "{F0}Panelskyddsprocessen (lång tid) slutfördes inte. "
+
+# osd_protect_retry_texts[54] (item 1, swedish)
+177270.54 "{F0}för att utföra panelskyddsfunktionen. "
+
+# osd_protect_retry_texts[25] (item 0, swedish)
+177270.25 "{F0}Panelskyddsprocessen slutfördes inte. Tryck på knappen \"Utför\""
+
+# osd_protect_auto_texts[25] (item 0, swedish)
+1785c0.25 "{F0}Panelskyddsfunktionen aktiveras automatiskt för att bevara "
+
+# osd_protect_long_auto_texts[54] (item 1, swedish)
+16f25c.54 "aktiveras automatiskt."
+
+# osd_protect_auto_texts[54] (item 1, swedish)
+1785c0.54 "{F0}panelens bildkvalitet."
+
+# osd_protect_long_execute_texts[141] (item 4, swedish)
+# osd_protect_long_auto_texts[141] (item 4, swedish)
+# osd_protect_long_title_texts[170] (item 5, swedish)
+# osd_protect_long_incomplete_texts[141] (item 4, swedish)
+# osd_protect_long_retry_texts[141] (item 4, swedish)
+16e0d0.141 "{F0}Strömindikatorn blinkar vit tills processen är klar."
+
+# osd_protect_long_execute_texts[112] (item 3, swedish)
+# osd_protect_long_auto_texts[112] (item 3, swedish)
+# osd_protect_long_title_texts[141] (item 4, swedish)
+# osd_protect_long_incomplete_texts[112] (item 3, swedish)
+# osd_protect_long_retry_texts[112] (item 3, swedish)
+16e0d0.112 "{F0}Denna skyddsfunktion kan ta någon timme att genomföra."
+
+# osd_protect_long_title_texts[344] (item 11, swedish)
+# osd_protect_long_retry_texts[315] (item 10, swedish)
+# osd_protect_retry_texts[315] (item 10, swedish)
+16f670.344 "{F0}stängs AV eller är i energisparläge."
+
+# osd_protect_long_title_texts[315] (item 10, swedish)
+# osd_protect_long_retry_texts[286] (item 9, swedish)
+# osd_protect_retry_texts[286] (item 9, swedish)
+16f670.315 "{F0}Om du klickar på knappen \"Avbryt\" aktiveras processen automatiskt när bildskärmen"
+
+# osd_protect_long_execute_texts[257] (item 8, swedish)
+# osd_protect_long_auto_texts[257] (item 8, swedish)
+# osd_protect_long_title_texts[286] (item 9, swedish)
+# osd_protect_long_incomplete_texts[257] (item 8, swedish)
+# osd_protect_incomplete_texts[257] (item 8, swedish)
+# osd_protect_execute_texts[257] (item 8, swedish)
+# ... and 4 more entries
+16e0d0.257 "{F0}när processen pågår."
+
+# osd_protect_long_execute_texts[228] (item 7, swedish)
+# osd_protect_long_auto_texts[228] (item 7, swedish)
+# osd_protect_long_title_texts[257] (item 8, swedish)
+# osd_protect_long_incomplete_texts[228] (item 7, swedish)
+# osd_protect_incomplete_texts[228] (item 7, swedish)
+# osd_protect_execute_texts[228] (item 7, swedish)
+# ... and 4 more entries
+16e0d0.228 "{F0}Tryck på strömbrytaren igen för att avbryta funktionen"
+
+# osd_protect_long_execute_texts[199] (item 6, swedish)
+# osd_protect_long_auto_texts[199] (item 6, swedish)
+# osd_protect_long_title_texts[228] (item 7, swedish)
+# osd_protect_long_incomplete_texts[199] (item 6, swedish)
+# osd_protect_incomplete_texts[199] (item 6, swedish)
+# osd_protect_execute_texts[199] (item 6, swedish)
+# ... and 4 more entries
+16e0d0.199 "{F0} "
+
+# osd_protect_long_execute_texts[170] (item 5, swedish)
+# osd_protect_long_auto_texts[170] (item 5, swedish)
+# osd_protect_long_title_texts[199] (item 6, swedish)
+# osd_protect_long_incomplete_texts[170] (item 5, swedish)
+# osd_protect_incomplete_texts[170] (item 5, swedish)
+# osd_protect_execute_texts[170] (item 5, swedish)
+# ... and 4 more entries
+16e0d0.170 "{F0}Dra inte ut bildskärmens elkabel när processen pågår."
+
+# osd_protect_incomplete_texts[141] (item 4, swedish)
+# osd_protect_execute_texts[141] (item 4, swedish)
+# osd_protect_retry_texts[141] (item 4, swedish)
+# osd_protect_auto_texts[141] (item 4, swedish)
+# osd_protect_title_texts[170] (item 5, swedish)
+173998.141 "{F0}Strömindikatorn blinkar orange tills processen är klar."
+
+# osd_protect_incomplete_texts[112] (item 3, swedish)
+# osd_protect_execute_texts[112] (item 3, swedish)
+# osd_protect_retry_texts[112] (item 3, swedish)
+# osd_protect_auto_texts[112] (item 3, swedish)
+# osd_protect_title_texts[141] (item 4, swedish)
+173998.112 "{F0}Denna skyddsfunktion kan ta flera minuter att genomföra."
+
+# osd_protect_long_execute_texts[83] (item 2, swedish)
+# osd_protect_long_auto_texts[83] (item 2, swedish)
+# osd_protect_long_title_texts[112] (item 3, swedish)
+# osd_protect_long_retry_texts[83] (item 2, swedish)
+# osd_protect_retry_texts[83] (item 2, swedish)
+# osd_protect_auto_texts[83] (item 2, swedish)
+# ... and 1 more entries
+16e0d0.83 "{F0}Meddelande:"
+
+# osd_protect_title_texts[83] (item 2, swedish)
+179a14.83 "{F0} automatiskt när bildskärmen använts mer än 4 timmar"
+
+# osd_protect_title_texts[54] (item 1, swedish)
+179a14.54 "För att bibehålla panelens bildkvalitet aktiveras funktionen Panelskydd "
+
+# osd_protect_title_texts[25] (item 0, swedish)
+179a14.25 "MSI OLED Care - Panelskydd"
+
+# osd_protect_retry_texts[431] (item 14, swedish)
+# osd_protect_title_texts[402] (item 13, swedish)
+177270.431 "{F0}att visas när panelen sammanlagt använts mer än 24 timmar."
+
+# osd_protect_retry_texts[402] (item 13, swedish)
+# osd_protect_title_texts[373] (item 12, swedish)
+177270.402 "{F0}Om du klickar på knappen \"Later{FB}”{F0} (Senare kommer aviseringen enbart"
+
+# osd_protect_retry_texts[373] (item 12, swedish)
+# osd_protect_title_texts[344] (item 11, swedish)
+177270.373 "{F0} stänger AV eller i energisparläge."
+
+# osd_protect_retry_texts[344] (item 11, swedish)
+# osd_protect_title_texts[315] (item 10, swedish)
+177270.344 "{F0}Klicka på knapparna \"Avbryt\" eller \"Senare\" för att aktivera processen när du"
+
+# osd_change_notice_line3_texts[25] (item 0, swedish)
+180b60.25 "Välj ett av följande alternativ:"
+
+# osd_change_notice_line2_texts[25] (item 0, swedish)
+181058.25 "öka skärmens strömförbrukning."
+
+# osd_change_notice_line1_texts[25] (item 0, swedish)
+1814d8.25 "Ändring av den valda funktionen kan"
+
+# osd_change_notice_title_texts[25] (item 0, swedish)
+1819cc.25 "Bekräfta ändring!"
+
+# table_1821d4[54] (item 1, swedish)
+1821d4.54 "digital"
+
+# table_1821d4[25] (item 0, swedish)
+1821d4.25 "Analog"
+
+# osd_pbp_source_texts[54] (item 1, swedish)
+182534.54 "Källa 2"
+
+# osd_pbp_source_texts[25] (item 0, swedish)
+182534.25 "Källa 1"
+
+# osd_pip_item_texts[83] (item 2, swedish)
+1828c0.83 "Plats"
+
+# osd_pip_item_texts[54] (item 1, swedish)
+1828c0.54 "PIP-storlek"
+
+# osd_pip_item_texts[25] (item 0, swedish)
+1828c0.25 "Källa"
+
+# osd_pip_item_texts[141] (item 4, swedish)
+1828c0.141 "Ljudknapp"
+
+# osd_pip_item_texts[112] (item 3, swedish)
+1828c0.112 "Skärmknapp"
+
+# osd_choice_note_function_texts[141] (item 4, swedish)
+1832e4.141 "Skärmstorlek"
+
+# osd_choice_note_reducing_texts[170] (item 5, swedish)
+183cb4.170 "{F0}VRR-innehåll."
+
+# osd_choice_note_reducing_texts[141] (item 4, swedish)
+183cb4.141 "{F0}när bildskärmen tar emot"
+
+# osd_choice_note_reducing_texts[112] (item 3, swedish)
+183cb4.112 "{F0}Denna funktion fungerar inte"
+
+# osd_choice_note_reducing_texts[83] (item 2, swedish)
+183cb4.83 "{F0}eller \"DisplayHDR\"."
+
+# osd_choice_note_reducing_texts[54] (item 1, swedish)
+183cb4.54 "{F0}på inst. av \"ljusstyrka\""
+
+# osd_choice_note_reducing_texts[25] (item 0, swedish)
+183cb4.25 "{F0}Sänker effekt beroende"
+
+# osd_choice_note_texts[141] (item 4, swedish)
+183a70.141 " "
+
+# osd_choice_note_texts[112] (item 3, swedish)
+183a70.112 "{F0}Ung. en timme att genomföra"
+
+# osd_choice_note_texts[83] (item 2, swedish)
+183a70.83 " "
+
+# osd_choice_note_texts[54] (item 1, swedish)
+183a70.54 "{F0}Cirka 15 min. att slutföra"
+
+# osd_choice_note_texts[25] (item 0, swedish)
+183a70.25 "{F0}Meddelande:"
+
+# osd_oled_care_item_texts[83] (item 2, swedish)
+185e78.83 "{F0}Skydda avisering"
+
+# osd_oled_care_function_texts[170] (item 5, swedish)
+# osd_oled_care_item_texts[199] (item 6, swedish)
+185bc0.170 "{F0}Gränsdetektering"
+
+# osd_oled_care_function_texts[141] (item 4, swedish)
+# osd_oled_care_item_texts[170] (item 5, swedish)
+185bc0.141 "{F0}Detekt. Aktvitetsfält"
+
+# osd_oled_care_function_texts[112] (item 3, swedish)
+# osd_oled_care_item_texts[141] (item 4, swedish)
+185bc0.112 "{F0}Detektera logotyp"
+
+# osd_oled_care_item_texts[228] (item 7, swedish)
+185e78.228 "{F0}OLED-panelinfo."
+
+# osd_oled_care_function_texts[83] (item 2, swedish)
+# osd_oled_care_item_texts[112] (item 3, swedish)
+185bc0.83 "{F0}Statisk skärmdetekt."
+
+# osd_oled_care_function_texts[25] (item 0, swedish)
+# osd_oled_care_item_texts[54] (item 1, swedish)
+185bc0.25 "{F0}Panelskydd"
+
+# osd_oled_care_function_texts[54] (item 1, swedish)
+# osd_oled_care_item_texts[25] (item 0, swedish)
+185bc0.54 "{F0}Pixelförskjutning"
+
+# osd_choice_note_function_texts[315] (item 10, swedish)
+# osd_settings_item_texts[228] (item 7, swedish)
+1832e4.315 "{F0}Type-C PD-laddning"
+
+# osd_settings_item_texts[141] (item 4, swedish)
+1874f8.141 "{F0}Strömknapp"
+
+# osd_settings_item_texts[286] (item 9, swedish)
+1874f8.286 "Återställa"
+
+# osd_settings_item_texts[83] (item 2, swedish)
+1874f8.83 "OSD-avstängning"
+
+# osd_settings_item_texts[54] (item 1, swedish)
+1874f8.54 "Transparens"
+
+# osd_settings_item_texts[25] (item 0, swedish)
+1874f8.25 "Språk"
+
+# osd_professional_item_texts[83] (item 2, swedish)
+188634.83 "Bildförbättring"
+
+# osd_professional_item_texts[54] (item 1, swedish)
+188634.54 "Lågt blåljus"
+
+# osd_professional_item_texts[25] (item 0, swedish)
+188634.25 "Pro-läge"
+
+# osd_night_vision_texts[112] (item 3, swedish)
+1890d4.112 "starkast"
+
+# osd_night_vision_texts[83] (item 2, swedish)
+1890d4.83 "stark"
+
+# osd_night_vision_texts[54] (item 1, swedish)
+1890d4.54 "Normal"
+
+# osd_choice_note_function_texts[286] (item 9, swedish)
+# osd_gaming_item_texts[54] (item 1, swedish)
+1832e4.286 "Mörkerseende"
+
+# osd_gaming_item_texts[141] (item 4, swedish)
+188da0.141 "Väckarklocka"
+
+# osd_gaming_item_texts[112] (item 3, swedish)
+188da0.112 "Refresh Rate"
+
+# osd_choice_note_function_texts[170] (item 5, swedish)
+1832e4.170 "Svarstid"
+
+# osd_gaming_item_texts[25] (item 0, swedish)
+188da0.25 "Spelläge"
+
+# osd_choice_note_function_texts[199] (item 6, swedish)
+# osd_gi_item_texts[83] (item 2, swedish)
+1832e4.199 "Optix Scope"
+
+# osd_oled_care_seconds_texts[112] (item 3, swedish)
+18a7ec.112 "{F0}240 Sek"
+
+# osd_oled_care_seconds_texts[83] (item 2, swedish)
+18a7ec.83 "{F0}120 Sek"
+
+# osd_oled_care_seconds_texts[54] (item 1, swedish)
+18a7ec.54 "{F0}100 Sek"
+
+# osd_oled_care_seconds_texts[25] (item 0, swedish)
+18a7ec.25 "{F0}50 Sek"
+
+# table_18af08[54] (item 1, swedish)
+# table_18b008[54] (item 1, swedish)
+18af08.54 "{F0}Manuellt"
+
+# osd_oled_care_usage_texts[54] (item 1, swedish)
+18b29c.54 "{F0}Anv. 24 tim."
+
+# osd_oled_care_speed_texts[83] (item 2, swedish)
+18b5e0.83 "{F0}Snabb"
+
+# osd_oled_care_speed_texts[25] (item 0, swedish)
+18b5e0.25 "{F0}Långsam"
+
+# osd_oled_care_choice_texts[83] (item 2, swedish)
+# osd_oled_care_status_texts[83] (item 2, swedish)
+16df60.83 "{F0}Sänker nivå"
+
+# osd_oled_care_status_texts[54] (item 1, swedish)
+18b94c.54 "{F0}Tidsåtgång"
+
+# osd_oled_care_status_texts[25] (item 0, swedish)
+18b94c.25 "{F0}Börja vid"
+
+# table_18c070[54] (item 1, swedish)
+18c070.54 "{F0}Lång tid"
+
+# table_18c070[25] (item 0, swedish)
+18c070.25 "{F0}Kort tid"
+
+# table_18c4a8[25] (item 0, swedish)
+18c4a8.25 "{F0}Hastighet (pixelförskjutning)"
+
+# osd_image_item_texts[141] (item 4, swedish)
+18ca88.141 "Skärmstorlek"
+
+# osd_image_item_texts[112] (item 3, swedish)
+18ca88.112 "Färgtemperatur"
+
+# osd_image_item_texts[83] (item 2, swedish)
+18ca88.83 "Skärpa"
+
+# osd_image_item_texts[54] (item 1, swedish)
+18ca88.54 "Kontrast"
+
+# osd_language_texts[25] (item 0, swedish)
+18d3d4.25 "Svenska"
+
+# osd_optix_scope_item_texts[54] (item 1, swedish)
+18d578.54 "Scope-förhållande"
+
+# osd_optix_scope_item_texts[25] (item 0, swedish)
+18d578.25 "Scope-storlek"
+
+# osd_color_temp_texts[112] (item 3, swedish)
+18db28.112 "anpassning"
+
+# osd_color_temp_texts[83] (item 2, swedish)
+18db28.83 "varm"
+
+# osd_color_temp_texts[25] (item 0, swedish)
+18db28.25 "Sval"
+
+# osd_response_time_texts[83] (item 2, swedish)
+18e08c.83 "snabbast"
+
+# osd_response_time_texts[54] (item 1, swedish)
+18e08c.54 "snabb"
+
+# osd_oled_care_speed_texts[54] (item 1, swedish)
+# osd_color_temp_texts[54] (item 1, swedish)
+# osd_response_time_texts[25] (item 0, swedish)
+18b5e0.54 "Normal"
+
+# osd_crosshair_color_texts[54] (item 1, swedish)
+18e54c.54 "Röd"
+
+# osd_crosshair_color_texts[25] (item 0, swedish)
+18e54c.25 "Vit"
+
+# table_18c8b8[83] (item 2, swedish)
+# osd_pbp_mode_texts[83] (item 2, swedish)
+# osd_location_texts[141] (item 4, swedish)
+18c8b8.83 "Anpassa"
+
+# osd_location_texts[112] (item 3, swedish)
+18e9f8.112 "höger under"
+
+# osd_location_texts[83] (item 2, swedish)
+18e9f8.83 "vänster under"
+
+# osd_location_texts[54] (item 1, swedish)
+18e9f8.54 "höger över"
+
+# osd_location_texts[25] (item 0, swedish)
+18e9f8.25 "Vänster över"
+
+# osd_size_texts[83] (item 2, swedish)
+18f550.83 "Stor"
+
+# osd_size_texts[54] (item 1, swedish)
+18f550.54 "mellan"
+
+# osd_size_texts[25] (item 0, swedish)
+18f550.25 "Liten"
+
+# osd_crosshair_item_texts[141] (item 4, swedish)
+18f984.141 "Återställa"
+
+# osd_crosshair_item_texts[112] (item 3, swedish)
+18f984.112 "Placering"
+
+# osd_crosshair_item_texts[83] (item 2, swedish)
+18f984.83 "{F0}Färg"
+
+# osd_crosshair_item_texts[54] (item 1, swedish)
+18f984.54 "Ikon"
+
+# osd_crosshair_item_texts[25] (item 0, swedish)
+18f984.25 "Ingen"
+
+# osd_protect_button_texts[83] (item 2, swedish)
+190184.83 "{F0}Senare"
+
+# osd_protect_button_texts[54] (item 1, swedish)
+190184.54 "{F0}Avbryt"
+
+# osd_protect_button_texts[25] (item 0, swedish)
+190184.25 "{F0}Utför"
+
+# osd_yes_no_texts[54] (item 1, swedish)
+190748.54 "Nej"
+
+# osd_yes_no_texts[25] (item 0, swedish)
+190748.25 "Ja"
+
+# osd_kvm_texts[54] (item 1, swedish)
+1909ec.54 "{F0}Uppströms"
+
+# table_190cec[54] (item 1, swedish)
+190cec.54 "{F0}Högst 1 000 cd/m2"
+
+# osd_navi_key_item_texts[112] (item 3, swedish)
+19158c.112 "Höger"
+
+# osd_navi_key_item_texts[83] (item 2, swedish)
+19158c.83 "Vänster"
+
+# osd_navi_key_item_texts[54] (item 1, swedish)
+19158c.54 "Ner"
+
+# osd_navi_key_item_texts[25] (item 0, swedish)
+19158c.25 "Upp"
+
+# osd_info_box_texts[199] (item 6, swedish)
+191b30.199 "Bitdjup"
+
+# osd_info_box_texts[170] (item 5, swedish)
+191b30.170 "Innehållstyp"
+
+# osd_info_box_texts[141] (item 4, swedish)
+191b30.141 "Välj läge"
+
+# osd_info_box_texts[83] (item 2, swedish)
+191b30.83 "Fysisk upplösning"
+
+# osd_info_box_texts[54] (item 1, swedish)
+191b30.54 "Naturlig upplösning"
+
+# osd_out_of_range_texts[25] (item 0, swedish)
+192d8c.25 "Utanför intervallet!"
+
+# osd_no_signal_texts[25] (item 0, swedish)
+193008.25 "Ingen signal"
+
+# osd_power_button_texts[54] (item 1, swedish)
+19336c.54 "Standby"
+
+# osd_navi_function_texts[315] (item 10, swedish)
+1935bc.315 "Optix Scope"
+
+# osd_navi_function_texts[286] (item 9, swedish)
+1935bc.286 "Mörkerseende"
+
+# osd_info_box_texts[112] (item 3, swedish)
+# osd_navi_function_texts[228] (item 7, swedish)
+191b30.112 "Refresh Rate"
+
+# osd_gi_item_texts[54] (item 1, swedish)
+# osd_navi_function_texts[112] (item 3, swedish)
+18a360.54 "{F0}Smart hårkors"
+
+# osd_navi_function_texts[141] (item 4, swedish)
+1935bc.141 "Väckarklocka"
+
+# osd_navi_function_texts[83] (item 2, swedish)
+1935bc.83 "Spelläge"
+
+# osd_choice_note_function_texts[54] (item 1, swedish)
+# osd_image_item_texts[25] (item 0, swedish)
+# osd_navi_function_texts[54] (item 1, swedish)
+1832e4.54 "Ljusstyrka"
+
+# osd_settings_item_texts[170] (item 5, swedish)
+# table_18c8b8[112] (item 3, swedish)
+# osd_navi_function_texts[257] (item 8, swedish)
+1874f8.170 "Info. On Screen"
+
+# osd_navi_function_texts[199] (item 6, swedish)
+1935bc.199 "PIP/PBP-läge"
+
+# osd_image_enhancement_texts[141] (item 4, swedish)
+194b34.141 "starkast"
+
+# osd_image_enhancement_texts[112] (item 3, swedish)
+194b34.112 "stark"
+
+# osd_image_enhancement_texts[83] (item 2, swedish)
+194b34.83 "mellan"
+
+# osd_image_enhancement_texts[54] (item 1, swedish)
+194b34.54 "svag"
+
+# osd_pro_mode_texts[112] (item 3, swedish)
+1951dc.112 "Film"
+
+# osd_pro_mode_texts[83] (item 2, swedish)
+1951dc.83 "Blåljusskydd"
+
+# osd_pro_mode_texts[141] (item 4, swedish)
+1951dc.141 "Office"
+
+# osd_oled_care_choice_texts[54] (item 1, swedish)
+# osd_optix_scope_item_texts[112] (item 3, swedish)
+# osd_off_on_texts[54] (item 1, swedish)
+# table_195a38[83] (item 2, swedish)
+16df60.54 "PÅ"
+
+# osd_location_texts[170] (item 5, swedish)
+# table_195a38[25] (item 0, swedish)
+# table_195c7c[25] (item 0, swedish)
+18e9f8.170 "Plats"
+
+# osd_game_mode_texts[25] (item 0, swedish)
+195f24.25 "{F0}Premiumfärg"
+
+# osd_pro_mode_texts[54] (item 1, swedish)
+# osd_game_mode_texts[54] (item 1, swedish)
+1951dc.54 "Användare"
+
+# osd_game_mode_texts[112] (item 3, swedish)
+195f24.112 "Racing"
+
+# osd_pbp_mode_texts[54] (item 1, swedish)
+18e89c.54 "Läge 2"
+
+# osd_pbp_mode_texts[25] (item 0, swedish)
+18e89c.25 "Läge 1"
+
+# osd_oled_care_choice_texts[25] (item 0, swedish)
+# osd_night_vision_texts[25] (item 0, swedish)
+# table_18c8b8[25] (item 0, swedish)
+# osd_optix_scope_item_texts[83] (item 2, swedish)
+# osd_off_on_texts[25] (item 0, swedish)
+# osd_power_button_texts[25] (item 0, swedish)
+# ... and 5 more entries
+16df60.25 "AV"
+
+# osd_tab_name_texts[199] (item 6, swedish)
+196dc0.199 "Navi-knapp"
+
+# osd_tab_name_texts[228] (item 7, swedish)
+196dc0.228 "Inställning"
+
+# osd_info_box_texts[25] (item 0, swedish)
+# osd_navi_function_texts[170] (item 5, swedish)
+# osd_tab_name_texts[141] (item 4, swedish)
+191b30.25 "Ingångskälla"
+
+# osd_tab_name_texts[112] (item 3, swedish)
+196dc0.112 "Bild"
+
+# osd_tab_name_texts[83] (item 2, swedish)
+196dc0.83 "Professionell"
+
+# osd_tab_name_texts[54] (item 1, swedish)
+196dc0.54 "Spel"

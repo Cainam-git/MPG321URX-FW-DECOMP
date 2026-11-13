@@ -1,0 +1,5 @@
+# leon2s FUN_a0060440 0xa0060440-0xa0060450 (16 bytes)
+a0060440:  9f c5 c0 00  call  %l7
+a0060444:  01 00 00 00  nop
+a0060448:  81 e8 00 00  restore
+a006044c:  81 e0 00 00  save

@@ -1,0 +1,636 @@
+# Texts of language 11, named "{F5}{00}{01}{02}" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[40] (item 1, thai)
+16e0d0.40 "{F0}(long time)function."
+
+# osd_protect_long_execute_texts[11] (item 0, thai)
+16e0d0.11 "{F0}To maintain panel image quality,press\"Execute\"button to do panel protect"
+
+# osd_protect_long_auto_texts[11] (item 0, thai)
+16f25c.11 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+# osd_protect_long_title_texts[69] (item 2, thai)
+16f670.69 "{F0}automatically activate when monitor using over 1,500 hours."
+
+# osd_protect_long_title_texts[40] (item 1, thai)
+16f670.40 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+# osd_protect_long_title_texts[11] (item 0, thai)
+16f670.11 "{F5}{04}{09}{1B}{9A}{0F}{11}{F0} OLED {F5}{15}{08}{07}{F0} MSI - {F5}{04}{09}{1B}{6E}{08}{07}{2C}{2A}{0F}{46}{07}{F0} ({F5}{03}{24}{11}{09}{2A}{09}{2A}{F0})"
+
+# osd_protect_long_incomplete_texts[40] (item 1, thai)
+172590.40 "Please select and click this item further to do this process if needs later" hidden 2e
+
+# osd_protect_long_incomplete_texts[11] (item 0, thai)
+172590.11 "The panel protect(long time)process did not complete."
+
+# osd_protect_incomplete_texts[40] (item 1, thai)
+173998.40 "{F5}{1B}{09}{02}{04}{09}{1B}{A2}{AE}{04}{1F}{BC}{07}{03}{A4}{08}{A7}{04}{1B}{77}{25}{24}{2A}{04}{09}{1B}{B3}{B9}{09}{AF}{09}{03}{B4}{2A}{4C}{2A}{0E}{09}{02}{10}{47}{07}"
+
+# osd_protect_incomplete_texts[11] (item 0, thai)
+173998.11 "{F5}{04}{1B}{77}{25}{24}{2A}{04}{09}{1B}{19}{04}{6E}{08}{07}{0F}{46}{07}{38}{08}{F0} {F5}{00}{68}{03}{12}{8F}{38}{12}{05}{AD}{1B}{B0}{F0} {F5}{22}{19}{1B}{23}{03}{86}{08}{04}{0F}{11}{77}{1F}{9E}{04}"
+
+# osd_protect_long_incomplete_texts[69] (item 2, thai)
+# osd_protect_incomplete_texts[69] (item 2, thai)
+# osd_protect_execute_texts[69] (item 2, thai)
+172590.69 "{F5}{18}{08}{8E}{07}{03}{04}{1E}{F0}:"
+
+# osd_protect_execute_texts[40] (item 1, thai)
+174bd0.40 "{F5}{03}{A4}{08}{4C}{8D}{A5}{07}{A6}{8D}{2A}{04}{09}{1B}{6E}{08}{07}{88}{2A}{0F}{46}{07}{F0}"
+
+# osd_protect_execute_texts[11] (item 0, thai)
+174bd0.11 "{F5}{4C}{2A}{04}{09}{1B}{27}{04}{4B}{09}{3E}{14}{0E}{09}{0B}{15}{08}{07}{0E}{09}{0B}{38}{09}{04}{0F}{46}{07}{38}{08}{F0} {F5}{4C}{AC}{04}{23}{AA}{05}{F0} \"{F5}{29}{03}{BD}{2A}{04}{09}{1B}{F0}\""
+
+# osd_protect_long_retry_texts[40] (item 1, thai)
+175de4.40 "Please press \"execute\"button to do panel protect (long time) function."
+
+# osd_protect_long_retry_texts[11] (item 0, thai)
+175de4.11 "The panel protect(long time)process did not complete."
+
+# osd_protect_retry_texts[40] (item 1, thai)
+177270.40 "{F5}{03}{A4}{08}{4C}{8D}{A5}{07}{A6}{8D}{2A}{19}{04}{6E}{08}{07}{0F}{46}{07}{38}{08}{F0} "
+
+# osd_protect_retry_texts[11] (item 0, thai)
+177270.11 "{F5}{04}{1B}{77}{25}{24}{2A}{04}{09}{1B}{19}{04}{6E}{08}{07}{0F}{46}{07}{38}{08}{F0} {F5}{00}{68}{03}{12}{8F}{38}{12}{05}{AD}{1B}{B0}{F0} {F5}{22}{19}{1B}{23}{04}{23}{AA}{05}{F0} \"{F5}{29}{03}{A2}{2A}{04}{09}{1B}{F0}\" "
+
+# osd_protect_auto_texts[11] (item 0, thai)
+1785c0.11 "{F5}{03}{A4}{08}{27}{04}{4B}{09}{3E}{14}{0E}{09}{0B}{15}{08}{07}{0E}{09}{0B}{25}{2A}{0F}{46}{07}{38}{08}{F0} {F5}{A5}{07}{A6}{8D}{2A}{19}{04}{6E}{08}{07}{0F}{46}{07}{38}{08}"
+
+# osd_protect_long_auto_texts[40] (item 1, thai)
+16f25c.40 "atomatically activate."
+
+# osd_protect_auto_texts[40] (item 1, thai)
+1785c0.40 "{F5}{38}{77}{03}{AB}{23}{A7}{07}{09}{2A}{22}{23}{02}{96}{1E}{22}{2A}{73}{95}"
+
+# osd_protect_long_execute_texts[127] (item 4, thai)
+# osd_protect_long_auto_texts[127] (item 4, thai)
+# osd_protect_long_title_texts[156] (item 5, thai)
+# osd_protect_long_incomplete_texts[127] (item 4, thai)
+# osd_protect_long_retry_texts[127] (item 4, thai)
+16e0d0.127 "The power indicator will blink white color until process done."
+
+# osd_protect_long_execute_texts[98] (item 3, thai)
+# osd_protect_long_auto_texts[98] (item 3, thai)
+# osd_protect_long_title_texts[127] (item 4, thai)
+# osd_protect_long_incomplete_texts[98] (item 3, thai)
+# osd_protect_long_retry_texts[98] (item 3, thai)
+16e0d0.98 "{F5}{A6}{07}{A7}{2E}{2A}{88}{08}{07}{2C}{2A}{79}{08}{09}{38}{4C}{8D}{03}{24}{11}{09}{A8}{09}{07}{09}{2A}{10}{A3}{07}{8F}{24}{22}{05}{07}{03}{3D}{08}{03}{12}{90}{38}{81}{2A}"
+
+# osd_protect_long_title_texts[330] (item 11, thai)
+# osd_protect_long_retry_texts[301] (item 10, thai)
+# osd_protect_retry_texts[301] (item 10, thai)
+16f670.330 "{F5}{AB}{23}{38}{08}{0E}{09}{0B}{10}{78}{08}{38}{08}{0E}{09}{0B}{08}{BA}{4C}{2A}{22}{10}{05}{23}{04}{09}{1B}{19}{1B}{77}{10}{7D}{23}{0B}{C2}{07}{07}{09}{2A}"
+
+# osd_protect_long_title_texts[301] (item 10, thai)
+# osd_protect_long_retry_texts[272] (item 9, thai)
+# osd_protect_retry_texts[272] (item 9, thai)
+16f670.301 "{F5}{B9}{09}{1F}{BE}{04}{AA}{05}{F0} \"{F5}{02}{04}{03}{BE}{04}{F0}\" {F5}{04}{1B}{77}{25}{24}{2A}{04}{09}{1B}{B3}{38}{77}{03}{AB}{23}{A7}{09}{07}{09}{2A}{22}{23}{02}{96}{1E}{22}{2A}{73}{57}{03}{69}{08}"
+
+# osd_protect_long_execute_texts[243] (item 8, thai)
+# osd_protect_long_auto_texts[243] (item 8, thai)
+# osd_protect_long_title_texts[272] (item 9, thai)
+# osd_protect_long_incomplete_texts[243] (item 8, thai)
+# osd_protect_incomplete_texts[243] (item 8, thai)
+# osd_protect_execute_texts[243] (item 8, thai)
+# ... and 4 more entries
+16e0d0.243 "{F5}{77}{02}{04}{03}{9E}{04}{A5}{07}{A6}{8D}{2A}{A2}"
+
+# osd_protect_long_execute_texts[214] (item 7, thai)
+# osd_protect_long_auto_texts[214] (item 7, thai)
+# osd_protect_long_title_texts[243] (item 8, thai)
+# osd_protect_long_incomplete_texts[214] (item 7, thai)
+# osd_protect_incomplete_texts[214] (item 7, thai)
+# osd_protect_execute_texts[214] (item 7, thai)
+# ... and 4 more entries
+16e0d0.214 "{F5}{4C}{2A}{1B}{77}{10}{98}{09}{07}{04}{09}{1B}{03}{93}{02}{04}{4C}{18}{04}{1B}{77}{25}{24}{2A}{04}{09}{1B}{F0} {F5}{04}{09}{1B}{04}{23}{AA}{05}{0B}{09}{24}{03}{24}{08}{5E}{5D}{04}{1F}{BC}{07}{38}"
+
+# osd_protect_long_execute_texts[185] (item 6, thai)
+# osd_protect_long_auto_texts[185] (item 6, thai)
+# osd_protect_long_title_texts[214] (item 7, thai)
+# osd_protect_long_incomplete_texts[185] (item 6, thai)
+# osd_protect_incomplete_texts[185] (item 6, thai)
+# osd_protect_execute_texts[185] (item 6, thai)
+# ... and 4 more entries
+16e0d0.185 "{F5}{00}{32}{08}{08}{04}{38}{09}{04}{38}{08}{0E}{09}{0B}"
+
+# osd_protect_long_execute_texts[156] (item 5, thai)
+# osd_protect_long_auto_texts[156] (item 5, thai)
+# osd_protect_long_title_texts[185] (item 6, thai)
+# osd_protect_long_incomplete_texts[156] (item 5, thai)
+# osd_protect_incomplete_texts[156] (item 5, thai)
+# osd_protect_execute_texts[156] (item 5, thai)
+# ... and 4 more entries
+16e0d0.156 "{F5}{4C}{2A}{1B}{77}{10}{98}{09}{07}{04}{09}{1B}{03}{93}{02}{04}{4C}{18}{04}{1B}{77}{25}{24}{2A}{04}{09}{1B}{F0} {F5}{22}{19}{1B}{23}{08}{02}{09}{3C}{08}{23}{19}{C1}{04}{12}{09}{02}"
+
+# osd_protect_incomplete_texts[127] (item 4, thai)
+# osd_protect_execute_texts[127] (item 4, thai)
+# osd_protect_retry_texts[127] (item 4, thai)
+# osd_protect_auto_texts[127] (item 4, thai)
+# osd_protect_title_texts[156] (item 5, thai)
+173998.127 "{F5}{00}{32}{03}{03}{12}{1F}{07}{04}{09}{1B}{A7}{09}{07}{09}{2A}{38}{77}{04}{77}{0B}{78}{25}{03}{B4}{2A}{28}{8E}{05}{38}{2A}{04}{98}{09}{04}{1B}{77}{25}{24}{2A}{04}{09}{1B}{38}{77}{03}{12}{8F}{38}{B5}{2A}"
+
+# osd_protect_incomplete_texts[98] (item 3, thai)
+# osd_protect_execute_texts[98] (item 3, thai)
+# osd_protect_retry_texts[98] (item 3, thai)
+# osd_protect_auto_texts[98] (item 3, thai)
+# osd_protect_title_texts[127] (item 4, thai)
+173998.98 "{F5}{32}{07}{A6}{0A}{2A}{04}{09}{1B}{6E}{08}{07}{C0}{2A}{B3}{38}{77}{4C}{0A}{03}{24}{11}{09}{10}{11}{09}{02}{2A}{09}{8C}{4C}{2A}{04}{09}{1B}{01}{07}{09}{2A}{4C}{AC}{03}{12}{8F}{38}{B5}{2A}"
+
+# osd_protect_long_execute_texts[69] (item 2, thai)
+# osd_protect_long_auto_texts[69] (item 2, thai)
+# osd_protect_long_title_texts[98] (item 3, thai)
+# osd_protect_long_retry_texts[69] (item 2, thai)
+# osd_protect_retry_texts[69] (item 2, thai)
+# osd_protect_auto_texts[69] (item 2, thai)
+# ... and 1 more entries
+16e0d0.69 "{F5}{18}{08}{8E}{07}{03}{04}{1E}{F0}:"
+
+# osd_protect_title_texts[69] (item 2, thai)
+179a14.69 "{F5}{22}{23}{02}{96}{1E}{22}{2A}{73}{57}{03}{43}{08}{05}{04}{09}{1B}{4C}{8D}{07}{09}{2A}{38}{08}{0E}{09}{0B}{2A}{09}{2A}{04}{98}{09}{F0} 4 {F5}{BB}{24}{22}{05}{07}"
+
+# osd_protect_title_texts[40] (item 1, thai)
+179a14.40 "{F5}{4C}{2A}{04}{09}{1B}{27}{04}{4B}{09}{3E}{14}{0E}{09}{0B}{15}{08}{07}{0E}{09}{0B}{38}{09}{04}{0F}{46}{07}{38}{08}{F0} {F5}{A5}{07}{A6}{8D}{2A}{04}{09}{1B}{6E}{08}{07}{2C}{2A}{0F}{46}{07}{F0} {F5}{38}{77}{03}{AB}{23}{A7}{07}{09}{2A}"
+
+# osd_protect_title_texts[11] (item 0, thai)
+179a14.11 "MSI OLED Care - {F5}{04}{09}{1B}{6E}{08}{07}{2C}{2A}{0F}{46}{07}"
+
+# osd_protect_retry_texts[417] (item 14, thai)
+# osd_protect_title_texts[388] (item 13, thai)
+177270.417 "{F5}{03}{A1}{08}{07}{2C}{2A}{03}{B8}{2A}{04}{98}{09}{F0} 24 {F5}{BB}{24}{22}{05}{07}"
+
+# osd_protect_retry_texts[388] (item 13, thai)
+# osd_protect_title_texts[359] (item 12, thai)
+177270.388 "{F5}{C2}{09}{1F}{BE}{04}{AA}{05}{F0} \"{F5}{0E}{09}{02}{10}{47}{07}{F0}\" {F5}{04}{09}{1B}{0F}{89}{07}{03}{20}{08}{2A}{38}{77}{0F}{12}{23}{07}{49}{2A}{B7}{62}{08}{03}{C3}{08}{69}{04}{09}{1B}{4C}{8D}{07}{09}{2A}{0F}{46}{07}{38}{08}{62}{08}"
+
+# osd_protect_retry_texts[359] (item 12, thai)
+# osd_protect_title_texts[330] (item 11, thai)
+177270.359 "{F5}{08}{AB}{23}{38}{08}{0E}{09}{0B}{10}{C4}{08}{38}{08}{0E}{09}{0B}{08}{BA}{4C}{2A}{22}{10}{05}{23}{04}{09}{1B}{19}{1B}{77}{10}{6D}{23}{0B}{47}{07}{07}{09}{2A}"
+
+# osd_protect_retry_texts[330] (item 11, thai)
+# osd_protect_title_texts[301] (item 10, thai)
+177270.330 "{F5}{B9}{09}{1F}{BE}{04}{AA}{05}{F0} \"{F5}{02}{04}{03}{9E}{04}{F0}\" {F5}{10}{C4}{08}{F0} \"{F5}{0E}{09}{02}{10}{47}{07}{F0}\"{F5}{04}{1B}{77}{25}{24}{2A}{04}{09}{1B}{B3}{38}{77}{03}{AB}{23}{A7}{09}{07}{09}{2A}{22}{23}{02}{96}{1E}{22}{2A}{73}{57}{03}{C3}"
+
+# osd_change_notice_line3_texts[11] (item 0, thai)
+180b60.11 "{F5}{22}{19}{1B}{23}{03}{3A}{08}{04}{10}{69}{07}{4C}{2A}{20}{24}{03}{3A}{08}{04}{62}{08}{00}{19}{79}{F0} :"
+
+# osd_change_notice_line2_texts[11] (item 0, thai)
+181058.11 "{F5}{04}{09}{1B}{28}{2A}{03}{19}{28}{08}{07}{0B}{47}{07}{07}{09}{2A}{15}{08}{07}{38}{08}{0E}{09}{0B}{79}"
+
+# osd_change_notice_line1_texts[11] (item 0, thai)
+1814d8.11 "{F5}{04}{09}{1B}{03}{19}{28}{02}{2A}{35}{07}{2C}{54}{2A}{59}{03}{3A}{08}{04} {08}{09}{38}{03}{3D}{05}"
+
+# osd_change_notice_title_texts[11] (item 0, thai)
+1819cc.11 "{F5}{60}{2A}{7D}{2A}{04}{09}{1B}{03}{19}{28}{02}{2A}{0F}{19}{11}{07}!"
+
+# table_1821d4[40] (item 1, thai)
+1821d4.40 "{F5}{6A}{6B}{1E}{08}{11}"
+
+# table_1821d4[11] (item 0, thai)
+1821d4.11 "{F5}{08}{2A}{09}{67}{08}{04}"
+
+# osd_pbp_source_texts[40] (item 1, thai)
+182534.40 "{F5}{0F}{10}{16}{07}{17}{13}{13}{09}{14} 2"
+
+# osd_pbp_source_texts[11] (item 0, thai)
+182534.11 "{F5}{0F}{10}{16}{07}{17}{13}{13}{09}{14} 1"
+
+# osd_pip_item_texts[69] (item 2, thai)
+1828c0.69 "{F5}{5B}{0F}{10}{5C}{07}"
+
+# osd_pip_item_texts[40] (item 1, thai)
+1828c0.40 "{F5}{15}{2A}{09}{23} PIP"
+
+# osd_pip_item_texts[11] (item 0, thai)
+1828c0.11 "{F5}{0F}{10}{16}{07}{17}{13}{13}{09}{14}"
+
+# osd_pip_item_texts[127] (item 4, thai)
+1828c0.127 "{F5}{12}{47}{25}{48}{03}{28}{02}{07}"
+
+# osd_pip_item_texts[98] (item 3, thai)
+1828c0.98 "{F5}{12}{47}{25}{0E}{09}{0B}"
+
+# osd_choice_note_function_texts[127] (item 4, thai)
+1832e4.127 "{F5}{15}{2A}{09}{23}{10}{44}{09}{38}{08}"
+
+# osd_choice_note_reducing_texts[156] (item 5, thai)
+183cb4.156 "{F5}{25}{03}{B3}{08}{10}{09}{F0} VRR"
+
+# osd_choice_note_reducing_texts[127] (item 4, thai)
+183cb4.127 "{F5}{09}{2A}{03}{69}{08}{38}{08}{0E}{09}{0B}{00}{91}{27}"
+
+# osd_choice_note_reducing_texts[98] (item 3, thai)
+183cb4.98 "{F5}{A5}{07}{A6}{8D}{2A}{B3}{38}{77}{00}{68}{A7}{07}"
+
+# osd_choice_note_reducing_texts[69] (item 2, thai)
+183cb4.69 "{F5}{05}{12}{3F}{09}{07}{F0}\"{F5}{10}{34}{08}{F0} \"DisplayHDR\""
+
+# osd_choice_note_reducing_texts[40] (item 1, thai)
+183cb4.40 "{F5}{2A}{08}{A0}{88}{25}{04}{09}{1B}{95}{07}{21}{09}{F0} \"{F5}{1F}{24}{09}"
+
+# osd_choice_note_reducing_texts[11] (item 0, thai)
+183cb4.11 "{F5}{04}{09}{1B}{11}{23}{03}{08}{32}{03}{32}{04}{40}{38}{77}{49}"
+
+# osd_choice_note_texts[127] (item 4, thai)
+183a70.127 "{F5}{22}{05}{07}{03}{A5}{08}{03}{12}{90}{38}{A2}{2A}"
+
+# osd_choice_note_texts[98] (item 3, thai)
+183a70.98 "{F5}{4C}{8F}{03}{24}{11}{09}{19}{1B}{77}{05}{09}{14}{10}{A3}{07}{A4}{24}"
+
+# osd_choice_note_texts[69] (item 2, thai)
+183a70.69 "{F5}{2A}{09}{59}{03}{3D}{08}{03}{12}{8F}{38}{A2}{2A}"
+
+# osd_choice_note_texts[40] (item 1, thai)
+183a70.40 "{F5}{4C}{8F}{03}{24}{11}{09}{19}{1B}{77}{05}{09}{14}{F0} 15"
+
+# osd_choice_note_texts[11] (item 0, thai)
+183a70.11 "{F5}{8D}{08}{8E}{07}{03}{04}{1E}{F0}: "
+
+# osd_oled_care_item_texts[69] (item 2, thai)
+185e78.69 "{F5}{04}{09}{1B}{0F}{8A}{07}{03}{20}{08}{2A}{88}{08}{07}{2C}{2A}"
+
+# osd_oled_care_function_texts[156] (item 5, thai)
+# osd_oled_care_item_texts[185] (item 6, thai)
+185bc0.156 "{F5}{04}{09}{1B}{1E}{1B}{24}{38}{89}{25}{15}{08}{25}{03}{15}{1E}"
+
+# osd_oled_care_function_texts[127] (item 4, thai)
+# osd_oled_care_item_texts[156] (item 5, thai)
+185bc0.127 "{F5}{04}{09}{1B}{1E}{1B}{24}{38}{89}{25}{0F}{3C}{25}{07}{09}{2A}"
+
+# osd_oled_care_function_texts[98] (item 3, thai)
+# osd_oled_care_item_texts[127] (item 4, thai)
+185bc0.98 "{F5}{04}{09}{1B}{1E}{1B}{24}{38}{89}{25}{10}{11}{09}{02}{22}{11}{22}{2C}"
+
+# osd_oled_care_item_texts[214] (item 7, thai)
+185e78.214 "{F5}{8D}{08}{BF}{11}{0F}{46}{07}{38}{08}{F0} OLED"
+
+# osd_oled_care_function_texts[69] (item 2, thai)
+# osd_oled_care_item_texts[98] (item 3, thai)
+185bc0.69 "{F5}{1E}{1B}{24}{38}{89}{25}{10}{3B}{09}{38}{08}{1F}{07}{59}"
+
+# osd_oled_care_function_texts[11] (item 0, thai)
+# osd_oled_care_item_texts[40] (item 1, thai)
+185bc0.11 "{F5}{04}{09}{1B}{6E}{08}{07}{88}{2A}{0F}{46}{07}{F0} "
+
+# osd_oled_care_function_texts[40] (item 1, thai)
+# osd_oled_care_item_texts[11] (item 0, thai)
+185bc0.40 "{F5}{04}{09}{1B}{03}{19}{86}{02}{2A}{87}{04}{03}{2E}{11}"
+
+# osd_choice_note_function_texts[301] (item 10, thai)
+# osd_settings_item_texts[214] (item 7, thai)
+1832e4.301 "{F5}{0A}{09}{85}{38}{F0} PD {F0} Type C"
+
+# osd_settings_item_texts[127] (item 4, thai)
+1874f8.127 "{F5}{03}{45}{23}/{45}{23}"
+
+# osd_settings_item_texts[272] (item 9, thai)
+1874f8.272 "{F5}{34}{03}{53}{1E}"
+
+# osd_settings_item_texts[69] (item 2, thai)
+1874f8.69 "{F5}{00}{01}{52}{03}{08}{09}{40} OSD"
+
+# osd_settings_item_texts[40] (item 1, thai)
+1874f8.40 "{F5}{1F}{24}{09}{05}{22}{19}{4D}{07}{4C}{12}"
+
+# osd_settings_item_texts[11] (item 0, thai)
+1874f8.11 "{F5}{0E}{09}{4B}{09}"
+
+# osd_professional_item_texts[69] (item 2, thai)
+188634.69 "{F5}{3E}{14}{0E}{09}{0B}"
+
+# osd_professional_item_texts[40] (item 1, thai)
+188634.40 "{F5}{03}{03}{12}{07}{28}{7E}{09}{03}{7F}{2A}{80}{09}"
+
+# osd_professional_item_texts[11] (item 0, thai)
+188634.11 "{F5}{22}{10}{05}{23}{0C}{08}{08}{09}{0D}{0B}"
+
+# osd_night_vision_texts[98] (item 3, thai)
+1890d4.98 "{F5}{0F}{1B}{07}{59}{5A}{23}"
+
+# osd_night_vision_texts[69] (item 2, thai)
+1890d4.69 "{F5}{0F}{1B}{07}"
+
+# osd_night_vision_texts[40] (item 1, thai)
+1890d4.40 "{F5}{19}{04}{57}"
+
+# osd_choice_note_function_texts[272] (item 9, thai)
+# osd_gaming_item_texts[40] (item 1, thai)
+1832e4.272 "{F5}{04}{11}{09}{07}{72}{2A}"
+
+# osd_gaming_item_texts[127] (item 4, thai)
+188da0.127 "{F5}{2A}{09}{36}{04}{09}{19}{37}{04}"
+
+# osd_gaming_item_texts[98] (item 3, thai)
+188da0.98 "{F5}{33}{1E}{1B}{09}{04}{09}{1B}{34}{03}{32}{1B}{0A}"
+
+# osd_choice_note_function_texts[156] (item 5, thai)
+1832e4.156 "{F5}{03}{24}{11}{09}{1E}{08}{25}{12}{2A}{08}{07}"
+
+# osd_gaming_item_texts[11] (item 0, thai)
+188da0.11 "{F5}{22}{10}{05}{23}{03}{04}{05}"
+
+# osd_choice_note_function_texts[185] (item 6, thai)
+# osd_gi_item_texts[69] (item 2, thai)
+1832e4.185 "{F5}{15}{08}{25}{03}{15}{1E} {F0}Optix"
+
+# osd_oled_care_seconds_texts[98] (item 3, thai)
+18a7ec.98 "{F0}240 {F5}{9F}{2A}{09}{8C}"
+
+# osd_oled_care_seconds_texts[69] (item 2, thai)
+18a7ec.69 "{F0}120 {F5}{9F}{2A}{09}{8C}"
+
+# osd_oled_care_seconds_texts[40] (item 1, thai)
+18a7ec.40 "{F0}100 {F5}{9F}{2A}{09}{8C}"
+
+# osd_oled_care_seconds_texts[11] (item 0, thai)
+18a7ec.11 "{F0}50 {F5}{9F}{2A}{09}{8C}"
+
+# table_18af08[40] (item 1, thai)
+# table_18b008[40] (item 1, thai)
+18af08.40 "{F5}{92}{24}{02}{93}{24}{03}{08}{07}"
+
+# osd_oled_care_usage_texts[40] (item 1, thai)
+18b29c.40 "Usage 24 hrs"
+
+# osd_oled_care_speed_texts[69] (item 2, thai)
+18b5e0.69 "{F5}{03}{85}{24}"
+
+# osd_oled_care_speed_texts[11] (item 0, thai)
+18b5e0.11 "{F5}{41}{09}"
+
+# osd_oled_care_choice_texts[69] (item 2, thai)
+# osd_oled_care_status_texts[69] (item 2, thai)
+16df60.69 "{F5}{1B}{77}{26}{25}{04}{09}{1B}{11}{23}"
+
+# osd_oled_care_status_texts[40] (item 1, thai)
+18b94c.40 "{F5}{03}{24}{11}{09}{8C}{8B}{08}{07}{4C}{4A}"
+
+# osd_oled_care_status_texts[11] (item 0, thai)
+18b94c.11 "{F5}{03}{8A}{05}{8B}{2A}{8C}"
+
+# table_18c070[40] (item 1, thai)
+18c070.40 "{F5}{03}{24}{11}{09}{2A}{09}{2A}"
+
+# table_18c070[11] (item 0, thai)
+18c070.11 "{F5}{03}{24}{11}{09}{91}{2A}"
+
+# table_18c4a8[11] (item 0, thai)
+18c4a8.11 "Moving speed"
+
+# osd_image_item_texts[127] (item 4, thai)
+18ca88.127 "{F5}{15}{2A}{09}{23}{10}{44}{09}{38}{08}"
+
+# osd_image_item_texts[98] (item 3, thai)
+18ca88.98 "{F5}{08}{14}{10}{42}{43}{28}"
+
+# osd_image_item_texts[69] (item 2, thai)
+18ca88.69 "{F5}{1F}{24}{09}{05}{41}{23}"
+
+# osd_image_item_texts[40] (item 1, thai)
+18ca88.40 "{F5}{1F}{08}{2A}{01}{1B}{09}{12}{40}"
+
+# osd_language_texts[11] (item 0, thai)
+18d3d4.11 "{F5}{00}{01}{02}"
+
+# osd_optix_scope_item_texts[40] (item 1, thai)
+18d578.40 "{F5}{33}{1E}{1B}{09}{12}{24}{2A}{15}{08}{25}{03}{15}{1E}"
+
+# osd_optix_scope_item_texts[11] (item 0, thai)
+18d578.11 "{F5}{15}{2A}{09}{23}{15}{08}{25}{03}{15}{1E}"
+
+# osd_color_temp_texts[98] (item 3, thai)
+18db28.98 "{F5}{04}{09}{1B}{19}{27}{25}{0F}{62}{07}"
+
+# osd_color_temp_texts[69] (item 2, thai)
+18db28.69 "{F5}{61}{2A}"
+
+# osd_color_temp_texts[11] (item 0, thai)
+18db28.11 "{F5}{03}{60}{2A}"
+
+# osd_response_time_texts[69] (item 2, thai)
+18e08c.69 "{F5}{03}{58}{24}{59}{5A}{23}"
+
+# osd_response_time_texts[40] (item 1, thai)
+18e08c.40 "{F5}{03}{58}{24}"
+
+# osd_oled_care_speed_texts[40] (item 1, thai)
+# osd_color_temp_texts[40] (item 1, thai)
+# osd_response_time_texts[11] (item 0, thai)
+18b5e0.40 "{F5}{19}{04}{57}"
+
+# osd_crosshair_color_texts[40] (item 1, thai)
+18e54c.40 "{F5}{28}{0F}{23}{07}"
+
+# osd_crosshair_color_texts[11] (item 0, thai)
+18e54c.11 "{F5}{28}{15}{09}{24}"
+
+# table_18c8b8[69] (item 2, thai)
+# osd_pbp_mode_texts[69] (item 2, thai)
+# osd_location_texts[127] (item 4, thai)
+18c8b8.69 "{F5}{19}{27}{25}{03}{08}{07}"
+
+# osd_location_texts[98] (item 3, thai)
+18e9f8.98 "{F5}{16}{09}{07}{15}{24}{09}"
+
+# osd_location_texts[69] (item 2, thai)
+18e9f8.69 "{F5}{16}{09}{07}{4A}{09}{02}"
+
+# osd_location_texts[40] (item 1, thai)
+18e9f8.40 "{F5}{25}{2A}{15}{24}{09}"
+
+# osd_location_texts[11] (item 0, thai)
+18e9f8.11 "{F5}{25}{2A}{4A}{09}{02}"
+
+# osd_size_texts[69] (item 2, thai)
+18f550.69 "{F5}{4C}{10}{6C}"
+
+# osd_size_texts[40] (item 1, thai)
+18f550.40 "{F5}{04}{11}{09}{07}"
+
+# osd_size_texts[11] (item 0, thai)
+18f550.11 "{F5}{03}{67}{04}"
+
+# osd_crosshair_item_texts[127] (item 4, thai)
+18f984.127 "{F5}{34}{03}{53}{1E}"
+
+# osd_crosshair_item_texts[98] (item 3, thai)
+18f984.98 "{F5}{5B}{0F}{10}{5C}{07}"
+
+# osd_crosshair_item_texts[69] (item 2, thai)
+18f984.69 "{F5}{28}"
+
+# osd_crosshair_item_texts[40] (item 1, thai)
+18f984.40 "{F5}{00}{08}{1F}{08}{2A}"
+
+# osd_crosshair_item_texts[11] (item 0, thai)
+18f984.11 "{F5}{00}{68}{69}"
+
+# osd_protect_button_texts[69] (item 2, thai)
+190184.69 "{F5}{0E}{09}{02}{10}{47}{07}"
+
+# osd_protect_button_texts[40] (item 1, thai)
+190184.40 "{F5}{02}{04}{03}{BE}{04}"
+
+# osd_protect_button_texts[11] (item 0, thai)
+190184.11 "{F5}{29}{03}{BD}{04}{09}{1B}"
+
+# osd_yes_no_texts[40] (item 1, thai)
+190748.40 "{F5}{00}{68}"
+
+# osd_yes_no_texts[11] (item 0, thai)
+190748.11 "{F5}{4C}{39}"
+
+# osd_kvm_texts[40] (item 1, thai)
+1909ec.40 "{F5}{33}{0B}{12}{1E}{34}{05}"
+
+# table_190cec[40] (item 1, thai)
+190cec.40 "{F5}{B1}{07}{5A}{23}{F0} 1000 nits"
+
+# osd_navi_key_item_texts[98] (item 3, thai)
+19158c.98 "{F5}{15}{24}{09}"
+
+# osd_navi_key_item_texts[69] (item 2, thai)
+19158c.69 "{F5}{4A}{09}{02}"
+
+# osd_navi_key_item_texts[40] (item 1, thai)
+19158c.40 "{F5}{11}{07}"
+
+# osd_navi_key_item_texts[11] (item 0, thai)
+19158c.11 "{F5}{49}{2A}"
+
+# osd_info_box_texts[185] (item 6, thai)
+191b30.185 "{F5}{1F}{24}{09}{05}{7B}{04}{7A}{1E}"
+
+# osd_info_box_texts[156] (item 5, thai)
+191b30.156 "{F5}{19}{1B}{77}{03}{0E}{01}{03}{79}{08}{10}{09}"
+
+# osd_info_box_texts[127] (item 4, thai)
+191b30.127 "{F5}{03}{3A}{08}{04}{22}{10}{01}{23}"
+
+# osd_info_box_texts[69] (item 2, thai)
+191b30.69 "{F5}{1F}{24}{09}{05}{11}{77}{03}{7C}{02}{23}{38}{78}{07}"
+
+# osd_info_box_texts[40] (item 1, thai)
+191b30.40 "{F5}{1F}{24}{09}{05}{11}{77}{03}{7C}{02}{23}{0E}{09}{02}{4C}{2A}"
+
+# osd_out_of_range_texts[11] (item 0, thai)
+192d8c.11 "{F5}{2A}{08}{04}{39}{24}{07}!"
+
+# osd_no_signal_texts[11] (item 0, thai)
+193008.11 "{F5}{00}{68}{69}{17}{13}{13}{09}{14}"
+
+# osd_power_button_texts[40] (item 1, thai)
+19336c.40 "{F5}{12}{0F}{1E}{2A}{26}{25}{09}{02}"
+
+# osd_navi_function_texts[301] (item 10, thai)
+1935bc.301 "{F5}{15}{08}{25}{03}{15}{1E} {F0}Optix"
+
+# osd_navi_function_texts[272] (item 9, thai)
+1935bc.272 "{F5}{04}{11}{09}{07}{72}{2A}"
+
+# osd_info_box_texts[98] (item 3, thai)
+# osd_navi_function_texts[214] (item 7, thai)
+191b30.98 "{F5}{33}{1E}{1B}{09}{04}{09}{1B}{34}{03}{32}{1B}{0A}"
+
+# osd_gi_item_texts[40] (item 1, thai)
+# osd_navi_function_texts[98] (item 3, thai)
+18a360.40 "Smart Crosshair"
+
+# osd_navi_function_texts[127] (item 4, thai)
+1935bc.127 "{F5}{2A}{09}{36}{04}{09}{19}{37}{04}"
+
+# osd_navi_function_texts[69] (item 2, thai)
+1935bc.69 "{F5}{22}{10}{05}{23}{03}{04}{05}"
+
+# osd_choice_note_function_texts[40] (item 1, thai)
+# osd_image_item_texts[11] (item 0, thai)
+# osd_navi_function_texts[40] (item 1, thai)
+1832e4.40 "{F5}{1F}{24}{09}{05}{12}{3F}{09}{07}"
+
+# osd_settings_item_texts[156] (item 5, thai)
+# table_18c8b8[98] (item 3, thai)
+# osd_navi_function_texts[243] (item 8, thai)
+1874f8.156 "{F5}{18}{08}{76}{11}"
+
+# osd_navi_function_texts[185] (item 6, thai)
+1935bc.185 "{F5}{22}{10}{05}{23} PIP/PBP"
+
+# osd_image_enhancement_texts[127] (item 4, thai)
+194b34.127 "{F5}{0F}{1B}{07}{59}{5A}{23}"
+
+# osd_image_enhancement_texts[98] (item 3, thai)
+194b34.98 "{F5}{0F}{1B}{07}"
+
+# osd_image_enhancement_texts[69] (item 2, thai)
+194b34.69 "{F5}{04}{11}{09}{07}"
+
+# osd_image_enhancement_texts[40] (item 1, thai)
+194b34.40 "{F5}{03}{25}{09}"
+
+# osd_pro_mode_texts[11] (item 0, thai)
+1951dc.11 "{F5}{7C}{22}{1F}"
+
+# osd_pro_mode_texts[98] (item 3, thai)
+1951dc.98 "{F5}{0E}{09}{0B}{02}{2A}{1E}{5E}"
+
+# osd_pro_mode_texts[69] (item 2, thai)
+1951dc.69 "Anti-Blue"
+
+# osd_pro_mode_texts[127] (item 4, thai)
+1951dc.127 "{F5}{84}{09}{5F}{04}{07}{09}{2A}"
+
+# osd_oled_care_choice_texts[40] (item 1, thai)
+# osd_optix_scope_item_texts[98] (item 3, thai)
+# osd_off_on_texts[40] (item 1, thai)
+# table_195a38[69] (item 2, thai)
+16df60.40 "{F5}{03}{45}{23}"
+
+# osd_location_texts[156] (item 5, thai)
+# table_195a38[11] (item 0, thai)
+# table_195c7c[11] (item 0, thai)
+18e9f8.156 "{F5}{5B}{0F}{10}{5C}{07}"
+
+# osd_game_mode_texts[11] (item 0, thai)
+195f24.11 "{F5}{28}{0B}{34}{03}{69}{02}{05}"
+
+# osd_pro_mode_texts[40] (item 1, thai)
+# osd_game_mode_texts[40] (item 1, thai)
+1951dc.40 "{F5}{55}{4C}{54}"
+
+# osd_game_mode_texts[98] (item 3, thai)
+195f24.98 "{F5}{1B}{3C}{0F}{56}{07}"
+
+# osd_pbp_mode_texts[40] (item 1, thai)
+18e89c.40 "{F5}{22}{10}{05}{23} 2"
+
+# osd_pbp_mode_texts[11] (item 0, thai)
+18e89c.11 "{F5}{22}{10}{05}{23} 1"
+
+# osd_oled_care_choice_texts[11] (item 0, thai)
+# osd_night_vision_texts[11] (item 0, thai)
+# table_18c8b8[11] (item 0, thai)
+# osd_optix_scope_item_texts[69] (item 2, thai)
+# osd_off_on_texts[11] (item 0, thai)
+# osd_power_button_texts[11] (item 0, thai)
+# ... and 5 more entries
+16df60.11 "{F5}{45}{23}"
+
+# osd_tab_name_texts[185] (item 6, thai)
+196dc0.185 "{F5}{1C}{05}{1D}{04}{1A}{1B}"
+
+# osd_tab_name_texts[214] (item 7, thai)
+196dc0.214 "{F5}{04}{09}{1B}{20}{07}{21}{09}"
+
+# osd_info_box_texts[11] (item 0, thai)
+# osd_navi_function_texts[156] (item 5, thai)
+# osd_tab_name_texts[127] (item 4, thai)
+191b30.11 "{F5}{17}{13}{13}{09}{14}"
+
+# osd_tab_name_texts[98] (item 3, thai)
+196dc0.98 "{F5}{0E}{09}{0B}"
+
+# osd_tab_name_texts[69] (item 2, thai)
+196dc0.69 "{F5}{0C}{08}{08}{09}{0D}{0B}"
+
+# osd_tab_name_texts[40] (item 1, thai)
+196dc0.40 "{F5}{03}{04}{05}{06}{07}"

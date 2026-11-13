@@ -1,0 +1,54 @@
+/* Names used in the source of FUN_a0131518; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define GlobalModeHandler                 FUN_a0131518
+#define SysTasksBeforeDisplay_byChannel   FUN_a01516b0
+#define dbg_printf                        FUN_a00df170
+#define gpio_is_aux_bit0_high             FUN_a0124a40
+#define gpio_set_aux_bit0_high            FUN_a01249ec
+#define input_block_get_signal_code       FUN_a00fd820
+#define input_block_get_status_bit2       FUN_a0121258
+#define input_get_port_mask_bit           FUN_a0140098
+#define input_get_port_mask_bit_alt       FUN_a01400bc
+#define input_get_port_status_bit         FUN_a0129a10
+#define input_is_receiver_index_0_or_1    FUN_a01422f4
+#define input_is_receiver_index_2_or_3    FUN_a0142360
+#define input_is_timing_supported         FUN_a0105d58
+#define input_load_block_source_registers FUN_a00fd9a0
+#define input_port_get_status_bit10       FUN_a013f1e4
+#define input_port_get_status_bit7        FUN_a013f204
+#define input_port_id_to_entry_index      FUN_a0142168
+#define input_select_block_source         FUN_a00fd594
+#define input_setup_route_for_source      FUN_a00fe4a4
+#define ipc_load_dp_rx_clock_registers    FUN_a0137c4c
+#define ipc_restart_hdmi_port             FUN_a0137920
+#define ipc_send_dsc_dec_command          FUN_a0137d6c
+#define panel_get_active_row              FUN_a01241fc
+#define panel_is_power_off                FUN_a0141ad0
+#define panel_is_power_on_done            FUN_a0141a98
+#define panel_request_power               FUN_a01412b8
+#define pq_block_blank                    FUN_a0106ba8
+#define pq_block_is_blanked               FUN_a0104c34
+#define sys_channels_idle_task            FUN_a012f7a8
+#define sys_enable_channel_port           FUN_a01312d4
+#define sys_mode_apply_converter_setup    FUN_a015149c
+#define sys_mode_enter_state_c            FUN_a0151818
+#define sys_mode_notify_channel0_port     FUN_a01517f4
+#define sys_mode_reset_vx1_if_link_type_1 FUN_a0151674
+#define sys_mode_restart_channel          FUN_a01518c8
+#define sys_mode_set_pwm7_and_continue    FUN_a01519b4
+#define sys_poll_events_stub_copy22       FUN_a0151494
+#define sys_set_path_selector             FUN_a011433c
+#define timer_get_ticks16                 func_0x4008d588
+#define timer_ticks_since                 func_0x4008d594
+/* Stored data. */
+#define channel_records                   DAT_a802df30
+#define device_settings                   DAT_a802e1a0
+#define panel_active_row                  DAT_a802e378
+#define panel_default_row_active_lines    DAT_001a30da
+#define port_entries                      DAT_a802e116
+#define port_records                      DAT_a802e224
+#define sys_config                        DAT_a802e3d0
+#define sys_mode_handler_port             DAT_a802a44d
+#define sys_source_b1_block               DAT_a802a44c
+#define sys_wait2show_start_ticks         DAT_a802cb82
+/* End of names. */

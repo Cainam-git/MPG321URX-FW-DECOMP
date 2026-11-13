@@ -1,0 +1,53 @@
+/* Names used in the source of FUN_a015209c; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define ConfigScalerPWM                    FUN_a011d748
+#define FRCConfigPostFRC                   FUN_a0107e44
+#define System_Initialize                  FUN_a015209c
+#define audio_init_config                  FUN_a014f6f4
+#define dbg_is_print_enabled               FUN_a00dd614
+#define dbg_printf                         FUN_a00df170
+#define gpio_set_aux_bit2_high_copy        FUN_a0124eec
+#define gpio_set_drive_field               FUN_a010031c
+#define hdmi_cec_init                      FUN_a00fc200
+#define hdmi_cec_set_send_hook             FUN_a00fc30c
+#define input_apply_8051_port_flags        FUN_a002fae0
+#define input_block_set_config             FUN_a01207f4
+#define input_blocks_init                  FUN_a01218c8
+#define input_port_table_get_bus_id        FUN_a0125124
+#define ipc_apply_port_enable_mask         FUN_a01382b0
+#define ipc_handshake_8051_bytes           FUN_a002fa34
+#define ipc_set_hdr_peak_luminance         FUN_a0138e28
+#define ipc_write_8051_byte                func_0x4008c11c
+#define irq_set_source_handler             func_0x4008a880
+#define irq_unmask_sources                 func_0x40089820
+#define ldc_send_cmd_0x84                  FUN_a013a8d4
+#define ldc_send_panel_size_and_start      FUN_a0139a30
+#define ldc_send_zone_counts               FUN_a0139c3c
+#define ldc_send_zone_grid_32x16           FUN_a0139b90
+#define panel_get_active_row               FUN_a01241fc
+#define panel_output_setup_path            FUN_a0105150
+#define panel_pwm_set_mode_field           FUN_a011e220
+#define pq_gamma_load_first_curve_preset2  FUN_a010afe4
+#define pq_gamma_load_second_curve_preset2 FUN_a010b1b4
+#define pq_load_profile_table              FUN_a0110fb4
+#define startup_init_block_5a80            FUN_a01141fc
+#define startup_init_input_blocks          FUN_a00f87dc
+#define startup_init_level_generator       FUN_a0129b44
+#define startup_init_output_layers         FUN_a010b610
+#define startup_init_path_blocks           FUN_a01423dc
+#define startup_load_block8_config         FUN_a01410a4
+#define sys_frc_set_lock_mode              FUN_a01085f8
+#define sys_frc_setup_lock                 FUN_a0109bbc
+#define sys_init_enable_output_blocks      FUN_a015202c
+#define sys_init_picture_blocks            FUN_a0150da4
+#define sys_poll_events_stub_copy12        FUN_a0125c84
+#define sys_poll_events_stub_copy16        FUN_a012f12c
+#define sys_store_request_byte             FUN_a01111e4
+/* Stored data. */
+#define device_settings                    DAT_a802e1a0
+#define ipc_8051_cec_registers_entry       DAT_000d3ea4
+#define panel_active_row                   DAT_a802e378
+#define part_record_hdr_peak_luminance     DAT_a802e214
+#define port_entries                       DAT_a802e116
+#define sys_config_byte_3                  DAT_a802e3d3
+/* End of names. */

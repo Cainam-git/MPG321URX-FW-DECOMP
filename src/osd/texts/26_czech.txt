@@ -1,0 +1,633 @@
+# Texts of language 26, named "čeština" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[55] (item 1, czech)
+16e0d0.55 "{F0}funkci (dlouhodobé) ochrany panelu."
+
+# osd_protect_long_execute_texts[26] (item 0, czech)
+16e0d0.26 "Aby byla zajištěna kvalita obrazu panelu, stisknutím tlačítka {F7}{76}{F0}Spustit{F7}Ş{F0} spusťte  "
+
+# osd_protect_long_auto_texts[26] (item 0, czech)
+16f25c.26 "{F0}Aby byla zajištěna kvalita obrazu panelu, "
+
+# osd_protect_long_title_texts[84] (item 2, czech)
+16f670.84 "{F0} automaticky aktivuje, když je monitor používán více než 1 500 hodin."
+
+# osd_protect_long_title_texts[55] (item 1, czech)
+16f670.55 "{F0}Aby byla zachována kvalita obrazu panelu, funkce ochrany panelu (krátkodobý) se "
+
+# osd_protect_long_title_texts[26] (item 0, czech)
+16f670.26 "{F0}Údržba MSI OLED - Ochrana panelu (Dlouhodobý)"
+
+# osd_protect_long_incomplete_texts[55] (item 1, czech)
+172590.55 "{F0}kliknutím na tuto položku prove{F7}{7D}{F0}te tento proces později podle potřeby."
+
+# osd_protect_long_incomplete_texts[26] (item 0, czech)
+172590.26 "{F0}Proces (dlouhodobé) ochrany panelu nebyl dokončen. Výběrem a "
+
+# osd_protect_incomplete_texts[55] (item 1, czech)
+173998.55 "{F0}na tuto položku prove{F7}ď{F0}te tento proces později podle potřeby."
+
+# osd_protect_incomplete_texts[26] (item 0, czech)
+173998.26 "{F0}Proces ochrany panelu nebyl dokončen. Výběrem a kliknutím "
+
+# osd_protect_long_incomplete_texts[84] (item 2, czech)
+# osd_protect_incomplete_texts[84] (item 2, czech)
+# osd_protect_execute_texts[84] (item 2, czech)
+172590.84 "{F0}Oznámení:"
+
+# osd_protect_execute_texts[55] (item 1, czech)
+174bd0.55 "{F0}aktivuje funkci ochrany panelu."
+
+# osd_protect_execute_texts[26] (item 0, czech)
+174bd0.26 "{F0}Aby byla zachována kvalita obrazu panelu, stisknutím tlačítka {F7}„{F0}Provést{F7}”"
+
+# osd_protect_long_retry_texts[55] (item 1, czech)
+175de4.55 "Stisknutím tlačítka {F7}{76}{F0}Spustit{F7}Ş{F0} spusťte funkci (dlouhodobé) ochrany panelu."
+
+# osd_protect_long_retry_texts[26] (item 0, czech)
+175de4.26 "{F0}Proces (dlouhodobé) ochrany panelu nebyl dokončen."
+
+# osd_protect_retry_texts[55] (item 1, czech)
+177270.55 "{F7}„{F0}Spustit{F7}”{F0} spusťte funkci ochrany panelu. "
+
+# osd_protect_retry_texts[26] (item 0, czech)
+177270.26 "{F0}Proces ochrany panelu nebyl dokončen. Stisknutím tlačítka "
+
+# osd_protect_auto_texts[26] (item 0, czech)
+1785c0.26 "{F0}Aby byla zajištěna kvalita obrazu panelu, automaticky se aktivuje funkce"
+
+# osd_protect_long_auto_texts[55] (item 1, czech)
+16f25c.55 "{F0}automaticky se aktivuje funkce (dlouhodobé) ochrany panelu."
+
+# osd_protect_auto_texts[55] (item 1, czech)
+1785c0.55 "{F0}ochrany panelu. "
+
+# osd_protect_long_execute_texts[142] (item 4, czech)
+# osd_protect_long_auto_texts[142] (item 4, czech)
+# osd_protect_long_title_texts[171] (item 5, czech)
+# osd_protect_long_incomplete_texts[142] (item 4, czech)
+# osd_protect_long_retry_texts[142] (item 4, czech)
+16e0d0.142 "{F0}Do dokončení procesu bliká kontrolka napájení bíle."
+
+# osd_protect_long_execute_texts[113] (item 3, czech)
+# osd_protect_long_auto_texts[113] (item 3, czech)
+# osd_protect_long_title_texts[142] (item 4, czech)
+# osd_protect_long_incomplete_texts[113] (item 3, czech)
+# osd_protect_long_retry_texts[113] (item 3, czech)
+16e0d0.113 "{F0}Dokončení této funkce ochrany může trvat hodinu."
+
+# osd_protect_long_title_texts[345] (item 11, czech)
+# osd_protect_long_retry_texts[316] (item 10, czech)
+# osd_protect_retry_texts[316] (item 10, czech)
+16f670.345 "{F0}vypnutý nebo v úsporném režimu."
+
+# osd_protect_long_title_texts[316] (item 10, czech)
+# osd_protect_long_retry_texts[287] (item 9, czech)
+# osd_protect_retry_texts[287] (item 9, czech)
+16f670.316 "{F0}Pokud kliknete na tlačítko {F7}„{F0}Zrušit{F7}”{F0}, tento proces se automaticky aktivuje, když je monitor"
+
+# osd_protect_long_execute_texts[258] (item 8, czech)
+# osd_protect_long_auto_texts[258] (item 8, czech)
+# osd_protect_long_title_texts[287] (item 9, czech)
+# osd_protect_long_incomplete_texts[258] (item 8, czech)
+# osd_protect_incomplete_texts[258] (item 8, czech)
+# osd_protect_execute_texts[258] (item 8, czech)
+# ... and 4 more entries
+16e0d0.258 "{F0}můžete tuto funkci zrušit."
+
+# osd_protect_long_execute_texts[229] (item 7, czech)
+# osd_protect_long_auto_texts[229] (item 7, czech)
+# osd_protect_long_title_texts[258] (item 8, czech)
+# osd_protect_long_incomplete_texts[229] (item 7, czech)
+# osd_protect_incomplete_texts[229] (item 7, czech)
+# osd_protect_execute_texts[229] (item 7, czech)
+# ... and 4 more entries
+16e0d0.229 "{F0}Dalším stisknutím tohoto tlačítka během procesu"
+
+# osd_protect_long_execute_texts[200] (item 6, czech)
+# osd_protect_long_auto_texts[200] (item 6, czech)
+# osd_protect_long_title_texts[229] (item 7, czech)
+# osd_protect_long_incomplete_texts[200] (item 6, czech)
+# osd_protect_incomplete_texts[200] (item 6, czech)
+# osd_protect_execute_texts[200] (item 6, czech)
+# ... and 4 more entries
+16e0d0.200 "{F0} "
+
+# osd_protect_long_execute_texts[171] (item 5, czech)
+# osd_protect_long_auto_texts[171] (item 5, czech)
+# osd_protect_long_title_texts[200] (item 6, czech)
+# osd_protect_long_incomplete_texts[171] (item 5, czech)
+# osd_protect_incomplete_texts[171] (item 5, czech)
+# osd_protect_execute_texts[171] (item 5, czech)
+# ... and 4 more entries
+16e0d0.171 "{F0}Během procesu neodpojujte napájecí kabel od monitoru."
+
+# osd_protect_incomplete_texts[142] (item 4, czech)
+# osd_protect_execute_texts[142] (item 4, czech)
+# osd_protect_retry_texts[142] (item 4, czech)
+# osd_protect_auto_texts[142] (item 4, czech)
+# osd_protect_title_texts[171] (item 5, czech)
+173998.142 "{F0}Do dokončení procesu bude kontrolka napájení blikat oranžově."
+
+# osd_protect_incomplete_texts[113] (item 3, czech)
+# osd_protect_execute_texts[113] (item 3, czech)
+# osd_protect_retry_texts[113] (item 3, czech)
+# osd_protect_auto_texts[113] (item 3, czech)
+# osd_protect_title_texts[142] (item 4, czech)
+173998.113 "{F0}Dokončení této funkce může trvat několik minut."
+
+# osd_protect_long_execute_texts[84] (item 2, czech)
+# osd_protect_long_auto_texts[84] (item 2, czech)
+# osd_protect_long_title_texts[113] (item 3, czech)
+# osd_protect_long_retry_texts[84] (item 2, czech)
+# osd_protect_retry_texts[84] (item 2, czech)
+# osd_protect_auto_texts[84] (item 2, czech)
+# ... and 1 more entries
+16e0d0.84 "{F0}Oznámení:"
+
+# osd_protect_title_texts[84] (item 2, czech)
+179a14.84 "{F0}automaticky aktivuje, pokud je monitor používán déle než 4 hodin."
+
+# osd_protect_title_texts[55] (item 1, czech)
+179a14.55 "Aby byla zachována kvalita obrazu panelu, funkce ochrany panelu se"
+
+# osd_protect_title_texts[26] (item 0, czech)
+179a14.26 "MSI OLED Care - Ochrana panelu"
+
+# osd_protect_retry_texts[432] (item 14, czech)
+# osd_protect_title_texts[403] (item 13, czech)
+177270.432 "{F0}nepřetržitého provozu panelu déle než 24 hodin."
+
+# osd_protect_retry_texts[403] (item 13, czech)
+# osd_protect_title_texts[374] (item 12, czech)
+177270.403 "{F0}Kliknutím na tlačítko {F7}„{F0}Později{F7}”{F0} se oznámení zobrazí pouze v případě "
+
+# osd_protect_retry_texts[374] (item 12, czech)
+# osd_protect_title_texts[345] (item 11, czech)
+177270.374 "{F0}když je monitor vypnutý nebo v úsporném režimu."
+
+# osd_protect_retry_texts[345] (item 11, czech)
+# osd_protect_title_texts[316] (item 10, czech)
+177270.345 "{F0}Tento proces se automaticky aktivuje kliknutím na {F7}„{F0}Zrušit{F7}”{F0} nebo {F7}„{F0}Později{F7}”{F0},"
+
+# osd_change_notice_line3_texts[26] (item 0, czech)
+180b60.26 "Vyberte jednu z následujících možností:"
+
+# osd_change_notice_line2_texts[26] (item 0, czech)
+181058.26 "zvýšit příkon monitoru."
+
+# osd_change_notice_line1_texts[26] (item 0, czech)
+1814d8.26 "Změna vybrané funkce může"
+
+# osd_change_notice_title_texts[26] (item 0, czech)
+1819cc.26 "Potvrdit změnu!"
+
+# table_1821d4[55] (item 1, czech)
+1821d4.55 "Digitální"
+
+# table_1821d4[26] (item 0, czech)
+1821d4.26 "Analogový"
+
+# osd_pbp_source_texts[55] (item 1, czech)
+182534.55 "Zdroj 2"
+
+# osd_pbp_source_texts[26] (item 0, czech)
+182534.26 "Zdroj 1"
+
+# osd_pip_item_texts[84] (item 2, czech)
+1828c0.84 "Umístění"
+
+# osd_pip_item_texts[55] (item 1, czech)
+1828c0.55 "Velikost PIP"
+
+# osd_pip_item_texts[26] (item 0, czech)
+1828c0.26 "Zdroj"
+
+# osd_pip_item_texts[142] (item 4, czech)
+1828c0.142 "Přepínač zvuku"
+
+# osd_pip_item_texts[113] (item 3, czech)
+1828c0.113 "Přepínač obrazu"
+
+# osd_choice_note_function_texts[142] (item 4, czech)
+1832e4.142 "Velikost obrazu"
+
+# osd_choice_note_reducing_texts[171] (item 5, czech)
+183cb4.171 "{F0} VRR."
+
+# osd_choice_note_reducing_texts[142] (item 4, czech)
+183cb4.142 "{F0}když monitor přijímá obsah"
+
+# osd_choice_note_reducing_texts[113] (item 3, czech)
+183cb4.113 "{F0}Tato funkce nebude fungovat,"
+
+# osd_choice_note_reducing_texts[84] (item 2, czech)
+183cb4.84 "{F7}„{F0}DisplayHDR{F7}”{F0}."
+
+# osd_choice_note_reducing_texts[55] (item 1, czech)
+183cb4.55 "{F0}nastavení {F7}„{F0}Jas{F7}”{F0} nebo"
+
+# osd_choice_note_reducing_texts[26] (item 0, czech)
+183cb4.26 "{F0}Omezení efektu závisí na"
+
+# osd_choice_note_texts[142] (item 4, czech)
+183a70.142 " "
+
+# osd_choice_note_texts[113] (item 3, czech)
+183a70.113 "{F0}Přibl. hodina do dokončení"
+
+# osd_choice_note_texts[84] (item 2, czech)
+183a70.84 " "
+
+# osd_choice_note_texts[55] (item 1, czech)
+183a70.55 "{F0}Přibl. 15 min. do dokončení"
+
+# osd_choice_note_texts[26] (item 0, czech)
+183a70.26 "{F0}Oznámení:"
+
+# osd_oled_care_item_texts[84] (item 2, czech)
+185e78.84 "{F0}Oznám. o ochraně"
+
+# osd_oled_care_function_texts[171] (item 5, czech)
+# osd_oled_care_item_texts[200] (item 6, czech)
+185bc0.171 "{F0}Detekce ohraničení"
+
+# osd_oled_care_function_texts[142] (item 4, czech)
+# osd_oled_care_item_texts[171] (item 5, czech)
+185bc0.142 "{F0}Detekce pan nástr"
+
+# osd_oled_care_function_texts[113] (item 3, czech)
+# osd_oled_care_item_texts[142] (item 4, czech)
+185bc0.113 "{F0}Detekce více logo"
+
+# osd_oled_care_item_texts[229] (item 7, czech)
+185e78.229 "{F0}Info o panelu OLED"
+
+# osd_oled_care_function_texts[84] (item 2, czech)
+# osd_oled_care_item_texts[113] (item 3, czech)
+185bc0.84 "{F0}Detekce stat. el."
+
+# osd_oled_care_function_texts[26] (item 0, czech)
+# osd_oled_care_item_texts[55] (item 1, czech)
+185bc0.26 "{F0}Ochrana panelu"
+
+# osd_oled_care_function_texts[55] (item 1, czech)
+# osd_oled_care_item_texts[26] (item 0, czech)
+185bc0.55 "{F0}Posun pixelů"
+
+# osd_choice_note_function_texts[316] (item 10, czech)
+# osd_settings_item_texts[229] (item 7, czech)
+1832e4.316 "{F0}Nabíjení PD Type C"
+
+# osd_settings_item_texts[142] (item 4, czech)
+1874f8.142 "{F0}Vypínač"
+
+# osd_settings_item_texts[287] (item 9, czech)
+1874f8.287 "Resetovat"
+
+# osd_settings_item_texts[84] (item 2, czech)
+1874f8.84 "Časový interval OSD"
+
+# osd_settings_item_texts[55] (item 1, czech)
+1874f8.55 "Průsvitnost"
+
+# osd_settings_item_texts[26] (item 0, czech)
+1874f8.26 "Jazyk"
+
+# osd_professional_item_texts[84] (item 2, czech)
+188634.84 "Vylepšení obrazu"
+
+# osd_professional_item_texts[55] (item 1, czech)
+188634.55 "Slabé modré světlo"
+
+# osd_professional_item_texts[26] (item 0, czech)
+188634.26 "Režim Pro"
+
+# osd_night_vision_texts[113] (item 3, czech)
+1890d4.113 "Nejsilnější"
+
+# osd_night_vision_texts[84] (item 2, czech)
+1890d4.84 "Silný"
+
+# osd_night_vision_texts[55] (item 1, czech)
+1890d4.55 "Normální"
+
+# osd_choice_note_function_texts[287] (item 9, czech)
+# osd_gaming_item_texts[55] (item 1, czech)
+1832e4.287 "Noční vidění"
+
+# osd_gaming_item_texts[142] (item 4, czech)
+188da0.142 "Budík"
+
+# osd_gaming_item_texts[113] (item 3, czech)
+188da0.113 "Refresh Rate"
+
+# osd_choice_note_function_texts[171] (item 5, czech)
+1832e4.171 "Doba odezvy"
+
+# osd_gaming_item_texts[26] (item 0, czech)
+188da0.26 "Režim Hra"
+
+# osd_choice_note_function_texts[200] (item 6, czech)
+# osd_gi_item_texts[84] (item 2, czech)
+1832e4.200 "Zaměřovač Optix"
+
+# osd_oled_care_seconds_texts[113] (item 3, czech)
+18a7ec.113 "{F0}240 S"
+
+# osd_oled_care_seconds_texts[84] (item 2, czech)
+18a7ec.84 "{F0}120 S"
+
+# osd_oled_care_seconds_texts[55] (item 1, czech)
+18a7ec.55 "{F0}100 S"
+
+# osd_oled_care_seconds_texts[26] (item 0, czech)
+18a7ec.26 "{F0}50 S"
+
+# table_18af08[55] (item 1, czech)
+# table_18b008[55] (item 1, czech)
+18af08.55 "{F0}Ručně"
+
+# osd_oled_care_usage_texts[55] (item 1, czech)
+18b29c.55 "{F0}Provoz > 24 hod."
+
+# osd_oled_care_speed_texts[84] (item 2, czech)
+18b5e0.84 "{F0}Krátká"
+
+# osd_oled_care_speed_texts[26] (item 0, czech)
+18b5e0.26 "{F0}Pomalá"
+
+# osd_oled_care_choice_texts[84] (item 2, czech)
+# osd_oled_care_status_texts[84] (item 2, czech)
+16df60.84 "{F0}Snižování úrovně"
+
+# osd_oled_care_status_texts[55] (item 1, czech)
+18b94c.55 "{F0}Požadovaný čas"
+
+# osd_oled_care_status_texts[26] (item 0, czech)
+18b94c.26 "{F0}Zahájení v"
+
+# table_18c070[55] (item 1, czech)
+18c070.55 "{F0}Dlouhodobý"
+
+# table_18c070[26] (item 0, czech)
+18c070.26 "{F0}Krátkodobý"
+
+# table_18c4a8[26] (item 0, czech)
+18c4a8.26 "{F0}Rychlost pohybu (posun pixelů)"
+
+# osd_image_item_texts[142] (item 4, czech)
+18ca88.142 "Velikost obrazu"
+
+# osd_image_item_texts[113] (item 3, czech)
+18ca88.113 "Teplota barev"
+
+# osd_image_item_texts[84] (item 2, czech)
+18ca88.84 "Ostrost"
+
+# osd_image_item_texts[55] (item 1, czech)
+18ca88.55 "Kontrast"
+
+# osd_language_texts[26] (item 0, czech)
+18d3d4.26 "čeština"
+
+# osd_optix_scope_item_texts[55] (item 1, czech)
+18d578.55 "Poměr zaměřovače"
+
+# osd_optix_scope_item_texts[26] (item 0, czech)
+18d578.26 "Velikost zaměřovače"
+
+# osd_color_temp_texts[113] (item 3, czech)
+18db28.113 "Přizpůsobení"
+
+# osd_color_temp_texts[84] (item 2, czech)
+18db28.84 "Teplá"
+
+# osd_color_temp_texts[26] (item 0, czech)
+18db28.26 "Studená"
+
+# osd_response_time_texts[84] (item 2, czech)
+18e08c.84 "Nejkratší"
+
+# osd_response_time_texts[55] (item 1, czech)
+18e08c.55 "Krátká"
+
+# osd_oled_care_speed_texts[55] (item 1, czech)
+# osd_color_temp_texts[55] (item 1, czech)
+# osd_response_time_texts[26] (item 0, czech)
+18b5e0.55 "Normální"
+
+# osd_crosshair_color_texts[55] (item 1, czech)
+18e54c.55 "Červená"
+
+# osd_crosshair_color_texts[26] (item 0, czech)
+18e54c.26 "Bílá"
+
+# table_18c8b8[84] (item 2, czech)
+# osd_pbp_mode_texts[84] (item 2, czech)
+# osd_location_texts[142] (item 4, czech)
+18c8b8.84 "{F0}Přizpůsobit"
+
+# osd_location_texts[113] (item 3, czech)
+18e9f8.113 "Vpravo dole"
+
+# osd_location_texts[84] (item 2, czech)
+18e9f8.84 "Vlevo dole"
+
+# osd_location_texts[55] (item 1, czech)
+18e9f8.55 "Vpravo nahoře"
+
+# osd_location_texts[26] (item 0, czech)
+18e9f8.26 "Vlevo nahoře"
+
+# osd_size_texts[84] (item 2, czech)
+18f550.84 "Velká"
+
+# osd_size_texts[55] (item 1, czech)
+18f550.55 "Střední"
+
+# osd_size_texts[26] (item 0, czech)
+18f550.26 "Malá"
+
+# osd_crosshair_item_texts[142] (item 4, czech)
+18f984.142 "Resetovat"
+
+# osd_crosshair_item_texts[113] (item 3, czech)
+18f984.113 "Pozice"
+
+# osd_crosshair_item_texts[84] (item 2, czech)
+18f984.84 "{F0}Barva"
+
+# osd_crosshair_item_texts[55] (item 1, czech)
+18f984.55 "Icon"
+
+# osd_crosshair_item_texts[26] (item 0, czech)
+18f984.26 "Žádné"
+
+# osd_protect_button_texts[84] (item 2, czech)
+190184.84 "{F0}Později"
+
+# osd_protect_button_texts[55] (item 1, czech)
+190184.55 "{F0}Zrušit"
+
+# osd_protect_button_texts[26] (item 0, czech)
+190184.26 "{F0}Provést"
+
+# osd_yes_no_texts[55] (item 1, czech)
+190748.55 "Ne"
+
+# osd_yes_no_texts[26] (item 0, czech)
+190748.26 "Ano"
+
+# osd_kvm_texts[55] (item 1, czech)
+1909ec.55 "{F0}Výstup"
+
+# table_190cec[55] (item 1, czech)
+190cec.55 "{F0}Špička 1000 nitů"
+
+# osd_navi_key_item_texts[113] (item 3, czech)
+19158c.113 "Vpravo"
+
+# osd_navi_key_item_texts[84] (item 2, czech)
+19158c.84 "Vlevo"
+
+# osd_navi_key_item_texts[55] (item 1, czech)
+19158c.55 "Dolů"
+
+# osd_navi_key_item_texts[26] (item 0, czech)
+19158c.26 "Nahoru"
+
+# osd_info_box_texts[200] (item 6, czech)
+191b30.200 "Bitová hloubka"
+
+# osd_info_box_texts[171] (item 5, czech)
+191b30.171 "Typ obsahu"
+
+# osd_info_box_texts[142] (item 4, czech)
+191b30.142 "Vybrat režim"
+
+# osd_info_box_texts[84] (item 2, czech)
+191b30.84 "Fyzické rozlišení"
+
+# osd_info_box_texts[55] (item 1, czech)
+191b30.55 "Nativní rozlišení"
+
+# osd_out_of_range_texts[26] (item 0, czech)
+192d8c.26 "Mimo dosah!"
+
+# osd_no_signal_texts[26] (item 0, czech)
+193008.26 "Není signál"
+
+# osd_power_button_texts[55] (item 1, czech)
+19336c.55 "{F0}Pohotovostní režim"
+
+# osd_navi_function_texts[316] (item 10, czech)
+1935bc.316 "Zaměřovač Optix"
+
+# osd_navi_function_texts[287] (item 9, czech)
+1935bc.287 "Noční vidění"
+
+# osd_info_box_texts[113] (item 3, czech)
+# osd_navi_function_texts[229] (item 7, czech)
+191b30.113 "Refresh Rate"
+
+# osd_gi_item_texts[55] (item 1, czech)
+# osd_navi_function_texts[113] (item 3, czech)
+18a360.55 "{F0}Chytrý vlasový kříž"
+
+# osd_navi_function_texts[142] (item 4, czech)
+1935bc.142 "Budík"
+
+# osd_navi_function_texts[84] (item 2, czech)
+1935bc.84 "Režim Hra"
+
+# osd_choice_note_function_texts[55] (item 1, czech)
+# osd_image_item_texts[26] (item 0, czech)
+# osd_navi_function_texts[55] (item 1, czech)
+1832e4.55 "Jas"
+
+# osd_settings_item_texts[171] (item 5, czech)
+# table_18c8b8[113] (item 3, czech)
+# osd_navi_function_texts[258] (item 8, czech)
+1874f8.171 "Info. na obrazovce"
+
+# osd_navi_function_texts[200] (item 6, czech)
+1935bc.200 "Režim PIP/PBP"
+
+# osd_image_enhancement_texts[142] (item 4, czech)
+194b34.142 "Nejsilnější"
+
+# osd_image_enhancement_texts[113] (item 3, czech)
+194b34.113 "Silný"
+
+# osd_image_enhancement_texts[84] (item 2, czech)
+194b34.84 "Střední"
+
+# osd_image_enhancement_texts[55] (item 1, czech)
+194b34.55 "Slabý"
+
+# osd_pro_mode_texts[113] (item 3, czech)
+1951dc.113 "Film"
+
+# osd_pro_mode_texts[84] (item 2, czech)
+1951dc.84 "Antimodrá"
+
+# osd_pro_mode_texts[142] (item 4, czech)
+1951dc.142 "Kancelář"
+
+# osd_oled_care_choice_texts[55] (item 1, czech)
+# osd_optix_scope_item_texts[113] (item 3, czech)
+# osd_off_on_texts[55] (item 1, czech)
+# table_195a38[84] (item 2, czech)
+16df60.55 "ZAP."
+
+# osd_location_texts[171] (item 5, czech)
+# table_195a38[26] (item 0, czech)
+# table_195c7c[26] (item 0, czech)
+18e9f8.171 "Umístění"
+
+# osd_game_mode_texts[26] (item 0, czech)
+195f24.26 "{F0}Prémiová barva"
+
+# osd_pro_mode_texts[55] (item 1, czech)
+# osd_game_mode_texts[55] (item 1, czech)
+1951dc.55 "Uživatel"
+
+# osd_game_mode_texts[113] (item 3, czech)
+195f24.113 "Závody"
+
+# osd_pbp_mode_texts[55] (item 1, czech)
+18e89c.55 "Režim 2"
+
+# osd_pbp_mode_texts[26] (item 0, czech)
+18e89c.26 "Režim 1"
+
+# osd_oled_care_choice_texts[26] (item 0, czech)
+# osd_night_vision_texts[26] (item 0, czech)
+# table_18c8b8[26] (item 0, czech)
+# osd_optix_scope_item_texts[84] (item 2, czech)
+# osd_off_on_texts[26] (item 0, czech)
+# osd_power_button_texts[26] (item 0, czech)
+# ... and 5 more entries
+16df60.26 "VYP."
+
+# osd_tab_name_texts[200] (item 6, czech)
+196dc0.200 "Navigační tlačítko"
+
+# osd_tab_name_texts[229] (item 7, czech)
+196dc0.229 "Nastavení"
+
+# osd_info_box_texts[26] (item 0, czech)
+# osd_navi_function_texts[171] (item 5, czech)
+# osd_tab_name_texts[142] (item 4, czech)
+191b30.26 "Vstupní zdroj"
+
+# osd_tab_name_texts[113] (item 3, czech)
+196dc0.113 "Obraz"
+
+# osd_tab_name_texts[84] (item 2, czech)
+196dc0.84 "Profesionální"
+
+# osd_tab_name_texts[55] (item 1, czech)
+196dc0.55 "Hra"

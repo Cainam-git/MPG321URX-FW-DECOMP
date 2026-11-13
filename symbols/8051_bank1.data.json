@@ -1,0 +1,3035 @@
+{
+ "section": "8051_bank1",
+ "data": {
+  "BITS_20_0": {
+   "name": "sys_shared_bit_param",
+   "brief": "Bit shared by several routines: watch restart request, 4-byte flash addressing at start-up.",
+   "basis": "descriptive",
+   "evidence": "sys_main -> sys_watch_main_core (restart both stamps); startup_load_core_images bit local f; DP_EnableMRX"
+  },
+  "BITS_20_1": {
+   "name": "power_wake_entry_option_flag",
+   "brief": "Bit 5 of the current wake-up table entry for the port signal check; also the ADC rise result bit.",
+   "basis": "descriptive",
+   "evidence": "power_check_wake_entry: BITS_20_1 = entry bit 5; power_check_port_signal reads it"
+  },
+  "BITS_20_2": {
+   "name": "flash_extended_addr_flag",
+   "brief": "When set, a flash DMA read first writes address bits 31..24 to the extended address register.",
+   "basis": "derived",
+   "evidence": "flash_dma_read -> flash_write_extended_addr"
+  },
+  "BITS_21_3": {
+   "name": "dp_aux_no_request_flag",
+   "brief": "Set when the DP receiver holds no AUX request bytes to answer.",
+   "basis": "derived",
+   "evidence": "dp_aux_answer_port0/1, dp_aux_snoop_port0/1: set when the byte count is 0"
+  },
+  "BITS_21_4": {
+   "name": "dp_aux_empty_reply_flag",
+   "brief": "Set when an AUX request has no case: the reply is then that many zero bytes.",
+   "basis": "derived",
+   "evidence": "dp_aux_build_reply"
+  },
+  "BITS_21_6": {
+   "name": "sys_on_crystal_clock_flag",
+   "brief": "Set when the chip has been switched into power saving or off and the 8051 runs on its crystal.",
+   "basis": "derived",
+   "evidence": "power_setup_power_saving, power_off_sequence set it; sys_is_on_crystal_clock"
+  },
+  "BITS_22_0": {
+   "name": "ddc_rearm_pending_flag",
+   "brief": "Set on DDC/CI slave activity; once all ports have been idle for 1000 ticks the slaves are re-armed.",
+   "basis": "derived",
+   "evidence": "ddc_rearm_idle_slaves"
+  },
+  "BITS_22_1": {
+   "name": "power_cec_wake_request_flag",
+   "brief": "Set when a CEC power-up request has been received; taken and cleared by the wake check.",
+   "basis": "derived",
+   "evidence": "hdmi_cec_report_request, power_take_cec_wake_request"
+  },
+  "BITS_22_5": {
+   "name": "dp_aux_answer_mode_flag",
+   "brief": "Set: the 8051 answers DP AUX requests itself; clear: it only watches them for link training.",
+   "basis": "derived",
+   "evidence": "dp_aux_service: answer_port0/1 when set, snoop_port0/1 when clear; DP_EnableMRX"
+  },
+  "BITS_22_6": {
+   "name": "usb_cc_ch0_mode_on_flag",
+   "brief": "When set, the stored mode of USB-C CC channel 0 is applied; when clear its mode bits are cleared.",
+   "basis": "derived",
+   "evidence": "usb_cc_set_mode_ch0, usb_cc_apply_orientation_ch0, usb_cc_init_phy"
+  },
+  "BITS_22_7": {
+   "name": "usb_cc_ch1_mode_on_flag",
+   "brief": "When set, the stored mode of USB-C CC channel 1 is applied; when clear its mode bits are cleared.",
+   "basis": "derived",
+   "evidence": "usb_cc_set_mode_ch1, usb_cc_apply_orientation_ch1, usb_cc_init_port_mode"
+  },
+  "BITS_23_2": {
+   "name": "usb_cc_both_lines_low_flag",
+   "brief": "Result bit: both CC line readings are low.",
+   "basis": "derived",
+   "evidence": "usb_cc_test_both_lines_low"
+  },
+  "BITS_23_4": {
+   "name": "usb_cc_both_lines_high_flag",
+   "brief": "Result bit: both CC line readings are high.",
+   "basis": "derived",
+   "evidence": "usb_cc_test_both_lines_high"
+  },
+  "BITS_23_5": {
+   "name": "usb_cc_active_line_high_flag",
+   "brief": "Result bit: the CC line of the current plug orientation reads high.",
+   "basis": "derived",
+   "evidence": "usb_cc_test_active_line_high"
+  },
+  "BITS_23_6": {
+   "name": "usb_cc_lines_split_flag",
+   "brief": "Result bit: one CC line reads high and the other low.",
+   "basis": "derived",
+   "evidence": "usb_cc_test_lines_split"
+  },
+  "DAT_CODE_6af7": {
+   "name": "dp_aux_edid",
+   "brief": "The 256-byte EDID that the 8051 serves on the DP receivers over I2C-over-AUX.",
+   "basis": "proven",
+   "evidence": "EDID header 00 FF..FF 00 at 0x6AF7, maker NVT; dp_aux_build_reply I2C address 0x50"
+  },
+  "DAT_CODE_6bf7": {
+   "name": "dp_mrx_setup_bytes_default",
+   "brief": "Seven bytes copied to XDATA 0xE140 for chip IDs 0x16, 0x17, 0x1E and 0x1F.",
+   "basis": "descriptive",
+   "evidence": "DP_EnableMRX: table chosen by XDATA 0xD511"
+  },
+  "DAT_CODE_6bfe": {
+   "name": "dp_mrx_setup_bytes_chip1a",
+   "brief": "Seven bytes copied to XDATA 0xE140 for chip ID 0x1A.",
+   "basis": "descriptive",
+   "evidence": "DP_EnableMRX: table chosen by XDATA 0xD511"
+  },
+  "DAT_CODE_6c05": {
+   "name": "dp_mrx_setup_bytes_chip20",
+   "brief": "Seven bytes copied to XDATA 0xE140 for chip ID 0x20.",
+   "basis": "descriptive",
+   "evidence": "DP_EnableMRX: table chosen by XDATA 0xD511"
+  },
+  "DAT_CODE_6c0c": {
+   "name": "dp_aux_dpcd_link_status",
+   "brief": "DPCD link status bytes (0x200..0x207) that the 8051 answers for an emulated DP receiver.",
+   "basis": "derived",
+   "evidence": "dp_aux_build_reply: native read, address 0x2xx"
+  },
+  "DAT_CODE_6c14": {
+   "name": "dp_aux_dpcd_rx_caps",
+   "brief": "DPCD receiver capability bytes (0x000..0x00B) answered by the emulated DP receiver.",
+   "basis": "derived",
+   "evidence": "dp_aux_build_reply: native read, address 0x0xx; rev 0x12, rate 0x14, lanes 0xC4"
+  },
+  "DAT_CODE_6c20": {
+   "name": "dp_aux_dpcd_ext_rx_caps",
+   "brief": "DPCD extended receiver capability bytes (0x2200..0x220F) answered by the emulated DP receiver.",
+   "basis": "derived",
+   "evidence": "dp_aux_build_reply: native read, address 0x22xx; rev 0x14"
+  },
+  "DAT_CODE_6c30": {
+   "name": "dp_aux_dpcd_0400_bytes",
+   "brief": "Four bytes returned for native AUX reads of DPCD addresses 0x400..0x403.",
+   "basis": "derived",
+   "evidence": "dp_aux_build_reply answers reads with address high byte 4 from it (index below 4, zeros after)"
+  },
+  "DAT_CODE_b114": {
+   "name": "edid_slave_ctrl_reg_ptrs",
+   "brief": "Per EDID port (7): pointer to the EDID slave control register (0xF01C, 0xF01E ...).",
+   "basis": "derived",
+   "evidence": "edid_init_port_regs (no caller); same registers as edid_enable_port_slaves"
+  },
+  "DAT_CODE_b129": {
+   "name": "edid_slave_addr_reg_ptrs",
+   "brief": "Per EDID port (7): pointer to the EDID slave address register (0xF01D, 0xF01F ...).",
+   "basis": "derived",
+   "evidence": "edid_init_port_regs (no caller); same registers as edid_setup_port_slaves"
+  },
+  "DAT_CODE_b13e": {
+   "name": "edid_port_reg_ptr_table",
+   "brief": "28 pointers to EDID slave port registers, picked by index to test bits or write 7.",
+   "basis": "descriptive",
+   "evidence": "reg_test_table_reg_bits, reg_set_table_reg_to_7"
+  },
+  "DAT_CODE_b153": {
+   "name": "edid_init_zero_reg_ptrs",
+   "brief": "Per port (7): pointer to the EDID slave register that the set-up clears.",
+   "basis": "descriptive",
+   "evidence": "edid_init_port_regs (no caller); port 0 = 0xF15B"
+  },
+  "DAT_CODE_b168": {
+   "name": "edid_init_value_reg_ptrs",
+   "brief": "Per port (7): pointer to the EDID slave register that gets the value parameter.",
+   "basis": "descriptive",
+   "evidence": "edid_init_port_regs (no caller); port 0 = 0xF15D"
+  },
+  "DAT_CODE_b17d": {
+   "name": "edid_init_extra_reg_ptrs",
+   "brief": "Per port (7): pointer to the EDID slave register that gets XDATA 0xA6DE.",
+   "basis": "descriptive",
+   "evidence": "edid_init_port_regs (no caller); port 0 = 0xF15E"
+  },
+  "DAT_CODE_dc7d": {
+   "name": "sys_pll_clock_list",
+   "brief": "Six clock values (12..96) searched for 0x60 to pick the PLL setting.",
+   "basis": "descriptive",
+   "evidence": "sys_find_pll_setting (other chip IDs)"
+  },
+  "DAT_CODE_dc83": {
+   "name": "sys_pll_clock_list_chip20",
+   "brief": "Six clock values (12..68) searched for 0x30 to pick the PLL setting on chip ID 0x20.",
+   "basis": "descriptive",
+   "evidence": "sys_find_pll_setting"
+  },
+  "DAT_CODE_dc89": {
+   "name": "sys_clock_factor_table",
+   "brief": "Factor per clock select value (1, 1, 2, 2, 4, 5, 8, ...) used to scale timings.",
+   "basis": "descriptive",
+   "evidence": "sys_lookup_clock_factor via sys_lookup_clock_factor"
+  },
+  "DAT_CODE_ded4": {
+   "name": "i2c_sw_bit_masks",
+   "brief": "Bit masks 0x80, 0x40 .. 0x01 for sending a byte on the software I2C bus, first bit highest.",
+   "basis": "derived",
+   "evidence": "software I2C byte write in the i2c_sw module"
+  },
+  "DAT_EXTMEM_3000": {
+   "name": "startup_share_block",
+   "brief": "Share block that the boot loader fills for the application (0x6A bytes).",
+   "basis": "proven",
+   "evidence": "startup_load_core_images; boot loader share structure (version check)"
+  },
+  "DAT_EXTMEM_3066": {
+   "name": "startup_share_flash_chip_index",
+   "brief": "Flash chip index from the boot loader (share block kind 5); the high nibble is the chip group.",
+   "basis": "derived",
+   "evidence": "the boot loader's flash_identify writes flash_chip_index as first byte of share block kind 5; flash_unprotect and flash_restore_status branch on its high nibble"
+  },
+  "DAT_EXTMEM_3e00": {
+   "name": "hdcp_dptx_key_block",
+   "brief": "The 282-byte HDCP data block copied into the DP transmitter key port.",
+   "basis": "derived",
+   "evidence": "hdcp_load_dptx_key_data (command 0x21)"
+  },
+  "DAT_EXTMEM_3f20": {
+   "name": "sys_mirror_request_flag",
+   "brief": "When 1, a status byte is copied into the 63-byte mirror buffer.",
+   "basis": "descriptive",
+   "evidence": "sys_mirror_flag_to_buffer"
+  },
+  "DAT_EXTMEM_3f21": {
+   "name": "sys_mirror_done_flag",
+   "brief": "Set to 1 when the mirror buffer was filled, 0 when no request was set.",
+   "basis": "descriptive",
+   "evidence": "sys_mirror_flag_to_buffer"
+  },
+  "DAT_EXTMEM_3f22": {
+   "name": "sys_mirror_buffer",
+   "brief": "63 bytes filled with one status byte on request.",
+   "basis": "descriptive",
+   "evidence": "sys_mirror_flag_to_buffer"
+  },
+  "DAT_EXTMEM_4d00": {
+   "name": "reg_dp_mrx0_window",
+   "brief": "Register window of DisplayPort receiver 0.",
+   "basis": "derived",
+   "evidence": "dp_mrx_read_reg, dp_mrx_write_reg, dp_mrx_update_reg_bits"
+  },
+  "DAT_EXTMEM_4e00": {
+   "name": "reg_dp_mrx1_window",
+   "brief": "Register window of DisplayPort receiver 1.",
+   "basis": "derived",
+   "evidence": "dp_mrx_read_reg, dp_mrx_write_reg, dp_mrx_update_reg_bits"
+  },
+  "DAT_EXTMEM_6100": {
+   "name": "reg_port_page_window",
+   "brief": "Paged register window of the input ports, 256 bytes per page.",
+   "basis": "derived",
+   "evidence": "reg_port_page_read16, reg_read_paged_byte, power_check_port_signal"
+  },
+  "DAT_EXTMEM_6500": {
+   "name": "reg_paged_block0_window",
+   "brief": "Register window of paged block 0.",
+   "basis": "derived",
+   "evidence": "reg_paged_write, reg_paged_update_bits"
+  },
+  "DAT_EXTMEM_6600": {
+   "name": "reg_paged_block1_window",
+   "brief": "Register window of paged block 1.",
+   "basis": "derived",
+   "evidence": "reg_paged_write, reg_paged_update_bits"
+  },
+  "DAT_EXTMEM_9a00": {
+   "name": "reg_wake_block_window",
+   "brief": "Register window of the wake detection block used in standby.",
+   "basis": "derived",
+   "evidence": "reg_read_wake_block_byte / _word, reg_update_wake_block_bits, power_init_wake_detection"
+  },
+  "DAT_EXTMEM_a000": {
+   "name": "ddc_last_access_ticks",
+   "brief": "Tick stamp of the last DDC/CI slave activity, for the one-second idle re-arm.",
+   "basis": "derived",
+   "evidence": "ddc_rearm_idle_slaves: > 1000 ticks"
+  },
+  "DAT_EXTMEM_a001": {
+   "name": "ddc_reply_rows_from_end",
+   "brief": "The DDC/CI reply rows addressed one byte lower, for the odd ports that fill a row from its end.",
+   "basis": "derived",
+   "evidence": "ipc_run_message type 4: a001[row][0x3C - pos] for odd ports"
+  },
+  "DAT_EXTMEM_a002": {
+   "name": "ddc_reply_buffers",
+   "brief": "DDC/CI reply buffers: four rows of 0x3C bytes, row = port / 2 (even port from the front, odd from the end).",
+   "basis": "proven",
+   "evidence": "ipc_run_message type 4 (DATA_DDCCI), irq_ext0_ddc_slave, irq_ext1_peripherals"
+  },
+  "DAT_EXTMEM_a03e": {
+   "name": "ddc_reply_buffer_row1",
+   "brief": "DDC/CI reply buffer row 1 (slave ports 2 and 3).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, irq_ext1_peripherals"
+  },
+  "DAT_EXTMEM_a07a": {
+   "name": "ddc_reply_buffer_row2",
+   "brief": "DDC/CI reply buffer row 2 (slave ports 4 and 5).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, irq_ext1_peripherals"
+  },
+  "DAT_EXTMEM_a0b6": {
+   "name": "ddc_reply_buffer_row3",
+   "brief": "DDC/CI reply buffer row 3 (slave ports 6 and 7).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, irq_ext1_peripherals"
+  },
+  "DAT_EXTMEM_a0f3": {
+   "name": "ddc_pending_channel_flags",
+   "brief": "One bit per DDC/CI slave port with a finished request waiting to be reported.",
+   "basis": "derived",
+   "evidence": "ddc_rearm_idle_slaves sets, ddc_get_pending_channels, ddc_clear_pending_channel"
+  },
+  "DAT_EXTMEM_a0f4": {
+   "name": "ddc_request_buffers",
+   "brief": "DDC/CI request buffers: four rows of 0x3C bytes, row = port / 2, filled by the slave interrupts.",
+   "basis": "proven",
+   "evidence": "irq_ext0_ddc_slave, irq_ext1_peripherals; report type 4"
+  },
+  "DAT_EXTMEM_a130": {
+   "name": "ddc_request_buffer_row1",
+   "brief": "DDC/CI request buffer row 1 (slave ports 2 and 3).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, irq_ext1_peripherals"
+  },
+  "DAT_EXTMEM_a16c": {
+   "name": "ddc_request_buffer_row2",
+   "brief": "DDC/CI request buffer row 2 (slave ports 4 and 5).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, irq_ext1_peripherals"
+  },
+  "DAT_EXTMEM_a1a8": {
+   "name": "ddc_request_buffer_row3",
+   "brief": "DDC/CI request buffer row 3 (slave ports 6 and 7).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, irq_ext1_peripherals"
+  },
+  "DAT_EXTMEM_a1e4": {
+   "name": "timer_div10_count",
+   "brief": "Counter 0..9 stepped on every timer 0 tick.",
+   "basis": "derived",
+   "evidence": "irq_timer0_tick"
+  },
+  "DAT_EXTMEM_a1e5": {
+   "name": "dbg_uart_dump_read_index",
+   "brief": "Read position of the debug dump of the serial port 2 receive ring.",
+   "basis": "derived",
+   "evidence": "dbg_dump_uart_rx_ring"
+  },
+  "DAT_EXTMEM_a1e6": {
+   "name": "uart_test_byte_value",
+   "brief": "Counting test byte sent on serial port 4.",
+   "basis": "derived",
+   "evidence": "uart_send_test_byte_port4"
+  },
+  "DAT_EXTMEM_a1e7": {
+   "name": "irq_capture_enable_mask",
+   "brief": "Enabled sources of the capture interrupt (remote-control input), set by command 0x09 / 0x0A.",
+   "basis": "derived",
+   "evidence": "irq_set_capture_mask, irq_ext1_peripherals"
+  },
+  "DAT_EXTMEM_a1e8": {
+   "name": "uart_rx_ring_port1",
+   "brief": "16-byte receive ring of serial port 1.",
+   "basis": "derived",
+   "evidence": "irq_uart, uart_read_rx_ring"
+  },
+  "DAT_EXTMEM_a1f8": {
+   "name": "uart_tx_ring_port1",
+   "brief": "16-byte transmit ring of serial port 1 (printf output).",
+   "basis": "derived",
+   "evidence": "uart_tx_ring_put, irq_uart"
+  },
+  "DAT_EXTMEM_a208": {
+   "name": "uart_rx_ring_port2",
+   "brief": "Receive ring of serial port 2 (0x38 bytes).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, uart_read_rx_ring"
+  },
+  "DAT_EXTMEM_a240": {
+   "name": "uart_rx_ring_port3",
+   "brief": "Receive ring of serial port 3 (0x38 bytes).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, uart_read_rx_ring"
+  },
+  "DAT_EXTMEM_a278": {
+   "name": "uart_rx_ring_port4",
+   "brief": "Receive ring of serial port 4 (0x38 bytes).",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, uart_read_rx_ring"
+  },
+  "DAT_EXTMEM_a2b0": {
+   "name": "uart_tx_queue_port2",
+   "brief": "Bytes queued for sending on serial port 2.",
+   "basis": "derived",
+   "evidence": "uart_queue_tx_byte_port2, uart_flush_tx_queue_port2"
+  },
+  "DAT_EXTMEM_a2e8": {
+   "name": "uart_tx_queue_port3",
+   "brief": "Bytes queued for sending on serial port 3.",
+   "basis": "derived",
+   "evidence": "uart_queue_tx_byte_port3, uart_flush_tx_queue_port3"
+  },
+  "DAT_EXTMEM_a320": {
+   "name": "uart_tx_queue_port4",
+   "brief": "Bytes queued for sending on serial port 4.",
+   "basis": "derived",
+   "evidence": "uart_queue_tx_byte_port4, uart_flush_tx_queue_port4"
+  },
+  "DAT_EXTMEM_a358": {
+   "name": "ipc_rx_slot_index",
+   "brief": "Mailbox slot (0..3) where the search for the next message from the main processor starts.",
+   "basis": "derived",
+   "evidence": "ipc_service_mailbox: portal +0x10 + 20 * slot"
+  },
+  "DAT_EXTMEM_a359": {
+   "name": "sys_watch_token",
+   "brief": "Token the 8051 sends round the alive rings (plus 7 for ring 1, plus 13 for ring 2).",
+   "basis": "derived",
+   "evidence": "sys_watch_main_core: 0xF204 / 0xF240"
+  },
+  "DAT_EXTMEM_a35a": {
+   "name": "sys_watch_ring1_ticks",
+   "brief": "Tick stamp of the last round of alive ring 1; more than 15000 ticks old means a crash.",
+   "basis": "derived",
+   "evidence": "sys_watch_main_core"
+  },
+  "DAT_EXTMEM_a35c": {
+   "name": "sys_watch_ring2_ticks",
+   "brief": "Tick stamp of the last round of alive ring 2; more than 10000 ticks old means a crash.",
+   "basis": "derived",
+   "evidence": "sys_watch_main_core"
+  },
+  "DAT_EXTMEM_a35e": {
+   "name": "ipc_cmd25_sequence_state",
+   "brief": "State (0..2) of the timed port sequence started by command 0x25.",
+   "basis": "derived",
+   "evidence": "ipc_run_command, ipc_run_cmd_0x25_sequence"
+  },
+  "DAT_EXTMEM_a35f": {
+   "name": "i2c_result_ready_flag",
+   "brief": "Set to 1 when an I2C read result waits to be reported to the main processor.",
+   "basis": "derived",
+   "evidence": "ipc_run_message type 2, i2c_test_no_result_ready"
+  },
+  "DAT_EXTMEM_a360": {
+   "name": "i2c_transfer_buffer",
+   "brief": "Message type 2 data: device and register bytes, then the bytes to write or the bytes read.",
+   "basis": "derived",
+   "evidence": "ipc_run_message: i2c_write_eeprom_pages / i2c_master_write_read"
+  },
+  "DAT_EXTMEM_a362": {
+   "name": "i2c_transfer_data",
+   "brief": "Data part of the I2C transfer buffer; holds the read result that is reported.",
+   "basis": "derived",
+   "evidence": "ipc_fill_report_record report type 2"
+  },
+  "DAT_EXTMEM_a3e0": {
+   "name": "ipc_cmd25_first_port",
+   "brief": "First port of the pair stored by command 0x25 (byte 2).",
+   "basis": "derived",
+   "evidence": "ipc_run_command, ipc_run_cmd_0x25_sequence"
+  },
+  "DAT_EXTMEM_a3e1": {
+   "name": "ipc_cmd25_second_port",
+   "brief": "Second port of the pair stored by command 0x25 (byte 3).",
+   "basis": "derived",
+   "evidence": "ipc_run_command, ipc_run_cmd_0x25_sequence"
+  },
+  "DAT_EXTMEM_a3e2": {
+   "name": "ipc_tx_slot_index",
+   "brief": "Mailbox slot (0..3) where the search for a free slot towards the main processor starts.",
+   "basis": "derived",
+   "evidence": "ipc_service_mailbox, ipc_step_poll_slot: portal +0x60 + 20 * slot"
+  },
+  "DAT_EXTMEM_a3e3": {
+   "name": "uart_rx_reported_mask",
+   "brief": "One bit per serial port whose received data still sits in a mailbox slot.",
+   "basis": "derived",
+   "evidence": "ipc_service_mailbox (type 3 headers), uart_test_rx_reported"
+  },
+  "DAT_EXTMEM_a3e4": {
+   "name": "i2c_result_channel",
+   "brief": "Hardware I2C channel of the read result waiting to be reported.",
+   "basis": "derived",
+   "evidence": "ipc_run_message type 2 read"
+  },
+  "DAT_EXTMEM_a3e5": {
+   "name": "ipc_report_record",
+   "brief": "Outgoing report for the main processor: word count, position, type, channel, flags, length, data.",
+   "basis": "derived",
+   "evidence": "ipc_fill_report_record, ipc_build_report_message, ipc_clear_report_record (0xA3E5..0xA46B)"
+  },
+  "DAT_EXTMEM_a3ea": {
+   "name": "ipc_report_record_length",
+   "brief": "Bytes of the report still to send; zero means the record is free.",
+   "basis": "derived",
+   "evidence": "ipc_build_report_message, ipc_test_report_slot_free"
+  },
+  "DAT_EXTMEM_a46c": {
+   "name": "edid_readback_count",
+   "brief": "Byte count of the EDID RAM read-back asked for with command 0x0D; zero = none.",
+   "basis": "derived",
+   "evidence": "ipc_run_command case 13, edid_test_readback_requested"
+  },
+  "DAT_EXTMEM_a46d": {
+   "name": "edid_readback_offset",
+   "brief": "Start of the EDID RAM read-back asked for with command 0x0D, in 16-byte units.",
+   "basis": "derived",
+   "evidence": "ipc_run_command case 13"
+  },
+  "DAT_EXTMEM_a46e": {
+   "name": "i2c_result_length",
+   "brief": "Byte count of the I2C read result waiting to be reported.",
+   "basis": "derived",
+   "evidence": "ipc_run_message type 2 read"
+  },
+  "DAT_EXTMEM_a46f": {
+   "name": "power_wake_source",
+   "brief": "Wake word: code of the source that ended standby, passed to the main processor on release.",
+   "basis": "derived",
+   "evidence": "sys_main: 'Wakeup!!! %BX', startup_release_leon2m"
+  },
+  "DAT_EXTMEM_a470": {
+   "name": "sys_main_work_word",
+   "brief": "Work word of the main loop: counter of its 100-pass delay and holder of the wake check results.",
+   "basis": "descriptive",
+   "evidence": "used by sys_main only: delay loop counter, result of power_poll_wake_sources and power_find_active_wake_pin"
+  },
+  "DAT_EXTMEM_a472": {
+   "name": "power_wake_retry_count",
+   "brief": "Round counter (up to 10) of the wake-up wait while 0xDCB0 bits 7..6 stay set ('cnt %d %d').",
+   "basis": "descriptive",
+   "evidence": "sys_main"
+  },
+  "DAT_EXTMEM_a47f": {
+   "name": "startup_share_copy",
+   "brief": "Copy of the share block (from 0x3002) with the image records used at start-up.",
+   "basis": "derived",
+   "evidence": "startup_load_core_images: copied in 5 pieces, 0xA47F..0xA4E8"
+  },
+  "DAT_EXTMEM_a48b": {
+   "name": "startup_share_copy_0x0c",
+   "brief": "Flash source of the first image record; the record is handed to startup_setup_leon2m.",
+   "basis": "descriptive",
+   "evidence": "startup_load_core_images: copied to 0x9F040000"
+  },
+  "DAT_EXTMEM_a48f": {
+   "name": "startup_share_copy_0x10",
+   "brief": "Length of the first image record.",
+   "basis": "descriptive",
+   "evidence": "startup_load_core_images"
+  },
+  "DAT_EXTMEM_a493": {
+   "name": "startup_share_copy_0x14",
+   "brief": "Flash source of the second image record.",
+   "basis": "descriptive",
+   "evidence": "startup_load_core_images"
+  },
+  "DAT_EXTMEM_a497": {
+   "name": "startup_share_copy_0x18",
+   "brief": "Destination of the second image record.",
+   "basis": "descriptive",
+   "evidence": "startup_load_core_images"
+  },
+  "DAT_EXTMEM_a49b": {
+   "name": "startup_share_copy_0x1c",
+   "brief": "Length of the second image record.",
+   "basis": "descriptive",
+   "evidence": "startup_load_core_images"
+  },
+  "DAT_EXTMEM_a49f": {
+   "name": "startup_share_copy_0x20",
+   "brief": "Long written to registers 0xF1DB..0xF1DE and to XDATA 0xA729 at the end of start-up.",
+   "basis": "descriptive",
+   "evidence": "startup_load_core_images"
+  },
+  "DAT_EXTMEM_a4af": {
+   "name": "startup_share_copy_0x30",
+   "brief": "Flash source of the third image record; the record is handed to startup_setup_leon2s.",
+   "basis": "descriptive",
+   "evidence": "startup_load_core_images: copied to 0x9F1A0000 / 0x9F140000 / 0x9F180000"
+  },
+  "DAT_EXTMEM_a4bb": {
+   "name": "startup_share_copy_0x3c",
+   "brief": "Destination of the fifth image record.",
+   "basis": "descriptive",
+   "evidence": "startup_load_core_images"
+  },
+  "DAT_EXTMEM_a4c3": {
+   "name": "startup_share_copy_0x44",
+   "brief": "Flash source of the fourth image record (chip IDs 0x16/0x17/0x1E/0x1F only).",
+   "basis": "descriptive",
+   "evidence": "startup_load_core_images: copied to 0x9F1B0000"
+  },
+  "DAT_EXTMEM_a4c7": {
+   "name": "startup_share_copy_0x48",
+   "brief": "Length of the fourth image record.",
+   "basis": "descriptive",
+   "evidence": "startup_load_core_images"
+  },
+  "DAT_EXTMEM_a4e7": {
+   "name": "reg_ahb_read_addr",
+   "brief": "AHB address parameter of the PBus-to-AHB bridge read.",
+   "basis": "derived",
+   "evidence": "reg_ahb_read32 parameter; ipc_portal_read, startup_run_leon2m/_leon2s"
+  },
+  "DAT_EXTMEM_a4ec": {
+   "name": "reg_ahb_write_addr",
+   "brief": "AHB address parameter of the PBus-to-AHB bridge write.",
+   "basis": "derived",
+   "evidence": "reg_ahb_write32 parameter; ipc_portal_write, startup_setup_leon2m/_leon2s"
+  },
+  "DAT_EXTMEM_a4f0": {
+   "name": "reg_ahb_write_value",
+   "brief": "Word parameter of the PBus-to-AHB bridge write.",
+   "basis": "derived",
+   "evidence": "reg_ahb_write32 parameter"
+  },
+  "DAT_EXTMEM_a564": {
+   "name": "sys_ir_ring_write_index",
+   "brief": "Write position in the 128-byte infrared pulse ring.",
+   "basis": "derived",
+   "evidence": "irq_record_ir_pulse, sys_ir_ring_is_full / _is_empty / _flush"
+  },
+  "DAT_EXTMEM_a565": {
+   "name": "sys_ir_ring_read_index",
+   "brief": "Read position in the 128-byte infrared pulse ring.",
+   "basis": "derived",
+   "evidence": "sys_ir_ring_read_byte, sys_ir_ring_is_full / _is_empty / _flush"
+  },
+  "DAT_EXTMEM_a566": {
+   "name": "sys_ir_ring_buffer",
+   "brief": "128-byte ring of infrared pulse lengths (report type 5).",
+   "basis": "derived",
+   "evidence": "irq_record_ir_pulse, sys_ir_ring_read_byte"
+  },
+  "DAT_EXTMEM_a5e6": {
+   "name": "power_ir_match_state",
+   "brief": "State of the infrared wake-code matcher: step, collected bits and bit count.",
+   "basis": "derived",
+   "evidence": "power_match_ir_wake_code"
+  },
+  "DAT_EXTMEM_a5e9": {
+   "name": "power_wakeup_timer_ticks",
+   "brief": "Tick stamp of the last count-down step of the wake-up timer.",
+   "basis": "derived",
+   "evidence": "power_set_wakeup_timer, power_check_wakeup_timer"
+  },
+  "DAT_EXTMEM_a5eb": {
+   "name": "power_key_hit_ticks",
+   "brief": "Tick stamp of the wake key scan; a hit less than 50 ticks after it is ignored.",
+   "basis": "derived",
+   "evidence": "power_scan_wake_keys"
+  },
+  "DAT_EXTMEM_a5ed": {
+   "name": "power_key_table",
+   "brief": "Standby key and wake-pin table (60 bytes) from the main processor; starts with six 2-byte key entries.",
+   "basis": "proven",
+   "evidence": "FillKeyDetectList (message type 8), power_scan_wake_keys"
+  },
+  "DAT_EXTMEM_a5f9": {
+   "name": "power_key_table_ir_code",
+   "brief": "Six-byte infrared wake-up code of the standby table.",
+   "basis": "derived",
+   "evidence": "power_match_ir_wake_code"
+  },
+  "DAT_EXTMEM_a5ff": {
+   "name": "power_key_table_i2c_0x12",
+   "brief": "Standby table word passed as pin pointer to the software I2C ID check; zero disables it.",
+   "basis": "descriptive",
+   "evidence": "i2c_sw_match_device_id -> i2c_sw_select_pins"
+  },
+  "DAT_EXTMEM_a601": {
+   "name": "power_key_table_i2c_0x14",
+   "brief": "Standby table word passed as pin pointer to the software I2C ID check.",
+   "basis": "descriptive",
+   "evidence": "i2c_sw_match_device_id -> i2c_sw_select_pins"
+  },
+  "DAT_EXTMEM_a603": {
+   "name": "power_key_table_i2c_0x16",
+   "brief": "Standby table byte passed to the software I2C pin selection.",
+   "basis": "descriptive",
+   "evidence": "i2c_sw_match_device_id -> i2c_sw_select_pins"
+  },
+  "DAT_EXTMEM_a604": {
+   "name": "power_key_table_i2c_0x17",
+   "brief": "Standby table word passed as pin pointer to the software I2C ID check; zero disables it.",
+   "basis": "descriptive",
+   "evidence": "i2c_sw_match_device_id -> i2c_sw_select_pins"
+  },
+  "DAT_EXTMEM_a606": {
+   "name": "power_key_table_i2c_0x19",
+   "brief": "Standby table word passed as pin pointer to the software I2C ID check.",
+   "basis": "descriptive",
+   "evidence": "i2c_sw_match_device_id -> i2c_sw_select_pins"
+  },
+  "DAT_EXTMEM_a608": {
+   "name": "power_key_table_i2c_0x1b",
+   "brief": "Standby table byte passed to the software I2C pin selection.",
+   "basis": "descriptive",
+   "evidence": "i2c_sw_match_device_id -> i2c_sw_select_pins"
+  },
+  "DAT_EXTMEM_a609": {
+   "name": "power_key_table_i2c_id_record",
+   "brief": "Device address, register and six expected ID bytes for the software I2C ID check.",
+   "basis": "derived",
+   "evidence": "i2c_sw_match_device_id: i2c_sw_read_regs(dev, reg, n)"
+  },
+  "DAT_EXTMEM_a611": {
+   "name": "power_key_table_wake_pins",
+   "brief": "Six 2-byte wake-up pin entries of the standby table.",
+   "basis": "derived",
+   "evidence": "power_find_active_wake_pin"
+  },
+  "DAT_EXTMEM_a61d": {
+   "name": "power_key_table_standby_pins",
+   "brief": "Six 2-byte pin entries of the standby table that are set on entering standby.",
+   "basis": "derived",
+   "evidence": "power_apply_standby_pins"
+  },
+  "DAT_EXTMEM_a629": {
+   "name": "power_key_release_seen_flag",
+   "brief": "Set after a scan with no key or IR hit; a held key counts again only after that.",
+   "basis": "derived",
+   "evidence": "sys_scan_keys_and_ir, power_scan_wake_keys, sys_restart_key_scan_timer"
+  },
+  "DAT_EXTMEM_a62a": {
+   "name": "power_wakeup_timer_remaining",
+   "brief": "Ticks left on the wake-up timer (seconds x 1000); 0x03E7FC18 = stopped.",
+   "basis": "derived",
+   "evidence": "power_set_wakeup_timer ('setWakeupTimer'), power_check_wakeup_timer"
+  },
+  "DAT_EXTMEM_a62e": {
+   "name": "power_adc_key_tolerance",
+   "brief": "Tolerance of the ADC key comparison in the wake key scan (command 0x1B).",
+   "basis": "proven",
+   "evidence": "sys_set_adc_key_tolerance, power_scan_wake_keys"
+  },
+  "DAT_EXTMEM_a62f": {
+   "name": "power_wake_port_table",
+   "brief": "Wake-up port table from the main processor: ten 3-byte entries (input kind and option bits, time slot, ...).",
+   "basis": "proven",
+   "evidence": "ipc_store_wake_port_list ('SetZPArry', message type 9), power_poll_wake_sources"
+  },
+  "DAT_EXTMEM_a64d": {
+   "name": "power_wake_table_index",
+   "brief": "Current entry of the wake-up port table being checked.",
+   "basis": "derived",
+   "evidence": "power_poll_wake_sources, power_check_wake_entry, power_reset_wake_table"
+  },
+  "DAT_EXTMEM_a64e": {
+   "name": "power_wake_slot_ticks",
+   "brief": "Tick stamp at which the current wake table entry got its time slot.",
+   "basis": "derived",
+   "evidence": "power_poll_wake_sources"
+  },
+  "DAT_EXTMEM_a671": {
+   "name": "usb_cc_adc_reading",
+   "brief": "ADC reading taken on the channel named in the USB-C port description.",
+   "basis": "descriptive",
+   "evidence": "usb_cc_read_line_levels: gpio_read_adc(info >> 4)"
+  },
+  "DAT_EXTMEM_a672": {
+   "name": "usb_cc_line_readings",
+   "brief": "The two CC line level readings of the USB-C port.",
+   "basis": "derived",
+   "evidence": "usb_cc_read_line_levels, usb_cc_test_* / usb_cc_check_rp_pair / _rd_pair"
+  },
+  "DAT_EXTMEM_a673": {
+   "name": "usb_cc_line_reading_second",
+   "brief": "Second of the two CC line level readings.",
+   "basis": "derived",
+   "evidence": "usb_cc_test_active_line_high"
+  },
+  "DAT_EXTMEM_a69c": {
+   "name": "usb_c_port_info",
+   "brief": "Ten-byte USB-C port description from the main processor (message type 11).",
+   "basis": "proven",
+   "evidence": "FillTypeCInfo (original name), usb_update_dp_port_flags, usb_cc_read_line_levels"
+  },
+  "DAT_EXTMEM_a6a5": {
+   "name": "usb_c_port_info_port_select",
+   "brief": "Last byte of the USB-C description; bits 1..0 select the Type-C port register block.",
+   "basis": "derived",
+   "evidence": "usb_cc_select_port_block, usb_cc_read_line_levels"
+  },
+  "DAT_EXTMEM_a6a6": {
+   "name": "usb_cc_channel_select",
+   "brief": "1 starts CC channel 0 in mode 2; any other value starts channel 1.",
+   "basis": "descriptive",
+   "evidence": "usb_cc_init_phy, usb_cc_init_port_mode"
+  },
+  "DAT_EXTMEM_a6a7": {
+   "name": "power_dp_watch_ticks",
+   "brief": "Tick stamp for the 5000-tick DP activity watch after a DP power-up request.",
+   "basis": "derived",
+   "evidence": "power_watch_dp_activity"
+  },
+  "DAT_EXTMEM_a6a9": {
+   "name": "power_dp_watch_active_flag",
+   "brief": "Set while the DP activity watch after a power-up request is running.",
+   "basis": "derived",
+   "evidence": "power_watch_dp_activity"
+  },
+  "DAT_EXTMEM_a6aa": {
+   "name": "ipc_cmd25_start_ticks",
+   "brief": "Tick stamp at the start of the command 0x25 port sequence (600 / 1200 tick steps).",
+   "basis": "derived",
+   "evidence": "ipc_run_cmd_0x25_sequence"
+  },
+  "DAT_EXTMEM_a6ad": {
+   "name": "ipc_cmd25_step_ticks",
+   "brief": "Tick stamp of the last 500-tick step of the command 0x25 port sequence.",
+   "basis": "derived",
+   "evidence": "ipc_run_cmd_0x25_sequence"
+  },
+  "DAT_EXTMEM_a6af": {
+   "name": "power_cut_table",
+   "brief": "Power-cut table from the main processor: six 3-byte pin entries (18 bytes).",
+   "basis": "proven",
+   "evidence": "ipc_store_power_cut_list ('CutPwArray', message type 10), power_apply_cut_list"
+  },
+  "DAT_EXTMEM_a6c1": {
+   "name": "ipc_cmd25_port_entry_ptr",
+   "brief": "Pointer to the 0xF180 port entry that the command 0x25 sequence watches.",
+   "basis": "derived",
+   "evidence": "ipc_run_cmd_0x25_sequence"
+  },
+  "DAT_EXTMEM_a6ee": {
+   "name": "dp_power_up_request",
+   "brief": "1 when a DP source writes 1 to DPCD 0x600; sys_step_clock_switch counts it on to 4; 0 in power saving.",
+   "basis": "derived",
+   "evidence": "dp_aux_build_reply sets 1; sys_step_clock_switch uses it as its step counter 1..4; power_watch_dp_activity and power_setup_power_saving clear it"
+  },
+  "DAT_EXTMEM_a6ef": {
+   "name": "dp_aux_link_config_port0",
+   "brief": "Seven DPCD link configuration bytes (0x100..) written by the source on DP receiver 0.",
+   "basis": "derived",
+   "evidence": "dp_aux_build_reply native write 0x1xx; dp_aux_track_link_training"
+  },
+  "DAT_EXTMEM_a6f2": {
+   "name": "dp_aux_link_config_port0_0x03",
+   "brief": "Byte 3 of the DP receiver 0 link configuration, cleared when AUX handling starts.",
+   "basis": "descriptive",
+   "evidence": "DP_EnableMRX"
+  },
+  "DAT_EXTMEM_a6f6": {
+   "name": "dp_aux_link_config_port1",
+   "brief": "Seven DPCD link configuration bytes (0x100..) written by the source on DP receiver 1.",
+   "basis": "derived",
+   "evidence": "dp_aux_build_reply native write 0x1xx; dp_aux_track_link_training"
+  },
+  "DAT_EXTMEM_a6f9": {
+   "name": "dp_aux_link_config_port1_0x03",
+   "brief": "Byte 3 of the DP receiver 1 link configuration, cleared when AUX handling starts.",
+   "basis": "descriptive",
+   "evidence": "DP_EnableMRX"
+  },
+  "DAT_EXTMEM_a6fd": {
+   "name": "dp_aux_port_state_flags",
+   "brief": "Four bits per DP receiver: bit 1 = powered on by DPCD 0x600, bit 0 = lanes reported trained.",
+   "basis": "derived",
+   "evidence": "dp_aux_build_reply, dp_aux_track_link_training, dp_check_mrx0/1_wake"
+  },
+  "DAT_EXTMEM_a6fe": {
+   "name": "i2c_sw_sda_port_ptr",
+   "brief": "Pointer to the port register of the software I2C data line.",
+   "basis": "derived",
+   "evidence": "i2c_sw_* module (i2c_sw_start, i2c_sw_release_clock ...), i2c_sw_select_pins"
+  },
+  "DAT_EXTMEM_a701": {
+   "name": "i2c_sw_scl_port_ptr",
+   "brief": "Pointer to the port register of the software I2C clock line.",
+   "basis": "derived",
+   "evidence": "i2c_sw_release_clock, i2c_sw_select_pins"
+  },
+  "DAT_EXTMEM_a704": {
+   "name": "i2c_sw_sda_mask",
+   "brief": "Bit mask of the software I2C data line in its port register.",
+   "basis": "derived",
+   "evidence": "i2c_sw_* module (i2c_sw_start, i2c_sw_release_clock ...), i2c_sw_select_pins"
+  },
+  "DAT_EXTMEM_a705": {
+   "name": "i2c_sw_scl_mask",
+   "brief": "Bit mask of the software I2C clock line in its port register.",
+   "basis": "derived",
+   "evidence": "i2c_sw_* module (i2c_sw_start, i2c_sw_release_clock ...), i2c_sw_select_pins"
+  },
+  "DAT_EXTMEM_a706": {
+   "name": "i2c_sw_sda_ctrl_ptr",
+   "brief": "Pointer to the second register of the data line, ORed in on each update and set while reading.",
+   "basis": "descriptive",
+   "evidence": "i2c_sw_* module (i2c_sw_start, i2c_sw_release_clock ...), i2c_sw_select_pins"
+  },
+  "DAT_EXTMEM_a709": {
+   "name": "i2c_sw_scl_ctrl_ptr",
+   "brief": "Pointer to the second register of the clock line, ORed in on each update.",
+   "basis": "descriptive",
+   "evidence": "i2c_sw_* module (i2c_sw_start, i2c_sw_release_clock ...), i2c_sw_select_pins"
+  },
+  "DAT_EXTMEM_a70c": {
+   "name": "i2c_sw_id_match_flag",
+   "brief": "Whether the last software I2C device ID check matched.",
+   "basis": "derived",
+   "evidence": "sys_set_match_flag, i2c_sw_read_regs"
+  },
+  "DAT_EXTMEM_a70d": {
+   "name": "flash_window_base",
+   "brief": "Flash window base address for the main processor; the next long is the job address.",
+   "basis": "derived",
+   "evidence": "FE2P_SetLeon2BaseAddress, flash_set_job_address, flash_calc_window_room"
+  },
+  "DAT_EXTMEM_a711": {
+   "name": "flash_job_address",
+   "brief": "Flash address of the current flash job (window base + extension + offset).",
+   "basis": "derived",
+   "evidence": "flash_set_job_address; flash_read_to_buffer, flash_write_from_buffer, flash_erase_sector_at_addr"
+  },
+  "DAT_EXTMEM_a715": {
+   "name": "flash_job_length",
+   "brief": "Byte length of the current flash read or program job.",
+   "basis": "derived",
+   "evidence": "flash_set_job_length (command 0x14), flash_read_to_buffer, flash_write_from_buffer"
+  },
+  "DAT_EXTMEM_a717": {
+   "name": "flash_window_extension",
+   "brief": "Extension added to the window base for flash job addresses (command 0x26).",
+   "basis": "derived",
+   "evidence": "flash_set_job_address, flash_calc_window_room"
+  },
+  "DAT_EXTMEM_a729": {
+   "name": "flash_leon2_base_address",
+   "brief": "LEON flash window base saved at the end of start-up.",
+   "basis": "derived",
+   "evidence": "startup_load_core_images, flash_get_leon2_base_address"
+  },
+  "DAT_EXTMEM_a72d": {
+   "name": "startup_core_reg_addr",
+   "brief": "AHB address of the LEON core register that is written next.",
+   "basis": "derived",
+   "evidence": "startup_setup_leon2m/_leon2s, startup_run_*, sys_stop_* -> reg_ahb_write32"
+  },
+  "DAT_EXTMEM_a731": {
+   "name": "startup_core_reg_value",
+   "brief": "Value for the LEON core register that is written next.",
+   "basis": "derived",
+   "evidence": "startup_setup_leon2m/_leon2s, startup_run_*, sys_stop_* -> reg_ahb_write32"
+  },
+  "DAT_EXTMEM_a735": {
+   "name": "sys_timed_record",
+   "brief": "Timed indicator effect: last tick stamp, steps, mode, target, two limit pairs.",
+   "basis": "derived",
+   "evidence": "sys_run_timed_ramp, sys_set_timed_* (commands 0x18..0x1A, 0x30, 0x31)"
+  },
+  "DAT_EXTMEM_a737": {
+   "name": "sys_timed_steps",
+   "brief": "Ramp step of each of the two channels, from their level span.",
+   "basis": "derived",
+   "evidence": "sys_set_timed_ramp_step"
+  },
+  "DAT_EXTMEM_a739": {
+   "name": "sys_timed_mode",
+   "brief": "Mode of the timed effect: 0 off, 1 toggle, 2 ramp.",
+   "basis": "derived",
+   "evidence": "sys_set_timed_toggle_target, sys_set_timed_ramp_fields, sys_run_timed_ramp"
+  },
+  "DAT_EXTMEM_a73a": {
+   "name": "sys_timed_target",
+   "brief": "Toggle target address (mode 1) or the two ramp field bytes (mode 2).",
+   "basis": "derived",
+   "evidence": "sys_set_timed_toggle_target, sys_set_timed_ramp_fields"
+  },
+  "DAT_EXTMEM_a73c": {
+   "name": "sys_timed_limits",
+   "brief": "High and low limit pairs of the two timed effect channels (0xA73C/D, 0xA73E/F).",
+   "basis": "derived",
+   "evidence": "sys_set_timed_limits_ch0 / _ch1 (commands 0x19 / 0x1A), sys_set_timed_ramp_step"
+  },
+  "DAT_EXTMEM_a74a": {
+   "name": "flash_block_byte_ptr",
+   "brief": "Moving byte pointer of the 512-byte flash block copies.",
+   "basis": "derived",
+   "evidence": "flash_write_edid_ram, flash_read_block_to_pointer"
+  },
+  "DAT_EXTMEM_a74c": {
+   "name": "flash_block_sum",
+   "brief": "Sum of the 512 bytes of the last flash block read.",
+   "basis": "derived",
+   "evidence": "flash_sum_block"
+  },
+  "DAT_EXTMEM_a74e": {
+   "name": "flash_block_addr_high",
+   "brief": "Bits 23..16 of the flash address of a 512-byte block read.",
+   "basis": "derived",
+   "evidence": "flash_sum_block, flash_read_block_to_pointer, dbg_dump_flash_block: 0xF0F0"
+  },
+  "DAT_EXTMEM_a74f": {
+   "name": "flash_block_addr_bits_7_0",
+   "brief": "Bits 7..0 of the flash address of a 512-byte block read (written to register 0xF0F2).",
+   "basis": "derived",
+   "evidence": "flash_sum_block, flash_read_block_to_pointer and dbg_dump_flash_block copy it to reg_flash_spi_addr_low (0xF0F2)"
+  },
+  "DAT_EXTMEM_a750": {
+   "name": "flash_block_addr_bits_15_8",
+   "brief": "Bits 15..8 of the flash address of a 512-byte block read (written to register 0xF0F1).",
+   "basis": "derived",
+   "evidence": "flash_sum_block, flash_read_block_to_pointer and dbg_dump_flash_block copy it to reg_flash_spi_addr_mid (0xF0F1)"
+  },
+  "DAT_EXTMEM_a751": {
+   "name": "dp_mrx_adc_min_levels",
+   "brief": "Lowest analog sense reading of each DP port since detection started.",
+   "basis": "derived",
+   "evidence": "dp_mrx_detect_adc_rise"
+  },
+  "DAT_EXTMEM_a753": {
+   "name": "dp_mrx_adc_sample_counts",
+   "brief": "Number of first readings taken per DP port (up to 2).",
+   "basis": "derived",
+   "evidence": "dp_mrx_detect_adc_rise, power_init_wake_detection"
+  },
+  "DAT_EXTMEM_a755": {
+   "name": "dp_mrx_adc_channel_port0",
+   "brief": "ADC channel of the analog sense line of DP port 0.",
+   "basis": "derived",
+   "evidence": "dp_mrx_detect_adc_rise, dp_mrx_test_adc_level, power_init_wake_detection"
+  },
+  "DAT_EXTMEM_a756": {
+   "name": "dp_mrx_adc_channel_port1",
+   "brief": "ADC channel of the analog sense line of DP port 1.",
+   "basis": "derived",
+   "evidence": "dp_mrx_detect_adc_rise, dp_mrx_test_adc_level, power_init_wake_detection"
+  },
+  "DAT_EXTMEM_a757": {
+   "name": "hdmi_cec_active_source",
+   "brief": "Logical address of the device that last sent CEC 'Active Source' (0x0F = none).",
+   "basis": "derived",
+   "evidence": "hdmi_cec_receive_message opcode 0x82, hdmi_cec_select_port"
+  },
+  "DAT_EXTMEM_a758": {
+   "name": "hdmi_cec_request_flags",
+   "brief": "CEC requests seen: bit 1 Standby, 2 Active Source, 3 Inactive Source, 4 User Control Pressed.",
+   "basis": "derived",
+   "evidence": "hdmi_cec_receive_message (opcodes 0x36, 0x82, 0x9D, 0x44), hdmi_cec_poll_request"
+  },
+  "DAT_EXTMEM_a759": {
+   "name": "hdmi_cec_operand",
+   "brief": "Operand byte of the last CEC request (0xFF = none).",
+   "basis": "derived",
+   "evidence": "hdmi_cec_receive_message, hdmi_cec_get_operand"
+  },
+  "DAT_EXTMEM_a75a": {
+   "name": "hdmi_cec_initiator",
+   "brief": "Logical address of the sender of the last received CEC message.",
+   "basis": "derived",
+   "evidence": "hdmi_cec_receive_message: header bits 7..4; replies go to it"
+  },
+  "DAT_EXTMEM_a75f": {
+   "name": "flash_edid_write_addr",
+   "brief": "Flash address of the next 256-byte page when the EDID RAM is written to flash.",
+   "basis": "derived",
+   "evidence": "flash_write_edid_ram: += 0x100"
+  },
+  "DAT_EXTMEM_a763": {
+   "name": "uart_line_format_port1",
+   "brief": "Line-format code of serial port 1.",
+   "basis": "derived",
+   "evidence": "uart_set_line_format (command 0x05 byte 2)"
+  },
+  "DAT_EXTMEM_a764": {
+   "name": "uart_line_format_port2",
+   "brief": "Line-format code of serial port 2.",
+   "basis": "derived",
+   "evidence": "uart_set_line_format"
+  },
+  "DAT_EXTMEM_a765": {
+   "name": "uart_line_format_port3",
+   "brief": "Line-format code of serial port 3.",
+   "basis": "derived",
+   "evidence": "uart_set_line_format"
+  },
+  "DAT_EXTMEM_a766": {
+   "name": "uart_line_format_port4",
+   "brief": "Line-format code of serial port 4.",
+   "basis": "derived",
+   "evidence": "uart_set_line_format"
+  },
+  "DAT_EXTMEM_a76d": {
+   "name": "usb_cc_block_ptr",
+   "brief": "Pointer to the register block of the selected Type-C port (0xB250 or 0x1A50).",
+   "basis": "derived",
+   "evidence": "usb_cc_select_port_block, usb_cc_* register writers"
+  },
+  "DAT_EXTMEM_a76e": {
+   "name": "usb_cc_block_ptr_high",
+   "brief": "High address byte of the Type-C register block pointer.",
+   "basis": "derived",
+   "evidence": "usb_cc_select_port_block"
+  },
+  "DAT_EXTMEM_a76f": {
+   "name": "usb_cc_block_ptr_low",
+   "brief": "Low address byte of the Type-C register block pointer.",
+   "basis": "derived",
+   "evidence": "usb_cc_select_port_block"
+  },
+  "DAT_EXTMEM_a770": {
+   "name": "sys_run_state",
+   "brief": "Run state of the 8051 main loop: 0 power saving, 1 power off, 2 running.",
+   "basis": "derived",
+   "evidence": "sys_main, ipc_run_command (0x16 / 0x17), ipc_service_mailbox"
+  },
+  "DAT_EXTMEM_a771": {
+   "name": "flash_read_opcode",
+   "brief": "SPI flash read command used for DMA reads: 0x6B quad, 0x3B dual or 0x0B fast read.",
+   "basis": "derived",
+   "evidence": "sys_main by 0xF050 bits, flash_dma_read, flash_enable_quad_mode"
+  },
+  "DAT_EXTMEM_a772": {
+   "name": "timer_reload_high",
+   "brief": "High byte of the timer 0 reload for the current clock.",
+   "basis": "derived",
+   "evidence": "timer_set_clock_rates, irq_timer0_tick: TH0"
+  },
+  "DAT_EXTMEM_a773": {
+   "name": "timer_reload_low",
+   "brief": "Low byte of the timer 0 reload for the current clock.",
+   "basis": "derived",
+   "evidence": "timer_set_clock_rates, irq_timer0_tick: TL0"
+  },
+  "DAT_EXTMEM_a77a": {
+   "name": "i2c_master_ctrl_bits",
+   "brief": "Bits ORed into the hardware I2C control register with each start, read and stop command.",
+   "basis": "descriptive",
+   "evidence": "i2c_master_read, i2c_master_write"
+  },
+  "DAT_EXTMEM_a77b": {
+   "name": "i2c_sw_bus_clear_count",
+   "brief": "Clock pulses given (up to 9) while the software I2C data line is held low at start.",
+   "basis": "derived",
+   "evidence": "i2c_sw_start"
+  },
+  "DAT_EXTMEM_a77e": {
+   "name": "dp_mrx_adc_level",
+   "brief": "Last analog sense reading of a DP port (above 0xA0 = level high).",
+   "basis": "derived",
+   "evidence": "dp_mrx_test_adc_level"
+  },
+  "DAT_EXTMEM_a780": {
+   "name": "usb_cc_mode_ch0",
+   "brief": "Stored mode (0, 1 or 2) of USB-C CC channel 0.",
+   "basis": "derived",
+   "evidence": "usb_cc_set_mode_ch0, usb_cc_apply_orientation_ch0, usb_cc_set_mode2_ch0"
+  },
+  "DAT_EXTMEM_a781": {
+   "name": "usb_cc_mode_ch1",
+   "brief": "Stored mode (0, 1 or 2) of USB-C CC channel 1.",
+   "basis": "derived",
+   "evidence": "usb_cc_set_mode_ch1, usb_cc_apply_orientation_ch1"
+  },
+  "DAT_EXTMEM_a800": {
+   "name": "flash_data_buffer",
+   "brief": "2 KB flash data buffer shared by the flash jobs of the main processor (message type 7).",
+   "basis": "proven",
+   "evidence": "ipc_store_flash_data, flash_read_to_buffer, flash_write_from_buffer"
+  },
+  "DAT_EXTMEM_cc87": {
+   "name": "reg_dp_mrx_aux_irq_enable",
+   "brief": "Interrupt enable bits (3..4) of the AUX requests of both DP receivers.",
+   "basis": "derived",
+   "evidence": "DP_EnableMRX sets, dp_mrx_disable_aux_irqs clears"
+  },
+  "DAT_EXTMEM_cd80": {
+   "name": "reg_ahb_bridge_addr",
+   "brief": "AHB bridge address register, byte 0 (address written low byte first).",
+   "basis": "proven",
+   "evidence": "reg_ahb_read32 / reg_ahb_write32: bridge registers 0xCD80..0xCD8C"
+  },
+  "DAT_EXTMEM_cd81": {
+   "name": "reg_ahb_bridge_addr_byte1",
+   "brief": "AHB bridge address register, byte 1.",
+   "basis": "proven",
+   "evidence": "reg_ahb_read32 / reg_ahb_write32: bridge registers 0xCD80..0xCD8C"
+  },
+  "DAT_EXTMEM_cd82": {
+   "name": "reg_ahb_bridge_addr_byte2",
+   "brief": "AHB bridge address register, byte 2.",
+   "basis": "proven",
+   "evidence": "reg_ahb_read32 / reg_ahb_write32: bridge registers 0xCD80..0xCD8C"
+  },
+  "DAT_EXTMEM_cd83": {
+   "name": "reg_ahb_bridge_addr_byte3",
+   "brief": "AHB bridge address register, byte 3.",
+   "basis": "proven",
+   "evidence": "reg_ahb_read32 / reg_ahb_write32: bridge registers 0xCD80..0xCD8C"
+  },
+  "DAT_EXTMEM_cd84": {
+   "name": "reg_ahb_bridge_wdata",
+   "brief": "AHB bridge write data register, byte 0 (low byte first).",
+   "basis": "proven",
+   "evidence": "reg_ahb_read32 / reg_ahb_write32: bridge registers 0xCD80..0xCD8C"
+  },
+  "DAT_EXTMEM_cd85": {
+   "name": "reg_ahb_bridge_wdata_byte1",
+   "brief": "AHB bridge write data register, byte 1.",
+   "basis": "proven",
+   "evidence": "reg_ahb_read32 / reg_ahb_write32: bridge registers 0xCD80..0xCD8C"
+  },
+  "DAT_EXTMEM_cd86": {
+   "name": "reg_ahb_bridge_wdata_byte2",
+   "brief": "AHB bridge write data register, byte 2.",
+   "basis": "proven",
+   "evidence": "reg_ahb_read32 / reg_ahb_write32: bridge registers 0xCD80..0xCD8C"
+  },
+  "DAT_EXTMEM_cd87": {
+   "name": "reg_ahb_bridge_wdata_byte3",
+   "brief": "AHB bridge write data register, byte 3.",
+   "basis": "proven",
+   "evidence": "reg_ahb_read32 / reg_ahb_write32: bridge registers 0xCD80..0xCD8C"
+  },
+  "DAT_EXTMEM_cd88": {
+   "name": "reg_ahb_bridge_rdata",
+   "brief": "AHB bridge read data register, byte 0 (low byte first).",
+   "basis": "proven",
+   "evidence": "reg_ahb_read32 / reg_ahb_write32: bridge registers 0xCD80..0xCD8C"
+  },
+  "DAT_EXTMEM_cd89": {
+   "name": "reg_ahb_bridge_rdata_byte1",
+   "brief": "AHB bridge read data register, byte 1.",
+   "basis": "proven",
+   "evidence": "reg_ahb_read32 / reg_ahb_write32: bridge registers 0xCD80..0xCD8C"
+  },
+  "DAT_EXTMEM_cd8a": {
+   "name": "reg_ahb_bridge_rdata_byte2",
+   "brief": "AHB bridge read data register, byte 2.",
+   "basis": "proven",
+   "evidence": "reg_ahb_read32 / reg_ahb_write32: bridge registers 0xCD80..0xCD8C"
+  },
+  "DAT_EXTMEM_cd8b": {
+   "name": "reg_ahb_bridge_rdata_byte3",
+   "brief": "AHB bridge read data register, byte 3.",
+   "basis": "proven",
+   "evidence": "reg_ahb_read32 / reg_ahb_write32: bridge registers 0xCD80..0xCD8C"
+  },
+  "DAT_EXTMEM_cd8c": {
+   "name": "reg_ahb_bridge_control",
+   "brief": "AHB bridge control: bit 0 = ready, 0x40 starts a read.",
+   "basis": "proven",
+   "evidence": "reg_ahb_read32 / reg_ahb_write32: bridge registers 0xCD80..0xCD8C; 'PBus to AHB bridge Error!!'"
+  },
+  "DAT_EXTMEM_d50b": {
+   "name": "reg_paged_select",
+   "brief": "Page block select of the paged register access (0x85 block 0, 0x86 block 1).",
+   "basis": "derived",
+   "evidence": "reg_paged_read, reg_paged_update_bits"
+  },
+  "DAT_EXTMEM_d50c": {
+   "name": "reg_paged_index",
+   "brief": "Register number of the paged register access.",
+   "basis": "derived",
+   "evidence": "reg_paged_read, reg_paged_update_bits"
+  },
+  "DAT_EXTMEM_d50d": {
+   "name": "reg_paged_data",
+   "brief": "Data byte of the paged register access.",
+   "basis": "derived",
+   "evidence": "reg_paged_read, reg_paged_update_bits"
+  },
+  "DAT_EXTMEM_d511": {
+   "name": "reg_chip_id",
+   "brief": "Chip variant ID (0x16, 0x17, 0x1A, 0x1E, 0x1F, 0x20) that selects the set-up paths.",
+   "basis": "derived",
+   "evidence": "read by 30 routines: DP_EnableMRX, sys_main, startup_load_core_images ..."
+  },
+  "DAT_EXTMEM_d533": {
+   "name": "reg_hdmi_cec_port_select",
+   "brief": "Two-bit field per port (0..3) set to 01 when CEC is set up for that port.",
+   "basis": "descriptive",
+   "evidence": "hdmi_cec_select_port"
+  },
+  "DAT_EXTMEM_d5e0": {
+   "name": "reg_hdcp_dptx_key_ctrl",
+   "brief": "Control of the DP transmitter HDCP key port; 0x22 while the key block is written.",
+   "basis": "derived",
+   "evidence": "hdcp_load_dptx_key_data (command 0x21)"
+  },
+  "DAT_EXTMEM_d5e3": {
+   "name": "reg_hdcp_dptx_key_data",
+   "brief": "Data port of the DP transmitter HDCP key port; takes the 282 key bytes in turn.",
+   "basis": "derived",
+   "evidence": "hdcp_load_dptx_key_data"
+  },
+  "DAT_EXTMEM_d801": {
+   "name": "reg_hdmi_cec_clock_divider",
+   "brief": "CEC controller clock divider (0x78 shifted by the clock select).",
+   "basis": "derived",
+   "evidence": "hdmi_cec_set_clock_divider"
+  },
+  "DAT_EXTMEM_d80d": {
+   "name": "reg_hdmi_cec_status",
+   "brief": "CEC controller status and command register; status bits are cleared by writing them back.",
+   "basis": "derived",
+   "evidence": "hdmi_cec_receive_message / hdmi_cec_send_reply (block 0xD800)"
+  },
+  "DAT_EXTMEM_d80f": {
+   "name": "reg_hdmi_cec_rx_count",
+   "brief": "CEC receive register; zero means no message was received.",
+   "basis": "descriptive",
+   "evidence": "hdmi_cec_receive_message"
+  },
+  "DAT_EXTMEM_d810": {
+   "name": "reg_hdmi_cec_tx_length",
+   "brief": "Byte count of the CEC message to send.",
+   "basis": "derived",
+   "evidence": "hdmi_cec_send_reply, hdmi_cec_set_two_regs (command 0x24)"
+  },
+  "DAT_EXTMEM_d820": {
+   "name": "reg_hdmi_cec_tx_dest",
+   "brief": "Destination logical address of the CEC message to send.",
+   "basis": "derived",
+   "evidence": "hdmi_cec_send_reply, hdmi_cec_set_two_regs (command 0x24)"
+  },
+  "DAT_EXTMEM_d821": {
+   "name": "reg_hdmi_cec_tx_data",
+   "brief": "Bytes of the CEC message to send (opcode first).",
+   "basis": "derived",
+   "evidence": "hdmi_cec_receive_message replies 0x84, 0x32, 0x90 ..."
+  },
+  "DAT_EXTMEM_d831": {
+   "name": "reg_hdmi_cec_rx_header",
+   "brief": "Header byte of the received CEC message: initiator bits 7..4, destination bits 3..0.",
+   "basis": "derived",
+   "evidence": "hdmi_cec_receive_message"
+  },
+  "DAT_EXTMEM_d832": {
+   "name": "reg_hdmi_cec_rx_data",
+   "brief": "The 16 data bytes of the received CEC message (opcode first).",
+   "basis": "derived",
+   "evidence": "hdmi_cec_receive_message"
+  },
+  "DAT_EXTMEM_dc00": {
+   "name": "reg_dp_aux_window",
+   "brief": "Register window of the DP AUX units; the reply bytes go to 0xDCDD / 0xDCCD through it.",
+   "basis": "descriptive",
+   "evidence": "dp_aux_build_reply"
+  },
+  "DAT_EXTMEM_dcb1": {
+   "name": "reg_clock_timing_factors",
+   "brief": "Two registers 0xDCB1 / 0xDCB2: clock factor * 9 and * 15 on the PLL clock, 9 and 15 on the crystal.",
+   "basis": "descriptive",
+   "evidence": "written by sys_scale_timing_to_clock (factor * two constants) and sys_restore_crystal_timing (the constants for factor 1)"
+  },
+  "DAT_EXTMEM_dcc8": {
+   "name": "reg_dp_aux_rx_fifo_port1",
+   "brief": "AUX request FIFO of DP receiver 1: byte 0 bit 0 = data waiting, byte 1 = next request byte.",
+   "basis": "derived",
+   "evidence": "dp_aux_answer_port1, dp_aux_snoop_port1"
+  },
+  "DAT_EXTMEM_dcca": {
+   "name": "reg_dp_aux_ctrl_port1",
+   "brief": "AUX control register of DP receiver 1, pulsed 0 then 1 after a request.",
+   "basis": "descriptive",
+   "evidence": "dp_aux_answer_port1, dp_aux_init_regs"
+  },
+  "DAT_EXTMEM_dccb": {
+   "name": "reg_dp_aux_reply_len_port1",
+   "brief": "Reply byte count of DP receiver 1 (request length + 1, or 0).",
+   "basis": "derived",
+   "evidence": "dp_aux_answer_port1, dp_aux_build_reply"
+  },
+  "DAT_EXTMEM_dccc": {
+   "name": "reg_dp_aux_rx_ack_port1",
+   "brief": "Bit 0 is set after a request of DP receiver 1 was read and clears when done.",
+   "basis": "descriptive",
+   "evidence": "dp_aux_answer_port1"
+  },
+  "DAT_EXTMEM_dcce": {
+   "name": "reg_dp_aux_mode_port1",
+   "brief": "AUX mode register of DP receiver 1; bit 3 marks a waiting request.",
+   "basis": "descriptive",
+   "evidence": "DP_EnableMRX, dp_aux_service, dp_mrx_disable_aux_irqs"
+  },
+  "DAT_EXTMEM_dccf": {
+   "name": "reg_dp_aux_request_ctrl_port1",
+   "brief": "AUX control register of DisplayPort port 1: bit 0 enables the AUX request service; bits 4..5 are set by USB-C.",
+   "basis": "derived",
+   "evidence": "bit 0 cleared by dp_mrx_disable_aux_irqs and tested by dp_aux_service and power_init_wake_detection; bits 4..5 written by usb_update_dp_port_flags; next to reg_dp_aux_mode_port1 (0xDCCE)"
+  },
+  "DAT_EXTMEM_dcd8": {
+   "name": "reg_dp_aux_rx_fifo_port0",
+   "brief": "AUX request FIFO of DP receiver 0: byte 0 bit 0 = data waiting, byte 1 = next request byte.",
+   "basis": "derived",
+   "evidence": "dp_aux_answer_port0, dp_aux_snoop_port0"
+  },
+  "DAT_EXTMEM_dcda": {
+   "name": "reg_dp_aux_ctrl_port0",
+   "brief": "AUX control register of DP receiver 0, pulsed 0 then 1 after a request.",
+   "basis": "descriptive",
+   "evidence": "dp_aux_answer_port0, dp_aux_init_regs"
+  },
+  "DAT_EXTMEM_dcdb": {
+   "name": "reg_dp_aux_reply_len_port0",
+   "brief": "Reply byte count of DP receiver 0 (request length + 1, or 0).",
+   "basis": "derived",
+   "evidence": "dp_aux_answer_port0, dp_aux_build_reply"
+  },
+  "DAT_EXTMEM_dcdc": {
+   "name": "reg_dp_aux_rx_ack_port0",
+   "brief": "Bit 0 is set after a request of DP receiver 0 was read and clears when done.",
+   "basis": "descriptive",
+   "evidence": "dp_aux_answer_port0"
+  },
+  "DAT_EXTMEM_dcde": {
+   "name": "reg_dp_aux_mode_port0",
+   "brief": "AUX mode register of DP receiver 0; bit 3 marks a waiting request.",
+   "basis": "descriptive",
+   "evidence": "DP_EnableMRX, dp_aux_service, dp_mrx_disable_aux_irqs"
+  },
+  "DAT_EXTMEM_dcdf": {
+   "name": "reg_dp_aux_request_ctrl_port0",
+   "brief": "AUX control register of DisplayPort port 0: bit 0 enables the AUX request service; bits 4..5 are set by USB-C.",
+   "basis": "derived",
+   "evidence": "bit 0 cleared by dp_mrx_disable_aux_irqs and tested by dp_aux_service and power_init_wake_detection; bits 4..5 written by usb_update_dp_port_flags; next to reg_dp_aux_mode_port0 (0xDCDE)"
+  },
+  "DAT_EXTMEM_f000": {
+   "name": "reg_gpio_port1",
+   "brief": "Output register of GPIO port 1.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port, gpio_read_port_bit (port 1)"
+  },
+  "DAT_EXTMEM_f001": {
+   "name": "reg_gpio_port2",
+   "brief": "Output register of GPIO port 2.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port, gpio_read_port_bit (port 2)"
+  },
+  "DAT_EXTMEM_f002": {
+   "name": "reg_gpio_port3",
+   "brief": "Output register of GPIO port 3.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port, gpio_read_port_bit (port 3)"
+  },
+  "DAT_EXTMEM_f003": {
+   "name": "reg_gpio_port4",
+   "brief": "Output register of GPIO port 4.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port, gpio_read_port_bit (port 4)"
+  },
+  "DAT_EXTMEM_f004": {
+   "name": "reg_gpio_port5",
+   "brief": "Output register of GPIO port 5.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port, gpio_read_port_bit (port 5)"
+  },
+  "DAT_EXTMEM_f005": {
+   "name": "reg_gpio_port1_partner",
+   "brief": "Partner register of GPIO port 1, ORed into each output update.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port_partner (port 1)"
+  },
+  "DAT_EXTMEM_f006": {
+   "name": "reg_gpio_port2_partner",
+   "brief": "Partner register of GPIO port 2, ORed into each output update.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port_partner (port 2)"
+  },
+  "DAT_EXTMEM_f007": {
+   "name": "reg_gpio_port3_partner",
+   "brief": "Partner register of GPIO port 3, ORed into each output update.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port_partner (port 3)"
+  },
+  "DAT_EXTMEM_f008": {
+   "name": "reg_gpio_port4_partner",
+   "brief": "Partner register of GPIO port 4, ORed into each output update.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port_partner (port 4)"
+  },
+  "DAT_EXTMEM_f009": {
+   "name": "reg_gpio_port5_partner",
+   "brief": "Partner register of GPIO port 5, ORed into each output update.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port_partner (port 5)"
+  },
+  "DAT_EXTMEM_f010": {
+   "name": "reg_gpio_port6",
+   "brief": "Output register of GPIO port 6.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port, gpio_read_port_bit (port 6)"
+  },
+  "DAT_EXTMEM_f011": {
+   "name": "reg_gpio_port6_partner",
+   "brief": "Partner register of GPIO port 6, ORed into each output update.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port_partner (port 6)"
+  },
+  "DAT_EXTMEM_f012": {
+   "name": "reg_gpio_port7",
+   "brief": "Output register of GPIO port 7.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port, gpio_read_port_bit (port 7)"
+  },
+  "DAT_EXTMEM_f013": {
+   "name": "reg_gpio_port7_partner",
+   "brief": "Partner register of GPIO port 7, ORed into each output update.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port_partner (port 7)"
+  },
+  "DAT_EXTMEM_f014": {
+   "name": "reg_i2c7_ctrl",
+   "brief": "Control register of I2C unit 7; bit 6 arms the DDC/CI slave.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 7); block 0xF014"
+  },
+  "DAT_EXTMEM_f015": {
+   "name": "reg_i2c7_status",
+   "brief": "Status of I2C unit 7: bit 7 = read transfer, bit 0 = transfer finished.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 7); block 0xF014"
+  },
+  "DAT_EXTMEM_f016": {
+   "name": "reg_i2c7_mode",
+   "brief": "Mode register of I2C unit 7 (0xF8 on slave enable, 0xA0 / 0xC0 per transfer).",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 7); block 0xF014"
+  },
+  "DAT_EXTMEM_f017": {
+   "name": "reg_i2c7_events",
+   "brief": "Event bits of I2C unit 7: 7 addressed, 6 byte to send, 5 byte received, 4 and 3 others.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 7); block 0xF014"
+  },
+  "DAT_EXTMEM_f018": {
+   "name": "reg_i2c7_event_ack",
+   "brief": "Event acknowledge register of I2C unit 7 (write the event bit back).",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 7); block 0xF014"
+  },
+  "DAT_EXTMEM_f019": {
+   "name": "reg_i2c7_tx_data",
+   "brief": "Transmit data register of I2C unit 7.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 7); block 0xF014"
+  },
+  "DAT_EXTMEM_f01a": {
+   "name": "reg_i2c7_rx_data",
+   "brief": "Receive data register of I2C unit 7.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 7); block 0xF014"
+  },
+  "DAT_EXTMEM_f01b": {
+   "name": "reg_i2c7_address",
+   "brief": "DDC/CI slave address of I2C unit 7 (bits 7..1) and its slave enable bit 0.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 7); block 0xF014"
+  },
+  "DAT_EXTMEM_f01c": {
+   "name": "reg_edid0_ctrl",
+   "brief": "EDID slave control of port 0: bit 7 on, bit 6 control bit, size mode bits; bit 0 = accessed.",
+   "basis": "derived",
+   "evidence": "edid_setup_port_slaves, edid_enable_port_slaves, edid_disable_port_slaves, edid_set_port_control_bit6, ddc_detect_port_access; mask bit 0"
+  },
+  "DAT_EXTMEM_f01d": {
+   "name": "reg_edid0_address",
+   "brief": "EDID slave address register of port 0 (0xA0 with bits 3..1 from command 0x01).",
+   "basis": "derived",
+   "evidence": "edid_setup_port_slaves (command 0x01); mask bit 0"
+  },
+  "DAT_EXTMEM_f01e": {
+   "name": "reg_edid1_ctrl",
+   "brief": "EDID slave control of port 1: bit 7 on, bit 6 control bit, size mode bits; bit 0 = accessed.",
+   "basis": "derived",
+   "evidence": "edid_setup_port_slaves, edid_enable_port_slaves, edid_disable_port_slaves, edid_set_port_control_bit6, ddc_detect_port_access; mask bit 1"
+  },
+  "DAT_EXTMEM_f01f": {
+   "name": "reg_edid1_address",
+   "brief": "EDID slave address register of port 1 (0xA0 with bits 3..1 from command 0x01).",
+   "basis": "derived",
+   "evidence": "edid_setup_port_slaves (command 0x01); mask bit 1"
+  },
+  "DAT_EXTMEM_f020": {
+   "name": "reg_irq_source_status",
+   "brief": "Pending sources of the external interrupts: bit N = I2C unit N (0..6), bit 7 = capture (IR).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave (bits 0, 2, 4, 6), irq_ext1_peripherals (bits 1, 3, 5, 7)"
+  },
+  "DAT_EXTMEM_f021": {
+   "name": "reg_capture_irq_flags",
+   "brief": "Capture interrupt flags (remote-control input); cleared by writing the enabled bits back.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals: f021 & mask -> irq_record_ir_pulse; irq_set_capture_mask"
+  },
+  "DAT_EXTMEM_f022": {
+   "name": "reg_capture_irq_enable",
+   "brief": "Capture interrupt enable register written with the source mask (commands 0x09 / 0x0A).",
+   "basis": "descriptive",
+   "evidence": "irq_set_capture_mask"
+  },
+  "DAT_EXTMEM_f027": {
+   "name": "reg_ir_capture_low",
+   "brief": "Low byte of the captured infrared pulse length.",
+   "basis": "derived",
+   "evidence": "irq_record_ir_pulse"
+  },
+  "DAT_EXTMEM_f028": {
+   "name": "reg_ir_capture_high",
+   "brief": "High byte of the captured infrared pulse length.",
+   "basis": "derived",
+   "evidence": "irq_record_ir_pulse"
+  },
+  "DAT_EXTMEM_f02c": {
+   "name": "reg_uart_irq_enable",
+   "brief": "Serial interrupt enable bits: bit 6 port 2, bit 7 port 3.",
+   "basis": "derived",
+   "evidence": "uart_open_ports, uart_close_ports, startup_init_chip_regs"
+  },
+  "DAT_EXTMEM_f02e": {
+   "name": "reg_uart_rx_irq_status",
+   "brief": "Receive interrupt status: bit 6 serial port 2, bit 7 serial port 3.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave"
+  },
+  "DAT_EXTMEM_f031": {
+   "name": "reg_uart4_rx_irq_status",
+   "brief": "Receive interrupt status; bit 6 = serial port 4.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals"
+  },
+  "DAT_EXTMEM_f032": {
+   "name": "reg_uart3_line_ctrl",
+   "brief": "Line control of serial port 3: bit 7 set on open, line format bits from command 0x05.",
+   "basis": "derived",
+   "evidence": "uart_open_ports / uart_close_ports / uart_set_baud_rate (port mask bit 3), uart_set_line_format"
+  },
+  "DAT_EXTMEM_f033": {
+   "name": "reg_uart3_divisor_high",
+   "brief": "High byte of the serial port 3 baud divisor (12 MHz / baud - 1).",
+   "basis": "derived",
+   "evidence": "uart_set_baud_rate"
+  },
+  "DAT_EXTMEM_f034": {
+   "name": "reg_uart3_divisor_low",
+   "brief": "Low byte of the serial port 3 baud divisor.",
+   "basis": "derived",
+   "evidence": "uart_set_baud_rate"
+  },
+  "DAT_EXTMEM_f035": {
+   "name": "reg_uart3_config",
+   "brief": "Configuration register of serial port 3, set to 0xEA on open.",
+   "basis": "descriptive",
+   "evidence": "uart_open_ports"
+  },
+  "DAT_EXTMEM_f036": {
+   "name": "reg_uart3_status",
+   "brief": "Status of serial port 3: bit 0 = receive empty, bit 4 = acknowledged by writing it back.",
+   "basis": "derived",
+   "evidence": "uart_open_ports / uart_close_ports / uart_set_baud_rate (port mask bit 3), irq_ext0_ddc_slave, uart_flush_tx_queue_port3"
+  },
+  "DAT_EXTMEM_f037": {
+   "name": "reg_uart3_tx_data",
+   "brief": "Transmit data register of serial port 3.",
+   "basis": "derived",
+   "evidence": "uart_flush_tx_queue_port3"
+  },
+  "DAT_EXTMEM_f038": {
+   "name": "reg_uart3_rx_data",
+   "brief": "Receive data register of serial port 3.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave -> uart_rx_ring_port3"
+  },
+  "DAT_EXTMEM_f039": {
+   "name": "reg_i2c0_ctrl",
+   "brief": "Control register of I2C unit 0; bit 6 arms the DDC/CI slave.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 0), i2c_master_* channel 0; block 0xF039"
+  },
+  "DAT_EXTMEM_f03a": {
+   "name": "reg_i2c0_status",
+   "brief": "Status of I2C unit 0: bit 7 = read transfer, bit 0 = transfer finished.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 0), i2c_master_* channel 0; block 0xF039"
+  },
+  "DAT_EXTMEM_f03b": {
+   "name": "reg_i2c0_mode",
+   "brief": "Mode register of I2C unit 0 (0xF8 on slave enable, 0xA0 / 0xC0 per transfer).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 0), i2c_master_* channel 0; block 0xF039"
+  },
+  "DAT_EXTMEM_f03c": {
+   "name": "reg_i2c0_events",
+   "brief": "Event bits of I2C unit 0: 7 addressed, 6 byte to send, 5 byte received, 4 and 3 others.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 0), i2c_master_* channel 0; block 0xF039"
+  },
+  "DAT_EXTMEM_f03d": {
+   "name": "reg_i2c0_event_ack",
+   "brief": "Event acknowledge register of I2C unit 0 (write the event bit back).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 0), i2c_master_* channel 0; block 0xF039"
+  },
+  "DAT_EXTMEM_f03e": {
+   "name": "reg_i2c0_tx_data",
+   "brief": "Transmit data register of I2C unit 0.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 0), i2c_master_* channel 0; block 0xF039"
+  },
+  "DAT_EXTMEM_f03f": {
+   "name": "reg_i2c0_rx_data",
+   "brief": "Receive data register of I2C unit 0.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 0), i2c_master_* channel 0; block 0xF039"
+  },
+  "DAT_EXTMEM_f040": {
+   "name": "reg_i2c0_address",
+   "brief": "DDC/CI slave address of I2C unit 0 (bits 7..1) and its slave enable bit 0.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 0), i2c_master_* channel 0; block 0xF039"
+  },
+  "DAT_EXTMEM_f041": {
+   "name": "reg_i2c1_ctrl",
+   "brief": "Control register of I2C unit 1; bit 6 arms the DDC/CI slave.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 1), i2c_master_* channel 1; block 0xF041"
+  },
+  "DAT_EXTMEM_f042": {
+   "name": "reg_i2c1_status",
+   "brief": "Status of I2C unit 1: bit 7 = read transfer, bit 0 = transfer finished.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 1), i2c_master_* channel 1; block 0xF041"
+  },
+  "DAT_EXTMEM_f043": {
+   "name": "reg_i2c1_mode",
+   "brief": "Mode register of I2C unit 1 (0xF8 on slave enable, 0xA0 / 0xC0 per transfer).",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 1), i2c_master_* channel 1; block 0xF041"
+  },
+  "DAT_EXTMEM_f044": {
+   "name": "reg_i2c1_events",
+   "brief": "Event bits of I2C unit 1: 7 addressed, 6 byte to send, 5 byte received, 4 and 3 others.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 1), i2c_master_* channel 1; block 0xF041"
+  },
+  "DAT_EXTMEM_f045": {
+   "name": "reg_i2c1_event_ack",
+   "brief": "Event acknowledge register of I2C unit 1 (write the event bit back).",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 1), i2c_master_* channel 1; block 0xF041"
+  },
+  "DAT_EXTMEM_f046": {
+   "name": "reg_i2c1_tx_data",
+   "brief": "Transmit data register of I2C unit 1.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 1), i2c_master_* channel 1; block 0xF041"
+  },
+  "DAT_EXTMEM_f047": {
+   "name": "reg_i2c1_rx_data",
+   "brief": "Receive data register of I2C unit 1.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 1), i2c_master_* channel 1; block 0xF041"
+  },
+  "DAT_EXTMEM_f048": {
+   "name": "reg_i2c1_address",
+   "brief": "DDC/CI slave address of I2C unit 1 (bits 7..1) and its slave enable bit 0.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 1), i2c_master_* channel 1; block 0xF041"
+  },
+  "DAT_EXTMEM_f050": {
+   "name": "reg_flash_read_mode",
+   "brief": "Flash mode bits: bit 2 selects quad read (0x6B), bit 5 dual read (0x3B) at start-up.",
+   "basis": "derived",
+   "evidence": "sys_main, flash_enable_quad_mode"
+  },
+  "DAT_EXTMEM_f054": {
+   "name": "reg_uart1_line_ctrl",
+   "brief": "Line control of serial port 1: line format in bits 3..0; uart_open_ports sets bit 7 when it opens port 2.",
+   "basis": "derived",
+   "evidence": "uart_set_line_format (port mask bit 0) writes bits 3..0 as it does in reg_uart2..4_line_ctrl; uart_open_ports sets bit 7 in its port 2 arm"
+  },
+  "DAT_EXTMEM_f06e": {
+   "name": "reg_uart4_line_ctrl",
+   "brief": "Line control of serial port 4: bit 7 set on open, line format bits from command 0x05.",
+   "basis": "derived",
+   "evidence": "uart_open_ports / uart_close_ports / uart_set_baud_rate (port mask bit 4), uart_set_line_format"
+  },
+  "DAT_EXTMEM_f06f": {
+   "name": "reg_uart4_divisor_high",
+   "brief": "High byte of the serial port 4 baud divisor (12 MHz / baud - 1).",
+   "basis": "derived",
+   "evidence": "uart_set_baud_rate"
+  },
+  "DAT_EXTMEM_f070": {
+   "name": "reg_uart4_divisor_low",
+   "brief": "Low byte of the serial port 4 baud divisor.",
+   "basis": "derived",
+   "evidence": "uart_set_baud_rate"
+  },
+  "DAT_EXTMEM_f071": {
+   "name": "reg_uart4_config",
+   "brief": "Configuration register of serial port 4, set to 0xEA on open.",
+   "basis": "descriptive",
+   "evidence": "uart_open_ports"
+  },
+  "DAT_EXTMEM_f072": {
+   "name": "reg_uart4_status",
+   "brief": "Status of serial port 4: bit 0 = receive empty, bit 4 = acknowledged by writing it back.",
+   "basis": "derived",
+   "evidence": "uart_open_ports / uart_close_ports / uart_set_baud_rate (port mask bit 4), irq_ext1_peripherals, uart_flush_tx_queue_port4"
+  },
+  "DAT_EXTMEM_f073": {
+   "name": "reg_uart4_tx_data",
+   "brief": "Transmit data register of serial port 4.",
+   "basis": "derived",
+   "evidence": "uart_flush_tx_queue_port4"
+  },
+  "DAT_EXTMEM_f074": {
+   "name": "reg_uart4_rx_data",
+   "brief": "Receive data register of serial port 4.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals -> uart_rx_ring_port4"
+  },
+  "DAT_EXTMEM_f076": {
+   "name": "reg_edid6_ctrl",
+   "brief": "EDID slave control of port 6: bit 7 on, bit 6 control bit, size mode bits; bit 0 = accessed.",
+   "basis": "derived",
+   "evidence": "edid_setup_port_slaves, edid_enable_port_slaves, edid_disable_port_slaves, edid_set_port_control_bit6, ddc_detect_port_access; mask bit 6"
+  },
+  "DAT_EXTMEM_f077": {
+   "name": "reg_edid6_address",
+   "brief": "EDID slave address register of port 6 (0xA0 with bits 3..1 from command 0x01).",
+   "basis": "derived",
+   "evidence": "edid_setup_port_slaves (command 0x01); mask bit 6"
+  },
+  "DAT_EXTMEM_f085": {
+   "name": "reg_edid2_ctrl",
+   "brief": "EDID slave control of port 2: bit 7 on, bit 6 control bit, size mode bits; bit 0 = accessed.",
+   "basis": "derived",
+   "evidence": "edid_setup_port_slaves, edid_enable_port_slaves, edid_disable_port_slaves, edid_set_port_control_bit6, ddc_detect_port_access; mask bit 2"
+  },
+  "DAT_EXTMEM_f086": {
+   "name": "reg_edid2_address",
+   "brief": "EDID slave address register of port 2 (0xA0 with bits 3..1 from command 0x01).",
+   "basis": "derived",
+   "evidence": "edid_setup_port_slaves (command 0x01); mask bit 2"
+  },
+  "DAT_EXTMEM_f087": {
+   "name": "reg_edid3_ctrl",
+   "brief": "EDID slave control of port 3: bit 7 on, bit 6 control bit, size mode bits; bit 0 = accessed.",
+   "basis": "derived",
+   "evidence": "edid_setup_port_slaves, edid_enable_port_slaves, edid_disable_port_slaves, edid_set_port_control_bit6, ddc_detect_port_access; mask bit 3"
+  },
+  "DAT_EXTMEM_f088": {
+   "name": "reg_edid3_address",
+   "brief": "EDID slave address register of port 3 (0xA0 with bits 3..1 from command 0x01).",
+   "basis": "derived",
+   "evidence": "edid_setup_port_slaves (command 0x01); mask bit 3"
+  },
+  "DAT_EXTMEM_f089": {
+   "name": "reg_i2c2_ctrl",
+   "brief": "Control register of I2C unit 2; bit 6 arms the DDC/CI slave.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 2), i2c_master_* channel 2; block 0xF089"
+  },
+  "DAT_EXTMEM_f08a": {
+   "name": "reg_i2c2_status",
+   "brief": "Status of I2C unit 2: bit 7 = read transfer, bit 0 = transfer finished.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 2), i2c_master_* channel 2; block 0xF089"
+  },
+  "DAT_EXTMEM_f08b": {
+   "name": "reg_i2c2_mode",
+   "brief": "Mode register of I2C unit 2 (0xF8 on slave enable, 0xA0 / 0xC0 per transfer).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 2), i2c_master_* channel 2; block 0xF089"
+  },
+  "DAT_EXTMEM_f08c": {
+   "name": "reg_i2c2_events",
+   "brief": "Event bits of I2C unit 2: 7 addressed, 6 byte to send, 5 byte received, 4 and 3 others.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 2), i2c_master_* channel 2; block 0xF089"
+  },
+  "DAT_EXTMEM_f08d": {
+   "name": "reg_i2c2_event_ack",
+   "brief": "Event acknowledge register of I2C unit 2 (write the event bit back).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 2), i2c_master_* channel 2; block 0xF089"
+  },
+  "DAT_EXTMEM_f08e": {
+   "name": "reg_i2c2_tx_data",
+   "brief": "Transmit data register of I2C unit 2.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 2), i2c_master_* channel 2; block 0xF089"
+  },
+  "DAT_EXTMEM_f08f": {
+   "name": "reg_i2c2_rx_data",
+   "brief": "Receive data register of I2C unit 2.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 2), i2c_master_* channel 2; block 0xF089"
+  },
+  "DAT_EXTMEM_f090": {
+   "name": "reg_i2c2_address",
+   "brief": "DDC/CI slave address of I2C unit 2 (bits 7..1) and its slave enable bit 0.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 2), i2c_master_* channel 2; block 0xF089"
+  },
+  "DAT_EXTMEM_f091": {
+   "name": "reg_i2c3_ctrl",
+   "brief": "Control register of I2C unit 3; bit 6 arms the DDC/CI slave.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 3), i2c_master_* channel 3; block 0xF091"
+  },
+  "DAT_EXTMEM_f092": {
+   "name": "reg_i2c3_status",
+   "brief": "Status of I2C unit 3: bit 7 = read transfer, bit 0 = transfer finished.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 3), i2c_master_* channel 3; block 0xF091"
+  },
+  "DAT_EXTMEM_f093": {
+   "name": "reg_i2c3_mode",
+   "brief": "Mode register of I2C unit 3 (0xF8 on slave enable, 0xA0 / 0xC0 per transfer).",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 3), i2c_master_* channel 3; block 0xF091"
+  },
+  "DAT_EXTMEM_f094": {
+   "name": "reg_i2c3_events",
+   "brief": "Event bits of I2C unit 3: 7 addressed, 6 byte to send, 5 byte received, 4 and 3 others.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 3), i2c_master_* channel 3; block 0xF091"
+  },
+  "DAT_EXTMEM_f095": {
+   "name": "reg_i2c3_event_ack",
+   "brief": "Event acknowledge register of I2C unit 3 (write the event bit back).",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 3), i2c_master_* channel 3; block 0xF091"
+  },
+  "DAT_EXTMEM_f096": {
+   "name": "reg_i2c3_tx_data",
+   "brief": "Transmit data register of I2C unit 3.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 3), i2c_master_* channel 3; block 0xF091"
+  },
+  "DAT_EXTMEM_f097": {
+   "name": "reg_i2c3_rx_data",
+   "brief": "Receive data register of I2C unit 3.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 3), i2c_master_* channel 3; block 0xF091"
+  },
+  "DAT_EXTMEM_f098": {
+   "name": "reg_i2c3_address",
+   "brief": "DDC/CI slave address of I2C unit 3 (bits 7..1) and its slave enable bit 0.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 3), i2c_master_* channel 3; block 0xF091"
+  },
+  "DAT_EXTMEM_f099": {
+   "name": "reg_edid4_ctrl",
+   "brief": "EDID slave control of port 4: bit 7 on, bit 6 control bit, size mode bits; bit 0 = accessed.",
+   "basis": "derived",
+   "evidence": "edid_setup_port_slaves, edid_enable_port_slaves, edid_disable_port_slaves, edid_set_port_control_bit6, ddc_detect_port_access; mask bit 4"
+  },
+  "DAT_EXTMEM_f09a": {
+   "name": "reg_edid4_address",
+   "brief": "EDID slave address register of port 4 (0xA0 with bits 3..1 from command 0x01).",
+   "basis": "derived",
+   "evidence": "edid_setup_port_slaves (command 0x01); mask bit 4"
+  },
+  "DAT_EXTMEM_f09b": {
+   "name": "reg_i2c4_ctrl",
+   "brief": "Control register of I2C unit 4; bit 6 arms the DDC/CI slave.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 4), i2c_master_* channel 4; block 0xF09B"
+  },
+  "DAT_EXTMEM_f09c": {
+   "name": "reg_i2c4_status",
+   "brief": "Status of I2C unit 4: bit 7 = read transfer, bit 0 = transfer finished.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 4), i2c_master_* channel 4; block 0xF09B"
+  },
+  "DAT_EXTMEM_f09d": {
+   "name": "reg_i2c4_mode",
+   "brief": "Mode register of I2C unit 4 (0xF8 on slave enable, 0xA0 / 0xC0 per transfer).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 4), i2c_master_* channel 4; block 0xF09B"
+  },
+  "DAT_EXTMEM_f09e": {
+   "name": "reg_i2c4_events",
+   "brief": "Event bits of I2C unit 4: 7 addressed, 6 byte to send, 5 byte received, 4 and 3 others.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 4), i2c_master_* channel 4; block 0xF09B"
+  },
+  "DAT_EXTMEM_f09f": {
+   "name": "reg_i2c4_event_ack",
+   "brief": "Event acknowledge register of I2C unit 4 (write the event bit back).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 4), i2c_master_* channel 4; block 0xF09B"
+  },
+  "DAT_EXTMEM_f0a0": {
+   "name": "reg_i2c4_tx_data",
+   "brief": "Transmit data register of I2C unit 4.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 4), i2c_master_* channel 4; block 0xF09B"
+  },
+  "DAT_EXTMEM_f0a1": {
+   "name": "reg_i2c4_rx_data",
+   "brief": "Receive data register of I2C unit 4.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 4), i2c_master_* channel 4; block 0xF09B"
+  },
+  "DAT_EXTMEM_f0a2": {
+   "name": "reg_i2c4_address",
+   "brief": "DDC/CI slave address of I2C unit 4 (bits 7..1) and its slave enable bit 0.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 4), i2c_master_* channel 4; block 0xF09B"
+  },
+  "DAT_EXTMEM_f0a3": {
+   "name": "reg_edid5_ctrl",
+   "brief": "EDID slave control of port 5: bit 7 on, bit 6 control bit, size mode bits; bit 0 = accessed.",
+   "basis": "derived",
+   "evidence": "edid_setup_port_slaves, edid_enable_port_slaves, edid_disable_port_slaves, edid_set_port_control_bit6, ddc_detect_port_access; mask bit 5"
+  },
+  "DAT_EXTMEM_f0a4": {
+   "name": "reg_edid5_address",
+   "brief": "EDID slave address register of port 5 (0xA0 with bits 3..1 from command 0x01).",
+   "basis": "derived",
+   "evidence": "edid_setup_port_slaves (command 0x01); mask bit 5"
+  },
+  "DAT_EXTMEM_f0a7": {
+   "name": "reg_i2c7_irq_status",
+   "brief": "Bit 7 marks a pending event of I2C unit 7.",
+   "basis": "descriptive",
+   "evidence": "irq_ext1_peripherals"
+  },
+  "DAT_EXTMEM_f0b8": {
+   "name": "reg_i2c5_ctrl",
+   "brief": "Control register of I2C unit 5; bit 6 arms the DDC/CI slave.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 5), i2c_master_* channel 5; block 0xF0B8"
+  },
+  "DAT_EXTMEM_f0b9": {
+   "name": "reg_i2c5_status",
+   "brief": "Status of I2C unit 5: bit 7 = read transfer, bit 0 = transfer finished.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 5), i2c_master_* channel 5; block 0xF0B8"
+  },
+  "DAT_EXTMEM_f0ba": {
+   "name": "reg_i2c5_mode",
+   "brief": "Mode register of I2C unit 5 (0xF8 on slave enable, 0xA0 / 0xC0 per transfer).",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 5), i2c_master_* channel 5; block 0xF0B8"
+  },
+  "DAT_EXTMEM_f0bb": {
+   "name": "reg_i2c5_events",
+   "brief": "Event bits of I2C unit 5: 7 addressed, 6 byte to send, 5 byte received, 4 and 3 others.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 5), i2c_master_* channel 5; block 0xF0B8"
+  },
+  "DAT_EXTMEM_f0bc": {
+   "name": "reg_i2c5_event_ack",
+   "brief": "Event acknowledge register of I2C unit 5 (write the event bit back).",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 5), i2c_master_* channel 5; block 0xF0B8"
+  },
+  "DAT_EXTMEM_f0bd": {
+   "name": "reg_i2c5_tx_data",
+   "brief": "Transmit data register of I2C unit 5.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 5), i2c_master_* channel 5; block 0xF0B8"
+  },
+  "DAT_EXTMEM_f0be": {
+   "name": "reg_i2c5_rx_data",
+   "brief": "Receive data register of I2C unit 5.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 5), i2c_master_* channel 5; block 0xF0B8"
+  },
+  "DAT_EXTMEM_f0bf": {
+   "name": "reg_i2c5_address",
+   "brief": "DDC/CI slave address of I2C unit 5 (bits 7..1) and its slave enable bit 0.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 5), i2c_master_* channel 5; block 0xF0B8"
+  },
+  "DAT_EXTMEM_f0dd": {
+   "name": "reg_startup_wake_status",
+   "brief": "Register read once at start-up into power_wake_source; bit 2 leads to a second release of the main processor.",
+   "basis": "descriptive",
+   "evidence": "sys_main copies it into power_wake_source before the other processors are loaded and tests bit 2 of that value after the first release"
+  },
+  "DAT_EXTMEM_f0e5": {
+   "name": "reg_flash_spi_start",
+   "brief": "SPI flash transfer start and busy bits: bit 0 command or write, bit 1 read transfer, bit 6 FIFO reset.",
+   "basis": "derived",
+   "evidence": "flash_spi_transfer, flash_send_cmd, flash_send_cmd_read_byte, flash_dma_read, flash_program, DoBlockErase, flash_reset_fifo"
+  },
+  "DAT_EXTMEM_f0e6": {
+   "name": "reg_flash_spi_mode",
+   "brief": "SPI flash transfer mode (bits 2..3 kept; 0x41 command transfer, 0x01 read or program).",
+   "basis": "derived",
+   "evidence": "flash_spi_transfer, flash_send_cmd, flash_send_cmd_read_byte, flash_dma_read, flash_program, DoBlockErase"
+  },
+  "DAT_EXTMEM_f0ea": {
+   "name": "reg_flash_spi_read_opcode",
+   "brief": "Command byte of an SPI flash data transfer: reads (0x0B / 0x3B / 0x6B, status) and Page Program (0x02).",
+   "basis": "derived",
+   "evidence": "flash_dma_read, flash_send_cmd_read_byte, flash_read_bytes; flash_start_page_program and flash_program write 0x02"
+  },
+  "DAT_EXTMEM_f0eb": {
+   "name": "reg_flash_spi_count_high",
+   "brief": "Bits 23..16 of the SPI flash transfer byte count.",
+   "basis": "derived",
+   "evidence": "flash_spi_transfer, flash_send_cmd, flash_send_cmd_read_byte, flash_dma_read, flash_program, DoBlockErase"
+  },
+  "DAT_EXTMEM_f0ec": {
+   "name": "reg_flash_spi_count_mid",
+   "brief": "Bits 15..8 of the SPI flash transfer byte count.",
+   "basis": "derived",
+   "evidence": "flash_spi_transfer, flash_send_cmd, flash_send_cmd_read_byte, flash_dma_read, flash_program, DoBlockErase"
+  },
+  "DAT_EXTMEM_f0ed": {
+   "name": "reg_flash_spi_count_low",
+   "brief": "Bits 7..0 of the SPI flash transfer byte count.",
+   "basis": "derived",
+   "evidence": "flash_spi_transfer, flash_send_cmd, flash_send_cmd_read_byte, flash_dma_read, flash_program, DoBlockErase"
+  },
+  "DAT_EXTMEM_f0ee": {
+   "name": "reg_flash_spi_write_opcode",
+   "brief": "Command byte of an SPI flash command or write transfer (erase, program, status write).",
+   "basis": "derived",
+   "evidence": "flash_send_cmd, flash_spi_transfer, DoBlockErase, flash_start_page_program"
+  },
+  "DAT_EXTMEM_f0ef": {
+   "name": "reg_flash_spi_read_byte",
+   "brief": "Byte answered by the flash to a one-byte read transfer.",
+   "basis": "derived",
+   "evidence": "flash_send_cmd_read_byte"
+  },
+  "DAT_EXTMEM_f0f0": {
+   "name": "reg_flash_spi_addr_high",
+   "brief": "Bits 23..16 of the SPI flash transfer address.",
+   "basis": "derived",
+   "evidence": "flash_dma_read, flash_read_bytes, flash_program, flash_write_edid_ram"
+  },
+  "DAT_EXTMEM_f0f1": {
+   "name": "reg_flash_spi_addr_mid",
+   "brief": "Bits 15..8 of the SPI flash transfer address.",
+   "basis": "derived",
+   "evidence": "flash_dma_read, flash_read_bytes, flash_program"
+  },
+  "DAT_EXTMEM_f0f2": {
+   "name": "reg_flash_spi_addr_low",
+   "brief": "Bits 7..0 of the SPI flash transfer address.",
+   "basis": "derived",
+   "evidence": "flash_dma_read, flash_read_bytes, flash_program"
+  },
+  "DAT_EXTMEM_f0f4": {
+   "name": "reg_flash_spi_format",
+   "brief": "SPI flash transfer format (3 with address, 7 one-byte read, 0x13 | count << 5 for commands).",
+   "basis": "derived",
+   "evidence": "flash_spi_transfer, flash_send_cmd, flash_send_cmd_read_byte, flash_dma_read, flash_program, DoBlockErase"
+  },
+  "DAT_EXTMEM_f0f6": {
+   "name": "reg_uart2_line_ctrl",
+   "brief": "Line control of serial port 2: bit 7 set on open, line format bits from command 0x05.",
+   "basis": "derived",
+   "evidence": "uart_open_ports / uart_close_ports / uart_set_baud_rate (port mask bit 2), uart_set_line_format"
+  },
+  "DAT_EXTMEM_f0f7": {
+   "name": "reg_uart2_divisor_high",
+   "brief": "High byte of the serial port 2 baud divisor (12 MHz / baud - 1).",
+   "basis": "derived",
+   "evidence": "uart_set_baud_rate"
+  },
+  "DAT_EXTMEM_f0f8": {
+   "name": "reg_uart2_divisor_low",
+   "brief": "Low byte of the serial port 2 baud divisor.",
+   "basis": "derived",
+   "evidence": "uart_set_baud_rate"
+  },
+  "DAT_EXTMEM_f0f9": {
+   "name": "reg_uart2_config",
+   "brief": "Configuration register of serial port 2, set to 0xEA on open.",
+   "basis": "descriptive",
+   "evidence": "uart_open_ports"
+  },
+  "DAT_EXTMEM_f0fa": {
+   "name": "reg_uart2_status",
+   "brief": "Status of serial port 2: bit 0 = receive empty, bit 4 = acknowledged by writing it back.",
+   "basis": "derived",
+   "evidence": "uart_open_ports / uart_close_ports / uart_set_baud_rate (port mask bit 2), irq_ext0_ddc_slave, uart_flush_tx_queue_port2"
+  },
+  "DAT_EXTMEM_f0fb": {
+   "name": "reg_uart2_tx_data",
+   "brief": "Transmit data register of serial port 2.",
+   "basis": "derived",
+   "evidence": "uart_flush_tx_queue_port2"
+  },
+  "DAT_EXTMEM_f0fc": {
+   "name": "reg_uart2_rx_data",
+   "brief": "Receive data register of serial port 2.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave -> uart_rx_ring_port2"
+  },
+  "DAT_EXTMEM_f114": {
+   "name": "reg_gpio_port8",
+   "brief": "Output register of GPIO port 8.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port, gpio_read_port_bit (port 8)"
+  },
+  "DAT_EXTMEM_f115": {
+   "name": "reg_gpio_port8_partner",
+   "brief": "Partner register of GPIO port 8, ORed into each output update.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port_partner (port 8)"
+  },
+  "DAT_EXTMEM_f116": {
+   "name": "reg_gpio_port9",
+   "brief": "Output register of GPIO port 9.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port, gpio_read_port_bit (port 9)"
+  },
+  "DAT_EXTMEM_f117": {
+   "name": "reg_gpio_port9_partner",
+   "brief": "Partner register of GPIO port 9, ORed into each output update.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port_partner (port 9)"
+  },
+  "DAT_EXTMEM_f118": {
+   "name": "reg_gpio_port10",
+   "brief": "Output register of GPIO port 10.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port, gpio_read_port_bit (port 10)"
+  },
+  "DAT_EXTMEM_f119": {
+   "name": "reg_gpio_port10_partner",
+   "brief": "Partner register of GPIO port 10, ORed into each output update.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port_partner (port 10)"
+  },
+  "DAT_EXTMEM_f11a": {
+   "name": "reg_gpio_port11",
+   "brief": "Output register of GPIO port 11.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port, gpio_read_port_bit (port 11)"
+  },
+  "DAT_EXTMEM_f11b": {
+   "name": "reg_gpio_port11_partner",
+   "brief": "Partner register of GPIO port 11, ORed into each output update.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port_partner (port 11)"
+  },
+  "DAT_EXTMEM_f11c": {
+   "name": "reg_gpio_port12",
+   "brief": "Output register of GPIO port 12.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port, gpio_read_port_bit (port 12)"
+  },
+  "DAT_EXTMEM_f11d": {
+   "name": "reg_gpio_port12_partner",
+   "brief": "Partner register of GPIO port 12, ORed into each output update.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port_partner (port 12)"
+  },
+  "DAT_EXTMEM_f11e": {
+   "name": "reg_gpio_port13",
+   "brief": "Output register of GPIO port 13.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port, gpio_read_port_bit (port 13)"
+  },
+  "DAT_EXTMEM_f11f": {
+   "name": "reg_gpio_port13_partner",
+   "brief": "Partner register of GPIO port 13, ORed into each output update.",
+   "basis": "derived",
+   "evidence": "gpio_set_port_bits, gpio_write_port_partner (port 13)"
+  },
+  "DAT_EXTMEM_f140": {
+   "name": "reg_i2c6_ctrl",
+   "brief": "Control register of I2C unit 6; bit 6 arms the DDC/CI slave.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 6); block 0xF140"
+  },
+  "DAT_EXTMEM_f141": {
+   "name": "reg_i2c6_status",
+   "brief": "Status of I2C unit 6: bit 7 = read transfer, bit 0 = transfer finished.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 6); block 0xF140"
+  },
+  "DAT_EXTMEM_f142": {
+   "name": "reg_i2c6_mode",
+   "brief": "Mode register of I2C unit 6 (0xF8 on slave enable, 0xA0 / 0xC0 per transfer).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 6); block 0xF140"
+  },
+  "DAT_EXTMEM_f143": {
+   "name": "reg_i2c6_events",
+   "brief": "Event bits of I2C unit 6: 7 addressed, 6 byte to send, 5 byte received, 4 and 3 others.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 6); block 0xF140"
+  },
+  "DAT_EXTMEM_f144": {
+   "name": "reg_i2c6_event_ack",
+   "brief": "Event acknowledge register of I2C unit 6 (write the event bit back).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 6); block 0xF140"
+  },
+  "DAT_EXTMEM_f145": {
+   "name": "reg_i2c6_tx_data",
+   "brief": "Transmit data register of I2C unit 6.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 6); block 0xF140"
+  },
+  "DAT_EXTMEM_f146": {
+   "name": "reg_i2c6_rx_data",
+   "brief": "Receive data register of I2C unit 6.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 6); block 0xF140"
+  },
+  "DAT_EXTMEM_f147": {
+   "name": "reg_i2c6_address",
+   "brief": "DDC/CI slave address of I2C unit 6 (bits 7..1) and its slave enable bit 0.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, ddc_enable_slave / ddc_arm_slave / ddc_rearm_idle_slaves (port bit 6); block 0xF140"
+  },
+  "DAT_EXTMEM_f167": {
+   "name": "reg_usb_load_start",
+   "brief": "Start of the copy of the update agent into the USB controller (0x87); reads 0 when done.",
+   "basis": "derived",
+   "evidence": "startup_start_usb_agent: loader block 0xF166..0xF16F (start 0x87)"
+  },
+  "DAT_EXTMEM_f16a": {
+   "name": "reg_usb_load_addr_low",
+   "brief": "Bits 7..0 of the flash address of the USB controller image.",
+   "basis": "derived",
+   "evidence": "startup_start_usb_agent: loader block 0xF166..0xF16F (start 0x87)"
+  },
+  "DAT_EXTMEM_f16b": {
+   "name": "reg_usb_load_addr_mid",
+   "brief": "Bits 15..8 of the flash address of the USB controller image.",
+   "basis": "derived",
+   "evidence": "startup_start_usb_agent: loader block 0xF166..0xF16F (start 0x87)"
+  },
+  "DAT_EXTMEM_f16c": {
+   "name": "reg_usb_load_addr_high",
+   "brief": "Bits 23..16 of the flash address of the USB controller image.",
+   "basis": "derived",
+   "evidence": "startup_start_usb_agent: loader block 0xF166..0xF16F (start 0x87)"
+  },
+  "DAT_EXTMEM_f16d": {
+   "name": "reg_usb_load_len_low",
+   "brief": "Bits 7..0 of the length of the USB controller image.",
+   "basis": "derived",
+   "evidence": "startup_start_usb_agent: loader block 0xF166..0xF16F (start 0x87)"
+  },
+  "DAT_EXTMEM_f16e": {
+   "name": "reg_usb_load_len_mid",
+   "brief": "Bits 15..8 of the length of the USB controller image.",
+   "basis": "derived",
+   "evidence": "startup_start_usb_agent: loader block 0xF166..0xF16F (start 0x87)"
+  },
+  "DAT_EXTMEM_f16f": {
+   "name": "reg_usb_load_len_high",
+   "brief": "Bits 23..16 of the length of the USB controller image.",
+   "basis": "derived",
+   "evidence": "startup_start_usb_agent: loader block 0xF166..0xF16F (start 0x87)"
+  },
+  "DAT_EXTMEM_f180": {
+   "name": "reg_edid0_entry",
+   "brief": "Extra EDID entry value of port 0 (used for EDIDs longer than 256 bytes).",
+   "basis": "derived",
+   "evidence": "edid_set_port_entries (command 0x0E), mask bit 0, ipc_run_cmd_0x25_sequence"
+  },
+  "DAT_EXTMEM_f181": {
+   "name": "reg_edid0_entry_ctrl",
+   "brief": "Bit 7 switches the extra EDID entry of port 0 on.",
+   "basis": "derived",
+   "evidence": "edid_set_port_entries / edid_clear_port_entries (commands 0x0E / 0x0F), mask bit 0"
+  },
+  "DAT_EXTMEM_f182": {
+   "name": "reg_edid1_entry",
+   "brief": "Extra EDID entry value of port 1 (used for EDIDs longer than 256 bytes).",
+   "basis": "derived",
+   "evidence": "edid_set_port_entries (command 0x0E), mask bit 1"
+  },
+  "DAT_EXTMEM_f183": {
+   "name": "reg_edid1_entry_ctrl",
+   "brief": "Bit 7 switches the extra EDID entry of port 1 on.",
+   "basis": "derived",
+   "evidence": "edid_set_port_entries / edid_clear_port_entries (commands 0x0E / 0x0F), mask bit 1"
+  },
+  "DAT_EXTMEM_f184": {
+   "name": "reg_edid2_entry",
+   "brief": "Extra EDID entry value of port 2 (used for EDIDs longer than 256 bytes).",
+   "basis": "derived",
+   "evidence": "edid_set_port_entries (command 0x0E), mask bit 2"
+  },
+  "DAT_EXTMEM_f185": {
+   "name": "reg_edid2_entry_ctrl",
+   "brief": "Bit 7 switches the extra EDID entry of port 2 on.",
+   "basis": "derived",
+   "evidence": "edid_set_port_entries / edid_clear_port_entries (commands 0x0E / 0x0F), mask bit 2"
+  },
+  "DAT_EXTMEM_f186": {
+   "name": "reg_edid3_entry",
+   "brief": "Extra EDID entry value of port 3 (used for EDIDs longer than 256 bytes).",
+   "basis": "derived",
+   "evidence": "edid_set_port_entries (command 0x0E), mask bit 3"
+  },
+  "DAT_EXTMEM_f187": {
+   "name": "reg_edid3_entry_ctrl",
+   "brief": "Bit 7 switches the extra EDID entry of port 3 on.",
+   "basis": "derived",
+   "evidence": "edid_set_port_entries / edid_clear_port_entries (commands 0x0E / 0x0F), mask bit 3"
+  },
+  "DAT_EXTMEM_f188": {
+   "name": "reg_edid4_entry",
+   "brief": "Extra EDID entry value of port 4 (used for EDIDs longer than 256 bytes).",
+   "basis": "derived",
+   "evidence": "edid_set_port_entries (command 0x0E), mask bit 4"
+  },
+  "DAT_EXTMEM_f189": {
+   "name": "reg_edid4_entry_ctrl",
+   "brief": "Bit 7 switches the extra EDID entry of port 4 on.",
+   "basis": "derived",
+   "evidence": "edid_set_port_entries / edid_clear_port_entries (commands 0x0E / 0x0F), mask bit 4"
+  },
+  "DAT_EXTMEM_f18a": {
+   "name": "reg_edid5_entry",
+   "brief": "Extra EDID entry value of port 5 (used for EDIDs longer than 256 bytes).",
+   "basis": "derived",
+   "evidence": "edid_set_port_entries (command 0x0E), mask bit 5"
+  },
+  "DAT_EXTMEM_f18b": {
+   "name": "reg_edid5_entry_ctrl",
+   "brief": "Bit 7 switches the extra EDID entry of port 5 on.",
+   "basis": "derived",
+   "evidence": "edid_set_port_entries / edid_clear_port_entries (commands 0x0E / 0x0F), mask bit 5"
+  },
+  "DAT_EXTMEM_f18c": {
+   "name": "reg_edid6_entry",
+   "brief": "Extra EDID entry value of port 6 (used for EDIDs longer than 256 bytes).",
+   "basis": "derived",
+   "evidence": "edid_set_port_entries (command 0x0E), mask bit 6"
+  },
+  "DAT_EXTMEM_f18d": {
+   "name": "reg_edid6_entry_ctrl",
+   "brief": "Bit 7 switches the extra EDID entry of port 6 on.",
+   "basis": "derived",
+   "evidence": "edid_set_port_entries / edid_clear_port_entries (commands 0x0E / 0x0F), mask bit 6"
+  },
+  "DAT_EXTMEM_f1c0": {
+   "name": "reg_flash_fifo_port",
+   "brief": "SPI flash FIFO port: control codes 0x80 / 0x82 / 0x84 are written to it, read data comes from it.",
+   "basis": "descriptive",
+   "evidence": "flash_program, flash_read_bytes, flash_sum_page, flash_read_page, flash_read_block_to_pointer"
+  },
+  "DAT_EXTMEM_f1c3": {
+   "name": "reg_flash_fifo_wdata",
+   "brief": "SPI flash FIFO write port: command, address and page bytes to send.",
+   "basis": "derived",
+   "evidence": "flash_spi_transfer, DoBlockErase, flash_program, flash_write_edid_ram"
+  },
+  "DAT_EXTMEM_f1c8": {
+   "name": "reg_flash_fifo_rdata",
+   "brief": "SPI flash FIFO answer port: control codes 0x80..0x82 written, answer bytes read.",
+   "basis": "descriptive",
+   "evidence": "flash_spi_transfer"
+  },
+  "DAT_EXTMEM_f1db": {
+   "name": "reg_flash_leon2_base_7_0",
+   "brief": "Bits 7..0 of the LEON flash window base register; written at the end of start-up.",
+   "basis": "derived",
+   "evidence": "startup_load_core_images writes the long at share copy +0x20 to 0xF1DB..0xF1DE, low byte first; the same long is kept as flash_leon2_base_address"
+  },
+  "DAT_EXTMEM_f1dc": {
+   "name": "reg_flash_leon2_base_15_8",
+   "brief": "Bits 15..8 of the LEON flash window base register; written at the end of start-up.",
+   "basis": "derived",
+   "evidence": "startup_load_core_images writes the long at share copy +0x20 to 0xF1DB..0xF1DE, low byte first; the same long is kept as flash_leon2_base_address"
+  },
+  "DAT_EXTMEM_f1dd": {
+   "name": "reg_flash_leon2_base_23_16",
+   "brief": "Bits 23..16 of the LEON flash window base register; written at the end of start-up.",
+   "basis": "derived",
+   "evidence": "startup_load_core_images writes the long at share copy +0x20 to 0xF1DB..0xF1DE, low byte first; the same long is kept as flash_leon2_base_address"
+  },
+  "DAT_EXTMEM_f1de": {
+   "name": "reg_flash_leon2_base_31_24",
+   "brief": "Bits 31..24 of the LEON flash window base register; written at the end of start-up.",
+   "basis": "derived",
+   "evidence": "startup_load_core_images writes the long at share copy +0x20 to 0xF1DB..0xF1DE, low byte first; the same long is kept as flash_leon2_base_address"
+  },
+  "DAT_EXTMEM_f1df": {
+   "name": "reg_flash_access_ctrl",
+   "brief": "Bit 7 gives the SPI flash interface to the 8051 during a flash job.",
+   "basis": "derived",
+   "evidence": "flash_begin_access, flash_end_access, startup_load_core_images"
+  },
+  "DAT_EXTMEM_f204": {
+   "name": "reg_ipc_alive_stbc_cnt",
+   "brief": "Alive ring 1, the 8051 byte: the token the 8051 sends round (stbc cnt).",
+   "basis": "derived",
+   "evidence": "sys_watch_main_core ('stbc cnt = %02x, main cnt = %02x, sub_cnt')"
+  },
+  "DAT_EXTMEM_f208": {
+   "name": "reg_ipc_alive_main_cnt",
+   "brief": "Alive ring 1, the main processor byte (main cnt): its copy of the token.",
+   "basis": "derived",
+   "evidence": "sys_watch_main_core ('stbc cnt = %02x, main cnt = %02x, sub_cnt')"
+  },
+  "DAT_EXTMEM_f209": {
+   "name": "reg_ipc_alive_main_service",
+   "brief": "Two bytes next to the main count; 0x87 0x78 here stops the crash check (service mark).",
+   "basis": "descriptive",
+   "evidence": "sys_watch_main_core"
+  },
+  "DAT_EXTMEM_f20c": {
+   "name": "reg_ipc_alive_sub_cnt",
+   "brief": "Alive ring 1, the input processor byte (sub_cnt); equal to the 8051 byte = round complete.",
+   "basis": "derived",
+   "evidence": "sys_watch_main_core ('stbc cnt = %02x, main cnt = %02x, sub_cnt')"
+  },
+  "DAT_EXTMEM_f20d": {
+   "name": "reg_ipc_alive_sub_service",
+   "brief": "Two bytes next to the sub count; 0x87 0x78 here stops the crash check (service mark).",
+   "basis": "descriptive",
+   "evidence": "sys_watch_main_core"
+  },
+  "DAT_EXTMEM_f230": {
+   "name": "reg_ipc_shared_bytes",
+   "brief": "Shared bytes 0xF230..0xF23F; the wake key scan writes its hit (flag, key, value) here.",
+   "basis": "derived",
+   "evidence": "sys_main, power_scan_wake_keys (via its byte writer)"
+  },
+  "DAT_EXTMEM_f240": {
+   "name": "reg_ipc_reliable_stbc_cnt",
+   "brief": "Alive ring 2, the 8051 byte: the token the 8051 sends round.",
+   "basis": "derived",
+   "evidence": "sys_watch_main_core ('stbc relible cnt')"
+  },
+  "DAT_EXTMEM_f244": {
+   "name": "reg_ipc_reliable_main_cnt",
+   "brief": "Alive ring 2, the main processor byte.",
+   "basis": "derived",
+   "evidence": "sys_watch_main_core ('stbc relible cnt')"
+  },
+  "DAT_EXTMEM_f248": {
+   "name": "reg_ipc_reliable_sub_cnt",
+   "brief": "Alive ring 2, the input processor byte; equal to the 8051 byte = round complete.",
+   "basis": "derived",
+   "evidence": "sys_watch_main_core ('stbc relible cnt')"
+  },
+  "DAT_EXTMEM_f250": {
+   "name": "reg_fwupd_mailbox",
+   "brief": "Update mailbox read by the flash loop: command byte, address bytes, checksum.",
+   "basis": "derived",
+   "evidence": "fwupd_run_flash_loop"
+  },
+  "DAT_EXTMEM_f3c5": {
+   "name": "reg_adc_ch1_value",
+   "brief": "Reading of ADC channel 1.",
+   "basis": "derived",
+   "evidence": "gpio_read_adc(1)"
+  },
+  "DAT_EXTMEM_f3c6": {
+   "name": "reg_adc_ch2_value",
+   "brief": "Reading of ADC channel 2.",
+   "basis": "derived",
+   "evidence": "gpio_read_adc(2)"
+  },
+  "DAT_EXTMEM_f3c7": {
+   "name": "reg_adc_ch3_value",
+   "brief": "Reading of ADC channel 3.",
+   "basis": "derived",
+   "evidence": "gpio_read_adc(3)"
+  },
+  "DAT_EXTMEM_f3c8": {
+   "name": "reg_adc_ch4_value",
+   "brief": "Reading of ADC channel 4.",
+   "basis": "derived",
+   "evidence": "gpio_read_adc(4)"
+  },
+  "DAT_EXTMEM_f3c9": {
+   "name": "reg_adc_ch5_value",
+   "brief": "Reading of ADC channel 5.",
+   "basis": "derived",
+   "evidence": "gpio_read_adc(5)"
+  },
+  "DAT_EXTMEM_f3ca": {
+   "name": "reg_adc_ch6_value",
+   "brief": "Reading of ADC channel 6.",
+   "basis": "derived",
+   "evidence": "gpio_read_adc(6)"
+  },
+  "DAT_EXTMEM_f3cb": {
+   "name": "reg_adc_ch7_value",
+   "brief": "Reading of ADC channel 7.",
+   "basis": "derived",
+   "evidence": "gpio_read_adc(7)"
+  },
+  "DAT_EXTMEM_f3cc": {
+   "name": "reg_adc_ch8_value",
+   "brief": "Reading of ADC channel 8.",
+   "basis": "derived",
+   "evidence": "gpio_read_adc(8)"
+  },
+  "DAT_EXTMEM_f3d5": {
+   "name": "reg_adc_ch9_value",
+   "brief": "Reading of ADC channel 9.",
+   "basis": "derived",
+   "evidence": "gpio_read_adc(9)"
+  },
+  "DAT_EXTMEM_f3d6": {
+   "name": "reg_adc_ch10_value",
+   "brief": "Reading of ADC channel 10.",
+   "basis": "derived",
+   "evidence": "gpio_read_adc(10)"
+  },
+  "DAT_EXTMEM_f401": {
+   "name": "reg_port_page_select",
+   "brief": "Page select bytes of the port register window 0x6100 (one per 256-byte page).",
+   "basis": "derived",
+   "evidence": "reg_read_paged_byte, reg_port_page_read16, power_check_port_signal"
+  },
+  "DAT_EXTMEM_f405": {
+   "name": "reg_paged_block0_page_low",
+   "brief": "Low byte of the page select of paged block 0 (window 0x6500).",
+   "basis": "derived",
+   "evidence": "reg_paged_write, reg_paged_read, reg_paged_update_bits"
+  },
+  "DAT_EXTMEM_f406": {
+   "name": "reg_paged_block0_page_high",
+   "brief": "High byte of the page select of paged block 0.",
+   "basis": "derived",
+   "evidence": "reg_paged_write, reg_paged_read, reg_paged_update_bits"
+  },
+  "DAT_EXTMEM_f407": {
+   "name": "reg_paged_block1_page_low",
+   "brief": "Low byte of the page select of paged block 1 (window 0x6600).",
+   "basis": "derived",
+   "evidence": "reg_paged_write, reg_paged_read, reg_paged_update_bits"
+  },
+  "DAT_EXTMEM_f408": {
+   "name": "reg_paged_block1_page_high",
+   "brief": "High byte of the page select of paged block 1.",
+   "basis": "derived",
+   "evidence": "reg_paged_write, reg_paged_read, reg_paged_update_bits"
+  },
+  "DAT_EXTMEM_f40e": {
+   "name": "reg_port_wake_select",
+   "brief": "Selects the input port whose wake flag is read (chip ID 0x20).",
+   "basis": "descriptive",
+   "evidence": "power_test_port_wake_flag, power_clear_port_wake_flags"
+  },
+  "DAT_EXTMEM_f5d5": {
+   "name": "reg_adc_ch11_value",
+   "brief": "Reading of ADC channel 11.",
+   "basis": "derived",
+   "evidence": "gpio_read_adc(11)"
+  },
+  "DAT_EXTMEM_f5d6": {
+   "name": "reg_adc_ch12_value",
+   "brief": "Reading of ADC channel 12.",
+   "basis": "derived",
+   "evidence": "gpio_read_adc(12)"
+  },
+  "DAT_EXTMEM_f600": {
+   "name": "reg_dma_ctrl",
+   "brief": "DMA start register: 0x04 fill, 0x02 second mode, 0x40 flash read; 0 when done.",
+   "basis": "derived",
+   "evidence": "startup_dma_fill, startup_load_core_images (image copy DMA), flash_dma_read"
+  },
+  "DAT_EXTMEM_f601": {
+   "name": "reg_dma_status",
+   "brief": "DMA done bits (7 fill, 6 other jobs), acknowledged by writing them back.",
+   "basis": "derived",
+   "evidence": "startup_dma_fill, startup_load_core_images (image copy DMA), flash_dma_read"
+  },
+  "DAT_EXTMEM_f602": {
+   "name": "reg_dma_dst_7_0",
+   "brief": "Bits 7..0 of the DMA destination address.",
+   "basis": "derived",
+   "evidence": "startup_dma_fill, startup_load_core_images (image copy DMA)"
+  },
+  "DAT_EXTMEM_f603": {
+   "name": "reg_dma_dst_15_8",
+   "brief": "Bits 15..8 of the DMA destination address.",
+   "basis": "derived",
+   "evidence": "startup_dma_fill, startup_load_core_images (image copy DMA)"
+  },
+  "DAT_EXTMEM_f604": {
+   "name": "reg_dma_dst_23_16",
+   "brief": "Bits 23..16 of the DMA destination address.",
+   "basis": "derived",
+   "evidence": "startup_dma_fill, startup_load_core_images (image copy DMA)"
+  },
+  "DAT_EXTMEM_f605": {
+   "name": "reg_dma_dst_31_24",
+   "brief": "Bits 31..24 of the DMA destination address.",
+   "basis": "derived",
+   "evidence": "startup_dma_fill, startup_load_core_images (image copy DMA)"
+  },
+  "DAT_EXTMEM_f606": {
+   "name": "reg_dma_count_7_0",
+   "brief": "Bits 7..0 of the DMA word count (length / 4).",
+   "basis": "derived",
+   "evidence": "startup_dma_fill, startup_load_core_images (image copy DMA)"
+  },
+  "DAT_EXTMEM_f607": {
+   "name": "reg_dma_count_15_8",
+   "brief": "Bits 15..8 of the DMA word count.",
+   "basis": "derived",
+   "evidence": "startup_dma_fill, startup_load_core_images (image copy DMA)"
+  },
+  "DAT_EXTMEM_f608": {
+   "name": "reg_dma_count_23_16",
+   "brief": "Bits 23..16 of the DMA word count.",
+   "basis": "derived",
+   "evidence": "startup_dma_fill, startup_load_core_images (image copy DMA)"
+  },
+  "DAT_EXTMEM_f609": {
+   "name": "reg_dma_count_31_24",
+   "brief": "Bits 31..24 of the DMA word count.",
+   "basis": "derived",
+   "evidence": "startup_dma_fill, startup_load_core_images (image copy DMA)"
+  },
+  "DAT_EXTMEM_f60c": {
+   "name": "reg_dma_flash_count_low",
+   "brief": "Low byte of the word count of a flash DMA read.",
+   "basis": "derived",
+   "evidence": "flash_dma_read"
+  },
+  "DAT_EXTMEM_f60d": {
+   "name": "reg_dma_flash_count_high",
+   "brief": "High byte of the word count of a flash DMA read.",
+   "basis": "derived",
+   "evidence": "flash_dma_read"
+  },
+  "DAT_EXTMEM_f800": {
+   "name": "edid_ram",
+   "brief": "EDID RAM (2 KB) served by the EDID slaves; filled by message type 1, read back for command 0x0D.",
+   "basis": "proven",
+   "evidence": "ipc_run_message ('EDID address out of range!'), lib_pack_bytes_to_longs"
+  },
+  "DAT_INTMEM_29": {
+   "name": "ddc_port_activity_flags",
+   "brief": "One bit per DDC/CI slave port (0..7), set when a computer addresses the port, cleared when it is done.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, irq_ext1_peripherals, ddc_rearm_idle_slaves"
+  },
+  "DAT_INTMEM_2a": {
+   "name": "ddc_request_index_port0",
+   "brief": "Write position in the request buffer row of DDC/CI slave port 0.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave: in index of port bit 0"
+  },
+  "DAT_INTMEM_2b": {
+   "name": "ddc_request_index_port1",
+   "brief": "Write position in the request buffer row of DDC/CI slave port 1.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals: in index of port bit 1"
+  },
+  "DAT_INTMEM_2c": {
+   "name": "ddc_request_index_port2",
+   "brief": "Write position in the request buffer row of DDC/CI slave port 2.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave: in index of port bit 2"
+  },
+  "DAT_INTMEM_2d": {
+   "name": "ddc_request_index_port3",
+   "brief": "Write position in the request buffer row of DDC/CI slave port 3.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals: in index of port bit 3"
+  },
+  "DAT_INTMEM_2e": {
+   "name": "ddc_request_index_port4",
+   "brief": "Write position in the request buffer row of DDC/CI slave port 4.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave: in index of port bit 4"
+  },
+  "DAT_INTMEM_2f": {
+   "name": "ddc_request_index_port5",
+   "brief": "Write position in the request buffer row of DDC/CI slave port 5.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals: in index of port bit 5"
+  },
+  "DAT_INTMEM_30": {
+   "name": "ddc_request_index_port6",
+   "brief": "Write position in the request buffer row of DDC/CI slave port 6.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave: in index of port bit 6"
+  },
+  "DAT_INTMEM_31": {
+   "name": "ddc_request_index_port7",
+   "brief": "Write position in the request buffer row of DDC/CI slave port 7.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals: in index of port bit 7"
+  },
+  "DAT_INTMEM_32": {
+   "name": "ddc_reply_end_indexes",
+   "brief": "End position of the reply in the buffer row, one byte per DDC/CI slave port, from port 0.",
+   "basis": "derived",
+   "evidence": "ipc_run_message type 4 writes [port]; irq_ext0_ddc_slave compares"
+  },
+  "DAT_INTMEM_33": {
+   "name": "ddc_reply_end_index_port1",
+   "brief": "End position of the reply in the buffer row of DDC/CI slave port 1.",
+   "basis": "derived",
+   "evidence": "ipc_run_message type 4; irq_ext1_peripherals"
+  },
+  "DAT_INTMEM_34": {
+   "name": "ddc_reply_end_index_port2",
+   "brief": "End position of the reply in the buffer row of DDC/CI slave port 2.",
+   "basis": "derived",
+   "evidence": "ipc_run_message type 4; irq_ext0_ddc_slave"
+  },
+  "DAT_INTMEM_35": {
+   "name": "ddc_reply_end_index_port3",
+   "brief": "End position of the reply in the buffer row of DDC/CI slave port 3.",
+   "basis": "derived",
+   "evidence": "ipc_run_message type 4; irq_ext1_peripherals"
+  },
+  "DAT_INTMEM_36": {
+   "name": "ddc_reply_end_index_port4",
+   "brief": "End position of the reply in the buffer row of DDC/CI slave port 4.",
+   "basis": "derived",
+   "evidence": "ipc_run_message type 4; irq_ext0_ddc_slave"
+  },
+  "DAT_INTMEM_37": {
+   "name": "ddc_reply_end_index_port5",
+   "brief": "End position of the reply in the buffer row of DDC/CI slave port 5.",
+   "basis": "derived",
+   "evidence": "ipc_run_message type 4; irq_ext1_peripherals"
+  },
+  "DAT_INTMEM_38": {
+   "name": "ddc_reply_end_index_port6",
+   "brief": "End position of the reply in the buffer row of DDC/CI slave port 6.",
+   "basis": "derived",
+   "evidence": "ipc_run_message type 4; irq_ext0_ddc_slave"
+  },
+  "DAT_INTMEM_39": {
+   "name": "ddc_reply_end_index_port7",
+   "brief": "End position of the reply in the buffer row of DDC/CI slave port 7.",
+   "basis": "derived",
+   "evidence": "ipc_run_message type 4; irq_ext1_peripherals"
+  },
+  "DAT_INTMEM_3a": {
+   "name": "ddc_reply_index_port0",
+   "brief": "Read position of the next reply byte sent by DDC/CI slave port 0.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave: out index of port bit 0"
+  },
+  "DAT_INTMEM_3b": {
+   "name": "ddc_reply_index_port1",
+   "brief": "Read position of the next reply byte sent by DDC/CI slave port 1.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals: out index of port bit 1"
+  },
+  "DAT_INTMEM_3c": {
+   "name": "ddc_reply_index_port2",
+   "brief": "Read position of the next reply byte sent by DDC/CI slave port 2.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave: out index of port bit 2"
+  },
+  "DAT_INTMEM_3d": {
+   "name": "ddc_reply_index_port3",
+   "brief": "Read position of the next reply byte sent by DDC/CI slave port 3.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals: out index of port bit 3"
+  },
+  "DAT_INTMEM_3e": {
+   "name": "ddc_reply_index_port4",
+   "brief": "Read position of the next reply byte sent by DDC/CI slave port 4.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave: out index of port bit 4"
+  },
+  "DAT_INTMEM_3f": {
+   "name": "ddc_reply_index_port5",
+   "brief": "Read position of the next reply byte sent by DDC/CI slave port 5.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals: out index of port bit 5"
+  },
+  "DAT_INTMEM_40": {
+   "name": "ddc_reply_index_port6",
+   "brief": "Read position of the next reply byte sent by DDC/CI slave port 6.",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave: out index of port bit 6"
+  },
+  "DAT_INTMEM_41": {
+   "name": "ddc_reply_index_port7",
+   "brief": "Read position of the next reply byte sent by DDC/CI slave port 7.",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals: out index of port bit 7"
+  },
+  "DAT_INTMEM_42": {
+   "name": "uart_rx_write_index_port1",
+   "brief": "Write position in the 16-byte receive ring of serial port 1.",
+   "basis": "derived",
+   "evidence": "irq_uart, uart_read_rx_ring, uart_find_port_with_rx_data"
+  },
+  "DAT_INTMEM_43": {
+   "name": "uart_tx_write_index_port1",
+   "brief": "Write position in the 16-byte transmit ring of serial port 1.",
+   "basis": "derived",
+   "evidence": "uart_tx_ring_put, irq_uart"
+  },
+  "DAT_INTMEM_44": {
+   "name": "uart_rx_read_index_port1",
+   "brief": "Read position in the receive ring of serial port 1.",
+   "basis": "derived",
+   "evidence": "uart_read_rx_ring, uart_find_port_with_rx_data"
+  },
+  "DAT_INTMEM_45": {
+   "name": "uart_tx_read_index_port1",
+   "brief": "Read position in the transmit ring of serial port 1.",
+   "basis": "derived",
+   "evidence": "irq_uart, uart_tx_ring_put"
+  },
+  "DAT_INTMEM_46": {
+   "name": "uart_tx_idle_flag_port1",
+   "brief": "Set when serial port 1 has sent all queued bytes; the next put restarts sending.",
+   "basis": "derived",
+   "evidence": "irq_uart sets 1, uart_tx_ring_put"
+  },
+  "DAT_INTMEM_47": {
+   "name": "uart_rx_write_index_port2",
+   "brief": "Write position in the receive ring of serial port 2 (0x38 bytes).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, uart_read_rx_ring, uart_find_port_with_rx_data"
+  },
+  "DAT_INTMEM_48": {
+   "name": "uart_rx_write_index_port3",
+   "brief": "16-bit write position in the receive ring of serial port 3 (0x38 bytes).",
+   "basis": "derived",
+   "evidence": "irq_ext0_ddc_slave, uart_read_rx_ring, uart_find_port_with_rx_data"
+  },
+  "DAT_INTMEM_49": {
+   "name": "uart_rx_write_index_port3_low",
+   "brief": "Low byte of the write position in the receive ring of serial port 3.",
+   "basis": "derived",
+   "evidence": "uart_get_rx_head_port3_low"
+  },
+  "DAT_INTMEM_4a": {
+   "name": "uart_rx_write_index_port4",
+   "brief": "16-bit write position in the receive ring of serial port 4 (0x38 bytes).",
+   "basis": "derived",
+   "evidence": "irq_ext1_peripherals, uart_read_rx_ring, uart_find_port_with_rx_data"
+  },
+  "DAT_INTMEM_4b": {
+   "name": "uart_rx_write_index_port4_low",
+   "brief": "Low byte of the write position in the receive ring of serial port 4.",
+   "basis": "descriptive",
+   "evidence": "uart_get_rx_write_index_p4_low returns it; low byte of the 16-bit value at 0x4A"
+  },
+  "DAT_INTMEM_4c": {
+   "name": "uart_rx_read_index_port2",
+   "brief": "Read position in the receive ring of serial port 2.",
+   "basis": "derived",
+   "evidence": "uart_read_rx_ring, uart_find_port_with_rx_data"
+  },
+  "DAT_INTMEM_4d": {
+   "name": "uart_tx_queue_count_port2",
+   "brief": "Number of bytes queued for serial port 2; the queue is sent at 0x37 bytes.",
+   "basis": "derived",
+   "evidence": "uart_queue_tx_byte_port2, uart_flush_tx_queue_port2"
+  },
+  "DAT_INTMEM_4e": {
+   "name": "uart_rx_read_index_port3",
+   "brief": "16-bit read position in the receive ring of serial port 3.",
+   "basis": "derived",
+   "evidence": "uart_read_rx_ring, uart_find_port_with_rx_data"
+  },
+  "DAT_INTMEM_50": {
+   "name": "uart_tx_queue_count_port3",
+   "brief": "Number of bytes queued for serial port 3.",
+   "basis": "derived",
+   "evidence": "uart_queue_tx_byte_port3, uart_flush_tx_queue_port3"
+  },
+  "DAT_INTMEM_51": {
+   "name": "uart_rx_read_index_port4",
+   "brief": "16-bit read position in the receive ring of serial port 4.",
+   "basis": "derived",
+   "evidence": "uart_read_rx_ring, uart_find_port_with_rx_data"
+  },
+  "DAT_INTMEM_53": {
+   "name": "uart_tx_queue_count_port4",
+   "brief": "Number of bytes queued for serial port 4.",
+   "basis": "derived",
+   "evidence": "uart_queue_tx_byte_port4, uart_flush_tx_queue_port4"
+  },
+  "DAT_INTMEM_57": {
+   "name": "timer_tick_count",
+   "brief": "16-bit system tick counter, counted by the timer 0 interrupt.",
+   "basis": "derived",
+   "evidence": "irq_timer0_tick, timer_get_ticks"
+  },
+  "DAT_INTMEM_59": {
+   "name": "timer_tick_copy",
+   "brief": "Copy of the tick counter, re-read until two reads agree.",
+   "basis": "derived",
+   "evidence": "timer_get_ticks"
+  },
+  "DAT_INTMEM_5b": {
+   "name": "irq_ext1_loop_counters",
+   "brief": "Work bytes of external interrupt 1: AUX loop index and count; the first also holds the IR pulse value.",
+   "basis": "descriptive",
+   "evidence": "dp_aux_build_reply, dp_aux_track_link_training (struct {i, count}); irq_record_ir_pulse stores (0xFFFF - count) / 75 or 0xFF in the first byte and appends it to the IR ring"
+  },
+  "DAT_INTMEM_5d": {
+   "name": "uart_rx_last_byte_port1",
+   "brief": "Last byte received on serial port 1.",
+   "basis": "derived",
+   "evidence": "irq_uart: SBUF"
+  },
+  "DAT_INTMEM_5e": {
+   "name": "irq_ir_pulse_length",
+   "brief": "Length of the last infrared pulse, read from the capture registers.",
+   "basis": "derived",
+   "evidence": "irq_record_ir_pulse: (0xF028 << 8) + 0xF027"
+  },
+  "DAT_INTMEM_60": {
+   "name": "i2c_sw_clock_wait_count",
+   "brief": "Down-counter while waiting for the software I2C clock line to go high.",
+   "basis": "derived",
+   "evidence": "i2c_sw_release_clock"
+  },
+  "DAT_INTMEM_64": {
+   "name": "dp_aux_edid_offset_port0",
+   "brief": "Read offset into the EDID that DP receiver 0 serves over I2C-over-AUX.",
+   "basis": "derived",
+   "evidence": "dp_aux_build_reply: I2C address 0x50, set by write, advanced by read"
+  },
+  "DAT_INTMEM_65": {
+   "name": "dp_aux_edid_offset_port1",
+   "brief": "Read offset into the EDID that DP receiver 1 serves over I2C-over-AUX.",
+   "basis": "derived",
+   "evidence": "dp_aux_build_reply: I2C address 0x50, set by write, advanced by read"
+  }
+ }
+}

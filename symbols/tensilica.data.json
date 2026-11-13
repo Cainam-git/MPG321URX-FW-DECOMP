@@ -1,0 +1,371 @@
+{
+ "section": "tensilica",
+ "data": {
+  "ro_3ffe0494": {
+   "name": "ldc_pass_record_init",
+   "brief": "32 zero bytes copied into the pass record at the start of each pass",
+   "basis": "proven",
+   "evidence": "ldc_run_frame_pass"
+  },
+  "ro_3ffe0630": {
+   "name": "dbg_command_table",
+   "brief": "Debug command table {name[32], handler}: mem wmem mdw mww gpio help rsa msg1 msg0",
+   "basis": "proven",
+   "evidence": "read by dbg_find_and_run_command"
+  },
+  "ro_3ffe15d0": {
+   "name": "lib_decimal_digit_texts",
+   "brief": "Texts '0'..'9', two bytes each, used by lib_vsprintf for decimal digits",
+   "basis": "derived",
+   "evidence": "lib_vsprintf"
+  },
+  "ro_3ffe1630": {
+   "name": "lib_vsprintf_conv_table",
+   "brief": "Switch table of lib_vsprintf, index conversion character - 'P' (41 entries)",
+   "basis": "proven",
+   "evidence": "jx in lib_vsprintf"
+  },
+  "ro_3ffe19fc": {
+   "name": "trap_exception_cause_table",
+   "brief": "Handler per EXCCAUSE 0..5 read by the user exception vector (cause 6+ uses entry 0)",
+   "basis": "proven",
+   "evidence": "vec_40000340; entries trap_break_on_other_cause, trap_syscall_handler, irq_dispatch_level1, trap_alloca_handler"
+  },
+  "ro_3ffe1a20": {
+   "name": "sys_region_attribute_rank",
+   "brief": "Signed byte per attribute 0..15: rank used to keep the higher attribute (flag 0x100)",
+   "basis": "derived",
+   "evidence": "sys_set_region_attributes compares rank[new] with rank[current]"
+  },
+  "ro_3ffe1a30": {
+   "name": "irq_level_of_interrupt",
+   "brief": "Byte per interrupt 0..21: its level (1,2,3,4,5,7); handlers refused for 7 and above",
+   "basis": "proven",
+   "evidence": "irq_set_handler_and_arg; matches dispatcher masks (level 3 = 9,10,11,21; level 5 = 13)"
+  },
+  "data_3ffe2390": {
+   "name": "ldc_dimming_settings",
+   "brief": "Dimming settings: channel count, GainFilterMode, ADIM_Min/Max, usUserPDIM/ADIM, gains.",
+   "basis": "proven",
+   "evidence": "fields printed by ldc_print_debug_dump (usUserPDIM, ADIM_Max, UserGlobalGain, ...)"
+  },
+  "data_3ffe23e0": {
+   "name": "ldc_gain_table_anv1",
+   "brief": "Gain table ANV1: 5 {x, y} word pairs",
+   "basis": "proven",
+   "evidence": "printed as 'LDC_GainTable_ANV1' by ldc_print_debug_dump"
+  },
+  "data_3ffe2410": {
+   "name": "ldc_gain_table_flat",
+   "brief": "Gain table of 2 points {0, 0x400}, {0xFF, 0x400}, loaded for table number 0",
+   "basis": "derived",
+   "evidence": "ldc_cmd_load_gain_table, ldc_cmd_set_ldc_mode"
+  },
+  "data_3ffe2420": {
+   "name": "ldc_gain_table_anv2",
+   "brief": "Gain table ANV2: 5 {x, y} word pairs",
+   "basis": "proven",
+   "evidence": "printed as 'LDC_GainTable_ANV2'"
+  },
+  "data_3ffe2450": {
+   "name": "ldc_gain_table_anv3",
+   "brief": "Gain table ANV3: 5 {x, y} word pairs",
+   "basis": "proven",
+   "evidence": "printed as 'LDC_GainTable_ANV3'"
+  },
+  "data_3ffe2480": {
+   "name": "ldc_adim_curve_points",
+   "brief": "Point table {x, y}[2] = {0,0},{0xFFC,0x3FF} of ldc_adim_map_through_curve",
+   "basis": "derived",
+   "evidence": "used only by ldc_adim_map_through_curve"
+  },
+  "data_3ffe2490": {
+   "name": "ldc_filter_weights_16_32_64",
+   "brief": "3x3 weights 16 32 16 / 32 64 32 / 16 32 16 of ldc_filter_grid_3x3",
+   "basis": "derived",
+   "evidence": "used only by ldc_filter_grid_3x3"
+  },
+  "data_3ffe24c0": {
+   "name": "ldc_filter_weights_28_32",
+   "brief": "3x3 weights 28 everywhere, 32 in the centre, of ldc_filter_grid_3x3",
+   "basis": "derived",
+   "evidence": "used only by ldc_filter_grid_3x3"
+  },
+  "data_3ffe2570": {
+   "name": "ldc_first_current_on",
+   "brief": "1 until the first 'current on' of command 0x38 (longer wait the first time)",
+   "basis": "derived",
+   "evidence": "ldc_cmd_set_led_current_on"
+  },
+  "data_3ffe2574": {
+   "name": "ldc_input_duty_flag",
+   "brief": "Flag kept by ldc_check_input_duty_edges (1 at start)",
+   "basis": "descriptive",
+   "evidence": "ldc_check_input_duty_edges"
+  },
+  "data_3ffe2580": {
+   "name": "ldc_kept_global_gain",
+   "brief": "Kept global gain (scaled by 256) of ldc_smooth_and_apply_global_gain",
+   "basis": "derived",
+   "evidence": "used only by ldc_smooth_and_apply_global_gain"
+  },
+  "data_3ffe2590": {
+   "name": "ldc_command_table",
+   "brief": "Mailbox command table: pairs of command code and handler routine.",
+   "basis": "derived",
+   "evidence": "docs/MAP.md: command table 0x4000D288 read by ldc_poll_mailbox_command"
+  },
+  "data_3ffe2700": {
+   "name": "dbg_memcmd_verbose",
+   "brief": "Byte flag: echo, prompt and mr row headers of the second console on/off (set by 'md')",
+   "basis": "derived",
+   "evidence": "read by dbg_memcmd_echo_char, dbg_memcmd_mr, dbg_memcmd_poll_console; written by dbg_memcmd_md"
+  },
+  "data_3ffe2704": {
+   "name": "dbg_uart_config",
+   "brief": "Serial port set-up record (first word 115200) passed to uart_init",
+   "basis": "derived",
+   "evidence": "dbg_init_uart_print_banner; 0x0001C200"
+  },
+  "data_3ffe2720": {
+   "name": "dbg_memcmd_table",
+   "brief": "Command table {name, handler} of the second console: mr, mw, md, cfg",
+   "basis": "proven",
+   "evidence": "data words"
+  },
+  "data_3ffe2740": {
+   "name": "dbg_help_texts",
+   "brief": "NULL-terminated list of the help texts printed by 'help'",
+   "basis": "proven",
+   "evidence": "dbg_cmd_help"
+  },
+  "data_3ffe2760": {
+   "name": "ldc_segment_count",
+   "brief": "Number of segments (columns x rows) of the segment grid.",
+   "basis": "derived",
+   "evidence": "written by DRV_LDC_SetLDCSegment as cols * rows; loop bound of the merge routines"
+  },
+  "data_3ffe2764": {
+   "name": "ldc_dpll_init_done",
+   "brief": "Flag set by command 0x40; the per-frame pass runs only while it is not 0",
+   "basis": "proven",
+   "evidence": "ldc_cmd_dpll_init_check texts, ldc_run_pass_on_new_frame"
+  },
+  "data_3ffe2770": {
+   "name": "ldc_hw_default_registers",
+   "brief": "59 {register address, value} pairs written at start-up",
+   "basis": "proven",
+   "evidence": "ldc_hw_load_default_registers loop"
+  },
+  "data_3ffe2a20": {
+   "name": "ldc_as3824_last_led_mode",
+   "brief": "LED_Mode last handled by ldc_as3824_update (starts at 3)",
+   "basis": "derived",
+   "evidence": "ldc_as3824_update"
+  },
+  "data_3ffe2a30": {
+   "name": "ldc_level_curve",
+   "brief": "8 {x, y} points (x 0..100, y 0x580..0x140) used by ldc_level_curve_value",
+   "basis": "descriptive",
+   "evidence": "ldc_level_curve_value"
+  },
+  "data_3ffe2a78": {
+   "name": "irq_enable_state",
+   "brief": "+0 enabled interrupt bits, +4 allowed bits (INTENABLE = enabled & allowed)",
+   "basis": "proven",
+   "evidence": "irq_enable, irq_disable, irq_dispatch_level1"
+  },
+  "data_3ffe2a80": {
+   "name": "irq_handler_table",
+   "brief": "22 entries {handler, arg}; interrupt n at +8*(21-n); default irq_default_handler with arg n",
+   "basis": "proven",
+   "evidence": "irq_set_handler_and_arg writes; irq_dispatch_level1, irq_dispatch_level3, irq_dispatch_level5 call through it"
+  },
+  "data_3ffe2be0": {
+   "name": "irq_level5_handler_address",
+   "brief": "Word holding irq_dispatch_level5, put back into EXCSAVE5 on every level-5 entry",
+   "basis": "proven",
+   "evidence": "reset code stores it; irq_dispatch_level5 loads it into EXCSAVE5"
+  },
+  "0x3ffe3db0": {
+   "name": "ldc_adim_kept_values",
+   "brief": "Kept ADIM per channel (u32[32], scaled by 256) of ldc_adim_smooth_toward_target",
+   "basis": "derived",
+   "evidence": "read and written only by ldc_adim_smooth_toward_target"
+  },
+  "0x3ffe3e30": {
+   "name": "ldc_pdim_kept_values",
+   "brief": "Kept PDIM per channel (u32[32], scaled by 256) of ldc_pdim_smooth_toward_target",
+   "basis": "derived",
+   "evidence": "read and written only by ldc_pdim_smooth_toward_target"
+  },
+  "0x3ffe3f34": {
+   "name": "ldc_ramp_kept_level",
+   "brief": "Level kept by ldc_ramp_level_over_time",
+   "basis": "descriptive",
+   "evidence": "used only by ldc_ramp_level_over_time"
+  },
+  "0x3ffe3f38": {
+   "name": "ldc_adim_hold_start",
+   "brief": "Tick count when the ADIM hold started",
+   "basis": "descriptive",
+   "evidence": "used only by ldc_adim_hold_on_sudden_rise"
+  },
+  "0x3ffe3f3c": {
+   "name": "ldc_adim_hold_active",
+   "brief": "ADIM hold flag of ldc_adim_hold_on_sudden_rise",
+   "basis": "descriptive",
+   "evidence": "used only by ldc_adim_hold_on_sudden_rise"
+  },
+  "0x3ffe3f40": {
+   "name": "ldc_adim_previous_average",
+   "brief": "Previous average of the merged channel values",
+   "basis": "descriptive",
+   "evidence": "used only by ldc_adim_hold_on_sudden_rise"
+  },
+  "0x3ffe3f44": {
+   "name": "ldc_debug_dump_call_count",
+   "brief": "Call counter of ldc_print_debug_dump (periodic print every 180)",
+   "basis": "proven",
+   "evidence": "ldc_print_debug_dump"
+  },
+  "0x3ffe3f48": {
+   "name": "ldc_kept_ldc_mode",
+   "brief": "Last LDC_Mode applied by ldc_follow_mode_and_run_led_driver",
+   "basis": "proven",
+   "evidence": "ldc_follow_mode_and_run_led_driver"
+  },
+  "0x3ffe3f4c": {
+   "name": "ldc_led_driver_wait_count",
+   "brief": "Passes counted since the last LDC_Mode change",
+   "basis": "proven",
+   "evidence": "ldc_follow_mode_and_run_led_driver"
+  },
+  "0x3ffe3f50": {
+   "name": "ldc_led_driver_wait_length",
+   "brief": "Passes to wait after a mode change before the LED driver runs (1 or 2)",
+   "basis": "proven",
+   "evidence": "ldc_follow_mode_and_run_led_driver"
+  },
+  "0x3ffe3f60": {
+   "name": "ldc_command_index",
+   "brief": "Word per command number: position in ldc_command_table",
+   "basis": "proven",
+   "evidence": "ldc_build_command_index fills, ldc_poll_mailbox_command reads"
+  },
+  "0x3ffe41c0": {
+   "name": "dbg_memcmd_line_state",
+   "brief": "Second console line state: +0 length, +1 line complete",
+   "basis": "proven",
+   "evidence": "dbg_memcmd_poll_console"
+  },
+  "0x3ffe41d0": {
+   "name": "dbg_memcmd_line",
+   "brief": "Second console line buffer (64 characters + end at 0x3FFE4210)",
+   "basis": "proven",
+   "evidence": "dbg_memcmd_poll_console"
+  },
+  "0x3ffe4220": {
+   "name": "lib_heap_state",
+   "brief": "Heap record: +0 u8 ready, +4 pointer to the free-list head",
+   "basis": "derived",
+   "evidence": "written only by lib_heap_init, read by lib_heap_alloc/lib_heap_free"
+  },
+  "0x3ffe4230": {
+   "name": "lib_heap_list_head",
+   "brief": "Free-list head {+0 first free block, +4 pool size}",
+   "basis": "derived",
+   "evidence": "set by lib_heap_init"
+  },
+  "0x3ffe4240": {
+   "name": "dbg_console_state",
+   "brief": "Console record: word count, *xx request, hex mode, line length, request mode",
+   "basis": "derived",
+   "evidence": "fields used by dbg_console_poll/dbg_parse_star_request/dbg_run_star_request"
+  },
+  "0x3ffe4438": {
+   "name": "timer_tick_state",
+   "brief": "Pending tick counts and callbacks of timers 0 and 1",
+   "basis": "derived",
+   "evidence": "timer_count_tick_timer0, timer_count_tick_timer1, timer_run_pending_callbacks, timer_start_counted_timer0, timer_start_counted_timer1"
+  },
+  "0x3ffe4450": {
+   "name": "ldc_segment_grid",
+   "brief": "Grid record: +0 columns, +4 rows, +16/+20 panel width/height, +24/+28 zone exponents, +48 DS divider",
+   "basis": "derived",
+   "evidence": "written by DRV_LDC_SetLDCSegment, DRV_LDC_SetPanelResolution, ldc_set_zone_count_exponents, ldc_set_ds_divider"
+  },
+  "0x3ffe4490": {
+   "name": "ldc_segment_values",
+   "brief": "u16[2048] segment values read from 0xE0083000 every interrupt",
+   "basis": "derived",
+   "evidence": "ldc_read_segment_values copy, ldc_preset_segment_values preset"
+  },
+  "0x3ffe5490": {
+   "name": "ldc_unit_words",
+   "brief": "u32[4] per-unit words written to 0xC0197000 + k*0x1000 (bit 12 set by ldc_unit_set_mode_bits)",
+   "basis": "descriptive",
+   "evidence": "ldc_unit_set_mode_bits"
+  },
+  "0x3ffe54a0": {
+   "name": "AS3824Buf",
+   "brief": "AS3824 register mirror: DevAddr..HdrMode, BDAC[16], PWM_HT[16], order[16], init_done",
+   "basis": "proven",
+   "evidence": "texts 'AS3824Buf.<field>' in ldc_as3824_print_state"
+  },
+  "0x3ffe5590": {
+   "name": "ldc_as3824_last_ldc_mode",
+   "brief": "LDC_Mode last handled by ldc_as3824_update",
+   "basis": "derived",
+   "evidence": "ldc_as3824_update"
+  },
+  "0x3ffe5594": {
+   "name": "ldc_direct_pwm_on",
+   "brief": "1 while direct PWM is on for driver type 0; ldc_led_driver_type0_update then sends nothing",
+   "basis": "derived",
+   "evidence": "ldc_set_direct_pwm_type0 sets/clears, ldc_led_driver_type0_update tests"
+  },
+  "0x3ffe5598": {
+   "name": "timer_state",
+   "brief": "t0 {one_shot u8,period,callback} +0, t1 +12, tick_count +24, tick_callback +28, tick_wraps +32",
+   "basis": "derived",
+   "evidence": "timer_arm_timer0, timer_arm_timer1, timer_start_tick, timer_service_timer0, timer_service_timer1, timer_service_tick, timer_wait_ticks, timer_read_ticks"
+  },
+  "0x3ffe5690": {
+   "name": "lib_vsprintf_digits",
+   "brief": "lib_vsprintf digit stack, one digit per word; width end = this + width*4",
+   "basis": "derived",
+   "evidence": "lib_vsprintf"
+  },
+  "0x3ffe59b0": {
+   "name": "lib_vsprintf_staging",
+   "brief": "lib_vsprintf output staging, one character per 32-bit word",
+   "basis": "derived",
+   "evidence": "lib_vsprintf"
+  },
+  "0x3ffe5cd0": {
+   "name": "uart_rx_state",
+   "brief": "+0 copy of 0xE00A0008 value, +4 ring[128] words, +0x204 head, +0x208 tail",
+   "basis": "derived",
+   "evidence": "uart_init, uart_rx_irq_handler, uart_rx_ring_get"
+  },
+  "0x3ffe5edc": {
+   "name": "irq_sw_pending",
+   "brief": "Set by irq_sw_handler; main loop prints 'SW_IRQ!!' and clears it",
+   "basis": "derived",
+   "evidence": "irq_sw_handler, sys_init_and_run_main_loop"
+  },
+  "0x3ffe5ee0": {
+   "name": "ldc_irq_pending",
+   "brief": "Set by ldc_irq_handler; main loop runs ldc_run_pass_on_new_frame and clears it",
+   "basis": "derived",
+   "evidence": "ldc_irq_handler, sys_init_and_run_main_loop"
+  },
+  "0x3ffe62f0": {
+   "name": "irq_level5_save_area",
+   "brief": "Save area and stack of the level-5 dispatcher: special registers, then registers 0..31 at +52",
+   "basis": "proven",
+   "evidence": "irq_dispatch_level5"
+  }
+ }
+}

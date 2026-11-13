@@ -1,0 +1,50 @@
+/* Names used in the source of FUN_a00950a0; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define dbg_print_string                FUN_a00734c4
+#define hdmi_tx_build_pps_packet        FUN_a0092db8
+#define hdmi_tx_clear_active            FUN_a0091b74
+#define hdmi_tx_dsc_setup               func_0x9f1cd37c
+#define hdmi_tx_enable_audio_infoframe  FUN_a0093060
+#define hdmi_tx_enable_avi_packet       FUN_a00924dc
+#define hdmi_tx_enable_extra_infoframe  FUN_a0092608
+#define hdmi_tx_enable_packet_bits67    FUN_a00925e4
+#define hdmi_tx_enable_pps_packet       FUN_a009270c
+#define hdmi_tx_init_core_regs          FUN_a00944e0
+#define hdmi_tx_phy_enable_outputs      FUN_a008e654
+#define hdmi_tx_phy_power_down          FUN_a008e6b8
+#define hdmi_tx_phy_setup_frl           FUN_a008ecb8
+#define hdmi_tx_phy_switch_power        FUN_a008e5ac
+#define hdmi_tx_phy_tune_for_tmds_clock FUN_a008f270
+#define hdmi_tx_pulse_regf1_bit7        FUN_a0094a10
+#define hdmi_tx_reg_read8               FUN_a00a7fd8
+#define hdmi_tx_reg_update_bits         FUN_a00a80cc
+#define hdmi_tx_reg_write_field         FUN_a00a8184
+#define hdmi_tx_reset_keep_packets      FUN_a00943d0
+#define hdmi_tx_run_step                FUN_a00950a0
+#define hdmi_tx_select_link_source      FUN_a0094798
+#define hdmi_tx_select_source_port      FUN_a008ed50
+#define hdmi_tx_send_avi_infoframe      FUN_a0092100
+#define hdmi_tx_set_bank4_mode          FUN_a0094e40
+#define hdmi_tx_set_bank4_offsets       FUN_a0094b30
+#define hdmi_tx_set_color_depth         FUN_a0091f14
+#define hdmi_tx_set_frl_clock           FUN_a008e958
+#define hdmi_tx_set_frl_reg28_bit2      FUN_a0094ae8
+#define hdmi_tx_set_frl_reg28_bits      FUN_a0094b0c
+#define hdmi_tx_set_low_clock_bits      FUN_a008f450
+#define hdmi_tx_set_packet_switch       FUN_a00a89c0
+#define hdmi_tx_set_reg7c_low_nibble    FUN_a008d8e0
+#define hdmi_tx_set_reg8_bits45         FUN_a0094f64
+#define hdmi_tx_set_reg_f1_f2_bit0      FUN_a009498c
+#define hdmi_tx_set_regfd_mode          FUN_a0094a50
+#define hdmi_tx_set_source_route_bits   FUN_a008e7c0
+#define hdmi_tx_set_sync_polarity       FUN_a00945f0
+#define hdmi_tx_setup_audio             FUN_a00934c0
+#define hdmi_tx_setup_clock_path        FUN_a008e514
+#define hdmi_tx_stop_packets            FUN_a0094370
+#define sys_get_chip_revision           FUN_a008d800
+#define timer_delay_units               FUN_a00b160c
+/* Stored data. */
+#define dsc_encoder_record_height       DAT_a807954a
+#define hdmi_tx_bank4_value             DAT_a80785e8
+#define hdmi_tx_output_records          ARR_a807d580
+/* End of names. */

@@ -1,0 +1,631 @@
+# Texts of language 2, named "Français" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[31] (item 1, french)
+16e0d0.31 "{F0}lancer la fonction de protection du panneau (longue durée)."
+
+# osd_protect_long_execute_texts[2] (item 0, french)
+16e0d0.2 "{F0}Pour maintenir la qualité de l'image du panneau, appuyez sur le bouton {F7}ỷ{F0}Exécuter{F7}ı{F0} pour "
+
+# osd_protect_long_auto_texts[2] (item 0, french)
+16f25c.2 "{F0}Pour maintenir la qualité de l'image du panneau, la fonction de protection du"
+
+# osd_protect_long_title_texts[60] (item 2, french)
+16f670.60 "{F0}durée) s'active automatiquement lorsque le moniteur est utilisé plus de 1 500 heures"
+
+# osd_protect_long_title_texts[31] (item 1, french)
+16f670.31 "{F0}Pour maintenir la qualité d'image de la dalle, la fonction de protection de la dalle (longue "
+
+# osd_protect_long_title_texts[2] (item 0, french)
+16f670.2 "Entret MSI OLED - Protection de la dalle (Longue durée)"
+
+# osd_protect_long_incomplete_texts[31] (item 1, french)
+172590.31 "{F0}et cliquer sur l{F7}İ{F0}élément suivant pour lancer ce processus plus tard si nécessaire."
+
+# osd_protect_long_incomplete_texts[2] (item 0, french)
+172590.2 "{F0}Le processus de protection du panneau (longue durée) ne s'est pas terminé. Veuillez sélectionner "
+
+# osd_protect_incomplete_texts[31] (item 1, french)
+173998.31 "{F0}et cliquer sur l{F7}İ{F0}élément suivant pour lancer ce processus plus tard si nécessaire."
+
+# osd_protect_incomplete_texts[2] (item 0, french)
+173998.2 "{F0}Le processus de protection du panneau ne s'est pas terminé. Veuillez sélectionner"
+
+# osd_protect_long_incomplete_texts[60] (item 2, french)
+# osd_protect_incomplete_texts[60] (item 2, french)
+# osd_protect_execute_texts[60] (item 2, french)
+172590.60 "{F0}Remarque:"
+
+# osd_protect_execute_texts[31] (item 1, french)
+174bd0.31 "{F0}activer la fonction de protection de la dalle."
+
+# osd_protect_execute_texts[2] (item 0, french)
+174bd0.2 "{F0}Pour maintenir la qualité d'image de la dalle, appuyez sur le bouton {F7}«{F0}Exécuter{F7}»{F0} pour "
+
+# osd_protect_long_retry_texts[31] (item 1, french)
+175de4.31 "{F0}sur le bouton {F7}ỷ{F0}Exécuter{F7}ı{F0} pour lancer la fonction de protection du panneau (longue durée)."
+
+# osd_protect_long_retry_texts[2] (item 0, french)
+175de4.2 "{F0}Le processus de protection du panneau (longue durée) ne s'est pas terminé. Veuillez appuyer "
+
+# osd_protect_retry_texts[31] (item 1, french)
+177270.31 "{F7}«{F0}Exécuter{F7}»{F0} pour lancer la fonction de protection du panneau."
+
+# osd_protect_retry_texts[2] (item 0, french)
+177270.2 "{F0}Le processus de protection du panneau ne s'est pas terminé. Veuillez appuyer sur le bouton"
+
+# osd_protect_auto_texts[2] (item 0, french)
+1785c0.2 "{F0}Pour maintenir la qualité de l'image du panneau, la fonction de protection du"
+
+# osd_protect_long_auto_texts[31] (item 1, french)
+16f25c.31 "{F0}panneau (longue durée) s{F7}İ{F0}activera automatiquement."
+
+# osd_protect_auto_texts[31] (item 1, french)
+1785c0.31 "{F0}panneau s{F7}’{F0}activera automatiquement."
+
+# osd_protect_long_execute_texts[118] (item 4, french)
+# osd_protect_long_auto_texts[118] (item 4, french)
+# osd_protect_long_title_texts[147] (item 5, french)
+# osd_protect_long_incomplete_texts[118] (item 4, french)
+# osd_protect_long_retry_texts[118] (item 4, french)
+16e0d0.118 "Le voyant d'alim. clignote blanc jusqu'à ce que le processus se termine."
+
+# osd_protect_long_execute_texts[89] (item 3, french)
+# osd_protect_long_auto_texts[89] (item 3, french)
+# osd_protect_long_title_texts[118] (item 4, french)
+# osd_protect_long_incomplete_texts[89] (item 3, french)
+# osd_protect_long_retry_texts[89] (item 3, french)
+16e0d0.89 "Cette fonction de protection peut prendre une heure pour se terminer."
+
+# osd_protect_long_title_texts[321] (item 11, french)
+# osd_protect_long_retry_texts[292] (item 10, french)
+# osd_protect_retry_texts[292] (item 10, french)
+16f670.321 "est éteint ou en mode Éco énergie."
+
+# osd_protect_long_title_texts[292] (item 10, french)
+# osd_protect_long_retry_texts[263] (item 9, french)
+# osd_protect_retry_texts[263] (item 9, french)
+16f670.292 "{F0}Si vous cliquez sur le bouton {F7}«{F0}Annuler{F7}»{F0}, ce processus s'active lorsque le moniteur"
+
+# osd_protect_long_execute_texts[234] (item 8, french)
+# osd_protect_long_auto_texts[234] (item 8, french)
+# osd_protect_long_title_texts[263] (item 9, french)
+# osd_protect_long_incomplete_texts[234] (item 8, french)
+# osd_protect_incomplete_texts[234] (item 8, french)
+# osd_protect_execute_texts[234] (item 8, french)
+# ... and 4 more entries
+16e0d0.234 "pour annuler cette fonction."
+
+# osd_protect_long_execute_texts[205] (item 7, french)
+# osd_protect_long_auto_texts[205] (item 7, french)
+# osd_protect_long_title_texts[234] (item 8, french)
+# osd_protect_long_incomplete_texts[205] (item 7, french)
+# osd_protect_incomplete_texts[205] (item 7, french)
+# osd_protect_execute_texts[205] (item 7, french)
+# ... and 4 more entries
+16e0d0.205 "Durant l'exécution du processus, appuyez à nouveau sur le bouton d'alimentation"
+
+# osd_protect_long_execute_texts[176] (item 6, french)
+# osd_protect_long_auto_texts[176] (item 6, french)
+# osd_protect_long_title_texts[205] (item 7, french)
+# osd_protect_long_incomplete_texts[176] (item 6, french)
+# osd_protect_incomplete_texts[176] (item 6, french)
+# osd_protect_execute_texts[176] (item 6, french)
+# ... and 4 more entries
+16e0d0.176 "d'alimentation du moniteur."
+
+# osd_protect_long_execute_texts[147] (item 5, french)
+# osd_protect_long_auto_texts[147] (item 5, french)
+# osd_protect_long_title_texts[176] (item 6, french)
+# osd_protect_long_incomplete_texts[147] (item 5, french)
+# osd_protect_incomplete_texts[147] (item 5, french)
+# osd_protect_execute_texts[147] (item 5, french)
+# ... and 4 more entries
+16e0d0.147 "Durant l'exécution du processus, veuillez ne pas débrancher le cordon"
+
+# osd_protect_incomplete_texts[118] (item 4, french)
+# osd_protect_execute_texts[118] (item 4, french)
+# osd_protect_retry_texts[118] (item 4, french)
+# osd_protect_auto_texts[118] (item 4, french)
+# osd_protect_title_texts[147] (item 5, french)
+173998.118 "Le voyant d'alimentation clignote en orange jusqu'à la fin du processus."
+
+# osd_protect_incomplete_texts[89] (item 3, french)
+# osd_protect_execute_texts[89] (item 3, french)
+# osd_protect_retry_texts[89] (item 3, french)
+# osd_protect_auto_texts[89] (item 3, french)
+# osd_protect_title_texts[118] (item 4, french)
+173998.89 "Cette fonction de protection peut prendre plusieurs minutes pour se terminer."
+
+# osd_protect_long_execute_texts[60] (item 2, french)
+# osd_protect_long_auto_texts[60] (item 2, french)
+# osd_protect_long_title_texts[89] (item 3, french)
+# osd_protect_long_retry_texts[60] (item 2, french)
+# osd_protect_retry_texts[60] (item 2, french)
+# osd_protect_auto_texts[60] (item 2, french)
+# ... and 1 more entries
+16e0d0.60 "{F0}Remarque:"
+
+# osd_protect_title_texts[60] (item 2, french)
+179a14.60 "{F0}s'active automatiquement lorsque le moniteur est utilisé plus de 4 heures"
+
+# osd_protect_title_texts[31] (item 1, french)
+179a14.31 "{F0}Pour maintenir la qualité d'image de la dalle, la fonction de protection de la dalle "
+
+# osd_protect_title_texts[2] (item 0, french)
+179a14.2 "MSI OLED Care - Protection de la dalle"
+
+# osd_protect_retry_texts[408] (item 14, french)
+# osd_protect_title_texts[379] (item 13, french)
+177270.408 "{F0}cumulée de l'écran dépasse 24 heures."
+
+# osd_protect_retry_texts[379] (item 13, french)
+# osd_protect_title_texts[350] (item 12, french)
+177270.379 "{F0}Si vous cliquez sur {F7}«{F0} Plus tard {F7}»{F0}, l'avis ne s'affichera que lorsque la durée d'utilisation"
+
+# osd_protect_retry_texts[350] (item 12, french)
+# osd_protect_title_texts[321] (item 11, french)
+177270.350 "{F0}éteint ou en mode Économie d'énergie."
+
+# osd_protect_retry_texts[321] (item 11, french)
+# osd_protect_title_texts[292] (item 10, french)
+177270.321 "{F0}Cliquez sur {F7}«{F0} Annuler {F7}»{F0} ou {F7}«{F0} Plus tard {F7}»{F0} pour activer le processus quand l{F7}’{F0}écran est"
+
+# osd_change_notice_line3_texts[2] (item 0, french)
+180b60.2 "Veuillez sélectionner l'une des options suivantes:"
+
+# osd_change_notice_line2_texts[2] (item 0, french)
+181058.2 "consommation d'énergie de ce moniteur."
+
+# osd_change_notice_line1_texts[2] (item 0, french)
+1814d8.2 "Modifier cette fonction peut augmenter la"
+
+# osd_change_notice_title_texts[2] (item 0, french)
+1819cc.2 "Confirmer les modifications !"
+
+# table_1821d4[31] (item 1, french)
+1821d4.31 "Numérique"
+
+# table_1821d4[2] (item 0, french)
+1821d4.2 "Analogique"
+
+# osd_pbp_source_texts[31] (item 1, french)
+182534.31 "Source 2"
+
+# osd_pbp_source_texts[2] (item 0, french)
+182534.2 "Source 1"
+
+# osd_pip_item_texts[60] (item 2, french)
+1828c0.60 "Emplacement"
+
+# osd_pip_item_texts[31] (item 1, french)
+1828c0.31 "Taille PIP"
+
+# osd_pip_item_texts[2] (item 0, french)
+1828c0.2 "Source"
+
+# osd_pip_item_texts[118] (item 4, french)
+1828c0.118 "Commutateur audio"
+
+# osd_pip_item_texts[89] (item 3, french)
+1828c0.89 "Commut. d'affichage"
+
+# osd_choice_note_function_texts[118] (item 4, french)
+1832e4.118 "Taille de l'écran "
+
+# osd_choice_note_reducing_texts[147] (item 5, french)
+183cb4.147 "{F0}reçoit du contenu VRR."
+
+# osd_choice_note_reducing_texts[118] (item 4, french)
+183cb4.118 "{F0}pas lorsque l{F7}’{F0}écran"
+
+# osd_choice_note_reducing_texts[89] (item 3, french)
+183cb4.89 "{F0}La fonction ne fonctionne"
+
+# osd_choice_note_reducing_texts[60] (item 2, french)
+183cb4.60 "{F0}ou {F7}«{F0} DisplayHDR {F7}»{F0}."
+
+# osd_choice_note_reducing_texts[31] (item 1, french)
+183cb4.31 "{F0}dépend de  {F7}«{F0} Luminosité {F7}»{F0} "
+
+# osd_choice_note_reducing_texts[2] (item 0, french)
+183cb4.2 "{F0}L{F7}’{F0}effet de réduction "
+
+# osd_choice_note_texts[118] (item 4, french)
+183a70.118 "{F0}pour compléter"
+
+# osd_choice_note_texts[89] (item 3, french)
+183a70.89 "{F0}Environ une heure"
+
+# osd_choice_note_texts[60] (item 2, french)
+183a70.60 "{F0}pour se terminer"
+
+# osd_choice_note_texts[31] (item 1, french)
+183a70.31 "{F0}Prend env. 15 minutes"
+
+# osd_choice_note_texts[2] (item 0, french)
+183a70.2 "{F0}Remarque :"
+
+# osd_oled_care_item_texts[60] (item 2, french)
+185e78.60 "{F0}Avis de protection"
+
+# osd_oled_care_function_texts[147] (item 5, french)
+# osd_oled_care_item_texts[176] (item 6, french)
+185bc0.147 "{F0}Détection des contours"
+
+# osd_oled_care_function_texts[118] (item 4, french)
+# osd_oled_care_item_texts[147] (item 5, french)
+185bc0.118 "{F0}Dét. Barre des tâches"
+
+# osd_oled_care_function_texts[89] (item 3, french)
+# osd_oled_care_item_texts[118] (item 4, french)
+185bc0.89 "{F0}Détection Multi Logo"
+
+# osd_oled_care_item_texts[205] (item 7, french)
+185e78.205 "{F0}Infos sur la dalle OLED"
+
+# osd_oled_care_function_texts[60] (item 2, french)
+# osd_oled_care_item_texts[89] (item 3, french)
+185bc0.60 "{F0}Détect écr stat"
+
+# osd_oled_care_function_texts[2] (item 0, french)
+# osd_oled_care_item_texts[31] (item 1, french)
+185bc0.2 "{F0}Protection dalle"
+
+# osd_oled_care_function_texts[31] (item 1, french)
+# osd_oled_care_item_texts[2] (item 0, french)
+185bc0.31 "{F0}Décalage des pixels"
+
+# osd_choice_note_function_texts[292] (item 10, french)
+# osd_settings_item_texts[205] (item 7, french)
+1832e4.292 "{F0}Recharge PD type C"
+
+# osd_settings_item_texts[118] (item 4, french)
+1874f8.118 "Alimentation"
+
+# osd_settings_item_texts[263] (item 9, french)
+1874f8.263 "Réinitialiser"
+
+# osd_settings_item_texts[89] (item 3, french)
+1874f8.89 "RVB DEL"
+
+# osd_settings_item_texts[60] (item 2, french)
+1874f8.60 "Temporisation OSD"
+
+# osd_settings_item_texts[31] (item 1, french)
+1874f8.31 "Transparence"
+
+# osd_settings_item_texts[2] (item 0, french)
+1874f8.2 "Langue"
+
+# osd_professional_item_texts[60] (item 2, french)
+188634.60 "Amélioration de l'image"
+
+# osd_professional_item_texts[31] (item 1, french)
+188634.31 "Lumière bleue faible"
+
+# osd_professional_item_texts[2] (item 0, french)
+188634.2 "Mode Pro"
+
+# osd_night_vision_texts[89] (item 3, french)
+1890d4.89 "Le plus fort"
+
+# osd_night_vision_texts[60] (item 2, french)
+1890d4.60 "Fort"
+
+# osd_choice_note_function_texts[263] (item 9, french)
+# osd_gaming_item_texts[31] (item 1, french)
+1832e4.263 "Vision nocturne"
+
+# osd_gaming_item_texts[118] (item 4, french)
+188da0.118 "Réveil"
+
+# osd_gaming_item_texts[89] (item 3, french)
+188da0.89 "Taux de rafraîch."
+
+# osd_choice_note_function_texts[147] (item 5, french)
+1832e4.147 "Temps de réponse"
+
+# osd_gaming_item_texts[2] (item 0, french)
+188da0.2 "Mode Jeu"
+
+# osd_choice_note_function_texts[176] (item 6, french)
+# osd_gi_item_texts[60] (item 2, french)
+1832e4.176 "Optix Scope"
+
+# osd_oled_care_seconds_texts[89] (item 3, french)
+18a7ec.89 "240 Sec"
+
+# osd_oled_care_seconds_texts[60] (item 2, french)
+18a7ec.60 "120 Sec"
+
+# osd_oled_care_seconds_texts[31] (item 1, french)
+18a7ec.31 "100 Sec"
+
+# osd_oled_care_seconds_texts[2] (item 0, french)
+18a7ec.2 "50 Sec"
+
+# table_18af08[31] (item 1, french)
+# table_18b008[31] (item 1, french)
+18af08.31 "{F0}Manuellement"
+
+# osd_oled_care_usage_texts[31] (item 1, french)
+18b29c.31 "{F0}Utilisé plus de 24h"
+
+# osd_oled_care_speed_texts[60] (item 2, french)
+18b5e0.60 "{F0}Rapide"
+
+# osd_oled_care_speed_texts[2] (item 0, french)
+18b5e0.2 "{F0}Lent"
+
+# osd_oled_care_choice_texts[60] (item 2, french)
+# osd_oled_care_status_texts[60] (item 2, french)
+16df60.60 "{F0}Niveau de réduc."
+
+# osd_oled_care_status_texts[31] (item 1, french)
+18b94c.31 "{F0}Temps requis"
+
+# osd_oled_care_status_texts[2] (item 0, french)
+18b94c.2 "{F0}Démarrage à"
+
+# table_18c070[31] (item 1, french)
+18c070.31 "{F0}Longue durée"
+
+# table_18c070[2] (item 0, french)
+18c070.2 "{F0}Courte durée"
+
+# table_18c4a8[2] (item 0, french)
+18c4a8.2 "{F0}Vitesse de déplacement"
+
+# osd_image_item_texts[118] (item 4, french)
+18ca88.118 "Taille de l'écran "
+
+# osd_image_item_texts[89] (item 3, french)
+18ca88.89 "Température de couleur"
+
+# osd_image_item_texts[60] (item 2, french)
+18ca88.60 "Netteté"
+
+# osd_image_item_texts[31] (item 1, french)
+18ca88.31 "Contraste"
+
+# osd_language_texts[2] (item 0, french)
+18d3d4.2 "Français"
+
+# osd_optix_scope_item_texts[31] (item 1, french)
+18d578.31 "Ratio de plage"
+
+# osd_optix_scope_item_texts[2] (item 0, french)
+18d578.2 "Taille de plage"
+
+# osd_color_temp_texts[89] (item 3, french)
+18db28.89 "Personnalisation"
+
+# osd_color_temp_texts[60] (item 2, french)
+18db28.60 "Chaud"
+
+# osd_color_temp_texts[2] (item 0, french)
+18db28.2 "Froid"
+
+# osd_response_time_texts[60] (item 2, french)
+18e08c.60 "Le plus rapide"
+
+# osd_response_time_texts[31] (item 1, french)
+18e08c.31 "Rapide"
+
+# osd_crosshair_color_texts[31] (item 1, french)
+18e54c.31 "Rouge"
+
+# osd_crosshair_color_texts[2] (item 0, french)
+18e54c.2 "Blanc"
+
+# table_18c8b8[60] (item 2, french)
+# osd_pbp_mode_texts[60] (item 2, french)
+# osd_location_texts[118] (item 4, french)
+18c8b8.60 "Personnaliser"
+
+# osd_location_texts[89] (item 3, french)
+18e9f8.89 "En bas à droite"
+
+# osd_location_texts[60] (item 2, french)
+18e9f8.60 "En bas à gauche"
+
+# osd_location_texts[31] (item 1, french)
+18e9f8.31 "En haut à droite"
+
+# osd_location_texts[2] (item 0, french)
+18e9f8.2 "En haut à gauche"
+
+# osd_size_texts[60] (item 2, french)
+18f550.60 "Grande"
+
+# osd_size_texts[31] (item 1, french)
+18f550.31 "Moyenne"
+
+# osd_size_texts[2] (item 0, french)
+18f550.2 "Petite"
+
+# osd_crosshair_item_texts[118] (item 4, french)
+18f984.118 "Réinitialiser"
+
+# osd_crosshair_item_texts[89] (item 3, french)
+18f984.89 "Position"
+
+# osd_crosshair_item_texts[60] (item 2, french)
+18f984.60 "Couleur"
+
+# osd_crosshair_item_texts[31] (item 1, french)
+18f984.31 "{F0}Ic{F7}ô{F0}ne"
+
+# osd_crosshair_item_texts[2] (item 0, french)
+18f984.2 "Aucun"
+
+# osd_protect_button_texts[60] (item 2, french)
+190184.60 "{F0}Plus tard"
+
+# osd_protect_button_texts[31] (item 1, french)
+190184.31 "{F0}Annuler"
+
+# osd_protect_button_texts[2] (item 0, french)
+190184.2 "{F0}Exécuter"
+
+# osd_yes_no_texts[31] (item 1, french)
+190748.31 "Non"
+
+# osd_yes_no_texts[2] (item 0, french)
+190748.2 "Oui"
+
+# osd_kvm_texts[31] (item 1, french)
+1909ec.31 "Amont"
+
+# table_190cec[31] (item 1, french)
+190cec.31 "Pic 1 000 nits"
+
+# osd_navi_key_item_texts[89] (item 3, french)
+19158c.89 "Droite"
+
+# osd_navi_key_item_texts[60] (item 2, french)
+19158c.60 "Gauche"
+
+# osd_navi_key_item_texts[31] (item 1, french)
+19158c.31 "Bas"
+
+# osd_navi_key_item_texts[2] (item 0, french)
+19158c.2 "Haut"
+
+# osd_info_box_texts[176] (item 6, french)
+191b30.176 "Profondeur de bits"
+
+# osd_info_box_texts[147] (item 5, french)
+191b30.147 "Type de contenu"
+
+# osd_info_box_texts[118] (item 4, french)
+191b30.118 "Mode de sélection"
+
+# osd_info_box_texts[60] (item 2, french)
+191b30.60 "Résolution physique"
+
+# osd_info_box_texts[31] (item 1, french)
+191b30.31 "Résolution native"
+
+# osd_out_of_range_texts[2] (item 0, french)
+192d8c.2 "Hors de portée !"
+
+# osd_no_signal_texts[2] (item 0, french)
+193008.2 "Aucun signal"
+
+# osd_power_button_texts[31] (item 1, french)
+19336c.31 "Veille"
+
+# osd_navi_function_texts[292] (item 10, french)
+1935bc.292 "Optix Scope"
+
+# osd_navi_function_texts[263] (item 9, french)
+1935bc.263 "Vision nocturne"
+
+# osd_info_box_texts[89] (item 3, french)
+# osd_navi_function_texts[205] (item 7, french)
+191b30.89 "Taux de rafraîch."
+
+# osd_gi_item_texts[31] (item 1, french)
+# osd_navi_function_texts[89] (item 3, french)
+18a360.31 "{F0}Réticule intelligent"
+
+# osd_navi_function_texts[118] (item 4, french)
+1935bc.118 "Réveil"
+
+# osd_navi_function_texts[60] (item 2, french)
+1935bc.60 "Mode Jeu"
+
+# osd_choice_note_function_texts[31] (item 1, french)
+# osd_image_item_texts[2] (item 0, french)
+# osd_navi_function_texts[31] (item 1, french)
+1832e4.31 "Luminosité"
+
+# osd_settings_item_texts[147] (item 5, french)
+# table_18c8b8[89] (item 3, french)
+# osd_navi_function_texts[234] (item 8, french)
+1874f8.147 "Infos à l{F7}’{F0}écran"
+
+# osd_navi_function_texts[176] (item 6, french)
+1935bc.176 "Mode PIP/PBP"
+
+# osd_image_enhancement_texts[118] (item 4, french)
+194b34.118 "Le plus fort"
+
+# osd_image_enhancement_texts[89] (item 3, french)
+194b34.89 "Fort"
+
+# osd_image_enhancement_texts[60] (item 2, french)
+194b34.60 "Moyen"
+
+# osd_image_enhancement_texts[31] (item 1, french)
+194b34.31 "Faible"
+
+# osd_pro_mode_texts[2] (item 0, french)
+1951dc.2 "Éco"
+
+# osd_pro_mode_texts[89] (item 3, french)
+1951dc.89 "Film"
+
+# osd_pro_mode_texts[60] (item 2, french)
+1951dc.60 "Anti-bleu"
+
+# osd_pro_mode_texts[118] (item 4, french)
+1951dc.118 "Bureau"
+
+# osd_oled_care_choice_texts[31] (item 1, french)
+# osd_optix_scope_item_texts[89] (item 3, french)
+# osd_off_on_texts[31] (item 1, french)
+# table_195a38[60] (item 2, french)
+16df60.31 "MARCHE"
+
+# osd_location_texts[147] (item 5, french)
+# table_195a38[2] (item 0, french)
+# table_195c7c[2] (item 0, french)
+18e9f8.147 "Emplacement"
+
+# osd_game_mode_texts[2] (item 0, french)
+195f24.2 "{F0}Couleur Premium"
+
+# osd_pro_mode_texts[31] (item 1, french)
+# osd_game_mode_texts[31] (item 1, french)
+1951dc.31 "Utilisateur"
+
+# osd_game_mode_texts[89] (item 3, french)
+195f24.89 "Course"
+
+# osd_pbp_mode_texts[31] (item 1, french)
+18e89c.31 "Mode 2"
+
+# osd_pbp_mode_texts[2] (item 0, french)
+18e89c.2 "Mode 1"
+
+# osd_oled_care_choice_texts[2] (item 0, french)
+# osd_night_vision_texts[2] (item 0, french)
+# table_18c8b8[2] (item 0, french)
+# osd_optix_scope_item_texts[60] (item 2, french)
+# osd_off_on_texts[2] (item 0, french)
+# osd_power_button_texts[2] (item 0, french)
+# ... and 5 more entries
+16df60.2 "ARRÊT"
+
+# osd_tab_name_texts[176] (item 6, french)
+196dc0.176 "Touche Navi"
+
+# osd_tab_name_texts[205] (item 7, french)
+196dc0.205 "Setting"
+
+# osd_info_box_texts[2] (item 0, french)
+# osd_navi_function_texts[147] (item 5, french)
+# osd_tab_name_texts[118] (item 4, french)
+191b30.2 "Source d'entrée"
+
+# osd_tab_name_texts[89] (item 3, french)
+196dc0.89 "Image"
+
+# osd_tab_name_texts[60] (item 2, french)
+196dc0.60 "Professionnel"
+
+# osd_tab_name_texts[31] (item 1, french)
+196dc0.31 "Jeu"

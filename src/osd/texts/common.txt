@@ -1,0 +1,924 @@
+# Texts used by tables that are not one text per language, or by more than one language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_panel_protect_prompt_texts[4]
+16dde8.4 "After 1 mins, panel protect function will select \"Excute\" item automatically."
+
+# osd_panel_protect_prompt_texts[2]
+16dde8.2 "After 5 mins, panel protect Process will active automatically."
+
+# osd_panel_protect_prompt_texts[1]
+16dde8.1 "After 10 mins, panel protect Process will active automatically."
+
+# osd_panel_protect_prompt_texts[0]
+16dde8.0 "After 30 mins, panel protect Process will active automatically."
+
+# osd_panel_protect_prompt_texts[3]
+16dde8.3 "After 1 mins, panel protect function will select \"Cancel\" item automatically."
+
+# table_17992c[3]
+17992c.3 " automatically activate.ÀÀÀÀÀ"
+
+# table_17992c[2]
+17992c.2 " automatically activate when monitor using over 4 hours" hidden 2e
+
+# table_17992c[1]
+17992c.1 "automatically activate when monitor using over 8 hours."
+
+# table_17992c[0]
+17992c.0 "automatically activate when monitor using over 12 hours."
+
+# table_1832d8[0]
+1832d8.0 "1:1"
+
+# osd_choice_note_function_texts[87] (item 3, traditional_chinese)
+# osd_choice_note_function_texts[88] (item 3, english)
+# osd_choice_note_function_texts[89] (item 3, french)
+# osd_choice_note_function_texts[91] (item 3, italian)
+# osd_choice_note_function_texts[92] (item 3, spanish)
+# osd_choice_note_function_texts[93] (item 3, korean)
+# ... and 19 more entries
+1832e4.87 "PIP/PBP"
+
+# osd_choice_note_enabling_texts[1] (item 0, english)
+# osd_choice_note_enabling_texts[2] (item 0, french)
+# osd_choice_note_enabling_texts[3] (item 0, german)
+# osd_choice_note_enabling_texts[4] (item 0, italian)
+# osd_choice_note_enabling_texts[5] (item 0, spanish)
+# osd_choice_note_enabling_texts[8] (item 0, russian)
+# ... and 19 more entries
+185af0.1 "Enabling it will affect"
+
+# osd_choice_note_function_texts[0] (item 0, traditional_chinese)
+# osd_choice_note_function_texts[1] (item 0, english)
+# osd_choice_note_function_texts[2] (item 0, french)
+# osd_choice_note_function_texts[3] (item 0, german)
+# osd_choice_note_function_texts[4] (item 0, italian)
+# osd_choice_note_function_texts[5] (item 0, spanish)
+# ... and 23 more entries
+1832e4.0 "Adaptive-Sync"
+
+# osd_settings_item_texts[232] (item 8, traditional_chinese)
+# osd_settings_item_texts[233] (item 8, english)
+# osd_settings_item_texts[234] (item 8, french)
+# osd_settings_item_texts[235] (item 8, german)
+# osd_settings_item_texts[236] (item 8, italian)
+# osd_settings_item_texts[237] (item 8, spanish)
+# ... and 23 more entries
+1874f8.232 "Power LED"
+
+# osd_choice_note_function_texts[203] (item 7, traditional_chinese)
+# osd_choice_note_function_texts[204] (item 7, english)
+# osd_choice_note_function_texts[205] (item 7, french)
+# osd_choice_note_function_texts[206] (item 7, german)
+# osd_choice_note_function_texts[207] (item 7, italian)
+# osd_choice_note_function_texts[208] (item 7, spanish)
+# ... and 52 more entries
+1832e4.203 "HDMI CEC"
+
+# osd_settings_item_texts[108] (item 3, dutch)
+# osd_settings_item_texts[109] (item 3, finnish)
+# osd_settings_item_texts[110] (item 3, norwegian)
+1874f8.108 "RGB-LED"
+
+# osd_settings_item_texts[87] (item 3, traditional_chinese)
+# osd_settings_item_texts[88] (item 3, english)
+# osd_settings_item_texts[90] (item 3, german)
+# osd_settings_item_texts[91] (item 3, italian)
+# osd_settings_item_texts[92] (item 3, spanish)
+# osd_settings_item_texts[93] (item 3, korean)
+# ... and 14 more entries
+1874f8.87 "RGB LED" hidden 0b 5a 64 72 6f 6a 20 7a 76 75 6b 75
+
+# osd_choice_note_function_texts[319] (item 11, traditional_chinese)
+# osd_choice_note_function_texts[320] (item 11, english)
+# osd_choice_note_function_texts[321] (item 11, french)
+# osd_choice_note_function_texts[322] (item 11, german)
+# osd_choice_note_function_texts[323] (item 11, italian)
+# osd_choice_note_function_texts[324] (item 11, spanish)
+# ... and 52 more entries
+1832e4.319 "DSC"
+
+# osd_night_vision_texts[116] (item 4, traditional_chinese)
+# osd_night_vision_texts[117] (item 4, english)
+# osd_night_vision_texts[118] (item 4, french)
+# osd_night_vision_texts[119] (item 4, german)
+# osd_night_vision_texts[120] (item 4, italian)
+# osd_night_vision_texts[121] (item 4, spanish)
+# ... and 23 more entries
+1890d4.116 "{F0}A. I."
+
+# osd_gaming_item_texts[58] (item 2, traditional_chinese)
+# osd_gaming_item_texts[59] (item 2, english)
+# osd_gaming_item_texts[60] (item 2, french)
+# osd_gaming_item_texts[61] (item 2, german)
+# osd_gaming_item_texts[62] (item 2, italian)
+# osd_gaming_item_texts[63] (item 2, spanish)
+# ... and 23 more entries
+188da0.58 "AI Vision"
+
+# osd_night_vision_texts[30] (item 1, english)
+# osd_night_vision_texts[31] (item 1, french)
+# osd_night_vision_texts[32] (item 1, german)
+# osd_night_vision_texts[34] (item 1, spanish)
+# osd_night_vision_texts[38] (item 1, portuguese)
+1890d4.30 "Normal"
+
+# osd_gaming_item_texts[145] (item 5, traditional_chinese)
+# osd_gaming_item_texts[146] (item 5, english)
+# osd_gaming_item_texts[147] (item 5, french)
+# osd_gaming_item_texts[148] (item 5, german)
+# osd_gaming_item_texts[149] (item 5, italian)
+# osd_gaming_item_texts[150] (item 5, spanish)
+# ... and 23 more entries
+188da0.145 "Adaptive-Sync"
+
+# osd_choice_note_function_texts[58] (item 2, traditional_chinese)
+# osd_choice_note_function_texts[59] (item 2, english)
+# osd_choice_note_function_texts[60] (item 2, french)
+# osd_choice_note_function_texts[61] (item 2, german)
+# osd_choice_note_function_texts[62] (item 2, italian)
+# osd_choice_note_function_texts[63] (item 2, spanish)
+# ... and 23 more entries
+1832e4.58 "HDCR"
+
+# osd_gi_item_texts[0] (item 0, traditional_chinese)
+# osd_gi_item_texts[1] (item 0, english)
+# osd_gi_item_texts[2] (item 0, french)
+# osd_gi_item_texts[3] (item 0, german)
+# osd_gi_item_texts[4] (item 0, italian)
+# osd_gi_item_texts[5] (item 0, spanish)
+# ... and 23 more entries
+18a360.0 "KVM"
+
+# osd_status_header_texts[1]
+18a6ac.1 "HDR"
+
+# osd_status_header_texts[0]
+18a6ac.0 "HDR ON"
+
+# osd_rgb_brightness_level_texts[4]
+18a758.4 "100%"
+
+# osd_rgb_brightness_level_texts[3]
+18a758.3 "80%"
+
+# osd_rgb_brightness_level_texts[2]
+18a758.2 "60%"
+
+# osd_rgb_brightness_level_texts[1]
+18a758.1 "40%"
+
+# osd_rgb_brightness_level_texts[0]
+18a758.0 "20%"
+
+# osd_oled_care_level_texts[7]
+18a794.7 "95%"
+
+# osd_oled_care_level_texts[6]
+18a794.6 "90%"
+
+# osd_oled_care_level_texts[5]
+18a794.5 "85%"
+
+# osd_oled_care_level_texts[4]
+18a794.4 "80%"
+
+# osd_oled_care_level_texts[3]
+18a794.3 "75%"
+
+# osd_oled_care_level_texts[2]
+18a794.2 "70%"
+
+# osd_oled_care_level_texts[1]
+18a794.1 "65%"
+
+# table_18af08[0] (item 0, traditional_chinese)
+# table_18af08[1] (item 0, english)
+# table_18af08[2] (item 0, french)
+# table_18af08[3] (item 0, german)
+# table_18af08[4] (item 0, italian)
+# table_18af08[5] (item 0, spanish)
+# ... and 23 more entries
+18af08.0 "Auto ( > 1.5K hours)"
+
+# table_18b008[0] (item 0, traditional_chinese)
+# table_18b008[1] (item 0, english)
+# table_18b008[2] (item 0, french)
+# table_18b008[3] (item 0, german)
+# table_18b008[4] (item 0, italian)
+# table_18b008[5] (item 0, spanish)
+# ... and 23 more entries
+18b008.0 "Auto ( > 4 hours)"
+
+# osd_choice_note_function_texts[232] (item 8, traditional_chinese)
+# osd_choice_note_function_texts[233] (item 8, english)
+# osd_choice_note_function_texts[234] (item 8, french)
+# osd_choice_note_function_texts[235] (item 8, german)
+# osd_choice_note_function_texts[236] (item 8, italian)
+# osd_choice_note_function_texts[237] (item 8, spanish)
+# ... and 52 more entries
+1832e4.232 "DisplayHDR"
+
+# osd_oled_care_speed_texts[30] (item 1, english)
+# osd_oled_care_speed_texts[31] (item 1, french)
+# osd_oled_care_speed_texts[32] (item 1, german)
+# osd_oled_care_speed_texts[34] (item 1, spanish)
+# osd_oled_care_speed_texts[38] (item 1, portuguese)
+# osd_color_temp_texts[30] (item 1, english)
+# ... and 9 more entries
+18b5e0.30 "Normal"
+
+# table_18f52c[2]
+18f52c.2 "x3"
+
+# table_18f52c[1]
+18f52c.1 "x2"
+
+# table_18f52c[0]
+18f52c.0 "x1.5"
+
+# osd_protect_button_texts[87] (item 3, traditional_chinese)
+# osd_protect_button_texts[88] (item 3, english)
+# osd_protect_button_texts[89] (item 3, french)
+# osd_protect_button_texts[90] (item 3, german)
+# osd_protect_button_texts[91] (item 3, italian)
+# osd_protect_button_texts[92] (item 3, spanish)
+# ... and 23 more entries
+190184.87 "More Info"
+
+# osd_yes_no_texts[30] (item 1, english)
+# osd_yes_no_texts[33] (item 1, italian)
+# osd_yes_no_texts[34] (item 1, spanish)
+190748.30 "No"
+
+# osd_kvm_texts[58] (item 2, traditional_chinese)
+# osd_kvm_texts[59] (item 2, english)
+# osd_kvm_texts[60] (item 2, french)
+# osd_kvm_texts[61] (item 2, german)
+# osd_kvm_texts[62] (item 2, italian)
+# osd_kvm_texts[63] (item 2, spanish)
+# ... and 23 more entries
+1909ec.58 "Type C"
+
+# table_190cec[58] (item 2, traditional_chinese)
+# table_190cec[59] (item 2, english)
+# table_190cec[60] (item 2, french)
+# table_190cec[61] (item 2, german)
+# table_190cec[62] (item 2, italian)
+# table_190cec[63] (item 2, spanish)
+# ... and 23 more entries
+190cec.58 "EOTF Boost"
+
+# table_190cec[0] (item 0, traditional_chinese)
+# table_190cec[1] (item 0, english)
+# table_190cec[2] (item 0, french)
+# table_190cec[3] (item 0, german)
+# table_190cec[4] (item 0, italian)
+# table_190cec[5] (item 0, spanish)
+# ... and 23 more entries
+190cec.0 "True Black 400"
+
+# osd_screen_size_texts[87]
+# osd_screen_size_texts[88]
+# osd_screen_size_texts[89]
+# osd_screen_size_texts[90]
+# osd_screen_size_texts[91]
+# osd_screen_size_texts[92]
+# ... and 24 more entries
+1910b0.87 "16:10"
+
+# osd_oled_care_usage_texts[28] (item 0, slovak)
+# table_18c8b8[57] (item 1, slovak)
+# osd_crosshair_color_texts[86] (item 2, slovak)
+# osd_kvm_texts[28] (item 0, slovak)
+# osd_screen_size_texts[28]
+18b29c.28 "Automaticky"
+
+# osd_oled_care_usage_texts[27] (item 0, hungarian)
+# table_18c8b8[56] (item 1, hungarian)
+# osd_crosshair_color_texts[85] (item 2, hungarian)
+# osd_kvm_texts[27] (item 0, hungarian)
+# osd_screen_size_texts[27]
+18b29c.27 "Automatikus"
+
+# osd_oled_care_usage_texts[26] (item 0, czech)
+# table_18c8b8[55] (item 1, czech)
+# osd_crosshair_color_texts[84] (item 2, czech)
+# osd_kvm_texts[26] (item 0, czech)
+# osd_screen_size_texts[26]
+18b29c.26 "Automaticky"
+
+# osd_oled_care_usage_texts[25] (item 0, swedish)
+# table_18c8b8[54] (item 1, swedish)
+# osd_crosshair_color_texts[83] (item 2, swedish)
+# osd_kvm_texts[25] (item 0, swedish)
+# osd_screen_size_texts[25]
+18b29c.25 "Auto"
+
+# osd_oled_care_usage_texts[24] (item 0, polish)
+# table_18c8b8[53] (item 1, polish)
+# osd_crosshair_color_texts[82] (item 2, polish)
+# osd_kvm_texts[24] (item 0, polish)
+# osd_screen_size_texts[24]
+18b29c.24 "Automat."
+
+# osd_oled_care_usage_texts[23] (item 0, norwegian)
+# table_18c8b8[52] (item 1, norwegian)
+# osd_crosshair_color_texts[81] (item 2, norwegian)
+# osd_kvm_texts[23] (item 0, norwegian)
+# osd_screen_size_texts[23]
+18b29c.23 "Automatisk"
+
+# osd_oled_care_usage_texts[22] (item 0, finnish)
+# table_18c8b8[51] (item 1, finnish)
+# osd_crosshair_color_texts[80] (item 2, finnish)
+# osd_kvm_texts[22] (item 0, finnish)
+# osd_screen_size_texts[22]
+18b29c.22 "Automaattinen"
+
+# osd_oled_care_usage_texts[21] (item 0, dutch)
+# table_18c8b8[50] (item 1, dutch)
+# osd_crosshair_color_texts[79] (item 2, dutch)
+# osd_kvm_texts[21] (item 0, dutch)
+# osd_screen_size_texts[21]
+18b29c.21 "Automatisch"
+
+# osd_oled_care_usage_texts[20] (item 0, danish)
+# table_18c8b8[49] (item 1, danish)
+# osd_crosshair_color_texts[78] (item 2, danish)
+# osd_kvm_texts[20] (item 0, danish)
+# osd_screen_size_texts[20]
+18b29c.20 "Automatisk"
+
+# osd_oled_care_usage_texts[19] (item 0, arabic)
+# table_18c8b8[48] (item 1, arabic)
+# osd_crosshair_color_texts[77] (item 2, arabic)
+# osd_kvm_texts[19] (item 0, arabic)
+# osd_screen_size_texts[19]
+18b29c.19 "{FA}{3C}{80}{1A}{15}{45}{2E}"
+
+# osd_oled_care_usage_texts[18] (item 0, bengali)
+# table_18c8b8[47] (item 1, bengali)
+# osd_crosshair_color_texts[76] (item 2, bengali)
+# osd_kvm_texts[18] (item 0, bengali)
+# osd_screen_size_texts[18]
+18b29c.18 "{F9}{23}{67}"
+
+# osd_oled_care_usage_texts[17] (item 0, hebrew)
+# table_18c8b8[46] (item 1, hebrew)
+# osd_crosshair_color_texts[75] (item 2, hebrew)
+# osd_kvm_texts[17] (item 0, hebrew)
+# osd_screen_size_texts[17]
+18b29c.17 "{F8}יטמוטוא"
+
+# osd_oled_care_usage_texts[16] (item 0, vietnamese)
+# table_18c8b8[45] (item 1, vietnamese)
+# osd_crosshair_color_texts[74] (item 2, vietnamese)
+# osd_kvm_texts[16] (item 0, vietnamese)
+# osd_screen_size_texts[16]
+18b29c.16 "{F7}T{62} động"
+
+# osd_oled_care_usage_texts[15] (item 0, persian)
+# table_18c8b8[44] (item 1, persian)
+# osd_crosshair_color_texts[73] (item 2, persian)
+# osd_kvm_texts[15] (item 0, persian)
+# osd_screen_size_texts[15]
+18b29c.15 "{FA}{0C}{1A}{2A}{1C}{0D}{10}"
+
+# osd_oled_care_usage_texts[14] (item 0, turkish)
+# table_18c8b8[43] (item 1, turkish)
+# osd_crosshair_color_texts[72] (item 2, turkish)
+# osd_kvm_texts[14] (item 0, turkish)
+# osd_screen_size_texts[14]
+18b29c.14 "Oto"
+
+# osd_oled_care_usage_texts[13] (item 0, hindi)
+# table_18c8b8[42] (item 1, hindi)
+# osd_crosshair_color_texts[71] (item 2, hindi)
+# osd_kvm_texts[13] (item 0, hindi)
+# osd_screen_size_texts[13]
+18b29c.13 "{F6}{97}{BF}"
+
+# osd_oled_care_usage_texts[12] (item 0, indonesian)
+# table_18c8b8[41] (item 1, indonesian)
+# osd_crosshair_color_texts[70] (item 2, indonesian)
+# osd_kvm_texts[12] (item 0, indonesian)
+# osd_screen_size_texts[12]
+18b29c.12 "Otomatis"
+
+# osd_oled_care_usage_texts[11] (item 0, thai)
+# table_18c8b8[40] (item 1, thai)
+# osd_crosshair_color_texts[69] (item 2, thai)
+# osd_kvm_texts[11] (item 0, thai)
+# osd_screen_size_texts[11]
+18b29c.11 "{F5}{33}{1E}{22}{2A}{73}{57}"
+
+# osd_oled_care_usage_texts[10] (item 0, simplified_chinese)
+# table_18c8b8[39] (item 1, simplified_chinese)
+# osd_crosshair_color_texts[68] (item 2, simplified_chinese)
+# osd_kvm_texts[10] (item 0, simplified_chinese)
+# osd_screen_size_texts[10]
+18b29c.10 "{F3}自动"
+
+# osd_oled_care_usage_texts[9] (item 0, portuguese)
+# table_18c8b8[38] (item 1, portuguese)
+# osd_crosshair_color_texts[67] (item 2, portuguese)
+# osd_kvm_texts[9] (item 0, portuguese)
+# osd_screen_size_texts[9]
+18b29c.9 "Automático"
+
+# osd_oled_care_usage_texts[8] (item 0, russian)
+# table_18c8b8[37] (item 1, russian)
+# osd_crosshair_color_texts[66] (item 2, russian)
+# osd_kvm_texts[8] (item 0, russian)
+# osd_screen_size_texts[8]
+18b29c.8 "Авто"
+
+# osd_oled_care_usage_texts[7] (item 0, japanese)
+# table_18c8b8[36] (item 1, japanese)
+# osd_crosshair_color_texts[65] (item 2, japanese)
+# osd_kvm_texts[7] (item 0, japanese)
+# osd_screen_size_texts[7]
+18b29c.7 "{F1}自動"
+
+# osd_oled_care_usage_texts[6] (item 0, korean)
+# table_18c8b8[35] (item 1, korean)
+# osd_crosshair_color_texts[64] (item 2, korean)
+# osd_kvm_texts[6] (item 0, korean)
+# osd_screen_size_texts[6]
+18b29c.6 "{F2}자동"
+
+# osd_oled_care_usage_texts[5] (item 0, spanish)
+# table_18c8b8[34] (item 1, spanish)
+# osd_crosshair_color_texts[63] (item 2, spanish)
+# osd_kvm_texts[5] (item 0, spanish)
+# osd_screen_size_texts[5]
+18b29c.5 "Automático"
+
+# osd_oled_care_usage_texts[4] (item 0, italian)
+# table_18c8b8[33] (item 1, italian)
+# osd_crosshair_color_texts[62] (item 2, italian)
+# osd_kvm_texts[4] (item 0, italian)
+# osd_screen_size_texts[4]
+18b29c.4 "Automatico"
+
+# osd_oled_care_usage_texts[3] (item 0, german)
+# table_18c8b8[32] (item 1, german)
+# osd_crosshair_color_texts[61] (item 2, german)
+# osd_kvm_texts[3] (item 0, german)
+# osd_screen_size_texts[3]
+18b29c.3 "Auto"
+
+# osd_oled_care_usage_texts[2] (item 0, french)
+# table_18c8b8[31] (item 1, french)
+# osd_crosshair_color_texts[60] (item 2, french)
+# osd_kvm_texts[2] (item 0, french)
+# osd_screen_size_texts[2]
+18b29c.2 "Auto"
+
+# osd_oled_care_usage_texts[1] (item 0, english)
+# table_18c8b8[30] (item 1, english)
+# osd_crosshair_color_texts[59] (item 2, english)
+# osd_kvm_texts[1] (item 0, english)
+# osd_screen_size_texts[1]
+18b29c.1 "Auto"
+
+# osd_oled_care_usage_texts[0] (item 0, traditional_chinese)
+# table_18c8b8[29] (item 1, traditional_chinese)
+# osd_crosshair_color_texts[58] (item 2, traditional_chinese)
+# osd_kvm_texts[0] (item 0, traditional_chinese)
+# osd_screen_size_texts[0]
+18b29c.0 "{F4}自動"
+
+# osd_screen_size_texts[174]
+# osd_screen_size_texts[175]
+# osd_screen_size_texts[176]
+# osd_screen_size_texts[177]
+# osd_screen_size_texts[178]
+# osd_screen_size_texts[179]
+# ... and 23 more entries
+1910b0.174 "27\""
+
+# osd_screen_size_texts[145]
+# osd_screen_size_texts[146]
+# osd_screen_size_texts[147]
+# osd_screen_size_texts[148]
+# osd_screen_size_texts[149]
+# osd_screen_size_texts[150]
+# ... and 23 more entries
+1910b0.145 "24.5\""
+
+# osd_screen_size_texts[116]
+# osd_screen_size_texts[117]
+# osd_screen_size_texts[118]
+# osd_screen_size_texts[119]
+# osd_screen_size_texts[120]
+# osd_screen_size_texts[121]
+# ... and 23 more entries
+1910b0.116 "1:1"
+
+# osd_screen_size_texts[29]
+# osd_screen_size_texts[30]
+# osd_screen_size_texts[31]
+# osd_screen_size_texts[32]
+# osd_screen_size_texts[33]
+# osd_screen_size_texts[34]
+# ... and 23 more entries
+1910b0.29 "4:3"
+
+# osd_screen_size_texts[58]
+# osd_screen_size_texts[59]
+# osd_screen_size_texts[60]
+# osd_screen_size_texts[61]
+# osd_screen_size_texts[62]
+# osd_screen_size_texts[63]
+# ... and 23 more entries
+1910b0.58 "16:9"
+
+# osd_cec_console_texts[2]
+192860.2 "Xbox"
+
+# osd_cec_console_texts[1]
+192860.1 "Nintendo Switch"
+
+# osd_cec_console_texts[0]
+192860.0 "PlayStation"
+
+# table_192894[1]
+192894.1 "HDR"
+
+# table_192894[0]
+192894.0 "HDR ON"
+
+# osd_key_guide_texts[204] (item 7, english)
+# osd_key_guide_texts[205] (item 7, french)
+# osd_key_guide_texts[206] (item 7, german)
+# osd_key_guide_texts[207] (item 7, italian)
+# osd_key_guide_texts[208] (item 7, spanish)
+# osd_key_guide_texts[211] (item 7, russian)
+# ... and 19 more entries
+1928b0.204 "Back"
+
+# osd_key_guide_texts[175] (item 6, english)
+# osd_key_guide_texts[176] (item 6, french)
+# osd_key_guide_texts[177] (item 6, german)
+# osd_key_guide_texts[178] (item 6, italian)
+# osd_key_guide_texts[179] (item 6, spanish)
+# osd_key_guide_texts[182] (item 6, russian)
+# ... and 19 more entries
+1928b0.175 "Exit"
+
+# osd_key_guide_texts[146] (item 5, english)
+# osd_key_guide_texts[147] (item 5, french)
+# osd_key_guide_texts[148] (item 5, german)
+# osd_key_guide_texts[149] (item 5, italian)
+# osd_key_guide_texts[150] (item 5, spanish)
+# osd_key_guide_texts[153] (item 5, russian)
+# ... and 19 more entries
+1928b0.146 "Save"
+
+# osd_key_guide_texts[117] (item 4, english)
+# osd_key_guide_texts[118] (item 4, french)
+# osd_key_guide_texts[119] (item 4, german)
+# osd_key_guide_texts[120] (item 4, italian)
+# osd_key_guide_texts[121] (item 4, spanish)
+# osd_key_guide_texts[124] (item 4, russian)
+# ... and 19 more entries
+1928b0.117 "Select"
+
+# osd_key_guide_texts[88] (item 3, english)
+# osd_key_guide_texts[89] (item 3, french)
+# osd_key_guide_texts[90] (item 3, german)
+# osd_key_guide_texts[91] (item 3, italian)
+# osd_key_guide_texts[92] (item 3, spanish)
+# osd_key_guide_texts[95] (item 3, russian)
+# ... and 19 more entries
+1928b0.88 "Adjust"
+
+# osd_key_guide_texts[59] (item 2, english)
+# osd_key_guide_texts[60] (item 2, french)
+# osd_key_guide_texts[61] (item 2, german)
+# osd_key_guide_texts[62] (item 2, italian)
+# osd_key_guide_texts[63] (item 2, spanish)
+# osd_key_guide_texts[66] (item 2, russian)
+# ... and 19 more entries
+1928b0.59 "Switch"
+
+# osd_key_guide_texts[30] (item 1, english)
+# osd_key_guide_texts[31] (item 1, french)
+# osd_key_guide_texts[32] (item 1, german)
+# osd_key_guide_texts[33] (item 1, italian)
+# osd_key_guide_texts[34] (item 1, spanish)
+# osd_key_guide_texts[37] (item 1, russian)
+# ... and 19 more entries
+1928b0.30 "Enter"
+
+# osd_key_guide_texts[1] (item 0, english)
+# osd_key_guide_texts[2] (item 0, french)
+# osd_key_guide_texts[3] (item 0, german)
+# osd_key_guide_texts[4] (item 0, italian)
+# osd_key_guide_texts[5] (item 0, spanish)
+# osd_key_guide_texts[8] (item 0, russian)
+# ... and 19 more entries
+1928b0.1 "Move"
+
+# osd_rgb_led_texts[1]
+193330.1 "RGB Brightness"
+
+# osd_rgb_led_texts[0]
+193330.0 "MSI - Mystic Light"
+
+# osd_navi_function_texts[319] (item 11, traditional_chinese)
+# osd_navi_function_texts[320] (item 11, english)
+# osd_navi_function_texts[321] (item 11, french)
+# osd_navi_function_texts[322] (item 11, german)
+# osd_navi_function_texts[323] (item 11, italian)
+# osd_navi_function_texts[324] (item 11, spanish)
+# ... and 23 more entries
+1935bc.319 "KVM"
+
+# osd_pro_mode_texts[1] (item 0, english)
+# osd_pro_mode_texts[4] (item 0, italian)
+# osd_pro_mode_texts[5] (item 0, spanish)
+# osd_pro_mode_texts[9] (item 0, portuguese)
+# osd_pro_mode_texts[18] (item 0, bengali)
+# osd_pro_mode_texts[19] (item 0, arabic)
+# ... and 9 more entries
+1951dc.1 "Eco"
+
+# osd_pro_mode_texts[203] (item 7, traditional_chinese)
+# osd_pro_mode_texts[204] (item 7, english)
+# osd_pro_mode_texts[205] (item 7, french)
+# osd_pro_mode_texts[206] (item 7, german)
+# osd_pro_mode_texts[207] (item 7, italian)
+# osd_pro_mode_texts[208] (item 7, spanish)
+# ... and 23 more entries
+1951dc.203 "Display P3"
+
+# osd_pro_mode_texts[174] (item 6, traditional_chinese)
+# osd_pro_mode_texts[175] (item 6, english)
+# osd_pro_mode_texts[176] (item 6, french)
+# osd_pro_mode_texts[177] (item 6, german)
+# osd_pro_mode_texts[178] (item 6, italian)
+# osd_pro_mode_texts[179] (item 6, spanish)
+# ... and 23 more entries
+1951dc.174 "Adobe RGB"
+
+# osd_pro_mode_texts[145] (item 5, traditional_chinese)
+# osd_pro_mode_texts[146] (item 5, english)
+# osd_pro_mode_texts[147] (item 5, french)
+# osd_pro_mode_texts[148] (item 5, german)
+# osd_pro_mode_texts[149] (item 5, italian)
+# osd_pro_mode_texts[150] (item 5, spanish)
+# ... and 23 more entries
+1951dc.145 "sRGB"
+
+# table_195c7c[58] (item 2, traditional_chinese)
+# table_195c7c[59] (item 2, english)
+# table_195c7c[60] (item 2, french)
+# table_195c7c[61] (item 2, german)
+# table_195c7c[62] (item 2, italian)
+# table_195c7c[63] (item 2, spanish)
+# ... and 23 more entries
+195c7c.58 "OK"
+
+# osd_game_mode_texts[58] (item 2, traditional_chinese)
+# osd_game_mode_texts[59] (item 2, english)
+# osd_game_mode_texts[60] (item 2, french)
+# osd_game_mode_texts[62] (item 2, italian)
+# osd_game_mode_texts[63] (item 2, spanish)
+# osd_game_mode_texts[64] (item 2, korean)
+# ... and 21 more entries
+195f24.58 "FPS"
+
+# osd_game_mode_texts[145] (item 5, traditional_chinese)
+# osd_game_mode_texts[146] (item 5, english)
+# osd_game_mode_texts[147] (item 5, french)
+# osd_game_mode_texts[148] (item 5, german)
+# osd_game_mode_texts[149] (item 5, italian)
+# osd_game_mode_texts[150] (item 5, spanish)
+# ... and 22 more entries
+195f24.145 "RPG"
+
+# osd_game_mode_texts[116] (item 4, traditional_chinese)
+# osd_game_mode_texts[117] (item 4, english)
+# osd_game_mode_texts[118] (item 4, french)
+# osd_game_mode_texts[119] (item 4, german)
+# osd_game_mode_texts[120] (item 4, italian)
+# osd_game_mode_texts[121] (item 4, spanish)
+# ... and 22 more entries
+195f24.116 "RTS"
+
+# table_196654[1]
+196654.1 "Customize"
+
+# table_196654[0]
+196654.0 "Default"
+
+# osd_pip_pbp_texts[58] (item 2, traditional_chinese)
+# osd_pip_pbp_texts[59] (item 2, english)
+# osd_pip_pbp_texts[60] (item 2, french)
+# osd_pip_pbp_texts[62] (item 2, italian)
+# osd_pip_pbp_texts[63] (item 2, spanish)
+# osd_pip_pbp_texts[64] (item 2, korean)
+# ... and 21 more entries
+196678.58 "PBP"
+
+# osd_pip_pbp_texts[29] (item 1, traditional_chinese)
+# osd_pip_pbp_texts[30] (item 1, english)
+# osd_pip_pbp_texts[31] (item 1, french)
+# osd_pip_pbp_texts[33] (item 1, italian)
+# osd_pip_pbp_texts[34] (item 1, spanish)
+# osd_pip_pbp_texts[35] (item 1, korean)
+# ... and 19 more entries
+196678.29 "PIP"
+
+# osd_oled_care_choice_texts[1] (item 0, english)
+# osd_night_vision_texts[1] (item 0, english)
+# osd_oled_care_level_texts[0]
+# table_18c8b8[1] (item 0, english)
+# osd_optix_scope_item_texts[59] (item 2, english)
+# osd_off_on_texts[1] (item 0, english)
+# ... and 6 more entries
+16df60.1 "OFF"
+
+# osd_input_name_texts[32]
+196b24.32 "Automatické skenovanie"
+
+# osd_input_name_texts[31]
+196b24.31 "Auto. Keresés"
+
+# osd_input_name_texts[30]
+196b24.30 "Automatické hledání"
+
+# osd_input_name_texts[29]
+196b24.29 "Automatisk sökning"
+
+# osd_input_name_texts[28]
+196b24.28 "Autoskanowanie"
+
+# osd_input_name_texts[27]
+196b24.27 "Auto-skanning"
+
+# osd_input_name_texts[26]
+196b24.26 "Automaattinen haku"
+
+# osd_input_name_texts[25]
+196b24.25 "Automatisch scannen"
+
+# osd_input_name_texts[24]
+196b24.24 "Auto-scan"
+
+# osd_input_name_texts[23]
+196b24.23 "{FA}{3C}{80}{1A}{15}{1A}{17}{3B}{06} {99}{22}{30}{3B}{06}"
+
+# osd_input_name_texts[22]
+196b24.22 "{F9}{43}{22}{03}{83}{22} {43}{18}{02}{0F}"
+
+# osd_input_name_texts[21]
+196b24.21 "{F8}תיטמוטוא הקירס"
+
+# osd_input_name_texts[20]
+196b24.20 "{F7}T{62} động {F0}q{F7}ué{6A}"
+
+# osd_input_name_texts[19]
+196b24.19 "{FA}{0C}{1A}{2A}{1C}{0D}{10} {2F}{31}{22}{06}"
+
+# osd_input_name_texts[18]
+196b24.18 "Otomatik Tara"
+
+# osd_input_name_texts[17]
+196b24.17 "{F6}{97}{14}{F0}:{F6} {3A}{C0}{02}"
+
+# osd_input_name_texts[16]
+196b24.16 "Pindai Otomatis"
+
+# osd_input_name_texts[15]
+196b24.15 "{F5}{12}{0F}{04}{2A}{33}{1E}{22}{2A}{73}{57}"
+
+# osd_input_name_texts[14]
+196b24.14 "{F3}自动扫描"
+
+# osd_input_name_texts[13]
+196b24.13 "Análise automática"
+
+# osd_input_name_texts[12]
+196b24.12 "Автопоиск"
+
+# osd_input_name_texts[11]
+196b24.11 "{F1}自動スキャン"
+
+# osd_input_name_texts[10]
+196b24.10 "{F2}자동{F0} {F2}스캔"
+
+# osd_input_name_texts[9]
+196b24.9 "Exploración automática"
+
+# osd_input_name_texts[8]
+196b24.8 "Scansione automatica"
+
+# osd_input_name_texts[7]
+196b24.7 "Auto-Scan"
+
+# osd_input_name_texts[6]
+196b24.6 "Balayage auto"
+
+# osd_input_name_texts[5]
+196b24.5 "Auto Scan"
+
+# osd_input_name_texts[4]
+196b24.4 "{F4}自動掃描"
+
+# osd_input_name_texts[3]
+196b24.3 "Type C"
+
+# osd_input_name_texts[2]
+196b24.2 "DP"
+
+# osd_input_name_texts[1]
+196b24.1 "HDMI 2"
+
+# osd_input_name_texts[0]
+196b24.0 "HDMI 1"
+
+# osd_tab_name_texts[232] (item 8, traditional_chinese)
+# osd_tab_name_texts[233] (item 8, english)
+# osd_tab_name_texts[234] (item 8, french)
+# osd_tab_name_texts[235] (item 8, german)
+# osd_tab_name_texts[236] (item 8, italian)
+# osd_tab_name_texts[237] (item 8, spanish)
+# ... and 23 more entries
+196dc0.232 "MSI OLED Care"
+
+# osd_tab_name_texts[145] (item 5, traditional_chinese)
+# osd_tab_name_texts[146] (item 5, english)
+# osd_tab_name_texts[147] (item 5, french)
+# osd_tab_name_texts[149] (item 5, italian)
+# osd_tab_name_texts[150] (item 5, spanish)
+# osd_tab_name_texts[151] (item 5, korean)
+# ... and 19 more entries
+196dc0.145 "PIP/PBP"
+
+# osd_tab_name_texts[0] (item 0, traditional_chinese)
+# osd_tab_name_texts[1] (item 0, english)
+# osd_tab_name_texts[2] (item 0, french)
+# osd_tab_name_texts[3] (item 0, german)
+# osd_tab_name_texts[4] (item 0, italian)
+# osd_tab_name_texts[5] (item 0, spanish)
+# ... and 22 more entries
+196dc0.0 "G.I."
+
+# osd_color_gain_label_texts[58] (item 2, traditional_chinese)
+# osd_color_gain_label_texts[59] (item 2, english)
+# osd_color_gain_label_texts[60] (item 2, french)
+# osd_color_gain_label_texts[61] (item 2, german)
+# osd_color_gain_label_texts[62] (item 2, italian)
+# osd_color_gain_label_texts[63] (item 2, spanish)
+# ... and 23 more entries
+197d08.58 "B"
+
+# osd_color_gain_label_texts[29] (item 1, traditional_chinese)
+# osd_color_gain_label_texts[30] (item 1, english)
+# osd_color_gain_label_texts[31] (item 1, french)
+# osd_color_gain_label_texts[32] (item 1, german)
+# osd_color_gain_label_texts[33] (item 1, italian)
+# osd_color_gain_label_texts[34] (item 1, spanish)
+# ... and 23 more entries
+197d08.29 "G"
+
+# osd_color_gain_label_texts[0] (item 0, traditional_chinese)
+# osd_color_gain_label_texts[1] (item 0, english)
+# osd_color_gain_label_texts[2] (item 0, french)
+# osd_color_gain_label_texts[3] (item 0, german)
+# osd_color_gain_label_texts[4] (item 0, italian)
+# osd_color_gain_label_texts[5] (item 0, spanish)
+# ... and 23 more entries
+197d08.0 "R"
+
+# osd_symbol_texts[8]
+197ee4.8 "F"
+
+# osd_symbol_texts[7]
+197ee4.7 "%"
+
+# osd_symbol_texts[6]
+197ee4.6 ":"
+
+# osd_symbol_texts[2]
+197ee4.2 "5"
+
+# osd_symbol_texts[5]
+197ee4.5 "100"
+
+# osd_symbol_texts[4]
+197ee4.4 "30"
+
+# osd_symbol_texts[3]
+197ee4.3 "20"
+
+# osd_symbol_texts[1]
+197ee4.1 "1"
+
+# osd_symbol_texts[0]
+197ee4.0 "0"

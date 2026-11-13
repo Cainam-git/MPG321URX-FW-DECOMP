@@ -1,0 +1,645 @@
+# Texts of language 16, named "{F7}Ti{60}ng Việt" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[45] (item 1, vietnamese)
+16e0d0.45 "{F7}để{F0} th{F7}{62}{F0}c hi{F7}ệ{F0}n ch{F7}ứ{F0}c n{F7}ă{F0}ng b{F7}ả{F0}o v{F7}ệ{F0} t{F7}ấ{F0}m n{F7}ề{F0}n (th{F7}ờ{F0}i gian dài)."
+
+# osd_protect_long_execute_texts[16] (item 0, vietnamese)
+16e0d0.16 "{F7}Để{F0} {F7}đả{F0}m b{F7}ả{F0}o ch{F7}ấ{F0}t l{F7}ượ{F0}ng hình {F7}ả{F0}nh c{F7}ủ{F0}a t{F7}ấ{F0}m n{F7}ề{F0}n, hãy nh{F7}ấ{F0}n nút \"Th{F7}{62}{F0}c hi{F7}ệ{F0}n\" "
+
+# osd_protect_long_auto_texts[16] (item 0, vietnamese)
+16f25c.16 "{F7}Để{F0} {F7}đả{F0}m b{F7}ả{F0}o ch{F7}ấ{F0}t l{F7}ượ{F0}ng hình {F7}ả{F0}nh c{F7}ủ{F0}a t{F7}ấ{F0}m n{F7}ề{F0}n, ch{F7}ứ{F0}c n{F7}ă{F0}ng b{F7}ả{F0}o v{F7}ệ{F0} "
+
+# osd_protect_long_title_texts[74] (item 2, vietnamese)
+16f670.74 "{F0}(th{F7}ờ{F0}i gian dài) s{F7}ũ{F0} t{F7}{62}{F0} {F7}độ{F0}ng b{F7}ậ{F0}t khi s{F7}여{F0} d{F7}ụ{F0}ng màn hình quá 1.500 gi{F7}ờ"
+
+# osd_protect_long_title_texts[45] (item 1, vietnamese)
+16f670.45 "{F7}Để{F0} duy trì ch{F7}ấ{F0}t l{F7}ượ{F0}ng hình {F7}ả{F0}nh c{F7}ủ{F0}a t{F7}ấ{F0}m n{F7}ề{F0}n, ch{F7}ứ{F0}c n{F7}ă{F0}ng b{F7}ả{F0}o v{F7}ệ{F0} t{F7}ấ{F0}m n{F7}ề{F0}n"
+
+# osd_protect_long_title_texts[16] (item 0, vietnamese)
+16f670.16 "{F0}MSI OLED Care - B{F7}ả{F0}o v{F7}ệ{F0} t{F7}ấ{F0}m n{F7}ề{F0}n (Th{F7}ờ{F0}i gian dài)"
+
+# osd_protect_long_incomplete_texts[45] (item 1, vietnamese)
+172590.45 "{F0}nh{F7}ấ{F0}n m{F7}ụ{F0}c này {F7}để{F0} ti{F7}ế{F0}n hành quá trình này n{F7}ế{F0}u c{F7}ầ{F0}n thi{F7}ế{F0}t sau này."
+
+# osd_protect_long_incomplete_texts[16] (item 0, vietnamese)
+172590.16 "{F0}Quá trình b{F7}ả{F0}o v{F7}ệ{F0} t{F7}ấ{F0}m n{F7}ề{F0}n (th{F7}ờ{F0}i gian dài) ch{F7}ư{F0}a hoàn t{F7}ấ{F0}t. Vui lòng ch{F7}ọ{F0}n và "
+
+# osd_protect_incomplete_texts[45] (item 1, vietnamese)
+173998.45 "{F0}này {F7}để{F0} ti{F7}ế{F0}n hành quá trình n{F7}ế{F0}u c{F7}ầ{F0}n thi{F7}ế{F0}t sau này."
+
+# osd_protect_incomplete_texts[16] (item 0, vietnamese)
+173998.16 "{F0}Quá trình b{F7}ả{F0}o v{F7}ệ{F0} t{F7}ấ{F0}m n{F7}ề{F0}n ch{F7}ư{F0}a hoàn t{F7}ấ{F0}t. Vui lòng ch{F7}ọ{F0}n và nh{F7}ấ{F0}n m{F7}ụ{F0}c"
+
+# osd_protect_long_incomplete_texts[74] (item 2, vietnamese)
+# osd_protect_incomplete_texts[74] (item 2, vietnamese)
+# osd_protect_execute_texts[74] (item 2, vietnamese)
+172590.74 "{F0}Th{F7}ô{F0}ng báo :"
+
+# osd_protect_execute_texts[45] (item 1, vietnamese)
+174bd0.45 "{F0}ch{F7}ứ{F0}c n{F7}ă{F0}ng b{F7}ả{F0}o v{F7}ệ{F0} t{F7}ấ{F0}m n{F7}ề{F0}n."
+
+# osd_protect_execute_texts[16] (item 0, vietnamese)
+174bd0.16 "{F7}Để{F0} duy trì ch{F7}ấ{F0}t l{F7}ượ{F0}ng hình {F7}ả{F0}nh c{F7}ủ{F0}a t{F7}ấ{F0}m n{F7}ề{F0}n, hãy nh{F7}ấ{F0}n nút \"Th{F7}{62}{F0}c hi{F7}ệ{F0}n {F7}để{F0} b{F7}ậ{F0}t "
+
+# osd_protect_long_retry_texts[45] (item 1, vietnamese)
+175de4.45 "{F0}\"th{F7}{62}{F0}c hi{F7}ệ{F0}n\" {F7}để{F0} th{F7}{62}{F0}c hi{F7}ệ{F0}n ch{F7}ứ{F0}c n{F7}ă{F0}ng b{F7}ả{F0}o v{F7}ệ{F0} t{F7}ấ{F0}m n{F7}ề{F0}n (th{F7}ờ{F0}i gian dài)."
+
+# osd_protect_long_retry_texts[16] (item 0, vietnamese)
+175de4.16 "{F0}Quá trình b{F7}ả{F0}o v{F7}ệ{F0} t{F7}ấ{F0}m n{F7}ề{F0}n (th{F7}ờ{F0}i gian dài) ch{F7}ư{F0}a hoàn t{F7}ấ{F0}t. Vui lòng nh{F7}ấ{F0}n nút "
+
+# osd_protect_retry_texts[45] (item 1, vietnamese)
+177270.45 "{F7}để{F0} th{F7}{62}{F0}c hi{F7}ệ{F0}n ch{F7}ứ{F0}c n{F7}ă{F0}ng b{F7}ả{F0}o v{F7}ệ{F0} t{F7}ấ{F0}m n{F7}ề{F0}n. "
+
+# osd_protect_retry_texts[16] (item 0, vietnamese)
+177270.16 "{F0}Quá trình b{F7}ả{F0}o v{F7}ệ{F0} t{F7}ấ{F0}m n{F7}ề{F0}n ch{F7}ư{F0}a hoàn t{F7}ấ{F0}t. Vui lòng nh{F7}ấ{F0}n nút \"th{F7}{62}{F0}c hi{F7}ệ{F0}n\" "
+
+# osd_protect_auto_texts[16] (item 0, vietnamese)
+1785c0.16 "{F7}Để{F0} {F7}đả{F0}m b{F7}ả{F0}o ch{F7}ấ{F0}t l{F7}ượ{F0}ng hình {F7}ả{F0}nh c{F7}ủ{F0}a t{F7}ấ{F0}m n{F7}ề{F0}n, ch{F7}ứ{F0}c n{F7}ă{F0}ng b{F7}ả{F0}o v{F7}ệ{F0} "
+
+# osd_protect_long_auto_texts[45] (item 1, vietnamese)
+16f25c.45 "{F0}t{F7}ấ{F0}m n{F7}ề{F0}n (th{F7}ờ{F0}i gian dài) s{F7}ũ{F0} t{F7}{62}{F0} {F7}độ{F0}ng b{F7}ậ{F0}t."
+
+# osd_protect_auto_texts[45] (item 1, vietnamese)
+1785c0.45 "{F0}t{F7}ấ{F0}m n{F7}ề{F0}n s{F7}ẽ{F0} t{F7}{62}{F0} {F7}độ{F0}ng b{F7}ậ{F0}t."
+
+# osd_protect_long_execute_texts[132] (item 4, vietnamese)
+# osd_protect_long_auto_texts[132] (item 4, vietnamese)
+# osd_protect_long_title_texts[161] (item 5, vietnamese)
+# osd_protect_long_incomplete_texts[132] (item 4, vietnamese)
+# osd_protect_long_retry_texts[132] (item 4, vietnamese)
+16e0d0.132 "{F7}Đ{F0}èn báo ngu{F7}ồ{F0}n s{F7}ũ{F0} nháy màu tr{F7}ắ{F0}ng cho {F7}đế{F0}n khi hoàn t{F7}ấ{F0}t quá trình."
+
+# osd_protect_long_execute_texts[103] (item 3, vietnamese)
+# osd_protect_long_auto_texts[103] (item 3, vietnamese)
+# osd_protect_long_title_texts[132] (item 4, vietnamese)
+# osd_protect_long_incomplete_texts[103] (item 3, vietnamese)
+# osd_protect_long_retry_texts[103] (item 3, vietnamese)
+16e0d0.103 "{F0}Ch{F7}ứ{F0}c n{F7}ă{F0}ng b{F7}ả{F0}o v{F7}ệ{F0} này có th{F7}ể{F0} c{F7}ầ{F0}n m{F7}ộ{F0}t gi{F7}ờ{F0} {F7}để{F0} hoàn thành."
+
+# osd_protect_long_title_texts[335] (item 11, vietnamese)
+# osd_protect_long_retry_texts[306] (item 10, vietnamese)
+# osd_protect_retry_texts[306] (item 10, vietnamese)
+16f670.335 "{F0}T{F7}Ắ{F0}T ho{F7}ặ{F0}c vào ch{F7}ế{F0} {F7}độ{F0} ti{F7}ế{F0}t ki{F7}ệ{F0}m n{F7}ă{F0}ng l{F7}ượ{F0}ng."
+
+# osd_protect_long_title_texts[306] (item 10, vietnamese)
+# osd_protect_long_retry_texts[277] (item 9, vietnamese)
+# osd_protect_retry_texts[277] (item 9, vietnamese)
+16f670.306 "{F0}N{F7}ế{F0}u b{F7}ạ{F0}n nh{F7}ấ{F0}n nút \"H{F7}{BC}{F0}y\", quá trình này s{F7}ẽ{F0} t{F7}{62}{F0} {F7}độ{F0}ng th{F7}{62}{F0}c thi khi màn hình"
+
+# osd_protect_long_execute_texts[248] (item 8, vietnamese)
+# osd_protect_long_auto_texts[248] (item 8, vietnamese)
+# osd_protect_long_title_texts[277] (item 9, vietnamese)
+# osd_protect_long_incomplete_texts[248] (item 8, vietnamese)
+# osd_protect_incomplete_texts[248] (item 8, vietnamese)
+# osd_protect_execute_texts[248] (item 8, vietnamese)
+# ... and 4 more entries
+16e0d0.248 "{F0} "
+
+# osd_protect_long_execute_texts[219] (item 7, vietnamese)
+# osd_protect_long_auto_texts[219] (item 7, vietnamese)
+# osd_protect_long_title_texts[248] (item 8, vietnamese)
+# osd_protect_long_incomplete_texts[219] (item 7, vietnamese)
+# osd_protect_incomplete_texts[219] (item 7, vietnamese)
+# osd_protect_execute_texts[219] (item 7, vietnamese)
+# ... and 4 more entries
+16e0d0.219 "{F0}Trong khi th{F7}{62}{F0}c hi{F7}ệ{F0}n quá trình này, hãy nh{F7}ấ{F0}n nút ngu{F7}ồ{F0}n m{F7}ộ{F0}t l{F7}ầ{F0}n n{F7}ữ{F0}a {F7}để{F0} h{F7}ủ{F0}y b{F7}ỏ{F0} ch{F7}ứ{F0}c n{F7}ă{F0}ng."
+
+# osd_protect_long_execute_texts[190] (item 6, vietnamese)
+# osd_protect_long_auto_texts[190] (item 6, vietnamese)
+# osd_protect_long_title_texts[219] (item 7, vietnamese)
+# osd_protect_long_incomplete_texts[190] (item 6, vietnamese)
+# osd_protect_incomplete_texts[190] (item 6, vietnamese)
+# osd_protect_execute_texts[190] (item 6, vietnamese)
+# ... and 4 more entries
+16e0d0.190 "{F0} "
+
+# osd_protect_long_execute_texts[161] (item 5, vietnamese)
+# osd_protect_long_auto_texts[161] (item 5, vietnamese)
+# osd_protect_long_title_texts[190] (item 6, vietnamese)
+# osd_protect_long_incomplete_texts[161] (item 5, vietnamese)
+# osd_protect_incomplete_texts[161] (item 5, vietnamese)
+# osd_protect_execute_texts[161] (item 5, vietnamese)
+# ... and 4 more entries
+16e0d0.161 "{F0}Trong khi th{F7}{62}{F0}c hi{F7}ệ{F0}n quá trình này, vui lòng kh{F7}ô{F0}ng rút phích ngu{F7}ồ{F0}n kh{F7}ỏ{F0}i màn hình."
+
+# osd_protect_incomplete_texts[132] (item 4, vietnamese)
+# osd_protect_execute_texts[132] (item 4, vietnamese)
+# osd_protect_retry_texts[132] (item 4, vietnamese)
+# osd_protect_auto_texts[132] (item 4, vietnamese)
+# osd_protect_title_texts[161] (item 5, vietnamese)
+173998.132 "{F7}Đ{F0}èn báo ngu{F7}ồ{F0}n s{F7}ẽ{F0} nháy màu cam cho {F7}đế{F0}n khi quá trình này hoàn t{F7}ấ{F0}t."
+
+# osd_protect_incomplete_texts[103] (item 3, vietnamese)
+# osd_protect_execute_texts[103] (item 3, vietnamese)
+# osd_protect_retry_texts[103] (item 3, vietnamese)
+# osd_protect_auto_texts[103] (item 3, vietnamese)
+# osd_protect_title_texts[132] (item 4, vietnamese)
+173998.103 "{F0}Ch{F7}ứ{F0}c n{F7}ă{F0}ng b{F7}ả{F0}o v{F7}ệ{F0} này có th{F7}ể{F0} m{F7}ấ{F0}t vài phút {F7}để{F0} hoàn t{F7}ấ{F0}t."
+
+# osd_protect_long_execute_texts[74] (item 2, vietnamese)
+# osd_protect_long_auto_texts[74] (item 2, vietnamese)
+# osd_protect_long_title_texts[103] (item 3, vietnamese)
+# osd_protect_long_retry_texts[74] (item 2, vietnamese)
+# osd_protect_retry_texts[74] (item 2, vietnamese)
+# osd_protect_auto_texts[74] (item 2, vietnamese)
+# ... and 1 more entries
+16e0d0.74 "{F0}Th{F7}ô{F0}ng báo :"
+
+# osd_protect_title_texts[74] (item 2, vietnamese)
+179a14.74 "{F0}khi s{F7}ử{F0} d{F7}ụ{F0}ng màn hình quá 4 gi{F7}ờ{F0}."
+
+# osd_protect_title_texts[45] (item 1, vietnamese)
+179a14.45 "{F7}Để{F0} duy trì ch{F7}ấ{F0}t l{F7}ượ{F0}ng hình {F7}ả{F0}nh c{F7}ủ{F0}a t{F7}ấ{F0}m n{F7}ề{F0}n, ch{F7}ứ{F0}c n{F7}ă{F0}ng b{F7}ả{F0}o v{F7}ệ{F0} t{F7}ấ{F0}m n{F7}ề{F0}n s{F7}ẽ{F0} t{F7}{62}{F0} {F7}độ{F0}ng b{F7}ậ{F0}t "
+
+# osd_protect_title_texts[16] (item 0, vietnamese)
+179a14.16 "{F0}MSI OLED Care - B{F7}ả{F0}o v{F7}ệ{F0} t{F7}ấ{F0}m n{F7}ề{F0}n"
+
+# osd_protect_retry_texts[422] (item 14, vietnamese)
+# osd_protect_title_texts[393] (item 13, vietnamese)
+177270.422 "{F0}d{F7}ụ{F0}ng tích l{F7}ũ{F0}y c{F7}ủ{F0}a t{F7}ấ{F0}m n{F7}ề{F0}n v{F7}ượ{F0}t quá 24 gi{F7}ờ{F0}."
+
+# osd_protect_retry_texts[393] (item 13, vietnamese)
+# osd_protect_title_texts[364] (item 12, vietnamese)
+177270.393 "{F0}N{F7}ế{F0}u b{F7}ạ{F0}n nh{F7}ấ{F0}n nút \"{F7}Để{F0} sau\", th{F7}ô{F0}ng báo s{F7}ẽ{F0} ch{F7}ỉ{F0} xu{F7}ấ{F0}t hi{F7}ệ{F0}n khi th{F7}ờ{F0}i gian s{F7}ử"
+
+# osd_protect_retry_texts[364] (item 12, vietnamese)
+# osd_protect_title_texts[335] (item 11, vietnamese)
+177270.364 "{F0}khi màn hình T{F7}Ắ{F0}T ho{F7}ặ{F0}c vào c.{F7}độ{F0} ti{F7}ế{F0}t ki{F7}ệ{F0}m n{F7}ă{F0}ng l{F7}ượ{F0}ng."
+
+# osd_protect_retry_texts[335] (item 11, vietnamese)
+# osd_protect_title_texts[306] (item 10, vietnamese)
+177270.335 "{F0}N{F7}ế{F0}u b{F7}ạ{F0}n nh{F7}ấ{F0}n nút \"H{F7}ủ{F0}y\" ho{F7}ặ{F0}c \"{F7}Để{F0} sau\", quá trình này s{F7}ẽ{F0} t{F7}{62}{F0} {F7}độ{F0}ng th{F7}{62}{F0}c thi"
+
+# osd_change_notice_line3_texts[16] (item 0, vietnamese)
+180b60.16 "Vui lòng ch{F7}ọ{F0}n m{F7}ộ{F0}t trong các tùy ch{F7}ọ{F0}n sau:"
+
+# osd_change_notice_line2_texts[16] (item 0, vietnamese)
+181058.16 "{F7}đ{F0}i{F7}ệ{F0}n ti{F7}ê{F0}u th{F7}ụ{F0} c{F7}ú{F0}a màn h{F7}ì{F0}nh."
+
+# osd_change_notice_line1_texts[16] (item 0, vietnamese)
+1814d8.16 "Thay {F7}đ{6C}{F0}i ch{F7}ứ{F0}c n{F7}ă{F0}ng {F7}đ{F0}ã ch{F7}ọ{F0}n c{F7}ó{F0} th{F7}ể{F0} t{F7}ă{F0}ng l{F7}ượ{F0}ng"
+
+# osd_change_notice_title_texts[16] (item 0, vietnamese)
+1819cc.16 "X{F7}á{F0}c nh{F7}ậ{F0}n thay {F7}đ{6C}{F0}i!"
+
+# table_1821d4[45] (item 1, vietnamese)
+1821d4.45 "{F7}Kỹ thuật số"
+
+# table_1821d4[16] (item 0, vietnamese)
+1821d4.16 "{F7}Analog"
+
+# osd_pbp_source_texts[45] (item 1, vietnamese)
+182534.45 "{F7}Nguồn 2"
+
+# osd_pbp_source_texts[16] (item 0, vietnamese)
+182534.16 "{F7}Nguồn 1"
+
+# osd_pip_item_texts[74] (item 2, vietnamese)
+1828c0.74 "{F7}Vị trí"
+
+# osd_pip_item_texts[45] (item 1, vietnamese)
+1828c0.45 "{F7}K.cõ PIP"
+
+# osd_pip_item_texts[16] (item 0, vietnamese)
+1828c0.16 "{F7}Nguồn"
+
+# osd_pip_item_texts[132] (item 4, vietnamese)
+1828c0.132 "{F7}C.đổi âm thanh"
+
+# osd_pip_item_texts[103] (item 3, vietnamese)
+1828c0.103 "{F7}C.đổi màn hình"
+
+# osd_choice_note_function_texts[132] (item 4, vietnamese)
+1832e4.132 "{F7}K.cõ màn hình"
+
+# osd_choice_note_function_texts[103] (item 3, vietnamese)
+1832e4.103 "{F7}PIP/PBP"
+
+# osd_choice_note_reducing_texts[161] (item 5, vietnamese)
+183cb4.161 "{F0}dung VRR."
+
+# osd_choice_note_reducing_texts[132] (item 4, vietnamese)
+183cb4.132 "{F7}độ{F0}ng khi màn hình nh{F7}ậ{F0}n n{F7}ộ"
+
+# osd_choice_note_reducing_texts[103] (item 3, vietnamese)
+183cb4.103 "{F0}Ch{F7}ứ{F0}c n{F7}ă{F0}ng s{F7}ũ{F0} khÔng ho{F7}ạ{F0}t"
+
+# osd_choice_note_reducing_texts[74] (item 2, vietnamese)
+183cb4.74 "{F0}ho{F7}ặ{F0}c \"DisplayHDR\"."
+
+# osd_choice_note_reducing_texts[45] (item 1, vietnamese)
+183cb4.45 "{F0}vào cài {F7}đặ{F0}t \"{F7}Độ{F0} sáng\" "
+
+# osd_choice_note_reducing_texts[16] (item 0, vietnamese)
+183cb4.16 "{F0}Hi{F7}ệ{F0}u {F7}ứ{F0}ng gi{F7}ả{F0}m ph{F7}ụ{F0} thu{F7}ộ{F0}c "
+
+# osd_choice_note_texts[132] (item 4, vietnamese)
+183a70.132 "{F0}kho{F7}ả{F0}ng m{F7}ộ{F0}t gi{F7}ờ"
+
+# osd_choice_note_texts[103] (item 3, vietnamese)
+183a70.103 "{F0}S{F7}ũ{F0} hoàn thành sau"
+
+# osd_choice_note_texts[74] (item 2, vietnamese)
+183a70.74 "{F7}để{F0} hoàn t{F7}ấ{F0}t"
+
+# osd_choice_note_texts[45] (item 1, vietnamese)
+183a70.45 "{F0}C{F7}ầ{F0}n kho{F7}ả{F0}ng 15 phút n{F7}ữ{F0}a"
+
+# osd_choice_note_texts[16] (item 0, vietnamese)
+183a70.16 "{F0}ThÔng báo : "
+
+# osd_oled_care_item_texts[74] (item 2, vietnamese)
+185e78.74 "{F0}ThÔng báo b{F7}ả{F0}o v{F7}ệ"
+
+# osd_oled_care_function_texts[161] (item 5, vietnamese)
+# osd_oled_care_item_texts[190] (item 6, vietnamese)
+185bc0.161 "{F0}Phát hi{F7}ệ{F0}n ranh gi{F7}ớ{F0}i"
+
+# osd_oled_care_function_texts[132] (item 4, vietnamese)
+# osd_oled_care_item_texts[161] (item 5, vietnamese)
+185bc0.132 "{F0}Phát hi{F7}ệ{F0}n thanh tác v{F7}ụ"
+
+# osd_oled_care_function_texts[103] (item 3, vietnamese)
+# osd_oled_care_item_texts[132] (item 4, vietnamese)
+185bc0.103 "{F0}Phát hi{F7}ệ{F0}n nhi{F7}ề{F0}u logo"
+
+# osd_oled_care_item_texts[219] (item 7, vietnamese)
+185e78.219 "{F0}T.tin t{F7}ấ{F0}m n{F7}ề{F0}n OLED."
+
+# osd_oled_care_function_texts[74] (item 2, vietnamese)
+# osd_oled_care_item_texts[103] (item 3, vietnamese)
+185bc0.74 "{F0}P.hi{F7}ệ{F0}n m.hình t{F7}ĩ{F0}nh"
+
+# osd_oled_care_function_texts[16] (item 0, vietnamese)
+# osd_oled_care_item_texts[45] (item 1, vietnamese)
+185bc0.16 "{F0}B{F7}ả{F0}o v{F7}ệ{F0} t{F7}ấ{F0}m n{F7}ề{F0}n"
+
+# osd_oled_care_function_texts[45] (item 1, vietnamese)
+# osd_oled_care_item_texts[16] (item 0, vietnamese)
+185bc0.45 "{F0}D. chuy{F7}ể{F0}n {F7}đ{F0}i{F7}ể{F0}m {F7}ả{F0}nh"
+
+# osd_choice_note_function_texts[306] (item 10, vietnamese)
+# osd_settings_item_texts[219] (item 7, vietnamese)
+1832e4.306 "{F0}S{F7}ạ{F0}c PD lo{F7}ạ{F0}i C"
+
+# osd_settings_item_texts[132] (item 4, vietnamese)
+1874f8.132 "{F7}Nú{6A} nguồn"
+
+# osd_settings_item_texts[277] (item 9, vietnamese)
+1874f8.277 "{F7}Cài lại"
+
+# osd_settings_item_texts[103] (item 3, vietnamese)
+1874f8.103 "{F7}Đèn LED RGB"
+
+# osd_settings_item_texts[74] (item 2, vietnamese)
+1874f8.74 "{F7}Menu OSD hết giờ"
+
+# osd_settings_item_texts[45] (item 1, vietnamese)
+1874f8.45 "{F7}Độ trong suốt"
+
+# osd_settings_item_texts[16] (item 0, vietnamese)
+1874f8.16 "{F7}Ngôn ngữ"
+
+# osd_professional_item_texts[74] (item 2, vietnamese)
+188634.74 "{F7}T.cường hình ảnh"
+
+# osd_professional_item_texts[45] (item 1, vietnamese)
+188634.45 "Gi{F7}ả{F0}m ánh sáng xanh"
+
+# osd_professional_item_texts[16] (item 0, vietnamese)
+188634.16 "{F7}Chế độ c.nghiệp"
+
+# osd_night_vision_texts[103] (item 3, vietnamese)
+1890d4.103 "{F7}Mạnh nhất"
+
+# osd_night_vision_texts[74] (item 2, vietnamese)
+1890d4.74 "{F7}Mạnh"
+
+# osd_night_vision_texts[45] (item 1, vietnamese)
+1890d4.45 "{F7}Thường"
+
+# osd_choice_note_function_texts[277] (item 9, vietnamese)
+# osd_gaming_item_texts[45] (item 1, vietnamese)
+1832e4.277 "{F7}Tầm nhìn ban đêm"
+
+# osd_gaming_item_texts[132] (item 4, vietnamese)
+188da0.132 "{F7}Đ.hồ báo thức"
+
+# osd_gaming_item_texts[103] (item 3, vietnamese)
+188da0.103 "{F7}T.độ cập nhật"
+
+# osd_choice_note_function_texts[161] (item 5, vietnamese)
+1832e4.161 "{F7}T.gian phản hồi"
+
+# osd_gaming_item_texts[16] (item 0, vietnamese)
+188da0.16 "{F7}Chế độ game"
+
+# osd_choice_note_function_texts[190] (item 6, vietnamese)
+# osd_gi_item_texts[74] (item 2, vietnamese)
+1832e4.190 "{F7}Optix Scope"
+
+# osd_oled_care_seconds_texts[103] (item 3, vietnamese)
+18a7ec.103 "{F0}240 Giây"
+
+# osd_oled_care_seconds_texts[74] (item 2, vietnamese)
+18a7ec.74 "{F0}120 Giây"
+
+# osd_oled_care_seconds_texts[45] (item 1, vietnamese)
+18a7ec.45 "{F0}100 Giây"
+
+# osd_oled_care_seconds_texts[16] (item 0, vietnamese)
+18a7ec.16 "{F0}50 Giây"
+
+# table_18af08[45] (item 1, vietnamese)
+# table_18b008[45] (item 1, vietnamese)
+18af08.45 "{F0}Th{F7}ủ{F0} cÔng"
+
+# osd_oled_care_usage_texts[45] (item 1, vietnamese)
+18b29c.45 "{F0}ThÔng báo b{F7}ả{F0}o v{F7}ệ"
+
+# osd_oled_care_speed_texts[74] (item 2, vietnamese)
+18b5e0.74 "Nhanh"
+
+# osd_oled_care_speed_texts[16] (item 0, vietnamese)
+18b5e0.16 "{F0}Ch{F7}ậ{F0}m"
+
+# osd_oled_care_choice_texts[74] (item 2, vietnamese)
+# osd_oled_care_status_texts[74] (item 2, vietnamese)
+16df60.74 "M{F7}ứ{F0}c {F7}độ{F0} gi{F7}ả{F0}m"
+
+# osd_oled_care_status_texts[45] (item 1, vietnamese)
+18b94c.45 "{F0}Th{F7}ờ{F0}i gian c{F7}ầ{F0}n"
+
+# osd_oled_care_status_texts[16] (item 0, vietnamese)
+18b94c.16 "{F0}B{F7}ắ{F0}t {F7}đầ{F0}u t{F7}ừ"
+
+# table_18c070[45] (item 1, vietnamese)
+18c070.45 "{F0}Th{F7}ờ{F0}i gian dài"
+
+# table_18c070[16] (item 0, vietnamese)
+18c070.16 "{F0}Th{F7}ờ{F0}i gian ng{F7}ắ{F0}n"
+
+# table_18c4a8[16] (item 0, vietnamese)
+18c4a8.16 "Moving speed"
+
+# osd_image_item_texts[132] (item 4, vietnamese)
+18ca88.132 "{F7}K.cõ màn hình"
+
+# osd_image_item_texts[103] (item 3, vietnamese)
+18ca88.103 "{F7}Nhiệt độ màu"
+
+# osd_image_item_texts[74] (item 2, vietnamese)
+18ca88.74 "{F7}Độ sắc nét"
+
+# osd_image_item_texts[45] (item 1, vietnamese)
+18ca88.45 "{F7}Độ t.phản"
+
+# osd_language_texts[16] (item 0, vietnamese)
+18d3d4.16 "{F7}Ti{60}ng Việt"
+
+# osd_optix_scope_item_texts[45] (item 1, vietnamese)
+18d578.45 "{F0}Tý l{F7}ệ{F0} {F7}ố{F0}ng ng{F7}ắ{F0}m"
+
+# osd_optix_scope_item_texts[16] (item 0, vietnamese)
+18d578.16 "{F7}Kích cõ ống ngắm"
+
+# osd_color_temp_texts[103] (item 3, vietnamese)
+18db28.103 "{F7}Tùy chỉnh"
+
+# osd_color_temp_texts[74] (item 2, vietnamese)
+18db28.74 "{F7}Ấm"
+
+# osd_color_temp_texts[16] (item 0, vietnamese)
+18db28.16 "{F7}Nguội"
+
+# osd_response_time_texts[74] (item 2, vietnamese)
+18e08c.74 "{F7}Nhanh nhất"
+
+# osd_response_time_texts[45] (item 1, vietnamese)
+18e08c.45 "{F7}Nhanh"
+
+# osd_oled_care_speed_texts[45] (item 1, vietnamese)
+# osd_color_temp_texts[45] (item 1, vietnamese)
+# osd_response_time_texts[16] (item 0, vietnamese)
+18b5e0.45 "{F7}Thường"
+
+# osd_crosshair_color_texts[45] (item 1, vietnamese)
+18e54c.45 "{F7}Đỏ"
+
+# osd_crosshair_color_texts[16] (item 0, vietnamese)
+18e54c.16 "{F7}Trắng"
+
+# table_18c8b8[74] (item 2, vietnamese)
+# osd_pbp_mode_texts[74] (item 2, vietnamese)
+# osd_location_texts[132] (item 4, vietnamese)
+18c8b8.74 "{F7}TỪ chỉnh"
+
+# osd_location_texts[103] (item 3, vietnamese)
+18e9f8.103 "{F7}Dưới phải"
+
+# osd_location_texts[74] (item 2, vietnamese)
+18e9f8.74 "{F7}Dưới trái"
+
+# osd_location_texts[45] (item 1, vietnamese)
+18e9f8.45 "{F7}Trên phải"
+
+# osd_location_texts[16] (item 0, vietnamese)
+18e9f8.16 "{F7}Trên trái"
+
+# osd_size_texts[74] (item 2, vietnamese)
+18f550.74 "{F7}Lớn"
+
+# osd_size_texts[45] (item 1, vietnamese)
+18f550.45 "{F7}Trung bình"
+
+# osd_size_texts[16] (item 0, vietnamese)
+18f550.16 "{F7}Nhỏ"
+
+# osd_crosshair_item_texts[132] (item 4, vietnamese)
+18f984.132 "{F7}Cài lại"
+
+# osd_crosshair_item_texts[103] (item 3, vietnamese)
+18f984.103 "{F0}V{F7}ị{F0} trí"
+
+# osd_crosshair_item_texts[74] (item 2, vietnamese)
+18f984.74 "{F0}Màu"
+
+# osd_crosshair_item_texts[45] (item 1, vietnamese)
+18f984.45 "{F0}Bi{F7}ể{F0}u t{F7}ượ{F0}ng"
+
+# osd_crosshair_item_texts[16] (item 0, vietnamese)
+18f984.16 "{F7}Không có"
+
+# osd_protect_button_texts[74] (item 2, vietnamese)
+190184.74 "{F7}Để{F0} sau"
+
+# osd_protect_button_texts[45] (item 1, vietnamese)
+190184.45 "{F0}H{F7}ủ{F0}y b{F7}ỏ"
+
+# osd_protect_button_texts[16] (item 0, vietnamese)
+190184.16 "{F0}Th{F7}{62}{F0}c hi{F7}ệ{F0}n"
+
+# osd_yes_no_texts[45] (item 1, vietnamese)
+190748.45 "{F7}Không"
+
+# osd_yes_no_texts[16] (item 0, vietnamese)
+190748.16 "{F7}Có"
+
+# osd_kvm_texts[45] (item 1, vietnamese)
+1909ec.45 "{F0}K{F7}ế{F0}t n{F7}ố{F0}i máy tính"
+
+# table_190cec[45] (item 1, vietnamese)
+190cec.45 "{F0}T{F7}ố{F0}i {F7}đ{F0}a 1000 nits"
+
+# osd_navi_key_item_texts[103] (item 3, vietnamese)
+19158c.103 "{F7}Ph{5D}i"
+
+# osd_navi_key_item_texts[74] (item 2, vietnamese)
+19158c.74 "{F7}Tr{5C}i"
+
+# osd_navi_key_item_texts[45] (item 1, vietnamese)
+19158c.45 "{F7}Dưới"
+
+# osd_navi_key_item_texts[16] (item 0, vietnamese)
+19158c.16 "{F7}Lên"
+
+# osd_info_box_texts[190] (item 6, vietnamese)
+191b30.190 "Bitdjup"
+
+# osd_info_box_texts[161] (item 5, vietnamese)
+191b30.161 "{F0}Innehållstyp"
+
+# osd_info_box_texts[132] (item 4, vietnamese)
+191b30.132 "Välj läge"
+
+# osd_info_box_texts[74] (item 2, vietnamese)
+191b30.74 "{F0}Fysisk upplösning"
+
+# osd_info_box_texts[45] (item 1, vietnamese)
+191b30.45 "Naturlig upplösning"
+
+# osd_out_of_range_texts[16] (item 0, vietnamese)
+192d8c.16 "{F7}Ngoài phạm vi!"
+
+# osd_no_signal_texts[16] (item 0, vietnamese)
+193008.16 "{F7}Ko tín hiệu"
+
+# osd_power_button_texts[45] (item 1, vietnamese)
+19336c.45 "{F7}Chế độ chờ"
+
+# osd_navi_function_texts[306] (item 10, vietnamese)
+1935bc.306 "{F7}Optix Scope"
+
+# osd_navi_function_texts[277] (item 9, vietnamese)
+1935bc.277 "{F7}Tầm nhìn ban đêm"
+
+# osd_info_box_texts[103] (item 3, vietnamese)
+# osd_navi_function_texts[219] (item 7, vietnamese)
+191b30.103 "{F7}T.độ cập nhật"
+
+# osd_gi_item_texts[45] (item 1, vietnamese)
+# osd_navi_function_texts[103] (item 3, vietnamese)
+18a360.45 "Smart Crosshair"
+
+# osd_navi_function_texts[132] (item 4, vietnamese)
+1935bc.132 "{F7}Đ.hồ báo thức"
+
+# osd_navi_function_texts[74] (item 2, vietnamese)
+1935bc.74 "{F7}Chế độ game"
+
+# osd_choice_note_function_texts[45] (item 1, vietnamese)
+# osd_image_item_texts[16] (item 0, vietnamese)
+# osd_navi_function_texts[45] (item 1, vietnamese)
+1832e4.45 "{F7}Độ sáng"
+
+# osd_settings_item_texts[161] (item 5, vietnamese)
+# table_18c8b8[103] (item 3, vietnamese)
+# osd_navi_function_texts[248] (item 8, vietnamese)
+1874f8.161 "{F0}H.th{F7}ị{F0} thông s{F7}ố"
+
+# osd_navi_function_texts[190] (item 6, vietnamese)
+1935bc.190 "{F7}Chế độ PIP/PBP"
+
+# osd_image_enhancement_texts[132] (item 4, vietnamese)
+194b34.132 "{F7}Mạnh nhất"
+
+# osd_image_enhancement_texts[103] (item 3, vietnamese)
+194b34.103 "{F7}Mạnh"
+
+# osd_image_enhancement_texts[74] (item 2, vietnamese)
+194b34.74 "{F7}Trung bình"
+
+# osd_image_enhancement_texts[45] (item 1, vietnamese)
+194b34.45 "{F7}Yếu"
+
+# osd_pro_mode_texts[16] (item 0, vietnamese)
+1951dc.16 "Ti{F7}ế{F0}t ki{F7}ệ{F0}m"
+
+# osd_pro_mode_texts[103] (item 3, vietnamese)
+1951dc.103 "{F7}Phim"
+
+# osd_pro_mode_texts[74] (item 2, vietnamese)
+1951dc.74 "{F7}Chống xanh"
+
+# osd_pro_mode_texts[132] (item 4, vietnamese)
+1951dc.132 "{F7}Văn phòng"
+
+# osd_oled_care_choice_texts[45] (item 1, vietnamese)
+# osd_optix_scope_item_texts[103] (item 3, vietnamese)
+# osd_off_on_texts[45] (item 1, vietnamese)
+# table_195a38[74] (item 2, vietnamese)
+16df60.45 "{F7}BẬT"
+
+# osd_location_texts[161] (item 5, vietnamese)
+# table_195a38[16] (item 0, vietnamese)
+# table_195c7c[16] (item 0, vietnamese)
+18e9f8.161 "{F7}Vị trí"
+
+# osd_game_mode_texts[16] (item 0, vietnamese)
+195f24.16 "Premium Color"
+
+# osd_pro_mode_texts[45] (item 1, vietnamese)
+# osd_game_mode_texts[45] (item 1, vietnamese)
+1951dc.45 "{F7}Người dùng"
+
+# osd_game_mode_texts[103] (item 3, vietnamese)
+195f24.103 "{F7}Đua xe"
+
+# osd_pbp_mode_texts[45] (item 1, vietnamese)
+18e89c.45 "{F7}Chế độ 2"
+
+# osd_pbp_mode_texts[16] (item 0, vietnamese)
+18e89c.16 "{F7}Chế độ 1"
+
+# osd_oled_care_choice_texts[16] (item 0, vietnamese)
+# osd_night_vision_texts[16] (item 0, vietnamese)
+# table_18c8b8[16] (item 0, vietnamese)
+# osd_optix_scope_item_texts[74] (item 2, vietnamese)
+# osd_off_on_texts[16] (item 0, vietnamese)
+# osd_power_button_texts[16] (item 0, vietnamese)
+# ... and 5 more entries
+16df60.16 "{F7}TẮT"
+
+# osd_tab_name_texts[190] (item 6, vietnamese)
+196dc0.190 "{F7}Phím đ.hướng"
+
+# osd_tab_name_texts[219] (item 7, vietnamese)
+196dc0.219 "{F7}Cài đặt"
+
+# osd_tab_name_texts[161] (item 5, vietnamese)
+196dc0.161 "{F7}PIP/PBP"
+
+# osd_info_box_texts[16] (item 0, vietnamese)
+# osd_navi_function_texts[161] (item 5, vietnamese)
+# osd_tab_name_texts[132] (item 4, vietnamese)
+191b30.16 "{F7}Nguồn vào"
+
+# osd_tab_name_texts[103] (item 3, vietnamese)
+196dc0.103 "{F7}Hình ảnh"
+
+# osd_tab_name_texts[74] (item 2, vietnamese)
+196dc0.74 "{F7}Chuyên nghiệp"
+
+# osd_tab_name_texts[45] (item 1, vietnamese)
+196dc0.45 "{F7}Chơi game"

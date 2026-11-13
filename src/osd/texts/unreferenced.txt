@@ -1,0 +1,602 @@
+# Texts that no table and no address in the program code points at: the menu does not draw them.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+unref.001 "Reducing Level"
+
+unref.002 "atomatically activate."
+
+unref.003 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.004 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.005 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.006 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.007 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.008 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.009 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.010 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.011 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.012 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.013 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.014 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.015 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.016 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.017 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.018 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.019 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.020 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.021 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.022 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.023 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.024 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.025 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.026 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.027 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.028 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.029 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.030 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.031 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+unref.032 "{F0}During process executing, press power button again to cancel this function."
+
+unref.033 "{F0}During process executing, please do not unplug the power cord from monitor."
+
+unref.034 "The power indicator will blink orange color until process done." hidden 3b 54 68 69 73 20 70 72 6f 74 65 63 74 20 66 75 6e 63 74 69 6f 6e 20 6d 61 79 20 74 61 6b 65 20 73 65 76 65 72 61 6c 20 6d 69 6e 75 74 65 73 20 74 6f 20 63 6f 6d 70 6c 65 74 65 2e
+
+unref.035 "Notice:"
+
+unref.036 "{F0}During process executing, press power button again to cancel this function."
+
+unref.037 "{F0}During process executing, please do not unplug the power cord from monitor."
+
+unref.038 "{F0}The power indicator will blink orange color until process done."
+
+unref.039 "{F0}This protect function may take several minutes to complete."
+
+unref.040 "{F0}Notice:"
+
+unref.041 "{F0}To maintain panel image quality, panel protect (short time) function will"
+
+unref.042 "MSI OLED Care-Panel Protect (Short Time)"
+
+unref.043 "Kancelária"
+
+unref.044 "Iroda"
+
+unref.045 "Kancelář"
+
+unref.046 "Office"
+
+unref.047 "Biuro"
+
+unref.048 "Kontor"
+
+unref.049 "Toimisto"
+
+unref.050 "Office"
+
+unref.051 "Kontor"
+
+unref.052 "{FA}{3C}{39}{17}{31}{0A}"
+
+unref.053 "{F9}{23}{64}{15}"
+
+unref.054 "{F8}דרשמ"
+
+unref.055 "{F7}VỪn phúng"
+
+unref.056 "{FA}{2B}{17}{3D}{0C}"
+
+unref.057 "Ofis"
+
+unref.058 "{F6}{50}{26}{13}"
+
+unref.059 "Kantor"
+
+unref.060 "{F5}{17}{09}{5F}{04}{07}{09}{2A}"
+
+unref.061 "{F3}所功"
+
+unref.062 "Escritório"
+
+unref.063 "ОФис"
+
+unref.064 "{F1}オフィス"
+
+unref.065 "{F2}사경실"
+
+unref.066 "Oficina" hidden 06 4f 66 66 69 63 65
+
+unref.067 "Office"
+
+unref.068 "Bureau"
+
+unref.069 "Office"
+
+unref.070 "{F4}更所功"
+
+unref.071 "Film"
+
+unref.072 "Mozgókép"
+
+unref.073 "Film"
+
+unref.074 "Film"
+
+unref.075 "Film"
+
+unref.076 "Film"
+
+unref.077 "Elokuva" hidden 04 46 69 6c 6d
+
+unref.078 "Film"
+
+unref.079 "{FA}{32}{27}{3D}{05}{06}"
+
+unref.080 "{F9}{7F}{1A}"
+
+unref.081 "{F8}טרס"
+
+unref.082 "{F7}Phim"
+
+unref.083 "{FA}{46}{3B}{3A}{3D}"
+
+unref.084 "Film"
+
+unref.085 "{F6}{BD}{BE}"
+
+unref.086 "Film"
+
+unref.087 "{F5}{0E}{09}{0B}{02}{2A}{1E}{5E}"
+
+unref.088 "{F3}机影"
+
+unref.089 "Filme"
+
+unref.090 "Фильм"
+
+unref.091 "{F1}ムービー"
+
+unref.092 "{F2}영화"
+
+unref.093 "Película"
+
+unref.094 "Film"
+
+unref.095 "Film"
+
+unref.096 "Film"
+
+unref.097 "Movie"
+
+unref.098 "{F4}圖影"
+
+unref.099 "Proti Modrej"
+
+unref.100 "Kékellenes"
+
+unref.101 "Antimodrá"
+
+unref.102 "Blåljusskydd"
+
+unref.103 "Anty niebieski"
+
+unref.104 "Antiblå" hidden 0c 53 69 6e 69 73 65 6e 20 65 73 74 6f
+
+unref.105 "Anti-blauw"
+
+unref.106 "Anti-Blå"
+
+unref.107 "{FA}{5E}{0C}{64}{05}{06} {1D}{0D}{20}{3B}{06} {1F}{16}{0A}"
+
+unref.108 "{F9}{23}{18}{02}{24}-{83}{84}"
+
+unref.109 "{F8}לרחכ יטנא"
+
+unref.110 "{F7}Chống xanh"
+
+unref.111 "{FA}{52}{2E}{1A}{0A} {13}{20}"
+
+unref.112 "Mavi Karşıtı"
+
+unref.113 "{F6}{54}{BC} {2A}{09}{54} {2A}{2B}"
+
+unref.114 "Anti Biru"
+
+unref.115 "{F5}{2B}{08}{07}{2C}{2A}{0F}{12}{07}{28}{3B}{09}{03}{7E}{05}" hidden 04 f3 22 9f a0
+
+unref.116 "Anti-Blue"
+
+unref.117 "Анти-синий"
+
+unref.118 "{F1}アンチブルー" hidden 08 f2 1f 20 f0 2d f2 22 97
+
+unref.119 "Luz antiazul"
+
+unref.120 "Anti-Blu"
+
+unref.121 "Anti-Blau"
+
+unref.122 "Anti-Bleu"
+
+unref.123 "Anti-Blue"
+
+unref.124 "{F4}確認變"
+
+unref.125 "Ролевые игры"
+
+unref.126 "RPG"
+
+unref.127 "Стратегии"
+
+unref.128 "RTS"
+
+unref.129 "Preteky" hidden 07 56 65 72 73 65 6e 79 06 5a 13 76 6f 64 79
+
+unref.130 "Racing"
+
+unref.131 "Wyścigi" hidden 06 52 61 63 69 6e 67
+
+unref.132 "Kilpa-ajo"
+
+unref.133 "Racen"
+
+unref.134 "Racerløb"
+
+unref.135 "{FA}{29}{1A}{39}{22}"
+
+unref.136 "{F9}{06}{0B}{49}{03}"
+
+unref.137 "{F8}םיצורמ" hidden 07 f7 27 09 06 04 4b 08 07 fa 38 15 25 1a 22 0a 05 59 61 72 d0 ce
+
+unref.138 "{F6}{69}{6A}{04}"
+
+unref.139 "Balapan" hidden 06 f5 1b 3c 0f 56 07
+
+unref.140 "{F3}比赛"
+
+unref.141 "Corrida" hidden 05 bb c1 bf 82 85
+
+unref.142 "{F1}レーシング"
+
+unref.143 "{F2}레이싱"
+
+unref.144 "Carreras"
+
+unref.145 "Gara"
+
+unref.146 "Rennen"
+
+unref.147 "Course"
+
+unref.148 "Racing"
+
+unref.149 "{F4}賽車"
+
+unref.150 "Шутеры"
+
+unref.151 "Egoshooter"
+
+unref.152 "FPS"
+
+unref.153 "{F3}并排画面"
+
+unref.154 "BnB"
+
+unref.155 "PBP"
+
+unref.156 "Approx. an hour to complete"
+
+unref.157 "Approx. 15 mins to complete"
+
+unref.158 "Notice : "
+
+unref.159 "{F0}PIP/PBP{F2}의{F0} {F2}활성화{F0} {F2}결과{F0} " hidden 1c 45 6e 61 62 6c 69 6e 67 20 50 49 50 2f 50 42 50 20 77 69 6c 6c 20 61 66 66 65 63 74
+
+unref.160 "{F4}開啟{F0}PIP/PBP{F4}將影響"
+
+unref.161 "Quick Charge"
+
+unref.162 "RGB СИД"
+
+unref.163 "Hangforrás"
+
+unref.164 "Zdroj zvuku"
+
+unref.165 "Ljudkälla"
+
+unref.166 "Źródło audio"
+
+unref.167 "Lydkilde"
+
+unref.168 "Audiolähde"
+
+unref.169 "Audiobron"
+
+unref.170 "Lydkilde"
+
+unref.171 "{FA}{4D}{0D}{14}{3B}{06} {0C}{13}{14}{0A}"
+
+unref.172 "{F9}{23}{3F}{21}{0B} {13}{14}{15}"
+
+unref.173 "{F8}עמש רוקמ"
+
+unref.174 "{F7}Nguồn âm thanh" hidden 09 fa 06 13 0e 12 1f 39 16 0a
+
+unref.175 "Ses Kaynağı"
+
+unref.176 "{F6}{50}{51}{65} {16}{14}" hidden 0c 53 75 6d 62 65 72 20 41 75 64 69 6f
+
+unref.177 "{F5}{0F}{10}{16}{07}{03}{28}{02}{07}"
+
+unref.178 "{F3}音频源"
+
+unref.179 "Fonte de áudio"
+
+unref.180 "Источник звука"
+
+unref.181 "{F1}オーディオソース"
+
+unref.182 "{F2}오디오 소스" hidden 0f 46 75 65 6e 74 65 20 64 65 20 61 75 64 69 6f 0e 53 6f 72 67 65 6e 74 65 20 61 75 64 69 6f
+
+unref.183 "Audioquelle"
+
+unref.184 "Source audio"
+
+unref.185 "Audio Source"
+
+unref.186 "{F4}音訊來源"
+
+unref.187 "OFF"
+
+unref.188 "Smart Crosshair"
+
+unref.189 "Nulové časové oneskorenie"
+
+unref.190 "Zéró késlekedés" hidden 0c 42 65 7a 20 7a 70 6f db 64 e0 6e 12
+
+unref.191 "Noll fördröjning"
+
+unref.192 "Brak opóźnienia" hidden 10 4e 75 6c 6c 20 66 6f 72 73 69 6e 6b 65 6c 73 65
+
+unref.193 "Nollaviive"
+
+unref.194 "Nul latentie"
+
+unref.195 "Ingen forsinkelse"
+
+unref.196 "{FA}{2F}{0D}{30}{31}{18}{06} {32}{06}{13}{33}{34}{06}"
+
+unref.197 "{F9}{25}{0F}{18} {26}{27}{00}{28}"
+
+unref.198 "{F8}הייהשה ספא"
+
+unref.199 "{F7}Độ trễ bằng 0"
+
+unref.200 "{FA}{06}{2B}{6A}{06} {2B}{3A}{10}{6B}{2E} {2F}{21}{13}{25}"
+
+unref.201 "Sıfır Gecikme"
+
+unref.202 "{F6}{2D}{2E} {0F}{2F}{20}{30}"
+
+unref.203 "Latensi Nol"
+
+unref.204 "{F5}{11}{09}{03}{01}{2A}{2F}{30}{2A}{31}"
+
+unref.205 "{F3}零延迟"
+
+unref.206 "Latência zero"
+
+unref.207 "Нулевая задержка"
+
+unref.208 "{F1}ゼロレイテンシ"
+
+unref.209 "{F2}제로 대기 시간"
+
+unref.210 "Latenza cero"
+
+unref.211 "Latenza zero"
+
+unref.212 "Null Latenz"
+
+unref.213 "Latence zéro"
+
+unref.214 "Zero Latency"
+
+unref.215 "{F4}零延遲"
+
+unref.216 "Čierny tuner"
+
+unref.217 "Fekete hangolás" hidden 0b dc 65 72 6e d9 20 74 75 6e 65 72
+
+unref.218 "Svart mottagare" hidden 1b 44 6f 73 74 6f 73 6f 77 61 6e 69 65 20 70 6f 7a 69 6f 6d 75 20 63 7a 65 72 6e 69
+
+unref.219 "Svart justering" hidden 0d 4d 75 73 74 61 20 76 69 72 69 74 69 6e
+
+unref.220 "Zwartafstemmer"
+
+unref.221 "Sort tuner"
+
+unref.222 "{FA}{1C}{0D}{22}{05}{06} {23}{18}{06}{0D}{0A}"
+
+unref.223 "{F9}{1F}{18}{02}{1B} {11}{02}{0F}{02}{0B}"
+
+unref.224 "{F8}רוחש ןונווכ"
+
+unref.225 "{F7}Bộ chỉnh màu đen"
+
+unref.226 "{FA}{68}{1A}{3A}{22} {2B}{5A}{0D}{3A}{2E}"
+
+unref.227 "Siyah Ayarlayıcı"
+
+unref.228 "{F6}{21}{17} {22}{02}{0B}" hidden 0c 50 65 6e 61 6c 61 20 48 69 74 61 6d
+
+unref.229 "{F5}{26}{24}{19}{27}{25}{28}{29}"
+
+unref.230 "{F3}黑色调谐器"
+
+unref.231 "Ajuste de preto" hidden 11 b1 c5 c3 83 c2 c1 91 82 c5 20 94 c0 c2 bf c1 c6 c1
+
+unref.232 "{F1}ブラックチューナー"
+
+unref.233 "{F2}검은색 튜너" hidden 12 53 69 6e 74 6f 6e 69 7a 61 64 6f 72 20 6e 65 67 72 6f
+
+unref.234 "Sintonizzatore nero"
+
+unref.235 "Schwarzabstimmung"
+
+unref.236 "Syntoniseur noir"
+
+unref.237 "Black Tuner"
+
+unref.238 "{F4}黑色微調"
+
+unref.239 "Bri. Reduce Timing:"
+
+unref.240 "Bri. Reduce Ratio:"
+
+unref.241 "Static Screen Detection:"
+
+unref.242 "Pixel Shift:"
+
+unref.243 "Long Time:"
+
+unref.244 "Short Time:"
+
+unref.245 "Panel Protect"
+
+unref.246 "Normal"
+
+unref.247 "{F3}常规色"
+
+unref.248 "{F4}一般"
+
+unref.249 "HDR"
+
+unref.250 "21:9"
+
+unref.251 " 24"
+
+unref.252 "24 "
+
+unref.253 " 19"
+
+unref.254 "19 "
+
+unref.255 "PC"
+
+unref.256 "Console"
+
+unref.257 "MSI - Glow Sync"
+
+unref.258 "Vernieuwingsfrequentie"
+
+unref.259 "Calibration 3"
+
+unref.260 "Calibration 2"
+
+unref.261 "Calibration 1"
+
+unref.262 "{F0}Údržba MSI OLED"
+
+unref.263 "{F0}MSI OLED Care"
+
+unref.264 "{F0}Údržba MSI OLED"
+
+unref.265 "{F0}Sköta MSI OLED" hidden 0e f0 4d 53 49 20 4f 4c 45 44 20 43 61 72 65
+
+unref.266 "{F0}MSI OLED Care"
+
+unref.267 "{F0}MSI OLED -hoito"
+
+unref.268 "{F0}MSI OLED-zorg"
+
+unref.269 "MSI OLED Care"
+
+unref.270 "{F0}MSI OLED {FA}{24}{2D}{1A}{2C}{9C}{2D}{25} {24}{36}{1A}{16}{33}{18}{06}"
+
+unref.271 "{F0}MSI OLED {F9}{06}{99}{9A}{02}{9B}"
+
+unref.272 "MSI OLED Care"
+
+unref.273 "MSI OLED Care"
+
+unref.274 "{F0}MSI OLED {FA}{4D}{1A}{0A}{97}{10}"
+
+unref.275 "{F0}MSI OLED Care"
+
+unref.276 "{F0}MSI OLED {F6}{D9}{DA}{5D}{29}" hidden 0e f0 4d 53 49 20 4f 4c 45 44 20 43 61 72 65
+
+unref.277 "MSI OLED Care"
+
+unref.278 "{F0}MSI OLED {F3}保护"
+
+unref.279 "{F0}MSI OLED Care"
+
+unref.280 "MSI OLED Care"
+
+unref.281 "{F0}MSI OLED{F1}のケア"
+
+unref.282 "{F0}MSI OLED Care"
+
+unref.283 "{F0}Cuidar OLED MSI"
+
+unref.284 "{F0}MSI OLED Care"
+
+unref.285 "{F0}MSI-OLED-Pflege"
+
+unref.286 "{F0}Entret MSI OLED"
+
+unref.287 "{F0}MSI OLED {F4}保護"
+
+unref.288 "M"
+
+unref.289 "Z"
+
+unref.290 "{F0}Č"
+
+unref.291 "V"
+
+unref.292 "{FA}{5E}{0C}{64}{55}"
+
+unref.293 "{FA}{82}{83}{10}{55}"
+
+unref.294 "{FA}{2B}{49}{3E}{55}"
+
+unref.295 "{F7}B"
+
+unref.296 "{F7}G"
+
+unref.297 "{F7}R"
+
+unref.298 "{F6}{54}{37}"
+
+unref.299 "{F6}{00}{5B}"
+
+unref.300 "{F6}{37}{29}"

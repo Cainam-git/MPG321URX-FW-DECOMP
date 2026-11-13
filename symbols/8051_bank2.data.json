@@ -1,0 +1,893 @@
+{
+ "section": "8051_bank2",
+ "data": {
+  "DAT_0022": {
+   "name": "usb_block_buffer",
+   "brief": "Buffer in DATA through which 32-byte blocks of the USB port memory are read and written.",
+   "basis": "derived",
+   "evidence": "passed as the buffer to usb_port_read_blocks_buf / usb_port_write_blocks_buf; source of lib_swap_word_bytes for the reply and block copies"
+  },
+  "DAT_BIT_0000": {
+   "name": "usb_reg114_bit0_clear_flag",
+   "brief": "Set: the next write of register 0x114 clears its bit 0; clear: it sets the bit.",
+   "basis": "descriptive",
+   "evidence": "written by usb_device_mode_init (0, later 1); read by reg_window_write_reg114_bit0"
+  },
+  "DAT_BIT_000b": {
+   "name": "fwupd_ntfs_in_index_alloc",
+   "brief": "NTFS: set once the listing has moved from the index root to the index allocation.",
+   "basis": "derived",
+   "evidence": "set right after fwupd_ntfs_open_index_alloc is called at the end of the index root; tested before that step"
+  },
+  "DAT_BIT_000c": {
+   "name": "fwupd_dir_end_reached",
+   "brief": "Set when the directory walk reached the end of its chain; the listing then returns 0 at once.",
+   "basis": "derived",
+   "evidence": "takes the result of fwupd_fat_step_cluster; tested at the start of the listing routine; cleared with the file position reset"
+  },
+  "DAT_BIT_000d": {
+   "name": "fwupd_file_contiguous",
+   "brief": "Set when the selected file is one unbroken run of clusters; the FAT chain is then not followed.",
+   "basis": "derived",
+   "evidence": "set from the no-FAT-chain flag of the file's directory entry; tested before each FAT look-up of the file reader"
+  },
+  "DAT_CODE_c9d2": {
+   "name": "usb_host_init_table",
+   "brief": "The 16 register writes of the host set-up: register, value, wait.",
+   "basis": "proven",
+   "evidence": "usb_host_init_controller"
+  },
+  "DAT_CODE_cb8c": {
+   "name": "flash_chip_table",
+   "brief": "The table of known flash chips, 8-byte records, looked up by JEDEC ID.",
+   "basis": "proven",
+   "evidence": "flash_identify_chip"
+  },
+  "DAT_CODE_cbc4": {
+   "name": "fwupd_svc_cmd_1e_record",
+   "brief": "Fixed eight-byte service packet 07 1E AA 55 CC 33 E2 1D, sent by fwupd_svc_send_rec_cbc4.",
+   "basis": "derived",
+   "evidence": "copied whole to XDATA 0x08F3 and sent by fwupd_svc_send_rec_cbc4 (update mode bit 0 of fwupd_svc_erase_flash)"
+  },
+  "DAT_CODE_cbcc": {
+   "name": "fwupd_svc_record10_template",
+   "brief": "Fixed ten-byte service record; fwupd_svc_send_rec_cbcc sends a copy with bytes 8 and 9 replaced.",
+   "basis": "derived",
+   "evidence": "copied whole by fwupd_svc_send_rec_cbcc before the two parameter bytes are set"
+  },
+  "DAT_CODE_cbd6": {
+   "name": "flash_id_try_values",
+   "brief": "Values written to register 0xF068 before each of the three JEDEC ID read tries.",
+   "basis": "derived",
+   "evidence": "flash_identify_chip"
+  },
+  "DAT_CODE_e0a8": {
+   "name": "fwupd_boot_sector_head",
+   "brief": "First 11 bytes of a FAT boot sector (EB 58 90 'MSDOS5.0'), tested on block 0.",
+   "basis": "proven",
+   "evidence": "fwupd_find_update_file"
+  },
+  "DAT_CODE_e0b9": {
+   "name": "fwupd_msdos_oem_name",
+   "brief": "The OEM name 'MSDOS5.0' tested in the boot sector.",
+   "basis": "proven",
+   "evidence": "fwupd_mount_volume"
+  },
+  "DAT_CODE_e0c1": {
+   "name": "fwupd_ntfs_oem_name",
+   "brief": "The OEM name 'NTFS    ' tested in the boot sector.",
+   "basis": "proven",
+   "evidence": "fwupd_mount_volume"
+  },
+  "DAT_CODE_e543": {
+   "name": "uart_clock_factors",
+   "brief": "Clock factor per clock setting; timer reload and delay count are computed from it.",
+   "basis": "derived",
+   "evidence": "uart_set_baud_rate"
+  },
+  "DAT_EXTMEM_0100": {
+   "name": "fwupd_buffer_sector",
+   "brief": "Disk address of the block now in the sector buffer; read again only when it differs.",
+   "basis": "derived",
+   "evidence": "fwupd_set_target_file"
+  },
+  "DAT_EXTMEM_0104": {
+   "name": "fwupd_ntfs_run_bytes",
+   "brief": "Number of NTFS data-run bytes copied into the run list.",
+   "basis": "descriptive",
+   "evidence": "fwupd_set_target_file"
+  },
+  "DAT_EXTMEM_0105": {
+   "name": "fwupd_volume_start_sector",
+   "brief": "First sector of the volume (partition start from the boot sector +0x1C6, or 0).",
+   "basis": "proven",
+   "evidence": "fwupd_mount_volume, fwupd_find_update_file"
+  },
+  "DAT_EXTMEM_0109": {
+   "name": "fwupd_file_size",
+   "brief": "Size of the selected update file.",
+   "basis": "proven",
+   "evidence": "fwupd_set_target_file (813c: x0109 = size)"
+  },
+  "DAT_EXTMEM_010d": {
+   "name": "fwupd_ntfs_run",
+   "brief": "NTFS: the data run in use: length in clusters (word) and start (long at 0x010F).",
+   "basis": "derived",
+   "evidence": "filled from fwupd_ntfs_run_length and fwupd_ntfs_run_offset for the current run index"
+  },
+  "DAT_EXTMEM_0113": {
+   "name": "fwupd_record_total",
+   "brief": "Sizes of records 1 and up of the update image, each rounded up to 256-byte units, added together.",
+   "basis": "derived",
+   "evidence": "summed by fwupd_build_record_table; returned by fwupd_get_record_total for mailbox command 0x60"
+  },
+  "DAT_EXTMEM_0117": {
+   "name": "fwupd_saved_position",
+   "brief": "Sector and byte offset left by fwupd_seek_block_offset: where the readers look in the sector buffer.",
+   "basis": "derived",
+   "evidence": "written at the end of fwupd_seek_block_offset; the NTFS readers index fwupd_sector_buffer with its offset; fwupd_restore_walk_position copies it"
+  },
+  "DAT_EXTMEM_011d": {
+   "name": "fwupd_entry_name",
+   "brief": "The 0x2D-byte name of the directory entry listed last (printed).",
+   "basis": "proven",
+   "evidence": "directory lister 1e55; fwupd_set_target_file"
+  },
+  "DAT_EXTMEM_014a": {
+   "name": "fwupd_config_record_flag",
+   "brief": "Set when the CONFIG.bin directory entry was found; without it the file passes unchecked.",
+   "basis": "derived",
+   "evidence": "fwupd_find_update_file, fwupd_verify_file_sum"
+  },
+  "DAT_EXTMEM_014b": {
+   "name": "fwupd_exfat_heap_offset",
+   "brief": "exFAT cluster heap offset from the boot sector (+0x58).",
+   "basis": "derived",
+   "evidence": "fwupd_find_update_file"
+  },
+  "DAT_EXTMEM_014f": {
+   "name": "fwupd_ntfs_run_count",
+   "brief": "NTFS: number of data runs copied into fwupd_ntfs_run_list.",
+   "basis": "derived",
+   "evidence": "cleared and counted up once per run by fwupd_ntfs_read_data_runs; upper limit of the run index in the listing"
+  },
+  "DAT_EXTMEM_0150": {
+   "name": "fwupd_dir_entry_offset",
+   "brief": "Offset of the current 0x20-byte entry in the directory sector.",
+   "basis": "derived",
+   "evidence": "directory lister 1e55; fwupd_reset_file_position"
+  },
+  "DAT_EXTMEM_0152": {
+   "name": "fwupd_entry_first_sector",
+   "brief": "First sector of the directory entry being looked at.",
+   "basis": "derived",
+   "evidence": "fwupd_set_target_file (b84b)"
+  },
+  "DAT_EXTMEM_0156": {
+   "name": "fwupd_config_sum",
+   "brief": "The 16-bit sum from the CONFIG.bin record (bytes +0x10, +0x11).",
+   "basis": "proven",
+   "evidence": "fwupd_verify_file_sum"
+  },
+  "DAT_EXTMEM_0158": {
+   "name": "fwupd_fat_start_sector",
+   "brief": "Start of the FAT: reserved sectors (FAT) or the FAT offset (exFAT +0x50).",
+   "basis": "derived",
+   "evidence": "fwupd_mount_volume"
+  },
+  "DAT_EXTMEM_015c": {
+   "name": "fwupd_ntfs_run_list",
+   "brief": "The NTFS data runs of the file record, copied byte by byte.",
+   "basis": "derived",
+   "evidence": "fwupd_ntfs_run_offset, fwupd_ntfs_run_length"
+  },
+  "DAT_EXTMEM_01dc": {
+   "name": "fwupd_sectors_per_cluster",
+   "brief": "Sectors per cluster of the mounted volume.",
+   "basis": "proven",
+   "evidence": "fwupd_mount_volume"
+  },
+  "DAT_EXTMEM_01de": {
+   "name": "fwupd_fat_entry_sector",
+   "brief": "FAT sector that holds the entry of the current cluster (cluster * 4 / sector size).",
+   "basis": "derived",
+   "evidence": "fwupd_mount_volume"
+  },
+  "DAT_EXTMEM_01e2": {
+   "name": "fwupd_ntfs_mft_sector",
+   "brief": "NTFS: first sector of the master file table (MFT cluster * sectors per cluster).",
+   "basis": "derived",
+   "evidence": "fwupd_mount_volume"
+  },
+  "DAT_EXTMEM_01e6": {
+   "name": "fwupd_sector_buffer",
+   "brief": "The 512-byte buffer of the disk block read last.",
+   "basis": "proven",
+   "evidence": "fwupd_mount_volume"
+  },
+  "DAT_EXTMEM_01fa": {
+   "name": "fwupd_mft_first_attr_offset",
+   "brief": "Byte 0x14 of the sector buffer: in a file record, the offset of its first attribute.",
+   "basis": "derived",
+   "evidence": "address 0x01E6 + 0x14 inside fwupd_sector_buffer; read as the start offset of the attribute search after a file record was loaded"
+  },
+  "DAT_EXTMEM_03e6": {
+   "name": "fwupd_file_first_cluster",
+   "brief": "First cluster of the selected update file.",
+   "basis": "proven",
+   "evidence": "fwupd_set_target_file (813c)"
+  },
+  "DAT_EXTMEM_03ee": {
+   "name": "fwupd_ntfs_index_sector",
+   "brief": "NTFS: sector of the index entry to list next.",
+   "basis": "derived",
+   "evidence": "first argument of fwupd_seek_block_offset in the NTFS listing, paired with the entry's byte offset"
+  },
+  "DAT_EXTMEM_03f2": {
+   "name": "fwupd_walk_position",
+   "brief": "Position of the FAT / exFAT directory walk: cluster, sector, offset and the cluster's FAT entry place.",
+   "basis": "derived",
+   "evidence": "stored at the end of fwupd_fat_step_cluster from its five arguments; passed on when an entry is remembered"
+  },
+  "DAT_EXTMEM_0401": {
+   "name": "fwupd_file_first_sector",
+   "brief": "First sector of the selected update file.",
+   "basis": "proven",
+   "evidence": "fwupd_set_target_file, usb_disk_run_write_pass"
+  },
+  "DAT_EXTMEM_0405": {
+   "name": "fwupd_data_start_sector",
+   "brief": "First data sector: cluster heap (exFAT) or behind the FATs (FAT).",
+   "basis": "derived",
+   "evidence": "fwupd_mount_volume"
+  },
+  "DAT_EXTMEM_0409": {
+   "name": "fwupd_dir_entry_count",
+   "brief": "Count of directory entries listed.",
+   "basis": "derived",
+   "evidence": "directory lister 1e55, fwupd_step_port_state"
+  },
+  "DAT_EXTMEM_040a": {
+   "name": "fwupd_ntfs_index_offset",
+   "brief": "NTFS: byte offset of the index entry to list next; grows by the entry length.",
+   "basis": "derived",
+   "evidence": "second argument of fwupd_seek_block_offset in the NTFS listing; the entry length is added after each entry"
+  },
+  "DAT_EXTMEM_040c": {
+   "name": "fwupd_ntfs_record_number",
+   "brief": "NTFS: file record number of the index entry listed last.",
+   "basis": "derived",
+   "evidence": "read from the first four bytes of an index entry; multiplied by the record size in sectors and added to the MFT start sector"
+  },
+  "DAT_EXTMEM_0410": {
+   "name": "fwupd_fat_entry_offset",
+   "brief": "Byte offset of the current cluster in the FAT (cluster * 4).",
+   "basis": "derived",
+   "evidence": "fwupd_mount_volume"
+  },
+  "DAT_EXTMEM_0414": {
+   "name": "fwupd_dir_cluster",
+   "brief": "The cluster of the directory being read; starts at the root cluster.",
+   "basis": "derived",
+   "evidence": "fwupd_mount_volume, fwupd_reset_file_position"
+  },
+  "DAT_EXTMEM_0418": {
+   "name": "fwupd_root_cluster",
+   "brief": "First cluster of the root directory.",
+   "basis": "proven",
+   "evidence": "fwupd_mount_volume"
+  },
+  "DAT_EXTMEM_041c": {
+   "name": "fwupd_fs_type",
+   "brief": "File system of the stick: 0 FAT, 1 exFAT, 2 NTFS.",
+   "basis": "proven",
+   "evidence": "fwupd_mount_volume"
+  },
+  "DAT_EXTMEM_041d": {
+   "name": "fwupd_entry_cluster",
+   "brief": "Cluster of the current directory entry.",
+   "basis": "derived",
+   "evidence": "fwupd_set_target_file (df50, block read)"
+  },
+  "DAT_EXTMEM_0421": {
+   "name": "fwupd_entry_sector",
+   "brief": "Sector within the cluster of the current directory entry.",
+   "basis": "derived",
+   "evidence": "fwupd_set_target_file (df50, block read)"
+  },
+  "DAT_EXTMEM_0425": {
+   "name": "fwupd_entry_offset",
+   "brief": "Byte offset, within its sector, of the directory entry remembered while listing.",
+   "basis": "derived",
+   "evidence": "stored with fwupd_entry_cluster and fwupd_entry_sector; passed to fwupd_take_file_entry when the file is selected"
+  },
+  "DAT_EXTMEM_0429": {
+   "name": "fwupd_dir_sector",
+   "brief": "Sector, within the directory cluster, that the directory walk is reading.",
+   "basis": "derived",
+   "evidence": "added to the first sector of fwupd_dir_cluster when the directory sector is read; byte in front of fwupd_bytes_per_sector"
+  },
+  "DAT_EXTMEM_042a": {
+   "name": "fwupd_bytes_per_sector",
+   "brief": "Bytes per sector of the mounted volume.",
+   "basis": "proven",
+   "evidence": "fwupd_mount_volume"
+  },
+  "DAT_EXTMEM_042c": {
+   "name": "fwupd_ntfs_run_index",
+   "brief": "NTFS: number of the data run of the index that is being listed.",
+   "basis": "derived",
+   "evidence": "argument of fwupd_ntfs_run_length / fwupd_ntfs_run_offset; stepped while below the run count"
+  },
+  "DAT_EXTMEM_042d": {
+   "name": "fwupd_last_percent",
+   "brief": "Progress percent printed last by the flash block writer.",
+   "basis": "derived",
+   "evidence": "fwupd_write_flash_blocks"
+  },
+  "DAT_EXTMEM_042e": {
+   "name": "fwupd_record_count",
+   "brief": "Number of header records in the image (from the header block).",
+   "basis": "derived",
+   "evidence": "fwupd_build_record_table"
+  },
+  "DAT_EXTMEM_042f": {
+   "name": "fwupd_record_base",
+   "brief": "Base flash address of the header records and DUALFW regions.",
+   "basis": "derived",
+   "evidence": "fwupd_build_record_table, fwupd_tag_new_region"
+  },
+  "DAT_EXTMEM_0433": {
+   "name": "fwupd_last_record_size_low",
+   "brief": "Low byte of the size word of the last image record; its top three bits give a block count.",
+   "basis": "derived",
+   "evidence": "set by fwupd_build_record_table from bytes 4..7 of the last record; fwupd_refresh_flash_records loops (value >> 5) times"
+  },
+  "DAT_EXTMEM_0434": {
+   "name": "fwupd_dualfw_region",
+   "brief": "Current and next DUALFW region index.",
+   "basis": "derived",
+   "evidence": "fwupd_pick_valid_region, fwupd_tag_new_region"
+  },
+  "DAT_EXTMEM_0435": {
+   "name": "fwupd_dualfw_region_next",
+   "brief": "The 'next' region index: second byte of fwupd_dualfw_region, declared as its own byte in one file.",
+   "basis": "derived",
+   "evidence": "address 0x0434 + 1; the other files reach it as fwupd_dualfw_region.next; fwupd_refresh_flash_records shifts it into record addresses"
+  },
+  "DAT_EXTMEM_0436": {
+   "name": "fwupd_svc_packet",
+   "brief": "Command and reply packet of the flash service link.",
+   "basis": "derived",
+   "evidence": "fwupd_svc_* routines"
+  },
+  "DAT_EXTMEM_0440": {
+   "name": "fwupd_block_buffer",
+   "brief": "The 512-byte block written to the flash.",
+   "basis": "derived",
+   "evidence": "fwupd_write_dualfw_tag, fwupd_write_flash_blocks"
+  },
+  "DAT_EXTMEM_0640": {
+   "name": "fwupd_flash_chip_row",
+   "brief": "The chip table row of the identified flash chip.",
+   "basis": "derived",
+   "evidence": "flash_identify_chip (CODE 0xCB8C)"
+  },
+  "DAT_EXTMEM_0644": {
+   "name": "fwupd_flash_size_code",
+   "brief": "Size code of the flash chip (size = code * 0x40000 bytes).",
+   "basis": "proven",
+   "evidence": "fwupd_refresh_flash_records, fwupd_svc_send_region"
+  },
+  "DAT_EXTMEM_0648": {
+   "name": "fwupd_svc_claim_reply_byte1",
+   "brief": "Reply byte 1 of the service link, kept by fwupd_svc_claim_link when it takes the link.",
+   "basis": "descriptive",
+   "evidence": "written by fwupd_svc_claim_link from fwupd_svc_packet[1]; no reader in the written-out routines"
+  },
+  "DAT_EXTMEM_0649": {
+   "name": "fwupd_svc_claim_reply_byte2",
+   "brief": "Reply byte 2 of the service link, kept by fwupd_svc_claim_link when it takes the link.",
+   "basis": "descriptive",
+   "evidence": "written by fwupd_svc_claim_link from fwupd_svc_packet[2]; no reader in the written-out routines"
+  },
+  "DAT_EXTMEM_064a": {
+   "name": "fwupd_mailbox_work_bytes",
+   "brief": "Eight bytes filled by mailbox commands 0x41 (bytes 0..4) and 0x42 (bytes 5..7).",
+   "basis": "derived",
+   "evidence": "lib_copy_to_work_array writes it at a given offset; fwupd_write_dualfw_tag copies the eight bytes into the tag block; fwupd_svc_set_control_bit reads bytes 0, 5, 6, 7 as register, mask and polarity"
+  },
+  "DAT_EXTMEM_0652": {
+   "name": "fwupd_record_table",
+   "brief": "The header records of the image (up to 20).",
+   "basis": "derived",
+   "evidence": "fwupd_build_record_table"
+  },
+  "DAT_EXTMEM_06f2": {
+   "name": "fwupd_state_reg_on_flag",
+   "brief": "1 lets fwupd_svc_write_state_reg write its register; fwupd_run_isp_write clears it before the write.",
+   "basis": "derived",
+   "evidence": "tested for 1 by fwupd_svc_write_state_reg; set to 0 by fwupd_run_isp_write"
+  },
+  "DAT_EXTMEM_06f3": {
+   "name": "fwupd_state_reg_number_high",
+   "brief": "High byte of the main chip register number that fwupd_svc_write_state_reg writes.",
+   "basis": "derived",
+   "evidence": "reg = (this byte << 8) | fwupd_state_reg_number_low in fwupd_svc_write_state_reg"
+  },
+  "DAT_EXTMEM_06f4": {
+   "name": "fwupd_state_reg_number_low",
+   "brief": "Low byte of the main chip register number that fwupd_svc_write_state_reg writes.",
+   "basis": "derived",
+   "evidence": "reg = (fwupd_state_reg_number_high << 8) | this byte in fwupd_svc_write_state_reg"
+  },
+  "DAT_EXTMEM_06f5": {
+   "name": "fwupd_state_reg_value_0",
+   "brief": "Value fwupd_svc_write_state_reg writes to its register for state 0.",
+   "basis": "derived",
+   "evidence": "second argument of fwupd_svc_write_register when the state is 0"
+  },
+  "DAT_EXTMEM_06f6": {
+   "name": "fwupd_state_reg_value_1",
+   "brief": "Value fwupd_svc_write_state_reg writes to its register for state 1.",
+   "basis": "derived",
+   "evidence": "second argument of fwupd_svc_write_register when the state is 1"
+  },
+  "DAT_EXTMEM_06f7": {
+   "name": "fwupd_record_buffer",
+   "brief": "The 32-byte header record being refreshed.",
+   "basis": "derived",
+   "evidence": "fwupd_record_get_word, fwupd_record_set_word"
+  },
+  "DAT_EXTMEM_0717": {
+   "name": "fwupd_dram_address",
+   "brief": "DRAM address of the loaded file, posted in 0xF19B..0xF19D.",
+   "basis": "derived",
+   "evidence": "fwupd_post_value_0717, fwupd_svc_send_region"
+  },
+  "DAT_EXTMEM_071b": {
+   "name": "usb_control_reply",
+   "brief": "Reply bytes of the last USB control transfer, copied from the block buffer with the word bytes reversed.",
+   "basis": "derived",
+   "evidence": "filled by lib_swap_word_bytes from the block buffer after a control transfer; usb_host_enumerate_device reads the device replies from it"
+  },
+  "DAT_EXTMEM_075b": {
+   "name": "usb_port_index",
+   "brief": "The USB port (0 or 1) whose records are loaded.",
+   "basis": "proven",
+   "evidence": "usb_select_controller"
+  },
+  "DAT_EXTMEM_075c": {
+   "name": "usb_port_record",
+   "brief": "Current copy of the 0x27-byte record of the selected USB port.",
+   "basis": "derived",
+   "evidence": "usb_select_controller"
+  },
+  "DAT_EXTMEM_0783": {
+   "name": "usb_port_records",
+   "brief": "Saved 0x27-byte records of the two USB ports.",
+   "basis": "derived",
+   "evidence": "usb_select_controller"
+  },
+  "DAT_EXTMEM_07d1": {
+   "name": "usb_next_device_address",
+   "brief": "Per USB port: the address the next enumerated device gets; starts at 3 and grows by 2.",
+   "basis": "derived",
+   "evidence": "usb_host_init_controller sets both bytes to 3; usb_host_enumerate_device puts the byte into the set-address packet, calls usb_host_set_device_address with it and adds 2"
+  },
+  "DAT_EXTMEM_07d3": {
+   "name": "usb_port_error_counts",
+   "brief": "Error counter of each USB port: 1 is added for every failed transfer or enumeration step.",
+   "basis": "derived",
+   "evidence": "incremented in usb_host_run_transfer and usb_host_enumerate_device; read by usb_get_port_error_count, cleared by usb_clear_port_error_count"
+  },
+  "DAT_EXTMEM_07d5": {
+   "name": "usb_port_mem_base",
+   "brief": "Memory base of the selected port: common base + port * 0x380.",
+   "basis": "proven",
+   "evidence": "usb_select_controller"
+  },
+  "DAT_EXTMEM_07d9": {
+   "name": "usb_setup_packets",
+   "brief": "Ten 8-byte USB setup packets sent by the control transfers; byte 6 is the data length.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device and the hub routine pass rows of it to usb_host_control_xfer with row byte 6 as the length; the set-address row gets the device address in byte 2"
+  },
+  "DAT_EXTMEM_0829": {
+   "name": "usb_queue_head_ptr",
+   "brief": "Pointer to the block buffer at DATA 0x22, through which the fields of a queue head are read and written.",
+   "basis": "derived",
+   "evidence": "set to 0x22 by usb_host_init_controller; the queue-head routines read and write td_link, address_bits and other fields through it"
+  },
+  "DAT_EXTMEM_082a": {
+   "name": "usb_port_xfer_record",
+   "brief": "Current copy of the 0x2E-byte transfer record of the selected port.",
+   "basis": "derived",
+   "evidence": "usb_select_controller"
+  },
+  "DAT_EXTMEM_0858": {
+   "name": "usb_port_xfer_records",
+   "brief": "Saved 0x2E-byte transfer records of the two USB ports.",
+   "basis": "derived",
+   "evidence": "usb_select_controller"
+  },
+  "DAT_EXTMEM_08b4": {
+   "name": "usb_port_list_block",
+   "brief": "Block address of the port's list area (port memory address a + 0x80); written to register 0x24.",
+   "basis": "derived",
+   "evidence": "set by usb_select_controller; usb_host_init_async_list writes it shifted left by 5 to register 0x24 and fills 16 two-block entries from it"
+  },
+  "DAT_EXTMEM_08b8": {
+   "name": "usb_port_mem_offset",
+   "brief": "Port index * 0x380, the offset of the port memory.",
+   "basis": "proven",
+   "evidence": "usb_select_controller"
+  },
+  "DAT_EXTMEM_08bc": {
+   "name": "usb_port_mem_addrs",
+   "brief": "Three addresses in the port memory: base + 0x280, + 0x20, + 8.",
+   "basis": "derived",
+   "evidence": "usb_select_controller"
+  },
+  "DAT_EXTMEM_08c9": {
+   "name": "usb_mem_base",
+   "brief": "Common base of the USB port memory.",
+   "basis": "derived",
+   "evidence": "fwupd_set_value_08c9, usb_select_controller"
+  },
+  "DAT_EXTMEM_08cd": {
+   "name": "usb_port_bytes",
+   "brief": "Current copies of the three per-port bytes of the selected port.",
+   "basis": "descriptive",
+   "evidence": "usb_select_controller"
+  },
+  "DAT_EXTMEM_08d0": {
+   "name": "usb_port_saved_bytes0",
+   "brief": "Saved first per-port byte of each USB port.",
+   "basis": "descriptive",
+   "evidence": "usb_select_controller"
+  },
+  "DAT_EXTMEM_08d2": {
+   "name": "usb_port_saved_bytes1",
+   "brief": "Saved second per-port byte of each USB port.",
+   "basis": "descriptive",
+   "evidence": "usb_select_controller"
+  },
+  "DAT_EXTMEM_08d4": {
+   "name": "usb_port_saved_bytes2",
+   "brief": "Saved third per-port byte of each USB port.",
+   "basis": "descriptive",
+   "evidence": "usb_select_controller"
+  },
+  "DAT_EXTMEM_08de": {
+   "name": "usb_msc_command_tag",
+   "brief": "Tag put into each mass-storage command block ('USBC'); one higher after every command.",
+   "basis": "derived",
+   "evidence": "copied into the tag field of the command block that starts with the signature 0x55534243, incremented at the end of the command routine"
+  },
+  "DAT_EXTMEM_08f5": {
+   "name": "fwupd_svc_record10_copy",
+   "brief": "Working copy of the ten-byte service record, filled and sent by fwupd_svc_send_rec_cbcc.",
+   "basis": "derived",
+   "evidence": "receives the fixed record, gets bytes 8 and 9 set, and is handed to i2c_write_packet"
+  },
+  "DAT_EXTMEM_0912": {
+   "name": "fwupd_image_header",
+   "brief": "Header block of the loaded image, checked for the NVTSC_IMG signature.",
+   "basis": "derived",
+   "evidence": "fwupd_check_image_signature"
+  },
+  "DAT_EXTMEM_09bd": {
+   "name": "usb_device_max_packet",
+   "brief": "Largest packet of the device-mode control endpoint (0x40).",
+   "basis": "derived",
+   "evidence": "usb_device_mode_init, usb_device_answer_setup"
+  },
+  "DAT_EXTMEM_09c6": {
+   "name": "fwupd_requested_usb_mode",
+   "brief": "USB mode asked for by mailbox command 0x70 (0 or 1, host or device).",
+   "basis": "derived",
+   "evidence": "fwupd_run_mailbox_command, sys_main"
+  },
+  "DAT_EXTMEM_09cc": {
+   "name": "usb_phy_tune_value",
+   "brief": "Tuning value from mailbox byte 0xF199; below 0x20 it goes into register 0x5052.",
+   "basis": "derived",
+   "evidence": "usb_phy_tune_ctrl52"
+  },
+  "DAT_EXTMEM_09cd": {
+   "name": "fwupd_mode_state",
+   "brief": "Byte 0 = USB mode in effect, bytes 1 and 2 = status for 0xF190 and 0xF192.",
+   "basis": "derived",
+   "evidence": "sys_main"
+  },
+  "DAT_EXTMEM_09ce": {
+   "name": "fwupd_port0_state",
+   "brief": "State of the update state machine of USB port 0.",
+   "basis": "derived",
+   "evidence": "fwupd_step_port_state"
+  },
+  "DAT_EXTMEM_09cf": {
+   "name": "fwupd_port1_state",
+   "brief": "State of the update state machine of USB port 1.",
+   "basis": "derived",
+   "evidence": "fwupd_step_port_state"
+  },
+  "DAT_EXTMEM_09d0": {
+   "name": "timer_delay_loop_count",
+   "brief": "Loop count of the delay routine, set from the baud rate table.",
+   "basis": "derived",
+   "evidence": "uart_set_baud_rate, timer_delay_base"
+  },
+  "DAT_EXTMEM_09d2": {
+   "name": "i2c_bit_delay_count",
+   "brief": "Delay count of one bit on the bit-banged service bus.",
+   "basis": "derived",
+   "evidence": "i2c_set_bit_delay, i2c_bit_delay"
+  },
+  "DAT_EXTMEM_5052": {
+   "name": "reg_usb_phy_ctrl52",
+   "brief": "USB PHY register; bits 0-4 take the tuning value from the mailbox.",
+   "basis": "derived",
+   "evidence": "usb_phy_tune_ctrl52"
+  },
+  "DAT_EXTMEM_cd00": {
+   "name": "reg_usb0_reg_cmd",
+   "brief": "USB port 0 register access: 0x40 read, 0x80 write; bit 0 set when done.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd01": {
+   "name": "reg_usb0_reg_index",
+   "brief": "USB port 0 register access: low byte of the register number.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd02": {
+   "name": "reg_usb0_wdata0",
+   "brief": "USB port 0 register access: write value bits 0-7.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd03": {
+   "name": "reg_usb0_wdata1",
+   "brief": "USB port 0 register access: write value bits 8-15.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd04": {
+   "name": "reg_usb0_wdata2",
+   "brief": "USB port 0 register access: write value bits 16-23.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd05": {
+   "name": "reg_usb0_wdata3",
+   "brief": "USB port 0 register access: write value bits 24-31.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd06": {
+   "name": "reg_usb0_rdata0",
+   "brief": "USB port 0 register access: read value bits 0-7.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd07": {
+   "name": "reg_usb0_rdata1",
+   "brief": "USB port 0 register access: read value bits 8-15.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd08": {
+   "name": "reg_usb0_rdata2",
+   "brief": "USB port 0 register access: read value bits 16-23.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd09": {
+   "name": "reg_usb0_rdata3",
+   "brief": "USB port 0 register access: read value bits 24-31.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd0a": {
+   "name": "reg_usb0_byte_0a",
+   "brief": "USB controller 0 register byte 0x0A: 0x80 pulsed at reset; bit 5 switched by mailbox commands 0x21 / 0x22.",
+   "basis": "descriptive",
+   "evidence": "written 0x80 then 0 by sys_main and fwupd_step_port_state; bit 5 set / cleared by fwupd_run_mailbox_command"
+  },
+  "DAT_EXTMEM_cd20": {
+   "name": "reg_usb1_reg_cmd",
+   "brief": "USB port 1 register access: 0x40 read, 0x80 write; bit 0 set when done.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd21": {
+   "name": "reg_usb1_reg_index",
+   "brief": "USB port 1 register access: low byte of the register number.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd22": {
+   "name": "reg_usb1_wdata0",
+   "brief": "USB port 1 register access: write value bits 0-7.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd23": {
+   "name": "reg_usb1_wdata1",
+   "brief": "USB port 1 register access: write value bits 8-15.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd24": {
+   "name": "reg_usb1_wdata2",
+   "brief": "USB port 1 register access: write value bits 16-23.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd25": {
+   "name": "reg_usb1_wdata3",
+   "brief": "USB port 1 register access: write value bits 24-31.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd26": {
+   "name": "reg_usb1_rdata0",
+   "brief": "USB port 1 register access: read value bits 0-7.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd27": {
+   "name": "reg_usb1_rdata1",
+   "brief": "USB port 1 register access: read value bits 8-15.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd28": {
+   "name": "reg_usb1_rdata2",
+   "brief": "USB port 1 register access: read value bits 16-23.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd29": {
+   "name": "reg_usb1_rdata3",
+   "brief": "USB port 1 register access: read value bits 24-31.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device register access"
+  },
+  "DAT_EXTMEM_cd2a": {
+   "name": "reg_usb1_byte_0a",
+   "brief": "USB controller 1 register byte 0x0A: 0x80 pulsed together with the same byte of controller 0.",
+   "basis": "descriptive",
+   "evidence": "written 0x80 then 0 next to reg_usb0_byte_0a by sys_main and fwupd_step_port_state"
+  },
+  "DAT_EXTMEM_cd30": {
+   "name": "reg_bus_block_ctrl",
+   "brief": "Bus block access: set to 0x80 before each 32-byte block.",
+   "basis": "derived",
+   "evidence": "usb_port_read_blocks_buf, usb_port_write_blocks_buf"
+  },
+  "DAT_EXTMEM_cd31": {
+   "name": "reg_bus_block_wdata",
+   "brief": "Bus block access: write data, one byte at a time.",
+   "basis": "derived",
+   "evidence": "usb_port_write_blocks_buf"
+  },
+  "DAT_EXTMEM_cd32": {
+   "name": "reg_bus_block_read_start",
+   "brief": "Bus block access: 0x80 starts a block read.",
+   "basis": "derived",
+   "evidence": "usb_port_read_blocks_buf"
+  },
+  "DAT_EXTMEM_cd33": {
+   "name": "reg_bus_block_read_status",
+   "brief": "Bus block access: reads 0x80 when the block read is done.",
+   "basis": "derived",
+   "evidence": "usb_port_read_blocks_buf"
+  },
+  "DAT_EXTMEM_cd34": {
+   "name": "reg_bus_block_rdata",
+   "brief": "Bus block access: read data, one byte at a time.",
+   "basis": "derived",
+   "evidence": "usb_port_read_blocks_buf"
+  },
+  "DAT_EXTMEM_cd35": {
+   "name": "reg_bus_block_addr0",
+   "brief": "Bus block access: address bits 0-7.",
+   "basis": "derived",
+   "evidence": "usb_port_read_blocks_buf, usb_port_write_blocks_buf"
+  },
+  "DAT_EXTMEM_cd36": {
+   "name": "reg_bus_block_addr1",
+   "brief": "Bus block access: address bits 8-15.",
+   "basis": "derived",
+   "evidence": "usb_port_read_blocks_buf, usb_port_write_blocks_buf"
+  },
+  "DAT_EXTMEM_cd37": {
+   "name": "reg_bus_block_addr2",
+   "brief": "Bus block access: address bits 16-23.",
+   "basis": "derived",
+   "evidence": "usb_port_read_blocks_buf, usb_port_write_blocks_buf"
+  },
+  "DAT_EXTMEM_cd38": {
+   "name": "reg_bus_block_addr3",
+   "brief": "Bus block access: address bits 24-31.",
+   "basis": "derived",
+   "evidence": "usb_port_read_blocks_buf, usb_port_write_blocks_buf"
+  },
+  "DAT_EXTMEM_f190": {
+   "name": "reg_fwupd_port0_status",
+   "brief": "Mailbox: status of USB port 0 for the main processor.",
+   "basis": "proven",
+   "evidence": "update_agent.md; fwupd_step_port_state, sys_main"
+  },
+  "DAT_EXTMEM_f191": {
+   "name": "reg_fwupd_port0_command",
+   "brief": "Mailbox: command for USB port 0 from the main processor.",
+   "basis": "proven",
+   "evidence": "update_agent.md; fwupd_step_port_state, sys_main"
+  },
+  "DAT_EXTMEM_f192": {
+   "name": "reg_fwupd_port1_status",
+   "brief": "Mailbox: status of USB port 1 for the main processor.",
+   "basis": "proven",
+   "evidence": "update_agent.md; fwupd_step_port_state, sys_main"
+  },
+  "DAT_EXTMEM_f193": {
+   "name": "reg_fwupd_port1_command",
+   "brief": "Mailbox: command for USB port 1 from the main processor.",
+   "basis": "proven",
+   "evidence": "update_agent.md; fwupd_step_port_state, sys_main"
+  },
+  "DAT_EXTMEM_f194": {
+   "name": "reg_fwupd_progress",
+   "brief": "Mailbox: progress of the current job, 0..0xFF.",
+   "basis": "derived",
+   "evidence": "usb_host_enumerate_device"
+  },
+  "DAT_EXTMEM_f198": {
+   "name": "reg_fwupd_mailbox_cmd",
+   "brief": "Mailbox command byte; taken and cleared by the main loop.",
+   "basis": "proven",
+   "evidence": "update_agent.md; sys_main"
+  },
+  "DAT_EXTMEM_f19a": {
+   "name": "reg_fwupd_mailbox_f19a",
+   "brief": "Mailbox byte 0xF19A: parameter (USB mode of command 0x70, first file name byte).",
+   "basis": "derived",
+   "evidence": "fwupd_run_mailbox_command, fwupd_find_update_file"
+  },
+  "DAT_EXTMEM_f19b": {
+   "name": "reg_fwupd_mailbox_f19b",
+   "brief": "Mailbox byte 0xF19B: parameter or answer (DRAM address bits 0-7).",
+   "basis": "derived",
+   "evidence": "fwupd_post_value_0717"
+  },
+  "DAT_EXTMEM_f19c": {
+   "name": "reg_fwupd_mailbox_f19c",
+   "brief": "Mailbox byte 0xF19C: parameter or answer (address or size byte).",
+   "basis": "derived",
+   "evidence": "fwupd_post_value_0717, fwupd_post_value_0109"
+  },
+  "DAT_EXTMEM_f19d": {
+   "name": "reg_fwupd_mailbox_f19d",
+   "brief": "Mailbox byte 0xF19D: parameter or answer (address or size byte).",
+   "basis": "derived",
+   "evidence": "fwupd_post_value_0717, fwupd_post_value_0109"
+  },
+  "DAT_EXTMEM_f19e": {
+   "name": "reg_fwupd_mailbox_f19e",
+   "brief": "Mailbox byte 0xF19E: parameter or answer (size byte).",
+   "basis": "derived",
+   "evidence": "fwupd_post_value_0109"
+  },
+  "DAT_EXTMEM_f19f": {
+   "name": "reg_fwupd_mailbox_f19f",
+   "brief": "Mailbox byte 0xF19F: parameter or answer (size byte).",
+   "basis": "derived",
+   "evidence": "fwupd_post_value_0109"
+  }
+ }
+}

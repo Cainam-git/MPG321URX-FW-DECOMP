@@ -1,0 +1,645 @@
+# Texts of language 12, named "Bahasa Indonesia" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[41] (item 1, indonesian)
+16e0d0.41 "{F0}fungsi perlindungan panel (waktu lama)."
+
+# osd_protect_long_execute_texts[12] (item 0, indonesian)
+16e0d0.12 "{F0}Untuk mempertahankan kualitas gambar panel, tekan tombol \"Jalankan\" untuk menjalankan "
+
+# osd_protect_long_auto_texts[12] (item 0, indonesian)
+16f25c.12 "{F0}Untuk mempertahankan kualitas gambar panel, fungsi perlindungan panel (waktu lama) "
+
+# osd_protect_long_title_texts[70] (item 2, indonesian)
+16f670.70 "{F0}akan aktif secara otomatis ketika penggunaan monitor melebihi 1.500 jam"
+
+# osd_protect_long_title_texts[41] (item 1, indonesian)
+16f670.41 "{F0}Untuk mempertahankan kualitas gambar panel, fungsi perlindungan panel (waktu lama) "
+
+# osd_protect_long_title_texts[12] (item 0, indonesian)
+16f670.12 "{F0}MSI OLED Care - Perlindungan Panel (Waktu Lama)"
+
+# osd_protect_long_incomplete_texts[41] (item 1, indonesian)
+172590.41 "{F0}lebih jauh untuk melakukan proses ini jika dibutuhkan nanti."
+
+# osd_protect_long_incomplete_texts[12] (item 0, indonesian)
+172590.12 "{F0}Proses perlindungan panel (waktu lama) tidak selesai. Silakan klik dan pilih item "
+
+# osd_protect_incomplete_texts[41] (item 1, indonesian)
+173998.41 "{F0}lebih jauh untuk melakukan proses ini jika dibutuhkan nanti."
+
+# osd_protect_incomplete_texts[12] (item 0, indonesian)
+173998.12 "{F0}Proses perlindungan panel tidak selesai. Silakan klik dan pilih item "
+
+# osd_protect_long_incomplete_texts[70] (item 2, indonesian)
+# osd_protect_incomplete_texts[70] (item 2, indonesian)
+# osd_protect_execute_texts[70] (item 2, indonesian)
+172590.70 "{F0}Pemberitahuan:"
+
+# osd_protect_execute_texts[41] (item 1, indonesian)
+174bd0.41 "{F0}fungsi perlindungan panel."
+
+# osd_protect_execute_texts[12] (item 0, indonesian)
+174bd0.12 "{F0}Untuk mempertahankan kualitas gambar panel, tekan tombol \"Jalankan\" untuk menjalankan"
+
+# osd_protect_long_retry_texts[41] (item 1, indonesian)
+175de4.41 "{F0}untuk melakukan fungsi perlindungan panel (waktu lama)."
+
+# osd_protect_long_retry_texts[12] (item 0, indonesian)
+175de4.12 "{F0}Proses perlindungan panel (waktu lama) tidak selesai. Silakan tekan tombol \"jalankan\" "
+
+# osd_protect_retry_texts[41] (item 1, indonesian)
+177270.41 "{F0}\"jalankan\" untuk melakukan fungsi perlindungan panel. "
+
+# osd_protect_retry_texts[12] (item 0, indonesian)
+177270.12 "{F0}Proses perlindungan panel tidak selesai. Silakan tekan tombol  "
+
+# osd_protect_auto_texts[12] (item 0, indonesian)
+1785c0.12 "{F0}Untuk mempertahankan kualitas gambar panel, fungsi perlindungan panel "
+
+# osd_protect_long_auto_texts[41] (item 1, indonesian)
+16f25c.41 "{F0}akan diaktifkan secara otomatis."
+
+# osd_protect_auto_texts[41] (item 1, indonesian)
+1785c0.41 "{F0}akan diaktifkan secara otomatis."
+
+# osd_protect_long_execute_texts[128] (item 4, indonesian)
+# osd_protect_long_auto_texts[128] (item 4, indonesian)
+# osd_protect_long_title_texts[157] (item 5, indonesian)
+# osd_protect_long_incomplete_texts[128] (item 4, indonesian)
+# osd_protect_long_retry_texts[128] (item 4, indonesian)
+16e0d0.128 "{F0}Indikator daya akan berkedip putih sampai proses selesai."
+
+# osd_protect_long_execute_texts[99] (item 3, indonesian)
+# osd_protect_long_auto_texts[99] (item 3, indonesian)
+# osd_protect_long_title_texts[128] (item 4, indonesian)
+# osd_protect_long_incomplete_texts[99] (item 3, indonesian)
+# osd_protect_long_retry_texts[99] (item 3, indonesian)
+16e0d0.99 "{F0}Fungsi perlindungan ini mungkin butuh waktu satu jam untuk menyelesaikan."
+
+# osd_protect_long_title_texts[331] (item 11, indonesian)
+# osd_protect_long_retry_texts[302] (item 10, indonesian)
+# osd_protect_retry_texts[302] (item 10, indonesian)
+16f670.331 "{F0}atau pada mode hemat daya."
+
+# osd_protect_long_title_texts[302] (item 10, indonesian)
+# osd_protect_long_retry_texts[273] (item 9, indonesian)
+# osd_protect_retry_texts[273] (item 9, indonesian)
+16f670.302 "{F0}Jika tombol \"Batalkan\" diklik, proses akan otomatis aktif saat MEMATIKAN monitor "
+
+# osd_protect_long_execute_texts[244] (item 8, indonesian)
+# osd_protect_long_auto_texts[244] (item 8, indonesian)
+# osd_protect_long_title_texts[273] (item 9, indonesian)
+# osd_protect_long_incomplete_texts[244] (item 8, indonesian)
+# osd_protect_incomplete_texts[244] (item 8, indonesian)
+# osd_protect_execute_texts[244] (item 8, indonesian)
+# ... and 4 more entries
+16e0d0.244 "{F0} "
+
+# osd_protect_long_execute_texts[215] (item 7, indonesian)
+# osd_protect_long_auto_texts[215] (item 7, indonesian)
+# osd_protect_long_title_texts[244] (item 8, indonesian)
+# osd_protect_long_incomplete_texts[215] (item 7, indonesian)
+# osd_protect_incomplete_texts[215] (item 7, indonesian)
+# osd_protect_execute_texts[215] (item 7, indonesian)
+# ... and 4 more entries
+16e0d0.215 "{F0}Selama proses berjalan, tekan tombol daya lagi untuk membatalkan fungsi ini."
+
+# osd_protect_long_execute_texts[186] (item 6, indonesian)
+# osd_protect_long_auto_texts[186] (item 6, indonesian)
+# osd_protect_long_title_texts[215] (item 7, indonesian)
+# osd_protect_long_incomplete_texts[186] (item 6, indonesian)
+# osd_protect_incomplete_texts[186] (item 6, indonesian)
+# osd_protect_execute_texts[186] (item 6, indonesian)
+# ... and 4 more entries
+16e0d0.186 "{F0} "
+
+# osd_protect_long_execute_texts[157] (item 5, indonesian)
+# osd_protect_long_auto_texts[157] (item 5, indonesian)
+# osd_protect_long_title_texts[186] (item 6, indonesian)
+# osd_protect_long_incomplete_texts[157] (item 5, indonesian)
+# osd_protect_incomplete_texts[157] (item 5, indonesian)
+# osd_protect_execute_texts[157] (item 5, indonesian)
+# ... and 4 more entries
+16e0d0.157 "{F0}Selama proses berjalan, jangan lepas colokan kabel daya dari monitor."
+
+# osd_protect_incomplete_texts[128] (item 4, indonesian)
+# osd_protect_execute_texts[128] (item 4, indonesian)
+# osd_protect_retry_texts[128] (item 4, indonesian)
+# osd_protect_auto_texts[128] (item 4, indonesian)
+# osd_protect_title_texts[157] (item 5, indonesian)
+173998.128 "{F0}Indikator daya akan mengerdipkan warna kuning sampai proses selesai."
+
+# osd_protect_incomplete_texts[99] (item 3, indonesian)
+# osd_protect_execute_texts[99] (item 3, indonesian)
+# osd_protect_retry_texts[99] (item 3, indonesian)
+# osd_protect_auto_texts[99] (item 3, indonesian)
+# osd_protect_title_texts[128] (item 4, indonesian)
+173998.99 "{F0}Fungsi perlindungan mungkin butuh beberapa menit untuk menyelesaikan."
+
+# osd_protect_long_execute_texts[70] (item 2, indonesian)
+# osd_protect_long_auto_texts[70] (item 2, indonesian)
+# osd_protect_long_title_texts[99] (item 3, indonesian)
+# osd_protect_long_retry_texts[70] (item 2, indonesian)
+# osd_protect_retry_texts[70] (item 2, indonesian)
+# osd_protect_auto_texts[70] (item 2, indonesian)
+# ... and 1 more entries
+16e0d0.70 "{F0}Pemberitahuan:"
+
+# osd_protect_title_texts[70] (item 2, indonesian)
+179a14.70 "{F0}akan aktif secara otomatis ketika penggunaan monitor melebihi 4 jam"
+
+# osd_protect_title_texts[41] (item 1, indonesian)
+179a14.41 "{F0}Untuk mempertahankan kualitas gambar panel, fungsi perlindungan panel"
+
+# osd_protect_title_texts[12] (item 0, indonesian)
+179a14.12 "{F0}MSI OLED Care - Perlindungan Panel "
+
+# osd_protect_retry_texts[418] (item 14, indonesian)
+# osd_protect_title_texts[389] (item 13, indonesian)
+177270.418 "{F0}saat pemakaian kumulatif melebihi 24 jam."
+
+# osd_protect_retry_texts[389] (item 13, indonesian)
+# osd_protect_title_texts[360] (item 12, indonesian)
+177270.389 "{F0}Jika mengeklik tombol \"Nanti\", notifikasi hanya muncul"
+
+# osd_protect_retry_texts[360] (item 12, indonesian)
+# osd_protect_title_texts[331] (item 11, indonesian)
+177270.360 "{F0}otomatis/mode hemat daya."
+
+# osd_protect_retry_texts[331] (item 11, indonesian)
+# osd_protect_title_texts[302] (item 10, indonesian)
+177270.331 "{F0}Bila klik \"Batal\" atau \"Nanti\", proses buat monitor OFF "
+
+# osd_change_notice_line3_texts[12] (item 0, indonesian)
+180b60.12 "Silakan pilih salah satu opsi berikut:"
+
+# osd_change_notice_line2_texts[12] (item 0, indonesian)
+181058.12 "meningkatkan pemakaian daya monitor ini."
+
+# osd_change_notice_line1_texts[12] (item 0, indonesian)
+1814d8.12 "Mengubah fungsi yang dipilih bisa"
+
+# osd_change_notice_title_texts[12] (item 0, indonesian)
+1819cc.12 "Konfirmasikan Perubahan !"
+
+# table_1821d4[41] (item 1, indonesian)
+1821d4.41 "Digital"
+
+# table_1821d4[12] (item 0, indonesian)
+1821d4.12 "Analog"
+
+# osd_pbp_source_texts[41] (item 1, indonesian)
+182534.41 "Sumber 2"
+
+# osd_pbp_source_texts[12] (item 0, indonesian)
+182534.12 "Sumber 1"
+
+# osd_pip_item_texts[70] (item 2, indonesian)
+1828c0.70 "Lokasi"
+
+# osd_pip_item_texts[41] (item 1, indonesian)
+1828c0.41 "Ukuran GDG"
+
+# osd_pip_item_texts[12] (item 0, indonesian)
+1828c0.12 "Sumber"
+
+# osd_pip_item_texts[128] (item 4, indonesian)
+1828c0.128 "Alihkan Audio"
+
+# osd_pip_item_texts[99] (item 3, indonesian)
+1828c0.99 "Alihkan Layar"
+
+# osd_choice_note_function_texts[128] (item 4, indonesian)
+1832e4.128 "Ukuran Layar"
+
+# osd_choice_note_function_texts[99] (item 3, indonesian)
+1832e4.99 "GDG/PBP"
+
+# osd_choice_note_reducing_texts[157] (item 5, indonesian)
+183cb4.157 " "
+
+# osd_choice_note_reducing_texts[128] (item 4, indonesian)
+183cb4.128 "{F0}terima konten VRR"
+
+# osd_choice_note_reducing_texts[99] (item 3, indonesian)
+183cb4.99 "{F0}Fungsi mati saat monitor"
+
+# osd_choice_note_reducing_texts[70] (item 2, indonesian)
+183cb4.70 "{F0}\"DisplayHDR\"."
+
+# osd_choice_note_reducing_texts[41] (item 1, indonesian)
+183cb4.41 "{F0}\"Kecerahan\" atau "
+
+# osd_choice_note_reducing_texts[12] (item 0, indonesian)
+183cb4.12 "{F0}Efek kurangi ikut setelan"
+
+# osd_choice_note_texts[128] (item 4, indonesian)
+183a70.128 "{F0}untuk menyelesaikan"
+
+# osd_choice_note_texts[99] (item 3, indonesian)
+183a70.99 "{F0}Kurang lebih satu jam"
+
+# osd_choice_note_texts[70] (item 2, indonesian)
+183a70.70 "{F0}untuk menyelesaikan"
+
+# osd_choice_note_texts[41] (item 1, indonesian)
+183a70.41 "{F0}Kurang lebih 15 mnt"
+
+# osd_choice_note_texts[12] (item 0, indonesian)
+183a70.12 "{F0}Pemberitahuan :"
+
+# osd_oled_care_item_texts[70] (item 2, indonesian)
+185e78.70 "{F0}Notifikasi Lindungi"
+
+# osd_oled_care_function_texts[157] (item 5, indonesian)
+# osd_oled_care_item_texts[186] (item 6, indonesian)
+185bc0.157 "{F0}Deteksi Batas"
+
+# osd_oled_care_function_texts[128] (item 4, indonesian)
+# osd_oled_care_item_texts[157] (item 5, indonesian)
+185bc0.128 "{F0}Deteksi Bilah Tugas"
+
+# osd_oled_care_function_texts[99] (item 3, indonesian)
+# osd_oled_care_item_texts[128] (item 4, indonesian)
+185bc0.99 "{F0}Deteksi Multi Logo"
+
+# osd_oled_care_item_texts[215] (item 7, indonesian)
+185e78.215 "{F0}Info Panel OLED"
+
+# osd_oled_care_function_texts[70] (item 2, indonesian)
+# osd_oled_care_item_texts[99] (item 3, indonesian)
+185bc0.70 "{F0}Deteksi Layar Statis"
+
+# osd_oled_care_function_texts[12] (item 0, indonesian)
+# osd_oled_care_item_texts[41] (item 1, indonesian)
+185bc0.12 "{F0}Perlindungan Panel"
+
+# osd_oled_care_function_texts[41] (item 1, indonesian)
+# osd_oled_care_item_texts[12] (item 0, indonesian)
+185bc0.41 "{F0}Ganti Piksel"
+
+# osd_choice_note_function_texts[302] (item 10, indonesian)
+# osd_settings_item_texts[215] (item 7, indonesian)
+1832e4.302 "{F0}Isi Daya PD Tipe C"
+
+# osd_settings_item_texts[128] (item 4, indonesian)
+1874f8.128 "Tombol Daya"
+
+# osd_settings_item_texts[273] (item 9, indonesian)
+1874f8.273 "Atur Ulang"
+
+# osd_settings_item_texts[70] (item 2, indonesian)
+1874f8.70 "Waktu habis OSD"
+
+# osd_settings_item_texts[41] (item 1, indonesian)
+1874f8.41 "Transparansi"
+
+# osd_settings_item_texts[12] (item 0, indonesian)
+1874f8.12 "Bahasa"
+
+# osd_professional_item_texts[70] (item 2, indonesian)
+188634.70 "Peningkatan Gambar"
+
+# osd_professional_item_texts[41] (item 1, indonesian)
+188634.41 "Sinar Biru Rendah"
+
+# osd_professional_item_texts[12] (item 0, indonesian)
+188634.12 "Mode Profesional"
+
+# osd_night_vision_texts[99] (item 3, indonesian)
+1890d4.99 "Terkuat"
+
+# osd_night_vision_texts[70] (item 2, indonesian)
+1890d4.70 "Kuat"
+
+# osd_night_vision_texts[41] (item 1, indonesian)
+1890d4.41 "Normal"
+
+# osd_choice_note_function_texts[273] (item 9, indonesian)
+# osd_gaming_item_texts[41] (item 1, indonesian)
+1832e4.273 "Tampilan Malam"
+
+# osd_gaming_item_texts[128] (item 4, indonesian)
+188da0.128 "Jam Alarm"
+
+# osd_gaming_item_texts[99] (item 3, indonesian)
+188da0.99 "Laju Refresh"
+
+# osd_choice_note_function_texts[157] (item 5, indonesian)
+1832e4.157 "Waktu Respons"
+
+# osd_gaming_item_texts[12] (item 0, indonesian)
+188da0.12 "Mode Game"
+
+# osd_choice_note_function_texts[186] (item 6, indonesian)
+# osd_gi_item_texts[70] (item 2, indonesian)
+1832e4.186 "Lingkup Optiks"
+
+# osd_oled_care_seconds_texts[99] (item 3, indonesian)
+18a7ec.99 "{F0}240 Detik"
+
+# osd_oled_care_seconds_texts[70] (item 2, indonesian)
+18a7ec.70 "{F0}120 Detik"
+
+# osd_oled_care_seconds_texts[41] (item 1, indonesian)
+18a7ec.41 "{F0}100 Detik"
+
+# osd_oled_care_seconds_texts[12] (item 0, indonesian)
+18a7ec.12 "{F0}50 Detik"
+
+# table_18af08[41] (item 1, indonesian)
+# table_18b008[41] (item 1, indonesian)
+18af08.41 "{F0}Secara manual"
+
+# osd_oled_care_usage_texts[41] (item 1, indonesian)
+18b29c.41 "{F0}Pakai 24j lbh"
+
+# osd_oled_care_speed_texts[70] (item 2, indonesian)
+18b5e0.70 "{F0}Cepat"
+
+# osd_oled_care_speed_texts[12] (item 0, indonesian)
+18b5e0.12 "{F0}Lambat"
+
+# osd_oled_care_choice_texts[70] (item 2, indonesian)
+# osd_oled_care_status_texts[70] (item 2, indonesian)
+16df60.70 "{F0}Level Berkurang"
+
+# osd_oled_care_status_texts[41] (item 1, indonesian)
+18b94c.41 "{F0}Waktu diperlukan"
+
+# osd_oled_care_status_texts[12] (item 0, indonesian)
+18b94c.12 "{F0}Mulai pada"
+
+# table_18c070[41] (item 1, indonesian)
+18c070.41 "{F0}Waktu Lama"
+
+# table_18c070[12] (item 0, indonesian)
+18c070.12 "{F0}Waktu Singkat"
+
+# table_18c4a8[12] (item 0, indonesian)
+18c4a8.12 "{F0}Kecepatan gerak (Ganti Piksel)"
+
+# osd_image_item_texts[128] (item 4, indonesian)
+18ca88.128 "Ukuran Layar"
+
+# osd_image_item_texts[99] (item 3, indonesian)
+18ca88.99 "Suhu Warna"
+
+# osd_image_item_texts[70] (item 2, indonesian)
+18ca88.70 "Ketajaman"
+
+# osd_image_item_texts[41] (item 1, indonesian)
+18ca88.41 "Kontras"
+
+# osd_language_texts[12] (item 0, indonesian)
+18d3d4.12 "Bahasa Indonesia"
+
+# osd_optix_scope_item_texts[41] (item 1, indonesian)
+18d578.41 "{F0}Lingkup Rasio"
+
+# osd_optix_scope_item_texts[12] (item 0, indonesian)
+18d578.12 "{F0}Lingkup Ukuran"
+
+# osd_color_temp_texts[99] (item 3, indonesian)
+18db28.99 "Penyesuaian"
+
+# osd_color_temp_texts[70] (item 2, indonesian)
+18db28.70 "Hangat"
+
+# osd_color_temp_texts[12] (item 0, indonesian)
+18db28.12 "Dingin"
+
+# osd_response_time_texts[70] (item 2, indonesian)
+18e08c.70 "Tercepat"
+
+# osd_response_time_texts[41] (item 1, indonesian)
+18e08c.41 "Cepat"
+
+# osd_oled_care_speed_texts[41] (item 1, indonesian)
+# osd_color_temp_texts[41] (item 1, indonesian)
+# osd_response_time_texts[12] (item 0, indonesian)
+18b5e0.41 "Normal"
+
+# osd_crosshair_color_texts[41] (item 1, indonesian)
+18e54c.41 "Merah"
+
+# osd_crosshair_color_texts[12] (item 0, indonesian)
+18e54c.12 "Putih"
+
+# table_18c8b8[70] (item 2, indonesian)
+# osd_pbp_mode_texts[70] (item 2, indonesian)
+# osd_location_texts[128] (item 4, indonesian)
+18c8b8.70 "Sesuaikan"
+
+# osd_location_texts[99] (item 3, indonesian)
+18e9f8.99 "Bawah Kanan"
+
+# osd_location_texts[70] (item 2, indonesian)
+18e9f8.70 "Bawah Kiri"
+
+# osd_location_texts[41] (item 1, indonesian)
+18e9f8.41 "Atas Kanan"
+
+# osd_location_texts[12] (item 0, indonesian)
+18e9f8.12 "Atas Kiri"
+
+# osd_size_texts[70] (item 2, indonesian)
+18f550.70 "Besar"
+
+# osd_size_texts[41] (item 1, indonesian)
+18f550.41 "Sedang"
+
+# osd_size_texts[12] (item 0, indonesian)
+18f550.12 "Kecil"
+
+# osd_crosshair_item_texts[128] (item 4, indonesian)
+18f984.128 "Atur Ulang"
+
+# osd_crosshair_item_texts[99] (item 3, indonesian)
+18f984.99 "Posisi"
+
+# osd_crosshair_item_texts[70] (item 2, indonesian)
+18f984.70 "{F0}Warna"
+
+# osd_crosshair_item_texts[41] (item 1, indonesian)
+18f984.41 "Ikon"
+
+# osd_crosshair_item_texts[12] (item 0, indonesian)
+18f984.12 "Tidak Ada"
+
+# osd_protect_button_texts[70] (item 2, indonesian)
+190184.70 "{F0}Nanti"
+
+# osd_protect_button_texts[41] (item 1, indonesian)
+190184.41 "{F0}Batal"
+
+# osd_protect_button_texts[12] (item 0, indonesian)
+190184.12 "{F0}Jalankan"
+
+# osd_yes_no_texts[41] (item 1, indonesian)
+190748.41 "Tidak"
+
+# osd_yes_no_texts[12] (item 0, indonesian)
+190748.12 "Ya"
+
+# osd_kvm_texts[41] (item 1, indonesian)
+1909ec.41 "Hulu"
+
+# table_190cec[41] (item 1, indonesian)
+190cec.41 "{F0}Puncak 1000 nit"
+
+# osd_navi_key_item_texts[99] (item 3, indonesian)
+19158c.99 "Kanan"
+
+# osd_navi_key_item_texts[70] (item 2, indonesian)
+19158c.70 "Kiri"
+
+# osd_navi_key_item_texts[41] (item 1, indonesian)
+19158c.41 "Turun"
+
+# osd_navi_key_item_texts[12] (item 0, indonesian)
+19158c.12 "Atas"
+
+# osd_info_box_texts[186] (item 6, indonesian)
+191b30.186 "Kedalaman Bit"
+
+# osd_info_box_texts[157] (item 5, indonesian)
+191b30.157 "Jenis Konten"
+
+# osd_info_box_texts[128] (item 4, indonesian)
+191b30.128 "Pilih Mode"
+
+# osd_info_box_texts[70] (item 2, indonesian)
+191b30.70 "Resolusi Fisik"
+
+# osd_info_box_texts[41] (item 1, indonesian)
+191b30.41 "Resolusi Asli"
+
+# osd_out_of_range_texts[12] (item 0, indonesian)
+192d8c.12 "Di Luar Jangkauan!"
+
+# osd_no_signal_texts[12] (item 0, indonesian)
+193008.12 "Tidak Ada Sinyal"
+
+# osd_power_button_texts[41] (item 1, indonesian)
+19336c.41 "Siaga"
+
+# osd_navi_function_texts[302] (item 10, indonesian)
+1935bc.302 "Lingkup Optiks"
+
+# osd_navi_function_texts[273] (item 9, indonesian)
+1935bc.273 "Tampilan Malam"
+
+# osd_info_box_texts[99] (item 3, indonesian)
+# osd_navi_function_texts[215] (item 7, indonesian)
+191b30.99 "Laju Refresh"
+
+# osd_gi_item_texts[41] (item 1, indonesian)
+# osd_navi_function_texts[99] (item 3, indonesian)
+18a360.41 "{F0}Garis Bidik Pintar"
+
+# osd_navi_function_texts[128] (item 4, indonesian)
+1935bc.128 "Jam Alarm"
+
+# osd_navi_function_texts[70] (item 2, indonesian)
+1935bc.70 "Mode Game"
+
+# osd_choice_note_function_texts[41] (item 1, indonesian)
+# osd_image_item_texts[12] (item 0, indonesian)
+# osd_navi_function_texts[41] (item 1, indonesian)
+1832e4.41 "Kecerahan"
+
+# osd_settings_item_texts[157] (item 5, indonesian)
+# table_18c8b8[99] (item 3, indonesian)
+# osd_navi_function_texts[244] (item 8, indonesian)
+1874f8.157 "Info Tentang Layar"
+
+# osd_navi_function_texts[186] (item 6, indonesian)
+1935bc.186 "Mode GDG/PBP"
+
+# osd_image_enhancement_texts[128] (item 4, indonesian)
+194b34.128 "Terkuat"
+
+# osd_image_enhancement_texts[99] (item 3, indonesian)
+194b34.99 "Kuat"
+
+# osd_image_enhancement_texts[70] (item 2, indonesian)
+194b34.70 "Sedang"
+
+# osd_image_enhancement_texts[41] (item 1, indonesian)
+194b34.41 "Lemah"
+
+# osd_pro_mode_texts[12] (item 0, indonesian)
+1951dc.12 "Ekologi"
+
+# osd_pro_mode_texts[99] (item 3, indonesian)
+1951dc.99 "Film"
+
+# osd_pro_mode_texts[70] (item 2, indonesian)
+1951dc.70 "Anti Biru"
+
+# osd_pro_mode_texts[128] (item 4, indonesian)
+1951dc.128 "Kantor"
+
+# osd_oled_care_choice_texts[41] (item 1, indonesian)
+# osd_optix_scope_item_texts[99] (item 3, indonesian)
+# osd_off_on_texts[41] (item 1, indonesian)
+# table_195a38[70] (item 2, indonesian)
+16df60.41 "HIDUP"
+
+# osd_location_texts[157] (item 5, indonesian)
+# table_195a38[12] (item 0, indonesian)
+# table_195c7c[12] (item 0, indonesian)
+18e9f8.157 "Lokasi"
+
+# osd_game_mode_texts[12] (item 0, indonesian)
+195f24.12 "{F0}Warna Premium"
+
+# osd_pro_mode_texts[41] (item 1, indonesian)
+# osd_game_mode_texts[41] (item 1, indonesian)
+1951dc.41 "Pengguna"
+
+# osd_game_mode_texts[99] (item 3, indonesian)
+195f24.99 "Balapan"
+
+# osd_pbp_mode_texts[41] (item 1, indonesian)
+18e89c.41 "Mode 2"
+
+# osd_pbp_mode_texts[12] (item 0, indonesian)
+18e89c.12 "Mode 1"
+
+# osd_pip_pbp_texts[41] (item 1, indonesian)
+196678.41 "GDG"
+
+# osd_oled_care_choice_texts[12] (item 0, indonesian)
+# osd_night_vision_texts[12] (item 0, indonesian)
+# table_18c8b8[12] (item 0, indonesian)
+# osd_optix_scope_item_texts[70] (item 2, indonesian)
+# osd_off_on_texts[12] (item 0, indonesian)
+# osd_power_button_texts[12] (item 0, indonesian)
+# ... and 5 more entries
+16df60.12 "MATI"
+
+# osd_tab_name_texts[186] (item 6, indonesian)
+196dc0.186 "Kunci Navigasi"
+
+# osd_tab_name_texts[215] (item 7, indonesian)
+196dc0.215 "Pengaturan"
+
+# osd_tab_name_texts[157] (item 5, indonesian)
+196dc0.157 "GDG/PBP"
+
+# osd_info_box_texts[12] (item 0, indonesian)
+# osd_navi_function_texts[157] (item 5, indonesian)
+# osd_tab_name_texts[128] (item 4, indonesian)
+191b30.12 "Sumber Input"
+
+# osd_tab_name_texts[99] (item 3, indonesian)
+196dc0.99 "Gambar"
+
+# osd_tab_name_texts[70] (item 2, indonesian)
+196dc0.70 "Profesional"
+
+# osd_tab_name_texts[41] (item 1, indonesian)
+196dc0.41 "Permainan"

@@ -1,0 +1,613 @@
+# Texts of language 1, named "English" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[30] (item 1, english)
+16e0d0.30 "{F0}(long time)function."
+
+# osd_protect_long_execute_texts[1] (item 0, english)
+16e0d0.1 "{F0}To maintain panel image quality,press\"Execute\"button to do panel protect"
+
+# osd_protect_long_auto_texts[1] (item 0, english)
+16f25c.1 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+# osd_protect_long_title_texts[59] (item 2, english)
+16f670.59 "{F0}automatically activate when monitor using over 1,500 hours."
+
+# osd_protect_long_title_texts[30] (item 1, english)
+16f670.30 "{F0}To maintain panel image quality, panel protect (long time) function Will"
+
+# osd_protect_long_title_texts[1] (item 0, english)
+16f670.1 "{F0}MSI OLED Care - Panel Protect (Long Time)"
+
+# osd_protect_long_incomplete_texts[30] (item 1, english)
+172590.30 "Please select and click this item further to do this process if needs later" hidden 2e
+
+# osd_protect_long_incomplete_texts[1] (item 0, english)
+172590.1 "The panel protect(long time)process did not complete."
+
+# osd_protect_incomplete_texts[30] (item 1, english)
+173998.30 "Please select and click this item further to do this process if needs later" hidden 2e
+
+# osd_protect_incomplete_texts[1] (item 0, english)
+173998.1 "The panel protect process did not complete."
+
+# osd_protect_long_incomplete_texts[59] (item 2, english)
+# osd_protect_incomplete_texts[59] (item 2, english)
+# osd_protect_execute_texts[59] (item 2, english)
+172590.59 "{F0}Notice:"
+
+# osd_protect_execute_texts[30] (item 1, english)
+174bd0.30 "{F0} "
+
+# osd_protect_execute_texts[1] (item 0, english)
+174bd0.1 "{F0}To maintain panel image quality, press \"Execute\" button to do panel protect function."
+
+# osd_protect_long_retry_texts[30] (item 1, english)
+175de4.30 "Please press \"execute\"button to do panel protect (long time) function."
+
+# osd_protect_long_retry_texts[1] (item 0, english)
+175de4.1 "The panel protect(long time)process did not complete."
+
+# osd_protect_retry_texts[30] (item 1, english)
+177270.30 "{F0}button to do panel protect function."
+
+# osd_protect_retry_texts[1] (item 0, english)
+177270.1 "{F0}The panel protect process did not complete. Please press \"execute\" "
+
+# osd_protect_auto_texts[1] (item 0, english)
+1785c0.1 "{F0}To maintain panel image quality, panel protect function will "
+
+# osd_protect_long_auto_texts[30] (item 1, english)
+16f25c.30 "automatically activate."
+
+# osd_protect_auto_texts[30] (item 1, english)
+1785c0.30 "automatically activate."
+
+# osd_protect_long_execute_texts[117] (item 4, english)
+# osd_protect_long_auto_texts[117] (item 4, english)
+# osd_protect_long_title_texts[146] (item 5, english)
+# osd_protect_long_incomplete_texts[117] (item 4, english)
+# osd_protect_long_retry_texts[117] (item 4, english)
+16e0d0.117 "The power indicator will blink white color until process done."
+
+# osd_protect_long_execute_texts[88] (item 3, english)
+# osd_protect_long_auto_texts[88] (item 3, english)
+# osd_protect_long_title_texts[117] (item 4, english)
+# osd_protect_long_incomplete_texts[88] (item 3, english)
+# osd_protect_long_retry_texts[88] (item 3, english)
+16e0d0.88 "This protect function may take an hour to complete."
+
+# osd_protect_long_title_texts[320] (item 11, english)
+# osd_protect_long_retry_texts[291] (item 10, english)
+# osd_protect_retry_texts[291] (item 10, english)
+16f670.320 "OFF or in power saving mode."
+
+# osd_protect_long_title_texts[291] (item 10, english)
+# osd_protect_long_retry_texts[262] (item 9, english)
+# osd_protect_retry_texts[262] (item 9, english)
+16f670.291 "If click \"Cancel\" button, this process will automatically activate when turn monitor"
+
+# osd_protect_long_execute_texts[233] (item 8, english)
+# osd_protect_long_auto_texts[233] (item 8, english)
+# osd_protect_long_title_texts[262] (item 9, english)
+# osd_protect_long_incomplete_texts[233] (item 8, english)
+# osd_protect_incomplete_texts[233] (item 8, english)
+# osd_protect_execute_texts[233] (item 8, english)
+# ... and 4 more entries
+16e0d0.233 "{F0} "
+
+# osd_protect_long_execute_texts[204] (item 7, english)
+# osd_protect_long_auto_texts[204] (item 7, english)
+# osd_protect_long_title_texts[233] (item 8, english)
+# osd_protect_long_incomplete_texts[204] (item 7, english)
+# osd_protect_incomplete_texts[204] (item 7, english)
+# osd_protect_execute_texts[204] (item 7, english)
+# ... and 4 more entries
+16e0d0.204 "{F0}During process executing, press power button again to cancel this function."
+
+# osd_protect_long_execute_texts[175] (item 6, english)
+# osd_protect_long_auto_texts[175] (item 6, english)
+# osd_protect_long_title_texts[204] (item 7, english)
+# osd_protect_long_incomplete_texts[175] (item 6, english)
+# osd_protect_incomplete_texts[175] (item 6, english)
+# osd_protect_execute_texts[175] (item 6, english)
+# ... and 4 more entries
+16e0d0.175 "{F0} "
+
+# osd_protect_long_execute_texts[146] (item 5, english)
+# osd_protect_long_auto_texts[146] (item 5, english)
+# osd_protect_long_title_texts[175] (item 6, english)
+# osd_protect_long_incomplete_texts[146] (item 5, english)
+# osd_protect_incomplete_texts[146] (item 5, english)
+# osd_protect_execute_texts[146] (item 5, english)
+# ... and 4 more entries
+16e0d0.146 "{F0}During process executing, please do not unplug the power cord from monitor."
+
+# osd_protect_incomplete_texts[117] (item 4, english)
+# osd_protect_execute_texts[117] (item 4, english)
+# osd_protect_retry_texts[117] (item 4, english)
+# osd_protect_auto_texts[117] (item 4, english)
+# osd_protect_title_texts[146] (item 5, english)
+173998.117 "{F0}The power indicator will blink orange color until process done."
+
+# osd_protect_incomplete_texts[88] (item 3, english)
+# osd_protect_execute_texts[88] (item 3, english)
+# osd_protect_retry_texts[88] (item 3, english)
+# osd_protect_auto_texts[88] (item 3, english)
+# osd_protect_title_texts[117] (item 4, english)
+173998.88 "{F0}This protect function may take several minutes to complete."
+
+# osd_protect_long_execute_texts[59] (item 2, english)
+# osd_protect_long_auto_texts[59] (item 2, english)
+# osd_protect_long_title_texts[88] (item 3, english)
+# osd_protect_long_retry_texts[59] (item 2, english)
+# osd_protect_retry_texts[59] (item 2, english)
+# osd_protect_auto_texts[59] (item 2, english)
+# ... and 1 more entries
+16e0d0.59 "{F0}Notice:"
+
+# osd_protect_title_texts[59] (item 2, english)
+179a14.59 "automatically activate when monitor using over 4 hours."
+
+# osd_protect_title_texts[30] (item 1, english)
+179a14.30 "To maintain panel image quality, panel protect function will"
+
+# osd_protect_title_texts[1] (item 0, english)
+179a14.1 "MSI OLED Care - Panel Protect "
+
+# osd_protect_retry_texts[407] (item 14, english)
+# osd_protect_title_texts[378] (item 13, english)
+177270.407 "{F0}24 hours."
+
+# osd_protect_retry_texts[378] (item 13, english)
+# osd_protect_title_texts[349] (item 12, english)
+177270.378 "{F0}If click \"Later\" button, the notification only show up when panel cumulative usage over"
+
+# osd_protect_retry_texts[349] (item 12, english)
+# osd_protect_title_texts[320] (item 11, english)
+177270.349 "{F0}monitor OFF or in power saving mode."
+
+# osd_protect_retry_texts[320] (item 11, english)
+# osd_protect_title_texts[291] (item 10, english)
+177270.320 "{F0}If click \"Cancel\" or \"Later\" button, this process will automatically activate when turn"
+
+# osd_change_notice_line3_texts[1] (item 0, english)
+180b60.1 "Please select one of the following options:"
+
+# osd_change_notice_line2_texts[1] (item 0, english)
+181058.1 "the power consumption of this monitor."
+
+# osd_change_notice_line1_texts[1] (item 0, english)
+1814d8.1 "Changing the selected function may increase"
+
+# osd_change_notice_title_texts[1] (item 0, english)
+1819cc.1 "Confirm Change !"
+
+# table_1821d4[30] (item 1, english)
+1821d4.30 "Digital"
+
+# table_1821d4[1] (item 0, english)
+1821d4.1 "Analog"
+
+# osd_pbp_source_texts[30] (item 1, english)
+182534.30 "Source 2"
+
+# osd_pbp_source_texts[1] (item 0, english)
+182534.1 "Source 1"
+
+# osd_pip_item_texts[59] (item 2, english)
+1828c0.59 "Location"
+
+# osd_pip_item_texts[30] (item 1, english)
+1828c0.30 "PIP Size"
+
+# osd_pip_item_texts[1] (item 0, english)
+1828c0.1 "Source"
+
+# osd_pip_item_texts[117] (item 4, english)
+1828c0.117 "Audio Switch"
+
+# osd_pip_item_texts[88] (item 3, english)
+1828c0.88 "Display Switch"
+
+# osd_choice_note_function_texts[117] (item 4, english)
+1832e4.117 "Screen Size"
+
+# osd_choice_note_reducing_texts[146] (item 5, english)
+183cb4.146 "{F0}receiving VRR content."
+
+# osd_choice_note_reducing_texts[117] (item 4, english)
+183cb4.117 "{F0}when the monitor is"
+
+# osd_choice_note_reducing_texts[88] (item 3, english)
+183cb4.88 "{F0}This function will not work "
+
+# osd_choice_note_reducing_texts[59] (item 2, english)
+183cb4.59 "{F0}\"DisplayHDR\" setting."
+
+# osd_choice_note_reducing_texts[30] (item 1, english)
+183cb4.30 "{F0}on \"Brightness\" or"
+
+# osd_choice_note_reducing_texts[1] (item 0, english)
+183cb4.1 "{F0}Reducing effect depends"
+
+# osd_choice_note_texts[117] (item 4, english)
+183a70.117 " "
+
+# osd_choice_note_texts[88] (item 3, english)
+183a70.88 "Approx. an hour to complete"
+
+# osd_choice_note_texts[59] (item 2, english)
+183a70.59 " "
+
+# osd_choice_note_texts[30] (item 1, english)
+183a70.30 "Approx. 15 mins to complete"
+
+# osd_choice_note_texts[1] (item 0, english)
+183a70.1 "Notice : "
+
+# osd_oled_care_item_texts[59] (item 2, english)
+185e78.59 "Protect Notice"
+
+# osd_oled_care_function_texts[146] (item 5, english)
+# osd_oled_care_item_texts[175] (item 6, english)
+185bc0.146 "Boundary Detection"
+
+# osd_oled_care_function_texts[117] (item 4, english)
+# osd_oled_care_item_texts[146] (item 5, english)
+185bc0.117 "Taskbar Detection"
+
+# osd_oled_care_function_texts[88] (item 3, english)
+# osd_oled_care_item_texts[117] (item 4, english)
+185bc0.88 "Multi Logo Detection"
+
+# osd_oled_care_item_texts[204] (item 7, english)
+185e78.204 "{F0}OLED Panel Info."
+
+# osd_oled_care_function_texts[59] (item 2, english)
+# osd_oled_care_item_texts[88] (item 3, english)
+185bc0.59 "{F0}Static Screen Detection"
+
+# osd_oled_care_function_texts[1] (item 0, english)
+# osd_oled_care_item_texts[30] (item 1, english)
+185bc0.1 "{F0}Panel Protect "
+
+# osd_oled_care_function_texts[30] (item 1, english)
+# osd_oled_care_item_texts[1] (item 0, english)
+185bc0.30 "{F0}Pixel Shift"
+
+# osd_choice_note_function_texts[291] (item 10, english)
+# osd_settings_item_texts[204] (item 7, english)
+1832e4.291 "{F0}Type C PD Charge"
+
+# osd_settings_item_texts[117] (item 4, english)
+1874f8.117 "Power Button"
+
+# osd_settings_item_texts[262] (item 9, english)
+1874f8.262 "Reset"
+
+# osd_settings_item_texts[59] (item 2, english)
+1874f8.59 "OSD Time out"
+
+# osd_settings_item_texts[30] (item 1, english)
+1874f8.30 "Transparency"
+
+# osd_settings_item_texts[1] (item 0, english)
+1874f8.1 "Language"
+
+# osd_professional_item_texts[59] (item 2, english)
+188634.59 "Image Enhancement"
+
+# osd_professional_item_texts[30] (item 1, english)
+188634.30 "Low Blue Light"
+
+# osd_professional_item_texts[1] (item 0, english)
+188634.1 "Pro Mode"
+
+# osd_night_vision_texts[88] (item 3, english)
+1890d4.88 "Strongest"
+
+# osd_night_vision_texts[59] (item 2, english)
+1890d4.59 "Strong"
+
+# osd_choice_note_function_texts[262] (item 9, english)
+# osd_gaming_item_texts[30] (item 1, english)
+1832e4.262 "Night Vision"
+
+# osd_gaming_item_texts[117] (item 4, english)
+188da0.117 "Alarm Clock"
+
+# osd_gaming_item_texts[88] (item 3, english)
+188da0.88 "Refresh Rate"
+
+# osd_choice_note_function_texts[146] (item 5, english)
+1832e4.146 "Response Time"
+
+# osd_gaming_item_texts[1] (item 0, english)
+188da0.1 "Game Mode"
+
+# osd_choice_note_function_texts[175] (item 6, english)
+# osd_gi_item_texts[59] (item 2, english)
+1832e4.175 "Optix Scope"
+
+# osd_oled_care_seconds_texts[88] (item 3, english)
+18a7ec.88 "240 Sec"
+
+# osd_oled_care_seconds_texts[59] (item 2, english)
+18a7ec.59 "120 Sec"
+
+# osd_oled_care_seconds_texts[30] (item 1, english)
+18a7ec.30 "100 Sec"
+
+# osd_oled_care_seconds_texts[1] (item 0, english)
+18a7ec.1 "50 Sec"
+
+# table_18af08[30] (item 1, english)
+# table_18b008[30] (item 1, english)
+18af08.30 "{F0}Manually"
+
+# osd_oled_care_usage_texts[30] (item 1, english)
+18b29c.30 "Usage 24 hrs"
+
+# osd_oled_care_speed_texts[59] (item 2, english)
+18b5e0.59 "{F0}Fast"
+
+# osd_oled_care_speed_texts[1] (item 0, english)
+18b5e0.1 "{F0}Slow"
+
+# osd_oled_care_choice_texts[59] (item 2, english)
+# osd_oled_care_status_texts[59] (item 2, english)
+16df60.59 "Reducing Level"
+
+# osd_oled_care_status_texts[30] (item 1, english)
+18b94c.30 "{F0}Time required"
+
+# osd_oled_care_status_texts[1] (item 0, english)
+18b94c.1 "{F0}Starting in"
+
+# table_18c070[30] (item 1, english)
+18c070.30 "{F0}Long Time"
+
+# table_18c070[1] (item 0, english)
+18c070.1 "{F0}Short Time"
+
+# table_18c4a8[1] (item 0, english)
+18c4a8.1 "{F0}Moving speed (Pixel Shift)"
+
+# osd_image_item_texts[117] (item 4, english)
+18ca88.117 "Screen Size"
+
+# osd_image_item_texts[88] (item 3, english)
+18ca88.88 "Color Temperature"
+
+# osd_image_item_texts[59] (item 2, english)
+18ca88.59 "Sharpness"
+
+# osd_image_item_texts[30] (item 1, english)
+18ca88.30 "Contrast"
+
+# osd_language_texts[1] (item 0, english)
+18d3d4.1 "English"
+
+# osd_optix_scope_item_texts[30] (item 1, english)
+18d578.30 "Scope Ratio"
+
+# osd_optix_scope_item_texts[1] (item 0, english)
+18d578.1 "Scope Size"
+
+# osd_color_temp_texts[88] (item 3, english)
+18db28.88 "Customization"
+
+# osd_color_temp_texts[59] (item 2, english)
+18db28.59 "Warm"
+
+# osd_color_temp_texts[1] (item 0, english)
+18db28.1 "Cool"
+
+# osd_response_time_texts[59] (item 2, english)
+18e08c.59 "Fastest"
+
+# osd_response_time_texts[30] (item 1, english)
+18e08c.30 "Fast"
+
+# osd_crosshair_color_texts[30] (item 1, english)
+18e54c.30 "Red"
+
+# osd_crosshair_color_texts[1] (item 0, english)
+18e54c.1 "White"
+
+# table_18c8b8[59] (item 2, english)
+# osd_pbp_mode_texts[59] (item 2, english)
+# osd_location_texts[117] (item 4, english)
+18c8b8.59 "Customize"
+
+# osd_location_texts[88] (item 3, english)
+18e9f8.88 "Right Bottom"
+
+# osd_location_texts[59] (item 2, english)
+18e9f8.59 "Left Bottom"
+
+# osd_location_texts[30] (item 1, english)
+18e9f8.30 "Right Top"
+
+# osd_location_texts[1] (item 0, english)
+18e9f8.1 "Left Top"
+
+# osd_size_texts[59] (item 2, english)
+18f550.59 "Large"
+
+# osd_size_texts[30] (item 1, english)
+18f550.30 "Medium"
+
+# osd_size_texts[1] (item 0, english)
+18f550.1 "Small"
+
+# osd_crosshair_item_texts[117] (item 4, english)
+18f984.117 "Reset"
+
+# osd_crosshair_item_texts[88] (item 3, english)
+18f984.88 "Position"
+
+# osd_crosshair_item_texts[59] (item 2, english)
+18f984.59 "Color"
+
+# osd_crosshair_item_texts[30] (item 1, english)
+18f984.30 "Icon"
+
+# osd_crosshair_item_texts[1] (item 0, english)
+18f984.1 "None"
+
+# osd_protect_button_texts[59] (item 2, english)
+190184.59 "Later"
+
+# osd_protect_button_texts[30] (item 1, english)
+190184.30 "Cancel"
+
+# osd_protect_button_texts[1] (item 0, english)
+190184.1 "Execute"
+
+# osd_yes_no_texts[1] (item 0, english)
+190748.1 "Yes"
+
+# osd_kvm_texts[30] (item 1, english)
+1909ec.30 "Upstream"
+
+# table_190cec[30] (item 1, english)
+190cec.30 "Peak 1000 nits"
+
+# osd_navi_key_item_texts[88] (item 3, english)
+19158c.88 "Right"
+
+# osd_navi_key_item_texts[59] (item 2, english)
+19158c.59 "Left"
+
+# osd_navi_key_item_texts[30] (item 1, english)
+19158c.30 "Down"
+
+# osd_navi_key_item_texts[1] (item 0, english)
+19158c.1 "Up"
+
+# osd_info_box_texts[175] (item 6, english)
+191b30.175 "Bit Depth"
+
+# osd_info_box_texts[146] (item 5, english)
+191b30.146 "Content Type"
+
+# osd_info_box_texts[117] (item 4, english)
+191b30.117 "Select Mode"
+
+# osd_info_box_texts[59] (item 2, english)
+191b30.59 "Physical Resolution"
+
+# osd_info_box_texts[30] (item 1, english)
+191b30.30 "Native Resolution"
+
+# osd_out_of_range_texts[1] (item 0, english)
+192d8c.1 "Out Of Range!"
+
+# osd_no_signal_texts[1] (item 0, english)
+193008.1 "No Signal"
+
+# osd_power_button_texts[30] (item 1, english)
+19336c.30 "Standby"
+
+# osd_navi_function_texts[291] (item 10, english)
+1935bc.291 "Optix Scope"
+
+# osd_navi_function_texts[262] (item 9, english)
+1935bc.262 "Night Vision"
+
+# osd_info_box_texts[88] (item 3, english)
+# osd_navi_function_texts[204] (item 7, english)
+191b30.88 "Refresh Rate"
+
+# osd_gi_item_texts[30] (item 1, english)
+# osd_navi_function_texts[88] (item 3, english)
+18a360.30 "Smart Crosshair"
+
+# osd_navi_function_texts[117] (item 4, english)
+1935bc.117 "Alarm Clock"
+
+# osd_navi_function_texts[59] (item 2, english)
+1935bc.59 "Game Mode"
+
+# osd_choice_note_function_texts[30] (item 1, english)
+# osd_image_item_texts[1] (item 0, english)
+# osd_navi_function_texts[30] (item 1, english)
+1832e4.30 "Brightness"
+
+# osd_settings_item_texts[146] (item 5, english)
+# table_18c8b8[88] (item 3, english)
+# osd_navi_function_texts[233] (item 8, english)
+1874f8.146 "Info. On Screen"
+
+# osd_navi_function_texts[175] (item 6, english)
+1935bc.175 "PIP/PBP Mode"
+
+# osd_image_enhancement_texts[117] (item 4, english)
+194b34.117 "Strongest"
+
+# osd_image_enhancement_texts[88] (item 3, english)
+194b34.88 "Strong"
+
+# osd_image_enhancement_texts[59] (item 2, english)
+194b34.59 "Medium"
+
+# osd_image_enhancement_texts[30] (item 1, english)
+194b34.30 "Weak"
+
+# osd_pro_mode_texts[88] (item 3, english)
+1951dc.88 "Movie"
+
+# osd_pro_mode_texts[59] (item 2, english)
+1951dc.59 "Anti-Blue"
+
+# osd_pro_mode_texts[117] (item 4, english)
+1951dc.117 "Office"
+
+# osd_oled_care_choice_texts[30] (item 1, english)
+# osd_optix_scope_item_texts[88] (item 3, english)
+# osd_off_on_texts[30] (item 1, english)
+# table_195a38[59] (item 2, english)
+16df60.30 "ON"
+
+# osd_location_texts[146] (item 5, english)
+# table_195a38[1] (item 0, english)
+# table_195c7c[1] (item 0, english)
+18e9f8.146 "Location"
+
+# osd_game_mode_texts[1] (item 0, english)
+195f24.1 "Premium Color"
+
+# osd_pro_mode_texts[30] (item 1, english)
+# osd_game_mode_texts[30] (item 1, english)
+1951dc.30 "User"
+
+# osd_game_mode_texts[88] (item 3, english)
+195f24.88 "Racing"
+
+# osd_pbp_mode_texts[30] (item 1, english)
+18e89c.30 "Mode 2"
+
+# osd_pbp_mode_texts[1] (item 0, english)
+18e89c.1 "Mode 1"
+
+# osd_tab_name_texts[175] (item 6, english)
+196dc0.175 "Navi Key"
+
+# osd_tab_name_texts[204] (item 7, english)
+196dc0.204 "Settings"
+
+# osd_info_box_texts[1] (item 0, english)
+# osd_navi_function_texts[146] (item 5, english)
+# osd_tab_name_texts[117] (item 4, english)
+191b30.1 "Input Source"
+
+# osd_tab_name_texts[88] (item 3, english)
+196dc0.88 "Image"
+
+# osd_tab_name_texts[59] (item 2, english)
+196dc0.59 "Professional"
+
+# osd_tab_name_texts[30] (item 1, english)
+196dc0.30 "Gaming"

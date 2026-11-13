@@ -1,0 +1,643 @@
+# Texts of language 3, named "Deutsch" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[32] (item 1, german)
+16e0d0.32 "{F0}(langfristig) {F7}{76}{F0}Ausführen{F7}Ş{F0}."
+
+# osd_protect_long_execute_texts[3] (item 0, german)
+16e0d0.3 "{F0}Zur Wahrung der Bildqualität drücken Sie zur Ausführung der Bildschirmschutzfunktion"
+
+# osd_protect_long_auto_texts[3] (item 0, german)
+16f25c.3 "{F0}Zur Wahrung der Bildqualität aktiviert sich die Bildschirmschutzfunktion "
+
+# osd_protect_long_title_texts[61] (item 2, german)
+16f670.61 "{F0}automatisch, wenn der Monitor über 1.500 Stunden in Betrieb ist"
+
+# osd_protect_long_title_texts[32] (item 1, german)
+16f670.32 "{F0}Zur Wahrung der Bildqualität aktiviert sich die Bildschirmschutzfunktion (langfristig) "
+
+# osd_protect_long_title_texts[3] (item 0, german)
+16f670.3 "MSI-OLED-Pflege - Bildschirmschutz (Langfristig)"
+
+# osd_protect_long_incomplete_texts[32] (item 1, german)
+172590.32 "{F0}Sie auf dieses Element, wenn Sie diesen Prozess später abschließen möchten."
+
+# osd_protect_long_incomplete_texts[3] (item 0, german)
+172590.3 "{F0}Der Bildschirmschutzprozess (langfristig) wurde nicht abgeschlossen. Wählen und klicken "
+
+# osd_protect_incomplete_texts[32] (item 1, german)
+173998.32 "{F0}Sie auf dieses Element, wenn Sie diesen Prozess später abschließen möchten."
+
+# osd_protect_incomplete_texts[3] (item 0, german)
+173998.3 "{F0}Der Bildschirmschutzprozess wurde nicht abgeschlossen. Wählen und klicken "
+
+# osd_protect_long_incomplete_texts[61] (item 2, german)
+# osd_protect_incomplete_texts[61] (item 2, german)
+# osd_protect_execute_texts[61] (item 2, german)
+172590.61 "{F0}Hinweis:"
+
+# osd_protect_execute_texts[32] (item 1, german)
+174bd0.32 "{F0}{F7}„{F0}Ausführen{F7}”{F0}."
+
+# osd_protect_execute_texts[3] (item 0, german)
+174bd0.3 "{F0}Zur Wahrung der Bildqualität drücken Sie zur Ausführung der Bildschirmschutzfunktion "
+
+# osd_protect_long_retry_texts[32] (item 1, german)
+175de4.32 "{F0}zur Ausführung der Bildschirmschutzfunktion (langfristig) {F7}{76}{F0}Ausführen{F7}Ş{F0}."
+
+# osd_protect_long_retry_texts[3] (item 0, german)
+175de4.3 "{F0}Der Bildschirmschutzprozess (langfristig) wurde nicht abgeschlossen. Drücken Sie"
+
+# osd_protect_retry_texts[32] (item 1, german)
+177270.32 "{F0}Ausführung der Bildschirmschutzfunktion {F7}„{F0}Ausführen{F3}“{F0}."
+
+# osd_protect_retry_texts[3] (item 0, german)
+177270.3 "{F0}Der Bildschirmschutzprozess wurde nicht abgeschlossen. Drücken Sie zur "
+
+# osd_protect_auto_texts[3] (item 0, german)
+1785c0.3 "{F0}Zur Wahrung der Bildqualität aktiviert sich die Bildschirmschutzfunktion "
+
+# osd_protect_long_auto_texts[32] (item 1, german)
+16f25c.32 "{F0}(langfristig) automatisch."
+
+# osd_protect_auto_texts[32] (item 1, german)
+1785c0.32 "{F0}automatisch."
+
+# osd_protect_long_execute_texts[119] (item 4, german)
+# osd_protect_long_auto_texts[119] (item 4, german)
+# osd_protect_long_title_texts[148] (item 5, german)
+# osd_protect_long_incomplete_texts[119] (item 4, german)
+# osd_protect_long_retry_texts[119] (item 4, german)
+16e0d0.119 "Die Betriebsanzeige blinkt weiß, bis der Vorgang abgeschlossen ist."
+
+# osd_protect_long_execute_texts[90] (item 3, german)
+# osd_protect_long_auto_texts[90] (item 3, german)
+# osd_protect_long_title_texts[119] (item 4, german)
+# osd_protect_long_incomplete_texts[90] (item 3, german)
+# osd_protect_long_retry_texts[90] (item 3, german)
+16e0d0.90 "Es kann eine Stunde dauern, bis diese Schutzfunktion abgeschlossen ist."
+
+# osd_protect_long_title_texts[322] (item 11, german)
+# osd_protect_long_retry_texts[293] (item 10, german)
+# osd_protect_retry_texts[293] (item 10, german)
+16f670.322 "Sie Monitor ausschalten oder in Sparmodus  versetzen."
+
+# osd_protect_long_title_texts[293] (item 10, german)
+# osd_protect_long_retry_texts[264] (item 9, german)
+# osd_protect_retry_texts[264] (item 9, german)
+16f670.293 "{F0}Bei Anklicken von {F7}„{F0}Abbrechen{F7}”{F0} wird der Prozess auto aktiviert, wenn"
+
+# osd_protect_long_execute_texts[235] (item 8, german)
+# osd_protect_long_auto_texts[235] (item 8, german)
+# osd_protect_long_title_texts[264] (item 9, german)
+# osd_protect_long_incomplete_texts[235] (item 8, german)
+# osd_protect_incomplete_texts[235] (item 8, german)
+# osd_protect_execute_texts[235] (item 8, german)
+# ... and 4 more entries
+16e0d0.235 " Abbrechen dieser Funktion."
+
+# osd_protect_long_execute_texts[206] (item 7, german)
+# osd_protect_long_auto_texts[206] (item 7, german)
+# osd_protect_long_title_texts[235] (item 8, german)
+# osd_protect_long_incomplete_texts[206] (item 7, german)
+# osd_protect_incomplete_texts[206] (item 7, german)
+# osd_protect_execute_texts[206] (item 7, german)
+# ... and 4 more entries
+16e0d0.206 "Drücken Sie während des Vorgangs nicht erneut die Ein-/Austaste zum"
+
+# osd_protect_long_execute_texts[177] (item 6, german)
+# osd_protect_long_auto_texts[177] (item 6, german)
+# osd_protect_long_title_texts[206] (item 7, german)
+# osd_protect_long_incomplete_texts[177] (item 6, german)
+# osd_protect_incomplete_texts[177] (item 6, german)
+# osd_protect_execute_texts[177] (item 6, german)
+# ... and 4 more entries
+16e0d0.177 "{F0} "
+
+# osd_protect_long_execute_texts[148] (item 5, german)
+# osd_protect_long_auto_texts[148] (item 5, german)
+# osd_protect_long_title_texts[177] (item 6, german)
+# osd_protect_long_incomplete_texts[148] (item 5, german)
+# osd_protect_incomplete_texts[148] (item 5, german)
+# osd_protect_execute_texts[148] (item 5, german)
+# ... and 4 more entries
+16e0d0.148 "{F0}Bitte trennen Sie während des Vorgangs nicht das Netzkabel vom Monitor."
+
+# osd_protect_incomplete_texts[119] (item 4, german)
+# osd_protect_execute_texts[119] (item 4, german)
+# osd_protect_retry_texts[119] (item 4, german)
+# osd_protect_auto_texts[119] (item 4, german)
+# osd_protect_title_texts[148] (item 5, german)
+173998.119 "Die Betriebsanzeige blinkt orange, bis der Vorgang abgeschlossen ist."
+
+# osd_protect_incomplete_texts[90] (item 3, german)
+# osd_protect_execute_texts[90] (item 3, german)
+# osd_protect_retry_texts[90] (item 3, german)
+# osd_protect_auto_texts[90] (item 3, german)
+# osd_protect_title_texts[119] (item 4, german)
+173998.90 "Es kann mehrere Minuten dauern, bis diese Schutzfunktion abgeschlossen ist."
+
+# osd_protect_long_execute_texts[61] (item 2, german)
+# osd_protect_long_auto_texts[61] (item 2, german)
+# osd_protect_long_title_texts[90] (item 3, german)
+# osd_protect_long_retry_texts[61] (item 2, german)
+# osd_protect_retry_texts[61] (item 2, german)
+# osd_protect_auto_texts[61] (item 2, german)
+# ... and 1 more entries
+16e0d0.61 "{F0}Hinweis:"
+
+# osd_protect_title_texts[61] (item 2, german)
+179a14.61 "{F0}automatisch, wenn der Monitor über 4 Stunden in Betrieb ist"
+
+# osd_protect_title_texts[32] (item 1, german)
+179a14.32 "{F0}Zur Wahrung der Bildqualität aktiviert sich die Bildschirmschutzfunktion"
+
+# osd_protect_title_texts[3] (item 0, german)
+179a14.3 "MSI OLED Care - Bildschirmschutz"
+
+# osd_protect_retry_texts[409] (item 14, german)
+# osd_protect_title_texts[380] (item 13, german)
+177270.409 "{F0}einer Nutzung > 24 Stunden."
+
+# osd_protect_retry_texts[380] (item 13, german)
+# osd_protect_title_texts[351] (item 12, german)
+177270.380 "{F0}Durch Klick auf \"Später\" erscheint die Benachrichtigung erst bei"
+
+# osd_protect_retry_texts[351] (item 12, german)
+# osd_protect_title_texts[322] (item 11, german)
+177270.351 "{F0}wenn Monitor ausgeschaltet oder in ECO versetzt wird."
+
+# osd_protect_retry_texts[322] (item 11, german)
+# osd_protect_title_texts[293] (item 10, german)
+177270.322 "{F0}Durch Klick auf Abbrechen/Später wird Vorgang automat. aktiviert,"
+
+# osd_change_notice_line3_texts[3] (item 0, german)
+180b60.3 "Bitte wählen Sie eine der folgenden Optionen:"
+
+# osd_change_notice_line2_texts[3] (item 0, german)
+181058.3 "sich möglicherweise der Stromverbrauch dieses Monitors."
+
+# osd_change_notice_line1_texts[3] (item 0, german)
+1814d8.3 "Durch Änderung der ausgewählten Funktion erhöht"
+
+# osd_change_notice_title_texts[3] (item 0, german)
+1819cc.3 "Änderung bestätigen!"
+
+# table_1821d4[32] (item 1, german)
+1821d4.32 "Digital"
+
+# table_1821d4[3] (item 0, german)
+1821d4.3 "Analog"
+
+# osd_pbp_source_texts[32] (item 1, german)
+182534.32 "Quelle 2"
+
+# osd_pbp_source_texts[3] (item 0, german)
+182534.3 "Quelle 1"
+
+# osd_pip_item_texts[61] (item 2, german)
+1828c0.61 "Position"
+
+# osd_pip_item_texts[32] (item 1, german)
+1828c0.32 "BiB-Größe"
+
+# osd_pip_item_texts[3] (item 0, german)
+1828c0.3 "Quelle"
+
+# osd_pip_item_texts[119] (item 4, german)
+1828c0.119 "Audio-Wechseln"
+
+# osd_pip_item_texts[90] (item 3, german)
+1828c0.90 "Anzeige-Wechseln"
+
+# osd_choice_note_function_texts[119] (item 4, german)
+1832e4.119 "Bildschirmgröße"
+
+# osd_choice_note_function_texts[90] (item 3, german)
+1832e4.90 "BiB/BnB"
+
+# osd_choice_note_reducing_texts[148] (item 5, german)
+183cb4.148 "{F0}VRR-Inhalte empfängt."
+
+# osd_choice_note_reducing_texts[119] (item 4, german)
+183cb4.119 "{F0}wenn der Monitor"
+
+# osd_choice_note_reducing_texts[90] (item 3, german)
+183cb4.90 "{F0}Sie funktioniert nicht,"
+
+# osd_choice_note_reducing_texts[61] (item 2, german)
+183cb4.61 "{F0}oder \"DisplayHDR\"."
+
+# osd_choice_note_reducing_texts[32] (item 1, german)
+183cb4.32 "{F0}abhängig von \"Helligkeit\""
+
+# osd_choice_note_reducing_texts[3] (item 0, german)
+183cb4.3 "{F0}Reduzierungseffekt"
+
+# osd_choice_note_texts[119] (item 4, german)
+183a70.119 "{F0}zum Abschluss"
+
+# osd_choice_note_texts[90] (item 3, german)
+183a70.90 "{F0}Ca. eine Stunde bis"
+
+# osd_choice_note_texts[61] (item 2, german)
+183a70.61 "{F0}Fertigstellung"
+
+# osd_choice_note_texts[32] (item 1, german)
+183a70.32 "{F0}Ca. 15 Minuten zur"
+
+# osd_choice_note_texts[3] (item 0, german)
+183a70.3 "{F0}Hinweis:"
+
+# osd_oled_care_item_texts[61] (item 2, german)
+185e78.61 "{F0}Schutzhinweis"
+
+# osd_oled_care_function_texts[148] (item 5, german)
+# osd_oled_care_item_texts[177] (item 6, german)
+185bc0.148 "{F0}Grenzerkennung"
+
+# osd_oled_care_function_texts[119] (item 4, german)
+# osd_oled_care_item_texts[148] (item 5, german)
+185bc0.119 "{F0}Taskbar-Erkennung"
+
+# osd_oled_care_function_texts[90] (item 3, german)
+# osd_oled_care_item_texts[119] (item 4, german)
+185bc0.90 "{F0}Multi-Logo-Erkennung"
+
+# osd_oled_care_item_texts[206] (item 7, german)
+185e78.206 "{F0}OLED-Bildschirm-Info"
+
+# osd_oled_care_function_texts[61] (item 2, german)
+# osd_oled_care_item_texts[90] (item 3, german)
+185bc0.61 "{F0}Stat.-Bildschirm-Erk."
+
+# osd_oled_care_function_texts[3] (item 0, german)
+# osd_oled_care_item_texts[32] (item 1, german)
+185bc0.3 "{F0}Bildschirmschutz"
+
+# osd_oled_care_function_texts[32] (item 1, german)
+# osd_oled_care_item_texts[3] (item 0, german)
+185bc0.32 "{F0}Pixelverschiebung"
+
+# osd_choice_note_function_texts[293] (item 10, german)
+# osd_settings_item_texts[206] (item 7, german)
+1832e4.293 "{F0}Type-C-PD-Aufladung"
+
+# osd_settings_item_texts[119] (item 4, german)
+1874f8.119 "Ein-/Austaste"
+
+# osd_settings_item_texts[264] (item 9, german)
+1874f8.264 "Zurücksetzen"
+
+# osd_settings_item_texts[61] (item 2, german)
+1874f8.61 "OSD-Zeitüberschreitung"
+
+# osd_settings_item_texts[32] (item 1, german)
+1874f8.32 "Transparenz"
+
+# osd_settings_item_texts[3] (item 0, german)
+1874f8.3 "Sprache"
+
+# osd_professional_item_texts[61] (item 2, german)
+188634.61 "Bildoptimierung"
+
+# osd_professional_item_texts[32] (item 1, german)
+188634.32 "Schwaches Blaulicht"
+
+# osd_professional_item_texts[3] (item 0, german)
+188634.3 "Profi-Modus"
+
+# osd_night_vision_texts[90] (item 3, german)
+1890d4.90 "Am stärksten"
+
+# osd_night_vision_texts[61] (item 2, german)
+1890d4.61 "Stark"
+
+# osd_choice_note_function_texts[264] (item 9, german)
+# osd_gaming_item_texts[32] (item 1, german)
+1832e4.264 "Nachtsicht"
+
+# osd_gaming_item_texts[119] (item 4, german)
+188da0.119 "Alarmuhr"
+
+# osd_gaming_item_texts[90] (item 3, german)
+188da0.90 "Bildfrequenz"
+
+# osd_choice_note_function_texts[148] (item 5, german)
+1832e4.148 "Reaktionszeit"
+
+# osd_gaming_item_texts[3] (item 0, german)
+188da0.3 "Spielmodus"
+
+# osd_choice_note_function_texts[177] (item 6, german)
+# osd_gi_item_texts[61] (item 2, german)
+1832e4.177 "Optix-Umfang"
+
+# osd_oled_care_seconds_texts[90] (item 3, german)
+18a7ec.90 "240 s"
+
+# osd_oled_care_seconds_texts[61] (item 2, german)
+18a7ec.61 "120 s"
+
+# osd_oled_care_seconds_texts[32] (item 1, german)
+18a7ec.32 "100 s"
+
+# osd_oled_care_seconds_texts[3] (item 0, german)
+18a7ec.3 "50 s"
+
+# table_18af08[32] (item 1, german)
+# table_18b008[32] (item 1, german)
+18af08.32 "{F0}Manuell"
+
+# osd_oled_care_usage_texts[32] (item 1, german)
+18b29c.32 "{F0}Nutzung > 24 Std. "
+
+# osd_oled_care_speed_texts[61] (item 2, german)
+18b5e0.61 "{F0}Schnell"
+
+# osd_oled_care_speed_texts[3] (item 0, german)
+18b5e0.3 "{F0}Langsam"
+
+# osd_oled_care_choice_texts[61] (item 2, german)
+# osd_oled_care_status_texts[61] (item 2, german)
+16df60.61 "{F0}Reduzierungsstufe"
+
+# osd_oled_care_status_texts[32] (item 1, german)
+18b94c.32 "{F0}Erforderliche Zeit"
+
+# osd_oled_care_status_texts[3] (item 0, german)
+18b94c.3 "{F0}Start bei"
+
+# table_18c070[32] (item 1, german)
+18c070.32 "{F0}Langfristig"
+
+# table_18c070[3] (item 0, german)
+18c070.3 "{F0}Kurzfristig"
+
+# table_18c4a8[3] (item 0, german)
+18c4a8.3 "{F0}Bewegungsgeschwindigkeit (Pixelverschiebung)"
+
+# osd_image_item_texts[119] (item 4, german)
+18ca88.119 "Bildschirmgröße"
+
+# osd_image_item_texts[90] (item 3, german)
+18ca88.90 "Farbtemperatur"
+
+# osd_image_item_texts[61] (item 2, german)
+18ca88.61 "Schärfe"
+
+# osd_image_item_texts[32] (item 1, german)
+18ca88.32 "Kontrast"
+
+# osd_language_texts[3] (item 0, german)
+18d3d4.3 "Deutsch"
+
+# osd_optix_scope_item_texts[32] (item 1, german)
+18d578.32 "Umfangsverhältnis"
+
+# osd_optix_scope_item_texts[3] (item 0, german)
+18d578.3 "Umfangsgröße"
+
+# osd_color_temp_texts[90] (item 3, german)
+18db28.90 "Anpassung"
+
+# osd_color_temp_texts[61] (item 2, german)
+18db28.61 "Warm"
+
+# osd_color_temp_texts[3] (item 0, german)
+18db28.3 "Kühl"
+
+# osd_response_time_texts[61] (item 2, german)
+18e08c.61 "Am schnellsten"
+
+# osd_response_time_texts[32] (item 1, german)
+18e08c.32 "Schnell"
+
+# osd_crosshair_color_texts[32] (item 1, german)
+18e54c.32 "Rot"
+
+# osd_crosshair_color_texts[3] (item 0, german)
+18e54c.3 "Weiß"
+
+# table_18c8b8[61] (item 2, german)
+# osd_pbp_mode_texts[61] (item 2, german)
+# osd_location_texts[119] (item 4, german)
+18c8b8.61 "Anpassen"
+
+# osd_location_texts[90] (item 3, german)
+18e9f8.90 "Unten rechts"
+
+# osd_location_texts[61] (item 2, german)
+18e9f8.61 "Unten links"
+
+# osd_location_texts[32] (item 1, german)
+18e9f8.32 "Oben rechts"
+
+# osd_location_texts[3] (item 0, german)
+18e9f8.3 "Oben links"
+
+# osd_size_texts[61] (item 2, german)
+18f550.61 "Groß"
+
+# osd_size_texts[32] (item 1, german)
+18f550.32 "Mittel"
+
+# osd_size_texts[3] (item 0, german)
+18f550.3 "Klein"
+
+# osd_crosshair_item_texts[119] (item 4, german)
+18f984.119 "Zurücksetzen"
+
+# osd_crosshair_item_texts[90] (item 3, german)
+18f984.90 "Position"
+
+# osd_crosshair_item_texts[61] (item 2, german)
+18f984.61 "Farbe"
+
+# osd_crosshair_item_texts[32] (item 1, german)
+18f984.32 "Symbol"
+
+# osd_crosshair_item_texts[3] (item 0, german)
+18f984.3 "Ohne"
+
+# osd_protect_button_texts[61] (item 2, german)
+190184.61 "{F0}Später"
+
+# osd_protect_button_texts[32] (item 1, german)
+190184.32 "{F0}Abbrechen"
+
+# osd_protect_button_texts[3] (item 0, german)
+190184.3 "{F0}Ausführen"
+
+# osd_yes_no_texts[32] (item 1, german)
+190748.32 "Nein"
+
+# osd_yes_no_texts[3] (item 0, german)
+190748.3 "Ja"
+
+# osd_kvm_texts[32] (item 1, german)
+1909ec.32 "Upstream"
+
+# table_190cec[32] (item 1, german)
+190cec.32 "Spitze 1000 Nits"
+
+# osd_navi_key_item_texts[90] (item 3, german)
+19158c.90 "Rechts"
+
+# osd_navi_key_item_texts[61] (item 2, german)
+19158c.61 "Links"
+
+# osd_navi_key_item_texts[32] (item 1, german)
+19158c.32 "Abwärts"
+
+# osd_navi_key_item_texts[3] (item 0, german)
+19158c.3 "Aufwärts"
+
+# osd_info_box_texts[177] (item 6, german)
+191b30.177 "Bittiefe"
+
+# osd_info_box_texts[148] (item 5, german)
+191b30.148 "Inhaltstyp"
+
+# osd_info_box_texts[119] (item 4, german)
+191b30.119 "Modus wählen"
+
+# osd_info_box_texts[61] (item 2, german)
+191b30.61 "Physikalische Auflösung"
+
+# osd_info_box_texts[32] (item 1, german)
+191b30.32 "Native Auflösung"
+
+# osd_out_of_range_texts[3] (item 0, german)
+192d8c.3 "Außerhalb des Bereichs!"
+
+# osd_no_signal_texts[3] (item 0, german)
+193008.3 "Kein Signal"
+
+# osd_power_button_texts[32] (item 1, german)
+19336c.32 "Standby"
+
+# osd_navi_function_texts[293] (item 10, german)
+1935bc.293 "Optix-Umfang"
+
+# osd_navi_function_texts[264] (item 9, german)
+1935bc.264 "Nachtsicht"
+
+# osd_info_box_texts[90] (item 3, german)
+# osd_navi_function_texts[206] (item 7, german)
+191b30.90 "Bildfrequenz"
+
+# osd_gi_item_texts[32] (item 1, german)
+# osd_navi_function_texts[90] (item 3, german)
+18a360.32 "Smart Crosshair"
+
+# osd_navi_function_texts[119] (item 4, german)
+1935bc.119 "Alarmuhr"
+
+# osd_navi_function_texts[61] (item 2, german)
+1935bc.61 "Spielmodus"
+
+# osd_choice_note_function_texts[32] (item 1, german)
+# osd_image_item_texts[3] (item 0, german)
+# osd_navi_function_texts[32] (item 1, german)
+1832e4.32 "Helligkeit"
+
+# osd_settings_item_texts[148] (item 5, german)
+# table_18c8b8[90] (item 3, german)
+# osd_navi_function_texts[235] (item 8, german)
+1874f8.148 "Info am Bildschirm"
+
+# osd_navi_function_texts[177] (item 6, german)
+1935bc.177 "BiB- / BnB-Modus"
+
+# osd_image_enhancement_texts[119] (item 4, german)
+194b34.119 "Am stärksten"
+
+# osd_image_enhancement_texts[90] (item 3, german)
+194b34.90 "Stark"
+
+# osd_image_enhancement_texts[61] (item 2, german)
+194b34.61 "Mittel"
+
+# osd_image_enhancement_texts[32] (item 1, german)
+194b34.32 "Schwach"
+
+# osd_pro_mode_texts[3] (item 0, german)
+1951dc.3 "Öko"
+
+# osd_pro_mode_texts[90] (item 3, german)
+1951dc.90 "Film"
+
+# osd_pro_mode_texts[61] (item 2, german)
+1951dc.61 "Anti-Blau"
+
+# osd_pro_mode_texts[119] (item 4, german)
+1951dc.119 "Office"
+
+# osd_oled_care_choice_texts[32] (item 1, german)
+# osd_optix_scope_item_texts[90] (item 3, german)
+# osd_off_on_texts[32] (item 1, german)
+# table_195a38[61] (item 2, german)
+16df60.32 "Ein"
+
+# osd_location_texts[148] (item 5, german)
+# table_195a38[3] (item 0, german)
+# table_195c7c[3] (item 0, german)
+18e9f8.148 "Position"
+
+# osd_game_mode_texts[3] (item 0, german)
+195f24.3 "{F0}Premium-Farbe"
+
+# osd_pro_mode_texts[32] (item 1, german)
+# osd_game_mode_texts[32] (item 1, german)
+1951dc.32 "Nutzer"
+
+# osd_game_mode_texts[61] (item 2, german)
+195f24.61 "Egoshooter"
+
+# osd_game_mode_texts[90] (item 3, german)
+195f24.90 "Rennen"
+
+# osd_pbp_mode_texts[32] (item 1, german)
+18e89c.32 "Modus 2"
+
+# osd_pbp_mode_texts[3] (item 0, german)
+18e89c.3 "Modus 1"
+
+# osd_pip_pbp_texts[61] (item 2, german)
+196678.61 "BnB"
+
+# osd_pip_pbp_texts[32] (item 1, german)
+196678.32 "BiB"
+
+# osd_oled_care_choice_texts[3] (item 0, german)
+# osd_night_vision_texts[3] (item 0, german)
+# table_18c8b8[3] (item 0, german)
+# osd_optix_scope_item_texts[61] (item 2, german)
+# osd_off_on_texts[3] (item 0, german)
+# osd_power_button_texts[3] (item 0, german)
+# ... and 5 more entries
+16df60.3 "Aus"
+
+# osd_tab_name_texts[177] (item 6, german)
+196dc0.177 "Navigationssteuerung"
+
+# osd_tab_name_texts[206] (item 7, german)
+196dc0.206 "Einstellung"
+
+# osd_tab_name_texts[148] (item 5, german)
+196dc0.148 "BiB/BnB"
+
+# osd_info_box_texts[3] (item 0, german)
+# osd_navi_function_texts[148] (item 5, german)
+# osd_tab_name_texts[119] (item 4, german)
+191b30.3 "Eingangsquelle"
+
+# osd_tab_name_texts[90] (item 3, german)
+196dc0.90 "Bild"
+
+# osd_tab_name_texts[61] (item 2, german)
+196dc0.61 "Professionell"
+
+# osd_tab_name_texts[32] (item 1, german)
+196dc0.32 "Gaming"

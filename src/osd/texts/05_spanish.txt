@@ -1,0 +1,622 @@
+# Texts of language 5, named "Español" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[34] (item 1, spanish)
+16e0d0.34 "{F0}la función de protección del panel (tiempo prolongado)."
+
+# osd_protect_long_execute_texts[5] (item 0, spanish)
+16e0d0.5 "{F0}Para mantener la calidad de imagen del panel, presione el botón \"Ejecutar\" para realizar "
+
+# osd_protect_long_auto_texts[5] (item 0, spanish)
+16f25c.5 "{F0}Para mantener la calidad de imagen del panel, la función de protección del panel "
+
+# osd_protect_long_title_texts[63] (item 2, spanish)
+16f670.63 "{F0}largo) se activará automáticamente cuando el monitor se haya usado durante más de 1500 horas"
+
+# osd_protect_long_title_texts[34] (item 1, spanish)
+16f670.34 "{F0}Para mantener la calidad de la imagen del panel, la función de protección del panel (tiempo"
+
+# osd_protect_long_title_texts[5] (item 0, spanish)
+16f670.5 "Cuidar OLED MSI - Protector del panel (Tiempo largo)"
+
+# osd_protect_long_incomplete_texts[34] (item 1, spanish)
+172590.34 "{F0}y haga clic en él para ejecutar este proceso si lo necesita más adelante."
+
+# osd_protect_long_incomplete_texts[5] (item 0, spanish)
+172590.5 "{F0}El proceso de protección del panel (tiempo largo) no se completó. Seleccione este elemento "
+
+# osd_protect_incomplete_texts[34] (item 1, spanish)
+173998.34 "{F0}y haga clic en él para ejecutar este proceso si lo necesita más adelante."
+
+# osd_protect_incomplete_texts[5] (item 0, spanish)
+173998.5 "{F0}El proceso de protección del panel no se completó. Seleccione este elemento "
+
+# osd_protect_long_incomplete_texts[63] (item 2, spanish)
+# osd_protect_incomplete_texts[63] (item 2, spanish)
+# osd_protect_execute_texts[63] (item 2, spanish)
+172590.63 "{F0}Aviso:"
+
+# osd_protect_execute_texts[34] (item 1, spanish)
+174bd0.34 "{F0}la función de protección del panel."
+
+# osd_protect_execute_texts[5] (item 0, spanish)
+174bd0.5 "{F0}Para mantener la calidad de imagen del panel, presione el botón \"Ejecutar\" para ejecutar "
+
+# osd_protect_long_retry_texts[34] (item 1, spanish)
+175de4.34 "{F0}\"Ejecutar\" para ejecutar la función de protección del panel (tiempo largo)."
+
+# osd_protect_long_retry_texts[5] (item 0, spanish)
+175de4.5 "{F0}El proceso de protección del panel (tiempo largo) no se completó. Presione el botón "
+
+# osd_protect_retry_texts[34] (item 1, spanish)
+177270.34 "{F0}\"ejecutar\" para llevar a cabo la función de protección del panel."
+
+# osd_protect_retry_texts[5] (item 0, spanish)
+177270.5 "{F0}El proceso de protección del panel no se completó. Presione el botón"
+
+# osd_protect_auto_texts[5] (item 0, spanish)
+1785c0.5 "{F0}Para mantener la calidad de imagen del panel, la función de protección del panel "
+
+# osd_protect_long_auto_texts[34] (item 1, spanish)
+16f25c.34 "{F0}(tiempo largo) se activará automáticamente."
+
+# osd_protect_auto_texts[34] (item 1, spanish)
+1785c0.34 "{F0}se activará automáticamente."
+
+# osd_protect_long_execute_texts[121] (item 4, spanish)
+# osd_protect_long_auto_texts[121] (item 4, spanish)
+# osd_protect_long_title_texts[150] (item 5, spanish)
+# osd_protect_long_incomplete_texts[121] (item 4, spanish)
+# osd_protect_long_retry_texts[121] (item 4, spanish)
+16e0d0.121 "El indicador de encendido parpadeará en blanco hasta que el proceso finalice."
+
+# osd_protect_long_execute_texts[92] (item 3, spanish)
+# osd_protect_long_auto_texts[92] (item 3, spanish)
+# osd_protect_long_title_texts[121] (item 4, spanish)
+# osd_protect_long_incomplete_texts[92] (item 3, spanish)
+# osd_protect_long_retry_texts[92] (item 3, spanish)
+16e0d0.92 "Esta función de protección puede tardar una hora en completarse."
+
+# osd_protect_long_title_texts[324] (item 11, spanish)
+# osd_protect_long_retry_texts[295] (item 10, spanish)
+# osd_protect_retry_texts[295] (item 10, spanish)
+16f670.324 "en modo de ahorro de energía."
+
+# osd_protect_long_title_texts[295] (item 10, spanish)
+# osd_protect_long_retry_texts[266] (item 9, spanish)
+# osd_protect_retry_texts[266] (item 9, spanish)
+16f670.295 "Clic en \"Cancelar\": el proceso se autoactiva al APAGAR el monitor o si este está"
+
+# osd_protect_long_execute_texts[237] (item 8, spanish)
+# osd_protect_long_auto_texts[237] (item 8, spanish)
+# osd_protect_long_title_texts[266] (item 9, spanish)
+# osd_protect_long_incomplete_texts[237] (item 8, spanish)
+# osd_protect_incomplete_texts[237] (item 8, spanish)
+# osd_protect_execute_texts[237] (item 8, spanish)
+# ... and 4 more entries
+16e0d0.237 "para cancelar esta función."
+
+# osd_protect_long_execute_texts[208] (item 7, spanish)
+# osd_protect_long_auto_texts[208] (item 7, spanish)
+# osd_protect_long_title_texts[237] (item 8, spanish)
+# osd_protect_long_incomplete_texts[208] (item 7, spanish)
+# osd_protect_incomplete_texts[208] (item 7, spanish)
+# osd_protect_execute_texts[208] (item 7, spanish)
+# ... and 4 more entries
+16e0d0.208 "Durante la ejecución del proceso, presione el botón de alimentación nuevamente"
+
+# osd_protect_long_execute_texts[179] (item 6, spanish)
+# osd_protect_long_auto_texts[179] (item 6, spanish)
+# osd_protect_long_title_texts[208] (item 7, spanish)
+# osd_protect_long_incomplete_texts[179] (item 6, spanish)
+# osd_protect_incomplete_texts[179] (item 6, spanish)
+# osd_protect_execute_texts[179] (item 6, spanish)
+# ... and 4 more entries
+16e0d0.179 "{F0} "
+
+# osd_protect_long_execute_texts[150] (item 5, spanish)
+# osd_protect_long_auto_texts[150] (item 5, spanish)
+# osd_protect_long_title_texts[179] (item 6, spanish)
+# osd_protect_long_incomplete_texts[150] (item 5, spanish)
+# osd_protect_incomplete_texts[150] (item 5, spanish)
+# osd_protect_execute_texts[150] (item 5, spanish)
+# ... and 4 more entries
+16e0d0.150 "{F0}Durante la ejecución del proceso, no desenchufe el cable de alimentación del monitor."
+
+# osd_protect_incomplete_texts[121] (item 4, spanish)
+# osd_protect_execute_texts[121] (item 4, spanish)
+# osd_protect_retry_texts[121] (item 4, spanish)
+# osd_protect_auto_texts[121] (item 4, spanish)
+# osd_protect_title_texts[150] (item 5, spanish)
+173998.121 "{F0}El indicador de alimentación parpadeará en naranja hasta finalizar el proceso."
+
+# osd_protect_incomplete_texts[92] (item 3, spanish)
+# osd_protect_execute_texts[92] (item 3, spanish)
+# osd_protect_retry_texts[92] (item 3, spanish)
+# osd_protect_auto_texts[92] (item 3, spanish)
+# osd_protect_title_texts[121] (item 4, spanish)
+173998.92 "Esta función de protección puede tardar varios minutos en completarse."
+
+# osd_protect_long_execute_texts[63] (item 2, spanish)
+# osd_protect_long_auto_texts[63] (item 2, spanish)
+# osd_protect_long_title_texts[92] (item 3, spanish)
+# osd_protect_long_retry_texts[63] (item 2, spanish)
+# osd_protect_retry_texts[63] (item 2, spanish)
+# osd_protect_auto_texts[63] (item 2, spanish)
+# ... and 1 more entries
+16e0d0.63 "{F0}Aviso:"
+
+# osd_protect_title_texts[63] (item 2, spanish)
+179a14.63 "{F0}se activará automáticamente cuando el monitor se use durante más de 4 horas."
+
+# osd_protect_title_texts[34] (item 1, spanish)
+179a14.34 "{F0}Para mantener la calidad de imagen del panel, la función de protección del panel"
+
+# osd_protect_title_texts[5] (item 0, spanish)
+179a14.5 "MSI OLED Care - Protector del panel"
+
+# osd_protect_retry_texts[411] (item 14, spanish)
+# osd_protect_title_texts[382] (item 13, spanish)
+177270.411 "{F0}panel > 24 h."
+
+# osd_protect_retry_texts[382] (item 13, spanish)
+# osd_protect_title_texts[353] (item 12, spanish)
+177270.382 "{F0}Al hacer clic en \"Más tarde\", la notificación aparece si el uso acumulado del "
+
+# osd_protect_retry_texts[353] (item 12, spanish)
+# osd_protect_title_texts[324] (item 11, spanish)
+177270.353 "{F0}monitor o si el ahorro de energía está activo."
+
+# osd_protect_retry_texts[324] (item 11, spanish)
+# osd_protect_title_texts[295] (item 10, spanish)
+177270.324 "{F0}Si hace clic en \"Cancelar\" o \"Más tarde\", este proceso se activa al APAGAR el"
+
+# osd_change_notice_line3_texts[5] (item 0, spanish)
+180b60.5 "Seleccione una de las siguientes opciones:"
+
+# osd_change_notice_line2_texts[5] (item 0, spanish)
+181058.5 "el consumo de energía de este monitor."
+
+# osd_change_notice_line1_texts[5] (item 0, spanish)
+1814d8.5 "Cambiar la función seleccionada puede aumentar"
+
+# osd_change_notice_title_texts[5] (item 0, spanish)
+1819cc.5 "¡Confirme el cambio!"
+
+# table_1821d4[34] (item 1, spanish)
+1821d4.34 "Digital"
+
+# table_1821d4[5] (item 0, spanish)
+1821d4.5 "Analógico"
+
+# osd_pbp_source_texts[34] (item 1, spanish)
+182534.34 "Fuente 2"
+
+# osd_pbp_source_texts[5] (item 0, spanish)
+182534.5 "Fuente 1"
+
+# osd_pip_item_texts[63] (item 2, spanish)
+1828c0.63 "Ubicación"
+
+# osd_pip_item_texts[34] (item 1, spanish)
+1828c0.34 "Tamaño PIP"
+
+# osd_pip_item_texts[5] (item 0, spanish)
+1828c0.5 "Fuente"
+
+# osd_pip_item_texts[121] (item 4, spanish)
+1828c0.121 "Cambiar de audio"
+
+# osd_pip_item_texts[92] (item 3, spanish)
+1828c0.92 "Camb. visualización"
+
+# osd_choice_note_function_texts[121] (item 4, spanish)
+1832e4.121 "Tamaño pantalla"
+
+# osd_choice_note_reducing_texts[150] (item 5, spanish)
+183cb4.150 "{F0}reciba contenido VRR."
+
+# osd_choice_note_reducing_texts[121] (item 4, spanish)
+183cb4.121 "{F0}cuando el monitor"
+
+# osd_choice_note_reducing_texts[92] (item 3, spanish)
+183cb4.92 "{F0}Esta función no funcionará"
+
+# osd_choice_note_reducing_texts[63] (item 2, spanish)
+183cb4.63 "{F0}\"DisplayHDR\"."
+
+# osd_choice_note_reducing_texts[34] (item 1, spanish)
+183cb4.34 "{F0}depende de \"Brillo\" o"
+
+# osd_choice_note_reducing_texts[5] (item 0, spanish)
+183cb4.5 "{F0}El efecto de reducción"
+
+# osd_choice_note_texts[121] (item 4, spanish)
+183a70.121 "{F0}completar"
+
+# osd_choice_note_texts[92] (item 3, spanish)
+183a70.92 "{F0}Aprox. una hora para"
+
+# osd_choice_note_texts[63] (item 2, spanish)
+183a70.63 "{F0}aproximadamente"
+
+# osd_choice_note_texts[34] (item 1, spanish)
+183a70.34 "{F0}15 minutos para terminar,"
+
+# osd_choice_note_texts[5] (item 0, spanish)
+183a70.5 "{F0}Aviso:"
+
+# osd_oled_care_item_texts[63] (item 2, spanish)
+185e78.63 "{F0}Aviso prot."
+
+# osd_oled_care_function_texts[150] (item 5, spanish)
+# osd_oled_care_item_texts[179] (item 6, spanish)
+185bc0.150 "{F0}Detección de límites"
+
+# osd_oled_care_function_texts[121] (item 4, spanish)
+# osd_oled_care_item_texts[150] (item 5, spanish)
+185bc0.121 "{F0}Detección de límites"
+
+# osd_oled_care_function_texts[92] (item 3, spanish)
+# osd_oled_care_item_texts[121] (item 4, spanish)
+185bc0.92 "{F0}Detectar logotipos"
+
+# osd_oled_care_item_texts[208] (item 7, spanish)
+185e78.208 "{F0}Inf. del panel OLED"
+
+# osd_oled_care_function_texts[63] (item 2, spanish)
+# osd_oled_care_item_texts[92] (item 3, spanish)
+185bc0.63 "{F0}Detectar pantalla estát."
+
+# osd_oled_care_function_texts[5] (item 0, spanish)
+# osd_oled_care_item_texts[34] (item 1, spanish)
+185bc0.5 "{F0}Protector del panel"
+
+# osd_oled_care_function_texts[34] (item 1, spanish)
+# osd_oled_care_item_texts[5] (item 0, spanish)
+185bc0.34 "{F0}Cambio de píxel"
+
+# osd_choice_note_function_texts[295] (item 10, spanish)
+# osd_settings_item_texts[208] (item 7, spanish)
+1832e4.295 "{F0}Carga PD Tipo C"
+
+# osd_settings_item_texts[121] (item 4, spanish)
+1874f8.121 "{F0}Botón de encendido"
+
+# osd_settings_item_texts[266] (item 9, spanish)
+1874f8.266 "Restablecer"
+
+# osd_settings_item_texts[63] (item 2, spanish)
+1874f8.63 "OSD Time out"
+
+# osd_settings_item_texts[34] (item 1, spanish)
+1874f8.34 "Transparencia"
+
+# osd_settings_item_texts[5] (item 0, spanish)
+1874f8.5 "Idioma"
+
+# osd_professional_item_texts[63] (item 2, spanish)
+188634.63 "Mejora de imagen"
+
+# osd_professional_item_texts[34] (item 1, spanish)
+188634.34 "Luz azul baja"
+
+# osd_professional_item_texts[5] (item 0, spanish)
+188634.5 "Modo Profesional"
+
+# osd_night_vision_texts[92] (item 3, spanish)
+1890d4.92 "El más intenso"
+
+# osd_night_vision_texts[63] (item 2, spanish)
+1890d4.63 "Intenso"
+
+# osd_choice_note_function_texts[266] (item 9, spanish)
+# osd_gaming_item_texts[34] (item 1, spanish)
+1832e4.266 "Visión nocturna"
+
+# osd_gaming_item_texts[121] (item 4, spanish)
+188da0.121 "Despertador"
+
+# osd_gaming_item_texts[92] (item 3, spanish)
+188da0.92 "Frec. actualización"
+
+# osd_choice_note_function_texts[150] (item 5, spanish)
+1832e4.150 "Tiempo de respuesta"
+
+# osd_gaming_item_texts[5] (item 0, spanish)
+188da0.5 "Modo juego"
+
+# osd_choice_note_function_texts[179] (item 6, spanish)
+# osd_gi_item_texts[63] (item 2, spanish)
+1832e4.179 "Ámbito de Optix"
+
+# osd_oled_care_seconds_texts[92] (item 3, spanish)
+18a7ec.92 "240 S"
+
+# osd_oled_care_seconds_texts[63] (item 2, spanish)
+18a7ec.63 "120 S"
+
+# osd_oled_care_seconds_texts[34] (item 1, spanish)
+18a7ec.34 "100 S"
+
+# osd_oled_care_seconds_texts[5] (item 0, spanish)
+18a7ec.5 "50 S"
+
+# table_18af08[34] (item 1, spanish)
+# table_18b008[34] (item 1, spanish)
+18af08.34 "{F0}Manualmente"
+
+# osd_oled_care_usage_texts[34] (item 1, spanish)
+18b29c.34 "{F0}24 h de uso"
+
+# osd_oled_care_speed_texts[63] (item 2, spanish)
+18b5e0.63 "{F0}Rápida"
+
+# osd_oled_care_speed_texts[5] (item 0, spanish)
+18b5e0.5 "{F0}Lenta"
+
+# osd_oled_care_choice_texts[63] (item 2, spanish)
+# osd_oled_care_status_texts[63] (item 2, spanish)
+16df60.63 "{F0}Nivel de reducción"
+
+# osd_oled_care_status_texts[34] (item 1, spanish)
+18b94c.34 "{F0}Tiempo necesario"
+
+# osd_oled_care_status_texts[5] (item 0, spanish)
+18b94c.5 "{F0}Empezando en"
+
+# table_18c070[34] (item 1, spanish)
+18c070.34 "{F0}Tiempo largo"
+
+# table_18c070[5] (item 0, spanish)
+18c070.5 "{F0}Tiempo corto"
+
+# table_18c4a8[5] (item 0, spanish)
+18c4a8.5 "{F0}Velocidad de movimiento (cambio de píxel)"
+
+# osd_image_item_texts[121] (item 4, spanish)
+18ca88.121 "Tamaño pantalla"
+
+# osd_image_item_texts[92] (item 3, spanish)
+18ca88.92 "Temperatura de color"
+
+# osd_image_item_texts[63] (item 2, spanish)
+18ca88.63 "Nitidez"
+
+# osd_image_item_texts[34] (item 1, spanish)
+18ca88.34 "Contraste"
+
+# osd_language_texts[5] (item 0, spanish)
+18d3d4.5 "Español"
+
+# osd_optix_scope_item_texts[34] (item 1, spanish)
+18d578.34 "Relación de ámbito"
+
+# osd_optix_scope_item_texts[5] (item 0, spanish)
+18d578.5 "Tamaño de ámbito"
+
+# osd_color_temp_texts[92] (item 3, spanish)
+18db28.92 "Personalización"
+
+# osd_color_temp_texts[63] (item 2, spanish)
+18db28.63 "Cálida"
+
+# osd_color_temp_texts[5] (item 0, spanish)
+18db28.5 "Fría"
+
+# osd_response_time_texts[63] (item 2, spanish)
+18e08c.63 "La más rápida"
+
+# osd_response_time_texts[34] (item 1, spanish)
+18e08c.34 "Rápida"
+
+# osd_crosshair_color_texts[34] (item 1, spanish)
+18e54c.34 "Rojo"
+
+# osd_crosshair_color_texts[5] (item 0, spanish)
+18e54c.5 "blanco"
+
+# table_18c8b8[63] (item 2, spanish)
+# osd_pbp_mode_texts[63] (item 2, spanish)
+# osd_location_texts[121] (item 4, spanish)
+18c8b8.63 "Personalizar"
+
+# osd_location_texts[92] (item 3, spanish)
+18e9f8.92 "Inferior derecha"
+
+# osd_location_texts[63] (item 2, spanish)
+18e9f8.63 "Inferior izquierda"
+
+# osd_location_texts[34] (item 1, spanish)
+18e9f8.34 "Superior derecha"
+
+# osd_location_texts[5] (item 0, spanish)
+18e9f8.5 "Superior izquierda"
+
+# osd_size_texts[63] (item 2, spanish)
+18f550.63 "Grande"
+
+# osd_size_texts[34] (item 1, spanish)
+18f550.34 "Mediano"
+
+# osd_size_texts[5] (item 0, spanish)
+18f550.5 "Pequeño"
+
+# osd_crosshair_item_texts[121] (item 4, spanish)
+18f984.121 "Restablecer"
+
+# osd_crosshair_item_texts[92] (item 3, spanish)
+18f984.92 "{F0}Posición"
+
+# osd_crosshair_item_texts[63] (item 2, spanish)
+18f984.63 "Color"
+
+# osd_crosshair_item_texts[34] (item 1, spanish)
+18f984.34 "Icono"
+
+# osd_crosshair_item_texts[5] (item 0, spanish)
+18f984.5 "Ninguno"
+
+# osd_protect_button_texts[63] (item 2, spanish)
+190184.63 "{F0}Más tarde"
+
+# osd_protect_button_texts[34] (item 1, spanish)
+190184.34 "{F0}Cancelar"
+
+# osd_protect_button_texts[5] (item 0, spanish)
+190184.5 "{F0}Ejecutar"
+
+# osd_yes_no_texts[5] (item 0, spanish)
+190748.5 "Sí"
+
+# osd_kvm_texts[34] (item 1, spanish)
+1909ec.34 "Ascendente"
+
+# table_190cec[34] (item 1, spanish)
+190cec.34 "1000 nits máximo"
+
+# osd_navi_key_item_texts[92] (item 3, spanish)
+19158c.92 "Derecha"
+
+# osd_navi_key_item_texts[63] (item 2, spanish)
+19158c.63 "Izquierda"
+
+# osd_navi_key_item_texts[34] (item 1, spanish)
+19158c.34 "Abajo"
+
+# osd_navi_key_item_texts[5] (item 0, spanish)
+19158c.5 "Arriba"
+
+# osd_info_box_texts[179] (item 6, spanish)
+191b30.179 "Profundidad de bits"
+
+# osd_info_box_texts[150] (item 5, spanish)
+191b30.150 "Tipo de contenido"
+
+# osd_info_box_texts[121] (item 4, spanish)
+191b30.121 "Seleccionar modo"
+
+# osd_info_box_texts[63] (item 2, spanish)
+191b30.63 "Resolución física"
+
+# osd_info_box_texts[34] (item 1, spanish)
+191b30.34 "Resolución nativa"
+
+# osd_out_of_range_texts[5] (item 0, spanish)
+192d8c.5 "¡Fuera del intervalo!"
+
+# osd_no_signal_texts[5] (item 0, spanish)
+193008.5 "No hay señal"
+
+# osd_power_button_texts[34] (item 1, spanish)
+19336c.34 "En espera"
+
+# osd_navi_function_texts[295] (item 10, spanish)
+1935bc.295 "Ámbito de Optix"
+
+# osd_navi_function_texts[266] (item 9, spanish)
+1935bc.266 "Visión nocturna"
+
+# osd_info_box_texts[92] (item 3, spanish)
+# osd_navi_function_texts[208] (item 7, spanish)
+191b30.92 "Frec. actualización"
+
+# osd_gi_item_texts[34] (item 1, spanish)
+# osd_navi_function_texts[92] (item 3, spanish)
+18a360.34 "{F0}Mira inteligente"
+
+# osd_navi_function_texts[121] (item 4, spanish)
+1935bc.121 "Despertador"
+
+# osd_navi_function_texts[63] (item 2, spanish)
+1935bc.63 "Modo juego"
+
+# osd_choice_note_function_texts[34] (item 1, spanish)
+# osd_image_item_texts[5] (item 0, spanish)
+# osd_navi_function_texts[34] (item 1, spanish)
+1832e4.34 "Brillo"
+
+# osd_settings_item_texts[150] (item 5, spanish)
+# table_18c8b8[92] (item 3, spanish)
+# osd_navi_function_texts[237] (item 8, spanish)
+1874f8.150 "Info. En la pantalla"
+
+# osd_navi_function_texts[179] (item 6, spanish)
+1935bc.179 "Modo PIP/PBP"
+
+# osd_image_enhancement_texts[121] (item 4, spanish)
+194b34.121 "El más intenso"
+
+# osd_image_enhancement_texts[92] (item 3, spanish)
+194b34.92 "Intenso"
+
+# osd_image_enhancement_texts[63] (item 2, spanish)
+194b34.63 "Medio"
+
+# osd_image_enhancement_texts[34] (item 1, spanish)
+194b34.34 "Débil"
+
+# osd_pro_mode_texts[92] (item 3, spanish)
+1951dc.92 "Película"
+
+# osd_pro_mode_texts[63] (item 2, spanish)
+1951dc.63 "Luz antiazul"
+
+# osd_pro_mode_texts[121] (item 4, spanish)
+1951dc.121 "Oficina"
+
+# osd_oled_care_choice_texts[34] (item 1, spanish)
+# osd_optix_scope_item_texts[92] (item 3, spanish)
+# osd_off_on_texts[34] (item 1, spanish)
+# table_195a38[63] (item 2, spanish)
+16df60.34 "ACTIVAR"
+
+# osd_location_texts[150] (item 5, spanish)
+# table_195a38[5] (item 0, spanish)
+# table_195c7c[5] (item 0, spanish)
+18e9f8.150 "Ubicación"
+
+# osd_game_mode_texts[5] (item 0, spanish)
+195f24.5 "{F0}Color prémium"
+
+# osd_pro_mode_texts[34] (item 1, spanish)
+# osd_game_mode_texts[34] (item 1, spanish)
+1951dc.34 "Usuario"
+
+# osd_game_mode_texts[92] (item 3, spanish)
+195f24.92 "Carreras"
+
+# osd_pbp_mode_texts[34] (item 1, spanish)
+18e89c.34 "Modo 2"
+
+# osd_pbp_mode_texts[5] (item 0, spanish)
+18e89c.5 "Modo 1"
+
+# osd_oled_care_choice_texts[5] (item 0, spanish)
+# osd_night_vision_texts[5] (item 0, spanish)
+# table_18c8b8[5] (item 0, spanish)
+# osd_optix_scope_item_texts[63] (item 2, spanish)
+# osd_off_on_texts[5] (item 0, spanish)
+# osd_power_button_texts[5] (item 0, spanish)
+# ... and 5 more entries
+16df60.5 "DESACTIVAR"
+
+# osd_tab_name_texts[179] (item 6, spanish)
+196dc0.179 "Tecla de navegación"
+
+# osd_tab_name_texts[208] (item 7, spanish)
+196dc0.208 "Configuración"
+
+# osd_info_box_texts[5] (item 0, spanish)
+# osd_navi_function_texts[150] (item 5, spanish)
+# osd_tab_name_texts[121] (item 4, spanish)
+191b30.5 "Fuente de entrada"
+
+# osd_tab_name_texts[92] (item 3, spanish)
+196dc0.92 "Imagen"
+
+# osd_tab_name_texts[63] (item 2, spanish)
+196dc0.63 "Profesional"
+
+# osd_tab_name_texts[34] (item 1, spanish)
+196dc0.34 "Juegos"

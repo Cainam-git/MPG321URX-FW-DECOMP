@@ -1,0 +1,347 @@
+{
+  "functions": {
+    "CODE:0000": {
+      "by": "hand",
+      "name": "thunk_FUN_CODE_13f7",
+      "status": "matched"
+    },
+    "CODE:0003": {
+      "by": "hand",
+      "name": "FUN_CODE_0003",
+      "status": "matched"
+    },
+    "CODE:0927": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?_PRINTF517?BYTE (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0927",
+      "status": "matched",
+      "symbol": "?_PRINTF517?BYTE"
+    },
+    "CODE:0930": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+9) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0930",
+      "status": "matched",
+      "symbol": "@0+9"
+    },
+    "CODE:0941": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+26) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0941",
+      "status": "matched",
+      "symbol": "@0+26"
+    },
+    "CODE:094b": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+36) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_094b",
+      "status": "matched",
+      "symbol": "@0+36"
+    },
+    "CODE:0962": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+59) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0962",
+      "status": "matched",
+      "symbol": "@0+59"
+    },
+    "CODE:0973": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+76) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0973",
+      "status": "matched",
+      "symbol": "@0+76"
+    },
+    "CODE:0980": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+89) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0980",
+      "status": "matched",
+      "symbol": "@0+89"
+    },
+    "CODE:0989": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine _PRINTF (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0989",
+      "status": "matched",
+      "symbol": "_PRINTF"
+    },
+    "CODE:0bab": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+644) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0bab",
+      "status": "matched",
+      "symbol": "@0+644"
+    },
+    "CODE:0bba": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+659) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0bba",
+      "status": "matched",
+      "symbol": "@0+659"
+    },
+    "CODE:0c44": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PRINTF (internal entry point, segment 0+797) (C51S.LIB:PRINTF)",
+      "lib": "C51S.LIB:PRINTF",
+      "name": "FUN_CODE_0c44",
+      "status": "matched",
+      "symbol": "@0+797"
+    },
+    "CODE:0c83": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "name": "FUN_CODE_0c83",
+      "status": "matched"
+    },
+    "CODE:0f3f": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CLDPTR (C51C.LIB:?C?CLDPTR)",
+      "lib": "C51C.LIB:?C?CLDPTR",
+      "name": "FUN_CODE_0f3f",
+      "status": "matched",
+      "symbol": "?C?CLDPTR"
+    },
+    "CODE:0f58": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CLDOPTR (C51C.LIB:?C?CLDOPTR)",
+      "lib": "C51C.LIB:?C?CLDOPTR",
+      "name": "FUN_CODE_0f58",
+      "status": "matched",
+      "symbol": "?C?CLDOPTR"
+    },
+    "CODE:0f85": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CSTPTR (C51C.LIB:?C?CSTPTR)",
+      "lib": "C51C.LIB:?C?CSTPTR",
+      "name": "FUN_CODE_0f85",
+      "status": "matched",
+      "symbol": "?C?CSTPTR"
+    },
+    "CODE:0f97": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CSTOPTR (C51C.LIB:?C?CSTOPTR)",
+      "lib": "C51C.LIB:?C?CSTOPTR",
+      "name": "FUN_CODE_0f97",
+      "status": "matched",
+      "symbol": "?C?CSTOPTR"
+    },
+    "CODE:0fb9": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?LMUL (C51BC.LIB:?C?LMUL)",
+      "lib": "C51BC.LIB:?C?LMUL",
+      "name": "FUN_CODE_0fb9",
+      "status": "matched",
+      "symbol": "?C?LMUL"
+    },
+    "CODE:1008": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine ?C?ULDIV (internal entry point, segment 0+0) (C51BC.LIB:?C?ULDIV)",
+      "lib": "C51BC.LIB:?C?ULDIV",
+      "name": "FUN_CODE_1008",
+      "status": "matched",
+      "symbol": "@0+0"
+    },
+    "CODE:1044": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?ULDIV (C51BC.LIB:?C?ULDIV)",
+      "lib": "C51BC.LIB:?C?ULDIV",
+      "name": "FUN_CODE_1044",
+      "status": "matched",
+      "symbol": "?C?ULDIV"
+    },
+    "CODE:10d6": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?ULSHR (C51BC.LIB:?C?ULSHR)",
+      "lib": "C51BC.LIB:?C?ULSHR",
+      "name": "FUN_CODE_10d6",
+      "status": "matched",
+      "symbol": "?C?ULSHR"
+    },
+    "CODE:10e9": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?PLDIIDATA (C51BC.LIB:?C?PLDIIDATA)",
+      "lib": "C51BC.LIB:?C?PLDIIDATA",
+      "name": "FUN_CODE_10e9",
+      "status": "matched",
+      "symbol": "?C?PLDIIDATA"
+    },
+    "CODE:10f9": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine ?C?CCASE (C51BC.LIB:?C?CCASE)",
+      "lib": "C51BC.LIB:?C?CCASE",
+      "name": "FUN_CODE_10f9",
+      "status": "matched",
+      "symbol": "?C?CCASE"
+    },
+    "CODE:111f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "name": "FUN_CODE_111f",
+      "status": "matched"
+    },
+    "CODE:123a": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "name": "FUN_CODE_123a",
+      "status": "matched"
+    },
+    "CODE:1249": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "name": "FUN_CODE_1249",
+      "status": "matched"
+    },
+    "CODE:124f": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "name": "FUN_CODE_124f",
+      "status": "matched"
+    },
+    "CODE:1346": {
+      "by": "hand",
+      "name": "FUN_CODE_1346",
+      "status": "matched"
+    },
+    "CODE:13f7": {
+      "by": "hand",
+      "name": "FUN_CODE_13f7",
+      "status": "matched"
+    },
+    "CODE:1491": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED)",
+      "name": "FUN_CODE_1491",
+      "status": "matched"
+    },
+    "CODE:151c": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "name": "FUN_CODE_151c",
+      "status": "matched"
+    },
+    "CODE:1616": {
+      "by": "hand",
+      "name": "FUN_CODE_1616",
+      "status": "matched"
+    },
+    "CODE:16db": {
+      "by": "hand",
+      "name": "FUN_CODE_16db",
+      "status": "matched"
+    },
+    "CODE:172d": {
+      "by": "hand",
+      "name": "FUN_CODE_172d",
+      "status": "matched"
+    },
+    "CODE:1777": {
+      "by": "hand",
+      "name": "FUN_CODE_1777",
+      "status": "matched"
+    },
+    "CODE:17af": {
+      "by": "hand",
+      "name": "FUN_CODE_17af",
+      "status": "matched"
+    },
+    "CODE:17e2": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "name": "FUN_CODE_17e2",
+      "status": "matched"
+    },
+    "CODE:180d": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "name": "FUN_CODE_180d",
+      "status": "matched"
+    },
+    "CODE:1838": {
+      "by": "keil-lib",
+      "comment": "Keil C51 library routine _PUTCHAR (C51BC.LIB:PUTCHAR)",
+      "lib": "C51BC.LIB:PUTCHAR",
+      "name": "FUN_CODE_1838",
+      "status": "matched",
+      "symbol": "_PUTCHAR"
+    },
+    "CODE:1843": {
+      "by": "keil-lib",
+      "comment": "piece of Keil C51 library routine PUTCHAR (internal entry point, segment 0+11) (C51BC.LIB:PUTCHAR)",
+      "lib": "C51BC.LIB:PUTCHAR",
+      "name": "FUN_CODE_1843",
+      "status": "matched",
+      "symbol": "@0+11"
+    },
+    "CODE:1873": {
+      "by": "hand",
+      "name": "FUN_CODE_1873",
+      "status": "matched"
+    },
+    "CODE:1899": {
+      "by": "hand",
+      "name": "FUN_CODE_1899",
+      "status": "matched"
+    },
+    "CODE:18ab": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(8,SPEED) REGFILE(R.ORC)",
+      "name": "FUN_CODE_18ab",
+      "status": "matched"
+    },
+    "CODE:18bb": {
+      "by": "hand",
+      "name": "FUN_CODE_18bb",
+      "status": "matched"
+    },
+    "CODE:18c9": {
+      "by": "hand",
+      "c51opts": "OPTIMIZE(7,SPEED) REGFILE(R.ORC)",
+      "name": "FUN_CODE_18c9",
+      "status": "matched"
+    },
+    "CODE:18e2": {
+      "by": "hand",
+      "name": "FUN_CODE_18e2",
+      "status": "matched"
+    },
+    "CODE:18e8": {
+      "by": "hand",
+      "name": "FUN_CODE_18e8",
+      "status": "matched"
+    },
+    "CODE:7400": {
+      "by": "data",
+      "comment": "NOT CODE: 17 zero bytes of padding inside the slot-1 partition area (0x7000..0x7FFF); no caller (a byte search for LCALL/LJMP to it finds only operand bytes of other instructions); Ghidra false positive",
+      "name": "FUN_CODE_7400",
+      "status": "matched"
+    },
+    "CODE:7527": {
+      "by": "data",
+      "comment": "NOT CODE: 17 zero bytes of padding inside the slot-1 partition area (0x7000..0x7FFF); no caller (a byte search for LCALL/LJMP to it finds only operand bytes of other instructions); Ghidra false positive",
+      "name": "FUN_CODE_7527",
+      "status": "matched"
+    },
+    "CODE:7f9d": {
+      "by": "data",
+      "comment": "NOT CODE: 17 zero bytes of padding inside the slot-1 partition area (0x7000..0x7FFF); no caller (a byte search for LCALL/LJMP to it finds only operand bytes of other instructions); Ghidra false positive",
+      "name": "FUN_CODE_7f9d",
+      "status": "matched"
+    },
+    "ram:18d6": {
+      "by": "hand",
+      "name": "FUN_CODE_18d6",
+      "status": "matched"
+    }
+  }
+}

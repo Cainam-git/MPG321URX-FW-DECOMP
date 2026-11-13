@@ -1,0 +1,3 @@
+libgcc.a _pack_sf.o __pack_f
+# leon2m FUN_a0156dec: toolchain library function __pack_f (libgcc.a:_pack_sf.o, 328 bytes),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

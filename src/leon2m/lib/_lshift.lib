@@ -1,0 +1,3 @@
+libc.a mprec.o _lshift
+# leon2m FUN_a015d3b0: toolchain library function _lshift (libc.a:mprec.o, 276 bytes),
+# byte-exact at its address; the archive member is the source, nothing to decompile.

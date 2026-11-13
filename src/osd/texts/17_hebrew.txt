@@ -1,0 +1,641 @@
+# Texts of language 17, named "{F8}תי{25}{26}{27}" in the language list, used by no other language.
+# Written by tools/osd_gen.py; the format is described in docs/OSD-TEXT.md.
+
+# osd_protect_long_execute_texts[46] (item 1, hebrew)
+16e0d0.46 "{F8}כדי{F0} {F8}לשמור{F0} {F8}על{F0} {F8}איכות{F0} {F8}תמונת{F0} {F8}הפאנל{F0},"
+
+# osd_protect_long_execute_texts[17] (item 0, hebrew)
+16e0d0.17 "{F8}לחץ{F0} {F8}על{F0} {F8}הלחצן{F0} \"{F8}בצע{F0}\" {F8}כדי{F0} {F8}להפעיל{F0} {F8}את{F0} {F8}פונקציית{F0} {F8}ההגנה{F0} {F8}על{F0} {F8}הפאנל{F0} ({F8}ארוכת{F0} {F8}זמן{F0})."
+
+# osd_protect_long_auto_texts[17] (item 0, hebrew)
+16f25c.17 "{F8}כדי{F0} {F8}לשמור{F0} {F8}על{F0} {F8}איכות{F0} {F8}תמונת{F0} {F8}הפאנל{F0}, {F8}פונקציית{F0} {F8}ההגנה{F0} {F8}על{F0} {F8}הפאנל{F0} ({F8}ארוכת{F0} {F8}זמן{F0}) {F8}תופעל{F0} {F8}אוטומטית{F0}."
+
+# osd_protect_long_title_texts[75] (item 2, hebrew)
+16f670.75 "{F8}כדי{F0} {F8}לשמור{F0} {F8}על{F0} {F8}איכות{F0} {F8}התמונה{F0} {F8}של{F0} {F8}הפאנל{F0}, {F8}הפונקציה"
+
+# osd_protect_long_title_texts[46] (item 1, hebrew)
+16f670.46 "{F0}\"{F8}הגנה{F0} {F8}על{F0} {F8}הפאנל{F0} ({F8}זמן{F0} {F8}ארוך{F0})\" {F8}תופעל{F0} {F8}באופן{F0} {F8}אוטומטי{F0} {F8}כאשר{F0} {F8}השימוש{F0} {F8}בצג{F0} {F8}יעלה{F0} {F8}על{F0} 1,500 {F8}שעות{F0}."
+
+# osd_protect_long_title_texts[17] (item 0, hebrew)
+16f670.17 "{F8}אופן{F0} {F8}הטיפול{F0} {F8}ב{F0}-MSI OLED - {F8}הגנה{F0} {F8}על{F0} {F8}הפאנל{F0} ({F8}זמן{F0} {F8}ארוך{F0})"
+
+# osd_protect_long_incomplete_texts[46] (item 1, hebrew)
+172590.46 "{F8}תהליך{F0} {F8}ההגנה{F0} {F8}על{F0} {F8}הפאנל{F0} ({F8}ארוכת{F0} {F8}זמן{F0}) {F8}לא{F0} {F8}הושלמה{F0}."
+
+# osd_protect_long_incomplete_texts[17] (item 0, hebrew)
+172590.17 "{F8}אנא{F0} {F8}בחר{F0} {F8}ולחץ{F0} {F8}על{F0} {F8}פריט{F0} {F8}זה{F0} {F8}קצת{F0} {F8}יותר{F0} {F8}כדי{F0} {F8}לבצע{F0} {F8}תהליך{F0} {F8}זה{F0} {F8}אם{F0} {F8}יהיה{F0} {F8}בכך{F0} {F8}צורך{F0} {F8}מאוחר{F0} {F8}יותר{F0}."
+
+# osd_protect_incomplete_texts[46] (item 1, hebrew)
+173998.46 "{F0}.{F8}רתוי רחואמ ךרוצ ךכב היהי םא הז ךילהת עצבל"
+
+# osd_protect_incomplete_texts[17] (item 0, hebrew)
+173998.17 "{F8}ידכ רתוי תצק הז טירפ לע ץחלו רחב אנא {F0}.{F8}המלשה אל לנאפה תייצקנופ לע הנגה"
+
+# osd_protect_long_incomplete_texts[75] (item 2, hebrew)
+# osd_protect_incomplete_texts[75] (item 2, hebrew)
+# osd_protect_execute_texts[75] (item 2, hebrew)
+172590.75 "{F0}:{F8}העדוה"
+
+# osd_protect_execute_texts[46] (item 1, hebrew)
+174bd0.46 "{F0}.\"{F8}לנאפה לע הנגה{F0}\"{F8} היצקנופה תא ליעפהל ידכ"
+
+# osd_protect_execute_texts[17] (item 0, hebrew)
+174bd0.17 "{F0}\"{F8}עוציב{F0}\"{F8} ךצתלה לע ץותלל שי{F0},{F8}לנאפה לש הנומתה תוכיא לע רומשל ידכ"
+
+# osd_protect_long_retry_texts[46] (item 1, hebrew)
+175de4.46 "{F8}תהליך{F0} {F8}ההגנה{F0} {F8}על{F0} {F8}הפאנל{F0} ({F8}ארוכת{F0} {F8}זמן{F0}) {F8}לא{F0} {F8}הושלמה{F0}."
+
+# osd_protect_long_retry_texts[17] (item 0, hebrew)
+175de4.17 "{F8}אנא{F0} {F8}לחץ{F0} {F8}על{F0} {F8}כפתור{F0} \"{F8}ביצוע{F0}\" {F8}כדי{F0} {F8}להפעיל{F0} {F8}הגנה{F0} {F8}על{F0} {F8}הפאנל{F0} ({F8}ארוכת{F0} {F8}זמן{F0})."
+
+# osd_protect_retry_texts[46] (item 1, hebrew)
+177270.46 "{F0}.{F8}לנאפה לע הנגה ליעפהל ידכ {F0}\"{F8}עוציב{F0}\" {F8}רותפכ לע"
+
+# osd_protect_retry_texts[17] (item 0, hebrew)
+177270.17 "{F8}ץחל אנא {F0}.{F8}המלשוה אל לנאפה תייצקנופ לע הנגה"
+
+# osd_protect_auto_texts[17] (item 0, hebrew)
+1785c0.17 "{F8}תייצקנופ{F0},{F8}לנאפה תנומת תוכיא לע רומשל ידכ"
+
+# osd_protect_long_auto_texts[46] (item 1, hebrew)
+16f25c.46 "{F0} "
+
+# osd_protect_auto_texts[46] (item 1, hebrew)
+1785c0.46 "{F0}.{F8}תיטמוטוא לעפות לנאפה לע הנגהה"
+
+# osd_protect_long_execute_texts[133] (item 4, hebrew)
+# osd_protect_long_auto_texts[133] (item 4, hebrew)
+# osd_protect_long_title_texts[162] (item 5, hebrew)
+# osd_protect_long_incomplete_texts[133] (item 4, hebrew)
+# osd_protect_long_retry_texts[133] (item 4, hebrew)
+16e0d0.133 "{F8}נורית{F0} {F8}חיווי{F0} {F8}פעולה{F0} {F8}מהבהב{F0} {F8}בצבע{F0} {F8}לבן{F0} {F8}עד{F0} {F8}לסיום{F0} {F8}התהליך{F0}."
+
+# osd_protect_long_execute_texts[104] (item 3, hebrew)
+# osd_protect_long_auto_texts[104] (item 3, hebrew)
+# osd_protect_long_title_texts[133] (item 4, hebrew)
+# osd_protect_long_incomplete_texts[104] (item 3, hebrew)
+# osd_protect_long_retry_texts[104] (item 3, hebrew)
+16e0d0.104 "{F8}השלמת{F0} {F8}פונקציית{F0} {F8}הגנה{F0} {F8}זו{F0} {F8}עשויה{F0} {F8}להימשך{F0} {F8}שעה{F0}."
+
+# osd_protect_long_title_texts[336] (item 11, hebrew)
+# osd_protect_long_retry_texts[307] (item 10, hebrew)
+# osd_protect_retry_texts[307] (item 10, hebrew)
+16f670.336 "{F8}למשח תכירצב ןוכסיח בצמ סנכנ וא יובכ גצה רשאכ"
+
+# osd_protect_long_title_texts[307] (item 10, hebrew)
+# osd_protect_long_retry_texts[278] (item 9, hebrew)
+# osd_protect_retry_texts[278] (item 9, hebrew)
+16f670.307 "{F8}תיטמוטוא לעפוי הז ךילהת{F0},\"{F8}לוטיב{F0}\"{F8} ןצחלה לע ץחלת םא"
+
+# osd_protect_long_execute_texts[249] (item 8, hebrew)
+# osd_protect_long_auto_texts[249] (item 8, hebrew)
+# osd_protect_long_title_texts[278] (item 9, hebrew)
+# osd_protect_long_incomplete_texts[249] (item 8, hebrew)
+# osd_protect_incomplete_texts[249] (item 8, hebrew)
+# osd_protect_execute_texts[249] (item 8, hebrew)
+# ... and 4 more entries
+16e0d0.249 "{F0} "
+
+# osd_protect_long_execute_texts[220] (item 7, hebrew)
+# osd_protect_long_auto_texts[220] (item 7, hebrew)
+# osd_protect_long_title_texts[249] (item 8, hebrew)
+# osd_protect_long_incomplete_texts[220] (item 7, hebrew)
+# osd_protect_incomplete_texts[220] (item 7, hebrew)
+# osd_protect_execute_texts[220] (item 7, hebrew)
+# ... and 4 more entries
+16e0d0.220 "{F0}{F8}הלעפהה ןצחל לע תינשב ץוחלל שי {F0},{F8}ועוציב תעב ךילהתה תא לטבל םיצור םא"
+
+# osd_protect_long_execute_texts[191] (item 6, hebrew)
+# osd_protect_long_auto_texts[191] (item 6, hebrew)
+# osd_protect_long_title_texts[220] (item 7, hebrew)
+# osd_protect_long_incomplete_texts[191] (item 6, hebrew)
+# osd_protect_incomplete_texts[191] (item 6, hebrew)
+# osd_protect_execute_texts[191] (item 6, hebrew)
+# ... and 4 more entries
+16e0d0.191 "{F0} "
+
+# osd_protect_long_execute_texts[162] (item 5, hebrew)
+# osd_protect_long_auto_texts[162] (item 5, hebrew)
+# osd_protect_long_title_texts[191] (item 6, hebrew)
+# osd_protect_long_incomplete_texts[162] (item 5, hebrew)
+# osd_protect_incomplete_texts[162] (item 5, hebrew)
+# osd_protect_execute_texts[162] (item 5, hebrew)
+# ... and 4 more entries
+16e0d0.162 "{F0}{F8}גצהמ למשחה לבכ תא קתנל אל אנ ךילהתה עוציב תעב"
+
+# osd_protect_incomplete_texts[133] (item 4, hebrew)
+# osd_protect_execute_texts[133] (item 4, hebrew)
+# osd_protect_retry_texts[133] (item 4, hebrew)
+# osd_protect_auto_texts[133] (item 4, hebrew)
+# osd_protect_title_texts[162] (item 5, hebrew)
+173998.133 "{F0}{F8}ךילהתה תמלשהל דע םותכ רואב בהבהי הלעפהה ןווחמ"
+
+# osd_protect_incomplete_texts[104] (item 3, hebrew)
+# osd_protect_execute_texts[104] (item 3, hebrew)
+# osd_protect_retry_texts[104] (item 3, hebrew)
+# osd_protect_auto_texts[104] (item 3, hebrew)
+# osd_protect_title_texts[133] (item 4, hebrew)
+173998.104 "{F0}{F8}םויסל דע תוקד רפסמ ךוראל היושע וז הנגה תייצקנופ"
+
+# osd_protect_long_execute_texts[75] (item 2, hebrew)
+# osd_protect_long_auto_texts[75] (item 2, hebrew)
+# osd_protect_long_title_texts[104] (item 3, hebrew)
+# osd_protect_long_retry_texts[75] (item 2, hebrew)
+# osd_protect_retry_texts[75] (item 2, hebrew)
+# osd_protect_auto_texts[75] (item 2, hebrew)
+# ... and 1 more entries
+16e0d0.75 "{F0}:{F8}העדוה"
+
+# osd_protect_title_texts[75] (item 2, hebrew)
+179a14.75 "{F8}כדי{F0} {F8}לשמור{F0} {F8}על{F0} {F8}איכות{F0} {F8}התמונה{F0} {F8}של{F0} {F8}הפאנל{F0}, {F8}הפונקציה"
+
+# osd_protect_title_texts[46] (item 1, hebrew)
+179a14.46 "{F0}\"{F8}הגנה{F0} {F8}על{F0} {F8}הפאנל{F0}\" {F8}תופעל{F0} {F8}באופן{F0} {F8}אוטומטי{F0} {F8}כאשר{F0} {F8}השימוש{F0} {F8}בצג{F0} {F8}יעלה{F0} {F8}על{F0} 4 {F8}שעות{F0}."
+
+# osd_protect_title_texts[17] (item 0, hebrew)
+179a14.17 "MSI OLED Care - {F8}לנאפה לע הנגה"
+
+# osd_protect_retry_texts[423] (item 14, hebrew)
+# osd_protect_title_texts[394] (item 13, hebrew)
+177270.423 "{F8}{2A}תועש {F0}24{F8} לעמ אוה חולה לש "
+
+# osd_protect_retry_texts[394] (item 13, hebrew)
+# osd_protect_title_texts[365] (item 12, hebrew)
+177270.394 "{F8}רבטצמה שומישה רשאכ קר עיפות העדוהה{F0},\"{F8}רתוי רחואמ{F0}\" {F8}ןצחלה לע ץחלת םא"
+
+# osd_protect_retry_texts[365] (item 12, hebrew)
+# osd_protect_title_texts[336] (item 11, hebrew)
+177270.365 "{F8}{2A}למשחב ךוכסיח בצמב וא גצה יוביכ"
+
+# osd_protect_retry_texts[336] (item 11, hebrew)
+# osd_protect_title_texts[307] (item 10, hebrew)
+177270.336 "{F8}תעב תיטמוטוא לעפוי אוה{F0},\"{F8}רתוי רחךאמ{F0}\"{F8} וא {F0}\"{F8}לוטיב{F0}\"{F8} ךצחלה לע  ץחלת םא"
+
+# osd_change_notice_line3_texts[17] (item 0, hebrew)
+180b60.17 ":{F8}תואבה תויורשפאהמ תחאב רחב"
+
+# osd_change_notice_line2_texts[17] (item 0, hebrew)
+181058.17 ".{F8}הז גצ לש קפסהה תכירצ"
+
+# osd_change_notice_line1_texts[17] (item 0, hebrew)
+1814d8.17 "{F8}תא לידגהל לולע תרחבנה היצקנופה יוניש"
+
+# osd_change_notice_title_texts[17] (item 0, hebrew)
+1819cc.17 "! {F8}יוניש רשא"
+
+# table_1821d4[46] (item 1, hebrew)
+1821d4.46 "{F8}ילטיגיד"
+
+# table_1821d4[17] (item 0, hebrew)
+1821d4.17 "{F8}יגולנא"
+
+# osd_pbp_source_texts[46] (item 1, hebrew)
+182534.46 "{F8}2רוקמ "
+
+# osd_pbp_source_texts[17] (item 0, hebrew)
+182534.17 "{F8}1רוקמ "
+
+# osd_pip_item_texts[75] (item 2, hebrew)
+1828c0.75 "{F8}םוקימ"
+
+# osd_pip_item_texts[46] (item 1, hebrew)
+1828c0.46 "{F8}לדוג PIP"
+
+# osd_pip_item_texts[17] (item 0, hebrew)
+1828c0.17 "{F8}רוקמ"
+
+# osd_pip_item_texts[133] (item 4, hebrew)
+1828c0.133 "{F8}וידוא גתמ"
+
+# osd_pip_item_texts[104] (item 3, hebrew)
+1828c0.104 "{F8}הגוצת גתמ"
+
+# osd_choice_note_function_texts[133] (item 4, hebrew)
+1832e4.133 "{F8}ךסמה לדוג"
+
+# osd_choice_note_reducing_texts[162] (item 5, hebrew)
+183cb4.162 " "
+
+# osd_choice_note_reducing_texts[133] (item 4, hebrew)
+183cb4.133 "{F8}לעפת אל וז היצקנופ"
+
+# osd_choice_note_reducing_texts[104] (item 3, hebrew)
+183cb4.104 "{F0}.VRR {F8}ןכות ינותנ לבקמ גצה רשאכ"
+
+# osd_choice_note_reducing_texts[75] (item 2, hebrew)
+183cb4.75 "{F0}.\"DisplayHDR\"{F8} רא {F0}\"{F8}תוריה"
+
+# osd_choice_note_reducing_texts[46] (item 1, hebrew)
+183cb4.46 "{F8}ב{F0}\"{F8}ה  תרדגהב הירלת"
+
+# osd_choice_note_reducing_texts[17] (item 0, hebrew)
+183cb4.17 "{F8}טקפאב התחפהה"
+
+# osd_choice_note_texts[133] (item 4, hebrew)
+183a70.133 " "
+
+# osd_choice_note_texts[104] (item 3, hebrew)
+183a70.104 "{F8}המלשהל{F0} {F8}העש{F0} .{F8}רעושמ"
+
+# osd_choice_note_texts[75] (item 2, hebrew)
+183a70.75 " "
+
+# osd_choice_note_texts[46] (item 1, hebrew)
+183a70.46 "{F8}םויסל דע תוקד {F0}15-{F8}כ ורתונ"
+
+# osd_choice_note_texts[17] (item 0, hebrew)
+183a70.17 "{F8}העדוה{F0}:"
+
+# osd_oled_care_item_texts[75] (item 2, hebrew)
+185e78.75 "{F8}הנגה תעדוה"
+
+# osd_oled_care_function_texts[162] (item 5, hebrew)
+# osd_oled_care_item_texts[191] (item 6, hebrew)
+185bc0.162 "{F8}תולובג יוהיז"
+
+# osd_oled_care_function_texts[133] (item 4, hebrew)
+# osd_oled_care_item_texts[162] (item 5, hebrew)
+185bc0.133 "{F8}תומישמה תרוש יוהיז"
+
+# osd_oled_care_function_texts[104] (item 3, hebrew)
+# osd_oled_care_item_texts[133] (item 4, hebrew)
+185bc0.104 "{F8}וגול בר יוהיז"
+
+# osd_oled_care_item_texts[220] (item 7, hebrew)
+185e78.220 "{F0}OLED {F8}לנאפ{F0} {F8}עדימ"
+
+# osd_oled_care_function_texts[75] (item 2, hebrew)
+# osd_oled_care_item_texts[104] (item 3, hebrew)
+185bc0.75 "{F8}יטטס{F0} {F8}ךסמ{F0} {F8}יוהיז"
+
+# osd_oled_care_function_texts[17] (item 0, hebrew)
+# osd_oled_care_item_texts[46] (item 1, hebrew)
+185bc0.17 "{F8}לנאפה{F0} {F8}לע{F0} {F8}הנגה"
+
+# osd_oled_care_function_texts[46] (item 1, hebrew)
+# osd_oled_care_item_texts[17] (item 0, hebrew)
+185bc0.46 "{F8}םילסקיפ{F0} {F8}תזזה"
+
+# osd_choice_note_function_texts[307] (item 10, hebrew)
+# osd_settings_item_texts[220] (item 7, hebrew)
+1832e4.307 "{F0}Type C PD{F8} תניעט"
+
+# osd_settings_item_texts[133] (item 4, hebrew)
+1874f8.133 "{F8}הלעפה Iצחל"
+
+# osd_settings_item_texts[278] (item 9, hebrew)
+1874f8.278 "{F8}סופיא"
+
+# osd_settings_item_texts[104] (item 3, hebrew)
+1874f8.104 "{F8}תירונ RGB"
+
+# osd_settings_item_texts[75] (item 2, hebrew)
+1874f8.75 "{F8}טירפת תגצה ןמז"
+
+# osd_settings_item_texts[46] (item 1, hebrew)
+1874f8.46 "{F8}תופיקש"
+
+# osd_settings_item_texts[17] (item 0, hebrew)
+1874f8.17 "{F8}הפש"
+
+# osd_professional_item_texts[75] (item 2, hebrew)
+188634.75 "{F8}הנומת רופיש"
+
+# osd_professional_item_texts[46] (item 1, hebrew)
+188634.46 "{F8}שלח לוחנ ךוא"
+
+# osd_professional_item_texts[17] (item 0, hebrew)
+188634.17 "{F8}יעוצקמ בצמ"
+
+# osd_night_vision_texts[104] (item 3, hebrew)
+1890d4.104 "{F8}קזח יכה"
+
+# osd_night_vision_texts[75] (item 2, hebrew)
+1890d4.75 "{F8}קזח"
+
+# osd_night_vision_texts[46] (item 1, hebrew)
+1890d4.46 "{F8}הליגר"
+
+# osd_choice_note_function_texts[278] (item 9, hebrew)
+# osd_gaming_item_texts[46] (item 1, hebrew)
+1832e4.278 "{F8}הליל תייאר"
+
+# osd_gaming_item_texts[133] (item 4, hebrew)
+188da0.133 "{F8}ררועמ ןועש"
+
+# osd_gaming_item_texts[104] (item 3, hebrew)
+188da0.104 "{F8}ןונער בצק"
+
+# osd_choice_note_function_texts[162] (item 5, hebrew)
+1832e4.162 "{F8}הבוגת ןמז"
+
+# osd_gaming_item_texts[17] (item 0, hebrew)
+188da0.17 "{F8}קחשמ בצמ"
+
+# osd_choice_note_function_texts[191] (item 6, hebrew)
+# osd_gi_item_texts[75] (item 2, hebrew)
+1832e4.191 "Optix Scope"
+
+# osd_oled_care_seconds_texts[104] (item 3, hebrew)
+18a7ec.104 "{F0}240 {F8}תוינש"
+
+# osd_oled_care_seconds_texts[75] (item 2, hebrew)
+18a7ec.75 "{F0}120 {F8}תוינש"
+
+# osd_oled_care_seconds_texts[46] (item 1, hebrew)
+18a7ec.46 "{F0}100 {F8}תוינש"
+
+# osd_oled_care_seconds_texts[17] (item 0, hebrew)
+18a7ec.17 "{F0}50 {F8}תוינש"
+
+# table_18af08[46] (item 1, hebrew)
+# table_18b008[46] (item 1, hebrew)
+18af08.46 "{F8}ינדי{F0} {F8}ןפואב"
+
+# osd_oled_care_usage_texts[46] (item 1, hebrew)
+18b29c.46 "{F8}תועש {F0}24{F8} לעמ שומיש"
+
+# osd_oled_care_speed_texts[75] (item 2, hebrew)
+18b5e0.75 "{F8}ריהמ"
+
+# osd_oled_care_speed_texts[17] (item 0, hebrew)
+18b5e0.17 "{F8}תיטא"
+
+# osd_oled_care_choice_texts[75] (item 2, hebrew)
+# osd_oled_care_status_texts[75] (item 2, hebrew)
+16df60.75 "{F8}המרה{F0} {F8}םוצמצ"
+
+# osd_oled_care_status_texts[46] (item 1, hebrew)
+18b94c.46 "{F8}שרדנה ןמזה"
+
+# osd_oled_care_status_texts[17] (item 0, hebrew)
+18b94c.17 "{F0}-{F8}ב{F0} {F8}הלחתה"
+
+# table_18c070[46] (item 1, hebrew)
+18c070.46 "{F8}ךורא{F0} {F8}ןמז"
+
+# table_18c070[17] (item 0, hebrew)
+18c070.17 "{F8}רצ3{F0} {F8}ןמז"
+
+# table_18c4a8[17] (item 0, hebrew)
+18c4a8.17 "Moving speed"
+
+# osd_image_item_texts[133] (item 4, hebrew)
+18ca88.133 "{F8}ךסמה לדוג"
+
+# osd_image_item_texts[104] (item 3, hebrew)
+18ca88.104 "{F8}םיעבצ תרוטרפמט"
+
+# osd_image_item_texts[75] (item 2, hebrew)
+18ca88.75 "{F8}תודח"
+
+# osd_image_item_texts[46] (item 1, hebrew)
+18ca88.46 "{F8}תוידוגינ"
+
+# osd_language_texts[17] (item 0, hebrew)
+18d3d4.17 "{F8}תי{25}{26}{27}"
+
+# osd_optix_scope_item_texts[46] (item 1, hebrew)
+18d578.46 "{F8}חווט סחי"
+
+# osd_optix_scope_item_texts[17] (item 0, hebrew)
+18d578.17 "{F8}חווט לדוג"
+
+# osd_color_temp_texts[104] (item 3, hebrew)
+18db28.104 "{F8}תישיא םאתומ"
+
+# osd_color_temp_texts[75] (item 2, hebrew)
+18db28.75 "{F8}המח"
+
+# osd_color_temp_texts[17] (item 0, hebrew)
+18db28.17 "{F8}הרק"
+
+# osd_response_time_texts[75] (item 2, hebrew)
+18e08c.75 "{F8}ריהמ יכה"
+
+# osd_response_time_texts[46] (item 1, hebrew)
+18e08c.46 "{F8}ריהמ"
+
+# osd_color_temp_texts[46] (item 1, hebrew)
+18db28.46 "{F8}הליגר"
+
+# osd_oled_care_speed_texts[46] (item 1, hebrew)
+# osd_response_time_texts[17] (item 0, hebrew)
+18b5e0.46 "{F8}הליגר"
+
+# osd_crosshair_color_texts[46] (item 1, hebrew)
+18e54c.46 "{F8}םודא"
+
+# osd_crosshair_color_texts[17] (item 0, hebrew)
+18e54c.17 "{F8}ןבל"
+
+# table_18c8b8[75] (item 2, hebrew)
+# osd_pbp_mode_texts[75] (item 2, hebrew)
+# osd_location_texts[133] (item 4, hebrew)
+18c8b8.75 "{F8}תישיא המאתה"
+
+# osd_location_texts[104] (item 3, hebrew)
+18e9f8.104 "{F8}הטמל ןימי"
+
+# osd_location_texts[75] (item 2, hebrew)
+18e9f8.75 "{F8}הטמל לאמש"
+
+# osd_location_texts[46] (item 1, hebrew)
+18e9f8.46 "{F8}הלעמל ןימי"
+
+# osd_location_texts[17] (item 0, hebrew)
+18e9f8.17 "{F8}הלעמל לאמש"
+
+# osd_size_texts[75] (item 2, hebrew)
+18f550.75 "{F8}לודג"
+
+# osd_size_texts[46] (item 1, hebrew)
+18f550.46 "{F8}ינוניב"
+
+# osd_size_texts[17] (item 0, hebrew)
+18f550.17 "{F8}ןטק"
+
+# osd_crosshair_item_texts[133] (item 4, hebrew)
+18f984.133 "{F8}סופיא"
+
+# osd_crosshair_item_texts[104] (item 3, hebrew)
+18f984.104 "{F8}םוקמ"
+
+# osd_crosshair_item_texts[75] (item 2, hebrew)
+18f984.75 "{F8}צבע"
+
+# osd_crosshair_item_texts[46] (item 1, hebrew)
+18f984.46 "{F8}למס"
+
+# osd_crosshair_item_texts[17] (item 0, hebrew)
+18f984.17 "{F8}אלל"
+
+# osd_protect_button_texts[75] (item 2, hebrew)
+190184.75 "{F8}רחואמ רתוי"
+
+# osd_protect_button_texts[46] (item 1, hebrew)
+190184.46 "{F8}לוטיב"
+
+# osd_protect_button_texts[17] (item 0, hebrew)
+190184.17 "{F8}עוציב"
+
+# osd_yes_no_texts[46] (item 1, hebrew)
+190748.46 "{F8}אל"
+
+# osd_yes_no_texts[17] (item 0, hebrew)
+190748.17 "{F8}ןכ"
+
+# osd_kvm_texts[46] (item 1, hebrew)
+1909ec.46 "{F8}םרדה{F0} {F8}הלעמב"
+
+# table_190cec[46] (item 1, hebrew)
+190cec.46 "nits 1,000 {F8}איש"
+
+# osd_navi_key_item_texts[104] (item 3, hebrew)
+19158c.104 "{F8}ןימי"
+
+# osd_navi_key_item_texts[75] (item 2, hebrew)
+19158c.75 "{F8}הלאמש"
+
+# osd_navi_key_item_texts[46] (item 1, hebrew)
+19158c.46 "{F8}הטמל"
+
+# osd_navi_key_item_texts[17] (item 0, hebrew)
+19158c.17 "{F8}הלעמל"
+
+# osd_info_box_texts[191] (item 6, hebrew)
+191b30.191 "{F8}תויביס קמוע"
+
+# osd_info_box_texts[162] (item 5, hebrew)
+191b30.162 "{F8}ןכות גוס"
+
+# osd_info_box_texts[133] (item 4, hebrew)
+191b30.133 "{F8}הריחב בצמ"
+
+# osd_info_box_texts[75] (item 2, hebrew)
+191b30.75 "{F8}תיזיפ היצולוזר"
+
+# osd_info_box_texts[46] (item 1, hebrew)
+191b30.46 "{F8}תיעבט היצולוזר"
+
+# osd_out_of_range_texts[17] (item 0, hebrew)
+192d8c.17 "{F8}!חווטל ץוחמ"
+
+# osd_no_signal_texts[17] (item 0, hebrew)
+193008.17 "{F8}הטילק ןיא"
+
+# osd_power_button_texts[46] (item 1, hebrew)
+19336c.46 "{F8}הנתמה בצמ"
+
+# osd_navi_function_texts[307] (item 10, hebrew)
+1935bc.307 "Optix Scope"
+
+# osd_navi_function_texts[278] (item 9, hebrew)
+1935bc.278 "{F8}הליל תייאר"
+
+# osd_info_box_texts[104] (item 3, hebrew)
+# osd_navi_function_texts[220] (item 7, hebrew)
+191b30.104 "{F8}ןונער בצק"
+
+# osd_gi_item_texts[46] (item 1, hebrew)
+# osd_navi_function_texts[104] (item 3, hebrew)
+18a360.46 "{F8}המכח תנווכ"
+
+# osd_navi_function_texts[133] (item 4, hebrew)
+1935bc.133 "{F8}ררועמ ןועש"
+
+# osd_navi_function_texts[75] (item 2, hebrew)
+1935bc.75 "{F8}קחשמ בצמ"
+
+# osd_choice_note_function_texts[46] (item 1, hebrew)
+# osd_image_item_texts[17] (item 0, hebrew)
+# osd_navi_function_texts[46] (item 1, hebrew)
+1832e4.46 "{F8}תוריהב"
+
+# osd_settings_item_texts[162] (item 5, hebrew)
+# table_18c8b8[104] (item 3, hebrew)
+# osd_navi_function_texts[249] (item 8, hebrew)
+1874f8.162 "{F8}ךסמה לע {28}דימ"
+
+# osd_navi_function_texts[191] (item 6, hebrew)
+1935bc.191 "{F8}בצמ PIP/PBP"
+
+# osd_image_enhancement_texts[133] (item 4, hebrew)
+194b34.133 "{F8}קזח יכה"
+
+# osd_image_enhancement_texts[104] (item 3, hebrew)
+194b34.104 "{F8}קזח"
+
+# osd_image_enhancement_texts[75] (item 2, hebrew)
+194b34.75 "{F8}ינוניב"
+
+# osd_image_enhancement_texts[46] (item 1, hebrew)
+194b34.46 "{F8}שלח"
+
+# osd_pro_mode_texts[17] (item 0, hebrew)
+1951dc.17 "{F8}ןוכסיח בצמ"
+
+# osd_pro_mode_texts[104] (item 3, hebrew)
+1951dc.104 "{F8}טרס"
+
+# osd_pro_mode_texts[75] (item 2, hebrew)
+1951dc.75 "{F8}לרחכ יטנא"
+
+# osd_pro_mode_texts[133] (item 4, hebrew)
+1951dc.133 "{F8}דרשמ"
+
+# osd_oled_care_choice_texts[46] (item 1, hebrew)
+# osd_optix_scope_item_texts[104] (item 3, hebrew)
+# osd_off_on_texts[46] (item 1, hebrew)
+# table_195a38[75] (item 2, hebrew)
+16df60.46 "{F8}לעפומ"
+
+# osd_location_texts[162] (item 5, hebrew)
+# table_195a38[17] (item 0, hebrew)
+# table_195c7c[17] (item 0, hebrew)
+18e9f8.162 "{F8}םוקימ"
+
+# osd_game_mode_texts[17] (item 0, hebrew)
+195f24.17 "{F8}םוימרפ{F0} {F8}עבצ"
+
+# osd_pro_mode_texts[46] (item 1, hebrew)
+# osd_game_mode_texts[46] (item 1, hebrew)
+1951dc.46 "{F8}תישיא םאתומ"
+
+# osd_game_mode_texts[104] (item 3, hebrew)
+195f24.104 "{F8}םיצורמ"
+
+# osd_pbp_mode_texts[46] (item 1, hebrew)
+18e89c.46 "{F8}2 בצמ"
+
+# osd_pbp_mode_texts[17] (item 0, hebrew)
+18e89c.17 "{F8}1 בצמ"
+
+# osd_oled_care_choice_texts[17] (item 0, hebrew)
+# osd_night_vision_texts[17] (item 0, hebrew)
+# table_18c8b8[17] (item 0, hebrew)
+# osd_optix_scope_item_texts[75] (item 2, hebrew)
+# osd_off_on_texts[17] (item 0, hebrew)
+# osd_power_button_texts[17] (item 0, hebrew)
+# ... and 5 more entries
+16df60.17 "{F8}תבשומ"
+
+# osd_tab_name_texts[191] (item 6, hebrew)
+196dc0.191 "{F8}טווינ שקמ"
+
+# osd_tab_name_texts[220] (item 7, hebrew)
+196dc0.220 "{F8}הרדגה"
+
+# osd_info_box_texts[17] (item 0, hebrew)
+# osd_navi_function_texts[162] (item 5, hebrew)
+# osd_tab_name_texts[133] (item 4, hebrew)
+191b30.17 "{F8}טלקה רוקמ"
+
+# osd_tab_name_texts[104] (item 3, hebrew)
+196dc0.104 "{F8}הנומת"
+
+# osd_tab_name_texts[75] (item 2, hebrew)
+196dc0.75 "{F8}יעוצקמ"
+
+# osd_tab_name_texts[46] (item 1, hebrew)
+196dc0.46 "{F8}םיקחשמ"

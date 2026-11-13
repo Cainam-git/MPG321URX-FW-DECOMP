@@ -1,0 +1,50 @@
+/* Names used in the source of FUN_a0153018; the label behind each name is what the checking tools link by.
+   Written by tools/names/apply.py; the build puts this list in front of the file when it compiles it. */
+#define GlobalModeHandler                       FUN_a0131518
+#define dbg_ddr_stress_task                     FUN_a014d5f4
+#define dbg_printf                              FUN_a00df170
+#define gpio_is_port13_bit5_high                FUN_a0124828
+#define input_channel_bring_up_task             FUN_a013dc6c
+#define input_is_port_control_pin_active        FUN_a0124e44
+#define input_port_sync_task                    FUN_a0142910
+#define input_port_timer_start                  FUN_a013b754
+#define input_port_timers_update                FUN_a013b7e0
+#define input_power_on_ports_by_mask            FUN_a0151aa4
+#define input_refresh_port_entries              func_0x4008f550
+#define input_report_present_ports              FUN_a01298d8
+#define ipc_handshake_8051_bytes                func_0x4008fa34
+#define ipc_input_cpu_get_state_low_byte        FUN_a0137754
+#define ipc_read_8051_byte                      func_0x4008c194
+#define ipc_set_status_byte_88dd                FUN_a013777c
+#define ldc_write_status_word                   FUN_a013a728
+#define nvram_flush_pending_task                FUN_a0140ab4
+#define nvram_get_device_setting                FUN_a0145af8
+#define nvram_write_settings_record             FUN_a0153970
+#define oled_power_get_state                    FUN_a012792c
+#define oled_power_get_step                     FUN_a0127944
+#define oled_request_sensing_in_factory_burn_in FUN_a0127ab8
+#define osd_is_enabled                          FUN_a011996c
+#define panel_blurfree_periodic_task            FUN_a0150248
+#define panel_power_sequencer_task              FUN_a01413d0
+#define pq_auto_level_task                      FUN_a012a774
+#define pq_read_zone_color_averages             FUN_a0150df8
+#define sys_get_channel_state                   FUN_a013ce6c
+#define sys_main_loop_periodic_task             FUN_a0153018
+#define sys_refresh_status_and_signal_alive     FUN_a0154580
+#define sys_service_ports_by_mask               FUN_a01519d8
+#define timer_get_ticks16                       func_0x4008d588
+#define timer_ticks_since                       func_0x4008d594
+/* Stored data. */
+#define channel_records                         DAT_a802df30
+#define device_settings                         DAT_a802e1a0
+#define ldc_menu_layer_status_last              DAT_a802a4bc
+#define port_entries                            DAT_a802e116
+#define port_records                            DAT_a802e224
+#define sys_config                              DAT_a802e3d0
+#define sys_housekeeping_ticks                  DAT_a802cf94
+#define sys_input_cpu_state_last                DAT_a802cf96
+#define sys_lut_upload_pass_count               DAT_a802cf97
+#define sys_oled_time_pass_count                DAT_a802cf91
+#define sys_on_time_pass_count                  DAT_a802cf92
+#define sys_port_service_table                  DAT_001a74a6
+/* End of names. */

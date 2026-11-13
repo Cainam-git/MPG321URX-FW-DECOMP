@@ -1,0 +1,2961 @@
+{
+ "thunk_FUN_CODE_d426": {
+  "name": "startup_reset_vector",
+  "brief": "Jump from the reset vector to the C start-up code.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "reset vector LJMP to ?C_STARTUP (STARTUP.A51)",
+  "plain": "First instruction the USB controller's 8051 runs."
+ },
+ "FUN_CODE_0003": {
+  "name": "flash_identify_chip",
+  "brief": "Identify the SPI flash chip from its JEDEC ID and load its parameter record.",
+  "returns": "0 found, 2 unknown chip",
+  "notes": "Record copied to 0x0640; byte 4 = size code used by the write loops.",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "sends 9Fh (JEDEC Read ID); chip table CODE 0xCB8C (ids EF4018/EF4019/C22019/1C7019/C84019)",
+  "plain": "Finds out which flash chip the monitor has before writing it."
+ },
+ "FUN_CODE_00fc": {
+  "name": "fwupd_svc_send_region_thunk",
+  "brief": "Forward to fwupd_svc_send_region.",
+  "returns": "0 on success",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "returns fwupd_svc_send_region(); last step of fwupd_run_isp_write",
+  "plain": "Passes control on to the routine that starts the chip's own flash programming."
+ },
+ "FUN_CODE_1000": {
+  "name": "fwupd_list_next_img_entry",
+  "brief": "List the next *.IMG file of the USB disk and print its name.",
+  "returns": "1 entry listed, 0 end of directory",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "port command 0x45; twin of fwupd_list_next_dir_entry with the IMG filters (FAT, exFAT, NTFS)",
+  "plain": "Shows the next picture-file candidate on the USB stick."
+ },
+ "FUN_CODE_1234": {
+  "name": "fwupd_list_next_img_entry_part1",
+  "brief": "Continue fwupd_list_next_img_entry (code piece 1)",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "piece inside fwupd_list_next_img_entry (one C function); not a function of its own",
+  "plain": "Part of listing the USB stick's files."
+ },
+ "FUN_CODE_13c8": {
+  "name": "fwupd_list_next_img_entry_part2",
+  "brief": "Continue fwupd_list_next_img_entry (code piece 2)",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "piece inside fwupd_list_next_img_entry (one C function); not a function of its own",
+  "plain": "Part of listing the USB stick's files."
+ },
+ "FUN_CODE_13eb": {
+  "name": "fwupd_list_next_img_entry_part3",
+  "brief": "Continue fwupd_list_next_img_entry (code piece 3)",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "piece inside fwupd_list_next_img_entry (one C function); not a function of its own",
+  "plain": "Part of listing the USB stick's files."
+ },
+ "FUN_CODE_140a": {
+  "name": "fwupd_list_next_img_entry_part4",
+  "brief": "Return 0 (code piece inside fwupd_list_next_img_entry)",
+  "returns": "0",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "piece inside fwupd_list_next_img_entry (one C function); not a function of its own",
+  "plain": "Part of listing the USB stick's files."
+ },
+ "FUN_CODE_140d": {
+  "name": "fwupd_list_next_img_entry_part5",
+  "brief": "Continue fwupd_list_next_img_entry (code piece 5)",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "piece inside fwupd_list_next_img_entry (one C function); not a function of its own",
+  "plain": "Part of listing the USB stick's files."
+ },
+ "FUN_CODE_1e55": {
+  "name": "fwupd_list_next_dir_entry",
+  "brief": "List the next directory entry of the USB disk and print its name.",
+  "returns": "1 entry listed, 0 end of directory",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "port command 0x47; walks FAT 8.3/LFN, exFAT 0x85 and NTFS entries, printf of the name",
+  "plain": "Shows the next file name on the USB stick."
+ },
+ "FUN_CODE_2342": {
+  "name": "fwupd_list_next_dir_entry_part1",
+  "brief": "Continue fwupd_list_next_dir_entry (code piece 1)",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "piece inside fwupd_list_next_dir_entry (one C function); not a function of its own",
+  "plain": "Part of listing the USB stick's files."
+ },
+ "FUN_CODE_272d": {
+  "name": "fwupd_list_next_dir_entry_part2",
+  "brief": "Continue fwupd_list_next_dir_entry (code piece 2)",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "piece inside fwupd_list_next_dir_entry (one C function); not a function of its own",
+  "plain": "Part of listing the USB stick's files."
+ },
+ "FUN_CODE_2b74": {
+  "name": "lib_c_fpmul",
+  "brief": "Compiler library routine ?C?FPMUL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPMUL (original name ?C?FPMUL)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2c7a": {
+  "name": "lib_c_fpdiv_part",
+  "brief": "Internal entry point of the compiler library routine ?C?FPDIV.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPDIV",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2c7d": {
+  "name": "lib_c_fpdiv",
+  "brief": "Compiler library routine ?C?FPDIV.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPDIV (original name ?C?FPDIV)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2d1a": {
+  "name": "lib_c_fcastl",
+  "brief": "Compiler library routine ?C?FCASTL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FCAST (original name ?C?FCASTL)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2d24": {
+  "name": "lib_c_fcastc",
+  "brief": "Compiler library routine ?C?FCASTC.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FCAST (original name ?C?FCASTC)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2d58": {
+  "name": "lib_c_castf",
+  "brief": "Compiler library routine ?C?CASTF.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?CASTF (original name ?C?CASTF)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2d8f": {
+  "name": "lib_c_fpgetopn2",
+  "brief": "Compiler library routine ?C?FPGETOPN2.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPGETOPN (original name ?C?FPGETOPN2)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2da6": {
+  "name": "lib_c_fpresult",
+  "brief": "Compiler library routine ?C?FPRESULT.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPGETOPN (original name ?C?FPRESULT)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2dc4": {
+  "name": "lib_c_fpnanresult",
+  "brief": "Compiler library routine ?C?FPNANRESULT.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPGETOPN (original name ?C?FPNANRESULT)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2dcb": {
+  "name": "lib_c_fpunderflow",
+  "brief": "Compiler library routine ?C?FPUNDERFLOW.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPGETOPN (original name ?C?FPUNDERFLOW)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2dce": {
+  "name": "lib_c_fpoverflow",
+  "brief": "Compiler library routine ?C?FPOVERFLOW.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPGETOPN (original name ?C?FPOVERFLOW)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2dd9": {
+  "name": "lib_c_fpround",
+  "brief": "Compiler library routine ?C?FPROUND.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:?C?FPROUND (original name ?C?FPROUND)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2e16": {
+  "name": "lib_c_fpconvert",
+  "brief": "Compiler library routine ?C?FPCONVERT.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:?C?FPCONVERT (original name ?C?FPCONVERT)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2f1b": {
+  "name": "lib_c_fpadd_part",
+  "brief": "Internal entry point of the compiler library routine ?C?FPADD.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPADD",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3013": {
+  "name": "lib_c_ftnpwr_part",
+  "brief": "Internal entry point of the compiler library routine ?C?FTNPWR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FTNPWR",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3043": {
+  "name": "lib_c_ftnpwr",
+  "brief": "Compiler library routine ?C?FTNPWR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FTNPWR (original name ?C?FTNPWR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_305d": {
+  "name": "lib_c_ftnpwr_part_2",
+  "brief": "Internal entry point of the compiler library routine ?C?FTNPWR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FTNPWR",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_306c": {
+  "name": "lib_c_ftnpwr_part_3",
+  "brief": "Internal entry point of the compiler library routine ?C?FTNPWR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FTNPWR",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3071": {
+  "name": "lib_c_ftnpwr_part_4",
+  "brief": "Internal entry point of the compiler library routine ?C?FTNPWR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FTNPWR",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3083": {
+  "name": "lib_c_copy_part",
+  "brief": "Internal entry point of the compiler library routine ?C?COPY.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?COPY",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3153": {
+  "name": "lib_c_copy",
+  "brief": "Compiler library routine ?C?COPY.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?COPY (original name ?C?COPY)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3179": {
+  "name": "lib_c_cldptr",
+  "brief": "Compiler library routine ?C?CLDPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?CLDPTR (original name ?C?CLDPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3192": {
+  "name": "lib_c_cldoptr",
+  "brief": "Compiler library routine ?C?CLDOPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?CLDOPTR (original name ?C?CLDOPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_31bf": {
+  "name": "lib_c_cildptr",
+  "brief": "Compiler library routine ?C?CILDPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?CILDPTR (original name ?C?CILDPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_31e1": {
+  "name": "lib_c_cstptr",
+  "brief": "Compiler library routine ?C?CSTPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?CSTPTR (original name ?C?CSTPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_31f3": {
+  "name": "lib_c_cstoptr",
+  "brief": "Compiler library routine ?C?CSTOPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?CSTOPTR (original name ?C?CSTOPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3215": {
+  "name": "lib_c_imul",
+  "brief": "Compiler library routine ?C?IMUL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?IMUL (original name ?C?IMUL)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3227": {
+  "name": "lib_c_uidiv",
+  "brief": "Compiler library routine ?C?UIDIV.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?UIDIV (original name ?C?UIDIV)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_327c": {
+  "name": "lib_c_ildix",
+  "brief": "Compiler library routine ?C?ILDIX.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?ILDIX (original name ?C?ILDIX)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3292": {
+  "name": "lib_c_ildptr",
+  "brief": "Compiler library routine ?C?ILDPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?ILDPTR (original name ?C?ILDPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_32bd": {
+  "name": "lib_c_ildoptr",
+  "brief": "Compiler library routine ?C?ILDOPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?ILDOPTR (original name ?C?ILDOPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_32f5": {
+  "name": "lib_c_lmul",
+  "brief": "Compiler library routine ?C?LMUL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LMUL (original name ?C?LMUL)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3344": {
+  "name": "lib_c_uldiv_part",
+  "brief": "Internal entry point of the compiler library routine ?C?ULDIV.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?ULDIV",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3380": {
+  "name": "lib_c_uldiv",
+  "brief": "Compiler library routine ?C?ULDIV.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?ULDIV (original name ?C?ULDIV)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3412": {
+  "name": "lib_c_lnot",
+  "brief": "Compiler library routine ?C?LNOT.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LNOT (original name ?C?LNOT)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_341f": {
+  "name": "lib_c_lneg",
+  "brief": "Compiler library routine ?C?LNEG.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LNEG (original name ?C?LNEG)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_342d": {
+  "name": "lib_c_ulcmp",
+  "brief": "Compiler library routine ?C?ULCMP.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?ULCMP (original name ?C?ULCMP)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_343e": {
+  "name": "lib_c_ulshr",
+  "brief": "Compiler library routine ?C?ULSHR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?ULSHR (original name ?C?ULSHR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3451": {
+  "name": "lib_c_lshl",
+  "brief": "Compiler library routine ?C?LSHL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LSHL (original name ?C?LSHL)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3464": {
+  "name": "lib_c_lldptr",
+  "brief": "Compiler library routine ?C?LLDPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?LLDPTR (original name ?C?LLDPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3484": {
+  "name": "lib_c_lldidata",
+  "brief": "Compiler library routine ?C?LLDIDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LLDIDATA (original name ?C?LLDIDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3490": {
+  "name": "lib_c_lldcode",
+  "brief": "Compiler library routine ?C?LLDCODE.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LLDCODE (original name ?C?LLDCODE)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_34a0": {
+  "name": "lib_c_lildxdata1",
+  "brief": "Compiler library routine ?C?LILDXDATA1.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LILDXDATA (original name ?C?LILDXDATA1)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_34a2": {
+  "name": "lib_c_lildxdata8",
+  "brief": "Compiler library routine ?C?LILDXDATA8.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LILDXDATA (original name ?C?LILDXDATA8)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_34d5": {
+  "name": "lib_c_lstidata",
+  "brief": "Compiler library routine ?C?LSTIDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LSTIDATA (original name ?C?LSTIDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_34e1": {
+  "name": "lib_c_lstxdata",
+  "brief": "Compiler library routine ?C?LSTXDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LSTXDATA (original name ?C?LSTXDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_34ed": {
+  "name": "lib_c_lstkxdata",
+  "brief": "Compiler library routine ?C?LSTKXDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LSTKXDATA (original name ?C?LSTKXDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3504": {
+  "name": "lib_c_lstkxdata_part",
+  "brief": "Internal entry point of the compiler library routine ?C?LSTKXDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LSTKXDATA",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_351e": {
+  "name": "lib_c_pldixdata",
+  "brief": "Compiler library routine ?C?PLDIXDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?PLDIXDATA (original name ?C?PLDIXDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3535": {
+  "name": "lib_c_pstxdata",
+  "brief": "Compiler library routine ?C?PSTXDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?PSTXDATA (original name ?C?PSTXDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_353e": {
+  "name": "lib_c_ccase",
+  "brief": "Compiler library routine ?C?CCASE.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?CCASE (original name ?C?CCASE)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3564": {
+  "name": "lib_c_limul",
+  "brief": "Compiler library routine ?C?LIMUL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LIMUL (original name ?C?LIMUL)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_3591": {
+  "name": "lib_c_lldxdata",
+  "brief": "Compiler library routine ?C?LLDXDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LLDXDATA (original name ?C?LLDXDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_359d": {
+  "name": "lib_c_lldpdata",
+  "brief": "Compiler library routine ?C?LLDPDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LLDPDATA (original name ?C?LLDPDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_35a9": {
+  "name": "fwupd_find_update_file",
+  "brief": "Search the USB disk's root folder for UPDATE*.bin and CONFIG.bin.",
+  "params": [
+   {
+    "name": "use_mailbox_name",
+    "meaning": "1 = take the name from the command bytes"
+   }
+  ],
+  "returns": "1 file found and checked",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "name 'UPDATE' (or 6 bytes from 0xF19A) + 'BIN', attribute 0x20; FAT and exFAT; then copy and sum check",
+  "plain": "Looks on the USB stick for the firmware update file."
+ },
+ "FUN_CODE_3e68": {
+  "name": "fwupd_copy_file_to_dram",
+  "brief": "Copy the selected file from the USB disk into DRAM.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "follows the FAT chain from the start cluster in pieces of up to 16 KB (contiguous exFAT files in one run)",
+  "plain": "Loads the update file from the USB stick into the monitor's memory."
+ },
+ "FUN_CODE_467e": {
+  "name": "usb_host_enumerate_device",
+  "brief": "Enumerate the attached USB device and return its interface class.",
+  "returns": "bytes 0x0E and 0x10 of the 0x20-byte configuration reply: interface class and protocol",
+  "notes": "Class 8 runs the Bulk-Only start-up commands, class 9 the hub set-up, class 3 (HID in the USB standard) usb_host_init_async_list.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "queue heads (8f9b x4), control transfers, address, Bulk-Only command; returns config bytes 14/16",
+  "plain": "Gets to know a USB stick or hub that was just plugged in."
+ },
+ "FUN_CODE_4e8e": {
+  "name": "fwupd_test_ntfs_img_name",
+  "brief": "Report whether an NTFS file name ends in I, M, G (any case) and its sixth character from the end is not '~'.",
+  "params": [
+   {
+    "name": "record_sector",
+    "meaning": "record block"
+   },
+   {
+    "name": "name_offset",
+    "meaning": "name offset"
+   },
+   {
+    "name": "name_length",
+    "meaning": "name length"
+   }
+  ],
+  "returns": "1 when .IMG",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "reads the last name characters through the block seek, case-insensitive I/M/G test; used by the IMG list",
+  "plain": "Checks whether a file on an NTFS stick is a picture-file candidate."
+ },
+ "FUN_CODE_5200": {
+  "name": "usb_host_control_xfer_entry1",
+  "brief": "Load shared arguments, then continue into usb_host_control_xfer.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of usb_host_control_xfer; not a function of its own",
+  "plain": "Part of talking to a USB device."
+ },
+ "FUN_CODE_5203": {
+  "name": "usb_host_control_xfer_entry2",
+  "brief": "Load shared arguments, then continue into usb_host_control_xfer.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of usb_host_control_xfer; not a function of its own",
+  "plain": "Part of talking to a USB device."
+ },
+ "FUN_CODE_520b": {
+  "name": "usb_host_control_xfer_entry3",
+  "brief": "Load shared arguments, then continue into usb_host_control_xfer.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of usb_host_control_xfer; not a function of its own",
+  "plain": "Part of talking to a USB device."
+ },
+ "FUN_CODE_520d": {
+  "name": "usb_host_control_xfer_entry4",
+  "brief": "Load shared arguments, then continue into usb_host_control_xfer.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of usb_host_control_xfer; not a function of its own",
+  "plain": "Part of talking to a USB device."
+ },
+ "FUN_CODE_5219": {
+  "name": "usb_host_control_xfer",
+  "brief": "Run one USB control transfer with the 8-byte setup packet given.",
+  "params": [
+   {
+    "name": "a",
+    "meaning": "device record"
+   },
+   {
+    "name": "p",
+    "meaning": "setup packet"
+   },
+   {
+    "name": "len",
+    "meaning": "data length"
+   }
+  ],
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "switch on bRequest: IN data (GET_STATUS/DESCRIPTOR/CONFIGURATION/INTERFACE, GET_MAX_LUN), no data, SET_DESCRIPTOR",
+  "plain": "Sends one standard request to the plugged-in USB device."
+ },
+ "FUN_CODE_573b": {
+  "name": "usb_device_answer_setup",
+  "brief": "Answer a USB setup request from the PC while in device mode.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "setup packet from reg 0x1D0; bRequest 0 GET_STATUS, 5 SET_ADDRESS, 6 GET_DESCRIPTOR, 9 SET_CONFIGURATION",
+  "plain": "Replies to the PC's basic questions when the monitor acts as a USB device."
+ },
+ "FUN_CODE_5c20": {
+  "name": "usb_otg_service_irq",
+  "brief": "Service the FOTG210 USB controller's interrupt status in device mode.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "prints 'fotg210: reset by host', 'suspend/removed', 'resume'; group/sub status registers",
+  "plain": "Reacts to USB events such as reset, suspend and data requests."
+ },
+ "FUN_CODE_60b9": {
+  "name": "usb_device_mode_init",
+  "brief": "Log and set up the USB controller for device mode.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "prints 'device mode'; called for both ports under 'Device Mode Init'",
+  "plain": "Prepares the USB port so the monitor can act as a USB device."
+ },
+ "FUN_CODE_6540": {
+  "name": "lib_printf517_byte",
+  "brief": "Compiler library routine ?_PRINTF517?BYTE.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517 (original name ?_PRINTF517?BYTE)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_654f": {
+  "name": "lib_printf517_part",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_6562": {
+  "name": "lib_printf517_part_2",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_656b": {
+  "name": "lib_printf517_part_3",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_6583": {
+  "name": "lib_printf517_part_4",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_6594": {
+  "name": "lib_printf517_part_5",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_65a5": {
+  "name": "lib_sprintf517",
+  "brief": "Compiler library routine _SPRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517 (original name _SPRINTF517)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_65ab": {
+  "name": "lib_printf517",
+  "brief": "Compiler library routine _PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517 (original name _PRINTF517)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_68c9": {
+  "name": "lib_printf517_part_6",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_68e7": {
+  "name": "lib_printf517_part_7",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_6971": {
+  "name": "lib_printf517_part_8",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_6984": {
+  "name": "lib_printf517_part_9",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_69c3": {
+  "name": "usb_host_run_transfer_entry1",
+  "brief": "Load shared arguments, then continue into usb_host_run_transfer.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of usb_host_run_transfer; not a function of its own",
+  "plain": "Part of moving data over USB."
+ },
+ "FUN_CODE_69da": {
+  "name": "usb_host_run_transfer_entry2",
+  "brief": "Load shared arguments, then continue into usb_host_run_transfer.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of usb_host_run_transfer; not a function of its own",
+  "plain": "Part of moving data over USB."
+ },
+ "FUN_CODE_69e5": {
+  "name": "usb_host_run_transfer",
+  "brief": "Start a prepared host transfer and wait until the controller completes it.",
+  "params": [
+   {
+    "name": "a",
+    "meaning": "queue record"
+   },
+   {
+    "name": "b",
+    "meaning": "transfer record"
+   }
+  ],
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "polls USB status reg 0x14; prints 'HC SendPort TERM', 'USBSTS %08lX', 'D_GET(STATUS,pd)'",
+  "plain": "Moves one piece of data to or from the USB stick and waits for it."
+ },
+ "FUN_CODE_6e16": {
+  "name": "fwupd_step_port_state",
+  "brief": "Run one step of the update agent's state machine for one USB port.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "USB port 0/1"
+   }
+  ],
+  "notes": "Flash writing starts only on port commands 0x11..0x17.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "prints 'CMD_LOADFILE2DRAM', 'STATUS_WAIT_FW_UPDATE', 'CMD_START_ISP_ROMCODE_MODE'; cmd 0xF191/3, status 0xF190/2",
+  "plain": "Moves the USB-stick update forward one step on the commands of the main processor."
+ },
+ "FUN_CODE_7262": {
+  "name": "fwupd_fat_step_cluster_entry1",
+  "brief": "Load shared arguments, then continue into fwupd_fat_step_cluster.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of fwupd_fat_step_cluster; not a function of its own",
+  "plain": "Part of following a file across the USB stick."
+ },
+ "FUN_CODE_7263": {
+  "name": "fwupd_fat_step_cluster_entry2",
+  "brief": "Load shared arguments, then continue into fwupd_fat_step_cluster.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of fwupd_fat_step_cluster; not a function of its own",
+  "plain": "Part of following a file across the USB stick."
+ },
+ "FUN_CODE_72a5": {
+  "name": "fwupd_fat_step_cluster_entry3",
+  "brief": "Load shared arguments, then continue into fwupd_fat_step_cluster.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of fwupd_fat_step_cluster; not a function of its own",
+  "plain": "Part of following a file across the USB stick."
+ },
+ "FUN_CODE_72b0": {
+  "name": "fwupd_fat_step_cluster",
+  "brief": "Step a directory or file position to the next sector or FAT cluster.",
+  "returns": "1 when the FAT entry read is 0x0FFFFFFF (end of the chain), else 0",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "prints 'DataCluster = 0x%8lx'; 0x0FFFFFFF = end of chain",
+  "plain": "Follows a file or folder from one piece of the USB stick to the next."
+ },
+ "FUN_CODE_7677": {
+  "name": "usb_msc_run_command_entry1",
+  "brief": "Load shared arguments, then continue into usb_msc_run_command.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of usb_msc_run_command; not a function of its own",
+  "plain": "Part of sending a disk command to the USB stick."
+ },
+ "FUN_CODE_768a": {
+  "name": "usb_msc_run_command_entry2",
+  "brief": "Load shared arguments, then continue into usb_msc_run_command.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of usb_msc_run_command; not a function of its own",
+  "plain": "Part of sending a disk command to the USB stick."
+ },
+ "FUN_CODE_76b4": {
+  "name": "usb_msc_run_command",
+  "brief": "Send a Bulk-Only command block, move its data and read the status.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "Command Block Wrapper signature 0x55534243 'USBC', tag, length, 16-byte CDB (USB Mass Storage Bulk-Only)",
+  "plain": "Sends one disk command, such as read or write, to the USB stick."
+ },
+ "FUN_CODE_7a46": {
+  "name": "usb_device_dma_transfer_entry",
+  "brief": "Load shared arguments, then continue into usb_device_dma_transfer.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of usb_device_dma_transfer; not a function of its own",
+  "plain": "Part of moving data to the PC."
+ },
+ "FUN_CODE_7a60": {
+  "name": "usb_device_dma_transfer",
+  "brief": "Move a data block between the device FIFO and memory piece by piece.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "regs 0x1C0/0x1C8/0x1CC/0x14C; prints 'fotg210: dma busy / reset by host / fail'",
+  "plain": "Moves data between the PC and the monitor in device mode."
+ },
+ "FUN_CODE_813c": {
+  "name": "fwupd_take_file_entry",
+  "brief": "Record start cluster, size and first sector of the directory entry found.",
+  "params": [
+   {
+    "name": "v",
+    "meaning": "entry offset"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "sets first cluster 0x03E6, size 0x0109, first sector 0x0401, contiguous flag (exFAT flags bit 1)",
+  "plain": "Remembers where the update file sits on the USB stick and how big it is."
+ },
+ "FUN_CODE_8437": {
+  "name": "fwupd_refresh_flash_records",
+  "brief": "Rewrite and verify the flash header records of the new firmware.",
+  "params": [
+   {
+    "name": "mode",
+    "meaning": "update mode 0x10/0x11"
+   }
+  ],
+  "returns": "0 when all records verified",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "32-byte records read, changed (bytes 0x0C/0x0D, DUALFW slot words), written back and compared",
+  "plain": "Updates the small table records of the firmware and checks they were stored right."
+ },
+ "FUN_CODE_872e": {
+  "name": "fwupd_test_exfat_img_name",
+  "brief": "Report whether an exFAT file name ends in .IMG.",
+  "returns": "1 when .IMG",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "'.IMG' test across name entries and sector boundaries; used by fwupd_list_next_img_entry",
+  "plain": "Checks whether a file on an exFAT stick is a picture-file candidate."
+ },
+ "FUN_CODE_8a08": {
+  "name": "usb_host_bulk_transfer_entry",
+  "brief": "Load shared arguments, then continue into usb_host_bulk_transfer.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of usb_host_bulk_transfer; not a function of its own",
+  "plain": "Part of moving data over USB."
+ },
+ "FUN_CODE_8a0e": {
+  "name": "usb_host_bulk_transfer",
+  "brief": "Fill a transfer descriptor for a data stage and run it.",
+  "params": [
+   {
+    "name": "a",
+    "meaning": "queue"
+   },
+   {
+    "name": "n",
+    "meaning": "byte count"
+   },
+   {
+    "name": "buf",
+    "meaning": "buffer"
+   },
+   {
+    "name": "off",
+    "meaning": "offset"
+   },
+   {
+    "name": "f",
+    "meaning": "flags"
+   }
+  ],
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "descriptor record count, five buffer words, offset, flags; then usb_host_run_transfer",
+  "plain": "Moves a block of data to or from the USB stick."
+ },
+ "FUN_CODE_8cdc": {
+  "name": "fwupd_mount_volume",
+  "brief": "Read the USB disk's boot sector and set up FAT, exFAT or NTFS access.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "boot sector OEM ids 'MSDOS5.0' / 'NTFS', partition start at MBR offset 0x1C6, geometry fields per type",
+  "plain": "Opens the file system of the USB stick."
+ },
+ "FUN_CODE_8f95": {
+  "name": "usb_host_init_queue_head_entry",
+  "brief": "Load shared arguments, then continue into usb_host_init_queue_head.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of usb_host_init_queue_head; not a function of its own",
+  "plain": "Part of preparing a USB connection."
+ },
+ "FUN_CODE_8f9b": {
+  "name": "usb_host_init_queue_head",
+  "brief": "Fill a host queue head: link type, address, endpoint, speed, packet size.",
+  "params": [
+   {
+    "name": "v",
+    "meaning": "queue"
+   },
+   {
+    "name": "typ",
+    "meaning": "link type"
+   },
+   {
+    "name": "addr",
+    "meaning": "device address"
+   },
+   {
+    "name": "h",
+    "meaning": "head flag"
+   },
+   {
+    "name": "ep",
+    "meaning": "endpoint"
+   },
+   {
+    "name": "mps",
+    "meaning": "max packet size"
+   }
+  ],
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "record 0x0829 fields; speed from controller reg 0x80",
+  "plain": "Prepares one data channel to a USB device."
+ },
+ "FUN_CODE_9235": {
+  "name": "fwupd_ntfs_open_index_alloc",
+  "brief": "Locate the NTFS root folder's index allocation and its first cluster.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "walks the MFT record attributes to type 0xA0 ($INDEX_ALLOCATION) and decodes its data runs",
+  "plain": "Finds the file list of an NTFS-formatted USB stick."
+ },
+ "FUN_CODE_94d3": {
+  "name": "usb_host_update_xfer_records",
+  "brief": "Update count, buffer and flag fields of two transfer records.",
+  "params": [
+   {
+    "name": "a",
+    "meaning": "flag value"
+   },
+   {
+    "name": "b",
+    "meaning": "record number"
+   }
+  ],
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "records 0x08C5 + b - 1 and 0x08C1 + 2(b - 1)",
+  "plain": "Adjusts the bookkeeping of a USB data transfer."
+ },
+ "FUN_CODE_9734": {
+  "name": "usb_disk_write_frame_dump",
+  "brief": "Write the captured picture data to the USB disk, reporting progress.",
+  "params": [
+   {
+    "name": "a",
+    "meaning": "start block"
+   }
+  ],
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "SCSI WRITE(10) (0x2A) per chunk; chunk count 0xF19E from Leon2M (width * height * 3 / 0x5000 + 1); progress 0xF194",
+  "plain": "Saves a picture of the screen onto the USB stick."
+ },
+ "FUN_CODE_9981": {
+  "name": "lib_swap_word_bytes_entry1",
+  "brief": "Load shared arguments, then continue into lib_swap_word_bytes.",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of lib_swap_word_bytes; not a function of its own",
+  "plain": "Part of reordering bytes."
+ },
+ "FUN_CODE_9982": {
+  "name": "lib_swap_word_bytes_entry2",
+  "brief": "Load shared arguments, then continue into lib_swap_word_bytes.",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of lib_swap_word_bytes; not a function of its own",
+  "plain": "Part of reordering bytes."
+ },
+ "FUN_CODE_999f": {
+  "name": "lib_swap_word_bytes",
+  "brief": "Copy a buffer while reversing the byte order of every 32-bit word.",
+  "params": [
+   {
+    "name": "dst",
+    "meaning": "destination"
+   },
+   {
+    "name": "src",
+    "meaning": "source"
+   },
+   {
+    "name": "len",
+    "meaning": "bytes"
+   }
+  ],
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "whole words plus one more word when len is not a multiple of 4",
+  "plain": "Turns data the other way round so the two processors read it alike."
+ },
+ "FUN_CODE_9b8d": {
+  "name": "reg_window_read32_entry",
+  "brief": "Load shared arguments, then continue into reg_window_read32.",
+  "topic": "reg",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of reg_window_read32; not a function of its own",
+  "plain": "Part of reading a USB controller register."
+ },
+ "FUN_CODE_9b91": {
+  "name": "reg_window_read32",
+  "brief": "Read a 32-bit USB controller register through the register window.",
+  "params": [
+   {
+    "name": "reg",
+    "meaning": "register"
+   }
+  ],
+  "returns": "32-bit value",
+  "topic": "reg",
+  "basis": "derived",
+  "evidence": "address window 0xCD20 / data 0xCD00, controller chosen by 0x075B; partner of reg_window_write32",
+  "plain": "Reads one setting of the USB controller."
+ },
+ "FUN_CODE_9d97": {
+  "name": "fwupd_load_file_to_dram",
+  "brief": "Copy the selected update file into DRAM and read its record table.",
+  "returns": "1 (always)",
+  "notes": "Never reports failure, so the caller's 'CheckSum Fail!' branch is not reached.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "port command 0x46, printed 'CMD_LOADFILE2DRAM'; copy then fwupd_build_record_table",
+  "plain": "Loads the chosen update file from the USB stick into memory."
+ },
+ "FUN_CODE_9f8f": {
+  "name": "fwupd_write_flash_blocks",
+  "brief": "Write the DRAM file copy to the flash in 512-byte blocks with progress.",
+  "params": [
+   {
+    "name": "mode",
+    "meaning": "bit 2 = upper half only, bit 1 = skip last 4 KB of each 64 KB"
+   }
+  ],
+  "notes": "Block count = flash size code << 8 from the chip record.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "per block fwupd_svc_write_block over slave 0x6E; progress 0x47..0xFE to scaler reg 0xBF04",
+  "plain": "Writes the new firmware into the flash chip piece by piece."
+ },
+ "FUN_CODE_a17e": {
+  "name": "fwupd_set_target_file",
+  "brief": "Select the listed directory entry as the update file.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "port command 0x48; caller prints 'File_SetTargetFilePara!'; NTFS $DATA walk or FAT/exFAT entry",
+  "plain": "Picks the file on the USB stick that will be used for the update."
+ },
+ "FUN_CODE_a36c": {
+  "name": "fwupd_run_mailbox_command",
+  "brief": "Carry out one command from the main processor's mailbox byte.",
+  "params": [
+   {
+    "name": "cmd",
+    "meaning": "command byte"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "0xF198 commands: 0x70 mode (host/device), 0x31 set values, 0x52..0x58 name table, 0x5A/0x5B/0x60 values",
+  "plain": "Does what the main processor asks, such as switching USB host or device mode."
+ },
+ "FUN_CODE_a547": {
+  "name": "fwupd_build_record_table",
+  "brief": "Read the record count and sizes from a signed update image in DRAM.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "only after fwupd_check_image_signature ('NVTSC_IMG'); records 0x0652 (offset, size), totals 0x0113",
+  "plain": "Reads the table of contents of the update file."
+ },
+ "FUN_CODE_a6fa": {
+  "name": "usb_select_controller",
+  "brief": "Save the state of the current USB controller and switch to controller n.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "port 0/1"
+   }
+  ],
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "per-port record sets indexed by 0x075B (usb_get_current_port)",
+  "plain": "Switches the agent between the two USB ports."
+ },
+ "FUN_CODE_a8a3": {
+  "name": "fwupd_run_isp_write",
+  "brief": "Identify the flash, enter ISP mode and write the firmware in the given mode.",
+  "params": [
+   {
+    "name": "mode",
+    "meaning": "update mode"
+   }
+  ],
+  "returns": "1 on success (modes 0x10/0x11)",
+  "notes": "Modes 1/2/4/8 end in an endless loop.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "callers print 'CMD_START_ISP_ROMCODE_MODE(_DUALFW)'; modes 1/2/4/8 and 0x10/0x11",
+  "plain": "Carries out the actual flash update through the chip's programming port."
+ },
+ "FUN_CODE_aa43": {
+  "name": "fwupd_ntfs_open_index_root",
+  "brief": "Locate the NTFS root folder's index root attribute.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "walks the MFT record attributes to type 0x90 ($INDEX_ROOT)",
+  "plain": "Finds the start of the file list of an NTFS-formatted USB stick."
+ },
+ "FUN_CODE_abce": {
+  "name": "usb_port_read_blocks_buf",
+  "brief": "Read n 32-byte blocks from a bus address into a buffer.",
+  "params": [
+   {
+    "name": "buf",
+    "meaning": "destination"
+   },
+   {
+    "name": "addr",
+    "meaning": "bus address"
+   },
+   {
+    "name": "n",
+    "meaning": "blocks"
+   },
+   {
+    "name": "f",
+    "meaning": "1 keeps the byte order of each group of four, any other value reverses each group"
+   }
+  ],
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "address to bus block address registers, data from the block read data register; byte order per group of four set by in_order",
+  "plain": "Fetches data from memory through the USB controller's port."
+ },
+ "FUN_CODE_ad56": {
+  "name": "fwupd_verify_file_sum",
+  "brief": "Check the update file's 16-bit byte sum against the CONFIG.bin record.",
+  "returns": "0 when the sums differ; 1 otherwise (sum matches, no CONFIG.bin, or no AA 55 04 record)",
+  "notes": "Without a CONFIG.bin, or without the AA 55 04 record in its first block, the file is accepted unchecked.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "record AA 55 04 in the config file, expected sum at +0x10; sum of size/512 blocks; result to 0xF19A/B",
+  "plain": "Checks that the update file was read without errors."
+ },
+ "FUN_CODE_aed9": {
+  "name": "fwupd_seek_block_offset_entry1",
+  "brief": "Load shared arguments, then continue into fwupd_seek_block_offset.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of fwupd_seek_block_offset; not a function of its own",
+  "plain": "Part of reading the USB stick."
+ },
+ "FUN_CODE_aeea": {
+  "name": "fwupd_seek_block_offset_entry2",
+  "brief": "Load shared arguments, then continue into fwupd_seek_block_offset.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of fwupd_seek_block_offset; not a function of its own",
+  "plain": "Part of reading the USB stick."
+ },
+ "FUN_CODE_aefa": {
+  "name": "fwupd_seek_block_offset_entry3",
+  "brief": "Load shared arguments, then continue into fwupd_seek_block_offset.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of fwupd_seek_block_offset; not a function of its own",
+  "plain": "Part of reading the USB stick."
+ },
+ "FUN_CODE_aefb": {
+  "name": "fwupd_seek_block_offset_entry4",
+  "brief": "Load shared arguments, then continue into fwupd_seek_block_offset.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of fwupd_seek_block_offset; not a function of its own",
+  "plain": "Part of reading the USB stick."
+ },
+ "FUN_CODE_af00": {
+  "name": "fwupd_seek_block_offset_entry5",
+  "brief": "Load shared arguments, then continue into fwupd_seek_block_offset.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of fwupd_seek_block_offset; not a function of its own",
+  "plain": "Part of reading the USB stick."
+ },
+ "FUN_CODE_af03": {
+  "name": "fwupd_seek_block_offset_entry6",
+  "brief": "Load shared arguments, then continue into fwupd_seek_block_offset.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of fwupd_seek_block_offset; not a function of its own",
+  "plain": "Part of reading the USB stick."
+ },
+ "FUN_CODE_af07": {
+  "name": "fwupd_seek_block_offset",
+  "brief": "Move the read cursor to an offset, loading the disk block it falls in.",
+  "params": [
+   {
+    "name": "addr",
+    "meaning": "block"
+   },
+   {
+    "name": "v",
+    "meaning": "offset"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "addr += off / size, off %= size; reads the block when it is not the cached one",
+  "plain": "Moves to a position on the USB stick, reading that piece when needed."
+ },
+ "FUN_CODE_b044": {
+  "name": "flash_lookup_chip_id",
+  "brief": "Return the chip-table index whose three id bytes match, 0xFF if none.",
+  "params": [
+   {
+    "name": "chip_id",
+    "meaning": "chip table"
+   },
+   {
+    "name": "table",
+    "meaning": "three id bytes"
+   }
+  ],
+  "returns": "index or 0xFF",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "8-byte records, bytes 5..7; used with the id read through scaler regs 0xF064..0xF066",
+  "plain": "Looks up a flash chip by its identity bytes."
+ },
+ "FUN_CODE_b1a9": {
+  "name": "usb_port_write_blocks_buf",
+  "brief": "Write n 32-byte blocks of a buffer to a bus address.",
+  "params": [
+   {
+    "name": "buf",
+    "meaning": "source"
+   },
+   {
+    "name": "addr",
+    "meaning": "bus address"
+   },
+   {
+    "name": "n",
+    "meaning": "blocks"
+   },
+   {
+    "name": "f",
+    "meaning": "1 sends each group of four as it lies in buf, any other value reverses each group"
+   }
+  ],
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "address to bus block address registers, data to the block write data register; byte order per group of four set by in_order",
+  "plain": "Stores data into memory through the USB controller's port."
+ },
+ "FUN_CODE_b308": {
+  "name": "reg_window_write32_entry",
+  "brief": "Load shared arguments, then continue into reg_window_write32.",
+  "topic": "reg",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of reg_window_write32; not a function of its own",
+  "plain": "Part of writing a USB controller register."
+ },
+ "FUN_CODE_b317": {
+  "name": "reg_window_write32",
+  "brief": "Write a 32-bit USB controller register through the register window.",
+  "params": [
+   {
+    "name": "reg",
+    "meaning": "register"
+   },
+   {
+    "name": "v",
+    "meaning": "value"
+   }
+  ],
+  "topic": "reg",
+  "basis": "derived",
+  "evidence": "address window 0xCD20 / data 0xCD00, controller chosen by 0x075B",
+  "plain": "Changes one setting of the USB controller."
+ },
+ "FUN_CODE_b45f": {
+  "name": "usb_host_set_device_address",
+  "brief": "Store the device address in all four host queue heads.",
+  "params": [
+   {
+    "name": "v",
+    "meaning": "USB address"
+   }
+  ],
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "low 7 bits of byte 7 of each queue head (device address field)",
+  "plain": "Tells the USB channels which address the plugged-in device now has."
+ },
+ "FUN_CODE_b5b4": {
+  "name": "sys_main",
+  "brief": "Start the agent, then serve mailbox commands and the USB ports forever.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "entered from ?C_STARTUP; prints 'Start to loop..', 'Host Mode Init', 'Device Mode Init'",
+  "plain": "The update agent's main program in the USB controller."
+ },
+ "FUN_CODE_b706": {
+  "name": "usb_host_init_controller",
+  "brief": "Load the host controller register table and reset the host records.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "CODE table 0xC9D2 (reg, value, wait); called under 'Host Mode Init' and on every re-attach",
+  "plain": "Prepares a USB port to talk to a USB stick."
+ },
+ "FUN_CODE_b84b": {
+  "name": "fwupd_take_config_entry",
+  "brief": "Record the first sector of the CONFIG.bin directory entry.",
+  "params": [
+   {
+    "name": "e",
+    "meaning": "entry offset"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "found by fwupd_find_update_file; sector to 0x0152, read by fwupd_verify_file_sum",
+  "plain": "Remembers where the update's check file sits on the USB stick."
+ },
+ "FUN_CODE_b97a": {
+  "name": "usb_host_init_async_list",
+  "brief": "Reset the transfer records and fill the host list words.",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "usb_host_update_xfer_records(0, 1), window register writes, 16 list words through usb_port_write_blocks",
+  "plain": "Clears the USB data channel lists before use."
+ },
+ "FUN_CODE_ba96": {
+  "name": "usb_host_scan_hub_ports",
+  "brief": "Try the hub's ports one by one until a stick with the update file is found.",
+  "returns": "1 when found",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "records 6..8, enumeration and fwupd_find_update_file(0) per try (up to four rounds)",
+  "plain": "Looks behind a USB hub for a stick that holds the update file."
+ },
+ "FUN_CODE_bba9": {
+  "name": "i2c_read_packet",
+  "brief": "Read a length-prefixed reply packet from a service bus device.",
+  "params": [
+   {
+    "name": "dev",
+    "meaning": "slave address"
+   },
+   {
+    "name": "buf",
+    "meaning": "buffer"
+   }
+  ],
+  "returns": "0 ok, 1 no ACK or bad length",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "address dev | 1 with 10 retries, length byte, then that many bytes",
+  "plain": "Reads an answer from the monitor chip's programming port."
+ },
+ "FUN_CODE_bcb3": {
+  "name": "fwupd_svc_send_region",
+  "brief": "Send the ISP region command with flash base address and size.",
+  "returns": "0 on success",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "packet 09 DE, address (0x0717), size code * 0x40000 / 2, to slave 0x6E",
+  "plain": "Tells the chip's programming code which part of the flash to write."
+ },
+ "FUN_CODE_bdbd": {
+  "name": "fwupd_ntfs_read_data_runs",
+  "brief": "Copy an NTFS data-run list into the run buffer.",
+  "params": [
+   {
+    "name": "addr",
+    "meaning": "block"
+   },
+   {
+    "name": "off",
+    "meaning": "offset"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "header byte: low nibble length size, high nibble offset size; ends at 0; buffer 0x015C",
+  "plain": "Reads where an NTFS file's pieces are stored on the USB stick."
+ },
+ "FUN_CODE_bec7": {
+  "name": "lib_get_le_value_entry1",
+  "brief": "Load shared arguments, then continue into lib_get_le_value.",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of lib_get_le_value; not a function of its own",
+  "plain": "Part of reading a number from the USB stick's data."
+ },
+ "FUN_CODE_bf0c": {
+  "name": "lib_get_le_value_entry2",
+  "brief": "Load shared arguments, then continue into lib_get_le_value.",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of lib_get_le_value; not a function of its own",
+  "plain": "Part of reading a number from the USB stick's data."
+ },
+ "FUN_CODE_bf10": {
+  "name": "lib_get_le_value_entry3",
+  "brief": "Load shared arguments, then continue into lib_get_le_value.",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of lib_get_le_value; not a function of its own",
+  "plain": "Part of reading a number from the USB stick's data."
+ },
+ "FUN_CODE_bf15": {
+  "name": "lib_get_le_value_entry4",
+  "brief": "Load shared arguments, then continue into lib_get_le_value.",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of lib_get_le_value; not a function of its own",
+  "plain": "Part of reading a number from the USB stick's data."
+ },
+ "FUN_CODE_bf1b": {
+  "name": "lib_get_le_value",
+  "brief": "Return the little-endian value of n bytes at p.",
+  "params": [
+   {
+    "name": "p",
+    "meaning": "bytes"
+   },
+   {
+    "name": "n",
+    "meaning": "count 1..4"
+   }
+  ],
+  "returns": "value",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "used for boot sector and directory fields",
+  "plain": "Reads a number stored low byte first."
+ },
+ "FUN_CODE_bfcf": {
+  "name": "i2c_write_packet",
+  "brief": "Write a packet with XOR checksum to a service bus device.",
+  "params": [
+   {
+    "name": "address",
+    "meaning": "slave address"
+   },
+   {
+    "name": "len",
+    "meaning": "length"
+   },
+   {
+    "name": "buf",
+    "meaning": "payload"
+   }
+  ],
+  "returns": "0 on success",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "address with 10 retries, payload, XOR checksum, stop; device 0x6E",
+  "plain": "Sends one command to the monitor chip's programming port."
+ },
+ "FUN_CODE_c0be": {
+  "name": "fwupd_svc_spi_transfer",
+  "brief": "Run one SPI flash transaction through the scaler's SPI registers.",
+  "params": [
+   {
+    "name": "buf",
+    "meaning": "command and reply"
+   },
+   {
+    "name": "n",
+    "meaning": "bytes out"
+   },
+   {
+    "name": "m",
+    "meaning": "bytes in"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "regs 0xF0C0..0xF0C6 and window 0xA700 over the service bus; used with 9Fh (Read ID)",
+  "plain": "Passes one command to the flash chip through the monitor chip."
+ },
+ "FUN_CODE_c1a6": {
+  "name": "fwupd_svc_erase_flash",
+  "brief": "Erase the flash range of the update mode through the ISP port.",
+  "params": [
+   {
+    "name": "mode",
+    "meaning": "update mode"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "erase packets 09 2D AA 55 CC 33 E2 1D lo hi in steps of 16; mode bit 0 = whole chip command",
+  "plain": "Wipes the part of the flash chip that is about to be rewritten."
+ },
+ "FUN_CODE_c395": {
+  "name": "data_at_c395",
+  "brief": "Not code: bytes inside the Keil ?C_INITSEG initialisation records 0xC36D..0xC44E (22 records, 0x00 terminator at 0xC44D); Ghidra decoded record bytes as instructions.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "recorded as data in the function table",
+  "plain": "An entry of the function table that is data, not a routine."
+ },
+ "FUN_CODE_c433": {
+  "name": "data_at_c433",
+  "brief": "Not code: bytes inside the Keil ?C_INITSEG initialisation records 0xC36D..0xC44E (22 records, 0x00 terminator at 0xC44D); Ghidra decoded record bytes as instructions.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "recorded as data in the function table",
+  "plain": "An entry of the function table that is data, not a routine."
+ },
+ "FUN_CODE_c441": {
+  "name": "data_at_c441",
+  "brief": "Not code: bytes inside the Keil ?C_INITSEG initialisation records 0xC36D..0xC44E (22 records, 0x00 terminator at 0xC44D); Ghidra decoded record bytes as instructions.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "recorded as data in the function table",
+  "plain": "An entry of the function table that is data, not a routine."
+ },
+ "FUN_CODE_c44e": {
+  "name": "flash_lookup_jedec_id",
+  "brief": "Return the chip-table index that matches the JEDEC ID, 0xFF if none.",
+  "returns": "index or 0xFF",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "8-byte records at CODE 0xCB8C, bytes 5..7 = JEDEC manufacturer / type / capacity",
+  "plain": "Looks up the flash chip type from its identity."
+ },
+ "FUN_CODE_c52f": {
+  "name": "fwupd_svc_write_block",
+  "brief": "Write one 512-byte block to the flash through the ISP port.",
+  "params": [
+   {
+    "name": "block_number",
+    "meaning": "low 8 bits of the block number (0x77 for the DUALFW tag)"
+   },
+   {
+    "name": "block_data",
+    "meaning": "the 512 data bytes"
+   }
+  ],
+  "returns": "0 on success",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "packet 6E 00 3C v F0 0F 6E 91 13 EC + 512 bytes + XOR checksum",
+  "plain": "Writes one piece of the new firmware into the flash chip."
+ },
+ "FUN_CODE_c60e": {
+  "name": "usb_disk_read_blocks",
+  "brief": "Read disk sectors from the USB stick into memory with SCSI READ(10)",
+  "params": [
+   {
+    "name": "a",
+    "meaning": "first sector"
+   },
+   {
+    "name": "b",
+    "meaning": "bytes"
+   },
+   {
+    "name": "c",
+    "meaning": "destination"
+   }
+  ],
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "Bulk-Only command block opcode 0x28 READ(10), LBA a, b / 512 sectors",
+  "plain": "Reads part of the USB stick."
+ },
+ "FUN_CODE_c6ea": {
+  "name": "fwupd_svc_write_tag_block",
+  "brief": "Write a 512-byte block of 0xFF ending in one tag byte through the ISP port.",
+  "params": [
+   {
+    "name": "addr",
+    "meaning": "flash address"
+   },
+   {
+    "name": "v",
+    "meaning": "tag byte"
+   }
+  ],
+  "returns": "0 on success",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "same packet as fwupd_svc_write_block with a 3-byte address; used by fwupd_tag_new_region",
+  "plain": "Marks a firmware area as valid or not valid in the flash chip."
+ },
+ "FUN_CODE_c7c5": {
+  "name": "fwupd_ntfs_run_offset",
+  "brief": "Return the cluster offset field of NTFS data run h.",
+  "params": [
+   {
+    "name": "run_number",
+    "meaning": "run number"
+   }
+  ],
+  "returns": "offset",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "high-nibble field of the run header, little-endian; run buffer 0x015C",
+  "plain": "Reads where one piece of an NTFS file starts."
+ },
+ "FUN_CODE_c89e": {
+  "name": "fwupd_ntfs_run_length",
+  "brief": "Return the first byte of the length field of NTFS data run n.",
+  "params": [
+   {
+    "name": "run_number",
+    "meaning": "number of the data run in fwupd_ntfs_run_list"
+   }
+  ],
+  "returns": "the first length byte (0 when the field has no bytes)",
+  "notes": "The other length bytes are shifted right by 8 or more before they are added, which leaves 0.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "skips n runs by their header nibbles; adds the length bytes, byte i shifted right by 8 * i; run buffer 0x015C",
+  "plain": "Reads how long one piece of an NTFS file is."
+ },
+ "FUN_CODE_ca42": {
+  "name": "fwupd_write_dualfw_tag",
+  "brief": "Write the 512-byte DUALFW tag block for the update mode.",
+  "params": [
+   {
+    "name": "mode",
+    "meaning": "update mode"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "signature 'DUALFW' at block offset 0x1F0, block 0x77 via fwupd_svc_write_block",
+  "plain": "Marks the newly written firmware so the boot loader can find it."
+ },
+ "FUN_CODE_cbd9": {
+  "name": "usb_disk_read_to_xdata",
+  "brief": "Read bytes from the USB stick into an 8051 buffer.",
+  "params": [
+   {
+    "name": "addr",
+    "meaning": "first sector"
+   },
+   {
+    "name": "buf",
+    "meaning": "buffer"
+   },
+   {
+    "name": "n",
+    "meaning": "bytes"
+   }
+  ],
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "usb_disk_read_blocks then 32-byte pieces with lib_swap_word_bytes",
+  "plain": "Reads part of the USB stick into the agent's working memory."
+ },
+ "FUN_CODE_cca2": {
+  "name": "fwupd_read_file_block",
+  "brief": "Read 512-byte block a of the DRAM file copy into a buffer.",
+  "params": [
+   {
+    "name": "a",
+    "meaning": "block number"
+   },
+   {
+    "name": "p",
+    "meaning": "buffer"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "16 x 32 bytes from DRAM base 0x08C9 + 0x700 through usb_port_read_blocks",
+  "plain": "Fetches one piece of the loaded update file."
+ },
+ "FUN_CODE_cd68": {
+  "name": "i2c_read_bytes",
+  "brief": "Read bytes from a device on the update agent's I2C bus.",
+  "params": [
+   {
+    "name": "address",
+    "meaning": "device address"
+   },
+   {
+    "name": "buf",
+    "meaning": "destination"
+   },
+   {
+    "name": "len",
+    "meaning": "byte count"
+   }
+  ],
+  "returns": "0 on success",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "bit-banged: start, address | 1 with 10 tries, two dropped reads, len bytes, last one NACKed, stop",
+  "plain": "Reads data from the main chip over the service link."
+ },
+ "FUN_CODE_ce2a": {
+  "name": "fwupd_pick_valid_region",
+  "brief": "Find which of the two firmware regions carries the valid tag.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "DUALFW tags 0xAA at region + 0xFFF read over the service link; sets TagInfo.ValidRegionCurrent (0x0434) / ValidRegionNext (0x0435) and prints them",
+  "plain": "Decides which of the two stored firmware copies is the current one."
+ },
+ "FUN_CODE_cee9": {
+  "name": "fwupd_svc_write_protect_off",
+  "brief": "Switch the flash write protection off through the main chip.",
+  "notes": "Its final jump was removed by the LX51 linker.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "empty call, then fwupd_svc_set_write_protect(0); called four times by the partial update",
+  "plain": "Unlocks the flash chip before an update writes it."
+ },
+ "FUN_CODE_ceee": {
+  "name": "fwupd_svc_set_write_protect",
+  "brief": "Set or clear the flash chip's write-protect bits through the main chip.",
+  "params": [
+   {
+    "name": "on",
+    "meaning": "1 protect, 0 unprotect"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "service packets 09 53 (Write Enable / EWSR, then Write Status Register with block-protect bits) to slave 0x6E",
+  "plain": "Locks or unlocks the flash chip during an update."
+ },
+ "FUN_CODE_cfa5": {
+  "name": "fwupd_set_value_08c9",
+  "brief": "Store a 32-bit value built from four bytes at XDATA 0x08C9.",
+  "params": [
+   {
+    "name": "byte_31_24",
+    "meaning": "bits 31..24"
+   },
+   {
+    "name": "byte_23_16",
+    "meaning": "bits 23..16"
+   },
+   {
+    "name": "byte_15_8",
+    "meaning": "bits 15..8"
+   },
+   {
+    "name": "byte_7_0",
+    "meaning": "bits 7..0"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "code: 0x08C9 = a:b:c:d; caller fwupd_run_mailbox_command, command 0x31, with mailbox bytes 0xF19C..0xF19F",
+  "plain": "Remembers an address for the update."
+ },
+ "FUN_CODE_d059": {
+  "name": "fwupd_wait_ready_line",
+  "brief": "Wait until the main chip's ready line P1.1 goes from low to high, with a time limit.",
+  "params": [
+   {
+    "name": "limit",
+    "meaning": "time limit in units of 0xFFFF polling rounds"
+   }
+  ],
+  "returns": "1 when the line was low and went high in time; 0 when the limit ran out or the line was already high",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "polls P1.1 while it is low for up to limit * 0xFFFF rounds; called after the service packets",
+  "plain": "Waits for the main chip to finish a service command."
+ },
+ "FUN_CODE_d10a": {
+  "name": "fwupd_tag_new_region",
+  "brief": "Mark the newly written firmware region valid and the old one not valid.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "DUALFW tag block at region + 0xE00 whose last byte (region + 0xFFF) is 0xAA for ValidRegionNext, 0 for ValidRegionCurrent (fwupd_pick_valid_region reads them)",
+  "plain": "Switches the monitor over to the firmware copy that was just written."
+ },
+ "FUN_CODE_d1bb": {
+  "name": "fwupd_svc_claim_link",
+  "brief": "Take or release the main chip's service link for the update.",
+  "params": [
+   {
+    "name": "m",
+    "meaning": "1 take, 0 release"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "i2c_set_bit_delay(0x14), P1.4 = 1, fwupd_svc_bus_handshake(m); m == 1 also reads the reply and sets registers 0xF04C, 0xD929, 0xF1A8 ..",
+  "plain": "Takes control of the main chip before the update and hands it back afterwards."
+ },
+ "FUN_CODE_d261": {
+  "name": "i2c_write_byte_entry",
+  "brief": "Shared entry code of i2c_write_byte, placed in front of it by the compiler.",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_d275": {
+  "name": "i2c_write_byte",
+  "brief": "Send one byte on the update agent's I2C bus and read the acknowledge.",
+  "params": [
+   {
+    "name": "value",
+    "meaning": "byte"
+   }
+  ],
+  "returns": "0 = acknowledged, 1 = not acknowledged",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "bit-banged on P1.6 (data) / P1.7 (clock)",
+  "plain": "Sends one byte over the service link."
+ },
+ "FUN_CODE_d2fb": {
+  "name": "usb_read_port_status_record",
+  "brief": "Read an 8-byte status record from the USB block port and update it.",
+  "returns": "the 8-byte record",
+  "notes": "Port state machine states 0xA1 / 0xA2.",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "usb_port_read_blocks of 0x08C5; when bit 7 of byte 11 of the 0x08BC record is clear: dump, byte swap, reg_window_set_bits32(0x14 ..)",
+  "plain": "Reads status data of the USB connection."
+ },
+ "FUN_CODE_d393": {
+  "name": "uart_set_baud_rate",
+  "brief": "Set the Timer 1 baud rate from a table index and a rate.",
+  "params": [
+   {
+    "name": "factor_index",
+    "meaning": "table index 0..8"
+   },
+   {
+    "name": "rate_div100",
+    "meaning": "rate / 100"
+   }
+  ],
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "TH1 = -(k * 2000000 / 384 / (b * 100)) with k = CODE 0xE543[a]; 0x09D0 = k * 12.5; mailbox command 0x11",
+  "plain": "Sets the speed of the update agent's serial timing."
+ },
+ "FUN_CODE_d426": {
+  "name": "startup_entry",
+  "brief": "Compiler start-up code: clear the memory, set the stack and call the main program.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "Keil STARTUP.A51 (unmodified) + INIT.A51 (record, checked with tools/startup8051.py)",
+  "plain": "The update agent's very first code: prepares the memory and starts its main program."
+ },
+ "FUN_CODE_d4b2": {
+  "name": "usb_port_read_sector_swapped",
+  "brief": "Read 512 bytes through the USB block port, swapping the bytes of each word.",
+  "params": [
+   {
+    "name": "k",
+    "meaning": "sector index"
+   },
+   {
+    "name": "p",
+    "meaning": "destination"
+   }
+  ],
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "16 x usb_port_read_blocks of one 32-byte block, each byte-swapped into the buffer",
+  "plain": "Reads one sector from the USB storage."
+ },
+ "FUN_CODE_d53d": {
+  "name": "fwupd_svc_set_address",
+  "brief": "Send a 24-bit flash address to the main chip over the service link.",
+  "params": [
+   {
+    "name": "address",
+    "meaning": "address"
+   }
+  ],
+  "returns": "0 when every byte was acknowledged",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "frame 6E 04 4A + three address bytes + XOR sum; caller fwupd_pick_valid_region",
+  "plain": "Tells the main chip where in the flash the next access goes."
+ },
+ "FUN_CODE_d5c5": {
+  "name": "fwupd_reset_file_position",
+  "brief": "Set the update file's read position back to the start.",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "0x0414 / 0x0410 / 0x01DE from the start value 0x0418, counters cleared; NTFS (file system type 2) handled apart, FAT and exFAT together",
+  "plain": "Starts reading the update file from the beginning."
+ },
+ "FUN_CODE_d64c": {
+  "name": "fwupd_record_get_word",
+  "brief": "Return a 32-bit word of the record image, low byte first.",
+  "params": [
+   {
+    "name": "offset",
+    "meaning": "byte offset"
+   }
+  ],
+  "returns": "word",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "image 0x06F7 (module of the record refresh); inverse of fwupd_record_set_word",
+  "plain": "Reads one value from the flash record being refreshed."
+ },
+ "FUN_CODE_d6d1": {
+  "name": "usb_disk_read_to_offset",
+  "brief": "Read bytes from the USB disk into the memory that holds the loaded file, at a byte offset.",
+  "params": [
+   {
+    "name": "sector",
+    "meaning": "block address"
+   },
+   {
+    "name": "byte_count",
+    "meaning": "length"
+   },
+   {
+    "name": "dest_offset",
+    "meaning": "offset"
+   }
+  ],
+  "notes": "Sets fwupd_dram_address = usb_mem_base + 0x700 on every call; the destination block is that value + offset / 32.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "usb_mem_base + 0x700 is stored in fwupd_dram_address, then usb_disk_read_blocks (READ(10)) with the destination block fwupd_dram_address + dest_offset / 32; caller fwupd_copy_file_to_dram",
+  "plain": "Copies part of the update file from the USB stick."
+ },
+ "FUN_CODE_d751": {
+  "name": "fwupd_restore_walk_position",
+  "brief": "Copy the stored directory walk position back into the variables the directory listing works with.",
+  "notes": "NTFS: the block reader's cursor becomes the index listing cursor; FAT / exFAT: the five values stored by fwupd_fat_step_cluster.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "copies fwupd_saved_position (NTFS) or fwupd_walk_position (FAT, exFAT) into the listing variables; called after each step of the directory and index walk",
+  "plain": "Lets the search for the update file on the USB stick carry on with the next folder entry."
+ },
+ "FUN_CODE_d7d0": {
+  "name": "lib_div256_round_up",
+  "brief": "Return a 32-bit number divided by 256, rounded up.",
+  "params": [
+   {
+    "name": "value",
+    "meaning": "size"
+   }
+  ],
+  "returns": "quotient",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: (n + 255) / 256",
+  "plain": "Counts how many 256-byte pieces a size needs."
+ },
+ "FUN_CODE_d84c": {
+  "name": "fwupd_record_verify_entry1",
+  "brief": "Shared entry code 1 of fwupd_record_verify, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_d859": {
+  "name": "fwupd_record_verify_entry2",
+  "brief": "Shared entry code 2 of fwupd_record_verify, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_d85b": {
+  "name": "fwupd_record_verify_entry3",
+  "brief": "Shared entry code 3 of fwupd_record_verify, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_d866": {
+  "name": "fwupd_record_verify",
+  "brief": "Read a 32-byte flash record back and compare it with the record image.",
+  "params": [
+   {
+    "name": "off",
+    "meaning": "record offset"
+   }
+  ],
+  "returns": "1 when a byte differs",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "module of the record refresh (8437): reads into 0x08FA, compares with image 0x06F7",
+  "plain": "Checks that a refreshed flash record was written correctly."
+ },
+ "FUN_CODE_d8c4": {
+  "name": "fwupd_record_set_word",
+  "brief": "Store a 32-bit word into the record image, low byte first.",
+  "params": [
+   {
+    "name": "offset",
+    "meaning": "byte offset"
+   },
+   {
+    "name": "value",
+    "meaning": "word"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "image 0x06F7; inverse of fwupd_record_get_word",
+  "plain": "Changes one value of the flash record being refreshed."
+ },
+ "FUN_CODE_d938": {
+  "name": "dbg_dump_block_words",
+  "brief": "Read blocks through the USB block port and print them as 32-bit words.",
+  "params": [
+   {
+    "name": "addr",
+    "meaning": "address"
+   },
+   {
+    "name": "word_count",
+    "meaning": "word count"
+   }
+  ],
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "usb_port_read_blocks into DATA 0x22, printf '%08lX' per word",
+  "plain": "Shows raw data on the debug output."
+ },
+ "FUN_CODE_d99e": {
+  "name": "fwupd_svc_write_state_reg",
+  "brief": "Write the configured register value for one of two states over the service link.",
+  "params": [
+   {
+    "name": "state",
+    "meaning": "state 0/1"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "record 0x06F2..0x06F6 = enable flag, register number high / low, value for state 0 / 1; fwupd_svc_write_register; caller fwupd_write_flash_blocks",
+  "plain": "Sets a register of the main chip to show the update's progress state."
+ },
+ "FUN_CODE_da02": {
+  "name": "usb_phy_tune_ctrl52",
+  "brief": "Adjust the USB PHY control register 0x5052 from the stored setting.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "prints 'USB_PHY0_CTRL52= %X' before and after; value 0x09CC",
+  "plain": "Fine-tunes the USB connection hardware."
+ },
+ "FUN_CODE_da66": {
+  "name": "fwupd_svc_write_register_entry1",
+  "brief": "Shared entry code 1 of fwupd_svc_write_register, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_da86": {
+  "name": "fwupd_svc_write_register_entry2",
+  "brief": "Shared entry code 2 of fwupd_svc_write_register, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_da8a": {
+  "name": "fwupd_svc_write_register",
+  "brief": "Write one register of the main chip through the service link.",
+  "params": [
+   {
+    "name": "reg",
+    "meaning": "16-bit register"
+   },
+   {
+    "name": "val",
+    "meaning": "value"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "packet 04 78 reg val to slave 0x6E, then fwupd_svc_read_reply; counterpart fwupd_svc_read_register",
+  "plain": "Changes a setting of the main chip during the update."
+ },
+ "FUN_CODE_dac1": {
+  "name": "lib_fill_data_buffer_entry",
+  "brief": "Shared entry code of lib_fill_data_buffer, placed in front of it by the compiler.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_dac5": {
+  "name": "lib_fill_data_buffer",
+  "brief": "Fill whole 32-byte blocks of the data buffer with one value.",
+  "params": [
+   {
+    "name": "val",
+    "meaning": "fill byte"
+   },
+   {
+    "name": "n",
+    "meaning": "block count"
+   }
+  ],
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "n * 32 bytes of DATA 0x22 = val",
+  "plain": "Clears or fills the update agent's work buffer."
+ },
+ "FUN_CODE_db1c": {
+  "name": "i2c_read_byte",
+  "brief": "Read one byte on the update agent's I2C bus and send ACK or NACK.",
+  "returns": "byte",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "bit-banged read with ACK/NACK (record)",
+  "plain": "Receives one byte over the service link."
+ },
+ "FUN_CODE_db76": {
+  "name": "fwupd_check_image_signature",
+  "brief": "Check the first block of the loaded update file for the 'NVTSC_IMG' signature.",
+  "returns": "1 when the signature matches",
+  "notes": "The text is tested at bytes 1..9 of the block; byte 0 is not tested.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "reads one 32-byte block from the start of the loaded file (block fwupd_dram_address) into fwupd_image_header (0x0912) and compares nine characters with 'NVTSC_IMG'",
+  "plain": "Makes sure the file on the USB stick is a firmware image for this monitor's chip."
+ },
+ "FUN_CODE_dbd0": {
+  "name": "fwupd_post_value_0717",
+  "brief": "Copy the 32-bit value at XDATA 0x0717 into port registers 0xF19B..0xF19E.",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "low byte first; port command 0x43 and the command switch",
+  "plain": "Reports an update value to the other side."
+ },
+ "FUN_CODE_dc24": {
+  "name": "fwupd_post_value_0109",
+  "brief": "Copy the 32-bit value at XDATA 0x0109 into port registers 0xF19C..0xF19F.",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "low byte first; port command 0x44",
+  "plain": "Reports an update value to the other side."
+ },
+ "FUN_CODE_dc78": {
+  "name": "fwupd_record_set_byte_entry1",
+  "brief": "Shared entry code 1 of fwupd_record_set_byte, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_dc7c": {
+  "name": "fwupd_record_set_byte_entry2",
+  "brief": "Shared entry code 2 of fwupd_record_set_byte, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_dc80": {
+  "name": "fwupd_record_set_byte",
+  "brief": "Store one register byte into the record image (word bytes reversed).",
+  "params": [
+   {
+    "name": "reg",
+    "meaning": "register number"
+   },
+   {
+    "name": "val",
+    "meaning": "value"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "index (reg & ~3) + 3 - (reg & 3) into image 0x06F7 (module of the record refresh)",
+  "plain": "Changes one setting in the flash record being refreshed."
+ },
+ "FUN_CODE_dcc9": {
+  "name": "fwupd_get_erase_size_kb",
+  "brief": "Return the largest erase block size in KB that fits an address's alignment.",
+  "params": [
+   {
+    "name": "addr",
+    "meaning": "address"
+   }
+  ],
+  "returns": "64, 32 or 4",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "0x40 when 64 KB aligned, 0x20 when 32 KB aligned, else 4; stored in record byte 0x0C by the record refresh",
+  "plain": "Picks how big a piece of flash can be erased at once at this address."
+ },
+ "FUN_CODE_dd1a": {
+  "name": "fwupd_svc_erase_second_half",
+  "brief": "Send the erase walk's service record once for the second half of the flash range; read the reply.",
+  "params": [
+   {
+    "name": "cmd99_arg",
+    "meaning": "size code 0x10 only: not 0 sends service command 0x99 with 8 first, 0 sends it with 0"
+   }
+  ],
+  "notes": "Bytes 8 / 9 of the record: 0x20 / 0x3F, 0x40 / 0x7F, 0x80 / 0xFF, 0x00 / 0xFF for size codes 2, 4, 8, 0x10; another size code sends no record.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "fwupd_svc_send_rec_cbcc, the record fwupd_svc_erase_flash sends per step, with the first and last position of the second half; only caller fwupd_svc_erase_flash (update mode bit 2 without bit 1)",
+  "plain": "Has the main chip erase the second half of the flash in one go during a firmware update."
+ },
+ "FUN_CODE_dd6a": {
+  "name": "fwupd_svc_set_control_bit",
+  "brief": "Change one main chip register over the service link by the mask in the mailbox work bytes.",
+  "params": [
+   {
+    "name": "on",
+    "meaning": "1: the 'on' change, 0: the 'off' change (see the note)"
+   }
+  ],
+  "notes": "Register = work bytes 0 and 5, mask = byte 6, polarity = byte 7. Polarity 0: on sets the mask bits, off clears them; else on keeps only the mask bits and off sets all bits outside the mask.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "fwupd_mailbox_work_bytes 0, 5, 6, 7 (mailbox commands 0x41 / 0x42) as register, mask and polarity; fwupd_svc_read_register, fwupd_svc_write_register",
+  "plain": "Turns a hardware setting of the main chip on or off around the update."
+ },
+ "FUN_CODE_ddb7": {
+  "name": "reg_window_clear_bits32_entry",
+  "brief": "Shared entry code of reg_window_clear_bits32, placed in front of it by the compiler.",
+  "topic": "reg",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_ddbb": {
+  "name": "reg_window_clear_bits32",
+  "brief": "Clear bits of a 32-bit register reached through the register window.",
+  "params": [
+   {
+    "name": "reg",
+    "meaning": "register"
+   },
+   {
+    "name": "mask",
+    "meaning": "bits"
+   }
+  ],
+  "topic": "reg",
+  "basis": "derived",
+  "evidence": "write(reg, read(reg) & ~mask) through the 0xCD20/0xCD00 window; partner reg_window_set_bits32",
+  "plain": "Turns some bits of a hardware setting off."
+ },
+ "FUN_CODE_de04": {
+  "name": "fwupd_record_write_entry1",
+  "brief": "Shared entry code 1 of fwupd_record_write, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_de13": {
+  "name": "fwupd_record_write_entry2",
+  "brief": "Shared entry code 2 of fwupd_record_write, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_de15": {
+  "name": "fwupd_record_write_entry3",
+  "brief": "Shared entry code 3 of fwupd_record_write, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_de20": {
+  "name": "fwupd_record_write",
+  "brief": "Write the record image back to its 32-byte flash record.",
+  "params": [
+   {
+    "name": "off",
+    "meaning": "record offset"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "image 0x06F7 to base + off (module of the record refresh)",
+  "plain": "Saves a refreshed record into the flash chip."
+ },
+ "FUN_CODE_de50": {
+  "name": "fwupd_svc_bus_handshake",
+  "brief": "Send the raw bus sequence that takes or releases the main chip's service bus.",
+  "params": [
+   {
+    "name": "take",
+    "meaning": "1 take, 0 release"
+   }
+  ],
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "bytes 04 34 06 36 after repeated starts (take, twice after 10 start/stop pairs) or 04 34 06 3C (release)",
+  "plain": "Takes over or hands back the main chip's programming link."
+ },
+ "FUN_CODE_de9a": {
+  "name": "fwupd_svc_read_flash_status",
+  "brief": "Ask the main chip for the status of the flash chip.",
+  "returns": "status",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "service packet 09 53 05 .. 11 to I2C address 0x6E, wait, read the answer, then a register read",
+  "plain": "Sends a service command from the update agent to the monitor's main chip over their I2C link."
+ },
+ "FUN_CODE_dee4": {
+  "name": "fwupd_record_copy_field_entry1",
+  "brief": "Shared entry code 1 of fwupd_record_copy_field, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_def0": {
+  "name": "fwupd_record_copy_field_entry2",
+  "brief": "Shared entry code 2 of fwupd_record_copy_field, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_def2": {
+  "name": "fwupd_record_copy_field_entry3",
+  "brief": "Shared entry code 3 of fwupd_record_copy_field, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_defd": {
+  "name": "fwupd_record_copy_field",
+  "brief": "Helper of the update record reader.",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "member of the updater record module",
+  "plain": "Part of the update agent, the small program that can write new firmware into the monitor."
+ },
+ "FUN_CODE_df2d": {
+  "name": "fwupd_store_entry_pos_entry1",
+  "brief": "Shared entry code 1 of fwupd_store_entry_pos, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_df44": {
+  "name": "usb_disk_read_block_part_entry2",
+  "brief": "Shared entry code 2 of fwupd_store_entry_pos, placed in front of it by the compiler.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_df50": {
+  "name": "fwupd_store_entry_pos",
+  "brief": "Store the position (cluster, sector, byte offset) of the directory entry being listed.",
+  "notes": "Reads nothing from the medium.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "three stores to fwupd_entry_cluster, fwupd_entry_sector and the entry offset at 0x0425, which the file selection reads again",
+  "plain": "Remembers where the directory entry being listed sits on the USB stick."
+ },
+ "FUN_CODE_df76": {
+  "name": "fwupd_svc_send_rec_cbcc_entry",
+  "brief": "Shared entry code of fwupd_svc_send_rec_cbcc, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_df7f": {
+  "name": "fwupd_svc_send_rec_cbcc",
+  "brief": "Send the ten-byte service record with two parameter bytes to the main chip and wait for it.",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "record from CODE 0xCBCC with bytes 8 and 9 set; I2C address 0x6E; wait up to 5000 units",
+  "plain": "Sends a service command from the update agent to the monitor's main chip over their I2C link."
+ },
+ "FUN_CODE_dfbe": {
+  "name": "reg_window_set_bits32",
+  "brief": "Set bits of a 32-bit register reached through the register window.",
+  "topic": "reg",
+  "basis": "derived",
+  "evidence": "read, OR, write through the window routines",
+  "plain": "A small register access helper."
+ },
+ "FUN_CODE_e004": {
+  "name": "reg_window_write_reg114_bit0",
+  "brief": "Clear bit 0 of the 32-bit register 0x114 when the flag bit is set, else set it.",
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "reads 0x114, clears bit 0 when bit variable 0 is set and sets it otherwise, writes the register back",
+  "plain": "A small register access helper."
+ },
+ "FUN_CODE_e04a": {
+  "name": "usb_port_copy_blocks",
+  "brief": "Read blocks from one address and write them to another through the block port.",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "data buffer at DATA 0x22; read, then write of n blocks",
+  "plain": "Part of moving data blocks in the USB controller."
+ },
+ "FUN_CODE_e0c9": {
+  "name": "lib_copy_to_work_array",
+  "brief": "Copy bytes into the work array at a given offset.",
+  "topic": "lib",
+  "basis": "descriptive",
+  "evidence": "XDATA array at 0x064A",
+  "plain": "A small general-purpose helper."
+ },
+ "FUN_CODE_e105": {
+  "name": "fwupd_svc_read_register",
+  "brief": "Read one register of the main chip through the service link.",
+  "returns": "register value",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "service packet 03 87 <register> to I2C address 0x6E",
+  "plain": "Sends a service command from the update agent to the monitor's main chip over their I2C link."
+ },
+ "FUN_CODE_e141": {
+  "name": "usb_disk_read_to_port_mem",
+  "brief": "Read bytes from the USB disk, from a sector on, into the selected port's memory (usb_port_mem_base).",
+  "params": [
+   {
+    "name": "sector",
+    "meaning": "first disk sector"
+   },
+   {
+    "name": "byte_count",
+    "meaning": "number of bytes to read"
+   }
+  ],
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "usb_disk_read_blocks with the value of usb_port_mem_base (XDATA 0x07D5) as destination; only caller fwupd_verify_file_sum",
+  "plain": "Reads a piece of a file from the USB stick into working memory."
+ },
+ "FUN_CODE_e17c": {
+  "name": "usb_port_write_blocks_entry1",
+  "brief": "Shared entry code 1 of usb_port_write_blocks, placed in front of it by the compiler.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_e190": {
+  "name": "usb_port_write_blocks_entry2",
+  "brief": "Shared entry code 2 of usb_port_write_blocks, placed in front of it by the compiler.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_e193": {
+  "name": "usb_port_write_blocks_entry3",
+  "brief": "Shared entry code 3 of usb_port_write_blocks, placed in front of it by the compiler.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_e19e": {
+  "name": "usb_port_write_blocks_entry4",
+  "brief": "Shared entry code 4 of usb_port_write_blocks, placed in front of it by the compiler.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_e1a0": {
+  "name": "usb_port_write_blocks_entry5",
+  "brief": "Shared entry code 5 of usb_port_write_blocks, placed in front of it by the compiler.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_e1a4": {
+  "name": "usb_port_write_blocks",
+  "brief": "Write a number of blocks from the data buffer to an address through the block port.",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "data buffer at DATA 0x22",
+  "plain": "Part of moving data blocks in the USB controller."
+ },
+ "FUN_CODE_e1b5": {
+  "name": "fwupd_svc_send_cmd_0x0f_entry",
+  "brief": "Shared entry code of fwupd_svc_send_cmd_0x0f, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_e1c1": {
+  "name": "fwupd_svc_send_cmd_0x0f",
+  "brief": "Send service command 0x0F with one byte to the main chip and read the answer.",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "service packet 02 0F <byte> to I2C address 0x6E, wait 100 units",
+  "plain": "Sends a service command from the update agent to the monitor's main chip over their I2C link."
+ },
+ "FUN_CODE_e1eb": {
+  "name": "lib_clear_bytes_entry",
+  "brief": "Shared entry code of lib_clear_bytes, placed in front of it by the compiler.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_e1f3": {
+  "name": "lib_clear_bytes",
+  "brief": "Clear a number of bytes.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte loop",
+  "plain": "A small general-purpose helper."
+ },
+ "FUN_CODE_e21d": {
+  "name": "fwupd_svc_set_isp_mode",
+  "brief": "Write main chip registers 0xF1EB / 0xF1E0: 0x8A / 0x02 for a non-zero mode, 0x82 / 0x0A for mode 0.",
+  "params": [
+   {
+    "name": "mode",
+    "meaning": "0: values 0x82 / 0x0A; any other: 0x8A / 0x02"
+   }
+  ],
+  "notes": "Waits 50 delay units first. fwupd_run_isp_write calls it with 1 before the flash write; fwupd_step_port_state with 0 after its wait on mailbox byte 0xF19A.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "service writes to registers 0xF1EB and 0xF1E0, values by mode; mode 1 comes from fwupd_run_isp_write before service command 0xA3",
+  "plain": "Sends a service command from the update agent to the monitor's main chip over their I2C link."
+ },
+ "FUN_CODE_e24d": {
+  "name": "fwupd_svc_send_cmd_0xa3",
+  "brief": "Send service command 0xA3 with one byte to the main chip.",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "service packet 02 A3 <byte> to I2C address 0x6E",
+  "plain": "Sends a service command from the update agent to the monitor's main chip over their I2C link."
+ },
+ "FUN_CODE_e27c": {
+  "name": "fwupd_svc_send_cmd_0x0f_copy",
+  "brief": "Send service command 0x0F with one byte to the main chip and read the answer (second copy).",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "same packet as fwupd_svc_send_cmd_0x0f",
+  "plain": "Sends a service command from the update agent to the monitor's main chip over their I2C link."
+ },
+ "FUN_CODE_e2ab": {
+  "name": "fwupd_svc_query_cmd_0x36",
+  "brief": "Send service command 0x36 with one byte and return the 16-bit answer.",
+  "returns": "16-bit answer",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "service packet 02 36 <byte>, wait up to 4000 units",
+  "plain": "Sends a service command from the update agent to the monitor's main chip over their I2C link."
+ },
+ "FUN_CODE_e2da": {
+  "name": "fwupd_svc_query_cmd_0x11",
+  "brief": "Send service command 0x11 and read the answer.",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "service packet 01 11, wait 100 units",
+  "plain": "Sends a service command from the update agent to the monitor's main chip over their I2C link."
+ },
+ "FUN_CODE_e306": {
+  "name": "usb_port_write_bytes",
+  "brief": "Write a byte count, rounded up to whole 32-byte blocks, through the block port.",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "n = ceil(len / 32)",
+  "plain": "Part of moving data blocks in the USB controller."
+ },
+ "FUN_CODE_e331": {
+  "name": "fwupd_svc_send_cmd_0x99",
+  "brief": "Send service command 0x99 with one byte to the main chip and read the answer.",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "service packet 02 99 <byte>, wait up to 4000 units",
+  "plain": "Sends a service command from the update agent to the monitor's main chip over their I2C link."
+ },
+ "FUN_CODE_e35b": {
+  "name": "usb_port_read_blocks_entry1",
+  "brief": "Shared entry code 1 of usb_port_read_blocks, placed in front of it by the compiler.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_e35f": {
+  "name": "usb_port_read_blocks_entry2",
+  "brief": "Shared entry code 2 of usb_port_read_blocks, placed in front of it by the compiler.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_e362": {
+  "name": "usb_port_read_blocks_entry3",
+  "brief": "Shared entry code 3 of usb_port_read_blocks, placed in front of it by the compiler.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_e36d": {
+  "name": "usb_port_read_blocks_entry4",
+  "brief": "Shared entry code 4 of usb_port_read_blocks, placed in front of it by the compiler.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_e36f": {
+  "name": "usb_port_read_blocks_entry5",
+  "brief": "Shared entry code 5 of usb_port_read_blocks, placed in front of it by the compiler.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_e373": {
+  "name": "usb_port_read_blocks",
+  "brief": "Read a number of blocks from an address into the data buffer through the block port.",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "data buffer at DATA 0x22",
+  "plain": "Part of moving data blocks in the USB controller."
+ },
+ "FUN_CODE_e384": {
+  "name": "fwupd_svc_send_rec_cbc4",
+  "brief": "Send the fixed eight-byte service record to the main chip and wait for it.",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "record from CODE 0xCBC4; I2C address 0x6E; wait up to 4000 units",
+  "plain": "Sends a service command from the update agent to the monitor's main chip over their I2C link."
+ },
+ "FUN_CODE_e3ab": {
+  "name": "fwupd_svc_query_cmd_0x25",
+  "brief": "Send service command 0x25 and read the answer.",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "service packet 01 25, wait up to 4000 units",
+  "plain": "Sends a service command from the update agent to the monitor's main chip over their I2C link."
+ },
+ "FUN_CODE_e3d2": {
+  "name": "lib_putchar",
+  "brief": "Compiler library routine _PUTCHAR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:PUTCHAR (original name _PUTCHAR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_e3dd": {
+  "name": "lib_putchar_part",
+  "brief": "Internal entry point of the compiler library routine PUTCHAR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:PUTCHAR",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_e3f9": {
+  "name": "reg_window_get_reg30_bit0",
+  "brief": "Return bit 0 of the 32-bit register 0x30.",
+  "returns": "0 or 1",
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "through the register window read",
+  "plain": "A small register access helper."
+ },
+ "FUN_CODE_e419": {
+  "name": "i2c_start_entry",
+  "brief": "Shared entry code of i2c_start, placed in front of it by the compiler.",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_e423": {
+  "name": "i2c_start",
+  "brief": "Send an I2C start condition on the update agent's bus.",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "pins P1.6 (data) and P1.7 (clock)",
+  "plain": "Part of the I2C link between the update agent and the main chip."
+ },
+ "FUN_CODE_e432": {
+  "name": "usb_disk_run_write_pass",
+  "brief": "Write memory to the USB disk from the selected file's first sector on (usb_disk_write_frame_dump).",
+  "notes": "Reads the current port number first and does not use it.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "usb_disk_write_frame_dump with the value of fwupd_file_first_sector (XDATA 0x0401); only caller fwupd_step_port_state",
+  "plain": "Part of writing to the USB storage."
+ },
+ "FUN_CODE_e44b": {
+  "name": "timer_delay_units",
+  "brief": "Wait for n times four base delays.",
+  "topic": "timer",
+  "basis": "proven",
+  "evidence": "loop over timer_delay_base",
+  "plain": "Pauses for a short time."
+ },
+ "FUN_CODE_e462": {
+  "name": "i2c_bit_delay",
+  "brief": "Wait for one bit time of the I2C bus.",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "idle loop set by the XDATA byte at 0x09D2",
+  "plain": "Part of the I2C link between the update agent and the main chip."
+ },
+ "FUN_CODE_e478": {
+  "name": "timer_delay_base",
+  "brief": "Wait for one base delay.",
+  "topic": "timer",
+  "basis": "proven",
+  "evidence": "idle loop set by the XDATA value at 0x09D0",
+  "plain": "Pauses for a short time."
+ },
+ "FUN_CODE_e4a4": {
+  "name": "fwupd_svc_send_0x99_and_record",
+  "brief": "Send service command 0x99, then the ten-byte service record, and read the answer.",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "fwupd_svc_send_cmd_0x99(0), fwupd_svc_send_rec_cbcc(0x0E, 0x0E)",
+  "plain": "Sends a service command from the update agent to the monitor's main chip over their I2C link."
+ },
+ "FUN_CODE_e4b9": {
+  "name": "fwupd_svc_read_reply_entry",
+  "brief": "Shared entry code of fwupd_svc_read_reply, placed in front of it by the compiler.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "common entry block of the routine's code segment; loads fixed arguments and falls into the routine",
+  "plain": "A piece of code the compiler shared between several calls."
+ },
+ "FUN_CODE_e4bf": {
+  "name": "fwupd_svc_read_reply",
+  "brief": "Read the main chip's answer to a service command into the buffer.",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "I2C read from address 0x6E, then a short wait",
+  "plain": "Part of the I2C link between the update agent and the monitor's main chip."
+ },
+ "FUN_CODE_e4c9": {
+  "name": "usb_get_port_error_count",
+  "brief": "Return the error counter of the current USB port.",
+  "returns": "the count (the callers test it for non-zero)",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "usb_port_error_counts (XDATA 0x07D3) indexed by usb_port_index (0x075B); the transfer and enumeration code adds 1 per failure",
+  "plain": "Part of the USB storage handling."
+ },
+ "FUN_CODE_e4d9": {
+  "name": "usb_clear_port_error_count",
+  "brief": "Set the error counter of the current USB port to 0.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "usb_port_error_counts (XDATA 0x07D3) indexed by usb_port_index (0x075B)",
+  "plain": "Part of the USB storage handling."
+ },
+ "FUN_CODE_e4f8": {
+  "name": "fwupd_get_value_0109",
+  "brief": "Return the 32-bit value stored at XDATA 0x0109.",
+  "returns": "value",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "plain getter",
+  "plain": "Part of the update agent, the small program that can write new firmware into the monitor."
+ },
+ "FUN_CODE_e507": {
+  "name": "fwupd_get_record_total",
+  "brief": "Return the record total of the update image (fwupd_record_total, in 256-byte units).",
+  "returns": "32-bit total",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "plain getter of fwupd_record_total; only caller fwupd_run_mailbox_command, command 0x60",
+  "plain": "Reports how large the parts of the update file are in total."
+ },
+ "FUN_CODE_e525": {
+  "name": "i2c_stop",
+  "brief": "Send an I2C stop condition on the update agent's bus.",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "pin sequence with the bit delay",
+  "plain": "Part of the I2C link between the update agent and the monitor's main chip."
+ },
+ "FUN_CODE_e532": {
+  "name": "fwupd_set_value_0156",
+  "brief": "Store a 16-bit value at XDATA 0x0156.",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "plain setter",
+  "plain": "Part of the update agent, the small program that can write new firmware into the monitor."
+ },
+ "FUN_CODE_e53b": {
+  "name": "i2c_set_bit_delay",
+  "brief": "Set the bit time of the update agent's I2C bus.",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "XDATA byte at 0x09D2; only a non-zero value is stored",
+  "plain": "Part of the I2C link between the update agent and the monitor's main chip."
+ },
+ "FUN_CODE_e54b": {
+  "name": "fwupd_read_file_block16",
+  "brief": "Read 512-byte block n of the loaded file copy (16-bit block number).",
+  "topic": "fwupd",
+  "basis": "derived",
+  "evidence": "forwards to fwupd_read_file_block with the block number widened to 32 bits; called with block numbers by fwupd_verify_file_sum and fwupd_write_flash_blocks",
+  "plain": "Part of reading the update file from the USB storage."
+ },
+ "FUN_CODE_e551": {
+  "name": "sys_empty_function",
+  "brief": "Empty function: returns at once.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "a single return instruction",
+  "plain": "A routine that does nothing."
+ },
+ "FUN_CODE_f080": {
+  "name": "data_at_f080",
+  "brief": "Not code: 0xFF fill (erased flash); the three apparent LJMP 0xF080 at 0x0053, 0x00E9 and 0xB10E are the bytes F0 80 xx of MOVX @DPTR,A; SJMP inside matched functions.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "recorded as data in the function table",
+  "plain": "An entry of the function table that is data, not a routine."
+ },
+ "FUN_CODE_4ffa": {
+  "name": "usb_get_current_port",
+  "brief": "Return the number of the current USB port.",
+  "returns": "port",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "byte at XDATA 0x075B, the index used for the per-port tables",
+  "plain": "Part of the USB storage handling."
+ },
+ "FUN_CODE_e4e9": {
+  "name": "fwupd_get_value_0717",
+  "brief": "Return the 32-bit value stored at XDATA 0x0717.",
+  "returns": "value",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "plain getter",
+  "plain": "Part of the update agent, the small program that can write new firmware into the monitor."
+ },
+ "FUN_CODE_e516": {
+  "name": "fwupd_get_value_0109_copy",
+  "brief": "Return the 32-bit value stored at XDATA 0x0109 (second copy).",
+  "returns": "value",
+  "topic": "fwupd",
+  "basis": "descriptive",
+  "evidence": "plain getter",
+  "plain": "Part of the update agent, the small program that can write new firmware into the monitor."
+ }
+}

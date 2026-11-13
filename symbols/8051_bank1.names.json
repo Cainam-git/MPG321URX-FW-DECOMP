@@ -1,0 +1,4966 @@
+{
+ "thunk_FUN_CODE_a627": {
+  "name": "startup_reset_vector",
+  "brief": "Jump from the reset vector to the compiler start-up code.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "CODE 0x0000 'LJMP A627h' = Keil STARTUP.A51 ?C_STARTUP (record)",
+  "plain": "First instruction the 8051 runs after reset."
+ },
+ "thunk_FUN_CODE_2c38": {
+  "name": "irq_vector_irq_ext0_ddc_slave",
+  "brief": "Interrupt vector: jump to irq_ext0_ddc_slave.",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "jump placed by the compiler for the routine's interrupt number",
+  "plain": "One of the fixed entry points the processor jumps to on an interrupt."
+ },
+ "FUN_CODE_0006": {
+  "name": "uart_get_rx_head_port2",
+  "brief": "Return the write index of the port 2 receive ring.",
+  "returns": "write index",
+  "notes": "No caller in the bank-1 image; sits between the interrupt vectors.",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "IDATA 0x47 = write index of ring 2 (0xA208) in uart_read_rx_ring; no caller",
+  "plain": "Tells how far the second serial port's receive buffer has been filled."
+ },
+ "FUN_CODE_000b": {
+  "name": "irq_vector_irq_timer0_tick",
+  "brief": "Interrupt vector: jump to irq_timer0_tick.",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "jump placed by the compiler for the routine's interrupt number",
+  "plain": "One of the fixed entry points the processor jumps to on an interrupt."
+ },
+ "FUN_CODE_000e": {
+  "name": "uart_get_rx_head_port3_low",
+  "brief": "Return the low byte of the write index of the port 3 receive ring.",
+  "returns": "index low byte",
+  "notes": "No caller in the bank-1 image; sits between the interrupt vectors.",
+  "topic": "uart",
+  "basis": "descriptive",
+  "evidence": "IDATA 0x49 = low byte of the 16-bit ring-3 write index 0x48 in uart_read_rx_ring; no caller",
+  "plain": "Tells how far the third serial port's receive buffer has been filled."
+ },
+ "thunk_FUN_CODE_3091": {
+  "name": "irq_vector_irq_ext1_peripherals",
+  "brief": "Interrupt vector: jump to irq_ext1_peripherals.",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "jump placed by the compiler for the routine's interrupt number",
+  "plain": "One of the fixed entry points the processor jumps to on an interrupt."
+ },
+ "FUN_CODE_0016": {
+  "name": "flash_reset_fifo",
+  "brief": "Pulse the reset bit of the SPI flash FIFO.",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "bit 6 of 0xF0E5 set then cleared; same code as the boot loader's flash_reset_fifo; callers flash program/read",
+  "plain": "Clears the flash interface's data buffer before a transfer."
+ },
+ "FUN_CODE_0022": {
+  "name": "sys_empty_function",
+  "brief": "Empty function: returns at once.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "a single return instruction",
+  "plain": "A routine that does nothing."
+ },
+ "thunk_FUN_CODE_bfdd": {
+  "name": "irq_vector_irq_uart",
+  "brief": "Interrupt vector: jump to irq_uart.",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "jump placed by the compiler for the routine's interrupt number",
+  "plain": "One of the fixed entry points the processor jumps to on an interrupt."
+ },
+ "FUN_CODE_0026": {
+  "name": "lib_c_fpadd_part",
+  "brief": "Internal entry point of the compiler library routine ?C?FPADD.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPADD",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_002d": {
+  "name": "lib_c_fpadd",
+  "brief": "Compiler library routine ?C?FPADD.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPADD (original name ?C?FPADD)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "thunk_FUN_CODE_03f1": {
+  "name": "lib_c_fpadd_part_2",
+  "brief": "Internal entry point of the compiler library routine ?C?FPADD.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPADD",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_011e": {
+  "name": "lib_c_fpmul",
+  "brief": "Compiler library routine ?C?FPMUL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPMUL (original name ?C?FPMUL)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0200": {
+  "name": "lib_c_fpmul_part",
+  "brief": "Internal entry point of the compiler library routine ?C?FPMUL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPMUL",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0204": {
+  "name": "lib_c_fpmul_part_2",
+  "brief": "Internal entry point of the compiler library routine ?C?FPMUL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPMUL",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0224": {
+  "name": "lib_c_fpdiv_part",
+  "brief": "Internal entry point of the compiler library routine ?C?FPDIV.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPDIV",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0227": {
+  "name": "lib_c_fpdiv",
+  "brief": "Compiler library routine ?C?FPDIV.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPDIV (original name ?C?FPDIV)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0260": {
+  "name": "lib_c_fpdiv_part_2",
+  "brief": "Internal entry point of the compiler library routine ?C?FPDIV.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPDIV",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_02c4": {
+  "name": "lib_c_fpcmp3",
+  "brief": "Compiler library routine ?C?FPCMP3.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPCMP (original name ?C?FPCMP3)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_033d": {
+  "name": "lib_c_fcastl",
+  "brief": "Compiler library routine ?C?FCASTL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FCAST (original name ?C?FCASTL)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0342": {
+  "name": "lib_c_fcasti",
+  "brief": "Compiler library routine ?C?FCASTI.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FCAST (original name ?C?FCASTI)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_037b": {
+  "name": "lib_c_castf",
+  "brief": "Compiler library routine ?C?CASTF.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?CASTF (original name ?C?CASTF)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_03b2": {
+  "name": "lib_c_fpgetopn2",
+  "brief": "Compiler library routine ?C?FPGETOPN2.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPGETOPN (original name ?C?FPGETOPN2)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_03c9": {
+  "name": "lib_c_fpresult",
+  "brief": "Compiler library routine ?C?FPRESULT.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPGETOPN (original name ?C?FPRESULT)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_03e7": {
+  "name": "lib_c_fpnanresult",
+  "brief": "Compiler library routine ?C?FPNANRESULT.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPGETOPN (original name ?C?FPNANRESULT)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_03ee": {
+  "name": "lib_c_fpunderflow",
+  "brief": "Compiler library routine ?C?FPUNDERFLOW.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPGETOPN (original name ?C?FPUNDERFLOW)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_03f1": {
+  "name": "lib_c_fpoverflow",
+  "brief": "Compiler library routine ?C?FPOVERFLOW.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FPGETOPN (original name ?C?FPOVERFLOW)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_03fc": {
+  "name": "lib_c_fpround",
+  "brief": "Compiler library routine ?C?FPROUND.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:?C?FPROUND (original name ?C?FPROUND)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0439": {
+  "name": "lib_c_fpconvert",
+  "brief": "Compiler library routine ?C?FPCONVERT.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:?C?FPCONVERT (original name ?C?FPCONVERT)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_053e": {
+  "name": "lib_c_ftnpwr_part",
+  "brief": "Internal entry point of the compiler library routine ?C?FTNPWR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FTNPWR",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_056e": {
+  "name": "lib_c_ftnpwr",
+  "brief": "Compiler library routine ?C?FTNPWR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FTNPWR (original name ?C?FTNPWR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0588": {
+  "name": "lib_c_ftnpwr_part_2",
+  "brief": "Internal entry point of the compiler library routine ?C?FTNPWR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FTNPWR",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0597": {
+  "name": "lib_c_ftnpwr_part_3",
+  "brief": "Internal entry point of the compiler library routine ?C?FTNPWR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FTNPWR",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_059c": {
+  "name": "lib_c_ftnpwr_part_4",
+  "brief": "Internal entry point of the compiler library routine ?C?FTNPWR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPC.LIB:?C?FTNPWR",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_05ae": {
+  "name": "lib_c_copy_part",
+  "brief": "Internal entry point of the compiler library routine ?C?COPY.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?COPY",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_05da": {
+  "name": "lib_c_copy_part_2",
+  "brief": "Internal entry point of the compiler library routine ?C?COPY.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?COPY",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_05e6": {
+  "name": "lib_c_copy_part_3",
+  "brief": "Internal entry point of the compiler library routine ?C?COPY.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?COPY",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0603": {
+  "name": "lib_c_copy_part_4",
+  "brief": "Internal entry point of the compiler library routine ?C?COPY.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?COPY",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0606": {
+  "name": "lib_c_copy_part_5",
+  "brief": "Internal entry point of the compiler library routine ?C?COPY.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?COPY",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_064a": {
+  "name": "lib_c_copy_part_6",
+  "brief": "Internal entry point of the compiler library routine ?C?COPY.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?COPY",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0651": {
+  "name": "lib_c_copy_part_7",
+  "brief": "Internal entry point of the compiler library routine ?C?COPY.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?COPY",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_067e": {
+  "name": "lib_c_copy",
+  "brief": "Compiler library routine ?C?COPY.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?COPY (original name ?C?COPY)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_06a4": {
+  "name": "lib_c_cldptr",
+  "brief": "Compiler library routine ?C?CLDPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?CLDPTR (original name ?C?CLDPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_06bd": {
+  "name": "lib_c_cldoptr",
+  "brief": "Compiler library routine ?C?CLDOPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?CLDOPTR (original name ?C?CLDOPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_06ea": {
+  "name": "lib_c_cstptr",
+  "brief": "Compiler library routine ?C?CSTPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?CSTPTR (original name ?C?CSTPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_06fc": {
+  "name": "lib_c_cstoptr",
+  "brief": "Compiler library routine ?C?CSTOPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?CSTOPTR (original name ?C?CSTOPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_071e": {
+  "name": "lib_c_imul",
+  "brief": "Compiler library routine ?C?IMUL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?IMUL (original name ?C?IMUL)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0730": {
+  "name": "lib_c_uidiv",
+  "brief": "Compiler library routine ?C?UIDIV.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?UIDIV (original name ?C?UIDIV)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0785": {
+  "name": "lib_c_iildx",
+  "brief": "Compiler library routine ?C?IILDX.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?IILDX (original name ?C?IILDX)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_079b": {
+  "name": "lib_c_ildix",
+  "brief": "Compiler library routine ?C?ILDIX.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?ILDIX (original name ?C?ILDIX)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_07b1": {
+  "name": "lib_c_lmul",
+  "brief": "Compiler library routine ?C?LMUL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LMUL (original name ?C?LMUL)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0800": {
+  "name": "lib_c_uldiv_part",
+  "brief": "Internal entry point of the compiler library routine ?C?ULDIV.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?ULDIV",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_083c": {
+  "name": "lib_c_uldiv",
+  "brief": "Compiler library routine ?C?ULDIV.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?ULDIV (original name ?C?ULDIV)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_08ce": {
+  "name": "lib_c_lneg",
+  "brief": "Compiler library routine ?C?LNEG.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LNEG (original name ?C?LNEG)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_08dc": {
+  "name": "lib_c_ulcmp",
+  "brief": "Compiler library routine ?C?ULCMP.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?ULCMP (original name ?C?ULCMP)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_08ed": {
+  "name": "lib_c_ulshr",
+  "brief": "Compiler library routine ?C?ULSHR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?ULSHR (original name ?C?ULSHR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0900": {
+  "name": "lib_c_lshl",
+  "brief": "Compiler library routine ?C?LSHL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LSHL (original name ?C?LSHL)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0913": {
+  "name": "lib_c_lldptr",
+  "brief": "Compiler library routine ?C?LLDPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?LLDPTR (original name ?C?LLDPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0933": {
+  "name": "lib_c_lldoptr",
+  "brief": "Compiler library routine ?C?LLDOPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?LLDOPTR (original name ?C?LLDOPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0963": {
+  "name": "lib_c_lstptr",
+  "brief": "Compiler library routine ?C?LSTPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?LSTPTR (original name ?C?LSTPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_097d": {
+  "name": "lib_c_lstoptr",
+  "brief": "Compiler library routine ?C?LSTOPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?LSTOPTR (original name ?C?LSTOPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_09a1": {
+  "name": "lib_c_lldcode",
+  "brief": "Compiler library routine ?C?LLDCODE.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LLDCODE (original name ?C?LLDCODE)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_09b1": {
+  "name": "lib_c_lstxdata",
+  "brief": "Compiler library routine ?C?LSTXDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LSTXDATA (original name ?C?LSTXDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_09bd": {
+  "name": "lib_c_lstkxdata",
+  "brief": "Compiler library routine ?C?LSTKXDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LSTKXDATA (original name ?C?LSTKXDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_09d4": {
+  "name": "lib_c_lstkxdata_part",
+  "brief": "Internal entry point of the compiler library routine ?C?LSTKXDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LSTKXDATA",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_09ee": {
+  "name": "lib_c_lstptr_2",
+  "brief": "Compiler library routine ?C?LSTPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?LSTPTR (original name ?C?LSTPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0a08": {
+  "name": "lib_c_lstoptr_2",
+  "brief": "Compiler library routine ?C?LSTOPTR.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51C.LIB:?C?LSTOPTR (original name ?C?LSTOPTR)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0a2c": {
+  "name": "lib_c_pldixdata",
+  "brief": "Compiler library routine ?C?PLDIXDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?PLDIXDATA (original name ?C?PLDIXDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0a43": {
+  "name": "lib_c_pstxdata",
+  "brief": "Compiler library routine ?C?PSTXDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?PSTXDATA (original name ?C?PSTXDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0a4c": {
+  "name": "lib_c_ccase",
+  "brief": "Compiler library routine ?C?CCASE.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?CCASE (original name ?C?CCASE)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0a72": {
+  "name": "lib_c_limul",
+  "brief": "Compiler library routine ?C?LIMUL.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LIMUL (original name ?C?LIMUL)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0a9f": {
+  "name": "lib_c_lldidata",
+  "brief": "Compiler library routine ?C?LLDIDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LLDIDATA (original name ?C?LLDIDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0aab": {
+  "name": "lib_c_lldxdata",
+  "brief": "Compiler library routine ?C?LLDXDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LLDXDATA (original name ?C?LLDXDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0ab7": {
+  "name": "lib_c_lldpdata",
+  "brief": "Compiler library routine ?C?LLDPDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LLDPDATA (original name ?C?LLDPDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0ac3": {
+  "name": "lib_c_lstidata",
+  "brief": "Compiler library routine ?C?LSTIDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LSTIDATA (original name ?C?LSTIDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0acf": {
+  "name": "lib_c_lstpdata",
+  "brief": "Compiler library routine ?C?LSTPDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LSTPDATA (original name ?C?LSTPDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0adb": {
+  "name": "lib_c_lstkidata",
+  "brief": "Compiler library routine ?C?LSTKIDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LSTKIDATA (original name ?C?LSTKIDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0af4": {
+  "name": "lib_c_lstkpdata",
+  "brief": "Compiler library routine ?C?LSTKPDATA.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BC.LIB:?C?LSTKPDATA (original name ?C?LSTKPDATA)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_0b0d": {
+  "name": "startup_load_core_images",
+  "brief": "Set up the chip and copy the other processors' programs to their run-time memory.",
+  "notes": "Also starts the USB update agent (startup_start_usb_agent) and both LEON cores.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "docs/MAP.md start-up step 2; prints 'Share Structure version is differnet with Bootloader!!'; calls the image copy and core set-up",
+  "plain": "Loads the main, input and dimming processors' programs at power-on."
+ },
+ "FUN_CODE_1397": {
+  "name": "startup_load_core_images_part1",
+  "brief": "Continue startup_load_core_images: copy the last partition record.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "record: else-arm of the last record of startup_load_core_images, one C function",
+  "plain": "Piece of the start-up copy routine."
+ },
+ "FUN_CODE_147a": {
+  "name": "dp_aux_build_reply",
+  "brief": "Answer one DisplayPort AUX request with the emulated receiver's DPCD or EDID bytes.",
+  "params": [
+   {
+    "name": "type",
+    "meaning": "0 native read, 1 native write, 2 I2C read, 3 I2C write"
+   },
+   {
+    "name": "p",
+    "meaning": "request bytes"
+   },
+   {
+    "name": "sel",
+    "meaning": "receiver port"
+   }
+  ],
+  "notes": "sel 0 = receiver port 0 (0xDCDx), 1 = port 1 (0xDCCx); writes the reply bytes to the AUX transmit port.",
+  "topic": "dp",
+  "basis": "proven",
+  "evidence": "AUX request codes 9/8/1/5/0/4 (native read/write, I2C-over-AUX) from the callers; DPCD 0x000 caps, 0x100, 0x202 lane status 0x77, 0x600, 0x2200, 0x68028, I2C 0x50",
+  "plain": "Answers a computer's DisplayPort link questions while the 8051 stands in for the receiver."
+ },
+ "FUN_CODE_1c3c": {
+  "name": "ipc_run_message",
+  "brief": "Carry out one message from the main processor according to its type.",
+  "params": [
+   {
+    "name": "msg",
+    "meaning": "five-word message"
+   }
+  ],
+  "notes": "Types: 1 EDID RAM, 2 I2C, 3 serial ports, 4 DDC/CI reply, 6 command list, 7 flash data, 8/9/10 power tables, 11 Type-C info.",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "prints 'EDID address out of range!', 'DATA_I2C OOR', 'DATA_DDCCI OOR', 'DataTest'; types match the main side's senders",
+  "plain": "Takes data the main processor sends (EDID, I2C, serial, DDC/CI, flash data, power tables) and stores or sends it on."
+ },
+ "FUN_CODE_224f": {
+  "name": "ipc_run_command",
+  "brief": "Carry out one numbered command word written by the main processor.",
+  "params": [
+   {
+    "name": "word",
+    "meaning": "command word: number in bits 0-7, arguments above"
+   }
+  ],
+  "notes": "Acknowledges by clearing portal word 0 except for commands 0, 0x16 and 0x17.",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "prints CMD_SYS_POWERSAVING, CMD_SYS_POWEROFF, CMD_WRITE_DPTXHDCP, CMD_FE2P_SETEXTEND; docs/MAP.md update path; the commands are listed in docs/MAILBOX.md",
+  "plain": "Does what the main processor asks: power off, standby, EDID, serial ports, flash jobs, update mode."
+ },
+ "thunk_FUN_CODE_236e": {
+  "name": "ipc_run_command_jump_table",
+  "brief": "Jump to the handler of command 0x01 (first entry of the command jump table).",
+  "topic": "ipc",
+  "basis": "derived",
+  "evidence": "CODE 0x22DB = start of the 49-entry LJMP table of ipc_run_command (symbols: part of 224f)",
+  "plain": "Piece of the command switch."
+ },
+ "thunk_FUN_CODE_275e": {
+  "name": "ipc_run_command_jump_0x28",
+  "brief": "Jump to the handler of command 0x28 (jump table entry).",
+  "topic": "ipc",
+  "basis": "derived",
+  "evidence": "CODE 0x2350 = table entry 39 (command 0x28) of the LJMP table at 0x22DB, target 0x275E",
+  "plain": "Piece of the command switch."
+ },
+ "FUN_CODE_236e": {
+  "name": "ipc_run_command_part1",
+  "brief": "Continue ipc_run_command: handle command 0x01 (enable the internal EDID).",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "first case body after the jump table (cases in source order), part of ipc_run_command",
+  "plain": "Piece of a larger routine."
+ },
+ "FUN_CODE_275e": {
+  "name": "ipc_run_command_part2",
+  "brief": "Continue ipc_run_command: handle command 0x28 (set or clear an option bit).",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "target of jump-table entry for 0x28, part of ipc_run_command",
+  "plain": "Piece of a larger routine."
+ },
+ "FUN_CODE_279f": {
+  "name": "ipc_run_command_part3",
+  "brief": "Continue ipc_run_command: acknowledge the command by clearing portal word 0.",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "tail 0x279F of ipc_run_command (header: d5a1(0) for every cmd except 0/0x16/0x17)",
+  "plain": "Piece of a larger routine."
+ },
+ "FUN_CODE_27b5": {
+  "name": "lib_printf517_byte",
+  "brief": "Compiler library routine ?_PRINTF517?BYTE.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517 (original name ?_PRINTF517?BYTE)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_27c4": {
+  "name": "lib_printf517_part",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_27d7": {
+  "name": "lib_printf517_part_2",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_27e0": {
+  "name": "lib_printf517_part_3",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_27f8": {
+  "name": "lib_printf517_part_4",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2809": {
+  "name": "lib_printf517_part_5",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_281a": {
+  "name": "lib_sprintf517",
+  "brief": "Compiler library routine _SPRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517 (original name _SPRINTF517)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2820": {
+  "name": "lib_printf517",
+  "brief": "Compiler library routine _PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517 (original name _PRINTF517)",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2b3e": {
+  "name": "lib_printf517_part_6",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2b5c": {
+  "name": "lib_printf517_part_7",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2be6": {
+  "name": "lib_printf517_part_8",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2bf9": {
+  "name": "lib_printf517_part_9",
+  "brief": "Internal entry point of the compiler library routine PRINTF517.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "byte-identical to the library member C51BFPL.LIB:PRINTF517",
+  "plain": "A standard routine that comes with the compiler."
+ },
+ "FUN_CODE_2c38": {
+  "name": "irq_ext0_ddc_slave",
+  "brief": "Serve the DDC/CI slave events of four input ports.",
+  "notes": "Runs in register bank 1; marks active ports in IDATA 0x29 for the idle check.",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "external interrupt 0 vector; per-port in/out arrays 0xA0F4../0xA002.. are the DDC/CI buffers of message type 4 ('DATA_DDCCI')",
+  "plain": "Exchanges DDC/CI bytes with a connected computer on four of the monitor's inputs."
+ },
+ "FUN_CODE_3091": {
+  "name": "irq_ext1_peripherals",
+  "brief": "Serve infrared, serial receive, DP AUX and four more DDC/CI slave ports.",
+  "notes": "Serial bytes from 0xF074 go to the port 4 receive ring 0xA278.",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "external interrupt 1 vector; calls irq_record_ir_pulse and dp_aux_service; same DDC/CI arrays as irq_ext0_ddc_slave",
+  "plain": "Handles remote-control pulses, serial data, DisplayPort link requests and DDC/CI on the other inputs."
+ },
+ "FUN_CODE_34c8": {
+  "name": "dp_aux_track_link_training",
+  "brief": "Mirror a snooped DP AUX request into the receiver's link status registers.",
+  "params": [
+   {
+    "name": "type",
+    "meaning": "0 native read, 1 native write"
+   },
+   {
+    "name": "p",
+    "meaning": "request bytes"
+   },
+   {
+    "name": "sel",
+    "meaning": "receiver port"
+   }
+  ],
+  "topic": "dp",
+  "basis": "derived",
+  "evidence": "DPCD writes 0x102/0x103 set lane status 0x77/0x11 at receiver regs 0x97/0x98; 0x600 power state; callers dp_aux_snoop_port0/1",
+  "plain": "Keeps the DisplayPort receiver's link-training status in step with what the computer writes."
+ },
+ "FUN_CODE_38a7": {
+  "name": "ipc_fill_report_record",
+  "brief": "Fill the outgoing report with the next pending data for the main processor.",
+  "notes": "Record at 0xA3E3 (report record); called when the previous report is empty.",
+  "topic": "ipc",
+  "basis": "derived",
+  "evidence": "sources by type 4 DDC/CI, 3 serial ring, 1 EDID RAM, 2 I2C read, 5 infrared ('Reload IR'); packs with lib_pack_bytes_to_longs",
+  "plain": "Gathers DDC/CI requests, serial bytes, EDID read-backs, I2C results or remote codes to send on."
+ },
+ "FUN_CODE_3c4d": {
+  "name": "i2c_master_read",
+  "brief": "Read bytes from an I2C device through one hardware I2C channel.",
+  "params": [
+   {
+    "name": "channel",
+    "meaning": "I2C channel 0..5"
+   },
+   {
+    "name": "device_addr",
+    "meaning": "device address byte"
+   },
+   {
+    "name": "count",
+    "meaning": "byte count"
+   },
+   {
+    "name": "buf",
+    "meaning": "destination"
+   }
+  ],
+  "returns": "1 when every byte arrived and the closing stop succeeded; 0 otherwise, also for a count of 0",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "channel blocks 0xF039.. ch 0..5; per-byte wait for the receive flag (i2c_master_receive_byte), stop at the end",
+  "plain": "Reads data from a chip connected to one of the monitor's I2C buses."
+ },
+ "FUN_CODE_3fe7": {
+  "name": "sys_main",
+  "brief": "Start the system, then serve the mailbox and supervise the main processor forever.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "docs/MAP.md start-up step 2; prints 'NT68500 MCU Test program', 'Wakeup!!!'; calls startup_load_core_images, ipc_service_mailbox, sys_watch_main_core",
+  "plain": "The 8051's main program: power-on start, then the endless work loop."
+ },
+ "FUN_CODE_42f6": {
+  "name": "sys_run_timed_ramp",
+  "brief": "Step the timed toggle or ramp set up by the main processor (indicator control).",
+  "notes": "Mode 1 toggles bits of an XDATA register; other modes step bytes of the 0xE84B records towards high/low.",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "record 0xA735 set by commands 0x18/0x19/0x1A/0x30/0x31 (sys_set_timed_toggle_target, sys_set_timed_ramp_fields); main side ipc_8051_set_indicator",
+  "plain": "Blinks or fades an output over time as the main processor asked."
+ },
+ "FUN_CODE_45aa": {
+  "name": "dp_mrx_init_regs_80_fc",
+  "brief": "Write a fixed set-up sequence into one DP receiver's registers 0x80..0xFC.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "DP receiver 0/1"
+   }
+  ],
+  "topic": "dp",
+  "basis": "descriptive",
+  "evidence": "fixed dp_mrx_write_reg sequence from register 0x80 (= 0x12) up to 0xFC; only caller DP_EnableMRX",
+  "plain": "Prepares a DisplayPort input's registers."
+ },
+ "FUN_CODE_482e": {
+  "name": "i2c_master_write",
+  "brief": "Write bytes to an I2C device through one hardware I2C channel.",
+  "params": [
+   {
+    "name": "channel",
+    "meaning": "I2C channel 0..5"
+   },
+   {
+    "name": "device_addr",
+    "meaning": "device address byte"
+   },
+   {
+    "name": "count",
+    "meaning": "byte count"
+   },
+   {
+    "name": "buf",
+    "meaning": "source"
+   }
+  ],
+  "returns": "1 when all bytes were taken",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "channel blocks 0xF039.. ch 0..5; sends address then bytes with i2c_master_send_byte, last with stop",
+  "plain": "Sends data to a chip connected to one of the monitor's I2C buses."
+ },
+ "FUN_CODE_4a85": {
+  "name": "startup_setup_leon2m",
+  "brief": "Set the main processor's boot address and core registers before it starts.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "boot base 0xA0028000 via the AHB bridge; prints 'Leon2 vs AHB clk is 3:1'; docs/MAP.md (code window 0x108000)",
+  "plain": "Prepares the main processor so it can be started."
+ },
+ "FUN_CODE_4cb9": {
+  "name": "i2c_master_write_at",
+  "brief": "Write bytes to an I2C device starting at a given register address.",
+  "params": [
+   {
+    "name": "ch",
+    "meaning": "I2C channel"
+   },
+   {
+    "name": "ctl",
+    "meaning": "device address"
+   },
+   {
+    "name": "w",
+    "meaning": "register address"
+   },
+   {
+    "name": "n",
+    "meaning": "byte count"
+   },
+   {
+    "name": "p",
+    "meaning": "source"
+   }
+  ],
+  "returns": "1 on success",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "like i2c_master_write with an address byte w sent first; used by i2c_write_eeprom_pages",
+  "plain": "Writes data into a chip on an I2C bus at a chosen position."
+ },
+ "FUN_CODE_4ec1": {
+  "name": "ipc_run_cmd_0x25_sequence",
+  "brief": "Run the timed port sequence started by main-processor command 0x25.",
+  "notes": "Every give-up path writes 0xF17D = 1 and returns to state 0.",
+  "topic": "ipc",
+  "basis": "descriptive",
+  "evidence": "state 0xA35E reset by command 0x25 (port numbers 0xA3E0/0xA3E1 into the 0xF180 table), timeouts 500/600/1200 ticks",
+  "plain": "Carries out a timed step sequence on one input port that the main processor started."
+ },
+ "FUN_CODE_50c9": {
+  "name": "i2c_write_eeprom_pages",
+  "brief": "Write a buffer to an I2C EEPROM in pieces that do not cross 8-byte pages.",
+  "params": [
+   {
+    "name": "channel",
+    "meaning": "I2C channel"
+   },
+   {
+    "name": "device_addr",
+    "meaning": "device address"
+   },
+   {
+    "name": "start_addr",
+    "meaning": "start address"
+   },
+   {
+    "name": "buf",
+    "meaning": "data"
+   },
+   {
+    "name": "count",
+    "meaning": "byte count"
+   }
+  ],
+  "returns": "1 when all pieces succeeded",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "blocks end at multiples of 8 of the address, block address bits (addr >> 7) & 0x0E in the device byte, 10-tick pause per block; message type 2",
+  "plain": "Writes data into a small memory chip on an I2C bus."
+ },
+ "FUN_CODE_52be": {
+  "name": "power_check_wake_entry",
+  "brief": "Check the input named by the current wake-up table entry for activity.",
+  "returns": "entry kind that fired, or 0x0D",
+  "notes": "When the entry did not fire, DisplayPort receiver entries (kinds 7 to 10) found anywhere in the table are checked as well.",
+  "topic": "power",
+  "basis": "derived",
+  "evidence": "switch on the entry kind of table 0xA62F: sync meter checks, port flags, dp_check_mrx0_wake/_mrx1_wake; then the DisplayPort receiver kinds 7..10 looked up in the whole table",
+  "plain": "During standby, checks whether the selected input has a signal that should wake the monitor."
+ },
+ "FUN_CODE_568f": {
+  "name": "ddc_rearm_idle_slaves",
+  "brief": "Mark finished DDC/CI requests as pending and re-arm the slave ports that are not active.",
+  "notes": "A port that is not active gets bit 6 of its control register set on every pass; 0x10 goes to the event acknowledge registers once, after more than 1000 ticks without activity.",
+  "topic": "ddc",
+  "basis": "derived",
+  "evidence": "per-port activity bits from irq_ext0_ddc_slave; status bit -> pending channel flag; after 1000 ticks 0x10 to reg_i2c<N>_event_ack; bit 6 of reg_i2c<N>_ctrl",
+  "plain": "Marks finished DDC/CI requests as pending and gets idle connections ready for the next request."
+ },
+ "FUN_CODE_5864": {
+  "name": "lib_pack_bytes_to_longs_entry",
+  "brief": "Shared entry code of lib_pack_bytes_to_longs, placed in front of it by the compiler.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_5868": {
+  "name": "lib_pack_bytes_to_longs",
+  "brief": "Pack a byte buffer into 32-bit words, first byte most significant.",
+  "params": [
+   {
+    "name": "bytes",
+    "meaning": "bytes"
+   },
+   {
+    "name": "words",
+    "meaning": "words"
+   },
+   {
+    "name": "count",
+    "meaning": "byte count"
+   }
+  ],
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: q[i] = p[4i..4i+3] big-endian for (n + 3) / 4 words",
+  "plain": "Converts bytes into the word format the mailbox carries."
+ },
+ "FUN_CODE_5a39": {
+  "name": "power_scan_wake_keys",
+  "brief": "Look for a pressed wake-up key or ADC key from the standby table.",
+  "returns": "1 when a key was found",
+  "topic": "power",
+  "basis": "proven",
+  "evidence": "prints 'Key%02X : %02X %02X', 'PWR_DPMS ADC key', 'ADC key'; entries 0xA5ED from FillKeyDetectList",
+  "plain": "In standby, notices a press of the power button or another wake key."
+ },
+ "FUN_CODE_5c06": {
+  "name": "ipc_build_report_message",
+  "brief": "Build the next five-word message for the main processor from the report record.",
+  "params": [
+   {
+    "name": "msg",
+    "meaning": "five-word message buffer"
+   }
+  ],
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "header word = type, channel, byte count, number of the four-word piece; payload four words of 0xA3EC; caller ipc_service_mailbox (8051 -> main slots)",
+  "plain": "Prepares the next piece of data to hand to the main processor."
+ },
+ "FUN_CODE_5dcb": {
+  "name": "startup_setup_leon2s",
+  "brief": "Set the input processor's boot address and core registers before it starts.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "boot base 0xA0060000 via the AHB bridge; twin of startup_setup_leon2m",
+  "plain": "Prepares the input processor so it can be started."
+ },
+ "FUN_CODE_5f73": {
+  "name": "gpio_set_port_bits",
+  "brief": "Set or clear bits of one GPIO port's output register.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "port 1..14"
+   },
+   {
+    "name": "mask",
+    "meaning": "pin bits"
+   },
+   {
+    "name": "set",
+    "meaning": "1 set, 0 clear"
+   }
+  ],
+  "topic": "gpio",
+  "basis": "derived",
+  "evidence": "ports 1..13 = 0xF000..0xF11E with partner registers, 14 = P3; used by the power-cut and standby pin lists",
+  "plain": "Switches pins of the chip on or off."
+ },
+ "FUN_CODE_611a": {
+  "name": "i2c_master_receive_byte",
+  "brief": "Wait for and take one received byte on a hardware I2C channel.",
+  "params": [
+   {
+    "name": "channel",
+    "meaning": "I2C channel"
+   },
+   {
+    "name": "buf",
+    "meaning": "destination"
+   }
+  ],
+  "returns": "1 on success, 0 on error or time-out",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "polls bit 5 of the channel's events register up to 1000 times (gives up on events bit 3), reads rx_data, acknowledges with 0x20 in event_ack",
+  "plain": "Reads one byte from an I2C bus."
+ },
+ "FUN_CODE_62b5": {
+  "name": "i2c_master_send_byte_entry",
+  "brief": "Shared entry code of i2c_master_send_byte, placed in front of it by the compiler.",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_62c6": {
+  "name": "i2c_master_send_byte",
+  "brief": "Wait until a hardware I2C channel can send, then send one byte.",
+  "params": [
+   {
+    "name": "ch",
+    "meaning": "I2C channel"
+   },
+   {
+    "name": "v",
+    "meaning": "byte"
+   }
+  ],
+  "returns": "1 on success",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "polls status bit 6 up to 1000 times, writes the data register and 0x40",
+  "plain": "Sends one byte on an I2C bus."
+ },
+ "FUN_CODE_644f": {
+  "name": "i2c_master_send_last_byte_entry",
+  "brief": "Shared entry code of i2c_master_send_last_byte, placed in front of it by the compiler.",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_6465": {
+  "name": "i2c_master_send_last_byte",
+  "brief": "Send the last byte of a write on a hardware I2C channel and wait for the stop.",
+  "params": [
+   {
+    "name": "ch",
+    "meaning": "I2C channel"
+   },
+   {
+    "name": "v",
+    "meaning": "byte"
+   }
+  ],
+  "returns": "1 on success",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "writes R+5, sets bit 5 of R+0, waits up to 12000 passes for bit 0 of R+1",
+  "plain": "Sends the final byte on an I2C bus."
+ },
+ "FUN_CODE_65e9": {
+  "name": "ddc_detect_port_access",
+  "brief": "Find a port whose EDID or DDC bus was accessed and wait until it is quiet.",
+  "returns": "1 when a port was accessed",
+  "topic": "ddc",
+  "basis": "derived",
+  "evidence": "first EDID slave register 0xF01C.. with event bit 0; waits 500 ticks without bus change; reported by MailBox_UpdateDDCFlag",
+  "plain": "Notices when a computer has read the monitor's identity data on an input."
+ },
+ "FUN_CODE_6781": {
+  "name": "i2c_sw_write_byte",
+  "brief": "Send one byte on the software I2C bus and read the acknowledge.",
+  "params": [
+   {
+    "name": "x",
+    "meaning": "byte"
+   }
+  ],
+  "returns": "0 = acknowledged, 1 = not acknowledged",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "bit-banged: 8 data bits MSB first (mask table 0xDED4), clock via i2c_sw_release_clock, then ACK sample",
+  "plain": "Sends one byte on a pin-driven I2C bus."
+ },
+ "FUN_CODE_6917": {
+  "name": "uart_read_rx_ring",
+  "brief": "Copy the bytes waiting in one serial port's receive ring to a buffer.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "serial port 1..4"
+   },
+   {
+    "name": "buf",
+    "meaning": "destination"
+   }
+  ],
+  "returns": "byte count",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "rings 0xA1E8 / 0xA208 / 0xA240 / 0xA278 with IDATA indexes; ring 1 is filled by the UART interrupt; message type 3 data",
+  "plain": "Collects the bytes a serial port has received."
+ },
+ "FUN_CODE_6c34": {
+  "name": "fwupd_run_flash_loop",
+  "brief": "Serve flash erase, write and read commands from the update mailbox forever.",
+  "notes": "Never returns; command 8 stops in an endless loop.",
+  "topic": "fwupd",
+  "basis": "proven",
+  "evidence": "prints 'STBC FW updating......', 'checksum error'; mailbox 0xF250, ack 0xF260; docs/MAP.md update path (command 0x29)",
+  "plain": "Writes the new firmware into the flash chip during an update."
+ },
+ "FUN_CODE_6db5": {
+  "name": "i2c_master_stop",
+  "brief": "End a hardware I2C read with a stop and wait for the bus to finish.",
+  "params": [
+   {
+    "name": "ch",
+    "meaning": "I2C channel"
+   }
+  ],
+  "returns": "1 on success",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "sets bit 5 of the channel's register, waits up to 12000 passes for bit 0 of the next one",
+  "plain": "Closes a transfer on an I2C bus."
+ },
+ "FUN_CODE_6f26": {
+  "name": "flash_program",
+  "brief": "Program a buffer into the SPI flash, one 256-byte page at a time.",
+  "params": [
+   {
+    "name": "src",
+    "meaning": "XDATA source"
+   },
+   {
+    "name": "addr",
+    "meaning": "flash address"
+   },
+   {
+    "name": "len",
+    "meaning": "byte count"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "Page Program sequence per page; write protection lifted by flash_unprotect and restored by flash_restore_status",
+  "plain": "Writes data into the flash chip."
+ },
+ "FUN_CODE_71f0": {
+  "name": "power_setup_power_saving",
+  "brief": "Switch the chip's blocks into the power-saving state.",
+  "topic": "power",
+  "basis": "derived",
+  "evidence": "only caller command 0x16 CMD_SYS_POWERSAVING; register blocks 0x5000/0x5100, clock unit 0xD9xx, then power cut list on",
+  "plain": "Puts the monitor's electronics into standby."
+ },
+ "FUN_CODE_7352": {
+  "name": "startup_copy_flash_image_entry1",
+  "brief": "Shared entry code 1 of startup_copy_flash_image, placed in front of it by the compiler.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_7369": {
+  "name": "startup_copy_flash_image_entry2",
+  "brief": "Shared entry code 2 of startup_copy_flash_image, placed in front of it by the compiler.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_7381": {
+  "name": "startup_copy_flash_image_entry3",
+  "brief": "Shared entry code 3 of startup_copy_flash_image, placed in front of it by the compiler.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_738c": {
+  "name": "startup_copy_flash_image",
+  "brief": "Copy a program image from flash into a processor's memory over the AHB bus.",
+  "params": [
+   {
+    "name": "src",
+    "meaning": "flash address"
+   },
+   {
+    "name": "dst",
+    "meaning": "AHB address"
+   },
+   {
+    "name": "len",
+    "meaning": "byte count"
+   },
+   {
+    "name": "wide",
+    "meaning": "4-byte flash addressing"
+   }
+  ],
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "docs/MAP.md start-up step 2 (DMA routine of startup_load_core_images); arguments source, destination, length, 4-byte-address bit",
+  "plain": "Moves one processor's program from the flash chip into its working memory."
+ },
+ "FUN_CODE_74af": {
+  "name": "FillTypeCInfo",
+  "brief": "Store the ten-byte USB-C port description sent by the main processor.",
+  "params": [
+   {
+    "name": "info",
+    "meaning": "ten bytes"
+   }
+  ],
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "prints 'FillTypeCInfo : %02X, ...' (original name); message type 11 (main side ipc_8051_send_usb_c_info)",
+  "plain": "Remembers how the USB-C port is wired, as the main processor reports it."
+ },
+ "FUN_CODE_760c": {
+  "name": "power_check_sync_timing",
+  "brief": "Check that the measured input timing lies within the supported limits.",
+  "returns": "1 when all checks pass",
+  "topic": "power",
+  "basis": "derived",
+  "evidence": "range checks on sync meter values (reg_read_sync_meter_byte/_word): totals >= 0x280/0x200, rate limits 60.26/50.3/30.38",
+  "plain": "Decides whether a detected video signal is valid enough to wake the monitor."
+ },
+ "FUN_CODE_7765": {
+  "name": "flash_unprotect",
+  "brief": "Save the flash status registers and clear their write-protect bits.",
+  "params": [
+   {
+    "name": "save",
+    "meaning": "where the status bytes are kept"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "Read/Write Status Register sequence; prints 'error flash!!!'; restored later by flash_restore_status",
+  "plain": "Unlocks the flash chip so it can be written."
+ },
+ "FUN_CODE_78ba": {
+  "name": "hdmi_cec_receive_message",
+  "brief": "Take one received HDMI CEC message and answer or flag it.",
+  "returns": "status code (5, 6 or the handled state)",
+  "notes": "Standby, Active Source, Inactive Source and User Control requests are queued as bits 1..4 of hdmi_cec_request_flags (0xA758).",
+  "topic": "hdmi",
+  "basis": "proven",
+  "evidence": "CEC opcodes: 0x83 -> reply 0x84 (physical address), 0x91 -> 0x32 'eng' (menu language), 0x8F -> 0x90, 0x36/0x82/0x9D flags",
+  "plain": "Reacts to remote-control commands that other HDMI devices send over CEC."
+ },
+ "FUN_CODE_7a0b": {
+  "name": "power_off_sequence",
+  "brief": "Switch the chip's blocks off for power-off.",
+  "topic": "power",
+  "basis": "proven",
+  "evidence": "docs/MAP.md; callers command 0x17 CMD_SYS_POWEROFF and the SYSTEM CRASH path of sys_watch_main_core",
+  "plain": "Turns the monitor's electronics off."
+ },
+ "FUN_CODE_7b5a": {
+  "name": "sys_watch_main_core",
+  "brief": "Check that both LEON processors are alive (two token rounds) and power off if a round takes too long.",
+  "notes": "After a crash the 8051 loops forever.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "prints '###SYSTEM CRASH, RESET###', 'stbc cnt = ...'; 15000 / 10000 tick limits (docs/MAP.md)",
+  "plain": "Watchdog: if the main processor hangs, the monitor is shut down."
+ },
+ "FUN_CODE_7ca8": {
+  "name": "flash_read_bytes",
+  "brief": "Read a range of the SPI flash into memory in 512-byte pieces.",
+  "params": [
+   {
+    "name": "dst",
+    "meaning": "XDATA buffer"
+   },
+   {
+    "name": "addr",
+    "meaning": "flash address"
+   },
+   {
+    "name": "len",
+    "meaning": "byte count"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "prints 'read flash flashaddr %08lx, Length %d'; caller flash_read_to_buffer",
+  "plain": "Reads data back from the flash chip."
+ },
+ "FUN_CODE_7df1": {
+  "name": "flash_spi_transfer",
+  "brief": "Send command bytes to the SPI flash and read the answer bytes.",
+  "params": [
+   {
+    "name": "send_count",
+    "meaning": "bytes to send"
+   },
+   {
+    "name": "send_bytes",
+    "meaning": "command bytes"
+   },
+   {
+    "name": "read_count",
+    "meaning": "bytes to read"
+   },
+   {
+    "name": "read_bytes",
+    "meaning": "answer"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "writes wn bytes, reads rn bytes through the flash controller FIFO 0xF1C3/0xF1C8; used for the status registers",
+  "plain": "Talks to the flash chip."
+ },
+ "FUN_CODE_7f36": {
+  "name": "i2c_sw_match_device_id",
+  "brief": "Read an ID from a device on the software I2C bus and compare it with the stored one.",
+  "returns": "1 when the ID matches",
+  "notes": "No caller in the bank-1 image.",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "pins from the standby table words 0xA5FF..0xA608, device/register 0xA609/0xA60A, six expected bytes 0xA60B; i2c_sw_read_regs",
+  "plain": "Checks that the expected chip answers on a pin-driven I2C bus."
+ },
+ "FUN_CODE_8072": {
+  "name": "lib_unpack_longs_to_bytes",
+  "brief": "Unpack 32-bit words into bytes, most significant byte first.",
+  "params": [
+   {
+    "name": "out",
+    "meaning": "bytes"
+   },
+   {
+    "name": "words",
+    "meaning": "words"
+   },
+   {
+    "name": "byte_count",
+    "meaning": "byte count"
+   }
+  ],
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "code: (n + 3) / 4 words to bytes",
+  "plain": "Converts mailbox words back into bytes."
+ },
+ "FUN_CODE_82d2": {
+  "name": "power_match_ir_wake_code",
+  "brief": "Decode infrared pulses and compare them with the wake-up remote code.",
+  "returns": "1 when the code matched",
+  "topic": "power",
+  "basis": "derived",
+  "evidence": "samples from sys_ir_ring_read_byte (IR pulse ring of irq_record_ir_pulse); pattern table 0xA5F9 in the standby table",
+  "plain": "Lets the remote control's power button wake the monitor."
+ },
+ "FUN_CODE_83f3": {
+  "name": "i2c_master_write_read",
+  "brief": "Run an I2C write followed by a read on one hardware I2C channel.",
+  "params": [
+   {
+    "name": "ch",
+    "meaning": "I2C channel"
+   },
+   {
+    "name": "device",
+    "meaning": "device address"
+   },
+   {
+    "name": "reg",
+    "meaning": "register number; its low byte is the one byte written before the read"
+   },
+   {
+    "name": "buf",
+    "meaning": "buffer"
+   },
+   {
+    "name": "read_count",
+    "meaning": "read count"
+   }
+  ],
+  "returns": "1 on success",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "switches the channel to master, i2c_master_write then i2c_master_read, back to slave mode (0xF8); message type 2 read",
+  "plain": "Reads data from a chip on an I2C bus after telling it where."
+ },
+ "FUN_CODE_8512": {
+  "name": "ipc_find_free_tx_slot",
+  "brief": "Find a free slot for a message to the main processor.",
+  "returns": "slot 0..3, or 0xFF",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "header bits 3..0 = 0 in slots +0x60 + 20 * i; collects taken-slot bits (type 3) into 0xA3E3 (ipc_service_mailbox header)",
+  "plain": "Finds room in the mailbox to send data to the main processor."
+ },
+ "FUN_CODE_8622": {
+  "name": "i2c_sw_read_regs",
+  "brief": "Read registers of a device on the software I2C bus.",
+  "params": [
+   {
+    "name": "device",
+    "meaning": "device address"
+   },
+   {
+    "name": "reg",
+    "meaning": "register"
+   },
+   {
+    "name": "count",
+    "meaning": "count"
+   },
+   {
+    "name": "buf",
+    "meaning": "destination"
+   }
+  ],
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "start, address with 10 retries, register byte(s), repeated start, address | 1, n bytes, stop",
+  "plain": "Reads data from a chip on a pin-driven I2C bus."
+ },
+ "FUN_CODE_8731": {
+  "name": "usb_cc_load_config_regs",
+  "brief": "Load the USB-C CC controller's 29 configuration registers.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "register block at the pointer 0xA76D (USB-C block); only caller usb_cc_initialize",
+  "plain": "Sets up the USB-C port's connection detector."
+ },
+ "FUN_CODE_883d": {
+  "name": "power_init_wake_detection",
+  "brief": "Set up the sync meter and wake block for detecting inputs in standby.",
+  "notes": "DP_EnableMRX runs for a DisplayPort port only when the wake table lists it (kinds 7 or 8 for port 0, 10 or 9 for port 1) and bit 0 of its AUX register 0xDCDF / 0xDCCF is clear.",
+  "topic": "power",
+  "basis": "derived",
+  "evidence": "fixed reg_write_wake_block_byte / reg_write_sync_meter_byte sequence, then DP_EnableMRX for the DisplayPort ports found in the wake table (kinds 7..10); caller power_poll_wake_sources",
+  "plain": "Prepares the hardware that watches the inputs while the monitor sleeps."
+ },
+ "FUN_CODE_8947": {
+  "name": "edid_init_port_regs",
+  "brief": "Write a fixed set-up into one port's EDID slave registers.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "port"
+   },
+   {
+    "name": "unused",
+    "meaning": "unused"
+   },
+   {
+    "name": "value",
+    "meaning": "value"
+   }
+  ],
+  "notes": "No caller in the bank-1 image; parameter b is unused.",
+  "topic": "edid",
+  "basis": "descriptive",
+  "evidence": "register pointers from CODE tables 0xB114.. (port 0: 0xF01C, 0xF01D, 0xF15B ..); writes 0xA0, 0xE8, 0, v",
+  "plain": "Prepares one input's identity-data interface."
+ },
+ "FUN_CODE_8a51": {
+  "name": "DP_EnableMRX",
+  "brief": "Switch the DisplayPort receivers to 8051-handled AUX mode and set them up.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "0 or 1"
+   }
+  ],
+  "topic": "dp",
+  "basis": "proven",
+  "evidence": "prints 'DP_EnableMRX (%bx)' (original name); AUX registers 0xDCxx, dp_mrx_init_regs_80_fc / _c6",
+  "plain": "Lets the 8051 answer a computer's DisplayPort link while the monitor is in standby."
+ },
+ "FUN_CODE_8b58": {
+  "name": "DoBlockErase",
+  "brief": "Erase one flash unit (4 KB, 32 KB or 64 KB) with a given erase command.",
+  "params": [
+   {
+    "name": "sector",
+    "meaning": "unit number: byte address = sector << 12 for command 0x20, << 15 for 0x52, << 16 for any other"
+   },
+   {
+    "name": "cmd",
+    "meaning": "erase command byte"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "prints 'DoBlockErase start %04x' (original name)",
+  "plain": "Erases part of the flash chip."
+ },
+ "FUN_CODE_8c5d": {
+  "name": "i2c_sw_read_byte",
+  "brief": "Read one byte on the software I2C bus and send ACK or NACK.",
+  "params": [
+   {
+    "name": "last",
+    "meaning": "1 = last byte (NACK)"
+   }
+  ],
+  "returns": "byte",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "8 clocked samples of the data pin, then ACK (0) or NACK (last = 1)",
+  "plain": "Receives one byte on a pin-driven I2C bus."
+ },
+ "FUN_CODE_8d60": {
+  "name": "flash_dma_read",
+  "brief": "Start a flash DMA read of a block and wait until it finishes.",
+  "params": [
+   {
+    "name": "flash_addr",
+    "meaning": "flash address"
+   },
+   {
+    "name": "byte_count",
+    "meaning": "byte count"
+   },
+   {
+    "name": "dma_mode",
+    "meaning": "channel byte"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "docs/MAP.md: Tensilica program load via startup_load_tensilica_image; registers 0xF60A.., 0xF0EA..; poll 0xF0E5 bit 1",
+  "plain": "Copies a block of the flash chip by DMA."
+ },
+ "FUN_CODE_8e61": {
+  "name": "startup_run_leon2m",
+  "brief": "Release the main processor from reset so it starts running.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "prints 'Leon2 (Main) RUN...'; core control 0x9F020008",
+  "plain": "Starts the main processor."
+ },
+ "FUN_CODE_8f5a": {
+  "name": "startup_run_leon2s",
+  "brief": "Release the input processor from reset so it starts running.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "prints 'Leon2 (Sub) RUN...'; core control 0x9F120008",
+  "plain": "Starts the input processor."
+ },
+ "FUN_CODE_9053": {
+  "name": "FillKeyDetectList",
+  "brief": "Store part of the standby key and wake-up table sent by the main processor.",
+  "params": [
+   {
+    "name": "offset",
+    "meaning": "offset"
+   },
+   {
+    "name": "count",
+    "meaning": "count"
+   },
+   {
+    "name": "piece",
+    "meaning": "data"
+   }
+  ],
+  "topic": "power",
+  "basis": "proven",
+  "evidence": "prints 'FillKeyDetectList (%04x)' (original name); message type 8 (main side ipc_8051_send_wake_key_table), 0xA5ED, 60 bytes",
+  "plain": "Remembers which keys and signals may wake the monitor from standby."
+ },
+ "FUN_CODE_914b": {
+  "name": "dp_aux_answer_port1",
+  "brief": "Read an AUX request from DP receiver 1 and answer it.",
+  "topic": "dp",
+  "basis": "proven",
+  "evidence": "request command nibble 9/8 native read/write, 1/5 and 0/4 I2C-over-AUX; dp_aux_build_reply(…, 1); caller dp_aux_service",
+  "plain": "Answers a computer's DisplayPort link request on the second DP input."
+ },
+ "FUN_CODE_9243": {
+  "name": "ipc_service_mailbox",
+  "brief": "Run one command and exchange pending messages with the main processor.",
+  "notes": "Both message loops stop after 100 rounds, so a dead main processor cannot hang the 8051.",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "header of the source; docs/MAP.md update path; ipc_run_command, ipc_run_message, ipc_build_report_message",
+  "plain": "The 8051's regular check of the mailbox it shares with the main processor."
+ },
+ "FUN_CODE_9339": {
+  "name": "dp_aux_answer_port0",
+  "brief": "Read an AUX request from DP receiver 0 and answer it.",
+  "topic": "dp",
+  "basis": "proven",
+  "evidence": "same as dp_aux_answer_port1 on the 0xDCDx registers, dp_aux_build_reply(…, 0)",
+  "plain": "Answers a computer's DisplayPort link request on the first DP input."
+ },
+ "FUN_CODE_942e": {
+  "name": "dp_mrx_init_regs_c6",
+  "brief": "Write a fixed set-up sequence into one DP receiver's registers 0xC6..0xDC.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "DP receiver 0/1"
+   }
+  ],
+  "topic": "dp",
+  "basis": "descriptive",
+  "evidence": "fixed dp_mrx_write_reg sequence; only caller DP_EnableMRX",
+  "plain": "Prepares a DisplayPort input's registers."
+ },
+ "FUN_CODE_9522": {
+  "name": "usb_cc_init_phy",
+  "brief": "Load the USB-C CC detector's start values and set its line mode.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "prints 'Initial CC PHY!!'; then usb_cc_set_mode_ch0 or _ch1 by 0xA6A6",
+  "plain": "Sets up the USB-C port's connection detection."
+ },
+ "FUN_CODE_960f": {
+  "name": "ipc_find_rx_message",
+  "brief": "Find the next filled message slot from the main processor.",
+  "returns": "slot 0..3, or 0xFE",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "header bits 3..0 != 0 in slots +0x10 + 20 * i, round robin from 0xA358",
+  "plain": "Looks for data the main processor has left in the mailbox."
+ },
+ "FUN_CODE_96eb": {
+  "name": "startup_start_usb_agent",
+  "brief": "Copy the update agent into the USB controller and start it.",
+  "topic": "startup",
+  "basis": "derived",
+  "evidence": "loader block 0xF166..0xF16F filled with flash address and length; start key 'USBONE' written to 0xF1E5 (docs/MAP.md)",
+  "plain": "Starts the USB update helper."
+ },
+ "FUN_CODE_97c4": {
+  "name": "i2c_sw_start",
+  "brief": "Send a start condition on the software I2C bus, freeing a stuck bus first.",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "data pin high, clock pulses (up to 9) until the data pin is released, then start",
+  "plain": "Begins a transfer on a pin-driven I2C bus."
+ },
+ "FUN_CODE_9975": {
+  "name": "uart_set_baud_rate",
+  "brief": "Set the baud rate of the serial ports chosen by a bit mask.",
+  "params": [
+   {
+    "name": "port_mask",
+    "meaning": "port bits"
+   },
+   {
+    "name": "baud",
+    "meaning": "baud rate"
+   }
+  ],
+  "topic": "uart",
+  "basis": "proven",
+  "evidence": "Timer 1 reload for port 1, divisor 12000000 / baud - 1 into 0xF0F7/F8, 0xF033/34, 0xF06F/70 for bits 2/3/4; default 4800",
+  "plain": "Sets the speed of the monitor's serial links."
+ },
+ "FUN_CODE_9a43": {
+  "name": "gpio_write_reg_pair",
+  "brief": "Write two values to the register pair of one numbered port.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "port 1..13"
+   },
+   {
+    "name": "first_value",
+    "meaning": "first value"
+   },
+   {
+    "name": "second_value",
+    "meaning": "second value"
+   }
+  ],
+  "notes": "No caller in the bank-1 image.",
+  "topic": "gpio",
+  "basis": "descriptive",
+  "evidence": "13 pairs 0xF0B0/0xF0C7 .. 0xF135/0xF13D by sel 1..13 (same numbering as the GPIO ports)",
+  "plain": "Sets two configuration values of one group of pins."
+ },
+ "FUN_CODE_9b11": {
+  "name": "flash_erase_sector",
+  "brief": "Erase 4 KB sectors of the SPI flash.",
+  "params": [
+   {
+    "name": "sector",
+    "meaning": "4 KB sector number"
+   },
+   {
+    "name": "cmd",
+    "meaning": "erase command sent to the flash (0x20, 0x52 or 0xD8)"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "erase opcodes 0x20 / 0x52 / 0xD8, address = sector << 12; prints 'sector erase'; update loop command 1",
+  "plain": "Erases part of the flash chip during an update."
+ },
+ "FUN_CODE_9bde": {
+  "name": "power_set_wake_block_mode",
+  "brief": "Program the wake block for one input kind of the wake-up table.",
+  "params": [
+   {
+    "name": "kind",
+    "meaning": "entry kind 0..12"
+   }
+  ],
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "mode 0..12 -> wake block registers 4, 3, 0x54 (reg_write_wake_block_byte); caller power_apply_wake_block_mode",
+  "plain": "Points the standby detection hardware at the input to watch."
+ },
+ "FUN_CODE_9caa": {
+  "name": "power_check_wakeup_timer",
+  "brief": "Count down the wake-up timer and report when it has run out.",
+  "returns": "1 when it expired",
+  "topic": "power",
+  "basis": "proven",
+  "evidence": "prints 'Wakeup by timer %08lx %04x'; 0x03E7FC18 = off; set by power_set_wakeup_timer",
+  "plain": "Wakes the monitor when the timer set by the main processor expires."
+ },
+ "FUN_CODE_9d75": {
+  "name": "power_test_ddc_wake",
+  "brief": "Report whether a DDC/CI request arrived on a port listed in the wake table.",
+  "returns": "1 when found",
+  "topic": "power",
+  "basis": "derived",
+  "evidence": "per-port done bits 0xA0F3 (ddc_rearm_idle_slaves) tested for the entries of table 0xA62F",
+  "plain": "Lets a computer's DDC/CI request wake the monitor."
+ },
+ "FUN_CODE_9e3f": {
+  "name": "reg_paged_update_bits",
+  "brief": "Set or clear bits in a paged register of block 0 or 1.",
+  "params": [
+   {
+    "name": "block",
+    "meaning": "block 0/1"
+   },
+   {
+    "name": "page_reg",
+    "meaning": "page:register"
+   },
+   {
+    "name": "bits",
+    "meaning": "bits"
+   },
+   {
+    "name": "set",
+    "meaning": "1 set, else clear"
+   }
+  ],
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "page select 0xF405..0xF408, access 0xD50B..0xD50D, window 0x6500 / 0x6600",
+  "plain": "Changes some bits of a hardware setting."
+ },
+ "FUN_CODE_9f04": {
+  "name": "ddc_enable_slave",
+  "brief": "Switch on the DDC/CI slave of the ports chosen by a bit mask.",
+  "params": [
+   {
+    "name": "port_mask",
+    "meaning": "port bits 0..7"
+   }
+  ],
+  "topic": "ddc",
+  "basis": "proven",
+  "evidence": "sets the slave enable bit and 0xF8 mode per port; prints 'Enable I2C 7' for port 7; command 7 after ddc_set_slave_address",
+  "plain": "Lets computers talk DDC/CI to the chosen inputs."
+ },
+ "FUN_CODE_9fc8": {
+  "name": "flash_write_buffer_bytes",
+  "brief": "Program bytes from the flash data buffer to the job address.",
+  "params": [
+   {
+    "name": "offset",
+    "meaning": "buffer offset"
+   },
+   {
+    "name": "count",
+    "meaning": "byte count"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "flash_program from 0xA800 + offset; prints 'FE2P WriteByte'; command 0x15",
+  "plain": "Writes a few bytes into the flash chip."
+ },
+ "FUN_CODE_a085": {
+  "name": "power_find_active_wake_pin",
+  "brief": "Return the first wake-up pin from the standby table that is at its active level.",
+  "returns": "index, or 0xFF",
+  "topic": "power",
+  "basis": "derived",
+  "evidence": "six entries 0xA611 (standby table) tested with gpio_read_port_bit; prints index and entry",
+  "plain": "Notices a wake-up signal on one of the listed pins."
+ },
+ "FUN_CODE_a142": {
+  "name": "power_apply_cut_list",
+  "brief": "Switch the pins listed in the power-cut table for one phase.",
+  "params": [
+   {
+    "name": "half",
+    "meaning": "phase"
+   }
+  ],
+  "topic": "power",
+  "basis": "derived",
+  "evidence": "entries 0xA6AF (CutPwArray, message type 10) through gpio_set_port_bits with delays; callers power-saving, power-off, resume",
+  "plain": "Turns supply switches on or off in the order the main processor gave."
+ },
+ "FUN_CODE_a1fe": {
+  "name": "power_watch_dp_activity",
+  "brief": "After a DP power-up request, watch the ports and fall back to the crystal clock.",
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "flag 0xA6EE (set on DPCD 0x600 = 1); sys_test_port_event_bit every 5000 ticks; then sys_switch_to_crystal_clock",
+  "plain": "Saves power again when the DisplayPort activity stops."
+ },
+ "FUN_CODE_a36c": {
+  "name": "ipc_store_flash_data",
+  "brief": "Copy a block of flash data from the main processor into the 2 KB buffer.",
+  "params": [
+   {
+    "name": "offset",
+    "meaning": "offset"
+   },
+   {
+    "name": "count",
+    "meaning": "count"
+   },
+   {
+    "name": "src",
+    "meaning": "data"
+   }
+  ],
+  "notes": "Its range message reuses the text 'KeyDetArray OOR'.",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "message type 7 (main side ipc_8051_send_storage_block); buffer 0xA800 used by flash jobs 0x11/0x15",
+  "plain": "Receives data that is to be written into the flash chip."
+ },
+ "FUN_CODE_a41f": {
+  "name": "dbg_dump_flash_block",
+  "brief": "Read 512 bytes from the flash and print them as hex.",
+  "notes": "No caller in the bank-1 image.",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "flash read with command op through 0xF0E5..0xF1C0; prints each byte, offset every 16",
+  "plain": "Shows a piece of the flash contents on the debug output."
+ },
+ "FUN_CODE_a4d2": {
+  "name": "ipc_portal_read_entry1",
+  "brief": "Shared entry code 1 of ipc_portal_read, placed in front of it by the compiler.",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_a4d6": {
+  "name": "ipc_portal_read_entry2",
+  "brief": "Shared entry code 2 of ipc_portal_read, placed in front of it by the compiler.",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_a4e0": {
+  "name": "ipc_portal_read_entry3",
+  "brief": "Shared entry code 3 of ipc_portal_read, placed in front of it by the compiler.",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_a4e3": {
+  "name": "ipc_portal_read_entry4",
+  "brief": "Shared entry code 4 of ipc_portal_read, placed in front of it by the compiler.",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_a4e5": {
+  "name": "ipc_portal_read_entry5",
+  "brief": "Shared entry code 5 of ipc_portal_read, placed in front of it by the compiler.",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_a4e9": {
+  "name": "ipc_portal_read",
+  "brief": "Read words from the mailbox portal shared with the main processor.",
+  "params": [
+   {
+    "name": "offset",
+    "meaning": "byte offset"
+   },
+   {
+    "name": "words",
+    "meaning": "words"
+   },
+   {
+    "name": "word_count",
+    "meaning": "word count"
+   }
+  ],
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "AHB 0x9F0A0100 + offset through reg_ahb_read32 (header of ipc_service_mailbox); counterpart ipc_portal_write",
+  "plain": "Reads data the main processor has placed in the shared mailbox."
+ },
+ "FUN_CODE_a57e": {
+  "name": "power_poll_wake_sources",
+  "brief": "Check the wake-up table's inputs in turn, moving to the next after its time slot.",
+  "returns": "entry kind that fired, or 0x0D",
+  "topic": "power",
+  "basis": "derived",
+  "evidence": "table 0xA62F index 0xA64D, slot time from entry byte 1; power_check_wake_entry, power_apply_wake_block_mode, power_init_wake_detection",
+  "plain": "In standby, keeps looking at each input that may wake the monitor."
+ },
+ "FUN_CODE_a627": {
+  "name": "startup_entry",
+  "brief": "Compiler start-up code: clear the memory, set the stack and call the main program.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "Keil STARTUP.A51 + INIT.A51 (record, checked with tools/startup8051.py); main = sys_main",
+  "plain": "The very first program code: prepares the memory and starts the main program."
+ },
+ "FUN_CODE_a6cf": {
+  "name": "dp_mrx_detect_adc_rise",
+  "brief": "Report a rise of a DP port's analog sense level above its lowest reading.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "DP port 0/1"
+   }
+  ],
+  "returns": "1 on a rise",
+  "topic": "dp",
+  "basis": "derived",
+  "evidence": "ADC channel from 0xA755/0xA756 by port (gpio_read_adc); minimum kept at 0xA751; rise > 0x50; callers wake kinds 7..10 (mrx wake up)",
+  "plain": "Notices that something was plugged into or switched on at a DisplayPort input."
+ },
+ "FUN_CODE_a775": {
+  "name": "uart_open_ports",
+  "brief": "Enable the serial ports chosen by a bit mask and set their format and baud rate.",
+  "params": [
+   {
+    "name": "port_mask",
+    "meaning": "port bits"
+   },
+   {
+    "name": "line_format",
+    "meaning": "line format"
+   },
+   {
+    "name": "baud_factor",
+    "meaning": "baud rate / 1200"
+   }
+  ],
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "command 0x05 (main side sends the rate / 1200); per-port registers for bits 2/3/4, uart_set_line_format, uart_set_baud_rate(m, d * 1200)",
+  "plain": "Turns on serial links and sets their speed."
+ },
+ "FUN_CODE_a819": {
+  "name": "ipc_store_power_cut_list",
+  "brief": "Store part of the power-cut table sent by the main processor.",
+  "params": [
+   {
+    "name": "offset",
+    "meaning": "offset"
+   },
+   {
+    "name": "count",
+    "meaning": "count"
+   },
+   {
+    "name": "piece",
+    "meaning": "data"
+   }
+  ],
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "prints 'CutPwArray OOR %d %d'; message type 10 (main side ipc_8051_send_power_cut_table), 0xA6AF, 18 bytes",
+  "plain": "Remembers in which order to switch the supplies off and on."
+ },
+ "FUN_CODE_a8bb": {
+  "name": "startup_dma_fill",
+  "brief": "Fill the rest of a memory window by DMA without a source.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "docs/MAP.md: fill routine of startup_load_core_images",
+  "plain": "Clears unused memory of a processor at start-up."
+ },
+ "FUN_CODE_a959": {
+  "name": "usb_cc_set_mode_ch0",
+  "brief": "Set the mode bits of USB-C CC channel 0 from the stored mode.",
+  "notes": "With the channel's on-flag clear, bits 4..7 of block byte 5 are cleared: the mode bits of both channels.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "register byte 0x0B and byte 5 of the block at the pointer 0xA76D, mode 0xA780; callers usb_cc_init_phy, usb_cc_apply_orientation_ch0, usb_cc_set_mode2_ch0",
+  "plain": "Sets how the first USB-C detection line behaves."
+ },
+ "FUN_CODE_a9f6": {
+  "name": "usb_cc_set_mode_ch1",
+  "brief": "Set the mode bits of USB-C CC channel 1 from the stored mode.",
+  "notes": "With the channel's on-flag clear, bits 4..7 of block byte 5 are cleared: the mode bits of both channels.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "twin of usb_cc_set_mode_ch0: register byte 0x08, mode 0xA781; callers usb_cc_init_phy, usb_cc_apply_orientation_ch1, usb_cc_init_port_mode",
+  "plain": "Sets how the second USB-C detection line behaves."
+ },
+ "FUN_CODE_aa93": {
+  "name": "flash_write_edid_ram",
+  "brief": "Program the 512 bytes of EDID RAM into the flash as two pages.",
+  "notes": "No caller in the bank-1 image.",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "source 0xF800..0xF9FF (EDID RAM, message type 1), two Page Program runs at the address 0xA75F",
+  "plain": "Saves the monitor's identity data into the flash chip."
+ },
+ "FUN_CODE_ab2c": {
+  "name": "reg_paged_write",
+  "brief": "Write a paged register of block 0 or 1.",
+  "params": [
+   {
+    "name": "block",
+    "meaning": "block 0/1"
+   },
+   {
+    "name": "page_reg",
+    "meaning": "page:register"
+   },
+   {
+    "name": "value",
+    "meaning": "value"
+   }
+  ],
+  "notes": "No caller in the bank-1 image.",
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "page select 0xF405..0xF408, window 0x6500 / 0x6600; counterpart reg_paged_read",
+  "plain": "Changes one hardware setting."
+ },
+ "FUN_CODE_abc4": {
+  "name": "edid_setup_port_slaves",
+  "brief": "Set the EDID slave address and mode of the ports chosen by a bit mask.",
+  "params": [
+   {
+    "name": "port_mask",
+    "meaning": "port bits 0..6"
+   },
+   {
+    "name": "address",
+    "meaning": "slave address"
+   },
+   {
+    "name": "size_mode",
+    "meaning": "mode bit"
+   }
+  ],
+  "topic": "edid",
+  "basis": "derived",
+  "evidence": "command 0x01 (main side ipc_8051_enable_internal_edid): address 0xA0 | segment bits, mode 0x33 / 0x13; registers 0xF01C..",
+  "plain": "Prepares the inputs to hand out the monitor's identity data."
+ },
+ "FUN_CODE_ac5b": {
+  "name": "flash_sum_page",
+  "brief": "Return the 16-bit sum of one 256-byte flash page.",
+  "params": [
+   {
+    "name": "a2",
+    "meaning": "address bits 23..16"
+   },
+   {
+    "name": "a1",
+    "meaning": "bits 15..8"
+   },
+   {
+    "name": "a0",
+    "meaning": "bits 7..0"
+   }
+  ],
+  "returns": "sum",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "Fast Read 0x0B of 256 bytes; update loop command 2 compares it ('checksum error')",
+  "plain": "Checks what was written into the flash chip."
+ },
+ "FUN_CODE_acf2": {
+  "name": "gpio_write_port",
+  "brief": "Write the output register of one numbered GPIO port.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "port 1..14"
+   },
+   {
+    "name": "value",
+    "meaning": "value"
+   }
+  ],
+  "notes": "No caller in the bank-1 image.",
+  "topic": "gpio",
+  "basis": "descriptive",
+  "evidence": "ports 1..13 = 0xF000..0xF11E, 14 = P3 (same numbering as gpio_set_port_bits)",
+  "plain": "Sets all pins of one group at once."
+ },
+ "FUN_CODE_ad88": {
+  "name": "reg_paged_init_wake_port",
+  "brief": "Write the wake set-up of one input into the paged registers.",
+  "params": [
+   {
+    "name": "ch",
+    "meaning": "port"
+   }
+  ],
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "chip 0x20: 0xDCAC and ten 0xDCA1 bytes; else four reg_paged_update_bits calls; caller power_init_wake_detection",
+  "plain": "Prepares one input for standby detection."
+ },
+ "FUN_CODE_ae1d": {
+  "name": "usb_update_dp_port_flags",
+  "brief": "Set the DP receiver flags from the USB-C pin levels.",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "USB-C info 0xA69C (FillTypeCInfo) names two pins (gpio_read_port_bit); bits 4..5 of 0xDCCF / 0xDCDF",
+  "plain": "Adjusts the DisplayPort input to how the USB-C cable is plugged in."
+ },
+ "FUN_CODE_aeb2": {
+  "name": "gpio_read_adc",
+  "brief": "Return the reading of one numbered analog input.",
+  "params": [
+   {
+    "name": "channel",
+    "meaning": "channel 1..12"
+   }
+  ],
+  "returns": "reading, 0xFF for other n",
+  "topic": "gpio",
+  "basis": "derived",
+  "evidence": "channels 1..12 = 0xF3C5.., 0xF5D5/6; used by the ADC key scan ('ADC key') and the CC line checks",
+  "plain": "Reads the voltage on one analog pin (keys, cable sense)."
+ },
+ "FUN_CODE_af47": {
+  "name": "gpio_read_port_bit",
+  "brief": "Return whether the masked pins of one GPIO port are high.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "port 1..14"
+   },
+   {
+    "name": "mask",
+    "meaning": "pin bits"
+   }
+  ],
+  "returns": "1 when any masked bit is set",
+  "topic": "gpio",
+  "basis": "derived",
+  "evidence": "ports 1..13 = 0xF000.., 14 = P3; used by the key and wake pin scans",
+  "plain": "Reads the level of a pin."
+ },
+ "FUN_CODE_afdc": {
+  "name": "startup_init_chip_regs",
+  "brief": "Set the pin and block registers for the chip variant at start-up.",
+  "topic": "startup",
+  "basis": "derived",
+  "evidence": "values chosen by the chip ID 0xD511 (0x20 / 0x1A / other); registers 0xF160..0xF165, 0xF024.., 0xF0A6; caller sys_main",
+  "plain": "Prepares the chip's pins when the 8051 starts."
+ },
+ "FUN_CODE_b06f": {
+  "name": "power_leave_power_saving",
+  "brief": "Switch the chip's blocks back on after standby.",
+  "topic": "power",
+  "basis": "derived",
+  "evidence": "power cut list phase 0 (entries 3..5 of the power-cut table), clears the standby flag bit set by the power-saving set-up, clock registers 0xD9xx, then timer_set_clock_rates; caller sys_main",
+  "plain": "Wakes the monitor's electronics up again."
+ },
+ "FUN_CODE_b192": {
+  "name": "flash_read_page",
+  "brief": "Read one 256-byte flash page into the transfer buffer.",
+  "params": [
+   {
+    "name": "addr_23_16",
+    "meaning": "address bits 23..16"
+   },
+   {
+    "name": "addr_15_8",
+    "meaning": "bits 15..8"
+   },
+   {
+    "name": "addr_7_0",
+    "meaning": "bits 7..0"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "Fast Read 0x0B into XDATA 0x3200 (sibling of flash_sum_page); update loop command 4",
+  "plain": "Reads back a piece of the flash chip during an update."
+ },
+ "FUN_CODE_b222": {
+  "name": "ipc_portal_write_entry",
+  "brief": "Shared entry code of ipc_portal_write, placed in front of it by the compiler.",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_b228": {
+  "name": "ipc_portal_write",
+  "brief": "Write words to the mailbox portal shared with the main processor.",
+  "params": [
+   {
+    "name": "off",
+    "meaning": "byte offset"
+   },
+   {
+    "name": "src",
+    "meaning": "words"
+   },
+   {
+    "name": "n",
+    "meaning": "word count"
+   }
+  ],
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "AHB 0x9F0A0100 + offset through reg_ahb_write32 (header of ipc_service_mailbox)",
+  "plain": "Puts data into the mailbox for the main processor."
+ },
+ "FUN_CODE_b2b0": {
+  "name": "power_check_port_signal",
+  "brief": "Run the standby wake-up test of one input port's receiver.",
+  "params": [
+   {
+    "name": "port_page",
+    "meaning": "the port's register page (0..3)"
+   }
+  ],
+  "returns": "1 when the test passes, 0 otherwise",
+  "notes": "The test: bit 0 of sync meter register 0x20 set and the low 10 bits of port register 0x1F1C above 0x16; run twice unless the wake entry's option flag is set.",
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "chip 0x20: power_test_port_wake_status; else sync meter register 0x20 bit 0 and paged port register 0x1F1C (reg_port_page_read16), prints 'Check Again!!!!' before the second pass; caller power_check_wake_entry",
+  "plain": "In standby, checks whether a video input has a signal."
+ },
+ "FUN_CODE_b33e": {
+  "name": "gpio_write_port_partner",
+  "brief": "Write the partner register of one numbered GPIO port.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "port 1..13"
+   },
+   {
+    "name": "value",
+    "meaning": "value"
+   }
+  ],
+  "notes": "No caller in the bank-1 image.",
+  "topic": "gpio",
+  "basis": "descriptive",
+  "evidence": "partner registers 0xF005.. of ports 1..13 (counterpart of gpio_write_port)",
+  "plain": "Sets the second register of one group of pins."
+ },
+ "FUN_CODE_b3cb": {
+  "name": "ipc_store_wake_port_list",
+  "brief": "Store part of the wake-up port table sent by the main processor.",
+  "params": [
+   {
+    "name": "off",
+    "meaning": "offset"
+   },
+   {
+    "name": "n",
+    "meaning": "count"
+   },
+   {
+    "name": "src",
+    "meaning": "data"
+   }
+  ],
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "prints 'SetZPArry OOR'; message type 9 (main side ipc_8051_send_wake_port_table), table 0xA62F, 30 bytes",
+  "plain": "Remembers which inputs may wake the monitor."
+ },
+ "FUN_CODE_b456": {
+  "name": "flash_restore_status",
+  "brief": "Write the saved status registers back to the SPI flash.",
+  "params": [
+   {
+    "name": "status",
+    "meaning": "saved status bytes"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "Write Status Register with the bytes saved by flash_unprotect",
+  "plain": "Locks the flash chip again after writing."
+ },
+ "FUN_CODE_b56a": {
+  "name": "dp_aux_init_regs",
+  "brief": "Load the start values of both DP receivers' AUX registers.",
+  "topic": "dp",
+  "basis": "derived",
+  "evidence": "registers 0xDCB0..0xDCEA; enable bits by bit 0x00; only caller DP_EnableMRX",
+  "plain": "Prepares the DisplayPort link channels for the 8051."
+ },
+ "FUN_CODE_b5f2": {
+  "name": "flash_sum_block",
+  "brief": "Read 512 flash bytes and store their sum.",
+  "notes": "No caller in the bank-1 image.",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "read opcode from flash_read_opcode through 0xF0xx/0xF1C0, sum to 0xA74C; counterpart flash_read_block_to_pointer",
+  "plain": "Checks a piece of the flash chip."
+ },
+ "FUN_CODE_b679": {
+  "name": "flash_enable_quad_mode",
+  "brief": "Switch the SPI flash and its controller to quad mode.",
+  "notes": "No caller in the bank-1 image.",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "prints 'Flash change to Quad mode!!', 'Write enable!!'; status write 0x42",
+  "plain": "Speeds up reading of the flash chip."
+ },
+ "FUN_CODE_b6fe": {
+  "name": "flash_read_block_to_pointer",
+  "brief": "Read 512 flash bytes to the buffer named by a pointer.",
+  "notes": "No caller in the bank-1 image.",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "Fast Read 0x0B through 0xF0xx/0xF1C0, stores via pointer 0xA74A",
+  "plain": "Reads a piece of the flash chip."
+ },
+ "FUN_CODE_b781": {
+  "name": "ipc_sum_flash_data",
+  "brief": "Walk the 2 KB flash data buffer in four 512-byte blocks and return a 32-bit result that is always 0.",
+  "returns": "0 (the result starts at 0 and is only shifted)",
+  "notes": "Per block the bytes are added into an 8-bit sum and the 32-bit result is shifted left by (sum + 8); nothing is ever added to the result, so it is not a sum of the data.",
+  "topic": "ipc",
+  "basis": "derived",
+  "evidence": "four 512-byte blocks at 0xA800; result word posted to portal word 0xB0 (ipc_post_result_word) after message type 7 and command 0x12",
+  "plain": "Goes over the flash data buffer to make a check value, which always comes out as zero."
+ },
+ "FUN_CODE_b802": {
+  "name": "power_apply_wake_block_mode",
+  "brief": "Program the wake block for the current wake-up table entry.",
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "entry 0xA62F[0xA64D] kind 0..12 to power_set_wake_block_mode",
+  "plain": "Points the standby detection at the next input."
+ },
+ "FUN_CODE_b881": {
+  "name": "power_apply_standby_pins",
+  "brief": "Set the pins listed in the standby table.",
+  "topic": "power",
+  "basis": "derived",
+  "evidence": "entries 0xA61D (standby table, FillKeyDetectList) through gpio_set_port_bits; caller sys_main",
+  "plain": "Puts the listed pins into their standby state."
+ },
+ "FUN_CODE_b8fd": {
+  "name": "dp_aux_snoop_port1",
+  "brief": "Read an AUX request seen on DP receiver 1 and track link training.",
+  "topic": "dp",
+  "basis": "derived",
+  "evidence": "AUX FIFO 0xDCC9; native read/write (nibble 9/8) to dp_aux_track_link_training(…, 1); caller dp_aux_service",
+  "plain": "Follows the DisplayPort link set-up on the second DP input."
+ },
+ "FUN_CODE_b979": {
+  "name": "dp_aux_snoop_port0",
+  "brief": "Read an AUX request seen on DP receiver 0 and track link training.",
+  "topic": "dp",
+  "basis": "derived",
+  "evidence": "same as dp_aux_snoop_port1 on 0xDCD9 with port 0",
+  "plain": "Follows the DisplayPort link set-up on the first DP input."
+ },
+ "FUN_CODE_ba6d": {
+  "name": "sys_set_timed_ramp_step",
+  "brief": "Store the high/low levels of a ramp channel and compute its step.",
+  "params": [
+   {
+    "name": "ch",
+    "meaning": "channel"
+   },
+   {
+    "name": "hi",
+    "meaning": "high level"
+   },
+   {
+    "name": "lo",
+    "meaning": "low level"
+   }
+  ],
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "command 0x31; record 0xA735 used by sys_run_timed_ramp",
+  "plain": "Sets how fast an output fades."
+ },
+ "FUN_CODE_bae2": {
+  "name": "i2c_master_wait_tx_ready",
+  "brief": "Wait until a hardware I2C channel is ready to send.",
+  "params": [
+   {
+    "name": "ch",
+    "meaning": "I2C channel"
+   }
+  ],
+  "returns": "1 when ready",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "polls bit 6 of the channel's events register 0xF03C/0xF044/.. up to 12000 times",
+  "plain": "Waits for an I2C bus to accept the next byte."
+ },
+ "FUN_CODE_bb56": {
+  "name": "reg_paged_read",
+  "brief": "Read a paged register of block 0 or 1.",
+  "params": [
+   {
+    "name": "sel",
+    "meaning": "block 0/1"
+   },
+   {
+    "name": "p",
+    "meaning": "page:register"
+   }
+  ],
+  "returns": "value",
+  "notes": "No caller in the bank-1 image.",
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "page select 0xF405..0xF408, access 0xD50B..0xD50D",
+  "plain": "Reads one hardware setting."
+ },
+ "FUN_CODE_bc3d": {
+  "name": "irq_record_ir_pulse",
+  "brief": "Measure one infrared pulse and append its length to the IR ring.",
+  "topic": "irq",
+  "basis": "derived",
+  "evidence": "capture count 0xF027/0xF028, (0xFFFF - count) / 75 into ring 0xA566 read by sys_ring_read_byte; 'Reload IR' report type 5",
+  "plain": "Records the remote control's light pulses."
+ },
+ "FUN_CODE_bcad": {
+  "name": "reg_ahb_read32",
+  "brief": "Read a 32-bit word over the PBus-to-AHB bridge.",
+  "params": [
+   {
+    "name": "addr",
+    "meaning": "AHB address"
+   }
+  ],
+  "returns": "word",
+  "topic": "reg",
+  "basis": "proven",
+  "evidence": "bridge registers 0xCD80..0xCD8C; prints 'PBus to AHB bridge Error!!'",
+  "plain": "Reads a value from the other processors' address space."
+ },
+ "FUN_CODE_bd18": {
+  "name": "i2c_sw_release_clock_entry",
+  "brief": "Shared entry code of i2c_sw_release_clock, placed in front of it by the compiler.",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_bd1b": {
+  "name": "i2c_sw_release_clock",
+  "brief": "Release the clock line of the software I2C bus and wait until it is high.",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "sets the clock pin (pointer 0xA701) and waits up to 65535 rounds for it to read high (clock stretching)",
+  "plain": "Lets the pin-driven I2C clock rise, waiting for a slow device."
+ },
+ "FUN_CODE_bd81": {
+  "name": "flash_program_page",
+  "brief": "Program one 256-byte page from the transfer buffer into the flash.",
+  "params": [
+   {
+    "name": "addr_23_16",
+    "meaning": "address bits 23..16"
+   },
+   {
+    "name": "addr_15_8",
+    "meaning": "bits 15..8"
+   },
+   {
+    "name": "addr_7_0",
+    "meaning": "bits 7..0"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "source XDATA 0x3200, 24-bit address; update loop commands 2 and 5",
+  "plain": "Writes one piece of the new firmware into the flash chip."
+ },
+ "FUN_CODE_bde9": {
+  "name": "ddc_set_slave_address",
+  "brief": "Set the DDC/CI slave address of the ports chosen by a bit mask.",
+  "params": [
+   {
+    "name": "ports",
+    "meaning": "port bits 0..7"
+   },
+   {
+    "name": "address",
+    "meaning": "slave address"
+   }
+  ],
+  "topic": "ddc",
+  "basis": "proven",
+  "evidence": "command 7 (docs/MAP.md: I2C slave address 0x6E for MSI's tool); address registers 0xF040.. bits 1..7",
+  "plain": "Gives the inputs the DDC/CI address a computer talks to."
+ },
+ "FUN_CODE_be50": {
+  "name": "usb_cc_check_rp_pair",
+  "brief": "Report whether exactly one CC line shows a pull-up (Rp) level.",
+  "returns": "1 when exactly one line is in range and neither reading is above 0x9D",
+  "notes": "No caller in the bank-1 image.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "prints 'get two rp'; CC readings 0xA672/0xA673 in 0x14..0x9C",
+  "plain": "Checks how a USB-C cable is connected."
+ },
+ "FUN_CODE_beb5": {
+  "name": "reg_ahb_write32",
+  "brief": "Write a 32-bit word over the PBus-to-AHB bridge.",
+  "params": [
+   {
+    "name": "addr",
+    "meaning": "AHB address"
+   },
+   {
+    "name": "val",
+    "meaning": "word"
+   }
+  ],
+  "topic": "reg",
+  "basis": "proven",
+  "evidence": "bridge registers 0xCD80..0xCD8C; prints 'PBus to AHB bridge Error!!'",
+  "plain": "Writes a value into the other processors' address space."
+ },
+ "FUN_CODE_bf18": {
+  "name": "hdmi_cec_select_port",
+  "brief": "Set up the CEC controller for one port and reset its state.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "port 0..3"
+   }
+  ],
+  "notes": "No caller in the bank-1 image.",
+  "topic": "hdmi",
+  "basis": "descriptive",
+  "evidence": "CEC registers 0xD807/0xD800/0xD811/0xD80D, 2-bit port field in 0xD533, logical address 0x0F",
+  "plain": "Prepares the HDMI remote-control link."
+ },
+ "FUN_CODE_bf7b": {
+  "name": "hdmi_cec_send_reply",
+  "brief": "Send a reply message on the CEC bus and wait for the result.",
+  "params": [
+   {
+    "name": "header",
+    "meaning": "header (destination)"
+   },
+   {
+    "name": "count",
+    "meaning": "byte count"
+   }
+  ],
+  "topic": "hdmi",
+  "basis": "derived",
+  "evidence": "CEC registers 0xD80D/0xD820/0xD810; waits up to 1000 ticks; caller hdmi_cec_receive_message (replies 0x84, 0x32, 0x90)",
+  "plain": "Answers another HDMI device's remote-control request."
+ },
+ "FUN_CODE_bfdd": {
+  "name": "irq_uart",
+  "brief": "Serve the serial port interrupt: store a received byte, send the next queued one.",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "interrupt 4 (serial) 'using 1'; receive ring 0xA1E8 (port 1 of uart_read_rx_ring), transmit ring 0xA1F8",
+  "plain": "Moves bytes in and out of the 8051's own serial port."
+ },
+ "FUN_CODE_c03f": {
+  "name": "irq_set_capture_mask",
+  "brief": "Set which sources of the capture interrupt are enabled.",
+  "params": [
+   {
+    "name": "sources",
+    "meaning": "source bits 0..3"
+   }
+  ],
+  "topic": "irq",
+  "basis": "descriptive",
+  "evidence": "bits 0..3 into 0xA1E7 and the low nibble of 0xF021/0xF022; irq_ext1_peripherals tests 0xF021 & 0xA1E7 before irq_record_ir_pulse; commands 0x09 / 0x0A",
+  "plain": "Chooses which inputs may raise the remote-control interrupt."
+ },
+ "FUN_CODE_c0a1": {
+  "name": "power_check_sync_input",
+  "brief": "Set up the sync meter for an input and check its measured timing.",
+  "returns": "1 when a valid signal is seen",
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "registers 0xD523, 0x6033, 0x604D, wake block / sync meter writes; result from power_check_sync_timing and power_calc_sync_ratio; wake kind 0",
+  "plain": "In standby, checks whether a video signal has appeared on an input."
+ },
+ "FUN_CODE_c103": {
+  "name": "MailBox_UpdateDDCFlag",
+  "brief": "Report in the mailbox status word whether a port's DDC was accessed.",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "prints 'MailBox_UpdateDDCFlag %BX' (original name); low byte of portal word 0x0C from ddc_detect_port_access",
+  "plain": "Tells the main processor that a computer has read an input's identity data."
+ },
+ "FUN_CODE_c163": {
+  "name": "ipc_wait_flash_handshake",
+  "brief": "Wait until the main processor signals that a flash job may start.",
+  "returns": "1 ready, 0 time-out",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "polls portal word 0xB8 until its low byte is 1 (max 20000 reads); commands 0x11..0x15, 0x27",
+  "plain": "Waits for the main processor's go-ahead before touching the flash chip."
+ },
+ "FUN_CODE_c1c1": {
+  "name": "dp_aux_service",
+  "brief": "Serve pending AUX requests of both DP receivers.",
+  "topic": "dp",
+  "basis": "derived",
+  "evidence": "pending bits of 0xDCDF/0xDCDE and 0xDCCF/0xDCCE; answer mode (bit 0x15) or snoop mode; then sys_step_clock_switch; caller irq_ext1_peripherals",
+  "plain": "Answers or follows DisplayPort link requests on both DP inputs."
+ },
+ "FUN_CODE_c21d": {
+  "name": "flash_read_three_reply_bytes",
+  "brief": "Send a flash command and read its three answer bytes.",
+  "notes": "No caller in the bank-1 image.",
+  "topic": "flash",
+  "basis": "descriptive",
+  "evidence": "opcode from XDATA 0xF068, answer to 0xF064..0xF066 through the flash FIFO",
+  "plain": "Asks the flash chip a question that has a three-byte answer."
+ },
+ "FUN_CODE_c278": {
+  "name": "ddc_disable_slave",
+  "brief": "Switch off the DDC/CI slave of the ports chosen by a bit mask.",
+  "params": [
+   {
+    "name": "ports",
+    "meaning": "port bits 0..7"
+   }
+  ],
+  "topic": "ddc",
+  "basis": "derived",
+  "evidence": "clears the enable bit 0 of the address registers 0xF040.. set by ddc_enable_slave; command 0x08 (main side ipc_8051_disable_ddc_slave)",
+  "plain": "Stops the chosen inputs from answering DDC/CI."
+ },
+ "FUN_CODE_c2d3": {
+  "name": "ddc_arm_slave",
+  "brief": "Arm the DDC/CI slave of the ports chosen by a bit mask for the next request.",
+  "params": [
+   {
+    "name": "ports",
+    "meaning": "port bits 0..7"
+   }
+  ],
+  "topic": "ddc",
+  "basis": "derived",
+  "evidence": "sets bit 6 of the channel control registers 0xF039.. (same write as the interrupt's re-arm); last step of command 7",
+  "plain": "Makes the chosen inputs ready to receive DDC/CI."
+ },
+ "FUN_CODE_c32e": {
+  "name": "i2c_sw_select_pins",
+  "brief": "Choose the clock and data pins of the software I2C bus.",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "stores the pin register pointers and masks 0xA6FE/0xA701/0xA704.. used by the i2c_sw_* routines; caller i2c_sw_match_device_id",
+  "plain": "Tells the pin-driven I2C code which pins to use."
+ },
+ "FUN_CODE_c389": {
+  "name": "uart_set_line_format",
+  "brief": "Store a line-format code for the serial ports chosen by a bit mask.",
+  "params": [
+   {
+    "name": "ports",
+    "meaning": "port bits"
+   },
+   {
+    "name": "format",
+    "meaning": "format code 0..8"
+   }
+  ],
+  "topic": "uart",
+  "basis": "descriptive",
+  "evidence": "v < 9 into shadow bytes 0xA763.. and the low nibble of 0xF054 / 0xF0F6 / 0xF032 / 0xF06E; callers uart_open_ports, uart_setup_line_control",
+  "plain": "Sets the data format of serial links."
+ },
+ "FUN_CODE_c3e4": {
+  "name": "power_calc_sync_ratio",
+  "brief": "Return the ratio of two measured sync meter totals scaled by 256.",
+  "returns": "ratio",
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "round(reg 0x14 * 256 / (reg 0x12 & 0x1FFF)) from reg_read_sync_meter_word",
+  "plain": "Computes a check value for a detected video signal."
+ },
+ "FUN_CODE_c43e": {
+  "name": "startup_load_tensilica_image",
+  "brief": "Copy the Tensilica dimming program from flash by DMA.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "docs/MAP.md start-up step 2 (partition record flash 0x030000, length 0xD8DC) via flash_dma_read; only for chip IDs 0x16/0x1E/0x1F/0x17",
+  "plain": "Loads the dimming processor's program at power-on."
+ },
+ "FUN_CODE_c4ee": {
+  "name": "hdmi_cec_poll_request",
+  "brief": "Return the next pending CEC power request after reading the CEC bus.",
+  "returns": "request 1..5, or 0",
+  "topic": "hdmi",
+  "basis": "derived",
+  "evidence": "lowest set bit of 0xA758 (set by hdmi_cec_receive_message) as 1..5, cleared on return",
+  "plain": "Checks whether another HDMI device asked the monitor to switch on or off."
+ },
+ "FUN_CODE_c544": {
+  "name": "startup_release_leon2m",
+  "brief": "Write the release byte that the main processor waits for at start-up.",
+  "topic": "startup",
+  "basis": "proven",
+  "evidence": "portal word 0xB8 bits 15..8 (docs/MAP.md; main side ipc_8051_get_boot_source)",
+  "plain": "Lets the main processor continue its start-up."
+ },
+ "FUN_CODE_c59a": {
+  "name": "edid_enable_port_slaves",
+  "brief": "Switch on the EDID slave of the ports chosen by a bit mask.",
+  "params": [
+   {
+    "name": "port_mask",
+    "meaning": "port bits 0..6"
+   }
+  ],
+  "topic": "edid",
+  "basis": "derived",
+  "evidence": "sets bit 7 of 0xF01C/0xF01E/0xF085/0xF087/0xF099/0xF0A3/0xF076; command 0x01 after edid_setup_port_slaves",
+  "plain": "Lets the chosen inputs hand out the monitor's identity data."
+ },
+ "FUN_CODE_c5f0": {
+  "name": "flash_start_page_program",
+  "brief": "Issue the Page Program command for the prepared 256-byte page.",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "opcode 0x02; callers flash_program_page, flash_write_edid_ram",
+  "plain": "Starts writing one page of the flash chip."
+ },
+ "FUN_CODE_c644": {
+  "name": "usb_cc_read_line_levels",
+  "brief": "Read the analog levels of the USB-C CC lines into the readings.",
+  "notes": "No caller in the bank-1 image.",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "gpio_read_adc channels 9/10 or 11/12 by 0xA6A5 into 0xA672/0xA673",
+  "plain": "Measures the USB-C cable's detection lines."
+ },
+ "FUN_CODE_c698": {
+  "name": "usb_cc_check_rd_pair",
+  "brief": "Report whether exactly one CC line shows a pull-down (Rd) level.",
+  "returns": "1 when exactly one line is in range",
+  "notes": "No caller in the bank-1 image.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "prints 'get two rd'; CC readings 0xA672/0xA673 in 0x42..0xC7",
+  "plain": "Checks how a USB-C cable is connected."
+ },
+ "FUN_CODE_c6ec": {
+  "name": "i2c_sw_stop",
+  "brief": "Send a stop condition on the software I2C bus.",
+  "topic": "i2c",
+  "basis": "proven",
+  "evidence": "data low, clock high (i2c_sw_release_clock), data high",
+  "plain": "Ends a transfer on a pin-driven I2C bus."
+ },
+ "FUN_CODE_c73e": {
+  "name": "dp_mrx_update_reg_bits",
+  "brief": "Set or clear bits in one register of DP receiver 0 or 1.",
+  "params": [
+   {
+    "name": "receiver",
+    "meaning": "receiver 0/1"
+   },
+   {
+    "name": "reg_index",
+    "meaning": "register"
+   },
+   {
+    "name": "mask",
+    "meaning": "bits"
+   },
+   {
+    "name": "set_bits",
+    "meaning": "1 set, 0 clear"
+   }
+  ],
+  "topic": "dp",
+  "basis": "derived",
+  "evidence": "0x4D00[idx] (receiver 0) / 0x4E00[idx] (receiver 1), the banks of dp_mrx_read_reg / dp_mrx_write_reg",
+  "plain": "Changes some bits of a DisplayPort input setting."
+ },
+ "FUN_CODE_c790": {
+  "name": "edid_disable_port_slaves",
+  "brief": "Switch off the EDID slave of the ports chosen by a bit mask.",
+  "params": [
+   {
+    "name": "port_mask",
+    "meaning": "port bits 0..6"
+   }
+  ],
+  "topic": "edid",
+  "basis": "derived",
+  "evidence": "clears bit 7 of the registers that edid_enable_port_slaves sets; command 0x02 (main side ipc_8051_disable_internal_edid)",
+  "plain": "Stops the chosen inputs from handing out the monitor's identity data."
+ },
+ "FUN_CODE_c7e0": {
+  "name": "edid_clear_port_entries",
+  "brief": "Clear the enable bit of the port entries chosen by a bit mask.",
+  "params": [
+   {
+    "name": "port_mask",
+    "meaning": "port bits 0..6"
+   }
+  ],
+  "topic": "edid",
+  "basis": "descriptive",
+  "evidence": "clears bit 7 of 0xF181 + 2i; command 0x0F (main side ipc_8051_disable_internal_edid); command 0x0E sets them",
+  "plain": "Turns off an extra identity-data setting of the chosen inputs."
+ },
+ "FUN_CODE_c830": {
+  "name": "power_set_wakeup_timer",
+  "brief": "Start the wake-up timer with a time in seconds.",
+  "params": [
+   {
+    "name": "seconds",
+    "meaning": "time"
+   }
+  ],
+  "topic": "power",
+  "basis": "proven",
+  "evidence": "command 0x1C prints 'setWakeupTimer %04x'; prints 'wakeup timer setup'; 0xA62A = t * 1000 counted down by power_check_wakeup_timer",
+  "plain": "Sets when the monitor should wake up by itself."
+ },
+ "FUN_CODE_c87f": {
+  "name": "edid_set_port_control_bit6",
+  "brief": "Write bit 6 of one port's EDID slave control register and clear its bits 0 and 1.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "one-hot port bit 0x01..0x40 (ports 0..6)"
+   },
+   {
+    "name": "on",
+    "meaning": "1 sets bit 6, every other value clears it"
+   }
+  ],
+  "notes": "The register becomes (old & 0xBC) | 0x40 for on == 1 and (old & 0xBC) for every other value; a port value that is not one of the seven bits changes nothing.",
+  "topic": "edid",
+  "basis": "descriptive",
+  "evidence": "one-hot port 0x01..0x40 -> 0xF01C.. (reg & 0xBC) | 0x40; command 0x1F (main side ipc_8051_set_edid_slave_bit6)",
+  "plain": "Changes one setting of an input's identity-data interface."
+ },
+ "FUN_CODE_c8cd": {
+  "name": "dp_mrx_test_adc_level",
+  "brief": "Report whether a DP port's ADC level is above 0xA0 and its ADC channel number is 0x0C or less.",
+  "params": [
+   {
+    "name": "dp_port",
+    "meaning": "DP port 0 or 1 (a higher number counts as 0)"
+   }
+  ],
+  "returns": "1 when both hold, else 0",
+  "notes": "No caller in the bank-1 image.",
+  "topic": "dp",
+  "basis": "descriptive",
+  "evidence": "ADC channel 0xA755/0xA756 via gpio_read_adc, value kept at 0xA77E; level > 0xA0 and channel <= 0x0C",
+  "plain": "Checks a DisplayPort input's sense voltage."
+ },
+ "FUN_CODE_c965": {
+  "name": "flash_set_job_address",
+  "brief": "Compute the flash address of the next flash job from the window base.",
+  "params": [
+   {
+    "name": "offset",
+    "meaning": "16-bit offset"
+   }
+  ],
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "0xA711 = 0xA70D + 0xA717 (CMD_FE2P_SETEXTEND) + w; command 0x14 ('Update FE2P Addr'); used by commands 0x11..0x13",
+  "plain": "Works out where in the flash chip the next write or erase goes."
+ },
+ "FUN_CODE_c9b0": {
+  "name": "uart_close_ports",
+  "brief": "Disable the serial ports chosen by a bit mask.",
+  "params": [
+   {
+    "name": "port_mask",
+    "meaning": "port bits"
+   }
+  ],
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "clears the register bits uart_open_ports sets; command 0x06",
+  "plain": "Turns serial links off."
+ },
+ "FUN_CODE_c9fb": {
+  "name": "sys_setup_pll_and_select",
+  "brief": "Program the clock unit, wait for it to settle and select the PLL setting.",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "same 0xD904..0xD90C writes as sys_setup_pll_regs, 0x3840-pass delay, 0xD929 = (sys_find_pll_setting() + 1) | 0x40",
+  "plain": "Sets up the chip's clock generator."
+ },
+ "FUN_CODE_ca44": {
+  "name": "usb_cc_set_config_bytes",
+  "brief": "Write bytes 0x38..0x3A of the USB-C CC register block.",
+  "params": [
+   {
+    "name": "byte38_bits",
+    "meaning": "bits ORed into byte 0x38 after its low nibble is kept"
+   },
+   {
+    "name": "byte39_bits",
+    "meaning": "bits ORed into byte 0x39 together with the high byte of the word"
+   },
+   {
+    "name": "word",
+    "meaning": "word: high byte goes to byte 0x39, low byte to byte 0x3A"
+   }
+  ],
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "block at the pointer 0xA76D; caller usb_cc_load_default_params",
+  "plain": "Sets three values of the USB-C detector."
+ },
+ "FUN_CODE_cad5": {
+  "name": "flash_write_command_byte",
+  "brief": "Send a flash command followed by one data byte.",
+  "params": [
+   {
+    "name": "cmd",
+    "meaning": "opcode"
+   },
+   {
+    "name": "data_byte",
+    "meaning": "data byte"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "opcode to 0xF0EE, data byte to 0xF1C3; caller flash_write_extended_addr",
+  "plain": "Sends one setting to the flash chip."
+ },
+ "FUN_CODE_cb1d": {
+  "name": "ipc_finish_flash_handshake",
+  "brief": "Tell the main processor that the flash job is finished.",
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "sets the low byte of portal word 0xB8 to 2 (after ipc_wait_flash_handshake)",
+  "plain": "Reports back that the flash chip is free again."
+ },
+ "FUN_CODE_cb65": {
+  "name": "ddc_ack_slave_events_by_mask",
+  "brief": "Write 0x10 to the event acknowledge registers of the slave ports chosen by a bit mask.",
+  "params": [
+   {
+    "name": "port_mask",
+    "meaning": "bits 0..6 pick the slave ports 0..6"
+   }
+  ],
+  "notes": "No caller in the bank-1 image.",
+  "topic": "ddc",
+  "basis": "descriptive",
+  "evidence": "0x10 to reg_i2c0_event_ack .. reg_i2c6_event_ack (0xF03D, F045, F08D, F095, F09F, F0BC, F144), one per mask bit; the same write as in ddc_rearm_idle_slaves",
+  "plain": "Acknowledges a pending bus event on the chosen inputs' monitor-control links."
+ },
+ "FUN_CODE_cbac": {
+  "name": "sys_stop_leon2m",
+  "brief": "Stop the main processor.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "prints 'Leon2 (Main) STOP...'; core control 0x9F020008 = 0x1003; power-off, power-saving and crash paths",
+  "plain": "Halts the main processor."
+ },
+ "FUN_CODE_cbf2": {
+  "name": "sys_stop_leon2s",
+  "brief": "Stop the input processor.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "prints 'Leon2 (Sub) STOP...'; core control = 0x1003 (twin of sys_stop_leon2m)",
+  "plain": "Halts the input processor."
+ },
+ "FUN_CODE_cc38": {
+  "name": "dbg_dump_uart_rx_ring",
+  "brief": "Print the unread bytes of the port 2 receive ring.",
+  "notes": "No caller in the bank-1 image.",
+  "topic": "dbg",
+  "basis": "derived",
+  "evidence": "ring 0xA208 from read index 0xA1E5 to write index IDATA 0x47",
+  "plain": "Shows received serial data on the debug output."
+ },
+ "FUN_CODE_cc7d": {
+  "name": "sys_setup_pll_regs",
+  "brief": "Program the clock unit's PLL registers and wait briefly.",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "0xCC8B bit 3 cleared, 0xD904..0xD90C = FE 03 04 .. 55 55 84 30, 0xF0-pass delay; step 1 of sys_step_clock_switch",
+  "plain": "Prepares the chip's clock generator."
+ },
+ "FUN_CODE_ccc2": {
+  "name": "power_reset_wake_table",
+  "brief": "Restart the wake-up table scan, optionally clearing the table.",
+  "params": [
+   {
+    "name": "clear_table",
+    "meaning": "1 = clear the table"
+   }
+  ],
+  "topic": "power",
+  "basis": "derived",
+  "evidence": "0xA64D = 0x1F; m == 1 resets the ten 0xA62F entries to 1F FF FF; callers command 0x16 and sys_main",
+  "plain": "Starts the standby input checks from the beginning."
+ },
+ "FUN_CODE_cd07": {
+  "name": "timer_set_clock_rates",
+  "brief": "Set the tick timer reload and serial port 1 rate for the current clock.",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "Timer 0 reload from the clock variant (0x0FA0 / 0x1F40) to 0xA772/0xA773, uart_set_baud_rate(1, 4800); counterpart timer_set_crystal_rates",
+  "plain": "Keeps the timing correct after a clock change."
+ },
+ "FUN_CODE_cd4b": {
+  "name": "hdmi_cec_report_request",
+  "brief": "Print the pending CEC power request and flag a power-up request.",
+  "topic": "hdmi",
+  "basis": "proven",
+  "evidence": "prints '_SYS_CECRequest_PowerUp' / _PowerDown / _ActivateSC / _DeviceControl_Power; sets bit 0x11 for power-up requests",
+  "plain": "Reacts when another HDMI device asks the monitor to switch on."
+ },
+ "FUN_CODE_cd8c": {
+  "name": "flash_calc_window_room",
+  "brief": "Return the room left in the flash window after the extension offset.",
+  "returns": "32-bit size",
+  "topic": "flash",
+  "basis": "descriptive",
+  "evidence": "0xA70D[1] - 0xA70D[0] - 0xA717; command 0x14 (result not used)",
+  "plain": "Computes how much flash space a job may use."
+ },
+ "FUN_CODE_cdcd": {
+  "name": "usb_cc_set_default_bytes",
+  "brief": "Write the default values of bytes 0x48..0x4D of the USB-C CC block.",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "00 08 7F 04 00 00 at the pointer 0xA76D, 0xF030 bit 2; caller usb_cc_initialize",
+  "plain": "Sets default values of the USB-C detector."
+ },
+ "FUN_CODE_ce0d": {
+  "name": "reg_port_page_write_entry1",
+  "brief": "Shared entry code 1 of reg_port_page_write, placed in front of it by the compiler.",
+  "topic": "reg",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_ce0f": {
+  "name": "reg_port_page_write_entry2",
+  "brief": "Shared entry code 2 of reg_port_page_write, placed in front of it by the compiler.",
+  "topic": "reg",
+  "basis": "proven",
+  "evidence": "Keil OPTIMIZE(8) common-entry block in the callee's code segment (record)",
+  "plain": "Compiler-made start piece of another routine; it does nothing on its own."
+ },
+ "FUN_CODE_ce18": {
+  "name": "reg_port_page_write",
+  "brief": "Write one byte of a port's paged register window.",
+  "params": [
+   {
+    "name": "page",
+    "meaning": "port page"
+   },
+   {
+    "name": "v",
+    "meaning": "page:register"
+   },
+   {
+    "name": "x",
+    "meaning": "value"
+   }
+  ],
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "page byte 0xF401 + page, data at 0x6100 + page * 256 + register",
+  "plain": "Changes one setting of an input's receiver."
+ },
+ "FUN_CODE_ce4b": {
+  "name": "timer_apply_clock_rates",
+  "brief": "Reload the tick timer and the serial port rates after a clock change.",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "timer_set_clock_rates, TL0/TH0 from 0xA772/0xA773, uart_set_baud_rate(0x1D, 4800), 0xDD09 bit 3, pulse 0xF3D1 bit 2",
+  "plain": "Restores correct timing when the chip's clock changes."
+ },
+ "FUN_CODE_ce87": {
+  "name": "uart_find_port_with_rx_data",
+  "brief": "Return the number of a serial port whose receive ring holds data.",
+  "returns": "port 1..4, or 0xFF",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "compares read and write indexes of rings 1..4 (IDATA 0x42/0x44, 0x47/0x4C, 0x48/0x4E, 0x4A/0x51); caller ipc_fill_report_record",
+  "plain": "Finds a serial link that has received bytes."
+ },
+ "FUN_CODE_cefd": {
+  "name": "reg_port_page_read16",
+  "brief": "Read a 16-bit value from a port's paged register window.",
+  "params": [
+   {
+    "name": "page",
+    "meaning": "port page"
+   },
+   {
+    "name": "page_and_reg",
+    "meaning": "page:register"
+   }
+  ],
+  "returns": "16-bit value",
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "page byte 0xF401 + page, data at 0x6100 + page * 256 + register",
+  "plain": "Reads one setting of an input's receiver."
+ },
+ "FUN_CODE_cf38": {
+  "name": "power_check_sync_input_alt",
+  "brief": "Set up the sync meter another way for an input and check its timing.",
+  "returns": "1 when a valid signal is seen",
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "register 0xD523, wake block / sync meter writes; result from power_calc_sync_ratio; second check of wake kind 0",
+  "plain": "In standby, checks again whether a video signal has appeared."
+ },
+ "FUN_CODE_cf73": {
+  "name": "flash_send_cmd_read_byte",
+  "brief": "Send one SPI flash command and return the byte the flash answers.",
+  "params": [
+   {
+    "name": "cmd",
+    "meaning": "SPI flash opcode"
+   }
+  ],
+  "returns": "answer byte",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "SPI master regs 0xF0EA/0xF0EF; used with 05h Read Status (standard SPI opcode)",
+  "plain": "Asks the flash chip one question, such as its status, and returns the answer."
+ },
+ "FUN_CODE_cfad": {
+  "name": "uart_flush_tx_queue_port2",
+  "brief": "Send the queued bytes of serial port 2 and empty the queue.",
+  "notes": "Waits while the transmit buffer is full (status bit 3).",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "record type 3 sub 2 of the message handler (port numbers 1..4); baud regs 0xF0F7/F8 set with data reg 0xF0FB",
+  "plain": "Sends the waiting text of the second serial link."
+ },
+ "FUN_CODE_d021": {
+  "name": "uart_flush_tx_queue_port4",
+  "brief": "Send the queued bytes of serial port 4 and empty the queue.",
+  "notes": "Waits while the transmit buffer is full (status bit 3).",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "twin of uart_flush_tx_queue_port2; record type 3 sub 4 of the message handler, baud regs 0xF06F/70",
+  "plain": "Sends the waiting text of the fourth serial link."
+ },
+ "FUN_CODE_d05b": {
+  "name": "i2c_sw_bit_delay_entry1",
+  "brief": "Update a software I2C line, then wait one bit delay (shared entry)",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of i2c_sw_bit_delay; not a function of its own",
+  "plain": "Part of the slow hand-driven I2C wire control."
+ },
+ "FUN_CODE_d05e": {
+  "name": "i2c_sw_bit_delay_entry2",
+  "brief": "Update a software I2C line, then wait one bit delay (shared entry)",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of i2c_sw_bit_delay; not a function of its own",
+  "plain": "Part of the slow hand-driven I2C wire control."
+ },
+ "FUN_CODE_d07e": {
+  "name": "i2c_sw_bit_delay_entry3",
+  "brief": "Update a software I2C line, then wait one bit delay (shared entry)",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of i2c_sw_bit_delay; not a function of its own",
+  "plain": "Part of the slow hand-driven I2C wire control."
+ },
+ "FUN_CODE_d080": {
+  "name": "i2c_sw_bit_delay_entry4",
+  "brief": "Update a software I2C line, then wait one bit delay (shared entry)",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of i2c_sw_bit_delay; not a function of its own",
+  "plain": "Part of the slow hand-driven I2C wire control."
+ },
+ "FUN_CODE_d086": {
+  "name": "i2c_sw_bit_delay",
+  "brief": "Wait the fixed delay between two software I2C line changes.",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "module of the bit-banged I2C master (start, stop, byte write with ack, register read i2c_sw_read_regs)",
+  "plain": "Waits a moment so the I2C wires change at a steady pace."
+ },
+ "FUN_CODE_d095": {
+  "name": "FE2P_SetLeon2BaseAddress",
+  "brief": "Store the flash window base address for the main processor and log it.",
+  "params": [
+   {
+    "name": "base",
+    "meaning": "flash window base"
+   }
+  ],
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "(original name printed: 'FE2P_SetLeon2BaseAddress %08lx')",
+  "plain": "Remembers where in the flash chip the main processor's program starts."
+ },
+ "FUN_CODE_d0cc": {
+  "name": "flash_erase_sectors",
+  "brief": "Erase a run of consecutive flash sectors with the given erase opcode.",
+  "params": [
+   {
+    "name": "sector",
+    "meaning": "first sector"
+   },
+   {
+    "name": "count_minus_1",
+    "meaning": "count minus one"
+   },
+   {
+    "name": "cmd",
+    "meaning": "erase opcode"
+   }
+  ],
+  "notes": "Not called anywhere.",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "loops the DoBlockErase routine over sector .. sector + n; no caller in the image",
+  "plain": "Wipes several neighbouring pieces of the flash chip."
+ },
+ "FUN_CODE_d103": {
+  "name": "irq_timer0_tick",
+  "brief": "Count one system tick on the timer 0 interrupt and reload the timer.",
+  "topic": "irq",
+  "basis": "proven",
+  "evidence": "interrupt vector 0x000B (timer 0); 16-bit tick counter in IDATA 0x57",
+  "plain": "Keeps the 8051's clock ticking for all its timeouts and delays."
+ },
+ "FUN_CODE_d13a": {
+  "name": "usb_cc_load_default_params",
+  "brief": "Write five fixed parameter sets into the Type-C CC controller record.",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "called by the 'USB CC Initialize' routine; each set goes to bytes 0x38..0x3A of the CC register block",
+  "plain": "Loads start values into the USB-C connector controller."
+ },
+ "FUN_CODE_d171": {
+  "name": "hdcp_load_dptx_key_data",
+  "brief": "Copy the 282-byte HDCP data block into the DP transmitter's key port.",
+  "topic": "hdcp",
+  "basis": "derived",
+  "evidence": "only use is command 0x21, printed name 'CMD_WRITE_DPTXHDCP'; 0x11A bytes from 0x3E00 to port byte 0xD5E3",
+  "plain": "Hands the copy-protection key data to the DisplayPort output."
+ },
+ "FUN_CODE_d1a8": {
+  "name": "uart_tx_ring_put",
+  "brief": "Put one character into the serial port 1 transmit ring and restart sending.",
+  "params": [
+   {
+    "name": "ch",
+    "meaning": "character"
+   }
+  ],
+  "returns": "0 stored, 0xFF ring full",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "16-entry ring with head/tail, sets TI to restart the serial interrupt",
+  "plain": "Queues one letter for the 8051's own serial output."
+ },
+ "FUN_CODE_d1de": {
+  "name": "sys_toggle_warm_reset",
+  "brief": "Pulse the warm-reset control bits and log the warm reset.",
+  "notes": "Registers 0xF04F and 0xD570 are written several times on purpose.",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "prints '0x4570[5] toggle ==> warm Reset!!' after the register writes",
+  "plain": "Restarts part of the chip without switching it off."
+ },
+ "FUN_CODE_d214": {
+  "name": "sys_step_clock_switch",
+  "brief": "Advance the switch-over from the crystal clock to the PLL clock by one step.",
+  "notes": "Step counter = dp_power_up_request (1: PLL registers; 2; 3: switch, then 4). Runs from an interrupt in register bank 3; not used on chip id 0x20.",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "step 1 programs the clock unit (regs 0xD904..), step 3 switches the clock and timer rates; the counter is the byte dp_power_up_request",
+  "plain": "Moves the 8051 step by step onto its fast clock."
+ },
+ "FUN_CODE_d27f": {
+  "name": "power_find_wake_entry",
+  "brief": "Return the setting byte of the wake-source table entry of this type.",
+  "params": [
+   {
+    "name": "key",
+    "meaning": "wake source type"
+   }
+  ],
+  "returns": "entry byte 2, 0xFF when absent",
+  "topic": "power",
+  "basis": "derived",
+  "evidence": "ten 3-byte entries ended by type 0x1F, the table the standby wake check walks (types 7..10 = DP wake)",
+  "plain": "Looks up how one wake-up source is set up."
+ },
+ "FUN_CODE_d2b4": {
+  "name": "reg_write_sync_meter_mode",
+  "brief": "Set two mode fields of the sync measurement block.",
+  "params": [
+   {
+    "name": "a",
+    "meaning": "field written to reg 0x1B bits 5..7"
+   },
+   {
+    "name": "b",
+    "meaning": "field value"
+   }
+  ],
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "writes regs 0x29 and 0x1B of the block read by the standby signal checks",
+  "plain": "Sets how the 8051 measures the incoming picture signal timing."
+ },
+ "FUN_CODE_d2e9": {
+  "name": "sys_scan_keys_and_ir",
+  "brief": "Run the key scan and the IR code matcher once; note when neither fired.",
+  "returns": "non-zero when a key or code was found and the release flag was already set",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "ORs power_scan_wake_keys (prints 'Key%02X', 'ADC key') and power_match_ir_wake_code (matches the IR ring); flag 0xA629",
+  "plain": "Checks the buttons and the remote-control input once."
+ },
+ "FUN_CODE_d31d": {
+  "name": "flash_update_fe2p_address",
+  "brief": "Store and log a new LEON flash window address and pass it to the main chip.",
+  "params": [
+   {
+    "name": "addr",
+    "meaning": "new window base"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "prints 'Update FE2P Addr %08lx'; posts the value to mailbox portal word 0xB4",
+  "plain": "Moves the place in the flash chip that the main processor reads its program from."
+ },
+ "FUN_CODE_d351": {
+  "name": "power_clear_port_wake_flags",
+  "brief": "Clear the wake flags of all four input ports before standby.",
+  "notes": "Only on chip id 0x20.",
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "same register writes as power_test_port_wake_flag for ports 0..3; part of CMD_SYS_POWERSAVING",
+  "plain": "Resets the signals that tell the monitor an input woke it up."
+ },
+ "FUN_CODE_d385": {
+  "name": "sys_mirror_flag_to_buffer",
+  "brief": "Copy a status byte into a 63-byte buffer when its request flag is set.",
+  "notes": "Not called anywhere.",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "mechanics only; no caller in the image",
+  "plain": "Copies one status value into a block of memory on request."
+ },
+ "FUN_CODE_d3b9": {
+  "name": "flash_read_to_buffer",
+  "brief": "Read the requested flash range into the 2 KB transfer buffer.",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "mailbox command 0x12 (flash read job); address/length from the command record",
+  "plain": "Reads part of the flash chip for the main processor."
+ },
+ "FUN_CODE_d3eb": {
+  "name": "flash_write_from_buffer",
+  "brief": "Program the 2 KB transfer buffer into the requested flash range.",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "mailbox command 0x11 (flash write job); calls the page-program routine",
+  "plain": "Writes data from the main processor into the flash chip."
+ },
+ "FUN_CODE_d41d": {
+  "name": "ipc_clear_report_record",
+  "brief": "Clear the outgoing report record for the main processor.",
+  "notes": "Not called anywhere.",
+  "topic": "ipc",
+  "basis": "derived",
+  "evidence": "record 0xA3E5..0xA46B that ipc_fill_report_record fills (types 1..5); no caller in the image",
+  "plain": "Empties the message the 8051 sends back to the main processor."
+ },
+ "FUN_CODE_d44e": {
+  "name": "timer_delay_ticks",
+  "brief": "Wait the given number of system ticks.",
+  "params": [
+   {
+    "name": "ticks_minus_one",
+    "meaning": "ticks minus one"
+   }
+  ],
+  "topic": "timer",
+  "basis": "proven",
+  "evidence": "busy-waits on the timer 0 tick counter",
+  "plain": "Pauses for a short, fixed time."
+ },
+ "FUN_CODE_d47f": {
+  "name": "i2c_sw_probe_device",
+  "brief": "Probe an address on the software I2C bus; an empty start/stop pair goes before and after.",
+  "params": [
+   {
+    "name": "address_byte",
+    "meaning": "address byte"
+   }
+  ],
+  "returns": "1 when the device acknowledged",
+  "notes": "Not called anywhere.",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "start (97c4), byte write with ack test (6781), stop (c6ec); an empty start/stop pair before and after",
+  "plain": "Checks whether a chip answers at an I2C address."
+ },
+ "FUN_CODE_d4b0": {
+  "name": "power_test_port_wake_flag",
+  "brief": "Report whether input port n has raised its wake flag.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "port 0..3"
+   }
+  ],
+  "returns": "1 when the flag was set",
+  "notes": "Only on chip id 0x20.",
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "standby wake check cases 1..6; write-back of 0x7E7A after a set bit",
+  "plain": "Checks whether a video input asked the monitor to wake up."
+ },
+ "FUN_CODE_d4e1": {
+  "name": "usb_cc_set_control_bit0",
+  "brief": "Set or clear bit 0 of control byte 0x10 in the Type-C CC block.",
+  "params": [
+   {
+    "name": "on",
+    "meaning": "1 set, 0 clear"
+   }
+  ],
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "CC register block pointer 0xA76D",
+  "plain": "Switches one setting of the USB-C connector controller."
+ },
+ "FUN_CODE_d511": {
+  "name": "uart_putchar",
+  "brief": "Send one character on serial port 1, waiting while the transmit ring is full.",
+  "params": [
+   {
+    "name": "ch",
+    "meaning": "character"
+   }
+  ],
+  "returns": "the character",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "character output used by the printf code (stub at 0x2817) and by message type 3 port 1",
+  "plain": "Prints one letter of the 8051's debug messages."
+ },
+ "FUN_CODE_d53f": {
+  "name": "reg_read_paged_byte",
+  "brief": "Select a register page and read one byte through the page window.",
+  "params": [
+   {
+    "name": "page",
+    "meaning": "block"
+   },
+   {
+    "name": "select_offset",
+    "meaning": "page:offset"
+   }
+  ],
+  "returns": "register byte",
+  "topic": "reg",
+  "basis": "derived",
+  "evidence": "page register 0xF401 + page, window 0x6100 + page * 256",
+  "plain": "Reads one setting of a chip block that is reached through a page."
+ },
+ "FUN_CODE_d56d": {
+  "name": "reg_test_table_reg_bits",
+  "brief": "Test mask bits of the register picked from the 28-entry pointer table.",
+  "params": [
+   {
+    "name": "index",
+    "meaning": "table index"
+   },
+   {
+    "name": "mask",
+    "meaning": "bits"
+   }
+  ],
+  "returns": "1 when a bit is set",
+  "notes": "Not called anywhere.",
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "pointer table CODE 0xB13E; reads twice and writes back; no caller",
+  "plain": "Checks bits of one chip setting from a fixed list."
+ },
+ "FUN_CODE_d59b": {
+  "name": "ipc_clear_portal_word_entry",
+  "brief": "Clear a mailbox portal word (shared entry with zero offset bits)",
+  "topic": "ipc",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of ipc_clear_portal_word; not a function of its own",
+  "plain": "Part of telling the main processor a command is done."
+ },
+ "FUN_CODE_d5a1": {
+  "name": "ipc_clear_portal_word",
+  "brief": "Write zero into one word of the main chip's mailbox portal.",
+  "params": [
+   {
+    "name": "off",
+    "meaning": "portal word offset"
+   }
+  ],
+  "topic": "ipc",
+  "basis": "proven",
+  "evidence": "command switch tail clears portal word +0x00 to acknowledge a command",
+  "plain": "Tells the main processor that the 8051 took its command."
+ },
+ "FUN_CODE_d5c8": {
+  "name": "sys_switch_to_crystal_clock",
+  "brief": "Switch the 8051 back to the crystal clock and slow timer rates.",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "clock unit regs 0xD904..0xD929 then the fixed slow timer reload; called when activity ends",
+  "plain": "Puts the 8051 on its slow, low-power clock."
+ },
+ "FUN_CODE_d5f3": {
+  "name": "flash_send_cmd",
+  "brief": "Send one single-byte command to the SPI flash and wait until it is out.",
+  "params": [
+   {
+    "name": "cmd",
+    "meaning": "SPI opcode"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "SPI master regs 0xF0EE/0xF0E5; used with 06h Write Enable (standard SPI opcode)",
+  "plain": "Gives the flash chip a short order such as 'allow writing'."
+ },
+ "FUN_CODE_d61c": {
+  "name": "reg_update_sync_meter_bits",
+  "brief": "Set or clear mask bits in one register of the sync measurement block.",
+  "params": [
+   {
+    "name": "reg",
+    "meaning": "register"
+   },
+   {
+    "name": "mask",
+    "meaning": "bits"
+   },
+   {
+    "name": "on",
+    "meaning": "1 set, else clear"
+   }
+  ],
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "read-modify-write on the block of reg_read_sync_meter_byte",
+  "plain": "Changes single settings of the signal timing meter."
+ },
+ "FUN_CODE_d645": {
+  "name": "reg_update_wake_block_bits",
+  "brief": "Set or clear mask bits in one register of the wake detection block.",
+  "params": [
+   {
+    "name": "reg",
+    "meaning": "register"
+   },
+   {
+    "name": "mask",
+    "meaning": "bits"
+   },
+   {
+    "name": "on",
+    "meaning": "1 set"
+   }
+  ],
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "block written per wake-source type by power_set_wake_block_mode",
+  "plain": "Changes single settings of the wake-up detector."
+ },
+ "FUN_CODE_d697": {
+  "name": "sys_ir_ring_read_byte",
+  "brief": "Take the next byte from the 128-byte IR ring, 0xFF when it is empty.",
+  "returns": "byte or 0xFF",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "ring 0xA566; read by the IR matcher and sent as report type 5 after 'Reload IR'",
+  "plain": "Takes the next remote-control value from its queue."
+ },
+ "FUN_CODE_d6bf": {
+  "name": "sys_find_pll_setting",
+  "brief": "Return the index of the PLL setting that fits this chip variant.",
+  "returns": "index 0..5, 0 when none",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "searches CODE tables 0xDC7D / 0xDC83 by chip id 0xD511; result goes to clock reg 0xD929",
+  "plain": "Picks the right fast-clock setting for this chip version."
+ },
+ "FUN_CODE_d6e7": {
+  "name": "power_test_wake_status_type11",
+  "brief": "Report the status bits checked for wake-source types 11 and 12.",
+  "returns": "1 when all three bits are set",
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "standby wake check cases 11/12; regs 0x5407..0x5409",
+  "plain": "Checks one kind of wake-up signal."
+ },
+ "FUN_CODE_d70f": {
+  "name": "sys_set_timed_ramp_fields",
+  "brief": "Store two ramp field values and select ramp mode for the timed effect.",
+  "params": [
+   {
+    "name": "slot",
+    "meaning": "field 0/1"
+   },
+   {
+    "name": "record_index",
+    "meaning": "3-bit target"
+   },
+   {
+    "name": "rate",
+    "meaning": "5-bit rate"
+   }
+  ],
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "command 0x30; record 0xA735 stepped by sys_run_timed_ramp (mode 2 ramps bytes up/down)",
+  "plain": "Sets up a gradual change that the 8051 carries out over time."
+ },
+ "FUN_CODE_d737": {
+  "name": "dp_mrx_read_reg",
+  "brief": "Read one register of DisplayPort receiver 0 or 1.",
+  "params": [
+   {
+    "name": "sel",
+    "meaning": "receiver 0/1"
+   },
+   {
+    "name": "idx",
+    "meaning": "register"
+   }
+  ],
+  "returns": "register byte",
+  "notes": "Runs in register bank 3 (interrupt context).",
+  "topic": "dp",
+  "basis": "derived",
+  "evidence": "banks 0x4D00/0x4E00 programmed by DP_EnableMRX and the AUX request handler",
+  "plain": "Reads a setting of one DisplayPort input."
+ },
+ "FUN_CODE_d785": {
+  "name": "usb_cc_test_lines_split",
+  "brief": "Report whether one CC line reads high and the other low.",
+  "returns": "flag bit 0x1E",
+  "notes": "Not called anywhere.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "compares the two CC readings 0xA672/0xA673 against 0xD4 and 0x41",
+  "plain": "Checks how a USB-C cable is plugged in."
+ },
+ "FUN_CODE_d7ac": {
+  "name": "power_test_adc_key_level",
+  "brief": "Pulse register 0xF0A8, wait, and report whether register 0xF0AD reads between 1 and 9.",
+  "returns": "1 when 0 < value < 10",
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "ADC control 0xF0A8, result 0xF0AD; standby wake check case 0",
+  "plain": "Checks the analogue key input for a press."
+ },
+ "FUN_CODE_d7d2": {
+  "name": "sys_get_cpu_clock_hz",
+  "brief": "Return the current 8051 clock frequency in hertz.",
+  "returns": "clock in Hz",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "12 MHz on the crystal (bit 0x0E), else 48 MHz (chip id 0x20) or 96 MHz; used to set the baud rates",
+  "plain": "Tells the 8051 how fast it is running so its timings come out right."
+ },
+ "FUN_CODE_d7f7": {
+  "name": "usb_cc_test_active_line_high",
+  "brief": "Report whether the CC line of the current orientation reads high.",
+  "returns": "flag bit 0x1D",
+  "notes": "Not called anywhere.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "picks reading 0xA672 or 0xA673 by usb_cc_test_orientation_bits, threshold 0xD4",
+  "plain": "Checks the active wire of a USB-C connection."
+ },
+ "FUN_CODE_d81c": {
+  "name": "flash_write_extended_addr",
+  "brief": "Write the SPI flash extended address register (address bits 24 and up)",
+  "params": [
+   {
+    "name": "ext",
+    "meaning": "high address byte"
+   }
+  ],
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "opcodes 06h Write Enable, 05h status poll, C5h Write Extended Address Register",
+  "plain": "Lets the 8051 reach the upper part of a large flash chip."
+ },
+ "FUN_CODE_d83f": {
+  "name": "uart_send_test_byte_port4",
+  "brief": "Send a counting test byte on serial port 4 and log it.",
+  "notes": "Not called anywhere.",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "prints 'k %BX'; no caller in the image",
+  "plain": "Sends a test value down the fourth serial link."
+ },
+ "FUN_CODE_d884": {
+  "name": "dp_mrx_write_reg",
+  "brief": "Write one register of DisplayPort receiver 0 or 1.",
+  "params": [
+   {
+    "name": "sel",
+    "meaning": "receiver 0/1"
+   },
+   {
+    "name": "idx",
+    "meaning": "register"
+   },
+   {
+    "name": "v",
+    "meaning": "value"
+   }
+  ],
+  "notes": "Runs in register bank 3 (interrupt context).",
+  "topic": "dp",
+  "basis": "derived",
+  "evidence": "72 calls from DP_EnableMRX set-up sequences and the AUX request handler",
+  "plain": "Changes a setting of one DisplayPort input."
+ },
+ "FUN_CODE_d8a6": {
+  "name": "sys_scale_timing_to_clock",
+  "brief": "Set two timing registers in proportion to the current clock divider.",
+  "notes": "Runs in register bank 3 (interrupt context).",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "r from the clock divider reg 0xD929; regs 0xDCB1 = r * 9, 0xDCB2 = r * 15; step of sys_step_clock_switch",
+  "plain": "Adjusts two timing values after the clock speed changed."
+ },
+ "FUN_CODE_d8c8": {
+  "name": "usb_cc_init_port_mode",
+  "brief": "Choose the start-up mode of the Type-C CC controller and apply it.",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "step of USBCC_Initial; mode byte 0xA66E = 0x20 or 0x10 by status 0xA6A6, then usb_cc_set_control_bit0(0)",
+  "plain": "Prepares the USB-C connector controller in its starting role."
+ },
+ "FUN_CODE_d8ea": {
+  "name": "hdmi_cec_set_clock_divider",
+  "brief": "Set the CEC block's timing value for the selected clock rate.",
+  "topic": "hdmi",
+  "basis": "descriptive",
+  "evidence": "CEC block reg 0xD801 = 0x78 >> (reg 0xD520 & 3); tail of hdmi_cec_select_port (CEC regs 0xD800..0xD811)",
+  "plain": "Keeps the TV-control link's timing right for the current clock speed."
+ },
+ "FUN_CODE_d90a": {
+  "name": "ddc_get_first_pending_channel",
+  "brief": "Return the lowest DDC/CI channel with a message waiting, 0xFF if none.",
+  "returns": "channel 0..7 or 0xFF",
+  "topic": "ddc",
+  "basis": "derived",
+  "evidence": "lowest set bit of 0xA0F3; the report builder ipc_fill_report_record sends that channel's 0x3C-byte row as type 4",
+  "plain": "Finds the first monitor-control message that waits for the main processor."
+ },
+ "FUN_CODE_d92a": {
+  "name": "power_test_port_wake_status",
+  "brief": "Report bit 6 of the paged status register of input port page.",
+  "params": [
+   {
+    "name": "page",
+    "meaning": "port page"
+   }
+  ],
+  "returns": "1 when set",
+  "notes": "Only on chip id 0x20.",
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "reg_read_paged_byte(page, 0x041A) bit 6; part of the standby wake check of each port",
+  "plain": "Checks whether a video input shows activity while the monitor sleeps."
+ },
+ "FUN_CODE_d94a": {
+  "name": "timer_get_ticks",
+  "brief": "Return a consistent copy of the 16-bit system tick counter.",
+  "returns": "tick count",
+  "topic": "timer",
+  "basis": "proven",
+  "evidence": "re-reads the tick counter written by irq_timer0_tick until two reads agree",
+  "plain": "Reads the 8051's clock without catching it halfway through a change."
+ },
+ "FUN_CODE_d9a5": {
+  "name": "reg_read_sync_meter_word",
+  "brief": "Read a 16-bit value from two registers of the sync measurement block.",
+  "params": [
+   {
+    "name": "reg",
+    "meaning": "low register"
+   }
+  ],
+  "returns": "16-bit value",
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "regs 0x12/0x14/0x26 checked against picture size limits by power_check_sync_timing",
+  "plain": "Reads one measured timing value of the incoming signal."
+ },
+ "FUN_CODE_d9c3": {
+  "name": "reg_write_wake_block_byte_entry",
+  "brief": "Store the mode byte, then write two wake block registers (shared entry)",
+  "topic": "reg",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of reg_write_wake_block_byte; not a function of its own",
+  "plain": "Part of setting up the wake-up detector."
+ },
+ "FUN_CODE_d9d1": {
+  "name": "reg_write_wake_block_byte",
+  "brief": "Write one register of the wake detection block.",
+  "params": [
+   {
+    "name": "reg",
+    "meaning": "register"
+   },
+   {
+    "name": "val",
+    "meaning": "value"
+   }
+  ],
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "block programmed per wake-source type by power_set_wake_block_mode and by the standby signal checks",
+  "plain": "Changes one setting of the wake-up detector."
+ },
+ "FUN_CODE_d9e1": {
+  "name": "reg_read_wake_block_word",
+  "brief": "Read a 16-bit value from two registers of the wake detection block.",
+  "params": [
+   {
+    "name": "reg",
+    "meaning": "low register"
+   }
+  ],
+  "returns": "16-bit value",
+  "notes": "Not called anywhere.",
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "low byte first; no caller in the image",
+  "plain": "Reads one two-byte value of the wake-up detector."
+ },
+ "FUN_CODE_d9ff": {
+  "name": "reg_set_table_reg_to_7",
+  "brief": "Write 7 into the register picked from the 28-entry pointer table.",
+  "params": [
+   {
+    "name": "index",
+    "meaning": "table index"
+   }
+  ],
+  "notes": "Not called anywhere.",
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "pointer table CODE 0xB13E (as reg_test_table_reg_bits); no caller",
+  "plain": "Sets one chip setting from a fixed list to the value 7."
+ },
+ "FUN_CODE_da3a": {
+  "name": "dp_check_mrx0_wake",
+  "brief": "Report and log a wake request from DisplayPort receiver 0.",
+  "returns": "1 when woken",
+  "topic": "dp",
+  "basis": "proven",
+  "evidence": "prints 'mrx wake up'; flag bit 0 of the DP sink state 0xA6FD",
+  "plain": "Tells whether a computer on the first DisplayPort input wants the monitor to wake."
+ },
+ "FUN_CODE_da57": {
+  "name": "dp_check_mrx1_wake",
+  "brief": "Report and log a wake request from DisplayPort receiver 1.",
+  "returns": "1 when woken",
+  "topic": "dp",
+  "basis": "proven",
+  "evidence": "prints 'mrx1 wake up'; flag bit 4 of the DP sink state 0xA6FD",
+  "plain": "Tells whether a computer on the second DisplayPort input wants the monitor to wake."
+ },
+ "FUN_CODE_da74": {
+  "name": "usb_cc_test_orientation_bits",
+  "brief": "Report whether both orientation bits of the Type-C CC status are set.",
+  "returns": "1 when both set",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "bits 2..3 of byte 0x10 of the CC block; selects which CC reading the line tests use",
+  "plain": "Checks which way round a USB-C plug is inserted."
+ },
+ "FUN_CODE_da91": {
+  "name": "flash_erase_sector_at_addr",
+  "brief": "Erase the 4 KB flash sector that holds the requested address.",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "mailbox command 0x13; DoBlockErase(address / 0x1000, 0x20 = Sector Erase opcode)",
+  "plain": "Wipes one small piece of the flash chip for the main processor."
+ },
+ "FUN_CODE_daad": {
+  "name": "timer_set_crystal_rates",
+  "brief": "Load the timer reload and serial speed used on the crystal clock.",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "timer 0 reload 0xFC18 and 4800 baud; called on power off, power saving and the crystal clock switch",
+  "plain": "Keeps the 8051's timing right while it runs on its slow clock."
+ },
+ "FUN_CODE_dac8": {
+  "name": "timer_set_crystal_rates_short",
+  "brief": "Load a shorter timer reload and the crystal-clock serial speed.",
+  "notes": "Not called anywhere.",
+  "topic": "timer",
+  "basis": "descriptive",
+  "evidence": "same as timer_set_crystal_rates with reload 0xFF06; no caller",
+  "plain": "Alternative timing set-up for the slow clock."
+ },
+ "FUN_CODE_dae3": {
+  "name": "reg_write_wake_block_word",
+  "brief": "Write a 16-bit value into two registers of the wake detection block.",
+  "params": [
+   {
+    "name": "reg",
+    "meaning": "low register"
+   },
+   {
+    "name": "value",
+    "meaning": "value"
+   }
+  ],
+  "notes": "Not called anywhere.",
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "low byte first; no caller in the image",
+  "plain": "Changes one two-byte setting of the wake-up detector."
+ },
+ "FUN_CODE_dafe": {
+  "name": "ipc_write_shared_byte_entry",
+  "brief": "Load the arguments for a shared-byte write (shared entry)",
+  "topic": "ipc",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of ipc_write_shared_byte; not a function of its own",
+  "plain": "Part of passing a value to the main processor."
+ },
+ "FUN_CODE_db05": {
+  "name": "ipc_write_shared_byte",
+  "brief": "Write one byte of the shared report area read by the main processor.",
+  "params": [
+   {
+    "name": "v",
+    "meaning": "value"
+   },
+   {
+    "name": "i",
+    "meaning": "index 0..15"
+   }
+  ],
+  "topic": "ipc",
+  "basis": "derived",
+  "evidence": "XDATA 0xF230 + i (shared bytes 0xF200.. are seen by Leon2M at 0xCF03C800); used by the input scan 5a39",
+  "plain": "Leaves a value where the main processor can pick it up."
+ },
+ "FUN_CODE_db18": {
+  "name": "sys_pulse_variant_reg",
+  "brief": "Pulse the start-up control register on chip variant 0x1A.",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "reg 0xF06B = 3 then 1 when chip id 0xD511 is 0x1A; called first in the application start-up",
+  "plain": "Gives one chip version a start-up nudge."
+ },
+ "FUN_CODE_db32": {
+  "name": "uart_queue_tx_byte_port2",
+  "brief": "Queue one byte for serial port 2, sending the queue when it is full.",
+  "params": [
+   {
+    "name": "byte",
+    "meaning": "byte"
+   }
+  ],
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "message type 3 sub 2; flush by uart_flush_tx_queue_port2 at 0x37 bytes",
+  "plain": "Adds a letter to the second serial link's outgoing text."
+ },
+ "FUN_CODE_db4b": {
+  "name": "uart_queue_tx_byte_port3",
+  "brief": "Queue one byte for serial port 3, sending the queue when it is full.",
+  "params": [
+   {
+    "name": "byte",
+    "meaning": "byte"
+   }
+  ],
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "message type 3 sub 3; flush routine uart_flush_tx_queue_port3 at 0x37 bytes",
+  "plain": "Adds a letter to the third serial link's outgoing text."
+ },
+ "FUN_CODE_db64": {
+  "name": "uart_queue_tx_byte_port4",
+  "brief": "Queue one byte for serial port 4, sending the queue when it is full.",
+  "params": [
+   {
+    "name": "byte",
+    "meaning": "byte"
+   }
+  ],
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "message type 3 sub 4; flush by uart_flush_tx_queue_port4 at 0x37 bytes",
+  "plain": "Adds a letter to the fourth serial link's outgoing text."
+ },
+ "FUN_CODE_db7d": {
+  "name": "sys_test_port_event_bit",
+  "brief": "Report the event bit of port 0 or 1 in the activity status register.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "port 0/1"
+   }
+  ],
+  "returns": "1 when set",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "bit 6 / 7 of reg 0xDCB0; keeps the fast clock running while set (power_watch_dp_activity)",
+  "plain": "Checks whether something happened on one of two connections."
+ },
+ "FUN_CODE_db96": {
+  "name": "usb_cc_apply_orientation_ch0",
+  "brief": "Store the plug orientation as mode of CC channel 0 and apply it.",
+  "notes": "Not called anywhere.",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "mode 0xA780 from usb_cc_test_orientation_bits, then usb_cc_set_mode_ch0; no caller",
+  "plain": "Sets the first USB-C channel to match the way the plug is inserted."
+ },
+ "FUN_CODE_dbaf": {
+  "name": "usb_cc_apply_orientation_ch1",
+  "brief": "Store the plug orientation as mode of CC channel 1 and apply it.",
+  "notes": "Not called anywhere.",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "twin of usb_cc_apply_orientation_ch0 with mode 0xA781 and usb_cc_set_mode_ch1; no caller",
+  "plain": "Sets the second USB-C channel to match the way the plug is inserted."
+ },
+ "FUN_CODE_dbc8": {
+  "name": "ddc_clear_pending_channel",
+  "brief": "Clear the message-waiting flag of DDC/CI channel n.",
+  "params": [
+   {
+    "name": "channel",
+    "meaning": "channel"
+   }
+  ],
+  "topic": "ddc",
+  "basis": "derived",
+  "evidence": "bit n of 0xA0F3, cleared by the report builder after sending type 4",
+  "plain": "Marks one monitor-control message as passed on."
+ },
+ "FUN_CODE_dbdf": {
+  "name": "ipc_post_result_word",
+  "brief": "Post a 32-bit result word to the main chip's mailbox portal.",
+  "params": [
+   {
+    "name": "result",
+    "meaning": "result"
+   }
+  ],
+  "topic": "ipc",
+  "basis": "derived",
+  "evidence": "portal word 0xB0; used after the flash read job and with the 0xA800 buffer sum (message type 7)",
+  "plain": "Hands a result, such as a checksum, back to the main processor."
+ },
+ "FUN_CODE_dc0d": {
+  "name": "usb_cc_test_both_lines_low",
+  "brief": "Report whether both CC line readings are low.",
+  "returns": "flag bit 0x1A",
+  "notes": "Not called anywhere.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "CC readings 0xA672/0xA673 below 0x13; no caller",
+  "plain": "Checks the USB-C connector's two sense wires for a low level."
+ },
+ "FUN_CODE_dc24": {
+  "name": "usb_cc_test_both_lines_high",
+  "brief": "Report whether both CC line readings are high.",
+  "returns": "flag bit 0x1C",
+  "notes": "Not called anywhere.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "CC readings 0xA672/0xA673 above 0xD4; no caller",
+  "plain": "Checks the USB-C connector's two sense wires for a high level."
+ },
+ "FUN_CODE_dc92": {
+  "name": "usb_cc_initialize",
+  "brief": "Log and run the Type-C CC PHY and controller set-up.",
+  "topic": "usb",
+  "basis": "proven",
+  "evidence": "prints 'USB CC Initialize'; calls the 'Initial CC PHY' routine and the CC register loaders",
+  "plain": "Starts the USB-C connector controller."
+ },
+ "FUN_CODE_dca7": {
+  "name": "flash_chip_erase",
+  "brief": "Erase the whole SPI flash and wait until bit 1 (write enable) of its status byte is clear.",
+  "notes": "Not called anywhere.",
+  "topic": "flash",
+  "basis": "proven",
+  "evidence": "opcodes 06h Write Enable, C7h Chip Erase, 05h status poll; no caller",
+  "plain": "Wipes the complete flash chip."
+ },
+ "FUN_CODE_dcbb": {
+  "name": "power_clear_sequence_table",
+  "brief": "Clear the 18-byte table of pending pin sequence steps.",
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "table 0xA6AF stepped by power_apply_cut_list with the pin set/clear routine gpio_set_port_bits",
+  "plain": "Empties the list of planned power pin changes at start-up."
+ },
+ "FUN_CODE_dccf": {
+  "name": "reg_write_sync_meter_byte_entry",
+  "brief": "Write a sync meter register, then the next one (shared entry)",
+  "topic": "reg",
+  "basis": "derived",
+  "evidence": "Keil common-entry code in front of reg_write_sync_meter_byte; not a function of its own",
+  "plain": "Part of setting up the signal timing meter."
+ },
+ "FUN_CODE_dcd3": {
+  "name": "reg_write_sync_meter_byte",
+  "brief": "Write one register of the sync measurement block.",
+  "params": [
+   {
+    "name": "reg",
+    "meaning": "register"
+   },
+   {
+    "name": "val",
+    "meaning": "value"
+   }
+  ],
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "block whose regs 0x12/0x14/0x22/0x23/0x26 are checked against picture limits by power_check_sync_timing",
+  "plain": "Changes one setting of the signal timing meter."
+ },
+ "FUN_CODE_dce3": {
+  "name": "sys_ir_ring_is_empty",
+  "brief": "Report whether the 128-byte IR ring holds no data.",
+  "returns": "1 when empty",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "compares the write and read indexes of the ring read by sys_ir_ring_read_byte",
+  "plain": "Checks whether any remote-control values are waiting."
+ },
+ "FUN_CODE_dcf6": {
+  "name": "uart_setup_line_control",
+  "brief": "Set the serial line control registers and select the default port mode.",
+  "topic": "uart",
+  "basis": "descriptive",
+  "evidence": "reg 0xF053 = 0x83, 0xF055 = 6, then uart_set_line_format(1, 0) (per-port mode nibbles); part of the UART set-up",
+  "plain": "Prepares a serial link's data format."
+ },
+ "FUN_CODE_dd09": {
+  "name": "Enable_DPMRX",
+  "brief": "Log and enable both DisplayPort receivers for standby wake-up.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "(original name printed: 'Enable_DPMRX'); calls DP_EnableMRX(0) and (1); mailbox command 0x2A",
+  "plain": "Turns on the DisplayPort inputs so a computer can wake the monitor."
+ },
+ "FUN_CODE_dd2f": {
+  "name": "USBCC_Initial",
+  "brief": "Select the CC port, initialise it and log the start-up.",
+  "notes": "Not called anywhere.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "(original name printed: 'USBCC_Initial'); no caller in the image",
+  "plain": "Starts the USB-C connector controller."
+ },
+ "FUN_CODE_dd63": {
+  "name": "sys_set_match_flag",
+  "brief": "Store whether the last device check matched.",
+  "params": [
+   {
+    "name": "matched",
+    "meaning": "1 match"
+   }
+  ],
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "flag 0xA70C; only caller i2c_sw_match_device_id (I2C read compared with a 6-byte field)",
+  "plain": "Remembers the result of a comparison."
+ },
+ "FUN_CODE_dd74": {
+  "name": "reg_read_sync_meter_byte",
+  "brief": "Read one register of the sync measurement block.",
+  "params": [
+   {
+    "name": "reg",
+    "meaning": "register"
+   }
+  ],
+  "returns": "register byte",
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "8 callers in the standby signal checks (power_check_sync_timing, c0a1, cf38)",
+  "plain": "Reads one measured value of the incoming signal timing."
+ },
+ "FUN_CODE_dd85": {
+  "name": "reg_read_wake_block_byte",
+  "brief": "Read one register of the wake detection block.",
+  "params": [
+   {
+    "name": "reg",
+    "meaning": "register"
+   }
+  ],
+  "returns": "register byte",
+  "notes": "Not called anywhere.",
+  "topic": "reg",
+  "basis": "descriptive",
+  "evidence": "no caller in the image",
+  "plain": "Reads one setting of the wake-up detector."
+ },
+ "FUN_CODE_dd96": {
+  "name": "flash_clear_transfer_buffer",
+  "brief": "Fill the 2 KB flash transfer buffer with 0xFF.",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "buffer 0xA800..0xAFFF used by flash_read_to_buffer / flash_write_from_buffer; 0xFF = erased flash",
+  "plain": "Empties the buffer used for flash reads and writes."
+ },
+ "FUN_CODE_ddb6": {
+  "name": "uart_test_rx_reported",
+  "brief": "Report whether serial port n's received data is already reported.",
+  "params": [
+   {
+    "name": "port",
+    "meaning": "port"
+   }
+  ],
+  "returns": "bit",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "bit n of 0xA3E3, set by the report builder after a type 3 (serial data) report",
+  "plain": "Checks whether the main processor was already told about new serial data."
+ },
+ "FUN_CODE_ddd6": {
+  "name": "lib_delay_nops",
+  "brief": "Wait n passes of four no-operation instructions.",
+  "params": [
+   {
+    "name": "count",
+    "meaning": "passes"
+   }
+  ],
+  "notes": "Not called anywhere.",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "_nop_() loop; no caller in the image",
+  "plain": "Waits a very short moment."
+ },
+ "FUN_CODE_dde5": {
+  "name": "flash_get_leon2_base_address",
+  "brief": "Return the LEON flash window base saved during start-up.",
+  "returns": "base address",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "value stored by the start-up copy startup_load_core_images, passed to FE2P_SetLeon2BaseAddress",
+  "plain": "Gives the place in the flash where the main processor's program starts."
+ },
+ "FUN_CODE_ddf4": {
+  "name": "ipc_step_poll_slot",
+  "brief": "Advance the mailbox poll slot counter through 0..3.",
+  "topic": "ipc",
+  "basis": "descriptive",
+  "evidence": "counter 0xA3E2; only caller the mailbox service ipc_service_mailbox",
+  "plain": "Moves to the next of four message slots."
+ },
+ "FUN_CODE_de03": {
+  "name": "sys_set_timed_toggle_target",
+  "brief": "Store a target word and select toggle mode for the timed effect.",
+  "params": [
+   {
+    "name": "target",
+    "meaning": "target"
+   }
+  ],
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "command 0x18; record 0xA735 stepped by sys_run_timed_ramp (mode 1 toggles bits at an address)",
+  "plain": "Sets up a value that the 8051 switches on and off over time."
+ },
+ "FUN_CODE_de12": {
+  "name": "ipc_test_report_slot_free",
+  "brief": "Report whether the outgoing report record is empty and can be refilled.",
+  "returns": "1 when free",
+  "topic": "ipc",
+  "basis": "derived",
+  "evidence": "byte count 0xA3EA of the report record; the builder ipc_fill_report_record runs only when it is 0",
+  "plain": "Checks whether the 8051 may prepare its next message for the main processor."
+ },
+ "FUN_CODE_de2e": {
+  "name": "Disable_DPMRX",
+  "brief": "Log and switch off the DisplayPort receivers' standby request handling.",
+  "topic": "lib",
+  "basis": "proven",
+  "evidence": "(original name printed: 'Disable_DPMRX'); mailbox command 0x2B, then dp_mrx_disable_aux_irqs",
+  "plain": "Stops the DisplayPort inputs from waking the monitor."
+ },
+ "FUN_CODE_de50": {
+  "name": "uart_test_no_rx_data",
+  "brief": "Report whether no serial port has received data to pass on.",
+  "returns": "1 when none",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "uart_find_port_with_rx_data returns the port 1..4 with data or 0xFF; tested by the report builder before a type 3 report",
+  "plain": "Checks whether any serial link has new data for the main processor."
+ },
+ "FUN_CODE_de87": {
+  "name": "usb_cc_set_mode2_ch0",
+  "brief": "Select mode 2 for CC channel 0 and apply it.",
+  "notes": "Not called anywhere.",
+  "topic": "usb",
+  "basis": "descriptive",
+  "evidence": "mode 0xA780 = 2 then usb_cc_set_mode_ch0, as at the end of 'Initial CC PHY'; no caller",
+  "plain": "Puts the first USB-C channel into one fixed mode."
+ },
+ "FUN_CODE_de92": {
+  "name": "ddc_test_none_pending",
+  "brief": "Report whether no DDC/CI channel has a message waiting.",
+  "returns": "1 when none",
+  "topic": "ddc",
+  "basis": "derived",
+  "evidence": "pending byte 0xA0F3 is 0; tested by the report builder before a type 4 report",
+  "plain": "Checks whether any monitor-control message waits for the main processor."
+ },
+ "FUN_CODE_dea6": {
+  "name": "sys_ir_ring_test_empty",
+  "brief": "Report whether the IR ring is empty (bit result)",
+  "returns": "1 when empty",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "bit form of sys_ir_ring_is_empty; the report builder sends the ring ('Reload IR') when it is not",
+  "plain": "Checks whether any remote-control values are waiting."
+ },
+ "FUN_CODE_deb0": {
+  "name": "power_take_cec_wake_request",
+  "brief": "Return and clear the flag of a CEC power-up request.",
+  "returns": "1 when a request was pending",
+  "topic": "power",
+  "basis": "derived",
+  "evidence": "bit 0x11 set by the CEC request printer hdmi_cec_report_request for _SYS_CECRequest_PowerUp and Power control",
+  "plain": "Tells the main loop once that a TV or player asked the monitor to switch on."
+ },
+ "FUN_CODE_dedc": {
+  "name": "hdmi_cec_get_operand",
+  "brief": "Return the operand byte of the last CEC request.",
+  "returns": "operand",
+  "topic": "hdmi",
+  "basis": "derived",
+  "evidence": "byte 0xA759; hdmi_cec_report_request treats DeviceControl_Power with operand 0x40 as power-up",
+  "plain": "Gives the detail value of the last command from a TV or player."
+ },
+ "FUN_CODE_dee2": {
+  "name": "ddc_get_pending_channels",
+  "brief": "Return the bit mask of DDC/CI channels with a message waiting.",
+  "returns": "channel mask",
+  "topic": "ddc",
+  "basis": "derived",
+  "evidence": "byte 0xA0F3; one bit per channel row at 0xA0F4",
+  "plain": "Lists the monitor-control messages that wait for the main processor."
+ },
+ "FUN_CODE_def4": {
+  "name": "uart_init",
+  "brief": "Set up the serial ports, the timers and their interrupts.",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "uart_setup_line_control then uart_init_8051_serial; called in the application start-up",
+  "plain": "Prepares the 8051's serial links and clocks at start-up."
+ },
+ "FUN_CODE_defa": {
+  "name": "uart_get_rx_write_index_p4_low",
+  "brief": "Return the low byte of the serial port 4 receive ring write position (IDATA 0x4B).",
+  "returns": "the byte",
+  "notes": "Not called anywhere.",
+  "topic": "uart",
+  "basis": "descriptive",
+  "evidence": "IDATA 0x4B = low byte of uart_rx_write_index_port4 (0x4A); no caller in the image",
+  "plain": "An unused helper that reads part of a serial receive counter."
+ },
+ "thunk_FUN_CODE_568f": {
+  "name": "ddc_rearm_idle_slaves_thunk",
+  "brief": "Forward to ddc_rearm_idle_slaves.",
+  "topic": "ddc",
+  "basis": "derived",
+  "evidence": "single LJMP to ddc_rearm_idle_slaves (ddc_rearm_idle_slaves); called from sys_service_ddc_and_cec",
+  "plain": "Passes control on to the routine that readies the monitor-control links again."
+ },
+ "FUN_CODE_df02": {
+  "name": "sys_set_flag_0x0d",
+  "brief": "Set flag bit 0x0D.",
+  "notes": "Not called anywhere.",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "bit 0x0D (byte 0x21 bit 5); no caller",
+  "plain": "Switches one stored flag on."
+ },
+ "FUN_CODE_df05": {
+  "name": "sys_clear_flag_0x0d",
+  "brief": "Clear flag bit 0x0D.",
+  "notes": "Not called anywhere.",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "bit 0x0D (byte 0x21 bit 5); no caller",
+  "plain": "Switches one stored flag off."
+ },
+ "FUN_CODE_df08": {
+  "name": "sys_test_flag_0x0d",
+  "brief": "Return flag bit 0x0D.",
+  "returns": "flag",
+  "notes": "Not called anywhere.",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "bit 0x0D (byte 0x21 bit 5); no caller",
+  "plain": "Reads one stored flag."
+ },
+ "FUN_CODE_df0b": {
+  "name": "sys_is_on_crystal_clock",
+  "brief": "Report whether the 8051 runs on its slow crystal clock.",
+  "returns": "1 on the crystal clock",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "bit 0x0E set on power saving / power off, cleared at start-up; sys_get_cpu_clock_hz returns 12 MHz when set",
+  "plain": "Tells whether the 8051 is in its slow, low-power clock mode."
+ },
+ "FUN_CODE_df0f": {
+  "name": "sys_empty_function_2",
+  "brief": "Empty function: returns at once.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "a single return instruction",
+  "plain": "A routine that does nothing."
+ },
+ "FUN_CODE_df14": {
+  "name": "sys_empty_function_3",
+  "brief": "Empty function: returns at once.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "a single return instruction",
+  "plain": "A routine that does nothing."
+ },
+ "FUN_CODE_df16": {
+  "name": "sys_empty_function_4",
+  "brief": "Empty function: returns at once.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "a single return instruction",
+  "plain": "A routine that does nothing."
+ },
+ "FUN_CODE_df17": {
+  "name": "sys_empty_function_5",
+  "brief": "Empty function: returns at once.",
+  "topic": "sys",
+  "basis": "proven",
+  "evidence": "a single return instruction",
+  "plain": "A routine that does nothing."
+ },
+ "FUN_CODE_bbca": {
+  "name": "edid_set_port_entries",
+  "brief": "Enable and set the EDID slave entry of each port selected by mask.",
+  "params": [
+   {
+    "name": "port_mask",
+    "meaning": "channels 0..6"
+   },
+   {
+    "name": "entry_value",
+    "meaning": "value"
+   }
+  ],
+  "topic": "edid",
+  "basis": "derived",
+  "evidence": "mailbox command 0x0E; port pairs 0xF180 + 2i / 0xF181 + 2i bit 7, the pairs edid_clear_port_entries clears",
+  "plain": "Sets up the display-data answer of several video inputs in one go."
+ },
+ "FUN_CODE_cfe7": {
+  "name": "uart_flush_tx_queue_port3",
+  "brief": "Send the queued bytes of serial port 3 and empty the queue.",
+  "notes": "Waits while the transmit buffer is full (status bit 3).",
+  "topic": "uart",
+  "basis": "derived",
+  "evidence": "twin of uart_flush_tx_queue_port2; message type 3 sub 3, data reg 0xF037, baud regs 0xF033/34",
+  "plain": "Sends the waiting text of the third serial link."
+ },
+ "FUN_CODE_d24a": {
+  "name": "sys_switch_to_pll_clock",
+  "brief": "Switch the 8051 to the PLL clock once locked and set the fast timer rates.",
+  "notes": "Runs in register bank 3 (interrupt context).",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "lock bit 7 of reg 0xD90B; divider to 0xD929, new timer 0 reload and timer 1 baud value",
+  "plain": "Puts the 8051 on its fast clock when that clock is ready."
+ },
+ "FUN_CODE_d66e": {
+  "name": "usb_cc_select_port_block",
+  "brief": "Point the CC register block pointer at the selected Type-C port.",
+  "topic": "usb",
+  "basis": "derived",
+  "evidence": "bits 0..1 of 0xA6A5 select block 0xB250 or 0x1A50 (same selection picks the CC readings)",
+  "plain": "Chooses which USB-C connector the 8051 talks to."
+ },
+ "FUN_CODE_d75e": {
+  "name": "dp_mrx_disable_aux_irqs",
+  "brief": "Turn off the AUX request interrupts of both DisplayPort receivers.",
+  "topic": "dp",
+  "basis": "derived",
+  "evidence": "clears bit 0 of the request control regs 0xDCDE/DF and 0xDCCE/CF tested by the AUX interrupt dp_aux_service",
+  "plain": "Stops the 8051 from answering DisplayPort requests itself."
+ },
+ "FUN_CODE_d862": {
+  "name": "sys_ir_ring_is_full",
+  "brief": "Report whether the 128-byte IR ring has no free slot.",
+  "returns": "1 when full",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "write index one behind the read index (wrap at 0x7F); used by the ring writer irq_record_ir_pulse",
+  "plain": "Checks whether the remote-control queue is full."
+ },
+ "FUN_CODE_d969": {
+  "name": "lib_is_within_distance",
+  "brief": "Report whether two values differ by less than a limit.",
+  "params": [
+   {
+    "name": "first",
+    "meaning": "first value"
+   },
+   {
+    "name": "second",
+    "meaning": "second value"
+   },
+   {
+    "name": "limit",
+    "meaning": "limit"
+   }
+  ],
+  "returns": "1 when within",
+  "topic": "lib",
+  "basis": "derived",
+  "evidence": "|a - b| < limit; used by the IR code matcher",
+  "plain": "Checks whether two measurements are close enough to count as equal."
+ },
+ "FUN_CODE_d987": {
+  "name": "uart_init_8051_serial",
+  "brief": "Set up the 8051 serial port, both timers and their interrupts.",
+  "topic": "uart",
+  "basis": "proven",
+  "evidence": "standard 8051 SFRs: SCON = 0x52, TMOD = 0x21, PCON.SMOD, TR0/TR1, EX0/EX1/ET0/ES, PS",
+  "plain": "Starts the 8051's own serial link and timers."
+ },
+ "FUN_CODE_dbf6": {
+  "name": "timer_get_counts_per_ms",
+  "brief": "Return the timer 0 counts that make one millisecond on this chip.",
+  "returns": "counts per ms",
+  "topic": "timer",
+  "basis": "derived",
+  "evidence": "4000 on chip id 0x20 (48 MHz / 12), else 8000 (96 MHz / 12); used to compute the tick reload",
+  "plain": "Tells the timer how far to count for one millisecond."
+ },
+ "FUN_CODE_dc3b": {
+  "name": "sys_service_ddc_and_cec",
+  "brief": "Re-arm idle DDC/CI links and, while off or saving power, report CEC requests.",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "ddc_rearm_idle_slaves, then hdmi_cec_report_request (prints _SYS_CECRequest_*) when run state 0xA770 is 0 or 1",
+  "plain": "Keeps the monitor-control links ready and listens for TV or player commands in standby."
+ },
+ "FUN_CODE_dc51": {
+  "name": "flash_begin_access",
+  "brief": "Claim the SPI flash interface for the 8051 before a flash job.",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "sets bit 7 of reg 0xF1DF (bit 0 of 0xF1A8 cleared on chip 0x1A); called at the start of every flash routine",
+  "plain": "Takes over the flash chip before reading or writing it."
+ },
+ "FUN_CODE_dc67": {
+  "name": "flash_end_access",
+  "brief": "Release the SPI flash interface after a flash job.",
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "undoes flash_begin_access; called at the end of every flash routine",
+  "plain": "Gives the flash chip back after reading or writing it."
+ },
+ "FUN_CODE_dd41": {
+  "name": "sys_restart_key_scan_timer",
+  "brief": "Clear the scan flag and restart the key scan timer.",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "flag 0xA629 and tick stamp 0xA5EB used by the key scan power_scan_wake_keys; power saving / power off commands",
+  "plain": "Restarts the timing of the button checks."
+ },
+ "FUN_CODE_de20": {
+  "name": "sys_lookup_clock_factor",
+  "brief": "Return the timing factor for a clock divider setting from a table.",
+  "params": [
+   {
+    "name": "param_1",
+    "meaning": "divider setting"
+   }
+  ],
+  "returns": "factor",
+  "notes": "Runs in register bank 3 (interrupt context).",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "CODE table 0xDC89 indexed by the divider bits of reg 0xD929",
+  "plain": "Looks up a timing value for the current clock speed."
+ },
+ "FUN_CODE_de3a": {
+  "name": "hdmi_cec_set_two_regs",
+  "brief": "Write the two values of mailbox command 0x24 into CEC block registers.",
+  "params": [
+   {
+    "name": "dest",
+    "meaning": "first value"
+   },
+   {
+    "name": "length",
+    "meaning": "second value"
+   }
+  ],
+  "topic": "hdmi",
+  "basis": "descriptive",
+  "evidence": "CEC block 0xD80x (hdmi_cec_*): regs 0xD820 = p1, 0xD810 = p2",
+  "plain": "Applies two CEC settings sent by the main processor."
+ },
+ "FUN_CODE_de45": {
+  "name": "flash_set_job_length",
+  "brief": "Set the flash job length in 256-byte units when non-zero.",
+  "params": [
+   {
+    "name": "blocks",
+    "meaning": "length / 256"
+   }
+  ],
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "length word 0xA715 used by flash_read_to_buffer / flash_write_from_buffer; mailbox command 0x14",
+  "plain": "Sets how much data the next flash read or write moves."
+ },
+ "FUN_CODE_de5b": {
+  "name": "i2c_test_no_result_ready",
+  "brief": "Report whether no I2C read result waits to be reported.",
+  "returns": "1 when none",
+  "topic": "i2c",
+  "basis": "derived",
+  "evidence": "flag 0xA35F set by the message type 2 I2C job; the report builder sends type 2 when it is 1",
+  "plain": "Checks whether an I2C answer waits for the main processor."
+ },
+ "FUN_CODE_de66": {
+  "name": "power_arm_signal_detect",
+  "brief": "Set the two signal detector levels used for the standby signal check.",
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "regs 0xD507/0xD508 = 0x37 before the check in power_check_sync_input_alt",
+  "plain": "Prepares the detector that notices an incoming picture signal."
+ },
+ "FUN_CODE_de71": {
+  "name": "power_disarm_signal_detect",
+  "brief": "Write 0x88 to the two registers 0xD507 / 0xD508 after a failed signal check.",
+  "topic": "power",
+  "basis": "descriptive",
+  "evidence": "regs 0xD507/0xD508 = 0x88 on the failure path of power_check_sync_input_alt; power_arm_signal_detect writes 0x37 to both before the check",
+  "plain": "Puts the signal detector back after no picture was found."
+ },
+ "FUN_CODE_de7c": {
+  "name": "sys_restore_crystal_timing",
+  "brief": "Set the two clock-scaled timing registers to their crystal values.",
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "regs 0xDCB1 = 9, 0xDCB2 = 15 (sys_scale_timing_to_clock with factor 1); after the crystal clock switch",
+  "plain": "Resets two timing values when the 8051 returns to its slow clock."
+ },
+ "FUN_CODE_de9c": {
+  "name": "edid_test_readback_requested",
+  "brief": "Report whether a read-back of the EDID buffer was requested.",
+  "returns": "1 when requested",
+  "topic": "edid",
+  "basis": "derived",
+  "evidence": "length 0xA46C set by mailbox command 0x0D; report type 1 sends the 0xF800 EDID buffer",
+  "plain": "Checks whether the main processor asked to read back the display data block."
+ },
+ "FUN_CODE_deb9": {
+  "name": "sys_ir_ring_flush",
+  "brief": "Discard everything in the IR ring.",
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "sets the write index to the read index; only call in sys_main at the end of a wake-up, right after the run state becomes 'running'",
+  "plain": "Empties the remote-control queue."
+ },
+ "FUN_CODE_dec2": {
+  "name": "sys_set_timed_limits_ch0",
+  "brief": "Store the first value pair (top, bottom) of the timed toggle / ramp record.",
+  "params": [
+   {
+    "name": "top",
+    "meaning": "toggle: first register value; ramp: top end"
+   },
+   {
+    "name": "bottom",
+    "meaning": "toggle: hold time of that value in units of 100 ticks; ramp: bottom end"
+   }
+  ],
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "mailbox command 0x19; limits[0] of the record 0xA735 used by sys_run_timed_ramp",
+  "plain": "Sets the range of the first gradual change."
+ },
+ "FUN_CODE_decb": {
+  "name": "sys_set_timed_limits_ch1",
+  "brief": "Store the second value pair (top, bottom) of the timed toggle / ramp record.",
+  "params": [
+   {
+    "name": "top",
+    "meaning": "toggle: second register value; ramp: top end"
+   },
+   {
+    "name": "bottom",
+    "meaning": "toggle: hold time of that value in units of 100 ticks; ramp: bottom end"
+   }
+  ],
+  "topic": "sys",
+  "basis": "descriptive",
+  "evidence": "mailbox command 0x1A; limits[1] of the record 0xA735 used by sys_run_timed_ramp",
+  "plain": "Sets the range of the second gradual change."
+ },
+ "FUN_CODE_dee8": {
+  "name": "flash_set_fe2p_extend",
+  "brief": "Store the FE2P extended address sent by the main processor.",
+  "params": [
+   {
+    "name": "extension",
+    "meaning": "extended address"
+   }
+  ],
+  "topic": "flash",
+  "basis": "derived",
+  "evidence": "mailbox command 0x26, printed 'CMD_FE2P_SETEXTEND : %02X%02X%02X'; long 0xA717",
+  "plain": "Remembers the upper address part used for the main processor's flash window."
+ },
+ "FUN_CODE_deee": {
+  "name": "sys_set_adc_key_tolerance",
+  "brief": "Store the tolerance used when matching ADC key readings.",
+  "params": [
+   {
+    "name": "tolerance",
+    "meaning": "tolerance"
+   }
+  ],
+  "topic": "sys",
+  "basis": "derived",
+  "evidence": "byte 0xA62E = g in the key scan power_scan_wake_keys ('ADC key %BX %BX %BX'); mailbox command 0x1B",
+  "plain": "Sets how exact a button's voltage must be to count as that button."
+ }
+}
